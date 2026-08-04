@@ -1,0 +1,829 @@
+[
+  {
+    "productCode": "108923P4",
+    "title": "Private Guided Hike in Arches National Park",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-Guided-Hike-in-Arches-National-Park/d5600-108923P4",
+    "priceFrom": "From $244.00",
+    "price": 244.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 8,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5e/d7/9e.jpg",
+    "overview": "Arches National Park is home to the highest concentration of natural arches anywhere in the world. Contained within its 76,518 acres are well over 2,000 documented arches. While impossible to see all of them in one visit, guides take you on a private tour of the most impressive geologic formations in the park. Learn how ancient sand dunes first turned to stone and are continually eroding into arches, fins, domes and canyons.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Professional experienced guide",
+      "Private tour for your group only",
+      "National Park entry fee",
+      "Snacks and bottled water",
+      "Hotel pickup/drop-off within 5 miles of Moab"
+    ],
+    "categories": [
+      "Private Tours",
+      "Hiking Tours",
+      "National Parks"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Operator Desert Highlights. Listing shows Likely to Sell Out on some surfaces. Review counts vary by aggregator (Viator listing ~8; FunEx/Tripadvisor combined up to ~16)."
+  },
+  {
+    "productCode": "18497P17",
+    "title": "Discover The Hidden Arches: Solitaire Arches Private Desert Hike",
+    "productUrl": "https://www.viator.com/tours/Moab/Guided-Hike-Through-the-Hidden-Side-Of-Arches-National-Park/d5600-18497P17",
+    "priceFrom": "From $189.00",
+    "price": 189.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 4,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/79/e5.jpg",
+    "overview": "Arches National Park holds a remote area as spectacular as anything along the main park roads, home to one of the biggest arches in the park. A moderately strenuous 3–4 mile round-trip hike reaches this secluded structure. The private experience focuses on solitude and photography away from paved-road crowds. Timed-entry reservation for Arches is included; park entry fee is extra ($15/person or free with valid pass).",
+    "itineraryStops": [
+      "Arches National Park",
+      "Solitaire / Hidden Arches hike area"
+    ],
+    "inclusions": [
+      "3-4 mile moderately strenuous guided hike",
+      "Timed-entry reservation for Arches National Park",
+      "Pickup from Moab hotels/campgrounds/Airbnbs (city limits)"
+    ],
+    "categories": [
+      "Private Tours",
+      "Hiking Tours",
+      "National Parks"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Operator Moab In A Day LLC. Low review count (4). Park entry excluded. Max private group size up to ~11 per operator materials."
+  },
+  {
+    "productCode": "18497P4",
+    "title": "Arches National Park Hike Challenge: Tackle Devils Garden 7m Loop",
+    "productUrl": "https://www.viator.com/tours/Moab/Guided-Jeep-Tour-of-Arches-National-Park-and-Its-Famous-Arches/d5600-18497P4",
+    "priceFrom": "From $257.00",
+    "price": 257.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 12,
+    "duration": "5 to 6 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/24/28/b5.jpg",
+    "overview": "The Primitive Loop of Devil's Garden is billed as a phenomenal ~7-mile mildly strenuous hike inside Arches National Park with a professional guide. The experience illuminates the geologic events that formed the park's fins and arches, desert ecology/botany, and cultural heritage. This is a guided hiking challenge focused on Devils Garden—not a jeep tour despite legacy URL slug.",
+    "itineraryStops": [
+      "Devils Garden",
+      "Landscape Arch area",
+      "Devils Garden Primitive Loop"
+    ],
+    "inclusions": [
+      "Professional guided Devils Garden Primitive Loop hike",
+      "Timed-entry reservation for Arches (operator pattern)",
+      "Pickup offered (Moab In A Day)"
+    ],
+    "categories": [
+      "Hiking Tours",
+      "National Parks",
+      "Adventure Tours"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "RENAMED product. User URL slug Guided-Jeep-Tour-and-Hike-to-Devils-Garden redirects/resolves to Guided-Jeep-Tour-of-Arches-National-Park-and-Its-Famous-Arches; live H1 is Hike Challenge Devils Garden 7m Loop. Price varies by group size (private-style). Not jeep/off-road despite old URL."
+  },
+  {
+    "productCode": "265766P8",
+    "title": "Arches Full Day Private Tour and Hike",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-Tour-and-Hike-in-Arches-National-Park/d5600-265766P8",
+    "priceFrom": "From $973.00",
+    "price": 973.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 45,
+    "duration": "6 to 10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/ce/c4/cc.jpg",
+    "overview": "Join an expert guide for a full-day private hiking tour, choosing between Arches National Park and Canyonlands National Park. The day is tailored to preferences; the guide finds trails to suit needs and schedule. Booking this guided trip lets guests bypass timed-entry constraints and enjoy maximum flexibility. Midday gourmet picnic lunch is included with dietary accommodations on notice.",
+    "itineraryStops": [
+      "Arches National Park or Canyonlands National Park (guest choice)",
+      "Delicate Arch (common)",
+      "Windows Section / Double Arch (common)",
+      "Tower Arch / Devils Garden (optional)"
+    ],
+    "inclusions": [
+      "Private naturalist guide",
+      "Private transportation / air-conditioned vehicle",
+      "Park entry fees",
+      "Gourmet picnic lunch"
+    ],
+    "categories": [
+      "Private Tours",
+      "Hiking Tours",
+      "Full-day Tours",
+      "National Parks"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Premium per-person pricing (Viator shows ~£744 / ~€870 depending on locale; USD ~$973 from aggregator mirrors). Arches OR Canyonlands choice—still Arches-explicit. High advance booking (~113 days avg)."
+  },
+  {
+    "productCode": "334588P2",
+    "title": "Arches National Park Backcountry Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Half-Day-Arches-Backcountry-Tour/d5600-334588P2",
+    "priceFrom": "From $252.00",
+    "price": 252.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 54,
+    "duration": "4 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0d/48/43.jpg",
+    "overview": "Get off the beaten path and discover the backcountry of Utah's Arches National Park on this half-day tour. Climb aboard a 4x4 vehicle with a private guide and discover rugged terrain around Moab. Your guide points out formations such as Marching Men, Tower Arch, Eye of the Whale, and pavement-section highlights. All park entry fees, water, and snacks are included.",
+    "itineraryStops": [
+      "Arches National Park backcountry",
+      "Marching Men",
+      "Tower Arch",
+      "Eye of the Whale",
+      "Balanced Rock / Windows / Delicate Arch viewpoints (pavement overview)"
+    ],
+    "inclusions": [
+      "Private 4x4 transportation",
+      "Bottled water and light snacks",
+      "Park entry fees",
+      "All fees and taxes"
+    ],
+    "categories": [
+      "Private Tours",
+      "4WD Tours",
+      "National Parks",
+      "Adventure Tours"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Likely to Sell Out badge. Operator Xtreme 4x4 / Moab Reservation Center. Distinct from Moab-bound 334588P4 sunset pavement tour."
+  },
+  {
+    "productCode": "24134P2",
+    "title": "Arches National Park Back Country Adventure from Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Backcountry-4x4-Half-Day/d5600-24134P2",
+    "priceFrom": "From $210.00",
+    "price": 210.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 610,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a7/4d.jpg",
+    "overview": "Half-day 4x4 backcountry adventure into Arches National Park with an experienced guide in Jeep Wranglers. Off-pavement trails access views most visitors miss; guides rotate passengers among seats. Timed-entry tickets are NOT needed. Not a private tour by default (private available for additional fees).",
+    "itineraryStops": [
+      "Arches National Park backcountry",
+      "Off-road arches viewpoints"
+    ],
+    "inclusions": [
+      "Experienced knowledgeable guide",
+      "Transport by 4x4 vehicle",
+      "Ice, water, and snacks",
+      "Parking at office"
+    ],
+    "categories": [
+      "4WD Tours",
+      "National Parks",
+      "Adventure Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Operator Adrift Adventures. Explicitly 'not a private tour'. Park entrance fee and hotel pickup listed as excluded on Viator inclusions. Strong review volume (610)."
+  },
+  {
+    "productCode": "6896P1",
+    "title": "Arches and Canyonlands 4X4 Adventure from Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-and-Canyonlands-4X4-Adventure-from-Moab/d5600-6896P1",
+    "priceFrom": "From $337.00",
+    "price": 337.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 208,
+    "duration": "9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/8f/cb/6e.jpg",
+    "overview": "Small-group 4x4 adventure through Arches and Canyonlands from Moab. Reach places other vehicles can't, keep costs down by sharing with a small group, and enjoy provided lunch and ice water. Combines Shafer Trail / Canyonlands backcountry with Arches backcountry highlights such as Marching Men, Tower Arch, and Eye of the Whale.",
+    "itineraryStops": [
+      "Canyonlands National Park / Island in the Sky",
+      "Shafer Trail / White Rim",
+      "Arches National Park",
+      "Marching Men",
+      "Tower Arch",
+      "Eye of the Whale",
+      "Dinosaur tracks (exit trail)"
+    ],
+    "inclusions": [
+      "National Park tour by four-wheel-drive vehicle",
+      "Quality lunch with ice water",
+      "Licensed experienced guide",
+      "Hotel pickup offered"
+    ],
+    "categories": [
+      "4WD Tours",
+      "Full-day Tours",
+      "National Parks",
+      "Adventure Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Operator NAVTEC. Park entrance fees often extra ($15/person unless annual pass). Min 3 passengers. Distinct from Moab-bound 6896MOABAPARK (Arches-only 4x4)."
+  },
+  {
+    "productCode": "148657P5",
+    "title": "Sunset and Night Photography in Arches National Park",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-and-Night-Photography-in-Arches-National-Park/d5600-148657P5",
+    "priceFrom": "From $395.00",
+    "price": 395.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 19,
+    "duration": "6 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/c1/33.jpg",
+    "overview": "Arches National Park—an International Dark Sky Park—is especially beautiful after the sun goes down and the crowds depart. Visit three (or more) spots for golden hour and night photography at lesser-known locales. Great for beginner and intermediate photographers; practice astrophotography once the Milky Way emerges. Max 6 travelers; some moderate hiking <1 mile on uneven ground.",
+    "itineraryStops": [
+      "Arches National Park Visitor Center meet",
+      "Multiple photography locations in Arches NP"
+    ],
+    "inclusions": [
+      "Timed entry permit",
+      "Photography guide / instruction",
+      "Snacks and bottled water (per some mirrors)",
+      "Pickup for first 4 passengers (vehicle capacity)"
+    ],
+    "categories": [
+      "Photography Tours",
+      "National Parks",
+      "Small Group"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Premium photo workshop. National Park admission often guest-provided. USD price surfaces at $375–$395 depending on locale/mirror. Distinct from Moab-bound 458439P2 astro/stargazing product."
+  },
+  {
+    "productCode": "18497P1",
+    "title": "Best Scenic Arches Tours w/ Walks: Pick 3hr, 4hr, 5hr, or 7hr",
+    "productUrl": "https://www.viator.com/tours/Moab/Moab-Geology-and-Botany-Tour/d5600-18497P1",
+    "priceFrom": "From $182.61",
+    "price": 182.61,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 92,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8d/50/66.jpg",
+    "overview": "Photography-focused small-group scenic tour of Arches in a comfortable spacious vehicle (not offroad), with duration options (3hr sunset, 4hr, 5hr, or 7hr). Timed-entry reservation included. Cold water refills and snacks on shorter options; lunch on longer options. Park entry excluded ($15/pp or free with pass). Max 11 travelers.",
+    "itineraryStops": [
+      "Arches National Park",
+      "Windows / Double Arch (common)",
+      "Delicate Arch area (when scheduled)",
+      "Sunset overlooks (sunset option)"
+    ],
+    "inclusions": [
+      "Photography-focused small-group tour vehicle",
+      "Timed-entry reservation for Arches",
+      "Cold water refills & snacks (3hr/4hr); lunch on 7hr/8hr options"
+    ],
+    "categories": [
+      "Sightseeing Tours",
+      "National Parks",
+      "Photography Tours",
+      "Half-day Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Legacy slug Moab-Geology-and-Botany-Tour; live H1 is Best Scenic Arches Tours w/ Walks. Strong reviews (92). Not off-road."
+  },
+  {
+    "productCode": "14649P16",
+    "title": "Corona Arch Canyon Run Helicopter Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Backcountry-Arches-Helicopter-Tour/d5600-14649P16",
+    "priceFrom": "From $159.00",
+    "price": 159.0,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "duration": "20 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d1/b7/79.jpg",
+    "overview": "Explore Moab canyon country from the air on this ~20-minute helicopter tour. Aerial views include Determination Towers, Monitor and Merrimac Butte, Gemini Bridges, Behind the Rocks, Corona Arch, Jeep Arch, and Uranium Arch, with pilot commentary via headsets. Max 3 travelers; 300 lb per-passenger weight limit. Meet at Canyonlands Field Airport.",
+    "itineraryStops": [
+      "Determination Towers",
+      "Monitor and Merrimac Butte",
+      "Gemini Bridges",
+      "Behind the Rocks",
+      "Corona Arch",
+      "Jeep Arch",
+      "Uranium Arch"
+    ],
+    "inclusions": [
+      "Window seats for everyone",
+      "Live narration / headsets",
+      "Complimentary water in terminal",
+      "All taxes/fees/handling"
+    ],
+    "categories": [
+      "Helicopter Tours",
+      "Air Tours",
+      "Adventure Tours"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Live H1 renamed to Corona Arch Canyon Run Helicopter Tour (legacy slug Backcountry-Arches-Helicopter-Tour). USD price confirmed via operator Rezdy ($159); Viator page price not captured in dump. Rating/reviewCount not visible in fetched snippets. Premium air product; route is Moab backcountry arches (not always over NPS Arches boundary)."
+  },
+  {
+    "productCode": "14649P18",
+    "title": "Arches National Park Airplane Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Airplane-Tour/d5600-14649P18",
+    "priceFrom": "From $249.00",
+    "price": 249.0,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "duration": "30 minutes",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/91/3c/7a.jpg",
+    "overview": "Fixed-wing scenic flight over Arches National Park from Canyonlands Field Airport. Bird's-eye views of Delicate Arch, Landscape Arch, Windows Section, Courthouse Towers, Devils Garden and more with pilot narration via headsets. Window seat for every passenger. Redtail Air is the permitted operator for flights directly over Arches.",
+    "itineraryStops": [
+      "Arches National Park aerial circuit",
+      "Delicate Arch",
+      "Windows Section",
+      "Courthouse Towers",
+      "Devils Garden / Landscape Arch area"
+    ],
+    "inclusions": [
+      "Small-group scenic airplane tour",
+      "Professional pilot",
+      "Live narration and headsets"
+    ],
+    "categories": [
+      "Air Tours",
+      "National Parks",
+      "Airplane Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Listed on Arches attraction page 4. Rating not captured in listing dump. Premium air product."
+  },
+  {
+    "productCode": "14649P2",
+    "title": "Canyonlands and Arches Combo in Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Canyonlands-and-Arches-Combo-in-Moab/d5600-14649P2",
+    "priceFrom": "From $249.00",
+    "price": 249.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 35,
+    "duration": "30 minutes to ~1 hour (air combo; confirm at booking)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/91/3c/7a.jpg",
+    "overview": "Aerial combo covering Canyonlands and Arches National Parks from Moab (Redtail Air family). Provides a condensed bird's-eye overview of both parks' signature geology. Exact live H1 could not be fully confirmed—related-product cards on Viator inconsistently label this code as 'Arches National Park Airplane Tour' while the canonical slug remains Canyonlands-and-Arches-Combo-in-Moab.",
+    "itineraryStops": [
+      "Arches National Park (aerial)",
+      "Canyonlands National Park (aerial)"
+    ],
+    "inclusions": [
+      "Fixed-wing aerial tour",
+      "Pilot narration / headsets"
+    ],
+    "categories": [
+      "Air Tours",
+      "National Parks",
+      "Airplane Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "H1 TITLE UNCERTAIN—related cards show Airplane Tour title/price overlap with 14649P18. Confirm live H1/duration before wiring. Multi-park OK (Arches explicit in slug)."
+  },
+  {
+    "productCode": "18497P9",
+    "title": "Secluded Arches Sunset Experience Best Of Devils Garden Easy Hike",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Guided-Tour-of-Arches-National-Park/d5600-18497P9",
+    "priceFrom": "From $199.00",
+    "price": 199.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 9,
+    "duration": "3 to 4 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/79/e5.jpg",
+    "overview": "Experience a private desert sunset atop a secluded high cliff inside Arches National Park, away from massive park crowds. Beyond and high above Landscape Arch, the upper reaches of Devil's Garden require a short but steep climb up a sandstone fin (may challenge guests with fear of heights or limited mobility). Part of the hike takes place after sunset with limited natural light. In June–July the sun sets behind a rock and cannot be viewed directly from the overlook.",
+    "itineraryStops": [
+      "Devils Garden",
+      "Landscape Arch area",
+      "Secluded sunset overlook / sandstone fin"
+    ],
+    "inclusions": [
+      "Private guided sunset hike",
+      "Timed-entry reservation pattern (Moab In A Day)",
+      "Pickup offered"
+    ],
+    "categories": [
+      "Private Tours",
+      "Hiking Tours",
+      "Sunset Tours",
+      "National Parks"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "URL discovered: /Sunset-Guided-Tour-of-Arches-National-Park/d5600-18497P9. Some locales title 'Fun Hike' instead of 'Easy Hike'. Price $199–$214 by locale. Premium sunset/private hike."
+  },
+  {
+    "productCode": "22803P33",
+    "title": "Arches National Park Half Day Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Half-Day-Tour/d5600-22803P33",
+    "priceFrom": "From $139.26",
+    "price": 139.26,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 74,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/80/c3/58.jpg",
+    "overview": "Explore Arches National Park with professional interpretive guides through iconic landmarks including Delicate Arch and Balanced Rock. Scenic drives, short walks, and panoramic views—no timed entry reservations required for this guided trip. Morning or afternoon departures available.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Guided sightseeing",
+      "Park access via tour"
+    ],
+    "categories": [
+      "Sightseeing Tours",
+      "National Parks",
+      "Day Trips"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION CANDIDATE ONLY — already Engine6-bound to Moab (scripts/moab-product-selection.json). Do not select for Arches destination. Extracted for rejection notes."
+  },
+  {
+    "productCode": "209615P252",
+    "title": "Discover Arches National Park: Private Tour from Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Discover-Pearls-of-Arches-National-Park-Private-Tour-from-Moab/d5600-209615P252",
+    "priceFrom": "From $984.00",
+    "price": 984.0,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "duration": "5 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/22/83/26.jpg",
+    "overview": "5-hour private tour from Moab immersing guests in Arches landscapes. Typical stops include Delicate Arch, Double Arch, and the Windows Section (North/South Windows, Turret Arch). Private pacing allows unhurried photography and exploration.",
+    "itineraryStops": [
+      "Delicate Arch",
+      "Double Arch",
+      "Windows Section",
+      "Turret Arch"
+    ],
+    "inclusions": [
+      "Private tour from Moab",
+      "Custom pacing"
+    ],
+    "categories": [
+      "Private Tours",
+      "National Parks",
+      "Sightseeing Tours"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Found on Arches listing page 4. Premium private. Rating/reviews not shown on listing card."
+  },
+  {
+    "productCode": "265766P26",
+    "title": "Arches Full Day Small Group Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Small-Group-Tour-of-Arches-National-Park/d5600-265766P26",
+    "priceFrom": "From $427.00",
+    "price": 427.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 11,
+    "duration": "7 to 8 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/ce/c4/cc.jpg",
+    "overview": "Full-day small-group guided tour and hike focused on Arches National Park. Longer guided day covering major park highlights with interpretive guiding; sibling product to private 265766P8 from same operator family.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Small-group guided full-day tour",
+      "Hiking components",
+      "Likely lunch/transport (confirm on page)"
+    ],
+    "categories": [
+      "Full-day Tours",
+      "Hiking Tours",
+      "National Parks",
+      "Small Group"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Additional premium longer guided Arches product from listing page. Related card title sometimes 'Arches Full Day Small Group Tour & Hike'."
+  },
+  {
+    "productCode": "24134P13",
+    "title": "Day Tour Arches and Canyonlands National Park in Utah",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Arches-and-Canyonlands-4x4/d5600-24134P13",
+    "priceFrom": "From $397.00",
+    "price": 397.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 15,
+    "duration": "10 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a7/4d.jpg",
+    "overview": "Full-day 4x4 tour covering both Arches and Canyonlands National Parks from Moab (~10 hours). Jeep-based multi-park adventure with Arches explicit in title/route.",
+    "itineraryStops": [
+      "Arches National Park",
+      "Canyonlands National Park"
+    ],
+    "inclusions": [
+      "4x4 transport",
+      "Experienced guide",
+      "Full-day itinerary"
+    ],
+    "categories": [
+      "4WD Tours",
+      "Full-day Tours",
+      "National Parks"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Additional jeep/combo candidate from Arches listing page. Overlaps thematically with 6896P1."
+  },
+  {
+    "productCode": "24134P16",
+    "title": "Arches National Park by Van Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-by-Van-Tour/d5600-24134P16",
+    "priceFrom": "From $127.00",
+    "price": 127.0,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "duration": "4 hours 30 minutes",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a7/4d.jpg",
+    "overview": "Guided van sightseeing tour of Arches National Park (~4.5 hours). Pavement-focused overview alternative to jeep backcountry products.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Guided van tour"
+    ],
+    "categories": [
+      "Sightseeing Tours",
+      "National Parks",
+      "Van Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Standard scenic van product from page 4. Lower price; useful depth inventory if premium mix already secured."
+  },
+  {
+    "productCode": "122460P8",
+    "title": "Arches National Park Morning Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Morning-Tour/d5600-122460P8",
+    "priceFrom": null,
+    "price": null,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 2,
+    "duration": "4 hours",
+    "heroUrl": null,
+    "overview": "Guided morning Arches National Park tour from Moab covering park highlights via scenic stops/short walks. Low review count on listing surfaces.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Guided morning sightseeing"
+    ],
+    "categories": [
+      "Sightseeing Tours",
+      "National Parks"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "Additional listing find. Very low reviews (2). Price not captured (~£114 on en-IN listing ≈ $145). Thin commercial signal."
+  },
+  {
+    "productCode": "6896MOABAPARK",
+    "title": "Arches National Park 4x4 Adventure from Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-4x4-Adventure-from-Moab/d5600-6896MOABAPARK",
+    "priceFrom": "From $197.00",
+    "price": 197.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 1884,
+    "duration": "4 to 5 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/87/8e.jpg",
+    "overview": "4WD backcountry tour of Arches from Moab visiting Tower Arch, Marching Men, Eye of the Whale, and fossilized dinosaur tracks. NAVTEC operator; authorized concessionaire.",
+    "itineraryStops": [
+      "Doc Williams Point",
+      "Tower Arch",
+      "Marching Men",
+      "Eye of the Whale Arch",
+      "Dinosaur tracks"
+    ],
+    "inclusions": [
+      "4WD vehicle tour",
+      "Licensed guide",
+      "Ice water & lemonade",
+      "Pickup if needed"
+    ],
+    "categories": [
+      "4WD Tours",
+      "National Parks",
+      "Adventure Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION — already Engine6-bound to Moab. Best-seller on Arches attraction page (~1884 reviews)."
+  },
+  {
+    "productCode": "7016P4",
+    "title": "Arches National Park Scenic Tours From Moab",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Scenic-Tours-From-Moab/d5600-7016P4",
+    "priceFrom": "From $159.00",
+    "price": 159.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 290,
+    "duration": "4 hours",
+    "heroUrl": null,
+    "overview": "HIGHLY RATED scenic sightseeing tour of Arches National Park from Moab (Best Seller on listing).",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Guided scenic tour"
+    ],
+    "categories": [
+      "Sightseeing Tours",
+      "National Parks"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION — already Engine6-bound to Moab."
+  },
+  {
+    "productCode": "458439P2",
+    "title": "Astro-Photo, Hiking and Stargazing Tour in Arches National Park",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-Photo-and-Hiking-tour-The-Windows-Section-Arches-NP/d5600-458439P2",
+    "priceFrom": "From $175.00",
+    "price": 175.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 36,
+    "duration": "2 hours",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/88/63/18/caption.jpg",
+    "overview": "Night-time astrophotography and stargazing tour in Arches with provided equipment tips; Windows Section focus. Cool evening temperatures and fewer crowds.",
+    "itineraryStops": [
+      "Arches National Park",
+      "Windows Section"
+    ],
+    "inclusions": [
+      "Astrophotography guidance",
+      "Tripods/equipment support",
+      "Small group"
+    ],
+    "categories": [
+      "Photography Tours",
+      "Private Tours",
+      "Hiking Tours",
+      "Stargazing"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION — already Engine6-bound to Moab. Strong stargazing/photo product if Arches destination needs alternate night product use 148657P5 instead."
+  },
+  {
+    "productCode": "334588P4",
+    "title": "3-Hours Sunset Arches National Park Pavement Sights Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Arches-National-Park-Pavement-Sights/d5600-334588P4",
+    "priceFrom": "From $191.00",
+    "price": 191.0,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 66,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/4e/71/b2.jpg",
+    "overview": "Small-group sunset tour of Arches pavement sights via air-conditioned 4x4 from Moab. Highlights include La Sal Mountain views, Three Gossips, and sunset photography opportunities. Max ~10 travelers.",
+    "itineraryStops": [
+      "Arches National Park",
+      "Three Gossips",
+      "Sunset viewpoint"
+    ],
+    "inclusions": [
+      "Round-trip transit from Moab",
+      "Guided sunset sightseeing"
+    ],
+    "categories": [
+      "Sunset Tours",
+      "4WD Tours",
+      "National Parks",
+      "Sightseeing Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION — already Engine6-bound to Moab."
+  },
+  {
+    "productCode": "18497P15",
+    "title": "Discover The Best Of Moab In A Day: Arches Canyonlands Dead Horse",
+    "productUrl": "https://www.viator.com/tours/Moab/Discover-Moab-in-A-Day-Arches-Canyonlands-and-Dead-Horse-Pt/d5600-18497P15",
+    "priceFrom": "From $369.49",
+    "price": 369.49,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 264,
+    "duration": "8 hours",
+    "heroUrl": null,
+    "overview": "Full-day multi-park Moab highlight tour covering Arches, Canyonlands, and Dead Horse Point with lunch and timed-entry for Arches.",
+    "itineraryStops": [
+      "Arches National Park",
+      "Canyonlands National Park",
+      "Dead Horse Point State Park"
+    ],
+    "inclusions": [
+      "Light picnic lunch",
+      "Cold water/snacks",
+      "Timed-entry for Arches",
+      "Dead Horse Point entry fees"
+    ],
+    "categories": [
+      "Full-day Tours",
+      "National Parks",
+      "Sightseeing Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "notes": "REJECTION — already Engine6-bound to Moab. Multi-park Moab day product."
+  },
+  {
+    "productCode": "267535P4",
+    "title": "Arches National Park Self-Guided Driving Audio Tour",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Self-Guided-Driving-Audio-Tour/d5600-267535P4",
+    "priceFrom": "From $17.00",
+    "price": 17.0,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 242,
+    "duration": "2 to 3 hours",
+    "heroUrl": null,
+    "overview": "Self-guided driving audio tour of Arches National Park.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Audio guide app/content"
+    ],
+    "categories": [
+      "Audio Guided Tours",
+      "Self-guided Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": true,
+    "unavailable": false,
+    "notes": "REJECTION — audio/self-guided."
+  },
+  {
+    "productCode": "102020P34",
+    "title": "Full-Day Audio Driving Tour of Arches National Park",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Audio-Driving-Tour-of-Arches-National-Park/d5600-102020P34",
+    "priceFrom": null,
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": 22,
+    "duration": "6 to 8 hours (approx.)",
+    "heroUrl": null,
+    "overview": "Full-day self-guided audio driving tour of Arches National Park.",
+    "itineraryStops": [
+      "Arches National Park"
+    ],
+    "inclusions": [
+      "Audio driving guide"
+    ],
+    "categories": [
+      "Audio Guided Tours",
+      "Self-guided Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": true,
+    "unavailable": false,
+    "notes": "REJECTION — audio/self-guided."
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "14649P18",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Airplane-Tour/d5600-14649P18",
+    "title": "Arches National Park Airplane Tour",
+    "description": {
+      "text": "Fixed-wing scenic flight over Arches National Park from Canyonlands Field Airport. Bird's-eye views of Delicate Arch, Landscape Arch, Windows Section, Courthouse Towers, Devils Garden and more with pilot narration via headsets. Stops include Delicate Arch, Windows Section, Courthouse Towers, Devils Garden. Window seat for every passenger. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "30 minutes",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/91/3c/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fixed-wing scenic flight over Arches National Park from Canyonlands Field Airport",
+      "Bird's-eye views of Delicate Arch, Landscape Arch, Windows Section, Courthouse Towers, Devils Garden and more with pilot",
+      "Window seat for every passenger",
+      "Arches National Park Airplane Tour near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Fixed-wing scenic flight over Arches National Park from Canyonlands Field Airport.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Delicate Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Windows Section",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Courthouse Towers",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Devils Garden",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small-group scenic airplane tour",
+      "Professional pilot",
+      "Live narration and headsets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches National Park Airplane Tour?",
+        "answer": "The planned duration is 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Airplane Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

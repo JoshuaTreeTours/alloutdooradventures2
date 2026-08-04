@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "18497P9",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Guided-Tour-of-Arches-National-Park/d5600-18497P9",
+    "title": "Secluded Arches Sunset Experience Best Of Devils Garden Easy Hike",
+    "description": {
+      "text": "Experience a private desert sunset atop a secluded high cliff inside Arches National Park, away from massive park crowds. Beyond and high above Landscape Arch, the upper reaches of Devil's Garden require a short but steep climb up a sandstone fin (may challenge guests with fear of heights or limited mobility). Stops include Devils Garden, Landscape Arch, Devils Garden Sunset Overlook. Part of the hike takes place after sunset with limited natural light. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "3 to 4 hours",
+    "priceFrom": "From $199.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ee/27/87.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience a private desert sunset atop a secluded high cliff inside Arches National Park, away from massive park crowds",
+      "Beyond and high above Landscape Arch, the upper reaches of Devil's Garden require a short but steep climb up a sandstone",
+      "Part of the hike takes place after sunset with limited natural light",
+      "Secluded Arches Sunset Experience Best Of Devils Garden Easy Hike near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience a private desert sunset atop a secluded high cliff inside Arches National Park, away from massive park crowds.",
+    "itineraryItems": [
+      {
+        "title": "Devils Garden",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Landscape Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Devils Garden Sunset Overlook",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guided sunset hike",
+      "Timed-entry reservation pattern (Moab In A Day)",
+      "Pickup offered"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Secluded Arches Sunset Experience Best Of Devils Garden Easy Hike?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 199
+      },
+      "currency": "USD"
+    }
+  }
+}

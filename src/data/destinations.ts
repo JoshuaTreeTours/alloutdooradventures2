@@ -1799,6 +1799,78 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         ],
       },
       {
+        name: "Arches National Park",
+        slug: "arches-national-park",
+        stateSlug: "utah",
+        region: "Moab",
+        lat: 38.7331,
+        lng: -109.5925,
+        shortDescription:
+          "Natural stone arches, red-rock viewpoints, jeep routes, and guided desert adventures.",
+        intro:
+          "Arches National Park concentrates more than 2,000 natural stone arches above Moab—Delicate Arch, the Windows Section, Devils Garden, and backcountry fins reached by guided hiking, jeep, and scenic tours.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5e/d7/9e.jpg",
+        ],
+        activityTags: ["arches", "hiking", "jeeping"],
+        whereItIs: [
+          "Arches National Park sits just north of Moab, Utah, along U.S. Highway 191 on the Colorado Plateau.",
+          "Most guided tours depart from Moab lodging or downtown meeting points a short drive from the park entrance.",
+        ],
+        experiences: {
+          mountains:
+            "Hike to Delicate Arch, Devils Garden, or secluded backcountry arches with a local guide.",
+          lakesWater:
+            "The Colorado River corridor near Moab pairs with Arches day trips for a red-rock river-and-arch itinerary.",
+          desertForest:
+            "Slickrock fins, sandstone arches, and desert scrub define the park's high-desert scenery.",
+          cycling:
+            "Scenic paved overlooks and short walks suit visitors who want arches without long desert approaches.",
+          scenicDrives:
+            "The park road links Courthouse Towers, Balanced Rock, the Windows, and Devils Garden viewpoints.",
+          seasonalNotes:
+            "Spring and fall bring milder hiking weather; summer favors early starts and sunset tours; winter is quieter with crisp light.",
+        },
+        thingsToDo: [
+          "Visit Delicate Arch and the Windows Section on a guided scenic or private hike.",
+          "Explore Tower Arch and Eye of the Whale on a 4x4 backcountry tour.",
+          "Book a sunset or night photography outing under International Dark Sky conditions.",
+          "Fly a short helicopter or airplane circuit over Moab canyon country and Arches.",
+          "Combine Arches with Canyonlands on a full-day guided adventure.",
+        ],
+        toursCopy: [
+          "Private hikes, jeep backcountry routes, and scenic vans cover Arches highlights without timed-entry stress.",
+          "Premium options include photography workshops, helicopter flights, and full-day multi-park 4x4 adventures.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: guided scenic tour or private hike through the Windows and Delicate Arch viewpoints.",
+            "Afternoon: Devils Garden hike or short overlook walks.",
+            "Evening: sunset photography or dark-sky outing in the park.",
+          ],
+          dayTwo: [
+            "Morning: 4x4 backcountry tour to Tower Arch and Eye of the Whale.",
+            "Afternoon: Canyonlands combo or scenic flight over Arches.",
+            "Evening: Moab dinner and red-rock sunset views.",
+          ],
+        },
+        gettingThere: [
+          "Canyonlands Field Airport (CNY) is the closest air option; Grand Junction and Salt Lake City are common gateways with a drive to Moab.",
+        ],
+        faq: [
+          {
+            question: "How much time do I need in Arches National Park?",
+            answer:
+              "A half day covers the main paved overlooks; plan a full day for Delicate Arch, Devils Garden, or a backcountry 4x4 route.",
+          },
+          {
+            question: "Do I need timed entry for a guided Arches tour?",
+            answer:
+              "Many guided operators handle park access logistics; confirm whether timed entry or park fees are included when booking.",
+          },
+        ],
+      },
+      {
         name: "Park City",
         slug: "park-city",
         stateSlug: "utah",

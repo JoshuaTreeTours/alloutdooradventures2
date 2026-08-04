@@ -1,0 +1,124 @@
+{
+  "product": {
+    "productCode": "6896P1",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-and-Canyonlands-4X4-Adventure-from-Moab/d5600-6896P1",
+    "title": "Arches and Canyonlands 4X4 Adventure from Moab",
+    "description": {
+      "text": "Small-group 4x4 adventure through Arches and Canyonlands from Moab. Reach places other vehicles can't, keep costs down by sharing with a small group, and enjoy provided lunch and ice water. Stops include Island in the Sky, Shafer Trail, Marching Men, Tower Arch, Eye of the Whale. Local commentary and route logistics are handled so you can focus on arches, viewpoints, and photography or adventure highlights. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $337.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 208
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/8f/cb/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Arches and Canyonlands 4X4 Adventure from Moab from Arches National Park",
+      "Natural stone arches and red-rock viewpoints",
+      "Professional guide with Arches local expertise",
+      "Small-group or private format as listed",
+      "Arches scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Small-group 4x4 adventure through Arches and Canyonlands from Moab.",
+    "itineraryItems": [
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shafer Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marching Men",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eye of the Whale",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "National Park tour by four-wheel-drive vehicle",
+      "Quality lunch with ice water",
+      "Licensed experienced guide",
+      "Hotel pickup offered"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches and Canyonlands 4X4 Adventure from Moab?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 337
+      },
+      "currency": "USD"
+    }
+  }
+}

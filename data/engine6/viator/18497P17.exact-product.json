@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "18497P17",
+    "productUrl": "https://www.viator.com/tours/Moab/Guided-Hike-Through-the-Hidden-Side-Of-Arches-National-Park/d5600-18497P17",
+    "title": "Discover The Hidden Arches: Solitaire Arches Private Desert Hike",
+    "description": {
+      "text": "Arches National Park holds a remote area as spectacular as anything along the main park roads, home to one of the biggest arches in the park. A moderately strenuous 3–4 mile round-trip hike reaches this secluded structure. Stops include Solitaire Arches. The private experience focuses on solitude and photography away from paved-road crowds. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $189.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/79/e5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Arches National Park holds a remote area as spectacular as anything along the main park roads, home to one of the bigges",
+      "A moderately strenuous 3–4 mile round-trip hike reaches this secluded structure",
+      "The private experience focuses on solitude and photography away from paved-road crowds",
+      "Discover The Hidden Arches: Solitaire Arches Private Desert Hike near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Arches National Park holds a remote area as spectacular as anything along the main park roads, home to one of the biggest arches in the park.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Solitaire Arches",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "3-4 mile moderately strenuous guided hike",
+      "Timed-entry reservation for Arches National Park",
+      "Pickup from Moab hotels/campgrounds/Airbnbs (city limits)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Discover The Hidden Arches: Solitaire Arches Private Desert Hike?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189
+      },
+      "currency": "USD"
+    }
+  }
+}

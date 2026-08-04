@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "18497P4",
+    "productUrl": "https://www.viator.com/tours/Moab/Guided-Jeep-Tour-of-Arches-National-Park-and-Its-Famous-Arches/d5600-18497P4",
+    "title": "Arches National Park Hike Challenge: Tackle Devils Garden 7m Loop",
+    "description": {
+      "text": "The Primitive Loop of Devil's Garden is billed as a phenomenal ~7-mile mildly strenuous hike inside Arches National Park with a professional guide. The experience illuminates the geologic events that formed the park's fins and arches, desert ecology/botany, and cultural heritage. Stops include Devils Garden, Landscape Arch, Devils Garden Primitive Loop. This is a guided hiking challenge focused on Devils Garden—not a jeep tour despite legacy URL slug. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "5 to 6 hours",
+    "priceFrom": "From $257.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/24/28/b5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Primitive Loop of Devil's Garden is billed as a phenomenal ~7-mile mildly strenuous hike inside Arches National Park",
+      "The experience illuminates the geologic events that formed the park's fins and arches, desert ecology/botany, and cultur",
+      "This is a guided hiking challenge focused on Devils Garden—not a jeep tour despite legacy URL slug",
+      "Arches National Park Hike Challenge: Tackle Devils Garden 7m Loop near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The Primitive Loop of Devil's Garden is billed as a phenomenal ~7-mile mildly strenuous hike inside Arches National Park with a professional guide.",
+    "itineraryItems": [
+      {
+        "title": "Devils Garden",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Landscape Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Devils Garden Primitive Loop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guided Devils Garden Primitive Loop hike",
+      "Timed-entry reservation for Arches (operator pattern)",
+      "Pickup offered (Moab In A Day)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches National Park Hike Challenge: Tackle Devils Garden 7m Loop?",
+        "answer": "The planned duration is 5 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 257
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -129,6 +129,21 @@ import specimen333327p1Payload from "../../data/engine6/viator/333327P1.exact-pr
 import specimen192749p8Payload from "../../data/engine6/viator/192749P8.exact-product.json";
 import specimen192749p3Payload from "../../data/engine6/viator/192749P3.exact-product.json";
 import specimen164292p1Payload from "../../data/engine6/viator/164292P1.exact-product.json";
+import specimen108923p4Payload from "../../data/engine6/viator/108923P4.exact-product.json";
+import specimen18497p17Payload from "../../data/engine6/viator/18497P17.exact-product.json";
+import specimen18497p4Payload from "../../data/engine6/viator/18497P4.exact-product.json";
+import specimen265766p8Payload from "../../data/engine6/viator/265766P8.exact-product.json";
+import specimen334588p2Payload from "../../data/engine6/viator/334588P2.exact-product.json";
+import specimen24134p2Payload from "../../data/engine6/viator/24134P2.exact-product.json";
+import specimen6896p1Payload from "../../data/engine6/viator/6896P1.exact-product.json";
+import specimen148657p5Payload from "../../data/engine6/viator/148657P5.exact-product.json";
+import specimen18497p9Payload from "../../data/engine6/viator/18497P9.exact-product.json";
+import specimen14649p16Payload from "../../data/engine6/viator/14649P16.exact-product.json";
+import specimen14649p18Payload from "../../data/engine6/viator/14649P18.exact-product.json";
+import specimen265766p26Payload from "../../data/engine6/viator/265766P26.exact-product.json";
+import specimen24134p13Payload from "../../data/engine6/viator/24134P13.exact-product.json";
+import specimen18497p1Payload from "../../data/engine6/viator/18497P1.exact-product.json";
+import specimen24134p16Payload from "../../data/engine6/viator/24134P16.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2116,6 +2131,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "164292P1",
     publicUrl: "https://www.viator.com/tours/Houston/Downtown-EADO-Tour/d5186-164292P1",
     rawPayload: specimen164292p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "108923P4",
+    publicUrl: "https://www.viator.com/tours/Moab/Private-Guided-Hike-in-Arches-National-Park/d5600-108923P4",
+    rawPayload: specimen108923p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P17",
+    publicUrl: "https://www.viator.com/tours/Moab/Guided-Hike-Through-the-Hidden-Side-Of-Arches-National-Park/d5600-18497P17",
+    rawPayload: specimen18497p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P4",
+    publicUrl: "https://www.viator.com/tours/Moab/Guided-Jeep-Tour-of-Arches-National-Park-and-Its-Famous-Arches/d5600-18497P4",
+    rawPayload: specimen18497p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P8",
+    publicUrl: "https://www.viator.com/tours/Moab/Private-Tour-and-Hike-in-Arches-National-Park/d5600-265766P8",
+    rawPayload: specimen265766p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "334588P2",
+    publicUrl: "https://www.viator.com/tours/Moab/Half-Day-Arches-Backcountry-Tour/d5600-334588P2",
+    rawPayload: specimen334588p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24134P2",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-Backcountry-4x4-Half-Day/d5600-24134P2",
+    rawPayload: specimen24134p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6896P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-and-Canyonlands-4X4-Adventure-from-Moab/d5600-6896P1",
+    rawPayload: specimen6896p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "148657P5",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-and-Night-Photography-in-Arches-National-Park/d5600-148657P5",
+    rawPayload: specimen148657p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P9",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-Guided-Tour-of-Arches-National-Park/d5600-18497P9",
+    rawPayload: specimen18497p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14649P16",
+    publicUrl: "https://www.viator.com/tours/Moab/Backcountry-Arches-Helicopter-Tour/d5600-14649P16",
+    rawPayload: specimen14649p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14649P18",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-Airplane-Tour/d5600-14649P18",
+    rawPayload: specimen14649p18Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P26",
+    publicUrl: "https://www.viator.com/tours/Moab/Full-Day-Small-Group-Tour-of-Arches-National-Park/d5600-265766P26",
+    rawPayload: specimen265766p26Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24134P13",
+    publicUrl: "https://www.viator.com/tours/Moab/Full-Day-Arches-and-Canyonlands-4x4/d5600-24134P13",
+    rawPayload: specimen24134p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Moab-Geology-and-Botany-Tour/d5600-18497P1",
+    rawPayload: specimen18497p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24134P16",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-by-Van-Tour/d5600-24134P16",
+    rawPayload: specimen24134p16Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

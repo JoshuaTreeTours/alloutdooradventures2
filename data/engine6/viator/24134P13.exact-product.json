@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "24134P13",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Arches-and-Canyonlands-4x4/d5600-24134P13",
+    "title": "Day Tour Arches and Canyonlands National Park in Utah",
+    "description": {
+      "text": "Full-day 4x4 tour covering both Arches and Canyonlands National Parks from Moab (~10 hours). Jeep-based multi-park adventure with Arches explicit in title/route. Stops include Canyonlands National Park. Local commentary and route logistics are handled so you can focus on arches, viewpoints, and photography or adventure highlights. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "10 hours",
+    "priceFrom": "From $397.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 15
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a7/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Day Tour Arches and Canyonlands National Park in Utah from Arches National Park",
+      "Natural stone arches and red-rock viewpoints",
+      "Professional guide with Arches local expertise",
+      "Small-group or private format as listed",
+      "Arches scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Full-day 4x4 tour covering both Arches and Canyonlands National Parks from Moab (~10 hours).",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "4x4 transport",
+      "Experienced guide",
+      "Full-day itinerary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Tour Arches and Canyonlands National Park in Utah?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 397
+      },
+      "currency": "USD"
+    }
+  }
+}
