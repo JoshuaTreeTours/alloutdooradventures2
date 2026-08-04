@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "10428P19",
+    "productUrl": "https://www.viator.com/tours/Austin/From-Austin-Half-Day-Hill-Country-Wine-Shuttle/d5021-10428P19",
+    "title": "Half-Day Hill Country Wine Shuttle From Austin",
+    "description": {
+      "text": "Travel southwest of Austin into the Driftwood and Wimberley Hill Country in a Mercedes Sprinter with a local guide. Sample wines at three award-winning wineries across a 4.5-hour afternoon shuttle limited to about 10 guests. Stops include Austin Departure, Duchman Family Winery, Wimberley Valley Winery, Limestone Terrace Vineyard. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $74.69",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 349
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0d/4d/f8/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-Day Hill Country Wine Shuttle From Austin from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel southwest of Austin into the Driftwood and Wimberley Hill Country in a Mercedes Sprinter with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Austin Departure",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Duchman Family Winery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wimberley Valley Winery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Limestone Terrace Vineyard",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided wine experience",
+      "As described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Hill Country Wine Shuttle From Austin?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tastings"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.69
+      },
+      "currency": "USD"
+    }
+  }
+}

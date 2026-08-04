@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "5513806P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Personal-Group-Tour-4-People-Bronco/d5021-5513806P1",
+    "title": "Austin Private Tours – Landmarks & Local Highlights",
+    "description": {
+      "text": "Explore Austin's most iconic landmarks and hidden gems in a modern open-top Ford Bronco on this private small-group tour. Visit Mount Bonnell for panoramic views, South Congress Avenue murals and shops, the historic Texas State Capitol, and East Austin street art with Lady Bird Lake scenery along the way. Stops include Texas State Capitol, Mount Bonnell, South Congress Avenue, East Austin Murals, Lady Bird Lake. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 46
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7d/1c/4f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Austin Private Tours – Landmarks & Local Highlights from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Austin's most iconic landmarks and hidden gems in a modern open-top Ford Bronco on this private small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Texas State Capitol",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Bonnell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Congress Avenue",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "East Austin Murals",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lady Bird Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Austin Private Tours – Landmarks & Local Highlights?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

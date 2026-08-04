@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "291969P2",
+    "productUrl": "https://www.viator.com/tours/Austin/Guided-Sunset-Kayak-Tour-in-Austin-Texas/d5021-291969P2",
+    "title": "Guided Sunset Bat Kayak Tour in Austin",
+    "description": {
+      "text": "Kayak Lady Bird Lake at sunset with a guide and watch Austin's famous bat colony leave Congress Avenue Bridge. Gear is included on this approximately two-hour outing suited to beginners and visitors seeking a water-level skyline view. Stops include Lady Bird Lake Launch, Downtown Skyline, Congress Avenue Bridge, Bat Viewing. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $49.50",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 238
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0d/2f/28/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Sunset Bat Kayak Tour in Austin from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Kayak Lady Bird Lake at sunset with a guide and watch Austin's famous bat colony leave Congress Avenue Bridge.",
+    "itineraryItems": [
+      {
+        "title": "Lady Bird Lake Launch",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Skyline",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Avenue Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bat Viewing",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Kayak or paddleboard equipment",
+      "Life jacket",
+      "Guided outing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Sunset Bat Kayak Tour in Austin?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49.5
+      },
+      "currency": "USD"
+    }
+  }
+}

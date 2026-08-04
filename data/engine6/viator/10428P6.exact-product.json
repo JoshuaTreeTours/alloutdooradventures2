@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "10428P6",
+    "productUrl": "https://www.viator.com/tours/Austin/Austins-Salt-Lick-and-Winery-Shuttle/d5021-10428P6",
+    "title": "From Austin: Hill Country BBQ & Wine Shuttle",
+    "description": {
+      "text": "Leave downtown Austin for a half-day Hill Country shuttle that pairs Texas barbecue at Salt Lick with two winery stops. Ride in an air-conditioned van with a maximum of about 10 guests and a local driver who knows the Driftwood routes. Stops include Austin Visitor Center, Hill Country Winery, Salt Lick BBQ, Second Winery Stop. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $67.22",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 999
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/cf/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "From Austin: Hill Country BBQ & Wine Shuttle from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave downtown Austin for a half-day Hill Country shuttle that pairs Texas barbecue at Salt Lick with two winery stops.",
+    "itineraryItems": [
+      {
+        "title": "Austin Visitor Center",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hill Country Winery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Salt Lick BBQ",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Second Winery Stop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided wine experience",
+      "As described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the From Austin: Hill Country BBQ & Wine Shuttle?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tastings"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 67.22
+      },
+      "currency": "USD"
+    }
+  }
+}

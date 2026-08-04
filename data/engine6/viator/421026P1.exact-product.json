@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "421026P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Inclusive-Private-Wine-Tasting-Experience-in-Austin/d5021-421026P1",
+    "title": "At-Home Private Wine or NA Wine Tasting Experience in Austin",
+    "description": {
+      "text": "Host a private wine tasting with a certified sommelier at your Austin home or lodging. Walk through three guided tastings for your group of up to 15 while learning how to evaluate aroma, structure, and finish without fighting crowded tasting rooms. Stops include Private Austin Location, Guided Wine Tasting Flight, Sommelier Q&A. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/91/0f/45.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "At-Home Private Wine or NA Wine Tasting Experience in Austin from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Host a private wine tasting with a certified sommelier at your Austin home or lodging.",
+    "itineraryItems": [
+      {
+        "title": "Private Austin Location",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Guided Wine Tasting Flight",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sommelier Q&A",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided wine experience",
+      "As described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the At-Home Private Wine or NA Wine Tasting Experience in Austin?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tastings"
+      },
+      {
+        "label": "Private Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

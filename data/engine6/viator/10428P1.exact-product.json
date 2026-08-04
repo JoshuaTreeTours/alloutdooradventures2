@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "10428P1",
+    "productUrl": "https://www.viator.com/tours/Austin/2-Hour-City-Tour-Perfect-balance-of-major-landmarks-and-offbeat-gems-The-Real-Austin-Tour-by-Austin-Detours/d5021-10428P1",
+    "title": "Best of Austin Small-Group Driving Tour with Local Guide",
+    "description": {
+      "text": "Cover Austin landmarks and offbeat gems on a two-hour small-group driving tour with a local guide. Your guide covers Austin landmarks such as the Texas State Capitol, South Congress murals, Lady Bird Lake, Mt. Bonnell, or nearby Hill Country scenery depending on the itinerary. Stops include Greetings from Austin Mural, Texas State Capitol, Neighborhood Highlights. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $49.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 2383
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/10/17/ed/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Best of Austin Small-Group Driving Tour with Local Guide from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cover Austin landmarks and offbeat gems on a two-hour small-group driving tour with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Meeting Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Greetings from Austin Mural",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Texas State Capitol",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Neighborhood Highlights",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Austin Small-Group Driving Tour with Local Guide?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49
+      },
+      "currency": "USD"
+    }
+  }
+}

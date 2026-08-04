@@ -40,6 +40,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     denver: ["Denver"],
     aspen: ["Aspen"],
     boulder: ["Boulder"],
+    austin: ["Austin"],
+    texas: ["Austin"],
     colorado: ["Rocky Mountain National Park", "Denver", "Aspen", "Boulder"],
     philadelphia: ["Philadelphia"],
     pennsylvania: ["Philadelphia"],

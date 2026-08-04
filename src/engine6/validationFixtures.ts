@@ -109,6 +109,26 @@ import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-pr
 import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
 import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
 import specimen41410p10Payload from "../../data/engine6/viator/41410P10.exact-product.json";
+import specimen5513806p1Payload from "../../data/engine6/viator/5513806P1.exact-product.json";
+import specimen406074p3Payload from "../../data/engine6/viator/406074P3.exact-product.json";
+import specimen421026p1Payload from "../../data/engine6/viator/421026P1.exact-product.json";
+import specimen327690p1Payload from "../../data/engine6/viator/327690P1.exact-product.json";
+import specimen10428p19Payload from "../../data/engine6/viator/10428P19.exact-product.json";
+import specimen10428p6Payload from "../../data/engine6/viator/10428P6.exact-product.json";
+import specimen87115p27Payload from "../../data/engine6/viator/87115P27.exact-product.json";
+import specimen5494432p1Payload from "../../data/engine6/viator/5494432P1.exact-product.json";
+import specimen5494432p3Payload from "../../data/engine6/viator/5494432P3.exact-product.json";
+import specimen153655p2Payload from "../../data/engine6/viator/153655P2.exact-product.json";
+import specimen10428p1Payload from "../../data/engine6/viator/10428P1.exact-product.json";
+import specimen244340p2Payload from "../../data/engine6/viator/244340P2.exact-product.json";
+import specimen121998p6Payload from "../../data/engine6/viator/121998P6.exact-product.json";
+import specimen406074p1Payload from "../../data/engine6/viator/406074P1.exact-product.json";
+import specimen291969p2Payload from "../../data/engine6/viator/291969P2.exact-product.json";
+import specimen57338p1Payload from "../../data/engine6/viator/57338P1.exact-product.json";
+import specimen42365p4Payload from "../../data/engine6/viator/42365P4.exact-product.json";
+import specimen42365p1Payload from "../../data/engine6/viator/42365P1.exact-product.json";
+import specimen350454p2Payload from "../../data/engine6/viator/350454P2.exact-product.json";
+import specimen134057p1Payload from "../../data/engine6/viator/134057P1.exact-product.json";
 import specimen87324p1Payload from "../../data/engine6/viator/87324P1.exact-product.json";
 import specimen326597p1Payload from "../../data/engine6/viator/326597P1.exact-product.json";
 import specimen134767p1Payload from "../../data/engine6/viator/134767P1.exact-product.json";
@@ -1939,6 +1959,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "41410P10",
     publicUrl: "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
     rawPayload: specimen41410p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5513806P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Personal-Group-Tour-4-People-Bronco/d5021-5513806P1",
+    rawPayload: specimen5513806p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "406074P3",
+    publicUrl: "https://www.viator.com/tours/Austin/Giant-Paddleboarding-the-Downtown-Skyline-at-Sunset-w-Bats/d5021-406074P3",
+    rawPayload: specimen406074p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "421026P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Inclusive-Private-Wine-Tasting-Experience-in-Austin/d5021-421026P1",
+    rawPayload: specimen421026p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "327690P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Half-Day-Wine-Tour-in-Luxury-Limousine/d5021-327690P1",
+    rawPayload: specimen327690p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "10428P19",
+    publicUrl: "https://www.viator.com/tours/Austin/From-Austin-Half-Day-Hill-Country-Wine-Shuttle/d5021-10428P19",
+    rawPayload: specimen10428p19Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "10428P6",
+    publicUrl: "https://www.viator.com/tours/Austin/Austins-Salt-Lick-and-Winery-Shuttle/d5021-10428P6",
+    rawPayload: specimen10428p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87115P27",
+    publicUrl: "https://www.viator.com/tours/Austin/Austin-City-Tour-with-State-Capitol/d5021-87115P27",
+    rawPayload: specimen87115p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5494432P1",
+    publicUrl: "https://www.viator.com/tours/Austin/20-Minute-Downtown-Austin-and-Lake-Austin/d5021-5494432P1",
+    rawPayload: specimen5494432p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5494432P3",
+    publicUrl: "https://www.viator.com/tours/Austin/30-Minute-Tour-F1-Circuit-of-the-Americas/d5021-5494432P3",
+    rawPayload: specimen5494432p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "153655P2",
+    publicUrl: "https://www.viator.com/tours/Austin/Lake-Austin-Pontoon-Boat-Tours/d5021-153655P2",
+    rawPayload: specimen153655p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "10428P1",
+    publicUrl: "https://www.viator.com/tours/Austin/2-Hour-City-Tour-Perfect-balance-of-major-landmarks-and-offbeat-gems-The-Real-Austin-Tour-by-Austin-Detours/d5021-10428P1",
+    rawPayload: specimen10428p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "244340P2",
+    publicUrl: "https://www.viator.com/tours/Austin/Lake-Travis-Sunset-Boat-Tour/d5021-244340P2",
+    rawPayload: specimen244340p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "121998P6",
+    publicUrl: "https://www.viator.com/tours/Austin/Lake-Austin-Boat-Tour-and-Sunset-Cruise-Per-Person/d5021-121998P6",
+    rawPayload: specimen121998p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "406074P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Downtown-Sunset-Kayak-with-1-5-Million-Bats/d5021-406074P1",
+    rawPayload: specimen406074p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "291969P2",
+    publicUrl: "https://www.viator.com/tours/Austin/Guided-Sunset-Kayak-Tour-in-Austin-Texas/d5021-291969P2",
+    rawPayload: specimen291969p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "57338P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Austin-Electric-Minibike-Tour/d5021-57338P1",
+    rawPayload: specimen57338p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42365P4",
+    publicUrl: "https://www.viator.com/tours/Austin/Let-it-Ride-Austin-Electric-Bike-Tour/d5021-42365P4",
+    rawPayload: specimen42365p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42365P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Austin-in-a-Nutshell/d5021-42365P1",
+    rawPayload: specimen42365p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "350454P2",
+    publicUrl: "https://www.viator.com/tours/Austin/Austin-Groovy-Ebike-Tours/d5021-350454P2",
+    rawPayload: specimen350454p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "134057P1",
+    publicUrl: "https://www.viator.com/tours/Austin/Tour-Austin-on-an-E-bike/d5021-134057P1",
+    rawPayload: specimen134057p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

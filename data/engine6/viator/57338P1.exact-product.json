@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "57338P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Austin-Electric-Minibike-Tour/d5021-57338P1",
+    "title": "Austin Biker Gang E-Bike Tour",
+    "description": {
+      "text": "Ride electric minibikes with a guide past Austin murals, bridges, and skyline viewpoints. The roughly 90-minute Biker Gang format mixes photo stops at landmarks such as the Greetings from Austin mural with easy throttle-assisted cruising. Stops include Greetings from Austin Mural, Bridge Skyline Stop, Neighborhood Cruise. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $68.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1441
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/90/78/4a/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Austin Biker Gang E-Bike Tour from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride electric minibikes with a guide past Austin murals, bridges, and skyline viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Meeting Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Greetings from Austin Mural",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridge Skyline Stop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Neighborhood Cruise",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "E-bike or bicycle",
+      "Helmet",
+      "Guided route"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Austin Biker Gang E-Bike Tour?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "E-Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 68
+      },
+      "currency": "USD"
+    }
+  }
+}
