@@ -747,6 +747,59 @@ export const ENGINE6_HOUSTON_TOUR_PATH_PREFIX =
 
 export const isEngine6HoustonTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_HOUSTON_TOUR_PATH_PREFIX);
+export const ENGINE6_ARCHES_108923P4_PRODUCT_CODE = "108923P4";
+export const ENGINE6_ARCHES_108923P4_ROUTE =
+  "/destinations/utah/arches-national-park/tours/private-guided-hike-in-arches-national-park-108923P4";
+export const ENGINE6_ARCHES_18497P17_PRODUCT_CODE = "18497P17";
+export const ENGINE6_ARCHES_18497P17_ROUTE =
+  "/destinations/utah/arches-national-park/tours/discover-the-hidden-arches-solitaire-arches-private-des-18497P17";
+export const ENGINE6_ARCHES_18497P4_PRODUCT_CODE = "18497P4";
+export const ENGINE6_ARCHES_18497P4_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-national-park-hike-challenge-tackle-devils-garde-18497P4";
+export const ENGINE6_ARCHES_265766P8_PRODUCT_CODE = "265766P8";
+export const ENGINE6_ARCHES_265766P8_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-full-day-private-tour-and-hike-265766P8";
+export const ENGINE6_ARCHES_334588P2_PRODUCT_CODE = "334588P2";
+export const ENGINE6_ARCHES_334588P2_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-national-park-backcountry-tour-334588P2";
+export const ENGINE6_ARCHES_24134P2_PRODUCT_CODE = "24134P2";
+export const ENGINE6_ARCHES_24134P2_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-national-park-back-country-adventure-from-moab-24134P2";
+export const ENGINE6_ARCHES_6896P1_PRODUCT_CODE = "6896P1";
+export const ENGINE6_ARCHES_6896P1_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-and-canyonlands-4x4-adventure-from-moab-6896P1";
+export const ENGINE6_ARCHES_148657P5_PRODUCT_CODE = "148657P5";
+export const ENGINE6_ARCHES_148657P5_ROUTE =
+  "/destinations/utah/arches-national-park/tours/sunset-and-night-photography-in-arches-national-park-148657P5";
+export const ENGINE6_ARCHES_18497P9_PRODUCT_CODE = "18497P9";
+export const ENGINE6_ARCHES_18497P9_ROUTE =
+  "/destinations/utah/arches-national-park/tours/secluded-arches-sunset-experience-best-of-devils-garden-18497P9";
+export const ENGINE6_ARCHES_14649P16_PRODUCT_CODE = "14649P16";
+export const ENGINE6_ARCHES_14649P16_ROUTE =
+  "/destinations/utah/arches-national-park/tours/corona-arch-canyon-run-helicopter-tour-14649P16";
+export const ENGINE6_ARCHES_14649P18_PRODUCT_CODE = "14649P18";
+export const ENGINE6_ARCHES_14649P18_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-national-park-airplane-tour-14649P18";
+export const ENGINE6_ARCHES_265766P26_PRODUCT_CODE = "265766P26";
+export const ENGINE6_ARCHES_265766P26_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-full-day-small-group-tour-265766P26";
+export const ENGINE6_ARCHES_24134P13_PRODUCT_CODE = "24134P13";
+export const ENGINE6_ARCHES_24134P13_ROUTE =
+  "/destinations/utah/arches-national-park/tours/day-tour-arches-and-canyonlands-national-park-in-utah-24134P13";
+export const ENGINE6_ARCHES_18497P1_PRODUCT_CODE = "18497P1";
+export const ENGINE6_ARCHES_18497P1_ROUTE =
+  "/destinations/utah/arches-national-park/tours/best-scenic-arches-tours-w-walks-pick-3hr-4hr-5hr-or-7h-18497P1";
+export const ENGINE6_ARCHES_24134P16_PRODUCT_CODE = "24134P16";
+export const ENGINE6_ARCHES_24134P16_ROUTE =
+  "/destinations/utah/arches-national-park/tours/arches-national-park-morning-or-afternoon-van-tours-24134P16";
+
+export const ENGINE6_ARCHES_NATIONAL_PARK_TOUR_PATH_PREFIX =
+  "/destinations/utah/arches-national-park/tours/";
+
+export const isEngine6ArchesNationalParkTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_ARCHES_NATIONAL_PARK_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3272,6 +3325,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_HOUSTON_164292P1_ROUTE,
     ENGINE6_HOUSTON_164292P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_108923P4_ROUTE,
+    ENGINE6_ARCHES_108923P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_18497P17_ROUTE,
+    ENGINE6_ARCHES_18497P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_18497P4_ROUTE,
+    ENGINE6_ARCHES_18497P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_265766P8_ROUTE,
+    ENGINE6_ARCHES_265766P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_334588P2_ROUTE,
+    ENGINE6_ARCHES_334588P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_24134P2_ROUTE,
+    ENGINE6_ARCHES_24134P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_6896P1_ROUTE,
+    ENGINE6_ARCHES_6896P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_148657P5_ROUTE,
+    ENGINE6_ARCHES_148657P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_18497P9_ROUTE,
+    ENGINE6_ARCHES_18497P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_14649P16_ROUTE,
+    ENGINE6_ARCHES_14649P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_14649P18_ROUTE,
+    ENGINE6_ARCHES_14649P18_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_265766P26_ROUTE,
+    ENGINE6_ARCHES_265766P26_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_24134P13_ROUTE,
+    ENGINE6_ARCHES_24134P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_18497P1_ROUTE,
+    ENGINE6_ARCHES_18497P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ARCHES_24134P16_ROUTE,
+    ENGINE6_ARCHES_24134P16_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

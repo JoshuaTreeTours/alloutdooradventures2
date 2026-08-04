@@ -1,0 +1,146 @@
+{
+  "destinationLabel": "Arches National Park",
+  "destinationCitySlug": "arches-national-park",
+  "viatorDestinationSlug": "Moab",
+  "viatorDestinationId": "d5600",
+  "attractionId": "a16091",
+  "catalogUrl": "https://www.viator.com/Moab-attractions/Arches-National-Park/d5600-a16091",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 15,
+  "premiumCount": 13,
+  "selectionNote": "Selected 15 guided Arches National Park products from attraction catalog d5600-a16091 with live commercial fields and product-specific heroes. Catalog advertises ~90 tours; many are audio/self-guided apps, Moab-already-bound SKUs, inactive/thin commercial listings, or non-Arches Moab adventures. No wine tours found. Jeep/off-road, private hiking, photography/stargazing-adjacent night photo, helicopter, and airplane covered. Paragon reference 265766P10 remains Zion-bound. Moab-bound Arches SKUs (7016P4, 22803P33, 6896MOABAPARK, 458439P2, 334588P4, 18497P15, 169760P14, 265766P59) were not reassigned. Fewer than 20 because viable unbound guided inventory after rejects is 15.",
+  "selectedProductCodes": [
+    "108923P4",
+    "18497P17",
+    "18497P4",
+    "265766P8",
+    "334588P2",
+    "24134P2",
+    "6896P1",
+    "148657P5",
+    "18497P9",
+    "14649P16",
+    "14649P18",
+    "265766P26",
+    "24134P13",
+    "18497P1",
+    "24134P16"
+  ],
+  "premiumProductCodes": [
+    "108923P4",
+    "18497P17",
+    "18497P4",
+    "265766P8",
+    "334588P2",
+    "24134P2",
+    "6896P1",
+    "148657P5",
+    "18497P9",
+    "14649P16",
+    "14649P18",
+    "265766P26",
+    "24134P13"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "209615P252",
+      "title": "Discover Arches National Park: Private Tour from Moab",
+      "reason": "Thin Viator rating/review signal (no reliable public review count on product card)"
+    },
+    {
+      "productCode": "14649P2",
+      "title": "Canyonlands and Arches Combo in Moab",
+      "reason": "Live H1 uncertain; likely near-duplicate of 14649P18 airplane product"
+    },
+    {
+      "productCode": "122460P8",
+      "title": "Arches National Park Morning Tour",
+      "reason": "Poor commercial data (no price/hero; only 2 reviews)"
+    },
+    {
+      "productCode": "122460P2",
+      "title": "Two-Hour Hummer Safari",
+      "reason": "Not Arches-focused (Moab slickrock safari)"
+    },
+    {
+      "productCode": "18497P10",
+      "title": "Moab's Slot Canyon Hike",
+      "reason": "Not Arches-focused"
+    },
+    {
+      "productCode": "371657P2",
+      "title": "Electric Dirt Bike Tour Gemini Bridges",
+      "reason": "Not Arches NP focused"
+    },
+    {
+      "productCode": "267535P4",
+      "title": "Arches National Park Self-Guided Driving Audio Tour",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "102020P34",
+      "title": "Full-Day Audio Driving Tour of Arches National Park",
+      "reason": "Audio tour"
+    },
+    {
+      "productCode": "267535P17",
+      "title": "Arches and Canyonlands NP Self-Guided Driving Audio Bundle Tour",
+      "reason": "Self-guided audio bundle"
+    },
+    {
+      "productCode": "259640P12",
+      "title": "Utah Mighty 5 National Parks Self-Guided Driving Audio Tours",
+      "reason": "Self-guided audio"
+    },
+    {
+      "productCode": "259428P10",
+      "title": "30+ National Parks Self-Guided Driving Tours Bundle",
+      "reason": "Self-guided audio bundle"
+    },
+    {
+      "productCode": "7016P4",
+      "title": "Arches National Park Scenic Tours From Moab",
+      "reason": "Already published as Moab Engine6 product; exclusivity forbids dual binding"
+    },
+    {
+      "productCode": "22803P33",
+      "title": "Arches National Park Half Day Tour",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "6896MOABAPARK",
+      "title": "Arches National Park 4x4 Adventure from Moab",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "458439P2",
+      "title": "Astro-Photo, Hiking and Stargazing Tour in Arches National Park",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "334588P4",
+      "title": "3-Hours Sunset Arches National Park Pavement Sights Tour",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "18497P15",
+      "title": "Discover 3 Moab Parks In 1 Day",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "169760P14",
+      "title": "Private full day tour and hike combo.",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "265766P59",
+      "title": "Arches & Canyonlands Two Day Private Tour & Hike",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "77370P4",
+      "title": "Rockies to the Red Rocks Train Moab to Denver SilverLeaf",
+      "reason": "Multi-day train package; not an Arches guided tour product"
+    }
+  ]
+}

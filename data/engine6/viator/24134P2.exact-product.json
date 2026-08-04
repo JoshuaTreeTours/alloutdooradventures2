@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "24134P2",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Backcountry-4x4-Half-Day/d5600-24134P2",
+    "title": "Arches National Park Back Country Adventure from Moab",
+    "description": {
+      "text": "Half-day 4x4 backcountry adventure into Arches National Park with an experienced guide in Jeep Wranglers. Off-pavement trails access views most visitors miss; guides rotate passengers among seats. Stops include Arches National Park Backcountry, Tower Arch Area. Timed-entry tickets are NOT needed. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own. Routes stay oriented to Arches National Park Backcountry, Tower Arch Area that define this Moab-area park experience."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $210.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 610
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a7/4d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day 4x4 backcountry adventure into Arches National Park with an experienced guide in Jeep Wranglers",
+      "Off-pavement trails access views most visitors miss; guides rotate passengers among seats",
+      "Timed-entry tickets are NOT needed",
+      "Arches National Park Back Country Adventure from Moab near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Half-day 4x4 backcountry adventure into Arches National Park with an experienced guide in Jeep Wranglers.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park Backcountry",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower Arch Area",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Experienced knowledgeable guide",
+      "Transport by 4x4 vehicle",
+      "Ice, water, and snacks",
+      "Parking at office"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches National Park Back Country Adventure from Moab?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210
+      },
+      "currency": "USD"
+    }
+  }
+}

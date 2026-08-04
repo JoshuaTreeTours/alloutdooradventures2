@@ -65,6 +65,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Arches",
+      matches: tour =>
+        /\/arches-national-park\//i.test(tour.canonicalPath) ||
+        /\barches national park\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Olympic",
       matches: tour =>
         /\/olympic-national-park\//i.test(tour.canonicalPath) ||

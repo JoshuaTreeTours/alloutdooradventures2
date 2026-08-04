@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "108923P4",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-Guided-Hike-in-Arches-National-Park/d5600-108923P4",
+    "title": "Private Guided Hike in Arches National Park",
+    "description": {
+      "text": "Arches National Park is home to the highest concentration of natural arches anywhere in the world. Contained within its 76,518 acres are well over 2,000 documented arches. Stops include Delicate Arch Viewpoint. While impossible to see all of them in one visit, guides take you on a private tour of the most impressive geologic formations in the park. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $244.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5e/d7/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Arches National Park is home to the highest concentration of natural arches anywhere in the world",
+      "Contained within its 76,518 acres are well over 2,000 documented arches",
+      "While impossible to see all of them in one visit, guides take you on a private tour of the most impressive geologic form",
+      "Private Guided Hike in Arches National Park near Arches National Park",
+      "Professional Arches National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Arches National Park is home to the highest concentration of natural arches anywhere in the world.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Delicate Arch Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional experienced guide",
+      "Private tour for your group only",
+      "National Park entry fee",
+      "Snacks and bottled water",
+      "Hotel pickup/drop-off within 5 miles of Moab"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Guided Hike in Arches National Park?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 244
+      },
+      "currency": "USD"
+    }
+  }
+}

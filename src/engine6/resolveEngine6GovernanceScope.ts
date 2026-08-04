@@ -28,6 +28,7 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     "yellowstone-national-park": ["Yellowstone"],
     "zion-national-park": ["Zion"],
     "bryce-canyon-national-park": ["Bryce Canyon"],
+    "arches-national-park": ["Arches"],
     "olympic-national-park": ["Olympic"],
     glacier: ["Glacier"],
     "great-smoky-mountains-national-park": ["Great Smoky Mountains"],

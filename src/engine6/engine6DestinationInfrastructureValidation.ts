@@ -83,6 +83,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "utah",
     citySlug: "moab",
   },
+  "arches-national-park": {
+    destinationLabel: "Arches National Park",
+    destinationCitySlug: "arches-national-park",
+    stateSlug: "utah",
+    citySlug: "arches-national-park",
+  },
   "key-west": {
     destinationLabel: "Key West",
     destinationCitySlug: "key-west",

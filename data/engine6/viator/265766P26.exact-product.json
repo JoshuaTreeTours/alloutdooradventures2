@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "265766P26",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Small-Group-Tour-of-Arches-National-Park/d5600-265766P26",
+    "title": "Arches Full Day Small Group Tour",
+    "description": {
+      "text": "Full-day small-group guided tour and hike focused on Arches National Park. Your guide covers landmark stops such as Delicate Arch, the Windows Section, Devils Garden, or nearby backcountry fins depending on the itinerary. Stops include Delicate Arch Viewpoint. Local commentary and route logistics are handled so you can focus on arches, viewpoints, and photography or adventure highlights. Ideal for visitors basing in Moab who want a guided Arches National Park experience without coordinating timed entry, trailheads, or backcountry logistics on their own."
+    },
+    "location": {
+      "city": "Arches National Park",
+      "state": "Utah"
+    },
+    "duration": "7 to 8 hours",
+    "priceFrom": "From $427.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/29/5f/06.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Arches Full Day Small Group Tour from Arches National Park",
+      "Natural stone arches and red-rock viewpoints",
+      "Professional guide with Arches local expertise",
+      "Small-group or private format as listed",
+      "Arches scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Moab or Arches National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Full-day small-group guided tour and hike focused on Arches National Park.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Delicate Arch Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small-group guided full-day tour",
+      "Hiking components",
+      "Likely lunch/transport (confirm on page)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches Full Day Small Group Tour?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Arches National Park?",
+        "answer": "Meet your guide at the confirmed Arches meeting location listed when booking, typically near Moab or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 427
+      },
+      "currency": "USD"
+    }
+  }
+}
