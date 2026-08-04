@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "326597P4",
+    "productUrl": "https://www.viator.com/tours/Boulder/IRideColorado/d22773-326597P4",
+    "title": "Best Family Small-Group E-Bike Guided Tour in Boulder, Colorado",
+    "description": {
+      "text": "This is our All-In-One \"Best Family\" Boulder tour designed for families, couples, or solo guests to see the top destinations of the city. After a safety orientation session, head out to the trails to see Wonderland Lake, Pearl Street, CU Boulder's campus, Boulder Creek, the Flatiron Mountains, and more. Stops include Folsom Field, Fiske Planetarium, Hotel Boulderado, Boulder County Farmers Market, University of Colorado at Boulder, The Hill. Local commentary and route logistics are handled so you can focus on Boulder's foothills scenery, open-space trails, and downtown highlights. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 31
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/19/31/fe/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Best Family Small-Group E-Bike Guided Tour in Boulder, Colorado from Boulder",
+      "Flatirons foothills, Pearl Street, Chautauqua, or creek-side paths",
+      "Professional guide with Boulder local expertise",
+      "Small-group or private format as listed",
+      "Boulder outdoor sightseeing, hiking, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This is our All-In-One \"Best Family\" Boulder tour designed for families, couples, or solo guests to see the top destinations of the city.",
+    "itineraryItems": [
+      {
+        "title": "Folsom Field",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fiske Planetarium",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hotel Boulderado",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boulder County Farmers Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "University of Colorado at Boulder",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of electric bike",
+      "Helmet",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best Family Small-Group E-Bike Guided Tour in Boulder, Colorado?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Mountain Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

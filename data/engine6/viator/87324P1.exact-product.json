@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "87324P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Miles-of-Smiles-E-Bike-Tour/d22773-87324P1",
+    "title": "Best of Boulder E-Bike Tour",
+    "description": {
+      "text": "Visit the places that make Boulder the “Happiest City in America” on a guided e-bike tour. The electric motor allows you to cover a huge range of attractions in the great outdoors, without getting winded. Stops include Pedego Boulder- Electric Bike Tours & Rentals, Settler's Park, Flatirons, Colorado Chautauqua: Park, University of Colorado at Boulder, National Center for Atmospheric Research - NCAR. Get comfortable with your e-bike during a short training session before the tour begins. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $103.53",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 381
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/19/1e/6d/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit the places that make Boulder the “Happiest City in America” on a guided e-bike tour",
+      "The electric motor allows you to cover a huge range of attractions in the great outdoors, without getting winded",
+      "Get comfortable with your e-bike during a short training session before the tour begins",
+      "Best of Boulder E-Bike Tour departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Visit the places that make Boulder the “Happiest City in America” on a guided e-bike tour.",
+    "itineraryItems": [
+      {
+        "title": "Pedego Boulder- Electric Bike Tours & Rentals",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Settler's Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flatirons",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado Chautauqua: Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "University of Colorado at Boulder",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional local guide",
+      "Use of electric bike",
+      "Use of bike helmet",
+      "Hotel drop-off",
+      "Hotel pickup",
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Boulder E-Bike Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Mountain Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 103.53
+      },
+      "currency": "USD"
+    }
+  }
+}

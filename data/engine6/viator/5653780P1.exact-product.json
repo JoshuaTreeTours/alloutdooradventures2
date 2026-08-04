@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "5653780P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Rocky-Mountain-National-Park-Tour-and-Picnic/d22773-5653780P1",
+    "title": "Rocky Mountain National Park Tour and Picnic",
+    "description": {
+      "text": "Experience Rocky Mountain National Park on this personalized small-group tour departing from Boulder. A guide handles mountain-road logistics while you take in alpine peaks, park overlooks, and nearby gateway towns without arranging park reservations yourself. Stops include Lyons, Estes Park, Beaver Meadows Visitor Center, Trail Ridge Road, Alpine Visitor Center, Sprague Lake. Local commentary and route logistics are handled so you can focus on Boulder's foothills scenery, open-space trails, and downtown highlights. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $189.05",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 27
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/33/44/b8/8a/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Rocky Mountain National Park Tour and Picnic from Boulder",
+      "Flatirons foothills, Pearl Street, Chautauqua, or creek-side paths",
+      "Professional guide with Boulder local expertise",
+      "Small-group or private format as listed",
+      "Boulder outdoor sightseeing, hiking, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup points Select a pickup point Pickup details The guide will wait at the entrance of your specified pickup location. If you’re staying at a hotel the guide will wait in front of the concierge desk. If you’re at an AirBnB or other private residence, the guide will wait outside. A text will be sent to notify of their arrival. Start time . 7:30 am"
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Rocky Mountain National Park on this personalized small-group tour departing from Boulder.",
+    "itineraryItems": [
+      {
+        "title": "Lyons",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Estes Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Beaver Meadows Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast Lite breakfast bites to start the day",
+      "Lunch A catered picnic lunch within the park",
+      "Entrance fee - Admission into Rocky Mountain National Park is included for all guests",
+      "Binoculars (Vortex) for every guest",
+      "Spotting Scope (Vortex)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rocky Mountain National Park Tour and Picnic?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Pickup points Select a pickup point Pickup details The guide will wait at the entrance of your specified pickup location. If you’re staying at a hotel the guide will wait in front of the concierge desk. If you’re at an AirBnB or other private residence, the guide will wait outside. A text will be sent to notify of their arrival. Start time . 7:30 am"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189.05
+      },
+      "currency": "USD"
+    }
+  }
+}

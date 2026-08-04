@@ -1,0 +1,89 @@
+{
+  "destinationLabel": "Boulder",
+  "destinationCitySlug": "boulder",
+  "viatorDestinationSlug": "Boulder",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/Boulder/d22773-ttd",
+  "selectedCount": 15,
+  "premiumCount": 8,
+  "selectionNote": "Selected 15 strongest viable Boulder d22773 guided products with verified live HTML commercial fields and product-specific heroes. Catalog (~49 listings) is e-bike heavy; rejected audio/self-guided/scavenger, unavailable products, zero/1-review weak commercial rows, and near-duplicates. Premium share 8/15 via private photography, private hiking, horse retreat, yoga hike, off-road dirt-road e-bike, Eldorado Canyon, and RMNP picnic. No active helicopter/wine/stargazing/jeep inventory with usable commercial data on live Boulder catalog (Switzerland Trail jeep 348362P1 404).",
+  "selectedProductCodes": [
+    "87324P1",
+    "326597P1",
+    "134767P1",
+    "326597P4",
+    "326597P3",
+    "283446P3",
+    "411989P1",
+    "205114P1",
+    "5653780P1",
+    "210815P2",
+    "438442P1",
+    "404160P1",
+    "87324P2",
+    "5554564P5",
+    "397161P1"
+  ],
+  "premiumProductCodes": [
+    "205114P1",
+    "5653780P1",
+    "210815P2",
+    "438442P1",
+    "404160P1",
+    "87324P2",
+    "5554564P5",
+    "397161P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "336661P17",
+      "title": "Guided eBike Tour of Rocky Mountain National Park",
+      "reason": "Only 1 review; weak commercial data"
+    },
+    {
+      "productCode": "389643P1",
+      "title": "Private Rocky Mountain Foraging Experience",
+      "reason": "Zero traveler reviews; poor commercial rating parity"
+    },
+    {
+      "productCode": "5644084P4",
+      "title": "4 Hour Guided Fly Fishing Trip in Rocky Mountain National Park",
+      "reason": "Only 2 reviews; weak commercial data"
+    },
+    {
+      "productCode": "5653780P2",
+      "title": "Rocky Mountain National Park Guided Hike and Picnic",
+      "reason": "Near-duplicate of selected 5653780P1 RMNP picnic tour"
+    },
+    {
+      "productCode": "87324P8",
+      "title": "Boulder Art and Nature E-Bike Tour",
+      "reason": "Only 1 review; near-duplicate Pedego e-bike sightseeing"
+    },
+    {
+      "productCode": "18473P11",
+      "title": "18473P11",
+      "reason": "Live page unavailable / 404"
+    },
+    {
+      "productCode": "478324P1",
+      "title": "478324P1",
+      "reason": "Live page unavailable / 404"
+    },
+    {
+      "productCode": "283446P2",
+      "title": "283446P2",
+      "reason": "Live page unavailable / 404"
+    },
+    {
+      "productCode": "32593P1",
+      "title": "32593P1",
+      "reason": "Live page unavailable / 404"
+    },
+    {
+      "productCode": "344945P1",
+      "title": "Private Outdoor Rock Climbing with a Pro Climbing Guide",
+      "reason": "Only 1 traveler review; poor commercial rating parity for Engine6 fields"
+    }
+  ]
+}

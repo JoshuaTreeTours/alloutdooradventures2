@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "397161P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Boulder-Yoga-Hikes/d22773-397161P1",
+    "title": "Boulder Yoga Hikes",
+    "description": {
+      "text": "If you’re visiting Boulder, this is one of those experiences you’ll be glad you didn’t miss—and very likely the one you’ll end up telling people about when you get home. It’s not just a hike, and not just a yoga class—it’s a feel-good, memorable way to experience the Flatirons that blends movement, nature, and time to actually slow down and take it all in. Stops include Boulder Yoga Hike Trailhead, Flatirons Open Space. Instead of rushing through a checklist of sights, this is about being in it—the views, the fresh air, the energy of the mountains, and those unexpected “wow, I needed this” moments along the way. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/ee/80/dd/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "If you’re visiting Boulder, this is one of those experiences you’ll be glad you didn’t miss—and very likely the one you’",
+      "It’s not just a hike, and not just a yoga class—it’s a feel-good, memorable way to experience the Flatirons that blends ",
+      "Instead of rushing through a checklist of sights, this is about being in it—the views, the fresh air, the energy of the ",
+      "Boulder Yoga Hikes departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point ChargePoint Charging Station 600 Baseline Rd, Boulder, CO 80302, USA Open in Google Maps We meet at the Ranger's cottage near the trailhead at Chautauqua Park. End point This activity ends back at the meeting point."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "If you’re visiting Boulder, this is one of those experiences you’ll be glad you didn’t miss—and very likely the one you’ll end up telling people about when you get home.",
+    "itineraryItems": [
+      {
+        "title": "Boulder Yoga Hike Trailhead",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flatirons Open Space",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Yoga mat rental"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boulder Yoga Hikes?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meeting point ChargePoint Charging Station 600 Baseline Rd, Boulder, CO 80302, USA Open in Google Maps We meet at the Ranger's cottage near the trailhead at Chautauqua Park. End point This activity ends back at the meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

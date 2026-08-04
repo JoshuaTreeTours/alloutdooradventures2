@@ -681,6 +681,58 @@ export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
 export const ENGINE6_KONA_207802P1_ROUTE =
   "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
 
+export const ENGINE6_BOULDER_87324P1_PRODUCT_CODE = "87324P1";
+export const ENGINE6_BOULDER_87324P1_ROUTE =
+  "/destinations/colorado/boulder/tours/best-of-boulder-e-bike-tour-87324P1";
+export const ENGINE6_BOULDER_326597P1_PRODUCT_CODE = "326597P1";
+export const ENGINE6_BOULDER_326597P1_ROUTE =
+  "/destinations/colorado/boulder/tours/ride-boulders-best-guided-ebike-e-bike-tour-electric-eb-326597P1";
+export const ENGINE6_BOULDER_134767P1_PRODUCT_CODE = "134767P1";
+export const ENGINE6_BOULDER_134767P1_ROUTE =
+  "/destinations/colorado/boulder/tours/original-ebike-tour-best-of-boulder-guided-bike-tour-134767P1";
+export const ENGINE6_BOULDER_326597P4_PRODUCT_CODE = "326597P4";
+export const ENGINE6_BOULDER_326597P4_ROUTE =
+  "/destinations/colorado/boulder/tours/best-family-small-group-e-bike-guided-tour-in-boulder-c-326597P4";
+export const ENGINE6_BOULDER_326597P3_PRODUCT_CODE = "326597P3";
+export const ENGINE6_BOULDER_326597P3_ROUTE =
+  "/destinations/colorado/boulder/tours/e-bike-guided-tour-in-boulder-colorado-326597P3";
+export const ENGINE6_BOULDER_283446P3_PRODUCT_CODE = "283446P3";
+export const ENGINE6_BOULDER_283446P3_ROUTE =
+  "/destinations/colorado/boulder/tours/boulder-joyride-guided-ebike-tour-283446P3";
+export const ENGINE6_BOULDER_411989P1_PRODUCT_CODE = "411989P1";
+export const ENGINE6_BOULDER_411989P1_ROUTE =
+  "/destinations/colorado/boulder/tours/immersive-boulder-flatiron-hike-411989P1";
+export const ENGINE6_BOULDER_205114P1_PRODUCT_CODE = "205114P1";
+export const ENGINE6_BOULDER_205114P1_ROUTE =
+  "/destinations/colorado/boulder/tours/leadership-mindfulness-retreat-with-horses-individual-g-205114P1";
+export const ENGINE6_BOULDER_5653780P1_PRODUCT_CODE = "5653780P1";
+export const ENGINE6_BOULDER_5653780P1_ROUTE =
+  "/destinations/colorado/boulder/tours/rocky-mountain-national-park-tour-and-picnic-5653780P1";
+export const ENGINE6_BOULDER_210815P2_PRODUCT_CODE = "210815P2";
+export const ENGINE6_BOULDER_210815P2_ROUTE =
+  "/destinations/colorado/boulder/tours/scenic-mountain-photoshoot-in-boulder-colorado-210815P2";
+export const ENGINE6_BOULDER_438442P1_PRODUCT_CODE = "438442P1";
+export const ENGINE6_BOULDER_438442P1_ROUTE =
+  "/destinations/colorado/boulder/tours/private-boulder-peaks-wilderness-tours-mallory-cave-tra-438442P1";
+export const ENGINE6_BOULDER_404160P1_PRODUCT_CODE = "404160P1";
+export const ENGINE6_BOULDER_404160P1_ROUTE =
+  "/destinations/colorado/boulder/tours/boulder-flatirons-private-photo-adventure-404160P1";
+export const ENGINE6_BOULDER_87324P2_PRODUCT_CODE = "87324P2";
+export const ENGINE6_BOULDER_87324P2_ROUTE =
+  "/destinations/colorado/boulder/tours/boulder-backroads-e-bike-dirt-road-tour-87324P2";
+export const ENGINE6_BOULDER_5554564P5_PRODUCT_CODE = "5554564P5";
+export const ENGINE6_BOULDER_5554564P5_ROUTE =
+  "/destinations/colorado/boulder/tours/boulder-to-eldorado-canyon-e-bike-tour-with-ice-cream-s-5554564P5";
+export const ENGINE6_BOULDER_397161P1_PRODUCT_CODE = "397161P1";
+export const ENGINE6_BOULDER_397161P1_ROUTE =
+  "/destinations/colorado/boulder/tours/boulder-yoga-hikes-397161P1";
+
+export const ENGINE6_BOULDER_TOUR_PATH_PREFIX =
+  "/destinations/colorado/boulder/tours/";
+
+export const isEngine6BoulderTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_BOULDER_TOUR_PATH_PREFIX);
+
 export const ENGINE6_ASPEN_74828P1_PRODUCT_CODE = "74828P1";
 export const ENGINE6_ASPEN_74828P1_ROUTE =
   "/destinations/colorado/aspen/tours/aspens-darkside-ghost-tour-74828P1";
@@ -2948,6 +3000,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_DENVER_41410P10_ROUTE,
     ENGINE6_DENVER_41410P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_87324P1_ROUTE,
+    ENGINE6_BOULDER_87324P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_326597P1_ROUTE,
+    ENGINE6_BOULDER_326597P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_134767P1_ROUTE,
+    ENGINE6_BOULDER_134767P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_326597P4_ROUTE,
+    ENGINE6_BOULDER_326597P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_326597P3_ROUTE,
+    ENGINE6_BOULDER_326597P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_283446P3_ROUTE,
+    ENGINE6_BOULDER_283446P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_411989P1_ROUTE,
+    ENGINE6_BOULDER_411989P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_205114P1_ROUTE,
+    ENGINE6_BOULDER_205114P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_5653780P1_ROUTE,
+    ENGINE6_BOULDER_5653780P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_210815P2_ROUTE,
+    ENGINE6_BOULDER_210815P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_438442P1_ROUTE,
+    ENGINE6_BOULDER_438442P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_404160P1_ROUTE,
+    ENGINE6_BOULDER_404160P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_87324P2_ROUTE,
+    ENGINE6_BOULDER_87324P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_5554564P5_ROUTE,
+    ENGINE6_BOULDER_5554564P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BOULDER_397161P1_ROUTE,
+    ENGINE6_BOULDER_397161P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_ASPEN_74828P1_ROUTE,
