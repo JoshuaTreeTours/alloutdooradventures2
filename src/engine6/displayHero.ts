@@ -67,6 +67,9 @@ export const ENGINE6_BOULDER_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_AUSTIN_CANONICAL_CITY_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/10/17/ed/caption.jpg?w=700&h=500&s=1";
 
+export const ENGINE6_HOUSTON_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/fb/83/03.jpg";
+
 export const ENGINE6_MOAB_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/43/44/fa/caption.jpg";
 
@@ -146,6 +149,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   texas: {
     austin: ENGINE6_AUSTIN_CANONICAL_CITY_HERO_URL,
+    houston: ENGINE6_HOUSTON_CANONICAL_CITY_HERO_URL,
   },
   florida: {
     orlando: ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL,

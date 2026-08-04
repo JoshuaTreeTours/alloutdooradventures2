@@ -681,6 +681,73 @@ export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
 export const ENGINE6_KONA_207802P1_ROUTE =
   "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
 
+export const ENGINE6_HOUSTON_192749P7_PRODUCT_CODE = "192749P7";
+export const ENGINE6_HOUSTON_192749P7_ROUTE =
+  "/destinations/texas/houston/tours/executive-private-houston-city-tour-192749P7";
+export const ENGINE6_HOUSTON_37391P2_PRODUCT_CODE = "37391P2";
+export const ENGINE6_HOUSTON_37391P2_ROUTE =
+  "/destinations/texas/houston/tours/private-houston-tour-3-hr-air-conditioned-city-tour-cus-37391P2";
+export const ENGINE6_HOUSTON_377051P2_PRODUCT_CODE = "377051P2";
+export const ENGINE6_HOUSTON_377051P2_ROUTE =
+  "/destinations/texas/houston/tours/polaris-slingshot-guided-tour-in-houston-377051P2";
+export const ENGINE6_HOUSTON_172188P36_PRODUCT_CODE = "172188P36";
+export const ENGINE6_HOUSTON_172188P36_ROUTE =
+  "/destinations/texas/houston/tours/private-professional-holiday-photoshoot-in-houston-172188P36";
+export const ENGINE6_HOUSTON_129206P4_PRODUCT_CODE = "129206P4";
+export const ENGINE6_HOUSTON_129206P4_ROUTE =
+  "/destinations/texas/houston/tours/private-tour-of-galveston-129206P4";
+export const ENGINE6_HOUSTON_129206P5_PRODUCT_CODE = "129206P5";
+export const ENGINE6_HOUSTON_129206P5_ROUTE =
+  "/destinations/texas/houston/tours/private-3-in-1-sightseeing-brewery-and-mural-tour-of-ho-129206P5";
+export const ENGINE6_HOUSTON_129206P2_PRODUCT_CODE = "129206P2";
+export const ENGINE6_HOUSTON_129206P2_ROUTE =
+  "/destinations/texas/houston/tours/private-houston-mural-instagram-tour-by-cart-129206P2";
+export const ENGINE6_HOUSTON_129206P1_PRODUCT_CODE = "129206P1";
+export const ENGINE6_HOUSTON_129206P1_ROUTE =
+  "/destinations/texas/houston/tours/private-sightseeing-cart-tour-of-houston-129206P1";
+export const ENGINE6_HOUSTON_331634P5_PRODUCT_CODE = "331634P5";
+export const ENGINE6_HOUSTON_331634P5_ROUTE =
+  "/destinations/texas/houston/tours/glowing-kayak-tour-port-oconnor-bar-room-bay-331634P5";
+export const ENGINE6_HOUSTON_37391P12_PRODUCT_CODE = "37391P12";
+export const ENGINE6_HOUSTON_37391P12_ROUTE =
+  "/destinations/texas/houston/tours/private-nasa-space-center-day-trip-with-houston-city-to-37391P12";
+export const ENGINE6_HOUSTON_192749P6_PRODUCT_CODE = "192749P6";
+export const ENGINE6_HOUSTON_192749P6_ROUTE =
+  "/destinations/texas/houston/tours/houston-space-center-ticket-with-nasa-expert-guide-tran-192749P6";
+export const ENGINE6_HOUSTON_192749P5_PRODUCT_CODE = "192749P5";
+export const ENGINE6_HOUSTON_192749P5_ROUTE =
+  "/destinations/texas/houston/tours/astroville-tunnel-tour-nasa-space-center-ticket-transpo-192749P5";
+export const ENGINE6_HOUSTON_37391P17_PRODUCT_CODE = "37391P17";
+export const ENGINE6_HOUSTON_37391P17_ROUTE =
+  "/destinations/texas/houston/tours/houston-sightseeing-tour-2-5-hour-air-conditioned-city-37391P17";
+export const ENGINE6_HOUSTON_192749P1_PRODUCT_CODE = "192749P1";
+export const ENGINE6_HOUSTON_192749P1_ROUTE =
+  "/destinations/texas/houston/tours/astroville-tunnel-tour-of-downtown-houston-air-conditio-192749P1";
+export const ENGINE6_HOUSTON_5920CITY_PRODUCT_CODE = "5920CITY";
+export const ENGINE6_HOUSTON_5920CITY_ROUTE =
+  "/destinations/texas/houston/tours/houstons-official-city-mural-tour-5920CITY";
+export const ENGINE6_HOUSTON_298059P2_PRODUCT_CODE = "298059P2";
+export const ENGINE6_HOUSTON_298059P2_ROUTE =
+  "/destinations/texas/houston/tours/trill-on-wheels-hip-hop-party-bike-tour-in-3rd-ward-hou-298059P2";
+export const ENGINE6_HOUSTON_333327P1_PRODUCT_CODE = "333327P1";
+export const ENGINE6_HOUSTON_333327P1_ROUTE =
+  "/destinations/texas/houston/tours/houston-ghosts-and-hauntings-walking-tour-333327P1";
+export const ENGINE6_HOUSTON_192749P8_PRODUCT_CODE = "192749P8";
+export const ENGINE6_HOUSTON_192749P8_ROUTE =
+  "/destinations/texas/houston/tours/space-city-nasa-bus-ticket-bundle-from-downtown-houston-192749P8";
+export const ENGINE6_HOUSTON_192749P3_PRODUCT_CODE = "192749P3";
+export const ENGINE6_HOUSTON_192749P3_ROUTE =
+  "/destinations/texas/houston/tours/nasa-historic-mission-control-tram-tour-general-admissi-192749P3";
+export const ENGINE6_HOUSTON_164292P1_PRODUCT_CODE = "164292P1";
+export const ENGINE6_HOUSTON_164292P1_ROUTE =
+  "/destinations/texas/houston/tours/downtown-houston-brewery-bike-tour-164292P1";
+
+export const ENGINE6_HOUSTON_TOUR_PATH_PREFIX =
+  "/destinations/texas/houston/tours/";
+
+export const isEngine6HoustonTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_HOUSTON_TOUR_PATH_PREFIX);
+
 export const ENGINE6_AUSTIN_5513806P1_PRODUCT_CODE = "5513806P1";
 export const ENGINE6_AUSTIN_5513806P1_ROUTE =
   "/destinations/texas/austin/tours/austin-private-tours-landmarks-local-highlights-5513806P1";
@@ -3067,6 +3134,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_DENVER_41410P10_ROUTE,
     ENGINE6_DENVER_41410P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P7_ROUTE,
+    ENGINE6_HOUSTON_192749P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_37391P2_ROUTE,
+    ENGINE6_HOUSTON_37391P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_377051P2_ROUTE,
+    ENGINE6_HOUSTON_377051P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_172188P36_ROUTE,
+    ENGINE6_HOUSTON_172188P36_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_129206P4_ROUTE,
+    ENGINE6_HOUSTON_129206P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_129206P5_ROUTE,
+    ENGINE6_HOUSTON_129206P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_129206P2_ROUTE,
+    ENGINE6_HOUSTON_129206P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_129206P1_ROUTE,
+    ENGINE6_HOUSTON_129206P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_331634P5_ROUTE,
+    ENGINE6_HOUSTON_331634P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_37391P12_ROUTE,
+    ENGINE6_HOUSTON_37391P12_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P6_ROUTE,
+    ENGINE6_HOUSTON_192749P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P5_ROUTE,
+    ENGINE6_HOUSTON_192749P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_37391P17_ROUTE,
+    ENGINE6_HOUSTON_37391P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P1_ROUTE,
+    ENGINE6_HOUSTON_192749P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_5920CITY_ROUTE,
+    ENGINE6_HOUSTON_5920CITY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_298059P2_ROUTE,
+    ENGINE6_HOUSTON_298059P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_333327P1_ROUTE,
+    ENGINE6_HOUSTON_333327P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P8_ROUTE,
+    ENGINE6_HOUSTON_192749P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_192749P3_ROUTE,
+    ENGINE6_HOUSTON_192749P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HOUSTON_164292P1_ROUTE,
+    ENGINE6_HOUSTON_164292P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_AUSTIN_5513806P1_ROUTE,

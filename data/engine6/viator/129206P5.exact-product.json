@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "129206P5",
+    "productUrl": "https://www.viator.com/tours/Houston/Managers-Special/d5186-129206P5",
+    "title": "Private 3-in-1 Sightseeing, Brewery, and Mural Tour of Houston by Cart",
+    "description": {
+      "text": "Combine Houston sightseeing, street murals, and a brewery stop on a private cart circuit through downtown districts. The Manager's Special format links Market Square Park, mural corridors, Discovery Green, and a local brewery stop in one private tour. Stops include Market Square Park, Downtown Murals, Houston Brewery Stop, Discovery Green. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $115.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 21
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/08/33/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combine Houston sightseeing, street murals, and a brewery stop on a private cart circuit through downtown districts",
+      "The Manager's Special format links Market Square Park, mural corridors, Discovery Green, and a local brewery stop in one",
+      "Stops include Market Square Park, Downtown Murals, Houston Brewery Stop, Discovery Green",
+      "Private 3-in-1 Sightseeing, Brewery, and Mural Tour of Houston by Cart departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Thre is a parking lot and a parking garage beside this location. You must pay to park in both."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Combine Houston sightseeing, street murals, and a brewery stop on a private cart circuit through downtown districts.",
+    "itineraryItems": [
+      {
+        "title": "Market Square Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Murals",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Houston Brewery Stop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Discovery Green",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private 3-in-1 Sightseeing, Brewery, and Mural Tour of Houston by Cart?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Thre is a parking lot and a parking garage beside this location. You must pay to park in both."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 115
+      },
+      "currency": "USD"
+    }
+  }
+}

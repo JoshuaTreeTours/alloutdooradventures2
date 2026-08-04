@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "331634P5",
+    "productUrl": "https://www.viator.com/tours/Houston/Glowing-Kayak-Tour-Port-OConnor-Bar-Room-Bay/d5186-331634P5",
+    "title": "Glowing Kayak Tour Port O'Connor - Bar Room Bay",
+    "description": {
+      "text": "Paddle clear kayaks fitted with underwater LED lights on a guided night outing from Port O'Connor near Houston. The route moves through the Intracoastal Waterway toward Bar Room Bay with a chance to spot marine life illuminated beneath the hull. Stops include Port O'Connor Launch, Intracoastal Waterway, Bar Room Bay. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hours 30 minutes (approx.)",
+    "priceFrom": "From $59.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/75/e1/f1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Paddle clear kayaks fitted with underwater LED lights on a guided night outing from Port O'Connor near Houston",
+      "The route moves through the Intracoastal Waterway toward Bar Room Bay with a chance to spot marine life illuminated bene",
+      "Stops include Port O'Connor Launch, Intracoastal Waterway, Bar Room Bay",
+      "Glowing Kayak Tour Port O'Connor - Bar Room Bay departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Address: 503 16th St. Port O’Connor, TX 77982 GPS Coordinates 28.438436 -96.417195 To find your way to this launch spot, simply put in the below address on your phone's GPS and look for the GlowRow Trailer!"
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Paddle clear kayaks fitted with underwater LED lights on a guided night outing from Port O'Connor near Houston.",
+    "itineraryItems": [
+      {
+        "title": "Port O'Connor Launch",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bar Room Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "GlowRow will provide the crystal clear kayak with lights & USCG flare kit, paddle with lanyard, USCG life jackets, flashlights, and an emergency whistle."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Glowing Kayak Tour Port O'Connor - Bar Room Bay?",
+        "answer": "The planned duration is 1 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Address: 503 16th St. Port O’Connor, TX 77982 GPS Coordinates 28.438436 -96.417195 To find your way to this launch spot, simply put in the below address on your phone's GPS and look for the GlowRow Trailer!"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59.99
+      },
+      "currency": "USD"
+    }
+  }
+}

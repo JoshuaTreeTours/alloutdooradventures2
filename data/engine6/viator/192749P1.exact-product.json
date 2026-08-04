@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "192749P1",
+    "productUrl": "https://www.viator.com/tours/Houston/Downtown-Underground-Tunnel-Tour/d5186-192749P1",
+    "title": "Astroville Tunnel Tour of Downtown Houston (Air-Conditioned)",
+    "description": {
+      "text": "Walk Houston's climate-controlled downtown tunnels with a guide who covers skyscraper lobbies, Theater District connections, and underground city history. The outing finishes near Finn Hall after an orientation that stays cool even on hot Houston days. Stops include Downtown Houston Tunnels, Skyscraper Lobbies, Theater District, Finn Hall. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $30.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 719
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/f6/de/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Walk Houston's climate-controlled downtown tunnels with a guide who covers skyscraper lobbies, Theater District connecti",
+      "The outing finishes near Finn Hall after an orientation that stays cool even on hot Houston days",
+      "Stops include Downtown Houston Tunnels, Skyscraper Lobbies, Theater District, Finn Hall",
+      "Astroville Tunnel Tour of Downtown Houston (Air-Conditioned) departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Our tour guide will meet guests inside the Starbucks location (914 Dallas Street, Houston, TX 77002) approximately 5 minutes prior to the scheduled start time. There is meter parking along Louisiana St and Milam St. and a Private Parking Garage located on 1110 Travis Street.*"
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Walk Houston's climate-controlled downtown tunnels with a guide who covers skyscraper lobbies, Theater District connections, and underground city history.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Houston Tunnels",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Skyscraper Lobbies",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Theater District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Finn Hall",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Access into iconic Houston skyscraper lobbies",
+      "Photos - our tour guide will take pictures of your group per request",
+      "Guided air-conditioned walking city tour inside Houston's tunnel system",
+      "Entry to the air-conditioned Houston tunnel system"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Astroville Tunnel Tour of Downtown Houston (Air-Conditioned)?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Our tour guide will meet guests inside the Starbucks location (914 Dallas Street, Houston, TX 77002) approximately 5 minutes prior to the scheduled start time. There is meter parking along Louisiana St and Milam St. and a Private Parking Garage located on 1110 Travis Street.*"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 30
+      },
+      "currency": "USD"
+    }
+  }
+}

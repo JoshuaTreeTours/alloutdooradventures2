@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "192749P6",
+    "productUrl": "https://www.viator.com/tours/Houston/Best-of-Houston-City-Driving-Tour-with-Local-Guide/d5186-192749P6",
+    "title": "Houston Space Center Ticket With NASA Expert Guide & Transport",
+    "description": {
+      "text": "Ride from downtown Houston to Space Center Houston with a NASA-expert guide, general admission, and round-trip transport included. The guide helps prioritize exhibit halls, theaters, and Rocket Park so you cover the campus efficiently. Stops include Bank of America Tower Pickup, Space Center Houston, NASA Exhibit Halls, Rocket Park. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $96.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 227
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/30/7b/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride from downtown Houston to Space Center Houston with a NASA-expert guide, general admission, and round-trip transport",
+      "The guide helps prioritize exhibit halls, theaters, and Rocket Park so you cover the campus efficiently",
+      "Stops include Bank of America Tower Pickup, Space Center Houston, NASA Exhibit Halls, Rocket Park",
+      "Houston Space Center Ticket With NASA Expert Guide & Transport departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your departure time. Look for our NASA shuttle to arrive in front of the giant, colorful Miro sculpture. Our NASA shuttle will be parked in front of the giant, colorful Miro sculpture."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride from downtown Houston to Space Center Houston with a NASA-expert guide, general admission, and round-trip transport included.",
+    "itineraryItems": [
+      {
+        "title": "Bank of America Tower Pickup",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Center Houston",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "NASA Exhibit Halls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocket Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Tips on maximizing NASA experience and booking free tram tours based on NASA's availability",
+      "NASA Exhibits & Recommendations Sheet",
+      "General Admission (GA) ticket to the NASA Space Center",
+      "Round-Trip Transport from meeting point to NASA Space Center in a Mercedes/Ford Shuttle or black SUV",
+      "English-speaking Expert Guide will accompany group inside Space Center for visit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Houston Space Center Ticket With NASA Expert Guide & Transport?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your departure time. Look for our NASA shuttle to arrive in front of the giant, colorful Miro sculpture. Our NASA shuttle will be parked in front of the giant, colorful Miro sculpture."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 96
+      },
+      "currency": "USD"
+    }
+  }
+}

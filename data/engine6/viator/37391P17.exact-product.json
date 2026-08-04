@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "37391P17",
+    "productUrl": "https://www.viator.com/tours/Houston/2-hour-Houston-orientation-sightseeing-tour/d5186-37391P17",
+    "title": "Houston Sightseeing Tour 2.5-hour Air-Conditioned City Tour",
+    "description": {
+      "text": "See Houston's core landmarks on a 2.5-hour air-conditioned van tour with hotel pickup from select central locations. The driving circuit covers Market Square, Discovery Green, stadium districts, Buffalo Bayou, and River Oaks homes with a local guide narrating city history. Stops include Market Square, Discovery Green, Toyota Center, Buffalo Bayou, River Oaks. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours 45 minutes (approx.)",
+    "priceFrom": "From $64.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 229
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/93/e5/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Houston's core landmarks on a 2.5-hour air-conditioned van tour with hotel pickup from select central locations",
+      "The driving circuit covers Market Square, Discovery Green, stadium districts, Buffalo Bayou, and River Oaks homes with a",
+      "Stops include Market Square, Discovery Green, Toyota Center, Buffalo Bayou, River Oaks",
+      "Houston Sightseeing Tour 2.5-hour Air-Conditioned City Tour departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Tour option 1-C PICKUPS are AVAILABLE on REQUEST in front of Macey's /Galleria Mall at 5135 W. Alabama street 77056. You will receive pickup details and time after booking."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Houston's core landmarks on a 2.",
+    "itineraryItems": [
+      {
+        "title": "Market Square",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Discovery Green",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Toyota Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buffalo Bayou",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "River Oaks",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Doorstep pickup from hotels located in [SELECTED AREAS]",
+      "Bottled Water, light snack",
+      "Air-conditioned vehicle",
+      "1 Free Souvenir per every (2) persons in your party"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Houston Sightseeing Tour 2.5-hour Air-Conditioned City Tour?",
+        "answer": "The planned duration is 2 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Tour option 1-C PICKUPS are AVAILABLE on REQUEST in front of Macey's /Galleria Mall at 5135 W. Alabama street 77056. You will receive pickup details and time after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 64
+      },
+      "currency": "USD"
+    }
+  }
+}

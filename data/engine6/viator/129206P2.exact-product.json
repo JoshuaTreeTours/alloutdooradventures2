@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "129206P2",
+    "productUrl": "https://www.viator.com/tours/Houston/Mural-Instagram-Tour/d5186-129206P2",
+    "title": "Private Houston Mural Instagram Tour by Cart",
+    "description": {
+      "text": "Ride an open electric cart through downtown Houston mural corridors with a guide who stages photo stops at street-art walls and neighborhood landmarks. The private mural route stays focused on Market Square Park, downtown murals, and EaDo street art rather than long walking transfers. Stops include Market Square Park, Downtown Houston Murals, EaDo Street Art, Photo Stop Circuit. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a6/b0/82.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride an open electric cart through downtown Houston mural corridors with a guide who stages photo stops at street-art wa",
+      "The private mural route stays focused on Market Square Park, downtown murals, and EaDo street art rather than long walki",
+      "Stops include Market Square Park, Downtown Houston Murals, EaDo Street Art, Photo Stop Circuit",
+      "Private Houston Mural Instagram Tour by Cart departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Tour Directions Thank you for choosing Joyride!   Our pickup location is at: 800 Preston Houston, TX 77002  Enter garage on Milam St. Take elevator down to lobby area. Our cart will be waiting for you.  For UBER Go to Frank’s Pizza, at 417 Travis St. We will be right across the street."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride an open electric cart through downtown Houston mural corridors with a guide who stages photo stops at street-art walls and neighborhood landmarks.",
+    "itineraryItems": [
+      {
+        "title": "Market Square Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Houston Murals",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "EaDo Street Art",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Photo Stop Circuit",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "We take your photos with your phone or camera"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Houston Mural Instagram Tour by Cart?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Tour Directions Thank you for choosing Joyride!   Our pickup location is at: 800 Preston Houston, TX 77002  Enter garage on Milam St. Take elevator down to lobby area. Our cart will be waiting for you.  For UBER Go to Frank’s Pizza, at 417 Travis St. We will be right across the street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

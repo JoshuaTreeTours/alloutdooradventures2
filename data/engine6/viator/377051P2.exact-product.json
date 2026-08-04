@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "377051P2",
+    "productUrl": "https://www.viator.com/tours/Houston/Polaris-Slingshot-Rental/d5186-377051P2",
+    "title": "Polaris Slingshot Guided Tour in Houston",
+    "description": {
+      "text": "Drive a Polaris Slingshot on a guided scenic route through northwest Houston backroads with open-air views and short photo stops. Choose a duration that fits your schedule while a guide handles navigation, briefing, and pacing across rural Texas roadside scenery near the city. Stops include Northwest Houston Departure, Texas Backroads Scenic Route, Photo Stop Overlook. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hours 15 minutes (approx.)",
+    "priceFrom": "From $160.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 92
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/1c/a2/b3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Drive a Polaris Slingshot on a guided scenic route through northwest Houston backroads with open-air views and short pho",
+      "Choose a duration that fits your schedule while a guide handles navigation, briefing, and pacing across rural Texas road",
+      "Stops include Northwest Houston Departure, Texas Backroads Scenic Route, Photo Stop Overlook",
+      "Polaris Slingshot Guided Tour in Houston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Building #4 which. is the last building on the left"
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Drive a Polaris Slingshot on a guided scenic route through northwest Houston backroads with open-air views and short photo stops.",
+    "itineraryItems": [
+      {
+        "title": "Northwest Houston Departure",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Texas Backroads Scenic Route",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Photo Stop Overlook",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Polaris Slingshot Guided Tour in Houston?",
+        "answer": "The planned duration is 1 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Building #4 which. is the last building on the left"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Scenic Drives"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 160
+      },
+      "currency": "USD"
+    }
+  }
+}

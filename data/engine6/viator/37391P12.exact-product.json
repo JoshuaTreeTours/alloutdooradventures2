@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "37391P12",
+    "productUrl": "https://www.viator.com/tours/Houston/Nasa-Space-Center-and-Houston-Sightseeing-Tour/d5186-37391P12",
+    "title": "Private NASA Space Center Day Trip with Houston City Tour",
+    "description": {
+      "text": "Pair a Houston city overview through River Oaks with a guided Space Center Houston day trip on a private outing that includes NASA tram access and a meal stop. The longer itinerary suits visitors who want city context and NASA exhibits without arranging separate transfers. Stops include River Oaks, Space Center Houston, NASA Tram Tour, BBQ Dinner Stop. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 64
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/5a/93.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Pair a Houston city overview through River Oaks with a guided Space Center Houston day trip on a private outing that inc",
+      "The longer itinerary suits visitors who want city context and NASA exhibits without arranging separate transfers",
+      "Stops include River Oaks, Space Center Houston, NASA Tram Tour, BBQ Dinner Stop",
+      "Private NASA Space Center Day Trip with Houston City Tour departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Houston meeting location provided after booking."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Pair a Houston city overview through River Oaks with a guided Space Center Houston day trip on a private outing that includes NASA tram access and a meal stop.",
+    "itineraryItems": [
+      {
+        "title": "River Oaks",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Center Houston",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "NASA Tram Tour",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "BBQ Dinner Stop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "60 Minute City Tour by certified guide/chauffeur",
+      "Bottled water, snack and 1 Souvenir per every two in your group.",
+      "Transportation to Rudy's Country store & BBQ for 1-hr dinner at TRAVELERS EXPENSE",
+      "Private Transport from hotel and return after experience",
+      "General Admission Ticket for Self Guided visit including Astronaut Training Facility and Rocket Park"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private NASA Space Center Day Trip with Houston City Tour?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Meet at the confirmed Houston meeting location provided after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

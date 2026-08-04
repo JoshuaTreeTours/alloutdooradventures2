@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "129206P4",
+    "productUrl": "https://www.viator.com/tours/Houston/Galveston-Tour/d5186-129206P4",
+    "title": "Private Tour of Galveston",
+    "description": {
+      "text": "Leave Houston for a private guided tour of Galveston covering historic Strand streets, the Seawall, and coastal viewpoints. An electric-cart or vehicle format keeps the day paced for photos and local history without planning island logistics yourself. Stops include Galveston Historic Strand, Galveston Seawall, Moody Gardens Area, Pleasure Pier Viewpoint. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hours 30 minutes (approx.)",
+    "priceFrom": "From $121.74",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/98/fc/4c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Leave Houston for a private guided tour of Galveston covering historic Strand streets, the Seawall, and coastal viewpoin",
+      "An electric-cart or vehicle format keeps the day paced for photos and local history without planning island logistics yo",
+      "Stops include Galveston Historic Strand, Galveston Seawall, Moody Gardens Area, Pleasure Pier Viewpoint",
+      "Private Tour of Galveston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We will communicate with clients upon booking tour."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Houston for a private guided tour of Galveston covering historic Strand streets, the Seawall, and coastal viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Galveston Historic Strand",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Galveston Seawall",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moody Gardens Area",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pleasure Pier Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private tour in air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour of Galveston?",
+        "answer": "The planned duration is 1 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "We will communicate with clients upon booking tour."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 121.74
+      },
+      "currency": "USD"
+    }
+  }
+}

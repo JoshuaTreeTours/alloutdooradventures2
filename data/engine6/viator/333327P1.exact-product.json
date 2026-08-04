@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "333327P1",
+    "productUrl": "https://www.viator.com/tours/Houston/Houston-Haunted-Dark-History-Ghost-Tour/d5186-333327P1",
+    "title": "Houston Ghosts and Hauntings Walking Tour",
+    "description": {
+      "text": "Walk downtown Houston after dark on a guided ghost tour covering Market Square Park, historic bars, and landmark hotels tied to local haunt lore. Guides share researched stories while keeping the group moving through compact downtown blocks. Stops include Market Square Park, La Carafe, Hotel ICON, Downtown Haunt Circuit. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $26.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 76
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0a/d1/2a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Walk downtown Houston after dark on a guided ghost tour covering Market Square Park, historic bars, and landmark hotels ",
+      "Guides share researched stories while keeping the group moving through compact downtown blocks",
+      "Stops include Market Square Park, La Carafe, Hotel ICON, Downtown Haunt Circuit",
+      "Houston Ghosts and Hauntings Walking Tour departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your tour guide by the Clock Tower at Market Square Park 301 Milam St. Your guide will be wearing a US Ghost Adventures t-shirt and holding a lantern."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Walk downtown Houston after dark on a guided ghost tour covering Market Square Park, historic bars, and landmark hotels tied to local haunt lore.",
+    "itineraryItems": [
+      {
+        "title": "Market Square Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Carafe",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hotel ICON",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Haunt Circuit",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Thoroughly researched and accurate history",
+      "Professional and courteous guide",
+      "Authentic local ghost stories"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Houston Ghosts and Hauntings Walking Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Meet your tour guide by the Clock Tower at Market Square Park 301 Milam St. Your guide will be wearing a US Ghost Adventures t-shirt and holding a lantern."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Ghost Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 26
+      },
+      "currency": "USD"
+    }
+  }
+}

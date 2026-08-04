@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "298059P2",
+    "productUrl": "https://www.viator.com/tours/Houston/Tril-On-Wheels-Hip-Hop-Party-Bike/d5186-298059P2",
+    "title": "Trill On Wheels Hip-Hop Party Bike Tour in 3rd Ward Houston",
+    "description": {
+      "text": "Pedal a motorized party bike through Houston's Third Ward with a host DJ playlist featuring local hip-hop history. The guided ride starts at the Almeda corridor rider lounge and pauses at neighborhood stops that highlight Third Ward culture. Stops include Third Ward Rider Lounge, Almeda Corridor, Historic Third Ward Stops. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $49.99",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 273
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0a/15/c7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Pedal a motorized party bike through Houston's Third Ward with a host DJ playlist featuring local hip-hop history",
+      "Stops include Third Ward Rider Lounge, Almeda Corridor, Historic Third Ward Stops",
+      "Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighbo",
+      "Trill On Wheels Hip-Hop Party Bike Tour in 3rd Ward Houston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "All Trill On Wheels tours begin and end at our Rider Lounge, located at: 3900 Almeda St., Houston, TX 77004 (Large Blue Warehouse)  Please park in our lot or along Truxillo St."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Pedal a motorized party bike through Houston's Third Ward with a host DJ playlist featuring local hip-hop history.",
+    "itineraryItems": [
+      {
+        "title": "Third Ward Rider Lounge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Almeda Corridor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Third Ward Stops",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Trappin' Captain (Party Host)",
+      "Cooler, Ice and Cups",
+      "Driver",
+      "Play a round of Trill Trivia + Trap Karaoke",
+      "VIP Entrance at Bar Stops + Drink Specials"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Trill On Wheels Hip-Hop Party Bike Tour in 3rd Ward Houston?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "All Trill On Wheels tours begin and end at our Rider Lounge, located at: 3900 Almeda St., Houston, TX 77004 (Large Blue Warehouse)  Please park in our lot or along Truxillo St."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49.99
+      },
+      "currency": "USD"
+    }
+  }
+}
