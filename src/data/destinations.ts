@@ -1799,6 +1799,78 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         ],
       },
       {
+        name: "Canyonlands National Park",
+        slug: "canyonlands-national-park",
+        stateSlug: "utah",
+        region: "Moab",
+        lat: 38.3269,
+        lng: -109.8783,
+        shortDescription:
+          "Island in the Sky overlooks, Needles backcountry, jeep routes, and guided canyon adventures.",
+        intro:
+          "Canyonlands National Park spreads across mesas and canyons carved by the Colorado and Green rivers near Moab—Island in the Sky overlooks, Needles spires, White Rim Road, and guided jeep, hiking, and aerial tours into Utah's largest national park.",
+        heroImages: [
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/b0/48/25/caption.jpg?w=700&h=500&s=1",
+        ],
+        activityTags: ["canyons", "hiking", "jeeping"],
+        whereItIs: [
+          "Canyonlands National Park surrounds Moab, Utah, with Island in the Sky the closest district and Needles farther south on the Colorado Plateau.",
+          "Most guided tours depart from Moab lodging or downtown meeting points before entering Island in the Sky, Needles, or White Rim routes.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Mesa Arch, Grand View Point, or Needles Joint Trail routes with a local guide.",
+          lakesWater:
+            "The Colorado and Green river corridors cut through Canyonlands and pair with overlook tours from Moab.",
+          desertForest:
+            "Mesas, grabens, sandstone needles, and high-desert scrub define the park's canyon-country scenery.",
+          cycling:
+            "Scenic paved overlooks in Island in the Sky suit visitors who want canyon views without long backcountry approaches.",
+          scenicDrives:
+            "Shafer Trail, White Rim Road, and Needles backcountry tracks reveal districts beyond the paved overlooks.",
+          seasonalNotes:
+            "Spring and fall bring milder touring weather; summer favors early starts and sunset tours; winter is quieter with crisp light.",
+        },
+        thingsToDo: [
+          "Explore Island in the Sky overlooks and Shafer Trail on a guided 4x4 tour.",
+          "Spend a full day in the Needles District with optional Joint Trail hiking.",
+          "Drive White Rim Road deep into Canyonlands backcountry with buffet lunch included.",
+          "Book a private hike, sunrise photography session, or helicopter flight over canyon country.",
+          "Catch a secluded Canyonlands sunset from a 4x4-accessed overlook.",
+        ],
+        toursCopy: [
+          "Jeep backcountry routes, private hikes, and aerial tours cover Canyonlands districts without self-driving remote roads.",
+          "Premium options include Needles and White Rim full-day 4x4 trips, helicopter flights, and sunrise photography.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Island in the Sky half-day 4x4 tour via Shafer Trail.",
+            "Afternoon: Mesa Arch and Grand View Point overlooks.",
+            "Evening: secluded Canyonlands sunset 4x4 outing.",
+          ],
+          dayTwo: [
+            "Morning: White Rim or Needles full-day backcountry adventure.",
+            "Afternoon: continue guided hiking or overlook photography.",
+            "Evening: Moab dinner and red-rock sunset views.",
+          ],
+        },
+        gettingThere: [
+          "Canyonlands Field Airport (CNY) is the closest air option; Grand Junction and Salt Lake City are common gateways with a drive to Moab.",
+        ],
+        faq: [
+          {
+            question: "How much time do I need in Canyonlands National Park?",
+            answer:
+              "A half day covers Island in the Sky overlooks; plan a full day for White Rim Road, Needles District, or a private hiking itinerary.",
+          },
+          {
+            question: "Do I need a high-clearance vehicle for Canyonlands?",
+            answer:
+              "Paved Island in the Sky overlooks are accessible by standard cars; Shafer Trail, White Rim, and Needles backcountry routes typically require guided 4x4 transport.",
+          },
+        ],
+      },
+      {
         name: "Arches National Park",
         slug: "arches-national-park",
         stateSlug: "utah",

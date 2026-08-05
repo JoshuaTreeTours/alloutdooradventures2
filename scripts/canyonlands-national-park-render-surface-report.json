@@ -1,0 +1,136 @@
+{
+  "selectedCount": 8,
+  "listingCount": 8,
+  "listingMatchesSelection": true,
+  "okCount": 8,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "24134P3",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-backcountry-4x4-adventure-fro-24134P3",
+      "title": "Canyonlands National Park Backcountry 4x4 Adventure from Moab",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a6/d0.jpg",
+      "card": "Discover the rugged beauty and ancient legends of Canyonlands National Park on a 4WD tour from Moab.",
+      "itineraryTitles": [
+        "Island in the Sky",
+        "Shafer Trail",
+        "Gooseneck Overlook",
+        "Canyonlands National Park"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6896MOABCHPARK",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-needles-district-by-4x4-6896MOABCHPARK",
+      "title": "Canyonlands National Park Needles District by 4x4",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/e1/85.jpg",
+      "card": "Hit the dusty trail on a full-day 4x4 tour into the Needles District of Canyonlands National Park.",
+      "itineraryTitles": [
+        "Needles District",
+        "Chesler Park",
+        "Elephant Hill",
+        "Devil's Lane",
+        "Devil's Kitchen",
+        "Joint Trail"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6896MOABWRIM",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-white-rim-trail-by-4wd-6896MOABWRIM",
+      "title": "Canyonlands National Park White Rim Trail by 4WD",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/e1/8f.jpg",
+      "card": "Go off-roading by 4-wheel drive deep into Canyonlands National Park via the White Rim Road, a scenic route of switchbacks and red rock forma",
+      "itineraryTitles": [
+        "White Rim Road",
+        "Island in the Sky",
+        "Gooseneck Overlook",
+        "Musselman Arch",
+        "Lathrop Canyon",
+        "Shafer Trail"
+      ],
+      "issues": []
+    },
+    {
+      "code": "14649P15",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/island-in-the-sky-of-canyonlands-helicopter-tour-14649P15",
+      "title": "Island in the Sky of Canyonlands Helicopter Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fd/2f/6e.jpg",
+      "card": "Soar above Canyonlands National Park on a 45-minute scenic helicopter flight from Moab.",
+      "itineraryTitles": [
+        "Dead Horse Point",
+        "Thelma and Louise Point",
+        "Colorado River",
+        "Island in the Sky",
+        "Grand View Point",
+        "Corona Arch"
+      ],
+      "issues": []
+    },
+    {
+      "code": "265766P60",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/canyonlands-full-day-private-tour-and-hike-265766P60",
+      "title": "Canyonlands Full Day Private Tour and Hike",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4d/2e/f4.jpg",
+      "card": "Join Master Naturalist guides for a full-day private tour and hike focused on Canyonlands National Park.",
+      "itineraryTitles": [
+        "Canyonlands National Park",
+        "Mesa Arch",
+        "Grand View Point Overlook",
+        "Green River Overlook",
+        "Upheaval Dome"
+      ],
+      "issues": []
+    },
+    {
+      "code": "14649P17",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/colorado-to-canyonlands-geology-airplane-tour-14649P17",
+      "title": "Colorado to Canyonlands Geology Airplane Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fd/54/b0.jpg",
+      "card": "Discover Canyonlands National Park from the air and learn more about the geology of the Colorado Plateau with this airplane tour.",
+      "itineraryTitles": [
+        "Dead Horse Point State Park",
+        "Island in the Sky",
+        "Fisher Towers",
+        "La Sal Mountains",
+        "Confluence of the Colorado and Green Rivers",
+        "Needles District"
+      ],
+      "issues": []
+    },
+    {
+      "code": "18497P14",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/unique-secluded-sunset-in-moab-canyonlands-by-4x4-hike-18497P14",
+      "title": "Unique Secluded Sunset In Moab: Canyonlands by 4x4 & Hike",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/90/88/f4.jpg",
+      "card": "In Canyonlands National Park, join a private small-group sunset outing that pairs a short bumpy 4x4 ride on Long Canyon Road with a half-mil",
+      "itineraryTitles": [
+        "Long Canyon Road",
+        "Canyonlands National Park",
+        "Secluded sunset overlook"
+      ],
+      "issues": []
+    },
+    {
+      "code": "148657P1",
+      "ok": true,
+      "path": "/destinations/utah/canyonlands-national-park/tours/sunrise-photography-in-dead-horse-point-and-canyonlands-148657P1",
+      "title": "Sunrise photography in Dead Horse Point and Canyonlands National Park",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/85/e9/fa.jpg",
+      "card": "Perfect your photography skills while exploring Dead Horse Point State Park and Canyonlands National Park.",
+      "itineraryTitles": [
+        "Dead Horse Point State Park",
+        "Canyonlands National Park",
+        "Island in the Sky"
+      ],
+      "issues": []
+    }
+  ]
+}

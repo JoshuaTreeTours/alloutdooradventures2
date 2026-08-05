@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "6896MOABCHPARK",
+    "productUrl": "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Needles-District-by-4x4/d5600-6896MOABCHPARK",
+    "title": "Canyonlands National Park Needles District by 4x4",
+    "description": {
+      "text": "Hit the dusty trail on a full-day 4x4 tour into the Needles District of Canyonlands National Park. Expert guides navigate Chesler Park highlights such as Elephant Hill, Devil's Lane, and Devil's Kitchen, with an optional hike on the Joint Trail. Stops include Needles District, Chesler Park, Elephant Hill, Devil's Lane, Devil's Kitchen, Joint Trail. Buffet lunch and 4x4 transport keep the day focused on remote sandstone spires away from Island in the Sky crowds. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $353.19",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 287
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/e1/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hit the dusty trail on a 4x4 tour of Canyonlands National Park",
+      "There\u2019s also the option to take a 3-mile (4.8-km) hike on the spectacularly scenic Joint Trail",
+      "This full-day adventure is the perfect way to experience Utah\u2019s backcountry away from the crowds",
+      "Canyonlands National Park Needles District by 4x4 near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "NAVTEC Expeditions, 321 N Main St, Moab, UT 84532, USA. Depart ~8:00 am for Chesler Park / Needles District. Pickup offered; ends at meeting point. ~2-hour drive to Needles."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hit the dusty trail on a full-day 4x4 tour into the Needles District of Canyonlands National Park.",
+    "itineraryItems": [
+      {
+        "title": "Needles District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chesler Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Elephant Hill",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Devil's Lane",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Devil's Kitchen",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Joint Trail",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Transport by 4x4 vehicle",
+      "Ice water",
+      "Buffet-style lunch",
+      "Hotel pick-up and drop-off (depending on location)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands National Park Needles District by 4x4?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "NAVTEC Expeditions, 321 N Main St, Moab, UT 84532, USA. Depart ~8:00 am for Chesler Park / Needles District. Pickup offered; ends at meeting point. ~2-hour drive to Needles."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 353.19
+      },
+      "currency": "USD"
+    }
+  }
+}

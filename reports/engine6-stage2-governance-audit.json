@@ -1,26 +1,19 @@
 {
-  "generatedAt": "2026-08-04T22:10:41.282Z",
+  "generatedAt": "2026-08-05T00:35:02.177Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [
-    "108923P4",
-    "14649P16",
-    "14649P18",
-    "148657P5",
-    "18497P1",
-    "18497P17",
-    "18497P4",
-    "18497P9",
-    "24134P13",
-    "24134P16",
-    "24134P2",
-    "265766P26",
-    "265766P8",
-    "334588P2",
-    "6896P1"
+    "14649P15",
+    "14649P17",
+    "148657P1",
+    "18497P14",
+    "24134P3",
+    "265766P60",
+    "6896MOABCHPARK",
+    "6896MOABWRIM"
   ],
   "scopedDestinationLabels": [
-    "Arches"
+    "Canyonlands"
   ],
   "fullSiteValidation": false,
   "blockingPassed": true,
@@ -18541,7 +18534,7 @@
     }
   ],
   "merchantFeedImage": {
-    "imagesValidated": 757,
+    "imagesValidated": 765,
     "automaticallyRepaired": 0,
     "requiringFallback": 0,
     "unrecoverableFailures": 0,
@@ -18554,21 +18547,14 @@
   },
   "productHero": {
     "auditedProductCodes": [
-      "108923P4",
-      "18497P17",
-      "18497P4",
-      "265766P8",
-      "334588P2",
-      "24134P2",
-      "6896P1",
-      "148657P5",
-      "18497P9",
-      "14649P16",
-      "14649P18",
-      "265766P26",
-      "24134P13",
-      "18497P1",
-      "24134P16"
+      "24134P3",
+      "6896MOABCHPARK",
+      "6896MOABWRIM",
+      "14649P15",
+      "265766P60",
+      "14649P17",
+      "18497P14",
+      "148657P1"
     ],
     "findings": [],
     "pass": true
@@ -18576,7 +18562,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-08-04T22:10:40.997Z",
+    "generatedAt": "2026-08-05T00:35:02.041Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -18607,26 +18593,19 @@
     "deployScope": {
       "blockingProductCodes": [],
       "reportOnlyProductCodes": [
-        "108923P4",
-        "14649P16",
-        "14649P18",
-        "148657P5",
-        "18497P1",
-        "18497P17",
-        "18497P4",
-        "18497P9",
-        "24134P13",
-        "24134P16",
-        "24134P2",
-        "265766P26",
-        "265766P8",
-        "334588P2",
-        "6896P1"
+        "14649P15",
+        "14649P17",
+        "148657P1",
+        "18497P14",
+        "24134P3",
+        "265766P60",
+        "6896MOABCHPARK",
+        "6896MOABWRIM"
       ]
     }
   },
   "notes": [
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort scope: Arches"
+    "Destination cohort scope: Canyonlands"
   ]
 }

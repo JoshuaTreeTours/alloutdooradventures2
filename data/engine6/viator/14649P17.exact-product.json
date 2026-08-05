@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "14649P17",
+    "productUrl": "https://www.viator.com/tours/Moab/Colorado-to-Canyonlands-Geology-Air-Tour/d5600-14649P17",
+    "title": "Colorado to Canyonlands Geology Airplane Tour",
+    "description": {
+      "text": "Discover Canyonlands National Park from the air and learn more about the geology of the Colorado Plateau with this airplane tour. Take off from Moab and fly over the mountains, canyons, rivers, and surrounding landscape of Southeastern Utah and Western Colorado, with informative commentary from your pilot along the way. Stops include Dead Horse Point State Park, Island in the Sky, Fisher Towers, La Sal Mountains, Confluence of the Colorado and Green Rivers, Needles District. Window seats and headsets keep the geology-focused flight easy to follow. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour 30 minutes",
+    "priceFrom": "From $1156.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fd/54/b0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Colorado to Canyonlands Geology Airplane Tour from Canyonlands National Park",
+      "Island in the Sky overlooks and red-rock canyon views",
+      "Professional guide with Canyonlands local expertise",
+      "Small-group or private format as listed",
+      "Canyonlands scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Canyonlands Regional Airport / Canyonlands Field Airport, Moab, UT (94 W Aviation Way pattern for Redtail family). Sold by group size, not per seat; starting price up to 3 guests."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Canyonlands National Park from the air and learn more about the geology of the Colorado Plateau with this airplane tour.",
+    "itineraryItems": [
+      {
+        "title": "Dead Horse Point State Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fisher Towers",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Sal Mountains",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Confluence of the Colorado and Green Rivers",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Needles District",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Headsets to clearly hear the narration",
+      "Live narration during the tour",
+      "Complimentary water inside the terminal",
+      "All taxes, fees and handling charges",
+      "Window seat for everyone"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Colorado to Canyonlands Geology Airplane Tour?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "Canyonlands Regional Airport / Canyonlands Field Airport, Moab, UT (94 W Aviation Way pattern for Redtail family). Sold by group size, not per seat; starting price up to 3 guests."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airplane Tours"
+      },
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1156
+      },
+      "currency": "USD"
+    }
+  }
+}

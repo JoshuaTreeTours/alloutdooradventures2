@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "265766P60",
+    "productUrl": "https://www.viator.com/tours/Moab/Full-Day-Private-Tour-and-Hike-in-Canyonlands-National-Park/d5600-265766P60",
+    "title": "Canyonlands Full Day Private Tour and Hike",
+    "description": {
+      "text": "Join Master Naturalist guides for a full-day private tour and hike focused on Canyonlands National Park. The itinerary stops at natural arches and sandstone formations, with time for off-the-beaten-path features when conditions allow. Stops include Mesa Arch, Grand View Point Overlook, Green River Overlook, Upheaval Dome. Guides share the park's human and geological history along with flora and fauna context throughout the day. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "8 hours",
+    "priceFrom": "From $973.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4d/2e/f4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Our guides team is made up of Master Naturalists, experts with Master's Degrees in Outdoor and Sustainability Education,",
+      "We\u2019ll stop at natural canyonlands and stunning sandstone formations",
+      "We can hike to off-the-beaten path features to experience the park like a local",
+      "Canyonlands Full Day Private Tour and Hike near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup offered (operator pattern: within ~90 minutes of park / Moab lodging). Price varies by group size. Private \u2014 only your group participates."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join Master Naturalist guides for a full-day private tour and hike focused on Canyonlands National Park.",
+    "itineraryItems": [
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mesa Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand View Point Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Green River Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Upheaval Dome",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private, medically trained, naturalist guide",
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Park entry fees",
+      "Gourmet picnic lunch (dietary requests with notice)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands Full Day Private Tour and Hike?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "Pickup offered (operator pattern: within ~90 minutes of park / Moab lodging). Price varies by group size. Private \u2014 only your group participates."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 973
+      },
+      "currency": "USD"
+    }
+  }
+}

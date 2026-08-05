@@ -72,6 +72,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Canyonlands",
+      matches: tour =>
+        /\/canyonlands-national-park\//i.test(tour.canonicalPath) ||
+        /\bcanyonlands national park\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Olympic",
       matches: tour =>
         /\/olympic-national-park\//i.test(tour.canonicalPath) ||

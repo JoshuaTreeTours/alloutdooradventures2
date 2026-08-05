@@ -89,6 +89,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "utah",
     citySlug: "arches-national-park",
   },
+  "canyonlands-national-park": {
+    destinationLabel: "Canyonlands National Park",
+    destinationCitySlug: "canyonlands-national-park",
+    stateSlug: "utah",
+    citySlug: "canyonlands-national-park",
+  },
   "key-west": {
     destinationLabel: "Key West",
     destinationCitySlug: "key-west",

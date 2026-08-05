@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "18497P14",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Scenic-Tour-of-Canyonlands-National-Park-and-Dead-Horse-State-Park/d5600-18497P14",
+    "title": "Unique Secluded Sunset In Moab: Canyonlands by 4x4 & Hike",
+    "description": {
+      "text": "In Canyonlands National Park, join a private small-group sunset outing that pairs a short bumpy 4x4 ride on Long Canyon Road with a half-mile scramble hike to a secluded vista. Start time shifts with sunset so picture stops land in warm evening light away from crowded overlooks. Stops include Long Canyon Road, Canyonlands National Park, Secluded sunset overlook. The private format keeps pacing flexible for photos and short walks. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $189.49",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 18
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/90/88/f4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private small-group sunset experience combining a short bumpy 4x4 ride (including Long Canyon Road ascent) with a ~0.5-m",
+      "Start time varies 4:00pm\u20135:45pm with sunset",
+      "Lots of picture stops",
+      "Unique Secluded Sunset In Moab: Canyonlands by 4x4 & Hike near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "150 E Center St, Moab, UT 84532, USA. Pickup from hotels/campgrounds/Airbnbs within Moab city limits; outlying lodges meet at office. Private \u2014 max ~4 guests. Park entry excluded ($15/person or free with valid pass for up to 4)."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Canyonlands National Park, join a private small-group sunset outing that pairs a short bumpy 4x4 ride on Long Canyon Road with a half-mile scramble hike to a secluded vista.",
+    "itineraryItems": [
+      {
+        "title": "Long Canyon Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Secluded sunset overlook",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Short fun bumpy 4x4 ride",
+      "One 0.5-mile scramble hike",
+      "Picture stops",
+      "Private tour for your group only"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Unique Secluded Sunset In Moab: Canyonlands by 4x4 & Hike?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "150 E Center St, Moab, UT 84532, USA. Pickup from hotels/campgrounds/Airbnbs within Moab city limits; outlying lodges meet at office. Private \u2014 max ~4 guests. Park entry excluded ($15/person or free with valid pass for up to 4)."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189.49
+      },
+      "currency": "USD"
+    }
+  }
+}

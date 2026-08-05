@@ -144,6 +144,14 @@ import specimen265766p26Payload from "../../data/engine6/viator/265766P26.exact-
 import specimen24134p13Payload from "../../data/engine6/viator/24134P13.exact-product.json";
 import specimen18497p1Payload from "../../data/engine6/viator/18497P1.exact-product.json";
 import specimen24134p16Payload from "../../data/engine6/viator/24134P16.exact-product.json";
+import specimen24134p3Payload from "../../data/engine6/viator/24134P3.exact-product.json";
+import specimen6896moabchparkPayload from "../../data/engine6/viator/6896MOABCHPARK.exact-product.json";
+import specimen6896moabwrimPayload from "../../data/engine6/viator/6896MOABWRIM.exact-product.json";
+import specimen14649p15Payload from "../../data/engine6/viator/14649P15.exact-product.json";
+import specimen265766p60Payload from "../../data/engine6/viator/265766P60.exact-product.json";
+import specimen14649p17Payload from "../../data/engine6/viator/14649P17.exact-product.json";
+import specimen18497p14Payload from "../../data/engine6/viator/18497P14.exact-product.json";
+import specimen148657p1Payload from "../../data/engine6/viator/148657P1.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2221,6 +2229,54 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "24134P16",
     publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-by-Van-Tour/d5600-24134P16",
     rawPayload: specimen24134p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24134P3",
+    publicUrl: "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Backcountry-4x4-Half-Day/d5600-24134P3",
+    rawPayload: specimen24134p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6896MOABCHPARK",
+    publicUrl: "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Needles-District-by-4x4/d5600-6896MOABCHPARK",
+    rawPayload: specimen6896moabchparkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6896MOABWRIM",
+    publicUrl: "https://www.viator.com/tours/Moab/Canyonlands-National-Park-White-Rim-Trail-by-4x4/d5600-6896MOABWRIM",
+    rawPayload: specimen6896moabwrimPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14649P15",
+    publicUrl: "https://www.viator.com/tours/Moab/Edge-of-Canyonlands-Helicopter-Air-Tour/d5600-14649P15",
+    rawPayload: specimen14649p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P60",
+    publicUrl: "https://www.viator.com/tours/Moab/Full-Day-Private-Tour-and-Hike-in-Canyonlands-National-Park/d5600-265766P60",
+    rawPayload: specimen265766p60Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14649P17",
+    publicUrl: "https://www.viator.com/tours/Moab/Colorado-to-Canyonlands-Geology-Air-Tour/d5600-14649P17",
+    rawPayload: specimen14649p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P14",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-Scenic-Tour-of-Canyonlands-National-Park-and-Dead-Horse-State-Park/d5600-18497P14",
+    rawPayload: specimen18497p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "148657P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunrise-photography-in-Dead-Horse-Point-and-Canyonlands-National-Park/d5600-148657P1",
+    rawPayload: specimen148657p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

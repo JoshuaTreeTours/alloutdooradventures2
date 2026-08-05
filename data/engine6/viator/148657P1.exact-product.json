@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "148657P1",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunrise-photography-in-Dead-Horse-Point-and-Canyonlands-National-Park/d5600-148657P1",
+    "title": "Sunrise photography in Dead Horse Point and Canyonlands National Park",
+    "description": {
+      "text": "Perfect your photography skills while exploring Dead Horse Point State Park and Canyonlands National Park. You and your photographer guide will head out in time to catch the early morning light. Stops include Dead Horse Point State Park, Canyonlands National Park, Island in the Sky. Your guide will also be available to teach you about composition and help you navigate your camera's settings while you work sunrise light across Island in the Sky overlooks and canyon rim viewpoints. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "4 to 6 hours",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/85/e9/fa.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Perfect your photography skills while exploring Dead Horse Point State Park and Canyonlands National Park",
+      "You and your photographer guide will head out in time to catch the early morning light",
+      "Your guide will also be available to teach you about composition and help you navigate your camera's settings while you ",
+      "Sunrise photography in Dead Horse Point and Canyonlands National Park near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Moab Information Center, 25 E Center St, Moab, UT 84532, USA. Meet one hour before sunrise outside visitor center (closed at arrival). Room for 4\u20135 passengers; larger groups may carpool. Park admission excluded \u2014 bring pass."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Perfect your photography skills while exploring Dead Horse Point State Park and Canyonlands National Park.",
+    "itineraryItems": [
+      {
+        "title": "Dead Horse Point State Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Cold water and snack bars",
+      "Photographer guide / composition instruction"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunrise photography in Dead Horse Point and Canyonlands National Park?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "Moab Information Center, 25 E Center St, Moab, UT 84532, USA. Meet one hour before sunrise outside visitor center (closed at arrival). Room for 4\u20135 passengers; larger groups may carpool. Park admission excluded \u2014 bring pass."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Sunrise Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}
