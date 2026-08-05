@@ -1,0 +1,119 @@
+{
+  "destinationLabel": "Acadia National Park",
+  "destinationCitySlug": "acadia-national-park",
+  "viatorDestinationSlug": "Bar-Harbor",
+  "viatorDestinationId": "d4371",
+  "attractionId": "a16085",
+  "catalogUrl": "https://www.viator.com/Bar-Harbor-attractions/Acadia-National-Park/d4371-a16085",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 15,
+  "premiumCount": 11,
+  "selectionNote": "Selected 15 guided Acadia National Park products from Bar Harbor attraction/catalog inventory (d4371-a16085) with live commercial fields and product-specific heroes. Rejected self-guided audio/app tours, self-guided e-bike rentals, food/ghost tours not park-focused, and thin winter/peak SKUs lacking verified heroes. Premium share is private tours, full-day hiking, lobster private day, sunrise Cadillac, and private bike. No jeep/helicopter/wine inventory found in live Acadia catalog. Paragon reference 265766P10 remains Zion-bound.",
+  "selectedProductCodes": [
+    "124652P1",
+    "124652P2",
+    "266852P3",
+    "87115P76",
+    "265766P25",
+    "227717P1",
+    "227717P2",
+    "227717P3",
+    "485251P2",
+    "265766P29",
+    "5569071P4",
+    "5569071P10",
+    "5596065P9",
+    "5596065P3",
+    "265766P17"
+  ],
+  "premiumProductCodes": [
+    "265766P25",
+    "227717P1",
+    "227717P2",
+    "227717P3",
+    "485251P2",
+    "265766P29",
+    "5569071P4",
+    "5569071P10",
+    "5596065P9",
+    "5596065P3",
+    "265766P17"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "267535P6",
+      "title": "Ultimate Acadia National Park Self-Guided Driving Audio Tour",
+      "reason": "Self-guided audio / app tour"
+    },
+    {
+      "productCode": "259648P31",
+      "title": "Acadia National Park & Bar Harbor Self-Guided Driving & Walking Tour",
+      "reason": "Self-guided app tour"
+    },
+    {
+      "productCode": "266852P1",
+      "title": "Self-Guided Ebike Tours of Acadia National Park Carriage Roads",
+      "reason": "Self-guided e-bike rental"
+    },
+    {
+      "productCode": "67541P7",
+      "title": "Full Day E-Bike Rental in Acadia National Park",
+      "reason": "Self-guided rental"
+    },
+    {
+      "productCode": "259648P19",
+      "title": "Acadia's Ocean Path Self-Guided Walking Audio Tour",
+      "reason": "Self-guided audio"
+    },
+    {
+      "productCode": "309754P26",
+      "title": "Self-Guided Audio Driving Tour in Acadia National Park",
+      "reason": "Self-guided audio"
+    },
+    {
+      "productCode": "222222P92",
+      "title": "Self-Guided GPS Audio Driving Tour Acadia NP From Hulls Cove VC",
+      "reason": "Self-guided GPS audio"
+    },
+    {
+      "productCode": "259620P23",
+      "title": "US East National Parks Driving & Walking Audio Tour Bundle",
+      "reason": "Multi-park audio bundle; not Acadia-guided"
+    },
+    {
+      "productCode": "143688P1",
+      "title": "Savor Bar Harbor Culinary Walking Tour in Maine",
+      "reason": "Town food tour; not Acadia park product"
+    },
+    {
+      "productCode": "343563P1",
+      "title": "90-minute Ghost Walking Tour in Bar Harbor",
+      "reason": "Town ghost walk; not Acadia park product"
+    },
+    {
+      "productCode": "197186P1",
+      "title": "1.5 to 2-Hr Windjammer Sailing Trip",
+      "reason": "Bay sailing; not Acadia park guided land product"
+    },
+    {
+      "productCode": "470431P4",
+      "title": "Aqua Safari Kayak tour departing Southwest Harbor",
+      "reason": "Kayak outing; weaker park-focus vs selected set"
+    },
+    {
+      "productCode": "5596065P10",
+      "title": "Acadia National Park Winter Wonderland Private Driving Tour",
+      "reason": "No verified product-specific attractions-splice hero"
+    },
+    {
+      "productCode": "5596065P12",
+      "title": "Cadillac Mountain Peak Acadia National Park Private Driving Tour",
+      "reason": "No verified product-specific attractions-splice hero; thin commercial card"
+    },
+    {
+      "productCode": "67541P9",
+      "title": "Guided E Bike Tour of Acadia National Park",
+      "reason": "No verified rating/hero on public dumps; prefer 266852P3"
+    }
+  ]
+}

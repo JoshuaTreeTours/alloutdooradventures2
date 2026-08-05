@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "227717P2",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/4-Hour-ACADIA-NATIONAL-PARK-TOUR-with-Somes-Sound-fjord-Gardens-and-Mansions/d4371-227717P2",
+    "title": "4 Hour Private Tour: Explore Acadia Nat'l Park, Fjord & Mansions",
+    "description": {
+      "text": "Explore Acadia National Park on a private half-day guided drive covering Park Loop Road highlights and Cadillac Mountain views without required climbing. Your guide personalizes pacing through fjord overlooks, gardens, and mansion corridors near Somes Sound. Stops include Cadillac Mountain, Park Loop Road, Somes Sound, Asticou Gardens. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $700.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 217
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4f/71/78.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get personalized recommendations and information from your tour guide",
+      "Cover the Park Loop Road, with panoramic views from Cadillac Mountain\u2014no climbing necessary",
+      "Tours include private transfers in a climate-controlled vehicle",
+      "4 Hour Private Tour: Explore Acadia Nat'l Park, Fjord & Mansions near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from any Downtown Bar Harbor lodging; outside downtown meet at Hulls Cove Visitor Center covered pavilion."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Acadia National Park on a private half-day guided drive covering Park Loop Road highlights and Cadillac Mountain views without required climbing.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Somes Sound",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Asticou Gardens",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 4 Hour Private Tour: Explore Acadia Nat'l Park, Fjord & Mansions?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Pickup from any Downtown Bar Harbor lodging; outside downtown meet at Hulls Cove Visitor Center covered pavilion."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 700
+      },
+      "currency": "USD"
+    }
+  }
+}

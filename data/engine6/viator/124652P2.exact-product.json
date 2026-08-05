@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "124652P2",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Premium-Narrated-Bus-Tour-of-Bar-Harbor-and-Acadia-National-Park-3-5-Hours/d4371-124652P2",
+    "title": "Premium Narrated Bus Tour of Bar Harbor and Acadia National Park (3.5 Hours)",
+    "description": {
+      "text": "Known for its rocky coastlines, wealth of wildlife, and evergreen forests, Acadia National Park promises dramatic scenery\u2014and this fully narrated driving tour makes for an easy way to discover it. Your guide covers landmark stops such as Thunder Hole, Jordan Pond, Ocean Path, or Park Loop Road depending on the itinerary. Stops include Cadillac Mountain, Thunder Hole, Sieur de Monts Spring, Jordan Pond. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 658
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/8a/b5/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Premium Narrated Bus Tour of Bar Harbor and Acadia National Park (3.5 Hours) from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "53 Main St, Bar Harbor, ME 04609, USA."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Known for its rocky coastlines, wealth of wildlife, and evergreen forests, Acadia National Park promises dramatic scenery\u2014and this fully narrated driving tour makes for an easy way to discover it.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sieur de Monts Spring",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Bottled Water",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Premium Narrated Bus Tour of Bar Harbor and Acadia National Park (3.5 Hours)?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "53 Main St, Bar Harbor, ME 04609, USA."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

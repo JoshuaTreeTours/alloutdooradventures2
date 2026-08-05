@@ -79,6 +79,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Acadia",
+      matches: tour =>
+        /\/acadia-national-park\//i.test(tour.canonicalPath) ||
+        /\bacadia national park\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Olympic",
       matches: tour =>
         /\/olympic-national-park\//i.test(tour.canonicalPath) ||

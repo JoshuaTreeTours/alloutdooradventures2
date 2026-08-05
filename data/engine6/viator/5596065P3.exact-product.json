@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "5596065P3",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Acadia-National-Park-Tour-Acadia-Wonderland-w-Bass-Harbor-Light/d4371-5596065P3",
+    "title": "Acadia National Park Bass Harbor Lighthouse Private Driving Tour",
+    "description": {
+      "text": "Tour Acadia National Park\u2019s quieter western side on a private driving outing that features Bass Harbor Head Light and scenic Mount Desert Island corridors. Your guide handles routing so you can focus on lighthouse photography, coastal overlooks, and park commentary without self-driving narrow roads. Stops include Bass Harbor Head Light, Mount Desert Island. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $800.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/17/16/f6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Acadia National Park Bass Harbor Lighthouse Private Driving Tour from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup as confirmed at booking in the Bar Harbor area."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Tour Acadia National Park\u2019s quieter western side on a private driving outing that features Bass Harbor Head Light and scenic Mount Desert Island corridors.",
+    "itineraryItems": [
+      {
+        "title": "Bass Harbor Head Light",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Desert Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Acadia National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guide commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Acadia National Park Bass Harbor Lighthouse Private Driving Tour?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Private pickup as confirmed at booking in the Bar Harbor area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 800
+      },
+      "currency": "USD"
+    }
+  }
+}

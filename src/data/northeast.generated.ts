@@ -3169,6 +3169,68 @@ export const northeastStates: StateDestination[] = [
             "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
           }
         ]
+      },
+      {
+        "name": "Acadia National Park",
+        "slug": "acadia-national-park",
+        "stateSlug": "maine",
+        "region": "Mount Desert Island",
+        "lat": 44.3386,
+        "lng": -68.2733,
+        "shortDescription": "Cadillac Mountain, Park Loop Road, carriage roads, and guided Acadia adventures from Bar Harbor.",
+        "intro": "Acadia National Park anchors Mount Desert Island with Cadillac Mountain sunrise views, Ocean Path granite shoreline, carriage-road cycling, and guided tours departing from Bar Harbor.",
+        "heroImages": [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/63/1d.jpg"
+        ],
+        "activityTags": ["hiking", "sightseeing", "national-parks"],
+        "whereItIs": [
+          "Acadia National Park covers much of Mount Desert Island in Maine, with Bar Harbor as the primary gateway town.",
+          "Most guided tours depart from downtown Bar Harbor lodging or Hulls Cove Visitor Center before entering Park Loop Road and Cadillac Mountain."
+        ],
+        "experiences": {
+          "mountains": "Drive or hike Cadillac Mountain for Atlantic seaboard summit views and sunrise/sunset access when reservations allow.",
+          "lakesWater": "Jordan Pond, Eagle Lake, and Frenchman Bay overlooks pair shoreline walks with carriage-road cycling.",
+          "desertForest": "Spruce-fir forests, granite headlands, and Ocean Path cliffs define Acadia's coastal park landscape.",
+          "cycling": "Guided and private bike tours explore Rockefeller carriage roads connecting Jordan Pond and Eagle Lake.",
+          "scenicDrives": "Park Loop Road, Cadillac Mountain Road, and Somes Sound overlooks deliver classic Mount Desert Island scenery.",
+          "seasonalNotes": "Summer and early fall are peak touring seasons; Cadillac Mountain timed entry applies in high season."
+        },
+        "thingsToDo": [
+          "Ride Park Loop Road highlights including Thunder Hole, Sand Beach, and Otter Cliffs with a guide.",
+          "Summit Cadillac Mountain for sunrise, sunset, or daytime panoramic views.",
+          "Bike historic carriage roads to Jordan Pond House and Eagle Lake.",
+          "Book a private or small-group full-day hike covering Ocean Path and Bubble Rock areas.",
+          "Visit Bass Harbor Head Light on a western Mount Desert Island private drive."
+        ],
+        "toursCopy": [
+          "Narrated bus tours, guided e-bike rides, private park drives, and naturalist hiking days cover Acadia without self-driving Park Loop logistics.",
+          "Premium private options include lobster-lunch day tours, sunrise Cadillac summits, and full-day private hikes from Bar Harbor."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: narrated or private Park Loop Road tour with Cadillac Mountain.",
+            "Afternoon: Ocean Path walk or Jordan Pond shoreline stroll.",
+            "Evening: Bar Harbor waterfront dinner."
+          ],
+          "dayTwo": [
+            "Morning: guided carriage-road e-bike tour or private hike.",
+            "Afternoon: Bass Harbor Head Light or Somes Sound overlooks.",
+            "Evening: sunset viewpoint or Cadillac Mountain sunset tour when available."
+          ]
+        },
+        "gettingThere": [
+          "Fly into Bangor (BGR) or Portland (PWM) and drive to Bar Harbor; seasonal ferry and bus options also serve Mount Desert Island."
+        ],
+        "faq": [
+          {
+            "question": "How much time do I need in Acadia National Park?",
+            "answer": "A half day covers Park Loop Road highlights; plan a full day for hiking plus Cadillac Mountain, or two days for carriage roads and the quieter western side."
+          },
+          {
+            "question": "Do I need a vehicle reservation for Cadillac Mountain?",
+            "answer": "Timed vehicle reservations are required for Cadillac Mountain Road in peak season; many guided tours include access logistics."
+          }
+        ]
       }
     ]
   },

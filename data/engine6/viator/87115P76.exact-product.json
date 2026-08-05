@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "87115P76",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Best-of-Bar-Harbor-w-Thunder-Hole-and-Acadia-National-Park/d4371-87115P76",
+    "title": "Bar Harbor Premium Tour with Cadillac Mountain and Acadia Park",
+    "description": {
+      "text": "Discover Bar Harbor and Acadia National Park on a small-group half-day tour with hotel pickup and a lobster roll finish. Stops commonly include Sieur de Monts Spring, Thunder Hole, Otter Cliff, and Cadillac Mountain with live local commentary. Stops include Sieur de Monts Spring, Thunder Hole, Otter Cliff, Cadillac Mountain, Bar Harbor Lobster Pound. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 171
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ad/b7/ec.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bar Harbor Premium Tour with Cadillac Mountain and Acadia Park from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Bar Harbor; guests outside town meet at the Bar Harbor Town Clock."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Bar Harbor and Acadia National Park on a small-group half-day tour with hotel pickup and a lobster roll finish.",
+    "itineraryItems": [
+      {
+        "title": "Sieur de Monts Spring",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Otter Cliff",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bar Harbor Lobster Pound",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup in Bar Harbor",
+      "Lobster roll",
+      "Admission to Cadillac Mountain",
+      "Live commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bar Harbor Premium Tour with Cadillac Mountain and Acadia Park?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Hotel pickup in Bar Harbor; guests outside town meet at the Bar Harbor Town Clock."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

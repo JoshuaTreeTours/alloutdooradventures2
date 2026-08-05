@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "227717P3",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/5-Hour-HIGHLIGHTS-OF-MOUNT-DESERT-ISLAND-and-eat-at-an-authentic-lobster-pound/d4371-227717P3",
+    "title": "6 Hour Private Tour: Acadia National Park, Fjord & Lobster Lunch",
+    "description": {
+      "text": "Discover top sights within Acadia National Park with your own personal guide during this private tour. Cover more locations in less time in a comfortable, climate-controlled vehicle. Stops include Cadillac Mountain, Park Loop Road, Asticou Gardens, Southwest Harbor Lobster Pound, Somes Sound. Tours include a stroll through Asticou Gardens, and a tasty lobster lunch stop in Southwest Harbor (meal not included.) Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $900.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 179
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4f/72/4f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover top sights within Acadia National Park with your own personal guide during this private tour",
+      "Cover more locations in less time in a comfortable, climate-controlled vehicle",
+      "Tours include a stroll through Asticou Gardens, and a tasty lobster lunch stop in Southwest Harbor (meal not included.)",
+      "6 Hour Private Tour: Acadia National Park, Fjord & Lobster Lunch near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from downtown Bar Harbor; outside downtown meet at Hulls Cove Visitor Center."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover top sights within Acadia National Park with your own personal guide during this private tour.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Asticou Gardens",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Southwest Harbor Lobster Pound",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Somes Sound",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Hour Private Tour: Acadia National Park, Fjord & Lobster Lunch?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Hotel pickup from downtown Bar Harbor; outside downtown meet at Hulls Cove Visitor Center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 900
+      },
+      "currency": "USD"
+    }
+  }
+}

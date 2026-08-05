@@ -95,6 +95,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "utah",
     citySlug: "canyonlands-national-park",
   },
+  "acadia-national-park": {
+    destinationLabel: "Acadia National Park",
+    destinationCitySlug: "acadia-national-park",
+    stateSlug: "maine",
+    citySlug: "acadia-national-park",
+  },
   "key-west": {
     destinationLabel: "Key West",
     destinationCitySlug: "key-west",

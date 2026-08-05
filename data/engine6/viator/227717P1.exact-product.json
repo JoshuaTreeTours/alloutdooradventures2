@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "227717P1",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/3-Hour-ACADIA-NATIONAL-PARK-TOUR-Cadillac-Mountain-Sand-Beach-and-Thunder-Hole/d4371-227717P1",
+    "title": "3 Hour: The Acadia Signature, Cadillac Summit & Park Loop Road",
+    "description": {
+      "text": "Make the most of your visit to Maine's Acadia National Park during this private, half-day guided tour with hotel pickup. Tours include bottled water and private transfers in a climate-controlled vehicle. Stops include Cadillac Mountain, Sand Beach, Thunder Hole, Otter Cliffs, Park Loop Road. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $900.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 265
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/c9/3d/ee/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "3 Hour: The Acadia Signature, Cadillac Summit & Park Loop Road from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from downtown Bar Harbor lodging, or Hulls Cove Visitor Center for guests outside downtown."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Make the most of your visit to Maine's Acadia National Park during this private, half-day guided tour with hotel pickup.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sand Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Otter Cliffs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "Private transportation",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3 Hour: The Acadia Signature, Cadillac Summit & Park Loop Road?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Hotel pickup from downtown Bar Harbor lodging, or Hulls Cove Visitor Center for guests outside downtown."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 900
+      },
+      "currency": "USD"
+    }
+  }
+}

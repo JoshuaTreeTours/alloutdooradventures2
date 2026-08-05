@@ -1,19 +1,26 @@
 {
-  "generatedAt": "2026-08-05T00:35:02.177Z",
+  "generatedAt": "2026-08-05T03:50:52.796Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [
-    "14649P15",
-    "14649P17",
-    "148657P1",
-    "18497P14",
-    "24134P3",
-    "265766P60",
-    "6896MOABCHPARK",
-    "6896MOABWRIM"
+    "124652P1",
+    "124652P2",
+    "227717P1",
+    "227717P2",
+    "227717P3",
+    "265766P17",
+    "265766P25",
+    "265766P29",
+    "266852P3",
+    "485251P2",
+    "5569071P10",
+    "5569071P4",
+    "5596065P3",
+    "5596065P9",
+    "87115P76"
   ],
   "scopedDestinationLabels": [
-    "Canyonlands"
+    "Acadia"
   ],
   "fullSiteValidation": false,
   "blockingPassed": true,
@@ -18534,7 +18541,7 @@
     }
   ],
   "merchantFeedImage": {
-    "imagesValidated": 765,
+    "imagesValidated": 780,
     "automaticallyRepaired": 0,
     "requiringFallback": 0,
     "unrecoverableFailures": 0,
@@ -18547,14 +18554,21 @@
   },
   "productHero": {
     "auditedProductCodes": [
-      "24134P3",
-      "6896MOABCHPARK",
-      "6896MOABWRIM",
-      "14649P15",
-      "265766P60",
-      "14649P17",
-      "18497P14",
-      "148657P1"
+      "124652P1",
+      "124652P2",
+      "266852P3",
+      "87115P76",
+      "265766P25",
+      "227717P1",
+      "227717P2",
+      "227717P3",
+      "485251P2",
+      "265766P29",
+      "5569071P4",
+      "5569071P10",
+      "5596065P9",
+      "5596065P3",
+      "265766P17"
     ],
     "findings": [],
     "pass": true
@@ -18562,7 +18576,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-08-05T00:35:02.041Z",
+    "generatedAt": "2026-08-05T03:50:52.506Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -18593,19 +18607,26 @@
     "deployScope": {
       "blockingProductCodes": [],
       "reportOnlyProductCodes": [
-        "14649P15",
-        "14649P17",
-        "148657P1",
-        "18497P14",
-        "24134P3",
-        "265766P60",
-        "6896MOABCHPARK",
-        "6896MOABWRIM"
+        "124652P1",
+        "124652P2",
+        "227717P1",
+        "227717P2",
+        "227717P3",
+        "265766P17",
+        "265766P25",
+        "265766P29",
+        "266852P3",
+        "485251P2",
+        "5569071P10",
+        "5569071P4",
+        "5596065P3",
+        "5596065P9",
+        "87115P76"
       ]
     }
   },
   "notes": [
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort scope: Canyonlands"
+    "Destination cohort scope: Acadia"
   ]
 }

@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "265766P29",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Private-Bike-Tour-in-Acadia-National-Park/d4371-265766P29",
+    "title": "Acadia Half Day Private Bike Tour",
+    "description": {
+      "text": "Ride Acadia National Park\u2019s historic carriage roads on a private bike outing with bikes and helmets provided, van support, and a naturalist-style guide. The half-day format keeps the group private so pacing and stops can match your riders\u2014including options for regular bikes or e-bikes when available. Stops include Carriage Roads, Eagle Lake, Jordan Pond. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $664.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/50/12/69.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Acadia Half Day Private Bike Tour from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup offered in Bar Harbor as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride Acadia National Park\u2019s historic carriage roads on a private bike outing with bikes and helmets provided, van support, and a naturalist-style guide.",
+    "itineraryItems": [
+      {
+        "title": "Carriage Roads",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eagle Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Bikes and helmets provided",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Acadia Half Day Private Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Hotel pickup offered in Bar Harbor as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 664.99
+      },
+      "currency": "USD"
+    }
+  }
+}

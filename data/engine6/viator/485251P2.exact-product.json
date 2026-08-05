@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "485251P2",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Acadia-The-Way-Life-Should-Be-Premium-4-hr-Private-Guided-Tour/d4371-485251P2",
+    "title": "The Way Life Should Be: 4-hr, Private Guided Tour of Acadia NP.",
+    "description": {
+      "text": "Enjoy a private, customized driving tour of Acadia National Park with hotel pickup, Cadillac Mountain entrance pass handling, and a local guide who adapts pacing to short walks and overlooks. Acadia's roads were purpose built to showcase views without long mandatory hikes, so the outing stays comfortable for mixed-ability groups. Stops include Cadillac Mountain, Park Loop Road, Thunder Hole, Jordan Pond. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours 15 minutes (approx.)",
+    "priceFrom": "From $700.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/1e/f7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Way Life Should Be: 4-hr, Private Guided Tour of Acadia NP. from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Guide calls 10\u201315 minutes prior for pickup; white Chrysler minivan with Acadia Driving Tours signage."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy a private, customized driving tour of Acadia National Park with hotel pickup, Cadillac Mountain entrance pass handling, and a local guide who adapts pacing to short walks and overlooks.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "National Park Passes",
+      "Cadillac Mountain entrance pass",
+      "Free pick-up and drop-off",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Way Life Should Be: 4-hr, Private Guided Tour of Acadia NP.?",
+        "answer": "The planned duration is 4 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Guide calls 10\u201315 minutes prior for pickup; white Chrysler minivan with Acadia Driving Tours signage."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 700
+      },
+      "currency": "USD"
+    }
+  }
+}
