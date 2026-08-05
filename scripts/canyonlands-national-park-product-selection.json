@@ -1,0 +1,119 @@
+{
+  "destinationLabel": "Canyonlands National Park",
+  "destinationCitySlug": "canyonlands-national-park",
+  "viatorDestinationSlug": "Moab",
+  "viatorDestinationId": "d5600",
+  "attractionId": "a16027",
+  "catalogUrl": "https://www.viator.com/Moab-attractions/Canyonlands-National-Park/d5600-a16027",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 8,
+  "premiumCount": 8,
+  "selectionNote": "Selected 8 guided Canyonlands National Park products from attraction catalog d5600-a16027 plus closely related Canyonlands-focused guided SKUs (Needles, White Rim, sunset, sunrise photo) with live commercial fields and product-specific heroes. Catalog advertises only 15 results; many are audio/self-guided apps, Moab-already-bound SKUs (6896MOABCPARK, 18497P15, 265766P59, 334588P3), Arches-bound combos (6896P1, 24134P13), Salt Lake multi-day packages, or thin/uncertain air SKUs. No wine tours found. Jeep/off-road, private hiking, helicopter, airplane, sunset, and photography covered. Paragon reference 265766P10 remains Zion-bound. Fewer than 10\u201320 because viable unbound guided Canyonlands inventory after rejects is 8.",
+  "selectedProductCodes": [
+    "24134P3",
+    "6896MOABCHPARK",
+    "6896MOABWRIM",
+    "14649P15",
+    "265766P60",
+    "14649P17",
+    "18497P14",
+    "148657P1"
+  ],
+  "premiumProductCodes": [
+    "24134P3",
+    "6896MOABCHPARK",
+    "6896MOABWRIM",
+    "14649P15",
+    "265766P60",
+    "14649P17",
+    "18497P14",
+    "148657P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "6896MOABCPARK",
+      "title": "Canyonlands National Park Half-Day Tour from Moab",
+      "reason": "Already published as Moab Engine6 product; exclusivity forbids dual binding"
+    },
+    {
+      "productCode": "18497P15",
+      "title": "Discover The Best Of Moab In A Day: Arches Canyonlands Dead Horse",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "265766P59",
+      "title": "Arches and Canyonlands Two Day Private Tour and Hike",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "334588P3",
+      "title": "Canyonlands National Park Backcountry Tour",
+      "reason": "Already published as Moab Engine6 product"
+    },
+    {
+      "productCode": "6896P1",
+      "title": "Arches and Canyonlands 4X4 Adventure from Moab",
+      "reason": "Already published as Arches Engine6 product"
+    },
+    {
+      "productCode": "24134P13",
+      "title": "Day Tour Arches and Canyonlands National Park in Utah",
+      "reason": "Already published as Arches Engine6 product"
+    },
+    {
+      "productCode": "267535P8",
+      "title": "Canyonlands National Park Self-Guided Driving Audio Tour",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "267535P17",
+      "title": "Arches and Canyonlands NP Self-Guided Driving Audio Bundle Tour",
+      "reason": "Self-guided audio bundle"
+    },
+    {
+      "productCode": "102020P32",
+      "title": "Canyonlands National Park Self-Guided Audio Tour",
+      "reason": "Self-guided audio / app tour"
+    },
+    {
+      "productCode": "309754P6",
+      "title": "Self Guided Audio Tour in Arches and Canyonlands",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "309754P71",
+      "title": "Self Guided Audio Driving Tour of Canyonlands",
+      "reason": "Self-guided audio / GPS tour"
+    },
+    {
+      "productCode": "481812P6",
+      "title": "4 Day Utah National Parks Tour Zion Bryce Canyonlands and Arches",
+      "reason": "Multi-day Salt Lake City package; not Canyonlands-focused Moab guided product"
+    },
+    {
+      "productCode": "481812P5",
+      "title": "Shared 7 Day Utah Winter Adventure Skiing and National Parks",
+      "reason": "Multi-day ski package; not Canyonlands guided tour"
+    },
+    {
+      "productCode": "14649P14",
+      "title": "Lake Powell & Canyonlands National Park Airplane Tour",
+      "reason": "Multi-destination Lake Powell charter; rating/reviews unverified on public dumps; less Canyonlands-pure"
+    },
+    {
+      "productCode": "14649P2",
+      "title": "Canyonlands and Arches Combo in Moab",
+      "reason": "Live H1 uncertain; related cards conflict with Airplane Tour labeling"
+    },
+    {
+      "productCode": "148657P4",
+      "title": "Day of Photography in Moab, Arches & Canyonlands",
+      "reason": "Multi-park day with Arches afternoon; prefer Canyonlands-focused 148657P1"
+    },
+    {
+      "productCode": "269326P2",
+      "title": "Off-Road Private Jeep Adventure in Moab Utah",
+      "reason": "Moab slickrock private jeep; not Canyonlands NP focused"
+    }
+  ]
+}

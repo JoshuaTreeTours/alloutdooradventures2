@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "24134P3",
+    "productUrl": "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Backcountry-4x4-Half-Day/d5600-24134P3",
+    "title": "Canyonlands National Park Backcountry 4x4 Adventure from Moab",
+    "description": {
+      "text": "Discover the rugged beauty and ancient legends of Canyonlands National Park on a 4WD tour from Moab. Go off-roading in a sturdy Jeep to reach the Island in the Sky district and other remote areas, where the Colorado River slices through steep ravines and ancient Pueblo rock art decorates the sandstone cliffs. Stops include Island in the Sky, Shafer Trail, Gooseneck Overlook. Hold on tight as your driver and guide navigates the switchbacks of Shafer Trail, and fill your camera roll with amazing perspective shots of the red-rock canyons. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $210.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 423
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/a6/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the rugged beauty and ancient legends of Canyonlands National Park on a 4WD tour from Moab",
+      "Go off-roading in a sturdy Jeep to reach the Island in the Sky district and other remote areas, where the Colorado River",
+      "Hold on tight as your driver and guide navigates the switchbacks of Shafer Trail, and fill your camera roll with amazing",
+      "Canyonlands National Park Backcountry 4x4 Adventure from Moab near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "378 N Main St, Moab, UT 84532, USA \u2014 meeting point next door to Comfort Suites; large pipe statue of a man holding an oar in front of parking lot. Ends at meeting point. Hotel pickup/drop-off not included (office contact for private pricing)."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the rugged beauty and ancient legends of Canyonlands National Park on a 4WD tour from Moab.",
+    "itineraryItems": [
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shafer Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gooseneck Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Experienced, knowledgeable guide",
+      "Ice water and snacks",
+      "Parking available at the office",
+      "Air-conditioned vehicle",
+      "Park entrance fee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands National Park Backcountry 4x4 Adventure from Moab?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "378 N Main St, Moab, UT 84532, USA \u2014 meeting point next door to Comfort Suites; large pipe statue of a man holding an oar in front of parking lot. Ends at meeting point. Hotel pickup/drop-off not included (office contact for private pricing)."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210
+      },
+      "currency": "USD"
+    }
+  }
+}

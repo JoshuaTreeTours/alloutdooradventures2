@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-08-04T22:10:41.282Z
+Generated: 2026-08-05T00:35:02.177Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -11,9 +11,9 @@ Overall passed: true
 
 ## Scope
 
-- Deploy-scoped blocking products: 15
-- Scoped product codes: 108923P4, 14649P16, 14649P18, 148657P5, 18497P1, 18497P17, 18497P4, 18497P9, 24134P13, 24134P16, 24134P2, 265766P26, 265766P8, 334588P2, 6896P1
-- Destination cohort labels: Arches
+- Deploy-scoped blocking products: 8
+- Scoped product codes: 14649P15, 14649P17, 148657P1, 18497P14, 24134P3, 265766P60, 6896MOABCHPARK, 6896MOABWRIM
+- Destination cohort labels: Canyonlands
 
 ## Totals
 
@@ -43,7 +43,7 @@ Overall passed: true
 ## Notes
 
 - rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.
-- Destination cohort scope: Arches
+- Destination cohort scope: Canyonlands
 
 ## Legacy findings (report-only)
 

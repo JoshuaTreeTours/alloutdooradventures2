@@ -800,6 +800,38 @@ export const isEngine6ArchesNationalParkTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_ARCHES_NATIONAL_PARK_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CANYONLANDS_24134P3_PRODUCT_CODE = "24134P3";
+export const ENGINE6_CANYONLANDS_24134P3_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-backcountry-4x4-adventure-fro-24134P3";
+export const ENGINE6_CANYONLANDS_6896MOABCHPARK_PRODUCT_CODE = "6896MOABCHPARK";
+export const ENGINE6_CANYONLANDS_6896MOABCHPARK_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-needles-district-by-4x4-6896MOABCHPARK";
+export const ENGINE6_CANYONLANDS_6896MOABWRIM_PRODUCT_CODE = "6896MOABWRIM";
+export const ENGINE6_CANYONLANDS_6896MOABWRIM_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/canyonlands-national-park-white-rim-trail-by-4wd-6896MOABWRIM";
+export const ENGINE6_CANYONLANDS_14649P15_PRODUCT_CODE = "14649P15";
+export const ENGINE6_CANYONLANDS_14649P15_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/island-in-the-sky-of-canyonlands-helicopter-tour-14649P15";
+export const ENGINE6_CANYONLANDS_265766P60_PRODUCT_CODE = "265766P60";
+export const ENGINE6_CANYONLANDS_265766P60_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/canyonlands-full-day-private-tour-and-hike-265766P60";
+export const ENGINE6_CANYONLANDS_14649P17_PRODUCT_CODE = "14649P17";
+export const ENGINE6_CANYONLANDS_14649P17_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/colorado-to-canyonlands-geology-airplane-tour-14649P17";
+export const ENGINE6_CANYONLANDS_18497P14_PRODUCT_CODE = "18497P14";
+export const ENGINE6_CANYONLANDS_18497P14_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/unique-secluded-sunset-in-moab-canyonlands-by-4x4-hike-18497P14";
+export const ENGINE6_CANYONLANDS_148657P1_PRODUCT_CODE = "148657P1";
+export const ENGINE6_CANYONLANDS_148657P1_ROUTE =
+  "/destinations/utah/canyonlands-national-park/tours/sunrise-photography-in-dead-horse-point-and-canyonlands-148657P1";
+
+export const ENGINE6_CANYONLANDS_NATIONAL_PARK_TOUR_PATH_PREFIX =
+  "/destinations/utah/canyonlands-national-park/tours/";
+
+export const isEngine6CanyonlandsNationalParkTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_CANYONLANDS_NATIONAL_PARK_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3385,6 +3417,38 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ARCHES_24134P16_ROUTE,
     ENGINE6_ARCHES_24134P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_24134P3_ROUTE,
+    ENGINE6_CANYONLANDS_24134P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_6896MOABCHPARK_ROUTE,
+    ENGINE6_CANYONLANDS_6896MOABCHPARK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_6896MOABWRIM_ROUTE,
+    ENGINE6_CANYONLANDS_6896MOABWRIM_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_14649P15_ROUTE,
+    ENGINE6_CANYONLANDS_14649P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_265766P60_ROUTE,
+    ENGINE6_CANYONLANDS_265766P60_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_14649P17_ROUTE,
+    ENGINE6_CANYONLANDS_14649P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_18497P14_ROUTE,
+    ENGINE6_CANYONLANDS_18497P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANYONLANDS_148657P1_ROUTE,
+    ENGINE6_CANYONLANDS_148657P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

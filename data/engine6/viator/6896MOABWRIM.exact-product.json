@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "6896MOABWRIM",
+    "productUrl": "https://www.viator.com/tours/Moab/Canyonlands-National-Park-White-Rim-Trail-by-4x4/d5600-6896MOABWRIM",
+    "title": "Canyonlands National Park White Rim Trail by 4WD",
+    "description": {
+      "text": "Go off-roading by 4-wheel drive deep into Canyonlands National Park via the White Rim Road, a scenic route of switchbacks and red rock formations. This full-day tour with an expert guide includes popular spots such as Island in the Sky, Gooseneck Overlook, Musselman Arch, Lathrop Canyon and the Shafer Trail leading to the Colorado River. Stops include White Rim Road, Island in the Sky, Gooseneck Overlook, Musselman Arch, Lathrop Canyon, Shafer Trail. Take short optional guided hikes that lead to hidden passages, secret canyons and the caves of Canyonlands. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $336.96",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 210
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/e1/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Go off-roading by 4-wheel drive (4WD) deep into Canyonlands National Park via the White Rim Road, a scenic route of swit",
+      "This full-day tour with an expert guide includes popular spots such as Island in the Sky, Gooseneck overlook, Musselman ",
+      "Take short optional guided hikes that lead to hidden passages, secret canyons and the caves of Canyonlands",
+      "Canyonlands National Park White Rim Trail by 4WD near Canyonlands National Park",
+      "Professional Canyonlands National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "NAVTEC Expeditions, 321 N Main St, Moab, UT 84532, USA. Depart 8:00 am (arrive 15 minutes early). Pickup offered; ends at meeting point."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Go off-roading by 4-wheel drive deep into Canyonlands National Park via the White Rim Road, a scenic route of switchbacks and red rock formations.",
+    "itineraryItems": [
+      {
+        "title": "White Rim Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gooseneck Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Musselman Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lathrop Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shafer Trail",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Transport by 4x4 vehicle",
+      "Ice water (bring personal bottle)",
+      "Buffet-style lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands National Park White Rim Trail by 4WD?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "NAVTEC Expeditions, 321 N Main St, Moab, UT 84532, USA. Depart 8:00 am (arrive 15 minutes early). Pickup offered; ends at meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Nature and Wildlife"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 336.96
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "14649P15",
+    "productUrl": "https://www.viator.com/tours/Moab/Edge-of-Canyonlands-Helicopter-Air-Tour/d5600-14649P15",
+    "title": "Island in the Sky of Canyonlands Helicopter Tour",
+    "description": {
+      "text": "Soar above Canyonlands National Park on a 45-minute scenic helicopter flight from Moab. Capture aerial views of Dead Horse Point, Thelma and Louise Point, the Colorado River, Behind the Rocks, and Island in the Sky rim country with pilot narration. Stops include Dead Horse Point, Thelma and Louise Point, Colorado River, Island in the Sky, Grand View Point. Window seats and headsets keep the short flight focused on canyon overlooks and red-rock photo angles. Ideal for visitors basing in Moab who want a guided Canyonlands National Park experience without coordinating park logistics, trailheads, or backcountry routes on their own."
+    },
+    "location": {
+      "city": "Canyonlands National Park",
+      "state": "Utah"
+    },
+    "duration": "45 minutes",
+    "priceFrom": "From $598.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fd/2f/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Island in the Sky of Canyonlands Helicopter Tour from Canyonlands National Park",
+      "Island in the Sky overlooks and red-rock canyon views",
+      "Professional guide with Canyonlands local expertise",
+      "Small-group or private format as listed",
+      "Canyonlands scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "94 W Aviation Way, Moab, UT 84532, USA \u2014 inside Canyonlands Field Airport Terminal. Ends at meeting point."
+      },
+      "end": {
+        "description": "Return to your Moab or Canyonlands National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Soar above Canyonlands National Park on a 45-minute scenic helicopter flight from Moab.",
+    "itineraryItems": [
+      {
+        "title": "Dead Horse Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thelma and Louise Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand View Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Corona Arch",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Headsets to clearly hear the narration",
+      "Live narration on board",
+      "Complimentary water inside the terminal",
+      "All taxes, fees and handling charges",
+      "Window seats for everyone"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Island in the Sky of Canyonlands Helicopter Tour?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Canyonlands National Park?",
+        "answer": "94 W Aviation Way, Moab, UT 84532, USA \u2014 inside Canyonlands Field Airport Terminal. Ends at meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 598
+      },
+      "currency": "USD"
+    }
+  }
+}
