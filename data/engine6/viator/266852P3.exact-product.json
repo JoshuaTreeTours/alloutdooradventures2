@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "266852P3",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Guided-Ebike-Tour-of-Acadia-National-Park-Carriage-Roads/d4371-266852P3",
+    "title": "Guided Ebike Tour of Acadia National Park Carriage Roads",
+    "description": {
+      "text": "Discover Acadia National Park\u2019s stunning Carriage Roads on a 22-mile guided e-bike tour, featuring premium Class I e-bikes for a smooth and enjoyable ride. Limited to eight riders, this top-rated tour includes stops at iconic spots like Jordan Pond House and Eagle Lake, with plenty of time for photos and relaxation. Stops include Carriage Roads, Jordan Pond House, Eagle Lake. Led by expert guides, you\u2019ll uncover the park\u2019s rich history, hidden viewpoints, and natural wonders at a comfortable pace. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $190.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 411
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/43/69.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover Acadia National Park\u2019s stunning Carriage Roads on a 22-mile guided e-bike tour, featuring premium Class I e-bik",
+      "Limited to eight riders, this top-rated tour includes stops at iconic spots like Jordan Pond House and Eagle Lake, with ",
+      "Led by expert guides, you\u2019ll uncover the park\u2019s rich history, hidden viewpoints, and natural wonders at a comfortable pa",
+      "Guided Ebike Tour of Acadia National Park Carriage Roads near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet for guided e-bike departure as confirmed at booking near Acadia carriage-road access."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Acadia National Park\u2019s stunning Carriage Roads on a 22-mile guided e-bike tour, featuring premium Class I e-bikes for a smooth and enjoyable ride.",
+    "itineraryItems": [
+      {
+        "title": "Carriage Roads",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond House",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eagle Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Class I e-bike",
+      "Helmet",
+      "Guided tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Ebike Tour of Acadia National Park Carriage Roads?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Meet for guided e-bike departure as confirmed at booking near Acadia carriage-road access."
+      }
+    ],
+    "categories": [
+      {
+        "label": "E-Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 190
+      },
+      "currency": "USD"
+    }
+  }
+}

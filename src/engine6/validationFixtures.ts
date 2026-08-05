@@ -152,6 +152,21 @@ import specimen265766p60Payload from "../../data/engine6/viator/265766P60.exact-
 import specimen14649p17Payload from "../../data/engine6/viator/14649P17.exact-product.json";
 import specimen18497p14Payload from "../../data/engine6/viator/18497P14.exact-product.json";
 import specimen148657p1Payload from "../../data/engine6/viator/148657P1.exact-product.json";
+import specimen124652p1Payload from "../../data/engine6/viator/124652P1.exact-product.json";
+import specimen124652p2Payload from "../../data/engine6/viator/124652P2.exact-product.json";
+import specimen266852p3Payload from "../../data/engine6/viator/266852P3.exact-product.json";
+import specimen87115p76Payload from "../../data/engine6/viator/87115P76.exact-product.json";
+import specimen265766p25Payload from "../../data/engine6/viator/265766P25.exact-product.json";
+import specimen227717p1Payload from "../../data/engine6/viator/227717P1.exact-product.json";
+import specimen227717p2Payload from "../../data/engine6/viator/227717P2.exact-product.json";
+import specimen227717p3Payload from "../../data/engine6/viator/227717P3.exact-product.json";
+import specimen485251p2Payload from "../../data/engine6/viator/485251P2.exact-product.json";
+import specimen265766p29Payload from "../../data/engine6/viator/265766P29.exact-product.json";
+import specimen5569071p4Payload from "../../data/engine6/viator/5569071P4.exact-product.json";
+import specimen5569071p10Payload from "../../data/engine6/viator/5569071P10.exact-product.json";
+import specimen5596065p9Payload from "../../data/engine6/viator/5596065P9.exact-product.json";
+import specimen5596065p3Payload from "../../data/engine6/viator/5596065P3.exact-product.json";
+import specimen265766p17Payload from "../../data/engine6/viator/265766P17.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2277,6 +2292,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "148657P1",
     publicUrl: "https://www.viator.com/tours/Moab/Sunrise-photography-in-Dead-Horse-Point-and-Canyonlands-National-Park/d5600-148657P1",
     rawPayload: specimen148657p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "124652P1",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Narrated-Bus-Tour-of-Acadia-National-Park-2-5-Hours/d4371-124652P1",
+    rawPayload: specimen124652p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "124652P2",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Premium-Narrated-Bus-Tour-of-Bar-Harbor-and-Acadia-National-Park-3-5-Hours/d4371-124652P2",
+    rawPayload: specimen124652p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "266852P3",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Guided-Ebike-Tour-of-Acadia-National-Park-Carriage-Roads/d4371-266852P3",
+    rawPayload: specimen266852p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87115P76",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Best-of-Bar-Harbor-w-Thunder-Hole-and-Acadia-National-Park/d4371-87115P76",
+    rawPayload: specimen87115p76Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P25",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Full-Day-Small-Group-Tour-of-Acadia-National-Park/d4371-265766P25",
+    rawPayload: specimen265766p25Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "227717P1",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/3-Hour-ACADIA-NATIONAL-PARK-TOUR-Cadillac-Mountain-Sand-Beach-and-Thunder-Hole/d4371-227717P1",
+    rawPayload: specimen227717p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "227717P2",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/4-Hour-ACADIA-NATIONAL-PARK-TOUR-with-Somes-Sound-fjord-Gardens-and-Mansions/d4371-227717P2",
+    rawPayload: specimen227717p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "227717P3",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/5-Hour-HIGHLIGHTS-OF-MOUNT-DESERT-ISLAND-and-eat-at-an-authentic-lobster-pound/d4371-227717P3",
+    rawPayload: specimen227717p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "485251P2",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Acadia-The-Way-Life-Should-Be-Premium-4-hr-Private-Guided-Tour/d4371-485251P2",
+    rawPayload: specimen485251p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P29",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Private-Bike-Tour-in-Acadia-National-Park/d4371-265766P29",
+    rawPayload: specimen265766p29Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5569071P4",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Classic-Acadia-Cadillac-Mountain-Thunder-Hole-and-hidden-gems/d4371-5569071P4",
+    rawPayload: specimen5569071p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5569071P10",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/The-Grand-Explorer-Full-Day-Tour-of-Acadia-and-Mount-Desert-Island/d4371-5569071P10",
+    rawPayload: specimen5569071p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5596065P9",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Sunrise-or-Sunset-on-Cadillac-Mountain-Summit-in-Acadia/d4371-5596065P9",
+    rawPayload: specimen5596065p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5596065P3",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Acadia-National-Park-Tour-Acadia-Wonderland-w-Bass-Harbor-Light/d4371-5596065P3",
+    rawPayload: specimen5596065p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P17",
+    publicUrl: "https://www.viator.com/tours/Bar-Harbor/Full-Day-Private-Tour-in-Acadia-National-Park/d4371-265766P17",
+    rawPayload: specimen265766p17Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

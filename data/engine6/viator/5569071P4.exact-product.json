@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "5569071P4",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Classic-Acadia-Cadillac-Mountain-Thunder-Hole-and-hidden-gems/d4371-5569071P4",
+    "title": "\u201cClassic Acadia\u201d Private Tour: Cadillac Mountain & Thunder Hole",
+    "description": {
+      "text": "Avoid crowds and skip the stress of planning, driving, and parking while exploring Acadia National Park. Your guide covers landmark stops such as Thunder Hole, Jordan Pond, Ocean Path, or Park Loop Road depending on the itinerary. Stops include Cadillac Mountain, Thunder Hole, Park Loop Road. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $795.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/22/a2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "\u201cClassic Acadia\u201d Private Tour: Cadillac Mountain & Thunder Hole from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup as confirmed at booking in the Bar Harbor area."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Avoid crowds and skip the stress of planning, driving, and parking while exploring Acadia National Park.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guide commentary",
+      "Cadillac Mountain access logistics"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the \u201cClassic Acadia\u201d Private Tour: Cadillac Mountain & Thunder Hole?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Private pickup as confirmed at booking in the Bar Harbor area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 795
+      },
+      "currency": "USD"
+    }
+  }
+}

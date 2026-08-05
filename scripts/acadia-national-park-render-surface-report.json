@@ -1,0 +1,232 @@
+{
+  "selectedCount": 15,
+  "listingCount": 15,
+  "listingMatchesSelection": true,
+  "okCount": 15,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "124652P1",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/narrated-bus-tour-of-bar-harbor-and-acadia-national-par-124652P1",
+      "title": "Narrated Bus Tour of Bar Harbor and Acadia National Park",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/63/1d.jpg",
+      "card": "Take a deep dive into Bar Harbor, Acadia National Park, and Mt.",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Sieur de Monts Spring",
+        "Thunder Hole"
+      ],
+      "issues": []
+    },
+    {
+      "code": "124652P2",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/premium-narrated-bus-tour-of-bar-harbor-and-acadia-nati-124652P2",
+      "title": "Premium Narrated Bus Tour of Bar Harbor and Acadia National Park (3.5 Hours)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/8a/b5/04.jpg",
+      "card": "Known for its rocky coastlines, wealth of wildlife, and evergreen forests, Acadia National Park promises dramatic scenery—and this fully nar",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Thunder Hole",
+        "Sieur de Monts Spring",
+        "Jordan Pond"
+      ],
+      "issues": []
+    },
+    {
+      "code": "266852P3",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/guided-ebike-tour-of-acadia-national-park-carriage-road-266852P3",
+      "title": "Guided Ebike Tour of Acadia National Park Carriage Roads",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/43/69.jpg",
+      "card": "Discover Acadia National Park’s stunning Carriage Roads on a 22-mile guided e-bike tour, featuring premium Class I e-bikes for a smooth and ",
+      "itineraryTitles": [
+        "Carriage Roads",
+        "Jordan Pond House",
+        "Eagle Lake"
+      ],
+      "issues": []
+    },
+    {
+      "code": "87115P76",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/bar-harbor-premium-tour-with-cadillac-mountain-and-acad-87115P76",
+      "title": "Bar Harbor Premium Tour with Cadillac Mountain and Acadia Park",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ad/b7/ec.jpg",
+      "card": "Discover Bar Harbor and Acadia National Park on a small-group half-day tour with hotel pickup and a lobster roll finish.",
+      "itineraryTitles": [
+        "Sieur de Monts Spring",
+        "Thunder Hole",
+        "Otter Cliff",
+        "Cadillac Mountain",
+        "Bar Harbor Lobster Pound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "265766P25",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/acadia-full-day-small-group-tour-265766P25",
+      "title": "Acadia Full Day Small Group Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/29/c8/97.jpg",
+      "card": "Explore Acadia National Park with a naturalist guide who teaches flora, fauna, and coastal geology while you hike and travel by van.",
+      "itineraryTitles": [
+        "Sand Beach",
+        "Ocean Path",
+        "Thunder Hole",
+        "Jordan Pond",
+        "Cadillac Mountain"
+      ],
+      "issues": []
+    },
+    {
+      "code": "227717P1",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/3-hour-the-acadia-signature-cadillac-summit-park-loop-r-227717P1",
+      "title": "3 Hour: The Acadia Signature, Cadillac Summit & Park Loop Road",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/c9/3d/ee/caption.jpg",
+      "card": "Make the most of your visit to Maine's Acadia National Park during this private, half-day guided tour with hotel pickup.",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Sand Beach",
+        "Thunder Hole",
+        "Otter Cliffs",
+        "Park Loop Road"
+      ],
+      "issues": []
+    },
+    {
+      "code": "227717P2",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/4-hour-private-tour-explore-acadia-natl-park-fjord-mans-227717P2",
+      "title": "4 Hour Private Tour: Explore Acadia Nat'l Park, Fjord & Mansions",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4f/71/78.jpg",
+      "card": "Explore Acadia National Park on a private half-day guided drive covering Park Loop Road highlights and Cadillac Mountain views without requi",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Park Loop Road",
+        "Somes Sound",
+        "Asticou Gardens"
+      ],
+      "issues": []
+    },
+    {
+      "code": "227717P3",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/6-hour-private-tour-acadia-national-park-fjord-lobster-227717P3",
+      "title": "6 Hour Private Tour: Acadia National Park, Fjord & Lobster Lunch",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4f/72/4f.jpg",
+      "card": "Discover top sights within Acadia National Park with your own personal guide during this private tour.",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Park Loop Road",
+        "Asticou Gardens",
+        "Southwest Harbor Lobster Pound",
+        "Somes Sound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "485251P2",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/the-way-life-should-be-4-hr-private-guided-tour-of-acad-485251P2",
+      "title": "The Way Life Should Be: 4-hr, Private Guided Tour of Acadia NP.",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/1e/f7.jpg",
+      "card": "Enjoy a private, customized driving tour of Acadia National Park with hotel pickup, Cadillac Mountain entrance pass handling, and a local gu",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Park Loop Road",
+        "Thunder Hole",
+        "Jordan Pond"
+      ],
+      "issues": []
+    },
+    {
+      "code": "265766P29",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/acadia-half-day-private-bike-tour-265766P29",
+      "title": "Acadia Half Day Private Bike Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/50/12/69.jpg",
+      "card": "Ride Acadia National Park’s historic carriage roads on a private bike outing with bikes and helmets provided, van support, and a naturalist-",
+      "itineraryTitles": [
+        "Carriage Roads",
+        "Eagle Lake",
+        "Jordan Pond"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5569071P4",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/classic-acadia-private-tour-cadillac-mountain-thunder-h-5569071P4",
+      "title": "“Classic Acadia” Private Tour: Cadillac Mountain & Thunder Hole",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/22/a2.jpg",
+      "card": "Avoid crowds and skip the stress of planning, driving, and parking while exploring Acadia National Park.",
+      "itineraryTitles": [
+        "Cadillac Mountain",
+        "Thunder Hole",
+        "Park Loop Road"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5569071P10",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/private-acadia-mount-desert-island-tour-full-day-six-ho-5569071P10",
+      "title": "“Private Acadia” & Mount Desert Island Tour (full day, six hours)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/19/47/4d.jpg",
+      "card": "Explore the beauty of Acadia National Park on this comprehensive six-hour private tour.",
+      "itineraryTitles": [
+        "Park Loop Road",
+        "Cadillac Mountain",
+        "Mount Desert Island",
+        "Lobster Pound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5596065P9",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/sunrise-or-sunset-on-cadillac-mountain-in-acadia-nation-5596065P9",
+      "title": "Sunrise or Sunset on Cadillac Mountain in Acadia National Park",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/9b/b5/ef.jpg",
+      "card": "Watch sunrise or sunset from Cadillac Mountain summit in Acadia National Park on a private timed outing up Cadillac Mountain Road.",
+      "itineraryTitles": [
+        "Cadillac Mountain Summit",
+        "Cadillac Mountain Road"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5596065P3",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/acadia-national-park-bass-harbor-lighthouse-private-dri-5596065P3",
+      "title": "Acadia National Park Bass Harbor Lighthouse Private Driving Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/17/16/f6.jpg",
+      "card": "Tour Acadia National Park’s quieter western side on a private driving outing that features Bass Harbor Head Light and scenic Mount Desert Is",
+      "itineraryTitles": [
+        "Bass Harbor Head Light",
+        "Mount Desert Island",
+        "Acadia National Park"
+      ],
+      "issues": []
+    },
+    {
+      "code": "265766P17",
+      "ok": true,
+      "path": "/destinations/maine/acadia-national-park/tours/acadia-full-day-private-tour-and-hike-265766P17",
+      "title": "Acadia Full Day Private Tour and Hike",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/99/06/64.jpg",
+      "card": "Spend 6–8 hours exploring Acadia National Park with a naturalist guide on a private itinerary: hiking toward Bubble Rock, walking the Ocean ",
+      "itineraryTitles": [
+        "Bubble Rock",
+        "Ocean Path",
+        "Thunder Hole",
+        "Jordan Pond",
+        "Cadillac Mountain"
+      ],
+      "issues": []
+    }
+  ]
+}

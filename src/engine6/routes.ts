@@ -832,6 +832,59 @@ export const isEngine6CanyonlandsNationalParkTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CANYONLANDS_NATIONAL_PARK_TOUR_PATH_PREFIX);
 
+export const ENGINE6_ACADIA_124652P1_PRODUCT_CODE = "124652P1";
+export const ENGINE6_ACADIA_124652P1_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/narrated-bus-tour-of-bar-harbor-and-acadia-national-par-124652P1";
+export const ENGINE6_ACADIA_124652P2_PRODUCT_CODE = "124652P2";
+export const ENGINE6_ACADIA_124652P2_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/premium-narrated-bus-tour-of-bar-harbor-and-acadia-nati-124652P2";
+export const ENGINE6_ACADIA_266852P3_PRODUCT_CODE = "266852P3";
+export const ENGINE6_ACADIA_266852P3_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/guided-ebike-tour-of-acadia-national-park-carriage-road-266852P3";
+export const ENGINE6_ACADIA_87115P76_PRODUCT_CODE = "87115P76";
+export const ENGINE6_ACADIA_87115P76_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/bar-harbor-premium-tour-with-cadillac-mountain-and-acad-87115P76";
+export const ENGINE6_ACADIA_265766P25_PRODUCT_CODE = "265766P25";
+export const ENGINE6_ACADIA_265766P25_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/acadia-full-day-small-group-tour-265766P25";
+export const ENGINE6_ACADIA_227717P1_PRODUCT_CODE = "227717P1";
+export const ENGINE6_ACADIA_227717P1_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/3-hour-the-acadia-signature-cadillac-summit-park-loop-r-227717P1";
+export const ENGINE6_ACADIA_227717P2_PRODUCT_CODE = "227717P2";
+export const ENGINE6_ACADIA_227717P2_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/4-hour-private-tour-explore-acadia-natl-park-fjord-mans-227717P2";
+export const ENGINE6_ACADIA_227717P3_PRODUCT_CODE = "227717P3";
+export const ENGINE6_ACADIA_227717P3_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/6-hour-private-tour-acadia-national-park-fjord-lobster-227717P3";
+export const ENGINE6_ACADIA_485251P2_PRODUCT_CODE = "485251P2";
+export const ENGINE6_ACADIA_485251P2_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/the-way-life-should-be-4-hr-private-guided-tour-of-acad-485251P2";
+export const ENGINE6_ACADIA_265766P29_PRODUCT_CODE = "265766P29";
+export const ENGINE6_ACADIA_265766P29_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/acadia-half-day-private-bike-tour-265766P29";
+export const ENGINE6_ACADIA_5569071P4_PRODUCT_CODE = "5569071P4";
+export const ENGINE6_ACADIA_5569071P4_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/classic-acadia-private-tour-cadillac-mountain-thunder-h-5569071P4";
+export const ENGINE6_ACADIA_5569071P10_PRODUCT_CODE = "5569071P10";
+export const ENGINE6_ACADIA_5569071P10_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/private-acadia-mount-desert-island-tour-full-day-six-ho-5569071P10";
+export const ENGINE6_ACADIA_5596065P9_PRODUCT_CODE = "5596065P9";
+export const ENGINE6_ACADIA_5596065P9_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/sunrise-or-sunset-on-cadillac-mountain-in-acadia-nation-5596065P9";
+export const ENGINE6_ACADIA_5596065P3_PRODUCT_CODE = "5596065P3";
+export const ENGINE6_ACADIA_5596065P3_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/acadia-national-park-bass-harbor-lighthouse-private-dri-5596065P3";
+export const ENGINE6_ACADIA_265766P17_PRODUCT_CODE = "265766P17";
+export const ENGINE6_ACADIA_265766P17_ROUTE =
+  "/destinations/maine/acadia-national-park/tours/acadia-full-day-private-tour-and-hike-265766P17";
+
+export const ENGINE6_ACADIA_NATIONAL_PARK_TOUR_PATH_PREFIX =
+  "/destinations/maine/acadia-national-park/tours/";
+
+export const isEngine6AcadiaNationalParkTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_ACADIA_NATIONAL_PARK_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3449,6 +3502,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CANYONLANDS_148657P1_ROUTE,
     ENGINE6_CANYONLANDS_148657P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_124652P1_ROUTE,
+    ENGINE6_ACADIA_124652P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_124652P2_ROUTE,
+    ENGINE6_ACADIA_124652P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_266852P3_ROUTE,
+    ENGINE6_ACADIA_266852P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_87115P76_ROUTE,
+    ENGINE6_ACADIA_87115P76_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_265766P25_ROUTE,
+    ENGINE6_ACADIA_265766P25_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_227717P1_ROUTE,
+    ENGINE6_ACADIA_227717P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_227717P2_ROUTE,
+    ENGINE6_ACADIA_227717P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_227717P3_ROUTE,
+    ENGINE6_ACADIA_227717P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_485251P2_ROUTE,
+    ENGINE6_ACADIA_485251P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_265766P29_ROUTE,
+    ENGINE6_ACADIA_265766P29_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_5569071P4_ROUTE,
+    ENGINE6_ACADIA_5569071P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_5569071P10_ROUTE,
+    ENGINE6_ACADIA_5569071P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_5596065P9_ROUTE,
+    ENGINE6_ACADIA_5596065P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_5596065P3_ROUTE,
+    ENGINE6_ACADIA_5596065P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ACADIA_265766P17_ROUTE,
+    ENGINE6_ACADIA_265766P17_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "265766P25",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Full-Day-Small-Group-Tour-of-Acadia-National-Park/d4371-265766P25",
+    "title": "Acadia Full Day Small Group Tour",
+    "description": {
+      "text": "Explore Acadia National Park with a naturalist guide who teaches flora, fauna, and coastal geology while you hike and travel by van. The small-group day mixes Ocean Path shoreline walking with Jordan Pond and Cadillac Mountain viewpoints. Stops include Sand Beach, Ocean Path, Thunder Hole, Jordan Pond, Cadillac Mountain. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "6 to 7 hours (approx.)",
+    "priceFrom": "From $427.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 121
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/29/c8/97.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the beauty of a national park with the help of a naturalist guide to teach you all about the flora and fauna of ",
+      "You\u2019ll enjoy a mixture of hiking on and off the beaten track, and traveling in a comfortable, air-conditioned van",
+      "You\u2019ll be walking and learning in an intimate group where you can pick the tour leader\u2019s brain to your heart\u2019s content",
+      "Acadia Full Day Small Group Tour near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "22 Albert Meadow, Bar Harbor, ME 04609, USA \u2014 Balance Rock paid parking lot area as confirmed by guide."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Acadia National Park with a naturalist guide who teaches flora, fauna, and coastal geology while you hike and travel by van.",
+    "itineraryItems": [
+      {
+        "title": "Sand Beach",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ocean Path",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Park Entry Fees",
+      "Air-conditioned vehicle",
+      "Snacks",
+      "Naturalist guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Acadia Full Day Small Group Tour?",
+        "answer": "The planned duration is 6 to 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "22 Albert Meadow, Bar Harbor, ME 04609, USA \u2014 Balance Rock paid parking lot area as confirmed by guide."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Small Group"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 427
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -40,6 +40,9 @@ export const ENGINE6_ARCHES_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_CANYONLANDS_CANONICAL_CITY_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/b0/48/25/caption.jpg?w=700&h=500&s=1";
 
+export const ENGINE6_ACADIA_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/63/1d.jpg";
+
 export const ENGINE6_OLYMPIC_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/78/b1/b5.jpg";
 
@@ -140,6 +143,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   montana: {
     "glacier-national-park": ENGINE6_GLACIER_CANONICAL_CITY_HERO_URL,
+  },
+  maine: {
+    "acadia-national-park": ENGINE6_ACADIA_CANONICAL_CITY_HERO_URL,
   },
   tennessee: {
     "great-smoky-mountains-national-park": ENGINE6_GSM_CANONICAL_CITY_HERO_URL,

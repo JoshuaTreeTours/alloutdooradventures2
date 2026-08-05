@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "265766P17",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Full-Day-Private-Tour-in-Acadia-National-Park/d4371-265766P17",
+    "title": "Acadia Full Day Private Tour and Hike",
+    "description": {
+      "text": "Spend 6\u20138 hours exploring Acadia National Park with a naturalist guide on a private itinerary: hiking toward Bubble Rock, walking the Ocean Path to Thunder Hole, stopping at Jordan Pond, and driving up to the summit of Cadillac Mountain. The private format lets your group tailor hike difficulty and pacing. Stops include Bubble Rock, Ocean Path, Thunder Hole, Jordan Pond, Cadillac Mountain. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "6 to 10 hours (approx.)",
+    "priceFrom": "From $851.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 60
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/99/06/64.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Acadia Full Day Private Tour and Hike from Acadia National Park",
+      "Cadillac Mountain overlooks and coastal granite shoreline views",
+      "Professional guide with Acadia local expertise",
+      "Small-group or private format as listed",
+      "Acadia scenic, adventure, or photography experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Bar Harbor meeting or pickup as confirmed by Good Trip Adventures before departure."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend 6\u20138 hours exploring Acadia National Park with a naturalist guide on a private itinerary: hiking toward Bubble Rock, walking the Ocean Path to Thunder Hole, stopping at Jordan Pond, and driving up to the summit of Cadillac Mountain.",
+    "itineraryItems": [
+      {
+        "title": "Bubble Rock",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ocean Path",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Hole",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordan Pond",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private naturalist guide",
+      "Air-conditioned vehicle",
+      "Park entry logistics",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Acadia Full Day Private Tour and Hike?",
+        "answer": "The planned duration is 6 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Bar Harbor meeting or pickup as confirmed by Good Trip Adventures before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 851
+      },
+      "currency": "USD"
+    }
+  }
+}

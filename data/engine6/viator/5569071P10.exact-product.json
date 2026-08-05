@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "5569071P10",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/The-Grand-Explorer-Full-Day-Tour-of-Acadia-and-Mount-Desert-Island/d4371-5569071P10",
+    "title": "\u201cPrivate Acadia\u201d & Mount Desert Island Tour (full day, six hours)",
+    "description": {
+      "text": "Explore the beauty of Acadia National Park on this comprehensive six-hour private tour. Discover breathtaking landscapes and charming local spots while enjoying a delicious lunch stop at a popular lobster pound. Stops include Park Loop Road, Cadillac Mountain, Mount Desert Island, Lobster Pound. This tour is designed to help you make the most of your day beyond Acadia\u2019s Park Loop Road, covering key attractions with a private guide. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $995.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/19/47/4d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the beauty of Acadia National Park on this comprehensive six-hour private tour",
+      "Discover breathtaking landscapes and charming local spots while enjoying a delicious lunch stop at a popular lobster pou",
+      "This tour is designed to help you make the most of your day beyond Acadia\u2019s Park Loop Road, covering key attractions wit",
+      "\u201cPrivate Acadia\u201d & Mount Desert Island Tour (full day, six hours) near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup as confirmed at booking in the Bar Harbor area."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the beauty of Acadia National Park on this comprehensive six-hour private tour.",
+    "itineraryItems": [
+      {
+        "title": "Park Loop Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadillac Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Desert Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lobster Pound",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guided touring",
+      "Lunch stop time (meal not included)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the \u201cPrivate Acadia\u201d & Mount Desert Island Tour (full day, six hours)?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Private pickup as confirmed at booking in the Bar Harbor area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 995
+      },
+      "currency": "USD"
+    }
+  }
+}

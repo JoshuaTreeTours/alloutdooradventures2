@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "5596065P9",
+    "productUrl": "https://www.viator.com/tours/Bar-Harbor/Sunrise-or-Sunset-on-Cadillac-Mountain-Summit-in-Acadia/d4371-5596065P9",
+    "title": "Sunrise or Sunset on Cadillac Mountain in Acadia National Park",
+    "description": {
+      "text": "Watch sunrise or sunset from Cadillac Mountain summit in Acadia National Park on a private timed outing up Cadillac Mountain Road. Your guide confirms exact departure timing so you reach the granite summit for first light or evening color without parking stress. Stops include Cadillac Mountain Summit, Cadillac Mountain Road. Local commentary and route logistics are handled so you can focus on coastal overlooks, carriage roads, and photography or adventure highlights. Ideal for visitors basing in Bar Harbor who want a guided Acadia National Park experience without coordinating park logistics, trailheads, or carriage roads on their own."
+    },
+    "location": {
+      "city": "Acadia National Park",
+      "state": "Maine"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/9b/b5/ef.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cadillac Summit is amazing any time of day, but there\u2019s something enchanting about sunrise and sunset",
+      "We\u2019ll take you up the Cadillac Mountain Road so you can experience first light or evening color from the summit of Cadil",
+      "Your guide will contact you via email or phone to solidify times and itinerary, as this tour is highly customizable",
+      "Sunrise or Sunset on Cadillac Mountain in Acadia National Park near Acadia National Park",
+      "Professional Acadia National Park guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Guide confirms exact pickup timing by email or phone before departure."
+      },
+      "end": {
+        "description": "Return to your Bar Harbor or Acadia National Park meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Watch sunrise or sunset from Cadillac Mountain summit in Acadia National Park on a private timed outing up Cadillac Mountain Road.",
+    "itineraryItems": [
+      {
+        "title": "Cadillac Mountain Summit",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadillac Mountain Road",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Cadillac Mountain access logistics",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunrise or Sunset on Cadillac Mountain in Acadia National Park?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Acadia National Park?",
+        "answer": "Guide confirms exact pickup timing by email or phone before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}
