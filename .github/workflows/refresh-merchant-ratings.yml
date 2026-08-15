@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: refresh-merchant-feed-ratings
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh-ratings:
@@ -37,13 +37,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Refresh merchant rating metadata from Viator reviews API
+      - name: Refresh merchant rating metadata using proven Magpie method
         env:
-          VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
-          VIATOR_API_BASE_URL: https://api.viator.com/partner
-          MERCHANT_RATING_CONCURRENCY: "20"
-          MERCHANT_RATING_REQUEST_TIMEOUT_MS: "20000"
+          MERCHANT_RATING_BASE_URL: https://www.alloutdooradventures.com
+          MERCHANT_RATING_DELAY_MS: "150"
+          MERCHANT_RATING_REQUEST_TIMEOUT_MS: "15000"
+          MERCHANT_RATING_MAX_ATTEMPTS: "3"
         run: npx tsx scripts/refresh-merchant-rating-metadata.ts
+
+      - name: Upload refresh report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: merchant-rating-refresh-report
+          path: merchant-rating-refresh-report.json
+          if-no-files-found: warn
 
       - name: Commit refreshed merchant feed
         shell: bash
