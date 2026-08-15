@@ -117,7 +117,7 @@ const main = async () => {
   }
 
   const dataRows = rows.slice(1);
-  const failures: string[] = [];
+  const skipped: string[] = [];
   let ratingChanges = 0;
   let countChanges = 0;
 
@@ -127,7 +127,7 @@ const main = async () => {
       batch.map(async row => {
         const productCode = row[idIndex]?.trim();
         if (!productCode) {
-          failures.push("(blank id): missing product code");
+          skipped.push("(blank id): missing product code");
           return;
         }
 
@@ -148,7 +148,9 @@ const main = async () => {
           row[ratingCountIndex] = liveCount;
           row[reviewCountIndex] = liveCount;
         } catch (error) {
-          failures.push(error instanceof Error ? error.message : String(error));
+          skipped.push(error instanceof Error ? error.message : String(error));
+          // Preserve the existing merchant-feed values for products that do not
+          // currently return complete live rating metadata.
         }
       })
     );
@@ -158,17 +160,16 @@ const main = async () => {
     );
   }
 
-  if (failures.length > 0) {
-    console.error(
-      `[merchant-rating-refresh] ${failures.length} product(s) failed; leaving feed unchanged.`
+  if (skipped.length > 0) {
+    console.warn(
+      `[merchant-rating-refresh] ${skipped.length} product(s) unresolved; preserving their existing rating fields.`
     );
-    failures.slice(0, 25).forEach(failure => console.error(`  ${failure}`));
-    throw new Error(`Rating refresh failed for ${failures.length} product(s)`);
+    skipped.slice(0, 25).forEach(item => console.warn(`  ${item}`));
   }
 
   await writeFile(FEED_PATH, toCsv([headers, ...dataRows]), "utf8");
   console.log(
-    `[merchant-rating-refresh] complete: ${dataRows.length} products; ${ratingChanges} average_rating change(s); ${countChanges} review-count change(s).`
+    `[merchant-rating-refresh] complete: ${dataRows.length} products; ${ratingChanges} average_rating change(s); ${countChanges} review-count change(s); ${skipped.length} preserved unresolved product(s).`
   );
 };
 
