@@ -4,7 +4,8 @@ import path from "node:path";
 const FEED_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
 const VIATOR_API_KEY = process.env.VIATOR_API_KEY?.trim() ?? "";
 const VIATOR_API_BASE_URL = (process.env.VIATOR_API_BASE_URL ?? "https://api.viator.com/partner").replace(/\/$/, "");
-const CONCURRENCY = Number(process.env.MERCHANT_RATING_CONCURRENCY ?? "12");
+const CONCURRENCY = Number(process.env.MERCHANT_RATING_CONCURRENCY ?? "20");
+const REQUEST_TIMEOUT_MS = Number(process.env.MERCHANT_RATING_REQUEST_TIMEOUT_MS ?? "20000");
 
 const parseCsv = (content: string): string[][] => {
   const rows: string[][] = [];
@@ -91,22 +92,29 @@ const fetchLiveRatingMetadata = async (productCode: string): Promise<RatingMetad
     throw new Error("VIATOR_API_KEY is not configured in GitHub Actions secrets");
   }
 
-  const response = await fetch(`${VIATOR_API_BASE_URL}/reviews/product`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json;version=2.0",
-      Accept: "application/json;version=2.0",
-      "Accept-Language": "en-US",
-      "exp-api-key": VIATOR_API_KEY,
-    },
-    body: JSON.stringify({
-      productCode,
-      provider: "ALL",
-      count: 1,
-      start: 1,
-      sortBy: "MOST_RECENT",
-    }),
-  });
+  let response: Response;
+  try {
+    response = await fetch(`${VIATOR_API_BASE_URL}/reviews/product`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;version=2.0",
+        Accept: "application/json;version=2.0",
+        "Accept-Language": "en-US",
+        "exp-api-key": VIATOR_API_KEY,
+      },
+      body: JSON.stringify({
+        productCode,
+        provider: "ALL",
+        count: 1,
+        start: 1,
+        sortBy: "MOST_RECENT",
+      }),
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`${productCode}: Viator reviews API request failed or timed out (${message})`);
+  }
 
   if (!response.ok) {
     throw new Error(`${productCode}: Viator reviews API HTTP ${response.status}`);
