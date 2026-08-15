@@ -3,7 +3,9 @@ name: Refresh Merchant Feed Ratings
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * 1"
+    # Monday late night in Santa Barbara: 11:30 PM PDT / 10:30 PM PST.
+    # GitHub Actions cron is UTC, so this runs early Tuesday UTC.
+    - cron: "30 6 * * 2"
   push:
     branches:
       - main
