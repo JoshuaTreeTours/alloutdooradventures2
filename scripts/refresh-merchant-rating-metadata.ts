@@ -2,7 +2,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const FEED_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
-const BASE_URL = (process.env.MERCHANT_RATING_BASE_URL ?? "https://www.alloutdooradventures.com").replace(/\/$/, "");
+const VIATOR_API_KEY = process.env.VIATOR_API_KEY?.trim() ?? "";
+const VIATOR_API_BASE_URL = (process.env.VIATOR_API_BASE_URL ?? "https://api.viator.com/partner").replace(/\/$/, "");
 const CONCURRENCY = Number(process.env.MERCHANT_RATING_CONCURRENCY ?? "12");
 
 const parseCsv = (content: string): string[][] => {
@@ -53,47 +54,96 @@ const escapeCsv = (value: string) => {
 const toCsv = (rows: string[][]) => `${rows.map(row => row.map(escapeCsv).join(",")).join("\n")}\n`;
 const normalizeRating = (value: number) => value.toFixed(1);
 
+const weightedAverageFromReviewCountTotals = (value: unknown): number | null => {
+  if (!Array.isArray(value)) return null;
+  let weightedSum = 0;
+  let totalCount = 0;
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object") continue;
+    const rating = Number((entry as Record<string, unknown>).rating);
+    const count = Number((entry as Record<string, unknown>).count);
+    if (Number.isFinite(rating) && Number.isFinite(count) && count > 0) {
+      weightedSum += rating * count;
+      totalCount += count;
+    }
+  }
+  return totalCount > 0 ? weightedSum / totalCount : null;
+};
+
+const sumReviewCountTotals = (value: unknown): number | null => {
+  if (!Array.isArray(value)) return null;
+  let total = 0;
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object") continue;
+    const count = Number((entry as Record<string, unknown>).count);
+    if (Number.isFinite(count) && count > 0) total += Math.trunc(count);
+  }
+  return total > 0 ? total : null;
+};
+
 type RatingMetadata = {
   aggregateRating: number;
   reviewCount: number;
-  source: string;
 };
 
 const fetchLiveRatingMetadata = async (productCode: string): Promise<RatingMetadata> => {
-  const url = new URL(`${BASE_URL}/api/engine6/viator-product`);
-  url.searchParams.set("productCode", productCode);
-  url.searchParams.set("_merchant_rating_refresh", `${Date.now()}-${Math.random()}`);
+  if (!VIATOR_API_KEY) {
+    throw new Error("VIATOR_API_KEY is not configured in GitHub Actions secrets");
+  }
 
-  const response = await fetch(url, {
+  const response = await fetch(`${VIATOR_API_BASE_URL}/reviews/product`, {
+    method: "POST",
     headers: {
-      accept: "application/json",
-      "cache-control": "no-cache, no-store, max-age=0",
-      pragma: "no-cache",
-      "user-agent": "Mozilla/5.0 AOA-Merchant-Rating-Refresh/2.0",
+      "Content-Type": "application/json;version=2.0",
+      Accept: "application/json;version=2.0",
+      "Accept-Language": "en-US",
+      "exp-api-key": VIATOR_API_KEY,
     },
+    body: JSON.stringify({
+      productCode,
+      provider: "ALL",
+      count: 1,
+      start: 1,
+      sortBy: "MOST_RECENT",
+    }),
   });
 
-  if (!response.ok) throw new Error(`${productCode}: HTTP ${response.status}`);
-
-  const body = (await response.json()) as {
-    source?: string;
-    extracted?: { aggregateRating?: number | null; reviewCount?: number | null };
-  };
-
-  const aggregateRating = body.extracted?.aggregateRating;
-  const reviewCount = body.extracted?.reviewCount;
-
-  if (typeof aggregateRating !== "number" || !Number.isFinite(aggregateRating) || aggregateRating <= 0) {
-    throw new Error(`${productCode}: missing aggregateRating from live AOA endpoint`);
-  }
-  if (typeof reviewCount !== "number" || !Number.isFinite(reviewCount) || reviewCount <= 0) {
-    throw new Error(`${productCode}: missing reviewCount from live AOA endpoint`);
+  if (!response.ok) {
+    throw new Error(`${productCode}: Viator reviews API HTTP ${response.status}`);
   }
 
-  return { aggregateRating, reviewCount, source: body.source ?? "unknown" };
+  const body = (await response.json()) as Record<string, unknown>;
+  const summary = body.totalReviewsSummary;
+  if (!summary || typeof summary !== "object") {
+    throw new Error(`${productCode}: no totalReviewsSummary from Viator reviews API`);
+  }
+
+  const record = summary as Record<string, unknown>;
+  const aggregateRating =
+    typeof record.combinedAverageRating === "number" && Number.isFinite(record.combinedAverageRating)
+      ? record.combinedAverageRating
+      : weightedAverageFromReviewCountTotals(record.reviewCountTotals);
+
+  const reviewCount =
+    typeof record.totalReviews === "number" && Number.isFinite(record.totalReviews) && record.totalReviews > 0
+      ? Math.trunc(record.totalReviews)
+      : sumReviewCountTotals(record.reviewCountTotals);
+
+  if (aggregateRating === null || aggregateRating <= 0) {
+    throw new Error(`${productCode}: missing aggregate rating from Viator reviews API`);
+  }
+  if (reviewCount === null || reviewCount <= 0) {
+    throw new Error(`${productCode}: missing review count from Viator reviews API`);
+  }
+
+  return { aggregateRating, reviewCount };
 };
 
 const main = async () => {
+  if (!VIATOR_API_KEY) {
+    throw new Error("VIATOR_API_KEY is not configured in GitHub Actions secrets");
+  }
+
   const content = await readFile(FEED_PATH, "utf8");
   const rows = parseCsv(content);
   if (rows.length < 2) throw new Error("merchantFeed.csv has no product rows");
@@ -103,7 +153,13 @@ const main = async () => {
   const avgIndex = headers.indexOf("average_rating");
   const ratingCountIndex = headers.indexOf("rating_count");
   const reviewCountIndex = headers.indexOf("review_count");
-  for (const [name, index] of [["id", idIndex], ["average_rating", avgIndex], ["rating_count", ratingCountIndex], ["review_count", reviewCountIndex]] as const) {
+
+  for (const [name, index] of [
+    ["id", idIndex],
+    ["average_rating", avgIndex],
+    ["rating_count", ratingCountIndex],
+    ["review_count", reviewCountIndex],
+  ] as const) {
     if (index < 0) throw new Error(`Missing required column: ${name}`);
   }
 
@@ -125,9 +181,9 @@ const main = async () => {
 
         if (productCode.toUpperCase() === "6740P7") {
           canaryResolved = true;
-          console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${liveRating} rating, ${liveCount} reviews (${live.source})`);
+          console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${liveRating} rating, ${liveCount} reviews (direct-viator-reviews-api)`);
           if (liveRating === "4.8" && liveCount === "453") {
-            throw new Error("6740P7: canary still returned stale 4.8 / 453 values");
+            throw new Error("6740P7: direct Viator reviews API still returned stale 4.8 / 453 values");
           }
         }
 
@@ -144,8 +200,8 @@ const main = async () => {
   }
 
   if (!canaryResolved) throw new Error("6740P7 canary did not resolve; refusing to write merchant feed");
-  if (skipped.some(item => item.includes("6740P7: canary still returned stale"))) {
-    throw new Error("6740P7 canary returned stale data; refusing to write merchant feed");
+  if (skipped.some(item => item.includes("6740P7:"))) {
+    throw new Error("6740P7 canary failed; refusing to write merchant feed");
   }
 
   if (skipped.length > 0) {
