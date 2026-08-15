@@ -37,9 +37,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Refresh merchant rating metadata from live AOA product data
+      - name: Refresh merchant rating metadata from Viator reviews API
         env:
-          MERCHANT_RATING_BASE_URL: https://www.alloutdooradventures.com
+          VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+          VIATOR_API_BASE_URL: https://api.viator.com/partner
           MERCHANT_RATING_CONCURRENCY: "12"
         run: npx tsx scripts/refresh-merchant-rating-metadata.ts
 
