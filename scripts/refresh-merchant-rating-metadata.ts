@@ -2,10 +2,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const FEED_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
-const VIATOR_API_KEY = process.env.VIATOR_API_KEY?.trim() ?? "";
-const VIATOR_API_BASE_URL = (process.env.VIATOR_API_BASE_URL ?? "https://api.viator.com/partner").replace(/\/$/, "");
-const CONCURRENCY = Number(process.env.MERCHANT_RATING_CONCURRENCY ?? "20");
-const REQUEST_TIMEOUT_MS = Number(process.env.MERCHANT_RATING_REQUEST_TIMEOUT_MS ?? "20000");
+const REPORT_PATH = path.resolve(process.cwd(), "merchant-rating-refresh-report.json");
+const AOA_BASE_URL = (process.env.MERCHANT_RATING_BASE_URL ?? "https://www.alloutdooradventures.com").replace(/\/$/, "");
+const BETWEEN_PRODUCTS_MS = Number(process.env.MERCHANT_RATING_DELAY_MS ?? "150");
+const REQUEST_TIMEOUT_MS = Number(process.env.MERCHANT_RATING_REQUEST_TIMEOUT_MS ?? "15000");
+const MAX_ATTEMPTS = Number(process.env.MERCHANT_RATING_MAX_ATTEMPTS ?? "3");
+
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 const parseCsv = (content: string): string[][] => {
   const rows: string[][] = [];
@@ -55,103 +58,71 @@ const escapeCsv = (value: string) => {
 const toCsv = (rows: string[][]) => `${rows.map(row => row.map(escapeCsv).join(",")).join("\n")}\n`;
 const normalizeRating = (value: number) => value.toFixed(1);
 
-const weightedAverageFromReviewCountTotals = (value: unknown): number | null => {
-  if (!Array.isArray(value)) return null;
-  let weightedSum = 0;
-  let totalCount = 0;
-  for (const entry of value) {
-    if (!entry || typeof entry !== "object") continue;
-    const rating = Number((entry as Record<string, unknown>).rating);
-    const count = Number((entry as Record<string, unknown>).count);
-    if (Number.isFinite(rating) && Number.isFinite(count) && count > 0) {
-      weightedSum += rating * count;
-      totalCount += count;
-    }
-  }
-  return totalCount > 0 ? weightedSum / totalCount : null;
-};
-
-const sumReviewCountTotals = (value: unknown): number | null => {
-  if (!Array.isArray(value)) return null;
-  let total = 0;
-  for (const entry of value) {
-    if (!entry || typeof entry !== "object") continue;
-    const count = Number((entry as Record<string, unknown>).count);
-    if (Number.isFinite(count) && count > 0) total += Math.trunc(count);
-  }
-  return total > 0 ? total : null;
-};
-
-type RatingMetadata = {
+type AoaRatingResult = {
   aggregateRating: number;
   reviewCount: number;
+  source: string;
+  attempt: number;
 };
 
-const fetchLiveRatingMetadata = async (productCode: string): Promise<RatingMetadata> => {
-  if (!VIATOR_API_KEY) {
-    throw new Error("VIATOR_API_KEY is not configured in GitHub Actions secrets");
+const fetchFromAoa = async (productCode: string): Promise<AoaRatingResult> => {
+  let lastProblem = "unknown failure";
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+    const url = `${AOA_BASE_URL}/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`;
+    try {
+      const response = await fetch(url, {
+        headers: {
+          accept: "application/json",
+          "cache-control": "no-cache",
+        },
+        signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+      });
+      const text = await response.text();
+      if (!response.ok) {
+        lastProblem = `HTTP ${response.status} ${text.slice(0, 180)}`;
+      } else {
+        const json = JSON.parse(text) as {
+          source?: string;
+          extracted?: {
+            reviewCount?: number | null;
+            aggregateRating?: number | null;
+          };
+        };
+        const count = json?.extracted?.reviewCount;
+        const rating = json?.extracted?.aggregateRating;
+        const source = json?.source ?? "unknown";
+
+        if (!Number.isFinite(count) || Number(count) <= 0) {
+          lastProblem = `missing positive extracted.reviewCount (${source})`;
+        } else if (!Number.isFinite(rating) || Number(rating) <= 0) {
+          lastProblem = `missing positive extracted.aggregateRating (${source})`;
+        } else if (source !== "live-api") {
+          // The successful Magpie-100 refresh returned source=live-api. Do not
+          // overwrite Merchant Center data with a bundled/stale fallback.
+          lastProblem = `non-live source ${source}`;
+        } else {
+          return {
+            aggregateRating: Number(rating),
+            reviewCount: Math.trunc(Number(count)),
+            source,
+            attempt,
+          };
+        }
+      }
+    } catch (error) {
+      lastProblem = error instanceof Error ? error.message : String(error);
+    }
+
+    if (attempt < MAX_ATTEMPTS) {
+      await sleep(500 * attempt);
+    }
   }
 
-  let response: Response;
-  try {
-    response = await fetch(`${VIATOR_API_BASE_URL}/reviews/product`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;version=2.0",
-        Accept: "application/json;version=2.0",
-        "Accept-Language": "en-US",
-        "exp-api-key": VIATOR_API_KEY,
-      },
-      body: JSON.stringify({
-        productCode,
-        provider: "ALL",
-        count: 1,
-        start: 1,
-        sortBy: "MOST_RECENT",
-      }),
-      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    throw new Error(`${productCode}: Viator reviews API request failed or timed out (${message})`);
-  }
-
-  if (!response.ok) {
-    throw new Error(`${productCode}: Viator reviews API HTTP ${response.status}`);
-  }
-
-  const body = (await response.json()) as Record<string, unknown>;
-  const summary = body.totalReviewsSummary;
-  if (!summary || typeof summary !== "object") {
-    throw new Error(`${productCode}: no totalReviewsSummary from Viator reviews API`);
-  }
-
-  const record = summary as Record<string, unknown>;
-  const aggregateRating =
-    typeof record.combinedAverageRating === "number" && Number.isFinite(record.combinedAverageRating)
-      ? record.combinedAverageRating
-      : weightedAverageFromReviewCountTotals(record.reviewCountTotals);
-
-  const reviewCount =
-    typeof record.totalReviews === "number" && Number.isFinite(record.totalReviews) && record.totalReviews > 0
-      ? Math.trunc(record.totalReviews)
-      : sumReviewCountTotals(record.reviewCountTotals);
-
-  if (aggregateRating === null || aggregateRating <= 0) {
-    throw new Error(`${productCode}: missing aggregate rating from Viator reviews API`);
-  }
-  if (reviewCount === null || reviewCount <= 0) {
-    throw new Error(`${productCode}: missing review count from Viator reviews API`);
-  }
-
-  return { aggregateRating, reviewCount };
+  throw new Error(`${productCode}: ${lastProblem} after ${MAX_ATTEMPTS} attempt(s)`);
 };
 
 const main = async () => {
-  if (!VIATOR_API_KEY) {
-    throw new Error("VIATOR_API_KEY is not configured in GitHub Actions secrets");
-  }
-
   const content = await readFile(FEED_PATH, "utf8");
   const rows = parseCsv(content);
   if (rows.length < 2) throw new Error("merchantFeed.csv has no product rows");
@@ -172,53 +143,71 @@ const main = async () => {
   }
 
   const dataRows = rows.slice(1);
-  const skipped: string[] = [];
+  const failures: Array<{ id: string; error: string }> = [];
+  const refreshed: Array<{ id: string; rating: string; reviews: number; attempt: number }> = [];
   let ratingChanges = 0;
   let countChanges = 0;
-  let canaryResolved = false;
 
-  for (let start = 0; start < dataRows.length; start += CONCURRENCY) {
-    const batch = dataRows.slice(start, start + CONCURRENCY);
-    await Promise.all(batch.map(async row => {
-      const productCode = row[idIndex]?.trim();
-      if (!productCode) return;
-      try {
-        const live = await fetchLiveRatingMetadata(productCode);
-        const liveRating = normalizeRating(live.aggregateRating);
-        const liveCount = String(Math.trunc(live.reviewCount));
+  // Deliberately serial, with the same 150 ms pacing used by the successful
+  // Magpie 100-tour refresh. This avoids hammering the production resolver and
+  // causing it to fall back to bundled data under parallel load.
+  for (let i = 0; i < dataRows.length; i += 1) {
+    const row = dataRows[i];
+    const productCode = row[idIndex]?.trim();
+    if (!productCode) {
+      failures.push({ id: "(blank)", error: "missing product code" });
+      continue;
+    }
 
-        if (productCode.toUpperCase() === "6740P7") {
-          canaryResolved = true;
-          console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${liveRating} rating, ${liveCount} reviews (direct-viator-reviews-api)`);
-          if (liveRating === "4.8" && liveCount === "453") {
-            throw new Error("6740P7: direct Viator reviews API still returned stale 4.8 / 453 values");
-          }
-        }
+    try {
+      const live = await fetchFromAoa(productCode);
+      const liveRating = normalizeRating(live.aggregateRating);
+      const liveCount = String(live.reviewCount);
 
-        if (row[avgIndex] !== liveRating) ratingChanges += 1;
-        if (row[ratingCountIndex] !== liveCount || row[reviewCountIndex] !== liveCount) countChanges += 1;
-        row[avgIndex] = liveRating;
-        row[ratingCountIndex] = liveCount;
-        row[reviewCountIndex] = liveCount;
-      } catch (error) {
-        skipped.push(error instanceof Error ? error.message : String(error));
+      if (row[avgIndex] !== liveRating) ratingChanges += 1;
+      if (row[ratingCountIndex] !== liveCount || row[reviewCountIndex] !== liveCount) countChanges += 1;
+
+      row[avgIndex] = liveRating;
+      row[ratingCountIndex] = liveCount;
+      row[reviewCountIndex] = liveCount;
+      refreshed.push({ id: productCode, rating: liveRating, reviews: live.reviewCount, attempt: live.attempt });
+
+      if (productCode.toUpperCase() === "6740P7") {
+        console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${liveRating} rating, ${liveCount} reviews (${live.source}, attempt ${live.attempt})`);
       }
-    }));
-    console.log(`[merchant-rating-refresh] processed ${Math.min(start + batch.length, dataRows.length)}/${dataRows.length}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      failures.push({ id: productCode, error: message });
+      console.warn(`[merchant-rating-refresh] preserving ${productCode}: ${message}`);
+    }
+
+    console.log(`[merchant-rating-refresh] [${i + 1}/${dataRows.length}] ${productCode}`);
+    await sleep(BETWEEN_PRODUCTS_MS);
   }
 
-  if (!canaryResolved) throw new Error("6740P7 canary did not resolve; refusing to write merchant feed");
-  if (skipped.some(item => item.includes("6740P7:"))) {
-    throw new Error("6740P7 canary failed; refusing to write merchant feed");
-  }
-
-  if (skipped.length > 0) {
-    console.warn(`[merchant-rating-refresh] ${skipped.length} product(s) unresolved; preserving existing values.`);
-    skipped.slice(0, 50).forEach(item => console.warn(`  ${item}`));
+  if (refreshed.length === 0) {
+    throw new Error("No live-api products resolved; refusing to write merchant feed");
   }
 
   await writeFile(FEED_PATH, toCsv([headers, ...dataRows]), "utf8");
-  console.log(`[merchant-rating-refresh] complete: ${dataRows.length} products; ${ratingChanges} rating change(s); ${countChanges} review-count change(s); ${skipped.length} preserved unresolved product(s).`);
+  await writeFile(
+    REPORT_PATH,
+    `${JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      method: "Magpie-100 AOA production resolver (serial, 150ms pacing)",
+      totalProducts: dataRows.length,
+      liveApiRefreshed: refreshed.length,
+      ratingChanges,
+      countChanges,
+      refreshed,
+      failures,
+    }, null, 2)}\n`,
+    "utf8"
+  );
+
+  console.log(
+    `[merchant-rating-refresh] complete: ${dataRows.length} products; ${refreshed.length} live-api refreshed; ${ratingChanges} rating change(s); ${countChanges} review-count change(s); ${failures.length} preserved unresolved.`
+  );
 };
 
 main().catch(error => {
