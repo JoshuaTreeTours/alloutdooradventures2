@@ -21,7 +21,7 @@ concurrency:
 jobs:
   refresh-ratings:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,7 +41,8 @@ jobs:
         env:
           VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
           VIATOR_API_BASE_URL: https://api.viator.com/partner
-          MERCHANT_RATING_CONCURRENCY: "12"
+          MERCHANT_RATING_CONCURRENCY: "20"
+          MERCHANT_RATING_REQUEST_TIMEOUT_MS: "20000"
         run: npx tsx scripts/refresh-merchant-rating-metadata.ts
 
       - name: Commit refreshed merchant feed
