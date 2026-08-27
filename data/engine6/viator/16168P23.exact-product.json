@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "16168P23",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Real-skip-the-line-experience-Sagrada-familia-in-a-small-group/d562-16168P23",
+    "title": "Sagrada Familia Small Group Guided Tour with Skip the Line Ticket",
+    "description": {
+      "text": "Antoni Gaudí’s iconic cathedral, the Sagrada Familia, is the most popular attraction in Barcelona. Bypass the long lines with this skip-the-line guided tour. Stops include Sagrada Familia, Nativity Facade. Accompanied by a guide, head straight inside the modernist masterpiece to admire the stained glass windows and opulent ceilings, and view the exhibits in the museum, while learning more about the building and its renowned creator. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "1 hour 45 minutes (approx.)",
+    "priceFrom": "From $68.32",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 671
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/fa/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Antoni Gaudí’s iconic cathedral, the Sagrada Familia, is the most popular attraction in Barcelona",
+      "Bypass the long lines with this skip-the-line guided tour",
+      "Accompanied by a guide, head straight inside the modernist masterpiece to admire the stained glass windows and opulent c",
+      "Sagrada Familia Small Group Guided Tour with Skip the Line Ticket near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Sagrada Familia Souvenir Shop Carrer de la Marina, s/n, L'Eixample, 08013 Barcelona, Spain We will meet you outside the official Sagrada Familia souvenir shop, next to the group entrance \"access A\". We will be there wi"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Antoni Gaudí’s iconic cathedral, the Sagrada Familia, is the most popular attraction in Barcelona.",
+    "itineraryItems": [
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nativity Facade",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip-the-line tickets to Sagrada Familia",
+      "Professional and friendly tour guide",
+      "Small-group tour to ensure a more intimate experience with your guide",
+      "Radio guide system",
+      "English Speaking Tour",
+      "An awesome experience at Sagrada Familia"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sagrada Familia Small Group Guided Tour with Skip the Line Ticket?",
+        "answer": "The planned duration is 1 hour 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Sagrada Familia Souvenir Shop Carrer de la Marina, s/n, L'Eixample, 08013 Barcelona, Spain We will meet you outside the official Sagrada Familia souvenir shop, next to the group entrance \"access A\". We will be there wi"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 68.32
+      },
+      "currency": "USD"
+    }
+  }
+}

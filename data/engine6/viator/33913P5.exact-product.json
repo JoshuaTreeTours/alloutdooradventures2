@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "33913P5",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Barcelona-PRIVATE-Sailing-Day/d562-33913P5",
+    "title": "Barcelona Private Sailing with Open Bar & Snacks (max 9)",
+    "description": {
+      "text": "Enjoy a peaceful day sailing off the coast of Barcelona by opting for a private sailing tour. Take the stress out of being on noisy, crowded boats by having a boat to yourself and your group. Stops include Port Olímpic, Barcelona coastline, Mediterranean Sea. You won’t have to worry about steering the ship or navigating, as a skipper joins you. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "1 to 4 hours (approx.)",
+    "priceFrom": "From $240.38",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 320
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/f2/e6/ec.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a peaceful day sailing off the coast of Barcelona by opting for a private sailing tour",
+      "Take the stress out of being on noisy, crowded boats by having a boat to yourself and your group",
+      "You won’t have to worry about steering the ship or navigating, as a skipper joins you",
+      "Barcelona Private Sailing with Open Bar & Snacks (max 9) near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Barcelona Sailing Day Puerto Olimpico, amarre 1416, Moll de la Marina, 10, Sant Martí, 08005 Barcelona, Spain It's the only floating dock between the between the 2 big tower buildings (Hotel Arts & torre mapfre) There"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy a peaceful day sailing off the coast of Barcelona by opting for a private sailing tour.",
+    "itineraryItems": [
+      {
+        "title": "Port Olímpic",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barcelona coastline",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mediterranean Sea",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "Snacks",
+      "Bottled water",
+      "Light refreshments",
+      "Alcoholic Beverages",
+      "Small Group up to 9 passengers",
+      "Soft cushions in cockpit and on bow yacht",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Barcelona Private Sailing with Open Bar & Snacks (max 9)?",
+        "answer": "The planned duration is 1 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Barcelona Sailing Day Puerto Olimpico, amarre 1416, Moll de la Marina, 10, Sant Martí, 08005 Barcelona, Spain It's the only floating dock between the between the 2 big tower buildings (Hotel Arts & torre mapfre) There"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 240.38
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "selectedCount": 19,
+  "listingCount": 19,
+  "listingMatchesSelection": true,
+  "okCount": 19,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "110975P7",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/sagrada-familia-park-guell-walking-private-tour-with-ta-110975P7",
+      "title": "Sagrada Familia, Park Guell & Walking Private Tour with Tapas",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/27/0d.jpg",
+      "card": "Skip the hassle of planning—and the lines along the way—on this private tour of Barcelona’s heritage, architecture, and gastronomy that comb",
+      "itineraryTitles": [
+        "Gothic Quarter",
+        "Sagrada Familia",
+        "Park Güell",
+        "Rambla de Catalunya"
+      ],
+      "issues": []
+    },
+    {
+      "code": "17377P22",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/barcelona-premium-gothic-montjuic-sagrada-familia-park-17377P22",
+      "title": "Barcelona Premium: Gothic, Montjuic, Sagrada Familia & Park Güell",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/e2/45.jpg",
+      "card": "Cover the best of Barcelona on this full-day tour.",
+      "itineraryTitles": [
+        "Gothic Quarter",
+        "Montjuïc",
+        "Sagrada Familia",
+        "Park Güell"
+      ],
+      "issues": []
+    },
+    {
+      "code": "17377P12",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/barcelona-city-tour-gothic-pedrera-sagrada-familia-park-17377P12",
+      "title": "Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/ef/b5.jpg",
+      "card": "Experience Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell in Barcelona.",
+      "itineraryTitles": [
+        "Gothic Quarter",
+        "Sagrada Familia",
+        "Park Güell",
+        "La Pedrera"
+      ],
+      "issues": []
+    },
+    {
+      "code": "9866P50",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/private-montserrat-and-cava-winery-tour-with-hotel-pick-9866P50",
+      "title": "Private Montserrat and Cava Winery Tour with Hotel Pick Up from Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/18/81/83.jpg",
+      "card": "Escape Barcelona for the day and combine two top attractions in one on this private full-day tour that includes Montserrat and a cava winery",
+      "itineraryTitles": [
+        "Montserrat Monastery",
+        "Natural Park of Montserrat",
+        "Sant Sadurní d'Anoia",
+        "Penedès"
+      ],
+      "issues": []
+    },
+    {
+      "code": "2646BCNBALLOON",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/balloon-ride-over-catalonia-with-optional-pick-up-from-2646BCNBALLOON",
+      "title": "Balloon Ride over Catalonia with optional Pick-up from Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/8a/2e/ea.jpg",
+      "card": "Soar above the sublime landscape of Catalonia near Barcelona on this early-morning hot-air balloon excursion.",
+      "itineraryTitles": [
+        "Montserrat",
+        "Pyrenees",
+        "Montseny"
+      ],
+      "issues": []
+    },
+    {
+      "code": "33913P5",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/barcelona-private-sailing-with-open-bar-snacks-max-9-33913P5",
+      "title": "Barcelona Private Sailing with Open Bar & Snacks (max 9)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/f2/e6/ec.jpg",
+      "card": "Enjoy a peaceful day sailing off the coast of Barcelona by opting for a private sailing tour.",
+      "itineraryTitles": [
+        "Port Olímpic",
+        "Barcelona coastline",
+        "Mediterranean Sea"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6874P23",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/penedes-wine-cava-tasting-4wd-vineyards-tour-from-barce-6874P23",
+      "title": "Penedes Wine & Cava Tasting & 4WD Vineyards Tour from Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/04/f3/a1.jpg",
+      "card": "Become more acquainted with Spain’s Penedès region on this cava-and-wine-tasting tour that sets off from Barcelona.",
+      "itineraryTitles": [
+        "Sant Sadurní d'Anoia",
+        "Penedès vineyards"
+      ],
+      "issues": []
+    },
+    {
+      "code": "127264P9",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/girona-and-costa-brava-private-tour-with-pick-up-from-b-127264P9",
+      "title": "Girona and Costa Brava Private Tour with Pick-up from Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/51/58/ea.jpg",
+      "card": "Escape the crowds of Barcelona and explore another Catalonian city, as well as some of the most scenic coastal areas in a single day.",
+      "itineraryTitles": [
+        "Girona Cathedral",
+        "Jewish Quarter",
+        "Calella de Palafrugell",
+        "Far de Sant Sebastià"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8513P1",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/barcelona-montserrat-hot-air-balloon-ride-with-champagn-8513P1",
+      "title": "Barcelona: Montserrat Hot Air Balloon Ride with Champagne Toast",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/6a/fc/18.jpg",
+      "card": "See Barcelona province landscapes from the sky on this incredible hot air balloon ride.",
+      "itineraryTitles": [
+        "Montserrat",
+        "Catalonia"
+      ],
+      "issues": []
+    },
+    {
+      "code": "16168P24",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/best-of-barcelona-sagrada-familia-park-guell-montjuic-g-16168P24",
+      "title": "Best of Barcelona: Sagrada Familia, Park Guell, Montjuic & Gothic",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/f1/fc.jpg",
+      "card": "Make the most of your short time in Barcelona with this “best-of” tour.",
+      "itineraryTitles": [
+        "Gothic Quarter",
+        "Montjuïc",
+        "Park Güell",
+        "Sagrada Familia"
+      ],
+      "issues": []
+    },
+    {
+      "code": "43217P5",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/costa-brava-day-adventure-kayak-snorkel-cliff-jump-with-43217P5",
+      "title": "Costa Brava Day Adventure: Kayak, Snorkel & Cliff Jump with Lunch",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/82/bd.jpg",
+      "card": "In Barcelona, the gorgeous coastline of Costa Brava is best experienced from the water.",
+      "itineraryTitles": [
+        "Costa Brava",
+        "Mediterranean coves",
+        "Costa Brava Sea Caves"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3993FTBB",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/highlights-of-barcelona-half-day-small-group-bike-tour-3993FTBB",
+      "title": "Highlights of Barcelona Half Day Small Group Bike Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/41/38/ca.jpg",
+      "card": "Experience the architectural and artistic majesty of Barcelona on a half-day guided bike tour.",
+      "itineraryTitles": [
+        "Sagrada Familia",
+        "Plaça del Rei",
+        "Plaça de Sant Jaume"
+      ],
+      "issues": []
+    },
+    {
+      "code": "9866P31",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/dali-museum-cadaques-small-group-tour-with-hotel-pick-u-9866P31",
+      "title": "Dali Museum & Cadaques Small Group Tour with Hotel pick-up",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/0e/72/b1.jpg",
+      "card": "Enter the mind of Salvador Dalí during this intimate exploration of the surrealist’s preferred haunts, with 2-way transfers from your Barcel",
+      "itineraryTitles": [
+        "Dalí Theatre-Museum",
+        "Figueres",
+        "Cadaqués",
+        "Portlligat"
+      ],
+      "issues": []
+    },
+    {
+      "code": "9866P29",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/girona-costa-brava-small-group-tour-with-pickup-from-ba-9866P29",
+      "title": "Girona & Costa Brava Small-Group Tour with Pickup from Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/0e/72/ba.jpg",
+      "card": "See a new side of Catalonia—and make exploring beyond Barcelona city limits hassle-free—on this small-group or private trip to Girona and th",
+      "itineraryTitles": [
+        "Girona Old Town",
+        "Pals",
+        "Calella de Palafrugell"
+      ],
+      "issues": []
+    },
+    {
+      "code": "16168P23",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/sagrada-familia-small-group-guided-tour-with-skip-the-l-16168P23",
+      "title": "Sagrada Familia Small Group Guided Tour with Skip the Line Ticket",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/fa/ac.jpg",
+      "card": "Antoni Gaudí’s iconic cathedral, the Sagrada Familia, is the most popular attraction in Barcelona.",
+      "itineraryTitles": [
+        "Sagrada Familia",
+        "Nativity Facade"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5689P12",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/best-of-barcelona-guided-tour-with-port-or-hotel-pick-u-5689P12",
+      "title": "Best of Barcelona Guided Tour with Port or Hotel Pick up",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/2a/13.jpg",
+      "card": "Discover the best of Barcelona with ease—even if you just have half a day to spare—on this comprehensive, small-group tour.",
+      "itineraryTitles": [
+        "Sagrada Familia",
+        "Park Güell",
+        "Gothic Quarter"
+      ],
+      "issues": []
+    },
+    {
+      "code": "120041P6",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/small-group-daytrip-to-costa-brava-and-dali-museum-from-120041P6",
+      "title": "Small group DayTrip to Costa Brava and Dalí Museum From Barcelona",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/3b/be/4b.jpg",
+      "card": "Get away from the Barcelona bustle and into the breeze.",
+      "itineraryTitles": [
+        "Dalí Theatre-Museum",
+        "Figueres",
+        "Peratallada",
+        "Calella de Palafrugell"
+      ],
+      "issues": []
+    },
+    {
+      "code": "333987P1",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/sagrada-familia-and-guell-park-small-group-tour-drink-a-333987P1",
+      "title": "Sagrada Familia and Guell Park Small Group Tour: Drink and Tapa",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/c8/37/d0.jpg",
+      "card": "In Barcelona, see two of Antoni Gaudí’s masterpieces in just a few hours with this small-group tour with a local, English speaking guide.",
+      "itineraryTitles": [
+        "Park Güell",
+        "Sagrada Familia"
+      ],
+      "issues": []
+    },
+    {
+      "code": "9866P55",
+      "ok": true,
+      "path": "/destinations/spain/barcelona/tours/sagrada-familia-barcelona-small-group-tour-with-hotel-p-9866P55",
+      "title": "Sagrada Familia & Barcelona Small Group Tour with Hotel Pick-up",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/52/52/c8.jpg",
+      "card": "In Barcelona, join this small-group tour of the Catalan capital, and discover Gaudi’s magnificent Sagrada Familia (tickets separate expense)",
+      "itineraryTitles": [
+        "Gothic Quarter",
+        "Sagrada Familia",
+        "Casa Batlló",
+        "Montjuïc"
+      ],
+      "issues": []
+    }
+  ]
+}

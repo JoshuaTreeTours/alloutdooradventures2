@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "9866P31",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Dali-Museum-Figueres-and-Cadaqus-Small-Group-Tour-with-Hotel-Pick-Up-from-Barcelona/d562-9866P31",
+    "title": "Dali Museum & Cadaques Small Group Tour with Hotel pick-up",
+    "description": {
+      "text": "Enter the mind of Salvador Dalí during this intimate exploration of the surrealist’s preferred haunts, with 2-way transfers from your Barcelona address. Visit Figueres, the artist’s birthplace, home of his eponymous museum; explore Cadaqués, a small coastal village along the Costa Brava; and continue to Portlligat, a tiny fishing cove. Stops include Dalí Theatre-Museum, Figueres, Cadaqués, Portlligat. Entrance fees for the Dalí sites are payable to your guide on the day. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $138.67",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 688
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/0e/72/b1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enter the mind of Salvador Dalí during this intimate exploration of the surrealist’s preferred haunts, with 2-way transf",
+      "Visit Figueres, the artist’s birthplace, home of his eponymous museum; explore Cadaqués, a small coastal village along t",
+      "Entrance fees for the Dalí sites are payable to your guide on the day",
+      "Dali Museum & Cadaques Small Group Tour with Hotel pick-up near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enter the mind of Salvador Dalí during this intimate exploration of the surrealist’s preferred haunts, with 2-way transfers from your Barcelona address.",
+    "itineraryItems": [
+      {
+        "title": "Dalí Theatre-Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Figueres",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cadaqués",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Portlligat",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel or apartment pickup and drop-off in Barcelona city (between 8 and 9 am)",
+      "Professional local guide",
+      "Air-conditioned vehicle",
+      "Small-group (maximum 8 people)",
+      "Complete guided tour of the Dali Museum",
+      "Tickets Dalí Museum: Figueres & Port Lligat (approx. 33€) To be paid to the guide."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dali Museum & Cadaques Small Group Tour with Hotel pick-up?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Museum Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 138.67
+      },
+      "currency": "USD"
+    }
+  }
+}

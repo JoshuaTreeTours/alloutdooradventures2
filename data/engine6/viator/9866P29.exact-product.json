@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "9866P29",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Girona-and-Costa-Brava-tour/d562-9866P29",
+    "title": "Girona & Costa Brava Small-Group Tour with Pickup from Barcelona",
+    "description": {
+      "text": "See a new side of Catalonia—and make exploring beyond Barcelona city limits hassle-free—on this small-group or private trip to Girona and the Costa Brava. In Girona, explore the Old Town on foot, and discover many of the city's most important landmarks along the way. Stops include Girona Old Town, Pals, Calella de Palafrugell. You'll also visit medieval Catalonian villages like Pals and Calella de Palafrugell, and take in coastal Mediterranean views. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $113.86",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 5463
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/0e/72/ba.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See a new side of Catalonia—and make exploring beyond Barcelona city limits hassle-free—on this small-group or private t",
+      "In Girona, explore the Old Town on foot, and discover many of the city's most important landmarks along the way",
+      "You'll also visit medieval Catalonian villages like Pals and Calella de Palafrugell, and take in coastal Mediterranean v",
+      "Girona & Costa Brava Small-Group Tour with Pickup from Barcelona near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See a new side of Catalonia—and make exploring beyond Barcelona city limits hassle-free—on this small-group or private trip to Girona and the Costa Brava.",
+    "itineraryItems": [
+      {
+        "title": "Girona Old Town",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pals",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Calella de Palafrugell",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional local guide",
+      "Walking Tour of Girona, Pals and Calella de Palafrugell",
+      "Hotel or apartment pickup and drop-off in Barcelona city (between 8 and 9 am)",
+      "Air-conditioned vehicle",
+      "Small-group (maximum 8 people)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Girona & Costa Brava Small-Group Tour with Pickup from Barcelona?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 113.86
+      },
+      "currency": "USD"
+    }
+  }
+}

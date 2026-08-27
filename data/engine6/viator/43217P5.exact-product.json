@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "43217P5",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Kayaking-and-Snorkeling/d562-43217P5",
+    "title": "Costa Brava Day Adventure: Kayak, Snorkel & Cliff Jump with Lunch",
+    "description": {
+      "text": "In Barcelona, the gorgeous coastline of Costa Brava is best experienced from the water. Discover the crystal-clear Mediterranean Sea while kayaking to coves and small caves, and snorkel for a better glimpse of marine life. Stops include Costa Brava, Mediterranean coves, Costa Brava Sea Caves. This day trip takes you by coach from central Barcelona to a picturesque beach, where kayak guides share their expertise. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $98.43",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2306
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/82/bd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The gorgeous coastline of Costa Brava is best experienced from the water",
+      "Discover the crystal-clear Mediterranean Sea while kayaking to coves and small caves, and snorkel for a better glimpse o",
+      "This day trip takes you by coach from central Barcelona to a picturesque beach, where kayak guides share their expertise",
+      "Costa Brava Day Adventure: Kayak, Snorkel & Cliff Jump with Lunch near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "La Bohème Carrer del Doctor Trueta, 33, Sant Martí, 08005 Barcelona, Spain Meet on terrace of Bohème café 10 mins BEFORE start time USE PROVIDED MAP LINK & DO NOT SEARCH BY NAME, there are several cafe’s with same name"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Barcelona, the gorgeous coastline of Costa Brava is best experienced from the water.",
+    "itineraryItems": [
+      {
+        "title": "Costa Brava",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mediterranean coves",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Costa Brava Sea Caves",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Certified Sea Kayak Instructors",
+      "Air-conditioned vehicle",
+      "Insurance",
+      "Equipment (kayak, life jacket, snorkel, wetsuit)",
+      "Return transport from Barcelona",
+      "Kayaking and snorkeling activity of 2.5 to 3 hours",
+      "Free time to explore, sunbathe, swim or beachbar cocktails"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Costa Brava Day Adventure: Kayak, Snorkel & Cliff Jump with Lunch?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "La Bohème Carrer del Doctor Trueta, 33, Sant Martí, 08005 Barcelona, Spain Meet on terrace of Bohème café 10 mins BEFORE start time USE PROVIDED MAP LINK & DO NOT SEARCH BY NAME, there are several cafe’s with same name"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking"
+      },
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 98.43
+      },
+      "currency": "USD"
+    }
+  }
+}

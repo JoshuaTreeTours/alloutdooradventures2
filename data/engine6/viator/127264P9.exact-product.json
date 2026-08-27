@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "127264P9",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Girona-and-Costa-Brava-Private-Tour-with-Pick-up-from-Barcelona/d562-127264P9",
+    "title": "Girona and Costa Brava Private Tour with Pick-up from Barcelona",
+    "description": {
+      "text": "Escape the crowds of Barcelona and explore another Catalonian city, as well as some of the most scenic coastal areas in a single day. This private tour takes you to see the most important sights in Girona, including the cathedral's exterior and the Jewish Quarter (El Call), and along the Costa Brava to enjoy the stunning coastal views. Stops include Girona Cathedral, Jewish Quarter, Calella de Palafrugell, Far de Sant Sebastià. Coach logistics are handled so visitors can focus on Girona streets and Costa Brava villages named on the itinerary. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $202.65",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 84
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/51/58/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Girona and Costa Brava Private Tour with Pick-up from Barcelona from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape the crowds of Barcelona and explore another Catalonian city, as well as some of the most scenic coastal areas in a single day.",
+    "itineraryItems": [
+      {
+        "title": "Girona Cathedral",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jewish Quarter",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Calella de Palafrugell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Far de Sant Sebastià",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Pick-up and Drop-Off (From Hotel, Apartment, Cruise Port or Airport)",
+      "Private Tour / Private Driver Guide",
+      "Walking Tour Of Girona Including Game of Thrones",
+      "Sightseeing In Costa Brava",
+      "Air-conditioned vehicle",
+      "Bottled water",
+      "Travel Insurance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Girona and Costa Brava Private Tour with Pick-up from Barcelona?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 202.65
+      },
+      "currency": "USD"
+    }
+  }
+}

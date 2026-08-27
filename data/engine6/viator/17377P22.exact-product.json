@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "17377P22",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Full-Day-Guided-Tour-and-Skip-the-Line-Sagrada-Familia-Park-Guell-and-La-Pedrera/d562-17377P22",
+    "title": "Barcelona Premium: Gothic, Montjuic, Sagrada Familia & Park Güell",
+    "description": {
+      "text": "Cover the best of Barcelona on this full-day tour. Visit the city’s most famous attractions and landmarks such as the Gothic Quarter, Plaza Catalunya, Montjuic and more as you learn about Barcelona’s history from your informative guide. Stops include Gothic Quarter, Montjuïc, Sagrada Familia, Park Güell. This comprehensive tour also visits two popular attractions: Sagrada Familia and Park Guell. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $313.60",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 115
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/e2/45.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cover the best of Barcelona on this full-day tour",
+      "Visit the city’s most famous attractions and landmarks such as the Gothic Quarter, Plaza Catalunya, Montjuic and more as",
+      "This comprehensive tour also visits two popular attractions: Sagrada Familia and Park Guell",
+      "Barcelona Premium: Gothic, Montjuic, Sagrada Familia & Park Güell near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Olívia Plaza Hotel Pl. de Catalunya, 19, Ciutat Vella, 08002 Barcelona, Spain Next to The Foot Locker at 8:30am"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cover the best of Barcelona on this full-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montjuïc",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Güell",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Free time to enjoy after walking tour",
+      "Montjuic and Parc Guell Panoramic Views",
+      "Small group to ensure a personalized experience.",
+      "Transported in a comfortable vehicle.",
+      "Licensed Official Guide",
+      "Entrance fee",
+      "Entrance fee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Barcelona Premium: Gothic, Montjuic, Sagrada Familia & Park Güell?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Olívia Plaza Hotel Pl. de Catalunya, 19, Ciutat Vella, 08002 Barcelona, Spain Next to The Foot Locker at 8:30am"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 313.6
+      },
+      "currency": "USD"
+    }
+  }
+}

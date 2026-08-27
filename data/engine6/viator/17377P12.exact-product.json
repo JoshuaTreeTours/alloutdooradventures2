@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "17377P12",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Barcelona-Smalll-Group-Tour-and-skip-the-line-at-La-Sagrada-Familia-Park-Guell-and-La-Pedrera/d562-17377P12",
+    "title": "Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell",
+    "description": {
+      "text": "Experience Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell in Barcelona. Benefit from fast-track entry and an intimate tour of the famed Spanish architect’s most iconic works, including Park Güell and the UNESCO-listed apartment building La Pedrera. Stops include Gothic Quarter, Sagrada Familia, Park Güell, La Pedrera. Local commentary and route logistics are handled so visitors can focus on Gaudí architecture, Mediterranean views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $342.42",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 100
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/ef/b5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Olívia Plaza Hotel Pl. de Catalunya, 19, Ciutat Vella, 08002 Barcelona, Spain in front of the Olivia Plaza Hotel, next to The Foot Locker, at 8:30am."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell in Barcelona.",
+    "itineraryItems": [
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Güell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Pedrera",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Panoramic views of the most beautiful cityscapes from Montjuic and Parc Guell.",
+      "Small group to ensure a personalized experience.",
+      "Transported in a comfortable vehicle.",
+      "Official Guide",
+      "Entrance tickets to Sagrada Familia, Park Guell and La Pedrera. Total: 68€ per person. We book them",
+      "Lunch",
+      "Coffee and/or Tea"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Barcelona City Tour: Gothic Pedrera, Sagrada Familia & Park Güell?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Olívia Plaza Hotel Pl. de Catalunya, 19, Ciutat Vella, 08002 Barcelona, Spain in front of the Olivia Plaza Hotel, next to The Foot Locker, at 8:30am."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 342.42
+      },
+      "currency": "USD"
+    }
+  }
+}

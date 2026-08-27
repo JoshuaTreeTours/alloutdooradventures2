@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "333987P1",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Skip-the-line-with-drink-and-tapas-Sagrada-Familia-and-Guell-Park-guided-tour/d562-333987P1",
+    "title": "Sagrada Familia and Guell Park Small Group Tour: Drink and Tapa",
+    "description": {
+      "text": "In Barcelona, see two of Antoni Gaudí’s masterpieces in just a few hours with this small-group tour with a local, English speaking guide. Includes transport between the two sites and a drink and tapas at the end of the tour. Stops include Park Güell, Sagrada Familia. Local commentary and route logistics are handled so visitors can focus on Gaudí architecture, Mediterranean views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $148.32",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 231
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/c8/37/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sagrada Familia and Guell Park Small Group Tour: Drink and Tapa from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Ctra. del Carmel, 23, Horta-Guinardó, 08024 Barcelona, Spain Your guide will be holding a YELLOW sign with the name ONA small group tours in front of the ticket boxes/office, next to the Kiosk. Please, make sure you ar"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Barcelona, see two of Antoni Gaudí’s masterpieces in just a few hours with this small-group tour with a local, English speaking guide.",
+    "itineraryItems": [
+      {
+        "title": "Park Güell",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local & Licensed English speaking tour Guide",
+      "Skip the line admission tickets in Sagrada Familia & Güell Park",
+      "small-group tour limited to 12 people to get the most of your experience",
+      "Mono-language Tour in English",
+      "Air-conditioned vehicle between Güell Park and Sagrada Familia",
+      "Drink & tapa",
+      "Pick up at the Hotel ONLY WITH PRIVATE TOUR OPTION",
+      "Hotel pick-up when booked in a small group"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sagrada Familia and Guell Park Small Group Tour: Drink and Tapa?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Ctra. del Carmel, 23, Horta-Guinardó, 08024 Barcelona, Spain Your guide will be holding a YELLOW sign with the name ONA small group tours in front of the ticket boxes/office, next to the Kiosk. Please, make sure you ar"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 148.32
+      },
+      "currency": "USD"
+    }
+  }
+}

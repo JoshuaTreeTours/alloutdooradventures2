@@ -59,6 +59,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "united-kingdom",
     citySlug: "london",
   },
+  barcelona: {
+    destinationLabel: "Barcelona",
+    destinationCitySlug: "barcelona",
+    stateSlug: "spain",
+    citySlug: "barcelona",
+  },
   boston: {
     destinationLabel: "Boston",
     destinationCitySlug: "boston",

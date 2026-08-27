@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "8513P1",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Barcelona-Hot-Air-Balloon-Ride/d562-8513P1",
+    "title": "Barcelona: Montserrat Hot Air Balloon Ride with Champagne Toast",
+    "description": {
+      "text": "See Barcelona province landscapes from the sky on this incredible hot air balloon ride. It’ll give you access to views of the province that you wouldn’t see otherwise. Stops include Montserrat. You won’t have to worry about getting hungry, as you’ll be given a welcome backpack with cookies, fruit juice, and bottled water. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Montserrat, a defining stop on this Barcelona sightseeing experience."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "3 to 5 hours (approx.)",
+    "priceFrom": "From $205.26",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 209
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/6a/fc/18.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Barcelona province landscapes from the sky on this incredible hot air balloon ride",
+      "It’ll give you access to views of the province that you wouldn’t see otherwise",
+      "You won’t have to worry about getting hungry, as you’ll be given a welcome backpack with cookies, fruit juice, and bottl",
+      "Barcelona: Montserrat Hot Air Balloon Ride with Champagne Toast near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Globus Kon-Tiki Òdena, Aeròdrom Òdena, 08711, Barcelona, Spain THIS IS NOT THE EXACT MEETING POINT! We will inform about the exact place 2 days before the flight (depending on winds direction and weather forecast) to g"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Barcelona province landscapes from the sky on this incredible hot air balloon ride.",
+    "itineraryItems": [
+      {
+        "title": "Montserrat",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Catalonia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Welcome backpack (selection of cookies, fruit juice, bottled water)",
+      "Champagne toast",
+      "Flight certificate",
+      "Photos",
+      "Professional guide",
+      "Hotel pickup/drop-off (not included, add it after purchasing and pay it the same day cash)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Barcelona: Montserrat Hot Air Balloon Ride with Champagne Toast?",
+        "answer": "The planned duration is 3 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Globus Kon-Tiki Òdena, Aeròdrom Òdena, 08711, Barcelona, Spain THIS IS NOT THE EXACT MEETING POINT! We will inform about the exact place 2 days before the flight (depending on winds direction and weather forecast) to g"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 205.26
+      },
+      "currency": "USD"
+    }
+  }
+}

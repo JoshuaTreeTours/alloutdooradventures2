@@ -4693,6 +4693,102 @@ const massachusettsState: StateDestination = {
   isFallback: true,
 };
 
+const spainState: StateDestination = {
+  slug: "spain",
+  name: "Spain",
+  description:
+    "Mediterranean city sightseeing, Gaudí landmarks, and Catalonia day trips from Barcelona.",
+  featuredDescription:
+    "Explore Barcelona tours with private Gaudí visits, Montserrat wine days, and Costa Brava adventures.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/f1/fc.jpg",
+  region: "Europe",
+  intro:
+    "Spain pairs walkable Barcelona districts with Gaudí landmarks, Mediterranean views, and curated guided experiences.",
+  longDescription:
+    "Barcelona anchors Spain tour inventory with private walking tours, skip-the-line Sagrada Familia visits, Park Güell routes, Montserrat wine days, and Costa Brava kayak or Girona day trips from the capital of Catalonia.",
+  topRegions: [
+    {
+      title: "Barcelona and Gaudí",
+      description:
+        "Sagrada Familia, Park Güell, the Gothic Quarter, and Montjuïc sightseeing.",
+    },
+    {
+      title: "Catalonia day trips",
+      description:
+        "Montserrat monastery visits, Penedès cava tastings, Girona, and Costa Brava.",
+    },
+  ],
+  cities: [
+    {
+      name: "Barcelona",
+      slug: "barcelona",
+      stateSlug: "spain",
+      region: "Catalonia",
+      lat: 41.3874,
+      lng: 2.1686,
+      shortDescription:
+        "Private Gaudí tours, Montserrat wine days, and Mediterranean sightseeing in Barcelona.",
+      intro:
+        "Barcelona is a Mediterranean city with Sagrada Familia, Park Güell, Gothic Quarter streets, and guided walking, cycling, and day-trip tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/f1/fc.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cycling"],
+      whereItIs: [
+        "Barcelona sits on Spain's Mediterranean coast with the Gothic Quarter, Eixample, and Montjuïc framing central sightseeing.",
+        "Most guided tours depart from Plaça de Catalunya, the Gothic Quarter, cruise port hotels, and central Barcelona meeting points.",
+      ],
+      experiences: {
+        mountains:
+          "Montserrat day trips add monastery walks and mountain viewpoints beyond the Barcelona waterfront.",
+        lakesWater:
+          "Private sailing from Port Olímpic and Costa Brava kayak days highlight the Mediterranean coastline.",
+        desertForest:
+          "Park Güell terraces and Montjuïc gardens offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours cover Sagrada Familia, Plaça del Rei, and Gothic Quarter corridors.",
+        scenicDrives:
+          "Private car tours cover Montserrat, Girona, Costa Brava villages, and Penedès vineyards.",
+        seasonalNotes:
+          "Spring and summer are popular for Park Güell, sailing, and Costa Brava kayaking; cooler months favor Gaudí interiors and Montserrat.",
+      },
+      thingsToDo: [
+        "Visit Sagrada Familia and Park Güell with skip-the-line tickets.",
+        "Walk the Gothic Quarter and look out from Montjuïc.",
+        "Join a Montserrat and cava winery day or a Costa Brava kayak trip.",
+      ],
+      toursCopy: [
+        "Book a private Gaudí walk for a compact introduction to Barcelona.",
+        "Pair a Sagrada Familia visit with Park Güell or a Montserrat wine day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Gothic Quarter walk and Sagrada Familia.",
+          "Afternoon: Park Güell and Montjuïc viewpoints.",
+          "Evening: Tapas in the Eixample or El Born.",
+        ],
+        dayTwo: [
+          "Morning: Montserrat monastery or Penedès cava tasting.",
+          "Afternoon: Girona Old Town or Costa Brava coves.",
+          "Evening: Return to Barcelona for a waterfront dinner.",
+        ],
+      },
+      gettingThere: [
+        "Barcelona-El Prat Airport serves the city with metro, Aerobús, and rail links to Plaça de Catalunya and the Gothic Quarter.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Barcelona tours?",
+          answer:
+            "Private Gaudí sightseeing, skip-the-line Sagrada Familia visits, Montserrat wine days, and Costa Brava kayak trips are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 const unitedKingdomState: StateDestination = {
   slug: "united-kingdom",
   name: "United Kingdom",
@@ -4800,6 +4896,7 @@ export const states: StateDestination[] = [
   massachusettsState,
   illinoisState,
   unitedKingdomState,
+  spainState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({
