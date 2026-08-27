@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "7812P3",
+    "productUrl": "https://www.viator.com/tours/Rome/Rome-Walking-Food-Tour-with-Private-Tour-Option/d511-7812P3",
+    "title": "Rome Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "In Rome, get a taste of true Roman fare while exploring the city’s unique districts on this food walking tour. Follow your local guide—and your appetite—to authentic eateries in the Piazza Navona, Campo de' Fiori, and the Jewish Quarter. Stops include Piazza Navona, Campo de' Fiori, Jewish Quarter, Largo di Torre Argentina. Learn about Rome’s fascinating history while stopping to sample local specialties such as espresso, pizza, fried risotto balls called suppli, Roman pasta, cheeses, and artisinal gelato. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Piazza Navona, Campo de' Fiori, Jewish Quarter, Largo di Torre Argentina that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $125.86",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 914
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/70/e6/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get a taste of true Roman fare while exploring the city’s unique districts on this food walking tour",
+      "Follow your local guide—and your appetite—to authentic eateries in the Piazza Navona, Campo de' Fiori, and the Jewish Qu",
+      "Learn about Rome’s fascinating history while stopping to sample local specialties such as espresso, pizza, fried risotto",
+      "Rome Walking Food Tour With Secret Food Tours near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Sant'Agnese in Agone, Piazza Navona, 14, 00186 Roma RM, Italy. Ends at Largo di Torre Argentina."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, get a taste of true Roman fare while exploring the city’s unique districts on this food walking tour.",
+    "itineraryItems": [
+      {
+        "title": "Piazza Navona",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Campo de' Fiori",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jewish Quarter",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Largo di Torre Argentina",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Three different types of homemade Pizza",
+      "Supplí: fried risotto balls",
+      "Italian cheeses",
+      "Artisanal gelato",
+      "Two Roman pastas",
+      "Finest Italian wines"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Sant'Agnese in Agone, Piazza Navona, 14, 00186 Roma RM, Italy. Ends at Largo di Torre Argentina."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125.86
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "3731VATICAN",
+    "productUrl": "https://www.viator.com/tours/Rome/Skip-the-Line-Vatican-Museums-and-Sistine-Chapel-Guided-Tour/d511-3731VATICAN",
+    "title": "Vatican Museums, Sistine Chapel & St Peter’s Basilica Guided Tour",
+    "description": {
+      "text": "In Rome, discover the Vatican on a group tour of the Sistine Chapel and the Vatican Museums with an expert guide. Navigate the vast complex of rooms, artwork, and history with a guide, who brings the ancient collection to life. Stops include Vatican Museums, Cortile della Pigna, Sphere within a Sphere, Galleria Delle Carte Geografiche, Sistine Chapel, St. Peter's Basilica. Skip all the entrance lines to explore halls such as the Gallery of the Maps; step inside the Sistine Chapel to admire ‘The Creation of Adam’ by Michelangelo and finish your tour visiting St. Peter's Basilica. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $116.49",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 33256
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ba/c1/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "St. Peter's Basilica",
+      "St. Peter's Square",
+      "Discover the Vatican on a group tour of the Sistine Chapel and the Vatican Museums with an expert guide",
+      "Navigate the vast complex of rooms, artwork, and history with a guide, who brings the ancient collection to life",
+      "Skip all the entrance lines to explore halls such as the Gallery of the Maps; step inside the Sistine Chapel to admire ‘"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Via Tunisi, 4, 00192 Roma RM, Italy, at the bottom of the steps across the street from the Entrance of the Vatican Museums, next to Caffè Vaticano."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, discover the Vatican on a group tour of the Sistine Chapel and the Vatican Museums with an expert guide.",
+    "itineraryItems": [
+      {
+        "title": "Vatican Museums",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cortile della Pigna",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sphere within a Sphere",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Galleria Delle Carte Geografiche",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sistine Chapel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Peter's Basilica",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Peter's Square",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Reserved Priority Access to the Vatican Museums",
+      "Guided visit of St. Peter’s Basilica",
+      "Access to the Sistine Chapel",
+      "Audio headsets so you can always hear your guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Vatican Museums, Sistine Chapel & St Peter’s Basilica Guided Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Via Tunisi, 4, 00192 Roma RM, Italy, at the bottom of the steps across the street from the Entrance of the Vatican Museums, next to Caffè Vaticano."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 116.49
+      },
+      "currency": "USD"
+    }
+  }
+}

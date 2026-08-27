@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "6718P9",
+    "productUrl": "https://www.viator.com/tours/Rome/Borghese-Gallery-Small-Group-Tour-Baroque-and-Renaissance-in-Rome/d511-6718P9",
+    "title": "Borghese Gallery Max 6 People Tour: Baroque & Renaissance in Rome",
+    "description": {
+      "text": "Explore a treasure trove of baroque and Renaissance art at Rome's Borghese Gallery—and discover insider facts you'd miss if visiting on your own—on this small-group tour. Housed in a 17th-century palazzo, the museum is home to world-class collection by Italian masters like Caravaggio, Bernini, Canova, and Raphael. Stops include Galleria Borghese, Piazzale del Museo Borghese. See many of the gallery’s most important paintings and sculptures while your guide shares stories about the artists and patrons behind them. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Galleria Borghese, Piazzale del Museo Borghese that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $172.95",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 125
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/3e/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore a treasure trove of baroque and Renaissance art at Rome's Borghese Gallery—and discover insider facts you'd miss",
+      "Housed in a 17th-century palazzo, the museum is home to world-class collection by Italian masters like Caravaggio, Berni",
+      "Borghese Gallery Max 6 People Tour: Baroque & Renaissance in Rome near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Outside the main entrance to the Borghese Gallery, Piazzale del Museo Borghese, 00197 Roma. Your guide will be holding a LivTours sign."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore a treasure trove of baroque and Renaissance art at Rome's Borghese Gallery—and discover insider facts you'd miss if visiting on your own—on this small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Galleria Borghese",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Piazzale del Museo Borghese",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided tour of Borghese Gallery",
+      "Prereserved entrance tickets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Borghese Gallery Max 6 People Tour: Baroque & Renaissance in Rome?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Outside the main entrance to the Borghese Gallery, Piazzale del Museo Borghese, 00197 Roma. Your guide will be holding a LivTours sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 172.95
+      },
+      "currency": "USD"
+    }
+  }
+}

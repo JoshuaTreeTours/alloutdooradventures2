@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "85309P4",
+    "productUrl": "https://www.viator.com/tours/Rome/Rome-by-Night-E-Bike-Tour-with-Pizza-Option/d511-85309P4",
+    "title": "Rome by Night eBike Tour with Pizza Option",
+    "description": {
+      "text": "Experience the most beautiful time in Rome when you explore at twilight—and see more sights in one tour than you could on your own—all thanks to this electric bike excursion. With just your guide and small group for company, watch the sunset and pass by major monuments such as the Colosseum, Roman Forum, Pantheon, and Trevi Fountain. Stops include Colosseum, Roman Forum, Pantheon, Trevi Fountain. If you've upgraded when booking, enjoy an authentic Roman pizza afterwards. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colosseum, Roman Forum, Pantheon, Trevi Fountain that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $73.13",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 324
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7f/42/95.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the most beautiful time in Rome when you explore at twilight—and see more sights in one tour than you could o",
+      "If you've upgraded when booking, enjoy an authentic Roman pizza afterwards",
+      "Rome by Night eBike Tour with Pizza Option near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Rome night e-bike meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the most beautiful time in Rome when you explore at twilight—and see more sights in one tour than you could on your own—all thanks to this electric bike excursion.",
+    "itineraryItems": [
+      {
+        "title": "Colosseum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Roman Forum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pantheon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trevi Fountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "High Quality E-Bike",
+      "Helmet - Handlebar holder",
+      "Optional Pizza (to choose at booking stage)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome by Night eBike Tour with Pizza Option?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Meet your guide at the confirmed Rome night e-bike meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 73.13
+      },
+      "currency": "USD"
+    }
+  }
+}

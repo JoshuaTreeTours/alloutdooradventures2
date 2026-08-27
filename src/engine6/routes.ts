@@ -1080,6 +1080,56 @@ export const isEngine6BarcelonaTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_BARCELONA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_ROME_75037P3_PRODUCT_CODE = "75037P3";
+export const ENGINE6_ROME_75037P3_ROUTE =
+  "/destinations/italy/rome/tours/vespa-sidecar-tour-in-rome-with-cappuccino-75037P3";
+export const ENGINE6_ROME_391465P2_PRODUCT_CODE = "391465P2";
+export const ENGINE6_ROME_391465P2_ROUTE =
+  "/destinations/italy/rome/tours/rome-vespa-tour-with-professional-photographer-391465P2";
+export const ENGINE6_ROME_367403P1_PRODUCT_CODE = "367403P1";
+export const ENGINE6_ROME_367403P1_ROUTE =
+  "/destinations/italy/rome/tours/fiat-500-private-tour-photoshoot-with-a-roman-pick-up-i-367403P1";
+export const ENGINE6_ROME_7559P11_PRODUCT_CODE = "7559P11";
+export const ENGINE6_ROME_7559P11_ROUTE =
+  "/destinations/italy/rome/tours/colosseum-tour-with-arena-floor-roman-forum-semi-privat-7559P11";
+export const ENGINE6_ROME_3731SSVAC_PRODUCT_CODE = "3731SSVAC";
+export const ENGINE6_ROME_3731SSVAC_ROUTE =
+  "/destinations/italy/rome/tours/full-day-colosseum-vatican-museums-st-peters-guided-tou-3731SSVAC";
+export const ENGINE6_ROME_133210P3_PRODUCT_CODE = "133210P3";
+export const ENGINE6_ROME_133210P3_ROUTE =
+  "/destinations/italy/rome/tours/rome-by-e-bike-the-guided-tour-of-the-city-center-133210P3";
+export const ENGINE6_ROME_123593P20_PRODUCT_CODE = "123593P20";
+export const ENGINE6_ROME_123593P20_ROUTE =
+  "/destinations/italy/rome/tours/romes-vineyard-symphony-countryside-winetasting-experie-123593P20";
+export const ENGINE6_ROME_7812P3_PRODUCT_CODE = "7812P3";
+export const ENGINE6_ROME_7812P3_ROUTE =
+  "/destinations/italy/rome/tours/rome-walking-food-tour-with-secret-food-tours-7812P3";
+export const ENGINE6_ROME_20163P100_PRODUCT_CODE = "20163P100";
+export const ENGINE6_ROME_20163P100_ROUTE =
+  "/destinations/italy/rome/tours/rome-vatican-museums-and-st-peters-basilica-small-group-20163P100";
+export const ENGINE6_ROME_6718P9_PRODUCT_CODE = "6718P9";
+export const ENGINE6_ROME_6718P9_ROUTE =
+  "/destinations/italy/rome/tours/borghese-gallery-max-6-people-tour-baroque-renaissance-6718P9";
+export const ENGINE6_ROME_5284APPIAN_PRODUCT_CODE = "5284APPIAN";
+export const ENGINE6_ROME_5284APPIAN_ROUTE =
+  "/destinations/italy/rome/tours/rome-ebike-tour-appian-way-catacombs-roman-aqueducts-5284APPIAN";
+export const ENGINE6_ROME_85309P4_PRODUCT_CODE = "85309P4";
+export const ENGINE6_ROME_85309P4_ROUTE =
+  "/destinations/italy/rome/tours/rome-by-night-ebike-tour-with-pizza-option-85309P4";
+export const ENGINE6_ROME_24338P3_PRODUCT_CODE = "24338P3";
+export const ENGINE6_ROME_24338P3_ROUTE =
+  "/destinations/italy/rome/tours/rome-food-tour-hidden-gems-of-trastevere-with-dinner-wi-24338P3";
+export const ENGINE6_ROME_3731VATICAN_PRODUCT_CODE = "3731VATICAN";
+export const ENGINE6_ROME_3731VATICAN_ROUTE =
+  "/destinations/italy/rome/tours/vatican-museums-sistine-chapel-st-peter-s-basilica-guid-3731VATICAN";
+
+export const ENGINE6_ROME_TOUR_PATH_PREFIX =
+  "/destinations/italy/rome/tours/";
+
+export const isEngine6RomeTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_ROME_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3985,6 +4035,62 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_BARCELONA_9866P55_ROUTE,
     ENGINE6_BARCELONA_9866P55_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_75037P3_ROUTE,
+    ENGINE6_ROME_75037P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_391465P2_ROUTE,
+    ENGINE6_ROME_391465P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_367403P1_ROUTE,
+    ENGINE6_ROME_367403P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_7559P11_ROUTE,
+    ENGINE6_ROME_7559P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_3731SSVAC_ROUTE,
+    ENGINE6_ROME_3731SSVAC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_133210P3_ROUTE,
+    ENGINE6_ROME_133210P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_123593P20_ROUTE,
+    ENGINE6_ROME_123593P20_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_7812P3_ROUTE,
+    ENGINE6_ROME_7812P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_20163P100_ROUTE,
+    ENGINE6_ROME_20163P100_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_6718P9_ROUTE,
+    ENGINE6_ROME_6718P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_5284APPIAN_ROUTE,
+    ENGINE6_ROME_5284APPIAN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_85309P4_ROUTE,
+    ENGINE6_ROME_85309P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_24338P3_ROUTE,
+    ENGINE6_ROME_24338P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ROME_3731VATICAN_ROUTE,
+    ENGINE6_ROME_3731VATICAN_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "123593P20",
+    "productUrl": "https://www.viator.com/tours/Rome/4-hour-private-tour-taste-Italian-wines-in-the-Roman-countryside/d511-123593P20",
+    "title": "Rome's Vineyard Symphony: Countryside Winetasting Experience",
+    "description": {
+      "text": "Leave central Rome for a private countryside wine tasting with hotel pickup and drop-off. Taste selected wines with local gastronomic specialties at a family-run vineyard, then return to the city after a guided cellar visit. Stops include Hotel pickup in Rome, Roman countryside vineyard. The half-day format is built for visitors who want Roman wine country without planning rural transfers on their own. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Hotel pickup in Rome, Roman countryside vineyard that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $180.18",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 17
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/a9/cb/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Leave central Rome for a private countryside wine tasting with hotel pickup and drop-off",
+      "Taste selected wines with local gastronomic specialties at a family-run vineyard, then return to the city after a guided",
+      "The half-day format is built for visitors who want Roman wine country without planning rural transfers on their own",
+      "Rome's Vineyard Symphony: Countryside Winetasting Experience near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Rome; provide your pickup address when booking."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave central Rome for a private countryside wine tasting with hotel pickup and drop-off.",
+    "itineraryItems": [
+      {
+        "title": "Hotel pickup in Rome",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Roman countryside vineyard",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "Hotel pick up and drop off",
+      "Tasting of selected wines",
+      "Tasting of local gastronomic specialties"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome's Vineyard Symphony: Countryside Winetasting Experience?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Hotel pickup in Rome; provide your pickup address when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180.18
+      },
+      "currency": "USD"
+    }
+  }
+}

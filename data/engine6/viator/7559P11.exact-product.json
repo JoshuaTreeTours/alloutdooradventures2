@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "7559P11",
+    "productUrl": "https://www.viator.com/tours/Rome/Colosseum-Tour-with-Arena-Floor-and-Roman-Forum-Semi-Private/d511-7559P11",
+    "title": "Colosseum Tour with Arena Floor & Roman Forum | Semi-Private",
+    "description": {
+      "text": "In Rome, if you’re interested in ancient Roman history, take this small-group guided tour that includes access to the Colosseum’s arena floor, the Roman Forum, and Palatine Hill. Learn more from your guide than you would wandering around by yourself, and ask lots of questions, which isn’t easy on larger tours. Stops include Colosseum Arena Floor, Roman Forum, Palatine Hill. See where ancient gladiatorial battles were fought, and where governance decisions were made, at these must-visit sites. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colosseum Arena Floor, Roman Forum, Palatine Hill that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $169.91",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 114
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/11/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "If you’re interested in ancient Roman history, take this small-group guided tour that includes access to the Colosseum’s",
+      "See where ancient gladiatorial battles were fought, and where governance decisions were made, at these must-visit sites",
+      "Colosseum Tour with Arena Floor & Roman Forum | Semi-Private near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Colosseum-area meeting point listed when booking."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, if you’re interested in ancient Roman history, take this small-group guided tour that includes access to the Colosseum’s arena floor, the Roman Forum, and Palatine Hill.",
+    "itineraryItems": [
+      {
+        "title": "Colosseum Arena Floor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Roman Forum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palatine Hill",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Colosseum entrance with Exclusive access to arena floor",
+      "Colosseum reservation fee",
+      "Roman Forum and Palatine Hill"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Colosseum Tour with Arena Floor & Roman Forum | Semi-Private?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Meet your guide at the confirmed Colosseum-area meeting point listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169.91
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -224,6 +224,20 @@ import specimen5689p12Payload from "../../data/engine6/viator/5689P12.exact-prod
 import specimen120041p6Payload from "../../data/engine6/viator/120041P6.exact-product.json";
 import specimen333987p1Payload from "../../data/engine6/viator/333987P1.exact-product.json";
 import specimen9866p55Payload from "../../data/engine6/viator/9866P55.exact-product.json";
+import specimen75037p3Payload from "../../data/engine6/viator/75037P3.exact-product.json";
+import specimen391465p2Payload from "../../data/engine6/viator/391465P2.exact-product.json";
+import specimen367403p1Payload from "../../data/engine6/viator/367403P1.exact-product.json";
+import specimen7559p11Payload from "../../data/engine6/viator/7559P11.exact-product.json";
+import specimen3731ssvacPayload from "../../data/engine6/viator/3731SSVAC.exact-product.json";
+import specimen133210p3Payload from "../../data/engine6/viator/133210P3.exact-product.json";
+import specimen123593p20Payload from "../../data/engine6/viator/123593P20.exact-product.json";
+import specimen7812p3Payload from "../../data/engine6/viator/7812P3.exact-product.json";
+import specimen20163p100Payload from "../../data/engine6/viator/20163P100.exact-product.json";
+import specimen6718p9Payload from "../../data/engine6/viator/6718P9.exact-product.json";
+import specimen5284appianPayload from "../../data/engine6/viator/5284APPIAN.exact-product.json";
+import specimen85309p4Payload from "../../data/engine6/viator/85309P4.exact-product.json";
+import specimen24338p3Payload from "../../data/engine6/viator/24338P3.exact-product.json";
+import specimen3731vaticanPayload from "../../data/engine6/viator/3731VATICAN.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2781,6 +2795,90 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "9866P55",
     publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-and-Sagrada-Familia-Small-Group-Half-Day-Tour-with-Hotel-Pick-up/d562-9866P55",
     rawPayload: specimen9866p55Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "75037P3",
+    publicUrl: "https://www.viator.com/tours/Rome/Rome-by-Vespa-Sidecar-Tour/d511-75037P3",
+    rawPayload: specimen75037p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "391465P2",
+    publicUrl: "https://www.viator.com/tours/Rome/Vespa-scooter-tour-in-Rome-With-Professional-Photographer/d511-391465P2",
+    rawPayload: specimen391465p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "367403P1",
+    publicUrl: "https://www.viator.com/tours/Rome/Private-Tour-and-Photoshoot-in-a-Fiat-500-Vintage-in-Rome/d511-367403P1",
+    rawPayload: specimen367403p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7559P11",
+    publicUrl: "https://www.viator.com/tours/Rome/Colosseum-Tour-with-Arena-Floor-and-Roman-Forum-Semi-Private/d511-7559P11",
+    rawPayload: specimen7559p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3731SSVAC",
+    publicUrl: "https://www.viator.com/tours/Rome/Full-Day-Combo-Vatican-and-Colosseum-Skip-the-Line-Guided-Tour/d511-3731SSVAC",
+    rawPayload: specimen3731ssvacPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "133210P3",
+    publicUrl: "https://www.viator.com/tours/Rome/PRIVATE-Discover-Rome-4-hour-Electric-Bike-Tour/d511-133210P3",
+    rawPayload: specimen133210p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "123593P20",
+    publicUrl: "https://www.viator.com/tours/Rome/4-hour-private-tour-taste-Italian-wines-in-the-Roman-countryside/d511-123593P20",
+    rawPayload: specimen123593p20Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P3",
+    publicUrl: "https://www.viator.com/tours/Rome/Rome-Walking-Food-Tour-with-Private-Tour-Option/d511-7812P3",
+    rawPayload: specimen7812p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "20163P100",
+    publicUrl: "https://www.viator.com/tours/Rome/Rome-Vatican-Museums-and-St-Peters-Basilica-Small-Group-Tour/d511-20163P100",
+    rawPayload: specimen20163p100Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6718P9",
+    publicUrl: "https://www.viator.com/tours/Rome/Borghese-Gallery-Small-Group-Tour-Baroque-and-Renaissance-in-Rome/d511-6718P9",
+    rawPayload: specimen6718p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5284APPIAN",
+    publicUrl: "https://www.viator.com/tours/Rome/Ancient-Appian-Way-Catacombs-and-Roman-Countryside-Bike-Tour/d511-5284APPIAN",
+    rawPayload: specimen5284appianPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "85309P4",
+    publicUrl: "https://www.viator.com/tours/Rome/Rome-by-Night-E-Bike-Tour-with-Pizza-Option/d511-85309P4",
+    rawPayload: specimen85309p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24338P3",
+    publicUrl: "https://www.viator.com/tours/Rome/Trastevere-Evening-Food-Tour-in-Rome/d511-24338P3",
+    rawPayload: specimen24338p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3731VATICAN",
+    publicUrl: "https://www.viator.com/tours/Rome/Skip-the-Line-Vatican-Museums-and-Sistine-Chapel-Guided-Tour/d511-3731VATICAN",
+    rawPayload: specimen3731vaticanPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

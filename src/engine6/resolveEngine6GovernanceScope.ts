@@ -44,6 +44,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     france: ["Paris"],
     barcelona: ["Barcelona"],
     spain: ["Barcelona"],
+    rome: ["Rome"],
+    italy: ["Rome"],
     "jackson-hole": ["Jackson Hole"],
     jackson: ["Jackson Hole"],
     wyoming: ["Jackson Hole"],
