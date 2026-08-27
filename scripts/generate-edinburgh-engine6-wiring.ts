@@ -40,7 +40,7 @@ const APPROVED_NARRATIVES_JSON =
   "scripts/edinburgh-approved-narratives.json";
 
 const ROUTE_PREFIX =
-  "/destinations/united-kingdom/edinburgh/tours/";
+  "/destinations/scotland/edinburgh/tours/";
 const ROUTES_INSERT_BEFORE = "export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE";
 const ROUTE_ENTRIES_INSERT_BEFORE = `  [
     ENGINE6_BRYCE_165275P1_ROUTE,

@@ -4881,10 +4881,41 @@ const unitedKingdomState: StateDestination = {
         },
       ],
     },
+  ],
+  isFallback: true,
+};
+
+const scotlandState: StateDestination = {
+  slug: "scotland",
+  name: "Scotland",
+  description:
+    "Castle cities, Highland glens, whisky country, and guided day tours from Edinburgh.",
+  featuredDescription:
+    "Explore Edinburgh tours with private Highlands days, Royal Mile walking, whisky glens, and Arthur's Seat cycling.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg",
+  region: "Europe",
+  intro:
+    "Scotland pairs walkable Edinburgh districts with castle ridgelines, Forth views, and guided Highland, whisky, and coastal days.",
+  longDescription:
+    "Edinburgh anchors Scotland tour inventory with Royal Mile castle walks, Arthur's Seat hiking and cycling, whisky glen days, and private Land Rover or chauffeur routes into Glencoe, Loch Ness, Stirling, and St Andrews.",
+  topRegions: [
+    {
+      title: "Old Town and the Royal Mile",
+      description:
+        "Edinburgh Castle, St Giles' Cathedral, and guided walking or food tours through UNESCO Old Town.",
+    },
+    {
+      title: "Highlands and whisky country",
+      description:
+        "Glencoe, Loch Ness, Stirling Castle, and distillery days reachable from Edinburgh.",
+    },
+  ],
+  cities: [
     {
       name: "Edinburgh",
       slug: "edinburgh",
-      stateSlug: "united-kingdom",
+      stateSlug: "scotland",
       region: "Edinburgh",
       lat: 55.9533,
       lng: -3.1883,
@@ -5410,6 +5441,7 @@ export const states: StateDestination[] = [
   massachusettsState,
   illinoisState,
   unitedKingdomState,
+  scotlandState,
   franceState,
   spainState,
   italyState,

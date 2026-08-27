@@ -54,7 +54,7 @@ const LIVE_DATA_PATH =
 const EDITORIAL_OVERRIDES_PATH =
   "scripts/edinburgh-editorial-overrides.json";
 const DESTINATION_CITY = "Edinburgh";
-const DESTINATION_STATE = "United Kingdom";
+const DESTINATION_STATE = "Scotland";
 const EDITORIAL_OVERRIDES = JSON.parse(
   readFileSync(EDITORIAL_OVERRIDES_PATH, "utf8")
 ) as Record<string, string>;

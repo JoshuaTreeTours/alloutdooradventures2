@@ -178,6 +178,8 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   "united-kingdom": {
     london: ENGINE6_LONDON_CANONICAL_CITY_HERO_URL,
+  },
+  scotland: {
     edinburgh: ENGINE6_EDINBURGH_CANONICAL_CITY_HERO_URL,
   },
   france: {

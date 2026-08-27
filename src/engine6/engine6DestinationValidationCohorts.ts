@@ -138,9 +138,8 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
     {
       label: "Edinburgh",
       matches: tour =>
-        /\/united-kingdom\/edinburgh\//i.test(tour.canonicalPath) ||
-        (/\bedinburgh\b/i.test(tour.city) &&
-          /\bunited kingdom\b/i.test(tour.state)),
+        /\/scotland\/edinburgh\//i.test(tour.canonicalPath) ||
+        (/\bedinburgh\b/i.test(tour.city) && /\bscotland\b/i.test(tour.state)),
       requireUniqueListingHeroes: true,
     },
     {

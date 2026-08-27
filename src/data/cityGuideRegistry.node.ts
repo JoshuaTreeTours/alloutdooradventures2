@@ -152,7 +152,8 @@ const buildIntlCityGuideRecords = (): CityGuideRecord[] => {
         return;
       }
       records.set(key, {
-        country: state.name,
+        country:
+          state.slug === "scotland" ? "United Kingdom" : state.name,
         state: state.name,
         stateSlug: state.slug,
         city: city.name,

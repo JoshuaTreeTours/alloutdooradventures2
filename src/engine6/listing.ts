@@ -32,6 +32,10 @@ const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
     return "United States";
   }
 
+  if (stateSlug === "scotland") {
+    return "United Kingdom";
+  }
+
   return tour.state;
 };
 
@@ -110,6 +114,9 @@ const toEngine6ListingTour = (
     activityCategories: tour.activityCategories,
     destination: {
       country: resolveEngine6ListingCountry(tour, stateSlug),
+      ...(stateSlug === "scotland"
+        ? { countryCode: "GB", countrySlug: "united-kingdom" }
+        : {}),
       state: tour.state,
       stateSlug,
       city: tour.city,

@@ -66,7 +66,7 @@ for (const code of codes) {
     .map(String);
 
   const heroSet = new Set(heroCandidates);
-  if (!tour.canonicalPath.includes("/united-kingdom/edinburgh/")) {
+  if (!tour.canonicalPath.includes("/scotland/edinburgh/")) {
     issues.push("bad path");
   }
   if (!/Edinburgh/i.test(governed)) {
@@ -113,7 +113,7 @@ for (const code of codes) {
 
 const listingCodes = engine6ResolvedTours
   .filter(tour =>
-    tour.canonicalPath.includes("/united-kingdom/edinburgh/")
+    tour.canonicalPath.includes("/scotland/edinburgh/")
   )
   .map(tour => tour.productCode)
   .sort();

@@ -52,7 +52,7 @@ const readMerchantFeedRows = () => {
 const edinburghListingTours = engine6ListingTours.filter(
   tour =>
     tour.engine === "engine6" &&
-    tour.destination.stateSlug === "united-kingdom" &&
+    tour.destination.stateSlug === "scotland" &&
     tour.destination.citySlug === "edinburgh" &&
     EDINBURGH_VIATOR_PUBLIC_PRODUCT_CODES.includes(
       tour.productCode
@@ -61,7 +61,7 @@ const edinburghListingTours = engine6ListingTours.filter(
 
 const edinburghResolvedTours = engine6ResolvedTours.filter(
   tour =>
-    tour.canonicalPath.includes("/united-kingdom/edinburgh/") &&
+    tour.canonicalPath.includes("/scotland/edinburgh/") &&
     EDINBURGH_VIATOR_PUBLIC_PRODUCT_CODES.includes(
       tour.productCode
     )
@@ -87,10 +87,17 @@ describe("Edinburgh Engine6 rating/review parity", () => {
       expect(tour?.reviewCount).toBe(expected.reviewCount);
 
       const listingEntry = getToursByCityUnified(
-        "united-kingdom",
+        "scotland",
         "edinburgh"
       ).find(entry => entry.tour.productCode === productCode);
       expect(listingEntry).toBeDefined();
+      expect(tour?.canonicalPath).toContain("/scotland/edinburgh/");
+      expect(tour?.state).toBe("Scotland");
+      expect(listingEntry?.tour.destination.state).toBe("Scotland");
+      expect(listingEntry?.tour.destination.stateSlug).toBe("scotland");
+      expect(listingEntry?.tour.destination.country).toBe("United Kingdom");
+      expect(listingEntry?.tour.destination.countryCode).toBe("GB");
+      expect(listingEntry?.href).toContain("/scotland/edinburgh/");
       expect(listingEntry?.tour.badges.rating).toBe(expected.rating);
       expect(listingEntry?.tour.badges.reviewCount).toBe(expected.reviewCount);
 
@@ -120,6 +127,18 @@ describe("Edinburgh Engine6 rating/review parity", () => {
       const touristTripNode = graph.find(
         node => node["@type"] === "TouristTrip"
       );
+      const placeNode = graph.find(node => node["@type"] === "Place") as {
+        address?: { addressCountry?: string; addressRegion?: string };
+      };
+      const breadcrumbNode = graph.find(
+        node => node["@type"] === "BreadcrumbList"
+      ) as { itemListElement?: Array<{ name?: string; item?: string }> };
+      expect(placeNode?.address?.addressCountry).toBe("GB");
+      expect(placeNode?.address?.addressRegion).toBe("Scotland");
+      expect(breadcrumbNode?.itemListElement?.[1]?.name).toBe("Scotland");
+      expect(String(breadcrumbNode?.itemListElement?.[1]?.item ?? "")).toContain(
+        "/destinations/scotland"
+      );
       expect(productNode?.image).toBe(tour!.heroImageUrl);
       expect(touristTripNode?.image).toBe(tour!.heroImageUrl);
       expect(listingEntry!.tour.heroImage).toBe(tour!.heroImageUrl);
@@ -134,7 +153,7 @@ describe("Edinburgh Engine6 rating/review parity", () => {
   );
 
   it("lists exactly the selected Engine6 cards for the Edinburgh cohort", () => {
-    const edinburghListing = getToursByCityUnified("united-kingdom", "edinburgh");
+    const edinburghListing = getToursByCityUnified("scotland", "edinburgh");
     expect(edinburghListing).toHaveLength(EDINBURGH_VIATOR_PUBLIC_PRODUCT_CODES.length);
     expect(
       edinburghListing.every(entry => entry.tour.engine === "engine6")
@@ -159,7 +178,7 @@ describe("Edinburgh Engine6 rating/review parity", () => {
           entry => entry.productCode === productCode
         );
         const listingEntry = getToursByCityUnified(
-          "united-kingdom",
+          "scotland",
           "edinburgh"
         ).find(entry => entry.tour.productCode === productCode);
 
@@ -215,7 +234,7 @@ describe("Edinburgh Engine6 rating/review parity", () => {
 describe("Edinburgh Engine6 hero diversity", () => {
   it("uses unique listing heroes with at most one canonical city fallback", () => {
     const listingEntries = getToursByCityUnified(
-      "united-kingdom",
+      "scotland",
       "edinburgh"
     ).filter(
       entry =>
