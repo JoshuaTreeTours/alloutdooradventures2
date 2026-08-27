@@ -4981,6 +4981,102 @@ const franceState: StateDestination = {
   isFallback: true,
 };
 
+const italyState: StateDestination = {
+  slug: "italy",
+  name: "Italy",
+  description:
+    "Rome landmarks, Vatican collections, and guided walking, cycling, and food touring.",
+  featuredDescription:
+    "Explore Rome tours with Vespa sidecars, private photography, Colosseum arena access, Vatican visits, and countryside wine tastings.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/80/9d.jpg",
+  region: "Europe",
+  intro:
+    "Italy pairs walkable Rome districts with Vatican museums, ancient ruins, and day trips into Roman wine country.",
+  longDescription:
+    "Rome anchors Italy tour inventory with Vespa sidecar sightseeing, private photography, Colosseum arena access, Vatican Museums visits, Trastevere food walks, Appian Way e-bike days, and countryside vineyard tastings from the capital.",
+  topRegions: [
+    {
+      title: "Ancient center and Colosseum",
+      description:
+        "Colosseum arena floor, Roman Forum, Palatine Hill, and Vespa or e-bike loops through the historic center.",
+    },
+    {
+      title: "Vatican and Trastevere",
+      description:
+        "Vatican Museums, the Sistine Chapel, St. Peter's Basilica, and food walks across Trastevere and Campo de' Fiori.",
+    },
+  ],
+  cities: [
+    {
+      name: "Rome",
+      slug: "rome",
+      stateSlug: "italy",
+      region: "Rome",
+      lat: 41.9028,
+      lng: 12.4964,
+      shortDescription:
+        "Private Vespa and Fiat tours, Vatican visits, and landmark sightseeing in Rome.",
+      intro:
+        "Rome is an ancient capital with the Colosseum, Vatican Museums, Trastevere, and guided walking, cycling, and food tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/80/9d.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cycling"],
+      whereItIs: [
+        "Rome sits on the Tiber River with the historic center, Vatican City, and Trastevere framing central sightseeing.",
+        "Most guided tours depart from the Colosseum area, Piazza Navona, Vatican Museums, and central Rome hotels.",
+      ],
+      experiences: {
+        mountains:
+          "Rome is a river city; tours focus on ancient landmarks, museum galleries, and neighborhood walking districts.",
+        lakesWater:
+          "Tiber cycle paths and riverside routes highlight Castel Sant'Angelo and historic-center views from the water's edge.",
+        desertForest:
+          "Parks such as Villa Borghese and the Appian Way countryside offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided e-bike tours cover the historic center, the Appian Way, catacombs, and Roman aqueducts.",
+        scenicDrives:
+          "Private Fiat 500 and Vespa sidecar tours cover the Colosseum, Trevi Fountain, and Pantheon photo stops.",
+        seasonalNotes:
+          "Spring and fall are popular for walking and e-bike days; summer heat favors early Colosseum and Vatican entries.",
+      },
+      thingsToDo: [
+        "Walk the Colosseum arena floor, Roman Forum, and Palatine Hill.",
+        "Visit the Vatican Museums and St. Peter's Basilica.",
+        "Join a Trastevere food walk or a Vespa sidecar landmark tour.",
+      ],
+      toursCopy: [
+        "Book a Vespa sidecar or private Fiat 500 tour for a compact introduction to Rome.",
+        "Pair a Vatican visit with Colosseum arena access for a full-day city itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Vatican Museums and St. Peter's Basilica.",
+          "Afternoon: Colosseum arena floor and Roman Forum.",
+          "Evening: Trastevere food tour with dinner and wine.",
+        ],
+        dayTwo: [
+          "Morning: Appian Way e-bike or Borghese Gallery small-group visit.",
+          "Afternoon: Historic-center Vespa or Fiat photography tour.",
+          "Evening: Rome by night e-bike past the Colosseum and Trevi Fountain.",
+        ],
+      },
+      gettingThere: [
+        "Fiumicino and Ciampino airports serve Rome with train, bus, and taxi links to the historic center.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Rome tours?",
+          answer:
+            "Vespa sidecar sightseeing, Colosseum arena access, Vatican Museums visits, Trastevere food walks, and Appian Way e-bike days are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -4994,6 +5090,7 @@ export const states: StateDestination[] = [
   unitedKingdomState,
   franceState,
   spainState,
+  italyState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

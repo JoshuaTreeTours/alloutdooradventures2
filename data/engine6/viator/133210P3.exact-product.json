@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "133210P3",
+    "productUrl": "https://www.viator.com/tours/Rome/PRIVATE-Discover-Rome-4-hour-Electric-Bike-Tour/d511-133210P3",
+    "title": "Rome by E-bike: the guided tour of the city center",
+    "description": {
+      "text": "Go beyond your standard walking tour on this fun, sustainable adventure through Rome. Led by your personal guide, you'll hop on an e-bike to see both the Eternal City's most-famous attractions and a few hidden gems along the way. Stops include Historic center of Rome, Tiber River cycle path. You’ll zip from piazzas and squares to ancient ruins and beyond, discovering far more than you would on foot —and still traveling green. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Historic center of Rome, Tiber River cycle path that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $78.68",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 124
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/04/72/11.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Go beyond your standard walking tour on this fun, sustainable adventure through Rome",
+      "You’ll zip from piazzas and squares to ancient ruins and beyond, discovering far more than you would on foot —and still",
+      "Rome by E-bike: the guided tour of the city center near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Rome e-bike meeting location listed when booking. The route uses city-center streets and the Tiber cycle path."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Go beyond your standard walking tour on this fun, sustainable adventure through Rome.",
+    "itineraryItems": [
+      {
+        "title": "Historic center of Rome",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tiber River cycle path",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet",
+      "Local Guide",
+      "Electric bike"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome by E-bike: the guided tour of the city center?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Meet your guide at the confirmed Rome e-bike meeting location listed when booking. The route uses city-center streets and the Tiber cycle path."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 78.68
+      },
+      "currency": "USD"
+    }
+  }
+}

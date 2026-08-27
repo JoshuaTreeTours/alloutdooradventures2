@@ -1,0 +1,166 @@
+{
+  "destinationLabel": "Rome",
+  "destinationCitySlug": "rome",
+  "viatorDestinationSlug": "Rome",
+  "viatorDestinationId": "d511",
+  "catalogUrl": "https://www.viator.com/Rome/d511-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 14,
+  "premiumCount": 10,
+  "selectionNote": "Selected 14 guided Rome d511 products with live USD From$ prices, ratings, and unique 674x446 heroes. The live catalog is large, but Viator bot-blocking and geo-currency dumps (EUR/CAD/GBP/SGD/DKK/CHF) blocked many otherwise-strong SKUs from being verified in USD. Jeep/off-road, helicopter, and stargazing SKUs were not captured as active USD product pages. Did not force inactive similar-options pages, non-USD pages, near-duplicates, audio/self-guided SKUs, or weak 4.2–4.3 ratings.",
+  "selectedProductCodes": [
+    "75037P3",
+    "391465P2",
+    "367403P1",
+    "7559P11",
+    "3731SSVAC",
+    "133210P3",
+    "123593P20",
+    "7812P3",
+    "20163P100",
+    "6718P9",
+    "5284APPIAN",
+    "85309P4",
+    "24338P3",
+    "3731VATICAN"
+  ],
+  "premiumProductCodes": [
+    "75037P3",
+    "391465P2",
+    "367403P1",
+    "7559P11",
+    "3731SSVAC",
+    "133210P3",
+    "123593P20",
+    "7812P3",
+    "20163P100",
+    "6718P9"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "416126P1",
+      "title": "Rome Vespa tour with Pro Photographer",
+      "reason": "Near-duplicate of selected 391465P2 Vespa photography; From$92.61 and 5.0/118 verified"
+    },
+    {
+      "productCode": "3731COLOSSEUM",
+      "title": "Rome: Colosseum, Roman Forum and Palatine Hill Guided Tour",
+      "reason": "From$38.24 and 4.5/22179 verified, but the live page offers an audio/self-guided option"
+    },
+    {
+      "productCode": "5034P65",
+      "title": "1-Day Rome: Vatican & Colosseum Tour with Transport",
+      "reason": "Weak commercial rating 4.3/222"
+    },
+    {
+      "productCode": "20905P54",
+      "title": "Rome: Two Days Private Guided Tour, Chauffeur Service -VIP Entry",
+      "reason": "From$1557.51 verified but 4.2/20 is below the selected quality bar"
+    },
+    {
+      "productCode": "24338P27",
+      "title": "Colosseum, Roman Forum & Vatican Highlights Combo Tour",
+      "reason": "Inactive similar-options page"
+    },
+    {
+      "productCode": "6718P34",
+      "title": "Early Morning Vatican & Exclusive Secret Room Max 6 People Group",
+      "reason": "Inactive similar-options page"
+    },
+    {
+      "productCode": "183501P22",
+      "title": "2 or 3 h guided tour Vatican Museums, Sistine Chapel and Basilica",
+      "reason": "Inactive similar-options page; 1.3/3"
+    },
+    {
+      "productCode": "282076P9",
+      "title": "Small Group Tour: Colosseum & Roman Forum with Arena Floor Access",
+      "reason": "Live dump priced in CAD only (From CA$83.52); 4.8/505"
+    },
+    {
+      "productCode": "3731P171",
+      "title": "Colosseum with Arena Floor Access, Roman Forum & Palatine Hill",
+      "reason": "Live dump priced in EUR only; 4.4/252"
+    },
+    {
+      "productCode": "360122P1",
+      "title": "Rome Golf Cart Tour: Highligths of the Eternal City",
+      "reason": "Live dump priced in EUR only (From €180.00); 4.9/377"
+    },
+    {
+      "productCode": "387632P3",
+      "title": "Golf Cart Driving Tour in Rome: 2.5 hrs Catacombs & Appian Way",
+      "reason": "Live dump priced in CAD only"
+    },
+    {
+      "productCode": "5553P10",
+      "title": "VIP Rome Golf Cart Food Tour with Eating Europe",
+      "reason": "Live dump priced in SGD only"
+    },
+    {
+      "productCode": "5553P13",
+      "title": "Rome Trastevere Food Tour at Twilight with Eating Europe",
+      "reason": "Live dump priced in EUR only; 4.9/3358"
+    },
+    {
+      "productCode": "21468P4",
+      "title": "Tivoli Day Tour from Rome : Hadrian’s Villa and Villa D’Este",
+      "reason": "Live dump priced in CAD only"
+    },
+    {
+      "productCode": "59821P5",
+      "title": "Tivoli Gardens and Hadrian's Villa full day guided tour",
+      "reason": "Live dump priced in SGD only"
+    },
+    {
+      "productCode": "26786P6",
+      "title": "VIP Tour of Rome (3/5/8hrs) Colosseum & Vatican Museums",
+      "reason": "Live dump priced in GBP only"
+    },
+    {
+      "productCode": "24338P73",
+      "title": "VIP Rome Catacombs Night Tour with Capuchin Crypts",
+      "reason": "Live dump priced in GBP only"
+    },
+    {
+      "productCode": "20455P26",
+      "title": "Best of Rome in a Day Private Guided Tour Including Vatican, Sistine Chapel, and Colosseum",
+      "reason": "Live dump priced in EUR only; 4 reviews on one surface"
+    },
+    {
+      "productCode": "29026P7",
+      "title": "Vatican & St Peter's Basilica: unlock the wonders",
+      "reason": "Live dump priced in EUR only"
+    },
+    {
+      "productCode": "15932P72",
+      "title": "Exclusive Borghese Gallery Tour with Skip-the-Line Access",
+      "reason": "Live dump priced in EUR only; 6718P9 already covers Borghese in USD"
+    },
+    {
+      "productCode": "3092PIZZATOUR",
+      "title": "Private Sacred Relics Jubilee Bike Tour",
+      "reason": "Live dump priced in DKK only; product title/URL mismatch on the captured page"
+    },
+    {
+      "productCode": "3731VATICAN_SMALL",
+      "title": "Vatican Museums, Sistine Chapel & St Peter’s Basilica Guided Tour",
+      "reason": "Near-duplicate of selected 3731VATICAN"
+    },
+    {
+      "productCode": "6718P18",
+      "title": "Rome: Skip the Line Vatican, Sistine Chapel, St Peter Small Group",
+      "reason": "USD From$219 appeared only on similar-options widgets of inactive pages; live product page not captured"
+    },
+    {
+      "productCode": "6703P5",
+      "title": "The ORIGINAL Fiat 500 3hour chauffeured tour",
+      "reason": "5.0/129 verified on a public surface but no consistent USD From$ + 674x446 dump"
+    },
+    {
+      "productCode": "141019P5",
+      "title": "Rome Catacomb & Appian Way Small-Group Tour by Golf Cart",
+      "reason": "From$116.08 appeared in search snippets; live product page timed out / was not captured"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "24338P3",
+    "productUrl": "https://www.viator.com/tours/Rome/Trastevere-Evening-Food-Tour-in-Rome/d511-24338P3",
+    "title": "Rome Food Tour: Hidden Gems of Trastevere with Dinner & Wine",
+    "description": {
+      "text": "Taste your way through Rome like locals do on this small-group food tour of the Trastevere neighborhood. Your guide will take you to four carefully selected eateries in the historic neighborhood where you can sample authentic Roman dishes, from street food and cured meats to baccalà and gelato. Stops include Piazza Farnese, Trastevere. You'll also sit down for a meal at a restaurant and drink wine and beer. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Piazza Farnese, Trastevere that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.95",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 808
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/af/6b/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Taste your way through Rome like locals do on this small-group food tour of the Trastevere neighborhood",
+      "Rome Food Tour: Hidden Gems of Trastevere with Dinner & Wine near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Piazza Farnese, 00186 Roma RM, Italy, by the fountain on the right when facing Palazzo Farnese. Look for a sign with The Tour Guy. Ends at Viale di Trastevere."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Taste your way through Rome like locals do on this small-group food tour of the Trastevere neighborhood.",
+    "itineraryItems": [
+      {
+        "title": "Piazza Farnese",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trastevere",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Four carefully-selected stops with multiple tastings at each (including wine and beer)",
+      "Culinary walking tour through Trastevere",
+      "Sit-down meal at a local Roman restaurant",
+      "English Speaking Foodie Guide",
+      "Small Group of Maximum 12"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome Food Tour: Hidden Gems of Trastevere with Dinner & Wine?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Piazza Farnese, 00186 Roma RM, Italy, by the fountain on the right when facing Palazzo Farnese. Look for a sign with The Tour Guy. Ends at Viale di Trastevere."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79.95
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -361,7 +361,10 @@ const getCanonicalCityTourPath = (tour: Tour) =>
     tour.destination.citySlug
   )}/tours/${tour.slug}`;
 
-const ENGINE6_ONLY_CITY_KEYS = new Set<string>(["france/paris"]);
+const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
+  "france/paris",
+  "italy/rome",
+]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
   ENGINE6_ONLY_CITY_KEYS.has(`${stateSlug}/${citySlug}`);

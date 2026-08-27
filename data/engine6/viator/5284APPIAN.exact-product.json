@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "5284APPIAN",
+    "productUrl": "https://www.viator.com/tours/Rome/Ancient-Appian-Way-Catacombs-and-Roman-Countryside-Bike-Tour/d511-5284APPIAN",
+    "title": "Rome EBike Tour: Appian Way, Catacombs & Roman Aqueducts",
+    "description": {
+      "text": "Venture outside of Rome’s historic center to marvel at ancient sights that most tourists miss with this electric-assist bicycle tour along the Ancient Appian Way. Check out the ruins of the Aurelian Walls, Circus of Maxentius, and the ancient Roman aqueducts, all the while cycling with ease through the countryside. Stops include Porta San Sebastiano, Appian Way (Via Appia Antica), Catacombs of Saint Callixtus, Circus of Maxentius, Mausoleo di Cecilia Metella, Parco degli Acquedotti. Choose a 4-hour or 6-hour tour to suit your schedule; the longer tour includes a guided visit inside the 2nd-century catacombs. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Porta San Sebastiano, Appian Way (Via Appia Antica), Catacombs of Saint Callixtus, Circus of Maxentius that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": "From $98.43",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1597
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/8a/9c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Parco degli Acquedotti",
+      "Terme di Caracalla",
+      "Parco Della Caffarella",
+      "Venture outside of Rome’s historic center to marvel at ancient sights that most tourists miss with this electric-assist",
+      "Check out the ruins of the Aurelian Walls, Circus of Maxentius, and the ancient Roman aqueducts, all the while cycling w"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed central Rome e-bike meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Venture outside of Rome’s historic center to marvel at ancient sights that most tourists miss with this electric-assist bicycle tour along the Ancient Appian Way.",
+    "itineraryItems": [
+      {
+        "title": "Porta San Sebastiano",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Appian Way (Via Appia Antica)",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Catacombs of Saint Callixtus",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Circus of Maxentius",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mausoleo di Cecilia Metella",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Parco degli Acquedotti",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Terme di Caracalla",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Parco Della Caffarella",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Top Quality CANNONDALE E-Bike",
+      "Helmet (mandatory)",
+      "Professional guide",
+      "Guided visit of the Catacombs of San Callisto or San Sebastiano (ONLY IN THE 6-HOUR TOUR)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome EBike Tour: Appian Way, Catacombs & Roman Aqueducts?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Meet your guide at the confirmed central Rome e-bike meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 98.43
+      },
+      "currency": "USD"
+    }
+  }
+}

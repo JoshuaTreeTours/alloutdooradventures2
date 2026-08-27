@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "367403P1",
+    "productUrl": "https://www.viator.com/tours/Rome/Private-Tour-and-Photoshoot-in-a-Fiat-500-Vintage-in-Rome/d511-367403P1",
+    "title": "Fiat 500 Private Tour&Photoshoot with a Roman, Pick-up Included",
+    "description": {
+      "text": "See Rome from a vintage Fiat 500 with a private driver-guide who also shoots professional photos of your group. Hotel pickup is included when traffic rules allow, with a meeting point at Via delle Terme di Tito beside the Colosseum if the historic center is restricted. Stops include Colosseum, Via delle Terme di Tito. The private format keeps the route flexible for landmark photo stops around the ancient city. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colosseum, Via delle Terme di Tito that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $196.17",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 62
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/38/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Rome from a vintage Fiat 500 with a private driver-guide who also shoots professional photos of your group",
+      "Hotel pickup is included when traffic rules allow, with a meeting point at Via delle Terme di Tito beside the Colosseum",
+      "The private format keeps the route flexible for landmark photo stops around the ancient city",
+      "Fiat 500 Private Tour&Photoshoot with a Roman, Pick-up Included near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Via delle Terme di Tito, 00184 Roma RM, Italy, or hotel pickup as close as traffic rules allow."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Rome from a vintage Fiat 500 with a private driver-guide who also shoots professional photos of your group.",
+    "itineraryItems": [
+      {
+        "title": "Colosseum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Via delle Terme di Tito",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional photo shoot with Nikon SLR",
+      "Hotel pickup, or nearby",
+      "Private tour, dedicated only to your group",
+      "Driver/guide",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fiat 500 Private Tour&Photoshoot with a Roman, Pick-up Included?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Via delle Terme di Tito, 00184 Roma RM, Italy, or hotel pickup as close as traffic rules allow."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Photography Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 196.17
+      },
+      "currency": "USD"
+    }
+  }
+}

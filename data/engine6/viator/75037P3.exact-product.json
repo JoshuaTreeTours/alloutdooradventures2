@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "75037P3",
+    "productUrl": "https://www.viator.com/tours/Rome/Rome-by-Vespa-Sidecar-Tour/d511-75037P3",
+    "title": "Vespa Sidecar Tour in Rome with Cappuccino",
+    "description": {
+      "text": "In Rome, skip the crowded coach tours and discover the highlights of the Eternal City from a Vespa sidecar. Each motorcycle and sidecar fits two people (plus driver), so you can settle back with a friend or loved one as you cruise by attractions from the Colosseum to the Trevi Fountain. Stops include Colosseum, Trevi Fountain, Pantheon, Piazza della Repubblica. Tours include live narration via convenient headphones for crucial context on each site, plus a traditional Roman breakfast of cappuccino and cornetto. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colosseum, Trevi Fountain, Pantheon, Piazza della Repubblica that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $154.06",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1615
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/80/9d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Skip the crowded coach tours and discover the highlights of the Eternal City from a Vespa sidecar",
+      "Tours include live narration via convenient headphones for crucial context on each site, plus a traditional Roman breakf",
+      "Vespa Sidecar Tour in Rome with Cappuccino near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "P.za della Repubblica, 41, 00185 Roma RM, Italy. 9:00 am departure."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, skip the crowded coach tours and discover the highlights of the Eternal City from a Vespa sidecar.",
+    "itineraryItems": [
+      {
+        "title": "Colosseum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trevi Fountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pantheon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Piazza della Repubblica",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast with traditional Cappuccino & Cornetto",
+      "Professional Licensed Guide with live commentary through headphones",
+      "Professional Drivers",
+      "Homologated CE Helmets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Vespa Sidecar Tour in Rome with Cappuccino?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "P.za della Repubblica, 41, 00185 Roma RM, Italy. 9:00 am departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Vespa Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 154.06
+      },
+      "currency": "USD"
+    }
+  }
+}

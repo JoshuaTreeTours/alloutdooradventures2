@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "20163P100",
+    "productUrl": "https://www.viator.com/tours/Rome/Rome-Vatican-Museums-and-St-Peters-Basilica-Small-Group-Tour/d511-20163P100",
+    "title": "Rome: Vatican Museums and St. Peter's Basilica Small Group Tour",
+    "description": {
+      "text": "In Rome, avoid being just a number on an impersonal large tour and enjoy an intimate experience on this small-group tour of the Vatican Museums and St. Peter’s Basilica. Save time with skip-the-line access so you can go straight to the stunning art and architecture. Stops include Vatican Museums, Sistine Chapel, St. Peter's Basilica. Listen to your guide’s interesting commentary as they lead you through the rich, ornate Vatican Museums, the Sistine Chapel, and St. Peter's Basilica. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Vatican Museums, Sistine Chapel, St. Peter's Basilica that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $147.11",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/85/f1/c2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Avoid being just a number on an impersonal large tour and enjoy an intimate experience on this small-group tour of the V",
+      "Rome: Vatican Museums and St. Peter's Basilica Small Group Tour near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Vatican Museums meeting point listed when booking."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, avoid being just a number on an impersonal large tour and enjoy an intimate experience on this small-group tour of the Vatican Museums and St.",
+    "itineraryItems": [
+      {
+        "title": "Vatican Museums",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sistine Chapel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Peter's Basilica",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip The line ticket included",
+      "Small-group, maximum 10 people",
+      "Visit to St. Peter's Basilica",
+      "Expert & entertaining guide",
+      "Visit to the Sistine Chapel"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome: Vatican Museums and St. Peter's Basilica Small Group Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Meet your guide at the confirmed Vatican Museums meeting point listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 147.11
+      },
+      "currency": "USD"
+    }
+  }
+}

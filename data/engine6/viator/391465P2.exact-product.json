@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "391465P2",
+    "productUrl": "https://www.viator.com/tours/Rome/Vespa-scooter-tour-in-Rome-With-Professional-Photographer/d511-391465P2",
+    "title": "Rome Vespa Tour with Professional Photographer",
+    "description": {
+      "text": "In Rome, capture your Roman holiday in style on this Vespa tour with an accompanying professional photographer. Drive by many notable landmarks, including the Colosseum and the Castel Sant'Angelo, for a comprehensive overview of the Eternal City. Stops include Colosseum, Castel Sant'Angelo, Piazza Venezia. Avoid the disappointment of taking sub-par vacation snaps—your driver–photographer–guide will take you to the most scenic spots, then take beautiful photos of you. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colosseum, Castel Sant'Angelo, Piazza Venezia that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "1 hour 30 minutes to 2 hours (approx.)",
+    "priceFrom": "From $89.42",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 416
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/84/72.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Capture your Roman holiday in style on this Vespa tour with an accompanying professional photographer",
+      "Drive by many notable landmarks, including the Colosseum and the Castel Sant'Angelo, for a comprehensive overview of the",
+      "Avoid the disappointment of taking sub-par vacation snaps—your driver–photographer–guide will take you to the most sceni",
+      "Rome Vespa Tour with Professional Photographer near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Via del Colosseo, 31, 00184 Roma RM, Italy, next to Colosseo Metro station. Drop-off at Piazza Venezia."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rome, capture your Roman holiday in style on this Vespa tour with an accompanying professional photographer.",
+    "itineraryItems": [
+      {
+        "title": "Colosseum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Castel Sant'Angelo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Piazza Venezia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet",
+      "25 photos",
+      "Vespa scooter with Driver"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rome Vespa Tour with Professional Photographer?",
+        "answer": "The planned duration is 1 hour 30 minutes to 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Via del Colosseo, 31, 00184 Roma RM, Italy, next to Colosseo Metro station. Drop-off at Piazza Venezia."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Vespa Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89.42
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "3731SSVAC",
+    "productUrl": "https://www.viator.com/tours/Rome/Full-Day-Combo-Vatican-and-Colosseum-Skip-the-Line-Guided-Tour/d511-3731SSVAC",
+    "title": "Full-Day: Colosseum, Vatican Museums & St Peter's Guided Tour",
+    "description": {
+      "text": "With this full-day tour, save time by visiting Rome’s most legendary attractions in one day: the Colosseum and the Vatican. After meeting your guide and group, start your day with a comprehensive tour of the Vatican, visiting the museums, the Sistine Chapel, and St. Peter's Basilica. Stops include Vatican Museums, Sistine Chapel, St. Peter's Basilica, Colosseum, Palatine Hill, Roman Forum. Then, after a short break for lunch (own expense), tour the Colosseum, Palatine Hill, and the Roman Forum. Ideal for visitors basing in Rome who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Vatican Museums, Sistine Chapel, St. Peter's Basilica, Colosseum that define this Rome sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Rome",
+      "state": "Italy"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $182.96",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1131
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5f/45/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Roman Forum",
+      "With this full-day tour, save time by visiting Rome’s most legendary attractions in one day: the Colosseum and the Vatic",
+      "Then, after a short break for lunch (own expense), tour the Colosseum, Palatine Hill, and the Roman Forum",
+      "Full-Day: Colosseum, Vatican Museums & St Peter's Guided Tour near Rome",
+      "Professional Rome guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Colosseum morning meet at Largo Gaetana Agnesi, 00184 Roma RM. Vatican afternoon meet at Via Tunisi, 4, 00192 Roma."
+      },
+      "end": {
+        "description": "Return to your Rome meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "With this full-day tour, save time by visiting Rome’s most legendary attractions in one day: the Colosseum and the Vatican.",
+    "itineraryItems": [
+      {
+        "title": "Vatican Museums",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sistine Chapel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Peter's Basilica",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colosseum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palatine Hill",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Roman Forum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional English-speaking guide",
+      "Audio headset",
+      "Guided Tours of Colosseum, Roman Forum, Palatine Hill, Vatican Museums, St Peter's Basilica"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day: Colosseum, Vatican Museums & St Peter's Guided Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rome?",
+        "answer": "Colosseum morning meet at Largo Gaetana Agnesi, 00184 Roma RM. Vatican afternoon meet at Via Tunisi, 4, 00192 Roma."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 182.96
+      },
+      "currency": "USD"
+    }
+  }
+}

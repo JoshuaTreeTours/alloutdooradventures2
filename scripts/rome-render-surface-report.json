@@ -1,0 +1,215 @@
+{
+  "selectedCount": 14,
+  "listingCount": 14,
+  "listingMatchesSelection": true,
+  "okCount": 14,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "75037P3",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/vespa-sidecar-tour-in-rome-with-cappuccino-75037P3",
+      "title": "Vespa Sidecar Tour in Rome with Cappuccino",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/80/9d.jpg",
+      "card": "In Rome, skip the crowded coach tours and discover the highlights of the Eternal City from a Vespa sidecar.",
+      "itineraryTitles": [
+        "Colosseum",
+        "Trevi Fountain",
+        "Pantheon",
+        "Piazza della Repubblica"
+      ],
+      "issues": []
+    },
+    {
+      "code": "391465P2",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-vespa-tour-with-professional-photographer-391465P2",
+      "title": "Rome Vespa Tour with Professional Photographer",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/84/72.jpg",
+      "card": "In Rome, capture your Roman holiday in style on this Vespa tour with an accompanying professional photographer.",
+      "itineraryTitles": [
+        "Colosseum",
+        "Castel Sant'Angelo",
+        "Piazza Venezia"
+      ],
+      "issues": []
+    },
+    {
+      "code": "367403P1",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/fiat-500-private-tour-photoshoot-with-a-roman-pick-up-i-367403P1",
+      "title": "Fiat 500 Private Tour&Photoshoot with a Roman, Pick-up Included",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/38/9e.jpg",
+      "card": "See Rome from a vintage Fiat 500 with a private driver-guide who also shoots professional photos of your group.",
+      "itineraryTitles": [
+        "Colosseum",
+        "Via delle Terme di Tito"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7559P11",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/colosseum-tour-with-arena-floor-roman-forum-semi-privat-7559P11",
+      "title": "Colosseum Tour with Arena Floor & Roman Forum | Semi-Private",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/11/bc.jpg",
+      "card": "In Rome, if you’re interested in ancient Roman history, take this small-group guided tour that includes access to the Colosseum’s arena floo",
+      "itineraryTitles": [
+        "Colosseum Arena Floor",
+        "Roman Forum",
+        "Palatine Hill"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3731SSVAC",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/full-day-colosseum-vatican-museums-st-peters-guided-tou-3731SSVAC",
+      "title": "Full-Day: Colosseum, Vatican Museums & St Peter's Guided Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5f/45/91.jpg",
+      "card": "With this full-day tour, save time by visiting Rome’s most legendary attractions in one day: the Colosseum and the Vatican.",
+      "itineraryTitles": [
+        "Vatican Museums",
+        "Sistine Chapel",
+        "St. Peter's Basilica",
+        "Colosseum",
+        "Palatine Hill",
+        "Roman Forum"
+      ],
+      "issues": []
+    },
+    {
+      "code": "133210P3",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-by-e-bike-the-guided-tour-of-the-city-center-133210P3",
+      "title": "Rome by E-bike: the guided tour of the city center",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/04/72/11.jpg",
+      "card": "Go beyond your standard walking tour on this fun, sustainable adventure through Rome.",
+      "itineraryTitles": [
+        "Historic center of Rome",
+        "Tiber River cycle path"
+      ],
+      "issues": []
+    },
+    {
+      "code": "123593P20",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/romes-vineyard-symphony-countryside-winetasting-experie-123593P20",
+      "title": "Rome's Vineyard Symphony: Countryside Winetasting Experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/a9/cb/6e.jpg",
+      "card": "Leave central Rome for a private countryside wine tasting with hotel pickup and drop-off.",
+      "itineraryTitles": [
+        "Hotel pickup in Rome",
+        "Roman countryside vineyard"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7812P3",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-walking-food-tour-with-secret-food-tours-7812P3",
+      "title": "Rome Walking Food Tour With Secret Food Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/70/e6/37.jpg",
+      "card": "In Rome, get a taste of true Roman fare while exploring the city’s unique districts on this food walking tour.",
+      "itineraryTitles": [
+        "Piazza Navona",
+        "Campo de' Fiori",
+        "Jewish Quarter",
+        "Largo di Torre Argentina"
+      ],
+      "issues": []
+    },
+    {
+      "code": "20163P100",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-vatican-museums-and-st-peters-basilica-small-group-20163P100",
+      "title": "Rome: Vatican Museums and St. Peter's Basilica Small Group Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/85/f1/c2.jpg",
+      "card": "In Rome, avoid being just a number on an impersonal large tour and enjoy an intimate experience on this small-group tour of the Vatican Muse",
+      "itineraryTitles": [
+        "Vatican Museums",
+        "Sistine Chapel",
+        "St. Peter's Basilica"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6718P9",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/borghese-gallery-max-6-people-tour-baroque-renaissance-6718P9",
+      "title": "Borghese Gallery Max 6 People Tour: Baroque & Renaissance in Rome",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/3e/25.jpg",
+      "card": "Explore a treasure trove of baroque and Renaissance art at Rome's Borghese Gallery—and discover insider facts you'd miss if visiting on your",
+      "itineraryTitles": [
+        "Galleria Borghese",
+        "Piazzale del Museo Borghese"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5284APPIAN",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-ebike-tour-appian-way-catacombs-roman-aqueducts-5284APPIAN",
+      "title": "Rome EBike Tour: Appian Way, Catacombs & Roman Aqueducts",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/8a/9c.jpg",
+      "card": "Venture outside of Rome’s historic center to marvel at ancient sights that most tourists miss with this electric-assist bicycle tour along t",
+      "itineraryTitles": [
+        "Porta San Sebastiano",
+        "Appian Way (Via Appia Antica)",
+        "Catacombs of Saint Callixtus",
+        "Circus of Maxentius",
+        "Mausoleo di Cecilia Metella",
+        "Parco degli Acquedotti",
+        "Terme di Caracalla",
+        "Parco Della Caffarella"
+      ],
+      "issues": []
+    },
+    {
+      "code": "85309P4",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-by-night-ebike-tour-with-pizza-option-85309P4",
+      "title": "Rome by Night eBike Tour with Pizza Option",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7f/42/95.jpg",
+      "card": "Experience the most beautiful time in Rome when you explore at twilight—and see more sights in one tour than you could on your own—all thank",
+      "itineraryTitles": [
+        "Colosseum",
+        "Roman Forum",
+        "Pantheon",
+        "Trevi Fountain"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24338P3",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/rome-food-tour-hidden-gems-of-trastevere-with-dinner-wi-24338P3",
+      "title": "Rome Food Tour: Hidden Gems of Trastevere with Dinner & Wine",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/af/6b/d8.jpg",
+      "card": "Taste your way through Rome like locals do on this small-group food tour of the Trastevere neighborhood.",
+      "itineraryTitles": [
+        "Piazza Farnese",
+        "Trastevere"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3731VATICAN",
+      "ok": true,
+      "path": "/destinations/italy/rome/tours/vatican-museums-sistine-chapel-st-peter-s-basilica-guid-3731VATICAN",
+      "title": "Vatican Museums, Sistine Chapel & St Peter’s Basilica Guided Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ba/c1/d8.jpg",
+      "card": "In Rome, discover the Vatican on a group tour of the Sistine Chapel and the Vatican Museums with an expert guide.",
+      "itineraryTitles": [
+        "Vatican Museums",
+        "Cortile della Pigna",
+        "Sphere within a Sphere",
+        "Galleria Delle Carte Geografiche",
+        "Sistine Chapel",
+        "St. Peter's Basilica",
+        "St. Peter's Square"
+      ],
+      "issues": []
+    }
+  ]
+}
