@@ -1130,6 +1130,50 @@ export const isEngine6RomeTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_ROME_TOUR_PATH_PREFIX);
 
+export const ENGINE6_VENICE_140596P2_PRODUCT_CODE = "140596P2";
+export const ENGINE6_VENICE_140596P2_ROUTE =
+  "/destinations/italy/venice/tours/full-day-prosecco-wine-tasting-at-two-wineries-from-ven-140596P2";
+export const ENGINE6_VENICE_17356P1_PRODUCT_CODE = "17356P1";
+export const ENGINE6_VENICE_17356P1_ROUTE =
+  "/destinations/italy/venice/tours/private-photo-shoot-in-venice-with-gondola-ride-17356P1";
+export const ENGINE6_VENICE_56417P12_PRODUCT_CODE = "56417P12";
+export const ENGINE6_VENICE_56417P12_ROUTE =
+  "/destinations/italy/venice/tours/3-hours-private-original-venice-photo-walk-56417P12";
+export const ENGINE6_VENICE_126511P4_PRODUCT_CODE = "126511P4";
+export const ENGINE6_VENICE_126511P4_ROUTE =
+  "/destinations/italy/venice/tours/friendinvenice-murano-burano-torcello-private-tour-by-l-126511P4";
+export const ENGINE6_VENICE_15693P31_PRODUCT_CODE = "15693P31";
+export const ENGINE6_VENICE_15693P31_ROUTE =
+  "/destinations/italy/venice/tours/venice-in-a-day-basilica-san-marco-doges-palace-gondola-15693P31";
+export const ENGINE6_VENICE_15693STMARK_PRODUCT_CODE = "15693STMARK";
+export const ENGINE6_VENICE_15693STMARK_ROUTE =
+  "/destinations/italy/venice/tours/venice-st-marks-basilica-after-hours-tour-with-optional-15693STMARK";
+export const ENGINE6_VENICE_6718P153_PRODUCT_CODE = "6718P153";
+export const ENGINE6_VENICE_6718P153_ROUTE =
+  "/destinations/italy/venice/tours/private-doges-palace-and-saint-marks-basilica-walking-t-6718P153";
+export const ENGINE6_VENICE_9555P4_PRODUCT_CODE = "9555P4";
+export const ENGINE6_VENICE_9555P4_ROUTE =
+  "/destinations/italy/venice/tours/private-excursion-by-typical-venetian-motorboat-to-mura-9555P4";
+export const ENGINE6_VENICE_2635PDOLOMITE_PRODUCT_CODE = "2635PDOLOMITE";
+export const ENGINE6_VENICE_2635PDOLOMITE_ROUTE =
+  "/destinations/italy/venice/tours/dolomite-mountains-and-cortina-semi-private-day-trip-fr-2635PDOLOMITE";
+export const ENGINE6_VENICE_7812P214_PRODUCT_CODE = "7812P214";
+export const ENGINE6_VENICE_7812P214_ROUTE =
+  "/destinations/italy/venice/tours/venice-walking-food-tour-with-secret-food-tours-7812P214";
+export const ENGINE6_VENICE_3731MURANO_PRODUCT_CODE = "3731MURANO";
+export const ENGINE6_VENICE_3731MURANO_ROUTE =
+  "/destinations/italy/venice/tours/murano-burano-islands-guided-small-group-tour-by-privat-3731MURANO";
+export const ENGINE6_VENICE_92490P4_PRODUCT_CODE = "92490P4";
+export const ENGINE6_VENICE_92490P4_ROUTE =
+  "/destinations/italy/venice/tours/venetian-cicchetti-street-food-sightseeing-walking-tour-92490P4";
+
+export const ENGINE6_VENICE_TOUR_PATH_PREFIX =
+  "/destinations/italy/venice/tours/";
+
+export const isEngine6VeniceTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_VENICE_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4091,6 +4135,54 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ROME_3731VATICAN_ROUTE,
     ENGINE6_ROME_3731VATICAN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_140596P2_ROUTE,
+    ENGINE6_VENICE_140596P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_17356P1_ROUTE,
+    ENGINE6_VENICE_17356P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_56417P12_ROUTE,
+    ENGINE6_VENICE_56417P12_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_126511P4_ROUTE,
+    ENGINE6_VENICE_126511P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_15693P31_ROUTE,
+    ENGINE6_VENICE_15693P31_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_15693STMARK_ROUTE,
+    ENGINE6_VENICE_15693STMARK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_6718P153_ROUTE,
+    ENGINE6_VENICE_6718P153_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_9555P4_ROUTE,
+    ENGINE6_VENICE_9555P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_2635PDOLOMITE_ROUTE,
+    ENGINE6_VENICE_2635PDOLOMITE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_7812P214_ROUTE,
+    ENGINE6_VENICE_7812P214_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_3731MURANO_ROUTE,
+    ENGINE6_VENICE_3731MURANO_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_VENICE_92490P4_ROUTE,
+    ENGINE6_VENICE_92490P4_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

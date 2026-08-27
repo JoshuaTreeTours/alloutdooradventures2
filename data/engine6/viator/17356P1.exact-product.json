@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "17356P1",
+    "productUrl": "https://www.viator.com/tours/Venice/Private-Photo-Shoot-in-Venice-with-Gondola-Ride/d522-17356P1",
+    "title": "Private Photo Shoot in Venice with Gondola Ride",
+    "description": {
+      "text": "Make your romantic memories of the canal city last forever with a private gondola ride and photo shoot in Venice. Explore the romantic corners of Venice with a professional photographer at the ready, then enjoy a 30-minute gondola ride as part of the package. Stops include Piazza San Marco, Rialto. Local commentary and route logistics are handled so you can focus on Venice landmarks, piazzas, and neighborhood walking or cycling highlights. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Piazza San Marco, Rialto that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $855.27",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 80
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/20/86.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Photo Shoot in Venice with Gondola Ride from Venice",
+      "St. Mark's Basilica, Doge's Palace, and historic-center views",
+      "Professional guide with Venice local expertise",
+      "Small-group or private format as listed",
+      "Guided Venice sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from apartments, train station, Piazzale Roma, Accademia bridge, and hotels in Venice."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Make your romantic memories of the canal city last forever with a private gondola ride and photo shoot in Venice.",
+    "itineraryItems": [
+      {
+        "title": "Piazza San Marco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rialto",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional photographer guide",
+      "30 minutes gondola ride",
+      "2-hours photo shoot tour",
+      "Digital photo book (50 photos)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Photo Shoot in Venice with Gondola Ride?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Pickup from apartments, train station, Piazzale Roma, Accademia bridge, and hotels in Venice."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Gondola Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 855.27
+      },
+      "currency": "USD"
+    }
+  }
+}

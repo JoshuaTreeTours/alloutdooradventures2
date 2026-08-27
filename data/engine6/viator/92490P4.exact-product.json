@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "92490P4",
+    "productUrl": "https://www.viator.com/tours/Venice/Venetian-Cicchetti-Street-Food-Wine-and-Sightseeing-Walking-Tour-with-local-guide/d522-92490P4",
+    "title": "Venetian Cicchetti Street Food & Sightseeing Walking Tour with local guide",
+    "description": {
+      "text": "Go for a sightseeing tour of Venice, and discover the city’s local culinary culture, too—this two-in-one tour provides an enviable way to explore. Meet your guide in the morning at the Church of San Salvador, and set off on foot. Stops include Rialto Bridge, Campo San Polo, Basilica dei Frari. You’ll discover major landmarks like the Rialto Bridge, Campo San Polo, and Basilica dei Frari. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Rialto Bridge, Campo San Polo, Basilica dei Frari that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $55.92",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 72
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/51/22/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Go for a sightseeing tour of Venice, and discover the city’s local culinary culture, too—this two-in-one tour provides a",
+      "You’ll discover major landmarks like the Rialto Bridge, Campo San Polo, and Basilica dei Frari",
+      "Venetian Cicchetti Street Food & Sightseeing Walking Tour with local guide near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Campo San Bortolomio, Campo S. Bortolomio, 30124 Venezia VE, Italy. Meet next to the statue. Guide holds a Food Tour sign."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Go for a sightseeing tour of Venice, and discover the city’s local culinary culture, too—this two-in-one tour provides an enviable way to explore.",
+    "itineraryItems": [
+      {
+        "title": "Rialto Bridge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Campo San Polo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilica dei Frari",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Food tastings",
+      "English speaking Local guide",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Venetian Cicchetti Street Food & Sightseeing Walking Tour with local guide?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Campo San Bortolomio, Campo S. Bortolomio, 30124 Venezia VE, Italy. Meet next to the statue. Guide holds a Food Tour sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55.92
+      },
+      "currency": "USD"
+    }
+  }
+}

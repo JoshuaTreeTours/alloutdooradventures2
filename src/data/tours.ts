@@ -364,6 +364,7 @@ const getCanonicalCityTourPath = (tour: Tour) =>
 const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
   "france/paris",
   "italy/rome",
+  "italy/venice",
 ]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>

@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "126511P4",
+    "productUrl": "https://www.viator.com/tours/Venice/Private-Tour-Murano-Burano-and-Torcello-as-local-traveling-means-discovering/d522-126511P4",
+    "title": "FriendInVenice Murano Burano Torcello Private Tour By Luxury Boat",
+    "description": {
+      "text": "Venice’s “vaporetto” water buses are a unique way to get around the islands, but their slow pace and frequent stops can eat into your sightseeing time. With this tour, zip between the islands by water taxi and fit in guided visits to three of the most fascinating in a single day. Stops include Isola di Murano, Burano, Isola di Torcello. Explore Murano’s glassblowing workshops, snap photos of Burano’s colorful houses, and learn about Venetian history on Torcello. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Isola di Murano, Burano, Isola di Torcello that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "6 hours 7 minutes (approx.)",
+    "priceFrom": "From $1322.82",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/74/7b/83.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Venice’s “vaporetto” water buses are a unique way to get around the islands, but their slow pace and frequent stops can",
+      "With this tour, zip between the islands by water taxi and fit in guided visits to three of the most fascinating in a sin",
+      "Explore Murano’s glassblowing workshops, snap photos of Burano’s colorful houses, and learn about Venetian history on To",
+      "FriendInVenice Murano Burano Torcello Private Tour By Luxury Boat near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel, seaport, airport, or train-station pickup according to booking details. 10:30 am start."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Venice’s “vaporetto” water buses are a unique way to get around the islands, but their slow pace and frequent stops can eat into your sightseeing time.",
+    "itineraryItems": [
+      {
+        "title": "Isola di Murano",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Burano",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Isola di Torcello",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Back to Venice by private water taxi",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the FriendInVenice Murano Burano Torcello Private Tour By Luxury Boat?",
+        "answer": "The planned duration is 6 hours 7 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Hotel, seaport, airport, or train-station pickup according to booking details. 10:30 am start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1322.82
+      },
+      "currency": "USD"
+    }
+  }
+}

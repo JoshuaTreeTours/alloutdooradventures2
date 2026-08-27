@@ -23,6 +23,13 @@ export const CITY_TIER1_INTL: Tier1IntlCity[] = [
   },
   {
     countrySlug: "italy",
+    citySlug: "venice",
+    cityName: "Venice",
+    lat: 45.4408,
+    lng: 12.3155,
+  },
+  {
+    countrySlug: "italy",
     citySlug: "florence",
     cityName: "Florence",
     lat: 43.7696,

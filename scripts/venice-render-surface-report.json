@@ -1,0 +1,174 @@
+{
+  "selectedCount": 12,
+  "listingCount": 12,
+  "listingMatchesSelection": true,
+  "okCount": 12,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "140596P2",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/full-day-prosecco-wine-tasting-at-two-wineries-from-ven-140596P2",
+      "title": "Full Day Prosecco Wine Tasting at Two Wineries from Venice",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/68/53/ac.jpg",
+      "card": "Prosecco is Italy's most beloved bubbly, produced on the scenic slopes just north of Venice.",
+      "itineraryTitles": [
+        "Piazzale Roma",
+        "Prosecco Hills wineries"
+      ],
+      "issues": []
+    },
+    {
+      "code": "17356P1",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/private-photo-shoot-in-venice-with-gondola-ride-17356P1",
+      "title": "Private Photo Shoot in Venice with Gondola Ride",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/20/86.jpg",
+      "card": "Make lasting images of the canal city with a private photo shoot and gondola ride in Venice.",
+      "itineraryTitles": [
+        "Piazza San Marco",
+        "Rialto"
+      ],
+      "issues": []
+    },
+    {
+      "code": "56417P12",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/3-hours-private-original-venice-photo-walk-56417P12",
+      "title": "3 Hours Private Original Venice Photo Walk",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7f/47/e8.jpg",
+      "card": "Beat the crowds and get an insider introduction to Venice on this private photo walk through lesser-known neighborhoods and canals that loca",
+      "itineraryTitles": [
+        "Campo San Giacomo di Rialto",
+        "Rialto Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "126511P4",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/friendinvenice-murano-burano-torcello-private-tour-by-l-126511P4",
+      "title": "FriendInVenice Murano Burano Torcello Private Tour By Luxury Boat",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/74/7b/83.jpg",
+      "card": "Venice's vaporetto water buses reach the lagoon islands, but slow routes and frequent stops can consume a sightseeing day.",
+      "itineraryTitles": [
+        "Isola di Murano",
+        "Burano",
+        "Isola di Torcello"
+      ],
+      "issues": []
+    },
+    {
+      "code": "15693P31",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/venice-in-a-day-basilica-san-marco-doges-palace-gondola-15693P31",
+      "title": "Venice In a Day: Basilica San Marco, Doges Palace & Gondola ride",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6b/74/85.jpg",
+      "card": "This full-day tour of Venice covers the city's most-important attractions for first-time visitors.",
+      "itineraryTitles": [
+        "Ponte di Rialto",
+        "Mercato di Rialto",
+        "Canal Grande",
+        "Basilica di San Marco",
+        "Doge's Palace"
+      ],
+      "issues": []
+    },
+    {
+      "code": "15693STMARK",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/venice-st-marks-basilica-after-hours-tour-with-optional-15693STMARK",
+      "title": "Venice: St Mark's Basilica After-Hours Tour with Optional Doge's Palace",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/de/24/04.jpg",
+      "card": "See Venice's Saint Mark's Basilica after hours on a small-group tour without daytime crowds.",
+      "itineraryTitles": [
+        "Basilica di San Marco",
+        "Doge's Palace",
+        "Bridge of Sighs"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6718P153",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/private-doges-palace-and-saint-marks-basilica-walking-t-6718P153",
+      "title": "Private Doge's Palace and Saint Mark's Basilica Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/aa/64/d0.jpg",
+      "card": "Visit two of Venice's most remarkable interiors on a private walking tour of Saint Mark's Basilica and the Doge's Palace.",
+      "itineraryTitles": [
+        "Saint Mark's Basilica",
+        "Doge's Palace Great Halls",
+        "Bridge of Sighs"
+      ],
+      "issues": []
+    },
+    {
+      "code": "9555P4",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/private-excursion-by-typical-venetian-motorboat-to-mura-9555P4",
+      "title": "Private Excursion by Typical Venetian Motorboat to Murano, Burano and Torcello",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/27/9b/f4.jpg",
+      "card": "Discover three of the most beautiful islands in the Venetian Lagoon from Venice on a private half-day motorboat outing.",
+      "itineraryTitles": [
+        "Murano glass workshop",
+        "Burano lace island",
+        "Torcello"
+      ],
+      "issues": []
+    },
+    {
+      "code": "2635PDOLOMITE",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/dolomite-mountains-and-cortina-semi-private-day-trip-fr-2635PDOLOMITE",
+      "title": "Dolomite Mountains and Cortina Semi Private Day Trip from Venice",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/df/f9/e1.jpg",
+      "card": "Leave Venice for a long day in the Dolomite Mountains, with an early departure to reach Cortina d'Ampezzo, Lago di Misurina, and views of Tr",
+      "itineraryTitles": [
+        "Cortina d'Ampezzo",
+        "Tre Cime Di Lavaredo",
+        "Lago di Misurina"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7812P214",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/venice-walking-food-tour-with-secret-food-tours-7812P214",
+      "title": "Venice Walking Food Tour With Secret Food Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/75/21/2e.jpg",
+      "card": "In Venice, many visitors land in tourist-trap restaurants.",
+      "itineraryTitles": [
+        "Teatro Italia",
+        "Rialto Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3731MURANO",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/murano-burano-islands-guided-small-group-tour-by-privat-3731MURANO",
+      "title": "Murano & Burano Islands Guided Small-Group Tour by Private Boat",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/b1/01.jpg",
+      "card": "Take a fully guided small-group boat trip from Venice to Murano and Burano, with a group of up to 22 people.",
+      "itineraryTitles": [
+        "Isola di Murano",
+        "Burano"
+      ],
+      "issues": []
+    },
+    {
+      "code": "92490P4",
+      "ok": true,
+      "path": "/destinations/italy/venice/tours/venetian-cicchetti-street-food-sightseeing-walking-tour-92490P4",
+      "title": "Venetian Cicchetti Street Food & Sightseeing Walking Tour with local guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/51/22/ce.jpg",
+      "card": "Combine sightseeing and local food culture in Venice on this two-in-one walking tour.",
+      "itineraryTitles": [
+        "Rialto Bridge",
+        "Campo San Polo",
+        "Basilica dei Frari"
+      ],
+      "issues": []
+    }
+  ]
+}

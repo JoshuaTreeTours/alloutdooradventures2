@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "140596P2",
+    "productUrl": "https://www.viator.com/tours/Venice/Prosecco-wine-tasting-From-Venice-Full-day/d522-140596P2",
+    "title": "Full Day Prosecco Wine Tasting at Two Wineries from Venice",
+    "description": {
+      "text": "Prosecco is Italy’s most beloved bubbly, produced on the scenic slopes just north of Venice. Make exploring beyond city limits simple—and head to wineries you might not find on your own—on this full-day, private tour. Stops include Piazzale Roma, Prosecco Hills wineries. Enjoy a scenic drive through rolling vineyards and medieval villages from Venice to two wine estates for tours, wine tastings, and a light lunch overlooking the hills. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Piazzale Roma, Prosecco Hills wineries that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $190.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 155
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/68/53/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Prosecco is Italy’s most beloved bubbly, produced on the scenic slopes just north of Venice",
+      "Make exploring beyond city limits simple—and head to wineries you might not find on your own—on this full-day, private t",
+      "Enjoy a scenic drive through rolling vineyards and medieval villages from Venice to two wine estates for tours, wine tas",
+      "Full Day Prosecco Wine Tasting at Two Wineries from Venice near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Piazzale Roma, 30135 Venezia VE, Italy. In front of the Pullman bar. 10:00 am departure."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Prosecco is Italy’s most beloved bubbly, produced on the scenic slopes just north of Venice.",
+    "itineraryItems": [
+      {
+        "title": "Piazzale Roma",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Prosecco Hills wineries",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Lunch",
+      "Certified Sommelier",
+      "Local guide - English speaking",
+      "Photo stop"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Prosecco Wine Tasting at Two Wineries from Venice?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Piazzale Roma, 30135 Venezia VE, Italy. In front of the Pullman bar. 10:00 am departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 190
+      },
+      "currency": "USD"
+    }
+  }
+}

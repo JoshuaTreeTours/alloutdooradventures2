@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "6718P153",
+    "productUrl": "https://www.viator.com/tours/Venice/Private-Doges-Palace-and-Saint-Marks-Tour/d522-6718P153",
+    "title": "Private Doge's Palace and Saint Mark's Basilica Walking Tour",
+    "description": {
+      "text": "Delve into two of Venice’s most remarkable sights without the fast pace and set itinerary of a group tour with this private visit to the Doge's Palace and Saint Mark's Basilica. Bypass the long line with priority admission and head directly inside with your guide. Stops include Saint Mark's Basilica, Doge's Palace Great Halls, Bridge of Sighs. Marvel at the glittering mosaics, then take in the sumptuous halls, historic prisons, and Bridge of Sighs in the palace. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Saint Mark's Basilica, Doge's Palace Great Halls, Bridge of Sighs that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $230.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 235
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/aa/64/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Delve into two of Venice’s most remarkable sights without the fast pace and set itinerary of a group tour with this priv",
+      "Marvel at the glittering mosaics, then take in the sumptuous halls, historic prisons, and Bridge of Sighs in the palace",
+      "Private Doge's Palace and Saint Mark's Basilica Walking Tour near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Colonna di San Marco, Piazzetta S. Marco, 30124 Venezia VE, Italy. Under the winged lion's column in Saint Mark's Square, closest side to the Grand Canal. Guide holds a LivTours sign."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Delve into two of Venice’s most remarkable sights without the fast pace and set itinerary of a group tour with this private visit to the Doge's Palace and Saint Mark's Basilica.",
+    "itineraryItems": [
+      {
+        "title": "Saint Mark's Basilica",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doge's Palace Great Halls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridge of Sighs",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Tour Guide",
+      "Exclusive Skip the Line Access into Saint Mark's Basilica",
+      "Exclusive Skip the Line Access to Doge's Palace",
+      "Admission to Palace Great Halls, Prisons and Weapon Collections and Bridge of Sighs"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Doge's Palace and Saint Mark's Basilica Walking Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Colonna di San Marco, Piazzetta S. Marco, 30124 Venezia VE, Italy. Under the winged lion's column in Saint Mark's Square, closest side to the Grand Canal. Guide holds a LivTours sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 230.99
+      },
+      "currency": "USD"
+    }
+  }
+}

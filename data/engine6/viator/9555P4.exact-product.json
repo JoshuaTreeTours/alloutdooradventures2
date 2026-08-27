@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "9555P4",
+    "productUrl": "https://www.viator.com/tours/Venice/Private-Excursion-by-Typical-Venetian-Motorboat-to-Murano-Burano-and-Torcello/d522-9555P4",
+    "title": "Private Excursion by Typical Venetian Motorboat to Murano, Burano and Torcello",
+    "description": {
+      "text": "In Venice, discover three of the most beautiful islands in the Venetian Lagoon on a private, half-day tour aboard a typical Venetian motorboat. See where the world’s finest blown glass is made in Murano, visit the home of artisan lace makers and famous biscuits in Burano and set foot on Venice’s oldest settlements in serene Torcello. Stops include Murano glass workshop, Burano lace island, Torcello. Enjoy a customizable itinerary and the personalized attention of a private boat captain. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Murano glass workshop, Burano lace island, Torcello that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $205.26",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 403
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/27/9b/f4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover three of the most beautiful islands in the Venetian Lagoon on a private, half-day tour aboard a typical Venetia",
+      "See where the world’s finest blown glass is made in Murano, visit the home of artisan lace makers and famous biscuits in",
+      "Enjoy a customizable itinerary and the personalized attention of a private boat captain",
+      "Private Excursion by Typical Venetian Motorboat to Murano, Burano and Torcello near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Local guide meets you at the lobby of your hotel in Venice."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Venice, discover three of the most beautiful islands in the Venetian Lagoon on a private, half-day tour aboard a typical Venetian motorboat.",
+    "itineraryItems": [
+      {
+        "title": "Murano glass workshop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Burano lace island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Torcello",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Transport by private vehicle",
+      "Private tour",
+      "Hotel pickup",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Excursion by Typical Venetian Motorboat to Murano, Burano and Torcello?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Local guide meets you at the lobby of your hotel in Venice."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 205.26
+      },
+      "currency": "USD"
+    }
+  }
+}
