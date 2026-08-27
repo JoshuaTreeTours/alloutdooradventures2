@@ -885,6 +885,68 @@ export const isEngine6AcadiaNationalParkTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_ACADIA_NATIONAL_PARK_TOUR_PATH_PREFIX);
 
+export const ENGINE6_LONDON_8607P1_PRODUCT_CODE = "8607P1";
+export const ENGINE6_LONDON_8607P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/3-hour-guided-private-walking-tour-the-best-of-london-8607P1";
+export const ENGINE6_LONDON_106826P1_PRODUCT_CODE = "106826P1";
+export const ENGINE6_LONDON_106826P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/ultimate-6-hour-private-tour-of-london-in-an-iconic-bla-106826P1";
+export const ENGINE6_LONDON_60273P32_PRODUCT_CODE = "60273P32";
+export const ENGINE6_LONDON_60273P32_ROUTE =
+  "/destinations/united-kingdom/london/tours/winston-churchills-london-and-the-churchill-war-rooms-a-60273P32";
+export const ENGINE6_LONDON_349592P2_PRODUCT_CODE = "349592P2";
+export const ENGINE6_LONDON_349592P2_ROUTE =
+  "/destinations/united-kingdom/london/tours/tower-of-london-private-tour-for-families-and-friends-349592P2";
+export const ENGINE6_LONDON_103194P1_PRODUCT_CODE = "103194P1";
+export const ENGINE6_LONDON_103194P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/rock-cab-tours-presents-music-legends-private-taxi-tour-103194P1";
+export const ENGINE6_LONDON_12389P8_PRODUCT_CODE = "12389P8";
+export const ENGINE6_LONDON_12389P8_ROUTE =
+  "/destinations/united-kingdom/london/tours/private-english-wine-tour-from-kent-12389P8";
+export const ENGINE6_LONDON_306564P1_PRODUCT_CODE = "306564P1";
+export const ENGINE6_LONDON_306564P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/private-london-food-tours-borough-market-soho-east-end-306564P1";
+export const ENGINE6_LONDON_110975P32_PRODUCT_CODE = "110975P32";
+export const ENGINE6_LONDON_110975P32_ROUTE =
+  "/destinations/united-kingdom/london/tours/highlights-of-london-private-tour-with-notting-hill-110975P32";
+export const ENGINE6_LONDON_13106P1_PRODUCT_CODE = "13106P1";
+export const ENGINE6_LONDON_13106P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/best-of-greenwich-private-day-tour-13106P1";
+export const ENGINE6_LONDON_62043P1_PRODUCT_CODE = "62043P1";
+export const ENGINE6_LONDON_62043P1_ROUTE =
+  "/destinations/united-kingdom/london/tours/skip-the-line-tower-of-london-westminster-tour-and-rive-62043P1";
+export const ENGINE6_LONDON_2452L02_PRODUCT_CODE = "2452L02";
+export const ENGINE6_LONDON_2452L02_ROUTE =
+  "/destinations/united-kingdom/london/tours/best-of-london-tour-inc-tower-of-london-and-changing-of-2452L02";
+export const ENGINE6_LONDON_75760P71_PRODUCT_CODE = "75760P71";
+export const ENGINE6_LONDON_75760P71_ROUTE =
+  "/destinations/united-kingdom/london/tours/westminster-3-hour-walking-tour-and-visit-of-churchill-75760P71";
+export const ENGINE6_LONDON_6295LOBLEGFD_PRODUCT_CODE = "6295LOBLEGFD";
+export const ENGINE6_LONDON_6295LOBLEGFD_ROUTE =
+  "/destinations/united-kingdom/london/tours/changing-of-the-guard-big-ben-thames-tower-of-london-to-6295LOBLEGFD";
+export const ENGINE6_LONDON_75760P69_PRODUCT_CODE = "75760P69";
+export const ENGINE6_LONDON_75760P69_ROUTE =
+  "/destinations/united-kingdom/london/tours/london-river-cruise-westminster-walking-tour-75760P69";
+export const ENGINE6_LONDON_24338P83_PRODUCT_CODE = "24338P83";
+export const ENGINE6_LONDON_24338P83_ROUTE =
+  "/destinations/united-kingdom/london/tours/tower-of-london-guided-tour-with-thames-river-cruise-24338P83";
+export const ENGINE6_LONDON_3862BICYCLE_PRODUCT_CODE = "3862BICYCLE";
+export const ENGINE6_LONDON_3862BICYCLE_ROUTE =
+  "/destinations/united-kingdom/london/tours/london-classic-landmarks-bike-tour-with-local-guide-3862BICYCLE";
+export const ENGINE6_LONDON_40046P15_PRODUCT_CODE = "40046P15";
+export const ENGINE6_LONDON_40046P15_ROUTE =
+  "/destinations/united-kingdom/london/tours/1-east-end-street-art-satisfaction-guaranteed-12ppl-max-40046P15";
+export const ENGINE6_LONDON_5936WHOWALK_PRODUCT_CODE = "5936WHOWALK";
+export const ENGINE6_LONDON_5936WHOWALK_ROUTE =
+  "/destinations/united-kingdom/london/tours/doctor-who-tv-locations-tour-of-london-5936WHOWALK";
+
+export const ENGINE6_LONDON_TOUR_PATH_PREFIX =
+  "/destinations/united-kingdom/london/tours/";
+
+export const isEngine6LondonTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_LONDON_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3562,6 +3624,78 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ACADIA_265766P17_ROUTE,
     ENGINE6_ACADIA_265766P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_8607P1_ROUTE,
+    ENGINE6_LONDON_8607P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_106826P1_ROUTE,
+    ENGINE6_LONDON_106826P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_60273P32_ROUTE,
+    ENGINE6_LONDON_60273P32_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_349592P2_ROUTE,
+    ENGINE6_LONDON_349592P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_103194P1_ROUTE,
+    ENGINE6_LONDON_103194P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_12389P8_ROUTE,
+    ENGINE6_LONDON_12389P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_306564P1_ROUTE,
+    ENGINE6_LONDON_306564P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_110975P32_ROUTE,
+    ENGINE6_LONDON_110975P32_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_13106P1_ROUTE,
+    ENGINE6_LONDON_13106P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_62043P1_ROUTE,
+    ENGINE6_LONDON_62043P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_2452L02_ROUTE,
+    ENGINE6_LONDON_2452L02_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_75760P71_ROUTE,
+    ENGINE6_LONDON_75760P71_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_6295LOBLEGFD_ROUTE,
+    ENGINE6_LONDON_6295LOBLEGFD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_75760P69_ROUTE,
+    ENGINE6_LONDON_75760P69_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_24338P83_ROUTE,
+    ENGINE6_LONDON_24338P83_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_3862BICYCLE_ROUTE,
+    ENGINE6_LONDON_3862BICYCLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_40046P15_ROUTE,
+    ENGINE6_LONDON_40046P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LONDON_5936WHOWALK_ROUTE,
+    ENGINE6_LONDON_5936WHOWALK_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

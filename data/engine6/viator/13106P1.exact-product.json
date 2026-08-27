@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "13106P1",
+    "productUrl": "https://www.viator.com/tours/London/Best-of-Greenwich-Walking-Tour-in-London/d737-13106P1",
+    "title": "Best of Greenwich Private Day Tour",
+    "description": {
+      "text": "In London, Discover the cultural hub and maritime center of Greenwich on a full-day small-group walking tour including lunch. Step aboard the legendary Cutty Sark, visit the home of Greenwich Mean Time at the Greenwich Royal Observatory, visit the recently-renovated Queen's House, and tour the National Maritime Museum and the Old Royal Naval College. Stops include Cutty Sark, Royal Observatory Greenwich, Queen's House, National Maritime Museum, Old Royal Naval College, Greenwich Market. Browse for bargains at the lively Greenwich market, then tuck into a traditional pub lunch overlooking the River Thames. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "Full day (approx.)",
+    "priceFrom": "From $401.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 29
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7a/c0/16.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the cultural hub and maritime center of Greenwich on a full-day small-group walking tour including lunch",
+      "Step aboard the legendary Cutty Sark, visit the home of Greenwich Mean Time at the Greenwich Royal Observatory, visit th",
+      "Browse for bargains at the lively Greenwich market, then tuck into a traditional pub lunch overlooking the River Thames",
+      "Best of Greenwich Private Day Tour near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Greenwich meeting point listed when booking, typically near Greenwich Pier / the tourist information area."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In London, Discover the cultural hub and maritime center of Greenwich on a full-day small-group walking tour including lunch.",
+    "itineraryItems": [
+      {
+        "title": "Cutty Sark",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Royal Observatory Greenwich",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Queen's House",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Maritime Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Royal Naval College",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Greenwich Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Traditional pub lunch included with complimentary tea, coffee or soda",
+      "Private guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Greenwich Private Day Tour?",
+        "answer": "The planned duration is Full day."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet at the confirmed Greenwich meeting point listed when booking, typically near Greenwich Pier / the tourist information area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 401
+      },
+      "currency": "USD"
+    }
+  }
+}

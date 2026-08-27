@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "2452L02",
+    "productUrl": "https://www.viator.com/tours/London/London-Full-Day-Sightseeing-Tour/d737-2452L02",
+    "title": "Best of London Tour inc Tower of London and Changing of the Guard",
+    "description": {
+      "text": "Tick off the British capital’s most recognizable landmarks on this attraction-packed London tour. Explore St. Paul’s Cathedral, then make a photo stop at Westminster Abbey. Stops include St. Paul's Cathedral, Westminster Abbey, Buckingham Palace, Tower of London, Thames River. Watch the Changing of the Guard at Buckingham Palace and visit the Tower of London, where you'll have free time for lunch (own expense). Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $189.58",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 2487
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/74/00.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tick off the British capital’s most recognizable landmarks on this attraction-packed London tour",
+      "Explore St. Paul’s Cathedral, then make a photo stop at Westminster Abbey",
+      "Watch the Changing of the Guard at Buckingham Palace and visit the Tower of London, where you'll have free time for lunc",
+      "Best of London Tour inc Tower of London and Changing of the Guard near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup as listed when booking for this full-day London sightseeing coach itinerary."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Tick off the British capital’s most recognizable landmarks on this attraction-packed London tour.",
+    "itineraryItems": [
+      {
+        "title": "St. Paul's Cathedral",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower of London",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thames River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Entry to Tower of London",
+      "Entry to St. Paul's Cathedral",
+      "Changing of the Guard ceremony (selected dates only) and photo stop outside Buckingham Palace",
+      "Private cruise on the River Thames",
+      "Friendly professional guide and air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of London Tour inc Tower of London and Changing of the Guard?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Hotel pickup as listed when booking for this full-day London sightseeing coach itinerary."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189.58
+      },
+      "currency": "USD"
+    }
+  }
+}

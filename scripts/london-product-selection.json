@@ -1,0 +1,107 @@
+{
+  "destinationLabel": "London",
+  "destinationCitySlug": "london",
+  "viatorDestinationSlug": "London",
+  "viatorDestinationId": "d737",
+  "catalogUrl": "https://www.viator.com/London/d737",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 18,
+  "premiumCount": 12,
+  "selectionNote": "Selected 18 guided London d737 products with live commercial fields and unique 674x446 heroes. Catalog is large, but Jeep/off-road, stargazing, and Red Rock SKUs do not exist. Helicopter 6329HELISHARE lacked a verified live From$ price. Several otherwise strong SKUs were CAD/AUD-only (7168P1, 179241P30), inactive (5098EVENING), thin-rated, self-guided/app, or missing product-specific heroes (160852P4). Did not force weak SKUs to reach 20.",
+  "selectedProductCodes": [
+    "8607P1",
+    "106826P1",
+    "60273P32",
+    "349592P2",
+    "103194P1",
+    "12389P8",
+    "306564P1",
+    "110975P32",
+    "13106P1",
+    "62043P1",
+    "2452L02",
+    "75760P71",
+    "6295LOBLEGFD",
+    "75760P69",
+    "24338P83",
+    "3862BICYCLE",
+    "40046P15",
+    "5936WHOWALK"
+  ],
+  "premiumProductCodes": [
+    "8607P1",
+    "106826P1",
+    "60273P32",
+    "349592P2",
+    "103194P1",
+    "12389P8",
+    "306564P1",
+    "110975P32",
+    "13106P1",
+    "62043P1",
+    "2452L02",
+    "75760P71"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "6329HELISHARE",
+      "title": "Central London Helicopter Flight- Shared flight",
+      "reason": "Live public page confirmed 4.5/49 and Battersea routing, but no verified From$ price"
+    },
+    {
+      "productCode": "160852P4",
+      "title": "Private London Tour by Car - Pick Up From Your Hotel or Apartment",
+      "reason": "USD $181.85 and 5.0/30 verified; no product-specific 674x446 hero captured from live dumps"
+    },
+    {
+      "productCode": "7168P1",
+      "title": "London Bike Tour: Landmarks, Secret Gems, Pub Stop & Street Art",
+      "reason": "Live dump priced in CAD only (From CA$122.66); 3862BICYCLE already covers bike landmarks in USD"
+    },
+    {
+      "productCode": "179241P30",
+      "title": "Private British Food and History Tour at London's Borough Market",
+      "reason": "Live dump priced in AUD only; 306564P1 already covers private Borough Market food"
+    },
+    {
+      "productCode": "5098EVENING",
+      "title": "Highlights of Royal London Bike Tour with River Cruise",
+      "reason": "Inactive / similar-options page with no live From$ price"
+    },
+    {
+      "productCode": "8909P2",
+      "title": "Private London helicopter",
+      "reason": "Poor commercial rating (3.2/15)"
+    },
+    {
+      "productCode": "100787P5",
+      "title": "Colourful Photo Tour at Notting Hill",
+      "reason": "Poor commercial rating (3.7/3)"
+    },
+    {
+      "productCode": "225279P23",
+      "title": "Shoreditch self-guided / app tour",
+      "reason": "Self-guided app tour"
+    },
+    {
+      "productCode": "3858EE07",
+      "title": "Royal London Guided Sightseeing Tour and Thames River Cruise",
+      "reason": "Weak rating (3.9/30)"
+    },
+    {
+      "productCode": "75760P288",
+      "title": "Harry Potter Film Location Walking Tour & Thames River Cruise",
+      "reason": "Live dump priced in EUR only (From €70.13); near-duplicate walking-plus-cruise format of 75760P69"
+    },
+    {
+      "productCode": "483063P1",
+      "title": "Iconic London Portraits Tour with Expert Local Photographer",
+      "reason": "Thin review count and EUR-only live From€169.29"
+    },
+    {
+      "productCode": "9086P18",
+      "title": "Small Group Winston Churchill and London in WW2 Walking Tour",
+      "reason": "Near-duplicate of selected Churchill/War Rooms SKUs 60273P32 and 75760P71; ticket inclusion copy conflicted across live surfaces"
+    }
+  ]
+}

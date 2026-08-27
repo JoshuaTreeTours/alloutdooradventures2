@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "75760P69",
+    "productUrl": "https://www.viator.com/tours/London/Westminster-Walking-Tour-and-Thames-River-Cruise-20-London-Sights/d737-75760P69",
+    "title": "London River Cruise & Westminster Walking Tour",
+    "description": {
+      "text": "See London's most famous landmarks on a half-day tour that combines a Westminster walking tour with a Thames River sightseeing cruise. Skip the hassle of navigating as you follow your guide past attractions such as Buckingham Palace, Trafalgar Square, Big Ben, and Westminster Abbey. Stops include Buckingham Palace, Trafalgar Square, Big Ben, Westminster Abbey, Thames River. The walking tour ends with drop-off at the Thames River cruise for another perspective on London from the water. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $101.03",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/1d/8b/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See London's most famous landmarks on a half-day tour that combines a Westminster walking tour with a Thames River sight",
+      "Skip the hassle of navigating as you follow your guide past attractions such as Buckingham Palace, Trafalgar Square, Big",
+      "The walking tour ends with drop-off at the Thames River cruise for another perspective on London from the water",
+      "London River Cruise & Westminster Walking Tour near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The Ritz London, 150 Piccadilly, London W1J 9BR, UK. Ends at Tower Millennium Pier, London EC3N 4DT, UK. The walking guide does not join the cruise."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See London's most famous landmarks on a half-day tour that combines a Westminster walking tour with a Thames River sightseeing cruise.",
+    "itineraryItems": [
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trafalgar Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Ben",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thames River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local Fun Guide",
+      "Walking tour of the Top 20 sights of Westminster (3 hours)",
+      "Thames Cruise Ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the London River Cruise & Westminster Walking Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "The Ritz London, 150 Piccadilly, London W1J 9BR, UK. Ends at Tower Millennium Pier, London EC3N 4DT, UK. The walking guide does not join the cruise."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 101.03
+      },
+      "currency": "USD"
+    }
+  }
+}

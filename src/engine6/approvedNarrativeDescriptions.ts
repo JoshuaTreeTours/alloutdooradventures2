@@ -21,6 +21,7 @@ import { getBryceCanyonNationalParkTargetedNarrativeDescription } from "./bryceC
 import { getArchesNationalParkTargetedNarrativeDescription } from "./archesNationalParkApprovedNarrativeDescriptions";
 import { getCanyonlandsNationalParkTargetedNarrativeDescription } from "./canyonlandsNationalParkApprovedNarrativeDescriptions";
 import { getAcadiaNationalParkTargetedNarrativeDescription } from "./acadiaNationalParkApprovedNarrativeDescriptions";
+import { getLondonTargetedNarrativeDescription } from "./londonApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -127,6 +128,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getArchesNationalParkTargetedNarrativeDescription(productCode) ??
   getCanyonlandsNationalParkTargetedNarrativeDescription(productCode) ??
   getAcadiaNationalParkTargetedNarrativeDescription(productCode) ??
+  getLondonTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

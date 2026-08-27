@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "75760P71",
+    "productUrl": "https://www.viator.com/tours/London/Westminster-Walking-Tour-and-Churchill-War-Rooms-Tickets/d737-75760P71",
+    "title": "Westminster 3 Hour Walking Tour and Visit of Churchill War Rooms",
+    "description": {
+      "text": "With such a high concentration of world-famous attractions, Westminster is an essential stop on any London sightseeing itinerary. After a walking tour of the borough’s major attractions, descend into the Churchill War Rooms to learn the secrets of the famous leader as he strategized during World War II. Stops include Westminster Abbey, Big Ben, Buckingham Palace, Churchill War Rooms. This landmark-packed tour is perfect for history buffs looking for a manageable but extensive tour to fit into a busy schedule. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $132.69",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 862
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e6/93/ba.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "With such a high concentration of world-famous attractions, Westminster is an essential stop on any London sightseeing i",
+      "After a walking tour of the borough’s major attractions, descend into the Churchill War Rooms to learn the secrets of th",
+      "This landmark-packed tour is perfect for history buffs looking for a manageable but extensive tour to fit into a busy sc",
+      "Westminster 3 Hour Walking Tour and Visit of Churchill War Rooms near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Outside The Ritz London, 150 Piccadilly, London W1J 9BR, UK, next to the red phone boxes underneath a Ritz sign. Ends at Churchill War Rooms; the walking guide does not enter with you."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "With such a high concentration of world-famous attractions, Westminster is an essential stop on any London sightseeing itinerary.",
+    "itineraryItems": [
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Ben",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Churchill War Rooms",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local Fun Guide",
+      "Walking tour of the Top 20 sights of Westminster (3 hours)",
+      "Entry to Churchill's War Rooms"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Westminster 3 Hour Walking Tour and Visit of Churchill War Rooms?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Outside The Ritz London, 150 Piccadilly, London W1J 9BR, UK, next to the red phone boxes underneath a Ritz sign. Ends at Churchill War Rooms; the walking guide does not enter with you."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 132.69
+      },
+      "currency": "USD"
+    }
+  }
+}

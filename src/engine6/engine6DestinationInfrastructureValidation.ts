@@ -53,6 +53,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "illinois",
     citySlug: "chicago",
   },
+  london: {
+    destinationLabel: "London",
+    destinationCitySlug: "london",
+    stateSlug: "united-kingdom",
+    citySlug: "london",
+  },
   boston: {
     destinationLabel: "Boston",
     destinationCitySlug: "boston",

@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "24338P83",
+    "productUrl": "https://www.viator.com/tours/London/Tower-of-London-Storytelling-Tour-with-Thames-River-Cruise/d737-24338P83",
+    "title": "Tower of London: Guided Tour with Thames River Cruise",
+    "description": {
+      "text": "Combine a guide-led visit to the Tower of London with a sighseeing cruise along the River Thames on this two-in-one tour. Meet your guide at Parliament Square before hopping on a riverboat along the Thames for a new view on the London skyline. Stops include Parliament Square, Thames River, Tower of London, Crown Jewels. Then, hop off at the Tower of London, where you’ll explore the famous monument, which dates to 1066, and houses the Crown Jewels. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.95",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 149
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/36/f9/e0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combine a guide-led visit to the Tower of London with a sighseeing cruise along the River Thames on this two-in-one tour",
+      "Meet your guide at Parliament Square before hopping on a riverboat along the Thames for a new view on the London skyline",
+      "Then, hop off at the Tower of London, where you’ll explore the famous monument, which dates to 1066, and houses the Crow",
+      "Tower of London: Guided Tour with Thames River Cruise near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Parliament Square for the walking approach to the river launch, then continue by Clipper to the Tower of London."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Combine a guide-led visit to the Tower of London with a sighseeing cruise along the River Thames on this two-in-one tour.",
+    "itineraryItems": [
+      {
+        "title": "Parliament Square",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thames River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower of London",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Crown Jewels",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Enjoy a Panoramic Boat Ride down the River Thames by Clipper",
+      "Prebooked Tower of London Tickets",
+      "Guided Tour of the Tower of London",
+      "Access to the British Crown Jewels, White Tower and More!",
+      "Expert English-Speaking Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tower of London: Guided Tour with Thames River Cruise?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet at Parliament Square for the walking approach to the river launch, then continue by Clipper to the Tower of London."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79.95
+      },
+      "currency": "USD"
+    }
+  }
+}

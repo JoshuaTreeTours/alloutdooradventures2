@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "12389P8",
+    "productUrl": "https://www.viator.com/tours/London/Private-English-Wine-Tour-from-London/d737-12389P8",
+    "title": "Private English Wine Tour from Kent",
+    "description": {
+      "text": "In London, Thanks to growing conditions similar to those in northern France, southern England’s burgeoning wine scene has never been more promising or accomplished—and this private tour makes it easy to sample and discover more. After pickup from a location of your choosing, you’ll travel in a comfortable minibus to at least three of Kent’s top wineries, where you’ll tour the vineyards and cellars and do plenty of tasting. Stops include Tonbridge Station, Kent Vineyards, English Wine Country. The tour also includes a pub or picnic lunch, per your preference. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "5 to 6 hours (approx.)",
+    "priceFrom": "From $211.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/b5/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Thanks to growing conditions similar to those in northern France, southern England’s burgeoning wine scene has never bee",
+      "After pickup from a location of your choosing, you’ll travel in a comfortable minibus to at least three of Kent’s top wi",
+      "The tour also includes a pub or picnic lunch, per your preference",
+      "Private English Wine Tour from Kent near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from Tonbridge Station, Barden Rd, Tonbridge TN9 1TT, UK (about 40 minutes by train from London Bridge). Come directly up the stairs at the station to the pick-up area."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In London, Thanks to growing conditions similar to those in northern France, southern England’s burgeoning wine scene has never been more promising or accomplished—and this private tour makes it easy to sample and discover more.",
+    "itineraryItems": [
+      {
+        "title": "Tonbridge Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kent Vineyards",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "English Wine Country",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Collection from main line station or accommodation",
+      "Transport and tour guide for the day",
+      "Visit 3 vineyards",
+      "Light lunch with English wine",
+      "Free tastings of 3 wines from each vineyard"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private English Wine Tour from Kent?",
+        "answer": "The planned duration is 5 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Pickup from Tonbridge Station, Barden Rd, Tonbridge TN9 1TT, UK (about 40 minutes by train from London Bridge). Come directly up the stairs at the station to the pick-up area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 211
+      },
+      "currency": "USD"
+    }
+  }
+}

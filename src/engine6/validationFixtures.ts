@@ -167,6 +167,24 @@ import specimen5569071p10Payload from "../../data/engine6/viator/5569071P10.exac
 import specimen5596065p9Payload from "../../data/engine6/viator/5596065P9.exact-product.json";
 import specimen5596065p3Payload from "../../data/engine6/viator/5596065P3.exact-product.json";
 import specimen265766p17Payload from "../../data/engine6/viator/265766P17.exact-product.json";
+import specimen8607p1Payload from "../../data/engine6/viator/8607P1.exact-product.json";
+import specimen106826p1Payload from "../../data/engine6/viator/106826P1.exact-product.json";
+import specimen60273p32Payload from "../../data/engine6/viator/60273P32.exact-product.json";
+import specimen349592p2Payload from "../../data/engine6/viator/349592P2.exact-product.json";
+import specimen103194p1Payload from "../../data/engine6/viator/103194P1.exact-product.json";
+import specimen12389p8Payload from "../../data/engine6/viator/12389P8.exact-product.json";
+import specimen306564p1Payload from "../../data/engine6/viator/306564P1.exact-product.json";
+import specimen110975p32Payload from "../../data/engine6/viator/110975P32.exact-product.json";
+import specimen13106p1Payload from "../../data/engine6/viator/13106P1.exact-product.json";
+import specimen62043p1Payload from "../../data/engine6/viator/62043P1.exact-product.json";
+import specimen2452l02Payload from "../../data/engine6/viator/2452L02.exact-product.json";
+import specimen75760p71Payload from "../../data/engine6/viator/75760P71.exact-product.json";
+import specimen6295loblegfdPayload from "../../data/engine6/viator/6295LOBLEGFD.exact-product.json";
+import specimen75760p69Payload from "../../data/engine6/viator/75760P69.exact-product.json";
+import specimen24338p83Payload from "../../data/engine6/viator/24338P83.exact-product.json";
+import specimen3862bicyclePayload from "../../data/engine6/viator/3862BICYCLE.exact-product.json";
+import specimen40046p15Payload from "../../data/engine6/viator/40046P15.exact-product.json";
+import specimen5936whowalkPayload from "../../data/engine6/viator/5936WHOWALK.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2382,6 +2400,114 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "265766P17",
     publicUrl: "https://www.viator.com/tours/Bar-Harbor/Full-Day-Private-Tour-in-Acadia-National-Park/d4371-265766P17",
     rawPayload: specimen265766p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8607P1",
+    publicUrl: "https://www.viator.com/tours/London/The-Best-Of-London-Guided-Private-Walking-Tour/d737-8607P1",
+    rawPayload: specimen8607p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "106826P1",
+    publicUrl: "https://www.viator.com/tours/London/The-Ultimate-Full-Day-London-Classic-Tour/d737-106826P1",
+    rawPayload: specimen106826p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "60273P32",
+    publicUrl: "https://www.viator.com/tours/London/Winston-Churchills-London-and-The-Churchill-War-Rooms-A-Private-Tour/d737-60273P32",
+    rawPayload: specimen60273p32Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "349592P2",
+    publicUrl: "https://www.viator.com/tours/London/Tower-of-London-private-tour-and-free-river-boat-ticket-from-Tower-to-Big-Ben/d737-349592P2",
+    rawPayload: specimen349592p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "103194P1",
+    publicUrl: "https://www.viator.com/tours/London/Music-Legends-Tour/d737-103194P1",
+    rawPayload: specimen103194p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "12389P8",
+    publicUrl: "https://www.viator.com/tours/London/Private-English-Wine-Tour-from-London/d737-12389P8",
+    rawPayload: specimen12389p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "306564P1",
+    publicUrl: "https://www.viator.com/tours/London/Chubby-Fellow-Food-and-Beverage-Tours/d737-306564P1",
+    rawPayload: specimen306564p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "110975P32",
+    publicUrl: "https://www.viator.com/tours/London/Highlights-of-London-Private-Tour-Downtown-Notting-Hill-and-Portobello-Market/d737-110975P32",
+    rawPayload: specimen110975p32Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "13106P1",
+    publicUrl: "https://www.viator.com/tours/London/Best-of-Greenwich-Walking-Tour-in-London/d737-13106P1",
+    rawPayload: specimen13106p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "62043P1",
+    publicUrl: "https://www.viator.com/tours/London/London-In-a-Day-Tower-of-London-Westminster-Abbey-and-Changing-of-the-Guard/d737-62043P1",
+    rawPayload: specimen62043p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2452L02",
+    publicUrl: "https://www.viator.com/tours/London/London-Full-Day-Sightseeing-Tour/d737-2452L02",
+    rawPayload: specimen2452l02Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "75760P71",
+    publicUrl: "https://www.viator.com/tours/London/Westminster-Walking-Tour-and-Churchill-War-Rooms-Tickets/d737-75760P71",
+    rawPayload: specimen75760p71Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6295LOBLEGFD",
+    publicUrl: "https://www.viator.com/tours/London/London-Super-Saver-Royal-Walking-Tour-Including-Tower-of-London-and-Changing-of-the-Guard-plus-London-Highlights-with-Afternoon-Tea/d737-6295LOBLEGFD",
+    rawPayload: specimen6295loblegfdPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "75760P69",
+    publicUrl: "https://www.viator.com/tours/London/Westminster-Walking-Tour-and-Thames-River-Cruise-20-London-Sights/d737-75760P69",
+    rawPayload: specimen75760p69Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24338P83",
+    publicUrl: "https://www.viator.com/tours/London/Tower-of-London-Storytelling-Tour-with-Thames-River-Cruise/d737-24338P83",
+    rawPayload: specimen24338p83Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3862BICYCLE",
+    publicUrl: "https://www.viator.com/tours/London/London-Bike-Tour-East-West-or-Central-London/d737-3862BICYCLE",
+    rawPayload: specimen3862bicyclePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "40046P15",
+    publicUrl: "https://www.viator.com/tours/London/Small-Group-Walking-Tour-London-Street-Art-and-the-East-End-in-London/d737-40046P15",
+    rawPayload: specimen40046p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5936WHOWALK",
+    publicUrl: "https://www.viator.com/tours/London/Doctor-Who-TV-Locations-Tour-of-London/d737-5936WHOWALK",
+    rawPayload: specimen5936whowalkPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

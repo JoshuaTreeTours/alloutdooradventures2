@@ -38,6 +38,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     sedona: ["Sedona"],
     chicago: ["Chicago"],
     illinois: ["Chicago"],
+    london: ["London"],
+    "united-kingdom": ["London"],
     "jackson-hole": ["Jackson Hole"],
     jackson: ["Jackson Hole"],
     wyoming: ["Jackson Hole"],

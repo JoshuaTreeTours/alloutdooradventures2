@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "106826P1",
+    "productUrl": "https://www.viator.com/tours/London/The-Ultimate-Full-Day-London-Classic-Tour/d737-106826P1",
+    "title": "Ultimate 6-hour Private Tour of London in an Iconic Black Cab",
+    "description": {
+      "text": "Optimize your time in the British capital on a private day tour, popping between landmarks by traditional black cab for an authentic London experience. Benefit from your guide’s personalized recommendations to add additional stops according to your interests. Stops include Buckingham Palace, Westminster Abbey, London Eye, Tower of London. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $806.86",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 449
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/3a/01.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ultimate 6-hour Private Tour of London in an Iconic Black Cab from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup and drop-off from Central London. Private black cab with driver-guide."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Optimize your time in the British capital on a private day tour, popping between landmarks by traditional black cab for an authentic London experience.",
+    "itineraryItems": [
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "London Eye",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower of London",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "English-Speaking driver guide",
+      "Private Transportation in a TXE, TX4 or Mercedes Vito London Taxi",
+      "Short walks and photo opportunities",
+      "Hotel pickup and drop-off only from Central London"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ultimate 6-hour Private Tour of London in an Iconic Black Cab?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Hotel pickup and drop-off from Central London. Private black cab with driver-guide."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Hop-on Hop-off Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 806.86
+      },
+      "currency": "USD"
+    }
+  }
+}
