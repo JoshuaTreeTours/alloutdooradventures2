@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "8616P5",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Glencoe-Driving-Tour-from-Edinburgh/d739-8616P5",
+    "title": "Private Glencoe Driving Tour from Edinburgh",
+    "description": {
+      "text": "Hotel pickup in Edinburgh starts this private Glencoe driving day in an air-conditioned Mercedes Vito Tourer. The itinerary can add castles, lochs, and a whisky distillery according to the group's interests, with a local guide covering Scottish history on the 8-to-9-hour outing. Stops include Edinburgh, Glencoe. Guiding fees and vehicle costs are included so the day stays on glen scenery rather than rental-car planning. The private format can linger at loch shores or castle viewpoints when the group wants extra time. Ideal for visitors basing in Edinburgh who want a private Glencoe day without self-driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $1218.70",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/55/47.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private tour with round-trip transportation from Edinburgh",
+      "Customize the itinerary according to your interests",
+      "See Scotland’s famous castles and lochs",
+      "Itinerary can include a whisky distillery"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We can pick up from hotels/Airbnb etc in the general Edinburgh area. Pick ups not in this location may be possible, but only with an additional fee and subject to us being able to get there in reasonable time."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hotel pickup in Edinburgh starts this private Glencoe driving day in an air-conditioned Mercedes Vito Tourer.",
+    "itineraryItems": [
+      {
+        "title": "Edinburgh",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glencoe",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Fee for guiding and all vehicle costs.",
+      "Food and drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Glencoe Driving Tour from Edinburgh?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "We can pick up from hotels/Airbnb etc in the general Edinburgh area. Pick ups not in this location may be possible, but only with an additional fee and subject to us being able to get there in reasonable time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1218.7
+      },
+      "currency": "USD"
+    }
+  }
+}

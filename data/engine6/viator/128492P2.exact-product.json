@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "128492P2",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/The-Highlands-Driving-Tour-Private/d739-128492P2",
+    "title": "Glencoe & Highlands: Private Land Rover Tour",
+    "description": {
+      "text": "Leave Edinburgh in a private Land Rover reserved for one party, heading into Glencoe rather than a large coach circuit. The driver-guide covers the Falls of Dochart and Rannoch Moor between Highland valleys, with hotel, airport, or port pickup in Edinburgh. Bottled water, lunch, and guiding fees are included on the nine-hour day. Stops include Glencoe, Falls of Dochart, Rannoch Moor. Private 4WD pacing keeps glen viewpoints and Highland history in focus instead of timed big-bus photo stops. The outing stays on mountain roads and glen pullouts that coaches often skip. Ideal for visitors basing in Edinburgh who want a Land Rover Highlands day without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $1216.59",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 42
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0c/50/0b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tour to Glencoe from Edinburgh: See as much as possible in one day",
+      "Private tour, exclusively for your party: A personalized experience",
+      "Hassle-free pickup from your Edinburgh accommodation, airport or port"
+    ],
+    "logistics": {
+      "start": {
+        "description": "You will be collected from you choice of start point or accommodation"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Edinburgh in a private Land Rover reserved for one party, heading into Glencoe rather than a large coach circuit.",
+    "itineraryItems": [
+      {
+        "title": "Glencoe",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Falls of Dochart",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rannoch Moor",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Hotel pickup and drop-off",
+      "All guiding fees",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Glencoe & Highlands: Private Land Rover Tour?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "You will be collected from you choice of start point or accommodation"
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1216.59
+      },
+      "currency": "USD"
+    }
+  }
+}

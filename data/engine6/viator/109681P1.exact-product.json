@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "109681P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Edinburgh-Sky-to-Sea-Bike-Tour-by-Manual-or-E-Bike/d739-109681P1",
+    "title": "Edinburgh Sky to Sea Bike or E-Bike Tour with Transfer by TBC",
+    "description": {
+      "text": "Cover Edinburgh's outdoor spine on a Sky to Sea bike or e-bike outing from Arthur's Seat to Portobello beach and the Port of Leith. A cycling guide supplies helmet, gloves, rain jacket, and water, with hotel pickup in the city centre and a choice of manual or electric bikes. Stops include Arthur's Seat, Portobello, Port of Leith. The 4-hour-45-minute format trades independent rental logistics for a paced city-to-coast ride, with e-bike as the easier option on the hill. Ideal for visitors basing in Edinburgh who want a guided bike day covering hill, beach, and harbour in one outing."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "4 hours 45 minutes (approx.)",
+    "priceFrom": "From $90.73",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 397
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6a/00/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See the best of Edinburgh's natural landscapes on a bike tour",
+      "An ideal choice for active travelers",
+      "Go easy on your legs by opting for an electric bike",
+      "Hassle-free hotel pickup and drop-off are included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Transport can be arranged for any address or transport hub around Edinburgh City centre. On occasions where our vehicle is full to capacity, We may provide taxis to beginning of the route. Travellers arriving by cruise ship or from outside the city centre can also meet the group at starting point of the tour at the specified start time. or"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cover Edinburgh's outdoor spine on a Sky to Sea bike or e-bike outing from Arthur's Seat to Portobello beach and the Port of Leith.",
+    "itineraryItems": [
+      {
+        "title": "Arthur's Seat",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Portobello",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port of Leith",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Choice of manual or e-bike",
+      "Hotel pick up",
+      "Guide",
+      "Helmet, gloves and rain jacket",
+      "Water",
+      "Bottled water",
+      "Food and drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Edinburgh Sky to Sea Bike or E-Bike Tour with Transfer by TBC?",
+        "answer": "The planned duration is 4 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "Transport can be arranged for any address or transport hub around Edinburgh City centre. On occasions where our vehicle is full to capacity, We may provide taxis to beginning of the route. Travellers arriving by cruise ship or from outside the city centre can also meet the group at starting point of the tour at the specified start time. or"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "E-Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.73
+      },
+      "currency": "USD"
+    }
+  }
+}

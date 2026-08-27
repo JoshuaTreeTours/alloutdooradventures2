@@ -1174,6 +1174,68 @@ export const isEngine6VeniceTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_VENICE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_EDINBURGH_128492P2_PRODUCT_CODE = "128492P2";
+export const ENGINE6_EDINBURGH_128492P2_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/glencoe-highlands-private-land-rover-tour-128492P2";
+export const ENGINE6_EDINBURGH_401019P1_PRODUCT_CODE = "401019P1";
+export const ENGINE6_EDINBURGH_401019P1_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/luxury-private-tour-of-the-highlands-loch-ness-from-edi-401019P1";
+export const ENGINE6_EDINBURGH_8616P6_PRODUCT_CODE = "8616P6";
+export const ENGINE6_EDINBURGH_8616P6_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/private-central-highlands-driving-tour-8616P6";
+export const ENGINE6_EDINBURGH_8616P5_PRODUCT_CODE = "8616P5";
+export const ENGINE6_EDINBURGH_8616P5_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/private-glencoe-driving-tour-from-edinburgh-8616P5";
+export const ENGINE6_EDINBURGH_108034P1_PRODUCT_CODE = "108034P1";
+export const ENGINE6_EDINBURGH_108034P1_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/private-one-day-highlands-tour-of-scotland-108034P1";
+export const ENGINE6_EDINBURGH_68313P45_PRODUCT_CODE = "68313P45";
+export const ENGINE6_EDINBURGH_68313P45_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/highlights-of-scotland-custom-private-tour-with-scottis-68313P45";
+export const ENGINE6_EDINBURGH_130291P9_PRODUCT_CODE = "130291P9";
+export const ENGINE6_EDINBURGH_130291P9_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/warriors-wilderness-braveheart-stirlingshire-day-trip-130291P9";
+export const ENGINE6_EDINBURGH_225008_PRODUCT_CODE = "225008";
+export const ENGINE6_EDINBURGH_225008_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/highland-lochs-glens-whisky-day-tour-including-admissio-225008";
+export const ENGINE6_EDINBURGH_5256HLOCHNESS_PRODUCT_CODE = "5256HLOCHNESS";
+export const ENGINE6_EDINBURGH_5256HLOCHNESS_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/scottish-highlands-loch-ness-and-glencoe-day-trip-from-5256HLOCHNESS";
+export const ENGINE6_EDINBURGH_7812P14_PRODUCT_CODE = "7812P14";
+export const ENGINE6_EDINBURGH_7812P14_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/edinburgh-walking-food-tour-with-secret-food-tours-7812P14";
+export const ENGINE6_EDINBURGH_109681P1_PRODUCT_CODE = "109681P1";
+export const ENGINE6_EDINBURGH_109681P1_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/edinburgh-sky-to-sea-bike-or-e-bike-tour-with-transfer-109681P1";
+export const ENGINE6_EDINBURGH_293401SECRETS_PRODUCT_CODE = "293401SECRETS";
+export const ENGINE6_EDINBURGH_293401SECRETS_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/royal-mile-and-edinburgh-castle-small-group-walking-tou-293401SECRETS";
+export const ENGINE6_EDINBURGH_225004_PRODUCT_CODE = "225004";
+export const ENGINE6_EDINBURGH_225004_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/st-andrews-the-fishing-villages-of-fife-small-group-day-225004";
+export const ENGINE6_EDINBURGH_5211P20_PRODUCT_CODE = "5211P20";
+export const ENGINE6_EDINBURGH_5211P20_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/outlander-film-locations-day-trip-from-edinburgh-5211P20";
+export const ENGINE6_EDINBURGH_6898P9_PRODUCT_CODE = "6898P9";
+export const ENGINE6_EDINBURGH_6898P9_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/edinburgh-west-highland-lochs-mountains-castles-6898P9";
+export const ENGINE6_EDINBURGH_5211WHISKY_PRODUCT_CODE = "5211WHISKY";
+export const ENGINE6_EDINBURGH_5211WHISKY_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/scotlands-glens-highlands-whisky-day-trip-from-edinburg-5211WHISKY";
+export const ENGINE6_EDINBURGH_72560P6_PRODUCT_CODE = "72560P6";
+export const ENGINE6_EDINBURGH_72560P6_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/edinburgh-food-drink-tour-with-eatwalk-tours-72560P6";
+export const ENGINE6_EDINBURGH_6898P18_PRODUCT_CODE = "6898P18";
+export const ENGINE6_EDINBURGH_6898P18_ROUTE =
+  "/destinations/united-kingdom/edinburgh/tours/edinburgh-the-outlander-palaces-jacobites-tour-6898P18";
+
+export const ENGINE6_EDINBURGH_TOUR_PATH_PREFIX =
+  "/destinations/united-kingdom/edinburgh/tours/";
+
+export const isEngine6EdinburghTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_EDINBURGH_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4183,6 +4245,78 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_VENICE_92490P4_ROUTE,
     ENGINE6_VENICE_92490P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_128492P2_ROUTE,
+    ENGINE6_EDINBURGH_128492P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_401019P1_ROUTE,
+    ENGINE6_EDINBURGH_401019P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_8616P6_ROUTE,
+    ENGINE6_EDINBURGH_8616P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_8616P5_ROUTE,
+    ENGINE6_EDINBURGH_8616P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_108034P1_ROUTE,
+    ENGINE6_EDINBURGH_108034P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_68313P45_ROUTE,
+    ENGINE6_EDINBURGH_68313P45_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_130291P9_ROUTE,
+    ENGINE6_EDINBURGH_130291P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_225008_ROUTE,
+    ENGINE6_EDINBURGH_225008_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_5256HLOCHNESS_ROUTE,
+    ENGINE6_EDINBURGH_5256HLOCHNESS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_7812P14_ROUTE,
+    ENGINE6_EDINBURGH_7812P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_109681P1_ROUTE,
+    ENGINE6_EDINBURGH_109681P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_293401SECRETS_ROUTE,
+    ENGINE6_EDINBURGH_293401SECRETS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_225004_ROUTE,
+    ENGINE6_EDINBURGH_225004_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_5211P20_ROUTE,
+    ENGINE6_EDINBURGH_5211P20_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_6898P9_ROUTE,
+    ENGINE6_EDINBURGH_6898P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_5211WHISKY_ROUTE,
+    ENGINE6_EDINBURGH_5211WHISKY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_72560P6_ROUTE,
+    ENGINE6_EDINBURGH_72560P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_EDINBURGH_6898P18_ROUTE,
+    ENGINE6_EDINBURGH_6898P18_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

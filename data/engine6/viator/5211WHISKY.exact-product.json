@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "5211WHISKY",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Whisky-and-Highland-Waterfalls-Day-Trip-from-Edinburgh/d739-5211WHISKY",
+    "title": "Scotland's Glens, Highlands & Whisky Day Trip from Edinburgh",
+    "description": {
+      "text": "This whisky and waterfalls day from Edinburgh crosses Loch Lomond and The Trossachs National Park, then visits Glenturret Distillery for a tour and dram before The Hermitage, Dunkeld, and Dunkeld Cathedral. An English-speaking guide handles the nine-hour air-conditioned circuit, with lunch at own expense. Stops include Loch Lomond and The Trossachs National Park, Glenturret Distillery, The Hermitage, Dunkeld, Dunkeld Cathedral. Hotel pickup is from the Royal Mile. Forest paths at The Hermitage and the cathedral village close the tasting day. Ideal for visitors basing in Edinburgh who want a guided glen, distillery, and waterfall day without rural self-driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $90.04",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 219
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0a/f4/92.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Soak up views of Loch Lomond and Trossachs National Park as your travel",
+      "Visit a whisky distillery and sample a wee dram",
+      "Walk through the Hermitage, a natural beauty spot with incredible waterfalls",
+      "Enjoy a stop in Dunkeld, a village written about in Shakespeare’s 'MacBeth'"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:15 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for the check-in staff wearing blue high-visibility vests there to greet you."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This whisky and waterfalls day from Edinburgh crosses Loch Lomond and The Trossachs National Park, then visits Glenturret Distillery for a tour and dram before The Hermitage, Dunkeld, and Dunkeld Cathedral.",
+    "itineraryItems": [
+      {
+        "title": "Loch Lomond and The Trossachs National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glenturret Distillery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Hermitage",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dunkeld",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dunkeld Cathedral",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local English Speaking Guide",
+      "Air-conditioned vehicle",
+      "Hotel pickup and drop-off",
+      "Food and drinks",
+      "Distillery tour",
+      "Dram of local whisky"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Scotland's Glens, Highlands & Whisky Day Trip from Edinburgh?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:15 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for the check-in staff wearing blue high-visibility vests there to greet you."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.04
+      },
+      "currency": "USD"
+    }
+  }
+}

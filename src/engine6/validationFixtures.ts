@@ -250,6 +250,24 @@ import specimen2635pdolomitePayload from "../../data/engine6/viator/2635PDOLOMIT
 import specimen7812p214Payload from "../../data/engine6/viator/7812P214.exact-product.json";
 import specimen3731muranoPayload from "../../data/engine6/viator/3731MURANO.exact-product.json";
 import specimen92490p4Payload from "../../data/engine6/viator/92490P4.exact-product.json";
+import specimen128492p2Payload from "../../data/engine6/viator/128492P2.exact-product.json";
+import specimen401019p1Payload from "../../data/engine6/viator/401019P1.exact-product.json";
+import specimen8616p6Payload from "../../data/engine6/viator/8616P6.exact-product.json";
+import specimen8616p5Payload from "../../data/engine6/viator/8616P5.exact-product.json";
+import specimen108034p1Payload from "../../data/engine6/viator/108034P1.exact-product.json";
+import specimen68313p45Payload from "../../data/engine6/viator/68313P45.exact-product.json";
+import specimen130291p9Payload from "../../data/engine6/viator/130291P9.exact-product.json";
+import specimen225008Payload from "../../data/engine6/viator/225008.exact-product.json";
+import specimen5256hlochnessPayload from "../../data/engine6/viator/5256HLOCHNESS.exact-product.json";
+import specimen7812p14Payload from "../../data/engine6/viator/7812P14.exact-product.json";
+import specimen109681p1Payload from "../../data/engine6/viator/109681P1.exact-product.json";
+import specimen293401secretsPayload from "../../data/engine6/viator/293401SECRETS.exact-product.json";
+import specimen225004Payload from "../../data/engine6/viator/225004.exact-product.json";
+import specimen5211p20Payload from "../../data/engine6/viator/5211P20.exact-product.json";
+import specimen6898p9Payload from "../../data/engine6/viator/6898P9.exact-product.json";
+import specimen5211whiskyPayload from "../../data/engine6/viator/5211WHISKY.exact-product.json";
+import specimen72560p6Payload from "../../data/engine6/viator/72560P6.exact-product.json";
+import specimen6898p18Payload from "../../data/engine6/viator/6898P18.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2963,6 +2981,114 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "92490P4",
     publicUrl: "https://www.viator.com/tours/Venice/Venetian-Cicchetti-Street-Food-Wine-and-Sightseeing-Walking-Tour-with-local-guide/d522-92490P4",
     rawPayload: specimen92490p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "128492P2",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/The-Highlands-Driving-Tour-Private/d739-128492P2",
+    rawPayload: specimen128492p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "401019P1",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Luxury-Private-Bespoke-Tour-of-Scotland/d739-401019P1",
+    rawPayload: specimen401019p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8616P6",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Private-Central-Highlands-driving-tour/d739-8616P6",
+    rawPayload: specimen8616p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8616P5",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Private-Glencoe-Driving-Tour-from-Edinburgh/d739-8616P5",
+    rawPayload: specimen8616p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "108034P1",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Private-One-Day-Highlands-Tour-of-Scotland/d739-108034P1",
+    rawPayload: specimen108034p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "68313P45",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Highlights-of-Scotland-Private-Day-Tour-Luxury-Chauffeur/d739-68313P45",
+    rawPayload: specimen68313p45Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130291P9",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Private-Stirlingshire-Day-Trip/d739-130291P9",
+    rawPayload: specimen130291p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "225008",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Highland-Lochs-Glens-and-Whisky-Small-Group-Day-Trip-from-Edinburgh/d739-225008",
+    rawPayload: specimen225008Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5256HLOCHNESS",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Scottish-Highlands-Loch-Ness-and-Glen-Coe-Day-Trip-from-Edinburgh/d739-5256HLOCHNESS",
+    rawPayload: specimen5256hlochnessPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P14",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/3-Hour-Guided-Edinburgh-Food-Tour/d739-7812P14",
+    rawPayload: specimen7812p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "109681P1",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Edinburgh-Sky-to-Sea-Bike-Tour-by-Manual-or-E-Bike/d739-109681P1",
+    rawPayload: specimen109681p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "293401SECRETS",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Secrets-of-Edinburghs-Royal-Mile-Afternoon-Walking-Tour-with-Edinburgh-Castle-Visit/d739-293401SECRETS",
+    rawPayload: specimen293401secretsPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "225004",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/St-Andrews-and-Fife-Small-Group-Day-Trip-from-Edinburgh/d739-225004",
+    rawPayload: specimen225004Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5211P20",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Outlander-Film-Locations-Day-Trip-from-Edinburgh/d739-5211P20",
+    rawPayload: specimen5211p20Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6898P9",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/West-Highland-Lochs-and-Castles/d739-6898P9",
+    rawPayload: specimen6898p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5211WHISKY",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Whisky-and-Highland-Waterfalls-Day-Trip-from-Edinburgh/d739-5211WHISKY",
+    rawPayload: specimen5211whiskyPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "72560P6",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Edinburgh-Food-and-Drink-tour/d739-72560P6",
+    rawPayload: specimen72560p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6898P18",
+    publicUrl: "https://www.viator.com/tours/Edinburgh/Outlander-Palaces-and-Jacobites-Tour-from-Edinburgh/d739-6898P18",
+    rawPayload: specimen6898p18Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

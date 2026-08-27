@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "68313P45",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Highlights-of-Scotland-Private-Day-Tour-Luxury-Chauffeur/d739-68313P45",
+    "title": "Highlights of Scotland Custom Private Tour With Scottish Local",
+    "description": {
+      "text": "A Scottish local chauffeur leads this custom private day from Edinburgh, with stories between Stirling Castle, Deanston Distillery, and The Kelpies. Door-to-door service covers Edinburgh hotels and cruise ports, with Wi-Fi and attraction entrance fees included in an eight-hour Mercedes outing. Stops include Stirling Castle, Deanston Distillery, The Kelpies. The route can tilt toward lochs, whisky, or castles according to the group, without a complicated public meeting point. Local commentary stays with the private party rather than a mixed coach. Ideal for visitors basing in Edinburgh who want a private Scotland highlights day without rental cars."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $686.98",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 25
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/de/6e/38.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This comprehensive tour is excellent for first-time and returning visitors",
+      "Customize this highlights of Scotland tour to your personal needs and interests",
+      "Forget complicated meeting points, as door-to-door transfers are included",
+      "Travel luxuriously in a Mercedes Benz and don’t worry about rental cars"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A Scottish local chauffeur leads this custom private day from Edinburgh, with stories between Stirling Castle, Deanston Distillery, and The Kelpies.",
+    "itineraryItems": [
+      {
+        "title": "Stirling Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Deanston Distillery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Kelpies",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Door to Door Service from Edinburgh and Cruise Ports",
+      "Services & Stories of a Scottish Local",
+      "Wi-Fi Access",
+      "Entrace Fees to Visitor Attractions"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of Scotland Custom Private Tour With Scottish Local?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 686.98
+      },
+      "currency": "USD"
+    }
+  }
+}

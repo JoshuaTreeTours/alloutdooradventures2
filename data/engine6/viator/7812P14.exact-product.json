@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "7812P14",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/3-Hour-Guided-Edinburgh-Food-Tour/d739-7812P14",
+    "title": "Edinburgh Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "Edinburgh's Old Town and New Town food streets are easier with a local on this three-hour Secret Food Tours walk. The small group samples haggis, neeps and tatties, Scotch whisky, afternoon tea, cakes, fudge, and a secret dish while covering the Royal Mile and Edinburgh Old Town. Stops include Royal Mile, Edinburgh Old Town. Groups stay at ten or fewer, meeting near St. Giles' Cathedral. The walking format stays on neighborhood kitchens rather than landmark ticket lines. Ideal for visitors basing in Edinburgh who want a guided tasting walk instead of guessing which Old Town menus are worth the queue."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $125.53",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 855
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/71/fd/9d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy classic Scottish food such as authentic Haggis, award winning Lowland Single Malt Whisky",
+      "Learn why Edinburgh locals are so passionate about their food",
+      "Explore the local streets on a walking food tour",
+      "Small-group experience with no more than 10 participants"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* St Giles' Cathedral High St, Edinburgh EH1 1RE, UK MEETING SPOT: The front of St Giles Cathedral at the West parliament square side, opposite the french consulate. Address: High St, Edinburgh EH1 1RE, UK Directions: The guide will be carrying an orange umbrella, so you can spot him/her easily"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Edinburgh's Old Town and New Town food streets are easier with a local on this three-hour Secret Food Tours walk.",
+    "itineraryItems": [
+      {
+        "title": "Royal Mile",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Edinburgh Old Town",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Amazing Haggis",
+      "Neeps and tatties",
+      "Scottish cakes",
+      "Our delicious Secret Dish",
+      "Traditional dessert",
+      "Local Fudge",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Edinburgh Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* St Giles' Cathedral High St, Edinburgh EH1 1RE, UK MEETING SPOT: The front of St Giles Cathedral at the West parliament square side, opposite the french consulate. Address: High St, Edinburgh EH1 1RE, UK Directions: The guide will be carrying an orange umbrella, so you can spot him/her easily"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125.53
+      },
+      "currency": "USD"
+    }
+  }
+}

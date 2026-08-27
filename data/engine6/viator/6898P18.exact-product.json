@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "6898P18",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Outlander-Palaces-and-Jacobites-Tour-from-Edinburgh/d739-6898P18",
+    "title": "Edinburgh: The Outlander, Palaces & Jacobites Tour",
+    "description": {
+      "text": "This Outlander palaces and Jacobites day from Edinburgh visits Linlithgow Palace, Culross, and Blackness Castle, the settings used for Wentworth Prison and Claire's herb garden. A driver-guide shares behind-the-scenes filming notes on the nine-hour air-conditioned circuit. Stops include Linlithgow Palace, Culross, Blackness Castle. Round-trip transport leaves Castle Terrace in Edinburgh. Palace ruins, a preserved village, and a Forth-side castle sit on one Lowland loop instead of three separate tickets. Ideal for visitors who want a guided palace and castle film-location day from Edinburgh without plotting opening hours alone."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $74.48",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 354
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/f9/fe/5f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Check off multiple “Outlander” filming locations in a day",
+      "Round-trip transport from Edinburgh ensures a hassle-free experience",
+      "Great photo opportunities—including Linlithgow Palace"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* 9 Castle Terrace, Edinburgh EH1 2EL, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This Outlander palaces and Jacobites day from Edinburgh visits Linlithgow Palace, Culross, and Blackness Castle, the settings used for Wentworth Prison and Claire's herb garden.",
+    "itineraryItems": [
+      {
+        "title": "Linlithgow Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Culross",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Blackness Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Knowledgeable driver-guide",
+      "Live commentary on board",
+      "Food and drinks",
+      "Attraction Tickets",
+      "Restroom on board",
+      "WiFi on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Edinburgh: The Outlander, Palaces & Jacobites Tour?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* 9 Castle Terrace, Edinburgh EH1 2EL, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.48
+      },
+      "currency": "USD"
+    }
+  }
+}

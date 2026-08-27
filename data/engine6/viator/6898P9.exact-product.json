@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "6898P9",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/West-Highland-Lochs-and-Castles/d739-6898P9",
+    "title": "Edinburgh: West Highland Lochs, Mountains & Castles",
+    "description": {
+      "text": "Leave Edinburgh for West Highland lochs and castles, starting at Doune Castle before Inveraray, Loch Awe, and Kilchurn Castle. The 9-hour-45-minute coach day includes free time in Inveraray and views toward the Arrochar Alps on the return. Stops include Doune Castle, Inveraray, Loch Awe, Kilchurn Castle. A knowledgeable driver-guide provides live commentary through Glen Ogle and loch-side pullouts; attraction tickets are listed separately. Ideal for visitors basing in Edinburgh who want a guided West Highland lochs and castles day without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "9 hours 45 minutes (approx.)",
+    "priceFrom": "From $78.13",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 502
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/f0/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day tour of the West Highlands’ lochs and castles from Edinburgh",
+      "Travel deep into the Scottish Highlands, home to the mighty Arrochar Alps",
+      "Admire the tranquil lakes and soaking peaks of the Highlands in Glen Ogle"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Timberbush Tours Castle Terrace, outside the, NCP Castle Terrace Car Park, Edinburgh EH1 2EW, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Edinburgh for West Highland lochs and castles, starting at Doune Castle before Inveraray, Loch Awe, and Kilchurn Castle.",
+    "itineraryItems": [
+      {
+        "title": "Doune Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Inveraray",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Awe",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilchurn Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Knowledgeable driver-guide",
+      "Live commentary on board",
+      "Food and drinks",
+      "Attraction Tickets",
+      "Restroom on board",
+      "WiFi on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Edinburgh: West Highland Lochs, Mountains & Castles?",
+        "answer": "The planned duration is 9 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* Timberbush Tours Castle Terrace, outside the, NCP Castle Terrace Car Park, Edinburgh EH1 2EW, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 78.13
+      },
+      "currency": "USD"
+    }
+  }
+}

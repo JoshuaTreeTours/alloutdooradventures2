@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "5256HLOCHNESS",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Scottish-Highlands-Loch-Ness-and-Glen-Coe-Day-Trip-from-Edinburgh/d739-5256HLOCHNESS",
+    "title": "Scottish Highlands, Loch Ness and Glencoe Day Trip from Edinburgh",
+    "description": {
+      "text": "This 13-hour coach day from Edinburgh winds through the Highlands to Pitlochry, Cairngorms National Park, Loch Ness, Urquhart Castle, Glencoe National Nature Reserve, and Stirling Castle. An air-conditioned vehicle with panoramic windows and a live driver-guide covers Nessie lore, the Glen Coe massacre, and Wallace-era warfare. Stops include Pitlochry, Cairngorms National Park, Loch Ness, Urquhart Castle, Glencoe National Nature Reserve, Stirling Castle. Check-in is in central Edinburgh near Parliament Square. The long format is built for visitors who want Loch Ness and Glencoe in one guided sightseeing day from Edinburgh."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "United Kingdom"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $83.95",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 2435
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/85/cb/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Stirling Castle",
+      "Head into the Scottish Highlands and travel through the fantastic landscapes of Cairngorms National Park",
+      "See the famous Loch Ness, believed to be home to a mysterious sea creature",
+      "Visit Glen Coe, a place known as much for a horrific massacre as its gorgeous scenery",
+      "Explore the ancient Urquhart Castle overlooking Loch Ness"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* 1 Parliament Sqr, Edinburgh EH1 1RF, UK Please check in with Highland Experience staff inside/outside Caffe Nero by 07:45"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This 13-hour coach day from Edinburgh winds through the Highlands to Pitlochry, Cairngorms National Park, Loch Ness, Urquhart Castle, Glencoe National Nature Reserve, and Stirling Castle.",
+    "itineraryItems": [
+      {
+        "title": "Pitlochry",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cairngorms National Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Loch Ness",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Urquhart Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glencoe National Nature Reserve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Stirling Castle",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Local live driver guide who will share stories and history throughout the day",
+      "Panoramic windows",
+      "Food and drinks",
+      "Loch Ness Cruise & Urquhart Castle Tour, £30 cash",
+      "Children under 3 years not accepted- valid ID may be required at check in"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Scottish Highlands, Loch Ness and Glencoe Day Trip from Edinburgh?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* 1 Parliament Sqr, Edinburgh EH1 1RF, UK Please check in with Highland Experience staff inside/outside Caffe Nero by 07:45"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 83.95
+      },
+      "currency": "USD"
+    }
+  }
+}
