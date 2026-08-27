@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "56417P12",
+    "productUrl": "https://www.viator.com/tours/Venice/Private-Three-Hours-Venice-Photo-Walk/d522-56417P12",
+    "title": "3 Hours Private Original Venice Photo Walk",
+    "description": {
+      "text": "Beat the crowds and enjoy an insider's introduction to Venice during this private photo walk, which visits lesser-known neighborhoods and attractions that only locals know. Discover canals and picturesque bridges away from the tourist track, stopping to take photographs along the way. Stops include Campo San Giacomo di Rialto, Rialto Market. Tailor-made itineraries offer hands-on photography instruction. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Campo San Giacomo di Rialto, Rialto Market that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $171.18",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 48
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7f/47/e8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Beat the crowds and enjoy an insider's introduction to Venice during this private photo walk, which visits lesser-known",
+      "Discover canals and picturesque bridges away from the tourist track, stopping to take photographs along the way",
+      "Tailor-made itineraries offer hands-on photography instruction",
+      "3 Hours Private Original Venice Photo Walk near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Osteria Bancogiro, Campo S. Giacomo di Rialto, 122, 30125 Venezia VE, Italy. Meeting in front of Bancogiro just in the Rialto Market Area."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Beat the crowds and enjoy an insider's introduction to Venice during this private photo walk, which visits lesser-known neighborhoods and attractions that only locals know.",
+    "itineraryItems": [
+      {
+        "title": "Campo San Giacomo di Rialto",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rialto Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional internationally published photographer guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3 Hours Private Original Venice Photo Walk?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Osteria Bancogiro, Campo S. Giacomo di Rialto, 122, 30125 Venezia VE, Italy. Meeting in front of Bancogiro just in the Rialto Market Area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 171.18
+      },
+      "currency": "USD"
+    }
+  }
+}

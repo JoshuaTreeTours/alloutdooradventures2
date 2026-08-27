@@ -5073,6 +5073,71 @@ const italyState: StateDestination = {
         },
       ],
     },
+    {
+      name: "Venice",
+      slug: "venice",
+      stateSlug: "italy",
+      region: "Venice",
+      lat: 45.4408,
+      lng: 12.3155,
+      shortDescription:
+        "Private island cruises, photography walks, and landmark sightseeing in Venice.",
+      intro:
+        "Venice is a lagoon city with St. Mark's Basilica, the Doge's Palace, Murano, Burano, and guided walking, boat, and food tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/b1/01.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "boat-tours"],
+      whereItIs: [
+        "Venice sits in the Venetian Lagoon with the historic center, Grand Canal, and lagoon islands framing sightseeing.",
+        "Most guided tours depart from Piazza San Marco, Rialto, Piazzale Roma, and central Venice hotels.",
+      ],
+      experiences: {
+        mountains:
+          "Venice is a lagoon city; tours focus on basilicas, palaces, island crafts, and neighborhood walking districts.",
+        lakesWater:
+          "Gondola and motorboat routes highlight the Grand Canal, inner canals, and lagoon crossings to Murano, Burano, and Torcello.",
+        desertForest:
+          "Giudecca and quieter sestieri offer open waterfronts and residential streets between landmark sightseeing routes.",
+        cycling:
+          "Most Venice touring is on foot or by boat; day trips from the city reach Prosecco hills and the Dolomites.",
+        scenicDrives:
+          "Private motorboat island cruises and Prosecco or Dolomites day trips cover lagoon and mainland scenery from Venice.",
+        seasonalNotes:
+          "Spring and fall are popular for walking and island days; summer heat favors early basilica entries and lagoon departures.",
+      },
+      thingsToDo: [
+        "Visit St. Mark's Basilica and the Doge's Palace.",
+        "Take a boat to Murano, Burano, and Torcello.",
+        "Join a cicchetti walk or a private photography tour.",
+      ],
+      toursCopy: [
+        "Book a private island motorboat or photography walk for a compact introduction to Venice.",
+        "Pair an after-hours basilica visit with a full-day St. Mark's, Doge's Palace, and gondola itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: St. Mark's Basilica and the Doge's Palace.",
+          "Afternoon: Gondola on the Grand Canal and Rialto Market.",
+          "Evening: Cicchetti and bacari walk in Cannaregio or San Polo.",
+        ],
+        dayTwo: [
+          "Morning: Murano glass and Burano lace by boat.",
+          "Afternoon: Private photo walk around Rialto or Giudecca.",
+          "Evening: After-hours St. Mark's Basilica visit.",
+        ],
+      },
+      gettingThere: [
+        "Marco Polo Airport and Santa Lucia station serve Venice with water bus, water taxi, and bus links to Piazzale Roma and the historic center.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Venice tours?",
+          answer:
+            "Murano and Burano boat days, private photography and gondola sessions, after-hours St. Mark's visits, Prosecco winery trips, and Dolomites day trips are the most popular departures.",
+        },
+      ],
+    },
   ],
   isFallback: true,
 };

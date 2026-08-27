@@ -1,0 +1,169 @@
+{
+  "destinationLabel": "Venice",
+  "destinationCitySlug": "venice",
+  "viatorDestinationSlug": "Venice",
+  "viatorDestinationId": "d522",
+  "catalogUrl": "https://www.viator.com/Venice/d522-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 12,
+  "premiumCount": 10,
+  "selectionNote": "Selected 12 guided Venice d522 products with live USD From$ prices, ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/GBP/CHF/AUD/SEK) blocked many otherwise-strong SKUs from being verified in USD. Jeep/off-road and stargazing SKUs were not captured as active USD product pages. Helicopter 408100P25 had no complete USD rating/hero dump. Did not force inactive similar-options pages, non-USD pages, near-duplicates, audio/self-guided SKUs, 4.4 ratings, or products with unusable heroes.",
+  "selectedProductCodes": [
+    "140596P2",
+    "17356P1",
+    "56417P12",
+    "126511P4",
+    "15693P31",
+    "15693STMARK",
+    "6718P153",
+    "9555P4",
+    "2635PDOLOMITE",
+    "7812P214",
+    "3731MURANO",
+    "92490P4"
+  ],
+  "premiumProductCodes": [
+    "140596P2",
+    "17356P1",
+    "56417P12",
+    "126511P4",
+    "15693P31",
+    "15693STMARK",
+    "6718P153",
+    "9555P4",
+    "2635PDOLOMITE",
+    "7812P214"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "21441P74",
+      "title": "Venice's Best: Basilica, Doge's Palace, Gondola & History Gallery",
+      "reason": "USD From$87.06 and 4.8 verified, but the live page is a mobile-app self-guided walking commentary product"
+    },
+    {
+      "productCode": "24338P33",
+      "title": "Venice in a Day",
+      "reason": "Near-duplicate of selected 15693P31 full-day St Mark's / Doge's / gondola itinerary"
+    },
+    {
+      "productCode": "2635VENICESS",
+      "title": "Private 4hrs Venice Tour: Doge's Palace, Grand Canal & St Mark's",
+      "reason": "Weak commercial rating 4.4/714"
+    },
+    {
+      "productCode": "13102P90",
+      "title": "45-Minute or 1-hour Private Gondola Ride from Rialto",
+      "reason": "Weak commercial rating 3.7/83"
+    },
+    {
+      "productCode": "18696P44",
+      "title": "Private Walking Tour: Dorsoduro and San Polo Districts in Venice",
+      "reason": "USD From$180.18 verified but the live page has no product reviews"
+    },
+    {
+      "productCode": "104884P23",
+      "title": "Venice Rialto Market Food Delicacies and Sightseeing Tour with a Native Guide",
+      "reason": "USD From$101.49 verified but only 5.0/1 review is below the selected commercial bar"
+    },
+    {
+      "productCode": "21175P106",
+      "title": "Jewish Ghetto and Cannaregio Private Tour in Venice",
+      "reason": "USD From$289.50 and 5.0/3; too thin commercial sample versus selected private SKUs"
+    },
+    {
+      "productCode": "332537P575",
+      "title": "The Best Churches of Venice Private Guided Tour with Tickets",
+      "reason": "2.0/1 on the live page"
+    },
+    {
+      "productCode": "18696P9",
+      "title": "Private Cruise: Murano, Burano and Torcello Full Day",
+      "reason": "USD From$583.15 verified but incomplete rating/hero dump; near-duplicate of selected 126511P4 and 9555P4 island cruises"
+    },
+    {
+      "productCode": "434960P1",
+      "title": "Luxurious Photoshoot in Venice",
+      "reason": "USD From$347.40 verified but no complete combined rating/review dump; near-duplicate of selected photography SKUs"
+    },
+    {
+      "productCode": "263230P35",
+      "title": "Giudecca Island Discovery Tour",
+      "reason": "USD From$157.48 and 4.9/15 verified, but no product-specific 674x446 hero dump"
+    },
+    {
+      "productCode": "18947P284",
+      "title": "Private Sunset Gondola Ride Tour",
+      "reason": "No complete USD From$ + rating + 674x446 dump; non-refundable"
+    },
+    {
+      "productCode": "408100P25",
+      "title": "Private Helicopter Tour from Venice to the Dolomites",
+      "reason": "No complete live USD product dump (rating, review count, 674x446 hero)"
+    },
+    {
+      "productCode": "190152P1",
+      "title": "Private Gondola ride and Photo Session in Venice",
+      "reason": "Live dump priced in GBP only; near-duplicate of selected 17356P1"
+    },
+    {
+      "productCode": "24338P30",
+      "title": "St Marks, Doges Palace, with Murano and Burano & Gondola Ride",
+      "reason": "Live dump priced in CAD only (From CA$162.78); 4.5/511; near-duplicate of 15693P31"
+    },
+    {
+      "productCode": "24338P29",
+      "title": "Best Of Venice: Saint Mark's Basilica, Doges Palace with Guide and Gondola Ride",
+      "reason": "Live dump priced in EUR only (From €71.60); 4.5/557"
+    },
+    {
+      "productCode": "51159P29",
+      "title": "Venice Bacaro Food Tour - Eat and Drink like a Venetian",
+      "reason": "Live dump priced in AUD only; 4.8/709"
+    },
+    {
+      "productCode": "5965CICCHETTI",
+      "title": "Discover Venice Like a Local: Small Group Cicchetti & Wine Tour",
+      "reason": "Live dump priced in CHF only; 4.8"
+    },
+    {
+      "productCode": "20455P10",
+      "title": "Rialto Market Food and Wine Lunchtime Tour of Venice",
+      "reason": "Live dump priced in EUR/GBP only; 4.9/265"
+    },
+    {
+      "productCode": "51192P110",
+      "title": "St Mark's Basilica and Doge's Palace Guided Tour",
+      "reason": "Live dump priced in EUR only"
+    },
+    {
+      "productCode": "6718P43",
+      "title": "Venice Doge's Palace & St. Mark's Semi-Private Tour, Max 6 People",
+      "reason": "4.9/131 verified but live dump had no USD From$; near-duplicate of selected 6718P153"
+    },
+    {
+      "productCode": "6718P58",
+      "title": "Exclusive Private Tour of Saint Mark's Basilica After Hours",
+      "reason": "Near-duplicate of selected 15693STMARK; CAD dump"
+    },
+    {
+      "productCode": "24338P115",
+      "title": "Half Day Murano and Burano Island Tour by Private Boat",
+      "reason": "4.5/190; near-duplicate of selected 3731MURANO; no complete USD From$ dump"
+    },
+    {
+      "productCode": "18055P13",
+      "title": "Lido bike tour",
+      "reason": "Live dump priced in EUR only"
+    },
+    {
+      "productCode": "18696P50",
+      "title": "Private Lido bike tour",
+      "reason": "Live dump priced in GBP only"
+    },
+    {
+      "productCode": "36029P1",
+      "title": "Venice kayak tour",
+      "reason": "Live dump priced in EUR only"
+    }
+  ]
+}

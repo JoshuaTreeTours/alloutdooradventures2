@@ -77,6 +77,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "italy",
     citySlug: "rome",
   },
+  venice: {
+    destinationLabel: "Venice",
+    destinationCitySlug: "venice",
+    stateSlug: "italy",
+    citySlug: "venice",
+  },
   boston: {
     destinationLabel: "Boston",
     destinationCitySlug: "boston",

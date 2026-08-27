@@ -238,6 +238,18 @@ import specimen5284appianPayload from "../../data/engine6/viator/5284APPIAN.exac
 import specimen85309p4Payload from "../../data/engine6/viator/85309P4.exact-product.json";
 import specimen24338p3Payload from "../../data/engine6/viator/24338P3.exact-product.json";
 import specimen3731vaticanPayload from "../../data/engine6/viator/3731VATICAN.exact-product.json";
+import specimen140596p2Payload from "../../data/engine6/viator/140596P2.exact-product.json";
+import specimen17356p1Payload from "../../data/engine6/viator/17356P1.exact-product.json";
+import specimen56417p12Payload from "../../data/engine6/viator/56417P12.exact-product.json";
+import specimen126511p4Payload from "../../data/engine6/viator/126511P4.exact-product.json";
+import specimen15693p31Payload from "../../data/engine6/viator/15693P31.exact-product.json";
+import specimen15693stmarkPayload from "../../data/engine6/viator/15693STMARK.exact-product.json";
+import specimen6718p153Payload from "../../data/engine6/viator/6718P153.exact-product.json";
+import specimen9555p4Payload from "../../data/engine6/viator/9555P4.exact-product.json";
+import specimen2635pdolomitePayload from "../../data/engine6/viator/2635PDOLOMITE.exact-product.json";
+import specimen7812p214Payload from "../../data/engine6/viator/7812P214.exact-product.json";
+import specimen3731muranoPayload from "../../data/engine6/viator/3731MURANO.exact-product.json";
+import specimen92490p4Payload from "../../data/engine6/viator/92490P4.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2879,6 +2891,78 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "3731VATICAN",
     publicUrl: "https://www.viator.com/tours/Rome/Skip-the-Line-Vatican-Museums-and-Sistine-Chapel-Guided-Tour/d511-3731VATICAN",
     rawPayload: specimen3731vaticanPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "140596P2",
+    publicUrl: "https://www.viator.com/tours/Venice/Prosecco-wine-tasting-From-Venice-Full-day/d522-140596P2",
+    rawPayload: specimen140596p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "17356P1",
+    publicUrl: "https://www.viator.com/tours/Venice/Private-Photo-Shoot-in-Venice-with-Gondola-Ride/d522-17356P1",
+    rawPayload: specimen17356p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "56417P12",
+    publicUrl: "https://www.viator.com/tours/Venice/Private-Three-Hours-Venice-Photo-Walk/d522-56417P12",
+    rawPayload: specimen56417p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "126511P4",
+    publicUrl: "https://www.viator.com/tours/Venice/Private-Tour-Murano-Burano-and-Torcello-as-local-traveling-means-discovering/d522-126511P4",
+    rawPayload: specimen126511p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15693P31",
+    publicUrl: "https://www.viator.com/tours/Venice/Small-Group-Venice-In-A-Day-With-Basilica-San-Marco-and-Doges-Palace-plus-Gondola-Ride/d522-15693P31",
+    rawPayload: specimen15693p31Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15693STMARK",
+    publicUrl: "https://www.viator.com/tours/Venice/St-Marks-Basilica-After-Hours-Tour-with-Optional-Doges-Palace-Visit/d522-15693STMARK",
+    rawPayload: specimen15693stmarkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6718P153",
+    publicUrl: "https://www.viator.com/tours/Venice/Private-Doges-Palace-and-Saint-Marks-Tour/d522-6718P153",
+    rawPayload: specimen6718p153Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9555P4",
+    publicUrl: "https://www.viator.com/tours/Venice/Private-Excursion-by-Typical-Venetian-Motorboat-to-Murano-Burano-and-Torcello/d522-9555P4",
+    rawPayload: specimen9555p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2635PDOLOMITE",
+    publicUrl: "https://www.viator.com/tours/Venice/Dolomite-Mountains-Small-Group-Day-Trip-from-Venice/d522-2635PDOLOMITE",
+    rawPayload: specimen2635pdolomitePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P214",
+    publicUrl: "https://www.viator.com/tours/Venice/Venice-Walking-Food-Tour-With-Secret-Food-Tours/d522-7812P214",
+    rawPayload: specimen7812p214Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3731MURANO",
+    publicUrl: "https://www.viator.com/tours/Venice/Murano-Glass-and-Burano-Lace-Tour-from-Venice/d522-3731MURANO",
+    rawPayload: specimen3731muranoPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92490P4",
+    publicUrl: "https://www.viator.com/tours/Venice/Venetian-Cicchetti-Street-Food-Wine-and-Sightseeing-Walking-Tour-with-local-guide/d522-92490P4",
+    rawPayload: specimen92490p4Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

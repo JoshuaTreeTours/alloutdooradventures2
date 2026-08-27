@@ -25,6 +25,7 @@ import { getLondonTargetedNarrativeDescription } from "./londonApprovedNarrative
 import { getParisTargetedNarrativeDescription } from "./parisApprovedNarrativeDescriptions";
 import { getBarcelonaTargetedNarrativeDescription } from "./barcelonaApprovedNarrativeDescriptions";
 import { getRomeTargetedNarrativeDescription } from "./romeApprovedNarrativeDescriptions";
+import { getVeniceTargetedNarrativeDescription } from "./veniceApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -135,6 +136,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getParisTargetedNarrativeDescription(productCode) ??
   getBarcelonaTargetedNarrativeDescription(productCode) ??
   getRomeTargetedNarrativeDescription(productCode) ??
+  getVeniceTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

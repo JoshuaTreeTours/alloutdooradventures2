@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "3731MURANO",
+    "productUrl": "https://www.viator.com/tours/Venice/Murano-Glass-and-Burano-Lace-Tour-from-Venice/d522-3731MURANO",
+    "title": "Murano & Burano Islands Guided Small-Group Tour by Private Boat",
+    "description": {
+      "text": "Explore the intricacies of two famed Italian handicrafts on a fully guided day trip from Venice to the nearby islands of Murano and Burano with a group of up to 22 people. Watch centuries-old glassblowing techniques in Murano, and marvel at the detailed stitches of exquisite Burano lace. Stops include Isola di Murano, Burano. Your knowledgeable guide will share the history of these two artisan islands while you visit local workshops and wander the picturesque streets. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Isola di Murano, Burano that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $56.74",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 6166
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/b1/01.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the intricacies of two famed Italian handicrafts on a fully guided day trip from Venice to the nearby islands of",
+      "Watch centuries-old glassblowing techniques in Murano, and marvel at the detailed stitches of exquisite Burano lace",
+      "Your knowledgeable guide will share the history of these two artisan islands while you visit local workshops and wander",
+      "Murano & Burano Islands Guided Small-Group Tour by Private Boat near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Riva degli Schiavoni, 4110, 30122 Venezia VE, Italy. In front of Hotel Gabrielli Sandwirth (near San Marco)."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the intricacies of two famed Italian handicrafts on a fully guided day trip from Venice to the nearby islands of Murano and Burano with a group of up to 22 people.",
+    "itineraryItems": [
+      {
+        "title": "Isola di Murano",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Burano",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip transportation by private boat just for your group",
+      "Expert local English speaking Guide",
+      "Glassmaking demonstration in Murano",
+      "Lacemaking demonstration in Burano"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Murano & Burano Islands Guided Small-Group Tour by Private Boat?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Riva degli Schiavoni, 4110, 30122 Venezia VE, Italy. In front of Hotel Gabrielli Sandwirth (near San Marco)."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 56.74
+      },
+      "currency": "USD"
+    }
+  }
+}

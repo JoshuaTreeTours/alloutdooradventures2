@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "2635PDOLOMITE",
+    "productUrl": "https://www.viator.com/tours/Venice/Dolomite-Mountains-Small-Group-Day-Trip-from-Venice/d522-2635PDOLOMITE",
+    "title": "Dolomite Mountains and Cortina Semi Private Day Trip from Venice",
+    "description": {
+      "text": "Get out of Venice for the day to visit the magnificent Dolomite Mountains. The early departure is to ensure a better experience in an area that year after year has seen a growing number of visitors. Stops include Cortina d'Ampezzo, Tre Cime Di Lavaredo, Lago di Misurina. Enjoy the luxury of having a driver to seamlessly transport you between sites, which, depending on the season, may include Cortina d’Ampezzo, Lake Misurina and enjoy stunning views of the Tre Cime di Lavaredo peaks. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Cortina d'Ampezzo, Tre Cime Di Lavaredo, Lago di Misurina that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $237.39",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 1339
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/df/f9/e1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get out of Venice for the day to visit the magnificent Dolomite Mountains",
+      "The early departure is to ensure a better experience in an area that year after year has seen a growing number of visito",
+      "Enjoy the luxury of having a driver to seamlessly transport you between sites, which, depending on the season, may inclu",
+      "Dolomite Mountains and Cortina Semi Private Day Trip from Venice near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Remida S.S.A, Isola Nova del Tronchetto, 30135 Venezia VE, Italy. Meet the driver outside Vaporetto landing line #2 in front of Re Mida Cafe. Ends at Piazzale Roma."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get out of Venice for the day to visit the magnificent Dolomite Mountains.",
+    "itineraryItems": [
+      {
+        "title": "Cortina d'Ampezzo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tre Cime Di Lavaredo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lago di Misurina",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "English speaking Driverguide",
+      "Transport by 8 pax A/C Mercedes minivan",
+      "Easy self-guided nature walk (optional)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dolomite Mountains and Cortina Semi Private Day Trip from Venice?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Remida S.S.A, Isola Nova del Tronchetto, 30135 Venezia VE, Italy. Meet the driver outside Vaporetto landing line #2 in front of Re Mida Cafe. Ends at Piazzale Roma."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 237.39
+      },
+      "currency": "USD"
+    }
+  }
+}

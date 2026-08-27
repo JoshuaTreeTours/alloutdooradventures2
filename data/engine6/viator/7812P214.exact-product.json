@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "7812P214",
+    "productUrl": "https://www.viator.com/tours/Venice/Venice-Walking-Food-Tour-With-Secret-Food-Tours/d522-7812P214",
+    "title": "Venice Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "Eating great food is a highlight of visiting Italy, but, in Venice, many visitors fall for subpar tourist traps. Avoid that risk by joining this small-group secret food walking tour. Stops include Teatro Italia, Rialto Market. You'll stroll the city's atmospheric streets while sampling a variety of dishes perfected by local eateries and learning about Venetian life and culinary history. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Teatro Italia, Rialto Market that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $121.50",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 176
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/75/21/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eating great food is a highlight of visiting Italy, but, in Venice, many visitors fall for subpar tourist traps",
+      "Avoid that risk by joining this small-group secret food walking tour",
+      "Venice Walking Food Tour With Secret Food Tours near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Despar Teatro Italia, Cannaregio nn, Campiello de l'Anconeta, 1939-1952, 30121 Venezia VE, Italy. In front of Teatro Italia."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Eating great food is a highlight of visiting Italy, but, in Venice, many visitors fall for subpar tourist traps.",
+    "itineraryItems": [
+      {
+        "title": "Teatro Italia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rialto Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Venetian Cookies",
+      "Cicchetti (Local Tapas: one must is with Baccalà Mantecato)",
+      "Venetian Meatball",
+      "Polenta tasting in a Traditional Bacaro",
+      "Venetian Main Pasta dish",
+      "Tiramisù"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Venice Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Despar Teatro Italia, Cannaregio nn, Campiello de l'Anconeta, 1939-1952, 30121 Venezia VE, Italy. In front of Teatro Italia."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 121.5
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "15693P31",
+    "productUrl": "https://www.viator.com/tours/Venice/Small-Group-Venice-In-A-Day-With-Basilica-San-Marco-and-Doges-Palace-plus-Gondola-Ride/d522-15693P31",
+    "title": "Venice In a Day: Basilica San Marco, Doges Palace & Gondola ride",
+    "description": {
+      "text": "Ideal for first-time visitors, this full-day tour of Venice checks off all the most-important attractions. Stroll across the Rialto Bridge and browse the lively Rialto fish market, then hop aboard a traditional gondola for a romantic cruise along the Grand Canal. Stops include Ponte di Rialto, Mercato di Rialto, Canal Grande, Basilica di San Marco, Doge's Palace. Finally, visit St. Mark's Basilica and enjoy skip-the-line entrance to the grandiose Doge's Palace. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Ponte di Rialto, Mercato di Rialto, Canal Grande, Basilica di San Marco that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $149.38",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2865
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6b/74/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ideal for first-time visitors, this full-day tour of Venice checks off all the most-important attractions",
+      "Stroll across the Rialto Bridge and browse the lively Rialto fish market, then hop aboard a traditional gondola for a ro",
+      "Finally, visit St. Mark's Basilica and enjoy skip-the-line entrance to the grandiose Doge's Palace",
+      "Venice In a Day: Basilica San Marco, Doges Palace & Gondola ride near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Campo S. Giacomo di Rialto, 255, 30125 Venezia VE, Italy. Meet outside the entrance of the Church of San Giacometto. Guide holds a green Walks sign."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ideal for first-time visitors, this full-day tour of Venice checks off all the most-important attractions.",
+    "itineraryItems": [
+      {
+        "title": "Ponte di Rialto",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mercato di Rialto",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Canal Grande",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilica di San Marco",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doge's Palace",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip-the-line ticket for St. Mark's Basilica",
+      "Pre-reserved ticket to the Doge's Palace",
+      "Gondola Ride",
+      "Headset",
+      "Local English-speaking guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Venice In a Day: Basilica San Marco, Doges Palace & Gondola ride?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Campo S. Giacomo di Rialto, 255, 30125 Venezia VE, Italy. Meet outside the entrance of the Church of San Giacometto. Guide holds a green Walks sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Gondola Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149.38
+      },
+      "currency": "USD"
+    }
+  }
+}

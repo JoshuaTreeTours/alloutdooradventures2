@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "15693STMARK",
+    "productUrl": "https://www.viator.com/tours/Venice/St-Marks-Basilica-After-Hours-Tour-with-Optional-Doges-Palace-Visit/d522-15693STMARK",
+    "title": "Venice: St Mark's Basilica After-Hours Tour with Optional Doge's Palace",
+    "description": {
+      "text": "Experience the magic of Venice's St. Mark's Basilica with an exclusive after-hours, small-group tour. Marvel at the breathtaking mosaics, explore the crypt believed to house St. Mark's remains, and soak in the serene atmosphere without the daytime crowds. Stops include Basilica di San Marco, Doge's Palace, Bridge of Sighs. For an extended adventure, upgrade to include a visit to the Doge's Palace, the historic seat of the Venetian Republic’s government. Ideal for visitors basing in Venice who want a guided city experience without coordinating vaporetto routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Basilica di San Marco, Doge's Palace, Bridge of Sighs that define this Venice sightseeing experience, with a guide handling vaporetto connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Venice",
+      "state": "Italy"
+    },
+    "duration": "1 hour 15 minutes to 3 hours 30 minutes (approx.)",
+    "priceFrom": "From $113.48",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1292
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/de/24/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the magic of Venice's St. Mark's Basilica with an exclusive after-hours, small-group tour",
+      "Marvel at the breathtaking mosaics, explore the crypt believed to house St. Mark's remains, and soak in the serene atmos",
+      "For an extended adventure, upgrade to include a visit to the Doge's Palace, the historic seat of the Venetian Republic’s",
+      "Venice: St Mark's Basilica After-Hours Tour with Optional Doge's Palace near Venice",
+      "Professional Venice guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Museo Correr, Piazza San Marco 52. Guide waits under the portico just outside the museum entrance with a green Walks sign."
+      },
+      "end": {
+        "description": "Return to your Venice meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the magic of Venice's St.",
+    "itineraryItems": [
+      {
+        "title": "Basilica di San Marco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doge's Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridge of Sighs",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "After-hours St. Mark’s Basilica tickets",
+      "Doge’s Palace tickets (only if option with Doge Palace purchased at time of booking)",
+      "Small groups of 25 people or fewer"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Venice: St Mark's Basilica After-Hours Tour with Optional Doge's Palace?",
+        "answer": "The planned duration is 1 hour 15 minutes to 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Venice?",
+        "answer": "Museo Correr, Piazza San Marco 52. Guide waits under the portico just outside the museum entrance with a green Walks sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Skip-the-Line Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 113.48
+      },
+      "currency": "USD"
+    }
+  }
+}
