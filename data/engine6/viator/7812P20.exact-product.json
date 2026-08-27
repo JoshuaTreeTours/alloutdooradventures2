@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "7812P20",
+    "productUrl": "https://www.viator.com/tours/Dublin/Small-Group-Dublin-Food-Walking-Tour/d503-7812P20",
+    "title": "Dublin Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "Eat like a local on this small-group Dublin food walk from the Henry Grattan Monument on College Green. A guide leads into pubs, cafes, and markets for Irish breakfast plates, cheeses, stew, ice cream, and a secret dish, with Irish coffee and a cream liqueur along the way. Landmark context at Trinity College and the Guinness Storehouse keeps the outing food-first rather than a landmark-only loop. Groups stay at 12 or fewer so tastings stay paced. Stops include Henry Grattan Monument, Trinity College, Guinness Storehouse, College Green, Wicklow Street."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $117.04",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1275
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/70/a3/4d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eat like a true Dubliner on this small-group Dublin food tour",
+      "Pair your tastings with an Irish cream liqueur and another tipple, and admire some of Dublin’s hidden gems and learn abo",
+      "Dublin Walking Food Tour With Secret Food Tours near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Henry Grattan Monument, College Green, Dublin, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Eat like a local on this small-group Dublin food walk from the Henry Grattan Monument on College Green.",
+    "itineraryItems": [
+      {
+        "title": "Henry Grattan Monument",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trinity College",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Guinness Storehouse",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "College Green",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wicklow Street",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Brownie",
+      "Pork Sausage Rolls",
+      "International and Irish Cheeses",
+      "Oyster",
+      "Irish Stew",
+      "Artisanal ice cream",
+      "Our delicious Secret Dish",
+      "Irish Coffee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Henry Grattan Monument, College Green, Dublin, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 117.04
+      },
+      "currency": "USD"
+    }
+  }
+}

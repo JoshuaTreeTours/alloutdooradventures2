@@ -5303,6 +5303,102 @@ const netherlandsState: StateDestination = {
   isFallback: true,
 };
 
+const irelandState: StateDestination = {
+  slug: "ireland",
+  name: "Ireland",
+  description:
+    "Dublin streets, Howth cliffs, Wicklow valleys, and guided day trips to the west and north coasts.",
+  featuredDescription:
+    "Explore Dublin tours with private walking routes, food and whiskey walks, Howth e-bike and hikes, and full-day trips to Wicklow, the Cliffs of Moher, and Giant's Causeway.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0b/6a/dc.jpg",
+  region: "Europe",
+  intro:
+    "Ireland pairs walkable Dublin districts with coastal Howth, Wicklow mountains, and long day trips to Atlantic cliffs and Antrim basalt.",
+  longDescription:
+    "Dublin anchors Ireland tour inventory with private walking tours, food and whiskey walks, Howth e-bike and coastal hikes, Wicklow and Glendalough days, and coach trips to the Cliffs of Moher, Galway, Titanic Belfast, and Giant's Causeway.",
+  topRegions: [
+    {
+      title: "Historic center and Temple Bar",
+      description:
+        "Trinity College, Ha'penny Bridge, the Molly Malone statue, and guided food and whiskey walks.",
+    },
+    {
+      title: "Coast and countryside from Dublin",
+      description:
+        "Howth cliffs, Wicklow Mountains National Park, Glendalough, the Cliffs of Moher, and Giant's Causeway day trips.",
+    },
+  ],
+  cities: [
+    {
+      name: "Dublin",
+      slug: "dublin",
+      stateSlug: "ireland",
+      region: "Dublin",
+      lat: 53.3498,
+      lng: -6.2603,
+      shortDescription:
+        "Private walks, food tours, Howth adventures, and full-day sightseeing from Dublin.",
+      intro:
+        "Dublin is a capital city with Temple Bar, Trinity College, and guided walking, food, cycling, hiking, and countryside tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0b/6a/dc.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "hiking"],
+      whereItIs: [
+        "Dublin sits on the River Liffey, with Temple Bar, Trinity College, and O'Connell Street framing central sightseeing.",
+        "Most guided tours depart from the Molly Malone statue, College Green, Howth Harbour, and central Dublin hotels.",
+      ],
+      experiences: {
+        mountains:
+          "Wicklow Mountains National Park and Glendalough sit a short drive south of Dublin.",
+        lakesWater:
+          "Howth Harbour, Dublin Bay, and Glendalough's lakes anchor coastal and valley days.",
+        desertForest:
+          "Wicklow woodland, Powerscourt gardens, and Burren limestone sit on day-trip routes from Dublin.",
+        cycling:
+          "Guided e-bike tours cover Howth cliffs, Baily Lighthouse, and off-road peninsula trails.",
+        scenicDrives:
+          "Coach and private days cover Wicklow, the Cliffs of Moher, Galway, and Giant's Causeway from Dublin.",
+        seasonalNotes:
+          "Spring and summer are popular for Howth hikes and cliff days; winter adds indoor food and whiskey walking.",
+      },
+      thingsToDo: [
+        "Walk Temple Bar, Ha'penny Bridge, and Trinity College with a private guide.",
+        "Taste Irish food and whiskey on a Dublin walking tour.",
+        "Ride or hike Howth, or join a Wicklow, Cliffs of Moher, or Giant's Causeway day.",
+      ],
+      toursCopy: [
+        "Book a private Dublin walk or food tour for a compact introduction to the city.",
+        "Pair a Howth e-bike or hike with a full-day Cliffs of Moher or Wicklow trip.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Dublin private walking tour.",
+          "Afternoon: Food or whiskey walking tour.",
+          "Evening: Temple Bar and Ha'penny Bridge.",
+        ],
+        dayTwo: [
+          "Morning: Howth e-bike or coastal hike.",
+          "Afternoon: Wicklow and Glendalough, or a Cliffs of Moher day.",
+          "Evening: Return to central Dublin.",
+        ],
+      },
+      gettingThere: [
+        "Dublin Airport and Dublin Connolly/Heuston stations serve the city with bus, LUAS, DART, and taxi links to Temple Bar and O'Connell Street.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Dublin tours?",
+          answer:
+            "Private walking tours, food and whiskey walks, Howth e-bike and coastal hikes, Wicklow and Glendalough days, and Cliffs of Moher or Giant's Causeway coach trips are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5318,6 +5414,7 @@ export const states: StateDestination[] = [
   spainState,
   italyState,
   netherlandsState,
+  irelandState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

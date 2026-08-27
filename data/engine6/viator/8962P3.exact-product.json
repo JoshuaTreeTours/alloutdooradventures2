@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "8962P3",
+    "productUrl": "https://www.viator.com/tours/Dublin/Cliffs-of-Moher-Day-Tour-From-Dublin/d503-8962P3",
+    "title": "Cliffs of Moher Day Tour from Dublin: Including The Wild Atlantic Way",
+    "description": {
+      "text": "Leave Dublin on a 12-hour coach day to the Cliffs of Moher via the Wild Atlantic Way. Numbered stops cover Kinvara Harbour, The Burren, Liscannor, the Cliffs of Moher Visitor Centre, and Bunratty Castle and Folk Park, with live commentary on board. Cliff admission is included so west-coast timing stays coordinated rather than split across separate tickets. Meet at 34 O'Connell Street Lower near The Spire. The long day is built for visitors who want cliff hiking and Burren limestone from a Dublin base. Stops include Kinvara Harbour, Wild Atlantic Way, The Burren, Liscannor, Cliffs of Moher, Bunratty Castle and Folk Park."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $86.85",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 1081
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/eb/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bunratty Castle and Folk Park",
+      "Grab your camera and set out to discover some of Ireland’s most impressive natural wonders on this full-day tour from Du",
+      "Explore the otherworldly landscapes of Kinvara fishing village, snap photos of Bunratty Castle",
+      "Then, set out to hike along the mighty Cliffs of Moher and marvel at the views as you drive part of the Wild Atlantic Wa",
+      "Cliffs of Moher Day Tour from Dublin: Including The Wild Atlantic Way near Dublin"
+    ],
+    "logistics": {
+      "start": {
+        "description": "34 O'Connell Street Lower, North City, Dublin 1, D01 EY17, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin on a 12-hour coach day to the Cliffs of Moher via the Wild Atlantic Way.",
+    "itineraryItems": [
+      {
+        "title": "Kinvara Harbour",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wild Atlantic Way",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The Burren",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liscannor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cliffs of Moher",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bunratty Castle and Folk Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All taxes, fees and handling charges",
+      "Live commentary on board",
+      "Air-conditioned vehicle",
+      "Cliffs of Moher Visitor Centre Ticket (€10.00 value)",
+      "WiFi on board",
+      "Professional Charming Guides",
+      "USB ports to charge your devices on tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cliffs of Moher Day Tour from Dublin: Including The Wild Atlantic Way?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "34 O'Connell Street Lower, North City, Dublin 1, D01 EY17, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 86.85
+      },
+      "currency": "USD"
+    }
+  }
+}

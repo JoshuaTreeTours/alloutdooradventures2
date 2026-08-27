@@ -1218,6 +1218,58 @@ export const isEngine6AmsterdamTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_AMSTERDAM_TOUR_PATH_PREFIX);
 
+export const ENGINE6_DUBLIN_103208P1_PRODUCT_CODE = "103208P1";
+export const ENGINE6_DUBLIN_103208P1_ROUTE =
+  "/destinations/ireland/dublin/tours/cliffs-of-moher-wild-atlantic-way-luxury-award-winning-103208P1";
+export const ENGINE6_DUBLIN_229063P1_PRODUCT_CODE = "229063P1";
+export const ENGINE6_DUBLIN_229063P1_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-private-walking-tour-229063P1";
+export const ENGINE6_DUBLIN_7812P20_PRODUCT_CODE = "7812P20";
+export const ENGINE6_DUBLIN_7812P20_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-walking-food-tour-with-secret-food-tours-7812P20";
+export const ENGINE6_DUBLIN_26444P13_PRODUCT_CODE = "26444P13";
+export const ENGINE6_DUBLIN_26444P13_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-6-whiskey-tasting-3-food-pairing-walking-tour-wi-26444P13";
+export const ENGINE6_DUBLIN_8954P33_PRODUCT_CODE = "8954P33";
+export const ENGINE6_DUBLIN_8954P33_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-food-and-drink-walking-tour-and-jameson-irish-co-8954P33";
+export const ENGINE6_DUBLIN_37082P4_PRODUCT_CODE = "37082P4";
+export const ENGINE6_DUBLIN_37082P4_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-panoramic-e-bike-tour-with-howth-adventures-37082P4";
+export const ENGINE6_DUBLIN_37082P5_PRODUCT_CODE = "37082P5";
+export const ENGINE6_DUBLIN_37082P5_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-coastal-hike-with-howth-adventures-37082P5";
+export const ENGINE6_DUBLIN_24779P1_PRODUCT_CODE = "24779P1";
+export const ENGINE6_DUBLIN_24779P1_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-to-powerscourt-wicklow-and-glendalough-small-gro-24779P1";
+export const ENGINE6_DUBLIN_24779P2_PRODUCT_CODE = "24779P2";
+export const ENGINE6_DUBLIN_24779P2_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-to-wicklow-glendalough-small-group-tour-with-gui-24779P2";
+export const ENGINE6_DUBLIN_5299P16_PRODUCT_CODE = "5299P16";
+export const ENGINE6_DUBLIN_5299P16_ROUTE =
+  "/destinations/ireland/dublin/tours/from-dublin-wicklow-glendalough-waterfall-sheepdog-demo-5299P16";
+export const ENGINE6_DUBLIN_33832P1_PRODUCT_CODE = "33832P1";
+export const ENGINE6_DUBLIN_33832P1_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-to-glendalough-wicklow-and-kilkenny-full-day-gui-33832P1";
+export const ENGINE6_DUBLIN_8962P3_PRODUCT_CODE = "8962P3";
+export const ENGINE6_DUBLIN_8962P3_ROUTE =
+  "/destinations/ireland/dublin/tours/cliffs-of-moher-day-tour-from-dublin-including-the-wild-8962P3";
+export const ENGINE6_DUBLIN_5299MOHER_PRODUCT_CODE = "5299MOHER";
+export const ENGINE6_DUBLIN_5299MOHER_ROUTE =
+  "/destinations/ireland/dublin/tours/cliffs-of-moher-doolin-burren-and-galway-day-tour-from-5299MOHER";
+export const ENGINE6_DUBLIN_8962P4_PRODUCT_CODE = "8962P4";
+export const ENGINE6_DUBLIN_8962P4_ROUTE =
+  "/destinations/ireland/dublin/tours/giants-causeway-day-tour-from-dublin-8962P4";
+export const ENGINE6_DUBLIN_5300TITANIC_PRODUCT_CODE = "5300TITANIC";
+export const ENGINE6_DUBLIN_5300TITANIC_ROUTE =
+  "/destinations/ireland/dublin/tours/dublin-to-belfast-titanic-dunluce-castle-giants-causewa-5300TITANIC";
+
+export const ENGINE6_DUBLIN_TOUR_PATH_PREFIX =
+  "/destinations/ireland/dublin/tours/";
+
+export const isEngine6DublinTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_DUBLIN_TOUR_PATH_PREFIX);
 export const ENGINE6_EDINBURGH_128492P2_PRODUCT_CODE = "128492P2";
 export const ENGINE6_EDINBURGH_128492P2_ROUTE =
   "/destinations/united-kingdom/edinburgh/tours/glencoe-highlands-private-land-rover-tour-128492P2";
@@ -4409,6 +4461,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_AMSTERDAM_75227P6_ROUTE,
     ENGINE6_AMSTERDAM_75227P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_103208P1_ROUTE,
+    ENGINE6_DUBLIN_103208P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_229063P1_ROUTE,
+    ENGINE6_DUBLIN_229063P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_7812P20_ROUTE,
+    ENGINE6_DUBLIN_7812P20_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_26444P13_ROUTE,
+    ENGINE6_DUBLIN_26444P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_8954P33_ROUTE,
+    ENGINE6_DUBLIN_8954P33_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_37082P4_ROUTE,
+    ENGINE6_DUBLIN_37082P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_37082P5_ROUTE,
+    ENGINE6_DUBLIN_37082P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_24779P1_ROUTE,
+    ENGINE6_DUBLIN_24779P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_24779P2_ROUTE,
+    ENGINE6_DUBLIN_24779P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_5299P16_ROUTE,
+    ENGINE6_DUBLIN_5299P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_33832P1_ROUTE,
+    ENGINE6_DUBLIN_33832P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_8962P3_ROUTE,
+    ENGINE6_DUBLIN_8962P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_5299MOHER_ROUTE,
+    ENGINE6_DUBLIN_5299MOHER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_8962P4_ROUTE,
+    ENGINE6_DUBLIN_8962P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DUBLIN_5300TITANIC_ROUTE,
+    ENGINE6_DUBLIN_5300TITANIC_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

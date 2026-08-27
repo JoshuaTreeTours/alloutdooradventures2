@@ -78,6 +78,9 @@ export const ENGINE6_VENICE_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_AMSTERDAM_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6c/b1/fa.jpg";
 
+export const ENGINE6_DUBLIN_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0b/6a/dc.jpg";
+
 export const ENGINE6_BOSTON_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg";
 
@@ -189,6 +192,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   netherlands: {
     amsterdam: ENGINE6_AMSTERDAM_CANONICAL_CITY_HERO_URL,
+  },
+  ireland: {
+    dublin: ENGINE6_DUBLIN_CANONICAL_CITY_HERO_URL,
   },
   massachusetts: {
     boston: ENGINE6_BOSTON_CANONICAL_CITY_HERO_URL,
