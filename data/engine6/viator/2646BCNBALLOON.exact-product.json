@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2646BCNBALLOON",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Hot-Air-Balloon-Flight-Over-Catalonia/d562-2646BCNBALLOON",
+    "title": "Balloon Ride over Catalonia with optional Pick-up from Barcelona",
+    "description": {
+      "text": "Soar above the sublime landscape of Catalonia near Barcelona on this early-morning hot-air balloon excursion. Marvel at beautiful landmarks like Montserrat and the Pyrenees Mountains as you climb to heights of up to 3,000 feet (900 meters) during your 1- to 1.5-hour flight. Stops include Montserrat, Pyrenees, Montseny. Then head back down to earth for brunch with sparkling wine. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "3 to 5 hours (approx.)",
+    "priceFrom": "From $208.44",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 556
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/8a/2e/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Soar above the sublime landscape of Catalonia near Barcelona on this early-morning hot-air balloon excursion",
+      "Marvel at beautiful landmarks like Montserrat and the Pyrenees Mountains as you climb to heights of up to 3,000 feet (90",
+      "Then head back down to earth for brunch with sparkling wine",
+      "Balloon Ride over Catalonia with optional Pick-up from Barcelona near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Soar above the sublime landscape of Catalonia near Barcelona on this early-morning hot-air balloon excursion.",
+    "itineraryItems": [
+      {
+        "title": "Montserrat",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyrenees",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montseny",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Pick up and drop-off from Barcelona city center (if transfer service option booked)",
+      "Pink Cava champagne toast, fruits juice and water available, light snack.",
+      "First Flight Certificate signed by pilot.",
+      "Local Brunch after the flight (if 2-hour flight option booked)",
+      "Balloon Flight with a maximum of 8 passengers on board (shared flight option)",
+      "Breakfast before activity."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Balloon Ride over Catalonia with optional Pick-up from Barcelona?",
+        "answer": "The planned duration is 3 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 208.44
+      },
+      "currency": "USD"
+    }
+  }
+}

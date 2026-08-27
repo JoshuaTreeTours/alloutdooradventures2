@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "120041P6",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Day-trip-to-Salvado-Dali-museum-and-Costa-Brava/d562-120041P6",
+    "title": "Small group DayTrip to Costa Brava and Dalí Museum From Barcelona",
+    "description": {
+      "text": "Get away from the Barcelona bustle and into the breeze. On this tour, you’ll leave the big city for the Catalan countryside, your first stop the Dalí Museum in Figueres, the artist’s hometown. Stops include Dalí Theatre-Museum, Figueres, Peratallada, Calella de Palafrugell. Then it’s off to Peratallada—a medieval, carved-stone village—and Calella de Palafrugell, a particularly picturesque fishing village in Costa Brava, filled with narrow alleyways, lined with seaside coves, and brimming with adventure. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $85.53",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 66
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/3b/be/4b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get away from the Barcelona bustle and into the breeze",
+      "On this tour, you’ll leave the big city for the Catalan countryside, your first stop the Dalí Museum in Figueres, the ar",
+      "Then it’s off to Peratallada—a medieval, carved-stone village—and Calella de Palafrugell, a particularly picturesque fis",
+      "Small group DayTrip to Costa Brava and Dalí Museum From Barcelona near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pg. de Gràcia, 17, L'Eixample, 08007 Barcelona, Spain Right in front of Nike Store"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get away from the Barcelona bustle and into the breeze.",
+    "itineraryItems": [
+      {
+        "title": "Dalí Theatre-Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Figueres",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Peratallada",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Calella de Palafrugell",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Guided visit",
+      "Lunch",
+      "Entrance fee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small group DayTrip to Costa Brava and Dalí Museum From Barcelona?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Pg. de Gràcia, 17, L'Eixample, 08007 Barcelona, Spain Right in front of Nike Store"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85.53
+      },
+      "currency": "USD"
+    }
+  }
+}

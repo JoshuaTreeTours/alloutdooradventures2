@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "6874P23",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Exclusive-Cava-and-Wine-Tasting-Experience-and-Tour-to-Local-Winery-and-Vineyards/d562-6874P23",
+    "title": "Penedes Wine & Cava Tasting & 4WD Vineyards Tour from Barcelona",
+    "description": {
+      "text": "Become more acquainted with Spain’s Penedès region on this cava-and-wine-tasting tour that sets off from Barcelona. Visit a winery in Sant Sadurní d'Anoia, the capital of cava, Catalonia’s answer to champagne, then explore a second winery’s vineyards on a Jeep. Stops include Sant Sadurní d'Anoia, Penedès vineyards. Needless to say, you’ll get the opportunity to taste both wine and cava, and indulge in local delights such as cheese and charcuterie. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $138.95",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 343
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/04/f3/a1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Become more acquainted with Spain’s Penedès region on this cava-and-wine-tasting tour that sets off from Barcelona",
+      "Visit a winery in Sant Sadurní d'Anoia, the capital of cava, Catalonia’s answer to champagne, then explore a second wine",
+      "Needless to say, you’ll get the opportunity to taste both wine and cava, and indulge in local delights such as cheese an",
+      "Penedes Wine & Cava Tasting & 4WD Vineyards Tour from Barcelona near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Carrer de Roger de Llúria, 117, L'Eixample, 08037 Barcelona, Spain Right in front of the World Experience office"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Become more acquainted with Spain’s Penedès region on this cava-and-wine-tasting tour that sets off from Barcelona.",
+    "itineraryItems": [
+      {
+        "title": "Sant Sadurní d'Anoia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Penedès vineyards",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Visit of a local wine and cava family-run winery.",
+      "A tasting of three wines and four cavas",
+      "Exclusive 4x4 ride through the vineyards accompanied by a local viticulturist.",
+      "Transportation by minibus and specialized tour guide",
+      "Variety of local delicacies such as cheese and charcuterie",
+      "Hotel pickup and drop-off",
+      "Food or beverages unless specified"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Penedes Wine & Cava Tasting & 4WD Vineyards Tour from Barcelona?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Carrer de Roger de Llúria, 117, L'Eixample, 08037 Barcelona, Spain Right in front of the World Experience office"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 138.95
+      },
+      "currency": "USD"
+    }
+  }
+}

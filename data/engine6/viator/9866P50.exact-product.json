@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "9866P50",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Private-Montserrat-and-Penedes-Day-Tour-form-Barcelona/d562-9866P50",
+    "title": "Private Montserrat and Cava Winery Tour with Hotel Pick Up from Barcelona",
+    "description": {
+      "text": "Escape Barcelona for the day and combine two top attractions in one on this private full-day tour that includes Montserrat and a cava winery. Spend your morning exploring the mountaintop monastery of Montserrat, then head to the Penedes region to learn about cava production and sample wines and cavas paired with tapas and snacks. Stops include Montserrat Monastery, Natural Park of Montserrat, Sant Sadurní d'Anoia, Penedès. Winery hosts and drivers handle tasting and vineyard logistics so visitors can focus on Penedès cellars, cava, and Montserrat views. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $336.41",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 53
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/18/81/83.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Montserrat and Cava Winery Tour with Hotel Pick Up from Barcelona from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape Barcelona for the day and combine two top attractions in one on this private full-day tour that includes Montserrat and a cava winery.",
+    "itineraryItems": [
+      {
+        "title": "Montserrat Monastery",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Natural Park of Montserrat",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sant Sadurní d'Anoia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Penedès",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Entrance tickets to the cellar visit and cava tasting",
+      "Entrance to Montserrat Monastery",
+      "Short walking tour of the Natural Park of Montserrat",
+      "Tasting of 3 wines and cavas paired with local bites",
+      "Hotel or apartment pickup and drop-off (in Barcelona city)",
+      "Transport by private vehicle",
+      "Professional local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Montserrat and Cava Winery Tour with Hotel Pick Up from Barcelona?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 336.41
+      },
+      "currency": "USD"
+    }
+  }
+}

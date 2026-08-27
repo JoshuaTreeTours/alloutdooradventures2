@@ -1015,6 +1015,71 @@ export const isEngine6ParisTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_PARIS_TOUR_PATH_PREFIX);
 
+export const ENGINE6_BARCELONA_110975P7_PRODUCT_CODE = "110975P7";
+export const ENGINE6_BARCELONA_110975P7_ROUTE =
+  "/destinations/spain/barcelona/tours/sagrada-familia-park-guell-walking-private-tour-with-ta-110975P7";
+export const ENGINE6_BARCELONA_17377P22_PRODUCT_CODE = "17377P22";
+export const ENGINE6_BARCELONA_17377P22_ROUTE =
+  "/destinations/spain/barcelona/tours/barcelona-premium-gothic-montjuic-sagrada-familia-park-17377P22";
+export const ENGINE6_BARCELONA_17377P12_PRODUCT_CODE = "17377P12";
+export const ENGINE6_BARCELONA_17377P12_ROUTE =
+  "/destinations/spain/barcelona/tours/barcelona-city-tour-gothic-pedrera-sagrada-familia-park-17377P12";
+export const ENGINE6_BARCELONA_9866P50_PRODUCT_CODE = "9866P50";
+export const ENGINE6_BARCELONA_9866P50_ROUTE =
+  "/destinations/spain/barcelona/tours/private-montserrat-and-cava-winery-tour-with-hotel-pick-9866P50";
+export const ENGINE6_BARCELONA_2646BCNBALLOON_PRODUCT_CODE = "2646BCNBALLOON";
+export const ENGINE6_BARCELONA_2646BCNBALLOON_ROUTE =
+  "/destinations/spain/barcelona/tours/balloon-ride-over-catalonia-with-optional-pick-up-from-2646BCNBALLOON";
+export const ENGINE6_BARCELONA_33913P5_PRODUCT_CODE = "33913P5";
+export const ENGINE6_BARCELONA_33913P5_ROUTE =
+  "/destinations/spain/barcelona/tours/barcelona-private-sailing-with-open-bar-snacks-max-9-33913P5";
+export const ENGINE6_BARCELONA_6874P23_PRODUCT_CODE = "6874P23";
+export const ENGINE6_BARCELONA_6874P23_ROUTE =
+  "/destinations/spain/barcelona/tours/penedes-wine-cava-tasting-4wd-vineyards-tour-from-barce-6874P23";
+export const ENGINE6_BARCELONA_127264P9_PRODUCT_CODE = "127264P9";
+export const ENGINE6_BARCELONA_127264P9_ROUTE =
+  "/destinations/spain/barcelona/tours/girona-and-costa-brava-private-tour-with-pick-up-from-b-127264P9";
+export const ENGINE6_BARCELONA_8513P1_PRODUCT_CODE = "8513P1";
+export const ENGINE6_BARCELONA_8513P1_ROUTE =
+  "/destinations/spain/barcelona/tours/barcelona-montserrat-hot-air-balloon-ride-with-champagn-8513P1";
+export const ENGINE6_BARCELONA_16168P24_PRODUCT_CODE = "16168P24";
+export const ENGINE6_BARCELONA_16168P24_ROUTE =
+  "/destinations/spain/barcelona/tours/best-of-barcelona-sagrada-familia-park-guell-montjuic-g-16168P24";
+export const ENGINE6_BARCELONA_43217P5_PRODUCT_CODE = "43217P5";
+export const ENGINE6_BARCELONA_43217P5_ROUTE =
+  "/destinations/spain/barcelona/tours/costa-brava-day-adventure-kayak-snorkel-cliff-jump-with-43217P5";
+export const ENGINE6_BARCELONA_3993FTBB_PRODUCT_CODE = "3993FTBB";
+export const ENGINE6_BARCELONA_3993FTBB_ROUTE =
+  "/destinations/spain/barcelona/tours/highlights-of-barcelona-half-day-small-group-bike-tour-3993FTBB";
+export const ENGINE6_BARCELONA_9866P31_PRODUCT_CODE = "9866P31";
+export const ENGINE6_BARCELONA_9866P31_ROUTE =
+  "/destinations/spain/barcelona/tours/dali-museum-cadaques-small-group-tour-with-hotel-pick-u-9866P31";
+export const ENGINE6_BARCELONA_9866P29_PRODUCT_CODE = "9866P29";
+export const ENGINE6_BARCELONA_9866P29_ROUTE =
+  "/destinations/spain/barcelona/tours/girona-costa-brava-small-group-tour-with-pickup-from-ba-9866P29";
+export const ENGINE6_BARCELONA_16168P23_PRODUCT_CODE = "16168P23";
+export const ENGINE6_BARCELONA_16168P23_ROUTE =
+  "/destinations/spain/barcelona/tours/sagrada-familia-small-group-guided-tour-with-skip-the-l-16168P23";
+export const ENGINE6_BARCELONA_5689P12_PRODUCT_CODE = "5689P12";
+export const ENGINE6_BARCELONA_5689P12_ROUTE =
+  "/destinations/spain/barcelona/tours/best-of-barcelona-guided-tour-with-port-or-hotel-pick-u-5689P12";
+export const ENGINE6_BARCELONA_120041P6_PRODUCT_CODE = "120041P6";
+export const ENGINE6_BARCELONA_120041P6_ROUTE =
+  "/destinations/spain/barcelona/tours/small-group-daytrip-to-costa-brava-and-dali-museum-from-120041P6";
+export const ENGINE6_BARCELONA_333987P1_PRODUCT_CODE = "333987P1";
+export const ENGINE6_BARCELONA_333987P1_ROUTE =
+  "/destinations/spain/barcelona/tours/sagrada-familia-and-guell-park-small-group-tour-drink-a-333987P1";
+export const ENGINE6_BARCELONA_9866P55_PRODUCT_CODE = "9866P55";
+export const ENGINE6_BARCELONA_9866P55_ROUTE =
+  "/destinations/spain/barcelona/tours/sagrada-familia-barcelona-small-group-tour-with-hotel-p-9866P55";
+
+export const ENGINE6_BARCELONA_TOUR_PATH_PREFIX =
+  "/destinations/spain/barcelona/tours/";
+
+export const isEngine6BarcelonaTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_BARCELONA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3844,6 +3909,82 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PARIS_46334P22_ROUTE,
     ENGINE6_PARIS_46334P22_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_110975P7_ROUTE,
+    ENGINE6_BARCELONA_110975P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_17377P22_ROUTE,
+    ENGINE6_BARCELONA_17377P22_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_17377P12_ROUTE,
+    ENGINE6_BARCELONA_17377P12_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_9866P50_ROUTE,
+    ENGINE6_BARCELONA_9866P50_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_2646BCNBALLOON_ROUTE,
+    ENGINE6_BARCELONA_2646BCNBALLOON_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_33913P5_ROUTE,
+    ENGINE6_BARCELONA_33913P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_6874P23_ROUTE,
+    ENGINE6_BARCELONA_6874P23_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_127264P9_ROUTE,
+    ENGINE6_BARCELONA_127264P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_8513P1_ROUTE,
+    ENGINE6_BARCELONA_8513P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_16168P24_ROUTE,
+    ENGINE6_BARCELONA_16168P24_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_43217P5_ROUTE,
+    ENGINE6_BARCELONA_43217P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_3993FTBB_ROUTE,
+    ENGINE6_BARCELONA_3993FTBB_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_9866P31_ROUTE,
+    ENGINE6_BARCELONA_9866P31_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_9866P29_ROUTE,
+    ENGINE6_BARCELONA_9866P29_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_16168P23_ROUTE,
+    ENGINE6_BARCELONA_16168P23_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_5689P12_ROUTE,
+    ENGINE6_BARCELONA_5689P12_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_120041P6_ROUTE,
+    ENGINE6_BARCELONA_120041P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_333987P1_ROUTE,
+    ENGINE6_BARCELONA_333987P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BARCELONA_9866P55_ROUTE,
+    ENGINE6_BARCELONA_9866P55_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

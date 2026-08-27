@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "3993FTBB",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Barcelona-Half-Day-Bike-Tour/d562-3993FTBB",
+    "title": "Highlights of Barcelona Half Day Small Group Bike Tour",
+    "description": {
+      "text": "Experience the architectural and artistic majesty of Barcelona on a half-day guided bike tour. See many of the city’s significant sights, such as the La Sagrada Familia and Placa del Rei as you gently cycle between monuments. Stops include Sagrada Familia, Plaça del Rei, Plaça de Sant Jaume. Capture fabulous photographs at each stop and gain insight into the city’s fascinating history with informative commentary. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "3 hours 30 minutes to 4 hours (approx.)",
+    "priceFrom": "From $41.69",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 2921
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/41/38/ca.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the architectural and artistic majesty of Barcelona on a half-day guided bike tour",
+      "See many of the city’s significant sights, such as the La Sagrada Familia and Placa del Rei as you gently cycle between ",
+      "Capture fabulous photographs at each stop and gain insight into the city’s fascinating history with informative commenta",
+      "Highlights of Barcelona Half Day Small Group Bike Tour near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pl. de Sant Jaume, 4, Ciutat Vella, 08002 Palau de la Generalitat, Barcelona, Spain Your tour meets in the corner of Plaça Sant Jaume near the intersection of Carrer del Call and Carrer de Sant Honorat. Look for your t"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the architectural and artistic majesty of Barcelona on a half-day guided bike tour.",
+    "itineraryItems": [
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Plaça del Rei",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Plaça de Sant Jaume",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Insurance",
+      "Bicycle rental and guided tour",
+      "Child-seats and helmets (on request)",
+      "Hotel pickup and drop off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of Barcelona Half Day Small Group Bike Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Pl. de Sant Jaume, 4, Ciutat Vella, 08002 Palau de la Generalitat, Barcelona, Spain Your tour meets in the corner of Plaça Sant Jaume near the intersection of Carrer del Call and Carrer de Sant Honorat. Look for your t"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 41.69
+      },
+      "currency": "USD"
+    }
+  }
+}

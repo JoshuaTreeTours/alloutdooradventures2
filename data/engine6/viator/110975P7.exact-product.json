@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "110975P7",
+    "productUrl": "https://www.viator.com/tours/Barcelona/The-most-complete-half-day-private-tour-with-Sagarda-Familia-and-Park-Guell/d562-110975P7",
+    "title": "Sagrada Familia, Park Guell & Walking Private Tour with Tapas",
+    "description": {
+      "text": "Skip the hassle of planning—and the lines along the way—on this private tour of Barcelona’s heritage, architecture, and gastronomy that combines a walking tour with taxi rides to two less central destinations. Traveling with a personal guide lets you maximize your time and discover parts of the city you would likely miss on your own. Stops include Gothic Quarter, Sagrada Familia, Park Güell, Rambla de Catalunya. Local commentary and route logistics are handled so visitors can focus on Gaudí architecture, Mediterranean views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $275.03",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 865
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/27/0d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sagrada Familia, Park Guell & Walking Private Tour with Tapas from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Statue of Frederic Soler (Pitarra) Ciutat Vella, 08002 Barcelona, Spain In front of the Monument of Frederic Soler i Hubert."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Skip the hassle of planning—and the lines along the way—on this private tour of Barcelona’s heritage, architecture, and gastronomy that combines a walking tour with taxi rides to two less central destinations.",
+    "itineraryItems": [
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Güell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rambla de Catalunya",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private walking tour with a local guide",
+      "Coffes in Picasso’s favorite restaurant",
+      "Lunch in a tapas restaurant in the beautifull Rambla Catalunya (Veggie option available)",
+      "Skip the line tickets to Sagrada Familia + Audioguides in your languaje",
+      "Taxis ride to Park Guell & Sagrada Familia. .",
+      "Guided Tour in Park Guell",
+      "Guided Tour in Sagrada Familia",
+      "Pick up and drop off service"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sagrada Familia, Park Guell & Walking Private Tour with Tapas?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Statue of Frederic Soler (Pitarra) Ciutat Vella, 08002 Barcelona, Spain In front of the Monument of Frederic Soler i Hubert."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 275.03
+      },
+      "currency": "USD"
+    }
+  }
+}

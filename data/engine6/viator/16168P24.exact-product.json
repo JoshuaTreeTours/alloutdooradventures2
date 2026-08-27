@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "16168P24",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Best-of-Barcelona-Sagrada-Familia-Park-Guell-Montjuic-and-Gothic/d562-16168P24",
+    "title": "Best of Barcelona: Sagrada Familia, Park Guell, Montjuic & Gothic",
+    "description": {
+      "text": "Make the most of your short time in Barcelona with this “best-of” tour. You’ll explore the architectural riches of the Gothic Quarter, dive deep into Catalan modernism, feast your eyes on the Sagrada Familia, and even skip the entrance lines. Stops include Gothic Quarter, Montjuïc, Park Güell, Sagrada Familia. Following your guide, you’ll not only save time—you’ll experience why Barcelona is one of the most-visited cities in the world. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $112.90",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1431
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/fa/f1/fc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Make the most of your short time in Barcelona with this “best-of” tour",
+      "You’ll explore the architectural riches of the Gothic Quarter, dive deep into Catalan modernism, feast your eyes on the ",
+      "Following your guide, you’ll not only save time—you’ll experience why Barcelona is one of the most-visited cities in the",
+      "Best of Barcelona: Sagrada Familia, Park Guell, Montjuic & Gothic near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "La Rambla, 97, Ciutat Vella, 08002 Barcelona, Spain Right outside \"Casa Beethoven\" music shop. The closest metro stations are \"Plaza Catalunya\" (Red Line - L1) or \"Liceu\" (Green Line - L3)"
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Make the most of your short time in Barcelona with this “best-of” tour.",
+    "itineraryItems": [
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montjuïc",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Güell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Sagrada Familia ticket with audioguide",
+      "Park Güell ticket",
+      "Professional tour guide",
+      "Small group tour of max. 15 people",
+      "Private transportation during the tour",
+      "Complete visit to Barcelona's highlights",
+      "Guided tour at Gothic Quarter and Montjuic Hill",
+      "Pick-up & drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Barcelona: Sagrada Familia, Park Guell, Montjuic & Gothic?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "La Rambla, 97, Ciutat Vella, 08002 Barcelona, Spain Right outside \"Casa Beethoven\" music shop. The closest metro stations are \"Plaza Catalunya\" (Red Line - L1) or \"Liceu\" (Green Line - L3)"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 112.9
+      },
+      "currency": "USD"
+    }
+  }
+}

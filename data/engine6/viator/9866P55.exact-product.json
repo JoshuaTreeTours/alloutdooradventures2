@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "9866P55",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Barcelona-and-Sagrada-Familia-Small-Group-Half-Day-Tour-with-Hotel-Pick-up/d562-9866P55",
+    "title": "Sagrada Familia & Barcelona Small Group Tour with Hotel Pick-up",
+    "description": {
+      "text": "In Barcelona, join this small-group tour of the Catalan capital, and discover Gaudi’s magnificent Sagrada Familia (tickets separate expense). Also on this tour, enjoy a walking tour of Barcelona’s Old Town and Gothic Quarter; admire Modernist architecture including Casa Batlló, Casa Mila, and Casa Lleó; and take in the views from Montjuïc Mountain. Stops include Gothic Quarter, Sagrada Familia, Casa Batlló, Montjuïc. Hotel or apartment pick-up and drop-off are included. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $92.03",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1193
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/52/52/c8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join this small-group tour of the Catalan capital, and discover Gaudi’s magnificent Sagrada Familia (tickets separate ex",
+      "Also on this tour, enjoy a walking tour of Barcelona’s Old Town and Gothic Quarter; admire Modernist architecture includ",
+      "Hotel or apartment pick-up and drop-off are included",
+      "Sagrada Familia & Barcelona Small Group Tour with Hotel Pick-up near Barcelona",
+      "Professional Barcelona guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Barcelona, join this small-group tour of the Catalan capital, and discover Gaudi’s magnificent Sagrada Familia (tickets separate expense).",
+    "itineraryItems": [
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Casa Batlló",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montjuïc",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel or apartment pick-up and drop-off in Barcelona city (between 8 and 9 am or 2 and 3 pm)",
+      "Walking tour in the Old Town",
+      "Complete visit to Barcelona’s highlights",
+      "Professional local guide",
+      "Air-conditioned vehicle",
+      "Small Group tour of max 8 people to ensure a personalised experience",
+      "Ticket to Sagrada Familia (approx.26€) To be paid to your guide, the day of your tour."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sagrada Familia & Barcelona Small Group Tour with Hotel Pick-up?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 92.03
+      },
+      "currency": "USD"
+    }
+  }
+}

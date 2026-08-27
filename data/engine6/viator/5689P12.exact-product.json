@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "5689P12",
+    "productUrl": "https://www.viator.com/tours/Barcelona/Skip-the-Line-Barcelona-Highlights-with-Pickup-from-your-Hotel-or-Cruise-Port/d562-5689P12",
+    "title": "Best of Barcelona Guided Tour with Port or Hotel Pick up",
+    "description": {
+      "text": "Discover the best of Barcelona with ease—even if you just have half a day to spare—on this comprehensive, small-group tour. With a guide to lead the way as well as hotel or port pickup provided, you can avoid any hassle and maximize your sightseeing time. Stops include Sagrada Familia, Park Güell, Gothic Quarter. Local commentary and route logistics are handled so visitors can focus on Gaudí architecture, Mediterranean views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Barcelona who want a guided city experience without coordinating metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Barcelona",
+      "state": "Spain"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $102.80",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 232
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/2a/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Best of Barcelona Guided Tour with Port or Hotel Pick up from Barcelona",
+      "Sagrada Familia, Park Güell, and Gothic Quarter views",
+      "Professional guide with Barcelona local expertise",
+      "Small-group or private format as listed",
+      "Guided Barcelona sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Barcelona meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the best of Barcelona with ease—even if you just have half a day to spare—on this comprehensive, small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Sagrada Familia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Güell",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gothic Quarter",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Pickup from your hotel or cruise ship in a new and air-conditioned vehicle",
+      "Drop-off to your hotel, cruise port, airport, or La Sagrada Familia",
+      "Bring your luggage with you if needed (no extra charges)",
+      "Food / drinks",
+      "Optional tickets to Park Guell/Sagrada Familia (can be added after booking the tour)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Barcelona Guided Tour with Port or Hotel Pick up?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Barcelona?",
+        "answer": "Meet the guide at the confirmed Barcelona meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 102.8
+      },
+      "currency": "USD"
+    }
+  }
+}

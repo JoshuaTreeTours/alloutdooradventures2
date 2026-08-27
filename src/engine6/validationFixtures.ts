@@ -205,6 +205,25 @@ import specimen3588versaPayload from "../../data/engine6/viator/3588VERSA.exact-
 import specimen47475p6Payload from "../../data/engine6/viator/47475P6.exact-product.json";
 import specimen46018p2Payload from "../../data/engine6/viator/46018P2.exact-product.json";
 import specimen46334p22Payload from "../../data/engine6/viator/46334P22.exact-product.json";
+import specimen110975p7Payload from "../../data/engine6/viator/110975P7.exact-product.json";
+import specimen17377p22Payload from "../../data/engine6/viator/17377P22.exact-product.json";
+import specimen17377p12Payload from "../../data/engine6/viator/17377P12.exact-product.json";
+import specimen9866p50Payload from "../../data/engine6/viator/9866P50.exact-product.json";
+import specimen2646bcnballoonPayload from "../../data/engine6/viator/2646BCNBALLOON.exact-product.json";
+import specimen33913p5Payload from "../../data/engine6/viator/33913P5.exact-product.json";
+import specimen6874p23Payload from "../../data/engine6/viator/6874P23.exact-product.json";
+import specimen127264p9Payload from "../../data/engine6/viator/127264P9.exact-product.json";
+import specimen8513p1Payload from "../../data/engine6/viator/8513P1.exact-product.json";
+import specimen16168p24Payload from "../../data/engine6/viator/16168P24.exact-product.json";
+import specimen43217p5Payload from "../../data/engine6/viator/43217P5.exact-product.json";
+import specimen3993ftbbPayload from "../../data/engine6/viator/3993FTBB.exact-product.json";
+import specimen9866p31Payload from "../../data/engine6/viator/9866P31.exact-product.json";
+import specimen9866p29Payload from "../../data/engine6/viator/9866P29.exact-product.json";
+import specimen16168p23Payload from "../../data/engine6/viator/16168P23.exact-product.json";
+import specimen5689p12Payload from "../../data/engine6/viator/5689P12.exact-product.json";
+import specimen120041p6Payload from "../../data/engine6/viator/120041P6.exact-product.json";
+import specimen333987p1Payload from "../../data/engine6/viator/333987P1.exact-product.json";
+import specimen9866p55Payload from "../../data/engine6/viator/9866P55.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2648,6 +2667,120 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "46334P22",
     publicUrl: "https://www.viator.com/tours/Paris/2-Hour-Muse-dOrsay-with-Skip-the-Line-Access/d479-46334P22",
     rawPayload: specimen46334p22Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "110975P7",
+    publicUrl: "https://www.viator.com/tours/Barcelona/The-most-complete-half-day-private-tour-with-Sagarda-Familia-and-Park-Guell/d562-110975P7",
+    rawPayload: specimen110975p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "17377P22",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Full-Day-Guided-Tour-and-Skip-the-Line-Sagrada-Familia-Park-Guell-and-La-Pedrera/d562-17377P22",
+    rawPayload: specimen17377p22Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "17377P12",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-Smalll-Group-Tour-and-skip-the-line-at-La-Sagrada-Familia-Park-Guell-and-La-Pedrera/d562-17377P12",
+    rawPayload: specimen17377p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9866P50",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Private-Montserrat-and-Penedes-Day-Tour-form-Barcelona/d562-9866P50",
+    rawPayload: specimen9866p50Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2646BCNBALLOON",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Hot-Air-Balloon-Flight-Over-Catalonia/d562-2646BCNBALLOON",
+    rawPayload: specimen2646bcnballoonPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33913P5",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-PRIVATE-Sailing-Day/d562-33913P5",
+    rawPayload: specimen33913p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6874P23",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Exclusive-Cava-and-Wine-Tasting-Experience-and-Tour-to-Local-Winery-and-Vineyards/d562-6874P23",
+    rawPayload: specimen6874p23Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "127264P9",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Girona-and-Costa-Brava-Private-Tour-with-Pick-up-from-Barcelona/d562-127264P9",
+    rawPayload: specimen127264p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8513P1",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-Hot-Air-Balloon-Ride/d562-8513P1",
+    rawPayload: specimen8513p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "16168P24",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Best-of-Barcelona-Sagrada-Familia-Park-Guell-Montjuic-and-Gothic/d562-16168P24",
+    rawPayload: specimen16168p24Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "43217P5",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Kayaking-and-Snorkeling/d562-43217P5",
+    rawPayload: specimen43217p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3993FTBB",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-Half-Day-Bike-Tour/d562-3993FTBB",
+    rawPayload: specimen3993ftbbPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9866P31",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Dali-Museum-Figueres-and-Cadaqus-Small-Group-Tour-with-Hotel-Pick-Up-from-Barcelona/d562-9866P31",
+    rawPayload: specimen9866p31Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9866P29",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Girona-and-Costa-Brava-tour/d562-9866P29",
+    rawPayload: specimen9866p29Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "16168P23",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Real-skip-the-line-experience-Sagrada-familia-in-a-small-group/d562-16168P23",
+    rawPayload: specimen16168p23Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5689P12",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Skip-the-Line-Barcelona-Highlights-with-Pickup-from-your-Hotel-or-Cruise-Port/d562-5689P12",
+    rawPayload: specimen5689p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "120041P6",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Day-trip-to-Salvado-Dali-museum-and-Costa-Brava/d562-120041P6",
+    rawPayload: specimen120041p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "333987P1",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Skip-the-line-with-drink-and-tapas-Sagrada-Familia-and-Guell-Park-guided-tour/d562-333987P1",
+    rawPayload: specimen333987p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9866P55",
+    publicUrl: "https://www.viator.com/tours/Barcelona/Barcelona-and-Sagrada-Familia-Small-Group-Half-Day-Tour-with-Hotel-Pick-up/d562-9866P55",
+    rawPayload: specimen9866p55Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
