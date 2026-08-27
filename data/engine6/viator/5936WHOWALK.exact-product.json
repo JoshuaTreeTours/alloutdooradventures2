@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "5936WHOWALK",
+    "productUrl": "https://www.viator.com/tours/London/Doctor-Who-TV-Locations-Tour-of-London/d737-5936WHOWALK",
+    "title": "Doctor Who TV Locations Tour of London",
+    "description": {
+      "text": "Step into the universe of Doctor Who on this walking tour of London’s famous filming locations. Wander through areas like Borough Market and Southwark with an expert guide, stopping at iconic sites such as Shakespeare’s Globe Theatre. Stops include Borough Market, Southwark, Shakespeare's Globe Theatre. Hear fascinating behind-the-scenes stories about the making of the beloved series and its many Doctors, from classic episodes to modern adventures. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $22.90",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 140
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c2/20.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Step into the universe of Doctor Who on this walking tour of London’s famous filming locations",
+      "Wander through areas like Borough Market and Southwark with an expert guide, stopping at iconic sites such as Shakespear",
+      "Hear fascinating behind-the-scenes stories about the making of the beloved series and its many Doctors, from classic epi",
+      "Doctor Who TV Locations Tour of London near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Central London start listed when booking. The walk covers South Bank filming locations around Borough Market and Southwark."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Step into the universe of Doctor Who on this walking tour of London’s famous filming locations.",
+    "itineraryItems": [
+      {
+        "title": "Borough Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Southwark",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shakespeare's Globe Theatre",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Doctor Who TV Locations Tour of London?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet at the confirmed Central London start listed when booking. The walk covers South Bank filming locations around Borough Market and Southwark."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 22.9
+      },
+      "currency": "USD"
+    }
+  }
+}

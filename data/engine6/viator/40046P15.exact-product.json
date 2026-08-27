@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "40046P15",
+    "productUrl": "https://www.viator.com/tours/London/Small-Group-Walking-Tour-London-Street-Art-and-the-East-End-in-London/d737-40046P15",
+    "title": "#1 East End & Street Art | Satisfaction Guaranteed! | 12ppl Max",
+    "description": {
+      "text": "London’s East End is the epicenter of the city’s vibrant street art scene, and the stomping ground of legendary street artists such as Shepard Fairey, Eine, and Banksy. This small-group walking tour will take you through East London’s coolest neighborhoods, where you’ll discover colorful street art, learn about the notorious Jack the Ripper, stroll down Brick Lane, and visit the famous Spitalfields Market. Stops include Shoreditch, Brick Lane, Spitalfields Market. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $59.27",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "#1 East End & Street Art | Satisfaction Guaranteed! | 12ppl Max from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet in London’s East End as listed when booking; the walk finishes at Shoreditch High Street Station."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "London’s East End is the epicenter of the city’s vibrant street art scene, and the stomping ground of legendary street artists such as Shepard Fairey, Eine, and Banksy.",
+    "itineraryItems": [
+      {
+        "title": "Shoreditch",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Brick Lane",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Spitalfields Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Semi-Private Walking Tour",
+      "Professional Tour Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the #1 East End & Street Art | Satisfaction Guaranteed! | 12ppl Max?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet in London’s East End as listed when booking; the walk finishes at Shoreditch High Street Station."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59.27
+      },
+      "currency": "USD"
+    }
+  }
+}

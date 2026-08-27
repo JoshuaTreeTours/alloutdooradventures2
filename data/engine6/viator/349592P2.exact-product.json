@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "349592P2",
+    "productUrl": "https://www.viator.com/tours/London/Tower-of-London-private-tour-and-free-river-boat-ticket-from-Tower-to-Big-Ben/d737-349592P2",
+    "title": "Tower of London Private Tour for Families and Friends",
+    "description": {
+      "text": "With 1,000 years of history, there’s only one way to explore the Tower of London: with a guide demystifying it all. On this private tour, you’ll explore this castle-turned-prison, discovering its dark, inner workings and, of course, its Crown Jewels. Stops include Tower of London, Crown Jewels, Tower Bridge. With your private guide, you’ll walk in the footsteps of royalty—and like royalty, you’ll get to skip the ticket lines, enjoying this iconic landmark in style. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $331.56",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d7/2b/f2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "With 1,000 years of history, there’s only one way to explore the Tower of London: with a guide demystifying it all",
+      "On this private tour, you’ll explore this castle-turned-prison, discovering its dark, inner workings and, of course, its",
+      "With your private guide, you’ll walk in the footsteps of royalty—and like royalty, you’ll get to skip the ticket lines, ",
+      "Tower of London Private Tour for Families and Friends near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Tower of London Learning and Community Groups Centre. The meeting point is located on the slope down to the entrance at 2b Tower Hill, London EC3N 4EE, UK."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "With 1,000 years of history, there’s only one way to explore the Tower of London: with a guide demystifying it all.",
+    "itineraryItems": [
+      {
+        "title": "Tower of London",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Crown Jewels",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower Bridge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional Blue Badge Tour Guide",
+      "Private tour",
+      "Admission ticket to Tower of London"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tower of London Private Tour for Families and Friends?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Tower of London Learning and Community Groups Centre. The meeting point is located on the slope down to the entrance at 2b Tower Hill, London EC3N 4EE, UK."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 331.56
+      },
+      "currency": "USD"
+    }
+  }
+}

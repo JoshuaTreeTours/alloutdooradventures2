@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "103194P1",
+    "productUrl": "https://www.viator.com/tours/London/Music-Legends-Tour/d737-103194P1",
+    "title": "Rock Cab Tours presents Music Legends Private Taxi Tour of London",
+    "description": {
+      "text": "Discover London landmarks linked to the Beatles, Rolling Stones, Queen, and other rock legends on a private black cab music tour. Choose the tour start time and duration and meet your music industry expert cabbie at your hotel. Stops include Abbey Road, Trident Studios, Central London. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $270.51",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 545
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f7/e4/34.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Rock Cab Tours presents Music Legends Private Taxi Tour of London from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from any hotel within the central London area. State the hotel name when booking."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover London landmarks linked to the Beatles, Rolling Stones, Queen, and other rock legends on a private black cab music tour.",
+    "itineraryItems": [
+      {
+        "title": "Abbey Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trident Studios",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Central London",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel/port pickup free of charge within the central London area.",
+      "Hotel/port drop-off free of charge within the central London area."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rock Cab Tours presents Music Legends Private Taxi Tour of London?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Pickup from any hotel within the central London area. State the hotel name when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 270.51
+      },
+      "currency": "USD"
+    }
+  }
+}

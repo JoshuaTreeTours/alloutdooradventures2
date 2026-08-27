@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "62043P1",
+    "productUrl": "https://www.viator.com/tours/London/London-In-a-Day-Tower-of-London-Westminster-Abbey-and-Changing-of-the-Guard/d737-62043P1",
+    "title": "Skip the Line Tower of London & Westminster Tour and River Cruise",
+    "description": {
+      "text": "A short stay in London can still cover the capital’s key landmarks. Soak up the key sights in just one action-packed day on this guided small-group walking tour. Stops include Westminster Abbey, Buckingham Palace, Thames River, Tower of London. Then, cruise the Thames River on a comfortable riverboat to the Tower of London where you can delve into British history. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $161.14",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 529
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/dc/21/46.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "A short stay in London can still cover the capital’s key landmarks",
+      "Soak up the key sights in just one action-packed day on this guided small-group walking tour",
+      "Then, cruise the Thames River on a comfortable riverboat to the Tower of London where you can delve into British history",
+      "Skip the Line Tower of London & Westminster Tour and River Cruise near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Inside Tower of London, 35 Tower Hill, London EC3N 4DR, UK, for the Tower segment as listed when booking."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A short stay in London can still cover the capital’s key landmarks.",
+    "itineraryItems": [
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thames River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower of London",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip the line ticket for Westminster Abbey (9AM tour only)",
+      "Skip the line ticket for Tower of London",
+      "Thames River Cruise",
+      "Local English-speaking guide",
+      "Expertly guided walking tour",
+      "Headset"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Skip the Line Tower of London & Westminster Tour and River Cruise?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Inside Tower of London, 35 Tower Hill, London EC3N 4DR, UK, for the Tower segment as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 161.14
+      },
+      "currency": "USD"
+    }
+  }
+}

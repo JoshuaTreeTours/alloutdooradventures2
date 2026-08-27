@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "60273P32",
+    "productUrl": "https://www.viator.com/tours/London/Winston-Churchills-London-and-The-Churchill-War-Rooms-A-Private-Tour/d737-60273P32",
+    "title": "Winston Churchill's London and The Churchill War Rooms - A Private Tour",
+    "description": {
+      "text": "In London, this private walking tour traces Winston Churchill's life through his childhood homes, favorite tailors, and cigar shops. Cross essential London sights such as 10 Downing Street and the Houses of Parliament, then use skip-the-line entry to the Churchill War Rooms for a focused visit without waiting. Stops include Churchill War Rooms, 10 Downing Street, Houses of Parliament. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $281.81",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 109
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2e/28/78.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Winston Churchill's London and The Churchill War Rooms - A Private Tour from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the confirmed Central London meeting point listed when booking. The visit finishes at the Churchill War Rooms."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In London, this private walking tour traces Winston Churchill's life through his childhood homes, favorite tailors, and cigar shops.",
+    "itineraryItems": [
+      {
+        "title": "Churchill War Rooms",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "10 Downing Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Houses of Parliament",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Skip-the-line entry to the Churchill War Rooms"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Winston Churchill's London and The Churchill War Rooms - A Private Tour?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet your private guide at the confirmed Central London meeting point listed when booking. The visit finishes at the Churchill War Rooms."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 281.81
+      },
+      "currency": "USD"
+    }
+  }
+}

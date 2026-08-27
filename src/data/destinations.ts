@@ -4693,6 +4693,102 @@ const massachusettsState: StateDestination = {
   isFallback: true,
 };
 
+const unitedKingdomState: StateDestination = {
+  slug: "united-kingdom",
+  name: "United Kingdom",
+  description:
+    "Historic capital districts, royal landmarks, and guided London sightseeing.",
+  featuredDescription:
+    "Explore London tours with private walking routes, Thames cruises, and landmark sightseeing.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/74/00.jpg",
+  region: "Europe",
+  intro:
+    "The United Kingdom pairs walkable London districts with royal landmarks, river views, and curated guided experiences.",
+  longDescription:
+    "London anchors United Kingdom tour inventory with private walking tours, black-cab sightseeing, Thames cruises, and premium food or wine days from the capital.",
+  topRegions: [
+    {
+      title: "Westminster and the Thames",
+      description:
+        "Big Ben, Buckingham Palace, Westminster Abbey, and river cruises along the Thames.",
+    },
+    {
+      title: "Tower and East End",
+      description:
+        "Tower of London visits, street-art walks, and Borough Market food tours.",
+    },
+  ],
+  cities: [
+    {
+      name: "London",
+      slug: "london",
+      stateSlug: "united-kingdom",
+      region: "London",
+      lat: 51.5074,
+      lng: -0.1278,
+      shortDescription:
+        "Private walking tours, Thames cruises, and landmark sightseeing in London.",
+      intro:
+        "London is a river city with royal palaces, Tower of London history, and guided walking, cycling, and food tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/74/00.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cycling"],
+      whereItIs: [
+        "London sits on the River Thames with Westminster, the City, and the South Bank framing central sightseeing.",
+        "Most guided tours depart from Westminster, Tower Hill, Covent Garden, and Central London hotels.",
+      ],
+      experiences: {
+        mountains:
+          "London is a river city; tours focus on royal landmarks, walking districts, and Thames views.",
+        lakesWater:
+          "Thames River cruises highlight Tower Bridge, the London Eye, and Westminster from the water.",
+        desertForest:
+          "Royal parks such as St James's Park and Hyde Park offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours cover Westminster, Covent Garden, and landmark corridors.",
+        scenicDrives:
+          "Private black-cab and car tours cover Abbey Road, Buckingham Palace, and Tower of London photo stops.",
+        seasonalNotes:
+          "Spring and summer are popular for Changing of the Guard and river cruises; winter adds indoor palace and market walking.",
+      },
+      thingsToDo: [
+        "Walk Westminster for Big Ben, Buckingham Palace, and Westminster Abbey.",
+        "Visit the Tower of London and cruise the Thames.",
+        "Join a private food walk at Borough Market or a black-cab landmark tour.",
+      ],
+      toursCopy: [
+        "Book a private Westminster walk for a compact introduction to London.",
+        "Pair a Tower of London visit with a Thames cruise for a full-day city itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Westminster walking tour and Changing of the Guard.",
+          "Afternoon: Tower of London visit.",
+          "Evening: Thames River cruise.",
+        ],
+        dayTwo: [
+          "Morning: Borough Market food tour or bike landmarks.",
+          "Afternoon: Greenwich maritime walk or Notting Hill private tour.",
+          "Evening: West End dinner.",
+        ],
+      },
+      gettingThere: [
+        "Heathrow, Gatwick, and London City airports serve London with rail and Tube links to Westminster and the South Bank.",
+      ],
+      faq: [
+        {
+          question: "What are the signature London tours?",
+          answer:
+            "Private walking tours, Tower of London visits, Thames cruises, and black-cab sightseeing are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -4703,6 +4799,7 @@ export const states: StateDestination[] = [
   wyomingState,
   massachusettsState,
   illinoisState,
+  unitedKingdomState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

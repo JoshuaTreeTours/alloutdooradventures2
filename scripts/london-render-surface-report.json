@@ -1,0 +1,280 @@
+{
+  "selectedCount": 18,
+  "listingCount": 18,
+  "listingMatchesSelection": true,
+  "okCount": 18,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "8607P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/3-hour-guided-private-walking-tour-the-best-of-london-8607P1",
+      "title": "3 Hour Guided Private Walking Tour: The Best of London",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/0c/30/15.jpg",
+      "card": "Marvel over royal monuments, architectural masterpieces and iconic landmarks on this 3-hour walking tour of London.",
+      "itineraryTitles": [
+        "Westminster Abbey",
+        "Big Ben",
+        "Buckingham Palace",
+        "Trafalgar Square",
+        "Covent Garden"
+      ],
+      "issues": []
+    },
+    {
+      "code": "106826P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/ultimate-6-hour-private-tour-of-london-in-an-iconic-bla-106826P1",
+      "title": "Ultimate 6-hour Private Tour of London in an Iconic Black Cab",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/3a/01.jpg",
+      "card": "Optimize your time in the British capital on a private day tour, popping between landmarks by traditional black cab for an authentic London…",
+      "itineraryTitles": [
+        "Buckingham Palace",
+        "Westminster Abbey",
+        "London Eye",
+        "Tower of London"
+      ],
+      "issues": []
+    },
+    {
+      "code": "60273P32",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/winston-churchills-london-and-the-churchill-war-rooms-a-60273P32",
+      "title": "Winston Churchill's London and The Churchill War Rooms - A Private Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2e/28/78.jpg",
+      "card": "In London, this private walking tour traces Winston Churchill's life through his childhood homes, favorite tailors, and cigar shops.",
+      "itineraryTitles": [
+        "Churchill War Rooms",
+        "10 Downing Street",
+        "Houses of Parliament"
+      ],
+      "issues": []
+    },
+    {
+      "code": "349592P2",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/tower-of-london-private-tour-for-families-and-friends-349592P2",
+      "title": "Tower of London Private Tour for Families and Friends",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d7/2b/f2.jpg",
+      "card": "With 1,000 years of history, there’s only one way to explore the Tower of London: with a guide demystifying it all.",
+      "itineraryTitles": [
+        "Tower of London",
+        "Crown Jewels",
+        "Tower Bridge"
+      ],
+      "issues": []
+    },
+    {
+      "code": "103194P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/rock-cab-tours-presents-music-legends-private-taxi-tour-103194P1",
+      "title": "Rock Cab Tours presents Music Legends Private Taxi Tour of London",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f7/e4/34.jpg",
+      "card": "Discover London landmarks linked to the Beatles, Rolling Stones, Queen, and other rock legends on a private black cab music tour.",
+      "itineraryTitles": [
+        "Abbey Road",
+        "Trident Studios",
+        "Central London"
+      ],
+      "issues": []
+    },
+    {
+      "code": "12389P8",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/private-english-wine-tour-from-kent-12389P8",
+      "title": "Private English Wine Tour from Kent",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/b5/b9.jpg",
+      "card": "In London, Thanks to growing conditions similar to those in northern France, southern England’s burgeoning wine scene has never been more pr",
+      "itineraryTitles": [
+        "Tonbridge Station",
+        "Kent Vineyards",
+        "English Wine Country"
+      ],
+      "issues": []
+    },
+    {
+      "code": "306564P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/private-london-food-tours-borough-market-soho-east-end-306564P1",
+      "title": "PRIVATE London Food Tours - Borough Market, Soho, East End",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/c9/d0/27.jpg",
+      "card": "In London, Pick from a range of itineraries, including an East End tour, a Soho and Chinatown tour, and more.",
+      "itineraryTitles": [
+        "Borough Market",
+        "Soho",
+        "East End",
+        "Chinatown"
+      ],
+      "issues": []
+    },
+    {
+      "code": "110975P32",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/highlights-of-london-private-tour-with-notting-hill-110975P32",
+      "title": "Highlights of London Private Tour with Notting Hill",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/a6/31.jpg",
+      "card": "In London, Start at SoHo, Chinatown, and Westminster before taking the tube to the lively Notting Hill neighborhood.",
+      "itineraryTitles": [
+        "Soho",
+        "Chinatown",
+        "Westminster",
+        "Notting Hill",
+        "Portobello Road Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "13106P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/best-of-greenwich-private-day-tour-13106P1",
+      "title": "Best of Greenwich Private Day Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7a/c0/16.jpg",
+      "card": "In London, Discover the cultural hub and maritime center of Greenwich on a full-day small-group walking tour including lunch.",
+      "itineraryTitles": [
+        "Cutty Sark",
+        "Royal Observatory Greenwich",
+        "Queen's House",
+        "National Maritime Museum",
+        "Old Royal Naval College",
+        "Greenwich Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "62043P1",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/skip-the-line-tower-of-london-westminster-tour-and-rive-62043P1",
+      "title": "Skip the Line Tower of London & Westminster Tour and River Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/dc/21/46.jpg",
+      "card": "A short stay in London can still cover the capital’s key landmarks.",
+      "itineraryTitles": [
+        "Westminster Abbey",
+        "Buckingham Palace",
+        "Thames River",
+        "Tower of London"
+      ],
+      "issues": []
+    },
+    {
+      "code": "2452L02",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/best-of-london-tour-inc-tower-of-london-and-changing-of-2452L02",
+      "title": "Best of London Tour inc Tower of London and Changing of the Guard",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/74/00.jpg",
+      "card": "Tick off the British capital’s most recognizable landmarks on this attraction-packed London tour.",
+      "itineraryTitles": [
+        "St. Paul's Cathedral",
+        "Westminster Abbey",
+        "Buckingham Palace",
+        "Tower of London",
+        "Thames River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "75760P71",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/westminster-3-hour-walking-tour-and-visit-of-churchill-75760P71",
+      "title": "Westminster 3 Hour Walking Tour and Visit of Churchill War Rooms",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e6/93/ba.jpg",
+      "card": "With such a high concentration of world-famous attractions, Westminster is an essential stop on any London sightseeing itinerary.",
+      "itineraryTitles": [
+        "Westminster Abbey",
+        "Big Ben",
+        "Buckingham Palace",
+        "Churchill War Rooms"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6295LOBLEGFD",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/changing-of-the-guard-big-ben-thames-tower-of-london-to-6295LOBLEGFD",
+      "title": "Changing of the Guard, Big Ben, Thames & Tower of London Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4c/be/d7.jpg",
+      "card": "See the iconic royal sights of London on a full-day tour that showcases the best of the capital—a combination of two popular sightseeing exp",
+      "itineraryTitles": [
+        "Buckingham Palace",
+        "Thames River",
+        "Tower of London"
+      ],
+      "issues": []
+    },
+    {
+      "code": "75760P69",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/london-river-cruise-westminster-walking-tour-75760P69",
+      "title": "London River Cruise & Westminster Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/1d/8b/d0.jpg",
+      "card": "See London's most famous landmarks on a half-day tour that combines a Westminster walking tour with a Thames River sightseeing cruise.",
+      "itineraryTitles": [
+        "Buckingham Palace",
+        "Trafalgar Square",
+        "Big Ben",
+        "Westminster Abbey",
+        "Thames River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24338P83",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/tower-of-london-guided-tour-with-thames-river-cruise-24338P83",
+      "title": "Tower of London: Guided Tour with Thames River Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/36/f9/e0.jpg",
+      "card": "Combine a guide-led visit to the Tower of London with a sighseeing cruise along the River Thames on this two-in-one tour.",
+      "itineraryTitles": [
+        "Parliament Square",
+        "Thames River",
+        "Tower of London",
+        "Crown Jewels"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3862BICYCLE",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/london-classic-landmarks-bike-tour-with-local-guide-3862BICYCLE",
+      "title": "London Classic Landmarks Bike Tour with Local Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/41/da.jpg",
+      "card": "Explore London's rich heritage and fabulous architecture in the open air—on a bicycle.",
+      "itineraryTitles": [
+        "Big Ben",
+        "Houses of Parliament",
+        "Westminster Abbey",
+        "Buckingham Palace",
+        "Covent Garden",
+        "St. Paul's Cathedral"
+      ],
+      "issues": []
+    },
+    {
+      "code": "40046P15",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/1-east-end-street-art-satisfaction-guaranteed-12ppl-max-40046P15",
+      "title": "#1 East End & Street Art | Satisfaction Guaranteed! | 12ppl Max",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/13.jpg",
+      "card": "London’s East End is the epicenter of the city’s vibrant street art scene, and the stomping ground of legendary street artists such as Shepa",
+      "itineraryTitles": [
+        "Shoreditch",
+        "Brick Lane",
+        "Spitalfields Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5936WHOWALK",
+      "ok": true,
+      "path": "/destinations/united-kingdom/london/tours/doctor-who-tv-locations-tour-of-london-5936WHOWALK",
+      "title": "Doctor Who TV Locations Tour of London",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c2/20.jpg",
+      "card": "Step into the universe of Doctor Who on this walking tour of London’s famous filming locations.",
+      "itineraryTitles": [
+        "Borough Market",
+        "Southwark",
+        "Shakespeare's Globe Theatre"
+      ],
+      "issues": []
+    }
+  ]
+}

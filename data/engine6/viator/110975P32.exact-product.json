@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "110975P32",
+    "productUrl": "https://www.viator.com/tours/London/Highlights-of-London-Private-Tour-Downtown-Notting-Hill-and-Portobello-Market/d737-110975P32",
+    "title": "Highlights of London Private Tour with Notting Hill",
+    "description": {
+      "text": "In London, Start at SoHo, Chinatown, and Westminster before taking the tube to the lively Notting Hill neighborhood. Stroll through Portobello Road Market, savor a classic English tea and pastry, and see filming locations from the Hugh Grant and Julia Roberts movie, Notting Hill. Stops include Soho, Chinatown, Westminster, Notting Hill, Portobello Road Market. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $164.83",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 16
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/a6/31.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Highlights of London Private Tour with Notting Hill from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the confirmed Central London start listed when booking. The route includes a Tube transfer to Notting Hill and Portobello Road Market."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In London, Start at SoHo, Chinatown, and Westminster before taking the tube to the lively Notting Hill neighborhood.",
+    "itineraryItems": [
+      {
+        "title": "Soho",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westminster",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Notting Hill",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Portobello Road Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional Guide",
+      "Underground Ticket",
+      "Capucino/Tea and a typical English pastry in one of the best Notting Hill bakeries"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of London Private Tour with Notting Hill?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet your private guide at the confirmed Central London start listed when booking. The route includes a Tube transfer to Notting Hill and Portobello Road Market."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 164.83
+      },
+      "currency": "USD"
+    }
+  }
+}

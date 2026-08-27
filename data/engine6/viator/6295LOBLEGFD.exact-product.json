@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "6295LOBLEGFD",
+    "productUrl": "https://www.viator.com/tours/London/London-Super-Saver-Royal-Walking-Tour-Including-Tower-of-London-and-Changing-of-the-Guard-plus-London-Highlights-with-Afternoon-Tea/d737-6295LOBLEGFD",
+    "title": "Changing of the Guard, Big Ben, Thames & Tower of London Tour",
+    "description": {
+      "text": "See the iconic royal sights of London on a full-day tour that showcases the best of the capital—a combination of two popular sightseeing experiences. Witness the Changing of the Guard ceremony outside Buckingham Palace, cruise along the Thames River to central London, an then meet an iconic Beefeater during a visit to the Tower of London. Stops include Buckingham Palace, Thames River, Tower of London. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $128.64",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4c/be/d7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Changing of the Guard, Big Ben, Thames & Tower of London Tour from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Central London start listed when booking. The combination includes Changing of the Guard routing and a Thames cruise to the Tower of London."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the iconic royal sights of London on a full-day tour that showcases the best of the capital—a combination of two popular sightseeing experiences.",
+    "itineraryItems": [
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thames River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower of London",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Tower of London Meet & Greet with a Beefeater",
+      "Entrance Ticket to the Tower of London",
+      "Boat ride on the River Thames",
+      "Changing of the Guard Tour / Westminster Walking Tour [depending on the day]",
+      "Expert, English-Speaking Tour Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Changing of the Guard, Big Ben, Thames & Tower of London Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meet at the confirmed Central London start listed when booking. The combination includes Changing of the Guard routing and a Thames cruise to the Tower of London."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 128.64
+      },
+      "currency": "USD"
+    }
+  }
+}

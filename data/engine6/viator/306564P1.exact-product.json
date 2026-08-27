@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "306564P1",
+    "productUrl": "https://www.viator.com/tours/London/Chubby-Fellow-Food-and-Beverage-Tours/d737-306564P1",
+    "title": "PRIVATE London Food Tours - Borough Market, Soho, East End",
+    "description": {
+      "text": "In London, Pick from a range of itineraries, including an East End tour, a Soho and Chinatown tour, and more. Whichever you choose, you can look forward to rubbing shoulders with locals and indulging in a range of top-tier eats. Stops include Borough Market, Soho, East End, Chinatown. Local commentary and route logistics are handled so you can focus on royal landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $268.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 253
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/c9/d0/27.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "PRIVATE London Food Tours - Borough Market, Soho, East End from London",
+      "Big Ben, Buckingham Palace, and Thames River views",
+      "Professional guide with London local expertise",
+      "Small-group or private format as listed",
+      "Guided London sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point confirmed when booking according to the selected food itinerary (Borough Market, Soho, or East End)."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In London, Pick from a range of itineraries, including an East End tour, a Soho and Chinatown tour, and more.",
+    "itineraryItems": [
+      {
+        "title": "Borough Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Soho",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "East End",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Alcoholic Beverages",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE London Food Tours - Borough Market, Soho, East End?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Meeting point confirmed when booking according to the selected food itinerary (Borough Market, Soho, or East End)."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 268
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "3862BICYCLE",
+    "productUrl": "https://www.viator.com/tours/London/London-Bike-Tour-East-West-or-Central-London/d737-3862BICYCLE",
+    "title": "London Classic Landmarks Bike Tour with Local Guide",
+    "description": {
+      "text": "Explore London's rich heritage and fabulous architecture in the open air—on a bicycle. With an experienced guide leading the way, you'll cycle from Covent Garden's vibrant atmosphere to the royal splendor of Buckingham Palace, from Westminster, to the architectural grandeur of St. Paul's Cathedral and beyond. Stops include Big Ben, Houses of Parliament, Westminster Abbey, Buckingham Palace, Covent Garden, St. Paul's Cathedral. Throughout your ride, your guide will share fascinating narratives about the city, covering everything from its moments of triumph to its notorious chapters and all its intrigue in between. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $60.87",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1301
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/41/da.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore London's rich heritage and fabulous architecture in the open air—on a bicycle",
+      "With an experienced guide leading the way, you'll cycle from Covent Garden's vibrant atmosphere to the royal splendor of",
+      "Throughout your ride, your guide will share fascinating narratives about the city, covering everything from its moments ",
+      "London Classic Landmarks Bike Tour with Local Guide near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Lambeth Towers, 74 Kennington Road, SE11 6NL, about 5 minutes from Lambeth North Underground Station or 10 minutes from Waterloo on foot."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore London's rich heritage and fabulous architecture in the open air—on a bicycle.",
+    "itineraryItems": [
+      {
+        "title": "Big Ben",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Houses of Parliament",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Covent Garden",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Paul's Cathedral",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bicycle rental",
+      "Helmet (on request)",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the London Classic Landmarks Bike Tour with Local Guide?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Lambeth Towers, 74 Kennington Road, SE11 6NL, about 5 minutes from Lambeth North Underground Station or 10 minutes from Waterloo on foot."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60.87
+      },
+      "currency": "USD"
+    }
+  }
+}

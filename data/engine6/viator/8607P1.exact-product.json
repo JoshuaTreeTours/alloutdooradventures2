@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "8607P1",
+    "productUrl": "https://www.viator.com/tours/London/The-Best-Of-London-Guided-Private-Walking-Tour/d737-8607P1",
+    "title": "3 Hour Guided Private Walking Tour: The Best of London",
+    "description": {
+      "text": "Marvel over royal monuments, architectural masterpieces and iconic landmarks on this 3-hour walking tour of London. Enjoy the undivided attention of your private guide as you stroll around Covent Garden, Leicester Square and Piccadilly Circus; snap photos of Trafalgar Square, Westminster Abbey, and Big Ben; and stand in awe before the magnificent Buckingham Palace. Stops include Westminster Abbey, Big Ben, Buckingham Palace, Trafalgar Square, Covent Garden, Piccadilly Circus. For the full experience, upgrade to include a visit to St Paul’s Cathedral, Tower Bridge, and the Tower of London. Ideal for visitors basing in London who want a guided city experience without coordinating Tube routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "London",
+      "state": "United Kingdom"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $237.88",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 46
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/0c/30/15.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Marvel over royal monuments, architectural masterpieces and iconic landmarks on this 3-hour walking tour of London",
+      "Enjoy the undivided attention of your private guide as you stroll around Covent Garden, Leicester Square and Piccadilly ",
+      "For the full experience, upgrade to include a visit to St Paul’s Cathedral, Tower Bridge, and the Tower of London",
+      "3 Hour Guided Private Walking Tour: The Best of London near London",
+      "Professional London guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Just outside Westminster Underground Station on Bridge Street, opposite Big Ben. There is a Caffe Nero; the tour starts from there. Hotel pickup from Central London hotels is available."
+      },
+      "end": {
+        "description": "Return to your London meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Marvel over royal monuments, architectural masterpieces and iconic landmarks on this 3-hour walking tour of London.",
+    "itineraryItems": [
+      {
+        "title": "Westminster Abbey",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Ben",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buckingham Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trafalgar Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Covent Garden",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pick-up and drop-off to selected hotels",
+      "Private guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3 Hour Guided Private Walking Tour: The Best of London?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for London?",
+        "answer": "Just outside Westminster Underground Station on Bridge Street, opposite Big Ben. There is a Caffe Nero; the tour starts from there. Hotel pickup from Central London hotels is available."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 237.88
+      },
+      "currency": "USD"
+    }
+  }
+}
