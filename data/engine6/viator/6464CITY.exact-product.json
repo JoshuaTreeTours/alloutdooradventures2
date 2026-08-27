@@ -1,0 +1,147 @@
+{
+  "product": {
+    "productCode": "6464CITY",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Amsterdam-City-Bike-Tour/d525-6464CITY",
+    "title": "The Original Amsterdam City Highlights Bike Tour (EN/NL/DE)",
+    "description": {
+      "text": "Enjoy an alternative sightseeing circuit of Amsterdam on a bike tour through waterways and cobbled streets. A professional guide leads past Centraal Station, Prinseneiland, the Jordaan, Anne Frank House, Westertoren, and Vondelpark, covering history and local coffee-shop culture. Groups stay small so the ride can leave the packed tourist circuit. Bike provision and canal-path routing stay with the guide so visitors can cycle rather than rent independently. Stops include Centraal Station, Prinseneiland, The Jordaan, Anne Frank House, Westertoren, Vondelpark."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $38.21",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 990
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6c/b1/fa.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Vondelpark",
+      "Museum Quarter (Museumkwartier)",
+      "Rijksmuseum",
+      "Amstelveld",
+      "Magere Brug"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Mike's Bike Tours Amsterdam, Oosterdoksstraat 106, 1011 DK Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy an alternative sightseeing circuit of Amsterdam on a bike tour through waterways and cobbled streets.",
+    "itineraryItems": [
+      {
+        "title": "Centraal Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Prinseneiland",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Jordaan",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Anne Frank House",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westertoren",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vondelpark",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museum Quarter (Museumkwartier)",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rijksmuseum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amstelveld",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magere Brug",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Holocaust Namenmonument",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nieuwmarkt",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "2.5 hour guided Amsterdam City Bike Tour (including bike)",
+      "English-speaking guide",
+      "Group size of max 15 people"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Original Amsterdam City Highlights Bike Tour (EN/NL/DE)?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Mike's Bike Tours Amsterdam, Oosterdoksstraat 106, 1011 DK Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 38.21
+      },
+      "currency": "USD"
+    }
+  }
+}

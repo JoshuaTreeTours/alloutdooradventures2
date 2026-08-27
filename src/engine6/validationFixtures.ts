@@ -250,6 +250,18 @@ import specimen2635pdolomitePayload from "../../data/engine6/viator/2635PDOLOMIT
 import specimen7812p214Payload from "../../data/engine6/viator/7812P214.exact-product.json";
 import specimen3731muranoPayload from "../../data/engine6/viator/3731MURANO.exact-product.json";
 import specimen92490p4Payload from "../../data/engine6/viator/92490P4.exact-product.json";
+import specimen139660p3Payload from "../../data/engine6/viator/139660P3.exact-product.json";
+import specimen6290ams4Payload from "../../data/engine6/viator/6290AMS4.exact-product.json";
+import specimen7812p33Payload from "../../data/engine6/viator/7812P33.exact-product.json";
+import specimen221267p4Payload from "../../data/engine6/viator/221267P4.exact-product.json";
+import specimen9093p9Payload from "../../data/engine6/viator/9093P9.exact-product.json";
+import specimen6624foodPayload from "../../data/engine6/viator/6624FOOD.exact-product.json";
+import specimen375412p1Payload from "../../data/engine6/viator/375412P1.exact-product.json";
+import specimen6464cityPayload from "../../data/engine6/viator/6464CITY.exact-product.json";
+import specimen6464countryPayload from "../../data/engine6/viator/6464COUNTRY.exact-product.json";
+import specimen6412walkPayload from "../../data/engine6/viator/6412WALK.exact-product.json";
+import specimen61268p6Payload from "../../data/engine6/viator/61268P6.exact-product.json";
+import specimen75227p6Payload from "../../data/engine6/viator/75227P6.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2963,6 +2975,78 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "92490P4",
     publicUrl: "https://www.viator.com/tours/Venice/Venetian-Cicchetti-Street-Food-Wine-and-Sightseeing-Walking-Tour-with-local-guide/d522-92490P4",
     rawPayload: specimen92490p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "139660P3",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Private-countryside-tour-the-highlights-of-Holland-with-guide-and-transport/d525-139660P3",
+    rawPayload: specimen139660p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6290AMS4",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Private-Tour-Amsterdam-City-Walking-Tour/d525-6290AMS4",
+    rawPayload: specimen6290ams4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P33",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Secret-Food-Tours-Amsterdam-Jordaan/d525-7812P33",
+    rawPayload: specimen7812p33Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "221267P4",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Countryside-Tour-Zaanse-Schans-and-Zandam-by-electric-bike/d525-221267P4",
+    rawPayload: specimen221267p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "9093P9",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Private-Tour-Red-Light-District-and-Food-Tour-with-Optional-Tasting-in-Amsterdam/d525-9093P9",
+    rawPayload: specimen9093p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6624FOOD",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-Jordaan-District-Food-Walking-Tour/d525-6624FOOD",
+    rawPayload: specimen6624foodPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "375412P1",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Guilty-Pleasure-Food-and-Drink-Tour-Trough-Old-Amsterdam-and-Red-Light-District/d525-375412P1",
+    rawPayload: specimen375412p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6464CITY",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-City-Bike-Tour/d525-6464CITY",
+    rawPayload: specimen6464cityPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6464COUNTRY",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-Countryside-Bike-Tour-Including-Cheese-Tasting-and-Clog-Demonstration/d525-6464COUNTRY",
+    rawPayload: specimen6464countryPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6412WALK",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-Walking-Tour/d525-6412WALK",
+    rawPayload: specimen6412walkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "61268P6",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Day-Trip-to-Zaanse-Schans-Edam-Volendam-and-Marken-from-Amsterdam/d525-61268P6",
+    rawPayload: specimen61268p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "75227P6",
+    publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-Canal-Cruise/d525-75227P6",
+    rawPayload: specimen75227p6Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

@@ -1,0 +1,137 @@
+{
+  "product": {
+    "productCode": "75227P6",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Amsterdam-Canal-Cruise/d525-75227P6",
+    "title": "Amsterdam Classic Saloon Boat Cruise, Drinks and Cheese Option",
+    "description": {
+      "text": "Elevate an Amsterdam canal cruise aboard a classic covered wooden saloon boat along UNESCO-listed canals. Onboard commentary points out the Anne Frank House, Westerkerk, the Rijksmuseum, the Amstel, and the Jordaan while the skipper handles canal routing. Depart from two central locations, with an option for Dutch cheese, mustard, and unlimited beer, wine, and soft drinks. The one-hour format is built for visitors who want canal views without choosing a dock or self-guided audio. Stops include Anne Frank House, Westerkerk, Rijksmuseum, The Amstel, The Jordaan."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $19.71",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 30121
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/fa/7d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Jordaan",
+      "Herengracht",
+      "Prinsengracht",
+      "Munt Tower (Munttoren)",
+      "Dutch National Opera & Ballet"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Select a central Amsterdam meeting point listed when booking."
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Elevate an Amsterdam canal cruise aboard a classic covered wooden saloon boat along UNESCO-listed canals.",
+    "itineraryItems": [
+      {
+        "title": "Anne Frank House",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Westerkerk",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Rijksmuseum",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The Amstel",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Seven Bridges View Point",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The Jordaan",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Herengracht",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Prinsengracht",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Munt Tower (Munttoren)",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Dutch National Opera & Ballet",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Skipper and Live Guide",
+      "Unique experience on a luxury boat",
+      "2 types of Dutch Cheese & Unlimited wine, beer, soft drinks (if option selected)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Amsterdam Classic Saloon Boat Cruise, Drinks and Cheese Option?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Select a central Amsterdam meeting point listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Canal Cruises"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 19.71
+      },
+      "currency": "USD"
+    }
+  }
+}

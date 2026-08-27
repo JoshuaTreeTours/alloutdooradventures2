@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "6464COUNTRY",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Amsterdam-Countryside-Bike-Tour-Including-Cheese-Tasting-and-Clog-Demonstration/d525-6464COUNTRY",
+    "title": "Countryside Bike Tour from Amsterdam: a Windmill and Dutch Cheese",
+    "description": {
+      "text": "Explore the Dutch countryside on this guided bike tour from Amsterdam, mixing windmills, farmland, and UNESCO canal landscapes. The route visits Krijtmolen d'Admiraal, Irene Hoeve for cheese and clogs, plus villages such as Zunderdorp and Ransdorp. Standard bikes cover a shorter loop; electric bikes cover more ground for experienced cyclists. A local guide keeps the ride on countryside lanes rather than independent navigation. Stops include Krijtmolen d'Admiraal, Irene Hoeve Clogs and Cheese Shop, Zunderdorp, Ransdorp."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $48.23",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1321
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/97.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Amsterdam North",
+      "Monnickendam",
+      "Explore the Dutch countryside on this guided bike tour from Amsterdam",
+      "Visit a mix of historical windmills, farmlands, classic Dutch landscapes, and UNESCO-listed canals",
+      "Countryside Bike Tour from Amsterdam: a Windmill and Dutch Cheese near Amsterdam"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Mike's Bike Tours Amsterdam, Oosterdoksstraat 106, 1011 DK Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the Dutch countryside on this guided bike tour from Amsterdam, mixing windmills, farmland, and UNESCO canal landscapes.",
+    "itineraryItems": [
+      {
+        "title": "Krijtmolen d'Admiraal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Irene Hoeve Clogs and Cheese Shop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zunderdorp",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ransdorp",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "EYE Film Institute Netherlands",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Amsterdam North",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Monnickendam",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Use of bicycle",
+      "Snacks",
+      "A Stroopwafel!"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Countryside Bike Tour from Amsterdam: a Windmill and Dutch Cheese?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Mike's Bike Tours Amsterdam, Oosterdoksstraat 106, 1011 DK Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 48.23
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "9093P9",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Private-Tour-Red-Light-District-and-Food-Tour-with-Optional-Tasting-in-Amsterdam/d525-9093P9",
+    "title": "Private Amsterdam Red Light District and Food Tour",
+    "description": {
+      "text": "See the famous Amsterdam Red Light District on a private tour that orients first-time visitors in the Dutch capital. The route follows the UNESCO-listed Amsterdam Canal Ring past Oude Kerk and into Chinatown, with three Dutch specialties such as cheese, kroket, and stroopwafel. Private pacing keeps commentary honest about the neighborhood rather than a packed group circuit. The two-hour format is built for visitors who want canal-ring walking and tastings without joining a large food group. Stops include Oude Kerk, Chinatown, Amsterdam Canal Ring."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $118.40",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 104
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/8d/72/51.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the truth behind the famous Amsterdam Red Light District on a private tour",
+      "It's a great way for first-time visitors to orient themselves in the Netherlands’ capital",
+      "As you stroll along the UNESCO-listed Amsterdam Canal Ring, you’ll pass Oude Kerk (Old Church) and explore Chinatown",
+      "Private Amsterdam Red Light District and Food Tour near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "ParkBee Parking NH Collection Amsterdam Barbizon Palace, Prins Hendrikkade 59, 1012 AD Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the famous Amsterdam Red Light District on a private tour that orients first-time visitors in the Dutch capital.",
+    "itineraryItems": [
+      {
+        "title": "Oude Kerk",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amsterdam Canal Ring",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local Guide",
+      "Private walking Tour",
+      "Three Dutch specialties",
+      "Pick your own departure time between 13:00 - 21:00"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Amsterdam Red Light District and Food Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "ParkBee Parking NH Collection Amsterdam Barbizon Palace, Prins Hendrikkade 59, 1012 AD Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 118.4
+      },
+      "currency": "USD"
+    }
+  }
+}

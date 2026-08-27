@@ -1,0 +1,137 @@
+{
+  "destinationLabel": "Amsterdam",
+  "destinationCitySlug": "amsterdam",
+  "viatorDestinationSlug": "Amsterdam",
+  "viatorDestinationId": "d525",
+  "catalogUrl": "https://www.viator.com/Amsterdam/d525-ttd",
+  "catalogUrlNote": "The task listed d522-ttd; live Amsterdam is d525. d522 is Venice.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 12,
+  "premiumCount": 7,
+  "selectionNote": "Selected 12 guided Amsterdam d525 products with live USD From$ prices, ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/GBP/AUD/SGD) blocked many otherwise-strong SKUs from being verified in USD. Jeep/off-road, helicopter, and stargazing SKUs were not captured as active USD product pages. Did not force inactive similar-options pages, non-USD pages, near-duplicates, audio/self-guided SKUs, weak ratings, thin review samples, or products with unusable heroes.",
+  "selectedProductCodes": [
+    "139660P3",
+    "6290AMS4",
+    "7812P33",
+    "221267P4",
+    "9093P9",
+    "6624FOOD",
+    "375412P1",
+    "6464CITY",
+    "6464COUNTRY",
+    "6412WALK",
+    "61268P6",
+    "75227P6"
+  ],
+  "premiumProductCodes": [
+    "139660P3",
+    "6290AMS4",
+    "7812P33",
+    "221267P4",
+    "9093P9",
+    "6624FOOD",
+    "375412P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "8681P13",
+      "title": "#1 Amsterdam City Center | Satisfaction Guaranteed! | 12ppl Max",
+      "reason": "No complete live USD product dump captured (rating, review count, and 674x446 hero together)"
+    },
+    {
+      "productCode": "9093P73",
+      "title": "Private Amsterdam City Bike Tour",
+      "reason": "USD From$110.61 and 5.0/27 reported, but no product-specific 674x446 hero dump"
+    },
+    {
+      "productCode": "257679P9",
+      "title": "Discover Netherlands from Amsterdam",
+      "reason": "USD From$137.80 and 5.0/8; thin reviews plus incomplete hero dump"
+    },
+    {
+      "productCode": "9093P25",
+      "title": "Private Zaanse Schans, Volendam and Marken Tour",
+      "reason": "USD From$478.95 and 5.0/11; too thin commercial sample versus selected private countryside SKU 139660P3"
+    },
+    {
+      "productCode": "67032P186",
+      "title": "Private Tour to Giethoorn incl Canal Cruise and Windmills from Amsterdam",
+      "reason": "USD From$396.16 verified on a live dump but only 5.0/1 review"
+    },
+    {
+      "productCode": "6290P37",
+      "title": "Private Amsterdam Bike Tour",
+      "reason": "USD From$182.50 and 4.0/1; weak rating and thin sample"
+    },
+    {
+      "productCode": "65356P12",
+      "title": "Private Amsterdam Bike Tour",
+      "reason": "Live dump priced in CAD; 5.0/7 is below the selected commercial bar"
+    },
+    {
+      "productCode": "2550LIN2A",
+      "title": "Windmill Tour from Amsterdam, Including Volendam & Marken",
+      "reason": "USD From$43.42 verified but weak commercial rating 4.2/4405; near-duplicate of selected 61268P6 countryside day trip"
+    },
+    {
+      "productCode": "7808P1",
+      "title": "Guided Canoe Adventure with Picnic Lunch in Waterland from Amsterdam",
+      "reason": "Live dump priced in AUD only (From A$156.87); 5.0/82"
+    },
+    {
+      "productCode": "400775P1",
+      "title": "Amsterdam Canal and Tulip Photography Tour",
+      "reason": "Live dump priced in AUD only; photography SKU otherwise attractive"
+    },
+    {
+      "productCode": "6464P5",
+      "title": "E-Bike Tour, Amsterdam's Highlights and Hidden Gems",
+      "reason": "Live dump priced in GBP only; near-duplicate of selected 6464CITY"
+    },
+    {
+      "productCode": "425945P1",
+      "title": "Amsterdam Walking Tour",
+      "reason": "Live dump priced in GBP only; 5.0/199"
+    },
+    {
+      "productCode": "61268P8",
+      "title": "Amsterdam Highlights Small-Group Walking Tour",
+      "reason": "Live dump priced in GBP only; 4.7/177"
+    },
+    {
+      "productCode": "9093P83",
+      "title": "Private Dutch Countryside Tour",
+      "reason": "Live dumps priced in SGD/GBP/EUR only; near-duplicate of selected 139660P3"
+    },
+    {
+      "productCode": "24380P58",
+      "title": "Amsterdam PRIVATE Bike Tour With Locals: Bike & Local Snack Included",
+      "reason": "Live dump priced in EUR only (From EUR 125.00); 4.8/128"
+    },
+    {
+      "productCode": "155558P1",
+      "title": "Amsterdam Photoshoot",
+      "reason": "Live dump priced in BRL; non-refundable"
+    },
+    {
+      "productCode": "7842P39",
+      "title": "Amsterdam Photography Masterclass",
+      "reason": "Live dump priced in CAD only"
+    },
+    {
+      "productCode": "7258P22",
+      "title": "Zaanse Schans and Volendam Private Tour from Amsterdam",
+      "reason": "Live dump priced in EUR only; near-duplicate of selected 139660P3"
+    },
+    {
+      "productCode": "67032P168",
+      "title": "Private Zaanse Schans Windmills and Volendam Tour from Amsterdam",
+      "reason": "Live dump priced in EUR only; near-duplicate of selected 139660P3"
+    },
+    {
+      "productCode": "375412P5",
+      "title": "Private 10 Tastes of Amsterdam Food Tour",
+      "reason": "Live dump priced in EUR only; near-duplicate of selected 375412P1"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "139660P3",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Private-countryside-tour-the-highlights-of-Holland-with-guide-and-transport/d525-139660P3",
+    "title": "Highlights of Holland Private Guided Tour from Amsterdam",
+    "description": {
+      "text": "Leave Amsterdam for a private 6- to 7-hour countryside day through Holland's windmills, fishing villages, and cheese country. Comfortable transport takes the group out of city crowds to Zaanse Schans, Marken, Volendam, and Church Broek. A private guide covers Dutch history while you taste local cheese, walk past working mills, and try on wooden shoes. Vehicle timing and village stops stay coordinated so the outing stays on rural Holland rather than self-driving between hamlets. Stops include Zaanse Schans, Marken, Volendam, Church Broek."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $332.92",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 234
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/25/8f/f2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Immerse yourself in Dutch culture, history, and cuisine on a private 6- to 7-hour countryside tour",
+      "Comfortable and swift transportation takes you from the tourist crowds of Amsterdam and into the heart of Holland",
+      "Highlights of Holland Private Guided Tour from Amsterdam near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Amsterdam as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Amsterdam for a private 6- to 7-hour countryside day through Holland's windmills, fishing villages, and cheese country.",
+    "itineraryItems": [
+      {
+        "title": "Zaanse Schans",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marken",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Volendam",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Church Broek",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "All Fees and Taxes",
+      "Entrance fee to a windmill at The Zaanse Schans",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of Holland Private Guided Tour from Amsterdam?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Hotel pickup in Amsterdam as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 332.92
+      },
+      "currency": "USD"
+    }
+  }
+}
