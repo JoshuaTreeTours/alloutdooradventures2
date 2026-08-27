@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "24779P1",
+    "productUrl": "https://www.viator.com/tours/Dublin/Wicklow-Powerscourt-and-Glendalough-Tour-from-Dublin/d503-24779P1",
+    "title": "Dublin to Powerscourt, Wicklow and Glendalough Small Group Tours",
+    "description": {
+      "text": "Spend an eight-hour small-group day from Dublin in County Wicklow, starting at the Molly Malone statue. The route visits Powerscourt House & Gardens, Enniskerry Village Square, Wicklow Mountains National Park, Sally Gap, Old Military Road, Guinness Lake, and Glendalough Monastic Settlement. A guide handles the scenic drive so visitors can walk the gardens and monastic valley without self-driving mountain lanes. Stops include Molly Malone Statue, Powerscourt House & Gardens, Enniskerry Village Square, Wicklow Mountains National Park, Sally Gap, Old Military Road, Guinness Lake, Glendalough Monastic Settlement."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $65.57",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 717
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ff/44/82.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Old Military Road",
+      "Guinness Lake",
+      "Glendalough Monastic Settlement",
+      "Dublin to Powerscourt, Wicklow and Glendalough Small Group Tours from Dublin",
+      "Temple Bar, Trinity College, and historic-center landmarks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend an eight-hour small-group day from Dublin in County Wicklow, starting at the Molly Malone statue.",
+    "itineraryItems": [
+      {
+        "title": "Molly Malone Statue",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Powerscourt House & Gardens",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Enniskerry Village Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wicklow Mountains National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sally Gap",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old Military Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Guinness Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glendalough Monastic Settlement",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "Live commentary on board",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin to Powerscourt, Wicklow and Glendalough Small Group Tours?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65.57
+      },
+      "currency": "USD"
+    }
+  }
+}

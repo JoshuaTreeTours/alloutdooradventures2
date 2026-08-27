@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "8962P4",
+    "productUrl": "https://www.viator.com/tours/Dublin/Giants-Causeway-Day-Tour-From-Dublin/d503-8962P4",
+    "title": "Giant's Causeway Day Tour from Dublin",
+    "description": {
+      "text": "Leave Dublin on a 13-hour day to Giant's Causeway, with stops at the Dark Hedges and Dunluce Castle on County Antrim's coast. A guide covers geology and folklore while the coach handles the long northbound drive from the city. Dunluce Castle admission is included; UNESCO Giant's Causeway access is a public monument. Meet at the Molly Malone statue on Suffolk Street. The outing is built for visitors who want Antrim coast columns and castle ruins without self-driving from Dublin. Stops include Giant's Causeway, Dark Hedges, Dunluce Castle."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $91.23",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 805
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/50/a3/57.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Leave the busy city behind and discover one of Northern Ireland’s most impressive natural attractions on this Giant’s Ca",
+      "Enjoy a bracing stroll along County Antrim’s coastal paths for panoramic views and a stop at the Dark Hedges",
+      "Giant's Causeway Day Tour from Dublin near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin on a 13-hour day to Giant's Causeway, with stops at the Dark Hedges and Dunluce Castle on County Antrim's coast.",
+    "itineraryItems": [
+      {
+        "title": "Giant's Causeway",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dark Hedges",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dunluce Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All taxes, road tolls and handling charges",
+      "Live commentary on board",
+      "Air-conditioned vehicle",
+      "WiFi on board",
+      "USB Charging Points at Every Seat",
+      "Dunluce Castle Entrance Fee",
+      "UNESCO Giant's Causeway access (public admission to this national monument is free of charge)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Giant's Causeway Day Tour from Dublin?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 91.23
+      },
+      "currency": "USD"
+    }
+  }
+}

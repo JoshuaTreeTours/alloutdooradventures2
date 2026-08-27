@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "33832P1",
+    "productUrl": "https://www.viator.com/tours/Dublin/Wicklow-mountains-Glendalough-and-Kilkenny-Day-Tour-from-Dublin/d503-33832P1",
+    "title": "Dublin to Glendalough, Wicklow and Kilkenny Full Day Guided Tour",
+    "description": {
+      "text": "Leave Dublin on a 9-hour 15-minute coach day through Wicklow Mountains National Park, Glendalough, and Kilkenny. A guide and separate driver cover The Wicklow Gap viewpoints, monastic ruins at Glendalough Monastic Settlement, and a walking circuit of Kilkenny Castle and medieval streets. Free time in Kilkenny lets the group add lunch or independent sightseeing before the return. The outing is built for visitors who want Wicklow scenery and a medieval city in one Dublin-based day. Stops include Glendalough Monastic Settlement, Wicklow Mountains National Park, The Wicklow Gap, Kilkenny Castle."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "9 hours 15 minutes (approx.)",
+    "priceFrom": "From $46.32",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3620
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7b/27/53.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Ireland’s natural wonders and historic gems on this full-day tour from Dublin",
+      "Set out on a scenic drive through the idyllic countryside of Wicklow National Park, stop to admire the views from Wicklo",
+      "Then, step back in time with a tour of Kilkenny, Ireland’s medieval capital, and enjoy free time to explore the city ind",
+      "Dublin to Glendalough, Wicklow and Kilkenny Full Day Guided Tour near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel Riu Plaza The Gresham Dublin, 23 O'Connell Street Upper, North City, Dublin, D01 C3W7, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin on a 9-hour 15-minute coach day through Wicklow Mountains National Park, Glendalough, and Kilkenny.",
+    "itineraryItems": [
+      {
+        "title": "Glendalough Monastic Settlement",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wicklow Mountains National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Wicklow Gap",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilkenny Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Live commentary on board",
+      "Professional guide and separate coach driver",
+      "Walking tours at Glendalough and Kilkenny included (not compulsory)",
+      "Transport by air-conditioned luxury coach",
+      "Free WiFi on board",
+      "USB charging ports"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin to Glendalough, Wicklow and Kilkenny Full Day Guided Tour?",
+        "answer": "The planned duration is 9 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Hotel Riu Plaza The Gresham Dublin, 23 O'Connell Street Upper, North City, Dublin, D01 C3W7, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 46.32
+      },
+      "currency": "USD"
+    }
+  }
+}

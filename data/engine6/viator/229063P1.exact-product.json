@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "229063P1",
+    "productUrl": "https://www.viator.com/tours/Dublin/Dublin-walking-tour/d503-229063P1",
+    "title": "Dublin Private Walking Tour",
+    "description": {
+      "text": "Discover Dublin on a private three-hour walking circuit of cobblestone streets and landmark stops. A licensed guide covers Temple Bar, Ha'penny Bridge, Trinity College, and the Molly Malone statue, with time for photos and local tips. Private pacing keeps commentary flexible rather than a fixed group loop. The walk finishes near the Oscar Wilde Monument so the same private format covers both historic streets and a Georgian square. Stops include Temple Bar, Ha'penny Bridge, Trinity College, Molly Malone statue, Oscar Wilde Monument."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $153.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 560
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/3a/3c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Dublin is rife with history and culture and this walking tour helps you to uncover the best landmarks",
+      "With a private guide, walk through the cobblestone streets of the city and stop at various points of interest including",
+      "Dublin Private Walking Tour near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Travelling Ireland Viaggiare in Irlanda, 8 Cecilia St, Temple Bar, Dublin, D02 RW82, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Dublin on a private three-hour walking circuit of cobblestone streets and landmark stops.",
+    "itineraryItems": [
+      {
+        "title": "Temple Bar",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ha'penny Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trinity College",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Molly Malone statue",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oscar Wilde Monument",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Experienced and licensed tour guide",
+      "Private guided tour (your group only)",
+      "Umbrellas provided",
+      "Restaurant, pub and shop recommendations",
+      "Photo opportunities",
+      "Local tips and tricks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin Private Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Travelling Ireland Viaggiare in Irlanda, 8 Cecilia St, Temple Bar, Dublin, D02 RW82, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 153.95
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "24779P2",
+    "productUrl": "https://www.viator.com/tours/Dublin/Wicklow-with-Guided-Walk-Including-Glendalough-Tour-from-Dublin/d503-24779P2",
+    "title": "Dublin to Wicklow, Glendalough Small Group Tour with Guided Walk",
+    "description": {
+      "text": "Leave Dublin for an eight-hour small-group day that pairs a guided walk in Wicklow National Park with time in Glendalough. After the hike, the group pauses for lunch in a Victorian village, then explores the medieval abbey setting before the return coach. Live commentary covers countryside lanes that are easy to miss from a rental car, and the driver-guide keeps hike and monastic timing on one vehicle. Meet at the Molly Malone statue on Suffolk Street. The outing is built for visitors who want a Wicklow walk plus Glendalough from a Dublin base. Stops include Wicklow National Park, Glendalough."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $86.85",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 263
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/10/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visiting Dublin is not experiencing the real Ireland",
+      "Or at least not all of it",
+      "This guided day trip from Dublin to Wicklow National Park shuttles you to a different side of Ireland",
+      "Dublin to Wicklow, Glendalough Small Group Tour with Guided Walk near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin for an eight-hour small-group day that pairs a guided walk in Wicklow National Park with time in Glendalough.",
+    "itineraryItems": [
+      {
+        "title": "Wicklow National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glendalough",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "Live commentary on board",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin to Wicklow, Glendalough Small Group Tour with Guided Walk?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 86.85
+      },
+      "currency": "USD"
+    }
+  }
+}

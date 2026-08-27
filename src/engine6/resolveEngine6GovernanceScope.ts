@@ -48,6 +48,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     venice: ["Venice"],
     amsterdam: ["Amsterdam"],
     netherlands: ["Amsterdam"],
+    dublin: ["Dublin"],
+    ireland: ["Dublin"],
     italy: ["Rome", "Venice"],
     "jackson-hole": ["Jackson Hole"],
     jackson: ["Jackson Hole"],

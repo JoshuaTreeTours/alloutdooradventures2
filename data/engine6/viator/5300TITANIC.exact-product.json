@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5300TITANIC",
+    "productUrl": "https://www.viator.com/tours/Dublin/Titanic-Visitor-Experience-and-Giants-Causeway-Day-Trip-from-Dublin/d503-5300TITANIC",
+    "title": "Dublin to Belfast Titanic, Dunluce Castle & Giant's Causeway Tour",
+    "description": {
+      "text": "Leave Dublin on a 13-hour coach day to Titanic Belfast, Dunluce Castle, and Giant's Causeway. A guide covers the liner's story in the Belfast galleries, then the Antrim Coast Road to Dunluce Castle and the UNESCO basalt columns. Admission to Titanic Belfast and Dunluce Castle is included so gallery and castle timing stay on one vehicle. Drop-off is on D'Olier Street near O'Connell Bridge. The long day is built for visitors who want Belfast shipyard history and Antrim coast geology from a Dublin base. Stops include Titanic Belfast, Antrim Coast Road, Dunluce Castle, Giant's Causeway, Castlebellingham."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $102.15",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3232
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c3/87/e9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Dublin to Belfast Titanic, Dunluce Castle & Giant's Causeway Tour from Dublin",
+      "Temple Bar, Trinity College, and historic-center landmarks",
+      "Professional guide with Dublin local expertise",
+      "Small-group or private format as listed",
+      "Guided Dublin sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Central Dublin meeting point as confirmed at booking; drop-off on D'Olier Street near O'Connell Bridge."
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin on a 13-hour coach day to Titanic Belfast, Dunluce Castle, and Giant's Causeway.",
+    "itineraryItems": [
+      {
+        "title": "Titanic Belfast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Antrim Coast Road",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Dunluce Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Giant's Causeway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Castlebellingham",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Air-conditioned vehicle",
+      "All Fees and Taxes",
+      "Entrance to the Titanic Experience",
+      "Entrance to Dunluce Castle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin to Belfast Titanic, Dunluce Castle & Giant's Causeway Tour?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Central Dublin meeting point as confirmed at booking; drop-off on D'Olier Street near O'Connell Bridge."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 102.15
+      },
+      "currency": "USD"
+    }
+  }
+}

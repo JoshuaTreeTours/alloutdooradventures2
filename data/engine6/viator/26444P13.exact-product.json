@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "26444P13",
+    "productUrl": "https://www.viator.com/tours/Dublin/The-Whiskey-Trail-Dublin/d503-26444P13",
+    "title": "Dublin 6 Whiskey Tasting & 3 Food Pairing Walking Tour with Local",
+    "description": {
+      "text": "Follow a local whiskey trail through Dublin with six tastings and optional food pairings. The walk starts at Powerscourt Townhouse Centre, then moves via Grafton Street and the Molly Malone statue toward Christ Church Cathedral and Temple Bar. A guide compares Jameson, Bushmills, Wild Geese, and Connemara styles in traditional pubs rather than a distillery-only visit. The three-hour format is built for visitors who want Dublin nightlife context with whiskey, not a self-guided pub crawl. Stops include Grafton Street, Molly Malone Statue, Powerscourt Townhouse Centre, Christ Church Cathedral, Temple Bar."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $90.09",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 32
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/28/05/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Dublin 6 Whiskey Tasting & 3 Food Pairing Walking Tour with Local from Dublin",
+      "Temple Bar, Trinity College, and historic-center landmarks",
+      "Professional guide with Dublin local expertise",
+      "Small-group or private format as listed",
+      "Guided Dublin sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Powerscourt Townhouse Centre, 59 William St S, Centre, Dublin 2, D02 HF95, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Follow a local whiskey trail through Dublin with six tastings and optional food pairings.",
+    "itineraryItems": [
+      {
+        "title": "Grafton Street",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Molly Malone Statue",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Powerscourt Townhouse Centre",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Christ Church Cathedral",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Temple Bar",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Beverages",
+      "Food tasting (Deluxe only)",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin 6 Whiskey Tasting & 3 Food Pairing Walking Tour with Local?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Powerscourt Townhouse Centre, 59 William St S, Centre, Dublin 2, D02 HF95, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.09
+      },
+      "currency": "USD"
+    }
+  }
+}

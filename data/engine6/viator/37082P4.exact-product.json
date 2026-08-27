@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "37082P4",
+    "productUrl": "https://www.viator.com/tours/Dublin/Howth-Panoramic-e-Bike-Tour/d503-37082P4",
+    "title": "Dublin Panoramic e-Bike Tour with Howth Adventures",
+    "description": {
+      "text": "Ride an e-bike from Dublin's Howth Harbour across the Howth Peninsula without grinding the hills. A small-group guide leads off-road trails to the Summit, Howth Cliffs, Baily Lighthouse, and Martello Towers, with photo stops and local commentary along the way. Bikes and helmets are provided so visitors can cover coastal ground rather than rent independently, and prior cycling experience is required for the off-road sections. The three-hour format is built for visitors who want Howth scenery from a Dublin-area harbor base. Stops include The Summit, Howth Cliffs, Baily Lighthouse, Martello Towers."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $68.36",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 439
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/37/fe/54.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Howth Peninsula is one of the most scenic spots near Dublin—but its hills can make exploring tricky",
+      "Instead, get a comprehensive tour of Howth without getting out of breath on this electric bike tour",
+      "Dublin Panoramic e-Bike Tour with Howth Adventures near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Howth Yacht Club, Middle Pier, Howth Harbour, Howth, Dublin, Co. Dublin, D13 E6V3, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride an e-bike from Dublin's Howth Harbour across the Howth Peninsula without grinding the hills.",
+    "itineraryItems": [
+      {
+        "title": "The Summit",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Howth Cliffs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Baily Lighthouse",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Martello Towers",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "ebike and helmet"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin Panoramic e-Bike Tour with Howth Adventures?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Howth Yacht Club, Middle Pier, Howth Harbour, Howth, Dublin, Co. Dublin, D13 E6V3, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 68.36
+      },
+      "currency": "USD"
+    }
+  }
+}

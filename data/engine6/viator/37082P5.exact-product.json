@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "37082P5",
+    "productUrl": "https://www.viator.com/tours/Dublin/Dublin-Coastal-Hike-with-Howth-Adventures/d503-37082P5",
+    "title": "Dublin Coastal Hike with Howth Adventures",
+    "description": {
+      "text": "Leave central Dublin for a three-hour guided coastal hike in the fishing village of Howth. A local guide covers Howth Castle, St. Mary's Abbey, and Howth Harbour before the cliff-path loop, with stories about village history along the way. The small-group walk is built for visitors who want shoreline views without mapping the peninsula independently. Meet outside Bodega Coffee Shop at Howth Market, opposite the train station, then follow the harbor and abbey before the cliffs. Stops include Howth Castle, St. Mary's Abbey, Howth Harbour."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $45.27",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 225
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/57/4a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the beauty of Dublin beyond the city center with a coastal walk in Howth",
+      "Explore the pretty harbor and coastal village while learning about local culture and history",
+      "Dublin Coastal Hike with Howth Adventures near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Howth Market, 3A Harbour Rd, Howth, Dublin, D13 X2D0, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave central Dublin for a three-hour guided coastal hike in the fishing village of Howth.",
+    "itineraryItems": [
+      {
+        "title": "Howth Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Mary's Abbey",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Howth Harbour",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Tour Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin Coastal Hike with Howth Adventures?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Howth Market, 3A Harbour Rd, Howth, Dublin, D13 X2D0, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45.27
+      },
+      "currency": "USD"
+    }
+  }
+}
