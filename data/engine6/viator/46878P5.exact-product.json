@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "46878P5",
+    "productUrl": "https://www.viator.com/tours/Paris/PARIS-BY-DAY-2H-TOUR-IN-VINTAGE-FRENCH-CAR/d479-46878P5",
+    "title": "Paris Private Guided Tour in a Vintage Car with Driver",
+    "description": {
+      "text": "If you're celebrating a special occasion and want to see the sights of Paris with a dash of classic charm, few experiences top this private sightseeing adventure where you glide through the city in an open-roof Citroen. You can hop into the car after easy pickup and let your guide chauffeur you through the City of Light, offering helpful narration as you go. Stops include Montmartre, Latin Quarter, Moulin Rouge, Champs-Élysées, Eiffel Tower, Louvre Museum. Explore charming neighborhoods like Montmartre and the Latin Quarter, see top sights like the Moulin Rouge, and cruise down the elegant Champs-Elysées. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $323.08",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 166
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1a/05/af.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "If you're celebrating a special occasion and want to see the sights of Paris with a dash of classic charm, few experienc",
+      "You can hop into the car after easy pickup and let your guide chauffeur you through the City of Light, offering helpful ",
+      "Explore charming neighborhoods like Montmartre and the Latin Quarter, see top sights like the Moulin Rouge, and cruise d",
+      "Paris Private Guided Tour in a Vintage Car with Driver near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from central Paris districts, or Place de la Concorde in front of Jardin des Tuileries if the hotel is outside the pickup zone."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "If you're celebrating a special occasion and want to see the sights of Paris with a dash of classic charm, few experiences top this private sightseeing adventure where you glide through the city in an open-roof Citroen.",
+    "itineraryItems": [
+      {
+        "title": "Montmartre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latin Quarter",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moulin Rouge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Champs-Élysées",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eiffel Tower",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Local Guide",
+      "Private Guide",
+      "Driver/Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris Private Guided Tour in a Vintage Car with Driver?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Pickup from central Paris districts, or Place de la Concorde in front of Jardin des Tuileries if the hotel is outside the pickup zone."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 323.08
+      },
+      "currency": "USD"
+    }
+  }
+}

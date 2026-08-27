@@ -4885,6 +4885,102 @@ const unitedKingdomState: StateDestination = {
   isFallback: true,
 };
 
+const franceState: StateDestination = {
+  slug: "france",
+  name: "France",
+  description:
+    "Paris landmarks, Seine views, and guided walking, cycling, and museum touring.",
+  featuredDescription:
+    "Explore Paris tours with private walking routes, vintage-car sightseeing, museum access, and Versailles day trips.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg",
+  region: "Europe",
+  intro:
+    "France pairs walkable Paris districts with Seine river views, museum collections, and day trips to Versailles.",
+  longDescription:
+    "Paris anchors France tour inventory with private walking tours, vintage-car sightseeing, Louvre and Orsay visits, Montmartre food walks, and Versailles bike days from the capital.",
+  topRegions: [
+    {
+      title: "Seine and historic islands",
+      description:
+        "Notre-Dame, Sainte-Chapelle, Île de la Cité, and river cruises along the Seine.",
+    },
+    {
+      title: "Right Bank landmarks",
+      description:
+        "Louvre Museum, Champs-Élysées, Trocadéro, and Montmartre neighborhood walks.",
+    },
+  ],
+  cities: [
+    {
+      name: "Paris",
+      slug: "paris",
+      stateSlug: "france",
+      region: "Paris",
+      lat: 48.8566,
+      lng: 2.3522,
+      shortDescription:
+        "Private walking tours, museum visits, and landmark sightseeing in Paris.",
+      intro:
+        "Paris is a river city with the Eiffel Tower, Louvre collections, Notre-Dame, and guided walking, cycling, and food tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cycling"],
+      whereItIs: [
+        "Paris sits on the River Seine with the Right Bank, Left Bank, and Île de la Cité framing central sightseeing.",
+        "Most guided tours depart from Trocadéro, the Louvre, Île de la Cité, Montmartre, and central Paris hotels.",
+      ],
+      experiences: {
+        mountains:
+          "Paris is a river city; tours focus on landmarks, museum galleries, and neighborhood walking districts.",
+        lakesWater:
+          "Seine River cruises highlight Notre-Dame, the Louvre, and the Eiffel Tower from the water.",
+        desertForest:
+          "Parks such as the Tuileries Garden and Luxembourg Garden offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours cover Les Invalides, the Louvre, Île de la Cité, and landmark corridors.",
+        scenicDrives:
+          "Private vintage-car and 2CV tours cover the Eiffel Tower, Montmartre, and Champs-Élysées photo stops.",
+        seasonalNotes:
+          "Spring and summer are popular for Seine cruises and Versailles gardens; winter adds indoor museum and food walking.",
+      },
+      thingsToDo: [
+        "Walk Île de la Cité for Notre-Dame, Sainte-Chapelle, and Pont Neuf.",
+        "Visit the Louvre Museum and cruise the Seine.",
+        "Join a private Montmartre food walk or a vintage-car landmark tour.",
+      ],
+      toursCopy: [
+        "Book a private Paris walk for a compact introduction to the city.",
+        "Pair a Louvre visit with a Seine cruise for a full-day city itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Louvre Museum guided visit.",
+          "Afternoon: Île de la Cité walking tour.",
+          "Evening: Seine River cruise or night bike tour.",
+        ],
+        dayTwo: [
+          "Morning: Montmartre food and wine walk.",
+          "Afternoon: Versailles bike day or Musée d'Orsay.",
+          "Evening: Trocadéro and the Eiffel Tower.",
+        ],
+      },
+      gettingThere: [
+        "Charles de Gaulle and Orly airports serve Paris with RER, Metro, and taxi links to central arrondissements.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Paris tours?",
+          answer:
+            "Private walking tours, Louvre and Orsay visits, Seine cruises, vintage-car sightseeing, and Versailles bike days are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -4896,6 +4992,7 @@ export const states: StateDestination[] = [
   massachusettsState,
   illinoisState,
   unitedKingdomState,
+  franceState,
   spainState,
 ];
 

@@ -9,6 +9,7 @@ export const EXCLUDED_PRODUCT_CODES = [
   "118744P4",
   "191303P1",
   "9345P1",
+  "12389P8",
 ] as const;
 
 /** Active tour pages may remain published; these codes must not ship in merchantFeed.csv. */

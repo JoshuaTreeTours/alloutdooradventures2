@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "181888P1",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-Private-Tour/d479-181888P1",
+    "title": "Paris Private Tour",
+    "description": {
+      "text": "Covering Paris in a short stay can overwhelm even the savviest visitors. Treat yourself to a smooth and stress-free introduction to the City of Lights during this private half-day tour. Stops include Place du Trocadéro, Eiffel Tower, Shakespeare and Company, Notre-Dame Cathedral of Paris. Tick off blockbusters like the Eiffel Tower, and discover locally beloved landmarks like Shakespeare and Co bookshop. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Place du Trocadéro, Eiffel Tower, Shakespeare and Company, Notre-Dame Cathedral of Paris that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $172.54",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 36
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7a/8d/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Covering Paris in limited time can overwhelm even the savviest travelers",
+      "Treat yourself to a smooth and stress-free introduction to the City of Lights during this private half-day tour",
+      "Tick off blockbusters like the Eiffel Tower, and discover locally beloved landmarks like Shakespeare and Co bookshop",
+      "Paris Private Tour near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Esplanade du Trocadéro, 75116 Paris, for walking departures. Private-driver option includes hotel pickup."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Covering Paris in a short stay can overwhelm even the savviest visitors.",
+    "itineraryItems": [
+      {
+        "title": "Place du Trocadéro",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eiffel Tower",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shakespeare and Company",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Notre-Dame Cathedral of Paris",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Coffee and/or Tea",
+      "A summary of the Paris history"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris Private Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Esplanade du Trocadéro, 75116 Paris, for walking departures. Private-driver option includes hotel pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 172.54
+      },
+      "currency": "USD"
+    }
+  }
+}

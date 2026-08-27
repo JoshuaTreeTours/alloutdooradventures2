@@ -361,7 +361,7 @@ const getCanonicalCityTourPath = (tour: Tour) =>
     tour.destination.citySlug
   )}/tours/${tour.slug}`;
 
-const ENGINE6_ONLY_CITY_KEYS = new Set<string>();
+const ENGINE6_ONLY_CITY_KEYS = new Set<string>(["france/paris"]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
   ENGINE6_ONLY_CITY_KEYS.has(`${stateSlug}/${citySlug}`);
@@ -699,10 +699,12 @@ export const getToursByCityUnified = (
   citySlug: string
 ): UnifiedCityTour[] => {
   if (isEngine6OnlyCity(stateSlug, citySlug)) {
-    const engine6OnlyTours = getToursByCity(stateSlug, citySlug).map(
-      toUnifiedEngine1Tour
+    const engine6OnlyTours = getToursByCity(stateSlug, citySlug)
+      .filter(tour => tour.engine === "engine6")
+      .map(toUnifiedEngine1Tour);
+    return dedupeUnifiedCityTours(engine6OnlyTours).filter(entry =>
+      isValidForPublicCityListing(entry, stateSlug, citySlug)
     );
-    return dedupeUnifiedCityTours(engine6OnlyTours);
   }
 
   const engine1Tours = getToursByCity(stateSlug, citySlug).map(

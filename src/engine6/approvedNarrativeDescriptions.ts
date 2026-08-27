@@ -22,6 +22,7 @@ import { getArchesNationalParkTargetedNarrativeDescription } from "./archesNatio
 import { getCanyonlandsNationalParkTargetedNarrativeDescription } from "./canyonlandsNationalParkApprovedNarrativeDescriptions";
 import { getAcadiaNationalParkTargetedNarrativeDescription } from "./acadiaNationalParkApprovedNarrativeDescriptions";
 import { getLondonTargetedNarrativeDescription } from "./londonApprovedNarrativeDescriptions";
+import { getParisTargetedNarrativeDescription } from "./parisApprovedNarrativeDescriptions";
 import { getBarcelonaTargetedNarrativeDescription } from "./barcelonaApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
@@ -130,6 +131,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getCanyonlandsNationalParkTargetedNarrativeDescription(productCode) ??
   getAcadiaNationalParkTargetedNarrativeDescription(productCode) ??
   getLondonTargetedNarrativeDescription(productCode) ??
+  getParisTargetedNarrativeDescription(productCode) ??
   getBarcelonaTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??

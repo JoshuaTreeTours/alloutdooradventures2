@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "46018P3",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-in-a-Day-with-Louvre-Eiffel-Tower-Notre-Dame-Cruise/d479-46018P3",
+    "title": "Paris in a Day with Louvre, Eiffel Tower, Notre Dame & Cruise",
+    "description": {
+      "text": "Discover Paris's iconic landmarks in a single day with a small group and a knowledgeable local guide. Skip the lines at the Louvre Museum for an immersive art experience and see the famous Mona Lisa. Stops include Louvre Museum, Montmartre, Ile de la Cité, Trocadéro, Eiffel Tower, Seine River. Explore Montmartre and Ile de la Cité on guided walks and enjoy views of the Eiffel Tower from Trocadero Square. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Louvre Museum, Montmartre, Ile de la Cité, Trocadéro that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $169.91",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1017
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover Paris's iconic landmarks in a single day with a small group and a knowledgeable local guide",
+      "Skip the lines at the Louvre Museum for an immersive art experience and see the famous Mona Lisa",
+      "Explore Montmartre and Ile de la Cité on guided walks and enjoy views of the Eiffel Tower from Trocadero Square",
+      "Paris in a Day with Louvre, Eiffel Tower, Notre Dame & Cruise near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the Walks guide at the confirmed Paris meeting point listed at booking."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Paris's iconic landmarks in a single day with a small group and a knowledgeable local guide.",
+    "itineraryItems": [
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montmartre",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ile de la Cité",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trocadéro",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eiffel Tower",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seine River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local English-speaking guide",
+      "Ticket for Louvre Museum",
+      "One hour Seine River Cruise",
+      "Metro tickets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris in a Day with Louvre, Eiffel Tower, Notre Dame & Cruise?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Meet the Walks guide at the confirmed Paris meeting point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169.91
+      },
+      "currency": "USD"
+    }
+  }
+}

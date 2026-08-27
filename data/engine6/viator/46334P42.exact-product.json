@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "46334P42",
+    "productUrl": "https://www.viator.com/tours/Paris/Semi-Private-Catacombs-of-Paris-Restricted-Access-Tour/d479-46334P42",
+    "title": "Catacombs of Paris Semi-Private VIP Restricted Access Tour",
+    "description": {
+      "text": "Explore the Catacombs of Paris on a small-group tour limited to only six people. With this skip-the-line admission, you can avoid the typically long ticket queue at one of Paris' most fascinating attractions, and learn about the history of the underground burial site with a guide. Stops include Catacombs of Paris, Rue Rémy Dumoncel. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Catacombs of Paris, Rue Rémy Dumoncel that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $185.16",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 282
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/35/de/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Catacombs of Paris Semi-Private VIP Restricted Access Tour from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Outside the main entrance gate to the Catacombs, 1 Av. du Colonel Henri Rol-Tanguy, 75014 Paris. Metro Denfert-Rochereau Sortie 1."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the Catacombs of Paris on a small-group tour limited to only six people.",
+    "itineraryItems": [
+      {
+        "title": "Catacombs of Paris",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rue Rémy Dumoncel",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided visit of the Catacombs",
+      "Special access to parts of the Catacombs closed to the public",
+      "VIP small groups of 6 people or fewer"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Catacombs of Paris Semi-Private VIP Restricted Access Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Outside the main entrance gate to the Catacombs, 1 Av. du Colonel Henri Rol-Tanguy, 75014 Paris. Metro Denfert-Rochereau Sortie 1."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Semi-Private VIP Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 185.16
+      },
+      "currency": "USD"
+    }
+  }
+}

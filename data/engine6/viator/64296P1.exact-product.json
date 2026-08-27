@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "64296P1",
+    "productUrl": "https://www.viator.com/tours/Paris/Versailles-Bike-Tour-with-Market-Gardens-and-Guided-Palace-Tour/d479-64296P1",
+    "title": "Versailles Bike Tour with Market, Gardens & Guided Palace Tour",
+    "description": {
+      "text": "See various parts of Versailles and its palace grounds on this day trip from Paris via a high-speed train. When you arrive, cruise around town and the grounds of the palace on a bike. Stops include Versailles, Palace of Versailles, Gardens of Versailles, Marie Antoinette's Hamlet. Then, skip the long lines of the palace and enjoy a guided tour where you walk through the famous gardens and see the fountains. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Versailles, Palace of Versailles, Gardens of Versailles, Marie Antoinette's Hamlet that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $155.09",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 830
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b2/59/73.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See various parts of Versailles and its palace grounds on this day trip from Paris via a high-speed train",
+      "When you arrive, cruise around town and the grounds of the palace on a bike",
+      "Then, skip the long lines of the palace and enjoy a guided tour where you walk through the famous gardens and see the fo",
+      "Versailles Bike Tour with Market, Gardens & Guided Palace Tour near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Paris train departure for Versailles as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See various parts of Versailles and its palace grounds on this day trip from Paris via a high-speed train.",
+    "itineraryItems": [
+      {
+        "title": "Versailles",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palace of Versailles",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gardens of Versailles",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marie Antoinette's Hamlet",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip train tickets from Paris",
+      "Guided palace tour",
+      "Bike time on the grounds"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Versailles Bike Tour with Market, Gardens & Guided Palace Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Paris train departure for Versailles as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 155.09
+      },
+      "currency": "USD"
+    }
+  }
+}

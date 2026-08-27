@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "88461P3",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-Montmartre-Food-Wine-Tour-with-Eating-Europe/d479-88461P3",
+    "title": "Paris Montmartre Food & Wine Tour with Eating Europe",
+    "description": {
+      "text": "In Paris, walk the hill of Montmartre with a local food guide, tasting baguette, macarons, cheese, charcuterie, and choux à la crème while sipping French wine and apple cider. The small-group route starts at Le Pain Quotidien on Rue Lepic and finishes at Basilique du Sacré-Cœur, with scenic viewpoints over Paris as you eat and drink like a neighborhood regular. Stops include Le Pain Quotidien, Rue Lepic, Montmartre, Basilique du Sacré-Cœur de Montmartre. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Le Pain Quotidien, Rue Lepic, Montmartre, Basilique du Sacré-Cœur de Montmartre that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "3 hours 10 minutes (approx.)",
+    "priceFrom": "From $182.96",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 465
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/81/cd/5c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Paris Montmartre Food & Wine Tour with Eating Europe from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Le Pain Quotidien, 31 Rue Lepic, 75018 Paris. Guide shows the Eating Europe purple logo."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Paris, walk the hill of Montmartre with a local food guide, tasting baguette, macarons, cheese, charcuterie, and choux à la crème while sipping French wine and apple cider.",
+    "itineraryItems": [
+      {
+        "title": "Le Pain Quotidien",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rue Lepic",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montmartre",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilique du Sacré-Cœur de Montmartre",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local expert guide",
+      "French wine and apple cider",
+      "Baguette, macarons, cheese, and charcuterie tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris Montmartre Food & Wine Tour with Eating Europe?",
+        "answer": "The planned duration is 3 hours 10 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Le Pain Quotidien, 31 Rue Lepic, 75018 Paris. Guide shows the Eating Europe purple logo."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Wine Tasting & Winery Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 182.96
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "3588PARIS01",
+    "productUrl": "https://www.viator.com/tours/Paris/Highlights-of-Paris-Bike-Tour-with-a-Local-Guide/d479-3588PARIS01",
+    "title": "Highlights of Paris Bike Tour with a Local Guide",
+    "description": {
+      "text": "Spin through the city streets like a local and explore the French capital in style on this small-group (or private) bike tour of Paris. Follow your guide to top attractions such as Les Invalides, the Louvre, and the Eiffel Tower. Stops include Ecole Militaire, Hôtel des Invalides, Place de la Concorde, Louvre Museum, Pont Alexandre III, Seine River. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Ecole Militaire, Hôtel des Invalides, Place de la Concorde, Louvre Museum that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $45.16",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1033
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/cf/c0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Highlights of Paris Bike Tour with a Local Guide from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Fat Tire Tours meeting point in Paris as listed at booking."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spin through the city streets like a local and explore the French capital in style on this small-group (or private) bike tour of Paris.",
+    "itineraryItems": [
+      {
+        "title": "Ecole Militaire",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hôtel des Invalides",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Place de la Concorde",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pont Alexandre III",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seine River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bicycle",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of Paris Bike Tour with a Local Guide?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Fat Tire Tours meeting point in Paris as listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45.16
+      },
+      "currency": "USD"
+    }
+  }
+}
