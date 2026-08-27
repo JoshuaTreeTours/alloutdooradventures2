@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "24380P214",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-the-City-of-Lights-by-Night/d479-24380P214",
+    "title": "A Magical Evening in Paris With Locals: PRIVATE City Walking Tour",
+    "description": {
+      "text": "See Paris at night on a personalized walking tour with a private local host who shows you the City of Light's illuminated sights. You'll stroll past the Champs Élysées, catch sight of the twinkling Eiffel Tower, and walk with your guide to Place Vendôme, Place de la Concorde, Grand Palais, and Pont Alexandre III before finishing at Trocadéro. Stops include Place Vendôme, Place de la Concorde, Champs-Elysees, Pont Alexandre III, Trocadéro, Eiffel Tower. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Place Vendôme, Place de la Concorde, Champs-Elysees, Pont Alexandre III that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $103.06",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 116
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f7/b7/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "A Magical Evening in Paris With Locals: PRIVATE City Walking Tour from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Clock statue \"L'heure de tous\" at Saint-Lazare / Place du Havre, 5 Cr du Havre, 75008 Paris."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Paris at night on a personalized walking tour with a private local host who shows you the City of Light's illuminated sights.",
+    "itineraryItems": [
+      {
+        "title": "Place Vendôme",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Place de la Concorde",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Champs-Elysees",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pont Alexandre III",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trocadéro",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eiffel Tower",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Tour - Only your travel party & your guide",
+      "Private guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the A Magical Evening in Paris With Locals: PRIVATE City Walking Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Clock statue \"L'heure de tous\" at Saint-Lazare / Place du Havre, 5 Cr du Havre, 75008 Paris."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 103.06
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "46334P22",
+    "productUrl": "https://www.viator.com/tours/Paris/2-Hour-Muse-dOrsay-with-Skip-the-Line-Access/d479-46334P22",
+    "title": "Orsay Museum Skip-the-Line Impressionists Guided Tour",
+    "description": {
+      "text": "In Paris, explore one of the world's most important collections of Impressionist and post-Impressionist art on this guided tour of the Musée d'Orsay. Instead of trying to navigate the museum on your own, you'll enjoy insight from a guide to make sure you see the top pieces and learn about the artists, such as Van Gogh, Monet, Manet, and Renoir. Stops include Musée d'Orsay, Rhinoceros by Alfred Jacquemart. And with skip-the-line entry, you're ensured a hassle-free visiting experience. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Musée d'Orsay, Rhinoceros by Alfred Jacquemart that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "1 hour 45 minutes (approx.)",
+    "priceFrom": "From $80.94",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 855
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/14/44/43.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore one of the world's most important collections of Impressionist and post-Impressionist art on this guided tour of",
+      "Skip-the-line Musée d'Orsay Impressionist galleries",
+      "Expert accredited museum guide",
+      "Orsay Museum Skip-the-Line Impressionists Guided Tour near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "In front of the Musée d’Orsay, outside by the rhinoceros statue. Guide wears an orange lanyard."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Paris, explore one of the world's most important collections of Impressionist and post-Impressionist art on this guided tour of the Musée d'Orsay.",
+    "itineraryItems": [
+      {
+        "title": "Musée d'Orsay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rhinoceros by Alfred Jacquemart",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "1h45' guided tour of the Musée d’Orsay",
+      "Skip the line entrance to the Musee d'Orsay",
+      "Expert, fully accredited guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Orsay Museum Skip-the-Line Impressionists Guided Tour?",
+        "answer": "The planned duration is 1 hour 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "In front of the Musée d’Orsay, outside by the rhinoceros statue. Guide wears an orange lanyard."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Museum Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 80.94
+      },
+      "currency": "USD"
+    }
+  }
+}

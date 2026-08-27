@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "30791P192",
+    "productUrl": "https://www.viator.com/tours/Paris/Explore-Paris-with-a-Local/d479-30791P192",
+    "title": "Paris Private Custom Tour with a Local Guide, Hidden Gems & Highlights",
+    "description": {
+      "text": "Explore Paris on your own terms with a customized city visit with a local host. You'll get to spend two to eight hours with an expert Parisian, who can show you all sorts of off-the-beaten-path gems, from restaurants to shops to lesser-known museums. Stops include Colonne Vendôme, Place Vendôme. Your guide can also help you plan the rest of your trip, setting you up with itineraries suited to your own needs and interests. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Colonne Vendôme, Place Vendôme that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 to 8 hours (approx.)",
+    "priceFrom": "From $93.43",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 258
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/fe/be.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Paris on your own terms with a customized city visit with a local host",
+      "You'll get to spend two to eight hours with an expert Parisian, who can show you all sorts of off-the-beaten-path gems, ",
+      "Your guide can also help you plan the rest of your trip, setting you up with itineraries suited to your own needs and in",
+      "Paris Private Custom Tour with a Local Guide, Hidden Gems & Highlights near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Colonne Vendôme, Place Vendôme, 75001 Paris."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Paris on your own terms with a customized city visit with a local host.",
+    "itineraryItems": [
+      {
+        "title": "Colonne Vendôme",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Place Vendôme",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private and personalized walking experience with insider tips from a passionate local"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris Private Custom Tour with a Local Guide, Hidden Gems & Highlights?",
+        "answer": "The planned duration is 2 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Meet at Colonne Vendôme, Place Vendôme, 75001 Paris."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 93.43
+      },
+      "currency": "USD"
+    }
+  }
+}

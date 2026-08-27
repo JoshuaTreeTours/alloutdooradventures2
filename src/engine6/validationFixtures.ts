@@ -185,6 +185,26 @@ import specimen24338p83Payload from "../../data/engine6/viator/24338P83.exact-pr
 import specimen3862bicyclePayload from "../../data/engine6/viator/3862BICYCLE.exact-product.json";
 import specimen40046p15Payload from "../../data/engine6/viator/40046P15.exact-product.json";
 import specimen5936whowalkPayload from "../../data/engine6/viator/5936WHOWALK.exact-product.json";
+import specimen181888p1Payload from "../../data/engine6/viator/181888P1.exact-product.json";
+import specimen126585p4Payload from "../../data/engine6/viator/126585P4.exact-product.json";
+import specimen46878p5Payload from "../../data/engine6/viator/46878P5.exact-product.json";
+import specimen6353p20Payload from "../../data/engine6/viator/6353P20.exact-product.json";
+import specimen30791p192Payload from "../../data/engine6/viator/30791P192.exact-product.json";
+import specimen24380p214Payload from "../../data/engine6/viator/24380P214.exact-product.json";
+import specimen88461p3Payload from "../../data/engine6/viator/88461P3.exact-product.json";
+import specimen393958p1Payload from "../../data/engine6/viator/393958P1.exact-product.json";
+import specimen46018p3Payload from "../../data/engine6/viator/46018P3.exact-product.json";
+import specimen64296p1Payload from "../../data/engine6/viator/64296P1.exact-product.json";
+import specimen46334p42Payload from "../../data/engine6/viator/46334P42.exact-product.json";
+import specimen6353p9Payload from "../../data/engine6/viator/6353P9.exact-product.json";
+import specimen3731louvrePayload from "../../data/engine6/viator/3731LOUVRE.exact-product.json";
+import specimen67584p1Payload from "../../data/engine6/viator/67584P1.exact-product.json";
+import specimen3588paris01Payload from "../../data/engine6/viator/3588PARIS01.exact-product.json";
+import specimen3588paris03Payload from "../../data/engine6/viator/3588PARIS03.exact-product.json";
+import specimen3588versaPayload from "../../data/engine6/viator/3588VERSA.exact-product.json";
+import specimen47475p6Payload from "../../data/engine6/viator/47475P6.exact-product.json";
+import specimen46018p2Payload from "../../data/engine6/viator/46018P2.exact-product.json";
+import specimen46334p22Payload from "../../data/engine6/viator/46334P22.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -2508,6 +2528,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "5936WHOWALK",
     publicUrl: "https://www.viator.com/tours/London/Doctor-Who-TV-Locations-Tour-of-London/d737-5936WHOWALK",
     rawPayload: specimen5936whowalkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "181888P1",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-Private-Tour/d479-181888P1",
+    rawPayload: specimen181888p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "126585P4",
+    publicUrl: "https://www.viator.com/tours/Paris/TOUR-IN-2CV-PARIS-SECRET-2H/d479-126585P4",
+    rawPayload: specimen126585p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46878P5",
+    publicUrl: "https://www.viator.com/tours/Paris/PARIS-BY-DAY-2H-TOUR-IN-VINTAGE-FRENCH-CAR/d479-46878P5",
+    rawPayload: specimen46878p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6353P20",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-City-Center-the-History-of-Paris-Exclusive-Guided-Walking-Tour/d479-6353P20",
+    rawPayload: specimen6353p20Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30791P192",
+    publicUrl: "https://www.viator.com/tours/Paris/Explore-Paris-with-a-Local/d479-30791P192",
+    rawPayload: specimen30791p192Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24380P214",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-the-City-of-Lights-by-Night/d479-24380P214",
+    rawPayload: specimen24380p214Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "88461P3",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-Montmartre-Food-Wine-Tour-with-Eating-Europe/d479-88461P3",
+    rawPayload: specimen88461p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "393958P1",
+    publicUrl: "https://www.viator.com/tours/Paris/2-Hour-Unique-Wine-Tasting-with-a-Certified-Parisian-Sommelier/d479-393958P1",
+    rawPayload: specimen393958p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46018P3",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-in-a-Day-with-Louvre-Eiffel-Tower-Notre-Dame-Cruise/d479-46018P3",
+    rawPayload: specimen46018p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "64296P1",
+    publicUrl: "https://www.viator.com/tours/Paris/Versailles-Bike-Tour-with-Market-Gardens-and-Guided-Palace-Tour/d479-64296P1",
+    rawPayload: specimen64296p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46334P42",
+    publicUrl: "https://www.viator.com/tours/Paris/Semi-Private-Catacombs-of-Paris-Restricted-Access-Tour/d479-46334P42",
+    rawPayload: specimen46334p42Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6353P9",
+    publicUrl: "https://www.viator.com/tours/Paris/Skip-the-line-Semi-Private-Guided-Tour-Orsay-Museum/d479-6353P9",
+    rawPayload: specimen6353p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3731LOUVRE",
+    publicUrl: "https://www.viator.com/tours/Paris/Skip-the-Line-Louvre-Museum-Walking-Tour-including-Venus-de-Milo-and-Mona-Lisa/d479-3731LOUVRE",
+    rawPayload: specimen3731louvrePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "67584P1",
+    publicUrl: "https://www.viator.com/tours/Paris/Louvre-Museum-Priority-Access-Guided-Tour-with-Mona-Lisa/d479-67584P1",
+    rawPayload: specimen67584p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3588PARIS01",
+    publicUrl: "https://www.viator.com/tours/Paris/Highlights-of-Paris-Bike-Tour-with-a-Local-Guide/d479-3588PARIS01",
+    rawPayload: specimen3588paris01Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3588PARIS03",
+    publicUrl: "https://www.viator.com/tours/Paris/Paris-by-Night-City-of-Lights-Sightseeing-Guided-Bike-Tour/d479-3588PARIS03",
+    rawPayload: specimen3588paris03Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3588VERSA",
+    publicUrl: "https://www.viator.com/tours/Paris/Versailles-by-Bike-Day-Tour/d479-3588VERSA",
+    rawPayload: specimen3588versaPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "47475P6",
+    publicUrl: "https://www.viator.com/tours/Paris/Montmartre-Walking-Tour-Paris-Best-Art-Culture-and-Food/d479-47475P6",
+    rawPayload: specimen47475p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46018P2",
+    publicUrl: "https://www.viator.com/tours/Paris/Complete-Ile-de-la-Cite-Tour-Notre-Dame-and-Sainte-Chapelle-and-La-Conciergerie/d479-46018P2",
+    rawPayload: specimen46018p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46334P22",
+    publicUrl: "https://www.viator.com/tours/Paris/2-Hour-Muse-dOrsay-with-Skip-the-Line-Access/d479-46334P22",
+    rawPayload: specimen46334p22Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

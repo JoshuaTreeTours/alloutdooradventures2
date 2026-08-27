@@ -22,6 +22,7 @@ import { getArchesNationalParkTargetedNarrativeDescription } from "./archesNatio
 import { getCanyonlandsNationalParkTargetedNarrativeDescription } from "./canyonlandsNationalParkApprovedNarrativeDescriptions";
 import { getAcadiaNationalParkTargetedNarrativeDescription } from "./acadiaNationalParkApprovedNarrativeDescriptions";
 import { getLondonTargetedNarrativeDescription } from "./londonApprovedNarrativeDescriptions";
+import { getParisTargetedNarrativeDescription } from "./parisApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -129,6 +130,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getCanyonlandsNationalParkTargetedNarrativeDescription(productCode) ??
   getAcadiaNationalParkTargetedNarrativeDescription(productCode) ??
   getLondonTargetedNarrativeDescription(productCode) ??
+  getParisTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

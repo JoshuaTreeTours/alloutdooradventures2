@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "126585P4",
+    "productUrl": "https://www.viator.com/tours/Paris/TOUR-IN-2CV-PARIS-SECRET-2H/d479-126585P4",
+    "title": "Vintage 2CV Adventure: 2 -Hour Paris Secrets Tour",
+    "description": {
+      "text": "Spend two hours touring Paris in a vintage Citroën 2CV with this private experience. Your guide will pick you up from your hotel and take you around the city, with photo stops at some of the city's most iconic sites, including the Eiffel Tower, the Pantheon, the Latin Quarter, and Montmartre. Stops include Eiffel Tower, Pantheon, Latin Quarter, Montmartre. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Eiffel Tower, Pantheon, Latin Quarter, Montmartre that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $272.55",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 455
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/27/7f/20.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Vintage 2CV Adventure: 2 -Hour Paris Secrets Tour from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup anywhere within the center of Paris."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend two hours touring Paris in a vintage Citroën 2CV with this private experience.",
+    "itineraryItems": [
+      {
+        "title": "Eiffel Tower",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pantheon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latin Quarter",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Montmartre",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide/Chauffeur"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Vintage 2CV Adventure: 2 -Hour Paris Secrets Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Hotel pickup anywhere within the center of Paris."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 272.55
+      },
+      "currency": "USD"
+    }
+  }
+}

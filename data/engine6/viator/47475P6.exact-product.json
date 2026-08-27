@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "47475P6",
+    "productUrl": "https://www.viator.com/tours/Paris/Montmartre-Walking-Tour-Paris-Best-Art-Culture-and-Food/d479-47475P6",
+    "title": "Paris Montmartre Walking Tour Best Art Culture and Food",
+    "description": {
+      "text": "Discover the charms of one of Paris' most popular neighborhoods on a walking tour of Montmartre, a district known for its artists and historically bohemian vibe. Start at the \"I Love You Wall\" and continue along the winding lanes to see where artists like Van Gogh, Henri de Toulouse-Lautrec, and Pissarro lived and worked. Stops include I Love You Wall, Moulin de la Galette, Basilica du Sacré-Coeur, La Bonne Franquette. See sights like the Basilica du Sacré-Coeur, and get insights from your guide about the art, music, food, and history of Montmartre. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to I Love You Wall, Moulin de la Galette, Basilica du Sacré-Coeur, La Bonne Franquette that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $41.69",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2240
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/81/54/b0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the charms of one of Paris' most popular neighborhoods on a walking tour of Montmartre, a district known for it",
+      "Start at the \"I Love You Wall\" and continue along the winding lanes to see where artists like Van Gogh, Henri de Toulous",
+      "See sights like the Basilica du Sacré-Coeur, and get insights from your guide about the art, music, food, and history of",
+      "Paris Montmartre Walking Tour Best Art Culture and Food near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "In front of Saint-Jean de Montmartre church, 19 Rue des Abbesses, 75018 Paris. Guide holds an orange ExperienceFirst sign."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the charms of one of Paris' most popular neighborhoods on a walking tour of Montmartre, a district known for its artists and historically bohemian vibe.",
+    "itineraryItems": [
+      {
+        "title": "I Love You Wall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moulin de la Galette",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilica du Sacré-Coeur",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Bonne Franquette",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local, Entertaining Guide",
+      "Guided visit of Montmartre in English"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris Montmartre Walking Tour Best Art Culture and Food?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "In front of Saint-Jean de Montmartre church, 19 Rue des Abbesses, 75018 Paris. Guide holds an orange ExperienceFirst sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 41.69
+      },
+      "currency": "USD"
+    }
+  }
+}

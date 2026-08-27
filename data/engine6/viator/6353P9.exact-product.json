@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "6353P9",
+    "productUrl": "https://www.viator.com/tours/Paris/Skip-the-line-Semi-Private-Guided-Tour-Orsay-Museum/d479-6353P9",
+    "title": "#1 Orsay Museum Guided Tour | Satisfaction Guaranteed! | 6ppl Max",
+    "description": {
+      "text": "Discover masterpieces by artists from Monet to Renoir on this 2 to 2.5-hour small-group tour of Paris’ renowned Musée d'Orsay (Orsay Museum). With numbers limited to just six people, you’ll enjoy personal attention from your guide as you learn about the birth of impressionism, discover the unique techniques of Van Gogh and Cezanne, and see exquisite artworks by Manet, Degas, Gauguin and many more. Stops include Musée d'Orsay, Rhinoceros by Alfred Jacquemart. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Musée d'Orsay, Rhinoceros by Alfred Jacquemart that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours to 2 hours 30 minutes (approx.)",
+    "priceFrom": "From $151.10",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 741
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/20/3e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "#1 Orsay Museum Guided Tour | Satisfaction Guaranteed! | 6ppl Max from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet by the rhinoceros statue in front of the Musée d'Orsay entrance."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover masterpieces by artists from Monet to Renoir on this 2 to 2.",
+    "itineraryItems": [
+      {
+        "title": "Musée d'Orsay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rhinoceros by Alfred Jacquemart",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "SEMI-PRIVATE MUSEUM TOUR",
+      "PROFESSIONAL TOUR GUIDE",
+      "ALL ENTRANCE FEES (Reserved Entry Included!)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the #1 Orsay Museum Guided Tour | Satisfaction Guaranteed! | 6ppl Max?",
+        "answer": "The planned duration is 2 hours to 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Meet by the rhinoceros statue in front of the Musée d'Orsay entrance."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Semi-Private Museum Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 151.1
+      },
+      "currency": "USD"
+    }
+  }
+}
