@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "393958P1",
+    "productUrl": "https://www.viator.com/tours/Paris/2-Hour-Unique-Wine-Tasting-with-a-Certified-Parisian-Sommelier/d479-393958P1",
+    "title": "The only Paris Wine Tasting experience you need to do - 2 hours",
+    "description": {
+      "text": "Learn all about French wine on this small-group, guided tour right in the heart of Paris. Sample around six to seven French wines in an unpretentious atmosphere with a charismatic guide. Stops include Paris Wine Co, 7 Rue Bargue. Discuss which are your favorites with your small group as your French sommelier guide explains each one. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Paris Wine Co, 7 Rue Bargue that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics. Meeting points are confirmed at booking in Paris, and the itinerary keeps visitors close to Seine views, museum galleries, and historic streets that shape this French capital tour."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $91.48",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 242
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d7/7b/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Learn all about French wine on this small-group, guided tour right in the heart of Paris",
+      "Sample around six to seven French wines in an unpretentious atmosphere with a charismatic guide",
+      "Discuss which are your favorites with your small group as your French sommelier guide explains each one",
+      "The only Paris Wine Tasting experience you need to do - 2 hours near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "7 Rue Bargue, 75015 Paris, blue facade at street level. Nearest metro Volontaires (line 12)."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Learn all about French wine on this small-group, guided tour right in the heart of Paris.",
+    "itineraryItems": [
+      {
+        "title": "Paris Wine Co",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "7 Rue Bargue",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "6 premium fine French Wine with 6 cheeses and bread/baguette"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The only Paris Wine Tasting experience you need to do - 2 hours?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "7 Rue Bargue, 75015 Paris, blue facade at street level. Nearest metro Volontaires (line 12)."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting & Winery Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 91.48
+      },
+      "currency": "USD"
+    }
+  }
+}

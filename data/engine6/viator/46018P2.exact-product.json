@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "46018P2",
+    "productUrl": "https://www.viator.com/tours/Paris/Complete-Ile-de-la-Cite-Tour-Notre-Dame-and-Sainte-Chapelle-and-La-Conciergerie/d479-46018P2",
+    "title": "Notre-Dame Exterior & Sainte-Chapelle Medieval Paris Tour",
+    "description": {
+      "text": "In Paris, this half-day tour lets you discover a handful of top sights in just several hours with skip-the-line access. Tour Conciergerie and Sainte-Chapelle with a guide, and head inside the newly restored Notre Dame Cathedral. Stops include Equestrian Statue of Henri IV, Conciergerie, Sainte-Chapelle, Notre-Dame Cathedral of Paris, Seine River. Bonus: A flexible Seine River cruise ticket is included. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Equestrian Statue of Henri IV, Conciergerie, Sainte-Chapelle, Notre-Dame Cathedral of Paris that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $85.74",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 214
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/ce/b7/b6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This half-day tour lets you discover a handful of top sights in just several hours with skip-the-line access",
+      "Tour Conciergerie and Sainte-Chapelle with a guide, and head inside the newly restored Notre Dame Cathedral",
+      "Bonus: A flexible Seine River cruise ticket is included",
+      "Notre-Dame Exterior & Sainte-Chapelle Medieval Paris Tour near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Equestrian Statue of Henri IV, 15 Pl. du Pont Neuf, 75001 Paris. Guide holds a green Walks sign."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Paris, this half-day tour lets you discover a handful of top sights in just several hours with skip-the-line access.",
+    "itineraryItems": [
+      {
+        "title": "Equestrian Statue of Henri IV",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Conciergerie",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sainte-Chapelle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Notre-Dame Cathedral of Paris",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seine River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip-the-line ticket for Conciergerie",
+      "Skip-the-line ticket for Sainte-Chapelle",
+      "Ticket for Seine River cruise",
+      "Local English-speaking guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Notre-Dame Exterior & Sainte-Chapelle Medieval Paris Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Equestrian Statue of Henri IV, 15 Pl. du Pont Neuf, 75001 Paris. Guide holds a green Walks sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85.74
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "3588PARIS03",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-by-Night-City-of-Lights-Sightseeing-Guided-Bike-Tour/d479-3588PARIS03",
+    "title": "Paris by Night City of Lights Sightseeing Guided Bike Tour",
+    "description": {
+      "text": "Discover a new perspective on Paris—and see much more than you would on foot—on this nighttime biking tour. Follow your guide past Paris' top attractions, such as the Louvre, Notre Dame, and more, all lit up after dark. Stops include Ecole Militaire, Ile Saint-Louis, Cathedrale Notre-Dame de Paris, Seine River, Pont des Arts, Louvre Museum. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Ecole Militaire, Ile Saint-Louis, Cathedrale Notre-Dame de Paris, Seine River that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $52.11",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 788
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/18/b0/ba.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Paris by Night City of Lights Sightseeing Guided Bike Tour from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Fat Tire Tours Paris meeting point as listed at booking."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover a new perspective on Paris—and see much more than you would on foot—on this nighttime biking tour.",
+    "itineraryItems": [
+      {
+        "title": "Ecole Militaire",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ile Saint-Louis",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedrale Notre-Dame de Paris",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seine River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pont des Arts",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bicycle",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris by Night City of Lights Sightseeing Guided Bike Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Fat Tire Tours Paris meeting point as listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 52.11
+      },
+      "currency": "USD"
+    }
+  }
+}

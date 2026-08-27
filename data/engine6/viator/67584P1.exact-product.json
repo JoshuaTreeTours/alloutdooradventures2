@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "67584P1",
+    "productUrl": "https://www.viator.com/tours/Paris/Louvre-Museum-Priority-Access-Guided-Tour-with-Mona-Lisa/d479-67584P1",
+    "title": "Louvre Museum Priority Access Guided Tour with Mona Lisa",
+    "description": {
+      "text": "In Paris, head straight into the home of the Mona Lisa with this skip-the-line tour of the world's largest art museum. Once inside, your local art historian guide will provide you with background about some of the Louvre's most striking masterpieces. Stops include Louvre Pyramid, Louvre Museum. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Louvre Pyramid, Louvre Museum that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $52.05",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 613
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2a/0a/b0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Louvre Museum Priority Access Guided Tour with Mona Lisa from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Equestrian statue of Louis XIV in front of the Louvre Pyramid. Guide holds a bright red The Tour Guy sign."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Paris, head straight into the home of the Mona Lisa with this skip-the-line tour of the world's largest art museum.",
+    "itineraryItems": [
+      {
+        "title": "Louvre Pyramid",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skip-the-line entry to the Louvre Museum",
+      "Engaging English Speaking Guide with a passion for Art History"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Louvre Museum Priority Access Guided Tour with Mona Lisa?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Equestrian statue of Louis XIV in front of the Louvre Pyramid. Guide holds a bright red The Tour Guy sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 52.05
+      },
+      "currency": "USD"
+    }
+  }
+}

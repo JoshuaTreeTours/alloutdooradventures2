@@ -1,0 +1,165 @@
+{
+  "destinationLabel": "Paris",
+  "destinationCitySlug": "paris",
+  "viatorDestinationSlug": "Paris",
+  "viatorDestinationId": "d479",
+  "catalogUrl": "https://www.viator.com/Paris/d479-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 20,
+  "premiumCount": 13,
+  "selectionNote": "Selected 20 guided Paris d479 products with live USD From$ prices, ratings, and unique 674x446 heroes. Jeep/off-road, stargazing, Red Rock, and Native cultural SKUs do not exist in the Paris catalog. Helicopter 6391HELICOPTERPARIS is inactive (similar-options) with 3.6/193. Photography 244531P3 lacked a stable USD+hero dump. Did not force weak 3.x/4.0 SKUs or non-USD pages.",
+  "selectedProductCodes": [
+    "181888P1",
+    "126585P4",
+    "46878P5",
+    "6353P20",
+    "30791P192",
+    "24380P214",
+    "88461P3",
+    "393958P1",
+    "46018P3",
+    "64296P1",
+    "46334P42",
+    "6353P9",
+    "3731LOUVRE",
+    "67584P1",
+    "3588PARIS01",
+    "3588PARIS03",
+    "3588VERSA",
+    "47475P6",
+    "46018P2",
+    "46334P22"
+  ],
+  "premiumProductCodes": [
+    "181888P1",
+    "126585P4",
+    "46878P5",
+    "6353P20",
+    "30791P192",
+    "24380P214",
+    "88461P3",
+    "393958P1",
+    "46018P3",
+    "64296P1",
+    "46334P42",
+    "6353P9",
+    "3588VERSA"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "6391HELICOPTERPARIS",
+      "title": "Paris and Versailles Sightseeing Helicopter Tour",
+      "reason": "Inactive similar-options page; 3.6/193 and no verified From$ on the live product surface"
+    },
+    {
+      "productCode": "244531P3",
+      "title": "Private Tour: Personal Travel Photographer Tour in Paris",
+      "reason": "USD From$318.39 appeared on one surface with only 10 reviews; CAD dump 37094P8/244531P3 family lacked a consistent USD+674x446 product-page dump"
+    },
+    {
+      "productCode": "270435P1",
+      "title": "Private Guided Tour in Champagne from Paris with Moet&Chandon visit.",
+      "reason": "From$980.71 and 5.0 verified but only 10 reviews"
+    },
+    {
+      "productCode": "51192P132",
+      "title": "Paris Louvre Museum Private Guided Tour with Pre-Reserved Tickets",
+      "reason": "Thin commercial rating 4.3/3"
+    },
+    {
+      "productCode": "449245P1",
+      "title": "Louvre Museum Private Guided Tour",
+      "reason": "From$150.53 and 4.9/67 verified; no product-specific 674x446 hero captured from live dumps"
+    },
+    {
+      "productCode": "26751P1",
+      "title": "Paris Private Flexible Duration Guided Tour on a Vintage Sidecar",
+      "reason": "Live dump priced in SGD only"
+    },
+    {
+      "productCode": "131161P7",
+      "title": "Versailles Palace & Giverny Private Tour with Lunch&Hotel Pick-up",
+      "reason": "Live dump priced in EUR only (From \u20ac738.00)"
+    },
+    {
+      "productCode": "326858P3",
+      "title": "Private Tour Louvre Museum",
+      "reason": "Live dump priced in EUR only"
+    },
+    {
+      "productCode": "6353P7",
+      "title": "Louvre Museum - Exclusive Guided Tour (Reserved Entry Included)",
+      "reason": "Live product page priced in SGD; USD appeared only on a similar-options widget"
+    },
+    {
+      "productCode": "3777CC",
+      "title": "Paris Seine River Champagne Tasting Cruise",
+      "reason": "4.4 rating below the selected quality bar; EUR-primary dumps"
+    },
+    {
+      "productCode": "23561P3",
+      "title": "Paris Seine River Dinner Cruise with Live Music by Bateaux Mouches",
+      "reason": "4.4 rating and EUR From\u20ac130 on the product page"
+    },
+    {
+      "productCode": "5836DINNERCRUISE",
+      "title": "Bateaux Parisiens Seine River Gourmet Dinner & Sightseeing Cruise",
+      "reason": "4.4 rating and no verified USD From$ on the captured product page"
+    },
+    {
+      "productCode": "2050PE",
+      "title": "Eiffel Tower Summit Option with Seine River Cruise and City Tour",
+      "reason": "Poor commercial rating 3.6/2165"
+    },
+    {
+      "productCode": "2050VRS_VRG",
+      "title": "Versailles Palace and Gardens Half Day Guided Tour from Paris",
+      "reason": "Weak rating 3.7/1681"
+    },
+    {
+      "productCode": "3731VERSAILLES",
+      "title": "From Paris: Palace of Versailles Skip-the-Line Tour by Coach",
+      "reason": "Weak rating 4.0/1527"
+    },
+    {
+      "productCode": "46018P6",
+      "title": "Paris Catacombs Tour",
+      "reason": "Inactive similar-options page"
+    },
+    {
+      "productCode": "334656P12",
+      "title": "Complete Tour of Paris in a Vintage Open-Top French Car",
+      "reason": "Inactive similar-options page"
+    },
+    {
+      "productCode": "128905P111",
+      "title": "Self-guided / app tour",
+      "reason": "Self-guided app tour"
+    },
+    {
+      "productCode": "7812P1",
+      "title": "Paris Walking Food Tour with Secret Food Tours",
+      "reason": "Live dump priced in EUR only; 88461P3 already covers Montmartre food and wine in USD"
+    },
+    {
+      "productCode": "26729P5",
+      "title": "Montmartre Hill French Gourmet Food and Wine Tasting Walking Tour",
+      "reason": "Near-duplicate of selected 88461P3 Montmartre food and wine"
+    },
+    {
+      "productCode": "67584P3",
+      "title": "Skip the Line Paris Catacombs Tour with Restricted Areas",
+      "reason": "Near-duplicate of selected VIP catacombs 46334P42"
+    },
+    {
+      "productCode": "5746DAYINPARIS",
+      "title": "Paris Your Perfect Half or Full Customized Private Day Tour",
+      "reason": "Live dump priced in SEK only"
+    },
+    {
+      "productCode": "218758P9",
+      "title": "Private Paris city tour with Minivan",
+      "reason": "Thin review count (1 review)"
+    }
+  ]
+}

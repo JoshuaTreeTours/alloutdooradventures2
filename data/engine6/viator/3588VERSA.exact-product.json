@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "3588VERSA",
+    "productUrl": "https://www.viator.com/tours/Paris/Versailles-by-Bike-Day-Tour/d479-3588VERSA",
+    "title": "From Paris: Versailles Bike Tour w/ Palace, Gardens, & Picnic",
+    "description": {
+      "text": "In Paris, the gardens of Versailles span an impressive 1,976 acres. Rather than exploring the sprawling grounds on foot, pedal your way around with an informative guide on this full-day Versailles bike tour from Paris. Stops include Place Du Marche Notre Dame, Grand Canal, The Grand Trianon, Le Petit Trianon, Queen’s Hamlet, Palace of Versailles. Discover garden trails and tree-lined paths behind the palace, and reach parts of the grounds that visitors on foot do not frequent, including Marie Antoinette's country-style hamlet, the Petit Trianon, and the Grand Trianon. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Place Du Marche Notre Dame, Grand Canal, The Grand Trianon, Le Petit Trianon that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $114.91",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/13/b8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The gardens of Versailles span an impressive 1,976 acres",
+      "Rather than exploring the sprawling grounds on foot, pedal your way around with an informative guide on this full-day Ve",
+      "Discover garden trails and tree-lined paths behind the palace, and reach parts of the grounds that visitors on foot do n",
+      "From Paris: Versailles Bike Tour w/ Palace, Gardens, & Picnic near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "1 Av. Emile Zola, 75015 Paris, as listed on the live meeting point."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Paris, the gardens of Versailles span an impressive 1,976 acres.",
+    "itineraryItems": [
+      {
+        "title": "Place Du Marche Notre Dame",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canal",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Grand Trianon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Le Petit Trianon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Queen’s Hamlet",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palace of Versailles",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bicycle and helmet",
+      "Round-Trip Train Transportation to Versailles",
+      "Up to 1.5 hours in the Palace"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the From Paris: Versailles Bike Tour w/ Palace, Gardens, & Picnic?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "1 Av. Emile Zola, 75015 Paris, as listed on the live meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 114.91
+      },
+      "currency": "USD"
+    }
+  }
+}

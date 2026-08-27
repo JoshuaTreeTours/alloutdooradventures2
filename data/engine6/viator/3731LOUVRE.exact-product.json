@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "3731LOUVRE",
+    "productUrl": "https://www.viator.com/tours/Paris/Skip-the-Line-Louvre-Museum-Walking-Tour-including-Venus-de-Milo-and-Mona-Lisa/d479-3731LOUVRE",
+    "title": "Louvre Museum Masterpieces Guided Tour with Reserved Access",
+    "description": {
+      "text": "Experience culture and art through the ages with a tour of Paris’ epic Louvre Museum (upgrade for a small-group or private experience). As you go, your guide will share stories about the artworks, and will discuss the museum's long history. Stops include Arc de Triomphe du Carrousel, Louvre Museum. Local commentary and route logistics are handled so you can focus on Paris landmarks, river views, and neighborhood walking or cycling highlights. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Arc de Triomphe du Carrousel, Louvre Museum that define this Paris sightseeing experience, with a guide handling Metro connections, ticket windows, and neighborhood pacing so the day stays focused on the city rather than logistics."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $75.32",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 10369
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/ce/b7/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Louvre Museum Masterpieces Guided Tour with Reserved Access from Paris",
+      "Eiffel Tower, Notre-Dame, and Seine River views",
+      "Professional guide with Paris local expertise",
+      "Small-group or private format as listed",
+      "Guided Paris sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Reserved Louvre meeting point as listed at booking, near the Arc de Triomphe du Carrousel."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience culture and art through the ages with a tour of Paris’ epic Louvre Museum (upgrade for a small-group or private experience).",
+    "itineraryItems": [
+      {
+        "title": "Arc de Triomphe du Carrousel",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Reserved Access to the Louvre Museum",
+      "English-speaking expert guide",
+      "Audio headsets so you can always hear your guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Louvre Museum Masterpieces Guided Tour with Reserved Access?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Reserved Louvre meeting point as listed at booking, near the Arc de Triomphe du Carrousel."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75.32
+      },
+      "currency": "USD"
+    }
+  }
+}

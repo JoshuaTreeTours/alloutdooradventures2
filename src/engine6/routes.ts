@@ -947,6 +947,74 @@ export const isEngine6LondonTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_LONDON_TOUR_PATH_PREFIX);
 
+export const ENGINE6_PARIS_181888P1_PRODUCT_CODE = "181888P1";
+export const ENGINE6_PARIS_181888P1_ROUTE =
+  "/destinations/france/paris/tours/paris-private-tour-181888P1";
+export const ENGINE6_PARIS_126585P4_PRODUCT_CODE = "126585P4";
+export const ENGINE6_PARIS_126585P4_ROUTE =
+  "/destinations/france/paris/tours/vintage-2cv-adventure-2-hour-paris-secrets-tour-126585P4";
+export const ENGINE6_PARIS_46878P5_PRODUCT_CODE = "46878P5";
+export const ENGINE6_PARIS_46878P5_ROUTE =
+  "/destinations/france/paris/tours/paris-private-guided-tour-in-a-vintage-car-with-driver-46878P5";
+export const ENGINE6_PARIS_6353P20_PRODUCT_CODE = "6353P20";
+export const ENGINE6_PARIS_6353P20_ROUTE =
+  "/destinations/france/paris/tours/paris-city-center-the-history-of-paris-exclusive-guided-6353P20";
+export const ENGINE6_PARIS_30791P192_PRODUCT_CODE = "30791P192";
+export const ENGINE6_PARIS_30791P192_ROUTE =
+  "/destinations/france/paris/tours/paris-private-custom-tour-with-a-local-guide-hidden-gem-30791P192";
+export const ENGINE6_PARIS_24380P214_PRODUCT_CODE = "24380P214";
+export const ENGINE6_PARIS_24380P214_ROUTE =
+  "/destinations/france/paris/tours/a-magical-evening-in-paris-with-locals-private-city-wal-24380P214";
+export const ENGINE6_PARIS_88461P3_PRODUCT_CODE = "88461P3";
+export const ENGINE6_PARIS_88461P3_ROUTE =
+  "/destinations/france/paris/tours/paris-montmartre-food-wine-tour-with-eating-europe-88461P3";
+export const ENGINE6_PARIS_393958P1_PRODUCT_CODE = "393958P1";
+export const ENGINE6_PARIS_393958P1_ROUTE =
+  "/destinations/france/paris/tours/the-only-paris-wine-tasting-experience-you-need-to-do-2-393958P1";
+export const ENGINE6_PARIS_46018P3_PRODUCT_CODE = "46018P3";
+export const ENGINE6_PARIS_46018P3_ROUTE =
+  "/destinations/france/paris/tours/paris-in-a-day-with-louvre-eiffel-tower-notre-dame-crui-46018P3";
+export const ENGINE6_PARIS_64296P1_PRODUCT_CODE = "64296P1";
+export const ENGINE6_PARIS_64296P1_ROUTE =
+  "/destinations/france/paris/tours/versailles-bike-tour-with-market-gardens-guided-palace-64296P1";
+export const ENGINE6_PARIS_46334P42_PRODUCT_CODE = "46334P42";
+export const ENGINE6_PARIS_46334P42_ROUTE =
+  "/destinations/france/paris/tours/catacombs-of-paris-semi-private-vip-restricted-access-t-46334P42";
+export const ENGINE6_PARIS_6353P9_PRODUCT_CODE = "6353P9";
+export const ENGINE6_PARIS_6353P9_ROUTE =
+  "/destinations/france/paris/tours/1-orsay-museum-guided-tour-satisfaction-guaranteed-6ppl-6353P9";
+export const ENGINE6_PARIS_3731LOUVRE_PRODUCT_CODE = "3731LOUVRE";
+export const ENGINE6_PARIS_3731LOUVRE_ROUTE =
+  "/destinations/france/paris/tours/louvre-museum-masterpieces-guided-tour-with-reserved-ac-3731LOUVRE";
+export const ENGINE6_PARIS_67584P1_PRODUCT_CODE = "67584P1";
+export const ENGINE6_PARIS_67584P1_ROUTE =
+  "/destinations/france/paris/tours/louvre-museum-priority-access-guided-tour-with-mona-lis-67584P1";
+export const ENGINE6_PARIS_3588PARIS01_PRODUCT_CODE = "3588PARIS01";
+export const ENGINE6_PARIS_3588PARIS01_ROUTE =
+  "/destinations/france/paris/tours/highlights-of-paris-bike-tour-with-a-local-guide-3588PARIS01";
+export const ENGINE6_PARIS_3588PARIS03_PRODUCT_CODE = "3588PARIS03";
+export const ENGINE6_PARIS_3588PARIS03_ROUTE =
+  "/destinations/france/paris/tours/paris-by-night-city-of-lights-sightseeing-guided-bike-t-3588PARIS03";
+export const ENGINE6_PARIS_3588VERSA_PRODUCT_CODE = "3588VERSA";
+export const ENGINE6_PARIS_3588VERSA_ROUTE =
+  "/destinations/france/paris/tours/from-paris-versailles-bike-tour-w-palace-gardens-picnic-3588VERSA";
+export const ENGINE6_PARIS_47475P6_PRODUCT_CODE = "47475P6";
+export const ENGINE6_PARIS_47475P6_ROUTE =
+  "/destinations/france/paris/tours/paris-montmartre-walking-tour-best-art-culture-and-food-47475P6";
+export const ENGINE6_PARIS_46018P2_PRODUCT_CODE = "46018P2";
+export const ENGINE6_PARIS_46018P2_ROUTE =
+  "/destinations/france/paris/tours/notre-dame-exterior-sainte-chapelle-medieval-paris-tour-46018P2";
+export const ENGINE6_PARIS_46334P22_PRODUCT_CODE = "46334P22";
+export const ENGINE6_PARIS_46334P22_ROUTE =
+  "/destinations/france/paris/tours/orsay-museum-skip-the-line-impressionists-guided-tour-46334P22";
+
+export const ENGINE6_PARIS_TOUR_PATH_PREFIX =
+  "/destinations/france/paris/tours/";
+
+export const isEngine6ParisTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_PARIS_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -3696,6 +3764,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LONDON_5936WHOWALK_ROUTE,
     ENGINE6_LONDON_5936WHOWALK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_181888P1_ROUTE,
+    ENGINE6_PARIS_181888P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_126585P4_ROUTE,
+    ENGINE6_PARIS_126585P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_46878P5_ROUTE,
+    ENGINE6_PARIS_46878P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_6353P20_ROUTE,
+    ENGINE6_PARIS_6353P20_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_30791P192_ROUTE,
+    ENGINE6_PARIS_30791P192_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_24380P214_ROUTE,
+    ENGINE6_PARIS_24380P214_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_88461P3_ROUTE,
+    ENGINE6_PARIS_88461P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_393958P1_ROUTE,
+    ENGINE6_PARIS_393958P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_46018P3_ROUTE,
+    ENGINE6_PARIS_46018P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_64296P1_ROUTE,
+    ENGINE6_PARIS_64296P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_46334P42_ROUTE,
+    ENGINE6_PARIS_46334P42_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_6353P9_ROUTE,
+    ENGINE6_PARIS_6353P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_3731LOUVRE_ROUTE,
+    ENGINE6_PARIS_3731LOUVRE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_67584P1_ROUTE,
+    ENGINE6_PARIS_67584P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_3588PARIS01_ROUTE,
+    ENGINE6_PARIS_3588PARIS01_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_3588PARIS03_ROUTE,
+    ENGINE6_PARIS_3588PARIS03_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_3588VERSA_ROUTE,
+    ENGINE6_PARIS_3588VERSA_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_47475P6_ROUTE,
+    ENGINE6_PARIS_47475P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_46018P2_ROUTE,
+    ENGINE6_PARIS_46018P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PARIS_46334P22_ROUTE,
+    ENGINE6_PARIS_46334P22_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

@@ -1,0 +1,310 @@
+{
+  "selectedCount": 20,
+  "listingCount": 20,
+  "listingMatchesSelection": true,
+  "okCount": 20,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "181888P1",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-private-tour-181888P1",
+      "title": "Paris Private Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7a/8d/65.jpg",
+      "card": "Covering Paris in a short stay can overwhelm even the savviest visitors.",
+      "itineraryTitles": [
+        "Place du Trocadéro",
+        "Eiffel Tower",
+        "Shakespeare and Company",
+        "Notre-Dame Cathedral of Paris"
+      ],
+      "issues": []
+    },
+    {
+      "code": "126585P4",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/vintage-2cv-adventure-2-hour-paris-secrets-tour-126585P4",
+      "title": "Vintage 2CV Adventure: 2 -Hour Paris Secrets Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/27/7f/20.jpg",
+      "card": "Spend two hours touring Paris in a vintage Citroën 2CV with this private experience.",
+      "itineraryTitles": [
+        "Eiffel Tower",
+        "Pantheon",
+        "Latin Quarter",
+        "Montmartre"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46878P5",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-private-guided-tour-in-a-vintage-car-with-driver-46878P5",
+      "title": "Paris Private Guided Tour in a Vintage Car with Driver",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1a/05/af.jpg",
+      "card": "If you're celebrating a special occasion and want to see the sights of Paris with a dash of classic charm, few experiences top this private…",
+      "itineraryTitles": [
+        "Montmartre",
+        "Latin Quarter",
+        "Moulin Rouge",
+        "Champs-Élysées",
+        "Eiffel Tower",
+        "Louvre Museum"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6353P20",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-city-center-the-history-of-paris-exclusive-guided-6353P20",
+      "title": "Paris City Center \"the History of Paris\" Exclusive Guided Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f2/cd/08.jpg",
+      "card": "Tick off some of Paris’ most iconic attractions, at your own pace, on this private walking tour of the City of Light.",
+      "itineraryTitles": [
+        "Ile de la Cite",
+        "Cathedrale Notre-Dame de Paris",
+        "Sainte-Chapelle",
+        "Pont Neuf",
+        "Louvre Museum",
+        "Jardin des Tuileries"
+      ],
+      "issues": []
+    },
+    {
+      "code": "30791P192",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-private-custom-tour-with-a-local-guide-hidden-gem-30791P192",
+      "title": "Paris Private Custom Tour with a Local Guide, Hidden Gems & Highlights",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/fe/be.jpg",
+      "card": "Explore Paris on your own terms with a customized city visit with a local host.",
+      "itineraryTitles": [
+        "Colonne Vendôme",
+        "Place Vendôme"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24380P214",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/a-magical-evening-in-paris-with-locals-private-city-wal-24380P214",
+      "title": "A Magical Evening in Paris With Locals: PRIVATE City Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f7/b7/25.jpg",
+      "card": "See Paris at night on a personalized walking tour with a private local host who shows you the City of Light's illuminated sights.",
+      "itineraryTitles": [
+        "Place Vendôme",
+        "Place de la Concorde",
+        "Champs-Elysees",
+        "Pont Alexandre III",
+        "Trocadéro",
+        "Eiffel Tower"
+      ],
+      "issues": []
+    },
+    {
+      "code": "88461P3",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-montmartre-food-wine-tour-with-eating-europe-88461P3",
+      "title": "Paris Montmartre Food & Wine Tour with Eating Europe",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/81/cd/5c.jpg",
+      "card": "In Paris, walk the hill of Montmartre with a local food guide, tasting baguette, macarons, cheese, charcuterie, and choux à la crème while s",
+      "itineraryTitles": [
+        "Le Pain Quotidien",
+        "Rue Lepic",
+        "Montmartre",
+        "Basilique du Sacré-Cœur de Montmartre"
+      ],
+      "issues": []
+    },
+    {
+      "code": "393958P1",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/the-only-paris-wine-tasting-experience-you-need-to-do-2-393958P1",
+      "title": "The only Paris Wine Tasting experience you need to do - 2 hours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d7/7b/2e.jpg",
+      "card": "Learn all about French wine on this small-group, guided tour right in the heart of Paris.",
+      "itineraryTitles": [
+        "Paris Wine Co",
+        "7 Rue Bargue"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46018P3",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-in-a-day-with-louvre-eiffel-tower-notre-dame-crui-46018P3",
+      "title": "Paris in a Day with Louvre, Eiffel Tower, Notre Dame & Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg",
+      "card": "Discover Paris's iconic landmarks in a single day with a small group and a knowledgeable local guide.",
+      "itineraryTitles": [
+        "Louvre Museum",
+        "Montmartre",
+        "Ile de la Cité",
+        "Trocadéro",
+        "Eiffel Tower",
+        "Seine River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "64296P1",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/versailles-bike-tour-with-market-gardens-guided-palace-64296P1",
+      "title": "Versailles Bike Tour with Market, Gardens & Guided Palace Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b2/59/73.jpg",
+      "card": "See various parts of Versailles and its palace grounds on this day trip from Paris via a high-speed train.",
+      "itineraryTitles": [
+        "Versailles",
+        "Palace of Versailles",
+        "Gardens of Versailles",
+        "Marie Antoinette's Hamlet"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46334P42",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/catacombs-of-paris-semi-private-vip-restricted-access-t-46334P42",
+      "title": "Catacombs of Paris Semi-Private VIP Restricted Access Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/35/de/0f.jpg",
+      "card": "Explore the Catacombs of Paris on a small-group tour limited to only six people.",
+      "itineraryTitles": [
+        "Catacombs of Paris",
+        "Rue Rémy Dumoncel"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6353P9",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/1-orsay-museum-guided-tour-satisfaction-guaranteed-6ppl-6353P9",
+      "title": "#1 Orsay Museum Guided Tour | Satisfaction Guaranteed! | 6ppl Max",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/20/3e.jpg",
+      "card": "Discover masterpieces by artists from Monet to Renoir on this 2 to 2.5-hour small-group tour of Paris’ renowned Musée d'Orsay (Orsay Museum)",
+      "itineraryTitles": [
+        "Musée d'Orsay",
+        "Rhinoceros by Alfred Jacquemart"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3731LOUVRE",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/louvre-museum-masterpieces-guided-tour-with-reserved-ac-3731LOUVRE",
+      "title": "Louvre Museum Masterpieces Guided Tour with Reserved Access",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/ce/b7/65.jpg",
+      "card": "Experience culture and art through the ages with a tour of Paris’ epic Louvre Museum (upgrade for a small-group or private experience).",
+      "itineraryTitles": [
+        "Arc de Triomphe du Carrousel",
+        "Louvre Museum"
+      ],
+      "issues": []
+    },
+    {
+      "code": "67584P1",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/louvre-museum-priority-access-guided-tour-with-mona-lis-67584P1",
+      "title": "Louvre Museum Priority Access Guided Tour with Mona Lisa",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2a/0a/b0.jpg",
+      "card": "In Paris, head straight into the home of the Mona Lisa with this skip-the-line tour of the world's largest art museum.",
+      "itineraryTitles": [
+        "Louvre Pyramid",
+        "Louvre Museum"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3588PARIS01",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/highlights-of-paris-bike-tour-with-a-local-guide-3588PARIS01",
+      "title": "Highlights of Paris Bike Tour with a Local Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/cf/c0.jpg",
+      "card": "Spin through the city streets like a local and explore the French capital in style on this small-group (or private) bike tour of Paris.",
+      "itineraryTitles": [
+        "Ecole Militaire",
+        "Hôtel des Invalides",
+        "Place de la Concorde",
+        "Louvre Museum",
+        "Pont Alexandre III",
+        "Seine River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3588PARIS03",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-by-night-city-of-lights-sightseeing-guided-bike-t-3588PARIS03",
+      "title": "Paris by Night City of Lights Sightseeing Guided Bike Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/18/b0/ba.jpg",
+      "card": "Discover a new perspective on Paris—and see much more than you would on foot—on this nighttime biking tour.",
+      "itineraryTitles": [
+        "Ecole Militaire",
+        "Ile Saint-Louis",
+        "Cathedrale Notre-Dame de Paris",
+        "Seine River",
+        "Pont des Arts",
+        "Louvre Museum"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3588VERSA",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/from-paris-versailles-bike-tour-w-palace-gardens-picnic-3588VERSA",
+      "title": "From Paris: Versailles Bike Tour w/ Palace, Gardens, & Picnic",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/13/b8.jpg",
+      "card": "In Paris, the gardens of Versailles span an impressive 1,976 acres.",
+      "itineraryTitles": [
+        "Place Du Marche Notre Dame",
+        "Grand Canal",
+        "The Grand Trianon",
+        "Le Petit Trianon",
+        "Queen’s Hamlet",
+        "Palace of Versailles"
+      ],
+      "issues": []
+    },
+    {
+      "code": "47475P6",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/paris-montmartre-walking-tour-best-art-culture-and-food-47475P6",
+      "title": "Paris Montmartre Walking Tour Best Art Culture and Food",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/81/54/b0.jpg",
+      "card": "Discover the charms of one of Paris' most popular neighborhoods on a walking tour of Montmartre, a district known for its artists and histor",
+      "itineraryTitles": [
+        "I Love You Wall",
+        "Moulin de la Galette",
+        "Basilica du Sacré-Coeur",
+        "La Bonne Franquette"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46018P2",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/notre-dame-exterior-sainte-chapelle-medieval-paris-tour-46018P2",
+      "title": "Notre-Dame Exterior & Sainte-Chapelle Medieval Paris Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/ce/b7/b6.jpg",
+      "card": "In Paris, this half-day tour lets you discover a handful of top sights in just several hours with skip-the-line access.",
+      "itineraryTitles": [
+        "Equestrian Statue of Henri IV",
+        "Conciergerie",
+        "Sainte-Chapelle",
+        "Notre-Dame Cathedral of Paris",
+        "Seine River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46334P22",
+      "ok": true,
+      "path": "/destinations/france/paris/tours/orsay-museum-skip-the-line-impressionists-guided-tour-46334P22",
+      "title": "Orsay Museum Skip-the-Line Impressionists Guided Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/14/44/43.jpg",
+      "card": "In Paris, explore one of the world's most important collections of Impressionist and post-Impressionist art on this guided tour of the Musée",
+      "itineraryTitles": [
+        "Musée d'Orsay",
+        "Rhinoceros by Alfred Jacquemart"
+      ],
+      "issues": []
+    }
+  ]
+}

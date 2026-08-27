@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "6353P20",
+    "productUrl": "https://www.viator.com/tours/Paris/Paris-City-Center-the-History-of-Paris-Exclusive-Guided-Walking-Tour/d479-6353P20",
+    "title": "Paris City Center \"the History of Paris\" Exclusive Guided Walking Tour",
+    "description": {
+      "text": "Tick off some of Paris’ most iconic attractions, at your own pace, on this private walking tour of the City of Light. Alongside your personal guide, you’ll head to one of Paris’ oldest districts, Île de la Cité, and explore the pristine Tuileries Gardens. Stops include Ile de la Cite, Cathedrale Notre-Dame de Paris, Sainte-Chapelle, Pont Neuf, Louvre Museum, Jardin des Tuileries. Visit Place de la Concorde, home to the world’s first guillotine, admire the grandeur of Fontaine Saint-Michel, and delve into Paris’ turbulent history as you amble along the Champs-Elysees, the world-famous boulevard that flanks the River Seine. Ideal for visitors basing in Paris who want a guided city experience without coordinating Metro routes, attraction tickets, or landmark timing on their own."
+    },
+    "location": {
+      "city": "Paris",
+      "state": "France"
+    },
+    "duration": "2 hours 40 minutes (approx.)",
+    "priceFrom": "From $60.15",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 143
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f2/cd/08.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Jardin des Tuileries",
+      "Tick off some of Paris’ most iconic attractions, at your own pace, on this private walking tour of the City of Light",
+      "Visit Place de la Concorde, home to the world’s first guillotine, admire the grandeur of Fontaine Saint-Michel, and delv",
+      "Paris City Center \"the History of Paris\" Exclusive Guided Walking Tour near Paris",
+      "Professional Paris guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Metro Cité (Line 4) exit, opposite the stairs next to the Metro sign CITÉ."
+      },
+      "end": {
+        "description": "Return to your Paris meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Tick off some of Paris’ most iconic attractions, at your own pace, on this private walking tour of the City of Light.",
+    "itineraryItems": [
+      {
+        "title": "Ile de la Cite",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedrale Notre-Dame de Paris",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sainte-Chapelle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pont Neuf",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louvre Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jardin des Tuileries",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "PRIVATE WALKING TOUR",
+      "TOUR GUIDE EXCLUSIVELY FOR YOU"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Paris City Center \"the History of Paris\" Exclusive Guided Walking Tour?",
+        "answer": "The planned duration is 2 hours 40 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Paris?",
+        "answer": "Metro Cité (Line 4) exit, opposite the stairs next to the Metro sign CITÉ."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60.15
+      },
+      "currency": "USD"
+    }
+  }
+}
