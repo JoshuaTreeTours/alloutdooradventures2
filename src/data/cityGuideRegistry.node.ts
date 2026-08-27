@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { City } from "./destinations";
 import { states } from "./destinations";
-import { CITY_TIER1_INTL } from "./cityTier1Intl";
+import { CITY_TIER1_INTL, isTier1IntlCity } from "./cityTier1Intl";
 import { slugify } from "./tourCatalog";
 import { isRetiredLowInventoryGuide } from "../utils/guides/retiredLowInventoryGuides";
 
@@ -135,6 +135,31 @@ const buildIntlCityGuideRecords = (): CityGuideRecord[] => {
         citySlug,
         route: `/guides/world/${countrySlug}/${citySlug}`,
         regionType: "country",
+      });
+    });
+  });
+
+  // Engine6-only international cities live in destinations.ts, not FareHarbor
+  // CSVs. Seed registry records from those destination cities so Tier-1 Intl
+  // cities such as Venice still resolve without inventing CSV inventory.
+  states.forEach(state => {
+    state.cities.forEach(city => {
+      if (!isTier1IntlCity(state.slug, city.slug)) {
+        return;
+      }
+      const key = `${state.slug}/${city.slug}`;
+      if (records.has(key)) {
+        return;
+      }
+      records.set(key, {
+        country: state.name,
+        state: state.name,
+        stateSlug: state.slug,
+        city: city.name,
+        citySlug: city.slug,
+        route: `/guides/world/${state.slug}/${city.slug}`,
+        regionType: "country",
+        cityData: city,
       });
     });
   });
