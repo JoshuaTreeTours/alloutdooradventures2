@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "103208P1",
+    "productUrl": "https://www.viator.com/tours/Dublin/Liberty-Cliffs-of-Moher-Express-Five-Star-Tour-ex-Dublin/d503-103208P1",
+    "title": "Cliffs Of Moher & Wild Atlantic Way Luxury Award Winning Tour.",
+    "description": {
+      "text": "Leave Dublin on a private 8- to 12-hour luxury car day to the Cliffs of Moher and the Wild Atlantic Way. A private guide covers Irish legends, monastery ruins, and castle stories while the route can add Galway City, gourmet stops, or countryside walks. Comfortable Mercedes-class transport keeps the long west-coast drive off self-drive logistics. The outing is built for visitors who want cliff time and coastal scenery without a packed coach schedule. Stops include Cliffs of Moher, Wild Atlantic Way, Galway City."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "8 to 12 hours (approx.)",
+    "priceFrom": "From $1505.40",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 152
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/11/85/03.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sit back in total luxury and enjoy a smooth ride and excellent service on this private car tour to the Cliffs of Moher",
+      "See the famous Irish countryside from your window, and travel along the Wild Atlantic Way spotting puffins and even dolp",
+      "Your experienced local guide will teach you all about the local legends and historical buildings—learn about the ruins o",
+      "Cliffs Of Moher & Wild Atlantic Way Luxury Award Winning Tour. near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel, airport, port, or private accommodation pickup in Dublin as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin on a private 8- to 12-hour luxury car day to the Cliffs of Moher and the Wild Atlantic Way.",
+    "itineraryItems": [
+      {
+        "title": "Cliffs of Moher",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wild Atlantic Way",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Galway City",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cliffs Of Moher & Wild Atlantic Way Luxury Award Winning Tour.?",
+        "answer": "The planned duration is 8 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Hotel, airport, port, or private accommodation pickup in Dublin as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1505.4
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "8954P33",
+    "productUrl": "https://www.viator.com/tours/Dublin/Dublin-Irish-Gastro-Food-and-Pub-Experience-Tour/d503-8954P33",
+    "title": "Dublin Food and Drink Walking Tour and Jameson Irish Coffee Demo",
+    "description": {
+      "text": "Join a Dublin food and drinks walk that ends with a Jameson Irish coffee demo at Jameson Distillery Bow St. A local guide covers brewing and distilling history while the group samples Irish dishes, Guinness, and whiskey in city pubs rather than a museum circuit inside the distillery. The three-hour small-group format stays on tasting stops and pub rooms, with meeting outside the Bow Street entrance in Smithfield. Commentary ties each pour to Dublin's distilling story so the outing stays food-and-drink first. Stops include Jameson Distillery Bow St., Dublin pubs."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $113.75",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 27
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/f7/54/fd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Travelers looking to learn more about Ireland's culture can embark on this food and drinks tour, complete with a Jameson",
+      "Immerse yourself in Ireland's culinary heritage as you explore Dublin's vibrant streets, savoring gastronomical delights",
+      "Learn about the country's rich history of distilling and brewing while sampling brews like Guinness and spirits like Jam",
+      "Dublin Food and Drink Walking Tour and Jameson Irish Coffee Demo near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Jameson Distillery Bow St., Bow St, Smithfield, Dublin 7, D07 N9VH, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join a Dublin food and drinks walk that ends with a Jameson Irish coffee demo at Jameson Distillery Bow St.",
+    "itineraryItems": [
+      {
+        "title": "Jameson Distillery Bow St.",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dublin pubs",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Enjoy a selection of Ireland’s top mouthwatering authentic dishes",
+      "Discover a selection of Dublin Bars- sample the best of beer & Enjoy an authentic Irish Coffee Demo",
+      "Tour is led by an expert first-class local guide who brings Ireland’s food heritage alive",
+      "Small group tour enjoying a more intimate experience",
+      "Irish Coffee Demo at Jameson Distillery is included, guided tour inside isn't part of this tour."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dublin Food and Drink Walking Tour and Jameson Irish Coffee Demo?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Jameson Distillery Bow St., Bow St, Smithfield, Dublin 7, D07 N9VH, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 113.75
+      },
+      "currency": "USD"
+    }
+  }
+}

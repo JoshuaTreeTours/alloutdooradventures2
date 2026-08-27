@@ -262,6 +262,21 @@ import specimen6464countryPayload from "../../data/engine6/viator/6464COUNTRY.ex
 import specimen6412walkPayload from "../../data/engine6/viator/6412WALK.exact-product.json";
 import specimen61268p6Payload from "../../data/engine6/viator/61268P6.exact-product.json";
 import specimen75227p6Payload from "../../data/engine6/viator/75227P6.exact-product.json";
+import specimen103208p1Payload from "../../data/engine6/viator/103208P1.exact-product.json";
+import specimen229063p1Payload from "../../data/engine6/viator/229063P1.exact-product.json";
+import specimen7812p20Payload from "../../data/engine6/viator/7812P20.exact-product.json";
+import specimen26444p13Payload from "../../data/engine6/viator/26444P13.exact-product.json";
+import specimen8954p33Payload from "../../data/engine6/viator/8954P33.exact-product.json";
+import specimen37082p4Payload from "../../data/engine6/viator/37082P4.exact-product.json";
+import specimen37082p5Payload from "../../data/engine6/viator/37082P5.exact-product.json";
+import specimen24779p1Payload from "../../data/engine6/viator/24779P1.exact-product.json";
+import specimen24779p2Payload from "../../data/engine6/viator/24779P2.exact-product.json";
+import specimen5299p16Payload from "../../data/engine6/viator/5299P16.exact-product.json";
+import specimen33832p1Payload from "../../data/engine6/viator/33832P1.exact-product.json";
+import specimen8962p3Payload from "../../data/engine6/viator/8962P3.exact-product.json";
+import specimen5299moherPayload from "../../data/engine6/viator/5299MOHER.exact-product.json";
+import specimen8962p4Payload from "../../data/engine6/viator/8962P4.exact-product.json";
+import specimen5300titanicPayload from "../../data/engine6/viator/5300TITANIC.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -3047,6 +3062,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "75227P6",
     publicUrl: "https://www.viator.com/tours/Amsterdam/Amsterdam-Canal-Cruise/d525-75227P6",
     rawPayload: specimen75227p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "103208P1",
+    publicUrl: "https://www.viator.com/tours/Dublin/Liberty-Cliffs-of-Moher-Express-Five-Star-Tour-ex-Dublin/d503-103208P1",
+    rawPayload: specimen103208p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "229063P1",
+    publicUrl: "https://www.viator.com/tours/Dublin/Dublin-walking-tour/d503-229063P1",
+    rawPayload: specimen229063p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P20",
+    publicUrl: "https://www.viator.com/tours/Dublin/Small-Group-Dublin-Food-Walking-Tour/d503-7812P20",
+    rawPayload: specimen7812p20Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "26444P13",
+    publicUrl: "https://www.viator.com/tours/Dublin/The-Whiskey-Trail-Dublin/d503-26444P13",
+    rawPayload: specimen26444p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8954P33",
+    publicUrl: "https://www.viator.com/tours/Dublin/Dublin-Irish-Gastro-Food-and-Pub-Experience-Tour/d503-8954P33",
+    rawPayload: specimen8954p33Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37082P4",
+    publicUrl: "https://www.viator.com/tours/Dublin/Howth-Panoramic-e-Bike-Tour/d503-37082P4",
+    rawPayload: specimen37082p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37082P5",
+    publicUrl: "https://www.viator.com/tours/Dublin/Dublin-Coastal-Hike-with-Howth-Adventures/d503-37082P5",
+    rawPayload: specimen37082p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24779P1",
+    publicUrl: "https://www.viator.com/tours/Dublin/Wicklow-Powerscourt-and-Glendalough-Tour-from-Dublin/d503-24779P1",
+    rawPayload: specimen24779p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24779P2",
+    publicUrl: "https://www.viator.com/tours/Dublin/Wicklow-with-Guided-Walk-Including-Glendalough-Tour-from-Dublin/d503-24779P2",
+    rawPayload: specimen24779p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5299P16",
+    publicUrl: "https://www.viator.com/tours/Dublin/WICKLOW-AND-GLENDALOUGH-TOUR/d503-5299P16",
+    rawPayload: specimen5299p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33832P1",
+    publicUrl: "https://www.viator.com/tours/Dublin/Wicklow-mountains-Glendalough-and-Kilkenny-Day-Tour-from-Dublin/d503-33832P1",
+    rawPayload: specimen33832p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8962P3",
+    publicUrl: "https://www.viator.com/tours/Dublin/Cliffs-of-Moher-Day-Tour-From-Dublin/d503-8962P3",
+    rawPayload: specimen8962p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5299MOHER",
+    publicUrl: "https://www.viator.com/tours/Dublin/Cliffs-of-Moher-Day-Trip-from-Dublin/d503-5299MOHER",
+    rawPayload: specimen5299moherPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8962P4",
+    publicUrl: "https://www.viator.com/tours/Dublin/Giants-Causeway-Day-Tour-From-Dublin/d503-8962P4",
+    rawPayload: specimen8962p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5300TITANIC",
+    publicUrl: "https://www.viator.com/tours/Dublin/Titanic-Visitor-Experience-and-Giants-Causeway-Day-Trip-from-Dublin/d503-5300TITANIC",
+    rawPayload: specimen5300titanicPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

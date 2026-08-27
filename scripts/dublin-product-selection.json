@@ -1,0 +1,167 @@
+{
+  "destinationLabel": "Dublin",
+  "destinationCitySlug": "dublin",
+  "viatorDestinationSlug": "Dublin",
+  "viatorDestinationId": "d503",
+  "catalogUrl": "https://www.viator.com/Dublin/d503-ttd",
+  "catalogUrlNote": "The task listed d739-ttd; live Dublin is d503. d739 is Edinburgh.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 15,
+  "premiumCount": 14,
+  "selectionNote": "Selected 15 guided Dublin d503 products with live USD From$ prices, ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (EUR/GBP/AUD/SGD) blocked many otherwise-strong SKUs from being verified in USD. Jeep/4x4 SKUs were not captured as active Dublin d503 product pages. Helicopter 66248P5 lacked a complete USD+rating dump. Did not force hop-on, admission-only, audio/self-guided, inactive, non-USD, near-duplicate, weak-rating, thin-review, or unusable-hero SKUs.",
+  "selectedProductCodes": [
+    "103208P1",
+    "229063P1",
+    "7812P20",
+    "26444P13",
+    "8954P33",
+    "37082P4",
+    "37082P5",
+    "24779P1",
+    "24779P2",
+    "5299P16",
+    "33832P1",
+    "8962P3",
+    "5299MOHER",
+    "8962P4",
+    "5300TITANIC"
+  ],
+  "premiumProductCodes": [
+    "103208P1",
+    "229063P1",
+    "7812P20",
+    "26444P13",
+    "8954P33",
+    "37082P4",
+    "24779P1",
+    "24779P2",
+    "5299P16",
+    "33832P1",
+    "8962P3",
+    "5299MOHER",
+    "8962P4",
+    "5300TITANIC"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "327039P1",
+      "title": "Cliffs of Moher Private Day tour from Dublin",
+      "reason": "Live USD From$1,447.50 and 5.0/80 with product-named 674x446 hero; near-duplicate of selected private Cliffs SKU 103208P1 (4.9/152)"
+    },
+    {
+      "productCode": "24779P4",
+      "title": "Dublin to Powerscourt, Wicklow, Glendalough Private Guided Tour",
+      "reason": "Live dump priced in SGD only (From SGD 865.50); 4.8/68"
+    },
+    {
+      "productCode": "46445P1",
+      "title": "Award Winning Private Tour of Glendalough, Powerscourt & Wicklow",
+      "reason": "Live dump priced in AUD only; 4.8/45"
+    },
+    {
+      "productCode": "46445P4",
+      "title": "6 hour Half-Day Award Winning Private Tour of the Boyne Valley",
+      "reason": "Live dumps priced in GBP/EUR only; 4.9/63"
+    },
+    {
+      "productCode": "66248P5",
+      "title": "30-Minutes Extended Dublin City and Stadiums Helicopter Tour",
+      "reason": "Helicopter SKU otherwise attractive; incomplete USD From$ and rating dump"
+    },
+    {
+      "productCode": "37094P17",
+      "title": "Dublin photography tour",
+      "reason": "Live dump priced in GBP; 5.0/6 is below the selected commercial bar"
+    },
+    {
+      "productCode": "136253P2",
+      "title": "Dublin Family Adventure: Cherished Memories in Every Photo",
+      "reason": "Live dump priced in EUR only (From €220.00); 5.0/13 thin photography sample"
+    },
+    {
+      "productCode": "161583P1",
+      "title": "Howth Guided Walking Tour Dublin Coastal Experience",
+      "reason": "Live dump priced in EUR only (From €35.00); 4.9/388 near-duplicate of selected Howth hike 37082P5"
+    },
+    {
+      "productCode": "170175P1",
+      "title": "Dublin city e-bike tour",
+      "reason": "Live dump priced in GBP only"
+    },
+    {
+      "productCode": "8962P79",
+      "title": "Glendalough & Wicklow Mountains Half Day Morning Tour from Dublin",
+      "reason": "USD From$38.21 verified but weak commercial rating 4.4/760 versus selected Wicklow SKUs"
+    },
+    {
+      "productCode": "8962P26",
+      "title": "(Small Group) Cliffs of Moher and Castle Tour from Dublin",
+      "reason": "Live dump priced in AUD only; near-duplicate of selected Cliffs day SKUs"
+    },
+    {
+      "productCode": "7572P12",
+      "title": "Dublin: Giant's Causeway, Dark Hedges, Dunluce and Belfast Titanic entrance fee",
+      "reason": "USD FromUS$96.93 and 4.8/1675; near-duplicate of selected 5300TITANIC"
+    },
+    {
+      "productCode": "107444P156",
+      "title": "Dublin To Cliffs Of Moher Private Sightseeing Tour",
+      "reason": "USD From$609.39 verified but 5.0/1 is too thin versus selected private Cliffs SKU 103208P1"
+    },
+    {
+      "productCode": "103208P6",
+      "title": "Dublin City Private Award Winning Luxury Car Tour",
+      "reason": "USD From$1,140.04 and product-named hero captured; no complete live rating/review dump"
+    },
+    {
+      "productCode": "30791P86",
+      "title": "Dublin Private Walking Tour with a local: Highlights & Gems",
+      "reason": "USD From$95.64 and 4.8/128; near-duplicate of stronger selected private walk 229063P1 (5.0/560)"
+    },
+    {
+      "productCode": "317794P2",
+      "title": "4 Hour Private Dublin City Sightseeing Tour ( 1-7 People)",
+      "reason": "USD From$463.14 and 5.0/19; thin commercial sample"
+    },
+    {
+      "productCode": "214618P1",
+      "title": "Private Driver Guided Tour of Dublin",
+      "reason": "USD FromUS$741.77 and 4.9/23; thin commercial sample"
+    },
+    {
+      "productCode": "5300CASTLES",
+      "title": "Dublin to Kilkenny, Wicklow, Glendalough, Laragh Sheep Dog Trial",
+      "reason": "4.9/6562 but live dump priced in EUR only (From €45.00); 33832P1 selected instead as the USD-verified Kilkenny/Wicklow day"
+    },
+    {
+      "productCode": "5299CORK",
+      "title": "Blarney, Rock of Cashel & Cahir Castles Day Tour From Dublin",
+      "reason": "Live dump priced in GBP only (From £73.92); 4.6/1829"
+    },
+    {
+      "productCode": "6249P5",
+      "title": "Glendalough and Powerscourt Gardens Day Tour",
+      "reason": "Includes hop-on hop-off bus and max 55 guests; near-duplicate Wicklow coverage versus selected 24779P1"
+    },
+    {
+      "productCode": "2916DUB",
+      "title": "City Sightseeing Dublin Hop-On Hop-Off Bus Tour",
+      "reason": "Hop-on hop-off rejected; 4.0/2366"
+    },
+    {
+      "productCode": "2032DUB",
+      "title": "Go City: Dublin Pass | Save up to 50% - Includes 35+ Things To Do",
+      "reason": "Admission pass, not a guided tour; EUR pricing and 3.8/508"
+    },
+    {
+      "productCode": "184316P2",
+      "title": "Best Dublin City & Bay authentic fun tour with a true Dubliner",
+      "reason": "Live dump priced in EUR only (From €650.00); 5.0/76"
+    },
+    {
+      "productCode": "8962P34",
+      "title": "4-Day South West Ireland Tour from Dublin",
+      "reason": "USD From$577.84 and 4.5/105; multi-day package left out to keep the set on day-tour commercial mix rather than hotel packages"
+    }
+  ]
+}

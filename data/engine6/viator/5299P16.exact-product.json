@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "5299P16",
+    "productUrl": "https://www.viator.com/tours/Dublin/WICKLOW-AND-GLENDALOUGH-TOUR/d503-5299P16",
+    "title": "From Dublin: Wicklow, Glendalough, Waterfall & Sheepdog demo",
+    "description": {
+      "text": "Leave Dublin for a seven-hour Wicklow countryside day covering Powerscourt Waterfall, Glendalough Monastery, the village of Hollywood, and an Irish farm sheepdog demonstration. A driver-guide keeps waterfall, monastic, and farm timing coordinated so the outing stays on country roads rather than self-drive logistics. Admission to the listed activities is included, with round-trip transport from the city. Meet at the Molly Malone statue. The format is built for visitors who want waterfall, monastery, and farm culture in one Dublin-based day. Stops include Powerscourt Waterfall, Glendalough Monastery, Hollywood, Irish farm."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $51.35",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 91
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/76/f7/da.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Leave the busy city streets behind and explore the countryside of Wicklow County on this tour of the surrounding area",
+      "Explore the 6th-century Glendalough Monastery for insights into Ireland's spiritual heritage plus visit the historic vil",
+      "From Dublin: Wicklow, Glendalough, Waterfall & Sheepdog demo near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Dublin for a seven-hour Wicklow countryside day covering Powerscourt Waterfall, Glendalough Monastery, the village of Hollywood, and an Irish farm sheepdog demonstration.",
+    "itineraryItems": [
+      {
+        "title": "Powerscourt Waterfall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glendalough Monastery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hollywood",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Irish farm",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "All activities admission",
+      "Transportation to and from Dublin",
+      "Air-conditioned vehicle and USB ports",
+      "Wifi on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the From Dublin: Wicklow, Glendalough, Waterfall & Sheepdog demo?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 51.35
+      },
+      "currency": "USD"
+    }
+  }
+}

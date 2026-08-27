@@ -1,0 +1,238 @@
+{
+  "selectedCount": 15,
+  "listingCount": 15,
+  "listingMatchesSelection": true,
+  "okCount": 15,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "103208P1",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/cliffs-of-moher-wild-atlantic-way-luxury-award-winning-103208P1",
+      "title": "Cliffs Of Moher & Wild Atlantic Way Luxury Award Winning Tour.",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/11/85/03.jpg",
+      "card": "Leave Dublin on a private 8- to 12-hour luxury car day to the Cliffs of Moher and the Wild Atlantic Way.",
+      "itineraryTitles": [
+        "Cliffs of Moher",
+        "Wild Atlantic Way",
+        "Galway City"
+      ],
+      "issues": []
+    },
+    {
+      "code": "229063P1",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-private-walking-tour-229063P1",
+      "title": "Dublin Private Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/3a/3c.jpg",
+      "card": "Discover Dublin on a private three-hour walking circuit of cobblestone streets and landmark stops.",
+      "itineraryTitles": [
+        "Temple Bar",
+        "Ha'penny Bridge",
+        "Trinity College",
+        "Molly Malone statue",
+        "Oscar Wilde Monument"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7812P20",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-walking-food-tour-with-secret-food-tours-7812P20",
+      "title": "Dublin Walking Food Tour With Secret Food Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/70/a3/4d.jpg",
+      "card": "Eat like a local on this small-group Dublin food walk from the Henry Grattan Monument on College Green.",
+      "itineraryTitles": [
+        "Henry Grattan Monument",
+        "Trinity College",
+        "Guinness Storehouse",
+        "College Green",
+        "Wicklow Street"
+      ],
+      "issues": []
+    },
+    {
+      "code": "26444P13",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-6-whiskey-tasting-3-food-pairing-walking-tour-wi-26444P13",
+      "title": "Dublin 6 Whiskey Tasting & 3 Food Pairing Walking Tour with Local",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/28/05/1b.jpg",
+      "card": "Follow a local whiskey trail through Dublin with six tastings and optional food pairings.",
+      "itineraryTitles": [
+        "Grafton Street",
+        "Molly Malone Statue",
+        "Powerscourt Townhouse Centre",
+        "Christ Church Cathedral",
+        "Temple Bar"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8954P33",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-food-and-drink-walking-tour-and-jameson-irish-co-8954P33",
+      "title": "Dublin Food and Drink Walking Tour and Jameson Irish Coffee Demo",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/f7/54/fd.jpg",
+      "card": "Join a Dublin food and drinks walk that ends with a Jameson Irish coffee demo at Jameson Distillery Bow St.",
+      "itineraryTitles": [
+        "Jameson Distillery Bow St.",
+        "Dublin pubs"
+      ],
+      "issues": []
+    },
+    {
+      "code": "37082P4",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-panoramic-e-bike-tour-with-howth-adventures-37082P4",
+      "title": "Dublin Panoramic e-Bike Tour with Howth Adventures",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/37/fe/54.jpg",
+      "card": "Ride an e-bike from Dublin's Howth Harbour across the Howth Peninsula without grinding the hills.",
+      "itineraryTitles": [
+        "The Summit",
+        "Howth Cliffs",
+        "Baily Lighthouse",
+        "Martello Towers"
+      ],
+      "issues": []
+    },
+    {
+      "code": "37082P5",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-coastal-hike-with-howth-adventures-37082P5",
+      "title": "Dublin Coastal Hike with Howth Adventures",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/57/4a.jpg",
+      "card": "Leave central Dublin for a three-hour guided coastal hike in the fishing village of Howth.",
+      "itineraryTitles": [
+        "Howth Castle",
+        "St. Mary's Abbey",
+        "Howth Harbour"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24779P1",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-to-powerscourt-wicklow-and-glendalough-small-gro-24779P1",
+      "title": "Dublin to Powerscourt, Wicklow and Glendalough Small Group Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ff/44/82.jpg",
+      "card": "Spend an eight-hour small-group day from Dublin in County Wicklow, starting at the Molly Malone statue.",
+      "itineraryTitles": [
+        "Molly Malone Statue",
+        "Powerscourt House & Gardens",
+        "Enniskerry Village Square",
+        "Wicklow Mountains National Park",
+        "Sally Gap",
+        "Old Military Road",
+        "Guinness Lake",
+        "Glendalough Monastic Settlement"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24779P2",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-to-wicklow-glendalough-small-group-tour-with-gui-24779P2",
+      "title": "Dublin to Wicklow, Glendalough Small Group Tour with Guided Walk",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/10/90.jpg",
+      "card": "Leave Dublin for an eight-hour small-group day that pairs a guided walk in Wicklow National Park with time in Glendalough.",
+      "itineraryTitles": [
+        "Wicklow National Park",
+        "Glendalough"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5299P16",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/from-dublin-wicklow-glendalough-waterfall-sheepdog-demo-5299P16",
+      "title": "From Dublin: Wicklow, Glendalough, Waterfall & Sheepdog demo",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/76/f7/da.jpg",
+      "card": "Leave Dublin for a seven-hour Wicklow countryside day covering Powerscourt Waterfall, Glendalough Monastery, the village of Hollywood, and a",
+      "itineraryTitles": [
+        "Powerscourt Waterfall",
+        "Glendalough Monastery",
+        "Hollywood",
+        "Irish farm"
+      ],
+      "issues": []
+    },
+    {
+      "code": "33832P1",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-to-glendalough-wicklow-and-kilkenny-full-day-gui-33832P1",
+      "title": "Dublin to Glendalough, Wicklow and Kilkenny Full Day Guided Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7b/27/53.jpg",
+      "card": "Leave Dublin on a 9-hour 15-minute coach day through Wicklow Mountains National Park, Glendalough, and Kilkenny.",
+      "itineraryTitles": [
+        "Glendalough Monastic Settlement",
+        "Wicklow Mountains National Park",
+        "The Wicklow Gap",
+        "Kilkenny Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8962P3",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/cliffs-of-moher-day-tour-from-dublin-including-the-wild-8962P3",
+      "title": "Cliffs of Moher Day Tour from Dublin: Including The Wild Atlantic Way",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/eb/ea.jpg",
+      "card": "Leave Dublin on a 12-hour coach day to the Cliffs of Moher via the Wild Atlantic Way.",
+      "itineraryTitles": [
+        "Kinvara Harbour",
+        "Wild Atlantic Way",
+        "The Burren",
+        "Liscannor",
+        "Cliffs of Moher",
+        "Bunratty Castle and Folk Park"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5299MOHER",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/cliffs-of-moher-doolin-burren-and-galway-day-tour-from-5299MOHER",
+      "title": "Cliffs of Moher, Doolin, Burren and Galway Day Tour from Dublin",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/68/dc/a0.jpg",
+      "card": "Escape central Dublin on a 13-hour coach day to the Cliffs of Moher, Doolin, The Burren, and Galway.",
+      "itineraryTitles": [
+        "Molly Malone Statue",
+        "Cliffs of Moher",
+        "Doolin",
+        "The Burren",
+        "Galway"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8962P4",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/giants-causeway-day-tour-from-dublin-8962P4",
+      "title": "Giant's Causeway Day Tour from Dublin",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/50/a3/57.jpg",
+      "card": "Leave Dublin on a 13-hour day to Giant's Causeway, with stops at the Dark Hedges and Dunluce Castle on County Antrim's coast.",
+      "itineraryTitles": [
+        "Giant's Causeway",
+        "Dark Hedges",
+        "Dunluce Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5300TITANIC",
+      "ok": true,
+      "path": "/destinations/ireland/dublin/tours/dublin-to-belfast-titanic-dunluce-castle-giants-causewa-5300TITANIC",
+      "title": "Dublin to Belfast Titanic, Dunluce Castle & Giant's Causeway Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c3/87/e9.jpg",
+      "card": "Leave Dublin on a 13-hour coach day to Titanic Belfast, Dunluce Castle, and Giant's Causeway.",
+      "itineraryTitles": [
+        "Titanic Belfast",
+        "Antrim Coast Road",
+        "Dunluce Castle",
+        "Giant's Causeway",
+        "Castlebellingham"
+      ],
+      "issues": []
+    }
+  ]
+}

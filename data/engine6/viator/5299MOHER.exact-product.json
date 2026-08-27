@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "5299MOHER",
+    "productUrl": "https://www.viator.com/tours/Dublin/Cliffs-of-Moher-Day-Trip-from-Dublin/d503-5299MOHER",
+    "title": "Cliffs of Moher, Doolin, Burren and Galway Day Tour from Dublin",
+    "description": {
+      "text": "Escape central Dublin on a 13-hour coach day to the Cliffs of Moher, Doolin, The Burren, and Galway. Meet at the Molly Malone statue, then walk cliff paths, pause in Doolin, cross Burren limestone, and finish in Galway's Latin Quarter streets before the return. Cliff admission and round-trip transport from Dublin keep the four-stop west-coast circuit on one vehicle. Commentary covers countryside between the city and the Atlantic so the long day stays guided rather than self-drive. Stops include Molly Malone Statue, Cliffs of Moher, Doolin, The Burren, Galway."
+    },
+    "location": {
+      "city": "Dublin",
+      "state": "Ireland"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $77.03",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 2417
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/68/dc/a0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Escape the bustle of Dublin in favor of picture-perfect coastal scenery on this full-day trip to the Cliffs of Moher",
+      "From the comfort of a luxury coach, admire the unrivaled beauty of the Irish countryside as you travel to the dramatic c",
+      "Plus, make bonus stops in the village of Doolin for lunch (own expense), see the otherworldly scenery of the Burren, and",
+      "Cliffs of Moher, Doolin, Burren and Galway Day Tour from Dublin near Dublin",
+      "Professional Dublin guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      },
+      "end": {
+        "description": "Return to your Dublin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape central Dublin on a 13-hour coach day to the Cliffs of Moher, Doolin, The Burren, and Galway.",
+    "itineraryItems": [
+      {
+        "title": "Molly Malone Statue",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cliffs of Moher",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doolin",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Burren",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Galway",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned and USB ports on the vehicle",
+      "Driver/guide",
+      "Round-trip transportation from Dublin",
+      "Cliffs of Moher admission"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cliffs of Moher, Doolin, Burren and Galway Day Tour from Dublin?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Dublin?",
+        "answer": "Molly Malone Statue, Suffolk St, Dublin 2, D02 KX03, Ireland"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 77.03
+      },
+      "currency": "USD"
+    }
+  }
+}

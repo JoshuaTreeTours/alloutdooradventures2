@@ -1,0 +1,48 @@
+export const DUBLIN_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
+  "103208P1",
+  "229063P1",
+  "7812P20",
+  "26444P13",
+  "8954P33",
+  "37082P4",
+  "37082P5",
+  "24779P1",
+  "24779P2",
+  "5299P16",
+  "33832P1",
+  "8962P3",
+  "5299MOHER",
+  "8962P4",
+  "5300TITANIC",
+] as const;
+
+export type DublinTargetedNarrativeDescriptionProductCode =
+  (typeof DUBLIN_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES)[number];
+
+export const DUBLIN_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
+  DublinTargetedNarrativeDescriptionProductCode,
+  string
+> = {
+  "103208P1": "Leave Dublin on a private 8- to 12-hour luxury car day to the Cliffs of Moher and the Wild Atlantic Way. A private guide covers Irish legends, monastery ruins, and castle stories while the route can add Galway City, gourmet stops, or countryside walks. Comfortable Mercedes-class transport keeps the long west-coast drive off self-drive logistics. The outing is built for visitors who want cliff time and coastal scenery without a packed coach schedule. Stops include Cliffs of Moher, Wild Atlantic Way, Galway City.",
+  "229063P1": "Discover Dublin on a private three-hour walking circuit of cobblestone streets and landmark stops. A licensed guide covers Temple Bar, Ha'penny Bridge, Trinity College, and the Molly Malone statue, with time for photos and local tips. Private pacing keeps commentary flexible rather than a fixed group loop. The walk finishes near the Oscar Wilde Monument so the same private format covers both historic streets and a Georgian square. Stops include Temple Bar, Ha'penny Bridge, Trinity College, Molly Malone statue, Oscar Wilde Monument.",
+  "7812P20": "Eat like a local on this small-group Dublin food walk from the Henry Grattan Monument on College Green. A guide leads into pubs, cafes, and markets for Irish breakfast plates, cheeses, stew, ice cream, and a secret dish, with Irish coffee and a cream liqueur along the way. Landmark context at Trinity College and the Guinness Storehouse keeps the outing food-first rather than a landmark-only loop. Groups stay at 12 or fewer so tastings stay paced. Stops include Henry Grattan Monument, Trinity College, Guinness Storehouse, College Green, Wicklow Street.",
+  "26444P13": "Follow a local whiskey trail through Dublin with six tastings and optional food pairings. The walk starts at Powerscourt Townhouse Centre, then moves via Grafton Street and the Molly Malone statue toward Christ Church Cathedral and Temple Bar. A guide compares Jameson, Bushmills, Wild Geese, and Connemara styles in traditional pubs rather than a distillery-only visit. The three-hour format is built for visitors who want Dublin nightlife context with whiskey, not a self-guided pub crawl. Stops include Grafton Street, Molly Malone Statue, Powerscourt Townhouse Centre, Christ Church Cathedral, Temple Bar.",
+  "8954P33": "Join a Dublin food and drinks walk that ends with a Jameson Irish coffee demo at Jameson Distillery Bow St. A local guide covers brewing and distilling history while the group samples Irish dishes, Guinness, and whiskey in city pubs rather than a museum circuit inside the distillery. The three-hour small-group format stays on tasting stops and pub rooms, with meeting outside the Bow Street entrance in Smithfield. Commentary ties each pour to Dublin's distilling story so the outing stays food-and-drink first. Stops include Jameson Distillery Bow St., Dublin pubs.",
+  "37082P4": "Ride an e-bike from Dublin's Howth Harbour across the Howth Peninsula without grinding the hills. A small-group guide leads off-road trails to the Summit, Howth Cliffs, Baily Lighthouse, and Martello Towers, with photo stops and local commentary along the way. Bikes and helmets are provided so visitors can cover coastal ground rather than rent independently, and prior cycling experience is required for the off-road sections. The three-hour format is built for visitors who want Howth scenery from a Dublin-area harbor base. Stops include The Summit, Howth Cliffs, Baily Lighthouse, Martello Towers.",
+  "37082P5": "Leave central Dublin for a three-hour guided coastal hike in the fishing village of Howth. A local guide covers Howth Castle, St. Mary's Abbey, and Howth Harbour before the cliff-path loop, with stories about village history along the way. The small-group walk is built for visitors who want shoreline views without mapping the peninsula independently. Meet outside Bodega Coffee Shop at Howth Market, opposite the train station, then follow the harbor and abbey before the cliffs. Stops include Howth Castle, St. Mary's Abbey, Howth Harbour.",
+  "24779P1": "Spend an eight-hour small-group day from Dublin in County Wicklow, starting at the Molly Malone statue. The route visits Powerscourt House & Gardens, Enniskerry Village Square, Wicklow Mountains National Park, Sally Gap, Old Military Road, Guinness Lake, and Glendalough Monastic Settlement. A guide handles the scenic drive so visitors can walk the gardens and monastic valley without self-driving mountain lanes. Stops include Molly Malone Statue, Powerscourt House & Gardens, Enniskerry Village Square, Wicklow Mountains National Park, Sally Gap, Old Military Road, Guinness Lake, Glendalough Monastic Settlement.",
+  "24779P2": "Leave Dublin for an eight-hour small-group day that pairs a guided walk in Wicklow National Park with time in Glendalough. After the hike, the group pauses for lunch in a Victorian village, then explores the medieval abbey setting before the return coach. Live commentary covers countryside lanes that are easy to miss from a rental car, and the driver-guide keeps hike and monastic timing on one vehicle. Meet at the Molly Malone statue on Suffolk Street. The outing is built for visitors who want a Wicklow walk plus Glendalough from a Dublin base. Stops include Wicklow National Park, Glendalough.",
+  "5299P16": "Leave Dublin for a seven-hour Wicklow countryside day covering Powerscourt Waterfall, Glendalough Monastery, the village of Hollywood, and an Irish farm sheepdog demonstration. A driver-guide keeps waterfall, monastic, and farm timing coordinated so the outing stays on country roads rather than self-drive logistics. Admission to the listed activities is included, with round-trip transport from the city. Meet at the Molly Malone statue. The format is built for visitors who want waterfall, monastery, and farm culture in one Dublin-based day. Stops include Powerscourt Waterfall, Glendalough Monastery, Hollywood, Irish farm.",
+  "33832P1": "Leave Dublin on a 9-hour 15-minute coach day through Wicklow Mountains National Park, Glendalough, and Kilkenny. A guide and separate driver cover The Wicklow Gap viewpoints, monastic ruins at Glendalough Monastic Settlement, and a walking circuit of Kilkenny Castle and medieval streets. Free time in Kilkenny lets the group add lunch or independent sightseeing before the return. The outing is built for visitors who want Wicklow scenery and a medieval city in one Dublin-based day. Stops include Glendalough Monastic Settlement, Wicklow Mountains National Park, The Wicklow Gap, Kilkenny Castle.",
+  "8962P3": "Leave Dublin on a 12-hour coach day to the Cliffs of Moher via the Wild Atlantic Way. Numbered stops cover Kinvara Harbour, The Burren, Liscannor, the Cliffs of Moher Visitor Centre, and Bunratty Castle and Folk Park, with live commentary on board. Cliff admission is included so west-coast timing stays coordinated rather than split across separate tickets. Meet at 34 O'Connell Street Lower near The Spire. The long day is built for visitors who want cliff hiking and Burren limestone from a Dublin base. Stops include Kinvara Harbour, Wild Atlantic Way, The Burren, Liscannor, Cliffs of Moher, Bunratty Castle and Folk Park.",
+  "5299MOHER": "Escape central Dublin on a 13-hour coach day to the Cliffs of Moher, Doolin, The Burren, and Galway. Meet at the Molly Malone statue, then walk cliff paths, pause in Doolin, cross Burren limestone, and finish in Galway's Latin Quarter streets before the return. Cliff admission and round-trip transport from Dublin keep the four-stop west-coast circuit on one vehicle. Commentary covers countryside between the city and the Atlantic so the long day stays guided rather than self-drive. Stops include Molly Malone Statue, Cliffs of Moher, Doolin, The Burren, Galway.",
+  "8962P4": "Leave Dublin on a 13-hour day to Giant's Causeway, with stops at the Dark Hedges and Dunluce Castle on County Antrim's coast. A guide covers geology and folklore while the coach handles the long northbound drive from the city. Dunluce Castle admission is included; UNESCO Giant's Causeway access is a public monument. Meet at the Molly Malone statue on Suffolk Street. The outing is built for visitors who want Antrim coast columns and castle ruins without self-driving from Dublin. Stops include Giant's Causeway, Dark Hedges, Dunluce Castle.",
+  "5300TITANIC": "Leave Dublin on a 13-hour coach day to Titanic Belfast, Dunluce Castle, and Giant's Causeway. A guide covers the liner's story in the Belfast galleries, then the Antrim Coast Road to Dunluce Castle and the UNESCO basalt columns. Admission to Titanic Belfast and Dunluce Castle is included so gallery and castle timing stay on one vehicle. Drop-off is on D'Olier Street near O'Connell Bridge. The long day is built for visitors who want Belfast shipyard history and Antrim coast geology from a Dublin base. Stops include Titanic Belfast, Antrim Coast Road, Dunluce Castle, Giant's Causeway, Castlebellingham.",
+};
+
+export const getDublinTargetedNarrativeDescription = (
+  productCode: string
+) =>
+  DUBLIN_TARGETED_NARRATIVE_DESCRIPTIONS[
+    productCode as DublinTargetedNarrativeDescriptionProductCode
+  ];
