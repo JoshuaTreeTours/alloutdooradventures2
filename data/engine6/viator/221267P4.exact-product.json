@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "221267P4",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Countryside-Tour-Zaanse-Schans-and-Zandam-by-electric-bike/d525-221267P4",
+    "title": "Zaanse Schans Windmills & Zaandam: Countryside Electric Bike Tour",
+    "description": {
+      "text": "Hop on an e-bike in Amsterdam to see the Netherlands the local way, on two wheels. This small-group tour pedals to Zaanse Schans among its windmills and continues into Zaandam, where traditional wooden houses line the streets. Time on foot is built in for photos and stalls selling Dutch cheese and clogs. Bike fitting and canal-path routing stay with the guide so visitors can ride rather than plan countryside lanes independently. The outing is built for visitors who want windmill country from a city base without renting bikes alone. Stops include Zaanse Schans, Zaandam."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $103.02",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 344
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/90/07/53.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hop on an e-bike to see the Netherlands the local way, on two wheels",
+      "This small-group tour takes you to Zaanse Schans to pedal amid its windmills and the village of Zaandam where traditiona",
+      "Ample time is included to explore on foot, take photos, and check out stalls selling Dutch cheese and clogs",
+      "Zaanse Schans Windmills & Zaandam: Countryside Electric Bike Tour near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Oudezijds Voorburgwal 30A, 1012 GD Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hop on an e-bike in Amsterdam to see the Netherlands the local way, on two wheels.",
+    "itineraryItems": [
+      {
+        "title": "Zaanse Schans",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zaandam",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet - available at the shop",
+      "Rain Poncho - available at the shop",
+      "Electric Bike for the tour: these are NOT scooters"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Zaanse Schans Windmills & Zaandam: Countryside Electric Bike Tour?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Oudezijds Voorburgwal 30A, 1012 GD Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 103.02
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "61268P6",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Day-Trip-to-Zaanse-Schans-Edam-Volendam-and-Marken-from-Amsterdam/d525-61268P6",
+    "title": "Day Trip to Zaanse Schans, Edam, Volendam and Marken from Amsterdam",
+    "description": {
+      "text": "Discover the Dutch countryside on this full-day tour to Zaanse Schans, Edam, Volendam, and Marken from Amsterdam. Windmills, waterlands, cheese makers, and clog workshops are covered with a professional guide, plus tastings of local produce and interior visits. Round-trip coach transfer from central Amsterdam keeps village timing coordinated. The outing is built for visitors who want a Holland countryside day without self-driving between fishing villages. Stops include Zaanse Schans, Edam, Simonehoeve, Marken."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $40.55",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 4557
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/87/92/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the Dutch countryside on this full-day tour to Zaanse Schans, Edam, Volendam, and Marken, with round-trip trans",
+      "See windmills, waterlands, cheese makers, and clog factories up close, and learn about the region's rich history directl",
+      "If option selected, you embark on a 1-hour canal sightseeing tour right after the tour, ending at Amsterdam Central Stat",
+      "Day Trip to Zaanse Schans, Edam, Volendam and Marken from Amsterdam near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "De Ruijterkade 151, 1011 AB Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the Dutch countryside on this full-day tour to Zaanse Schans, Edam, Volendam, and Marken from Amsterdam.",
+    "itineraryItems": [
+      {
+        "title": "Zaanse Schans",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Edam",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Simonehoeve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marken",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "A'dam Lookout",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Transfer by coach",
+      "Professional guide",
+      "Tasting of local cheese and other products like cookies , fruits wine"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Trip to Zaanse Schans, Edam, Volendam and Marken from Amsterdam?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "De Ruijterkade 151, 1011 AB Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 40.55
+      },
+      "currency": "USD"
+    }
+  }
+}

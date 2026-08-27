@@ -1174,6 +1174,50 @@ export const isEngine6VeniceTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_VENICE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_AMSTERDAM_139660P3_PRODUCT_CODE = "139660P3";
+export const ENGINE6_AMSTERDAM_139660P3_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/highlights-of-holland-private-guided-tour-from-amsterda-139660P3";
+export const ENGINE6_AMSTERDAM_6290AMS4_PRODUCT_CODE = "6290AMS4";
+export const ENGINE6_AMSTERDAM_6290AMS4_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/private-tour-amsterdam-city-walking-tour-and-canal-crui-6290AMS4";
+export const ENGINE6_AMSTERDAM_7812P33_PRODUCT_CODE = "7812P33";
+export const ENGINE6_AMSTERDAM_7812P33_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/amsterdam-food-tour-in-jordaan-district-with-secret-foo-7812P33";
+export const ENGINE6_AMSTERDAM_221267P4_PRODUCT_CODE = "221267P4";
+export const ENGINE6_AMSTERDAM_221267P4_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/zaanse-schans-windmills-zaandam-countryside-electric-bi-221267P4";
+export const ENGINE6_AMSTERDAM_9093P9_PRODUCT_CODE = "9093P9";
+export const ENGINE6_AMSTERDAM_9093P9_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/private-amsterdam-red-light-district-and-food-tour-9093P9";
+export const ENGINE6_AMSTERDAM_6624FOOD_PRODUCT_CODE = "6624FOOD";
+export const ENGINE6_AMSTERDAM_6624FOOD_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/amsterdam-jordaan-food-drinks-tour-with-eating-europe-6624FOOD";
+export const ENGINE6_AMSTERDAM_375412P1_PRODUCT_CODE = "375412P1";
+export const ENGINE6_AMSTERDAM_375412P1_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/10-tastes-of-amsterdam-food-tour-by-unesco-canals-and-j-375412P1";
+export const ENGINE6_AMSTERDAM_6464CITY_PRODUCT_CODE = "6464CITY";
+export const ENGINE6_AMSTERDAM_6464CITY_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/the-original-amsterdam-city-highlights-bike-tour-en-nl-6464CITY";
+export const ENGINE6_AMSTERDAM_6464COUNTRY_PRODUCT_CODE = "6464COUNTRY";
+export const ENGINE6_AMSTERDAM_6464COUNTRY_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/countryside-bike-tour-from-amsterdam-a-windmill-and-dut-6464COUNTRY";
+export const ENGINE6_AMSTERDAM_6412WALK_PRODUCT_CODE = "6412WALK";
+export const ENGINE6_AMSTERDAM_6412WALK_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/amsterdam-morning-or-afternoon-small-group-walking-tour-6412WALK";
+export const ENGINE6_AMSTERDAM_61268P6_PRODUCT_CODE = "61268P6";
+export const ENGINE6_AMSTERDAM_61268P6_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/day-trip-to-zaanse-schans-edam-volendam-and-marken-from-61268P6";
+export const ENGINE6_AMSTERDAM_75227P6_PRODUCT_CODE = "75227P6";
+export const ENGINE6_AMSTERDAM_75227P6_ROUTE =
+  "/destinations/netherlands/amsterdam/tours/amsterdam-classic-saloon-boat-cruise-drinks-and-cheese-75227P6";
+
+export const ENGINE6_AMSTERDAM_TOUR_PATH_PREFIX =
+  "/destinations/netherlands/amsterdam/tours/";
+
+export const isEngine6AmsterdamTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_AMSTERDAM_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4183,6 +4227,54 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_VENICE_92490P4_ROUTE,
     ENGINE6_VENICE_92490P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_139660P3_ROUTE,
+    ENGINE6_AMSTERDAM_139660P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_6290AMS4_ROUTE,
+    ENGINE6_AMSTERDAM_6290AMS4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_7812P33_ROUTE,
+    ENGINE6_AMSTERDAM_7812P33_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_221267P4_ROUTE,
+    ENGINE6_AMSTERDAM_221267P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_9093P9_ROUTE,
+    ENGINE6_AMSTERDAM_9093P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_6624FOOD_ROUTE,
+    ENGINE6_AMSTERDAM_6624FOOD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_375412P1_ROUTE,
+    ENGINE6_AMSTERDAM_375412P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_6464CITY_ROUTE,
+    ENGINE6_AMSTERDAM_6464CITY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_6464COUNTRY_ROUTE,
+    ENGINE6_AMSTERDAM_6464COUNTRY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_6412WALK_ROUTE,
+    ENGINE6_AMSTERDAM_6412WALK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_61268P6_ROUTE,
+    ENGINE6_AMSTERDAM_61268P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AMSTERDAM_75227P6_ROUTE,
+    ENGINE6_AMSTERDAM_75227P6_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "375412P1",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Guilty-Pleasure-Food-and-Drink-Tour-Trough-Old-Amsterdam-and-Red-Light-District/d525-375412P1",
+    "title": "10 Tastes of Amsterdam: Food Tour by UNESCO Canals and Jordaan",
+    "description": {
+      "text": "Eat your way around Amsterdam on this small-group food tour, with more than 10 tastings at five local eateries most visitors miss. The walk moves between De Mannen Van Kaas, the Jordaan, the UNESCO canal ring, and the Anne Frank House area, sampling stroopwafels, artisanal Gouda, and other Dutch delicacies. A local guide keeps the route on neighborhood tables rather than tourist-trap menus. The three-hour format is food-first for visitors who want canal-side tastings instead of a landmark-only circuit. Stops include De Mannen Van Kaas, Jordaan, Amsterdam Canal Ring, Anne Frank House."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $103.06",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1428
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/00/91/fb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eat your way around Amsterdam on this small-group food tour",
+      "It includes over 10 delicious tastings at five local eateries that most travelers miss",
+      "At each hidden gem, try Dutch delicacies, from freshly-made stroopwafels (syrup-filled waffles) to artisanal Gouda chees",
+      "10 Tastes of Amsterdam: Food Tour by UNESCO Canals and Jordaan near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Gastrovino Amsterdam - De Mannen Van Kaas, Spuistraat 330, 1012 VX Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Eat your way around Amsterdam on this small-group food tour, with more than 10 tastings at five local eateries most visitors miss.",
+    "itineraryItems": [
+      {
+        "title": "De Mannen Van Kaas",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jordaan",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amsterdam Canal Ring",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Anne Frank House",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Become Dutch in 3 hours: Eat, laugh and learn with our Expert local guides and max 10 foodies.",
+      "Eat 750 Years of Amsterdam: 10 Premium tastings at 5+ beloved local spots —enough for a nice meal",
+      "Drinks: Wine, authentic liquor, traditional jenever or coffee, tea, soda & bottle of water.",
+      "Taste real Amsterdam at UNESCO canalside pubs, 200 year old bakery, Golden age merchant houses."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 10 Tastes of Amsterdam: Food Tour by UNESCO Canals and Jordaan?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Gastrovino Amsterdam - De Mannen Van Kaas, Spuistraat 330, 1012 VX Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 103.06
+      },
+      "currency": "USD"
+    }
+  }
+}

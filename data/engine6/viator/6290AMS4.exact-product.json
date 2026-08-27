@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "6290AMS4",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Private-Tour-Amsterdam-City-Walking-Tour/d525-6290AMS4",
+    "title": "Private Tour: Amsterdam City Walking Tour and Canal Cruise",
+    "description": {
+      "text": "Discover the delights of Amsterdam on a private, customizable half-day walking tour of historical and cultural highlights. A personal guide leads past Dam Square, Leiden Square, the Rijksmuseum, and Anne Frank House, with time in Albert Cuyp Market. The outing finishes with a scenic canal cruise so the same private format covers both streets and UNESCO canals. Commentary and pacing stay flexible for visitors who want a private city introduction rather than a fixed group circuit. Stops include Albert Cuyp Market, Rijksmuseum, Dam Square, Leiden Square (Leidseplein)."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $191.07",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 140
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2f/7b/b2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Van Gogh Museum",
+      "Anne Frank House",
+      "Discover the delights of Amsterdam on a private, customizable half-day walking tour of the city’s historical and cultura",
+      "With your personal guide, stroll through iconic locations like Dam Square and Leiden Square",
+      "Pass by landmarks such as the Rijksmuseum and Anne Frank House, and take a walk through the country's largest street mar"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Loetje, Stationsplein 10, 1012 AB Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the delights of Amsterdam on a private, customizable half-day walking tour of historical and cultural highlights.",
+    "itineraryItems": [
+      {
+        "title": "Albert Cuyp Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rijksmuseum",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Dam Square",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Leiden Square (Leidseplein)",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Vondelpark",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Van Gogh Museum",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Anne Frank House",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Customizable tour with private guide",
+      "Hotel/ port pickup if situated in central Amsterdam",
+      "Canal Cruise"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Amsterdam City Walking Tour and Canal Cruise?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Loetje, Stationsplein 10, 1012 AB Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 191.07
+      },
+      "currency": "USD"
+    }
+  }
+}
