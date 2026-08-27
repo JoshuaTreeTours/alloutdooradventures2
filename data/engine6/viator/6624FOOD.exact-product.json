@@ -1,0 +1,149 @@
+{
+  "product": {
+    "productCode": "6624FOOD",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Amsterdam-Jordaan-District-Food-Walking-Tour/d525-6624FOOD",
+    "title": "Amsterdam Jordaan Food & Drinks Tour with Eating Europe",
+    "description": {
+      "text": "Relish the bites and cultural highlights of Amsterdam's Jordaan district on a food and walking tour. An epicurean guide visits local hotspots for Dutch delicacies such as award-winning Gouda with wine and salami, plus several sit-down tastings off the conventional tourist trail. The calmer sit-down format keeps the outing on neighborhood kitchens rather than grab-and-go snack stops. Stops include The Papeneiland Café, Vishandel Centrum, Café De Poort Amsterdam, Mama's Koelkast, Pat's Poffertjes Oude Leliestraat."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $108.86",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 2033
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/5e/0c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Petit Heemelrijck",
+      "Brouwersgracht",
+      "Herengracht",
+      "Willemsstraat",
+      "Anne Frank House"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Stichting Adullam, Noordermarkt 48, 1015 NA Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Relish the bites and cultural highlights of Amsterdam's Jordaan district on a food and walking tour.",
+    "itineraryItems": [
+      {
+        "title": "The Papeneiland Café",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vishandel Centrum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Café De Poort Amsterdam",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mama's Koelkast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pat's Poffertjes Oude Leliestraat",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Petit Heemelrijck",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Brouwersgracht",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Herengracht",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Willemsstraat",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Anne Frank House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "9 Little Streets (Negen Straatjes)",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Haarlemmerdijk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "12 premium food tastings at 6 authentic local establishments (enough for a hearty meal)",
+      "4 relaxed sit-down tasting experiences where you can dine like a local (not just \"eat and go\")",
+      "A complete drinks package: coffee/tea, water, soda, local beer, fine wine & traditional jenever",
+      "Expert English-speaking culinary guide passionate about Dutch food traditions",
+      "Our exclusive \"Amsterdam Food Lover's Guide\" with insider tips"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Amsterdam Jordaan Food & Drinks Tour with Eating Europe?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Stichting Adullam, Noordermarkt 48, 1015 NA Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 108.86
+      },
+      "currency": "USD"
+    }
+  }
+}

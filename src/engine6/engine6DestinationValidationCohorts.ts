@@ -172,6 +172,14 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Amsterdam",
+      matches: tour =>
+        /\/netherlands\/amsterdam\//i.test(tour.canonicalPath) ||
+        (/\bamsterdam\b/i.test(tour.city) &&
+          /\bnetherlands\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Boston",
       matches: tour =>
         /\/massachusetts\/boston\//i.test(tour.canonicalPath) ||

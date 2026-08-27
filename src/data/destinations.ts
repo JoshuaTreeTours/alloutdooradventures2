@@ -5207,6 +5207,102 @@ const italyState: StateDestination = {
   isFallback: true,
 };
 
+const netherlandsState: StateDestination = {
+  slug: "netherlands",
+  name: "Netherlands",
+  description:
+    "Amsterdam canals, Jordaan streets, and guided walking, cycling, and countryside touring.",
+  featuredDescription:
+    "Explore Amsterdam tours with canal cruises, private walking routes, bike days, food walks, and Zaanse Schans countryside trips.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6c/b1/fa.jpg",
+  region: "Europe",
+  intro:
+    "The Netherlands pairs walkable Amsterdam districts with UNESCO canals, museum collections, and day trips to windmill villages.",
+  longDescription:
+    "Amsterdam anchors Netherlands tour inventory with canal cruises, private walking tours, city and countryside bike days, Jordaan food walks, and Zaanse Schans, Edam, Volendam, and Marken countryside trips from the capital.",
+  topRegions: [
+    {
+      title: "Canal ring and historic center",
+      description:
+        "Dam Square, the Jordaan, Anne Frank House, the Rijksmuseum, and UNESCO-listed canal cruises.",
+    },
+    {
+      title: "Dutch countryside from Amsterdam",
+      description:
+        "Zaanse Schans windmills, Zaandam wooden houses, and fishing villages such as Volendam, Marken, and Edam.",
+    },
+  ],
+  cities: [
+    {
+      name: "Amsterdam",
+      slug: "amsterdam",
+      stateSlug: "netherlands",
+      region: "Amsterdam",
+      lat: 52.3676,
+      lng: 4.9041,
+      shortDescription:
+        "Canal cruises, bike tours, food walks, and countryside sightseeing from Amsterdam.",
+      intro:
+        "Amsterdam is a canal city with Dam Square, the Jordaan, the Rijksmuseum, and guided walking, cycling, food, and countryside tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6c/b1/fa.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cycling"],
+      whereItIs: [
+        "Amsterdam sits on the Amstel and the UNESCO canal ring, with Centraal Station and the Jordaan framing central sightseeing.",
+        "Most guided tours depart from Centraal Station, Dam Square, the Jordaan, and central Amsterdam hotels.",
+      ],
+      experiences: {
+        mountains:
+          "Amsterdam is a canal city; tours focus on landmarks, museum galleries, and neighborhood walking districts.",
+        lakesWater:
+          "Canal cruises highlight the Jordaan, the Rijksmuseum, and Anne Frank House from the water.",
+        desertForest:
+          "Parks such as Vondelpark offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours cover the canal ring, the Jordaan, Vondelpark, and countryside lanes toward Zaanse Schans.",
+        scenicDrives:
+          "Private countryside tours cover Zaanse Schans windmills, Volendam, and Marken from Amsterdam.",
+        seasonalNotes:
+          "Spring and summer are popular for canal cruises and countryside bike days; winter adds indoor museum and food walking.",
+      },
+      thingsToDo: [
+        "Cruise the UNESCO canal ring past the Jordaan and the Rijksmuseum.",
+        "Walk Dam Square, Nieuwmarkt, and the Jordaan with a local guide.",
+        "Bike to Zaanse Schans or join a private Holland countryside day.",
+      ],
+      toursCopy: [
+        "Book a canal cruise or city bike tour for a compact introduction to Amsterdam.",
+        "Pair a Jordaan food walk with a Zaanse Schans countryside day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Amsterdam city highlights bike tour.",
+          "Afternoon: Jordaan food walk or canal cruise.",
+          "Evening: Canal-ring stroll near the Anne Frank House.",
+        ],
+        dayTwo: [
+          "Morning: Zaanse Schans, Edam, Volendam, and Marken day trip.",
+          "Afternoon: Dam Square and Rijksmuseum walking time.",
+          "Evening: Private Red Light District and food tour.",
+        ],
+      },
+      gettingThere: [
+        "Schiphol Airport and Amsterdam Centraal serve the city with train, tram, metro, and taxi links to the canal ring.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Amsterdam tours?",
+          answer:
+            "Canal cruises, city and countryside bike tours, Jordaan food walks, private walking tours, and Zaanse Schans day trips are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5221,6 +5317,7 @@ export const states: StateDestination[] = [
   franceState,
   spainState,
   italyState,
+  netherlandsState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "6412WALK",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Amsterdam-Walking-Tour/d525-6412WALK",
+    "title": "Amsterdam Morning or Afternoon Small-Group Walking Tour",
+    "description": {
+      "text": "This small-group walking tour gives an insider's view of Amsterdam's historic center. A guide leads past Dam Square, the Royal Palace, Nieuwmarkt, and the Red Light District, with stories about UNESCO canals and 17th-century gabled houses. The morning or afternoon format keeps groups compact so commentary stays audible on busy streets. Walking logistics and landmark pacing stay with the guide so visitors can focus on the historic core rather than mapping a DIY circuit. Stops include Nieuwmarkt, Dam Square, Royal Palace Amsterdam, Kalverstraat."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $34.74",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1089
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c6/98/c0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Portugese Synagoge",
+      "Maison Descartes",
+      "Westerkerk",
+      "This small-group walking tour gives you an insider’s view of the beautiful city of Amsterdam",
+      "An informative guide leads your group around Amsterdam’s historical center and past top attractions such as Dam Square,"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Beursplein 5, 1012 JW Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This small-group walking tour gives an insider's view of Amsterdam's historic center.",
+    "itineraryItems": [
+      {
+        "title": "Nieuwmarkt",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dam Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Royal Palace Amsterdam",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kalverstraat",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Red Light District",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Portugese Synagoge",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Maison Descartes",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Westerkerk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "PPE for guides- Hand Sanitizer for guests"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Amsterdam Morning or Afternoon Small-Group Walking Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Beursplein 5, 1012 JW Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 34.74
+      },
+      "currency": "USD"
+    }
+  }
+}

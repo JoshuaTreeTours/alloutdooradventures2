@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "7812P33",
+    "productUrl": "https://www.viator.com/tours/Amsterdam/Secret-Food-Tours-Amsterdam-Jordaan/d525-7812P33",
+    "title": "Amsterdam Food Tour in Jordaan District With Secret Food Tours",
+    "description": {
+      "text": "Gain a rare perspective of Dutch cuisine on this food and culture tour through Amsterdam's Jordaan district. A guide shares neighborhood stories and leads into hidden gem eateries rather than tourist-trap menus. Tastings typically include poffertjes, fresh herring, apple cake, cheeses, and other Dutch treats between canal-side streets. The walking format keeps the outing food-first for visitors who want Jordaan kitchens instead of generic city sightseeing. Stops include Anne Frank Monument, The Jordaan."
+    },
+    "location": {
+      "city": "Amsterdam",
+      "state": "Netherlands"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $121.50",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 308
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/71/f0/3f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Gain a rare perspective of Dutch cuisine on this food and culture tour through Amsterdam’s Jordaan district",
+      "Going with a guide ensures you hear little-known anecdotes about top landmarks and get a behind-the-scenes look at hidde",
+      "Break up the walking tour with food and drink tastings such as poffertjes (traditional batter treat), fresh herring, app",
+      "Amsterdam Food Tour in Jordaan District With Secret Food Tours near Amsterdam",
+      "Professional Amsterdam guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Anne Frank Monument, Westermarkt 74, 1016 DL Amsterdam, Netherlands"
+      },
+      "end": {
+        "description": "Return to your Amsterdam meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Gain a rare perspective of Dutch cuisine on this food and culture tour through Amsterdam's Jordaan district.",
+    "itineraryItems": [
+      {
+        "title": "Anne Frank Monument",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Jordaan",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Poffertjes (traditional batter treat)",
+      "Assortment of Dutch cheeses",
+      "Kibbeling (local snack)",
+      "Fresh Herring",
+      "Traditional Dutch stamppot",
+      "Our delicious Secret Dish"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Amsterdam Food Tour in Jordaan District With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Amsterdam?",
+        "answer": "Anne Frank Monument, Westermarkt 74, 1016 DL Amsterdam, Netherlands"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 121.5
+      },
+      "currency": "USD"
+    }
+  }
+}
