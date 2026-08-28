@@ -6,7 +6,10 @@ import {
   hydrateEngine6ListingEntries,
   resolveInternationalCitySelectionRoute,
 } from "./ToursLanding";
-import { buildInternationalCityOptions } from "./internationalSelectorData";
+import {
+  buildInternationalCityOptions,
+  buildInternationalCountryOptions,
+} from "./internationalSelectorData";
 
 describe("ToursLanding Engine6 filtered listing hydration", () => {
   it("hydrates /tours?state=california&city=joshua-tree card fields from live Engine6 data", () => {
@@ -120,5 +123,49 @@ describe("ToursLanding international inventory selector", () => {
     ).toBe(
       "/destinations/europe/germany/cities/kirchzarten/tours?activity=cycling"
     );
+  });
+
+  it("adds Scotland alphabetically to the International Locations country dropdown", () => {
+    const countries = buildInternationalCountryOptions(tours, []);
+    const scotlandIndex = countries.indexOf("Scotland");
+    const unitedKingdomIndex = countries.indexOf("United Kingdom");
+
+    expect(scotlandIndex).toBeGreaterThan(-1);
+    expect(unitedKingdomIndex).toBeGreaterThan(-1);
+    expect(scotlandIndex).toBeLessThan(unitedKingdomIndex);
+    expect(countries).toEqual([...countries].sort((a, b) => a.localeCompare(b)));
+  });
+
+  it("shows Edinburgh when Scotland is selected and keeps London under United Kingdom", () => {
+    const scotlandCities = buildInternationalCityOptions({
+      selectedCountry: "Scotland",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: tours,
+      canadaProvinces: [],
+      mexicoTours: [],
+    });
+    const unitedKingdomCities = buildInternationalCityOptions({
+      selectedCountry: "United Kingdom",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: tours,
+      canadaProvinces: [],
+      mexicoTours: [],
+    });
+
+    expect(scotlandCities).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "Edinburgh", slug: "edinburgh" }),
+      ])
+    );
+    expect(unitedKingdomCities.map(city => city.slug)).toContain("london");
+  });
+
+  it("routes Scotland → Edinburgh to the canonical destination path", () => {
+    expect(
+      resolveInternationalCitySelectionRoute({
+        selectedCountry: "Scotland",
+        citySlug: "edinburgh",
+      })
+    ).toBe("/destinations/scotland/edinburgh/");
   });
 });

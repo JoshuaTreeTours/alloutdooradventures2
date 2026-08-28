@@ -473,6 +473,10 @@ export const getActivityCityOptions = (
 };
 
 const getInternationalCountrySlug = (tour: Tour) => {
+  if (tour.destination.stateSlug === "scotland") {
+    return "scotland";
+  }
+
   const countryName = tour.destination.country || tour.destination.state;
   const countrySlug = tour.destination.countrySlug || slugify(countryName);
 
@@ -489,7 +493,9 @@ const getInternationalCountrySlug = (tour: Tour) => {
 };
 
 const getInternationalCountryName = (tour: Tour) =>
-  tour.destination.country || tour.destination.state;
+  tour.destination.stateSlug === "scotland"
+    ? "Scotland"
+    : tour.destination.country || tour.destination.state;
 
 export const getActivityInternationalCountryOptions = (
   activitySlug: string

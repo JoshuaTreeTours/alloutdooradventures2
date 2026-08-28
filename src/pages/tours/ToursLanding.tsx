@@ -44,6 +44,7 @@ import {
   CANADA_COUNTRY_NAME,
   getMexicoCityKey,
   MEXICO_COUNTRY_NAME,
+  SCOTLAND_REGION_NAME,
   resolveInternationalCitySelectionRoute,
 } from "./internationalSelectorData";
 
@@ -423,11 +424,20 @@ export default function ToursLanding() {
         const selectedCitySlug = selectedInternationalCity;
 
         const standardTours = tours
-          .filter(
-            tour =>
+          .filter(tour => {
+            if (tour.destination.citySlug !== selectedCitySlug) {
+              return false;
+            }
+
+            if (selectedCountry === SCOTLAND_REGION_NAME) {
+              return tour.destination.stateSlug === "scotland";
+            }
+
+            return (
               tour.destination.country === selectedCountry &&
-              tour.destination.citySlug === selectedCitySlug
-          )
+              tour.destination.stateSlug !== "scotland"
+            );
+          })
           .map(tour => ({
             tour,
             href: `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
