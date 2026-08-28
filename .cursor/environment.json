@@ -1,0 +1,17 @@
+{
+  "name": "all-outdoor-adventures",
+  "install": "export NVM_DIR=\"$HOME/.nvm\"\n. \"$NVM_DIR/nvm.sh\"\nnvm install 20\nnvm alias default 20\nnvm use 20\nnpm ci",
+  "terminals": [
+    {
+      "name": "vite-dev",
+      "command": "export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; nvm use 20 >/dev/null; npm run dev",
+      "description": "Vite dev server for the React SPA. Serves the site with hot reload on http://localhost:5173 (also exposed on the container network via --host). Node is loaded via nvm because the platform's default node lacks npm."
+    }
+  ],
+  "ports": [
+    {
+      "name": "vite",
+      "port": 5173
+    }
+  ]
+}
