@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "5211P20",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Outlander-Film-Locations-Day-Trip-from-Edinburgh/d739-5211P20",
+    "title": "Outlander Film Locations Day Trip from Edinburgh",
+    "description": {
+      "text": "Follow Outlander filming locations from Edinburgh to Doune Castle, Culross, Falkland, and Linlithgow Palace. A local English-speaking guide covers castle sets, village streets, and palace ruins on a 9.5-hour air-conditioned day trip. Stops include Doune Castle, Culross, Falkland, Linlithgow Palace. Departure is from the Royal Mile, with stories about actors and film sets between the historic sites. Castle Courtyard and village lanes used on screen are easier to place with a guide than from a self-drive map. Ideal for visitors basing in Edinburgh who want a guided Outlander locations day without plotting castle opening times alone."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "9 hours 30 minutes (approx.)",
+    "priceFrom": "From $88.01",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1174
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/f8/08.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Outlander film locations tour from Edinburgh",
+      "Marvel at historic landmarks such as Doune Castle",
+      "Visit beautiful filming locations including Culross, and Falkland",
+      "Hear stories about Outlander’s actors and film sets from an expert guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:45 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for your designated queue. Our staff will check you in for the tour."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Follow Outlander filming locations from Edinburgh to Doune Castle, Culross, Falkland, and Linlithgow Palace.",
+    "itineraryItems": [
+      {
+        "title": "Doune Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Culross",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Falkland",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Linlithgow Palace",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local English Speaking Guide",
+      "Air-conditioned vehicle",
+      "Food and drinks",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Outlander Film Locations Day Trip from Edinburgh?",
+        "answer": "The planned duration is 9 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:45 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for your designated queue. Our staff will check you in for the tour."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 88.01
+      },
+      "currency": "USD"
+    }
+  }
+}

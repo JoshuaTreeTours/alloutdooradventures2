@@ -118,6 +118,13 @@ const isUsStateTour = (tour: Tour) => {
 };
 
 const getCountryFromTour = (tour: Tour) => {
+  if (tour.destination.stateSlug === "scotland") {
+    return {
+      name: tour.destination.state || "Scotland",
+      slug: "scotland",
+    };
+  }
+
   if (tour.destination.country) {
     return {
       name: tour.destination.country,

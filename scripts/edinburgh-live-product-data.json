@@ -1,0 +1,805 @@
+[
+  {
+    "productCode": "128492P2",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/The-Highlands-Driving-Tour-Private/d739-128492P2",
+    "title": "Glencoe & Highlands: Private Land Rover Tour",
+    "priceFrom": "From $1,216.59",
+    "price": 1216.59,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 42,
+    "duration": "9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0c/50/0b.jpg",
+    "overview": "Skip the big bus tours and enjoy a personalized experience as you explore the Scottish Highlands in a Land Rover. This private tour is just for your group and takes you into the haunting valley of Glencoe. Between stops at the Falls of Dochart, Rannoch Moor and more, you'll learn all about the area from your guide.",
+    "highlights": [
+      "Guided tour to Glencoe from Edinburgh: See as much as possible in one day",
+      "Private tour, exclusively for your party: A personalized experience",
+      "Learn all about Scottish history and culture from your guide",
+      "Hassle-free pickup from your Edinburgh accommodation, airport or port"
+    ],
+    "itineraryStops": [
+      "Glencoe",
+      "Falls of Dochart",
+      "Rannoch Moor"
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Hotel pickup and drop-off",
+      "All guiding fees",
+      "Lunch"
+    ],
+    "startDescription": "You will be collected from you choice of start point or accommodation",
+    "experienceType": "jeep-private",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "4WD Tours",
+      "Private Sightseeing Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "401019P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Luxury-Private-Bespoke-Tour-of-Scotland/d739-401019P1",
+    "title": "Luxury Private Tour of The Highlands & Loch Ness from Edinburgh",
+    "priceFrom": "From $1,211.93",
+    "price": 1211.93,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 109,
+    "duration": "10 to 12 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/74/d7/5d.jpg",
+    "overview": "Take in Scotland\u2019s dramatic landscapes in just one day from the comfort of your luxury private minivan. Departing from central Edinburgh, enjoy entry to Doune Castle and views over the Cairngorm National Park, Ben Nevis and Fort William\u2014all while relaxing with complimentary refreshments and an expert guide. The tour also includes stops at Loch Ness and Glencoe to explore some of the Highlands\u2019 most stunning scenery.",
+    "highlights": [
+      "Full-day private minivan tour of the Scottish Highlands, from Edinburgh",
+      "Stops include Doune Castle (as seen in Game of Thrones) and Kilmahog, where you can meet Highland cows",
+      "Relax in a luxury minivan, with leather seats, USB-charging ports, and complimentary refreshments",
+      "Tailored experience with a Scottish guide: Experience the Highlands like a local"
+    ],
+    "itineraryStops": [
+      "Doune Castle",
+      "Kilmahog",
+      "Glencoe",
+      "Loch Ness",
+      "Fort William"
+    ],
+    "inclusions": [
+      "Snacks",
+      "Bottled water"
+    ],
+    "startDescription": "Anything we can do to make you're trip more enjoyable, Just let us know.",
+    "experienceType": "private-highlands",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Full-day Tours",
+      "Day Trips"
+    ]
+  },
+  {
+    "productCode": "8616P6",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Central-Highlands-driving-tour/d739-8616P6",
+    "title": "Private Central Highlands Driving Tour",
+    "priceFrom": "From $1,150.99",
+    "price": 1150.99,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 98,
+    "duration": "7 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/8a/8f.jpg",
+    "overview": "Escape the bustle of Edinburgh for a full-day private tour of the central Highlands. See castles, waterfalls, and historic villages as your local guide takes care of the driving. Customize the itinerary according to your personal interests, including a possible stop at a whisky distillery. Get personalized advice on where to eat traditional food. Hotel pick-up and drop-off are included.",
+    "highlights": [
+      "Explore the central Highlands with a private tour",
+      "Skip the hassle of a rental car and let your guide do the driving",
+      "Adjust the itinerary according to your interests",
+      "Visit a whisky distillery, historic castles, and scenic waterfalls"
+    ],
+    "itineraryStops": [
+      "Edinburgh",
+      "Central Highlands"
+    ],
+    "inclusions": [
+      "All guiding fees and vehicle costs.",
+      "Hotel pickup and drop-off",
+      "Local guide",
+      "Transport by air-conditioned minivan",
+      "Booster seats for up to 2 children.",
+      "Transport by private vehicle",
+      "Entrance fees for castles/distillery",
+      "Food and drinks"
+    ],
+    "startDescription": "We will pick up from any Edinburgh hotel, BnB or Port. Pick up in locations outwith Edinburgh will require and additional fee if it is possible for us to get there.",
+    "experienceType": "private-highlands",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "8616P5",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Glencoe-Driving-Tour-from-Edinburgh/d739-8616P5",
+    "title": "Private Glencoe Driving Tour from Edinburgh",
+    "priceFrom": "From $1,218.70",
+    "price": 1218.7,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 47,
+    "duration": "8 to 9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/55/47.jpg",
+    "overview": "Explore the Scottish countryside at your own pace with a private driver. Get picked up at your hotel in Edinburgh in an air-conditioned Mercedes Vito Tourer and set out towards Glencoe. The full-day itinerary can be customized according to your interests and includes seeing castles, lochs, and if you choose, a whisky distillery. Learn about Scottish history from your local guide.",
+    "highlights": [
+      "Private tour with round-trip transportation from Edinburgh",
+      "Customize the itinerary according to your interests",
+      "See Scotland\u2019s famous castles and lochs",
+      "Itinerary can include a whisky distillery"
+    ],
+    "itineraryStops": [
+      "Edinburgh",
+      "Glencoe"
+    ],
+    "inclusions": [
+      "Fee for guiding and all vehicle costs.",
+      "Food and drinks"
+    ],
+    "startDescription": "We can pick up from hotels/Airbnb etc in the general Edinburgh area. Pick ups not in this location may be possible, but only with an additional fee and subject to us being able to get there in reasonable time.",
+    "experienceType": "private-highlands",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "108034P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-One-Day-Highlands-Tour-of-Scotland/d739-108034P1",
+    "title": "Private One Day Highlands Tour of Scotland",
+    "priceFrom": "From $879.66",
+    "price": 879.66,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 54,
+    "duration": "10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/da/19.jpg",
+    "overview": "Experience parts of Scotland most visitors to Edinburgh don\u2019t normally think to visit, during this private, one-day Highland Tour. Benefit from the local knowledge of your driver-guide and stop by hidden destinations and key attractions, such as Doune Castle, Glencoe, and the highest whisky distillery in Scotland: Dalwhinnie. Cover far more ground, far more comfortably, than you would be able to alone.",
+    "highlights": [
+      "Ideal for first-time visitors and those with limited time in Scotland",
+      "Visit lochs, castles, distilleries, and meet adorable Highland Cattle",
+      "Stops at Harry Potter and Outlander filming locations are included",
+      "Travel in a comfortable Mercedes Vito Tourer, chauffeured by your driver",
+      "Convenient pickup and drop-off is included for central Edinburgh locations"
+    ],
+    "itineraryStops": [
+      "Doune Castle",
+      "Glencoe",
+      "Dalwhinnie Distillery"
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Driver/guide",
+      "Hotel pickup",
+      "Hotel drop-off",
+      "Transport by private vehicle",
+      "Food and drinks",
+      "Lunch"
+    ],
+    "startDescription": "Meet your guide at the confirmed Edinburgh meeting location listed when booking.",
+    "experienceType": "private-highlands",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "68313P45",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Highlights-of-Scotland-Private-Day-Tour-Luxury-Chauffeur/d739-68313P45",
+    "title": "Highlights of Scotland Custom Private Tour With Scottish Local",
+    "priceFrom": "From $686.98",
+    "price": 686.98,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 25,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/de/6e/38.jpg",
+    "overview": "There\u2019s no need to coordinate your own visit to the blustery Scottish Highlands, Lochs, and whisky distilleries, when you can explore in luxury on this full-day, comprehensive, and customizable tour. Your local driver will tell stories as they transport your private tour group between attractions in comfort and style, freeing you up to enjoy the scenery and experience the best Scotland has to offer.",
+    "highlights": [
+      "This comprehensive tour is excellent for first-time and returning visitors",
+      "Customize this highlights of Scotland tour to your personal needs and interests",
+      "Forget complicated meeting points, as door-to-door transfers are included",
+      "Travel luxuriously in a Mercedes Benz and don\u2019t worry about rental cars"
+    ],
+    "itineraryStops": [
+      "Stirling Castle",
+      "Deanston Distillery",
+      "The Kelpies"
+    ],
+    "inclusions": [
+      "Door to Door Service from Edinburgh and Cruise Ports",
+      "Services & Stories of a Scottish Local",
+      "Wi-Fi Access",
+      "Entrace Fees to Visitor Attractions"
+    ],
+    "startDescription": "Meet your guide at the confirmed Edinburgh meeting location listed when booking.",
+    "experienceType": "private-custom",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "130291P9",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Stirlingshire-Day-Trip/d739-130291P9",
+    "title": "Warriors & Wilderness: Braveheart & Stirlingshire Day Trip",
+    "priceFrom": "From $525.33",
+    "price": 525.33,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 19,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/cb/07/a8.jpg",
+    "overview": "Escape the city for a day\u2014and explore the historical and cultural highlights of Stirlingshire\u2014on this private, full-day tour from Edinburgh. Following morning pickup directly at your hotel, see where the Battle of Bannockburn was fought, and tour the famed Stirling Castle. You\u2019ll also pay tribute to William Wallace at the National Wallace Monument, will visit the medieval Dunblane Cathedral, will see the magnificent ruins of Doune Castle, and more.",
+    "highlights": [
+      "Discover castles, cathedrals, monuments, and more, all in one day",
+      "A private tour offers the most comfortable, flexible way to travel",
+      "Round-trip transit directly from your Edinburgh hotel is included",
+      "Learn all about Scotland\u2019s wealth of history from your guide\u2019s commentary"
+    ],
+    "itineraryStops": [
+      "Bannockburn",
+      "Stirling Castle",
+      "National Wallace Monument",
+      "Dunblane Cathedral",
+      "Doune Castle"
+    ],
+    "inclusions": [
+      "Door to door pick up service",
+      "Private transportation in luxury Mercedes mini van",
+      "Bottled water for passengers",
+      "WiFi on board",
+      "Air-Conditioned vehicle",
+      "Live commentary",
+      "Lunch"
+    ],
+    "startDescription": "We can pick up from any centrally located Edinburgh hotel, guest house or convenient location including Edinburgh Airport or cruise liner port.",
+    "experienceType": "private-cultural",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Private Sightseeing Tours",
+      "Historical Tours",
+      "Full-day Tours"
+    ]
+  },
+  {
+    "productCode": "225008",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Highland-Lochs-Glens-and-Whisky-Small-Group-Day-Trip-from-Edinburgh/d739-225008",
+    "title": "Highland Lochs, Glens & Whisky Day Tour Including Admission",
+    "priceFrom": "From $129.62",
+    "price": 129.62,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 610,
+    "duration": "10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0a/8f/0c.jpg",
+    "overview": "Explore Scotland's rugged countryside and sample the nation's favorite beverage on this guided Highlands and whisky tour from Edinburgh. Make photo stops in quaint villages and at natural attractions including dense forests, sparkling rivers, and tall waterfalls as you head north toward Dewar's Aberfeldy Distillery for a tour and taste.",
+    "highlights": [
+      "Explore the Scottish Highlands in a 16-seat Mercedes mini-coach",
+      "Experience the lochs, glens, and whisky of the Highlands",
+      "See Glencoe and Loch Tummel from the Queen's View",
+      "Enjoy a glass of whisky without the hassle of designating a driver"
+    ],
+    "itineraryStops": [
+      "Dewar's Aberfeldy Distillery",
+      "Pitlochry",
+      "River Tay"
+    ],
+    "inclusions": [
+      "Admission Fee: Tour & Tasting at Dewar's Aberfeldy Distillery",
+      "Small Group Tour (maximum 16 passengers)",
+      "Top range 16-seat Mercedes mini-coach",
+      "The stories and services of an English-speaking driver-guide",
+      "Hotel pickup and drop off",
+      "Food and drinks, unless specified",
+      "Entrance fees unless specified"
+    ],
+    "startDescription": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes before departure)",
+    "experienceType": "whisky-tour",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Wine Tasting Tours",
+      "Full-day Tours",
+      "Day Trips"
+    ]
+  },
+  {
+    "productCode": "5256HLOCHNESS",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Scottish-Highlands-Loch-Ness-and-Glen-Coe-Day-Trip-from-Edinburgh/d739-5256HLOCHNESS",
+    "title": "Scottish Highlands, Loch Ness and Glencoe Day Trip from Edinburgh",
+    "priceFrom": "From $83.95",
+    "price": 83.95,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 2435,
+    "duration": "13 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/85/cb/ac.jpg",
+    "overview": "Discover the dramatic beauty, history and mystery of Scotland on this full-day trip from Edinburgh. Aboard a comfortable air-conditioned vehicle, wind through the Scottish Highlands and marvel at the majesty of Cairngorms National Park and the mysterious Loch Ness\u2014fabled home of the elusive water monster, Nessie. Spot the famous Urquhart Castle en route and hear about legendary warfare like the battles of William Wallace and the massacre of Glen Coe in the 17th century.",
+    "highlights": [
+      "Head into the Scottish Highlands and travel through the fantastic landscapes of Cairngorms National Park",
+      "See the famous Loch Ness, believed to be home to a mysterious sea creature",
+      "Visit Glen Coe, a place known as much for a horrific massacre as its gorgeous scenery",
+      "Explore the ancient Urquhart Castle overlooking Loch Ness"
+    ],
+    "itineraryStops": [
+      "Pitlochry",
+      "Cairngorms National Park (Pass By)",
+      "Loch Ness",
+      "Urquhart Castle",
+      "Glencoe National Nature Reserve",
+      "Stirling Castle (Pass By)"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Local live driver guide who will share stories and history throughout the day",
+      "Panoramic windows",
+      "Food and drinks",
+      "Loch Ness Cruise & Urquhart Castle Tour, \u00a330 cash",
+      "Children under 3 years not accepted- valid ID may be required at check in"
+    ],
+    "startDescription": "* 1 Parliament Sqr, Edinburgh EH1 1RF, UK Please check in with Highland Experience staff inside/outside Caffe Nero by 07:45",
+    "experienceType": "full-day-sightseeing",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Full-day Tours",
+      "Day Trips",
+      "Bus Tours"
+    ]
+  },
+  {
+    "productCode": "7812P14",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/3-Hour-Guided-Edinburgh-Food-Tour/d739-7812P14",
+    "title": "Edinburgh Walking Food Tour With Secret Food Tours",
+    "priceFrom": "From $125.53",
+    "price": 125.53,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 855,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/71/fd/9d.jpg",
+    "overview": "Scotland is renowned for its unique cuisine, but Edinburgh\u2019s foodie hotspots are best explored with a local guide. On this small-group walking tour, discover the UNESCO-listed Old and New Towns, and sample Scottish classics such as Haggis, Neeps and Tatties, Scotch whisky, and afternoon tea.",
+    "highlights": [
+      "Enjoy classic Scottish food such as authentic Haggis, award winning Lowland Single Malt Whisky",
+      "Learn why Edinburgh locals are so passionate about their food",
+      "Explore the local streets on a walking food tour",
+      "Small-group experience with no more than 10 participants"
+    ],
+    "itineraryStops": [
+      "Royal Mile",
+      "Edinburgh Old Town"
+    ],
+    "inclusions": [
+      "Amazing Haggis",
+      "Neeps and tatties",
+      "Scottish cakes",
+      "Our delicious Secret Dish",
+      "Traditional dessert",
+      "Local Fudge",
+      "Hotel pickup and drop-off"
+    ],
+    "startDescription": "* St Giles' Cathedral High St, Edinburgh EH1 1RE, UK MEETING SPOT: The front of St Giles Cathedral at the West parliament square side, opposite the french consulate. Address: High St, Edinburgh EH1 1RE, UK Directions: The guide will be carrying an orange umbrella, so you can spot him/her easily",
+    "experienceType": "food-tour",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "109681P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Edinburgh-Sky-to-Sea-Bike-Tour-by-Manual-or-E-Bike/d739-109681P1",
+    "title": "Edinburgh Sky to Sea Bike or E-Bike Tour with Transfer by TBC",
+    "priceFrom": "From $90.73",
+    "price": 90.73,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 397,
+    "duration": "4 hours 45 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6a/00/d0.jpg",
+    "overview": "Even if you\u2019ve only got limited time in Edinburgh, it's still possible to see the breadth of the city\u2019s natural landscapes. Cover more sights in less time during a bike ride which takes you from Arthur\u2019s Seat to the beaches of Portobello and the Port of Leith. Plus, you\u2019ll be able to choose between an electric or manual bike, depending on your fitness level.",
+    "highlights": [
+      "See the best of Edinburgh's natural landscapes on a bike tour",
+      "An ideal choice for active travelers",
+      "Go easy on your legs by opting for an electric bike",
+      "Hassle-free hotel pickup and drop-off are included"
+    ],
+    "itineraryStops": [
+      "Arthur's Seat",
+      "Portobello",
+      "Port of Leith"
+    ],
+    "inclusions": [
+      "Choice of manual or e-bike",
+      "Hotel pick up",
+      "Guide",
+      "Helmet, gloves and rain jacket",
+      "Water",
+      "Bottled water",
+      "Food and drinks"
+    ],
+    "startDescription": "Transport can be arranged for any address or transport hub around Edinburgh City centre. On occasions where our vehicle is full to capacity, We may provide taxis to beginning of the route. Travellers arriving by cruise ship or from outside the city centre can also meet the group at starting point of the tour at the specified start time. or",
+    "experienceType": "bike-tour",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Bike Tours",
+      "E-Bike Tours"
+    ]
+  },
+  {
+    "productCode": "293401SECRETS",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Secrets-of-Edinburghs-Royal-Mile-Afternoon-Walking-Tour-with-Edinburgh-Castle-Visit/d739-293401SECRETS",
+    "title": "Royal Mile and Edinburgh Castle - Small Group Walking Tour",
+    "priceFrom": "From $68.36",
+    "price": 68.36,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 1174,
+    "duration": "2 hours 15 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg",
+    "overview": "* Get skip-the-line access into Edinburgh Castle, saving valuable time",
+    "highlights": [
+      "Wander down centuries-old cobblestone streets, passageways, and Edinburgh tenements",
+      "See St. Giles Cathedral, High Street, Parliament Square, and Castlehill",
+      "Guided walking tour of Edinburgh\u2019s Royal Mile, Edinburgh Castle and Old Town, part of a UNESCO World Heritage Site"
+    ],
+    "itineraryStops": [
+      "Royal Mile",
+      "St. Giles' Cathedral",
+      "Parliament Square",
+      "John Knox House",
+      "Edinburgh Castle"
+    ],
+    "inclusions": [
+      "Fast track, skip the line entry into Edinburgh Castle",
+      "Exclusive multi-sensory experience; with master Storyteller guides",
+      "Small group experience",
+      "Enhanced, hand-picked sounds of Edinburgh, delivered through TourTalk audio devices"
+    ],
+    "startDescription": "* Mercat Cross High St, Edinburgh EH1 1RF, UK Mercat Cross, High St, Edinburgh EH1 1RF. Look for the 8 sided monument with white Unicorn on top. You will find a member of our visitor services team waiting here to check you in. They will be dressed in black, holding an iPad, wearing an orange lanyard & holding a black & orange umbrella.",
+    "experienceType": "city-walking",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "City Tours"
+    ]
+  },
+  {
+    "productCode": "225004",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/St-Andrews-and-Fife-Small-Group-Day-Trip-from-Edinburgh/d739-225004",
+    "title": "St Andrews & the Fishing Villages of Fife Small-Group Day Tour from Edinburgh",
+    "priceFrom": "From $83.47",
+    "price": 83.47,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 1643,
+    "duration": "8 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/01/c1.jpg",
+    "overview": "Travel from Edinburgh to St. Andrews and Fife on this day trip from Edinburgh. Cross the Forth Road Bridge into the Kingdom of Fife and pass by the coastal villages of East Neuk. Then pay homage to the town of St. Andrews, home to Scotland's oldest university and the Old Course where golf is routinely played. Driving in a top-of-the-range, 16-seat Mercedes mini-coach, see Falkland and the Lomond Hills. Enjoy a small-group tour, limited to 16 people, for a memorable and personalized experience.",
+    "highlights": [
+      "Full-day small group tour to St. Andrews and Fife by mini-coach",
+      "Cross the Forth Road Bridge",
+      "Fishing villages of East Neuk",
+      "Plenty of time in St Andrews, home of golf and Scotland's oldest university",
+      "Small-group tour with a maximum of 16 people for a more personalized experience"
+    ],
+    "itineraryStops": [
+      "Forth Bridge (Pass By)",
+      "Anstruther",
+      "St Andrews",
+      "Falkland"
+    ],
+    "inclusions": [
+      "Professional driver/guide",
+      "Transport by top of the range Mercedes mini-coach",
+      "Small Group (max 16 people) for a more personal experience",
+      "Hotel pickup and drop off",
+      "Food and drinks, unless specified",
+      "Admission fees"
+    ],
+    "startDescription": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes prior to departure)",
+    "experienceType": "scenic-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Day Trips",
+      "Full-day Tours",
+      "Small Group"
+    ]
+  },
+  {
+    "productCode": "5211P20",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Outlander-Film-Locations-Day-Trip-from-Edinburgh/d739-5211P20",
+    "title": "Outlander Film Locations Day Trip from Edinburgh",
+    "priceFrom": "From $88.01",
+    "price": 88.01,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 1174,
+    "duration": "9 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/f8/08.jpg",
+    "overview": "Scotland\u2019s rugged landscapes and historic castles provide a spectacular backdrop to hit TV series Outlander, but you\u2019ll need a guide if you want to follow in the footsteps of your favorite characters. This full-day tour from Edinburgh gives fans the inside scoop, visiting memorable filming locations such as Doune Castle, Culross, and Falkland.",
+    "highlights": [
+      "Full-day Outlander film locations tour from Edinburgh",
+      "Marvel at historic landmarks such as Doune Castle",
+      "Visit beautiful filming locations including Culross, and Falkland",
+      "Hear stories about Outlander\u2019s actors and film sets from an expert guide"
+    ],
+    "itineraryStops": [
+      "Doune Castle",
+      "Culross",
+      "Falkland",
+      "Linlithgow Palace (Pass By)"
+    ],
+    "inclusions": [
+      "Local English Speaking Guide",
+      "Air-conditioned vehicle",
+      "Food and drinks",
+      "Hotel pickup and drop-off"
+    ],
+    "startDescription": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:45 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for your designated queue. Our staff will check you in for the tour.",
+    "experienceType": "cultural-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Full-day Tours",
+      "Day Trips",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "6898P9",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/West-Highland-Lochs-and-Castles/d739-6898P9",
+    "title": "Edinburgh: West Highland Lochs, Mountains & Castles",
+    "priceFrom": "From $78.13",
+    "price": 78.13,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 502,
+    "duration": "9 hours 45 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/f0/ea.jpg",
+    "overview": "Experience the beauty of rural Scotland on this 9.5-hour West Highland lochs and castles day trip from Edinburgh. Visit the iconic Doune Castle in Stirlingshire, then head deep into the Scottish Highlands. Take in fine views over shimmering lakes and soaring peaks, and enjoy an hour\u2019s free time in Inveraray. Then, head onward to Loch Awe and Kilchurn Castle\u2014widely considered Scotland's prettiest castle. Explore the highland village of Inveraray and perhaps visit Inveraray Castle. Travel through the beautiful Arrochar Alps back to Edinburgh.",
+    "highlights": [
+      "Full-day tour of the West Highlands\u2019 lochs and castles from Edinburgh",
+      "Travel deep into the Scottish Highlands, home to the mighty Arrochar Alps",
+      "Admire the tranquil lakes and soaking peaks of the Highlands in Glen Ogle"
+    ],
+    "itineraryStops": [
+      "Doune Castle",
+      "Inveraray",
+      "Loch Awe",
+      "Kilchurn Castle"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Knowledgeable driver-guide",
+      "Live commentary on board",
+      "Food and drinks",
+      "Attraction Tickets",
+      "Restroom on board",
+      "WiFi on board"
+    ],
+    "startDescription": "* Timberbush Tours Castle Terrace, outside the, NCP Castle Terrace Car Park, Edinburgh EH1 2EW, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works",
+    "experienceType": "scenic-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Full-day Tours",
+      "Day Trips",
+      "Bus Tours"
+    ]
+  },
+  {
+    "productCode": "5211WHISKY",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Whisky-and-Highland-Waterfalls-Day-Trip-from-Edinburgh/d739-5211WHISKY",
+    "title": "Scotland's Glens, Highlands & Whisky Day Trip from Edinburgh",
+    "priceFrom": "From $90.04",
+    "price": 90.04,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 219,
+    "duration": "9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0a/f4/92.jpg",
+    "overview": "Appreciate the splendor of Scotland on a full-day whisky and waterfalls trip from Edinburgh. Wind through the Scottish Highlands and marvel at the majesty of Loch Lomond and Trossachs National Park, then visit a whisky distillery for a tour, whisky sampling, and lunch (own expense). Discover the centuries-old tradition of Scottish whisky production, then cap off your tour at the Hermitage forest and the village of Dunkeld.",
+    "highlights": [
+      "Soak up views of Loch Lomond and Trossachs National Park as your travel",
+      "Visit a whisky distillery and sample a wee dram",
+      "Walk through the Hermitage, a natural beauty spot with incredible waterfalls",
+      "Enjoy a stop in Dunkeld, a village written about in Shakespeare\u2019s 'MacBeth'"
+    ],
+    "itineraryStops": [
+      "Loch Lomond and The Trossachs National Park",
+      "Glenturret Distillery",
+      "The Hermitage",
+      "Dunkeld",
+      "Dunkeld Cathedral"
+    ],
+    "inclusions": [
+      "Local English Speaking Guide",
+      "Air-conditioned vehicle",
+      "Hotel pickup and drop-off",
+      "Food and drinks",
+      "Distillery tour",
+      "Dram of local whisky"
+    ],
+    "startDescription": "* Highland Explorer Tours 60 High St, Edinburgh EH1 1TB, UK This tour will depart at 8:15 am from 60 High Street, The Royal Mile, Edinburgh, EH1 1TB. Meet 15 minutes before departure and look for the check-in staff wearing blue high-visibility vests there to greet you.",
+    "experienceType": "whisky-tour",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Wine Tasting Tours",
+      "Full-day Tours",
+      "Day Trips"
+    ]
+  },
+  {
+    "productCode": "72560P6",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Edinburgh-Food-and-Drink-tour/d739-72560P6",
+    "title": "Edinburgh Food & Drink Tour with EatWalk Tours",
+    "priceFrom": "From $135.05",
+    "price": 135.05,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 465,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/54/31/69.jpg",
+    "overview": "There are so many fantastic places to eat and drink in Edinburgh that planning where to go can be a headache. Leave the decisions to the experts on this food and drink tour. In a small group, you'll delve deep into Scotland's culinary heritage and history and make several food stops in the Old and New Towns, three of which include a drink tasting.",
+    "highlights": [
+      "Food and drink tour of Edinburgh's Old and New Towns",
+      "Includes food and drinks tastings that equate to a meal",
+      "Learn all about Scotland's history and food culture",
+      "A small group ensures a more personalized experience"
+    ],
+    "itineraryStops": [
+      "Edinburgh New Town",
+      "Edinburgh Old Town",
+      "John Knox House"
+    ],
+    "inclusions": [
+      "Food equivalent to a full meal for brunch, lunch or dinner",
+      "Dietary Requirements must be advised at least 48 hours in advance"
+    ],
+    "startDescription": "Meet your guide at the confirmed Edinburgh meeting location listed when booking.",
+    "experienceType": "food-tour",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "6898P18",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Outlander-Palaces-and-Jacobites-Tour-from-Edinburgh/d739-6898P18",
+    "title": "Edinburgh: The Outlander, Palaces & Jacobites Tour",
+    "priceFrom": "From $74.48",
+    "price": 74.48,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 354,
+    "duration": "9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/f9/fe/5f.jpg",
+    "overview": "Discover the palaces and castles of TV\u2019s \u201cOutlander\u201d series on this guided tour from Edinburgh. Visit some of the sites that starred in the fictional Jacobite saga, including Linlithgow Palace, the setting of Wentworth Prison; and Culross, the setting of Claire\u2019s Herb Garden. Throughout the tour enjoy guide commentary with fun behind-the-scenes stories about the show.",
+    "highlights": [
+      "Check off multiple \u201cOutlander\u201d filming locations in a day",
+      "Hear insider stories about characters and filming from your guide",
+      "Round-trip transport from Edinburgh ensures a hassle-free experience",
+      "Great photo opportunities\u2014including Linlithgow Palace"
+    ],
+    "itineraryStops": [
+      "Linlithgow Palace",
+      "Culross",
+      "Blackness Castle"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Knowledgeable driver-guide",
+      "Live commentary on board",
+      "Food and drinks",
+      "Attraction Tickets",
+      "Restroom on board",
+      "WiFi on board"
+    ],
+    "startDescription": "* 9 Castle Terrace, Edinburgh EH1 2EL, UK Our Edinburgh tours depart from Castle Terrace, Edinburgh EH1 2EW, outside the NCP Car Park. What3Words Address: ///casino.cove.works",
+    "experienceType": "cultural-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Full-day Tours",
+      "Day Trips",
+      "Historical Tours"
+    ]
+  }
+]

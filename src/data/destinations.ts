@@ -4885,6 +4885,102 @@ const unitedKingdomState: StateDestination = {
   isFallback: true,
 };
 
+const scotlandState: StateDestination = {
+  slug: "scotland",
+  name: "Scotland",
+  description:
+    "Castle cities, Highland glens, whisky country, and guided day tours from Edinburgh.",
+  featuredDescription:
+    "Explore Edinburgh tours with private Highlands days, Royal Mile walking, whisky glens, and Arthur's Seat cycling.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg",
+  region: "Europe",
+  intro:
+    "Scotland pairs walkable Edinburgh districts with castle ridgelines, Forth views, and guided Highland, whisky, and coastal days.",
+  longDescription:
+    "Edinburgh anchors Scotland tour inventory with Royal Mile castle walks, Arthur's Seat hiking and cycling, whisky glen days, and private Land Rover or chauffeur routes into Glencoe, Loch Ness, Stirling, and St Andrews.",
+  topRegions: [
+    {
+      title: "Old Town and the Royal Mile",
+      description:
+        "Edinburgh Castle, St Giles' Cathedral, and guided walking or food tours through UNESCO Old Town.",
+    },
+    {
+      title: "Highlands and whisky country",
+      description:
+        "Glencoe, Loch Ness, Stirling Castle, and distillery days reachable from Edinburgh.",
+    },
+  ],
+  cities: [
+    {
+      name: "Edinburgh",
+      slug: "edinburgh",
+      stateSlug: "scotland",
+      region: "Edinburgh",
+      lat: 55.9533,
+      lng: -3.1883,
+      shortDescription:
+        "Private Highlands days, castle walking, and whisky touring from Edinburgh.",
+      intro:
+        "Edinburgh is a castle city with the Royal Mile, Arthur's Seat, and guided walking, cycling, whisky, and Highlands day tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg",
+      ],
+      activityTags: ["sightseeing", "hiking", "cycling"],
+      whereItIs: [
+        "Edinburgh sits between the Firth of Forth and the Pentland Hills, with Old Town, New Town, and Holyrood Park framing central sightseeing.",
+        "Most guided tours depart from the Royal Mile, Calton Hill, central hotels, and Edinburgh bus stations.",
+      ],
+      experiences: {
+        mountains:
+          "Arthur's Seat and day trips into Glencoe, Loch Ness, and the Trossachs bring Highland scenery within reach of the capital.",
+        lakesWater:
+          "Loch Ness, Loch Lomond, and Forth estuary views appear on full-day routes from Edinburgh.",
+        desertForest:
+          "Holyrood Park, the Hermitage, and Highland glens offer open grassland and woodland between castle and loch stops.",
+        cycling:
+          "Guided bike and e-bike tours cover Arthur's Seat, Portobello, and the Port of Leith.",
+        scenicDrives:
+          "Private Land Rover and minivan days cover Glencoe, Stirling Castle, whisky distilleries, and West Highland lochs.",
+        seasonalNotes:
+          "Spring and fall are popular for castle walking and Highland days; long summer light favors Arthur's Seat and loch viewpoints.",
+      },
+      thingsToDo: [
+        "Walk the Royal Mile to Edinburgh Castle.",
+        "Hike Arthur's Seat or bike from skyline to sea.",
+        "Take a whisky or private Highlands day to Glencoe and Loch Ness.",
+      ],
+      toursCopy: [
+        "Book a private Land Rover or Highlands chauffeur day for a compact introduction beyond the city.",
+        "Pair a Royal Mile castle walk with a whisky glen day for a full Edinburgh itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Royal Mile walking tour and Edinburgh Castle.",
+          "Afternoon: Arthur's Seat hike or sky-to-sea bike ride.",
+          "Evening: Old Town food walk.",
+        ],
+        dayTwo: [
+          "Morning: Depart for Glencoe, Loch Ness, or Stirling Castle.",
+          "Afternoon: Distillery tasting or St Andrews coastal villages.",
+          "Evening: Return to Edinburgh.",
+        ],
+      },
+      gettingThere: [
+        "Edinburgh Airport and Waverley station serve the city with tram, bus, and rail links to the Royal Mile and New Town.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Edinburgh tours?",
+          answer:
+            "Private Highlands Land Rover days, Edinburgh Castle walking tours, whisky glen trips, and Arthur's Seat bike rides are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 const franceState: StateDestination = {
   slug: "france",
   name: "France",
@@ -5345,6 +5441,7 @@ export const states: StateDestination[] = [
   massachusettsState,
   illinoisState,
   unitedKingdomState,
+  scotlandState,
   franceState,
   spainState,
   italyState,

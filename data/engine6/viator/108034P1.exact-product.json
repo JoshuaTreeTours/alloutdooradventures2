@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "108034P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-One-Day-Highlands-Tour-of-Scotland/d739-108034P1",
+    "title": "Private One Day Highlands Tour of Scotland",
+    "description": {
+      "text": "This private one-day Highlands tour from Edinburgh reaches places many first-time visitors skip, including Doune Castle, Glencoe, and Dalwhinnie Distillery, Scotland's highest whisky distillery. A chauffeur-guide in a Mercedes Vito Tourer covers lochs, Highland cattle, and filming locations linked to Harry Potter and Outlander. Stops include Doune Castle, Glencoe, Dalwhinnie Distillery. Bottled water, lunch, and central Edinburgh pickup and drop-off are included on the ten-hour day. The private vehicle covers more ground than a self-drive loop in the same hours. Ideal for visitors basing in Edinburgh who want a private Highland circuit without coordinating rural driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $879.66",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/da/19.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ideal for first-time visitors and those with limited time in Scotland",
+      "Visit lochs, castles, distilleries, and meet adorable Highland Cattle",
+      "Stops at Harry Potter and Outlander filming locations are included",
+      "Travel in a comfortable Mercedes Vito Tourer, chauffeured by your driver",
+      "Convenient pickup and drop-off is included for central Edinburgh locations"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This private one-day Highlands tour from Edinburgh reaches places many first-time visitors skip, including Doune Castle, Glencoe, and Dalwhinnie Distillery, Scotland's highest whisky distillery.",
+    "itineraryItems": [
+      {
+        "title": "Doune Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glencoe",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dalwhinnie Distillery",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Driver/guide",
+      "Hotel pickup",
+      "Hotel drop-off",
+      "Transport by private vehicle",
+      "Food and drinks",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private One Day Highlands Tour of Scotland?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 879.66
+      },
+      "currency": "USD"
+    }
+  }
+}

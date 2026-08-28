@@ -78,10 +78,12 @@ describe("ActivityToursPage", () => {
   });
 
   it("does not render an empty International Locations section when an activity has no international inventory", () => {
-    expect(getActivityInternationalCountryOptions("air-tours")).toEqual([]);
+    expect(
+      getActivityInternationalCountryOptions("not-an-activity")
+    ).toEqual([]);
 
     const html = renderToStaticMarkup(
-      <ActivityToursPage params={{ activitySlug: "air-tours" }} />
+      <ActivityToursPage params={{ activitySlug: "not-an-activity" }} />
     );
 
     expect(html).not.toContain("International Locations");
@@ -109,6 +111,29 @@ describe("ActivityToursPage", () => {
       "/destinations/europe/germany/cities/kirchzarten/tours?activity=cycling"
     );
     expect(kirchzarten?.route).not.toMatch(/^\/guides\//);
+  });
+
+  it("adds Scotland alphabetically and routes Edinburgh from activity International Locations", () => {
+    const countries = getActivityInternationalCountryOptions("cycling");
+    const countrySlugs = countries.map(country => country.slug);
+    const scotlandIndex = countrySlugs.indexOf("scotland");
+    const unitedKingdomIndex = countrySlugs.indexOf("united-kingdom");
+
+    expect(scotlandIndex).toBeGreaterThan(-1);
+    expect(countries[scotlandIndex]?.name).toBe("Scotland");
+    if (unitedKingdomIndex >= 0) {
+      expect(scotlandIndex).toBeLessThan(unitedKingdomIndex);
+    }
+
+    const scotlandCities = getActivityInternationalCityOptions(
+      "cycling",
+      "scotland"
+    );
+    const edinburgh = scotlandCities.find(city => city.slug === "edinburgh");
+    expect(edinburgh).toBeDefined();
+    expect(edinburgh?.route).toBe(
+      "/destinations/scotland/edinburgh/?activity=cycling"
+    );
   });
 
   it("keeps existing U.S. state/city selector behavior unchanged", () => {

@@ -8,7 +8,7 @@ export type Tier1IntlCity = {
 
 export const CITY_TIER1_INTL: Tier1IntlCity[] = [
   {
-    countrySlug: "united-kingdom",
+    countrySlug: "scotland",
     citySlug: "edinburgh",
     cityName: "Edinburgh",
     lat: 55.9533,

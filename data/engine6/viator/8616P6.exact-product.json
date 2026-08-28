@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "8616P6",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Central-Highlands-driving-tour/d739-8616P6",
+    "title": "Private Central Highlands Driving Tour",
+    "description": {
+      "text": "Escape central Edinburgh on a private central Highlands driving day, with castles, waterfalls, historic villages, and an optional whisky distillery stop shaped to the group. The local driver-guide handles the road day so visitors stay with scenery rather than rental-car logistics. Stops include Edinburgh, Central Highlands. Hotel pickup and drop-off in Edinburgh are included, with booster seats available for children and entrance fees for castles or a distillery listed with the booking. Advice on traditional food stops can be added along the route. Ideal for visitors basing in Edinburgh who want a customizable private Highlands day without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $1150.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 98
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/8a/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the central Highlands with a private tour",
+      "Adjust the itinerary according to your interests",
+      "Visit a whisky distillery, historic castles, and scenic waterfalls"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We will pick up from any Edinburgh hotel, BnB or Port. Pick up in locations outwith Edinburgh will require and additional fee if it is possible for us to get there."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape central Edinburgh on a private central Highlands driving day, with castles, waterfalls, historic villages, and an optional whisky distillery stop shaped to the group.",
+    "itineraryItems": [
+      {
+        "title": "Edinburgh",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Central Highlands",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All guiding fees and vehicle costs.",
+      "Hotel pickup and drop-off",
+      "Local guide",
+      "Transport by air-conditioned minivan",
+      "Booster seats for up to 2 children.",
+      "Transport by private vehicle",
+      "Entrance fees for castles/distillery",
+      "Food and drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Central Highlands Driving Tour?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "We will pick up from any Edinburgh hotel, BnB or Port. Pick up in locations outwith Edinburgh will require and additional fee if it is possible for us to get there."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1150.99
+      },
+      "currency": "USD"
+    }
+  }
+}

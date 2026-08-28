@@ -270,4 +270,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/london</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/peebles</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/seaford</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/scotland</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/scotland/edinburgh</loc><priority>0.5</priority></url>
 </urlset>

@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "225004",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/St-Andrews-and-Fife-Small-Group-Day-Trip-from-Edinburgh/d739-225004",
+    "title": "St Andrews & the Fishing Villages of Fife Small-Group Day Tour from Edinburgh",
+    "description": {
+      "text": "Travel from Edinburgh across the Forth Bridge into Fife for Anstruther, St Andrews, and Falkland on a small-group Mercedes mini-coach day. The East Neuk fishing villages and the Old Course town share the 8.5-hour outing, with time at Scotland's oldest university and coastal harbour streets. Stops include Forth Bridge, Anstruther, St Andrews, Falkland. Hotel pickup and a 16-guest maximum keep the Fife day closer to a private circuit than a large coach. Lomond Hills views appear between the coastal villages and Falkland. Ideal for visitors basing in Edinburgh who want a guided St Andrews and Fife day without self-driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $83.47",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1643
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/01/c1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day small group tour to St. Andrews and Fife by mini-coach",
+      "Cross the Forth Road Bridge",
+      "Fishing villages of East Neuk",
+      "Plenty of time in St Andrews, home of golf and Scotland's oldest university",
+      "Small-group tour with a maximum of 16 people for a more personalized experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes prior to departure)"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel from Edinburgh across the Forth Bridge into Fife for Anstruther, St Andrews, and Falkland on a small-group Mercedes mini-coach day.",
+    "itineraryItems": [
+      {
+        "title": "Forth Bridge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Anstruther",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St Andrews",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Falkland",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional driver/guide",
+      "Transport by top of the range Mercedes mini-coach",
+      "Small Group (max 16 people) for a more personal experience",
+      "Hotel pickup and drop off",
+      "Food and drinks, unless specified",
+      "Admission fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the St Andrews & the Fishing Villages of Fife Small-Group Day Tour from Edinburgh?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes prior to departure)"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 83.47
+      },
+      "currency": "USD"
+    }
+  }
+}

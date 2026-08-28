@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "225008",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Highland-Lochs-Glens-and-Whisky-Small-Group-Day-Trip-from-Edinburgh/d739-225008",
+    "title": "Highland Lochs, Glens & Whisky Day Tour Including Admission",
+    "description": {
+      "text": "Travel from Edinburgh into Highland lochs and glens on a small-group whisky day with admission at Dewar's Aberfeldy Distillery. A 16-seat Mercedes mini-coach continues to Pitlochry and the River Tay, with forest, river, and waterfall photo stops toward the tasting. Stops include Dewar's Aberfeldy Distillery, Pitlochry, River Tay. Distillery timing and hotel pickup are handled so visitors can stay with a dram rather than designating a driver. Queen's View over Loch Tummel often appears as a scenic pause on the northbound run. Ideal for visitors basing in Edinburgh who want a guided whisky glen day without rural self-driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $129.62",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 610
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0a/8f/0c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the Scottish Highlands in a 16-seat Mercedes mini-coach",
+      "Experience the lochs, glens, and whisky of the Highlands",
+      "See Glencoe and Loch Tummel from the Queen's View",
+      "Enjoy a glass of whisky without the hassle of designating a driver"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes before departure)"
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel from Edinburgh into Highland lochs and glens on a small-group whisky day with admission at Dewar's Aberfeldy Distillery.",
+    "itineraryItems": [
+      {
+        "title": "Dewar's Aberfeldy Distillery",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pitlochry",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "River Tay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Admission Fee: Tour & Tasting at Dewar's Aberfeldy Distillery",
+      "Small Group Tour (maximum 16 passengers)",
+      "Top range 16-seat Mercedes mini-coach",
+      "The stories and services of an English-speaking driver-guide",
+      "Hotel pickup and drop off",
+      "Food and drinks, unless specified",
+      "Entrance fees unless specified"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highland Lochs, Glens & Whisky Day Tour Including Admission?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "* Bus Station Edinburgh EH1 3AY, UK Please meet your Rabbie's guide inside the Edinburgh Bus Station, Gate J and Gate K, St Andrew Square, Edinburgh, EH1 3DQ (Check in closes 15 minutes before departure)"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.62
+      },
+      "currency": "USD"
+    }
+  }
+}

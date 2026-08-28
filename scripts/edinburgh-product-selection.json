@@ -1,0 +1,155 @@
+{
+  "destinationLabel": "Edinburgh",
+  "destinationCitySlug": "edinburgh",
+  "viatorDestinationSlug": "Edinburgh",
+  "viatorDestinationId": "d739",
+  "catalogUrl": "https://www.viator.com/Edinburgh/d739-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 18,
+  "premiumCount": 10,
+  "selectionNote": "Selected 18 guided Edinburgh d739 products with live public USD From$ prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (AUD/CAD/GBP/SGD/DKK/EUR) blocked many otherwise-strong SKUs from being verified in USD. Helicopter and stargazing SKUs were not captured as active USD product pages. Photography 313718P1 had rating/hero but no USD From$. Hiking 442109P2 appeared as EUR/GBP/US$ on mixed surfaces without a complete combined USD dump. Did not force hop-on/self-guided audio tickets, 4.3 private food, non-USD pages, or products with unusable heroes.",
+  "selectedProductCodes": [
+    "128492P2",
+    "401019P1",
+    "8616P6",
+    "8616P5",
+    "108034P1",
+    "68313P45",
+    "130291P9",
+    "225008",
+    "5256HLOCHNESS",
+    "7812P14",
+    "109681P1",
+    "293401SECRETS",
+    "225004",
+    "5211P20",
+    "6898P9",
+    "5211WHISKY",
+    "72560P6",
+    "6898P18"
+  ],
+  "premiumProductCodes": [
+    "128492P2",
+    "401019P1",
+    "8616P6",
+    "8616P5",
+    "108034P1",
+    "68313P45",
+    "130291P9",
+    "225008",
+    "5256HLOCHNESS",
+    "7812P14"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "313718P1",
+      "title": "Guided 60-Minute Photography and sightseeing Tour in Edinburgh",
+      "reason": "4.9/183 and product-specific 674x446 heroes verified, but the live dump had no USD From$ price"
+    },
+    {
+      "productCode": "442109P2",
+      "title": "Arthur's Seat Sunset Hike with Mountain Guide",
+      "reason": "Preferred guided hiking SKU; live surfaces mixed EUR/GBP/US$40.78 with only 5.0/13 and no complete combined USD+hero dump"
+    },
+    {
+      "productCode": "30740P2",
+      "title": "Stirling Castle, Kelpies and Loch Lomond from Edinburgh",
+      "reason": "4.9/214 verified but live dump priced in AUD only (From A$120.55)"
+    },
+    {
+      "productCode": "69714P3",
+      "title": "Edinburgh Castle Guided Walking Tour in English",
+      "reason": "4.9/4330 verified but live dump priced in CAD only (From CA$71.71)"
+    },
+    {
+      "productCode": "8613P1",
+      "title": "Royal Mile Guided Walking Tour in Edinburgh",
+      "reason": "4.9/1477 verified but live dump priced in AUD only"
+    },
+    {
+      "productCode": "8613P2",
+      "title": "Guided Edinburgh Private Walking Tour",
+      "reason": "4.9/256 verified but live dump priced in GBP only (From £315.00)"
+    },
+    {
+      "productCode": "454922P1",
+      "title": "Edinburgh Full Day Walking Tour with Castle Included -Small Group",
+      "reason": "4.9/335 verified but live dump priced in SGD only"
+    },
+    {
+      "productCode": "109681P2",
+      "title": "Scottish Highlands Freedom Bike & E- Bike Tour with Transfers",
+      "reason": "5.0/43 verified; live dump priced in SGD only; near-duplicate of selected 109681P1 city bike SKU"
+    },
+    {
+      "productCode": "6898P6",
+      "title": "Edinburgh: Loch Ness, Glencoe & The Highlands Day Trip",
+      "reason": "4.5/1666; live dump priced in AUD only; near-duplicate of selected 5256HLOCHNESS"
+    },
+    {
+      "productCode": "2250P79",
+      "title": "Outlander Locations Tour Including Admissions from Edinburgh",
+      "reason": "4.8/916 verified but live dump priced in DKK only; near-duplicate of selected 5211P20"
+    },
+    {
+      "productCode": "24380P852",
+      "title": "The 10 Tastings of Edinburgh With Locals: Private Food Tour",
+      "reason": "USD From$179.60 verified but weak commercial rating 4.3/57"
+    },
+    {
+      "productCode": "6551ROYAL",
+      "title": "Royal Edinburgh Ticket - Hop-On Hop-Off and Attraction Admissions",
+      "reason": "Hop-on hop-off / self-guided attraction pass; live dump priced in BRL"
+    },
+    {
+      "productCode": "2026ROYALBRIT",
+      "title": "The Royal Yacht Britannia Admission Ticket",
+      "reason": "Self-guided audio tour / admission ticket, not a guided Engine6 experience"
+    },
+    {
+      "productCode": "5491822P1",
+      "title": "Edinburgh Traditional Food Tour",
+      "reason": "4.9/34 verified but live dump priced in GBP only; near-duplicate of selected food walks"
+    },
+    {
+      "productCode": "380261P1",
+      "title": "Private Whisky Tasting, Scottish Food & Wine Pairing Tour",
+      "reason": "USD From$599.42 appeared in search snippets; no complete combined rating/hero dump"
+    },
+    {
+      "productCode": "8607P27",
+      "title": "Private Edinburgh Castle Tour",
+      "reason": "USD From$292.79 appeared in search snippets; no complete combined rating/hero dump"
+    },
+    {
+      "productCode": "31804P5",
+      "title": "Private 3-Hour Tour of Edinburgh in a Mini Cooper",
+      "reason": "No complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "154511P1",
+      "title": "Edinburgh Highlights Photography Tour",
+      "reason": "No complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "8616P1",
+      "title": "Small-Group Photography Walking Tour of Edinburgh",
+      "reason": "No complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "90592P1",
+      "title": "7 Hills of Edinburgh Tour - a half day hiking adventure with morning coffee!",
+      "reason": "Preferred hiking SKU; no complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "117302P4",
+      "title": "Speyside Whisky Tour - Three Distilleries Included - Private - 5 Star Reviews",
+      "reason": "Live dump priced in CAD only"
+    },
+    {
+      "productCode": "130291P7",
+      "title": "Casks & Chronicles: Day Tour of Scottish Whisky Distilleries",
+      "reason": "USD From$530.14 appeared in search snippets; no complete combined rating/hero dump; whisky already covered by selected 225008 and 5211WHISKY"
+    }
+  ]
+}

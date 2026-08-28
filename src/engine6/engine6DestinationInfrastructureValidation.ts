@@ -59,6 +59,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "united-kingdom",
     citySlug: "london",
   },
+  edinburgh: {
+    destinationLabel: "Edinburgh",
+    destinationCitySlug: "edinburgh",
+    stateSlug: "scotland",
+    citySlug: "edinburgh",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

@@ -1,0 +1,272 @@
+{
+  "selectedCount": 18,
+  "listingCount": 18,
+  "listingMatchesSelection": true,
+  "okCount": 18,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "225004",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/st-andrews-the-fishing-villages-of-fife-small-group-day-225004",
+      "title": "St Andrews & the Fishing Villages of Fife Small-Group Day Tour from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/01/c1.jpg",
+      "card": "Travel from Edinburgh across the Forth Bridge into Fife for Anstruther, St Andrews, and Falkland on a small-group Mercedes mini-coach day.",
+      "itineraryTitles": [
+        "Forth Bridge",
+        "Anstruther",
+        "St Andrews",
+        "Falkland"
+      ],
+      "issues": []
+    },
+    {
+      "code": "225008",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/highland-lochs-glens-whisky-day-tour-including-admissio-225008",
+      "title": "Highland Lochs, Glens & Whisky Day Tour Including Admission",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0a/8f/0c.jpg",
+      "card": "Travel from Edinburgh into Highland lochs and glens on a small-group whisky day with admission at Dewar's Aberfeldy Distillery.",
+      "itineraryTitles": [
+        "Dewar's Aberfeldy Distillery",
+        "Pitlochry",
+        "River Tay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "128492P2",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/glencoe-highlands-private-land-rover-tour-128492P2",
+      "title": "Glencoe & Highlands: Private Land Rover Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0c/50/0b.jpg",
+      "card": "Leave Edinburgh in a private Land Rover reserved for one party, heading into Glencoe rather than a large coach circuit.",
+      "itineraryTitles": [
+        "Glencoe",
+        "Falls of Dochart",
+        "Rannoch Moor"
+      ],
+      "issues": []
+    },
+    {
+      "code": "401019P1",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/luxury-private-tour-of-the-highlands-loch-ness-from-edi-401019P1",
+      "title": "Luxury Private Tour of The Highlands & Loch Ness from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/74/d7/5d.jpg",
+      "card": "Depart central Edinburgh in a luxury private minivan for Doune Castle, Kilmahog, Glencoe, Loch Ness, and Fort William.",
+      "itineraryTitles": [
+        "Doune Castle",
+        "Kilmahog",
+        "Glencoe",
+        "Loch Ness",
+        "Fort William"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8616P6",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/private-central-highlands-driving-tour-8616P6",
+      "title": "Private Central Highlands Driving Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/8a/8f.jpg",
+      "card": "Escape central Edinburgh on a private central Highlands driving day, with castles, waterfalls, historic villages, and an optional whisky dis",
+      "itineraryTitles": [
+        "Edinburgh",
+        "Central Highlands"
+      ],
+      "issues": []
+    },
+    {
+      "code": "8616P5",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/private-glencoe-driving-tour-from-edinburgh-8616P5",
+      "title": "Private Glencoe Driving Tour from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/55/47.jpg",
+      "card": "Hotel pickup in Edinburgh starts this private Glencoe driving day in an air-conditioned Mercedes Vito Tourer.",
+      "itineraryTitles": [
+        "Edinburgh",
+        "Glencoe"
+      ],
+      "issues": []
+    },
+    {
+      "code": "108034P1",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/private-one-day-highlands-tour-of-scotland-108034P1",
+      "title": "Private One Day Highlands Tour of Scotland",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/da/19.jpg",
+      "card": "This private one-day Highlands tour from Edinburgh reaches places many first-time visitors skip, including Doune Castle, Glencoe, and Dalwhi",
+      "itineraryTitles": [
+        "Doune Castle",
+        "Glencoe",
+        "Dalwhinnie Distillery"
+      ],
+      "issues": []
+    },
+    {
+      "code": "68313P45",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/highlights-of-scotland-custom-private-tour-with-scottis-68313P45",
+      "title": "Highlights of Scotland Custom Private Tour With Scottish Local",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/de/6e/38.jpg",
+      "card": "A Scottish local chauffeur leads this custom private day from Edinburgh, with stories between Stirling Castle, Deanston Distillery, and The ",
+      "itineraryTitles": [
+        "Stirling Castle",
+        "Deanston Distillery",
+        "The Kelpies"
+      ],
+      "issues": []
+    },
+    {
+      "code": "130291P9",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/warriors-wilderness-braveheart-stirlingshire-day-trip-130291P9",
+      "title": "Warriors & Wilderness: Braveheart & Stirlingshire Day Trip",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/cb/07/a8.jpg",
+      "card": "Leave Edinburgh on a private Stirlingshire day covering Bannockburn, Stirling Castle, the National Wallace Monument, Dunblane Cathedral, and",
+      "itineraryTitles": [
+        "Bannockburn",
+        "Stirling Castle",
+        "National Wallace Monument",
+        "Dunblane Cathedral",
+        "Doune Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5256HLOCHNESS",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/scottish-highlands-loch-ness-and-glencoe-day-trip-from-5256HLOCHNESS",
+      "title": "Scottish Highlands, Loch Ness and Glencoe Day Trip from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/85/cb/ac.jpg",
+      "card": "This 13-hour coach day from Edinburgh winds through the Highlands to Pitlochry, Cairngorms National Park, Loch Ness, Urquhart Castle, Glenco",
+      "itineraryTitles": [
+        "Pitlochry",
+        "Cairngorms National Park",
+        "Loch Ness",
+        "Urquhart Castle",
+        "Glencoe National Nature Reserve",
+        "Stirling Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7812P14",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/edinburgh-walking-food-tour-with-secret-food-tours-7812P14",
+      "title": "Edinburgh Walking Food Tour With Secret Food Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/71/fd/9d.jpg",
+      "card": "Edinburgh's Old Town and New Town food streets are easier with a local on this three-hour Secret Food Tours walk.",
+      "itineraryTitles": [
+        "Royal Mile",
+        "Edinburgh Old Town"
+      ],
+      "issues": []
+    },
+    {
+      "code": "109681P1",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/edinburgh-sky-to-sea-bike-or-e-bike-tour-with-transfer-109681P1",
+      "title": "Edinburgh Sky to Sea Bike or E-Bike Tour with Transfer by TBC",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6a/00/d0.jpg",
+      "card": "Cover Edinburgh's outdoor spine on a Sky to Sea bike or e-bike outing from Arthur's Seat to Portobello beach and the Port of Leith.",
+      "itineraryTitles": [
+        "Arthur's Seat",
+        "Portobello",
+        "Port of Leith"
+      ],
+      "issues": []
+    },
+    {
+      "code": "293401SECRETS",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/royal-mile-and-edinburgh-castle-small-group-walking-tou-293401SECRETS",
+      "title": "Royal Mile and Edinburgh Castle - Small Group Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg",
+      "card": "Walk Edinburgh's Royal Mile in a small group with skip-the-line entry to Edinburgh Castle, plus St.",
+      "itineraryTitles": [
+        "Royal Mile",
+        "St. Giles' Cathedral",
+        "Parliament Square",
+        "John Knox House",
+        "Edinburgh Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5211P20",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/outlander-film-locations-day-trip-from-edinburgh-5211P20",
+      "title": "Outlander Film Locations Day Trip from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/f8/08.jpg",
+      "card": "Follow Outlander filming locations from Edinburgh to Doune Castle, Culross, Falkland, and Linlithgow Palace.",
+      "itineraryTitles": [
+        "Doune Castle",
+        "Culross",
+        "Falkland",
+        "Linlithgow Palace"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6898P9",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/edinburgh-west-highland-lochs-mountains-castles-6898P9",
+      "title": "Edinburgh: West Highland Lochs, Mountains & Castles",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/f0/ea.jpg",
+      "card": "Leave Edinburgh for West Highland lochs and castles, starting at Doune Castle before Inveraray, Loch Awe, and Kilchurn Castle.",
+      "itineraryTitles": [
+        "Doune Castle",
+        "Inveraray",
+        "Loch Awe",
+        "Kilchurn Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5211WHISKY",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/scotlands-glens-highlands-whisky-day-trip-from-edinburg-5211WHISKY",
+      "title": "Scotland's Glens, Highlands & Whisky Day Trip from Edinburgh",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0a/f4/92.jpg",
+      "card": "This whisky and waterfalls day from Edinburgh crosses Loch Lomond and The Trossachs National Park, then visits Glenturret Distillery for a t",
+      "itineraryTitles": [
+        "Loch Lomond and The Trossachs National Park",
+        "Glenturret Distillery",
+        "The Hermitage",
+        "Dunkeld",
+        "Dunkeld Cathedral"
+      ],
+      "issues": []
+    },
+    {
+      "code": "72560P6",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/edinburgh-food-drink-tour-with-eatwalk-tours-72560P6",
+      "title": "Edinburgh Food & Drink Tour with EatWalk Tours",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/54/31/69.jpg",
+      "card": "EatWalk leads a three-hour food and drink walk through Edinburgh New Town, Edinburgh Old Town, and past John Knox House.",
+      "itineraryTitles": [
+        "Edinburgh New Town",
+        "Edinburgh Old Town",
+        "John Knox House"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6898P18",
+      "ok": true,
+      "path": "/destinations/scotland/edinburgh/tours/edinburgh-the-outlander-palaces-jacobites-tour-6898P18",
+      "title": "Edinburgh: The Outlander, Palaces & Jacobites Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/f9/fe/5f.jpg",
+      "card": "This Outlander palaces and Jacobites day from Edinburgh visits Linlithgow Palace, Culross, and Blackness Castle, the settings used for Wentw",
+      "itineraryTitles": [
+        "Linlithgow Palace",
+        "Culross",
+        "Blackness Castle"
+      ],
+      "issues": []
+    }
+  ]
+}

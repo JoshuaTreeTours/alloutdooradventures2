@@ -18,6 +18,9 @@ import {
 import { getEngine6TourRatingSourceOfTruth } from "../ratingSourceOfTruth";
 import type { Engine6Tour } from "../types";
 
+const resolveEngine6AddressCountry = (stateSlug: string) =>
+  stateSlug === "scotland" ? "GB" : "US";
+
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());
 
@@ -222,7 +225,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           "@type": "PostalAddress",
           addressLocality: tour.city,
           addressRegion: tour.state,
-          addressCountry: "US",
+          addressCountry: resolveEngine6AddressCountry(stateSlug),
         },
       },
       {

@@ -9,6 +9,8 @@ import { isUsCountryAlias } from "../../utils/guides/usCountryAliases";
 
 export const CANADA_COUNTRY_NAME = "Canada";
 export const MEXICO_COUNTRY_NAME = "Mexico";
+export const SCOTLAND_REGION_NAME = "Scotland";
+export const SCOTLAND_REGION_SLUG = "scotland";
 
 export type SelectorOption = {
   name: string;
@@ -39,6 +41,10 @@ const isMexicoCityAlias = (name: string) => {
 
 export const normalizeMexicoCityName = (name: string): string =>
   isMexicoCityAlias(name) ? "Ciudad De México" : name;
+
+export const isScotlandSelectorTour = (tour: Tour) =>
+  tour.destination.stateSlug === SCOTLAND_REGION_SLUG ||
+  (tour.destination.state ?? "").trim().toLowerCase() === SCOTLAND_REGION_SLUG;
 
 export const getMexicoCityKey = (
   name: string,
@@ -71,6 +77,10 @@ export const buildInternationalCountryOptions = (
 
   if (mexicoTours.length) {
     countrySet.add(MEXICO_COUNTRY_NAME);
+  }
+
+  if (internationalTours.some(isScotlandSelectorTour)) {
+    countrySet.add(SCOTLAND_REGION_NAME);
   }
 
   countrySet.add(CANADA_COUNTRY_NAME);
@@ -107,6 +117,19 @@ export const buildInternationalCityOptions = ({
       .sort((a, b) => a.name.localeCompare(b.name));
   }
 
+  if (selectedCountry === SCOTLAND_REGION_NAME) {
+    return Array.from(
+      new Set(
+        internationalTours
+          .filter(isScotlandSelectorTour)
+          .map(tour => tour.destination.city)
+          .filter(Boolean)
+      )
+    )
+      .sort((a, b) => a.localeCompare(b))
+      .map(city => ({ name: city, slug: slugify(city) }));
+  }
+
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
     const byCityKey = new Map<string, SelectorOption>();
 
@@ -135,7 +158,8 @@ export const buildInternationalCityOptions = ({
         .filter(
           tour =>
             tour.destination.country === selectedCountry &&
-            !isUsCountryAlias(tour.destination.country)
+            !isUsCountryAlias(tour.destination.country) &&
+            !isScotlandSelectorTour(tour)
         )
         .map(tour => tour.destination.city)
     )
@@ -176,6 +200,12 @@ export const resolveInternationalCountrySelectionRoute = ({
     return appendActivityFilterQuery("/destinations/mexico", activitySlug);
   }
 
+  if (selectedCountry === SCOTLAND_REGION_NAME) {
+    return activitySlug
+      ? `/destinations/${SCOTLAND_REGION_SLUG}?activity=${encodeURIComponent(activitySlug)}`
+      : `/destinations/${SCOTLAND_REGION_SLUG}`;
+  }
+
   const countrySlug = slugify(selectedCountry);
   const europeSlugSet = new Set(europeCountrySlugs);
   const basePath = europeSlugSet.has(countrySlug)
@@ -210,6 +240,13 @@ export const resolveInternationalCitySelectionRoute = ({
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
     return appendActivityFilterQuery(
       `/destinations/mexico/${citySlug}/tours`,
+      activitySlug
+    );
+  }
+
+  if (selectedCountry === SCOTLAND_REGION_NAME) {
+    return appendActivityFilterQuery(
+      `/destinations/${SCOTLAND_REGION_SLUG}/${citySlug}/`,
       activitySlug
     );
   }

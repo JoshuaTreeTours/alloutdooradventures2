@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "72560P6",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Edinburgh-Food-and-Drink-tour/d739-72560P6",
+    "title": "Edinburgh Food & Drink Tour with EatWalk Tours",
+    "description": {
+      "text": "EatWalk leads a three-hour food and drink walk through Edinburgh New Town, Edinburgh Old Town, and past John Knox House. Several tastings add up to a meal, with three stops that include a drink, covering Scottish culinary history in a small group. Stops include Edinburgh New Town, Edinburgh Old Town, John Knox House. Dietary needs are requested 48 hours ahead so the kitchen stops can adjust. The route mixes Georgian New Town rooms with Old Town closes rather than a single restaurant booking. Ideal for visitors basing in Edinburgh who want a guided tasting walk instead of assembling reservations alone."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $135.05",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 465
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/54/31/69.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Food and drink tour of Edinburgh's Old and New Towns",
+      "Includes food and drinks tastings that equate to a meal",
+      "Learn all about Scotland's history and food culture",
+      "A small group ensures a more personalized experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "EatWalk leads a three-hour food and drink walk through Edinburgh New Town, Edinburgh Old Town, and past John Knox House.",
+    "itineraryItems": [
+      {
+        "title": "Edinburgh New Town",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Edinburgh Old Town",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Knox House",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Food equivalent to a full meal for brunch, lunch or dinner",
+      "Dietary Requirements must be advised at least 48 hours in advance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Edinburgh Food & Drink Tour with EatWalk Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "Meet your guide at the confirmed Edinburgh meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135.05
+      },
+      "currency": "USD"
+    }
+  }
+}

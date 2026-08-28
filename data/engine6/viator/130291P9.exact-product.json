@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "130291P9",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Private-Stirlingshire-Day-Trip/d739-130291P9",
+    "title": "Warriors & Wilderness: Braveheart & Stirlingshire Day Trip",
+    "description": {
+      "text": "Leave Edinburgh on a private Stirlingshire day covering Bannockburn, Stirling Castle, the National Wallace Monument, Dunblane Cathedral, and Doune Castle. Morning hotel pickup uses a luxury Mercedes minivan with Wi-Fi, bottled water, and live commentary on Wallace, Braveheart country, and medieval church architecture. Stops include Bannockburn, Stirling Castle, National Wallace Monument, Dunblane Cathedral, Doune Castle. The eight-hour format keeps warrior history and castle ruins on one circuit from a central Edinburgh pickup. Ideal for visitors basing in Edinburgh who want a private cultural day without coordinating castle tickets alone."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $525.33",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/cb/07/a8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover castles, cathedrals, monuments, and more, all in one day",
+      "A private tour offers the most comfortable, flexible way to travel",
+      "Round-trip transit directly from your Edinburgh hotel is included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We can pick up from any centrally located Edinburgh hotel, guest house or convenient location including Edinburgh Airport or cruise liner port."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Edinburgh on a private Stirlingshire day covering Bannockburn, Stirling Castle, the National Wallace Monument, Dunblane Cathedral, and Doune Castle.",
+    "itineraryItems": [
+      {
+        "title": "Bannockburn",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Stirling Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Wallace Monument",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dunblane Cathedral",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doune Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Door to door pick up service",
+      "Private transportation in luxury Mercedes mini van",
+      "Bottled water for passengers",
+      "WiFi on board",
+      "Air-Conditioned vehicle",
+      "Live commentary",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Warriors & Wilderness: Braveheart & Stirlingshire Day Trip?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "We can pick up from any centrally located Edinburgh hotel, guest house or convenient location including Edinburgh Airport or cruise liner port."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 525.33
+      },
+      "currency": "USD"
+    }
+  }
+}

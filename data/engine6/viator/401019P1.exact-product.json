@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "401019P1",
+    "productUrl": "https://www.viator.com/tours/Edinburgh/Luxury-Private-Bespoke-Tour-of-Scotland/d739-401019P1",
+    "title": "Luxury Private Tour of The Highlands & Loch Ness from Edinburgh",
+    "description": {
+      "text": "Depart central Edinburgh in a luxury private minivan for Doune Castle, Kilmahog, Glencoe, Loch Ness, and Fort William. Complimentary refreshments and an English-speaking guide travel with the group, with views toward Cairngorms National Park, Ben Nevis, and Fort William on the 10-to-12-hour circuit. Stops include Doune Castle, Kilmahog, Glencoe, Loch Ness, Fort William. Private leather-seat transport keeps Highland routing, castle entry, and loch timing coordinated from Edinburgh. Highland cows at Kilmahog and loch-side time at Loch Ness sit inside the same chauffeur day. Ideal for visitors basing in Edinburgh who want a private Highlands and Loch Ness day without self-driving."
+    },
+    "location": {
+      "city": "Edinburgh",
+      "state": "Scotland"
+    },
+    "duration": "10 to 12 hours (approx.)",
+    "priceFrom": "From $1211.93",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 109
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/74/d7/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day private minivan tour of the Scottish Highlands, from Edinburgh",
+      "Relax in a luxury minivan, with leather seats, USB-charging ports, and complimentary refreshments",
+      "Tailored experience with a Scottish guide: Experience the Highlands like a local"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Anything we can do to make you're trip more enjoyable, Just let us know."
+      },
+      "end": {
+        "description": "Return to your Edinburgh meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Depart central Edinburgh in a luxury private minivan for Doune Castle, Kilmahog, Glencoe, Loch Ness, and Fort William.",
+    "itineraryItems": [
+      {
+        "title": "Doune Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilmahog",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glencoe",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ness",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort William",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Luxury Private Tour of The Highlands & Loch Ness from Edinburgh?",
+        "answer": "The planned duration is 10 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Edinburgh?",
+        "answer": "Anything we can do to make you're trip more enjoyable, Just let us know."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1211.93
+      },
+      "currency": "USD"
+    }
+  }
+}

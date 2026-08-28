@@ -1,8 +1,9 @@
 import { normalizePlaceName } from "../../../../utils/geo";
 import type { Tier1WorldCityPoi } from "./types";
-import { pois as edinburgh } from "./united-kingdom/edinburgh";
+import { pois as edinburgh } from "./scotland/edinburgh";
 import { pois as london } from "./united-kingdom/london";
 import { pois as rome } from "./italy/rome";
+import { pois as venice } from "./italy/venice";
 import { pois as florence } from "./italy/florence";
 import { pois as barcelona } from "./spain/barcelona";
 import { pois as madrid } from "./spain/madrid";
@@ -16,9 +17,10 @@ import { pois as paris } from "./france/paris";
 export type { Tier1WorldCityPoi } from "./types";
 
 const tier1IntlPoiMap: Record<string, Tier1WorldCityPoi[]> = {
-  "united-kingdom/edinburgh": edinburgh,
+  "scotland/edinburgh": edinburgh,
   "united-kingdom/london": london,
   "italy/rome": rome,
+  "italy/venice": venice,
   "italy/florence": florence,
   "spain/barcelona": barcelona,
   "spain/madrid": madrid,
