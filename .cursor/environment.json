@@ -1,0 +1,17 @@
+{
+  "name": "all-outdoor-adventures",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "vite-dev",
+      "command": "npm run dev",
+      "description": "Vite dev server for the React SPA. Serves the site with hot reload on http://localhost:5173 (also exposed on the container network via --host)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "vite",
+      "port": 5173
+    }
+  ]
+}
