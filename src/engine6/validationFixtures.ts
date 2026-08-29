@@ -339,6 +339,15 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen20336p1Payload from "../../data/engine6/viator/20336P1.exact-product.json";
+import specimen155286p1Payload from "../../data/engine6/viator/155286P1.exact-product.json";
+import specimen148831p28Payload from "../../data/engine6/viator/148831P28.exact-product.json";
+import specimen85155p2Payload from "../../data/engine6/viator/85155P2.exact-product.json";
+import specimen89775p1Payload from "../../data/engine6/viator/89775P1.exact-product.json";
+import specimen226342p3Payload from "../../data/engine6/viator/226342P3.exact-product.json";
+import specimen141439p1Payload from "../../data/engine6/viator/141439P1.exact-product.json";
+import specimen17020p17Payload from "../../data/engine6/viator/17020P17.exact-product.json";
+import specimen5207limbikePayload from "../../data/engine6/viator/5207LIMBIKE.exact-product.json";
 import specimen3714luxsunsetPayload from "../../data/engine6/viator/3714LUXSUNSET.exact-product.json";
 import specimen3714p32Payload from "../../data/engine6/viator/3714P32.exact-product.json";
 import specimen18372p1Payload from "../../data/engine6/viator/18372P1.exact-product.json";
@@ -3600,6 +3609,60 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "20336P1",
+    publicUrl: "https://www.viator.com/tours/Lima/Lima-Classic/d928-20336P1",
+    rawPayload: specimen20336p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "155286P1",
+    publicUrl: "https://www.viator.com/tours/Lima/City-Tour-Complete/d928-155286P1",
+    rawPayload: specimen155286p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "148831P28",
+    publicUrl: "https://www.viator.com/tours/Lima/Lima-by-night-and-Catacombs/d928-148831P28",
+    rawPayload: specimen148831p28Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "85155P2",
+    publicUrl: "https://www.viator.com/tours/Lima/Off-road-in-Marcahuasi/d928-85155P2",
+    rawPayload: specimen85155p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "89775P1",
+    publicUrl: "https://www.viator.com/tours/Lima/Sandboarding-and-off-road-in-Lima/d928-89775P1",
+    rawPayload: specimen89775p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "226342P3",
+    publicUrl: "https://www.viator.com/tours/Lima/Epic-Paracas-and-Huacachina-day-trip-from-Lima-All-Included/d928-226342P3",
+    rawPayload: specimen226342p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "141439P1",
+    publicUrl: "https://www.viator.com/tours/Lima/All-Inclusive-full-day-Experience-to-Caral-the-oldest-city-of-America-from-Lima/d928-141439P1",
+    rawPayload: specimen141439p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "17020P17",
+    publicUrl: "https://www.viator.com/tours/Lima/Pachacamacs-Inka-Pyramids-Tour-including-Museum-Small-Group/d928-17020P17",
+    rawPayload: specimen17020p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5207LIMBIKE",
+    publicUrl: "https://www.viator.com/tours/Lima/Small-Group-Lima-Coast-Bike-Tour/d928-5207LIMBIKE",
+    rawPayload: specimen5207limbikePayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

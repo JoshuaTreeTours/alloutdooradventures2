@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "5207LIMBIKE",
+    "productUrl": "https://www.viator.com/tours/Lima/Small-Group-Lima-Coast-Bike-Tour/d928-5207LIMBIKE",
+    "title": "Explore Lima On Bike: Coast Cycling Adventure",
+    "description": {
+      "text": "In Lima, this small-group coast ride starts in Miraflores, drops toward Chorrillos, then follows Barranco and Love Park on protected bike paths. Bicycles, helmets, and a cycling guide are included. The published meeting point is Calle Alcanfores 425 in Miraflores, with the end at Church Virgen Milagrosa. Commentary covers coastal neighborhoods and street art rather than a historic-center walking loop. The format suits visitors who want a guided bike outing without renting independently or navigating Lima traffic alone. The published duration is about three hours and fifteen minutes on mixed coastal path and neighborhood streets. Meeting points are confirmed at booking in Lima, and the itinerary stays on Chorrillos, Barranco, Love Park, and Miraflores that shape this coastal ride rather than a Huaca Pucllana or downtown plaza add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "3 hours 15 minutes (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 84
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/d5/51.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group coast bike ride from Miraflores",
+      "Guided route through Chorrillos, Barranco, and Love Park",
+      "Bicycles and helmets included",
+      "Meeting point on Calle Alcanfores in Miraflores",
+      "About 3 hours 15 minutes on coastal paths"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Calle Alcanfores 425, Miraflores 15074, Peru, in front of Freshii. The published end point is the main gate of the Church Virgen Milagrosa in Miraflores."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this small-group coast ride starts in Miraflores, drops toward Chorrillos, then follows Barranco and Love Park on protected bike paths.",
+    "itineraryItems": [
+      {
+        "title": "Chorrillos",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barranco",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Love Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Miraflores",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "Helmet",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Explore Lima On Bike: Coast Cycling Adventure?",
+        "answer": "The planned duration is 3 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Meet at Calle Alcanfores 425, Miraflores 15074, Peru, in front of Freshii. The published end point is the main gate of the Church Virgen Milagrosa in Miraflores."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

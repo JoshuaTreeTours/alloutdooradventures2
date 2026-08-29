@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "226342P3",
+    "productUrl": "https://www.viator.com/tours/Lima/Epic-Paracas-and-Huacachina-day-trip-from-Lima-All-Included/d928-226342P3",
+    "title": "Epic Paracas & Huacachina - Day Trip From Lima",
+    "description": {
+      "text": "In Lima, this long guided day runs south to Islas Ballestas, an Ica wine and pisco tasting, and Huacachina for a two-hour dune-buggy and sandboarding window. Hotel or hostel pickup is listed for Barranco, Miraflores, and San Isidro, with bilingual guiding and a published 22-person cap. Boat time at Ballestas and the desert activity are included; meals and some rentals are listed separately on the product page. The route is aimed at visitors who want a single guided coastal-and-desert day without booking the boat, tasting room, and dunes independently. Sunset timing at Huacachina is listed with the dune-buggy window. Meeting points are confirmed at booking in Lima, and the itinerary stays on Islas Ballestas, Ica, and Huacachina that define this outing rather than a Nazca overflight add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "17 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 177
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/1f/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day route from Lima to Islas Ballestas, Ica, and Huacachina",
+      "Two-hour Ballestas Islands boat included",
+      "Wine and pisco tasting in Ica",
+      "Two-hour dune-buggy and sandboarding window at Huacachina",
+      "Hotel or hostel pickup in Barranco, Miraflores, or San Isidro"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed for Barranco, Miraflores, and San Isidro. A meeting point at Calle Porta 145, Miraflores 15074, Peru is published for other locations."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this long guided day runs south to Islas Ballestas, an Ica wine and pisco tasting, and Huacachina for a two-hour dune-buggy and sandboarding window.",
+    "itineraryItems": [
+      {
+        "title": "Islas Ballestas",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ica",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Huacachina",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel or Hostel Pick-up / Drop-off: Barranco / Miraflores/ San Isidro.",
+      "Boat tour 2hrs. Islas Ballestas",
+      "Authentic experience. Wine and Pisco tasting.",
+      "2 Hours Dune Buggy and Sandboarding Tour + Sunset",
+      "Bilingual Guide (Esp/Eng)",
+      "Private transportation 22 travelers maximum"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Epic Paracas & Huacachina - Day Trip From Lima?",
+        "answer": "The planned duration is 17 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Pickup is listed for Barranco, Miraflores, and San Isidro. A meeting point at Calle Porta 145, Miraflores 15074, Peru is published for other locations."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

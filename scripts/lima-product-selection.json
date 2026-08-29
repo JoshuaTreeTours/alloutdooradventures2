@@ -1,0 +1,154 @@
+{
+  "destinationLabel": "Lima",
+  "destinationCitySlug": "lima",
+  "viatorDestinationSlug": "Lima",
+  "viatorDestinationId": "d928",
+  "catalogUrl": "https://www.viator.com/Lima/d928-ttd",
+  "suppliedCatalogUrl": "https://www.viator.com/Lima/d937-ttd",
+  "catalogIdNote": "User-supplied d937 is the live Cusco destination id. Lima's live Viator destination id is d928. Product URLs use /tours/Lima/.../d928-CODE.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 9,
+  "premiumCount": 6,
+  "selectionNote": "Selected 9 guided Lima d928 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including additional private city, jeep, bike, wine, photography, and sanctuary SKUs, but Viator DataDome blocking plus geo-currency dumps (AUD/CAD/GBP/EUR) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d928 helicopter or stargazing page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, airport transfers, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "20336P1",
+    "155286P1",
+    "148831P28",
+    "85155P2",
+    "89775P1",
+    "226342P3",
+    "141439P1",
+    "17020P17",
+    "5207LIMBIKE"
+  ],
+  "premiumProductCodes": [
+    "20336P1",
+    "155286P1",
+    "85155P2",
+    "89775P1",
+    "141439P1",
+    "17020P17"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "17020P7",
+      "title": "Caral The First Civilization in America - Full Day From Lima",
+      "reason": "USD $155 4.9/48 verified; skipped as a near-duplicate of selected 141439P1 Caral day"
+    },
+    {
+      "productCode": "5243LIMCITY",
+      "title": "Lima's Vibrant Heritage: Exploring the City's Landmarks Half-day",
+      "reason": "USD $39 4.4/558 below the quality bar used on Cabo"
+    },
+    {
+      "productCode": "20336P4",
+      "title": "Lima: Palomino Islands Excursion & Swimming with Sea Lions with Hotel Transfers",
+      "reason": "USD $125 4.4/129-130 below the quality bar"
+    },
+    {
+      "productCode": "20336P11",
+      "title": "From Lima: Pachacamac, Barranco & Chorrillos Private Tour",
+      "reason": "USD $69 4.1/26 below the quality bar and too thin"
+    },
+    {
+      "productCode": "5243NAZCA",
+      "title": "Nazca Lines Full Day Trip from Lima",
+      "reason": "USD $553.20 4.0/45 below the quality bar"
+    },
+    {
+      "productCode": "5243LIMDAY",
+      "title": "Lima in a Day: City Sightseeing Tour, Larco Museum and Magic Water Circuit",
+      "reason": "4.3/59 below the quality bar; CAD-only complete dump"
+    },
+    {
+      "productCode": "53762P1",
+      "title": "Visit the Sea Lions in Palomino Islands, in Lima Peru",
+      "reason": "4.8/566; AUD-only dump"
+    },
+    {
+      "productCode": "26488P4",
+      "title": "Huacachina Oasis & Mini-Galapagos! Most reviewed company in Peru!",
+      "reason": "4.8/5547 flagship scenic day; CAD/GBP-only dumps with no verified USD From$ on a complete page"
+    },
+    {
+      "productCode": "159308P6",
+      "title": "2 Days Experience in Paracas, Huacachina & Nazca Lines from Lima",
+      "reason": "4.9/44; AUD-only dump"
+    },
+    {
+      "productCode": "239682P1",
+      "title": "Full Day Paracas Ica and Huacachina from Lima All Included",
+      "reason": "4.6/49; no verified USD From$ on the complete dump"
+    },
+    {
+      "productCode": "17020P5",
+      "title": "Lima Half-Day City Walking Tour (Small Groups)",
+      "reason": "4.9/1038 strong walking product; EUR-only dumps"
+    },
+    {
+      "productCode": "17153P3",
+      "title": "The Original Highlights of Lima - Private Half Day Tour",
+      "reason": "Preferred private type; 4.9/47 EUR-only dump"
+    },
+    {
+      "productCode": "315522P1",
+      "title": "Lima Coast Biking",
+      "reason": "Preferred bike type; USD $29.99 verified but 3.0/2 too thin and below the quality bar"
+    },
+    {
+      "productCode": "103984P9",
+      "title": "Ultimate Comfort: Lima to Huacachina, Ballestas and Vineyard",
+      "reason": "USD $190 verified; third-party 5.0/21 too thin and near-duplicate of selected 226342P3"
+    },
+    {
+      "productCode": "353438P1",
+      "title": "Full day | Paracas- Huacachina ALL included | From Lima",
+      "reason": "USD $78 snippet; no complete rating+hero dump and near-duplicate of selected 226342P3"
+    },
+    {
+      "productCode": "158936P2",
+      "title": "Full day PRIVATE to Paracas, Ica and Huacachina from Lima All Inclusive and Lunch",
+      "reason": "Preferred private scenic type; US$340 snippet; no complete rating+hero dump and near-duplicate of selected 226342P3"
+    },
+    {
+      "productCode": "85155P8",
+      "title": "Marcahuasi Hiking in Lima",
+      "reason": "Preferred guided hiking type; USD $160 snippet; no complete rating+hero dump and near-duplicate of selected 85155P2"
+    },
+    {
+      "productCode": "67641P1",
+      "title": "Lima Photo Day Tour",
+      "reason": "Preferred photography type; catalog $180 5.0/41; no complete USD+hero product-page dump"
+    },
+    {
+      "productCode": "21804P2",
+      "title": "Rapel y aventura en Cañón Autisha - Desde Lima",
+      "reason": "Preferred guided hiking type; Spanish-only page dump with no verified USD From$ or rating"
+    },
+    {
+      "productCode": "119471P9",
+      "title": "Half day visit to the Sacred Ruins of Pachacamac",
+      "reason": "Indigenous sanctuary type; catalog $55; no complete USD+rating+hero dump and near-duplicate of selected 17020P17"
+    },
+    {
+      "productCode": "122472P4",
+      "title": "Tour to the Archaeological Sanctuary of Pachacamac (small group)",
+      "reason": "Catalog from $55; no complete USD+rating+hero dump and near-duplicate of selected 17020P17"
+    },
+    {
+      "productCode": "10269P6",
+      "title": "Bike Rental in Lima, Miraflores and Barranco - Full Day",
+      "reason": "Self-guided rental, not a guided tour"
+    },
+    {
+      "productCode": "10269P7",
+      "title": "Peru's Best Bike Experience since 2014 - 4 Hours Hire",
+      "reason": "Self-guided rental, not a guided tour"
+    },
+    {
+      "productCode": "334772P3",
+      "title": "Bike rentals",
+      "reason": "Self-guided rental, not a guided tour"
+    }
+  ]
+}

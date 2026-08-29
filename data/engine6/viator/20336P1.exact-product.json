@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "20336P1",
+    "productUrl": "https://www.viator.com/tours/Lima/Lima-Classic/d928-20336P1",
+    "title": "Historic Downtown, Miraflores & Catacombs Private Tour",
+    "description": {
+      "text": "In Lima, this private half-day circuit covers Miraflores, a San Isidro pass, and Centro Historico de Lima with a dedicated guide and vehicle for one group. The published route walks the Malecon, Love Park, and Kennedy Park before the historic-center squares, then offers a guided visit to the San Francisco Convent and catacombs or Huaca Pucllana. Snacks, a drink, and the San Francisco admission ticket are listed on the product page. Morning, afternoon, or early evening departures are offered from the confirmed Lima accommodations. The format suits visitors who want a guided city window without assembling taxi, ticket, and neighborhood timing independently. Meeting points are confirmed at booking in Lima, and the itinerary stays on Miraflores, San Isidro, and Centro Historico de Lima that define this private outing rather than a Barranco night add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 75
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/97/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day circuit of Miraflores, San Isidro, and Centro Historico de Lima",
+      "Guided choice of San Francisco Convent catacombs or Huaca Pucllana",
+      "Dedicated guide and vehicle for one group",
+      "Snacks, a drink, and listed San Francisco admission included",
+      "Morning, afternoon, or early evening departure options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the private guide at the confirmed Lima accommodations listed when booking. Morning, afternoon, or early evening departure times are offered."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this private half-day circuit covers Miraflores, a San Isidro pass, and Centro Historico de Lima with a dedicated guide and vehicle for one group.",
+    "itineraryItems": [
+      {
+        "title": "Miraflores",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Isidro",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Centro Historico de Lima",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Tourist Transportation (Minivan or SUV).",
+      "Tour Guide on board.",
+      "Snack and Drink on board.",
+      "All activities mentioned on this program.",
+      "Admission ticket to San Francisco Convent & Catacombs.",
+      "Permanent Assistance."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Historic Downtown, Miraflores & Catacombs Private Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Meet the private guide at the confirmed Lima accommodations listed when booking. Morning, afternoon, or early evening departure times are offered."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "17020P17",
+    "productUrl": "https://www.viator.com/tours/Lima/Pachacamacs-Inka-Pyramids-Tour-including-Museum-Small-Group/d928-17020P17",
+    "title": "Pachacamac's Inka Pyramids Tour including Museum Small-Group",
+    "description": {
+      "text": "In Lima, this small-group half-day heads south to Pachacamac for the site museum and the Temple of the Sun. Air-conditioned private transport, a professional guide, bottled water, and entry tickets are included, with the group capped at 10. The published route stays on the adobe sanctuary and museum rather than adding Barranco or a historic-center walk. Round-trip pickup from Lima is listed when booking. The format suits visitors who want a guided Indigenous sanctuary window without buying tickets and arranging the desert-coast transfer independently. Shade is limited on the adobe terraces, so sun protection is useful on the published walk. Meeting points are confirmed at booking in Lima, and the itinerary stays on the Pachacamac Site Museum and Temple of the Sun that define this outing rather than a Caral valley day."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/0b/a1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group half-day to Pachacamac from Lima",
+      "Pachacamac Site Museum and Temple of the Sun",
+      "Entry tickets and bottled water included",
+      "Air-conditioned private transport and a professional guide",
+      "Group capped at 10"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Round-trip private transport from Lima is listed when booking. The group is capped at 10."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this small-group half-day heads south to Pachacamac for the site museum and the Temple of the Sun.",
+    "itineraryItems": [
+      {
+        "title": "Pachacamac Site Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Temple of the Sun",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Private transport",
+      "Professional guide",
+      "All Fees and Taxes",
+      "Bottled water",
+      "Small group",
+      "Entry tickets to Pachacamac"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Pachacamac's Inka Pyramids Tour including Museum Small-Group?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Round-trip private transport from Lima is listed when booking. The group is capped at 10."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Archaeology Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}

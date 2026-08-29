@@ -1496,6 +1496,41 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_LIMA_20336P1_PRODUCT_CODE = "20336P1";
+export const ENGINE6_LIMA_20336P1_ROUTE =
+  "/destinations/peru/lima/tours/historic-downtown-miraflores-catacombs-private-tour-20336P1";
+export const ENGINE6_LIMA_155286P1_PRODUCT_CODE = "155286P1";
+export const ENGINE6_LIMA_155286P1_ROUTE =
+  "/destinations/peru/lima/tours/city-tour-complete-155286P1";
+export const ENGINE6_LIMA_148831P28_PRODUCT_CODE = "148831P28";
+export const ENGINE6_LIMA_148831P28_ROUTE =
+  "/destinations/peru/lima/tours/lima-by-night-including-catacombs-water-show-tour-148831P28";
+export const ENGINE6_LIMA_85155P2_PRODUCT_CODE = "85155P2";
+export const ENGINE6_LIMA_85155P2_ROUTE =
+  "/destinations/peru/lima/tours/marcahuasi-experience-in-lima-85155P2";
+export const ENGINE6_LIMA_89775P1_PRODUCT_CODE = "89775P1";
+export const ENGINE6_LIMA_89775P1_ROUTE =
+  "/destinations/peru/lima/tours/sandboarding-and-off-road-in-lima-national-park-lomas-d-89775P1";
+export const ENGINE6_LIMA_226342P3_PRODUCT_CODE = "226342P3";
+export const ENGINE6_LIMA_226342P3_ROUTE =
+  "/destinations/peru/lima/tours/epic-paracas-huacachina-day-trip-from-lima-226342P3";
+export const ENGINE6_LIMA_141439P1_PRODUCT_CODE = "141439P1";
+export const ENGINE6_LIMA_141439P1_ROUTE =
+  "/destinations/peru/lima/tours/caral-the-oldest-civilization-in-the-americas-day-trip-141439P1";
+export const ENGINE6_LIMA_17020P17_PRODUCT_CODE = "17020P17";
+export const ENGINE6_LIMA_17020P17_ROUTE =
+  "/destinations/peru/lima/tours/pachacamacs-inka-pyramids-tour-including-museum-small-g-17020P17";
+export const ENGINE6_LIMA_5207LIMBIKE_PRODUCT_CODE = "5207LIMBIKE";
+export const ENGINE6_LIMA_5207LIMBIKE_ROUTE =
+  "/destinations/peru/lima/tours/explore-lima-on-bike-coast-cycling-adventure-5207LIMBIKE";
+
+export const ENGINE6_LIMA_TOUR_PATH_PREFIX =
+  "/destinations/peru/lima/tours/";
+
+export const isEngine6LimaTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_LIMA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_PRODUCT_CODE = "3714LUXSUNSET";
 export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE =
   "/destinations/mexico/cabo-san-lucas/tours/los-cabos-luxury-sunset-sail-with-light-appetizers-and-3714LUXSUNSET";
@@ -4911,6 +4946,42 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_20336P1_ROUTE,
+    ENGINE6_LIMA_20336P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_155286P1_ROUTE,
+    ENGINE6_LIMA_155286P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_148831P28_ROUTE,
+    ENGINE6_LIMA_148831P28_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_85155P2_ROUTE,
+    ENGINE6_LIMA_85155P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_89775P1_ROUTE,
+    ENGINE6_LIMA_89775P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_226342P3_ROUTE,
+    ENGINE6_LIMA_226342P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_141439P1_ROUTE,
+    ENGINE6_LIMA_141439P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_17020P17_ROUTE,
+    ENGINE6_LIMA_17020P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LIMA_5207LIMBIKE_ROUTE,
+    ENGINE6_LIMA_5207LIMBIKE_PRODUCT_CODE,
   ],
   [
     ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE,

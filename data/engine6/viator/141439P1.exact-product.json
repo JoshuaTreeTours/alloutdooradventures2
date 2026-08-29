@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "141439P1",
+    "productUrl": "https://www.viator.com/tours/Lima/All-Inclusive-full-day-Experience-to-Caral-the-oldest-city-of-America-from-Lima/d928-141439P1",
+    "title": "Caral, The Oldest Civilization in the Americas:Day Trip from Lima",
+    "description": {
+      "text": "In Lima, this small-group day follows the Supe Valley to the Caral Archaeological Zone, then continues to Barranca for the published beach-town stop. Round-trip transport, site admission, a bilingual guide, and lunch are listed so the group can stay with the pyramids rather than assembling highway and ticket logistics independently. The guide covers unmarked ruins at what the product page calls the oldest center of civilization in the Americas. Pickup is published from multiple Lima locations. The format suits visitors who want a guided Indigenous-history day without self-driving the north coast. Meeting points are confirmed at booking in Lima, and the itinerary stays on the Caral Archaeological Zone and Barranca that shape this outing rather than a Pachacamac half-day add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $140.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 93
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/a9/27/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group day from Lima to the Caral Archaeological Zone",
+      "Guided visit to unmarked ruins in the Supe Valley",
+      "Published stop in Barranca after the site visit",
+      "Round-trip transport, admission, and lunch listed",
+      "Bilingual guide provided"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed from multiple key locations in Lima when booking."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this small-group day follows the Supe Valley to the Caral Archaeological Zone, then continues to Barranca for the published beach-town stop.",
+    "itineraryItems": [
+      {
+        "title": "Caral Archaeological Zone",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barranca",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Pick up and drop off is included.",
+      "Exclusive Transportation from and back to Lima.",
+      "All Fees and Taxes",
+      "Entrance fee",
+      "Bilinguial Guide provided",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Caral, The Oldest Civilization in the Americas:Day Trip from Lima?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Pickup is listed from multiple key locations in Lima when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 140
+      },
+      "currency": "USD"
+    }
+  }
+}

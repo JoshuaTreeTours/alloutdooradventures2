@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "89775P1",
+    "productUrl": "https://www.viator.com/tours/Lima/Sandboarding-and-off-road-in-Lima/d928-89775P1",
+    "title": "Sandboarding and Off Road in Lima (National Park Lomas de Ancón)",
+    "description": {
+      "text": "In Lima, this private 4x4 outing heads north to Lomas de Ancón for guided dune driving and sandboarding. Hotel pickup, sandboarding equipment, a certified instructor, and snacks are included after a safety briefing, and no prior sandboard experience is required. The published route stays on the Ancón reserve dunes rather than a long southbound Huacachina transfer. Airbnb pickups are asked to stay within a 20-mile radius of Lima. The format suits visitors who want a guided off-road window close to the capital without booking a 17-hour desert coach. A local dessert stop on the return is mentioned on the product page. Meeting points are confirmed at booking in Lima, and the itinerary stays on Lomas de Ancón and Ancón that define this sandboard day rather than a Paracas boat or vineyard add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $192.31",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/3a/76/6f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 4x4 sandboarding day at Lomas de Ancón",
+      "Guided dune driving with a certified sandboard instructor",
+      "Sandboarding equipment and snacks included",
+      "Hotel pickup and drop-off listed when booking",
+      "No prior sandboard experience required"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed when booking. Airbnb addresses are asked to stay within a 20-mile radius of Lima."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this private 4x4 outing heads north to Lomas de Ancón for guided dune driving and sandboarding.",
+    "itineraryItems": [
+      {
+        "title": "Lomas de Ancón",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ancón",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Professional sandboarding equipment",
+      "Transport and off road in a 4×4 vehicle over the dunes",
+      "Certified sandboard instructor",
+      "Snacks",
+      "Private tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sandboarding and Off Road in Lima (National Park Lomas de Ancón)?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Hotel pickup is listed when booking. Airbnb addresses are asked to stay within a 20-mile radius of Lima."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD, ATV & Off-Road Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 192.31
+      },
+      "currency": "USD"
+    }
+  }
+}

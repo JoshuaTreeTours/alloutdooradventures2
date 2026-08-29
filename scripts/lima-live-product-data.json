@@ -1,0 +1,309 @@
+[
+  {
+    "productCode": "20336P1",
+    "productUrl": "https://www.viator.com/tours/Lima/Lima-Classic/d928-20336P1",
+    "title": "Historic Downtown, Miraflores & Catacombs Private Tour",
+    "priceFrom": "From $65.00",
+    "price": 65,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 75,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/97/94.jpg",
+    "overview": "Get personalized attention and enjoy a flexible itinerary during this half-day private tour of Lima. Visit highlights such as the city's Cercado de Lima, San Isidro, and Miraflores with a dedicated guide just for you and your party. Also, enjoy a guided tour of the San Francisco Convent and catacombs or the Huaca Pucllana Pre Inca Site. Private round-trip transportation included. Choice of departure times throughout the day available.",
+    "itineraryStops": [
+      "Miraflores",
+      "San Isidro (Pass By)",
+      "Centro Historico de Lima"
+    ],
+    "inclusions": [
+      "Tourist Transportation (Minivan or SUV).",
+      "Tour Guide on board.",
+      "Snack and Drink on board.",
+      "All activities mentioned on this program.",
+      "Admission ticket to San Francisco Convent & Catacombs.",
+      "Permanent Assistance."
+    ],
+    "startDescription": "Meet the private guide at the confirmed Lima accommodations listed when booking. Morning, afternoon, or early evening departure times are offered.",
+    "highlights": [
+      "Private half-day circuit of Miraflores, San Isidro, and Centro Historico de Lima",
+      "Guided choice of San Francisco Convent catacombs or Huaca Pucllana",
+      "Dedicated guide and vehicle for one group",
+      "Snacks, a drink, and listed San Francisco admission included",
+      "Morning, afternoon, or early evening departure options"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "City Tours"]
+  },
+  {
+    "productCode": "155286P1",
+    "productUrl": "https://www.viator.com/tours/Lima/City-Tour-Complete/d928-155286P1",
+    "title": "City Tour Complete",
+    "priceFrom": "From $90.00",
+    "price": 90,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 98,
+    "duration": "3 to 4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/29/85/ba.jpg",
+    "overview": "Discover the best of Peru’s capital on this half-day city tour of Lima. Visit several neighborhoods including Barranco, Miraflores, and the historic center where you learn about the local history from your dedicated guide. Travel the city in air-conditioned comfort and enjoy the flexibility of a private tour, meaning you can stop at a place for longer if you choose.",
+    "itineraryStops": [
+      "Miraflores",
+      "Barranco",
+      "Historic Center of Lima"
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guía privado"
+    ],
+    "startDescription": "Hotel pickup is listed for accommodations in Miraflores, Barranco, and San Isidro. Transfers from outside that axis are listed at USD 20.",
+    "highlights": [
+      "Private half-day tour of Barranco, Miraflores, and the historic center",
+      "Air-conditioned vehicle and dedicated guide for one group",
+      "Flexible stop timing instead of a fixed coach loop",
+      "Hotel pickup listed for Miraflores, Barranco, and San Isidro",
+      "Museum tickets listed separately on the product page"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "City Tours"]
+  },
+  {
+    "productCode": "148831P28",
+    "productUrl": "https://www.viator.com/tours/Lima/Lima-by-night-and-Catacombs/d928-148831P28",
+    "title": "Lima by night including Catacombs & Water Show Tour",
+    "priceFrom": "From $55.00",
+    "price": 55,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 126,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/70/c1.jpg",
+    "overview": "Discover the Peruvian capital from an alternative vantage point on a small-group nighttime tour. Begin by exploring the eerie catacombs beneath the San Francisco Monastery, which house the remains of over 70,000 individuals. Then, stroll around the city's historic center, and listen to insightful and engaging commentary from your guide. As night falls, soak in the enchanting ambiance of Lima's illuminated landmarks.",
+    "itineraryStops": [
+      "San Francisco Monastery",
+      "Plaza de Armas",
+      "Magic Water Circuit"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Tickets to the Catacombs",
+      "Tickets to Magic Water Show"
+    ],
+    "startDescription": "Pickup from Barranco, Miraflores, San Isidro or Downtown Lima. Published start time is 4:00 p.m.",
+    "highlights": [
+      "Small-group evening tour of Lima after the daytime crowds",
+      "San Francisco Monastery catacombs with included admission",
+      "Historic-center walk around Plaza de Armas",
+      "Magic Water Circuit tickets included",
+      "Hotel pickup from Barranco, Miraflores, San Isidro, or downtown Lima"
+    ],
+    "experienceType": "scenic-night",
+    "categories": ["Night Tours", "Historical Tours"]
+  },
+  {
+    "productCode": "85155P2",
+    "productUrl": "https://www.viator.com/tours/Lima/Off-road-in-Marcahuasi/d928-85155P2",
+    "title": "Marcahuasi Experience in Lima",
+    "priceFrom": "From $165.00",
+    "price": 165,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 187,
+    "duration": "10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/5b/b0.jpg",
+    "overview": "The Marcahuasi stone forest is often overlooked by visitors, but this mystical site shouldn't be missed by anyone with an interest in nature or history—and this private guided tour from Lima will show you why. Discover monolithic stone forms, unobstructed vista points, and tucked-away attractions far from any crowds as you explore off the beaten path and delve into Peruvian lore.",
+    "itineraryStops": [
+      "San Pedro de Casta",
+      "Marcahuasi Stone Forest"
+    ],
+    "inclusions": [
+      "Breakfast"
+    ],
+    "startDescription": "Pickup is listed for any place in Lima Metropolitana when booking.",
+    "highlights": [
+      "Private guided day from Lima to the Marcahuasi Stone Forest",
+      "Off-road approach through San Pedro de Casta",
+      "Walk among high-plateau stone formations with a guide",
+      "Breakfast listed on the product page",
+      "Pickup published for Lima Metropolitana"
+    ],
+    "experienceType": "jeep-hike",
+    "categories": ["4WD, ATV & Off-Road Tours", "Hiking Tours"]
+  },
+  {
+    "productCode": "89775P1",
+    "productUrl": "https://www.viator.com/tours/Lima/Sandboarding-and-off-road-in-Lima/d928-89775P1",
+    "title": "Sandboarding and Off Road in Lima (National Park Lomas de Ancón)",
+    "priceFrom": "From $192.31",
+    "price": 192.31,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 54,
+    "duration": "6 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/3a/76/6f.jpg",
+    "overview": "You don't need to travel far for an adventure during this off-roading and sandboarding tour from Lima. After a safety briefing, hit the dunes with a guide—no experience necessary. After riding sand dunes in the remote desert location, grab a sweet dessert favorited by locals on your way back into town.",
+    "itineraryStops": [
+      "Lomas de Ancón",
+      "Ancón"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Professional sandboarding equipment",
+      "Transport and off road in a 4×4 vehicle over the dunes",
+      "Certified sandboard instructor",
+      "Snacks",
+      "Private tour"
+    ],
+    "startDescription": "Hotel pickup is listed when booking. Airbnb addresses are asked to stay within a 20-mile radius of Lima.",
+    "highlights": [
+      "Private 4x4 sandboarding day at Lomas de Ancón",
+      "Guided dune driving with a certified sandboard instructor",
+      "Sandboarding equipment and snacks included",
+      "Hotel pickup and drop-off listed when booking",
+      "No prior sandboard experience required"
+    ],
+    "experienceType": "jeep-offroad",
+    "categories": ["4WD, ATV & Off-Road Tours", "Private Sightseeing Tours"]
+  },
+  {
+    "productCode": "226342P3",
+    "productUrl": "https://www.viator.com/tours/Lima/Epic-Paracas-and-Huacachina-day-trip-from-Lima-All-Included/d928-226342P3",
+    "title": "Epic Paracas & Huacachina - Day Trip From Lima",
+    "priceFrom": "From $75.00",
+    "price": 75,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 177,
+    "duration": "17 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/1f/bc.jpg",
+    "overview": "A full-day route from Lima covers a two-hour Ballestas Islands boat, wine and pisco tasting in Ica, and a two-hour dune-buggy and sandboarding window at Huacachina, with bilingual guiding and hotel or hostel pickup in Barranco, Miraflores, or San Isidro.",
+    "itineraryStops": [
+      "Islas Ballestas",
+      "Ica",
+      "Huacachina"
+    ],
+    "inclusions": [
+      "Hotel or Hostel Pick-up / Drop-off: Barranco / Miraflores/ San Isidro.",
+      "Boat tour 2hrs. Islas Ballestas",
+      "Authentic experience. Wine and Pisco tasting.",
+      "2 Hours Dune Buggy and Sandboarding Tour + Sunset",
+      "Bilingual Guide (Esp/Eng)",
+      "Private transportation 22 travelers maximum"
+    ],
+    "startDescription": "Pickup is listed for Barranco, Miraflores, and San Isidro. A meeting point at Calle Porta 145, Miraflores 15074, Peru is published for other locations.",
+    "highlights": [
+      "Full-day route from Lima to Islas Ballestas, Ica, and Huacachina",
+      "Two-hour Ballestas Islands boat included",
+      "Wine and pisco tasting in Ica",
+      "Two-hour dune-buggy and sandboarding window at Huacachina",
+      "Hotel or hostel pickup in Barranco, Miraflores, or San Isidro"
+    ],
+    "experienceType": "scenic-wine",
+    "categories": ["Day Trips", "Wine Tasting"]
+  },
+  {
+    "productCode": "141439P1",
+    "productUrl": "https://www.viator.com/tours/Lima/All-Inclusive-full-day-Experience-to-Caral-the-oldest-city-of-America-from-Lima/d928-141439P1",
+    "title": "Caral, The Oldest Civilization in the Americas:Day Trip from Lima",
+    "priceFrom": "From $140.00",
+    "price": 140,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 93,
+    "duration": "12 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/a9/27/13.jpg",
+    "overview": "Visit Peru's Supe Valley without the stress of planning logistics on this intimate small-group tour that includes admission tickets and the convenience of round-trip hotel transport. Going with a guide ensures you learn the function of unmarked ruins in Caral, the oldest center of civilization in the Americas, as well as visit a hidden gem beach town known for its views and seafood.",
+    "itineraryStops": [
+      "Caral Archaeological Zone",
+      "Barranca"
+    ],
+    "inclusions": [
+      "Pick up and drop off is included.",
+      "Exclusive Transportation from and back to Lima.",
+      "All Fees and Taxes",
+      "Entrance fee",
+      "Bilinguial Guide provided",
+      "Lunch"
+    ],
+    "startDescription": "Pickup is listed from multiple key locations in Lima when booking.",
+    "highlights": [
+      "Small-group day from Lima to the Caral Archaeological Zone",
+      "Guided visit to unmarked ruins in the Supe Valley",
+      "Published stop in Barranca after the site visit",
+      "Round-trip transport, admission, and lunch listed",
+      "Bilingual guide provided"
+    ],
+    "experienceType": "indigenous-cultural",
+    "categories": ["Historical Tours", "Day Trips"]
+  },
+  {
+    "productCode": "17020P17",
+    "productUrl": "https://www.viator.com/tours/Lima/Pachacamacs-Inka-Pyramids-Tour-including-Museum-Small-Group/d928-17020P17",
+    "title": "Pachacamac's Inka Pyramids Tour including Museum Small-Group",
+    "priceFrom": "From $55.00",
+    "price": 55,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 40,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/0b/a1.jpg",
+    "overview": "Explore an ancient Inca city just outside of Lima on a half-day, small-group tour of Pachacamac Itshma Temple. From its artifact-filled museum to the Temple of the Sun and a palace backdropped by desert scenery, Pachacamac is proof you don’t need to travel to remote parts of the country to glimpse Inca heritage. Round-trip, private transport from Lima makes this a hassle-free excursion, too, and even your tickets are booked in advance.",
+    "itineraryStops": [
+      "Pachacamac Site Museum",
+      "Temple of the Sun"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Private transport",
+      "Professional guide",
+      "All Fees and Taxes",
+      "Bottled water",
+      "Small group",
+      "Entry tickets to Pachacamac"
+    ],
+    "startDescription": "Round-trip private transport from Lima is listed when booking. The group is capped at 10.",
+    "highlights": [
+      "Small-group half-day to Pachacamac from Lima",
+      "Pachacamac Site Museum and Temple of the Sun",
+      "Entry tickets and bottled water included",
+      "Air-conditioned private transport and a professional guide",
+      "Group capped at 10"
+    ],
+    "experienceType": "indigenous-cultural",
+    "categories": ["Historical Tours", "Archaeology Tours"]
+  },
+  {
+    "productCode": "5207LIMBIKE",
+    "productUrl": "https://www.viator.com/tours/Lima/Small-Group-Lima-Coast-Bike-Tour/d928-5207LIMBIKE",
+    "title": "Explore Lima On Bike: Coast Cycling Adventure",
+    "priceFrom": "From $65.00",
+    "price": 65,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 84,
+    "duration": "3 hours 15 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/d5/51.jpg",
+    "overview": "Climb aboard your modern bicycle and begin your experience, stopping at impressive war memorials and significant historical landmarks as your guide offers insight into Lima’s colorful past. First stop to revitalize will be the charming seaside neighborhood of Chorillos where it is possible to admire outstanding views of the Pacific Ocean before riding into the bohemian barrio of Barranco, an artistic enclave in which musicians, writers and artists reign supreme.",
+    "itineraryStops": [
+      "Chorrillos",
+      "Barranco (Pass By)",
+      "Love Park (Pass By)",
+      "Miraflores (Pass By)"
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "Helmet",
+      "Professional guide"
+    ],
+    "startDescription": "Meet at Calle Alcanfores 425, Miraflores 15074, Peru, in front of Freshii. The published end point is the main gate of the Church Virgen Milagrosa in Miraflores.",
+    "highlights": [
+      "Small-group coast bike ride from Miraflores",
+      "Guided route through Chorrillos, Barranco, and Love Park",
+      "Bicycles and helmets included",
+      "Meeting point on Calle Alcanfores in Miraflores",
+      "About 3 hours 15 minutes on coastal paths"
+    ],
+    "experienceType": "bike",
+    "categories": ["Bike Tours", "City Tours"]
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "85155P2",
+    "productUrl": "https://www.viator.com/tours/Lima/Off-road-in-Marcahuasi/d928-85155P2",
+    "title": "Marcahuasi Experience in Lima",
+    "description": {
+      "text": "In Lima, this private full-day outing leaves the coastal districts for San Pedro de Casta and the Marcahuasi Stone Forest. A guide covers the off-road approach and the high plateau walk among the stone formations, with breakfast listed on the product page. Pickup is published for Lima Metropolitana so the group can stay with the plateau rather than self-driving mountain roads. The day is aimed at visitors who want a guided jeep-and-hike window without renting a 4x4 independently. Altitude and walking time still depend on conditions on the plateau. Meeting points are confirmed at booking in Lima, and the itinerary stays on San Pedro de Casta and the Marcahuasi Stone Forest that shape this inland day rather than a city-plaza or island add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $165.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 187
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/5b/b0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided day from Lima to the Marcahuasi Stone Forest",
+      "Off-road approach through San Pedro de Casta",
+      "Walk among high-plateau stone formations with a guide",
+      "Breakfast listed on the product page",
+      "Pickup published for Lima Metropolitana"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed for any place in Lima Metropolitana when booking."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this private full-day outing leaves the coastal districts for San Pedro de Casta and the Marcahuasi Stone Forest.",
+    "itineraryItems": [
+      {
+        "title": "San Pedro de Casta",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marcahuasi Stone Forest",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Marcahuasi Experience in Lima?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Pickup is listed for any place in Lima Metropolitana when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD, ATV & Off-Road Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 165
+      },
+      "currency": "USD"
+    }
+  }
+}
