@@ -1,0 +1,147 @@
+{
+  "destinationLabel": "Mexico City",
+  "destinationCitySlug": "mexico-city",
+  "viatorDestinationSlug": "Mexico-City",
+  "viatorDestinationId": "d628",
+  "catalogUrl": "https://www.viator.com/Mexico-tours/City-Tours/d76-g12-c5330",
+  "cityCatalogNote": "Live Mexico City product pages use destination id d628. The supplied d76-g12-c5330 catalog is the Mexico-country City Tours listing.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 11,
+  "premiumCount": 8,
+  "selectionNote": "Selected 11 guided Mexico City d628 products with live public USD From$ prices, combined ratings, unique 674x446 heroes, and usable itinerary POIs. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (AUD/CAD/GBP/EUR/DKK/BRL) blocked many otherwise-strong SKUs from being verified in USD. Helicopter 344755P2/P4, wine 116149P4/137460P34, Jeep 13679P1, photography 21754P11, and several private multi-day SKUs appeared in search but lacked a complete combined USD+rating+674x446 dump. Did not force hop-on/self-guided audio tickets, 4.5 Super Saver 5885MEXSUPER1, 4.1 volcano hike 5885VOLCANO, or products with unusable commercial data.",
+  "selectedProductCodes": [
+    "333644P5",
+    "247495P2",
+    "33804P2",
+    "161745P6",
+    "325968P1",
+    "33804P1",
+    "88859P7",
+    "325968P5",
+    "466992P2",
+    "382677P1",
+    "38551P1"
+  ],
+  "premiumProductCodes": [
+    "333644P5",
+    "247495P2",
+    "33804P2",
+    "161745P6",
+    "325968P1",
+    "33804P1",
+    "88859P7",
+    "382677P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "8136P6",
+      "title": "Teotihuacan Hot Air Balloon Ride with Optional Bike or Walking Tour",
+      "reason": "4.8/141 and product-specific 674x446 heroes verified, but the live dump priced in BRL only (From R$1,591.71)"
+    },
+    {
+      "productCode": "484134P1",
+      "title": "Hot Air Balloon Flight Teotihuacan With Pickup and Breakfast",
+      "reason": "4.9/428 verified but live dump priced in CAD only (From CA$236.93)"
+    },
+    {
+      "productCode": "357659P1",
+      "title": "Balloon flight + Breakfast in cave + Pyramids + Pick up CDMX.",
+      "reason": "5.0/3495 verified but live dump priced in DKK only"
+    },
+    {
+      "productCode": "392103P5",
+      "title": "100% Private Tour in Teotihuacán Pyramids from Mexico City",
+      "reason": "4.8/232 verified but live dump priced in AUD only (From A$141.11)"
+    },
+    {
+      "productCode": "91035P2",
+      "title": "Private full tour to Teotihuacan and Basilica at your own pace",
+      "reason": "5.0/129 verified but live dump priced in EUR only (From €122.70)"
+    },
+    {
+      "productCode": "140382P2",
+      "title": "Private Walking Tour Historic Center of Mexico City",
+      "reason": "4.9/83 verified but live Viator dumps priced in GBP/EUR only"
+    },
+    {
+      "productCode": "140382P3",
+      "title": "Private Walking Tour Anthropology Museum & Chapultepec Castle",
+      "reason": "5.0/72 verified but live dump priced in DKK only"
+    },
+    {
+      "productCode": "41370P14",
+      "title": "Historic Downtown Walking Tour",
+      "reason": "4.9/975 verified but live dump priced in EUR only"
+    },
+    {
+      "productCode": "5885TEO",
+      "title": "Teotihuacan Early or Afternoon Access Guided Tour with No Crowds",
+      "reason": "4.7/5821 verified but live dump priced in EUR only"
+    },
+    {
+      "productCode": "35437P4",
+      "title": "Coyoacán Walking Tour: Access to Frida Kahlo Museum & Tacos",
+      "reason": "4.9/173 verified but live dump priced in AUD only; title/activity mix walking vs bike"
+    },
+    {
+      "productCode": "19861P2",
+      "title": "Teotihuacan Pyramids, intimate Small Group from Mexico City",
+      "reason": "4.8–4.9/612 verified but no USD From$ on the live dump"
+    },
+    {
+      "productCode": "5885MEXSUPER1",
+      "title": "Xochimilco, Coyoacán & Frida Kahlo Museum",
+      "reason": "USD From$35.70 verified but weak commercial rating 4.5/6373 and large-group coach format"
+    },
+    {
+      "productCode": "343024P2",
+      "title": "Grutas de Tolantongo Tour from Mexico City (1- or 2-day)",
+      "reason": "USD From$149 verified but weak commercial rating 4.5/19; Tolantongo already covered by stronger 325968P1"
+    },
+    {
+      "productCode": "5885VOLCANO",
+      "title": "Iztaccihuatl Volcano Hike with an Alpinist",
+      "reason": "USD From$120 verified but weak commercial rating 4.1/234"
+    },
+    {
+      "productCode": "193670P7",
+      "title": "Pyramids of Teotihuacan and restaurant la Gruta (Original)",
+      "reason": "USD From$27.00 and 4.7/242 verified; rejected as a weak budget filler beside stronger Teotihuacan SKUs"
+    },
+    {
+      "productCode": "9483P96",
+      "title": "Private Mexico City Tour with Chapultepec Castle Visit",
+      "reason": "USD From$250 appeared with 5.0/3; too few reviews for commercial quality"
+    },
+    {
+      "productCode": "13679P1",
+      "title": "Volcano Tour to Iztaccihuatl",
+      "reason": "Preferred Jeep SKU; USD From$369.24 appeared with 5.0/2; too few reviews and no complete hero dump"
+    },
+    {
+      "productCode": "344755P2",
+      "title": "30 min Private Helicopter Tour in Mexico City",
+      "reason": "Preferred helicopter SKU; no complete live USD From$ + rating + 674x446 dump (DataDome)"
+    },
+    {
+      "productCode": "116149P4",
+      "title": "2 days Cycling & Adventure, WINE and CHEESE in Queretaro with NOMAD Adventures",
+      "reason": "Preferred wine + bike SKU; no complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "137460P34",
+      "title": "Private Wine and Cheese Tasting in Queretaro from Mexico City",
+      "reason": "Preferred private wine SKU; no complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "21754P11",
+      "title": "Photo Session in Mexico City",
+      "reason": "Preferred photography SKU; no complete live USD From$ + rating + 674x446 dump"
+    },
+    {
+      "productCode": "343024P9",
+      "title": "Xochimilco Tour: Coyoacan and Frida Kahlo Museum in Mexico City",
+      "reason": "Private canal/Frida SKU; live dump priced in CAD only; near-duplicate of selected 33804P2"
+    }
+  ]
+}

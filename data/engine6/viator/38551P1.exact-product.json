@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "38551P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Historical-Bike-Tour-in-Mexico-City-Chapultepec-Reforma-and-Downtown/d628-38551P1",
+    "title": "The Emperor Route, Chapultepec & Paseo de la Reforma Historical bike tour",
+    "description": {
+      "text": "A four-hour small-group bike ride follows Paseo de la Reforma into Chapultepec Park, using one of Mexico City's longest dedicated bike lanes. A local guide supplies the bicycle, helmet, water, and a street-food snack. Stops include Paseo de la Reforma, Chapultepec Park. Morning or afternoon departures keep the Emperor Route monuments and park paths on a paced ride rather than an independent rental. Ideal for visitors basing in Mexico City who want a guided bike outing covering Reforma and Chapultepec without navigating traffic alone."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $53.80",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 80
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/40/e2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join a small group guided by a local to cycle through the Emperor route",
+      "See monuments and sculptures that tell stories of epic battles and legends",
+      "Try street food snacks including tacos, chilaquiles, and gorditas",
+      "Cycle in Chapultepec Park"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the cycling guide at the confirmed Mexico City meeting point listed when booking."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A four-hour small-group bike ride follows Paseo de la Reforma into Chapultepec Park, using one of Mexico City's longest dedicated bike lanes.",
+    "itineraryItems": [
+      {
+        "title": "Paseo de la Reforma",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chapultepec Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Dedicated local guide",
+      "Use of bicycle",
+      "Use of helmet",
+      "Bottled water",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Emperor Route, Chapultepec & Paseo de la Reforma Historical bike tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Meet the cycling guide at the confirmed Mexico City meeting point listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Walking and Biking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 53.8
+      },
+      "currency": "USD"
+    }
+  }
+}

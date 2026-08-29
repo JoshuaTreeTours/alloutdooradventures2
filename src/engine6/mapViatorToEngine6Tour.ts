@@ -13,6 +13,7 @@ import {
   stripEngine6AdmissionArtifacts,
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
+import { getMexicoCityTargetedNarrativeDescription } from "./mexicoCityApprovedNarrativeDescriptions";
 
 const shouldLogEngine6LocationDiagnostics = () =>
   process.env.ENGINE6_LOCATION_DIAGNOSTICS === "1";
@@ -365,7 +366,10 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
 };
 
 export const hasEngine6ReviewedOverviewOverride = (productCode: string) =>
-  Boolean(ENGINE6_OVERVIEW_OVERRIDES[productCode.trim()]);
+  Boolean(
+    ENGINE6_OVERVIEW_OVERRIDES[productCode.trim()] ||
+      getMexicoCityTargetedNarrativeDescription(productCode)
+  );
 
 const toSentence = (value: string) => {
   const trimmed = value.trim().replace(/\s+/g, " ");
@@ -1200,13 +1204,12 @@ export const mapViatorToEngine6Tour = (
     meetingPointText: payload.extracted.meetingPointText ?? null,
     sourceOverview: sourceOverviewText,
   });
-  const overriddenOverview = ENGINE6_OVERVIEW_OVERRIDES[
-    payload.rawProductCode
-  ]?.({
-    city,
-    state,
-    sourceOverview: sourceOverviewText,
-  });
+  const overriddenOverview =
+    ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
+      city,
+      state,
+      sourceOverview: sourceOverviewText,
+    }) ?? getMexicoCityTargetedNarrativeDescription(payload.rawProductCode);
   const governedOverview =
     isEngine6NewBuildProductCode(payload.rawProductCode) &&
     !hasEngine6ReviewedOverviewOverride(payload.rawProductCode)

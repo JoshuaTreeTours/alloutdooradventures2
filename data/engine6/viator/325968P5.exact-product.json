@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "325968P5",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Teotihuacan-Pyramids-Subterranean-Caves-and-Culinary-Experience/d628-325968P5",
+    "title": "Teotihuacan: Pyramids, Caves & Culinary Experience",
+    "description": {
+      "text": "A small-group day from central Mexico City covers Teotihuacan in seven to eight hours, with time at the Temple of Quetzalcóatl and the Pyramid of the Sun plus a descent into caves below the ancient city. Round-trip transfer and a five-course local lunch are included; optional mezcal and tequila tastings can follow. Stops include Temple of Quetzalcóatl, Pyramid of the Sun, Teotihuacan Caves. Guide commentary stays with pyramid plazas and underground chambers rather than a rushed photo loop. Ideal for visitors basing in Mexico City who want a guided Teotihuacan day with lunch handled on site."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 55
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/d8/ae/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Gain a comprehensive overview of Teotihuacan",
+      "Enjoy the personalized service of a small-group tour",
+      "Indulge in a local 5-course lunch, included in the price"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Round-trip transfer from central Mexico City."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A small-group day from central Mexico City covers Teotihuacan in seven to eight hours, with time at the Temple of Quetzalcóatl and the Pyramid of the Sun plus a descent into caves below the ancient city.",
+    "itineraryItems": [
+      {
+        "title": "Temple of Quetzalcóatl",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyramid of the Sun",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teotihuacan Caves",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "5-course Mexican lunch",
+      "Coffee and/or tea",
+      "Bottled water",
+      "Round-trip transfer from central Mexico City"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Teotihuacan: Pyramids, Caves & Culinary Experience?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Round-trip transfer from central Mexico City."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

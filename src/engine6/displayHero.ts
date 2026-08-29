@@ -64,6 +64,9 @@ export const ENGINE6_LONDON_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_EDINBURGH_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/ac/f1.jpg";
 
+export const ENGINE6_MEXICO_CITY_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg";
+
 export const ENGINE6_PARIS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg";
 
@@ -181,6 +184,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   scotland: {
     edinburgh: ENGINE6_EDINBURGH_CANONICAL_CITY_HERO_URL,
+  },
+  mexico: {
+    "mexico-city": ENGINE6_MEXICO_CITY_CANONICAL_CITY_HERO_URL,
   },
   france: {
     paris: ENGINE6_PARIS_CANONICAL_CITY_HERO_URL,

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "161745P6",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Pyramids-of-Teotihuacan-Private-Tour/d628-161745P6",
+    "title": "Pyramids of Teotihuacan Private Tour",
+    "description": {
+      "text": "A private vehicle leaves Mexico City for Teotihuacan on a five-to-seven-hour outing reserved for one party. The guide covers the Pyramid of the Sun, Pyramid of the Moon, and the Avenue of the Dead, with snacks, bottled water, and site fees included. Stops include Teotihuacan, Pyramid of the Sun, Pyramid of the Moon. Hotel or vacation-rental pickup is arranged so the group avoids the public-bus transfer to the pyramids. Ideal for visitors basing in Mexico City who want a private Teotihuacan morning without joining a mixed coach."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "5 to 7 hours (approx.)",
+    "priceFrom": "From $148.44",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 99
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/99/99/9a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Teotihuacan day from Mexico City",
+      "Hotel or vacation-rental pickup arranged on request",
+      "Snacks and bottled water included",
+      "Flexible five-to-seven-hour private pacing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from a Mexico City hotel or listed vacation rental."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A private vehicle leaves Mexico City for Teotihuacan on a five-to-seven-hour outing reserved for one party.",
+    "itineraryItems": [
+      {
+        "title": "Teotihuacan",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyramid of the Sun",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyramid of the Moon",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All fees and taxes",
+      "Snacks",
+      "Bottled water",
+      "Private guide and vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Pyramids of Teotihuacan Private Tour?",
+        "answer": "The planned duration is 5 to 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Pickup from a Mexico City hotel or listed vacation rental."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 148.44
+      },
+      "currency": "USD"
+    }
+  }
+}

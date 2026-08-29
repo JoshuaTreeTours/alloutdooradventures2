@@ -9,8 +9,8 @@ export interface MexicoCityTourRow {
   slug: string;
   country: "Mexico";
   countrySlug: "mexico";
-  city: "Ciudad De México";
-  citySlug: "ciudad-de-mexico";
+  city: "Mexico City";
+  citySlug: "mexico-city";
   image: string;
   bookingUrl: string;
   providerName: string;
@@ -47,7 +47,7 @@ const resolveSlug = (record: Record<string, string>, title: string, id: string) 
     return fromTitle;
   }
 
-  return slugify(id) || "ciudad-de-mexico-tour";
+  return slugify(id) || "mexico-city-tour";
 };
 
 const resolveItemId = (record: Record<string, string>) =>
@@ -110,8 +110,8 @@ export function loadMexicoCityTours(): MexicoCityTourRow[] {
           slug: resolveSlug(record, item_name, item_id),
           country: "Mexico",
           countrySlug: "mexico",
-          city: "Ciudad De México",
-          citySlug: "ciudad-de-mexico",
+          city: "Mexico City",
+          citySlug: "mexico-city",
           image: clean(record.image_url || record.image || record.photo),
           bookingUrl: clean(
             record.regular_link || record.booking_url || record.calendar_link

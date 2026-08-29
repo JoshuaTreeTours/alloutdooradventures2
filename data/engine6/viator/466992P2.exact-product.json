@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "466992P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Hiking-to-the-Puerta-del-Cielo-Viewpoint-in-Mexico-City/d628-466992P2",
+    "title": "Hiking to the Puerta del Cielo Viewpoint in Mexico City",
+    "description": {
+      "text": "A six-hour guided hike from Mexico City reaches the Puerta del Cielo viewpoint, with a ladder section, canyon overlooks, and a river-corridor return. Helmet, safety harness, bottled water, and park access fees are included. Stops include Fuente de Cibeles, Puerta del Cielo. The group meets at Fuente de Cibeles in Roma Norte beside the CDMX sign, then rides about 45 minutes to the trailhead. Ideal for visitors basing in Mexico City who want an intermediate highland hike without arranging trail transport or safety gear independently."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $93.11",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 18
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/42/eb/83.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided hike to Puerta del Cielo from Mexico City",
+      "Helmet and safety harness included",
+      "Small-group pacing with a local geology-minded guide",
+      "Return along a river corridor after the viewpoint"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Fuente de Cibeles, Plaza Villa de Madrid, Roma Norte, beside the CDMX sign."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A six-hour guided hike from Mexico City reaches the Puerta del Cielo viewpoint, with a ladder section, canyon overlooks, and a river-corridor return.",
+    "itineraryItems": [
+      {
+        "title": "Fuente de Cibeles",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Puerta del Cielo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet and safety harness",
+      "Bottled water",
+      "Park access fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hiking to the Puerta del Cielo Viewpoint in Mexico City?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Meet at Fuente de Cibeles, Plaza Villa de Madrid, Roma Norte, beside the CDMX sign."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 93.11
+      },
+      "currency": "USD"
+    }
+  }
+}

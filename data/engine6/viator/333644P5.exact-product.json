@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "333644P5",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Full-Day-in-the-Teotihuacan-Archaeological-Zone-and-Balloon-Ride/d628-333644P5",
+    "title": "Balloon flight with private transportation and guided tour to Teotihuacán",
+    "description": {
+      "text": "Leave Mexico City by private vehicle for a sunrise hot-air balloon over Teotihuacan, then walk the archaeological zone with a SECTUR-certified guide. The eight-hour day includes hotel pickup from Reforma, Roma, Condesa, Polanco, or Centro, a 40-to-50-minute shared flight, breakfast, and a flight certificate. Stops include Teotihuacan, Pyramid of the Sun, Pyramid of the Moon. Private ground transport keeps the early departure coordinated so the group reaches the launch field without arranging a separate transfer. Ideal for visitors basing in Mexico City who want a balloon and pyramid day without self-driving the highland highway."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $341.69",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 101
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/90/1b/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private hotel pickup from central Mexico City districts",
+      "Shared hot-air balloon flight over Teotihuacan",
+      "Guided visit to the Teotihuacan archaeological zone",
+      "Breakfast and flight certificate included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup from accommodations in Paseo de la Reforma, Zona Rosa, Condesa, La Roma, Polanco, Zona Centro, Hipódromo, and Anzures."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Leave Mexico City by private vehicle for a sunrise hot-air balloon over Teotihuacan, then walk the archaeological zone with a SECTUR-certified guide.",
+    "itineraryItems": [
+      {
+        "title": "Teotihuacan",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyramid of the Sun",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pyramid of the Moon",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Breakfast at local restaurant",
+      "40 to 50 minutes of shared balloon flight",
+      "Entrance and guided visit to Teotihuacan",
+      "SECTUR-certified Spanish-English guide",
+      "Flight certificate"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Balloon flight with private transportation and guided tour to Teotihuacán?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Private pickup from accommodations in Paseo de la Reforma, Zona Rosa, Condesa, La Roma, Polanco, Zona Centro, Hipódromo, and Anzures."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air, Helicopter & Balloon Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 341.69
+      },
+      "currency": "USD"
+    }
+  }
+}

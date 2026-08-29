@@ -43,6 +43,7 @@ import {
   buildInternationalCountryOptions,
   CANADA_COUNTRY_NAME,
   getMexicoCityKey,
+  isCanonicalMexicoCitySelection,
   MEXICO_COUNTRY_NAME,
   SCOTLAND_REGION_NAME,
   resolveInternationalCitySelectionRoute,
@@ -387,39 +388,45 @@ export default function ToursLanding() {
 
     if (selectedCountry && selectedInternationalCity) {
       if (selectedCountry === MEXICO_COUNTRY_NAME) {
-        nextTours = mexicoTours
-          .filter(
-            tour =>
-              getMexicoCityKey(tour.geo.city, tour.sourceCitySlug) ===
-              selectedInternationalCity
-          )
-          .map(tour => ({
-            tour: {
-              id: tour.id,
-              slug: tour.slug,
-              title: tour.name,
-              description: tour.seo.description,
-              image: tour.images.hero ?? "",
-              price: tour.pricing?.price ? `$${tour.pricing.price}` : undefined,
-              duration: "",
-              difficulty: "",
-              activityType: "Adventure",
-              activitySlugs: ["adventure"],
-              destination: {
-                state: "Mexico",
-                stateSlug: "mexico",
-                city: tour.geo.city,
-                citySlug: tour.sourceCitySlug,
-                country: "Mexico",
-                lat: tour.geo.lat ?? undefined,
-                lng: tour.geo.lng ?? undefined,
+        if (isCanonicalMexicoCitySelection(selectedInternationalCity)) {
+          nextTours = getToursByCityUnified("mexico", "mexico-city");
+        } else {
+          nextTours = mexicoTours
+            .filter(
+              tour =>
+                getMexicoCityKey(tour.geo.city, tour.sourceCitySlug) ===
+                selectedInternationalCity
+            )
+            .map(tour => ({
+              tour: {
+                id: tour.id,
+                slug: tour.slug,
+                title: tour.name,
+                description: tour.seo.description,
+                image: tour.images.hero ?? "",
+                price: tour.pricing?.price
+                  ? `$${tour.pricing.price}`
+                  : undefined,
+                duration: "",
+                difficulty: "",
+                activityType: "Adventure",
+                activitySlugs: ["adventure"],
+                destination: {
+                  state: "Mexico",
+                  stateSlug: "mexico",
+                  city: tour.geo.city,
+                  citySlug: tour.sourceCitySlug,
+                  country: "Mexico",
+                  lat: tour.geo.lat ?? undefined,
+                  lng: tour.geo.lng ?? undefined,
+                },
+                bookingUrl: tour.booking.bookingUrl,
+                operator: tour.provider.name,
+                source: "manual",
               },
-              bookingUrl: tour.booking.bookingUrl,
-              operator: tour.provider.name,
-              source: "manual",
-            },
-            href: tour.seo.canonicalPath,
-          }));
+              href: tour.seo.canonicalPath,
+            }));
+        }
       } else {
         const selectedCitySlug = selectedInternationalCity;
 

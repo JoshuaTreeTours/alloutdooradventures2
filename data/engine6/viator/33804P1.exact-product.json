@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "33804P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Private-Tour-Teotihuacan-and-Guadalupe-Shrine/d628-33804P1",
+    "title": "Private Tour: Teotihuacan and Guadalupe Shrine",
+    "description": {
+      "text": "A private Mexico City guide leads one party to Tlatelolco, the Basilica of Guadalupe, and Teotihuacan on a six-hour door-to-door outing. Hotel pickup from Polanco, Condesa, Roma, Centro, Reforma, or Santa Fe, site tickets, and bottled water are included. Stops include Zona Arqueologica Tlatelolco, the Basilica of Guadalupe, and the Teotihuacan Pyramids. The private format keeps Aztec ruins, the pilgrimage shrine, and the pyramid avenue on one circuit instead of three separate transfers. Commentary stays with Tlatelolco plaza layers, the Guadalupe shrine complex, and the Avenue of the Dead rather than a rushed photo loop. Ideal for visitors basing in Mexico City who want a guided Teotihuacan and Guadalupe day without a large coach."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $139.99",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 862
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/83.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Tlatelolco, an Aztec archaeological site in Mexico City",
+      "Visit the Basilica of Our Lady of Guadalupe",
+      "Discover pre-Hispanic pyramids at Teotihuacan",
+      "Two-way transfers from Polanco, Condesa, Roma, Centro, Reforma, and Santa Fe"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Polanco, Condesa, Roma, Centro, Reforma, and Santa Fe."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A private Mexico City guide leads one party to Tlatelolco, the Basilica of Guadalupe, and Teotihuacan on a six-hour door-to-door outing.",
+    "itineraryItems": [
+      {
+        "title": "Zona Arqueologica Tlatelolco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilica of Our Lady of Guadalupe",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teotihuacan Pyramids",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Private guide",
+      "Tickets",
+      "Bottled water",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Teotihuacan and Guadalupe Shrine?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Hotel pickup from Polanco, Condesa, Roma, Centro, Reforma, and Santa Fe."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139.99
+      },
+      "currency": "USD"
+    }
+  }
+}

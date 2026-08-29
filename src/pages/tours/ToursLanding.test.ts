@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { getToursByCityUnified, tours } from "../../data/tours";
+import { getEngine2MexicoTours } from "../../engine2/data/loadEngine2";
 import type { Engine6LiveProductFields } from "../../engine6/liveProductFields";
 import {
   hydrateEngine6ListingEntries,
@@ -167,5 +168,56 @@ describe("ToursLanding international inventory selector", () => {
         citySlug: "edinburgh",
       })
     ).toBe("/destinations/scotland/edinburgh/");
+  });
+});
+
+describe("Mexico City destination-selector normalization", () => {
+  it("exposes one Mexico City destination and no competing Ciudad De México entry", () => {
+    const mexicoTours = getEngine2MexicoTours();
+    const mexicoCities = buildInternationalCityOptions({
+      selectedCountry: "Mexico",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: tours,
+      canadaProvinces: [],
+      mexicoTours,
+    });
+
+    const mexicoCityEntries = mexicoCities.filter(
+      city =>
+        city.slug === "mexico-city" ||
+        city.slug === "ciudad-de-mexico" ||
+        /ciudad de m[eé]xico/i.test(city.name) ||
+        /mexico city/i.test(city.name)
+    );
+
+    expect(mexicoCityEntries).toHaveLength(1);
+    expect(mexicoCityEntries[0]).toEqual({
+      name: "Mexico City",
+      slug: "mexico-city",
+    });
+    expect(mexicoCities.map(city => city.name)).not.toContain(
+      "Ciudad De México"
+    );
+    expect(mexicoCities.map(city => city.slug)).not.toContain(
+      "ciudad-de-mexico"
+    );
+  });
+
+  it("routes Mexico → Mexico City to the canonical destination path", () => {
+    expect(
+      resolveInternationalCitySelectionRoute({
+        selectedCountry: "Mexico",
+        citySlug: "mexico-city",
+      })
+    ).toBe("/destinations/mexico/mexico-city/tours");
+  });
+
+  it("keeps the old Ciudad De México slug backward-compatible via alias routing", () => {
+    expect(
+      resolveInternationalCitySelectionRoute({
+        selectedCountry: "Mexico",
+        citySlug: "ciudad-de-mexico",
+      })
+    ).toBe("/destinations/mexico/ciudad-de-mexico/tours");
   });
 });
