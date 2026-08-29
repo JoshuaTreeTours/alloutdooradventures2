@@ -19,12 +19,16 @@ export const getGeneratedCountryDestinationHref = (
     return `/destinations/europe/${normalizedSlug}`;
   }
 
-  if (worldDestinationSlugs.has(normalizedSlug)) {
-    return `/destinations/world/${normalizedSlug}`;
-  }
-
   if (normalizedSlug === "mexico") {
     return "/destinations/mexico";
+  }
+
+  if (normalizedSlug === "peru") {
+    return "/destinations/peru";
+  }
+
+  if (worldDestinationSlugs.has(normalizedSlug)) {
+    return `/destinations/world/${normalizedSlug}`;
   }
 
   return null;
@@ -71,6 +75,10 @@ export const getGeneratedCityDestinationHref = (
 
   if (countryHref === "/destinations/mexico") {
     return `/destinations/mexico/${citySlug}`;
+  }
+
+  if (countryHref === "/destinations/peru") {
+    return `/destinations/peru/${citySlug}`;
   }
 
   return null;

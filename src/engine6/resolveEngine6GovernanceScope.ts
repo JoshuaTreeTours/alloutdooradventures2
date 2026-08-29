@@ -44,6 +44,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     cancun: ["Cancun"],
     "puerto-vallarta": ["Puerto Vallarta"],
     "cabo-san-lucas": ["Cabo San Lucas"],
+    cusco: ["Cusco"],
+    peru: ["Cusco"],
     mexico: ["Mexico City", "Cancun", "Puerto Vallarta", "Cabo San Lucas"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],

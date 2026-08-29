@@ -1458,6 +1458,44 @@ export const isEngine6PuertoVallartaTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_PUERTO_VALLARTA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CUSCO_89089P57_PRODUCT_CODE = "89089P57";
+export const ENGINE6_CUSCO_89089P57_ROUTE =
+  "/destinations/peru/cusco/tours/excursi-n-to-humantay-lake-full-day-from-cusco-89089P57";
+export const ENGINE6_CUSCO_49313P1_PRODUCT_CODE = "49313P1";
+export const ENGINE6_CUSCO_49313P1_ROUTE =
+  "/destinations/peru/cusco/tours/rainbow-mountain-trek-from-cusco-with-breakfast-lunch-f-49313P1";
+export const ENGINE6_CUSCO_120993P16_PRODUCT_CODE = "120993P16";
+export const ENGINE6_CUSCO_120993P16_ROUTE =
+  "/destinations/peru/cusco/tours/cusco-city-tour-four-ruins-half-day-tour-120993P16";
+export const ENGINE6_CUSCO_200691P13_PRODUCT_CODE = "200691P13";
+export const ENGINE6_CUSCO_200691P13_ROUTE =
+  "/destinations/peru/cusco/tours/sacred-valley-of-the-inkas-full-day-tour-200691P13";
+export const ENGINE6_CUSCO_173630P1_PRODUCT_CODE = "173630P1";
+export const ENGINE6_CUSCO_173630P1_ROUTE =
+  "/destinations/peru/cusco/tours/full-day-rainbow-mountain-adventure-with-atv-173630P1";
+export const ENGINE6_CUSCO_44685P2_PRODUCT_CODE = "44685P2";
+export const ENGINE6_CUSCO_44685P2_ROUTE =
+  "/destinations/peru/cusco/tours/cusco-by-night-planetarium-cusco-dinner-and-pisco-sour-44685P2";
+export const ENGINE6_CUSCO_101268P6_PRODUCT_CODE = "101268P6";
+export const ENGINE6_CUSCO_101268P6_ROUTE =
+  "/destinations/peru/cusco/tours/experience-the-magic-of-andean-textiles-weaving-worksho-101268P6";
+export const ENGINE6_CUSCO_168853P1_PRODUCT_CODE = "168853P1";
+export const ENGINE6_CUSCO_168853P1_ROUTE =
+  "/destinations/peru/cusco/tours/full-day-tour-to-machu-picchu-from-cusco-168853P1";
+export const ENGINE6_CUSCO_19345P9_PRODUCT_CODE = "19345P9";
+export const ENGINE6_CUSCO_19345P9_ROUTE =
+  "/destinations/peru/cusco/tours/2-day-tour-sacred-valley-and-machu-picchu-by-train-19345P9";
+export const ENGINE6_CUSCO_19345P27_PRODUCT_CODE = "19345P27";
+export const ENGINE6_CUSCO_19345P27_ROUTE =
+  "/destinations/peru/cusco/tours/machu-picchu-private-full-day-tour-from-cusco-19345P27";
+
+export const ENGINE6_CUSCO_TOUR_PATH_PREFIX =
+  "/destinations/peru/cusco/tours/";
+
+export const isEngine6CuscoTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_PRODUCT_CODE = "3714LUXSUNSET";
 export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE =
   "/destinations/mexico/cabo-san-lucas/tours/los-cabos-luxury-sunset-sail-with-light-appetizers-and-3714LUXSUNSET";
@@ -4833,6 +4871,46 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PUERTO_VALLARTA_46209P5_ROUTE,
     ENGINE6_PUERTO_VALLARTA_46209P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_89089P57_ROUTE,
+    ENGINE6_CUSCO_89089P57_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_49313P1_ROUTE,
+    ENGINE6_CUSCO_49313P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_120993P16_ROUTE,
+    ENGINE6_CUSCO_120993P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_200691P13_ROUTE,
+    ENGINE6_CUSCO_200691P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_173630P1_ROUTE,
+    ENGINE6_CUSCO_173630P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_44685P2_ROUTE,
+    ENGINE6_CUSCO_44685P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_101268P6_ROUTE,
+    ENGINE6_CUSCO_101268P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_168853P1_ROUTE,
+    ENGINE6_CUSCO_168853P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_19345P9_ROUTE,
+    ENGINE6_CUSCO_19345P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CUSCO_19345P27_ROUTE,
+    ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
   ],
   [
     ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE,

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "49313P1",
+    "productUrl": "https://www.viator.com/tours/Cusco/Rainbow-Mountain-Day-Trip-from-Cusco/d937-49313P1",
+    "title": "Rainbow Mountain Trek from Cusco with Breakfast & Lunch -Full Day",
+    "description": {
+      "text": "In Cusco, this full-day Rainbow Mountain trek drives through highland countryside to Quessiuno for breakfast before the hike to Vinicunca Mountain. A guide covers local flora and fauna on the climb, with optional horses available in the first town at extra cost. Breakfast and lunch are included; the mountain entrance fee is collected separately in soles. Drop-off is at Plaza Regocijo, one block from the central plaza. The published duration is about 12 hours, and the summit window looks toward snow-capped Ausangate when weather is clear. The format suits visitors who want a guided colored-mountain day without self-driving the dirt approach. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Quessiuno and Vinicunca Mountain that shape this hike rather than a Palcoyo or ATV variant."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 702
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/7e/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Travel for a few hours from Cusco through the rugged mountain countryside of Peru to reach the aptly named Rainbow Mount",
+      "Hike with a guide to the summit, or rent a horse (own expense) for easier access to the same views",
+      "Entrance to the mountain is not included",
+      "Rainbow Mountain Trek from Cusco with Breakfast & Lunch -Full Day near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Exact hotel pickup time is provided 24 hours before travel. Drop-off is at Plaza Regocijo, one block from the central plaza."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this full-day Rainbow Mountain trek drives through highland countryside to Quessiuno for breakfast before the hike to Vinicunca Mountain.",
+    "itineraryItems": [
+      {
+        "title": "Quessiuno",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vinicunca Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Plaza Regocijo (Kusipata)",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Transportation",
+      "Breakfast and lunch",
+      "Professional multi-lingual guide",
+      "Hotel pick up",
+      "First Aid Kit",
+      "Oxygen"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rainbow Mountain Trek from Cusco with Breakfast & Lunch -Full Day?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Exact hotel pickup time is provided 24 hours before travel. Drop-off is at Plaza Regocijo, one block from the central plaza."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}

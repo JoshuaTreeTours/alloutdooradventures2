@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "200691P13",
+    "productUrl": "https://www.viator.com/tours/Cusco/Sacred-valley-of-the-Inkas-Premium-Full-Day-Tour/d937-200691P13",
+    "title": "Sacred Valley of the Inkas Full Day Tour",
+    "description": {
+      "text": "In Cusco, this full-day Sacred Valley outing covers Pisac, Ollantaytambo, Moray, Chinchero, and the Salinas de Maras salt mines in one published circuit. Lunch and a craft-workshop stop in colonial Chinchero are listed so the day stays with Inka sites rather than a self-drive ticket hop. Shared transport handles the valley distances across the 11-to-12-hour window. The format suits visitors who want a longer guided sightseeing day without booking each ruin separately or coordinating Moray and Maras entrance cash on their own schedule. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Pisac, Ollantaytambo, Moray, Chinchero, and Salinas de Maras that shape this valley day rather than a Machu Picchu train add-on or a city-ruins half day."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "11 to 12 hours (approx.)",
+    "priceFrom": "From $39.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 247
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/32/5a/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit the top five attractions in Peru’s Sacred Valley on a group tour from Cusco",
+      "All-inclusive transportation enables a single day covering Ollantaytambo, Moray, Chinchero, Pisac, and the Salinas de Ma",
+      "Along the way, lunch and a visit to a craft workshop in colonial Chinchero are listed",
+      "Sacred Valley of the Inkas Full Day Tour near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed from Cusco hotels on the published morning departure."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this full-day Sacred Valley outing covers Pisac, Ollantaytambo, Moray, Chinchero, and the Salinas de Maras salt mines in one published circuit.",
+    "itineraryItems": [
+      {
+        "title": "Pisac",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ollantaytambo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moray",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinchero",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Salinas de Maras",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Transportation",
+      "Lunch",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sacred Valley of the Inkas Full Day Tour?",
+        "answer": "The planned duration is 11 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Hotel pickup is listed from Cusco hotels on the published morning departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39
+      },
+      "currency": "USD"
+    }
+  }
+}

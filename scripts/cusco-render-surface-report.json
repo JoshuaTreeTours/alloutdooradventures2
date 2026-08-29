@@ -1,0 +1,159 @@
+{
+  "selectedCount": 10,
+  "listingCount": 10,
+  "listingMatchesSelection": true,
+  "okCount": 10,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "89089P57",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/excursi-n-to-humantay-lake-full-day-from-cusco-89089P57",
+      "title": "Excursión to Humantay Lake Full Day from Cusco",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/23/28.jpg",
+      "card": "In Cusco, this full-day Humantay Lake outing leaves the city for Mollepata and the Soraypampa Trek, a circular walk of about 2.7 miles to th",
+      "itineraryTitles": [
+        "Mollepata",
+        "Soraypampa",
+        "Humantay Lake"
+      ],
+      "issues": []
+    },
+    {
+      "code": "49313P1",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/rainbow-mountain-trek-from-cusco-with-breakfast-lunch-f-49313P1",
+      "title": "Rainbow Mountain Trek from Cusco with Breakfast & Lunch -Full Day",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/7e/d9.jpg",
+      "card": "In Cusco, this full-day Rainbow Mountain trek drives through highland countryside to Quessiuno for breakfast before the hike to Vinicunca Mo",
+      "itineraryTitles": [
+        "Quessiuno",
+        "Vinicunca Mountain",
+        "Plaza Regocijo (Kusipata)"
+      ],
+      "issues": []
+    },
+    {
+      "code": "120993P16",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/cusco-city-tour-four-ruins-half-day-tour-120993P16",
+      "title": "Cusco City Tour Four Ruins Half-Day Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c0/a3/ce.jpg",
+      "card": "In Cusco, this half-day small-group circuit covers Coricancha, then the hillside ruins of Sacsayhuaman, Qenko, Puca Pucara, and Tambomachay.",
+      "itineraryTitles": [
+        "Coricancha",
+        "Sacsayhuaman",
+        "Qenko",
+        "Puca Pucara",
+        "Tambomachay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "200691P13",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/sacred-valley-of-the-inkas-full-day-tour-200691P13",
+      "title": "Sacred Valley of the Inkas Full Day Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/32/5a/90.jpg",
+      "card": "In Cusco, this full-day Sacred Valley outing covers Pisac, Ollantaytambo, Moray, Chinchero, and the Salinas de Maras salt mines in one publi",
+      "itineraryTitles": [
+        "Pisac",
+        "Ollantaytambo",
+        "Moray",
+        "Chinchero",
+        "Salinas de Maras"
+      ],
+      "issues": []
+    },
+    {
+      "code": "173630P1",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/full-day-rainbow-mountain-adventure-with-atv-173630P1",
+      "title": "Full-Day Rainbow Mountain Adventure with ATV",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/51/f2/32.jpg",
+      "card": "In Cusco, this small-group Rainbow Mountain day uses an ATV from Japura so the group can reach Vinicunca Mountain without the long uphill hi",
+      "itineraryTitles": [
+        "Japura",
+        "Vinicunca Mountain"
+      ],
+      "issues": []
+    },
+    {
+      "code": "44685P2",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/cusco-by-night-planetarium-cusco-dinner-and-pisco-sour-44685P2",
+      "title": "Cusco by Night: Planetarium Cusco, Dinner, and Pisco Sour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/5a/6e.jpg",
+      "card": "In Cusco, this evening outing pairs Planetarium Cusco stargazing with illuminated historic-center landmarks, a traditional dinner, and one P",
+      "itineraryTitles": [
+        "Plaza de Armas",
+        "Planetarium Cusco",
+        "Cusco Historic Center"
+      ],
+      "issues": []
+    },
+    {
+      "code": "101268P6",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/experience-the-magic-of-andean-textiles-weaving-worksho-101268P6",
+      "title": "Experience the Magic of Andean Textiles: Weaving workshop - Cusco",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/be/d2/26.jpg",
+      "card": "In Cusco, this Sacred Valley textile workshop is led by master weavers who demonstrate natural dyeing and loom techniques, then time at the ",
+      "itineraryTitles": [
+        "Sacred Valley",
+        "Andean textile workshop"
+      ],
+      "issues": []
+    },
+    {
+      "code": "168853P1",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/full-day-tour-to-machu-picchu-from-cusco-168853P1",
+      "title": "Full Day Tour to Machu Picchu From Cusco",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2e/1a/ce.jpg",
+      "card": "In Cusco, this full-day Machu Picchu outing includes a pre-departure briefing, transport to the Ollantaytambo station, round-trip train tick",
+      "itineraryTitles": [
+        "Ollantaytambo",
+        "Aguas Calientes",
+        "Machu Picchu"
+      ],
+      "issues": []
+    },
+    {
+      "code": "19345P9",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/2-day-tour-sacred-valley-and-machu-picchu-by-train-19345P9",
+      "title": "2-Day Tour: Sacred Valley and Machu Picchu by Train",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/ef/b0.jpg",
+      "card": "In Cusco, this two-day itinerary spends the first day on Awana Kancha, Taray, Pisac, Pisac Market, Urubamba, and Ollantaytambo before the In",
+      "itineraryTitles": [
+        "Cusco",
+        "Awana Kancha",
+        "Taray",
+        "Pisac",
+        "Pisac Market",
+        "Urubamba",
+        "Ollantaytambo",
+        "Aguas Calientes",
+        "Machu Picchu"
+      ],
+      "issues": []
+    },
+    {
+      "code": "19345P27",
+      "ok": true,
+      "path": "/destinations/peru/cusco/tours/machu-picchu-private-full-day-tour-from-cusco-19345P27",
+      "title": "Machu Picchu Private Full-Day Tour from Cusco",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/3a/db.jpg",
+      "card": "In Cusco, this private full-day Machu Picchu outing keeps the train, buffet lunch, and citadel walk on one party, with hotel pickup and priv",
+      "itineraryTitles": [
+        "Cusco",
+        "Sacred Valley",
+        "Aguas Calientes",
+        "Machu Picchu",
+        "Ollantaytambo"
+      ],
+      "issues": []
+    }
+  ]
+}

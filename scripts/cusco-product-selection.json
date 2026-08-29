@@ -1,0 +1,198 @@
+{
+  "destinationLabel": "Cusco",
+  "destinationCitySlug": "cusco",
+  "viatorDestinationSlug": "Cusco",
+  "viatorDestinationId": "d937",
+  "catalogUrl": "https://www.viator.com/Cusco/d937-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 10,
+  "premiumCount": 6,
+  "selectionNote": "Selected 10 guided Cusco d937 products with live public USD From prices, combined ratings, unique 674x446 named heroes, and verified itinerary POIs. The live catalog supports far more than 20 tours, including preferred bike, jeep, horseback, photography, Palcoyo, and additional ATV or private Sacred Valley SKUs, but Viator DataDome blocking plus geo-currency dumps (AUD/EUR/GBP/CHF/ZAR/NOK/DKK) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d937 helicopter page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "89089P57",
+    "49313P1",
+    "120993P16",
+    "200691P13",
+    "173630P1",
+    "44685P2",
+    "101268P6",
+    "168853P1",
+    "19345P9",
+    "19345P27"
+  ],
+  "premiumProductCodes": [
+    "173630P1",
+    "44685P2",
+    "101268P6",
+    "168853P1",
+    "19345P9",
+    "19345P27"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "5243MP1DAY",
+      "title": "Machu Picchu day tour (AUD listing)",
+      "reason": "AUD $533.75 and 4.5/1535; non-USD plus below the quality bar"
+    },
+    {
+      "productCode": "164727P7",
+      "title": "Explore Machu Picchu: Full Day Tour from Cusco",
+      "reason": "EUR-only dump; 4.8/311"
+    },
+    {
+      "productCode": "147349P10",
+      "title": "Machu Picchu tour (CHF listing)",
+      "reason": "CHF-only dump; 4.9/641"
+    },
+    {
+      "productCode": "100360P3",
+      "title": "Machu Picchu tour (AUD listing)",
+      "reason": "AUD-only dump; 4.9/566"
+    },
+    {
+      "productCode": "330995P1",
+      "title": "Classic Inca Trail",
+      "reason": "GBP-only dump; 5.0/8186"
+    },
+    {
+      "productCode": "5243MPBINGHAM",
+      "title": "Hiram Bingham Machu Picchu",
+      "reason": "EUR-only dump; 4.5/156"
+    },
+    {
+      "productCode": "27450P9",
+      "title": "Private bike Maras/Moray",
+      "reason": "Preferred guided bike type; EUR-only dump"
+    },
+    {
+      "productCode": "9864P1",
+      "title": "Horseback Riding Tour to the Devil's Balcony from Cusco",
+      "reason": "NOK-only dump; 4.9/230"
+    },
+    {
+      "productCode": "89089P113",
+      "title": "Palcoyo Rainbow Mountain",
+      "reason": "ZAR-only dump; 4.7/117"
+    },
+    {
+      "productCode": "213448P1",
+      "title": "Private Sacred Valley",
+      "reason": "Preferred private type; no verified USD From$ on a complete dump (DKK similar-options dump)"
+    },
+    {
+      "productCode": "16780P7",
+      "title": "Machu Picchu Vistadome",
+      "reason": "5.0/197; no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "408150P5",
+      "title": "Machu Picchu Vistadome",
+      "reason": "4.9/119; no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "192961P48",
+      "title": "5 Days: Cusco, Machu Picchu, Rainbow Mountain and Humantay Lake",
+      "reason": "USD $499.42 verified but 4.4/9 below the quality bar and too thin"
+    },
+    {
+      "productCode": "319733P3",
+      "title": "Rainbow Mountain",
+      "reason": "USD $45 and 4.8/17; too thin and near-duplicate of selected 49313P1"
+    },
+    {
+      "productCode": "101268P10",
+      "title": "Palcoyo with alpacas",
+      "reason": "4.6/10 too thin"
+    },
+    {
+      "productCode": "136406P1",
+      "title": "Palcoyo Rainbow Mountain",
+      "reason": "USD $165 and 4.9/17; too thin"
+    },
+    {
+      "productCode": "72901P9",
+      "title": "Sacred Valley ATV",
+      "reason": "USD $140 and 4.7/7; too thin"
+    },
+    {
+      "productCode": "29542P3",
+      "title": "Humantay Lake",
+      "reason": "USD $40 and 4.7/231; near-duplicate of selected 89089P57"
+    },
+    {
+      "productCode": "225442P6",
+      "title": "Rainbow Mountain ATV",
+      "reason": "USD $90 and 4.5/306; below the quality bar and near-duplicate of selected 173630P1"
+    },
+    {
+      "productCode": "148016P1",
+      "title": "Machu Picchu by train",
+      "reason": "USD $374 and 4.9/131; near-duplicate of selected 168853P1"
+    },
+    {
+      "productCode": "19345P54",
+      "title": "2-day Vistadome Sacred Valley and Machu Picchu",
+      "reason": "USD $659 and 4.9/100; near-duplicate of selected 19345P9"
+    },
+    {
+      "productCode": "19345P6",
+      "title": "Machu Picchu Full Day Tour from Cusco",
+      "reason": "USD $349 and 5.0/35; too thin and near-duplicate of selected 168853P1 / 19345P27"
+    },
+    {
+      "productCode": "200691P17",
+      "title": "2-Day Tour to Machu Picchu by Minivan",
+      "reason": "USD $198.65 and 4.8/130; rejected as a weak commercial product after live reviews described missing guidance and ticket handling"
+    },
+    {
+      "productCode": "5243CUZCT",
+      "title": "Cusco city tour",
+      "reason": "USD $49 and 4.3/87; below the quality bar"
+    },
+    {
+      "productCode": "7478P14",
+      "title": "Hiram Bingham luxury",
+      "reason": "USD $1350 and 4.8/31; luxury wine-adjacent but reviews too thin and no complete hero+page dump captured after DataDome"
+    },
+    {
+      "productCode": "29542P1",
+      "title": "ATV Tour to Moray & Maras Salt Mines",
+      "reason": "Preferred ATV type; live page showed similar-options unavailable state; no verified current USD From$"
+    },
+    {
+      "productCode": "58941P4",
+      "title": "ATV Quad Bike Tour to Moray Maras and Salt mines",
+      "reason": "27 reviews too thin and no verified USD From$ on the complete dump"
+    },
+    {
+      "productCode": "11413P10",
+      "title": "Sacred Valley 4x4 Quadbike Adventure from Cusco",
+      "reason": "USD $80 verified but 17 reviews too thin"
+    },
+    {
+      "productCode": "13345P13",
+      "title": "Planetarium Cusco: Learn About Inca Astronomy",
+      "reason": "USD $45 verified but 4.3/4 below the quality bar and too thin; stargazing already represented by 44685P2"
+    },
+    {
+      "productCode": "19945P24",
+      "title": "Palcoyo Small Rainbow Mountain",
+      "reason": "USD $39.44 on an incomplete dump; no combined rating/review/hero captured on a complete page"
+    },
+    {
+      "productCode": "148154P1",
+      "title": "Rainbow Mountain Tour Palcoyo",
+      "reason": "USD $60 and 16 reviews; too thin"
+    },
+    {
+      "productCode": "17998P11",
+      "title": "Sacred Valley Horseback Riding Adventure Full Day Tour",
+      "reason": "Preferred horseback type; no verified USD From$ or combined rating on a complete dump"
+    },
+    {
+      "productCode": "58628P1",
+      "title": "Skip the Line: Planetarium Cusco Admission Ticket",
+      "reason": "GBP-only dump; admission ticket rather than a guided outdoor tour"
+    }
+  ]
+}

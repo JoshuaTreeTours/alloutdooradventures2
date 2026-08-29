@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "120993P16",
+    "productUrl": "https://www.viator.com/tours/Cusco/Cusco-City-Tour-Half-Day-Tour/d937-120993P16",
+    "title": "Cusco City Tour Four Ruins Half-Day Tour",
+    "description": {
+      "text": "In Cusco, this half-day small-group circuit covers Coricancha, then the hillside ruins of Sacsayhuaman, Qenko, Puca Pucara, and Tambomachay. The published cap is about 15 people, with hotel pickup and drop-off in the city center and fees included so the afternoon stays on the four ruins rather than ticket windows. The meeting point is listed on Triunfo. The outing is aimed at visitors who want a guided city introduction before a longer valley or citadel day, without rushing the former Inka capital as a transfer stop only. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Coricancha and the four ruins that define this half-day rather than a Sacred Valley highway loop or a Machu Picchu train connection."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $40.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 408
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c0/a3/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Many visitors to Cusco rush through the city on the way to Machu Picchu",
+      "But the ancient capital of the Incas deserves more time",
+      "This half-day, small-group tour takes visitors to Cusco's most-important landmarks, including the main square and the te",
+      "Cusco City Tour Four Ruins Half-Day Tour near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Triunfo, Cusco 08002, with hotel pickup listed for the city center."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this half-day small-group circuit covers Coricancha, then the hillside ruins of Sacsayhuaman, Qenko, Puca Pucara, and Tambomachay.",
+    "itineraryItems": [
+      {
+        "title": "Coricancha",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sacsayhuaman",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Qenko",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Puca Pucara",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tambomachay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pick up and drop off in Cusco City Center",
+      "English or Spanish Tour Guide",
+      "Round trip transportation",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cusco City Tour Four Ruins Half-Day Tour?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Meet at Triunfo, Cusco 08002, with hotel pickup listed for the city center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 40
+      },
+      "currency": "USD"
+    }
+  }
+}

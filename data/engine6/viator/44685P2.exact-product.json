@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "44685P2",
+    "productUrl": "https://www.viator.com/tours/Cusco/Cusco-by-Night-Including-Pisco-Sour-and-The-Planetarium/d937-44685P2",
+    "title": "Cusco by Night: Planetarium Cusco, Dinner, and Pisco Sour",
+    "description": {
+      "text": "In Cusco, this evening outing pairs Planetarium Cusco stargazing with illuminated historic-center landmarks, a traditional dinner, and one Pisco Sour. Groups are limited to eight, and hotel pickup and drop-off are included; planetarium entry is listed as a separate on-site amount. The published route keeps the night on the plaza, the planetarium, and dinner rather than a self-guided bar hop. Inca constellation commentary is the stargazing core when skies are clear. The format suits visitors who want a guided tasting evening without assembling tickets independently. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Plaza de Armas, Planetarium Cusco, and the historic center that shape this night outing rather than a daytime ruin circuit or a Sacred Valley day."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 74
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/5a/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See a different side to Cusco on a nightlife tour that includes dinner and a drink",
+      "In an intimate group limited to eight people, the evening covers stargazing at Planetarium Cusco, illuminated landmarks",
+      "Hotel pickup and drop-off are included",
+      "Cusco by Night: Planetarium Cusco, Dinner, and Pisco Sour near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup and drop-off are included. Planetarium entrance is listed separately on the product page."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this evening outing pairs Planetarium Cusco stargazing with illuminated historic-center landmarks, a traditional dinner, and one Pisco Sour.",
+    "itineraryItems": [
+      {
+        "title": "Plaza de Armas",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Planetarium Cusco",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cusco Historic Center",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Dinner",
+      "One Pisco sour",
+      "Local guide",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cusco by Night: Planetarium Cusco, Dinner, and Pisco Sour?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Hotel pickup and drop-off are included. Planetarium entrance is listed separately on the product page."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nightlife"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

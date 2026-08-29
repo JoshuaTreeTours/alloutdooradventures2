@@ -76,6 +76,9 @@ export const ENGINE6_PUERTO_VALLARTA_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_CABO_SAN_LUCAS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/cf/9e/b2.jpg";
 
+export const ENGINE6_CUSCO_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/81/07.jpg";
+
 export const ENGINE6_PARIS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg";
 
@@ -199,6 +202,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
     cancun: ENGINE6_CANCUN_CANONICAL_CITY_HERO_URL,
     "puerto-vallarta": ENGINE6_PUERTO_VALLARTA_CANONICAL_CITY_HERO_URL,
     "cabo-san-lucas": ENGINE6_CABO_SAN_LUCAS_CANONICAL_CITY_HERO_URL,
+  },
+  peru: {
+    cusco: ENGINE6_CUSCO_CANONICAL_CITY_HERO_URL,
   },
   france: {
     paris: ENGINE6_PARIS_CANONICAL_CITY_HERO_URL,
