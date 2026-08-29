@@ -71,6 +71,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "mexico",
     citySlug: "mexico-city",
   },
+  cancun: {
+    destinationLabel: "Cancun",
+    destinationCitySlug: "cancun",
+    stateSlug: "mexico",
+    citySlug: "cancun",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "110186P7",
+    "productUrl": "https://www.viator.com/tours/Cancun/Chichen-Itza-Ik-Kil-Cenote-and-Valladolid-All-Inclusive-Tour/d631-110186P7",
+    "title": "Early morning Chichen Itza Tour: Cenote and Tequila Tasting",
+    "description": {
+      "text": "In Cancun, say goodbye to the Riviera Maya beaches and see a different side of the Yucatan. This guided tour explores Chichen Itza’s pyramid temples and colonial Valladolid, with a swim in an underground cenote. Stops include Chichen Itza, Cenote, Valladolid. Upgrade to add transfers from Cancun or Riviera Maya hotels—or book a private tour with flexible pickup times. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Chichen Itza, Cenote, Valladolid that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $39.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 6118
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/70/b9/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the Yucatan's rich history, both Mayan and colonial Spanish",
+      "Enjoy a guided tour of Chichen Itza, a UNESCO World Heritage Site",
+      "Feast on a delicious buffet lunch—and taste tequila, too",
+      "Upgrade to add hotel transfers or a guide and vehicle just for your group"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We offer convenient pickup services from the majority of hotels situated in the hotel zones of Cancun and Riviera Maya, or alternatively, we can arrange a meeting point near your specific hotel in Cancun, Riviera Maya, Playa del Carmen, and Tulum."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, say goodbye to the Riviera Maya beaches and see a different side of the Yucatan.",
+    "itineraryItems": [
+      {
+        "title": "Chichen Itza",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Valladolid",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Comfortable round-trip transportation with air conditioning and onboard restroom facilities",
+      "Hotel pickup available from Cancun and Riviera Maya or a conveniently located meeting point",
+      "Discover Chichen Itza serenely, arriving before most tourists.",
+      "Visit a beautiful cenote with provided restrooms and dressing room",
+      "Accompanied by a certified tour guide throughout the entire journey",
+      "Enjoy a 30-minute stop at Valladolid's main square",
+      "Buffet meal",
+      "Tequila Tasting"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Early morning Chichen Itza Tour: Cenote and Tequila Tasting?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "We offer convenient pickup services from the majority of hotels situated in the hotel zones of Cancun and Riviera Maya, or alternatively, we can arrange a meeting point near your specific hotel in Cancun, Riviera Maya, Playa del Carmen, and Tulum."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Archaeology Tours"
+      },
+      {
+        "label": "Historical & Heritage Tours"
+      },
+      {
+        "label": "Bus & Minivan Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Tours, Sightseeing & Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39
+      },
+      "currency": "USD"
+    }
+  }
+}

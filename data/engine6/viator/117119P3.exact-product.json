@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "117119P3",
+    "productUrl": "https://www.viator.com/tours/Cancun/Chichen-Itza-Private-Tour/d631-117119P3",
+    "title": "Chichen Itza Private Tour from Cancun",
+    "description": {
+      "text": "Discover the story behind Chichen Itza with a private tour from Cancun. Get picked up at your hotel or the address of your choice in Cancun and set out on a full-day sightseeing tour to the Mayan ruins at Chichen Itza. Stops include Chichen Itza, Cenote, Valladolid. Learn about Mexican history in the Yucatan Peninsula and explore this archaeological site including its iconic pyramid. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Chichen Itza, Cenote, Valladolid that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "Full day (approx.)",
+    "priceFrom": "From $392.52",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 58
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/18/e5/bd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Learn about the history behind these famous Mayan ruins",
+      "An authentic Yucatan lunch is included",
+      "Round-trip transportation from Cancun is provided",
+      "This is a private tour for one party only"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Cancun is confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the story behind Chichen Itza with a private tour from Cancun.",
+    "itineraryItems": [
+      {
+        "title": "Chichen Itza",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Valladolid",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private tour",
+      "Hotel pickup and drop-off in Cancun",
+      "Yucatan lunch",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chichen Itza Private Tour from Cancun?",
+        "answer": "The planned duration is Full day."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Hotel pickup from Cancun is confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 392.52
+      },
+      "currency": "USD"
+    }
+  }
+}

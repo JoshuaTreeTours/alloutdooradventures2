@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "70244P1",
+    "productUrl": "https://www.viator.com/tours/Cancun/Whale-Shark-Swimming-and-Isla-Mujeres-Beach-Tour/d631-70244P1",
+    "title": "Whale Shark Swimming and Isla Mujeres Beach Tour",
+    "description": {
+      "text": "Embark on a once-in-a-lifetime adventure swimming with whale sharks in Cancun. After a hotel pickup, enjoy a light breakfast and head to a protected area for 2-3 dives, guided by certified experts. Stops include Whale shark swim, Isla Mujeres. Visit Isla Mujeres' Playa Norte for relaxation and ceviche before returning. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Whale shark swim, Isla Mujeres that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics. Meeting points are confirmed at booking in Cancun, and the itinerary keeps visitors close to Caribbean coastline, Mayan ruins, and cenote swimming holes that shape this Cancun tour."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $210.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 375
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8a/df/02.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Swim with whale sharks in protected area",
+      "Professional guide and certified equipment",
+      "Hotel pickup and drop-off included",
+      "2-3 dives per person in pairs"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We can pick you up at most hotels in Cancun hotel zone or downtown, Playa del Carmen, and Riviera Maya."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Embark on a once-in-a-lifetime adventure swimming with whale sharks in Cancun.",
+    "itineraryItems": [
+      {
+        "title": "Whale shark swim",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Isla Mujeres",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Use of Snorkeling equipment",
+      "Professional guide",
+      "Breakfast",
+      "Sodas & bottled water",
+      "Snacks",
+      "Coffee and/or Tea",
+      "$20 usd per person dock fee, cash at the check-in"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Whale Shark Swimming and Isla Mujeres Beach Tour?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "We can pick you up at most hotels in Cancun hotel zone or downtown, Playa del Carmen, and Riviera Maya."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airport & Ground Transfers"
+      },
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Travel & Transportation Services"
+      },
+      {
+        "label": "On the Water"
+      },
+      {
+        "label": "Airport & Hotel Transfers"
+      },
+      {
+        "label": "Boat Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210
+      },
+      "currency": "USD"
+    }
+  }
+}

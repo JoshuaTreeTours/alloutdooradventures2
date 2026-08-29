@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "42786P2",
+    "productUrl": "https://www.viator.com/tours/Cancun/Snorkel-Tour-in-Puerto-Morelos-from-Cancun/d631-42786P2",
+    "title": "Reef Snorkeling in National Park from Cancun with Beachside Lunch",
+    "description": {
+      "text": "In Cancun, snorkel the Great Maya Reef on a half-day snorkeling tour of the coral reef near Puerto Morelos. Spot fish, marine wildlife, and vibrant corals as you swim alongside the snorkel guides, then enjoy some free time to explore the fishing village of Puerto Morelos. Stops include Puerto Morelos National Reef Park, Puerto Morelos. This snorkel tour includes all equipment, lunch at a beach club, and round-trip transport from centrally-located hotels in Cancun and the Riviera Maya. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Puerto Morelos National Reef Park, Puerto Morelos that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 900
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7d/cc/09.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Beach club access and lunch included",
+      "Choice of morning or afternoon departure",
+      "Small group tour limited to 14 people",
+      "Pickup and drop-off from your hotel in the area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departs from centrally located Cancun and Riviera Maya hotels. If your hotel is located outside the pickup zone, a central meeting point will be advised upon reconfirmation. If your hotel is not listed please leave us a note with your hotels name, to establish pickup time."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, snorkel the Great Maya Reef on a half-day snorkeling tour of the coral reef near Puerto Morelos.",
+    "itineraryItems": [
+      {
+        "title": "Puerto Morelos National Reef Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Puerto Morelos",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Use of snorkel equipment ( Mask,Fins,Brand new snorkel tube)",
+      "Professional guide",
+      "Lunch",
+      "Lockers",
+      "Traveler insurance",
+      "Gratuities",
+      "Environmental Management and Dock Fee (USD $10)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Reef Snorkeling in National Park from Cancun with Beachside Lunch?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Departs from centrally located Cancun and Riviera Maya hotels. If your hotel is located outside the pickup zone, a central meeting point will be advised upon reconfirmation. If your hotel is not listed please leave us a note with your hotels name, to establish pickup time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Water Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Jet Boats & Speed Boats"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      },
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Tours, Sightseeing & Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "7041P7",
+    "productUrl": "https://www.viator.com/tours/Cancun/OFFROAD-POLARIS-ADVENTURE/d631-7041P7",
+    "title": "Selvatica Adventure Park ATV and Ziplines in Cancun and Riviera Maya",
+    "description": {
+      "text": "Get your adrenaline fix while in Cancun with this five-in-one adventure combo. Fly through the trees on a thrilling zipline circuit, including an Aquazip; ride the Tarzania zipline coaster, and take a daring parachute drop. Stops include Selvatica Adventure Park, ATV jungle trail, Zipline circuit, Cenote. Then, challenge yourself to a treetop rope course and venture off-road on an exhilarating ATV or Polaris RZR buggy excursion. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Selvatica Adventure Park, ATV jungle trail, Zipline circuit, Cenote that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 175
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/dc/30/55.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Five thrilling activities including ziplining, ATV ride, and rope course",
+      "Delicious lunch of typical Mexican cuisine",
+      "Hassle-free pickup and drop-off from your Cancun hotel",
+      "Choice of tour departure times throughout the day"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Selvatica - The Adventure Tribe"
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get your adrenaline fix while in Cancun with this five-in-one adventure combo.",
+    "itineraryItems": [
+      {
+        "title": "Selvatica Adventure Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "ATV jungle trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zipline circuit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cenote",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "10 zip-line circuit",
+      "Aqua-zip / optional in last cable",
+      "Tarzania (zipline coaster)",
+      "Polaris RZR or ATV",
+      "Swim in our private cenote (sinkhole)",
+      "Lunch",
+      "Gratuities",
+      "Optional insurance fee (ATV USD$12)(POLARIS-USD$20)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Selvatica Adventure Park ATV and Ziplines in Cancun and Riviera Maya?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "* Selvatica - The Adventure Tribe"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airport & Ground Transfers"
+      },
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Travel & Transportation Services"
+      },
+      {
+        "label": "On the Water"
+      },
+      {
+        "label": "Airport & Hotel Transfers"
+      },
+      {
+        "label": "Boat Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}
