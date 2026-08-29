@@ -164,6 +164,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Cabo San Lucas",
+      matches: tour =>
+        /\/mexico\/cabo-san-lucas\//i.test(tour.canonicalPath) ||
+        (/\bcabo san lucas\b/i.test(tour.city) && /\bmexico\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Paris",
       matches: tour =>
         /\/france\/paris\//i.test(tour.canonicalPath) ||

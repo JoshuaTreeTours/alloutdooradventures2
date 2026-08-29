@@ -1458,6 +1458,56 @@ export const isEngine6PuertoVallartaTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_PUERTO_VALLARTA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_PRODUCT_CODE = "3714LUXSUNSET";
+export const ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/los-cabos-luxury-sunset-sail-with-light-appetizers-and-3714LUXSUNSET";
+export const ENGINE6_CABO_SAN_LUCAS_3714P32_PRODUCT_CODE = "3714P32";
+export const ENGINE6_CABO_SAN_LUCAS_3714P32_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/luxury-catamaran-whale-watching-cabo-san-lucas-3714P32";
+export const ENGINE6_CABO_SAN_LUCAS_18372P1_PRODUCT_CODE = "18372P1";
+export const ENGINE6_CABO_SAN_LUCAS_18372P1_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/humpback-whales-in-cabo-san-lucas-18372P1";
+export const ENGINE6_CABO_SAN_LUCAS_8056P2_PRODUCT_CODE = "8056P2";
+export const ENGINE6_CABO_SAN_LUCAS_8056P2_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/cabo-san-lucas-sunset-sailing-shared-cruise-8056P2";
+export const ENGINE6_CABO_SAN_LUCAS_3714P39_PRODUCT_CODE = "3714P39";
+export const ENGINE6_CABO_SAN_LUCAS_3714P39_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/half-day-cabo-snorkel-adventure-with-lunch-and-open-bar-3714P39";
+export const ENGINE6_CABO_SAN_LUCAS_220975P1_PRODUCT_CODE = "220975P1";
+export const ENGINE6_CABO_SAN_LUCAS_220975P1_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/cabo-san-lucas-and-santa-maria-bay-snorkeling-sightseei-220975P1";
+export const ENGINE6_CABO_SAN_LUCAS_7054P7_PRODUCT_CODE = "7054P7";
+export const ENGINE6_CABO_SAN_LUCAS_7054P7_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/cabo-san-lucas-glass-bottom-kayak-tour-and-snorkel-at-t-7054P7";
+export const ENGINE6_CABO_SAN_LUCAS_13221P9_PRODUCT_CODE = "13221P9";
+export const ENGINE6_CABO_SAN_LUCAS_13221P9_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/todos-santos-day-trip-from-cabo-san-lucas-13221P9";
+export const ENGINE6_CABO_SAN_LUCAS_177104P1_PRODUCT_CODE = "177104P1";
+export const ENGINE6_CABO_SAN_LUCAS_177104P1_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/best-atv-cabo-adventure-desert-beach-ride-whit-tequila-177104P1";
+export const ENGINE6_CABO_SAN_LUCAS_303247P1_PRODUCT_CODE = "303247P1";
+export const ENGINE6_CABO_SAN_LUCAS_303247P1_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/cabo-san-lucas-private-yacht-cruise-with-open-bar-303247P1";
+export const ENGINE6_CABO_SAN_LUCAS_34186P2_PRODUCT_CODE = "34186P2";
+export const ENGINE6_CABO_SAN_LUCAS_34186P2_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/sunset-cruise-in-los-cabos-with-jazz-and-wine-34186P2";
+export const ENGINE6_CABO_SAN_LUCAS_16451P2_PRODUCT_CODE = "16451P2";
+export const ENGINE6_CABO_SAN_LUCAS_16451P2_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/beach-hopper-small-group-snorkeling-tour-in-los-cabos-16451P2";
+export const ENGINE6_CABO_SAN_LUCAS_190377P1_PRODUCT_CODE = "190377P1";
+export const ENGINE6_CABO_SAN_LUCAS_190377P1_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/hike-the-native-pericu-road-in-sierra-de-la-laguna-190377P1";
+export const ENGINE6_CABO_SAN_LUCAS_30877P4_PRODUCT_CODE = "30877P4";
+export const ENGINE6_CABO_SAN_LUCAS_30877P4_ROUTE =
+  "/destinations/mexico/cabo-san-lucas/tours/explore-los-cabos-city-tour-glass-bottom-boat-ride-lunc-30877P4";
+
+export const ENGINE6_CABO_SAN_LUCAS_TOUR_PATH_PREFIX =
+  "/destinations/mexico/cabo-san-lucas/tours/";
+
+export const isEngine6CaboSanLucasTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_CABO_SAN_LUCAS_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4783,6 +4833,62 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PUERTO_VALLARTA_46209P5_ROUTE,
     ENGINE6_PUERTO_VALLARTA_46209P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_3714LUXSUNSET_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_3714P32_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_3714P32_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_18372P1_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_18372P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_8056P2_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_8056P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_3714P39_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_3714P39_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_220975P1_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_220975P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_7054P7_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_7054P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_13221P9_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_13221P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_177104P1_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_177104P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_303247P1_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_303247P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_34186P2_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_34186P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_16451P2_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_16451P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_190377P1_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_190377P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CABO_SAN_LUCAS_30877P4_ROUTE,
+    ENGINE6_CABO_SAN_LUCAS_30877P4_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

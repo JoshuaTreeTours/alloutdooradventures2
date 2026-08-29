@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "8056P2",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Cabo-Sunset-Sailing-Cruise/d50859-8056P2",
+    "title": "Cabo San Lucas Sunset Sailing Shared Cruise",
+    "description": {
+      "text": "In Cabo San Lucas, this two-hour shared sunset sail boards a yacht for Land's End and the Arch while the crew talks through local coastline history. Unlimited beer, wine, and soft drinks are served with snacks so the evening stays on deck rather than a separate bar stop. Departure time tracks the sunset, and the boat often powers down to sail once it clears the rocks. Hotel pickup is not included; the published meeting point is the marina dock listed at booking. The format suits visitors who want a guided scenic sail without chartering independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina, Arch, and Land's End that shape this evening cruise."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 709
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/70/2d/0b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Set out on a relaxing and informative sunset sailing cruise off Los Cabos",
+      "Board a luxury yacht for a 2-hour evening excursion, watching the sun slowly disappear below the horizon while listening",
+      "An expert crew will regale you with facts and history about the area as your boat makes its way smoothly across the sea",
+      "Cabo San Lucas Sunset Sailing Shared Cruise near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Cabo San Lucas marina dock listed when booking. Hotel pickup is not included."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this two-hour shared sunset sail boards a yacht for Land's End and the Arch while the crew talks through local coastline history.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Land's End",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Unlimited beer, wine and soft drinks",
+      "Snacks",
+      "Bottled water",
+      "Professional captain and crew"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cabo San Lucas Sunset Sailing Shared Cruise?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at the Cabo San Lucas marina dock listed when booking. Hotel pickup is not included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

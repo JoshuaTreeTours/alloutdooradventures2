@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "3714P32",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-Catamaran-Whale-Watching/d50859-3714P32",
+    "title": "Luxury Catamaran Whale Watching Cabo San Lucas",
+    "description": {
+      "text": "In Cabo San Lucas, this luxury catamaran looks for humpback whales from a double-deck boat with a guide and a hydrophone for whale song when animals are present. Snacks plus alcoholic and soft drinks are included so the morning stays on the water rather than a separate cafe stop. The published route covers the Cabo San Lucas coastline and the Arch, with an optional hotel transfer fee and a small cash dock fee at check-in. Seasonal whale presence still depends on winter migration, and the crew keeps a respectful distance from the animals. The format suits visitors who want a guided wildlife window without booking a private charter. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina, Arch, and Sea of Cortez water that shape this catamaran outing."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $129.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1753
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/60/fe/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Increase your chances of humpback whales in the wild during a luxury whale-watching tour by catamaran from Cabo San Luca",
+      "As well as enjoying views of the Cabo San Lucas coastline from the top deck of the double-decker boat, you’ll benefit fr",
+      "Plus, alcoholic and soft drinks, and snacks are included",
+      "Luxury Catamaran Whale Watching Cabo San Lucas near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup can be added for a listed fee. A $2 dock fee per person is collected at check-in."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this luxury catamaran looks for humpback whales from a double-deck boat with a guide and a hydrophone for whale song when animals are present.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sea of Cortez",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks",
+      "Alcoholic beverages",
+      "Hydrophone",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Luxury Catamaran Whale Watching Cabo San Lucas?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup can be added for a listed fee. A $2 dock fee per person is collected at check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dolphin & Whale Watching"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129
+      },
+      "currency": "USD"
+    }
+  }
+}

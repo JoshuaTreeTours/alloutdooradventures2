@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "7054P7",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/GLASS-BOTTOM-KAYAK-AND-SNORKEL-AT-TWO-BAYS/d50859-7054P7",
+    "title": "Cabo San Lucas Glass Bottom Kayak Tour and Snorkel at Two Bays",
+    "description": {
+      "text": "In Cabo San Lucas, this outing pairs a glass-bottom kayak with snorkel time at Santa María Bay and Chileno Bay. Hotel pickup arrives by air-conditioned van, then a bilingual guide issues life jackets, snorkel gear, and a wetsuit when needed. The kayak crossing between the two bays is the published movement rather than a motorboat hop, so the day stays on the reefs and rock formations of the corridor. Dry bags are listed for phones and wallets. The format suits visitors who want a guided paddle-and-swim without renting kayaks independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on Santa María Bay and Chileno Bay that shape this two-bay outing rather than a Land's End yacht add-on."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 519
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/63/c2/68.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit some of Cabo’s most spectacular snorkeling spots on this affordable excursion",
+      "After a convenient hotel pickup, head to Santa María and Chileno Bays with a bilingual guide",
+      "Travel by air-conditioned van and double-seated kayak equipped with a dry bag for valuables",
+      "Cabo San Lucas Glass Bottom Kayak Tour and Snorkel at Two Bays near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup starts about 90 minutes before the activity time based on the listed hotel."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this outing pairs a glass-bottom kayak with snorkel time at Santa María Bay and Chileno Bay.",
+    "itineraryItems": [
+      {
+        "title": "Santa María Bay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chileno Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Glass-bottom kayak",
+      "Snorkel gear",
+      "Bilingual guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cabo San Lucas Glass Bottom Kayak Tour and Snorkel at Two Bays?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup starts about 90 minutes before the activity time based on the listed hotel."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

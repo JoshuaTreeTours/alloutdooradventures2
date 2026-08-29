@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "34186P2",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Tropicat-Jazz-and-Wine-Sunset-Cruise-in-Los-Cabos/d50859-34186P2",
+    "title": "Sunset Cruise in Los Cabos with Jazz and Wine",
+    "description": {
+      "text": "In Cabo San Lucas, the Tropicat jazz-and-wine sunset cruise boards an elegant catamaran for Lover's Beach, Land's End, and the Arch with an open international bar. Gourmet meats, cheeses, and crudités are served with premium wines so the evening stays on deck. Hotel transfers from most Los Cabos properties must be reserved at least 48 hours ahead. In season the crew also watches for whales while the published route stays on the rock formations at Land's End. The format suits visitors who want a guided wine-focused sail without booking a private charter. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina, Lover's Beach, and Arch that shape this jazz cruise rather than a tequila-ranch add-on."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $133.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 191
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/06/88/07.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Listen to smooth jazz while sampling canapés and wine aboard the Tropicat, an elegant catamaran",
+      "This jazz cruise departs Cabo San Lucas in the early evening and features an open international bar",
+      "Glide into the sunset while you pass landmarks such as Lover's Beach and the Arch at Land's End",
+      "Sunset Cruise in Los Cabos with Jazz and Wine near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from listed Los Cabos hotels must be reserved at least 48 hours before departure."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, the Tropicat jazz-and-wine sunset cruise boards an elegant catamaran for Lover's Beach, Land's End, and the Arch with an open international bar.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lover's Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Land's End",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Unlimited beer, wine, premium liquor and soft drinks",
+      "Gourmet meats and cheeses",
+      "Hotel pickup from listed hotels"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Cruise in Los Cabos with Jazz and Wine?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup from listed Los Cabos hotels must be reserved at least 48 hours before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 133
+      },
+      "currency": "USD"
+    }
+  }
+}

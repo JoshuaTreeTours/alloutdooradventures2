@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "30877P4",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Explore-Los-Cabos/d50859-30877P4",
+    "title": "Explore Los Cabos City Tour, Glass-Bottom Boat Ride, Lunch and Shopping!",
+    "description": {
+      "text": "In Cabo San Lucas, this guided day pairs a glass-bottom boat to the Arch with a narrated city circuit, a blown-glass workshop, and a sit-down lunch window. Hotel pickup keeps the group on the published marina and downtown stops rather than a self-drive shopping loop. The boat segment is the scenic core; the land stops cover artisan and plaza time listed on the product page. The format suits visitors who want a longer guided sightseeing day without booking the Arch boat and a city van separately. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the Arch, downtown Cabo San Lucas, and the glass workshop that define this combination outing rather than a Todos Santos highway day."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 117
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/a2/ea/7d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Los Cabos City Tour, Glass-Bottom Boat Ride, Lunch and Shopping! from Cabo San Lucas",
+      "the Sea of Cortez, Sierra de la Laguna, and El Arco views",
+      "Professional guide with Cabo San Lucas local expertise",
+      "Small-group or private format as listed",
+      "Guided Cabo San Lucas sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is included from listed Los Cabos hotels and confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this guided day pairs a glass-bottom boat to the Arch with a narrated city circuit, a blown-glass workshop, and a sit-down lunch window.",
+    "itineraryItems": [
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cabo San Lucas downtown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Blown-glass workshop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Glass-bottom boat ride",
+      "City touring",
+      "Lunch stop",
+      "Hotel pickup from listed hotels"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Explore Los Cabos City Tour, Glass-Bottom Boat Ride, Lunch and Shopping!?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup is included from listed Los Cabos hotels and confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

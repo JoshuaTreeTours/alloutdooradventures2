@@ -329,6 +329,20 @@ import specimen218207p4Payload from "../../data/engine6/viator/218207P4.exact-pr
 import specimen428665p1Payload from "../../data/engine6/viator/428665P1.exact-product.json";
 import specimen368259p2Payload from "../../data/engine6/viator/368259P2.exact-product.json";
 import specimen46209p5Payload from "../../data/engine6/viator/46209P5.exact-product.json";
+import specimen3714luxsunsetPayload from "../../data/engine6/viator/3714LUXSUNSET.exact-product.json";
+import specimen3714p32Payload from "../../data/engine6/viator/3714P32.exact-product.json";
+import specimen18372p1Payload from "../../data/engine6/viator/18372P1.exact-product.json";
+import specimen8056p2Payload from "../../data/engine6/viator/8056P2.exact-product.json";
+import specimen3714p39Payload from "../../data/engine6/viator/3714P39.exact-product.json";
+import specimen220975p1Payload from "../../data/engine6/viator/220975P1.exact-product.json";
+import specimen7054p7Payload from "../../data/engine6/viator/7054P7.exact-product.json";
+import specimen13221p9Payload from "../../data/engine6/viator/13221P9.exact-product.json";
+import specimen177104p1Payload from "../../data/engine6/viator/177104P1.exact-product.json";
+import specimen303247p1Payload from "../../data/engine6/viator/303247P1.exact-product.json";
+import specimen34186p2Payload from "../../data/engine6/viator/34186P2.exact-product.json";
+import specimen16451p2Payload from "../../data/engine6/viator/16451P2.exact-product.json";
+import specimen190377p1Payload from "../../data/engine6/viator/190377P1.exact-product.json";
+import specimen30877p4Payload from "../../data/engine6/viator/30877P4.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -3516,6 +3530,90 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "46209P5",
     publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
     rawPayload: specimen46209p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3714LUXSUNSET",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Los-Cabos-Luxury-Sunset-Sail/d50859-3714LUXSUNSET",
+    rawPayload: specimen3714luxsunsetPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3714P32",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-Catamaran-Whale-Watching/d50859-3714P32",
+    rawPayload: specimen3714p32Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18372P1",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Whale-Watching-Humpback-Whales-in-Cabo-San-Lucas/d50859-18372P1",
+    rawPayload: specimen18372p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8056P2",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Cabo-Sunset-Sailing-Cruise/d50859-8056P2",
+    rawPayload: specimen8056p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3714P39",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-2-Bay-Snorkel-Adventure-with-lunch-and-open-bar/d50859-3714P39",
+    rawPayload: specimen3714p39Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "220975P1",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Snorkel-Tour/d50859-220975P1",
+    rawPayload: specimen220975p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7054P7",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/GLASS-BOTTOM-KAYAK-AND-SNORKEL-AT-TWO-BAYS/d50859-7054P7",
+    rawPayload: specimen7054p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "13221P9",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Todos-Santos-City-Tour/d50859-13221P9",
+    rawPayload: specimen13221p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "177104P1",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Adventure-in-Cuatrimoto-by-the-beach-and-the-desert-in-Los-Cabos/d50859-177104P1",
+    rawPayload: specimen177104p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "303247P1",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-Yacht-Cruise-in-Cabo-San-Lucas/d50859-303247P1",
+    rawPayload: specimen303247p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "34186P2",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Tropicat-Jazz-and-Wine-Sunset-Cruise-in-Los-Cabos/d50859-34186P2",
+    rawPayload: specimen34186p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "16451P2",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Beach-Hopper-Snorkeling-Tour-in-Los-Cabos/d50859-16451P2",
+    rawPayload: specimen16451p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "190377P1",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/RUTA-PERICU/d50859-190377P1",
+    rawPayload: specimen190377p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30877P4",
+    publicUrl: "https://www.viator.com/tours/Cabo-San-Lucas/Explore-Los-Cabos/d50859-30877P4",
+    rawPayload: specimen30877p4Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

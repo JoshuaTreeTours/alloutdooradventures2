@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "3714P39",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-2-Bay-Snorkel-Adventure-with-lunch-and-open-bar/d50859-3714P39",
+    "title": "Half Day Cabo Snorkel Adventure with Lunch and Open Bar",
+    "description": {
+      "text": "In Cabo San Lucas, this half-day snorkel covers two corridor bays with lunch and an open bar on board. Crew members handle snorkel gear, in-water timing, and a Land's End pass for the Arch so the group can stay with Santa Maria Bay and Chileno Bay rather than assembling boat and lunch tickets separately. Hotel pickup is listed for many Los Cabos properties. The outing is aimed at visitors who want a guided reef window with food service included. Seasonal whale sightings on the return are possible in winter but are not guaranteed. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the published bays and Arch rather than adding extra downtown shopping or a self-guided kayak hop."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 703
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d1/06/ef.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half Day Cabo Snorkel Adventure with Lunch and Open Bar from Cabo San Lucas",
+      "the Sea of Cortez, Sierra de la Laguna, and El Arco views",
+      "Professional guide with Cabo San Lucas local expertise",
+      "Small-group or private format as listed",
+      "Guided Cabo San Lucas sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is confirmed at booking for listed Los Cabos hotels."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this half-day snorkel covers two corridor bays with lunch and an open bar on board.",
+    "itineraryItems": [
+      {
+        "title": "Santa Maria Bay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chileno Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Open bar",
+      "Snorkel gear",
+      "Hotel pickup from listed hotels"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Cabo Snorkel Adventure with Lunch and Open Bar?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup is confirmed at booking for listed Los Cabos hotels."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

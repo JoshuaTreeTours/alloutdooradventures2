@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "18372P1",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Whale-Watching-Humpback-Whales-in-Cabo-San-Lucas/d50859-18372P1",
+    "title": "Humpback Whales in Cabo San Lucas",
+    "description": {
+      "text": "In Cabo San Lucas, this small-group boat looks for humpback whales with a marine biologist on board and a cap of about 12 passengers. The published 2.5-hour route passes the Arch of Cabo San Lucas and the sea lion colony before spending time on open water where whales may splash or travel with calves. Marine park fees and bottled water are included; souvenir photos are offered for purchase rather than required. The meeting point is the CaboTrek office inside Hotel Tesoro on the marina, near dock M-O and the lighthouse. The format suits visitors who want expert commentary without a large party boat. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina, Arch, and Sea of Cortez that define this wildlife morning."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 924
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/4e/49/ab.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "When in Cabo San Lucas, don’t miss the chance to see humpback whales and other dramatic marine life on this boat tour",
+      "Accompanied by a marine biologist onboard, see whales making gigantic splashes",
+      "Snap shots of the iconic Arch of Cabo San Lucas and its sea lion colony",
+      "Humpback Whales in Cabo San Lucas near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at CaboTrek inside Hotel Tesoro, Blvd. Paseo de la Marina 20-Local A, near dock M-O."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this small-group boat looks for humpback whales with a marine biologist on board and a cap of about 12 passengers.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sea of Cortez",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Marine biologist guide",
+      "2.5-hours boat ride",
+      "Marine park fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Humpback Whales in Cabo San Lucas?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at CaboTrek inside Hotel Tesoro, Blvd. Paseo de la Marina 20-Local A, near dock M-O."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dolphin & Whale Watching"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}
