@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "16451P2",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Beach-Hopper-Snorkeling-Tour-in-Los-Cabos/d50859-16451P2",
+    "title": "Beach Hopper Small-Group Snorkeling Tour in Los Cabos",
+    "description": {
+      "text": "In Cabo San Lucas, this small-group Beach Hopper uses a zodiac for half-hour snorkel windows at Chileno Bay and Santa Maria Bay, then continues to Lover's Beach and the Arch of Cabo San Lucas with sea lions on the rocks. A light lunch is included after the swims. The captain adjusts bay order to water conditions rather than a fixed self-guided hop. The format suits visitors who want a guided two-bay snorkel without assembling separate boat tickets. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on Chileno Bay, Santa Maria Bay, Lover's Beach, and the Arch that define this hopper rather than a glass-bottom kayak crossing or a shared sunset sail."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $220.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 87
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ab/93/22.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit two of the best snorkeling sites along the Sea of Cortez on a 'Beach Hopper' snorkeling tour of both Chileno Bay a",
+      "Afterward pay a visit to secluded Lovers Beach to enjoy a bit of sun-infused downtime, followed by a light lunch and a t",
+      "Beach Hopper Small-Group Snorkeling Tour in Los Cabos near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Los Cabos departure listed when booking."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this small-group Beach Hopper uses a zodiac for half-hour snorkel windows at Chileno Bay and Santa Maria Bay, then continues to Lover's Beach and the Arch of Cabo San Lucas with sea lions on the rocks.",
+    "itineraryItems": [
+      {
+        "title": "Chileno Bay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Santa Maria Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lover's Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Zodiac boat",
+      "Snorkel gear",
+      "Light lunch",
+      "Small-group format"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Beach Hopper Small-Group Snorkeling Tour in Los Cabos?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at the Los Cabos departure listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 220
+      },
+      "currency": "USD"
+    }
+  }
+}

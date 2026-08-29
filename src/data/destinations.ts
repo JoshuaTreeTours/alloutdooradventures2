@@ -5667,6 +5667,71 @@ const mexicoState: StateDestination = {
         },
       ],
     },
+    {
+      name: "Cabo San Lucas",
+      slug: "cabo-san-lucas",
+      stateSlug: "mexico",
+      region: "Baja California Sur",
+      lat: 22.8905,
+      lng: -109.9167,
+      shortDescription:
+        "Arch cruises, corridor snorkeling, and Sierra de la Laguna hiking from Cabo San Lucas.",
+      intro:
+        "Cabo San Lucas is a Baja California Sur marina city with guided Land's End sightseeing, corridor snorkel days, Migrino off-road rides, and Todos Santos touring.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/cf/9e/b2.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "water-sports"],
+      whereItIs: [
+        "Cabo San Lucas sits at the southern tip of Baja California Sur, with the marina, Medano Beach, and Land's End framing departures.",
+        "Most guided tours depart from the Cabo San Lucas marina, corridor hotels, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips inland reach Sierra de la Laguna hiking routes, Pericu trails, and desert canyon stops beyond the marina.",
+        lakesWater:
+          "Arch and Land's End cruises, Santa Maria and Chileno Bay snorkeling, and seasonal whale watching highlight the Sea of Cortez and Pacific meeting point.",
+        desertForest:
+          "Migrino Desert ATV tracks, camel or ranch add-ons, and semitropical reserve trails sit between resort and mountain days.",
+        cycling:
+          "Guided bike inventory is limited; most Cabo San Lucas days use boats, ATVs, or walking routes instead of independent rentals.",
+        scenicDrives:
+          "Private and group vehicles cover the marina, corridor bays, Todos Santos, and Sierra de la Laguna approaches.",
+        seasonalNotes:
+          "Winter and spring are popular for whale watching; summer favors early mountain and snorkel departures, and Arch access depends on sea conditions.",
+      },
+      thingsToDo: [
+        "Cruise Land's End to the Arch of Cabo San Lucas and Lover's Beach.",
+        "Snorkel Santa Maria Bay or Chileno Bay, or hike a Pericu route in Sierra de la Laguna.",
+        "Ride an ATV at Migrino Beach or take a Todos Santos artisan day.",
+      ],
+      toursCopy: [
+        "Book an Arch sunset sail or corridor snorkel for a compact introduction beyond the marina.",
+        "Pair a Migrino ATV outing with a Todos Santos or Sierra de la Laguna day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Santa Maria or Chileno Bay snorkel.",
+          "Afternoon: Marina walk or Medano Beach.",
+          "Evening: Sunset sail to the Arch.",
+        ],
+        dayTwo: [
+          "Morning: Migrino ATV ride or Pericu hike.",
+          "Afternoon: Todos Santos galleries or a private yacht window.",
+          "Evening: Marina dinner.",
+        ],
+      },
+      gettingThere: [
+        "Los Cabos International Airport serves Cabo San Lucas and San José del Cabo with buses, shuttles, and taxis to most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Cabo San Lucas tours?",
+          answer:
+            "Arch and Land's End sunset sails, Santa Maria and Chileno Bay snorkeling, Migrino ATV days, Todos Santos artisan touring, and Sierra de la Laguna Pericu hikes are the most popular departures.",
+        },
+      ],
+    },
   ],
   isFallback: true,
 };

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "3714LUXSUNSET",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Los-Cabos-Luxury-Sunset-Sail/d50859-3714LUXSUNSET",
+    "title": "Los Cabos Luxury Sunset Sail with Light Appetizers and Open Bar",
+    "description": {
+      "text": "In Cabo San Lucas, this small-group sunset sail leaves the marina on a 50-foot boat for Land's End, Lover's Beach, and the Arch of Cabo San Lucas. An open bar of sparkling wine, cocktails, beer, and soft drinks is served with light appetizers so the evening stays on the water rather than a separate restaurant stop. The crew handles docking and pacing while the published route stays on the bay and rock formations that mark where the Sea of Cortez meets the Pacific. Hotel pickup is listed for many Los Cabos properties. The format suits visitors who want a guided scenic evening without chartering a boat independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina, Lover's Beach, and Arch that define this sunset outing."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $109.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1827
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/d9/63/da.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sail past spectacular seaside sights at sunset on a romantic cruise from Los Cabos",
+      "Sip drinks from the open bar and nibble on light bites from a gourmet menu as you cruise past iconic landmarks like the",
+      "Watch as the sun sinks into the crystalline water and enjoy the luxurious facilities of your vessel",
+      "Los Cabos Luxury Sunset Sail with Light Appetizers and Open Bar near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is confirmed at booking for listed Los Cabos hotels. Look for a white Cabo Adventures van."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this small-group sunset sail leaves the marina on a 50-foot boat for Land's End, Lover's Beach, and the Arch of Cabo San Lucas.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lover's Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Land's End",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Open bar",
+      "Light appetizers",
+      "Hotel pickup from listed Los Cabos hotels",
+      "Professional crew"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Los Cabos Luxury Sunset Sail with Light Appetizers and Open Bar?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup is confirmed at booking for listed Los Cabos hotels. Look for a white Cabo Adventures van."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109
+      },
+      "currency": "USD"
+    }
+  }
+}

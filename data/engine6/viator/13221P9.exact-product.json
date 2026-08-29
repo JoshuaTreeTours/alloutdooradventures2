@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "13221P9",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Todos-Santos-City-Tour/d50859-13221P9",
+    "title": "Todos Santos Day Trip from Cabo San Lucas",
+    "description": {
+      "text": "In Cabo San Lucas, this small-group day follows the Pacific coast to Todos Santos for galleries, a blanket workshop, a pearl demonstration, and lunch at the Hotel California. A tequila tasting and a stop at the old Jesuit mission are on the published list, with hotel pickup and drop-off included so the group can stay with the town rather than self-driving the highway. Numbers are limited for a more personal pace. The format suits visitors who want a guided pueblo day without coordinating restaurant, tasting-room, and artisan timing independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on Todos Santos, the Hotel California, and the mission that define this Baja town outing rather than a La Paz beach add-on."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $130.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 499
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/d6/5c/f0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Todos Santos, a community of thriving artisans, on this day trip from Los Cabos",
+      "Travel along the Pacific Coast to the eclectic little town situated near the southern tip of the Baja Peninsula",
+      "You’ll stop by a variety of art galleries and shops, enjoy a tequila tasting, and sit down for lunch at the Hotel Califo",
+      "Todos Santos Day Trip from Cabo San Lucas near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is included from listed Los Cabos hotels and confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this small-group day follows the Pacific coast to Todos Santos for galleries, a blanket workshop, a pearl demonstration, and lunch at the Hotel California.",
+    "itineraryItems": [
+      {
+        "title": "Todos Santos",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hotel California",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Jesuit Mission",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch at Hotel California",
+      "Tequila tasting",
+      "Hotel pickup and drop-off",
+      "Artisan visits"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Todos Santos Day Trip from Cabo San Lucas?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel pickup is included from listed Los Cabos hotels and confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130
+      },
+      "currency": "USD"
+    }
+  }
+}

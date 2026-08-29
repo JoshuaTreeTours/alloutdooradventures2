@@ -1,0 +1,175 @@
+{
+  "destinationLabel": "Cabo San Lucas",
+  "destinationCitySlug": "cabo-san-lucas",
+  "viatorDestinationSlug": "Cabo-San-Lucas",
+  "viatorDestinationId": "d50859",
+  "catalogUrl": "https://www.viator.com/Cabo-San-Lucas/d50859-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 14,
+  "premiumCount": 9,
+  "selectionNote": "Selected 14 guided Cabo San Lucas d50859 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including preferred jeep, e-bike, horseback, photography, and additional ATV SKUs, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/GBP/AUD/SGD) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d50859 helicopter page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, airport transfers, inactive products, thin-review SKUs, near-duplicates, park-pass tickets, or products with unusable heroes. Same completeness constraint documented on Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "3714LUXSUNSET",
+    "3714P32",
+    "18372P1",
+    "8056P2",
+    "3714P39",
+    "220975P1",
+    "7054P7",
+    "13221P9",
+    "177104P1",
+    "303247P1",
+    "34186P2",
+    "16451P2",
+    "190377P1",
+    "30877P4"
+  ],
+  "premiumProductCodes": [
+    "3714LUXSUNSET",
+    "3714P32",
+    "3714P39",
+    "13221P9",
+    "177104P1",
+    "303247P1",
+    "34186P2",
+    "16451P2",
+    "190377P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "160467P1",
+      "title": "Private Or Shared Airport Transfers",
+      "reason": "Airport transfer, not a guided tour"
+    },
+    {
+      "productCode": "156643P1",
+      "title": "Shared ride to the arch of Cabo San Lucas",
+      "reason": "USD $19.20 verified and 4.8/611; skipped as a weak short shared water-taxi rather than a guided outdoor tour"
+    },
+    {
+      "productCode": "26006P14",
+      "title": "Park Pass at Wild Canyon: One Place, Many Adventures",
+      "reason": "USD $249 4.6/306 park-pass ticket, not a guided itinerary"
+    },
+    {
+      "productCode": "303629P121",
+      "title": "Wild Canyon Full Day Pass in Cabo",
+      "reason": "Park-pass ticket, not a guided tour"
+    },
+    {
+      "productCode": "177104P8",
+      "title": "Camel Ride and UTV Combo Adventure, with Tequila Tasting",
+      "reason": "USD $108 verified; 3.8/280 below the quality bar"
+    },
+    {
+      "productCode": "30877P3",
+      "title": "Todos Santos the coolest and most magical town of the southern BAJA!",
+      "reason": "USD $99 verified; 4.3/133 below the quality bar and near-duplicate of selected 13221P9"
+    },
+    {
+      "productCode": "177630P1",
+      "title": "Balandra Beach & City Tour La Paz & Todo Santos hotel California",
+      "reason": "USD $154.22 verified; 4.2/107 below the quality bar"
+    },
+    {
+      "productCode": "300307P13",
+      "title": "Private Tour to Playa Balandra, La Paz and Todos Santos",
+      "reason": "USD $425.76 4.4/21 too thin and below the quality bar"
+    },
+    {
+      "productCode": "6657WHALE",
+      "title": "Los Cabos Whale Watching Cruise Including Breakfast",
+      "reason": "USD $89 verified; 4.4/87 below the quality bar"
+    },
+    {
+      "productCode": "354044P1",
+      "title": "Tour to Arch in the only Clear Boat in Cabo Cruise Hotel PICKUP!",
+      "reason": "4.4/357 below the quality bar; no verified USD From$ on the complete dump"
+    },
+    {
+      "productCode": "16451P1",
+      "title": "Outdoor Adventure: Parasailing in Los Cabos",
+      "reason": "4.5/157 and GBP-only dump; aerial substitute but not a helicopter tour"
+    },
+    {
+      "productCode": "118351P14",
+      "title": "Single, or Double PARASAILING in Cabo with Views of The Arch",
+      "reason": "21 reviews too thin and no verified USD From$"
+    },
+    {
+      "productCode": "3714P21",
+      "title": "Electric Bike Beach Adventure with tequila tasting and lunch",
+      "reason": "Preferred guided bike type; 4.9/1067 EUR-only dump"
+    },
+    {
+      "productCode": "3714MTBIKE",
+      "title": "Los Cabos Mountain Bike Adventure and Eco-Farm",
+      "reason": "Preferred guided bike type; no complete USD+rating+hero dump"
+    },
+    {
+      "productCode": "192622P32",
+      "title": "Cabo White Sand Horseback Riding Tour and Tequila Tasting",
+      "reason": "4.9/975 GBP-only dump"
+    },
+    {
+      "productCode": "192622P13",
+      "title": "Cabo Migrino Beach and Desert ATV Tour plus Tequila Tasting",
+      "reason": "4.9/1567 AUD-only dump and ATV category already represented by 177104P1"
+    },
+    {
+      "productCode": "3714P40",
+      "title": "ATV Tour, Camel Ride, Tequila Tasting and Mexican Buffet Lunch",
+      "reason": "4.8/3069; no current verified USD From$ on a complete dump (expired May 2025 deal only)"
+    },
+    {
+      "productCode": "3714P45",
+      "title": "6-Hour Guided City and Cruise Tour of Los Cabos with Lunch",
+      "reason": "5.0/492 EUR-only dump and near-duplicate city+Arch format of selected 30877P4"
+    },
+    {
+      "productCode": "7054SNO",
+      "title": "Los Cabos Snorkeling Tour to Chileno Bay and Santa Maria Cove",
+      "reason": "4.9/345 GBP-only dump and near-duplicate of selected 3714P39/7054P7 bay snorkel"
+    },
+    {
+      "productCode": "7054JEEP",
+      "title": "Private Tour Baja Jeep 4x4 Adventure at Los Cabos",
+      "reason": "Preferred private jeep type; EUR-only dump"
+    },
+    {
+      "productCode": "7054P8",
+      "title": "Private Jeep Tour Cabo Pulmo",
+      "reason": "Preferred private jeep type; first dump showed $650 but no complete rating+hero page was captured after DataDome"
+    },
+    {
+      "productCode": "215599P6",
+      "title": "Private yacht charter for cruising & snorkeling in Cabo San Lucas",
+      "reason": "USD $1,190 from an earlier public dump; later complete hero+rating page was blocked"
+    },
+    {
+      "productCode": "357146P1",
+      "title": "Private photo session in Los Cabos",
+      "reason": "Preferred photography type; EUR-only dump and no complete rating+hero page"
+    },
+    {
+      "productCode": "300160P4",
+      "title": "Los Cabos Private Yacht Whale Watching Tour, Snorkel and Drinks",
+      "reason": "4.9/58 AUD-only dump and near-duplicate of selected 303247P1 private yacht"
+    },
+    {
+      "productCode": "290526P3",
+      "title": "Los Cabos Whale Watching (Transportation and Pictures Included)",
+      "reason": "4.9/200 EUR-only dump and whale category already represented"
+    },
+    {
+      "productCode": "154229P5",
+      "title": "Cabo San Lucas Whale Watching Tour with Photos Included",
+      "reason": "5.0/1216; no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "3714P21-bleed",
+      "title": "Electric Bike Beach Adventure overview",
+      "reason": "Not selected; live overview used Mexico City-style quesadillas wording that would risk destination bleed"
+    }
+  ]
+}

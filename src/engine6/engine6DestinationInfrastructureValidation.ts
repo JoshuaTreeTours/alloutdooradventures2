@@ -83,6 +83,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "mexico",
     citySlug: "puerto-vallarta",
   },
+  "cabo-san-lucas": {
+    destinationLabel: "Cabo San Lucas",
+    destinationCitySlug: "cabo-san-lucas",
+    stateSlug: "mexico",
+    citySlug: "cabo-san-lucas",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

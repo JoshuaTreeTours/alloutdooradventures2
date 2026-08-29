@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "220975P1",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Snorkel-Tour/d50859-220975P1",
+    "title": "Cabo San Lucas and Santa Maria Bay Snorkeling Sightseeing Cruise",
+    "description": {
+      "text": "In Cabo San Lucas, this sightseeing cruise heads to Santa Maria Bay for a guided snorkel with gear on the boat. The published route keeps the group on marina departure and corridor reef time rather than a multi-bay add-on. A small port tax may be collected in destination. The format suits visitors who want a compact guided swim without booking a private skiff. Commentary covers the bay and fish typical of the corridor reefs. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the marina and Santa Maria Bay that define this snorkel cruise rather than adding Chileno Bay, a kayak crossing, or a downtown shopping loop."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.80",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 548
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/77/51/4c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cabo San Lucas and Santa Maria Bay Snorkeling Sightseeing Cruise from Cabo San Lucas",
+      "the Sea of Cortez, Sierra de la Laguna, and El Arco views",
+      "Professional guide with Cabo San Lucas local expertise",
+      "Small-group or private format as listed",
+      "Guided Cabo San Lucas sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Cabo San Lucas marina location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this sightseeing cruise heads to Santa Maria Bay for a guided snorkel with gear on the boat.",
+    "itineraryItems": [
+      {
+        "title": "Cabo San Lucas Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Santa Maria Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snorkel gear",
+      "Boat cruise",
+      "Guided commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cabo San Lucas and Santa Maria Bay Snorkeling Sightseeing Cruise?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at the Cabo San Lucas marina location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Sightseeing Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79.8
+      },
+      "currency": "USD"
+    }
+  }
+}

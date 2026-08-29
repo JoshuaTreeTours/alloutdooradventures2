@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "303247P1",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Luxury-Yacht-Cruise-in-Cabo-San-Lucas/d50859-303247P1",
+    "title": "Cabo San Lucas Private Yacht Cruise with Open Bar",
+    "description": {
+      "text": "In Cabo San Lucas, this private yacht keeps the boat for one group, with snorkeling or paddleboarding at Pelican Rock and Chileno Bay plus a pass at the Arch of Cabo San Lucas. Drinks and snacks are included so the outing stays on the water rather than a marina restaurant stop. The meeting point is Local A at Tesoro Hotel on Blvd. Paseo de la Marina. The private format is aimed at visitors who want a guided scenic charter without sharing the deck with another party. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on Pelican Rock, the Arch, and Chileno Bay that define this yacht day rather than a shared sunset sail or glass-bottom city loop."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $599.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 237
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/cd/92/fe.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the Cabo waters in style—in the company of just your friends or family—on this private yacht cruise",
+      "Soak up the views as you sail then jump off board at Pelican Rock, a favorite snorkel spot; admire the famed El Arco de",
+      "Drinks and snacks included",
+      "Cabo San Lucas Private Yacht Cruise with Open Bar near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Local A Tesoro Hotel, Blvd. Paseo de la Marina 20, Centro, Marina, Cabo San Lucas."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this private yacht keeps the boat for one group, with snorkeling or paddleboarding at Pelican Rock and Chileno Bay plus a pass at the Arch of Cabo San Lucas.",
+    "itineraryItems": [
+      {
+        "title": "Pelican Rock",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arch of Cabo San Lucas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chileno Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private yacht",
+      "Alcoholic beverages",
+      "Snorkel gear",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cabo San Lucas Private Yacht Cruise with Open Bar?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at Local A Tesoro Hotel, Blvd. Paseo de la Marina 20, Centro, Marina, Cabo San Lucas."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Charters"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 599
+      },
+      "currency": "USD"
+    }
+  }
+}

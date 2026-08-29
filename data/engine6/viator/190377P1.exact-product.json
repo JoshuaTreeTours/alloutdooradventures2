@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "190377P1",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/RUTA-PERICU/d50859-190377P1",
+    "title": "Hike the native Pericu road in Sierra de la Laguna.",
+    "description": {
+      "text": "In Cabo San Lucas, this guided hike follows a Pericu route in the Sierra de la Laguna reserve, then sits down to a California rancho meal of handmade tortillas and rancho cheese. The published walk covers about four miles through semitropical desert, with a swim hole when water is present and a later stargazing window on the return when the group finishes after dark. Hotel transfers and the reserve entrance fee are included; the group is capped at eight. The meeting point is the McDonald's lot on Blvd. Lázaro Cárdenas. The format suits visitors who want an Indigenous-history trail day without finding the canyon independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on the Sierra de la Laguna, Pericu trail, and rancho that shape this outing."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $160.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/15/bb/b7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the tracks, trails and ways of life of Cabo’s indigenous nomadic people, the Pericu, on a guided hike through t",
+      "Meet a true California rancho for a traditional meal, including handmade tortillas and rancho cheese",
+      "Then hike 4 miles (6 kilometers) through the nature reserve, learning about the flora and fauna of semitropical desert a",
+      "Hike the native Pericu road in Sierra de la Laguna. near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the McDonald's parking lot on Blvd. Lázaro Cárdenas, El Medano Ejidal, or request hotel pickup."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this guided hike follows a Pericu route in the Sierra de la Laguna reserve, then sits down to a California rancho meal of handmade tortillas and rancho cheese.",
+    "itineraryItems": [
+      {
+        "title": "Sierra de la Laguna",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pericu trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "California rancho",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Reserve entrance fee",
+      "Lunch",
+      "Damiana tasting",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hike the native Pericu road in Sierra de la Laguna.?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Meet at the McDonald's parking lot on Blvd. Lázaro Cárdenas, El Medano Ejidal, or request hotel pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 160
+      },
+      "currency": "USD"
+    }
+  }
+}

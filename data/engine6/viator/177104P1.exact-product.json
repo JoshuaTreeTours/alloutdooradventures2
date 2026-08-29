@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "177104P1",
+    "productUrl": "https://www.viator.com/tours/Cabo-San-Lucas/Adventure-in-Cuatrimoto-by-the-beach-and-the-desert-in-Los-Cabos/d50859-177104P1",
+    "title": "Best ATV Cabo Adventure, Desert & Beach Ride whit Tequila Tasting",
+    "description": {
+      "text": "In Cabo San Lucas, this guided ATV outing follows Migrino Desert tracks and Migrino Beach on a single or shared machine. Helmets, goggles, and a bandana are issued after a safety briefing, and a tequila tasting closes the published route. Round-trip transfers cover listed hotels, villas, and the cruise port. A Migrino Park entrance fee and optional collision insurance are collected separately from the listed From price. Drivers need a valid license. The format suits visitors who want a guided off-road window without renting ATVs independently. Meeting points are confirmed at booking in Cabo San Lucas, and the itinerary stays on Migrino Desert and Migrino Beach that shape this Pacific-side ride rather than a canyon jeep or camel-safari add-on."
+    },
+    "location": {
+      "city": "Cabo San Lucas",
+      "state": "Mexico"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 406
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6d/be/63.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get your adrenaline pumping as you explore the desert and Migriño Beach on your own ATV",
+      "This group tour from Cabo takes you on an adventure along the Pacific Ocean and over sand dunes, offering plenty of oppo",
+      "Suitable for cruise ship passengers and includes round-trip transfers from your hotel, villa, or the cruise port",
+      "Best ATV Cabo Adventure, Desert & Beach Ride whit Tequila Tasting near Cabo San Lucas",
+      "Professional Cabo San Lucas guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel, villa, Airbnb, or cruise-port pickup is included from listed Cabo San Lucas and San José del Cabo points."
+      },
+      "end": {
+        "description": "Return to your Cabo San Lucas meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cabo San Lucas, this guided ATV outing follows Migrino Desert tracks and Migrino Beach on a single or shared machine.",
+    "itineraryItems": [
+      {
+        "title": "Migrino Desert",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Migrino Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Roundtrip transportation",
+      "Helmet, goggles, and bandana",
+      "Tequila tasting",
+      "Purified water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best ATV Cabo Adventure, Desert & Beach Ride whit Tequila Tasting?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cabo San Lucas?",
+        "answer": "Hotel, villa, Airbnb, or cruise-port pickup is included from listed Cabo San Lucas and San José del Cabo points."
+      }
+    ],
+    "categories": [
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Off-road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}
