@@ -319,6 +319,16 @@ import specimen6200p5Payload from "../../data/engine6/viator/6200P5.exact-produc
 import specimen308891p25Payload from "../../data/engine6/viator/308891P25.exact-product.json";
 import specimen42786p2Payload from "../../data/engine6/viator/42786P2.exact-product.json";
 import specimen368094p1Payload from "../../data/engine6/viator/368094P1.exact-product.json";
+import specimen2736p31Payload from "../../data/engine6/viator/2736P31.exact-product.json";
+import specimen22116p7Payload from "../../data/engine6/viator/22116P7.exact-product.json";
+import specimen7053zipPayload from "../../data/engine6/viator/7053ZIP.exact-product.json";
+import specimen24191p1Payload from "../../data/engine6/viator/24191P1.exact-product.json";
+import specimen118966p4Payload from "../../data/engine6/viator/118966P4.exact-product.json";
+import specimen46209p3Payload from "../../data/engine6/viator/46209P3.exact-product.json";
+import specimen218207p4Payload from "../../data/engine6/viator/218207P4.exact-product.json";
+import specimen428665p1Payload from "../../data/engine6/viator/428665P1.exact-product.json";
+import specimen368259p2Payload from "../../data/engine6/viator/368259P2.exact-product.json";
+import specimen46209p5Payload from "../../data/engine6/viator/46209P5.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -3446,6 +3456,66 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "368094P1",
     publicUrl: "https://www.viator.com/tours/Cancun/Full-Day-Tour-to-Isla-Mujeres-in-Catamaran/d631-368094P1",
     rawPayload: specimen368094p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2736P31",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/All-Terrain-Safari/d630-2736P31",
+    rawPayload: specimen2736p31Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22116P7",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Sierra-Madre-ATV-Mountain-Adventure-from-Puerto-Vallarta/d630-22116P7",
+    rawPayload: specimen22116p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7053ZIP",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Ziplining-in-Puerto-Vallarta-Original-Canopy-Tour/d630-7053ZIP",
+    rawPayload: specimen7053zipPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24191P1",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Mega-Yacht-All-Inclusive-Yelapa-Waterfall-and-Snorkeling-Adventure/d630-24191P1",
+    rawPayload: specimen24191p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "118966P4",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Marietas-Islands-snorkel-and-hidden-beach-optional/d630-118966P4",
+    rawPayload: specimen118966p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46209P3",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Small-Group-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P3",
+    rawPayload: specimen46209p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "218207P4",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Hidden-Beach-Tour/d630-218207P4",
+    rawPayload: specimen218207p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "428665P1",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Horseback-Riding-and-Tequila-Tasting/d630-428665P1",
+    rawPayload: specimen428665p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "368259P2",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Palo-Maria-Waterfalls-Hiking-Tour/d630-368259P2",
+    rawPayload: specimen368259p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46209P5",
+    publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
+    rawPayload: specimen46209p5Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

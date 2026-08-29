@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "7053ZIP",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Ziplining-in-Puerto-Vallarta-Original-Canopy-Tour/d630-7053ZIP",
+    "title": "Puerto Vallarta Original Canopy Tour, Ziplining, Tequila and Speed Boat Ride",
+    "description": {
+      "text": "In Puerto Vallarta, this original canopy circuit pairs an optional speedboat crossing with ziplines above the Los Horcones River. The Los Veranos Canopy Tour course covers about two miles on cables as high as 328 feet, then continues to an included tequila tasting plus swim, kayak, and waterslide time when the river allows. Land or sea transport is handled so visitors can stay with the platforms rather than arranging a separate jungle transfer. Lunch at the riverside restaurant is available to purchase, while the tasting and course time stay in the published package. The format suits visitors who want a guided adventure day without assembling zipline, boat, and tasting tickets separately. Departures are confirmed at booking in Puerto Vallarta, and the itinerary stays on the river approach and Los Veranos canopy that define this outing."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $118.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3172
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/7d/a2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Puerto Vallarta jungle canopy zipline and speedboat ride tour",
+      "Soar over the river across 19 cables with distances up to 1,450 feet (442 meters) long",
+      "Purchase lunch and drinks at a riverside restaurant and taste tequila (included)",
+      "Swim and kayak plus observe marmosets, coatimundi, and boas at an animal sanctuary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Begin at the Los Veranos Canopy Tour main office or the confirmed speedboat departure listed when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this original canopy circuit pairs an optional speedboat crossing with ziplines above the Los Horcones River.",
+    "itineraryItems": [
+      {
+        "title": "Los Horcones River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Los Veranos Canopy Tour",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Land or Sea round trip transporation",
+      "Zip lines course with water stations",
+      "Traditional Tequila tasting",
+      "Kayaks, water slides and water activities on the river (weather permitting)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Puerto Vallarta Original Canopy Tour, Ziplining, Tequila and Speed Boat Ride?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Begin at the Los Veranos Canopy Tour main office or the confirmed speedboat departure listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Zipline Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 118
+      },
+      "currency": "USD"
+    }
+  }
+}

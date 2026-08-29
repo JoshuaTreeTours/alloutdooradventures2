@@ -77,6 +77,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "mexico",
     citySlug: "cancun",
   },
+  "puerto-vallarta": {
+    destinationLabel: "Puerto Vallarta",
+    destinationCitySlug: "puerto-vallarta",
+    stateSlug: "mexico",
+    citySlug: "puerto-vallarta",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

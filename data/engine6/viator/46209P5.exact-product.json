@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "46209P5",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
+    "title": "Private Whale Watching Tour in Puerto Vallarta",
+    "description": {
+      "text": "In Puerto Vallarta, this private whale-watching charter gives a group the boat and a marine biologist for a morning on Banderas Bay. Lunch and soft drinks are served on board, and hotel pickup is listed so the outing stays on the water rather than marina logistics. The published season runs December to March, when humpback whales return to the bay, and the guide keeps a distance that will not disturb the animals. A cash port tax is collected, and the private format is capped at eight passengers. The outing is aimed at visitors who want a private wildlife morning without sharing the boat with another group. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on Marina Vallarta and Banderas Bay that define this charter."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $760.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 112
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spend the morning on the well-equipped boat and enjoy lunch on the water",
+      "Suitable for all ages; kids will love the individualized attention",
+      "This tour runs in the winter, when the humpback whales return to Vallarta"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Mr. Cream Pancakes & Waffles, Condominios Marina Sol Int. 3y4, Marina Vallarta, or use the included hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this private whale-watching charter gives a group the boat and a marine biologist for a morning on Banderas Bay.",
+    "itineraryItems": [
+      {
+        "title": "Marina Vallarta",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Banderas Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Soft Beverages",
+      "Lunch",
+      "Professional guide",
+      "Private tour",
+      "Hotel pickup and drop-off",
+      "Transportation to/from attractions"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Whale Watching Tour in Puerto Vallarta?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at Mr. Cream Pancakes & Waffles, Condominios Marina Sol Int. 3y4, Marina Vallarta, or use the included hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 760
+      },
+      "currency": "USD"
+    }
+  }
+}

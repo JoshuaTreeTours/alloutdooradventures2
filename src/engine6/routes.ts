@@ -1420,6 +1420,44 @@ export const isEngine6CancunTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CANCUN_TOUR_PATH_PREFIX);
 
+export const ENGINE6_PUERTO_VALLARTA_2736P31_PRODUCT_CODE = "2736P31";
+export const ENGINE6_PUERTO_VALLARTA_2736P31_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/utv-tour-puerto-vallarta-2736P31";
+export const ENGINE6_PUERTO_VALLARTA_22116P7_PRODUCT_CODE = "22116P7";
+export const ENGINE6_PUERTO_VALLARTA_22116P7_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/sierra-madre-atv-adventure-from-puerto-vallarta-22116P7";
+export const ENGINE6_PUERTO_VALLARTA_7053ZIP_PRODUCT_CODE = "7053ZIP";
+export const ENGINE6_PUERTO_VALLARTA_7053ZIP_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/puerto-vallarta-original-canopy-tour-ziplining-tequila-7053ZIP";
+export const ENGINE6_PUERTO_VALLARTA_24191P1_PRODUCT_CODE = "24191P1";
+export const ENGINE6_PUERTO_VALLARTA_24191P1_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/mega-yacht-all-inclusive-yelapa-waterfall-snorkeling-ad-24191P1";
+export const ENGINE6_PUERTO_VALLARTA_118966P4_PRODUCT_CODE = "118966P4";
+export const ENGINE6_PUERTO_VALLARTA_118966P4_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/marietas-islands-snorkel-tour-hidden-beach-118966P4";
+export const ENGINE6_PUERTO_VALLARTA_46209P3_PRODUCT_CODE = "46209P3";
+export const ENGINE6_PUERTO_VALLARTA_46209P3_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/small-group-half-day-whale-watching-tour-in-puerto-vall-46209P3";
+export const ENGINE6_PUERTO_VALLARTA_218207P4_PRODUCT_CODE = "218207P4";
+export const ENGINE6_PUERTO_VALLARTA_218207P4_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/hidden-beach-tour-218207P4";
+export const ENGINE6_PUERTO_VALLARTA_428665P1_PRODUCT_CODE = "428665P1";
+export const ENGINE6_PUERTO_VALLARTA_428665P1_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/horseback-riding-tequila-tasting-mex-bbq-margaritas-428665P1";
+export const ENGINE6_PUERTO_VALLARTA_368259P2_PRODUCT_CODE = "368259P2";
+export const ENGINE6_PUERTO_VALLARTA_368259P2_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/palo-mar-a-waterfalls-hike-half-day-tour-368259P2";
+export const ENGINE6_PUERTO_VALLARTA_46209P5_PRODUCT_CODE = "46209P5";
+export const ENGINE6_PUERTO_VALLARTA_46209P5_ROUTE =
+  "/destinations/mexico/puerto-vallarta/tours/private-whale-watching-tour-in-puerto-vallarta-46209P5";
+
+export const ENGINE6_PUERTO_VALLARTA_TOUR_PATH_PREFIX =
+  "/destinations/mexico/puerto-vallarta/tours/";
+
+export const isEngine6PuertoVallartaTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_PUERTO_VALLARTA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4705,6 +4743,46 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CANCUN_368094P1_ROUTE,
     ENGINE6_CANCUN_368094P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_2736P31_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_2736P31_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_22116P7_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_22116P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_7053ZIP_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_7053ZIP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_24191P1_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_24191P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_118966P4_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_118966P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_46209P3_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_46209P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_218207P4_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_218207P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_428665P1_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_428665P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_368259P2_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_368259P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PUERTO_VALLARTA_46209P5_ROUTE,
+    ENGINE6_PUERTO_VALLARTA_46209P5_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

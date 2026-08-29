@@ -31,6 +31,7 @@ import { getDublinTargetedNarrativeDescription } from "./dublinApprovedNarrative
 import { getEdinburghTargetedNarrativeDescription } from "./edinburghApprovedNarrativeDescriptions";
 import { getMexicoCityTargetedNarrativeDescription } from "./mexicoCityApprovedNarrativeDescriptions";
 import { getCancunTargetedNarrativeDescription } from "./cancunApprovedNarrativeDescriptions";
+import { getPuertoVallartaTargetedNarrativeDescription } from "./puertoVallartaApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -147,6 +148,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getEdinburghTargetedNarrativeDescription(productCode) ??
   getMexicoCityTargetedNarrativeDescription(productCode) ??
   getCancunTargetedNarrativeDescription(productCode) ??
+  getPuertoVallartaTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

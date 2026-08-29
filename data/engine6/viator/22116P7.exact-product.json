@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "22116P7",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Sierra-Madre-ATV-Mountain-Adventure-from-Puerto-Vallarta/d630-22116P7",
+    "title": "Sierra Madre ATV Adventure from Puerto Vallarta",
+    "description": {
+      "text": "In Puerto Vallarta, this half-day ATV outing follows Sierra Madre mountain tracks away from crowded resorts. Drivers choose a single or two-person ATV, then pass Old Town streets and jungle rivers under a guide who handles briefing, safety gear, and souvenir photos. Morning and afternoon departures make it easier to pair the ride with a beach or bay day. A valid license is required for drivers, and the small-group format keeps the route on dirt tracks rather than a large convoy. The outing is aimed at visitors who want a guided off-road window without renting ATVs independently. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on Old Town pass-throughs and Sierra Madre trails that shape this Jalisco mountain ride."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $81.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 793
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5b/37/7b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Roar through the Sierra Madre mountains on your own ATV",
+      "No extra charges for pictures: Souvenir shots are included",
+      "Small-group tour makes for a more intimate, personalized experience",
+      "Choice of departures let you plan your day and fit more in"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Puerto Vallarta departure listed when booking. Hotel pickup is not included."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this half-day ATV outing follows Sierra Madre mountain tracks away from crowded resorts.",
+    "itineraryItems": [
+      {
+        "title": "Old Town Puerto Vallarta",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sierra Madre Mountains",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guide",
+      "Use of helmet",
+      "All taxes, fees and handling charges",
+      "Complementary photos & videos"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sierra Madre ATV Adventure from Puerto Vallarta?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at the confirmed Puerto Vallarta departure listed when booking. Hotel pickup is not included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Off-road Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 81
+      },
+      "currency": "USD"
+    }
+  }
+}

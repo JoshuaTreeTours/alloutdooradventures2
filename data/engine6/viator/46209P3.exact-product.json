@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "46209P3",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Small-Group-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P3",
+    "title": "Small-Group Half-Day Whale-Watching Tour in Puerto Vallarta",
+    "description": {
+      "text": "In Puerto Vallarta, this small-group half-day looks for humpback whales on Banderas Bay with a marine biologist guide. The boat includes a restroom, and lunch plus soft drinks are served on board so the morning stays on the water rather than a separate restaurant stop. Hotel pickup is listed for many properties, with a small cash port fee collected at departure. The group format is aimed at visitors who want expert commentary without booking a private charter. Seasonal whale presence still depends on winter migration, and the published route keeps a respectful distance from the animals. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on Marina Vallarta and Banderas Bay that define this wildlife outing."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $110.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 282
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day small-group whale-watching tour from Puerto Vallarta",
+      "Cruise the waters of Banderas Bay to spot migrating humpback whales",
+      "Learn about whale behavior from the marine biologist guide",
+      "Lunch and soft drinks keep hunger pangs at bay"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is included from listed Puerto Vallarta hotels, or meet at the Marina Vallarta departure confirmed when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this small-group half-day looks for humpback whales on Banderas Bay with a marine biologist guide.",
+    "itineraryItems": [
+      {
+        "title": "Marina Vallarta",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Banderas Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Soft Beverages",
+      "Lunch",
+      "Professional guide",
+      "Hotel pickup and drop-off",
+      "Transportation to/from attractions"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group Half-Day Whale-Watching Tour in Puerto Vallarta?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Hotel pickup is included from listed Puerto Vallarta hotels, or meet at the Marina Vallarta departure confirmed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 110
+      },
+      "currency": "USD"
+    }
+  }
+}

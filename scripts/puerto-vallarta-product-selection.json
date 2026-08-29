@@ -1,0 +1,220 @@
+{
+  "destinationLabel": "Puerto Vallarta",
+  "destinationCitySlug": "puerto-vallarta",
+  "viatorDestinationSlug": "Puerto-Vallarta",
+  "viatorDestinationId": "d630",
+  "catalogUrl": "https://www.viator.com/Puerto-Vallarta/d630-ttd",
+  "suppliedCatalogUrlNote": "The requested https://www.viator.com/Puerto-Vallarta/d631-ttd is Cancun (d631), not Puerto Vallarta. Live Puerto Vallarta catalog is d630.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 10,
+  "premiumCount": 7,
+  "selectionNote": "Selected 10 guided Puerto Vallarta d630 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/GBP/CHF) blocked many otherwise-strong SKUs from being verified in USD on a complete product page. Dedicated helicopter, wine-only, photography, stargazing, Indigenous/Huichol, and guided-bike d630 pages with combined USD+rating+hero dumps were not captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Cancun (13) and Mexico City (11).",
+  "selectedProductCodes": [
+    "2736P31",
+    "22116P7",
+    "7053ZIP",
+    "24191P1",
+    "118966P4",
+    "46209P3",
+    "218207P4",
+    "428665P1",
+    "368259P2",
+    "46209P5"
+  ],
+  "premiumProductCodes": [
+    "2736P31",
+    "22116P7",
+    "7053ZIP",
+    "24191P1",
+    "428665P1",
+    "368259P2",
+    "46209P5"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "33070P5",
+      "title": "Full-Day Puerto Vallarta City Highlights Tour",
+      "reason": "USD $29 verified; 4.0/383 rating below the quality bar"
+    },
+    {
+      "productCode": "129286P4",
+      "title": "Marietas Islands Snorkel Cruise from Puerto Vallarta All Inclusive",
+      "reason": "USD $101.86 verified; 3.6/72 rating below the quality bar"
+    },
+    {
+      "productCode": "2736SEA_YEL",
+      "title": "Yelapa Waterfall, BBQ at Exclusive Majahuitas Beach & Open bar",
+      "reason": "USD $119 4.4/671 below the quality bar and near-duplicate of selected 24191P1 Yelapa yacht day"
+    },
+    {
+      "productCode": "59695P3",
+      "title": "Marietas Islands snorkeling & Hidden beach (w/ restrictions)",
+      "reason": "USD $120 4.7/171 verified; skipped as a near-duplicate of selected 118966P4 Marietas/Hidden Beach"
+    },
+    {
+      "productCode": "129286P10",
+      "title": "Whale & Dolphin Watching Cruise in Puerto Vallarta All Inclusive",
+      "reason": "USD $79 verified; 4.2/178 rating below the quality bar"
+    },
+    {
+      "productCode": "33070P22",
+      "title": "Private city and tequila tour",
+      "reason": "3.7/11 plus EUR-only dump; thin reviews and unverifiable USD"
+    },
+    {
+      "productCode": "129286P16",
+      "title": "Los Arcos, Animas and Quimixto Snorkel Cruise",
+      "reason": "3.3/68 and no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "67991P4",
+      "title": "Amazing Vallarta",
+      "reason": "3.9/40 and no verified USD From$"
+    },
+    {
+      "productCode": "71300P1",
+      "title": "Puerto Vallarta City Tour",
+      "reason": "4.1/98 below the quality bar and no verified USD From$"
+    },
+    {
+      "productCode": "33070P26",
+      "title": "Airport transfer",
+      "reason": "Airport transfer, not a guided tour"
+    },
+    {
+      "productCode": "32178P2",
+      "title": "City and Tropical Tour",
+      "reason": "Strong 4.9/163 private SKU; live dump CHF only"
+    },
+    {
+      "productCode": "269258P2",
+      "title": "Half day Private tour of Puerto Vallarta with a Local Guide",
+      "reason": "5.0/19 thin reviews and CAD-only dump"
+    },
+    {
+      "productCode": "269258P1",
+      "title": "San Sebastian del Oeste Pueblo Magico Private Tour",
+      "reason": "Preferred private/cultural type; CAD-only dump"
+    },
+    {
+      "productCode": "23153P6",
+      "title": "Private Tour in El Malecon Boardwalk Bike Ride",
+      "reason": "Preferred guided bike type; 4.8/68 GBP-only dump"
+    },
+    {
+      "productCode": "40350P16",
+      "title": "Road Bike tour from Nuevo Vallarta to Punta De Mita",
+      "reason": "Preferred guided bike type; 5.0/28 too thin and no verified USD From$"
+    },
+    {
+      "productCode": "348003P1",
+      "title": "Six hidden beaches hike",
+      "reason": "Preferred guided hiking type; 4.8/93 CHF-only dump"
+    },
+    {
+      "productCode": "392070P4",
+      "title": "Bioluminescence & sunset boat tour to Los Arcos Sanctuary",
+      "reason": "Preferred stargazing/night scenic type; 4.8/171 CAD-only dump"
+    },
+    {
+      "productCode": "327483P1",
+      "title": "ZipLine Canopy Tour by Nogalito Ecopark",
+      "reason": "4.8/201 zipline SKU; GBP-only dump and near-duplicate category of selected 7053ZIP"
+    },
+    {
+      "productCode": "125743P1",
+      "title": "Chocolate Tour in Vallarta",
+      "reason": "Cultural food SKU 4.9/147; EUR-only dump"
+    },
+    {
+      "productCode": "2736LAND_OUT",
+      "title": "Rainforest Ziplining, Waterfalls & Speed boat",
+      "reason": "4.8/1261 adventure SKU; EUR-only dump"
+    },
+    {
+      "productCode": "307532P1",
+      "title": "ATV and RZR Jorullo Bridge Experience",
+      "reason": "4.7/449 off-road SKU; EUR-only dump and ATV category already represented"
+    },
+    {
+      "productCode": "7154P8",
+      "title": "Bikes and Bites",
+      "reason": "Preferred bike/food type; GBP-only dump"
+    },
+    {
+      "productCode": "195368P2",
+      "title": "Sayulita City Photo Tour",
+      "reason": "Preferred photography type; GBP-only dump"
+    },
+    {
+      "productCode": "33070P4",
+      "title": "Full-Day Tequila, Jalisco from Puerto Vallarta",
+      "reason": "USD $450 verified; 4.6/7 too thin for commercial quality"
+    },
+    {
+      "productCode": "33070P23",
+      "title": "Private San Sebastian del Oeste Tour",
+      "reason": "USD $450 5.0/11 too thin for commercial quality"
+    },
+    {
+      "productCode": "125512P62",
+      "title": "Best of Puerto Vallarta Private Tour",
+      "reason": "USD $65 4.8/36 too thin for commercial quality"
+    },
+    {
+      "productCode": "249041P1",
+      "title": "Fun Horseback Tour in Mismaloya",
+      "reason": "USD $75 4.9/30 too thin; horseback already represented by 428665P1"
+    },
+    {
+      "productCode": "220192P3",
+      "title": "Horseback riding tour",
+      "reason": "Snippet showed $189.99; no complete rating+hero dump"
+    },
+    {
+      "productCode": "2736P30",
+      "title": "Off-Road Adventure: Traditional Mexican Village and Sierra Madre Hike",
+      "reason": "4.8/67 jeep+hike SKU; no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "358399P2",
+      "title": "ATV Mountain Tour Sierra Madre",
+      "reason": "4.9/329 ATV SKU; no verified USD From$ and ATV category already represented"
+    },
+    {
+      "productCode": "392070P1",
+      "title": "Visit Tortuguero Camp & Turtle Release",
+      "reason": "4.9/239; no verified USD From$ on a complete dump"
+    },
+    {
+      "productCode": "59695P4",
+      "title": "Wild dolphins encounter & snorkeling",
+      "reason": "4.9/141 guided wildlife SKU; no verified Viator USD From$ on a complete dump"
+    },
+    {
+      "productCode": "161887P4",
+      "title": "Whale and Dolphin Watching with a Biologist",
+      "reason": "4.9/543; EUR-only dump and near-duplicate of selected 46209P3"
+    },
+    {
+      "productCode": "2736SEA_RHY",
+      "title": "Rhythms of the night, sunset cruise, open bar & oceanfront dinner",
+      "reason": "USD $179 4.5/1431 dinner-show cruise, not a guided outdoor tour in the preferred portfolio"
+    },
+    {
+      "productCode": "5545652P2",
+      "title": "ATV Tour Rio Cuale Sierra Madre Mountains and tequila tasting",
+      "reason": "Snippet $68 4.9/34 too thin and ATV category already represented"
+    },
+    {
+      "productCode": "392523P3",
+      "title": "Private ATV tour with waterfall and Tequila tasting",
+      "reason": "EUR-only dump and ATV category already represented"
+    },
+    {
+      "productCode": "d631-catalog",
+      "title": "User-supplied Puerto Vallarta/d631-ttd URL",
+      "reason": "d631 is Cancun; rejected as the wrong destination catalog"
+    }
+  ]
+}

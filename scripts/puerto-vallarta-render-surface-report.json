@@ -1,0 +1,141 @@
+{
+  "selectedCount": 10,
+  "listingCount": 10,
+  "listingMatchesSelection": true,
+  "okCount": 10,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "2736P31",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/utv-tour-puerto-vallarta-2736P31",
+      "title": "UTV Tour Puerto Vallarta",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1a/c8/b2.jpg",
+      "card": "In Puerto Vallarta, this guided UTV day leaves the resort strip for Sierra Madre mountain tracks in a Polaris RZR.",
+      "itineraryTitles": [
+        "Sierra Madre Mountains",
+        "Natural swimming pool"
+      ],
+      "issues": []
+    },
+    {
+      "code": "22116P7",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/sierra-madre-atv-adventure-from-puerto-vallarta-22116P7",
+      "title": "Sierra Madre ATV Adventure from Puerto Vallarta",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5b/37/7b.jpg",
+      "card": "In Puerto Vallarta, this half-day ATV outing follows Sierra Madre mountain tracks away from crowded resorts.",
+      "itineraryTitles": [
+        "Old Town Puerto Vallarta",
+        "Sierra Madre Mountains"
+      ],
+      "issues": []
+    },
+    {
+      "code": "7053ZIP",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/puerto-vallarta-original-canopy-tour-ziplining-tequila-7053ZIP",
+      "title": "Puerto Vallarta Original Canopy Tour, Ziplining, Tequila and Speed Boat Ride",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/7d/a2.jpg",
+      "card": "In Puerto Vallarta, this original canopy circuit pairs an optional speedboat crossing with ziplines above the Los Horcones River.",
+      "itineraryTitles": [
+        "Los Horcones River",
+        "Los Veranos Canopy Tour"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24191P1",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/mega-yacht-all-inclusive-yelapa-waterfall-snorkeling-ad-24191P1",
+      "title": "Mega Yacht ALL INCLUSIVE Yelapa Waterfall & Snorkeling Adventure",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/87/7f/cf.jpg",
+      "card": "In Puerto Vallarta, this all-inclusive mega-yacht day sails Banderas Bay toward Playa Chica Locca, Quimixto, and Yelapa Beach.",
+      "itineraryTitles": [
+        "Playa Chica Locca",
+        "Quimixto",
+        "Yelapa Beach",
+        "Bay of Banderas"
+      ],
+      "issues": []
+    },
+    {
+      "code": "118966P4",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/marietas-islands-snorkel-tour-hidden-beach-118966P4",
+      "title": "Marietas Islands Snorkel Tour & Hidden Beach",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/49/f7/24.jpg",
+      "card": "In Puerto Vallarta, this snorkeling day heads to the Marietas Islands with a published chance of entering Hidden Beach through the water tun",
+      "itineraryTitles": [
+        "Marietas Islands",
+        "Hidden Beach"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46209P3",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/small-group-half-day-whale-watching-tour-in-puerto-vall-46209P3",
+      "title": "Small-Group Half-Day Whale-Watching Tour in Puerto Vallarta",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1a.jpg",
+      "card": "In Puerto Vallarta, this small-group half-day looks for humpback whales on Banderas Bay with a marine biologist guide.",
+      "itineraryTitles": [
+        "Marina Vallarta",
+        "Banderas Bay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "218207P4",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/hidden-beach-tour-218207P4",
+      "title": "hidden beach tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/2d/d1/db.jpg",
+      "card": "In Puerto Vallarta, this three-hour hidden beach tour leaves Punta de Mita for the Marietas water-tunnel swim when park access allows.",
+      "itineraryTitles": [
+        "Punta de Mita",
+        "Hidden Beach"
+      ],
+      "issues": []
+    },
+    {
+      "code": "428665P1",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/horseback-riding-tequila-tasting-mex-bbq-margaritas-428665P1",
+      "title": "Horseback Riding: Tequila Tasting, Mex BBQ & Margaritas",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/18/9b.jpg",
+      "card": "In Puerto Vallarta, this five-hour outing pairs a guided horseback ride along the Mascota River with an artisanal tequila tasting and Mexica",
+      "itineraryTitles": [
+        "Mascota River",
+        "La Dulce Vista"
+      ],
+      "issues": []
+    },
+    {
+      "code": "368259P2",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/palo-mar-a-waterfalls-hike-half-day-tour-368259P2",
+      "title": "Palo María Waterfalls Hike Half-Day Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9e/47/77.jpg",
+      "card": "In Puerto Vallarta, this half-day hike follows a local guide from Zona Romántica to the Palo María River and Cascadas Palo Maria.",
+      "itineraryTitles": [
+        "Palo María River",
+        "Cascadas Palo Maria"
+      ],
+      "issues": []
+    },
+    {
+      "code": "46209P5",
+      "ok": true,
+      "path": "/destinations/mexico/puerto-vallarta/tours/private-whale-watching-tour-in-puerto-vallarta-46209P5",
+      "title": "Private Whale Watching Tour in Puerto Vallarta",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1f.jpg",
+      "card": "In Puerto Vallarta, this private whale-watching charter gives a group the boat and a marine biologist for a morning on Banderas Bay.",
+      "itineraryTitles": [
+        "Marina Vallarta",
+        "Banderas Bay"
+      ],
+      "issues": []
+    }
+  ]
+}

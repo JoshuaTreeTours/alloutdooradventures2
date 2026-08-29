@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "368259P2",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Palo-Maria-Waterfalls-Hiking-Tour/d630-368259P2",
+    "title": "Palo María Waterfalls Hike Half-Day Tour",
+    "description": {
+      "text": "In Puerto Vallarta, this half-day hike follows a local guide from Zona Romántica to the Palo María River and Cascadas Palo Maria. Shared transport covers the short transfer into the Sierra Madre, then the group hikes, climbs, and swims in river pools with bottled water and snacks included. The outing is limited to 10 travelers and asks for moderate fitness, with a 10:00 a.m. start at Parque Lázaro Cárdenas. The route stays on the published waterfall trail rather than a multi-beach or jeep add-on. The format suits visitors who want a guided hiking window without finding the trailhead or river access independently. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on the Palo María River and waterfall stops that shape this mountain morning."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $63.08",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 79
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9e/47/77.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided hike to Palo María waterfalls",
+      "Shared transport from Zona Romántica",
+      "Bottled water and snacks included",
+      "Small group of up to 10 travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Parque Lázaro Cárdenas y Estacionamiento, at the corner of Lázaro Cárdenas and Pino Suárez in Zona Romántica."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this half-day hike follows a local guide from Zona Romántica to the Palo María River and Cascadas Palo Maria.",
+    "itineraryItems": [
+      {
+        "title": "Palo María River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cascadas Palo Maria",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Snacks",
+      "Transportation shared with all tour attendants from meeting point to Palo María River."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Palo María Waterfalls Hike Half-Day Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at Parque Lázaro Cárdenas y Estacionamiento, at the corner of Lázaro Cárdenas and Pino Suárez in Zona Romántica."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 63.08
+      },
+      "currency": "USD"
+    }
+  }
+}
