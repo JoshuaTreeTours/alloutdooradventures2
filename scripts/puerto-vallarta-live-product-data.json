@@ -1,0 +1,423 @@
+[
+  {
+    "productCode": "2736P31",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/All-Terrain-Safari/d630-2736P31",
+    "title": "UTV Tour Puerto Vallarta",
+    "priceFrom": "From $399.00",
+    "price": 399.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 201,
+    "duration": "6 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1a/c8/b2.jpg",
+    "overview": "Explore the rainforest outside Puerto Vallarta on a thrilling UTV (Utility Terrain Vehicle) adventure. Get a brief safety tutorial and a lesson in driving the 4x4 Polaris RZR UTV. Then, throw on a helmet and goggles and hit the trails. Stop for a hike to a hidden natural pool where you can swim, relax beside a waterfall, and munch on light snacks included in the tour.",
+    "highlights": [
+      "Go on a thrilling rainforest adventure in an UTV (utility terrain vehicle)",
+      "Escape the city and barrel through streams and down remote jungle paths",
+      "Learn how to maneuver a Polaris RZR UTV from an experienced instructor",
+      "Enjoy relaxing hike, a dip at a remote swim-hole, and complimentary snacks"
+    ],
+    "itineraryStops": [
+      "Sierra Madre Mountains",
+      "Natural swimming pool"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Use of UTV and helmet",
+      "Light snack",
+      "Purified water",
+      "Hotel pickup and drop-off"
+    ],
+    "startDescription": "Hotel pickup is included from listed Puerto Vallarta hotels. Confirm the pickup window when booking.",
+    "experienceType": "jeep-offroad",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Off-road Tours",
+      "Outdoor Activities"
+    ]
+  },
+  {
+    "productCode": "22116P7",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Sierra-Madre-ATV-Mountain-Adventure-from-Puerto-Vallarta/d630-22116P7",
+    "title": "Sierra Madre ATV Adventure from Puerto Vallarta",
+    "priceFrom": "From $81.00",
+    "price": 81.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 793,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5b/37/7b.jpg",
+    "overview": "Drive a single or 2-person all-terrain vehicle (ATV) through the Sierra Madre Mountains on a half-day adventure from Puerto Vallarta. You’ll splash through jungle rivers, pass quaint villages, and get a glimpse of the real Jalisco, far from crowded resorts. Morning and afternoon departures are available, with a small group size and included souvenir photos and safety gear: Drivers must have a valid license.",
+    "highlights": [
+      "Roar through the Sierra Madre mountains on your own ATV",
+      "No extra charges for pictures: Souvenir shots are included",
+      "Small-group tour makes for a more intimate, personalized experience",
+      "Choice of departures let you plan your day and fit more in"
+    ],
+    "itineraryStops": [
+      "Old Town Puerto Vallarta (Pass By)",
+      "Sierra Madre Mountains"
+    ],
+    "inclusions": [
+      "Guide",
+      "Use of helmet",
+      "All taxes, fees and handling charges",
+      "Complementary photos & videos"
+    ],
+    "startDescription": "Meet at the confirmed Puerto Vallarta departure listed when booking. Hotel pickup is not included.",
+    "experienceType": "jeep-offroad",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Off-road Tours",
+      "Outdoor Activities"
+    ]
+  },
+  {
+    "productCode": "7053ZIP",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Ziplining-in-Puerto-Vallarta-Original-Canopy-Tour/d630-7053ZIP",
+    "title": "Puerto Vallarta Original Canopy Tour, Ziplining, Tequila and Speed Boat Ride",
+    "priceFrom": "From $118.00",
+    "price": 118.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 3172,
+    "duration": "5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/7d/a2.jpg",
+    "overview": "Soar through the treetops of the rain forest straight into a tequila bar during this canopy tour, which begins with an optional speedboat ride. On Puerto Vallarta’s first-ever zipline circuit, cover two miles (three km) on strong cables suspended 328 feet (100 meters) in the air and enjoy panoramic vistas. Conclude the exhilarating experience with time to swim, kayak, and race down a waterslide, or greet the diverse wildlife of the on-site menagerie.",
+    "highlights": [
+      "Puerto Vallarta jungle canopy zipline and speedboat ride tour",
+      "Soar over the river across 19 cables with distances up to 1,450 feet (442 meters) long",
+      "Purchase lunch and drinks at a riverside restaurant and taste tequila (included)",
+      "Swim and kayak plus observe marmosets, coatimundi, and boas at an animal sanctuary"
+    ],
+    "itineraryStops": [
+      "Los Horcones River",
+      "Los Veranos Canopy Tour"
+    ],
+    "inclusions": [
+      "Land or Sea round trip transporation",
+      "Zip lines course with water stations",
+      "Traditional Tequila tasting",
+      "Kayaks, water slides and water activities on the river (weather permitting)"
+    ],
+    "startDescription": "Begin at the Los Veranos Canopy Tour main office or the confirmed speedboat departure listed when booking.",
+    "experienceType": "tequila-adventure",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Zipline Tours",
+      "Outdoor Activities"
+    ]
+  },
+  {
+    "productCode": "24191P1",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Mega-Yacht-All-Inclusive-Yelapa-Waterfall-and-Snorkeling-Adventure/d630-24191P1",
+    "title": "Mega Yacht ALL INCLUSIVE Yelapa Waterfall & Snorkeling Adventure",
+    "priceFrom": "From $135.00",
+    "price": 135.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 2199,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/87/7f/cf.jpg",
+    "overview": "This Yelapa Waterfalls and Snorkeling Yacht Cruise offers two different starting locations when booking, so you can find the place that’s most convenient for you to meet. This cruise features a fun day with all-inclusive, open-bar access, a fajita lunch, and activities such as kayaking and massages. Plus, the yacht has comfortable seating with shaded options available, too.",
+    "highlights": [
+      "Cruise to Yelapa and Yelapa Waterfalls aboard a comfortable yacht",
+      "Get set up with the use of snorkeling equipment, kayaks, and paddleboards",
+      "Gain access to a premium onboard open bar for alcoholic drinks",
+      "Breakfast, lunch, and snacks are included so you don’t have to worry"
+    ],
+    "itineraryStops": [
+      "Playa Chica Locca",
+      "Quimixto",
+      "Yelapa Beach",
+      "Bay of Banderas (Pass By)"
+    ],
+    "inclusions": [
+      "All Inclusive Activities",
+      "Use of Snorkel Equipment, Kayaks, Paddle Boards, water mattress,",
+      "Alcoholic Beverages",
+      "Breakfast",
+      "Lunch",
+      "Snacks"
+    ],
+    "startDescription": "Check in at the Chica Locca Tours office at Puerto Mágico Cruise Ship Terminal, or the alternate meeting place chosen when booking.",
+    "experienceType": "scenic-sightseeing",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Boat Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "118966P4",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Marietas-Islands-snorkel-and-hidden-beach-optional/d630-118966P4",
+    "title": "Marietas Islands Snorkel Tour & Hidden Beach",
+    "priceFrom": "From $99.00",
+    "price": 99.0,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 847,
+    "duration": "4 to 6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/49/f7/24.jpg",
+    "overview": "Discover the enchanting Marieta Islands on this snorkeling adventure from Puerto Vallarta. This tour has a 97% chance of visiting Hidden Beach—accessible only through a water tunnel—than other tours. Encounter diverse marine life including dolphins, turtles, and vibrant tropical fish, while underwater you can check out a colorful array of tropical fish.",
+    "highlights": [
+      "Explore the Marieta Islands with a chance to see Hidden Beach",
+      "Discover a variety of marine life with provided snorkel gear",
+      "National park fees, snacks, and bottled water are provided",
+      "Private tours can be organized on request"
+    ],
+    "itineraryStops": [
+      "Marietas Islands",
+      "Hidden Beach"
+    ],
+    "inclusions": [
+      "Boat ride",
+      "Use of life vest",
+      "Drinking water",
+      "Use of Snorkeling equipment",
+      "Conservancy donation fee to Bahia Unida",
+      "CONANP (Federal gov) fee",
+      "Permits for national park",
+      "Snacks such as granola bars, apples, bananas and jelly sandwich."
+    ],
+    "startDescription": "Meet at the confirmed Puerto Vallarta or Punta de Mita boat departure listed when booking.",
+    "experienceType": "scenic-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Snorkeling",
+      "Boat Tours"
+    ]
+  },
+  {
+    "productCode": "46209P3",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Small-Group-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P3",
+    "title": "Small-Group Half-Day Whale-Watching Tour in Puerto Vallarta",
+    "priceFrom": "From $110.00",
+    "price": 110.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 282,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1a.jpg",
+    "overview": "Look for humpback whales in Banderas Bay on this half-day whale-watching tour from Puerto Vallarta. Learn about the majestic animals from your marine biologist guide as you ride on a small boat that is equipped with a restroom. Your tour includes lunch served on board the boat and accompanied by nonalcoholic beverages: Bring cash to pay the small port fee.",
+    "highlights": [
+      "Half-day small-group whale-watching tour from Puerto Vallarta",
+      "Cruise the waters of Banderas Bay to spot migrating humpback whales",
+      "Learn about whale behavior from the marine biologist guide",
+      "Lunch and soft drinks keep hunger pangs at bay"
+    ],
+    "itineraryStops": [
+      "Marina Vallarta",
+      "Banderas Bay"
+    ],
+    "inclusions": [
+      "Soft Beverages",
+      "Lunch",
+      "Professional guide",
+      "Hotel pickup and drop-off",
+      "Transportation to/from attractions"
+    ],
+    "startDescription": "Hotel pickup is included from listed Puerto Vallarta hotels, or meet at the Marina Vallarta departure confirmed when booking.",
+    "experienceType": "scenic-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Wildlife Tours",
+      "Boat Tours"
+    ]
+  },
+  {
+    "productCode": "218207P4",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Hidden-Beach-Tour/d630-218207P4",
+    "title": "hidden beach tour",
+    "priceFrom": "From $145.00",
+    "price": 145.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 127,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/2d/d1/db.jpg",
+    "overview": "A small-group boat outing from Punta de Mita toward Hidden Beach in the Marietas Islands, with snorkeling gear, bottled water, lunch, and a swim through the water tunnel when park conditions allow.",
+    "highlights": [
+      "Small-group Hidden Beach boat outing from Punta de Mita",
+      "Snorkel gear, bottled water, and lunch included",
+      "Swim through the water tunnel when park access allows",
+      "Maximum of 8 travelers"
+    ],
+    "itineraryStops": [
+      "Punta de Mita",
+      "Hidden Beach"
+    ],
+    "inclusions": [
+      "Use of Snorkeling equipment",
+      "Bottled water",
+      "Private transportation",
+      "Lunch"
+    ],
+    "startDescription": "Meet at Shark's Tour Punta de Mita, Av. Las Pangas 1, Corral del Risco, in front of the small marina.",
+    "experienceType": "scenic-sightseeing",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Snorkeling",
+      "Boat Tours"
+    ]
+  },
+  {
+    "productCode": "428665P1",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Horseback-Riding-and-Tequila-Tasting/d630-428665P1",
+    "title": "Horseback Riding: Tequila Tasting, Mex BBQ & Margaritas",
+    "priceFrom": "From $101.21",
+    "price": 101.21,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 147,
+    "duration": "5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/18/9b.jpg",
+    "overview": "Ride along the Mascota River on a guided horseback outing from Puerto Vallarta, then continue to La Dulce Vista for an artisanal tequila tasting and a traditional Mexican BBQ lunch with margaritas. Transport leaves from Marina Vallarta at Nima Bay.",
+    "highlights": [
+      "Guided horseback ride along the Mascota River",
+      "Artisanal tequila tasting at La Dulce Vista",
+      "Traditional Mexican BBQ lunch with margaritas",
+      "Open-concept bus from Marina Vallarta"
+    ],
+    "itineraryStops": [
+      "Mascota River",
+      "La Dulce Vista"
+    ],
+    "inclusions": [
+      "Lunch",
+      "Air-conditioned vehicle",
+      "Alcoholic Beverages",
+      "Bottled water"
+    ],
+    "startDescription": "Meet at Av Paseo de la Marina 121, Marina Vallarta, at the large mirror on the wall at the Nima Bay back car entrance across from V Marina. Arrive 5 minutes before the 10:30 a.m. departure.",
+    "experienceType": "tequila-cultural",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Horseback Riding",
+      "Food & Drink"
+    ]
+  },
+  {
+    "productCode": "368259P2",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Palo-Maria-Waterfalls-Hiking-Tour/d630-368259P2",
+    "title": "Palo María Waterfalls Hike Half-Day Tour",
+    "priceFrom": "From $63.08",
+    "price": 63.08,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 79,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9e/47/77.jpg",
+    "overview": "A guided half-day hike from Puerto Vallarta to the Palo María River and Cascadas Palo Maria in the Sierra Madre, with shared transport from Zona Romántica, bottled water, and snacks. The outing is limited to 10 travelers.",
+    "highlights": [
+      "Guided hike to Palo María waterfalls",
+      "Shared transport from Zona Romántica",
+      "Bottled water and snacks included",
+      "Small group of up to 10 travelers"
+    ],
+    "itineraryStops": [
+      "Palo María River",
+      "Cascadas Palo Maria"
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Snacks",
+      "Transportation shared with all tour attendants from meeting point to Palo María River."
+    ],
+    "startDescription": "Meet at Parque Lázaro Cárdenas y Estacionamiento, at the corner of Lázaro Cárdenas and Pino Suárez in Zona Romántica.",
+    "experienceType": "guided-hiking",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": [
+      "Hiking Tours",
+      "Outdoor Activities"
+    ]
+  },
+  {
+    "productCode": "46209P5",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
+    "title": "Private Whale Watching Tour in Puerto Vallarta",
+    "priceFrom": "From $760.00",
+    "price": 760.0,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 112,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/6b/1f.jpg",
+    "overview": "Take a private tour from Puerto Vallarta into Banderas Bay with a marine biologist. You will have the guide and the boat to yourself on this whale watching adventure. Depart from the marina and spend the morning spotting whales from a safe distance that won’t disturb them. Make sure you bring your your questions for the expert, and your camera to capture the moment.",
+    "highlights": [
+      "Spend the morning on the well-equipped boat and enjoy lunch on the water",
+      "You will learn all about all sorts of marine wildlife, not just whales",
+      "Suitable for all ages; kids will love the individualized attention",
+      "This tour runs in the winter, when the humpback whales return to Vallarta"
+    ],
+    "itineraryStops": [
+      "Marina Vallarta",
+      "Banderas Bay"
+    ],
+    "inclusions": [
+      "Soft Beverages",
+      "Lunch",
+      "Professional guide",
+      "Private tour",
+      "Hotel pickup and drop-off",
+      "Transportation to/from attractions"
+    ],
+    "startDescription": "Meet at Mr. Cream Pancakes & Waffles, Condominios Marina Sol Int. 3y4, Marina Vallarta, or use the included hotel pickup listed when booking.",
+    "experienceType": "private",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "categories": [
+      "Private and Luxury",
+      "Wildlife Tours"
+    ]
+  }
+]

@@ -5434,16 +5434,16 @@ const mexicoState: StateDestination = {
   slug: "mexico",
   name: "Mexico",
   description:
-    "Mexico City landmarks, Cancun Caribbean days, and guided touring from the capital and hotel zone.",
+    "Mexico City landmarks, Cancun Caribbean days, Puerto Vallarta bay touring, and guided touring from the capital, hotel zone, and Banderas Bay.",
   featuredDescription:
-    "Explore Mexico City and Cancun tours with Teotihuacan, Centro Histórico, Chichen Itza, cenotes, and Isla Mujeres sailing.",
+    "Explore Mexico City, Cancun, and Puerto Vallarta tours with Teotihuacan, Centro Histórico, Chichen Itza, cenotes, Isla Mujeres sailing, and Banderas Bay days.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
   region: "North America",
   intro:
-    "Mexico pairs walkable Mexico City districts and highland day trips with Cancun hotel-zone departures to Chichen Itza, cenotes, and Isla Mujeres.",
+    "Mexico pairs walkable Mexico City districts and highland day trips with Cancun hotel-zone departures to Chichen Itza, cenotes, and Isla Mujeres, plus Puerto Vallarta days on Banderas Bay and the Sierra Madre.",
   longDescription:
-    "Mexico City and Cancun anchor Mexico tour inventory: Centro Histórico walking, Teotihuacan pyramid days, Chapultepec, Xochimilco, and Coyoacán from the capital, plus Chichen Itza and Valladolid routes, jungle ATV days, cenote circuits, and Isla Mujeres catamarans from Cancun.",
+    "Mexico City, Cancun, and Puerto Vallarta anchor Mexico tour inventory: Centro Histórico walking, Teotihuacan pyramid days, Chapultepec, Xochimilco, and Coyoacán from the capital; Chichen Itza and Valladolid routes, jungle ATV days, cenote circuits, and Isla Mujeres catamarans from Cancun; and Marietas Islands, Yelapa, Malecón sightseeing, and Sierra Madre ATV or hiking days from Puerto Vallarta.",
   topRegions: [
     {
       title: "Centro Histórico and Zócalo",
@@ -5464,6 +5464,11 @@ const mexicoState: StateDestination = {
       title: "Yucatan ruins and cenotes",
       description:
         "Chichen Itza, Tulum, Valladolid, and jungle cenote days reachable from Cancun.",
+    },
+    {
+      title: "Banderas Bay and Sierra Madre",
+      description:
+        "Puerto Vallarta departures for Marietas Islands, Yelapa, Malecón sightseeing, and Sierra Madre ATV or hiking days.",
     },
   ],
   cities: [
@@ -5594,6 +5599,71 @@ const mexicoState: StateDestination = {
           question: "What are the signature Cancun tours?",
           answer:
             "Chichen Itza and Tulum ruin days, jungle ATV and zipline combos, Isla Mujeres catamarans, reef snorkeling, and cenote circuits are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Puerto Vallarta",
+      slug: "puerto-vallarta",
+      stateSlug: "mexico",
+      region: "Jalisco",
+      lat: 20.6534,
+      lng: -105.2253,
+      shortDescription:
+        "Marietas Islands days, Sierra Madre ATV routes, and Yelapa sailing from Puerto Vallarta.",
+      intro:
+        "Puerto Vallarta is a Banderas Bay city with guided island snorkeling, Sierra Madre off-road days, canopy circuits, and Yelapa yacht outings.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3b/38/d8.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "water-sports"],
+      whereItIs: [
+        "Puerto Vallarta sits on Mexico's Pacific coast in Jalisco, with the Malecón, Marina Vallarta, and Sierra Madre foothills framing departures.",
+        "Most guided tours depart from Marina Vallarta, Zona Romántica, Punta de Mita, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips inland reach Sierra Madre ATV trails, Palo María waterfalls, and canopy circuits above the Los Horcones River.",
+        lakesWater:
+          "Marietas Islands snorkeling, Hidden Beach access, Yelapa yacht days, and whale-watching on Banderas Bay highlight the Pacific water.",
+        desertForest:
+          "Rainforest UTV tracks, riverside ziplines, and jungle hike pools sit between resort and mountain days.",
+        cycling:
+          "Guided bike inventory is limited; most Puerto Vallarta days use boats, ATVs, or walking routes instead of independent rentals.",
+        scenicDrives:
+          "Private and group vehicles cover Old Town, Marina Vallarta, and Sierra Madre ranch or waterfall approaches.",
+        seasonalNotes:
+          "Winter and spring are popular for whale watching; summer favors early mountain departures, and Hidden Beach access depends on park conditions.",
+      },
+      thingsToDo: [
+        "Snorkel the Marietas Islands with a Hidden Beach attempt when conditions allow.",
+        "Ride an ATV or UTV through Sierra Madre trails, or hike to Palo María waterfalls.",
+        "Sail to Yelapa or take a canopy circuit with a tequila tasting.",
+      ],
+      toursCopy: [
+        "Book a Marietas or Yelapa boat day for a compact introduction beyond the Malecón.",
+        "Pair a Sierra Madre ATV or UTV outing with a canopy or whale-watching morning.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Marietas Islands snorkel or Hidden Beach boat.",
+          "Afternoon: Malecón walk or Marina Vallarta.",
+          "Evening: Return to a Puerto Vallarta hotel.",
+        ],
+        dayTwo: [
+          "Morning: Sierra Madre ATV, UTV, or Palo María hike.",
+          "Afternoon: Los Veranos canopy or Yelapa yacht day.",
+          "Evening: Bay-front dinner.",
+        ],
+      },
+      gettingThere: [
+        "Licenciado Gustavo Díaz Ordaz International Airport serves Puerto Vallarta, Nuevo Vallarta, and Punta de Mita with buses, shuttles, and taxis to most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Puerto Vallarta tours?",
+          answer:
+            "Marietas Islands and Hidden Beach snorkeling, Sierra Madre ATV and UTV days, Los Veranos canopy circuits, Yelapa yacht cruises, and Banderas Bay whale watching are the most popular departures.",
         },
       ],
     },

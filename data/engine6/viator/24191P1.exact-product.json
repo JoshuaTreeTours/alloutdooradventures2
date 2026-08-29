@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "24191P1",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Mega-Yacht-All-Inclusive-Yelapa-Waterfall-and-Snorkeling-Adventure/d630-24191P1",
+    "title": "Mega Yacht ALL INCLUSIVE Yelapa Waterfall & Snorkeling Adventure",
+    "description": {
+      "text": "In Puerto Vallarta, this all-inclusive mega-yacht day sails Banderas Bay toward Playa Chica Locca, Quimixto, and Yelapa Beach. Breakfast, a fajita lunch, snacks, and an open bar are served on board, with snorkeling gear, kayaks, and paddleboards ready after the first anchor. A short trail hike to the Yelapa waterfall is available when water is flowing, with free time in the village or a massage back on the yacht. Two meeting places are listed at booking so the group can board at the more convenient dock, including Puerto Mágico. The format suits visitors who want a guided scenic day on the water without chartering a boat independently. Departures are confirmed at booking in Puerto Vallarta, and the itinerary stays on the published bay, beach, and village stops rather than adding extra mainland sightseeing."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $135.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2199
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/87/7f/cf.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cruise to Yelapa and Yelapa Waterfalls aboard a comfortable yacht",
+      "Get set up with the use of snorkeling equipment, kayaks, and paddleboards",
+      "Gain access to a premium onboard open bar for alcoholic drinks",
+      "Breakfast, lunch, and snacks are included so you don’t have to worry"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Chica Locca Tours office at Puerto Mágico Cruise Ship Terminal, or the alternate meeting place chosen when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this all-inclusive mega-yacht day sails Banderas Bay toward Playa Chica Locca, Quimixto, and Yelapa Beach.",
+    "itineraryItems": [
+      {
+        "title": "Playa Chica Locca",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Quimixto",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yelapa Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bay of Banderas",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All Inclusive Activities",
+      "Use of Snorkel Equipment, Kayaks, Paddle Boards, water mattress,",
+      "Alcoholic Beverages",
+      "Breakfast",
+      "Lunch",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mega Yacht ALL INCLUSIVE Yelapa Waterfall & Snorkeling Adventure?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Check in at the Chica Locca Tours office at Puerto Mágico Cruise Ship Terminal, or the alternate meeting place chosen when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135
+      },
+      "currency": "USD"
+    }
+  }
+}

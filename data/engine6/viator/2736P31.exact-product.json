@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "2736P31",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/All-Terrain-Safari/d630-2736P31",
+    "title": "UTV Tour Puerto Vallarta",
+    "description": {
+      "text": "In Puerto Vallarta, this guided UTV day leaves the resort strip for Sierra Madre mountain tracks in a Polaris RZR. After a safety briefing and driving lesson, the group follows rainforest trails and stream crossings to a natural swimming pool for a hike, swim, and included snacks. Hotel pickup and drop-off keep the outing on the jungle route rather than rental counters or self-navigation. Helmets, goggles, and a professional guide are included so visitors can focus on the terrain instead of vehicle logistics. The format suits visitors who want a guided off-road day without booking a UTV independently. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on Sierra Madre trails and the swim-hole stop that define this rainforest UTV tour."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $399.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 201
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1a/c8/b2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Go on a thrilling rainforest adventure in an UTV (utility terrain vehicle)",
+      "Escape the city and barrel through streams and down remote jungle paths",
+      "Learn how to maneuver a Polaris RZR UTV from an experienced instructor",
+      "Enjoy relaxing hike, a dip at a remote swim-hole, and complimentary snacks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is included from listed Puerto Vallarta hotels. Confirm the pickup window when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this guided UTV day leaves the resort strip for Sierra Madre mountain tracks in a Polaris RZR.",
+    "itineraryItems": [
+      {
+        "title": "Sierra Madre Mountains",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Natural swimming pool",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Use of UTV and helmet",
+      "Light snack",
+      "Purified water",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the UTV Tour Puerto Vallarta?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Hotel pickup is included from listed Puerto Vallarta hotels. Confirm the pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Off-road Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 399
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "428665P1",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Horseback-Riding-and-Tequila-Tasting/d630-428665P1",
+    "title": "Horseback Riding: Tequila Tasting, Mex BBQ & Margaritas",
+    "description": {
+      "text": "In Puerto Vallarta, this five-hour outing pairs a guided horseback ride along the Mascota River with an artisanal tequila tasting and Mexican BBQ lunch at La Dulce Vista. An open-concept bus leaves Marina Vallarta from the Nima Bay meeting point, then continues to the ranch for horse matching before the river trail. Margaritas and bottled water are included with lunch, and a short swim with the horses is offered when river conditions allow. The group is capped at 17 travelers, with a height rule for riders over 220 pounds and an 18-plus minimum for the tasting. The format suits visitors who want a guided countryside day without arranging horses, tasting-room timing, or ranch transport independently. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on the Mascota River and La Dulce Vista stops that define this ride."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $101.21",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 147
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/18/9b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided horseback ride along the Mascota River",
+      "Artisanal tequila tasting at La Dulce Vista",
+      "Traditional Mexican BBQ lunch with margaritas",
+      "Open-concept bus from Marina Vallarta"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Av Paseo de la Marina 121, Marina Vallarta, at the large mirror on the wall at the Nima Bay back car entrance across from V Marina. Arrive 5 minutes before the 10:30 a.m. departure."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this five-hour outing pairs a guided horseback ride along the Mascota River with an artisanal tequila tasting and Mexican BBQ lunch at La Dulce Vista.",
+    "itineraryItems": [
+      {
+        "title": "Mascota River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Dulce Vista",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Air-conditioned vehicle",
+      "Alcoholic Beverages",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Horseback Riding: Tequila Tasting, Mex BBQ & Margaritas?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at Av Paseo de la Marina 121, Marina Vallarta, at the large mirror on the wall at the Nima Bay back car entrance across from V Marina. Arrive 5 minutes before the 10:30 a.m. departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 101.21
+      },
+      "currency": "USD"
+    }
+  }
+}

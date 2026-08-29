@@ -157,6 +157,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Puerto Vallarta",
+      matches: tour =>
+        /\/mexico\/puerto-vallarta\//i.test(tour.canonicalPath) ||
+        (/\bpuerto vallarta\b/i.test(tour.city) && /\bmexico\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Paris",
       matches: tour =>
         /\/france\/paris\//i.test(tour.canonicalPath) ||

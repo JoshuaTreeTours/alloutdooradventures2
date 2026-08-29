@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "218207P4",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Hidden-Beach-Tour/d630-218207P4",
+    "title": "hidden beach tour",
+    "description": {
+      "text": "In Puerto Vallarta, this three-hour hidden beach tour leaves Punta de Mita for the Marietas water-tunnel swim when park access allows. The small boat is capped at eight travelers, with snorkeling gear, bottled water, lunch, and private transportation included. Guides handle the tunnel entry and in-water photos so the group can stay with Hidden Beach rather than assembling a self-guided boat. The meeting point is the Punta de Mita tourism cooperative in front of the small marina, and the return finishes at the same dock. The format suits visitors who want a compact island swim without a full-day Marietas cruise. Departures are confirmed at booking in Puerto Vallarta, and the itinerary stays on Punta de Mita and Hidden Beach rather than adding extra bay villages or resort stops."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $145.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 127
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/2d/d1/db.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Hidden Beach boat outing from Punta de Mita",
+      "Snorkel gear, bottled water, and lunch included",
+      "Swim through the water tunnel when park access allows",
+      "Maximum of 8 travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Shark's Tour Punta de Mita, Av. Las Pangas 1, Corral del Risco, in front of the small marina."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this three-hour hidden beach tour leaves Punta de Mita for the Marietas water-tunnel swim when park access allows.",
+    "itineraryItems": [
+      {
+        "title": "Punta de Mita",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hidden Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of Snorkeling equipment",
+      "Bottled water",
+      "Private transportation",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the hidden beach tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at Shark's Tour Punta de Mita, Av. Las Pangas 1, Corral del Risco, in front of the small marina."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 145
+      },
+      "currency": "USD"
+    }
+  }
+}

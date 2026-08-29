@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "118966P4",
+    "productUrl": "https://www.viator.com/tours/Puerto-Vallarta/Marietas-Islands-snorkel-and-hidden-beach-optional/d630-118966P4",
+    "title": "Marietas Islands Snorkel Tour & Hidden Beach",
+    "description": {
+      "text": "In Puerto Vallarta, this snorkeling day heads to the Marietas Islands with a published chance of entering Hidden Beach through the water tunnel when park conditions allow. Snorkel gear, life vests, drinking water, snacks, and national-park permits are included so the group can stay with the reefs rather than paying separate conservation windows. Dolphins, turtles, and tropical fish are the usual marine highlights on the published route. Private departures can be arranged on request, but the listed product is a guided boat outing rather than a self-guided rental. The format suits visitors who want a Marietas day without coordinating park fees and boat timing independently. Meeting points are confirmed at booking in Puerto Vallarta, and the itinerary stays on the islands and Hidden Beach rather than adding extra bay villages."
+    },
+    "location": {
+      "city": "Puerto Vallarta",
+      "state": "Mexico"
+    },
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 847
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/49/f7/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the Marieta Islands with a chance to see Hidden Beach",
+      "Discover a variety of marine life with provided snorkel gear",
+      "National park fees, snacks, and bottled water are provided",
+      "Private tours can be organized on request"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Puerto Vallarta or Punta de Mita boat departure listed when booking."
+      },
+      "end": {
+        "description": "Return to your Puerto Vallarta meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Puerto Vallarta, this snorkeling day heads to the Marietas Islands with a published chance of entering Hidden Beach through the water tunnel when park conditions allow.",
+    "itineraryItems": [
+      {
+        "title": "Marietas Islands",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hidden Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Boat ride",
+      "Use of life vest",
+      "Drinking water",
+      "Use of Snorkeling equipment",
+      "Conservancy donation fee to Bahia Unida",
+      "CONANP (Federal gov) fee",
+      "Permits for national park",
+      "Snacks such as granola bars, apples, bananas and jelly sandwich."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Marietas Islands Snorkel Tour & Hidden Beach?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Puerto Vallarta?",
+        "answer": "Meet at the confirmed Puerto Vallarta or Punta de Mita boat departure listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}
