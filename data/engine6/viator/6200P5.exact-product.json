@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "6200P5",
+    "productUrl": "https://www.viator.com/tours/Cancun/Islas-Mujeres-Luxury-Sailing-from-Puerto-Morelos/d631-6200P5",
+    "title": "Isla Mujeres Luxury Catamaran Sailing plus Lunch and Open Bar",
+    "description": {
+      "text": "In Cancun, this luxury catamaran sails the Caribbean coastline toward Isla Mujeres with snorkeling gear, a gourmet lunch, and an open bar on board. The crew handles hotel-zone pickup, reef timing, and the island stop so visitors can stay with the water rather than ferry tickets. Stops include Cancun Caribbean coastline, Snorkel stop, Isla Mujeres. Free time on Isla Mujeres is included after the snorkel break, then the return sail continues with complimentary drinks. The half-day format is aimed at visitors eight years and older, with round-trip transport from most Cancun and Riviera Maya hotels. Departures are confirmed at booking in Cancun, and the itinerary stays on the catamaran, the reef stop, and Isla Mujeres rather than adding extra mainland beach clubs."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 3246
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/bd/4f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sailing adventure to Islas Mujeres from Cancun",
+      "Cruise down Cancun’s stunning Caribbean coastline, and stop to snorkel in the water",
+      "Enjoy an open bar and a gourmet lunch on your catamaran cruise",
+      "Visit the charming island of Isla Mujeres, and go by its must-see sights",
+      "Must be at least eight years old to go on this adventure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Round-trip transportation is included from most hotels in Cancun and Riviera Maya."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, this luxury catamaran sails the Caribbean coastline toward Isla Mujeres with snorkeling gear, a gourmet lunch, and an open bar on board.",
+    "itineraryItems": [
+      {
+        "title": "Cancun Caribbean coastline",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snorkel stop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Isla Mujeres",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip transportation from most hotels in Cancun and Riviera Maya.",
+      "Professional, bilingual, attentive staff.",
+      "Snorkel in the underwater world with top-notch snorkel gear (if weather conditions permit).",
+      "Life jacket.",
+      "Delightful light lunch onboard.",
+      "Fully stocked open bar onboard.",
+      "Free time to explore the beautiful island and its attractions at your leisure.",
+      "Docking fee."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Isla Mujeres Luxury Catamaran Sailing plus Lunch and Open Bar?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Round-trip transportation is included from most hotels in Cancun and Riviera Maya."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature & Wildlife"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus & Minivan Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Outdoor Activities"
+      },
+      {
+        "label": "Tours, Sightseeing & Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

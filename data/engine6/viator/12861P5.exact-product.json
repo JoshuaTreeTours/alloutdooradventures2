@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "12861P5",
+    "productUrl": "https://www.viator.com/tours/Cancun/Viator-Exclusive-Combo-Tour-Tulum-Ruins-Akumal-Turtles-Plus-Cenote-and-Caves/d631-12861P5",
+    "title": "Viator Exclusive: Tulum Ruins, Reef Snorkeling, Cenote and Caves",
+    "description": {
+      "text": "In Cancun, explore coral reefs, ancient history, and nature in the Riviera Maya in just a day on this combination tour. Visit the Tulum archaeological site, snorkel coral reef in the Caribbean Sea, and swim in the crystal waters of a cenote sinkhole. Stops include Tulum Archaeological Site, Playa Maya, Parque De Cenotes Yax-Muul. Your package includes entrance fees, lunch, and door-to-door transport from hotels in Cancun, Tulum, and the Riviera Maya, but excludes a marine park tax. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Tulum Archaeological Site, Playa Maya, Parque De Cenotes Yax-Muul that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $129.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 4032
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/75/69/fb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tulum Ruins, Caribbean Sea snorkeling, and cenote combo tour",
+      "Includes a hearty lunch featuring fajitas and Yucatan BBQ pork",
+      "Guide explains Mayan culture and points out details you might otherwise miss",
+      "Includes 2-way transfers from Tulum, Riviera Maya, and Cancun hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pick-up is offered for this tour. Once your purchase is complete we will organize the pick-up arrangements. Pick ups from Costa Mujeres 5:30; Cancun from 06:00 am-07:00 am; Playa del Carmen and Riviera Maya 07:00 am -08:30 am, Tulum 8:30-08:50 am. Note: If you are on a Priv"
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, explore coral reefs, ancient history, and nature in the Riviera Maya in just a day on this combination tour.",
+    "itineraryItems": [
+      {
+        "title": "Tulum Archaeological Site",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Playa Maya",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Parque De Cenotes Yax-Muul",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bilingual Guide: Friendly, knowledgeable guides.",
+      "Round-trip Transportation: Comfortable, air-conditioned minivan from your hotel to all activities.",
+      "Lfe Jackets provided for all water activities, ensuring safety for all the participants",
+      "Fresh Mexican tacos with vegetarian and gluten-free options available ( notice required).",
+      "Complimentary water. Please bring a reusable water bottle for an eco-friendly experience.",
+      "Snorkeling Gear: Included. Snorkeling is optional, and non-participants can relax on the beach.",
+      "Natural Marine Reserve and Tulum National Park Fee 30 USD per person is payable upon pick-up in cash",
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Viator Exclusive: Tulum Ruins, Reef Snorkeling, Cenote and Caves?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Hotel pick-up is offered for this tour. Once your purchase is complete we will organize the pick-up arrangements. Pick ups from Costa Mujeres 5:30; Cancun from 06:00 am-07:00 am; Playa del Carmen and Riviera Maya 07:00 am -08:30 am, Tulum 8:30-08:50 am. Note: If you are on a Priv"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airport & Ground Transfers"
+      },
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Travel & Transportation Services"
+      },
+      {
+        "label": "On the Water"
+      },
+      {
+        "label": "Airport & Hotel Transfers"
+      },
+      {
+        "label": "Boat Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129
+      },
+      "currency": "USD"
+    }
+  }
+}

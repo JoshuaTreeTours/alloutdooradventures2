@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "308891P25",
+    "productUrl": "https://www.viator.com/tours/Cancun/Puerto-Morelos-City-and-Taco-Tour/d631-308891P25",
+    "title": "Puerto Morelos City & Taco Tour with Tequila Tasting from Cancun",
+    "description": {
+      "text": "In Cancun, this Puerto Morelos food walk leaves the hotel zone for a quieter fishing town south of the resort strip. A local guide leads a walking circuit of the plaza and waterfront, then stops for handmade tacos and an artesanal tequila tasting instead of a generic resort buffet. Fish, shrimp, smoked-meat, chicken, and vegetable taco options keep the food stop flexible, with a Mayan-style pork taco and a small ice-cream tasting rounding out the flavors. Hotel pickup and drop-off are included from most Cancun and Riviera Maya properties, so the afternoon stays on tasting and town walking rather than taxi logistics. The format suits visitors who want a native cultural food walk without coordinating restaurant reservations or tequila-room timing on their own. Departures are confirmed at booking in Cancun, and the itinerary stays on Puerto Morelos streets, taco counters, and tasting rooms that define this half-day from the hotel zone."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $49.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 678
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/8f/a6/be.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Puerto Morelos City & Taco Tour with Tequila Tasting from Cancun from Cancun",
+      "Chichen Itza, cenotes, and Caribbean coastline views",
+      "Professional guide with Cancun local expertise",
+      "Small-group or private format as listed",
+      "Guided Cancun sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please contact us in advance to confirm your exact pickup location and time. Pickup for Tulum is only available from the Super Aki supermarket. Please contact un in advance to verify the exact departure time."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, this Puerto Morelos food walk leaves the hotel zone for a quieter fishing town south of the resort strip.",
+    "itineraryItems": [
+      {
+        "title": "Puerto Morelos",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Taco tastings",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tequila tasting",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup & drop-off",
+      "Artesanal Tequila Tasting",
+      "City guided tour of Puerto Morelos",
+      "Fish, Shrimp or smoked meat taco",
+      "Artesanal flavor ice Cream",
+      "Chicken or veggie tacos.",
+      "Mayan Tacos special pork taco marínated with sauce",
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Puerto Morelos City & Taco Tour with Tequila Tasting from Cancun?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Please contact us in advance to confirm your exact pickup location and time. Pickup for Tulum is only available from the Super Aki supermarket. Please contact un in advance to verify the exact departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49
+      },
+      "currency": "USD"
+    }
+  }
+}

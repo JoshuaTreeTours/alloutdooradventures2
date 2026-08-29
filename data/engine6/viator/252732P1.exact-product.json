@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "252732P1",
+    "productUrl": "https://www.viator.com/tours/Cancun/Four-Cenotes-and-Caves-Family-Value-COMBO/d631-252732P1",
+    "title": "Family ATV Cenote Five Zip Lines Photos Taco Lunch Tequila Taste",
+    "description": {
+      "text": "In Cancun, enjoy a more intimate adventure than the big box tours when you book this small-group adrenaline package that's suitable for most everyone, even non-swimmers. Visit two cenotes—one lagoon and one cave cenote; roar through the jungle on a 2021 all-terrain vehicle (ATV); brave an upside-down zipline circuit and hanging bridge; and enjoy lunch and water. Stops include ATV jungle trail, Five zip lines, Lagoon cenote, Cave cenote. Your package includes photos and video, but a charge is payable to cover admission fees. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to ATV jungle trail, Five zip lines, Lagoon cenote, Cave cenote that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $94.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 116
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/25/8e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a more intimate adventure than the big box tours when you book this small-group adrenaline package that's suitable",
+      "Visit two cenotes—one lagoon and one cave cenote; roar through the jungle on a 2021 all-terrain vehicle (ATV); brave an",
+      "Your package includes photos and video, but a charge is payable to cover admission fees",
+      "Family ATV Cenote Five Zip Lines Photos Taco Lunch Tequila Taste near Cancun",
+      "Professional Cancun guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The cut-off time to request pick-up at your location is 5:00 PM in the afternoon before the tour."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, enjoy a more intimate adventure than the big box tours when you book this small-group adrenaline package that's suitable for most everyone, even non-swimmers.",
+    "itineraryItems": [
+      {
+        "title": "ATV jungle trail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Five zip lines",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lagoon cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cave cenote",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Family ATV Cenote Five Zip Lines Photos Taco Lunch Tequila Taste?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "The cut-off time to request pick-up at your location is 5:00 PM in the afternoon before the tour."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 94
+      },
+      "currency": "USD"
+    }
+  }
+}

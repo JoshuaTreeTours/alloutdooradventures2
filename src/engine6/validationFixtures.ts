@@ -306,6 +306,19 @@ import specimen325968p5Payload from "../../data/engine6/viator/325968P5.exact-pr
 import specimen466992p2Payload from "../../data/engine6/viator/466992P2.exact-product.json";
 import specimen382677p1Payload from "../../data/engine6/viator/382677P1.exact-product.json";
 import specimen38551p1Payload from "../../data/engine6/viator/38551P1.exact-product.json";
+import specimen5885p231Payload from "../../data/engine6/viator/5885P231.exact-product.json";
+import specimen110186p7Payload from "../../data/engine6/viator/110186P7.exact-product.json";
+import specimen308891p15Payload from "../../data/engine6/viator/308891P15.exact-product.json";
+import specimen252732p1Payload from "../../data/engine6/viator/252732P1.exact-product.json";
+import specimen70244p1Payload from "../../data/engine6/viator/70244P1.exact-product.json";
+import specimen117119p3Payload from "../../data/engine6/viator/117119P3.exact-product.json";
+import specimen118403p17Payload from "../../data/engine6/viator/118403P17.exact-product.json";
+import specimen7041p7Payload from "../../data/engine6/viator/7041P7.exact-product.json";
+import specimen12861p5Payload from "../../data/engine6/viator/12861P5.exact-product.json";
+import specimen6200p5Payload from "../../data/engine6/viator/6200P5.exact-product.json";
+import specimen308891p25Payload from "../../data/engine6/viator/308891P25.exact-product.json";
+import specimen42786p2Payload from "../../data/engine6/viator/42786P2.exact-product.json";
+import specimen368094p1Payload from "../../data/engine6/viator/368094P1.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -3355,6 +3368,84 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "38551P1",
     publicUrl: "https://www.viator.com/tours/Mexico-City/Historical-Bike-Tour-in-Mexico-City-Chapultepec-Reforma-and-Downtown/d628-38551P1",
     rawPayload: specimen38551p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5885P231",
+    publicUrl: "https://www.viator.com/tours/Cancun/Chichen-Itza-Plus-with-Cenote-Swim-and-Lunch/d631-5885P231",
+    rawPayload: specimen5885p231Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "110186P7",
+    publicUrl: "https://www.viator.com/tours/Cancun/Chichen-Itza-Ik-Kil-Cenote-and-Valladolid-All-Inclusive-Tour/d631-110186P7",
+    rawPayload: specimen110186p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "308891P15",
+    publicUrl: "https://www.viator.com/tours/Cancun/ATV-Jungle-Adventure-with-Cenote-and-Ziplines/d631-308891P15",
+    rawPayload: specimen308891p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "252732P1",
+    publicUrl: "https://www.viator.com/tours/Cancun/Four-Cenotes-and-Caves-Family-Value-COMBO/d631-252732P1",
+    rawPayload: specimen252732p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "70244P1",
+    publicUrl: "https://www.viator.com/tours/Cancun/Whale-Shark-Swimming-and-Isla-Mujeres-Beach-Tour/d631-70244P1",
+    rawPayload: specimen70244p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117119P3",
+    publicUrl: "https://www.viator.com/tours/Cancun/Chichen-Itza-Private-Tour/d631-117119P3",
+    rawPayload: specimen117119p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "118403P17",
+    publicUrl: "https://www.viator.com/tours/Cancun/Xenotes-Tour-Experience-4-Cenotes/d631-118403P17",
+    rawPayload: specimen118403p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7041P7",
+    publicUrl: "https://www.viator.com/tours/Cancun/OFFROAD-POLARIS-ADVENTURE/d631-7041P7",
+    rawPayload: specimen7041p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "12861P5",
+    publicUrl: "https://www.viator.com/tours/Cancun/Viator-Exclusive-Combo-Tour-Tulum-Ruins-Akumal-Turtles-Plus-Cenote-and-Caves/d631-12861P5",
+    rawPayload: specimen12861p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6200P5",
+    publicUrl: "https://www.viator.com/tours/Cancun/Islas-Mujeres-Luxury-Sailing-from-Puerto-Morelos/d631-6200P5",
+    rawPayload: specimen6200p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "308891P25",
+    publicUrl: "https://www.viator.com/tours/Cancun/Puerto-Morelos-City-and-Taco-Tour/d631-308891P25",
+    rawPayload: specimen308891p25Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42786P2",
+    publicUrl: "https://www.viator.com/tours/Cancun/Snorkel-Tour-in-Puerto-Morelos-from-Cancun/d631-42786P2",
+    rawPayload: specimen42786p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "368094P1",
+    publicUrl: "https://www.viator.com/tours/Cancun/Full-Day-Tour-to-Isla-Mujeres-in-Catamaran/d631-368094P1",
+    rawPayload: specimen368094p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

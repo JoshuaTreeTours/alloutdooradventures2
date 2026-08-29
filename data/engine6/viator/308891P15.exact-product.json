@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "308891P15",
+    "productUrl": "https://www.viator.com/tours/Cancun/ATV-Jungle-Adventure-with-Cenote-and-Ziplines/d631-308891P15",
+    "title": "Cancun ATV Jungle Adventure, Ziplines, Cenote and Tequila Tasting",
+    "description": {
+      "text": "In Cancun, ideal for visitors looking for a full day of outdoor adventure, this tour combines an all-terrain vehicle (ATV) off-road session with ziplining, swimming, and tequila tasting. Following pickup from your hotel, head to an adventure eco-park, where you’ll ride an ATV over jungle trails, try three zipline flights, and swim in a cenote—a natural limestone sinkhole with clear emerald waters. Stops include Yucatan jungle ATV trails, Zipline circuit, Cenote. Wrap up the day’s activities with a tequila tasting. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Yucatan jungle ATV trails, Zipline circuit, Cenote that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 3566
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4c/a4/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "An ATV off-road session through the Yucatan jungle",
+      "Also includes three zipline flights and a swimming session in a cenote",
+      "Celebrate the day’s adventures with a tequila tasting",
+      "Round-trip transportation from most Cancun area hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please contact us in advance to verify your exact pickup time and location. Pickup from Tulum is only available from the Super Aki supermarket."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, ideal for visitors looking for a full day of outdoor adventure, this tour combines an all-terrain vehicle (ATV) off-road session with ziplining, swimming, and tequila tasting.",
+    "itineraryItems": [
+      {
+        "title": "Yucatan jungle ATV trails",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zipline circuit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cenote",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Insurance Included",
+      "3-zipline circuit",
+      "Access to cenote",
+      "Snacks",
+      "Hotel pickup and drop-off from most hotels",
+      "Tequila tasting",
+      "$5 for locker rental plus $5 refundable deposit",
+      "Beverages"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cancun ATV Jungle Adventure, Ziplines, Cenote and Tequila Tasting?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Please contact us in advance to verify your exact pickup time and location. Pickup from Tulum is only available from the Super Aki supermarket."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

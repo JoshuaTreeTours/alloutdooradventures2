@@ -8,6 +8,13 @@ export type Tier1IntlCity = {
 
 export const CITY_TIER1_INTL: Tier1IntlCity[] = [
   {
+    countrySlug: "mexico",
+    citySlug: "cancun",
+    cityName: "Cancun",
+    lat: 21.1619,
+    lng: -86.8515,
+  },
+  {
     countrySlug: "scotland",
     citySlug: "edinburgh",
     cityName: "Edinburgh",

@@ -5434,16 +5434,16 @@ const mexicoState: StateDestination = {
   slug: "mexico",
   name: "Mexico",
   description:
-    "Mexico City landmarks, volcanic highlands, and guided cultural touring from the capital.",
+    "Mexico City landmarks, Cancun Caribbean days, and guided touring from the capital and hotel zone.",
   featuredDescription:
-    "Explore Mexico City tours with Teotihuacan pyramids, Centro Histórico walking, Chapultepec, Xochimilco, and Coyoacán.",
+    "Explore Mexico City and Cancun tours with Teotihuacan, Centro Histórico, Chichen Itza, cenotes, and Isla Mujeres sailing.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
   region: "North America",
   intro:
-    "Mexico pairs walkable Mexico City districts with highland day trips to Teotihuacan, Xochimilco canals, and volcanic scenery.",
+    "Mexico pairs walkable Mexico City districts and highland day trips with Cancun hotel-zone departures to Chichen Itza, cenotes, and Isla Mujeres.",
   longDescription:
-    "Mexico City anchors Mexico tour inventory with Centro Histórico walking, Teotihuacan pyramid days, Chapultepec park and castle, Xochimilco trajinera routes, Coyoacán neighborhoods, and private or small-group sightseeing from the capital.",
+    "Mexico City and Cancun anchor Mexico tour inventory: Centro Histórico walking, Teotihuacan pyramid days, Chapultepec, Xochimilco, and Coyoacán from the capital, plus Chichen Itza and Valladolid routes, jungle ATV days, cenote circuits, and Isla Mujeres catamarans from Cancun.",
   topRegions: [
     {
       title: "Centro Histórico and Zócalo",
@@ -5454,6 +5454,16 @@ const mexicoState: StateDestination = {
       title: "Highlands and ancient cities",
       description:
         "Teotihuacan pyramids, Xochimilco canals, and Coyoacán streets reachable from Mexico City.",
+    },
+    {
+      title: "Hotel zone and Isla Mujeres",
+      description:
+        "Catamaran sailing, reef snorkeling, and beach time from Cancun toward Isla Mujeres.",
+    },
+    {
+      title: "Yucatan ruins and cenotes",
+      description:
+        "Chichen Itza, Tulum, Valladolid, and jungle cenote days reachable from Cancun.",
     },
   ],
   cities: [
@@ -5519,6 +5529,71 @@ const mexicoState: StateDestination = {
           question: "What are the signature Mexico City tours?",
           answer:
             "Teotihuacan pyramid days, Centro Histórico walking and bike tours, Xochimilco canal rides, Coyoacán neighborhood walks, and private city sightseeing are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Cancun",
+      slug: "cancun",
+      stateSlug: "mexico",
+      region: "Quintana Roo",
+      lat: 21.1619,
+      lng: -86.8515,
+      shortDescription:
+        "Chichen Itza days, jungle ATV routes, and Isla Mujeres sailing from Cancun.",
+      intro:
+        "Cancun is a Caribbean hotel-zone city with guided ruin days, cenote swims, ATV jungle routes, and Isla Mujeres sailing.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/bd/55.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "water-sports"],
+      whereItIs: [
+        "Cancun sits on Mexico's Caribbean coast in Quintana Roo, with the hotel zone, downtown, and Nichupte Lagoon framing departures.",
+        "Most guided tours depart from hotel-zone and downtown hotels, Playa Tortugas, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips inland reach Chichen Itza, Tulum ruins, and jungle cenotes beyond the hotel-zone shoreline.",
+        lakesWater:
+          "Isla Mujeres catamarans, reef snorkeling at Puerto Morelos, and whale-shark swims highlight the Caribbean water.",
+        desertForest:
+          "Yucatan jungle ATV trails, Selvatica, and Xenotes cenote circuits sit between resort and ruin days.",
+        cycling:
+          "Guided bike inventory is limited; most Cancun days use coaches, boats, or off-road vehicles instead of independent rentals.",
+        scenicDrives:
+          "Private and group coaches cover Chichen Itza, Valladolid, Tulum, and Puerto Morelos from Cancun hotels.",
+        seasonalNotes:
+          "Winter and spring are popular for ruin days and sailing; whale-shark swims are seasonal, and summer favors early departures.",
+      },
+      thingsToDo: [
+        "Visit Chichen Itza with a cenote swim and Valladolid stop.",
+        "Sail to Isla Mujeres or snorkel the reef at Puerto Morelos.",
+        "Ride an ATV or Polaris through jungle trails and zip-line parks.",
+      ],
+      toursCopy: [
+        "Book a full-day Chichen Itza route for a compact introduction beyond the hotel zone.",
+        "Pair an Isla Mujeres catamaran with a jungle ATV or Xenotes cenote day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Chichen Itza guided visit.",
+          "Afternoon: Cenote swim and Valladolid plaza stop.",
+          "Evening: Return to the Cancun hotel zone.",
+        ],
+        dayTwo: [
+          "Morning: Isla Mujeres catamaran or Puerto Morelos reef snorkel.",
+          "Afternoon: Jungle ATV, ziplines, or Xenotes cenotes.",
+          "Evening: Hotel-zone dinner.",
+        ],
+      },
+      gettingThere: [
+        "Cancun International Airport serves the hotel zone and downtown with buses, shuttles, and taxis to most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Cancun tours?",
+          answer:
+            "Chichen Itza and Tulum ruin days, jungle ATV and zipline combos, Isla Mujeres catamarans, reef snorkeling, and cenote circuits are the most popular departures.",
         },
       ],
     },

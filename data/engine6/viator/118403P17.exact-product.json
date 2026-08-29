@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "118403P17",
+    "productUrl": "https://www.viator.com/tours/Cancun/Xenotes-Tour-Experience-4-Cenotes/d631-118403P17",
+    "title": "Sacred Adventure at Xenotes! 4 Different Cenotes + Round Transportation",
+    "description": {
+      "text": "In Cancun, this Xenotes day follows the Ruta de los Cenotes into jungle sinkholes of four types: semi-open, open, ancient, and cavern. Round-trip hotel transport is included, and the circuit mixes rappelling, zip lining, kayaking, and swimming before a picnic lunch with water, coffee, wine, and beer. Stops include Ruta de los Cenotes, Semi-open cenote, Open cenote, Ancient cenote, Cavern cenote. Life jackets and activity gear are provided so visitors can stay with the water rather than packing their own kit. The format suits visitors basing in Cancun who want a full cenote circuit without coordinating four separate park tickets. Departures are confirmed at booking in Cancun, and the itinerary stays on the published Xenotes route rather than adding extra ruins or beach clubs."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "Full day (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/16/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hassle-free round-trip transfers from Cancun",
+      "Visit four different types of cenotes",
+      "Activities include abseiling, zip line, kayak, and swimming",
+      "Picnic lunch with wine and beer"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Round-trip hotel pickup from Cancun, Playa del Carmen, and Tulum is confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, this Xenotes day follows the Ruta de los Cenotes into jungle sinkholes of four types: semi-open, open, ancient, and cavern.",
+    "itineraryItems": [
+      {
+        "title": "Ruta de los Cenotes",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Semi-open cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Open cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ancient cenote",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cavern cenote",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round trip transportation with certified guide",
+      "Visit to four different types of cenotes",
+      "Abseiling, zip line, kayak, and swim activities",
+      "Picnic lunch with water, coffee, wine, and beer",
+      "Life jacket and equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sacred Adventure at Xenotes! 4 Different Cenotes + Round Transportation?",
+        "answer": "The planned duration is Full day."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Round-trip hotel pickup from Cancun, Playa del Carmen, and Tulum is confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

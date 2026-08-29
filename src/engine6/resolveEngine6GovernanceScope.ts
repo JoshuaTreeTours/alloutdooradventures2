@@ -41,6 +41,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     london: ["London"],
     edinburgh: ["Edinburgh"],
     "mexico-city": ["Mexico City"],
+    cancun: ["Cancun"],
+    mexico: ["Mexico City", "Cancun"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],
     paris: ["Paris"],

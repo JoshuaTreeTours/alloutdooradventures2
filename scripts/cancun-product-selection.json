@@ -1,0 +1,180 @@
+{
+  "destinationLabel": "Cancun",
+  "destinationCitySlug": "cancun",
+  "viatorDestinationSlug": "Cancun",
+  "viatorDestinationId": "d631",
+  "catalogUrl": "https://www.viator.com/Cancun/d631-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 13,
+  "premiumCount": 10,
+  "selectionNote": "Selected 13 guided Cancun d631 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/AUD) blocked many otherwise-strong SKUs from being verified in USD on a complete product page. Dedicated helicopter, stargazing, wine-only, and guided bike d631 pages with combined USD+rating+hero dumps were not captured. Did not force audio/self-guided/app tours, inactive products, Playa/Tulum/Cozumel destination IDs, thin-review SKUs, or products with unusable heroes.",
+  "selectedProductCodes": [
+    "5885P231",
+    "110186P7",
+    "308891P15",
+    "252732P1",
+    "70244P1",
+    "117119P3",
+    "118403P17",
+    "7041P7",
+    "12861P5",
+    "6200P5",
+    "308891P25",
+    "42786P2",
+    "368094P1"
+  ],
+  "premiumProductCodes": [
+    "5885P231",
+    "110186P7",
+    "308891P15",
+    "252732P1",
+    "70244P1",
+    "117119P3",
+    "118403P17",
+    "7041P7",
+    "12861P5",
+    "6200P5"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "142800P6",
+      "title": "Chichen Itza tour from Playa del Carmen",
+      "reason": "Playa del Carmen destination d5501, not Cancun d631"
+    },
+    {
+      "productCode": "5885PCMCHI",
+      "title": "Chichen Itza from Playa del Carmen",
+      "reason": "Playa destination d5501 and 4.3 rating below the quality bar"
+    },
+    {
+      "productCode": "6200P34",
+      "title": "Tulum destination sailing product",
+      "reason": "Tulum destination d23012, not Cancun d631"
+    },
+    {
+      "productCode": "6140TXNTS",
+      "title": "Xenotes official park ticket",
+      "reason": "Live dumps priced in CAD/EUR only; no complete USD product page"
+    },
+    {
+      "productCode": "3206CUNRIO",
+      "title": "Rio Secreto guided cave and hike",
+      "reason": "Strong 4.7/818 guided cave/hike; live dumps EUR only with no Viator USD From page"
+    },
+    {
+      "productCode": "7460P16",
+      "title": "Private Chichen Itza from Cancun",
+      "reason": "Private Chichen SKU; live dumps EUR/CAD only"
+    },
+    {
+      "productCode": "6200P21",
+      "title": "4x4 jungle adventure",
+      "reason": "4.9/791 off-road SKU; no confirmed Viator From$ on a complete dump"
+    },
+    {
+      "productCode": "5885P312",
+      "title": "Early Chichen Itza from Cancun",
+      "reason": "4.9/2276 early Chichen; AUD-only dump and near-duplicate of selected 110186P7"
+    },
+    {
+      "productCode": "5885CUNCHI",
+      "title": "Early Chichen Itza group tour",
+      "reason": "USD $40 4.6/3880 verified; skipped to avoid a third group Chichen SKU after 5885P231 and 110186P7"
+    },
+    {
+      "productCode": "147508P13",
+      "title": "Cancun photography tour",
+      "reason": "Preferred photography type; thin reviews or non-USD dump"
+    },
+    {
+      "productCode": "172188P57",
+      "title": "Cancun photography tour",
+      "reason": "Preferred photography type; thin reviews or non-USD dump"
+    },
+    {
+      "productCode": "21754P1",
+      "title": "Cancun photography tour",
+      "reason": "Preferred photography type; thin reviews or non-USD dump"
+    },
+    {
+      "productCode": "205508P1",
+      "title": "Cancun scenic flight",
+      "reason": "Scenic flight; 5.0/7 too thin for commercial quality"
+    },
+    {
+      "productCode": "5885P167",
+      "title": "Cancun scenic plane tour",
+      "reason": "4.2/5 rating below the quality bar"
+    },
+    {
+      "productCode": "102629P151",
+      "title": "Xplor adventure park",
+      "reason": "USD $230 4.9/8 too thin for commercial quality"
+    },
+    {
+      "productCode": "135903P1",
+      "title": "ATV jungle tour",
+      "reason": "USD $64.50 4.2/2751 rating below the quality bar"
+    },
+    {
+      "productCode": "191823P3",
+      "title": "Taco tour",
+      "reason": "4.9/117 cultural SKU; no confirmed From$ on a complete dump"
+    },
+    {
+      "productCode": "327107P1",
+      "title": "Horseback and ATV combo",
+      "reason": "4.5/148; EUR-only dump"
+    },
+    {
+      "productCode": "414966P1",
+      "title": "ATV jungle tour",
+      "reason": "ATV category already represented; incomplete dump"
+    },
+    {
+      "productCode": "414966P3",
+      "title": "ATV jungle tour",
+      "reason": "ATV category already represented; incomplete dump"
+    },
+    {
+      "productCode": "308891P7",
+      "title": "ATV jungle tour",
+      "reason": "USD $82.86 ATV; skipped to avoid ATV overfill after three off-road SKUs"
+    },
+    {
+      "productCode": "157349P4",
+      "title": "E-bike rental",
+      "reason": "Self-guided e-bike rental, not a guided bike tour"
+    },
+    {
+      "productCode": "25920P8",
+      "title": "Weak-rated Cancun product",
+      "reason": "3.0/2 rating"
+    },
+    {
+      "productCode": "26400P38",
+      "title": "Weak-rated Cancun product",
+      "reason": "3.8 rating below the quality bar"
+    },
+    {
+      "productCode": "385311P1",
+      "title": "Yacht rental",
+      "reason": "Yacht rental, not a guided tour"
+    },
+    {
+      "productCode": "6814CUNJOYA",
+      "title": "Cirque du Soleil Joya",
+      "reason": "Indoor show ticket, not an outdoor guided experience"
+    },
+    {
+      "productCode": "7460P23",
+      "title": "Airport transfer",
+      "reason": "Airport transfer, not a guided tour"
+    },
+    {
+      "productCode": "362557P1",
+      "title": "Airport transfer",
+      "reason": "Airport transfer, not a guided tour"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "368094P1",
+    "productUrl": "https://www.viator.com/tours/Cancun/Full-Day-Tour-to-Isla-Mujeres-in-Catamaran/d631-368094P1",
+    "title": "All Inclusive Isla Mujeres Catamaran",
+    "description": {
+      "text": "In Cancun, this all-inclusive catamaran day sails from Playa Tortugas toward Isla Mujeres with snorkeling gear, lunch, snacks, and an open bar on board. The crew handles boarding, reef timing, and the island stop so visitors can stay with Caribbean water and beach time rather than ferry tickets. A snorkel stop is included when conditions allow, then the boat continues to Isla Mujeres for free time before the return sail. Restrooms on board and unlimited non-alcoholic and alcoholic drinks keep the full-day format straightforward for hotel-zone visitors. The outing is a scenic sailing day rather than a private charter, with a dock tax collected for Tortugas Beach as listed on the live product. Departures are confirmed at booking in Cancun, and the itinerary stays on the catamaran, the snorkel stop, and Isla Mujeres rather than adding extra ruins or mainland beach clubs."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 1376
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d5/15/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "All Inclusive Isla Mujeres Catamaran from Cancun",
+      "Chichen Itza, cenotes, and Caribbean coastline views",
+      "Professional guide with Cancun local expertise",
+      "Small-group or private format as listed",
+      "Guided Cancun sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "* Playa Tortugas, Quintana Roo, Mexico"
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, this all-inclusive catamaran day sails from Playa Tortugas toward Isla Mujeres with snorkeling gear, lunch, snacks, and an open bar on board.",
+    "itineraryItems": [
+      {
+        "title": "Catamaran sail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snorkel stop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Isla Mujeres",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of Snorkeling equipment",
+      "Soda/Pop",
+      "Lunch",
+      "Restroom on board",
+      "UNLIMITED ALCOHOLIC BEVERAGES",
+      "Snacks",
+      "Dock tax, Tortugas Beach"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the All Inclusive Isla Mujeres Catamaran?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "* Playa Tortugas, Quintana Roo, Mexico"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Water Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Night Cruises"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

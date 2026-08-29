@@ -1373,6 +1373,53 @@ export const isEngine6MexicoCityTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_MEXICO_CITY_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CANCUN_5885P231_PRODUCT_CODE = "5885P231";
+export const ENGINE6_CANCUN_5885P231_ROUTE =
+  "/destinations/mexico/cancun/tours/chichen-itza-cenote-valladolid-tour-with-tequila-and-lu-5885P231";
+export const ENGINE6_CANCUN_110186P7_PRODUCT_CODE = "110186P7";
+export const ENGINE6_CANCUN_110186P7_ROUTE =
+  "/destinations/mexico/cancun/tours/early-morning-chichen-itza-tour-cenote-and-tequila-tast-110186P7";
+export const ENGINE6_CANCUN_308891P15_PRODUCT_CODE = "308891P15";
+export const ENGINE6_CANCUN_308891P15_ROUTE =
+  "/destinations/mexico/cancun/tours/cancun-atv-jungle-adventure-ziplines-cenote-and-tequila-308891P15";
+export const ENGINE6_CANCUN_252732P1_PRODUCT_CODE = "252732P1";
+export const ENGINE6_CANCUN_252732P1_ROUTE =
+  "/destinations/mexico/cancun/tours/family-atv-cenote-five-zip-lines-photos-taco-lunch-tequ-252732P1";
+export const ENGINE6_CANCUN_70244P1_PRODUCT_CODE = "70244P1";
+export const ENGINE6_CANCUN_70244P1_ROUTE =
+  "/destinations/mexico/cancun/tours/whale-shark-swimming-and-isla-mujeres-beach-tour-70244P1";
+export const ENGINE6_CANCUN_117119P3_PRODUCT_CODE = "117119P3";
+export const ENGINE6_CANCUN_117119P3_ROUTE =
+  "/destinations/mexico/cancun/tours/chichen-itza-private-tour-from-cancun-117119P3";
+export const ENGINE6_CANCUN_118403P17_PRODUCT_CODE = "118403P17";
+export const ENGINE6_CANCUN_118403P17_ROUTE =
+  "/destinations/mexico/cancun/tours/sacred-adventure-at-xenotes-4-different-cenotes-round-t-118403P17";
+export const ENGINE6_CANCUN_7041P7_PRODUCT_CODE = "7041P7";
+export const ENGINE6_CANCUN_7041P7_ROUTE =
+  "/destinations/mexico/cancun/tours/selvatica-adventure-park-atv-and-ziplines-in-cancun-and-7041P7";
+export const ENGINE6_CANCUN_12861P5_PRODUCT_CODE = "12861P5";
+export const ENGINE6_CANCUN_12861P5_ROUTE =
+  "/destinations/mexico/cancun/tours/viator-exclusive-tulum-ruins-reef-snorkeling-cenote-and-12861P5";
+export const ENGINE6_CANCUN_6200P5_PRODUCT_CODE = "6200P5";
+export const ENGINE6_CANCUN_6200P5_ROUTE =
+  "/destinations/mexico/cancun/tours/isla-mujeres-luxury-catamaran-sailing-plus-lunch-and-op-6200P5";
+export const ENGINE6_CANCUN_308891P25_PRODUCT_CODE = "308891P25";
+export const ENGINE6_CANCUN_308891P25_ROUTE =
+  "/destinations/mexico/cancun/tours/puerto-morelos-city-taco-tour-with-tequila-tasting-from-308891P25";
+export const ENGINE6_CANCUN_42786P2_PRODUCT_CODE = "42786P2";
+export const ENGINE6_CANCUN_42786P2_ROUTE =
+  "/destinations/mexico/cancun/tours/reef-snorkeling-in-national-park-from-cancun-with-beach-42786P2";
+export const ENGINE6_CANCUN_368094P1_PRODUCT_CODE = "368094P1";
+export const ENGINE6_CANCUN_368094P1_ROUTE =
+  "/destinations/mexico/cancun/tours/all-inclusive-isla-mujeres-catamaran-368094P1";
+
+export const ENGINE6_CANCUN_TOUR_PATH_PREFIX =
+  "/destinations/mexico/cancun/tours/";
+
+export const isEngine6CancunTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_CANCUN_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4606,6 +4653,58 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MEXICO_CITY_38551P1_ROUTE,
     ENGINE6_MEXICO_CITY_38551P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_5885P231_ROUTE,
+    ENGINE6_CANCUN_5885P231_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_110186P7_ROUTE,
+    ENGINE6_CANCUN_110186P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_308891P15_ROUTE,
+    ENGINE6_CANCUN_308891P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_252732P1_ROUTE,
+    ENGINE6_CANCUN_252732P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_70244P1_ROUTE,
+    ENGINE6_CANCUN_70244P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_117119P3_ROUTE,
+    ENGINE6_CANCUN_117119P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_118403P17_ROUTE,
+    ENGINE6_CANCUN_118403P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_7041P7_ROUTE,
+    ENGINE6_CANCUN_7041P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_12861P5_ROUTE,
+    ENGINE6_CANCUN_12861P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_6200P5_ROUTE,
+    ENGINE6_CANCUN_6200P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_308891P25_ROUTE,
+    ENGINE6_CANCUN_308891P25_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_42786P2_ROUTE,
+    ENGINE6_CANCUN_42786P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CANCUN_368094P1_ROUTE,
+    ENGINE6_CANCUN_368094P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

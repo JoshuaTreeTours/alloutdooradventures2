@@ -43,6 +43,7 @@ const TIER1_CITY_RADIUS_MILES: Record<string, number> = {
   "newport-beach": 12,
   "laguna-beach": 12,
   edinburgh: 12,
+  cancun: 12,
   rome: 15,
   florence: 12,
   barcelona: 15,

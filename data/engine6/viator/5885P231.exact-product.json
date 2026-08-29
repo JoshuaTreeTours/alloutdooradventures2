@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "5885P231",
+    "productUrl": "https://www.viator.com/tours/Cancun/Chichen-Itza-Plus-with-Cenote-Swim-and-Lunch/d631-5885P231",
+    "title": "Chichen Itza, Cenote & Valladolid Tour with Tequila and Lunch",
+    "description": {
+      "text": "In Cancun, journey to Mexico's Yucatán Peninsula to visit the Mayan ruins of Chichen Itza on this full-day tour and experience this incredible archeological site with a local guide. Walk along El Castillo and the Pyramid of Kukulcan and learn how this pre-Columbian city played an important role in the Mayan Civilization. Stops include Chichen Itza, Cenote Chichikan, Valladolid. Midway through the day, enjoy a typical buffet lunch and a refreshing dip at a cenote. Ideal for visitors basing in Cancun who want a guided city experience without coordinating bus and walking routes, attraction tickets, or landmark timing on their own. Routes stay oriented to Chichen Itza, Cenote Chichikan, Valladolid that define this Cancun sightseeing experience, with a guide handling hotel pickup, ruin tickets, and cenote or island pacing so the day stays focused on the outing rather than logistics."
+    },
+    "location": {
+      "city": "Cancun",
+      "state": "Mexico"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $34.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 13523
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/77/99.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit to Chichén Itzá, Cenote, and Valladolid with free time",
+      "Hotel pick up available from Cancún, Rivera Maya, Playa del Carmen, and Tulum",
+      "Enjoy an included Mexican-inspired buffet lunch",
+      "Choose from different package options when booking"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pick-up is included only if the option is selected."
+      },
+      "end": {
+        "description": "Return to your Cancun meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cancun, journey to Mexico's Yucatán Peninsula to visit the Mayan ruins of Chichen Itza on this full-day tour and experience this incredible archeological site with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Chichen Itza",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cenote Chichikan",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Valladolid",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Buffet Lunch with vegetarian options",
+      "Certified guide",
+      "30 minute stop at Valladolid's Main Square",
+      "Cenote and access to facilities (restrooms, dressing rooms...)",
+      "Hotel pick up or Meeting Point (depends on the option selected)",
+      "Tequila tasting",
+      "Air-conditioned vehicle and Toll Road",
+      "Admission to Chichen Itza (tax included in the All-Inclusive option)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chichen Itza, Cenote & Valladolid Tour with Tequila and Lunch?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cancun?",
+        "answer": "Hotel pick-up is included only if the option is selected."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 34
+      },
+      "currency": "USD"
+    }
+  }
+}
