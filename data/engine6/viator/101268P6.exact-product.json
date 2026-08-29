@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "101268P6",
+    "productUrl": "https://www.viator.com/tours/Cusco/NATURAL-DEYNG-AND-WEAVING-EXPERIENCE-AT-SACRED-VALLLEY/d937-101268P6",
+    "title": "Experience the Magic of Andean Textiles: Weaving workshop - Cusco",
+    "description": {
+      "text": "In Cusco, this Sacred Valley textile workshop is led by master weavers who demonstrate natural dyeing and loom techniques, then time at the loom for a piece visitors take home. Lunch is served family-style with the artisans, and coffee or herb tea is included. Private transport from Cusco is listed, and the group is capped at five so the day stays on the workshop floor rather than a market shopping loop. Materials are included. The format suits visitors who want a guided Indigenous craft day without finding a workshop independently. Meeting points are confirmed at booking in Cusco, and the itinerary stays on the Sacred Valley textile workshop that defines this outing rather than a Pisac ruin circuit or a city walking tour from the plaza."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "1 day",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 72
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/be/d2/26.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "In the heart of Peru’s Sacred Valley, this dyeing and weaving textile workshop is led by master weavers who show natural",
+      "Lunch is served family-style with the artisans, and coffee or herb tea is included",
+      "Hotel pickup by private transport is offered",
+      "Experience the Magic of Andean Textiles: Weaving workshop - Cusco near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private hotel pickup is listed for the published Cusco departure."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this Sacred Valley textile workshop is led by master weavers who demonstrate natural dyeing and loom techniques, then time at the loom for a piece visitors take home.",
+    "itineraryItems": [
+      {
+        "title": "Sacred Valley",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Andean textile workshop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Private transportation",
+      "Workshop materials",
+      "Coffee and/or tea",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Experience the Magic of Andean Textiles: Weaving workshop - Cusco?",
+        "answer": "The planned duration is 1 day."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Private hotel pickup is listed for the published Cusco departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Workshops"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

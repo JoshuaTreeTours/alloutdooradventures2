@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "173630P1",
+    "productUrl": "https://www.viator.com/tours/Cusco/2-Hour-ATV-Ride-Explore-the-Seven-Colors-Mountain-for-Full-Day/d937-173630P1",
+    "title": "Full-Day Rainbow Mountain Adventure with ATV",
+    "description": {
+      "text": "In Cusco, this small-group Rainbow Mountain day uses an ATV from Japura so the group can reach Vinicunca Mountain without the long uphill hike. Breakfast and lunch are included; a listed destination fee and optional motorcycle rental appear separately from the From price. The published cap is about 12, and the calendar day runs about 12 to 13 hours including road time. The format suits visitors who want a guided off-road window on the colored slopes without renting machines independently or joining the walking trek. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Japura and Vinicunca Mountain that define this ATV outing rather than a Moray-and-Maras quad circuit or a Palcoyo hike from the city."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "12 to 13 hours (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 350
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/51/f2/32.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Peru’s Rainbow Mountain is usually explored on a challenging hike that reaches high altitudes",
+      "This small-group excursion uses an all-terrain vehicle so the group can spend more time on the colored slopes and local",
+      "Breakfast and lunch are included",
+      "Full-Day Rainbow Mountain Adventure with ATV near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is confirmed at booking for the published Cusco departure."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this small-group Rainbow Mountain day uses an ATV from Japura so the group can reach Vinicunca Mountain without the long uphill hike.",
+    "itineraryItems": [
+      {
+        "title": "Japura",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vinicunca Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast",
+      "Lunch",
+      "Individual ATV",
+      "Fuel surcharge",
+      "First aid kit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Rainbow Mountain Adventure with ATV?",
+        "answer": "The planned duration is 12 to 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Hotel pickup is confirmed at booking for the published Cusco departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}

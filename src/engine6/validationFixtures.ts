@@ -329,6 +329,16 @@ import specimen218207p4Payload from "../../data/engine6/viator/218207P4.exact-pr
 import specimen428665p1Payload from "../../data/engine6/viator/428665P1.exact-product.json";
 import specimen368259p2Payload from "../../data/engine6/viator/368259P2.exact-product.json";
 import specimen46209p5Payload from "../../data/engine6/viator/46209P5.exact-product.json";
+import specimen89089p57Payload from "../../data/engine6/viator/89089P57.exact-product.json";
+import specimen49313p1Payload from "../../data/engine6/viator/49313P1.exact-product.json";
+import specimen120993p16Payload from "../../data/engine6/viator/120993P16.exact-product.json";
+import specimen200691p13Payload from "../../data/engine6/viator/200691P13.exact-product.json";
+import specimen173630p1Payload from "../../data/engine6/viator/173630P1.exact-product.json";
+import specimen44685p2Payload from "../../data/engine6/viator/44685P2.exact-product.json";
+import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-product.json";
+import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
+import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
+import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
 import specimen3714luxsunsetPayload from "../../data/engine6/viator/3714LUXSUNSET.exact-product.json";
 import specimen3714p32Payload from "../../data/engine6/viator/3714P32.exact-product.json";
 import specimen18372p1Payload from "../../data/engine6/viator/18372P1.exact-product.json";
@@ -3530,6 +3540,66 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "46209P5",
     publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
     rawPayload: specimen46209p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "89089P57",
+    publicUrl: "https://www.viator.com/tours/Cusco/HUMANTAY-LAKE/d937-89089P57",
+    rawPayload: specimen89089p57Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "49313P1",
+    publicUrl: "https://www.viator.com/tours/Cusco/Rainbow-Mountain-Day-Trip-from-Cusco/d937-49313P1",
+    rawPayload: specimen49313p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "120993P16",
+    publicUrl: "https://www.viator.com/tours/Cusco/Cusco-City-Tour-Half-Day-Tour/d937-120993P16",
+    rawPayload: specimen120993p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "200691P13",
+    publicUrl: "https://www.viator.com/tours/Cusco/Sacred-valley-of-the-Inkas-Premium-Full-Day-Tour/d937-200691P13",
+    rawPayload: specimen200691p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "173630P1",
+    publicUrl: "https://www.viator.com/tours/Cusco/2-Hour-ATV-Ride-Explore-the-Seven-Colors-Mountain-for-Full-Day/d937-173630P1",
+    rawPayload: specimen173630p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44685P2",
+    publicUrl: "https://www.viator.com/tours/Cusco/Cusco-by-Night-Including-Pisco-Sour-and-The-Planetarium/d937-44685P2",
+    rawPayload: specimen44685p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "101268P6",
+    publicUrl: "https://www.viator.com/tours/Cusco/NATURAL-DEYNG-AND-WEAVING-EXPERIENCE-AT-SACRED-VALLLEY/d937-101268P6",
+    rawPayload: specimen101268p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "168853P1",
+    publicUrl: "https://www.viator.com/tours/Cusco/One-day-train-trip-to-Machu-Picchu/d937-168853P1",
+    rawPayload: specimen168853p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "19345P9",
+    publicUrl: "https://www.viator.com/tours/Cusco/2-Day-Tour-Sacred-Valley-and-Machu-Picchu-by-Train/d937-19345P9",
+    rawPayload: specimen19345p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "19345P27",
+    publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
+    rawPayload: specimen19345p27Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

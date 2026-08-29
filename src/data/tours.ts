@@ -372,6 +372,7 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
   "mexico/cancun",
   "mexico/puerto-vallarta",
   "mexico/cabo-san-lucas",
+  "peru/cusco",
 ]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>

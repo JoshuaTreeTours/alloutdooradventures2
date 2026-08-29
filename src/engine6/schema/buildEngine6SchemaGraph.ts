@@ -19,7 +19,13 @@ import { getEngine6TourRatingSourceOfTruth } from "../ratingSourceOfTruth";
 import type { Engine6Tour } from "../types";
 
 const resolveEngine6AddressCountry = (stateSlug: string) =>
-  stateSlug === "scotland" ? "GB" : stateSlug === "mexico" ? "MX" : "US";
+  stateSlug === "scotland"
+    ? "GB"
+    : stateSlug === "mexico"
+      ? "MX"
+      : stateSlug === "peru"
+        ? "PE"
+        : "US";
 
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());

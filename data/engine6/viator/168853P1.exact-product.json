@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "168853P1",
+    "productUrl": "https://www.viator.com/tours/Cusco/One-day-train-trip-to-Machu-Picchu/d937-168853P1",
+    "title": "Full Day Tour to Machu Picchu From Cusco",
+    "description": {
+      "text": "In Cusco, this full-day Machu Picchu outing includes a pre-departure briefing, transport to the Ollantaytambo station, round-trip train tickets, citadel admission, and the bus between Aguas Calientes and Machu Picchu. The published format is private for the booked group, with snacks listed and water left as an extra. The calendar day runs about 14 to 15 hours because the rail and bus connections fill the window. The day is built for visitors who want a guided citadel window without assembling train, bus, and ticket pieces independently. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Ollantaytambo, Aguas Calientes, and Machu Picchu that define this train day rather than a two-day Sacred Valley overnight or a city-ruins half day."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "14 to 15 hours (approx.)",
+    "priceFrom": "From $334.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 315
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2e/1a/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This full-day Machu Picchu outing from Cusco includes a pre-departure briefing, round-trip train tickets between Ollanta",
+      "Transport to the train station from Cusco is listed both ways",
+      "The published format is private for the booked group",
+      "Full Day Tour to Machu Picchu From Cusco near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Transport to the Ollantaytambo train station from Cusco is included both ways after a pre-departure briefing."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this full-day Machu Picchu outing includes a pre-departure briefing, transport to the Ollantaytambo station, round-trip train tickets, citadel admission, and the bus between Aguas Calientes and Machu Picchu.",
+    "itineraryItems": [
+      {
+        "title": "Ollantaytambo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Aguas Calientes",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Machu Picchu",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional tour guide",
+      "Round-trip train tickets",
+      "Machu Picchu admission tickets",
+      "Round-trip Aguas Calientes bus",
+      "Transport to the train station from Cusco",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Tour to Machu Picchu From Cusco?",
+        "answer": "The planned duration is 14 to 15 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Transport to the Ollantaytambo train station from Cusco is included both ways after a pre-departure briefing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 334
+      },
+      "currency": "USD"
+    }
+  }
+}

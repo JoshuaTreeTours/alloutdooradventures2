@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "19345P27",
+    "productUrl": "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
+    "title": "Machu Picchu Private Full-Day Tour from Cusco",
+    "description": {
+      "text": "In Cusco, this private full-day Machu Picchu outing keeps the train, buffet lunch, and citadel walk on one party, with hotel pickup and private station transfers included. The published guided circuit covers the Temple of the Sun and the Sacred Plaza inside Machu Picchu after the Sacred Valley rail segment. Vistadome and Huayna Picchu are listed as extras rather than the base From price. The calendar day is about 15 hours. The format suits visitors who want a private citadel day without sharing the guide with another group. Meeting points are confirmed at booking in Cusco, and the itinerary stays on the Sacred Valley rail corridor, Aguas Calientes, and Machu Picchu that define this private outing rather than a two-day valley overnight."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "15 hours (approx.)",
+    "priceFrom": "From $409.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/3a/db.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This private full-day tour from Cusco includes a train ride through the Sacred Valley, a buffet lunch, and a private tou",
+      "The published route covers the Temple of the Sun and the Sacred Plaza",
+      "Hotel pickup and drop-off are included",
+      "Machu Picchu Private Full-Day Tour from Cusco near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private hotel pickup in Cusco and private transport to the train station are included."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this private full-day Machu Picchu outing keeps the train, buffet lunch, and citadel walk on one party, with hotel pickup and private station transfers included.",
+    "itineraryItems": [
+      {
+        "title": "Cusco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sacred Valley",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Aguas Calientes",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Machu Picchu",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ollantaytambo",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private hotel pickup and drop off",
+      "Private transport from hotel to train station",
+      "Professional English or Spanish speaking guide",
+      "Private guided tour",
+      "Buffet lunch",
+      "1 bottle of water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Machu Picchu Private Full-Day Tour from Cusco?",
+        "answer": "The planned duration is 15 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Private hotel pickup in Cusco and private transport to the train station are included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 409
+      },
+      "currency": "USD"
+    }
+  }
+}

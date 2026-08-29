@@ -1,0 +1,134 @@
+{
+  "product": {
+    "productCode": "19345P9",
+    "productUrl": "https://www.viator.com/tours/Cusco/2-Day-Tour-Sacred-Valley-and-Machu-Picchu-by-Train/d937-19345P9",
+    "title": "2-Day Tour: Sacred Valley and Machu Picchu by Train",
+    "description": {
+      "text": "In Cusco, this two-day itinerary spends the first day on Awana Kancha, Taray, Pisac, Pisac Market, Urubamba, and Ollantaytambo before the Inca Rail transfer to Aguas Calientes. Day two uses the citadel bus for a guided Machu Picchu visit, then returns by train and road. Breakfast, a listed three-star overnight, round-trip train tickets, and Machu Picchu admission are included; the Sacred Valley ticket is collected in soles on day one. The format suits visitors who want a longer guided valley-and-citadel sequence without booking each transfer separately. Meeting points are confirmed at booking in Cusco, and the itinerary stays on the Sacred Valley stops and Machu Picchu that shape this overnight outing rather than a same-day rail sprint from the city."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "2 days",
+    "priceFrom": "From $469.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1108
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/ef/b0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Urubamba",
+      "Ollantaytambo",
+      "Aguas Calientes",
+      "Machu Picchu",
+      "Discover the Sacred Valley and Machu Picchu on this 2-day tour"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The 2-day itinerary starts with pickup in Cusco. Door-to-door service is listed if no road restrictions apply."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this two-day itinerary spends the first day on Awana Kancha, Taray, Pisac, Pisac Market, Urubamba, and Ollantaytambo before the Inca Rail transfer to Aguas Calientes.",
+    "itineraryItems": [
+      {
+        "title": "Cusco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Awana Kancha",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Taray",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pisac",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pisac Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Urubamba",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ollantaytambo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Aguas Calientes",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Machu Picchu",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast",
+      "1 night accommodation at 3 star hotels",
+      "Hotel pick up and drop off",
+      "Round trip train tickets",
+      "Machu Picchu admission ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 2-Day Tour: Sacred Valley and Machu Picchu by Train?",
+        "answer": "The planned duration is 2 days."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "The 2-day itinerary starts with pickup in Cusco. Door-to-door service is listed if no road restrictions apply."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 469
+      },
+      "currency": "USD"
+    }
+  }
+}

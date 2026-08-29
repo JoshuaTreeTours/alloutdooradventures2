@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "89089P57",
+    "productUrl": "https://www.viator.com/tours/Cusco/HUMANTAY-LAKE/d937-89089P57",
+    "title": "Excursión to Humantay Lake Full Day from Cusco",
+    "description": {
+      "text": "In Cusco, this full-day Humantay Lake outing leaves the city for Mollepata and the Soraypampa Trek, a circular walk of about 2.7 miles to the turquoise lake below the sacred peaks. Breakfast and lunch are included so the day stays on the trail rather than a separate cafe stop. Walking sticks and oxygen assistance are listed; optional horses can be rented on site. Hotel pickup covers the city center. The published duration is about 15 hours because the approach road and altitude pacing take most of the calendar day. The format suits visitors who want a guided high-altitude lake day without arranging the Soraypampa approach independently. Meeting points are confirmed at booking in Cusco, and the itinerary stays on Mollepata, Soraypampa, and Humantay Lake that define this Andean outing rather than a Rainbow Mountain or citadel add-on."
+    },
+    "location": {
+      "city": "Cusco",
+      "state": "Peru"
+    },
+    "duration": "15 hours (approx.)",
+    "priceFrom": "From $25.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1418
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/23/28.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This Humantay Lake Full-Day Tour from Cusco is a great pick for visitors who want to see the lake but only have a day to",
+      "This full-day tour takes visitors to the lake through the Soraypampa Trek, which is a circular route that runs about 2.7",
+      "A guide knows the best spots to stop at to see wildlife and teaches about the sacred mountains surrounding the area, too",
+      "Excursión to Humantay Lake Full Day from Cusco near Cusco",
+      "Professional Cusco guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for hotels in the Cusco city center."
+      },
+      "end": {
+        "description": "Return to your Cusco meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cusco, this full-day Humantay Lake outing leaves the city for Mollepata and the Soraypampa Trek, a circular walk of about 2.",
+    "itineraryItems": [
+      {
+        "title": "Mollepata",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Soraypampa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Humantay Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast",
+      "Lunch",
+      "Air-conditioned vehicle",
+      "Tour guide",
+      "Walking stick",
+      "Oxygen assistance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Excursión to Humantay Lake Full Day from Cusco?",
+        "answer": "The planned duration is 15 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cusco?",
+        "answer": "Hotel pickup is listed for hotels in the Cusco city center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 25
+      },
+      "currency": "USD"
+    }
+  }
+}

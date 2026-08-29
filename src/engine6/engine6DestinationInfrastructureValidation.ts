@@ -89,6 +89,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "mexico",
     citySlug: "cabo-san-lucas",
   },
+  cusco: {
+    destinationLabel: "Cusco",
+    destinationCitySlug: "cusco",
+    stateSlug: "peru",
+    citySlug: "cusco",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

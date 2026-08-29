@@ -5736,6 +5736,102 @@ const mexicoState: StateDestination = {
   isFallback: true,
 };
 
+const peruState: StateDestination = {
+  slug: "peru",
+  name: "Peru",
+  description:
+    "Cusco plazas, Sacred Valley ruins, Humantay and Rainbow Mountain days, and Machu Picchu train touring from the former Inka capital.",
+  featuredDescription:
+    "Explore Cusco tours with city ruin circuits, Sacred Valley days, Humantay Lake and Rainbow Mountain hikes, ATV outings, Andean textile workshops, planetarium evenings, and Machu Picchu train itineraries.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/81/07.jpg",
+  region: "South America",
+  intro:
+    "Peru pairs walkable Cusco districts and hillside ruins with Sacred Valley archaeological days and high-altitude lake or colored-mountain outings.",
+  longDescription:
+    "Cusco anchors Peru tour inventory with Coricancha and Sacsayhuaman city circuits, Sacred Valley stops at Pisac, Ollantaytambo, Moray, Chinchero, and Salinas de Maras, Humantay Lake and Vinicunca hiking or ATV days, Andean weaving workshops, planetarium evenings, and Machu Picchu train itineraries from Ollantaytambo and Aguas Calientes.",
+  topRegions: [
+    {
+      title: "Historic center and hillside ruins",
+      description:
+        "Plaza de Armas, Coricancha, Sacsayhuaman, Qenko, Puca Pucara, and Tambomachay.",
+    },
+    {
+      title: "Sacred Valley and Machu Picchu",
+      description:
+        "Pisac, Ollantaytambo, Moray, Chinchero, Salinas de Maras, Aguas Calientes, and Machu Picchu train days.",
+    },
+  ],
+  cities: [
+    {
+      name: "Cusco",
+      slug: "cusco",
+      stateSlug: "peru",
+      region: "Cusco",
+      lat: -13.5319,
+      lng: -71.9675,
+      shortDescription:
+        "City ruins, Sacred Valley days, mountain hikes, and Machu Picchu trains from Cusco.",
+      intro:
+        "Cusco is the former Inka capital with Plaza de Armas, hillside ruins, Sacred Valley day trips, and Machu Picchu train departures.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/81/07.jpg",
+      ],
+      activityTags: ["sightseeing", "hiking", "adventure"],
+      whereItIs: [
+        "Cusco sits in the southern Andes of Peru, with Plaza de Armas, San Blas, and Sacsayhuaman framing central sightseeing.",
+        "Most guided tours depart from city-center hotels, Plaza Regocijo, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Humantay Lake, Vinicunca Rainbow Mountain, and Palcoyo-style colored ridges sit on full-day routes from Cusco.",
+        lakesWater:
+          "Humantay Lake and glacial valleys appear on high-altitude hiking days from the city.",
+        desertForest:
+          "Sacred Valley terraces, Maras salt pans, and highland grassland sit between city and citadel days.",
+        cycling:
+          "Guided bike inventory is limited on verified USD pages; most Cusco days use hiking, vans, ATVs, or trains.",
+        scenicDrives:
+          "Shared and private vans cover the Sacred Valley, Humantay approaches, and Rainbow Mountain roads from Cusco.",
+        seasonalNotes:
+          "Dry-season months favor high-altitude hikes and citadel days; wet season can close mountain roads and change trail conditions.",
+      },
+      thingsToDo: [
+        "Walk Coricancha and the four hillside ruins on a half-day city circuit.",
+        "Spend a full day in the Sacred Valley or hike Humantay Lake or Rainbow Mountain.",
+        "Take a train day or two-day itinerary to Machu Picchu.",
+      ],
+      toursCopy: [
+        "Book a Cusco city ruin circuit or Sacred Valley day for a compact introduction.",
+        "Pair a Humantay or Rainbow Mountain hike with a Machu Picchu train itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Cusco city tour and four ruins.",
+          "Afternoon: Coricancha or historic-center walk.",
+          "Evening: Planetarium Cusco or a plaza dinner.",
+        ],
+        dayTwo: [
+          "Morning: Sacred Valley, Humantay Lake, or Rainbow Mountain.",
+          "Afternoon: Continue the published valley or mountain circuit.",
+          "Evening: Return to central Cusco.",
+        ],
+      },
+      gettingThere: [
+        "Alejandro Velasco Astete International Airport serves Cusco with taxis and hotel transfers to Plaza de Armas and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Cusco tours?",
+          answer:
+            "City ruin circuits, Sacred Valley archaeological days, Humantay Lake and Rainbow Mountain hikes, ATV outings, Andean textile workshops, planetarium evenings, and Machu Picchu train itineraries are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5754,6 +5850,7 @@ export const states: StateDestination[] = [
   netherlandsState,
   irelandState,
   mexicoState,
+  peruState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({
