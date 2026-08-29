@@ -95,6 +95,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "peru",
     citySlug: "cusco",
   },
+  lima: {
+    destinationLabel: "Lima",
+    destinationCitySlug: "lima",
+    stateSlug: "peru",
+    citySlug: "lima",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

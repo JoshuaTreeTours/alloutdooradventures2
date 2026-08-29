@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "148831P28",
+    "productUrl": "https://www.viator.com/tours/Lima/Lima-by-night-and-Catacombs/d928-148831P28",
+    "title": "Lima by night including Catacombs & Water Show Tour",
+    "description": {
+      "text": "In Lima, this small-group evening starts at the San Francisco Monastery catacombs, continues through the historic center around Plaza de Armas, and ends at the Magic Water Circuit. Air-conditioned hotel pickup plus tickets to the catacombs and the water show are included, with a published 4:00 p.m. start from Barranco, Miraflores, San Isidro, or downtown Lima. The group is listed with a maximum of 15. Commentary stays on the monastery crypts and the illuminated colonial squares rather than a daytime museum hop. The format suits visitors who want a guided night window without buying catacomb and fountain tickets independently. Meeting points are confirmed at booking in Lima, and the itinerary stays on San Francisco Monastery, Plaza de Armas, and the Magic Water Circuit that define this evening."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 126
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/70/c1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group evening tour of Lima after the daytime crowds",
+      "San Francisco Monastery catacombs with included admission",
+      "Historic-center walk around Plaza de Armas",
+      "Magic Water Circuit tickets included",
+      "Hotel pickup from Barranco, Miraflores, San Isidro, or downtown Lima"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from Barranco, Miraflores, San Isidro or Downtown Lima. Published start time is 4:00 p.m."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this small-group evening starts at the San Francisco Monastery catacombs, continues through the historic center around Plaza de Armas, and ends at the Magic Water Circuit.",
+    "itineraryItems": [
+      {
+        "title": "San Francisco Monastery",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Plaza de Armas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magic Water Circuit",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Tickets to the Catacombs",
+      "Tickets to Magic Water Show"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lima by night including Catacombs & Water Show Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Pickup from Barranco, Miraflores, San Isidro or Downtown Lima. Published start time is 4:00 p.m."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}

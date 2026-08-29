@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "155286P1",
+    "productUrl": "https://www.viator.com/tours/Lima/City-Tour-Complete/d928-155286P1",
+    "title": "City Tour Complete",
+    "description": {
+      "text": "In Lima, this private half-day city tour keeps one group in an air-conditioned vehicle for Barranco, Miraflores, and the historic center. A dedicated guide handles neighborhood pacing so stops can run longer at a plaza or shorter at a pass-by rather than a fixed coach loop. Hotel pickup is listed for Miraflores, Barranco, and San Isidro; transfers from outside that axis are listed as a USD 20 add-on. Museum and attraction tickets are not treated as a guaranteed inclusion on the published page. The format suits visitors who want a flexible guided overview without booking three district walks separately. Meeting points are confirmed at booking in Lima, and the itinerary stays on Miraflores, Barranco, and the Historic Center of Lima that shape this private circuit rather than a Palomino Islands or desert add-on."
+    },
+    "location": {
+      "city": "Lima",
+      "state": "Peru"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $90.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 98
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/29/85/ba.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day tour of Barranco, Miraflores, and the historic center",
+      "Air-conditioned vehicle and dedicated guide for one group",
+      "Flexible stop timing instead of a fixed coach loop",
+      "Hotel pickup listed for Miraflores, Barranco, and San Isidro",
+      "Museum tickets listed separately on the product page"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for accommodations in Miraflores, Barranco, and San Isidro. Transfers from outside that axis are listed at USD 20."
+      },
+      "end": {
+        "description": "Return to your Lima meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Lima, this private half-day city tour keeps one group in an air-conditioned vehicle for Barranco, Miraflores, and the historic center.",
+    "itineraryItems": [
+      {
+        "title": "Miraflores",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barranco",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Center of Lima",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guía privado"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the City Tour Complete?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Lima?",
+        "answer": "Hotel pickup is listed for accommodations in Miraflores, Barranco, and San Isidro. Transfers from outside that axis are listed at USD 20."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90
+      },
+      "currency": "USD"
+    }
+  }
+}

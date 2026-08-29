@@ -1,0 +1,132 @@
+{
+  "selectedCount": 9,
+  "listingCount": 9,
+  "listingMatchesSelection": true,
+  "okCount": 9,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "20336P1",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/historic-downtown-miraflores-catacombs-private-tour-20336P1",
+      "title": "Historic Downtown, Miraflores & Catacombs Private Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/97/94.jpg",
+      "card": "In Lima, this private half-day circuit covers Miraflores, a San Isidro pass, and Centro Historico de Lima with a dedicated guide and vehicle",
+      "itineraryTitles": [
+        "Miraflores",
+        "San Isidro",
+        "Centro Historico de Lima"
+      ],
+      "issues": []
+    },
+    {
+      "code": "155286P1",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/city-tour-complete-155286P1",
+      "title": "City Tour Complete",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/29/85/ba.jpg",
+      "card": "In Lima, this private half-day city tour keeps one group in an air-conditioned vehicle for Barranco, Miraflores, and the historic center.",
+      "itineraryTitles": [
+        "Miraflores",
+        "Barranco",
+        "Historic Center of Lima"
+      ],
+      "issues": []
+    },
+    {
+      "code": "148831P28",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/lima-by-night-including-catacombs-water-show-tour-148831P28",
+      "title": "Lima by night including Catacombs & Water Show Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/70/c1.jpg",
+      "card": "In Lima, this small-group evening starts at the San Francisco Monastery catacombs, continues through the historic center around Plaza de Arm",
+      "itineraryTitles": [
+        "San Francisco Monastery",
+        "Plaza de Armas",
+        "Magic Water Circuit"
+      ],
+      "issues": []
+    },
+    {
+      "code": "85155P2",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/marcahuasi-experience-in-lima-85155P2",
+      "title": "Marcahuasi Experience in Lima",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/5b/b0.jpg",
+      "card": "In Lima, this private full-day outing leaves the coastal districts for San Pedro de Casta and the Marcahuasi Stone Forest.",
+      "itineraryTitles": [
+        "San Pedro de Casta",
+        "Marcahuasi Stone Forest"
+      ],
+      "issues": []
+    },
+    {
+      "code": "89775P1",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/sandboarding-and-off-road-in-lima-national-park-lomas-d-89775P1",
+      "title": "Sandboarding and Off Road in Lima (National Park Lomas de Ancón)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/3a/76/6f.jpg",
+      "card": "In Lima, this private 4x4 outing heads north to Lomas de Ancón for guided dune driving and sandboarding.",
+      "itineraryTitles": [
+        "Lomas de Ancón",
+        "Ancón"
+      ],
+      "issues": []
+    },
+    {
+      "code": "226342P3",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/epic-paracas-huacachina-day-trip-from-lima-226342P3",
+      "title": "Epic Paracas & Huacachina - Day Trip From Lima",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/1f/bc.jpg",
+      "card": "In Lima, this long guided day runs south to Islas Ballestas, an Ica wine and pisco tasting, and Huacachina for a two-hour dune-buggy and san",
+      "itineraryTitles": [
+        "Islas Ballestas",
+        "Ica",
+        "Huacachina"
+      ],
+      "issues": []
+    },
+    {
+      "code": "141439P1",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/caral-the-oldest-civilization-in-the-americas-day-trip-141439P1",
+      "title": "Caral, The Oldest Civilization in the Americas:Day Trip from Lima",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/a9/27/13.jpg",
+      "card": "In Lima, this small-group day follows the Supe Valley to the Caral Archaeological Zone, then continues to Barranca for the published beach-t",
+      "itineraryTitles": [
+        "Caral Archaeological Zone",
+        "Barranca"
+      ],
+      "issues": []
+    },
+    {
+      "code": "17020P17",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/pachacamacs-inka-pyramids-tour-including-museum-small-g-17020P17",
+      "title": "Pachacamac's Inka Pyramids Tour including Museum Small-Group",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/28/0b/a1.jpg",
+      "card": "In Lima, this small-group half-day heads south to Pachacamac for the site museum and the Temple of the Sun.",
+      "itineraryTitles": [
+        "Pachacamac Site Museum",
+        "Temple of the Sun"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5207LIMBIKE",
+      "ok": true,
+      "path": "/destinations/peru/lima/tours/explore-lima-on-bike-coast-cycling-adventure-5207LIMBIKE",
+      "title": "Explore Lima On Bike: Coast Cycling Adventure",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/d5/51.jpg",
+      "card": "In Lima, this small-group coast ride starts in Miraflores, drops toward Chorrillos, then follows Barranco and Love Park on protected bike pa",
+      "itineraryTitles": [
+        "Chorrillos",
+        "Barranco",
+        "Love Park",
+        "Miraflores"
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -5740,16 +5740,16 @@ const peruState: StateDestination = {
   slug: "peru",
   name: "Peru",
   description:
-    "Cusco plazas, Sacred Valley ruins, Humantay and Rainbow Mountain days, and Machu Picchu train touring from the former Inka capital.",
+    "Cusco plazas, Sacred Valley ruins, Humantay and Rainbow Mountain days, and Machu Picchu train touring from the former Inka capital, plus Lima historic plazas, coastal neighborhoods, and day trips to older civilizations.",
   featuredDescription:
-    "Explore Cusco tours with city ruin circuits, Sacred Valley days, Humantay Lake and Rainbow Mountain hikes, ATV outings, Andean textile workshops, planetarium evenings, and Machu Picchu train itineraries.",
+    "Explore Cusco tours with city ruin circuits, Sacred Valley days, Humantay Lake and Rainbow Mountain hikes, ATV outings, Andean textile workshops, planetarium evenings, and Machu Picchu train itineraries, plus Lima private city circuits, coast bike rides, sanctuary days, and desert outings.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/81/07.jpg",
   region: "South America",
   intro:
-    "Peru pairs walkable Cusco districts and hillside ruins with Sacred Valley archaeological days and high-altitude lake or colored-mountain outings.",
+    "Peru pairs walkable Cusco districts and hillside ruins with Sacred Valley archaeological days and high-altitude lake or colored-mountain outings. On the Pacific coast, Lima adds historic plazas, coastal neighborhoods, and day trips to older civilizations.",
   longDescription:
-    "Cusco anchors Peru tour inventory with Coricancha and Sacsayhuaman city circuits, Sacred Valley stops at Pisac, Ollantaytambo, Moray, Chinchero, and Salinas de Maras, Humantay Lake and Vinicunca hiking or ATV days, Andean weaving workshops, planetarium evenings, and Machu Picchu train itineraries from Ollantaytambo and Aguas Calientes.",
+    "Cusco anchors Peru tour inventory with Coricancha and Sacsayhuaman city circuits, Sacred Valley stops at Pisac, Ollantaytambo, Moray, Chinchero, and Salinas de Maras, Humantay Lake and Vinicunca hiking or ATV days, Andean weaving workshops, planetarium evenings, and Machu Picchu train itineraries from Ollantaytambo and Aguas Calientes. Lima adds Historic Downtown and Miraflores circuits, Barranco and catacomb evenings, coast bike rides, Pachacamac and Caral sanctuary days, and Ancón or Huacachina desert outings.",
   topRegions: [
     {
       title: "Historic center and hillside ruins",
@@ -5760,6 +5760,11 @@ const peruState: StateDestination = {
       title: "Sacred Valley and Machu Picchu",
       description:
         "Pisac, Ollantaytambo, Moray, Chinchero, Salinas de Maras, Aguas Calientes, and Machu Picchu train days.",
+    },
+    {
+      title: "Lima coast and older civilizations",
+      description:
+        "Historic Downtown, Miraflores, Barranco, the Catacombs, Pachacamac, Caral, and desert routes around Ancón and Huacachina.",
     },
   ],
   cities: [
@@ -5825,6 +5830,71 @@ const peruState: StateDestination = {
           question: "What are the signature Cusco tours?",
           answer:
             "City ruin circuits, Sacred Valley archaeological days, Humantay Lake and Rainbow Mountain hikes, ATV outings, Andean textile workshops, planetarium evenings, and Machu Picchu train itineraries are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Lima",
+      slug: "lima",
+      stateSlug: "peru",
+      region: "Lima",
+      lat: -12.0464,
+      lng: -77.0428,
+      shortDescription:
+        "Historic plazas, coastal neighborhoods, and day trips to older civilizations from Lima.",
+      intro:
+        "Lima is Peru's Pacific capital with Historic Downtown, Miraflores, Barranco, the Catacombs, Pachacamac, Caral, and desert routes around Ancón and Huacachina.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/97/94.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "cycling"],
+      whereItIs: [
+        "Lima sits on Peru's central Pacific coast, with Miraflores, Barranco, and the historic center framing most sightseeing.",
+        "Most guided tours depart from Miraflores, Barranco, San Isidro, or downtown hotels and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Marcahuasi stone-forest days climb inland from Lima to the San Pedro de Casta plateau.",
+        lakesWater:
+          "Coastal bike routes follow the Pacific cliffs, while Ballestas boat windows sit on longer southbound days.",
+        desertForest:
+          "Lomas de Ancón dunes, Pachacamac adobe terraces, and Huacachina sand routes sit on full-day outings from the capital.",
+        cycling:
+          "Guided coast rides cover Miraflores, Barranco, Love Park, and Chorrillos on protected bike paths.",
+        scenicDrives:
+          "Private and small-group vans cover Historic Downtown, Pachacamac, Caral, Ancón, and Paracas-Huacachina approaches.",
+        seasonalNotes:
+          "Coastal days run year-round; inland Marcahuasi and Caral routes depend on highland weather and road conditions.",
+      },
+      thingsToDo: [
+        "Walk Historic Downtown, Miraflores, and the San Francisco catacombs.",
+        "Ride the coast by bike or take a night circuit to the Magic Water Circuit.",
+        "Spend a full day at Pachacamac, Caral, Marcahuasi, Ancón dunes, or Huacachina.",
+      ],
+      toursCopy: [
+        "Book a private historic-center and Miraflores circuit for a compact introduction.",
+        "Pair a Pachacamac or Caral sanctuary day with a coast bike ride or desert outing.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Historic Downtown, Miraflores, and catacombs.",
+          "Afternoon: Barranco or a coast bike ride.",
+          "Evening: Magic Water Circuit or a plaza dinner.",
+        ],
+        dayTwo: [
+          "Morning: Pachacamac, Caral, Marcahuasi, or Huacachina.",
+          "Afternoon: Continue the published sanctuary or desert circuit.",
+          "Evening: Return to central Lima.",
+        ],
+      },
+      gettingThere: [
+        "Jorge Chávez International Airport serves Lima with taxis and hotel transfers to Miraflores, Barranco, San Isidro, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Lima tours?",
+          answer:
+            "Private historic-center and Miraflores circuits, Barranco and catacomb evenings, coast bike rides, Marcahuasi and Ancón off-road days, Pachacamac and Caral sanctuary days, and Paracas-Huacachina desert days are the most popular departures.",
         },
       ],
     },
