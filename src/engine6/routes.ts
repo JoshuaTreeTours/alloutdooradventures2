@@ -1332,6 +1332,47 @@ export const isEngine6EdinburghTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_EDINBURGH_TOUR_PATH_PREFIX);
 
+export const ENGINE6_MEXICO_CITY_333644P5_PRODUCT_CODE = "333644P5";
+export const ENGINE6_MEXICO_CITY_333644P5_ROUTE =
+  "/destinations/mexico/mexico-city/tours/balloon-flight-with-private-transportation-and-guided-t-333644P5";
+export const ENGINE6_MEXICO_CITY_247495P2_PRODUCT_CODE = "247495P2";
+export const ENGINE6_MEXICO_CITY_247495P2_ROUTE =
+  "/destinations/mexico/mexico-city/tours/balloon-flight-cave-breakfast-pick-up-from-cdmx-or-we-f-247495P2";
+export const ENGINE6_MEXICO_CITY_33804P2_PRODUCT_CODE = "33804P2";
+export const ENGINE6_MEXICO_CITY_33804P2_ROUTE =
+  "/destinations/mexico/mexico-city/tours/private-tour-xochimilco-coyoacan-and-frida-kahlo-museum-33804P2";
+export const ENGINE6_MEXICO_CITY_161745P6_PRODUCT_CODE = "161745P6";
+export const ENGINE6_MEXICO_CITY_161745P6_ROUTE =
+  "/destinations/mexico/mexico-city/tours/pyramids-of-teotihuacan-private-tour-161745P6";
+export const ENGINE6_MEXICO_CITY_325968P1_PRODUCT_CODE = "325968P1";
+export const ENGINE6_MEXICO_CITY_325968P1_ROUTE =
+  "/destinations/mexico/mexico-city/tours/full-day-tour-exploring-the-waters-of-tolantongo-325968P1";
+export const ENGINE6_MEXICO_CITY_33804P1_PRODUCT_CODE = "33804P1";
+export const ENGINE6_MEXICO_CITY_33804P1_ROUTE =
+  "/destinations/mexico/mexico-city/tours/private-tour-teotihuacan-and-guadalupe-shrine-33804P1";
+export const ENGINE6_MEXICO_CITY_88859P7_PRODUCT_CODE = "88859P7";
+export const ENGINE6_MEXICO_CITY_88859P7_ROUTE =
+  "/destinations/mexico/mexico-city/tours/frida-kahlos-house-coyoacan-and-xochimilco-all-day-tour-88859P7";
+export const ENGINE6_MEXICO_CITY_325968P5_PRODUCT_CODE = "325968P5";
+export const ENGINE6_MEXICO_CITY_325968P5_ROUTE =
+  "/destinations/mexico/mexico-city/tours/teotihuacan-pyramids-caves-culinary-experience-325968P5";
+export const ENGINE6_MEXICO_CITY_466992P2_PRODUCT_CODE = "466992P2";
+export const ENGINE6_MEXICO_CITY_466992P2_ROUTE =
+  "/destinations/mexico/mexico-city/tours/hiking-to-the-puerta-del-cielo-viewpoint-in-mexico-city-466992P2";
+export const ENGINE6_MEXICO_CITY_382677P1_PRODUCT_CODE = "382677P1";
+export const ENGINE6_MEXICO_CITY_382677P1_ROUTE =
+  "/destinations/mexico/mexico-city/tours/the-best-and-most-complete-private-city-tour-through-th-382677P1";
+export const ENGINE6_MEXICO_CITY_38551P1_PRODUCT_CODE = "38551P1";
+export const ENGINE6_MEXICO_CITY_38551P1_ROUTE =
+  "/destinations/mexico/mexico-city/tours/the-emperor-route-chapultepec-paseo-de-la-reforma-histo-38551P1";
+
+export const ENGINE6_MEXICO_CITY_TOUR_PATH_PREFIX =
+  "/destinations/mexico/mexico-city/tours/";
+
+export const isEngine6MexicoCityTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_MEXICO_CITY_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
 export const ENGINE6_BRYCE_165275P1_ROUTE =
   "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
@@ -4521,6 +4562,50 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_DUBLIN_5300TITANIC_ROUTE,
     ENGINE6_DUBLIN_5300TITANIC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_333644P5_ROUTE,
+    ENGINE6_MEXICO_CITY_333644P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_247495P2_ROUTE,
+    ENGINE6_MEXICO_CITY_247495P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_33804P2_ROUTE,
+    ENGINE6_MEXICO_CITY_33804P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_161745P6_ROUTE,
+    ENGINE6_MEXICO_CITY_161745P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_325968P1_ROUTE,
+    ENGINE6_MEXICO_CITY_325968P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_33804P1_ROUTE,
+    ENGINE6_MEXICO_CITY_33804P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_88859P7_ROUTE,
+    ENGINE6_MEXICO_CITY_88859P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_325968P5_ROUTE,
+    ENGINE6_MEXICO_CITY_325968P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_466992P2_ROUTE,
+    ENGINE6_MEXICO_CITY_466992P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_382677P1_ROUTE,
+    ENGINE6_MEXICO_CITY_382677P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MEXICO_CITY_38551P1_ROUTE,
+    ENGINE6_MEXICO_CITY_38551P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_BRYCE_165275P1_ROUTE,

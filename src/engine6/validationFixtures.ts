@@ -295,6 +295,17 @@ import specimen6898p9Payload from "../../data/engine6/viator/6898P9.exact-produc
 import specimen5211whiskyPayload from "../../data/engine6/viator/5211WHISKY.exact-product.json";
 import specimen72560p6Payload from "../../data/engine6/viator/72560P6.exact-product.json";
 import specimen6898p18Payload from "../../data/engine6/viator/6898P18.exact-product.json";
+import specimen333644p5Payload from "../../data/engine6/viator/333644P5.exact-product.json";
+import specimen247495p2Payload from "../../data/engine6/viator/247495P2.exact-product.json";
+import specimen33804p2Payload from "../../data/engine6/viator/33804P2.exact-product.json";
+import specimen161745p6Payload from "../../data/engine6/viator/161745P6.exact-product.json";
+import specimen325968p1Payload from "../../data/engine6/viator/325968P1.exact-product.json";
+import specimen33804p1Payload from "../../data/engine6/viator/33804P1.exact-product.json";
+import specimen88859p7Payload from "../../data/engine6/viator/88859P7.exact-product.json";
+import specimen325968p5Payload from "../../data/engine6/viator/325968P5.exact-product.json";
+import specimen466992p2Payload from "../../data/engine6/viator/466992P2.exact-product.json";
+import specimen382677p1Payload from "../../data/engine6/viator/382677P1.exact-product.json";
+import specimen38551p1Payload from "../../data/engine6/viator/38551P1.exact-product.json";
 import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
 import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
 import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
@@ -3278,6 +3289,72 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "5300TITANIC",
     publicUrl: "https://www.viator.com/tours/Dublin/Titanic-Visitor-Experience-and-Giants-Causeway-Day-Trip-from-Dublin/d503-5300TITANIC",
     rawPayload: specimen5300titanicPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "333644P5",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Full-Day-in-the-Teotihuacan-Archaeological-Zone-and-Balloon-Ride/d628-333644P5",
+    rawPayload: specimen333644p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "247495P2",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Hot-Air-Balloon-Flight-in-Teotihuacan-from-Mexico-City/d628-247495P2",
+    rawPayload: specimen247495p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33804P2",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Private-Tour-Xochimilco-Coyoacan-and-Frida-Kahlo-Museum-in-Mexico-City/d628-33804P2",
+    rawPayload: specimen33804p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "161745P6",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Pyramids-of-Teotihuacan-Private-Tour/d628-161745P6",
+    rawPayload: specimen161745p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "325968P1",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Exploring-the-Waters-of-Tolantongo/d628-325968P1",
+    rawPayload: specimen325968p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33804P1",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Private-Tour-Teotihuacan-and-Guadalupe-Shrine/d628-33804P1",
+    rawPayload: specimen33804p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "88859P7",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Coyoacan-Frida-Kahlos-house-and-Xochimilco-all-day-tour/d628-88859P7",
+    rawPayload: specimen88859p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "325968P5",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Teotihuacan-Pyramids-Subterranean-Caves-and-Culinary-Experience/d628-325968P5",
+    rawPayload: specimen325968p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "466992P2",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Hiking-to-the-Puerta-del-Cielo-Viewpoint-in-Mexico-City/d628-466992P2",
+    rawPayload: specimen466992p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "382677P1",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Historical-Half-Day-Guided-Walking-Tour-in-Mexico-City/d628-382677P1",
+    rawPayload: specimen382677p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38551P1",
+    publicUrl: "https://www.viator.com/tours/Mexico-City/Historical-Bike-Tour-in-Mexico-City-Chapultepec-Reforma-and-Downtown/d628-38551P1",
+    rawPayload: specimen38551p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "247495P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Hot-Air-Balloon-Flight-in-Teotihuacan-from-Mexico-City/d628-247495P2",
+    "title": "Balloon Flight + Cave Breakfast + Pick Up from CDMX or We Fly",
+    "description": {
+      "text": "A Mexico City departure option pairs a shared hot-air balloon flight over Teotihuacan with breakfast at La Cueva Teotihuacán. The three-to-nine-hour format includes a 30-to-60-minute flight and, on all-inclusive bookings, certified guiding in the archaeological zone. Stops include the Teotihuacan launch field, La Cueva Teotihuacán, and the Teotihuacan Pyramids. Guests who skip hotel pickup meet at the launch field rather than navigating the pyramids independently. The flight window stays over the highland basin around the Avenue of the Dead, then breakfast moves into the cave restaurant beside the ancient city. Ideal for visitors basing in Mexico City who want a balloon-and-cave-breakfast morning without coordinating a separate launch-field transfer."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "3 to 9 hours (approx.)",
+    "priceFrom": "From $210.80",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 4430
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/a2/9b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hot-air balloon flight over Teotihuacan",
+      "Breakfast at La Cueva Teotihuacán",
+      "Optional Mexico City pickup",
+      "Guided time in the archaeological zone on all-inclusive options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Mexico City when selected, or meet at We Fly Teotihuacan."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A Mexico City departure option pairs a shared hot-air balloon flight over Teotihuacan with breakfast at La Cueva Teotihuacán.",
+    "itineraryItems": [
+      {
+        "title": "Teotihuacan Launch Field",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Cueva Teotihuacán",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teotihuacan Pyramids",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Shared balloon flight from 30 to 60 minutes",
+      "Breakfast at La Cueva Teotihuacán",
+      "Travel insurance",
+      "Certified guide in the archaeological area on all-inclusive options"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Balloon Flight + Cave Breakfast + Pick Up from CDMX or We Fly?",
+        "answer": "The planned duration is 3 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Hotel pickup from Mexico City when selected, or meet at We Fly Teotihuacan."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air, Helicopter & Balloon Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210.8
+      },
+      "currency": "USD"
+    }
+  }
+}

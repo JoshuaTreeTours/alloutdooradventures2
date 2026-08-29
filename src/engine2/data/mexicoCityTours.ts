@@ -27,14 +27,14 @@ export const getEngine2MexicoCityTours = (): Engine2Tour[] => {
           continue;
         }
 
-        const slugBase = slugify(clean(row.slug) || title) || "ciudad-de-mexico-tour";
+        const slugBase = slugify(clean(row.slug) || title) || "mexico-city-tour";
         const slug = `${slugBase}-${itemId}`;
-        const canonicalPath = `/destinations/mexico/ciudad-de-mexico/tours/${slug}`;
+        const canonicalPath = `/destinations/mexico/mexico-city/tours/${slug}`;
         const providerName = clean(row.providerName) || "Unknown provider";
         const copy = buildTourCopy({
           name: title,
           provider: providerName,
-          city: "Ciudad De México",
+          city: "Mexico City",
           region: "Mexico",
         });
 
@@ -46,7 +46,7 @@ export const getEngine2MexicoCityTours = (): Engine2Tour[] => {
           sourceDatasetKey: "mexico-city",
           sourceCountrySlug: "mexico",
           sourceProvinceSlug: undefined,
-          sourceCitySlug: "ciudad-de-mexico",
+          sourceCitySlug: "mexico-city",
           slug,
           name: title,
           provider: {
@@ -58,12 +58,12 @@ export const getEngine2MexicoCityTours = (): Engine2Tour[] => {
           geo: {
             country: "Mexico",
             region: "Mexico",
-            city: "Ciudad De México",
+            city: "Mexico City",
             lat: parseCoordinate(row.locationLat),
             lng: parseCoordinate(row.locationLong),
           },
           seo: {
-            title: `${title} | Ciudad De México Tour`,
+            title: `${title} | Mexico City Tour`,
             description: copy.metaDescription,
             canonicalPath,
             ogImage: heroImage,

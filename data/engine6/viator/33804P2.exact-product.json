@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "33804P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Private-Tour-Xochimilco-Coyoacan-and-Frida-Kahlo-Museum-in-Mexico-City/d628-33804P2",
+    "title": "Private Tour: Xochimilco, Coyoacan and Frida Kahlo Museum",
+    "description": {
+      "text": "Ride a traditional trajinera through Xochimilco canals, then visit Frida Kahlo and Diego Rivera landmarks on this private Mexico City art day. Round-trip hotel transfers, a one-hour canal ride, and admission to the Frida Kahlo Museum and Museo Diego Rivera Anahuacalli are included, with mosaic murals at UNAM on the same circuit. Stops include Parque Ecologico Xochimilco, Museo Frida Kahlo, Coyoacán, Museo Diego Rivera Anahuacalli, UNAM Biblioteca Central. Private pacing keeps canal time and museum windows together instead of separate taxi hops across the south of the city. Ideal for visitors basing in Mexico City who want a guided Xochimilco and Coyoacán day without coordinating tickets alone."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $179.99",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 326
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided private tour of two of Mexico City's most beloved districts",
+      "Ride a traditional boat through the floating gardens of Xochimilco",
+      "Private guide reserved for one group",
+      "Hassle-free two-way transfers from hotels and rentals across the city"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel or vacation-rental pickup across Mexico City."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride a traditional trajinera through Xochimilco canals, then visit Frida Kahlo and Diego Rivera landmarks on this private Mexico City art day.",
+    "itineraryItems": [
+      {
+        "title": "Parque Ecologico Xochimilco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museo Frida Kahlo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coyoacán",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museo Diego Rivera Anahuacalli",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "UNAM Biblioteca Central",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Hotel pickup and drop-off",
+      "Trajinera 1 hour",
+      "Bottled water",
+      "Tickets to the Frida Kahlo Museum"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Xochimilco, Coyoacan and Frida Kahlo Museum?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Hotel or vacation-rental pickup across Mexico City."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179.99
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,436 @@
+[
+  {
+    "productCode": "333644P5",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Full-Day-in-the-Teotihuacan-Archaeological-Zone-and-Balloon-Ride/d628-333644P5",
+    "title": "Balloon flight with private transportation and guided tour to Teotihuacán",
+    "priceFrom": "From $341.69",
+    "price": 341.69,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 101,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/90/1b/1b.jpg",
+    "overview": "Private transportation from Mexico City hotels in Reforma, Roma, Condesa, Polanco, and Centro pairs a 40-to-50-minute shared hot-air balloon flight with a guided visit to the Teotihuacan archaeological zone. Breakfast at a local restaurant, a flight certificate, and a SECTUR-certified Spanish-English guide are included on the eight-hour day.",
+    "highlights": [
+      "Private hotel pickup from central Mexico City districts",
+      "Shared hot-air balloon flight over Teotihuacan",
+      "Guided visit to the Teotihuacan archaeological zone",
+      "Breakfast and flight certificate included"
+    ],
+    "itineraryStops": [
+      "Teotihuacan",
+      "Pyramid of the Sun",
+      "Pyramid of the Moon"
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Breakfast at local restaurant",
+      "40 to 50 minutes of shared balloon flight",
+      "Entrance and guided visit to Teotihuacan",
+      "SECTUR-certified Spanish-English guide",
+      "Flight certificate"
+    ],
+    "startDescription": "Private pickup from accommodations in Paseo de la Reforma, Zona Rosa, Condesa, La Roma, Polanco, Zona Centro, Hipódromo, and Anzures.",
+    "experienceType": "balloon-private",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Air, Helicopter & Balloon Tours", "Private Sightseeing Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "247495P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Hot-Air-Balloon-Flight-in-Teotihuacan-from-Mexico-City/d628-247495P2",
+    "title": "Balloon Flight + Cave Breakfast + Pick Up from CDMX or We Fly",
+    "priceFrom": "From $210.80",
+    "price": 210.8,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 4430,
+    "duration": "3 to 9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/a2/9b.jpg",
+    "overview": "A shared 30-to-60-minute hot-air balloon flight over Teotihuacan is paired with breakfast at La Cueva Teotihuacán and optional pickup from Mexico City. Certified guiding in the archaeological zone is listed on all-inclusive options, with a meeting point at We Fly Teotihuacan for guests who travel independently.",
+    "highlights": [
+      "Hot-air balloon flight over Teotihuacan",
+      "Breakfast at La Cueva Teotihuacán",
+      "Optional Mexico City pickup",
+      "Guided time in the archaeological zone on all-inclusive options"
+    ],
+    "itineraryStops": [
+      "We Fly Teotihuacan",
+      "La Cueva Teotihuacán",
+      "Teotihuacan Pyramids"
+    ],
+    "inclusions": [
+      "Shared balloon flight from 30 to 60 minutes",
+      "Breakfast at La Cueva Teotihuacán",
+      "Travel insurance",
+      "Certified guide in the archaeological area on all-inclusive options"
+    ],
+    "startDescription": "Hotel pickup from Mexico City when selected, or meet at We Fly Teotihuacan.",
+    "experienceType": "balloon",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Air, Helicopter & Balloon Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "33804P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Private-Tour-Xochimilco-Coyoacan-and-Frida-Kahlo-Museum-in-Mexico-City/d628-33804P2",
+    "title": "Private Tour: Xochimilco, Coyoacan and Frida Kahlo Museum",
+    "priceFrom": "From $179.99",
+    "price": 179.99,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 326,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
+    "overview": "Ride a traditional barge through Xochimilco canals, then visit Frida Kahlo and Diego Rivera landmarks on this immersive private tour of Aztec history and Mexico City art. This tour includes round-trip transfers from hotels and vacation rentals across the city and admission to Xochimilco, the Museo Diego Rivera Anahuacalli, and the Frida Kahlo Museum, and features the spectacular mosaic murals at the National Autonomous University of Mexico (UNAM).",
+    "highlights": [
+      "Guided private tour of two of Mexico City's most beloved districts",
+      "Ride a traditional boat through the floating gardens of Xochimilco",
+      "Private guide reserved for one group",
+      "Hassle-free two-way transfers from hotels and rentals across the city"
+    ],
+    "itineraryStops": [
+      "Parque Ecologico Xochimilco",
+      "Museo Frida Kahlo",
+      "Coyoacán",
+      "Museo Diego Rivera Anahuacalli",
+      "UNAM Biblioteca Central"
+    ],
+    "inclusions": [
+      "Private guide",
+      "Hotel pickup and drop-off",
+      "Trajinera 1 hour",
+      "Bottled water",
+      "Tickets to the Frida Kahlo Museum"
+    ],
+    "startDescription": "Hotel or vacation-rental pickup across Mexico City.",
+    "experienceType": "private-cultural",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Private Sightseeing Tours", "Cultural Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "161745P6",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Pyramids-of-Teotihuacan-Private-Tour/d628-161745P6",
+    "title": "Pyramids of Teotihuacan Private Tour",
+    "priceFrom": "From $148.44",
+    "price": 148.44,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 99,
+    "duration": "5 to 7 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/99/99/9a.jpg",
+    "overview": "A private guide and vehicle cover Teotihuacan from a Mexico City hotel or vacation rental, with snacks, bottled water, and fees included on a five-to-seven-hour outing. The route focuses on the Pyramid of the Sun, Pyramid of the Moon, and the Avenue of the Dead rather than a mixed coach circuit.",
+    "highlights": [
+      "Private Teotihuacan day from Mexico City",
+      "Hotel or vacation-rental pickup arranged on request",
+      "Snacks and bottled water included",
+      "Flexible five-to-seven-hour private pacing"
+    ],
+    "itineraryStops": [
+      "Teotihuacan",
+      "Pyramid of the Sun",
+      "Pyramid of the Moon"
+    ],
+    "inclusions": [
+      "All fees and taxes",
+      "Snacks",
+      "Bottled water",
+      "Private guide and vehicle"
+    ],
+    "startDescription": "Pickup from a Mexico City hotel or listed vacation rental.",
+    "experienceType": "private-teotihuacan",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Private Sightseeing Tours", "Cultural Tours", "Day Trips"]
+  },
+  {
+    "productCode": "325968P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Exploring-the-Waters-of-Tolantongo/d628-325968P1",
+    "title": "Full-Day Tour Exploring the Waters of Tolantongo",
+    "priceFrom": "From $144.00",
+    "price": 144.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 971,
+    "duration": "14 to 16 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/72/06/b1.jpg",
+    "overview": "Indulge in an epic 14- to 16-hour odyssey on this full-day tour of Tolantongo's aquatic wonders. The meticulously planned itinerary is tailored to suit the diverse needs of the modern adventurer. Revel in the tranquility of Tolantongo, where time slows down and each moment is savored at your leisure. With top-notch English-speaking guides, you'll never miss out on a single detail. Plus, comfortable transportation ensures a hassle-free experience with ample space for all.",
+    "highlights": [
+      "Full day exploring the waters of Tolantongo",
+      "River relaxation and cave exploration at Grutas Tolantongo",
+      "Private transportation from Mexico City",
+      "Breakfast and snacks included"
+    ],
+    "itineraryStops": [
+      "Angel of Independence",
+      "Actopan",
+      "Tolantongo",
+      "Grutas Tolantongo"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Private transportation",
+      "Breakfast",
+      "Snacks",
+      "Sport towel, headlamp, and water bottle"
+    ],
+    "startDescription": "Meet along the rotunda facing the Angel of Independence, nearest the Sheraton Mexico City Maria Isabel Hotel.",
+    "experienceType": "hot-springs",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Full-day Tours", "Nature and Wildlife", "Day Trips"]
+  },
+  {
+    "productCode": "33804P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Private-Tour-Teotihuacan-and-Guadalupe-Shrine/d628-33804P1",
+    "title": "Private Tour: Teotihuacan and Guadalupe Shrine",
+    "priceFrom": "From $139.99",
+    "price": 139.99,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 862,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/83.jpg",
+    "overview": "On this private door-to-door tour, avoid the large tour groups and get to know the sights of Mexico City in the company of just your family and friends. Your personal guide takes you to Tlatelolco, an excavated Aztec zone, and the Basilica of Our Lady of Guadalupe, a popular Catholic pilgrimage site, before you explore the grandiose pyramids and majestic avenues of mysterious Teotihuacan. Upgrade to include lunch.",
+    "highlights": [
+      "See Tlatelolco, an Aztec archaeological site in Mexico City",
+      "Visit the Basilica of Our Lady of Guadalupe",
+      "Discover pre-Hispanic pyramids at Teotihuacan",
+      "Two-way transfers from Polanco, Condesa, Roma, Centro, Reforma, and Santa Fe"
+    ],
+    "itineraryStops": [
+      "Zona Arqueologica Tlatelolco",
+      "Basilica of Our Lady of Guadalupe",
+      "Teotihuacan Pyramids"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Private guide",
+      "Tickets",
+      "Bottled water",
+      "Private transportation"
+    ],
+    "startDescription": "Hotel pickup from Polanco, Condesa, Roma, Centro, Reforma, and Santa Fe.",
+    "experienceType": "private-cultural",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Private Sightseeing Tours", "Cultural Tours", "Day Trips"]
+  },
+  {
+    "productCode": "88859P7",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Coyoacan-Frida-Kahlos-house-and-Xochimilco-all-day-tour/d628-88859P7",
+    "title": "Frida Kahlo's House, Coyoacan and Xochimilco - All Day Tour",
+    "priceFrom": "From $100.00",
+    "price": 100.0,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 116,
+    "duration": "7 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/8a/42/c2.jpg",
+    "overview": "This guided tour to Xochimilco and Casa Azul offers an incredible value for visitors. When you book, not only do you receive entrance fees to both attractions, but you also have transportation in the bag to the far-flung destinations. Plus, your guide is there to answer any questions throughout the day.",
+    "highlights": [
+      "Xochimilco and Casa Azul tour in Mexico City",
+      "Visit two essential Mexico City sights with one booking",
+      "Entrance fees included",
+      "Hotel pickup and drop-off included"
+    ],
+    "itineraryStops": [
+      "Xochimilco",
+      "Casa Azul",
+      "Coyoacán"
+    ],
+    "inclusions": [
+      "Transportation",
+      "Hotel pick up and drop off",
+      "Boat ride in Xochimilco",
+      "Driver/bilingual guide",
+      "Museum entrance ticket"
+    ],
+    "startDescription": "Hotel pickup in Mexico City; pickup time is confirmed by email after booking.",
+    "experienceType": "full-day-sightseeing",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Full-day Tours", "Cultural Tours"]
+  },
+  {
+    "productCode": "325968P5",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Teotihuacan-Pyramids-Subterranean-Caves-and-Culinary-Experience/d628-325968P5",
+    "title": "Teotihuacan: Pyramids, Caves & Culinary Experience",
+    "priceFrom": "From $99.00",
+    "price": 99.0,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 55,
+    "duration": "7 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/d8/ae/1b.jpg",
+    "overview": "Take your time to fully explore Teotihuacan on this small-group full-day tour, with convenient round-trip transfer from central Mexico City. Benefit from the knowledge of your guide as you explore landmark structures like the Temple of Quetzalcóatl and the Pyramid of the Sun, then descend underground for an exclusive glimpse of the caves below the ancient city. Round off your trip with a 5-course lunch, followed by optional mezcal and tequila tastings.",
+    "highlights": [
+      "Gain a comprehensive overview of Teotihuacan",
+      "Benefit from the local knowledge of your guide",
+      "Enjoy the personalized service of a small-group tour",
+      "Indulge in a local 5-course lunch, included in the price"
+    ],
+    "itineraryStops": [
+      "Temple of Quetzalcóatl",
+      "Pyramid of the Sun",
+      "Teotihuacan Caves"
+    ],
+    "inclusions": [
+      "5-course Mexican lunch",
+      "Coffee and/or tea",
+      "Bottled water",
+      "Round-trip transfer from central Mexico City"
+    ],
+    "startDescription": "Round-trip transfer from central Mexico City.",
+    "experienceType": "teotihuacan-culinary",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Full-day Tours", "Cultural Tours", "Food & Drink"]
+  },
+  {
+    "productCode": "466992P2",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Hiking-to-the-Puerta-del-Cielo-Viewpoint-in-Mexico-City/d628-466992P2",
+    "title": "Hiking to the Puerta del Cielo Viewpoint in Mexico City",
+    "priceFrom": "From $93.11",
+    "price": 93.11,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 18,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/42/eb/83.jpg",
+    "overview": "A guided intermediate hike from Mexico City reaches the Puerta del Cielo viewpoint, with a ladder section, canyon overlooks, and a return along a river corridor. Helmet and safety harness, bottled water, and park access fees are included. The group meets at Fuente de Cibeles in Roma Norte beside the CDMX sign.",
+    "highlights": [
+      "Guided hike to Puerta del Cielo from Mexico City",
+      "Helmet and safety harness included",
+      "Small-group pacing with a local geology-minded guide",
+      "Return along a river corridor after the viewpoint"
+    ],
+    "itineraryStops": [
+      "Fuente de Cibeles",
+      "Puerta del Cielo"
+    ],
+    "inclusions": [
+      "Helmet and safety harness",
+      "Bottled water",
+      "Park access fees"
+    ],
+    "startDescription": "Meet at Fuente de Cibeles, Plaza Villa de Madrid, Roma Norte, beside the CDMX sign.",
+    "experienceType": "hiking",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Hiking Tours", "Outdoor Activities"]
+  },
+  {
+    "productCode": "382677P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Historical-Half-Day-Guided-Walking-Tour-in-Mexico-City/d628-382677P1",
+    "title": "The best and most complete PRIVATE CITY TOUR through the Historic Center",
+    "priceFrom": "From $60.45",
+    "price": 60.45,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 45,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/08/4d/f6.jpg",
+    "overview": "A private three-hour walking tour of Mexico City's Centro Histórico starts at the Monument to the Revolution and ends at the Mexico City Metropolitan Cathedral on the Zócalo. A local guide covers historic-center streets, plazas, and landmark façades with a group reserved for one party.",
+    "highlights": [
+      "Private historic-center walking tour in Mexico City",
+      "Start at the Monument to the Revolution",
+      "Finish at the Mexico City Metropolitan Cathedral",
+      "Three-hour format for first-time orientation"
+    ],
+    "itineraryStops": [
+      "Monument to the Revolution",
+      "Mexico City Metropolitan Cathedral",
+      "Zócalo"
+    ],
+    "inclusions": [
+      "Private guide",
+      "Water bottle"
+    ],
+    "startDescription": "Meet at the intelligent fountain in front of the Monument to the Revolution, Plaza de la República.",
+    "experienceType": "private-walking",
+    "premium": true,
+    "commercialTier": "premium",
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "38551P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Historical-Bike-Tour-in-Mexico-City-Chapultepec-Reforma-and-Downtown/d628-38551P1",
+    "title": "The Emperor Route, Chapultepec & Paseo de la Reforma Historical bike tour",
+    "priceFrom": "From $53.80",
+    "price": 53.8,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 80,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/40/e2.jpg",
+    "overview": "Explore Mexico City in a unique way by cycling along one of the city's longest dedicated bike lanes, Paseo de la Reforma, and discovering the beauty of Chapultepec Park. With a small group setting, you'll receive personalized attention and enhanced safety. Choose from morning or afternoon departures based on your schedule, and enjoy a delightful street food snack along the way. This tour is perfect for all fitness levels and offers a fun and active way to experience Mexico City.",
+    "highlights": [
+      "Join a small group guided by a local to cycle through the Emperor route",
+      "See monuments and sculptures that tell stories of epic battles and legends",
+      "Try street food snacks including tacos, chilaquiles, and gorditas",
+      "Cycle in Chapultepec Park"
+    ],
+    "itineraryStops": [
+      "Paseo de la Reforma",
+      "Chapultepec Park"
+    ],
+    "inclusions": [
+      "Dedicated local guide",
+      "Use of bicycle",
+      "Use of helmet",
+      "Bottled water",
+      "Snacks"
+    ],
+    "startDescription": "Meet the cycling guide at the confirmed Mexico City meeting point listed when booking.",
+    "experienceType": "bike",
+    "premium": false,
+    "commercialTier": "standard",
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "categories": ["Bike Tours", "Walking and Biking Tours"]
+  }
+]

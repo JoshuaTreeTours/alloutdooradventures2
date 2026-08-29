@@ -14,6 +14,23 @@ export type DestinationAlias = {
 
 export const DESTINATION_CITY_ALIASES: DestinationAlias[] = [
   {
+    countrySlug: "mexico",
+    aliasCitySlug: "ciudad-de-mexico",
+    canonicalCitySlug: "mexico-city",
+    canonicalCityName: "Mexico City",
+    aliases: [
+      "Ciudad De México",
+      "Ciudad de México",
+      "Ciudad De Mexico",
+      "CDMX",
+    ],
+    signals: [
+      "local-language slug",
+      "same metro inventory",
+      "same coordinates",
+    ],
+  },
+  {
     countrySlug: "austria",
     aliasCitySlug: "wien",
     canonicalCitySlug: "vienna",

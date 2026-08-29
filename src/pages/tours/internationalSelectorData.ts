@@ -39,8 +39,20 @@ const isMexicoCityAlias = (name: string) => {
   );
 };
 
+const isMexicoCitySlug = (slug?: string) => {
+  const normalized = normalizeAscii(slug ?? "").replace(/-/g, " ");
+  return (
+    normalized === "ciudad de mexico" ||
+    normalized === "mexico city" ||
+    normalized === "cdmx"
+  );
+};
+
+export const CANONICAL_MEXICO_CITY_NAME = "Mexico City";
+export const CANONICAL_MEXICO_CITY_SLUG = "mexico-city";
+
 export const normalizeMexicoCityName = (name: string): string =>
-  isMexicoCityAlias(name) ? "Ciudad De México" : name;
+  isMexicoCityAlias(name) ? CANONICAL_MEXICO_CITY_NAME : name;
 
 export const isScotlandSelectorTour = (tour: Tour) =>
   tour.destination.stateSlug === SCOTLAND_REGION_SLUG ||
@@ -50,17 +62,15 @@ export const getMexicoCityKey = (
   name: string,
   fallbackSlug?: string
 ): string => {
-  const normalizedFallbackSlug = normalizeAscii(fallbackSlug ?? "");
-
-  if (
-    isMexicoCityAlias(name) ||
-    normalizedFallbackSlug === "ciudad-de-mexico"
-  ) {
-    return slugify("Ciudad De México");
+  if (isMexicoCityAlias(name) || isMexicoCitySlug(fallbackSlug)) {
+    return CANONICAL_MEXICO_CITY_SLUG;
   }
 
   return slugify(name) || fallbackSlug || "";
 };
+
+export const isCanonicalMexicoCitySelection = (slug?: string) =>
+  isMexicoCitySlug(slug);
 
 export const buildInternationalCountryOptions = (
   internationalTours: Tour[],

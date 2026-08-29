@@ -40,6 +40,7 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     illinois: ["Chicago"],
     london: ["London"],
     edinburgh: ["Edinburgh"],
+    "mexico-city": ["Mexico City"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],
     paris: ["Paris"],

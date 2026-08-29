@@ -65,6 +65,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "scotland",
     citySlug: "edinburgh",
   },
+  "mexico-city": {
+    destinationLabel: "Mexico City",
+    destinationCitySlug: "mexico-city",
+    stateSlug: "mexico",
+    citySlug: "mexico-city",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

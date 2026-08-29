@@ -40,8 +40,8 @@ const resolveMexicoCityIdentity = (city: string) => {
 
   if (isMexicoCity) {
     return {
-      cityName: "Ciudad De México",
-      citySlug: "ciudad-de-mexico",
+      cityName: "Mexico City",
+      citySlug: "mexico-city",
     };
   }
 

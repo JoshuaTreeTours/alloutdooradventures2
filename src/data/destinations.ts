@@ -5430,6 +5430,102 @@ const irelandState: StateDestination = {
   isFallback: true,
 };
 
+const mexicoState: StateDestination = {
+  slug: "mexico",
+  name: "Mexico",
+  description:
+    "Mexico City landmarks, volcanic highlands, and guided cultural touring from the capital.",
+  featuredDescription:
+    "Explore Mexico City tours with Teotihuacan pyramids, Centro Histórico walking, Chapultepec, Xochimilco, and Coyoacán.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
+  region: "North America",
+  intro:
+    "Mexico pairs walkable Mexico City districts with highland day trips to Teotihuacan, Xochimilco canals, and volcanic scenery.",
+  longDescription:
+    "Mexico City anchors Mexico tour inventory with Centro Histórico walking, Teotihuacan pyramid days, Chapultepec park and castle, Xochimilco trajinera routes, Coyoacán neighborhoods, and private or small-group sightseeing from the capital.",
+  topRegions: [
+    {
+      title: "Centro Histórico and Zócalo",
+      description:
+        "The Metropolitan Cathedral, Templo Mayor, Palacio de Bellas Artes, and guided walking or bike tours through the historic center.",
+    },
+    {
+      title: "Highlands and ancient cities",
+      description:
+        "Teotihuacan pyramids, Xochimilco canals, and Coyoacán streets reachable from Mexico City.",
+    },
+  ],
+  cities: [
+    {
+      name: "Mexico City",
+      slug: "mexico-city",
+      stateSlug: "mexico",
+      region: "Mexico City",
+      lat: 19.4326,
+      lng: -99.1332,
+      shortDescription:
+        "Teotihuacan days, historic-center walking, and canal touring from Mexico City.",
+      intro:
+        "Mexico City is a highland capital with the Zócalo, Teotihuacan, Chapultepec, Xochimilco, and guided walking, cycling, and cultural tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e4/d9/8e.jpg",
+      ],
+      activityTags: ["sightseeing", "hiking", "cycling"],
+      whereItIs: [
+        "Mexico City sits on the highland Valley of Mexico, with Centro Histórico, Chapultepec, Coyoacán, and Xochimilco framing central sightseeing.",
+        "Most guided tours depart from the Zócalo, Reforma hotels, Coyoacán, and Mexico City meeting points.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips to Teotihuacan and highland viewpoints bring pyramid and volcanic scenery within reach of the capital.",
+        lakesWater:
+          "Xochimilco canals and trajinera routes appear on half-day and private outings from Mexico City.",
+        desertForest:
+          "Chapultepec Park, Desierto de los Leones, and Ajusco foothills offer woodland and parkland between city and highland stops.",
+        cycling:
+          "Guided bike and e-bike tours cover Centro Histórico, Reforma, Chapultepec, and Coyoacán.",
+        scenicDrives:
+          "Private van and Jeep days cover Teotihuacan, Puebla, and highland pueblos from Mexico City.",
+        seasonalNotes:
+          "Dry-season months favor pyramid climbing and canal touring; summer rains are typically afternoon showers around the Valley of Mexico.",
+      },
+      thingsToDo: [
+        "Walk the Zócalo to the Metropolitan Cathedral and Templo Mayor.",
+        "Visit Teotihuacan or bike through Chapultepec and Coyoacán.",
+        "Take a Xochimilco trajinera or a private city sightseeing day.",
+      ],
+      toursCopy: [
+        "Book a Teotihuacan day or Centro Histórico walk for a compact introduction to Mexico City.",
+        "Pair a historic-center tour with Xochimilco or Coyoacán for a full Mexico City itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Centro Histórico walking tour and Zócalo landmarks.",
+          "Afternoon: Chapultepec Castle or Coyoacán neighborhoods.",
+          "Evening: Historic-center food walk.",
+        ],
+        dayTwo: [
+          "Morning: Depart for Teotihuacan pyramids.",
+          "Afternoon: Xochimilco canals or Basilica of Guadalupe.",
+          "Evening: Return to central Mexico City.",
+        ],
+      },
+      gettingThere: [
+        "Mexico City International Airport and the city's metro, Metrobús, and taxi links serve Centro Histórico, Reforma, and Coyoacán meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Mexico City tours?",
+          answer:
+            "Teotihuacan pyramid days, Centro Histórico walking and bike tours, Xochimilco canal rides, Coyoacán neighborhood walks, and private city sightseeing are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5447,6 +5543,7 @@ export const states: StateDestination[] = [
   italyState,
   netherlandsState,
   irelandState,
+  mexicoState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

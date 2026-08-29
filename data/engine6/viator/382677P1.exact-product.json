@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "382677P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Historical-Half-Day-Guided-Walking-Tour-in-Mexico-City/d628-382677P1",
+    "title": "The best and most complete PRIVATE CITY TOUR through the Historic Center",
+    "description": {
+      "text": "A private three-hour walk through Mexico City's Centro Histórico starts at the Monument to the Revolution and ends at the Mexico City Metropolitan Cathedral on the Zócalo. A local guide reserved for one party covers historic-center streets, plazas, and landmark façades. Stops include Monument to the Revolution, Mexico City Metropolitan Cathedral, Zócalo. The compact format orients first-time visitors without a full-day coach loop. Ideal for visitors basing in Mexico City who want a private historic-center walk without joining a mixed group."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $60.45",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 45
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/08/4d/f6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private historic-center walking tour in Mexico City",
+      "Start at the Monument to the Revolution",
+      "Finish at the Mexico City Metropolitan Cathedral",
+      "Three-hour format for first-time orientation"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the intelligent fountain in front of the Monument to the Revolution, Plaza de la República."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A private three-hour walk through Mexico City's Centro Histórico starts at the Monument to the Revolution and ends at the Mexico City Metropolitan Cathedral on the Zócalo.",
+    "itineraryItems": [
+      {
+        "title": "Monument to the Revolution",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mexico City Metropolitan Cathedral",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zócalo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Water bottle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The best and most complete PRIVATE CITY TOUR through the Historic Center?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Meet at the intelligent fountain in front of the Monument to the Revolution, Plaza de la República."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60.45
+      },
+      "currency": "USD"
+    }
+  }
+}

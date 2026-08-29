@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "325968P1",
+    "productUrl": "https://www.viator.com/tours/Mexico-City/Exploring-the-Waters-of-Tolantongo/d628-325968P1",
+    "title": "Full-Day Tour Exploring the Waters of Tolantongo",
+    "description": {
+      "text": "A 14-to-16-hour guided day from Mexico City reaches the thermal pools, river, and caves at Tolantongo. Breakfast, snacks, private transportation, and a sport-towel kit are included, with an English-speaking guide on the highland drive. Stops include Angel of Independence, Actopan, Tolantongo, Grutas Tolantongo. The meeting point sits on the Reforma rotunda facing the Angel of Independence, nearest the Sheraton Maria Isabel. Ideal for visitors basing in Mexico City who want a long thermal-canyon day without self-driving the Hidalgo route."
+    },
+    "location": {
+      "city": "Mexico City",
+      "state": "Mexico"
+    },
+    "duration": "14 to 16 hours (approx.)",
+    "priceFrom": "From $144.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 971
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/72/06/b1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full day exploring the waters of Tolantongo",
+      "River relaxation and cave exploration at Grutas Tolantongo",
+      "Private transportation from Mexico City",
+      "Breakfast and snacks included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet along the rotunda facing the Angel of Independence, nearest the Sheraton Mexico City Maria Isabel Hotel."
+      },
+      "end": {
+        "description": "Return to your Mexico City meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A 14-to-16-hour guided day from Mexico City reaches the thermal pools, river, and caves at Tolantongo.",
+    "itineraryItems": [
+      {
+        "title": "Angel of Independence",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Actopan",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tolantongo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grutas Tolantongo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Private transportation",
+      "Breakfast",
+      "Snacks",
+      "Sport towel, headlamp, and water bottle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Tour Exploring the Waters of Tolantongo?",
+        "answer": "The planned duration is 14 to 16 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Mexico City?",
+        "answer": "Meet along the rotunda facing the Angel of Independence, nearest the Sheraton Mexico City Maria Isabel Hotel."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 144
+      },
+      "currency": "USD"
+    }
+  }
+}
