@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "33215P1",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Small-Group-Tokyo-Local-Biking-Tour/d334-33215P1",
+    "title": "Tokyo Guided Small-Group Biking Tour",
+    "description": {
+      "text": "In Tokyo, this small-group bike ride leaves Hatsudai for Meiji Jingu Shrine, Yoyogi Park, the Imperial Palace, Ginza, and Roppongi Hills before the Tokyo Metropolitan Government Building viewpoint. A cycling guide, bike, and helmet are included for the published 6.5-hour loop on mixed park paths and city streets. The meeting point is Tokyo Opera City Sankun Garden, connected from the east exit of Hatsudai Station. Food, hotel transfers, and gratuities are not treated as inclusions. The format suits visitors who want a guided bike window across shrine forest and downtown blocks without renting independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Meiji Jingu, Yoyogi Park, the Imperial Palace, and Ginza that define this ride rather than an Asakusa-only loop."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $106.77",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1147
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/66/07/5e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tokyo Metropolitan Government Building",
+      "Guided 6.5-hour bike circuit from Hatsudai",
+      "Meiji Jingu, Yoyogi Park, and Imperial Palace stops",
+      "Ginza and Roppongi Hills neighborhood riding",
+      "Tokyo Metropolitan Government Building viewpoint"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Tokyo Opera City Sankun Garden, basement 1st floor of Tokyo Opera City, connected from the east exit of Hatsudai Station."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this small-group bike ride leaves Hatsudai for Meiji Jingu Shrine, Yoyogi Park, the Imperial Palace, Ginza, and Roppongi Hills before the Tokyo Metropolitan Government Building viewpoint.",
+    "itineraryItems": [
+      {
+        "title": "Meiji Jingu Shrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yoyogi Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Imperial Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ginza",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Roppongi Hills",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tokyo Metropolitan Government Building",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Bike and helmet rental"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tokyo Guided Small-Group Biking Tour?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Meet at Tokyo Opera City Sankun Garden, basement 1st floor of Tokyo Opera City, connected from the east exit of Hatsudai Station."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 106.77
+      },
+      "currency": "USD"
+    }
+  }
+}

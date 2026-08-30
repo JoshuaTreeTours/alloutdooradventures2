@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "40436P7",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Private-Tour-to-see-Highlights-of-Kamakura-Enoshima-Yokohama-from-Tokyo/d334-40436P7",
+    "title": "Private Car Tour to see Highlights of Kamakura, Enoshima, Yokohama from Tokyo",
+    "description": {
+      "text": "In Tokyo, this private 10-hour car outing covers Kamakura, Enoshima, and Yokohama with a guide and driver instead of three separate train days. The published list covers the Kotoku-in Great Buddha, coastal Enoshima stops, and Yokohama waterfront sights, with the operator helping choose a stop list that fits the window. Private transportation is included; meals stay separate. The route stays on the Miura coast and Yokohama harbor rather than a Mount Fuji transfer. The format suits visitors who want a guided coastal-heritage day without assembling Kamakura and Enoshima tickets independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Kamakura, Kotoku-in, Enoshima, and Yokohama that define this outing rather than a Nikko shrine circuit."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $1179.61",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 48
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/cb/21/2f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 10-hour Kamakura, Enoshima, and Yokohama circuit",
+      "Kotoku-in Great Buddha stop",
+      "Coastal Enoshima and Yokohama waterfront options",
+      "Guide and private vehicle from Tokyo",
+      "Customizable published highlight list"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed from Tokyo. Confirm the Kamakura, Enoshima, and Yokohama stop list when booking."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private 10-hour car outing covers Kamakura, Enoshima, and Yokohama with a guide and driver instead of three separate train days.",
+    "itineraryItems": [
+      {
+        "title": "Kamakura",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kotoku-in Great Buddha",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Enoshima",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yokohama",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Guide and driver"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Car Tour to see Highlights of Kamakura, Enoshima, Yokohama from Tokyo?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Hotel pickup is listed from Tokyo. Confirm the Kamakura, Enoshima, and Yokohama stop list when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1179.61
+      },
+      "currency": "USD"
+    }
+  }
+}

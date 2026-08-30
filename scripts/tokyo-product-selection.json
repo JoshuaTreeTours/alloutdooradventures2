@@ -1,0 +1,136 @@
+{
+  "destinationLabel": "Tokyo",
+  "destinationCitySlug": "tokyo",
+  "viatorDestinationSlug": "Tokyo",
+  "viatorDestinationId": "d334",
+  "catalogUrl": "https://www.viator.com/Tokyo/d334-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 11,
+  "premiumCount": 8,
+  "selectionNote": "Selected 11 guided Tokyo d334 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including additional helicopter, Mt Takao hiking, Jeep/off-road, stargazing, Yamanashi wine, and private city SKUs, but Viator DataDome blocking plus geo-currency dumps (GBP/EUR/CHF/AUD/CAD) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d334 Jeep/off-road or stargazing page with combined USD+rating+hero was captured. Helicopter pages had USD From$ but no combined rating (50365P42) or only 15 reviews (50365P70). Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Lima (9), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "92136P34",
+    "30791P157",
+    "33215P1",
+    "6869TYOTM",
+    "434880P1",
+    "130384P1",
+    "65053P9",
+    "40436P1",
+    "40436P7",
+    "65053P10",
+    "319176P1"
+  ],
+  "premiumProductCodes": [
+    "92136P34",
+    "30791P157",
+    "6869TYOTM",
+    "130384P1",
+    "65053P9",
+    "40436P1",
+    "40436P7",
+    "65053P10"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "438304P1",
+      "title": "Tokyo Customized Private Walking Tour With Local Guide",
+      "reason": "USD $58.72 4.9/260 verified; skipped as a near-duplicate of selected 30791P157 private walking"
+    },
+    {
+      "productCode": "406416P1",
+      "title": "Mount fuji and Hakone Full day private sightseeing tour",
+      "reason": "USD $400 4.8/43 verified; skipped as a near-duplicate of selected 130384P1 / 65053P9 / 40436P1 Fuji-Hakone privates"
+    },
+    {
+      "productCode": "176331P8",
+      "title": "Mt. Fuji and Hakone Private Tour with English Speaking Guide",
+      "reason": "USD $579 4.3/98 below the quality bar and a Fuji-Hakone near-duplicate"
+    },
+    {
+      "productCode": "2142TYO_A070",
+      "title": "Tokyo Panoramic 1 Day: Meiji Shrine, Asakusa, Odaiba and SKYTREE",
+      "reason": "USD $92.94 4.3/1169 below the quality bar"
+    },
+    {
+      "productCode": "13441P10",
+      "title": "Watch Sumo Morning Practice at Stable in Tokyo",
+      "reason": "USD $104.15 4.2/266 below the quality bar"
+    },
+    {
+      "productCode": "22325P4",
+      "title": "One Day Tour of Kamakura from Tokyo",
+      "reason": "3.9/19 below the quality bar and too thin; no verified USD From$ on the complete dump"
+    },
+    {
+      "productCode": "2142TYO_A100",
+      "title": "Dynamic Tokyo: Tokyo Tower, Tea Experience, Bay Cruise Day Tour",
+      "reason": "4.5/493 strong sightseeing day; GBP-only complete dump"
+    },
+    {
+      "productCode": "22178P28",
+      "title": "Full Day Hiking Tour at Mt.Takao including Hot Spring",
+      "reason": "Preferred guided hiking type; 4.9/44; GBP-only complete dump"
+    },
+    {
+      "productCode": "230272P5",
+      "title": "One day Hike, Thrilling Mt. Nokogiri & Giant Buddha",
+      "reason": "Preferred guided hiking type; USD $209.17 snippet; no complete combined rating+hero dump"
+    },
+    {
+      "productCode": "50365P42",
+      "title": "Mt. Fuji & Tokyo Helicopter Tour 90 mins",
+      "reason": "Preferred helicopter type; USD $3416.50 verified; no combined rating on the complete dump"
+    },
+    {
+      "productCode": "50365P70",
+      "title": "Tokyo Skytree + Downtown City Lights Helicopter Tour",
+      "reason": "Preferred helicopter type; USD $1188.71 4.9/15 too thin"
+    },
+    {
+      "productCode": "50365P41",
+      "title": "Tokyo-Mt.Fuji Helicopter Tour 75 mins",
+      "reason": "Preferred helicopter type; GBP-only dump"
+    },
+    {
+      "productCode": "100913P11",
+      "title": "From Tokyo: Mount Fuji, Cruise and Sake Tasting Tour",
+      "reason": "Preferred wine/sake type; 3.0/1 too thin and below the quality bar"
+    },
+    {
+      "productCode": "102374P3",
+      "title": "Suntory whisky distillery tasting day tour for VIP from Tokyo",
+      "reason": "Preferred tasting type; 5.0/1 too thin"
+    },
+    {
+      "productCode": "53666P1",
+      "title": "Tokyo bike tour: Ueno, Nezu, Yanaka and Asakusa",
+      "reason": "Preferred bike type; no complete USD+rating+hero dump and near-duplicate of selected 33215P1"
+    },
+    {
+      "productCode": "59311P1",
+      "title": "3-Hour Tokyo city Highlights Sunset Bike Tour",
+      "reason": "4.8/49; no verified USD From$ on the complete dump and near-duplicate of selected 33215P1"
+    },
+    {
+      "productCode": "87227P1",
+      "title": "East Tokyo Neighborhood Cycle & 1day local brand bike rental",
+      "reason": "Includes a full-day self-guided rental window after the guided segment"
+    },
+    {
+      "productCode": "2142P1043",
+      "title": "Sumo Practice Viewing Guided Tour and Photo with Sumo Wrestlers",
+      "reason": "Audio-guide product"
+    },
+    {
+      "productCode": "484045P2",
+      "title": "Mount Fuji private tour by car with pickup from Tokyo",
+      "reason": "4.9/333 strong private scenic; no verified USD From$ on the complete dump and near-duplicate of selected Fuji privates"
+    },
+    {
+      "productCode": "27666P6",
+      "title": "Hakone Private One Day Tour From Tokyo",
+      "reason": "CHF/AUD dumps; no verified USD From$ on a complete page and near-duplicate of selected Hakone/Fuji privates"
+    }
+  ]
+}

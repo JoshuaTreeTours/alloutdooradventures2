@@ -6003,6 +6003,107 @@ const brazilState: StateDestination = {
   isFallback: true,
 };
 
+const japanState: StateDestination = {
+  slug: "japan",
+  name: "Japan",
+  description:
+    "Tokyo neighborhoods, shrine and temple days, Mount Fuji and Hakone scenic circuits, and guided touring from the capital.",
+  featuredDescription:
+    "Explore Tokyo tours with private city walking, coast and shrine bike rides, photography walks, tea tastings, Kamakura and Nikko days, and Mount Fuji or Hakone outings.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/2a/70.jpg",
+  region: "Asia",
+  intro:
+    "Japan pairs walkable Tokyo districts and shrine or temple days with Mount Fuji, Hakone, Kamakura, and Nikko outings from the capital.",
+  longDescription:
+    "Tokyo anchors Japan tour inventory with licensed private city circuits, neighborhood walking, Meiji Jingu and Asakusa shrine stops, Imperial Palace and Shinjuku Gyoen windows, Ginza photography walks, and coast or park bike rides. Day trips from the capital add Mount Fuji fifth-station and lake viewpoints, Hakone ropeway and Lake Ashi cruises, Kamakura Great Buddha and Enoshima coastal stops, and Nikko Toshogu shrine circuits.",
+  topRegions: [
+    {
+      title: "Shrines, gardens, and historic neighborhoods",
+      description:
+        "Meiji Jingu, Senso-ji, the Imperial Palace, Shinjuku Gyoen, Asakusa, and guided walking or bike tours through central Tokyo.",
+    },
+    {
+      title: "Mount Fuji and Hakone",
+      description:
+        "Fifth Station viewpoints, Lake Kawaguchiko, Oshino Hakkai, Hakone Ropeway, Owakudani, and Lake Ashi days reachable from Tokyo.",
+    },
+    {
+      title: "Kamakura and Nikko",
+      description:
+        "Kotoku-in Great Buddha, Tsurugaoka Hachimangu, Enoshima, Toshogu Shrine, and Kegon Falls on full-day routes from Tokyo.",
+    },
+  ],
+  cities: [
+    {
+      name: "Tokyo",
+      slug: "tokyo",
+      stateSlug: "japan",
+      region: "Tokyo",
+      lat: 35.6762,
+      lng: 139.6503,
+      shortDescription:
+        "Private city circuits, shrine bike rides, and Mount Fuji or Nikko days from Tokyo.",
+      intro:
+        "Tokyo is Japan's capital with Meiji Jingu, Asakusa, the Imperial Palace, Shinjuku Gyoen, and guided walking, cycling, photography, and day-trip tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/2a/70.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "hiking"],
+      whereItIs: [
+        "Tokyo sits on Tokyo Bay in eastern Honshu, with Shinjuku, Shibuya, Asakusa, and the Imperial Palace framing central sightseeing.",
+        "Most guided tours depart from Shinjuku, Harajuku, Asakusa, Hatsudai, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips to Mount Fuji fifth-station viewpoints, Hakone volcanic valleys, and Kamakura coastal ridges sit on full-day routes from Tokyo.",
+        lakesWater:
+          "Lake Kawaguchiko, Lake Ashi cruises, and Tokyo Bay viewpoints appear on scenic days from the capital.",
+        desertForest:
+          "Meiji Jingu forest, Yoyogi Park, and Shinjuku Gyoen offer woodland and garden stops between city neighborhoods.",
+        cycling:
+          "Guided bike rides cover Meiji Jingu, Yoyogi Park, the Imperial Palace, Ginza, and Roppongi Hills on mixed park and street routes.",
+        scenicDrives:
+          "Private vans cover Mount Fuji lakes, Hakone ropeway approaches, Kamakura and Enoshima, and Nikko shrine roads from Tokyo.",
+        seasonalNotes:
+          "Cherry-blossom and autumn-color months favor garden and lake days; winter can close the Mount Fuji Subaru Line above lower stations.",
+      },
+      thingsToDo: [
+        "Walk Meiji Jingu, Asakusa, and the Imperial Palace with a licensed or local guide.",
+        "Ride a guided bike loop past Yoyogi Park, Ginza, and the Tokyo Metropolitan Government Building.",
+        "Spend a full day at Mount Fuji, Hakone, Kamakura, or Nikko.",
+      ],
+      toursCopy: [
+        "Book a private licensed city circuit or neighborhood walk for a compact introduction.",
+        "Pair a Meiji Jingu bike ride or photography walk with a Mount Fuji, Hakone, or Nikko day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Meiji Jingu, Asakusa, or a licensed private city circuit.",
+          "Afternoon: Imperial Palace, Shinjuku Gyoen, or a Ginza photography walk.",
+          "Evening: Return to Shinjuku or Asakusa.",
+        ],
+        dayTwo: [
+          "Morning: Mount Fuji, Hakone, Kamakura, or Nikko.",
+          "Afternoon: Continue the published lake, ropeway, or shrine circuit.",
+          "Evening: Return to central Tokyo.",
+        ],
+      },
+      gettingThere: [
+        "Haneda and Narita airports serve Tokyo with trains, taxis, and hotel transfers to Shinjuku, Shibuya, Asakusa, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Tokyo tours?",
+          answer:
+            "Licensed private city circuits, neighborhood walking, Meiji Jingu and Imperial Palace bike rides, Ginza photography walks, tea tastings, and full-day Mount Fuji, Hakone, Kamakura, or Nikko itineraries are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6023,6 +6124,7 @@ export const states: StateDestination[] = [
   mexicoState,
   peruState,
   brazilState,
+  japanState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

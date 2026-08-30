@@ -13,6 +13,10 @@ export function buildDestinationUrl(countrySlug: string) {
     return "/destinations/brazil";
   }
 
+  if (countrySlug === "japan") {
+    return "/destinations/japan";
+  }
+
   return isEuropeCountrySlug(countrySlug)
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;

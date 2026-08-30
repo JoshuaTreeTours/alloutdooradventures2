@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "30791P157",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Tokyo-Explore-the-City-with-a-Local/d334-30791P157",
+    "title": "Private Tokyo Tour with a Local Guide: Tailored to Your Interests",
+    "description": {
+      "text": "In Tokyo, this private walking outing is shaped by a pre-tour questionnaire and a local host instead of a scripted coach loop. Published duration options run two to eight hours from the JR Harajuku Station meeting point, with Meiji Jingu Shrine, the Imperial Palace Garden, and Takeshita Street among the neighborhood windows the host can keep on the day. Food, attraction tickets, and public-transport fares are listed separately. The route stays on foot or short trains so the group can linger at a shrine path or skip a closed garden without sharing the day. The format suits visitors who want a tailored Tokyo walk without booking three district tours separately. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Harajuku, Meiji Jingu, and the Imperial Palace Garden that shape this outing rather than a Hakone transfer."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "2 to 8 hours (approx.)",
+    "priceFrom": "From $74.48",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1032
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/1b/e3/26.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private walking route tailored by a pre-tour questionnaire",
+      "Flexible two-to-eight-hour duration",
+      "Harajuku, Meiji Jingu, and Imperial Palace Garden options",
+      "Local host instead of a fixed coach script",
+      "Public-transport costs listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the host at the convenience store inside JR Harajuku Station or in front of Starbucks. Confirm the meeting point when booking."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private walking outing is shaped by a pre-tour questionnaire and a local host instead of a scripted coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Harajuku Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Meiji Jingu Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Imperial Palace Garden",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Takeshita Street",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private and personalized walking experience with insider tips from a passionate local",
+      "Flexible start times and durations",
+      "Pre-tour questionnaire to tailor the experience"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tokyo Tour with a Local Guide: Tailored to Your Interests?",
+        "answer": "The planned duration is 2 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Meet the host at the convenience store inside JR Harajuku Station or in front of Starbucks. Confirm the meeting point when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.48
+      },
+      "currency": "USD"
+    }
+  }
+}

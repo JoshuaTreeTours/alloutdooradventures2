@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "319176P1",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Mt-Fuji-and-Hakone-Sky-Gondola-Ride-Lake-Cruise-One-day-Tour/d334-319176P1",
+    "title": "Mt. Fuji & Hakone Tour Tokyo hotel pick-up by Grayline",
+    "description": {
+      "text": "In Tokyo, this guided Grayline day uses designated hotel pickup, a national licensed guide-interpreter, and published tickets for the Hakone sky gondola and Lake Ashi cruise. The route aims for the Mount Fuji 5th Station when the Subaru Line is open, then Owakudani Valley and the lake circuit, with weather substitutions listed toward Gotemba, Hakone Shrine, or a Kawaguchi boat. An optional bullet-train return to Tokyo Station is published. Lunch is included only on the with-lunch option. The format suits visitors who want a coordinated Fuji-Hakone coach day without buying gondola and cruise tickets independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on the Fifth Station, Owakudani, the Hakone gondola, and Lake Ashi that define this outing rather than a private lake charter."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $132.48",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 77
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3a/f3/50.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided 10-hour Mount Fuji and Hakone day from Tokyo hotels",
+      "Fifth Station window when the Subaru Line is open",
+      "Hakone sky gondola and Lake Ashi cruise tickets included",
+      "National licensed English-speaking guide",
+      "Optional bullet-train return to Tokyo Station"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed at designated Tokyo hotels. The confirmation email lists the exact pickup time and meeting spot."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this guided Grayline day uses designated hotel pickup, a national licensed guide-interpreter, and published tickets for the Hakone sky gondola and Lake Ashi cruise.",
+    "itineraryItems": [
+      {
+        "title": "Mt. Fuji 5th Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Owakudani Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hakone Sky Gondola",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Ashi",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Certified English-speaking guide (National Licensed Guide-interpreter)",
+      "Pick-up service at designated hotels in Tokyo",
+      "Sky gondola ticket",
+      "Lake cruise ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mt. Fuji & Hakone Tour Tokyo hotel pick-up by Grayline?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Pickup is listed at designated Tokyo hotels. The confirmation email lists the exact pickup time and meeting spot."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 132.48
+      },
+      "currency": "USD"
+    }
+  }
+}

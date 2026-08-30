@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "6869TYOTM",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Tokyo-Photography-Tour-Historic-Edo-to-Modern-Day-Tokyo/d334-6869TYOTM",
+    "title": "Tokyo Metropolis",
+    "description": {
+      "text": "In Tokyo, this small-group photography walk starts at the Shinbashi Station steam locomotive and moves through Shiodome Siosite, Ginza alleys, and the Tokyo International Forum. A local photographer covers composition and technical pacing for a group capped at six, with the published duration at two hours 30 minutes. The route stays on steel-and-glass towers and interior lines rather than a shrine-and-temple walking loop. No hotel pickup is listed. The format suits visitors who want guided architectural shooting without assembling a Shimbashi-to-Ginza route independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Shiodome, Ginza, and the Tokyo International Forum that shape this workshop rather than a Mount Fuji day."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $166.06",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 50
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/d4/d0/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group photography walk limited to six",
+      "Shiodome skyscraper and Ginza alley compositions",
+      "Tokyo International Forum interior stop",
+      "Local photographer instruction for novices and advanced shooters",
+      "2.5-hour Shimbashi departure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the steam locomotive at Shinbashi Station for the Shiodome and Ginza photography walk."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this small-group photography walk starts at the Shinbashi Station steam locomotive and moves through Shiodome Siosite, Ginza alleys, and the Tokyo International Forum.",
+    "itineraryItems": [
+      {
+        "title": "Shimbashi Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shiodome Siosite",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ginza",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tokyo International Forum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local photographer guide",
+      "Composition and technical instruction"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tokyo Metropolis?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Meet the guide at the steam locomotive at Shinbashi Station for the Shiodome and Ginza photography walk."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 166.06
+      },
+      "currency": "USD"
+    }
+  }
+}

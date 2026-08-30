@@ -31,6 +31,10 @@ export const getGeneratedCountryDestinationHref = (
     return "/destinations/brazil";
   }
 
+  if (normalizedSlug === "japan") {
+    return "/destinations/japan";
+  }
+
   if (worldDestinationSlugs.has(normalizedSlug)) {
     return `/destinations/world/${normalizedSlug}`;
   }
@@ -87,6 +91,10 @@ export const getGeneratedCityDestinationHref = (
 
   if (countryHref === "/destinations/brazil") {
     return `/destinations/brazil/${citySlug}`;
+  }
+
+  if (countryHref === "/destinations/japan") {
+    return `/destinations/japan/${citySlug}`;
   }
 
   return null;

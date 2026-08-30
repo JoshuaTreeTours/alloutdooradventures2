@@ -49,6 +49,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     peru: ["Cusco", "Lima"],
     "rio-de-janeiro": ["Rio de Janeiro"],
     brazil: ["Rio de Janeiro"],
+    tokyo: ["Tokyo"],
+    japan: ["Tokyo"],
     mexico: ["Mexico City", "Cancun", "Puerto Vallarta", "Cabo San Lucas"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],
