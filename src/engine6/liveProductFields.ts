@@ -1,6 +1,7 @@
 import type { Tour } from "../data/tours.types";
 import type { Engine6Tour } from "./types";
 import { getEngine6LiveRatingSourceOfTruth } from "./ratingSourceOfTruth";
+import { shouldAcceptLiveAmountAsUsd } from "./usdPriceGuard";
 
 export type Engine6LiveProductFields = {
   priceAmount: number | null;
@@ -56,12 +57,18 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
-  const resolvedPriceAmount = priceAmount ?? tour.priceAmount;
-  const resolvedPriceFormatted = resolveLivePriceFormatted(
+  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
     priceAmount,
-    priceFormatted,
-    tour.priceFormatted
+    tour.priceAmount
   );
+  const resolvedPriceAmount = acceptLivePrice ? priceAmount : tour.priceAmount;
+  const resolvedPriceFormatted = acceptLivePrice
+    ? resolveLivePriceFormatted(
+        priceAmount,
+        priceFormatted,
+        tour.priceFormatted
+      )
+    : tour.priceFormatted;
 
   const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
 
@@ -100,13 +107,20 @@ export const mergeEngine6LiveFieldsIntoTour = (
       ? liveFields.priceFormatted.trim()
       : "";
   const parsedFromFormatted = parsePriceFromFormatted(priceFormatted);
-  const resolvedStartingPrice =
-    priceAmount ?? parsedFromFormatted ?? tour.startingPrice ?? undefined;
-  const resolvedPriceBadge =
-    priceFormatted ||
-    (typeof resolvedStartingPrice === "number"
-      ? formatLivePriceLabel(resolvedStartingPrice)
-      : tour.badges.priceFrom);
+  const candidateLivePrice = priceAmount ?? parsedFromFormatted;
+  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
+    candidateLivePrice,
+    tour.startingPrice ?? null
+  );
+  const resolvedStartingPrice = acceptLivePrice
+    ? (candidateLivePrice ?? tour.startingPrice ?? undefined)
+    : tour.startingPrice;
+  const resolvedPriceBadge = acceptLivePrice
+    ? priceFormatted ||
+      (typeof resolvedStartingPrice === "number"
+        ? formatLivePriceLabel(resolvedStartingPrice)
+        : tour.badges.priceFrom)
+    : tour.badges.priceFrom;
 
   const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
 

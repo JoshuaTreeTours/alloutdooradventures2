@@ -190,6 +190,35 @@ describe("applyAvailabilitySummaryPrice", () => {
     expect(extracted.priceFormatted).toBe("From $156.60");
     expect(fetchViatorWithCurl).not.toHaveBeenCalled();
   });
+
+  it("overlays USD availability search when live product omits currency", async () => {
+    vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
+    vi.mocked(fetchViatorWithCurl).mockResolvedValue({
+      status: 200,
+      body: JSON.stringify({
+        bookableItems: [{ pricing: { recommendedRetailPrice: 156.6 } }],
+      }),
+    });
+
+    const extracted = await applyAvailabilitySummaryPrice({
+      apiKey: "test-key",
+      baseUrl: "https://api.viator.com/partner",
+      productCode: "92136P55",
+      extracted: buildExtracted({
+        priceAmount: 16500,
+        priceFormatted: "From $16500.00",
+      }),
+      livePayload: {
+        product: {
+          productCode: "92136P55",
+          pricing: { summary: { fromPrice: 16500 } },
+        },
+      },
+    });
+
+    expect(extracted.priceAmount).toBe(156.6);
+    expect(extracted.priceFormatted).toBe("From $156.60");
+  });
 });
 
 describe("readViatorPricingCurrency", () => {

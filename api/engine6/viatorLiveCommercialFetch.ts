@@ -224,7 +224,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
 }): Promise<Engine6Extracted> => {
   const pricingCurrency = readViatorPricingCurrency(args.livePayload);
   const needsUsdOverlay =
-    pricingCurrency !== null && pricingCurrency !== "USD";
+    args.livePayload != null && pricingCurrency !== "USD";
 
   if (needsUsdOverlay) {
     const usdPrice = await fetchAvailabilitySearchPrice({
@@ -238,6 +238,14 @@ export const applyAvailabilitySummaryPrice = async (args: {
         ...args.extracted,
         priceAmount: usdPrice,
         priceFormatted: formatUsdFromPriceLabel(usdPrice),
+      };
+    }
+
+    if (pricingCurrency && pricingCurrency !== "USD") {
+      return {
+        ...args.extracted,
+        priceAmount: null,
+        priceFormatted: "Check latest price",
       };
     }
 

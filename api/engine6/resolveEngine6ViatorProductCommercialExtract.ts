@@ -10,6 +10,7 @@ import {
   applyLiveReviewsCommercial,
   fetchViatorLiveJson,
 } from "./viatorLiveCommercialFetch.js";
+import { preferUsdCommercialPrice } from "../../src/engine6/usdPriceGuard.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -155,16 +156,12 @@ const mergeLiveDynamicCommercialExtract = (
     return bundled;
   }
 
+  const usdPrices = preferUsdCommercialPrice(live, bundled);
+
   return {
     ...bundled,
-    priceAmount:
-      typeof live.priceAmount === "number"
-        ? live.priceAmount
-        : bundled.priceAmount,
-    priceFormatted:
-      typeof live.priceFormatted === "string" && live.priceFormatted.trim()
-        ? live.priceFormatted
-        : bundled.priceFormatted,
+    priceAmount: usdPrices.priceAmount,
+    priceFormatted: usdPrices.priceFormatted,
     aggregateRating:
       typeof live.aggregateRating === "number"
         ? live.aggregateRating
@@ -411,6 +408,10 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     productCode: normalizedProductCode,
     extracted: liveWithAvailabilityPrice,
   });
+  const usdSafeLive = preferUsdCommercialPrice(
+    liveWithReviews,
+    bundledExtracted
+  );
 
   const extractedProductCode =
     typeof liveExtraction.product?.productCode === "string"
@@ -425,7 +426,7 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     const commercial = toCommercialExtract(
       mergeLiveDynamicCommercialExtract(
         bundledExtracted,
-        liveWithReviews
+        usdSafeLive
       ),
       "bundled-fallback"
     );
@@ -440,14 +441,14 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     });
   }
 
-  if (typeof liveWithReviews.priceAmount === "number") {
+  if (typeof usdSafeLive.priceAmount === "number") {
     const ratingMetadataPresent = detectLiveViatorProductRatingMetadata(
       liveExtraction.product
     );
-    const commercial = toCommercialExtract(liveWithReviews, "live-api");
-    const ratingExtracted = typeof liveWithReviews.aggregateRating === "number";
+    const commercial = toCommercialExtract(usdSafeLive, "live-api");
+    const ratingExtracted = typeof usdSafeLive.aggregateRating === "number";
     const reviewCountExtracted =
-      typeof liveWithReviews.reviewCount === "number";
+      typeof usdSafeLive.reviewCount === "number";
 
     if (
       ratingMetadataPresent &&
@@ -481,7 +482,7 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     const commercial = toCommercialExtract(
       mergeLiveDynamicCommercialExtract(
         bundledExtracted,
-        liveWithReviews
+        usdSafeLive
       ),
       "bundled-fallback"
     );
@@ -496,7 +497,7 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     });
   }
 
-  const commercial = toCommercialExtract(liveWithReviews, "live-api");
+  const commercial = toCommercialExtract(usdSafeLive, "live-api");
   return buildCommercialDiagnostic({
     productCode: normalizedProductCode,
     commercial,
