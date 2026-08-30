@@ -1,0 +1,146 @@
+{
+  "destinationLabel": "Bangkok",
+  "destinationCitySlug": "bangkok",
+  "viatorDestinationSlug": "Bangkok",
+  "viatorDestinationId": "d343",
+  "catalogUrl": "https://www.viator.com/Bangkok/d343-ttd",
+  "targetPremiumShare": 0.4,
+  "selectedCount": 10,
+  "premiumCount": 4,
+  "selectionNote": "Selected 10 guided Bangkok d343 products with live public USD From prices (From$, From US$, or FromUSD), combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including additional Grand Palace, dinner-cruise, tuk-tuk, floating-market, cooking, and private-driver SKUs, but Viator DataDome blocking plus geo-currency dumps (JPY/EUR/GBP/AUD/CAD/SGD/ZAR/DKK) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d343 helicopter, stargazing, or guided-hiking page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Kyoto (14), Tokyo (11), Lima (9), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "24380P161",
+    "18897P6",
+    "36435P43",
+    "30727P34",
+    "90546P140",
+    "5086TUD",
+    "198444P1",
+    "112650P5",
+    "6924BKKGHTB07",
+    "8374P24"
+  ],
+  "premiumProductCodes": [
+    "24380P161",
+    "18897P6",
+    "36435P43",
+    "30727P34"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "88184P6",
+      "title": "Hidden Canal Tour",
+      "reason": "Near-duplicate of selected 112650P5 longtail canal circuit (Artist House / Wat Paknam pattern); USD $36.53 4.9/619"
+    },
+    {
+      "productCode": "3685P279",
+      "title": "Private Tour - Top 3 Major Monuments (Grand Palace, Wat Pho, Wat Arun)",
+      "reason": "USD $105.90 verified; rejected as too thin (4.8/12) and a near-duplicate of selected 36435P43"
+    },
+    {
+      "productCode": "128405P2",
+      "title": "Bangkok private temple circuit",
+      "reason": "Too thin (4.9/10)"
+    },
+    {
+      "productCode": "194613P74",
+      "title": "Damnoen Saduak Floating Market and Train Market Tour",
+      "reason": "Too thin (~3.83/6) and a near-duplicate of selected 8374P24 / 30727P34"
+    },
+    {
+      "productCode": "90546P46",
+      "title": "White Orchid Dinner Cruise in Bangkok",
+      "reason": "JPY-only complete dump (From¥5,709.00); missing verified USD"
+    },
+    {
+      "productCode": "3685BKK38",
+      "title": "Bangkok Dinner Cruise on the Chao Phraya River",
+      "reason": "EUR-only complete dump (From€36.54); missing verified USD"
+    },
+    {
+      "productCode": "91960P48",
+      "title": "Bangkok Three Temples Tour with Grand Palace and River Cruise",
+      "reason": "EUR-only complete dump (From€62.14); missing verified USD"
+    },
+    {
+      "productCode": "3685BKK21C",
+      "title": "Floating Markets Day Trip from Bangkok",
+      "reason": "AUD-only complete dump (From A$148.06); missing verified USD"
+    },
+    {
+      "productCode": "110534P596",
+      "title": "River Star Princess Dinner Cruise: Bangkok Chao Phraya River",
+      "reason": "CAD-only complete dump (From CA$53.31); missing verified USD"
+    },
+    {
+      "productCode": "3685BKK45",
+      "title": "Baipai Thai Cooking School Class in Bangkok",
+      "reason": "SGD-only complete dump (From SGD 115.14); missing verified USD"
+    },
+    {
+      "productCode": "90546P15",
+      "title": "Exclusive Tour – Grand Palace, Emerald Buddha & Reclining Buddha",
+      "reason": "ZAR-only complete dump (From ZAR 1944.40); missing verified USD"
+    },
+    {
+      "productCode": "112650P1",
+      "title": "Bangkok Tuk-Tuk Tour by Night with Chinatown Street Food Meal",
+      "reason": "AUD-only complete dump (From A$59.53); missing verified USD"
+    },
+    {
+      "productCode": "25446P2",
+      "title": "Bangkok evening circuit",
+      "reason": "GBP-only complete dump (From £46.33); missing verified USD"
+    },
+    {
+      "productCode": "8084P11",
+      "title": "Bangkok city outing",
+      "reason": "EUR-only complete dump (From €44.38); missing verified USD"
+    },
+    {
+      "productCode": "123836P1",
+      "title": "Bangkok private day",
+      "reason": "GBP-only complete dump (From £107.60); missing verified USD"
+    },
+    {
+      "productCode": "90546P72",
+      "title": "Bangkok cooking or city SKU",
+      "reason": "Incomplete combined USD+rating+hero dump after DataDome"
+    },
+    {
+      "productCode": "103612P37",
+      "title": "Bangkok private SKU",
+      "reason": "Incomplete combined USD+rating+hero dump after DataDome"
+    },
+    {
+      "productCode": "8374P4",
+      "title": "Bangkok market SKU",
+      "reason": "Near-duplicate of selected 8374P24; incomplete combined dump"
+    },
+    {
+      "productCode": "172166P2",
+      "title": "Bangkok luxury SKU",
+      "reason": "Snippet FromUS$795 without a complete combined USD+rating+hero dump"
+    },
+    {
+      "productCode": "3841THAILAND",
+      "title": "Bangkok Temple and Grand Palace Tour",
+      "reason": "Seeded catalog URL; DataDome blocked the complete public page"
+    },
+    {
+      "productCode": "2280BKKTEMPLE",
+      "title": "Bangkok Temples and Grand Palace Tour",
+      "reason": "Seeded catalog URL; DataDome blocked the complete public page"
+    },
+    {
+      "productCode": "2280FLOAT",
+      "title": "Floating Markets and Thai Countryside Tour",
+      "reason": "Seeded catalog URL; DataDome blocked the complete public page"
+    },
+    {
+      "productCode": "2280AYU",
+      "title": "Ayutthaya Day Trip from Bangkok",
+      "reason": "Seeded catalog URL; DataDome blocked the complete public page"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 const ISO_CURRENCY = /^[A-Z]{3}$/;
 
-const NON_USD_AMOUNT_PATTERN = /¥|€|£|\bJPY\b|\bEUR\b|\bGBP\b|\bKRW\b|\bCNY\b/i;
+const NON_USD_AMOUNT_PATTERN =
+  /¥|€|£|฿|\bJPY\b|\bEUR\b|\bGBP\b|\bKRW\b|\bCNY\b|\bTHB\b/i;
 
 export const normalizeIsoCurrency = (
   value: string | null | undefined

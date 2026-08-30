@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "30727P34",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Floating-Market-Damnoen-Saduak-and-Meklong-Railway-Market-Half-Day-Tour/d343-30727P34",
+    "title": "Floating Market Damnoen Saduak and Meklong Railway Market: Half Day Tour",
+    "description": {
+      "text": "In Bangkok, this private five-to-six-hour outing leaves a city hotel for Damnoen Saduak Floating Market and Maeklong Railway Market instead of a temple circuit. A local guide and private vehicle handle the transfer so the group can paddle through canal stalls, then watch vendors pack goods off an active railway line. Fruit, snacks, bottled water, and a pad boat are listed. The format suits visitors who want a guided market morning without assembling taxis to Samut Songkhram independently. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Damnoen Saduak and Maeklong Railway Market that define this outing rather than a Grand Palace walk."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "5 to 6 hours (approx.)",
+    "priceFrom": "From $115.80",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 71
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/dd/4a/d1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day market outing from Bangkok",
+      "Damnoen Saduak Floating Market by paddle boat",
+      "Maeklong Railway Market on an active track",
+      "Private vehicle and local guide",
+      "Hotel pickup and drop-off in Bangkok"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from a Bangkok city hotel is confirmed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this private five-to-six-hour outing leaves a city hotel for Damnoen Saduak Floating Market and Maeklong Railway Market instead of a temple circuit.",
+    "itineraryItems": [
+      {
+        "title": "Damnoen Saduak Floating Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maeklong Railway Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by private vehicle",
+      "Pad boat",
+      "Fruit",
+      "Snacks",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Floating Market Damnoen Saduak and Meklong Railway Market: Half Day Tour?",
+        "answer": "The planned duration is 5 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Hotel pickup from a Bangkok city hotel is confirmed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 115.8
+      },
+      "currency": "USD"
+    }
+  }
+}

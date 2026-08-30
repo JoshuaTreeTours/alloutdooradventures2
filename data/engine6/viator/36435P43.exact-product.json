@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "36435P43",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Private-Half-Day-Bangkok-City-Tour-with-The-Grand-Palace/d343-36435P43",
+    "title": "Private Half-Day Bangkok City Tour with The Grand Palace",
+    "description": {
+      "text": "In Bangkok, this private four-hour city outing pairs a driver and guide with hotel pickup so the group can reach the Grand Palace, Wat Pho, and Wat Arun without navigating Rattanakosin traffic independently. The published window is a half-day rather than an eight-hour city cram, which keeps the pace on the three river temples. Entrance fees and meals follow the published inclusions list on the booking page. The format suits visitors with a short stay who want a compact temple circuit instead of a full-day market add-on. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on the Grand Palace, Wat Pho, and Wat Arun that shape this half-day rather than a Damnoen Saduak transfer."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $145.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 64
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/eb/f6/76.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private four-hour Bangkok temple circuit",
+      "Grand Palace, Wat Pho, and Wat Arun",
+      "Personal driver and guide",
+      "Hotel pickup in Bangkok",
+      "Half-day pacing instead of a full-day market add-on"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Bangkok is confirmed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this private four-hour city outing pairs a driver and guide with hotel pickup so the group can reach the Grand Palace, Wat Pho, and Wat Arun without navigating Rattanakosin traffic independently.",
+    "itineraryItems": [
+      {
+        "title": "Grand Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Pho",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Arun",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver and guide",
+      "Hotel pickup in Bangkok",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Half-Day Bangkok City Tour with The Grand Palace?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Hotel pickup in Bangkok is confirmed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 145
+      },
+      "currency": "USD"
+    }
+  }
+}

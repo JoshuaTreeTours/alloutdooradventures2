@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "198444P1",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Tingly-Thai-Cooking-Class-with-Morning-Market-Tour/d343-198444P1",
+    "title": "Tingly Thai Cooking Class with Morning Market Tour",
+    "description": {
+      "text": "In Bangkok, this three-and-a-half-hour class pairs a morning market walk with a hands-on kitchen session at Tingly Thai Cooking School. The chef covers common ingredients at the market, then the group prepares listed recipes such as tom yum, pad thai, green curry, and mango sticky rice before eating the meal. All ingredients are listed for the morning class. Hotel pickup is not listed. The format suits visitors who want a guided cooking morning without booking a Silom evening session or a countryside market transfer. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on the morning market and Tingly Thai Cooking School that define this class rather than a Grand Palace circuit."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $38.37",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 424
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e7/12/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-and-a-half-hour cooking class in Bangkok",
+      "Guided morning market ingredient walk",
+      "Hands-on recipes such as tom yum, pad thai, green curry, and mango sticky rice",
+      "Small-group chef instruction",
+      "Lunch of the dishes prepared in class"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Tingly Thai Cooking School address in Bangkok listed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this three-and-a-half-hour class pairs a morning market walk with a hands-on kitchen session at Tingly Thai Cooking School.",
+    "itineraryItems": [
+      {
+        "title": "Morning Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tingly Thai Cooking School",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small-group cooking class",
+      "Morning market tour",
+      "All ingredients",
+      "Meal of the dishes prepared in class"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tingly Thai Cooking Class with Morning Market Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Meet at the confirmed Tingly Thai Cooking School address in Bangkok listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 38.37
+      },
+      "currency": "USD"
+    }
+  }
+}

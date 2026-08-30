@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "112650P5",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Bangkok-Canal-Tour-2-Hour-Longtail-Boat-Ride/d343-112650P5",
+    "title": "Bangkok Canal Tour: 2-Hour Longtail Boat Ride",
+    "description": {
+      "text": "In Bangkok, this two-hour longtail outing meets a licensed English-speaking guide near Wat Pho, then boards a traditional boat for the Thonburi canals off the Chao Phraya River. The published stop is Baan Silapin, the restored Artist House on Khlong Bang Luang, with a photo pause at Wat Paknam Phasi Charoen from the water. The group does not disembark at Wat Paknam. Several departure times are listed. The format suits visitors who want a guided canal window without chartering a private longtail independently. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on the Thonburi canals, Baan Silapin, and Wat Paknam Phasi Charoen that define this ride rather than a Damnoen Saduak market boat."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $36.44",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 6401
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/8f/15/9b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-hour longtail boat ride on Thonburi canals",
+      "Baan Silapin Artist House stop",
+      "Photo pause at Wat Paknam Phasi Charoen",
+      "Licensed English-speaking guide",
+      "Meet near Wat Pho in Bangkok"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the licensed English-speaking guide near Wat Pho and walk with the group to board the longtail boat."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this two-hour longtail outing meets a licensed English-speaking guide near Wat Pho, then boards a traditional boat for the Thonburi canals off the Chao Phraya River.",
+    "itineraryItems": [
+      {
+        "title": "Thonburi canals",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Baan Silapin",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Paknam Phasi Charoen",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Licensed English-speaking guide",
+      "Traditional longtail boat",
+      "Visit to Baan Silapin"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bangkok Canal Tour: 2-Hour Longtail Boat Ride?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Meet the licensed English-speaking guide near Wat Pho and walk with the group to board the longtail boat."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Water Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 36.44
+      },
+      "currency": "USD"
+    }
+  }
+}

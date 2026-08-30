@@ -339,6 +339,16 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen24380p161Payload from "../../data/engine6/viator/24380P161.exact-product.json";
+import specimen18897p6Payload from "../../data/engine6/viator/18897P6.exact-product.json";
+import specimen36435p43Payload from "../../data/engine6/viator/36435P43.exact-product.json";
+import specimen30727p34Payload from "../../data/engine6/viator/30727P34.exact-product.json";
+import specimen90546p140Payload from "../../data/engine6/viator/90546P140.exact-product.json";
+import specimen5086tudPayload from "../../data/engine6/viator/5086TUD.exact-product.json";
+import specimen198444p1Payload from "../../data/engine6/viator/198444P1.exact-product.json";
+import specimen112650p5Payload from "../../data/engine6/viator/112650P5.exact-product.json";
+import specimen6924bkkghtb07Payload from "../../data/engine6/viator/6924BKKGHTB07.exact-product.json";
+import specimen8374p24Payload from "../../data/engine6/viator/8374P24.exact-product.json";
 import specimen92136p55Payload from "../../data/engine6/viator/92136P55.exact-product.json";
 import specimen92136p37Payload from "../../data/engine6/viator/92136P37.exact-product.json";
 import specimen92136p49Payload from "../../data/engine6/viator/92136P49.exact-product.json";
@@ -3643,6 +3653,66 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24380P161",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Private-Day-Trip-to-Ayutthaya-from-Bangkok/d343-24380P161",
+    rawPayload: specimen24380p161Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18897P6",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Private-Tour-Best-of-Bangkok-in-A-Day/d343-18897P6",
+    rawPayload: specimen18897p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "36435P43",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Private-Half-Day-Bangkok-City-Tour-with-The-Grand-Palace/d343-36435P43",
+    rawPayload: specimen36435p43Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30727P34",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Floating-Market-Damnoen-Saduak-and-Meklong-Railway-Market-Half-Day-Tour/d343-30727P34",
+    rawPayload: specimen30727p34Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "90546P140",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Silom-Thai-Cooking-School-with-Market-Tour/d343-90546P140",
+    rawPayload: specimen90546p140Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5086TUD",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Bangkok-Hidden-Gems-Talad-Noi-Chinatown-Street-Food-Tour/d343-5086TUD",
+    rawPayload: specimen5086tudPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "198444P1",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Tingly-Thai-Cooking-Class-with-Morning-Market-Tour/d343-198444P1",
+    rawPayload: specimen198444p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "112650P5",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Bangkok-Canal-Tour-2-Hour-Longtail-Boat-Ride/d343-112650P5",
+    rawPayload: specimen112650p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6924BKKGHTB07",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Bike-Bangkok-Historic-City-Tour/d343-6924BKKGHTB07",
+    rawPayload: specimen6924bkkghtb07Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8374P24",
+    publicUrl: "https://www.viator.com/tours/Bangkok/Half-Day-Railway-Market-and-Floating-Market-Tour-in-Thailand/d343-8374P24",
+    rawPayload: specimen8374p24Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

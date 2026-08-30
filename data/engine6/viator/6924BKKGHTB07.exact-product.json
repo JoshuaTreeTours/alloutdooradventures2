@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "6924BKKGHTB07",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Bike-Bangkok-Historic-City-Tour/d343-6924BKKGHTB07",
+    "title": "Bangkok: Backstreets and Temple Historic Bike Tour",
+    "description": {
+      "text": "In Bangkok, this four-hour small-group bike ride leaves Discova Day Tour Shop on Maha Chai Road in Phra Nakhon for backstreets, local neighborhoods, and the Rama 8 Bridge, with a Chao Phraya River ferry segment on the return. A cycling guide, bike, safety gear, ferry fare, snacks, and drinks are listed for a group of up to ten. The pace is published as relaxed, with clothing that covers shoulders and knees for temple stops. Hotel pickup is not listed. The format suits visitors who want a guided historic-city ride without renting independently. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Phra Nakhon, Rama 8 Bridge, and the Chao Phraya River that define this outing rather than a Grand Palace coach loop."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $35.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4a/3e/39.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Four-hour small-group bike ride in historic Bangkok",
+      "Phra Nakhon backstreets and local neighborhoods",
+      "Rama 8 Bridge crossing",
+      "Chao Phraya River ferry segment",
+      "Bike, helmet, snacks, and guide included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Discova Day Tour Shop Bangkok, 719 Maha Chai Road, Wang Burapha Phirom, Phra Nakhon, as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this four-hour small-group bike ride leaves Discova Day Tour Shop on Maha Chai Road in Phra Nakhon for backstreets, local neighborhoods, and the Rama 8 Bridge, with a Chao Phraya River ferry segment on the return.",
+    "itineraryItems": [
+      {
+        "title": "Phra Nakhon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rama 8 Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chao Phraya River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bike and safety equipment",
+      "Transportation fare",
+      "English-speaking professional guide",
+      "Snacks and refreshment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bangkok: Backstreets and Temple Historic Bike Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Meet at Discova Day Tour Shop Bangkok, 719 Maha Chai Road, Wang Burapha Phirom, Phra Nakhon, as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 35
+      },
+      "currency": "USD"
+    }
+  }
+}

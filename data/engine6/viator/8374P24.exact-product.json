@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "8374P24",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Half-Day-Railway-Market-and-Floating-Market-Tour-in-Thailand/d343-8374P24",
+    "title": "Half-Day Railway Market and Floating Market Tour in Thailand",
+    "description": {
+      "text": "In Bangkok, this six-hour small-group outing starts with hotel pickup, then rides the train to Mae Klong Railway Market before a boat circuit at Damnoen Saduak Floating Market. A guide handles the transfer so the group can watch vendors clear the tracks and then move through canal stalls without assembling the train and boat tickets independently. The tour ends at MBK Center rather than returning to every hotel. The group is capped at fifteen. The format suits visitors who want a coordinated market morning from Bangkok without a private-vehicle surcharge. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Mae Klong Railway Market and Damnoen Saduak Floating Market that define this outing rather than a Grand Palace temple day."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $30.70",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 3445
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/97/e4/ec.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group market day from Bangkok",
+      "Mae Klong Railway Market on an active track",
+      "Damnoen Saduak Floating Market boat circuit",
+      "Hotel pickup in Bangkok",
+      "Drop-off at MBK Center"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Bangkok is confirmed when booking. The outing ends at MBK Center."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this six-hour small-group outing starts with hotel pickup, then rides the train to Mae Klong Railway Market before a boat circuit at Damnoen Saduak Floating Market.",
+    "itineraryItems": [
+      {
+        "title": "Mae Klong Railway Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Damnoen Saduak Floating Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup in Bangkok",
+      "Small-group guide",
+      "Train segment to Mae Klong Railway Market",
+      "Boat circuit at Damnoen Saduak Floating Market",
+      "Drop-off at MBK Center"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Railway Market and Floating Market Tour in Thailand?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Hotel pickup in Bangkok is confirmed when booking. The outing ends at MBK Center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 30.7
+      },
+      "currency": "USD"
+    }
+  }
+}

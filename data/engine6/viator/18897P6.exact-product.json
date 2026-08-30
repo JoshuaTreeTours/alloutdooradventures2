@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "18897P6",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Private-Tour-Best-of-Bangkok-in-A-Day/d343-18897P6",
+    "title": "Private Tour: Best of Bangkok in A Day",
+    "description": {
+      "text": "In Bangkok, this private eight-hour circuit pairs a licensed local guide with an air-conditioned vehicle and hotel pickup in the city center. The published day covers the Grand Palace, Wat Pho, Wat Arun, Chinatown, and Pak Khlong Talat, with lunch and bottled water listed. Cruise-port pickup is a surcharge, not a standard inclusion. Dress rules for the Grand Palace and Temple of the Emerald Buddha are published on the product page. The format suits first-time visitors who want a single guided sweep of the river temples and markets without assembling separate tickets and transfers. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on the Grand Palace, Wat Pho, Wat Arun, and Chinatown that define this full-day window rather than an Ayutthaya transfer."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $207.20",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 419
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/2f/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-hour Bangkok city circuit",
+      "Grand Palace, Wat Pho, and Wat Arun",
+      "Chinatown and the flower market",
+      "Licensed local guide and air-conditioned vehicle",
+      "Hotel pickup in Bangkok city center"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The guide meets the group at 8:00 a.m. in the booked Bangkok hotel lobby."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this private eight-hour circuit pairs a licensed local guide with an air-conditioned vehicle and hotel pickup in the city center.",
+    "itineraryItems": [
+      {
+        "title": "Grand Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Pho",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Arun",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pak Khlong Talat",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private full-day guided tour",
+      "Transport by air-conditioned vehicle",
+      "Lunch",
+      "Bottled water",
+      "Licensed local guide",
+      "Hotel pickup and drop-off in Bangkok city center"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Best of Bangkok in A Day?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "The guide meets the group at 8:00 a.m. in the booked Bangkok hotel lobby."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 207.2
+      },
+      "currency": "USD"
+    }
+  }
+}
