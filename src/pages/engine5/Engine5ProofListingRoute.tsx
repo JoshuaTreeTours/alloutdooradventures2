@@ -18,9 +18,15 @@ export default function Engine5ProofListingRoute() {
   useEffect(() => {
     getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
       .then(apiTour => {
-        const mapped = mapViatorToEngine5Tour(engine5ProofViatorRecord, apiTour);
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        );
         if (process.env.NODE_ENV !== "production") {
-          console.info("[engine5][132218P209] listing diagnostics", mapped.normalized.diagnostics);
+          console.info(
+            "[engine5][163873P16] listing diagnostics",
+            mapped.normalized.diagnostics
+          );
         }
         setTour(mapped.listing);
       })
@@ -29,13 +35,17 @@ export default function Engine5ProofListingRoute() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
-      <h1 className="text-3xl font-semibold">Engine5 Los Angeles proof tours</h1>
+      <h1 className="text-3xl font-semibold">Engine5 East Zion proof tours</h1>
       {error ? <p className="mt-4">Engine5 failed loudly: {error}</p> : null}
       {tour ? (
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <TourCard
             tour={tour}
-            href={tour.slug ? `${ENGINE5_PROOF_LISTING_PATH}/${tour.slug}` : ENGINE5_PROOF_TOUR_PATH}
+            href={
+              tour.slug
+                ? `${ENGINE5_PROOF_LISTING_PATH}/${tour.slug}`
+                : ENGINE5_PROOF_TOUR_PATH
+            }
           />
         </div>
       ) : (

@@ -46,6 +46,22 @@ export type Engine5ViatorApiTour = {
     apiFetchSucceeded: boolean;
     descriptionSource: "api";
   };
+  sourceTrace?: {
+    titleFieldPath?: string;
+    heroImageFieldPath?: string;
+    priceFieldPath?: string;
+    ratingFieldPath?: string;
+    reviewCountFieldPath?: string;
+    meetingPointFieldPath?: string;
+    routeOwnershipFieldPath?: string;
+    runtimeDiagnostics?: {
+      hasViatorApiKey?: boolean;
+      attemptedLiveFetch?: boolean;
+      upstreamStatus?: number | null;
+      upstreamOk?: boolean | null;
+      commercialPriceFieldPath?: string;
+    };
+  };
 };
 
 export type Engine5NormalizedTour = {
@@ -68,7 +84,11 @@ export type Engine5NormalizedTour = {
     overview: string;
     highlights: string[];
     faqs: Array<{ question: string; answer: string }>;
-    itinerary: Array<{ title: string; description?: string; duration?: string }>;
+    itinerary: Array<{
+      title: string;
+      description?: string;
+      duration?: string;
+    }>;
     inclusions: string[];
     exclusions: string[];
     additionalInfo?: string;
@@ -89,7 +109,7 @@ export type Engine5NormalizedTour = {
 };
 
 export type Engine5ProductRecord = {
-  productCode: "132218P209";
+  productCode: "132218P209" | "163873P16";
   destination: {
     country: string;
     state: string;
