@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-08-30T19:59:05.350Z
+Generated: 2026-08-30T20:13:15.444Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -19,7 +19,7 @@ Overall passed: true
 
 - Blocking findings: 0
 - Warning findings: 0
-- Legacy findings (report-only): 4412
+- Legacy findings (report-only): 4417
 - Areas audited: 12
 - Areas passed (no blocking findings): 12
 
@@ -38,10 +38,11 @@ Overall passed: true
 | destination-cohort | 0 | 0 | 0 | yes |
 | destination-infrastructure | 0 | 0 | 0 | yes |
 | product-hero | 0 | 0 | 0 | yes |
-| paragon-build-scope | 0 | 0 | 0 | yes |
+| paragon-build-scope | 0 | 0 | 5 | yes |
 
 ## Notes
 
+- Branch-modified product codes: 11769P30, 117975P5, 206176P2, 243038P1, 416971P1, 52577P9, 60357P25, 66791P20, 86621P2, 86621P3, 86621P5, 92029P158
 - rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.
 - Destination cohort scope: Bali
 
@@ -147,6 +148,6 @@ Overall passed: true
 - **merchant-feed-commercial-refresh** (`3454YE3D`): 3454YE3D.review_count: expected "212", got "218"
 - **merchant-feed-commercial-refresh** (`365892P1`): 365892P1.price: expected "659 USD", got "689 USD"
 - **merchant-feed-commercial-refresh** (`365892P1`): 365892P1.rating_count: expected "137", got "145"
-- ...and 4312 additional legacy finding(s).
+- ...and 4317 additional legacy finding(s).
 
 See `reports/engine6-stage2-governance-audit.json` for the full machine-readable report.

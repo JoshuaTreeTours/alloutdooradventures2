@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T19:59:05.350Z",
+  "generatedAt": "2026-08-30T20:13:15.444Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [
@@ -25,7 +25,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 4412,
+    "legacyFindings": 4417,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -111,7 +111,7 @@
       "area": "paragon-build-scope",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 0,
+      "legacyCount": 5,
       "pass": true
     }
   ],
@@ -26587,10 +26587,40 @@
       "productCode": "265766P17",
       "message": "merchant feed row diverged from Product JSON-LD (265766P17.rating_count: expected \"60\", got \"112\"; 265766P17.review_count: expected \"60\", got \"112\")",
       "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "data/merchantFeed.csv: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "public/sitemap-tours.xml: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/baliViatorPublicRatings.ts: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/routes.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/validationFixtures.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
     }
   ],
   "merchantFeedImage": {
-    "imagesValidated": 1030,
+    "imagesValidated": 1042,
     "automaticallyRepaired": 0,
     "requiringFallback": 0,
     "unrecoverableFailures": 0,
@@ -26619,15 +26649,116 @@
     "findings": [],
     "pass": true
   },
-  "destinationInfrastructure": [],
+  "destinationInfrastructure": [
+    {
+      "destinationLabel": "Bali",
+      "destinationCitySlug": "bali",
+      "stateSlug": "indonesia",
+      "citySlug": "bali",
+      "routePrefix": "/destinations/indonesia/bali/tours/",
+      "pass": true,
+      "checks": [
+        {
+          "id": "state-registry",
+          "pass": true,
+          "message": "State registry includes indonesia"
+        },
+        {
+          "id": "city-registry",
+          "pass": true,
+          "message": "City registry includes bali"
+        },
+        {
+          "id": "tours-state-selector",
+          "pass": true,
+          "message": "Tours page state selector includes indonesia"
+        },
+        {
+          "id": "tours-city-selector",
+          "pass": true,
+          "message": "Tours page city selector includes bali"
+        },
+        {
+          "id": "route-prefix",
+          "pass": true,
+          "message": "Route prefix registered (12 tour route(s))"
+        },
+        {
+          "id": "governance-scope",
+          "pass": true,
+          "message": "Governance scope mapping resolves for bali"
+        },
+        {
+          "id": "canonical-hero-fallback",
+          "pass": true,
+          "message": "Canonical city hero fallback resolves"
+        },
+        {
+          "id": "validation-cohort",
+          "pass": true,
+          "message": "Validation cohort registered (Bali)"
+        },
+        {
+          "id": "fixture-target-path",
+          "pass": true,
+          "message": "Fixture generation target paths are deploy-scoped to the destination route prefix"
+        }
+      ],
+      "blockingFailures": []
+    }
+  ],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-08-30T19:59:05.215Z",
-    "pass": true,
-    "branchScopedProductCodes": [],
-    "blockedFiles": [],
+    "generatedAt": "2026-08-30T20:13:15.302Z",
+    "pass": false,
+    "branchScopedProductCodes": [
+      "11769P30",
+      "117975P5",
+      "206176P2",
+      "243038P1",
+      "416971P1",
+      "52577P9",
+      "60357P25",
+      "66791P20",
+      "86621P2",
+      "86621P3",
+      "86621P5",
+      "92029P158"
+    ],
+    "blockedFiles": [
+      {
+        "path": "data/merchantFeed.csv",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "public/sitemap-tours.xml",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/baliViatorPublicRatings.ts",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/routes.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      },
+      {
+        "path": "src/engine6/validationFixtures.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      }
+    ],
     "warnings": [],
-    "informational": [],
+    "informational": [
+      {
+        "path": "src/engine6/engine6DestinationInfrastructureValidation.ts",
+        "detail": "governance-only allowlisted file"
+      }
+    ],
     "merchantFeed": {
       "pass": true,
       "appendedProductCodes": [],
@@ -26651,8 +26782,7 @@
       "repeatedFileWrites": []
     },
     "deployScope": {
-      "blockingProductCodes": [],
-      "reportOnlyProductCodes": [
+      "blockingProductCodes": [
         "11769P30",
         "117975P5",
         "206176P2",
@@ -26665,10 +26795,12 @@
         "86621P3",
         "86621P5",
         "92029P158"
-      ]
+      ],
+      "reportOnlyProductCodes": []
     }
   },
   "notes": [
+    "Branch-modified product codes: 11769P30, 117975P5, 206176P2, 243038P1, 416971P1, 52577P9, 60357P25, 66791P20, 86621P2, 86621P3, 86621P5, 92029P158",
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
     "Destination cohort scope: Bali"
   ]
