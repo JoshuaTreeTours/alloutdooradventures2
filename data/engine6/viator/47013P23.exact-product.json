@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "47013P23",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-Night-Explorer-4-in-1-Day-including-Gwangmyeong-Cave-and-N-Seoul-Tower/d973-47013P23",
+    "title": "Seoul Night Tour (Gwangjang Market, Royal Palace and Naksan Park)",
+    "description": {
+      "text": "In Seoul, this five-hour evening covers Changgyeonggung Palace, Gwangjang Market, Naksan Park on the Hanyang city wall, and Cheonggyecheon Stream. An air-conditioned vehicle, English-speaking staff, and admission fees are listed. Reviews on the public page describe the lit wall walk at Naksan as the late stop. The format suits visitors who want a guided night circuit without assembling palace and market transfers independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Changgyeonggung, Gwangjang Market, Naksan Park, and Cheonggyecheon that define this outing rather than a Han River cruise."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $45.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 50
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7e/df/75.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Five-hour Seoul night circuit",
+      "Changgyeonggung Palace",
+      "Gwangjang Market food stalls",
+      "Naksan Park on the Hanyang wall",
+      "Cheonggyecheon Stream"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Seoul meeting point for the evening circuit."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this five-hour evening covers Changgyeonggung Palace, Gwangjang Market, Naksan Park on the Hanyang city wall, and Cheonggyecheon Stream.",
+    "itineraryItems": [
+      {
+        "title": "Changgyeonggung Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gwangjang Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Naksan Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cheonggyecheon Stream",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "English speaking tour staff",
+      "Admission fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seoul Night Tour (Gwangjang Market, Royal Palace and Naksan Park)?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at the confirmed Seoul meeting point for the evening circuit."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45
+      },
+      "currency": "USD"
+    }
+  }
+}

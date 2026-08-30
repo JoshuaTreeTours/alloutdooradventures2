@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "121170P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korean-Cooking-Class-with-Full-Course-Meal-and-Local-Market-Tour/d973-121170P1",
+    "title": "Korean Cooking Class with Full-Course Meal & Local Market Tour in Seoul",
+    "description": {
+      "text": "In Seoul, this three-and-a-half-hour home class meets at Mangwon Station Exit 2, walks Mangwon Market for street-food snacks and ingredients, then cooks four Korean dishes such as dakgalbi, bibimbap, haemul pajeon, or doenjang jjigae. A hanjeongsik spread of more than ten side dishes, dessert, beverages, and makgeolli is listed. The format suits visitors who want a guided home-kitchen meal rather than a kimchi-only session. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Mangwon Market and the home kitchen that define this class rather than a Gwangjang night walk."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $91.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 907
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0d/b9/89.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-and-a-half-hour Seoul home cooking class",
+      "Mangwon Market street-food walk",
+      "Four Korean dishes and hanjeongsik sides",
+      "Makgeolli listed",
+      "Small-group home kitchen"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet outside Exit 2 of Mangwon Station on the brown subway line in Seoul."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this three-and-a-half-hour home class meets at Mangwon Station Exit 2, walks Mangwon Market for street-food snacks and ingredients, then cooks four Korean dishes such as dakgalbi, bibimbap, haemul pajeon, or doenjang jjigae.",
+    "itineraryItems": [
+      {
+        "title": "Mangwon Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Home cooking kitchen",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Meals and more than 10 side dishes",
+      "Dessert and beverages",
+      "Makgeolli",
+      "All equipment for a class",
+      "Local market tour with street food"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Korean Cooking Class with Full-Course Meal & Local Market Tour in Seoul?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet outside Exit 2 of Mangwon Station on the brown subway line in Seoul."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cooking Classes"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 91
+      },
+      "currency": "USD"
+    }
+  }
+}

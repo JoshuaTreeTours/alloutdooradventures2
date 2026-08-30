@@ -339,6 +339,22 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen42053p19Payload from "../../data/engine6/viator/42053P19.exact-product.json";
+import specimen6780p36Payload from "../../data/engine6/viator/6780P36.exact-product.json";
+import specimen470724p1Payload from "../../data/engine6/viator/470724P1.exact-product.json";
+import specimen11214p21Payload from "../../data/engine6/viator/11214P21.exact-product.json";
+import specimen6780city_fulldayPayload from "../../data/engine6/viator/6780CITY_FULLDAY.exact-product.json";
+import specimen6780p26Payload from "../../data/engine6/viator/6780P26.exact-product.json";
+import specimen30023p9Payload from "../../data/engine6/viator/30023P9.exact-product.json";
+import specimen42053p14Payload from "../../data/engine6/viator/42053P14.exact-product.json";
+import specimen48881p11Payload from "../../data/engine6/viator/48881P11.exact-product.json";
+import specimen55262p2Payload from "../../data/engine6/viator/55262P2.exact-product.json";
+import specimen48881p82Payload from "../../data/engine6/viator/48881P82.exact-product.json";
+import specimen33054p5Payload from "../../data/engine6/viator/33054P5.exact-product.json";
+import specimen121170p1Payload from "../../data/engine6/viator/121170P1.exact-product.json";
+import specimen359901p1Payload from "../../data/engine6/viator/359901P1.exact-product.json";
+import specimen255235p5Payload from "../../data/engine6/viator/255235P5.exact-product.json";
+import specimen47013p23Payload from "../../data/engine6/viator/47013P23.exact-product.json";
 import specimen86621p5Payload from "../../data/engine6/viator/86621P5.exact-product.json";
 import specimen86621p2Payload from "../../data/engine6/viator/86621P2.exact-product.json";
 import specimen86621p3Payload from "../../data/engine6/viator/86621P3.exact-product.json";
@@ -3677,6 +3693,102 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42053P19",
+    publicUrl: "https://www.viator.com/tours/Seoul/Full-day-Customizable-Private-Seoul-Highlight-Tour-with-Hanbok-Experience/d973-42053P19",
+    rawPayload: specimen42053p19Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6780P36",
+    publicUrl: "https://www.viator.com/tours/Seoul/Korea-DMZ-Tour/d973-6780P36",
+    rawPayload: specimen6780p36Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "470724P1",
+    publicUrl: "https://www.viator.com/tours/Seoul/DMZ-Tour-1-Day-Class-with-North-Korean-Defectors/d973-470724P1",
+    rawPayload: specimen470724p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "11214P21",
+    publicUrl: "https://www.viator.com/tours/Seoul/Seoul-Nightlife-Chimaek-Night-Cruise-with-Han-River-Sightseeing/d973-11214P21",
+    rawPayload: specimen11214p21Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6780CITY_FULLDAY",
+    publicUrl: "https://www.viator.com/tours/Seoul/Seoul-City-Sightseeing-Tour-Including-Gyeongbokgung-Palace-N-Seoul-Tower-and-Namsangol-Hanok-Village/d973-6780CITY_FULLDAY",
+    rawPayload: specimen6780city_fulldayPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6780P26",
+    publicUrl: "https://www.viator.com/tours/Seoul/Full-Day-Palace-Tour/d973-6780P26",
+    rawPayload: specimen6780p26Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30023P9",
+    publicUrl: "https://www.viator.com/tours/Seoul/Small-Group-Seoul-Morning-Royal-Palaces-Tour/d973-30023P9",
+    rawPayload: specimen30023p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42053P14",
+    publicUrl: "https://www.viator.com/tours/Seoul/Day-tour-for-food-lovers-Demilitarized-Zone-DMZ-Tour-with-Korean-BBQ/d973-42053P14",
+    rawPayload: specimen42053p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "48881P11",
+    publicUrl: "https://www.viator.com/tours/Seoul/Day-Trip-to-Nami-Island-with-Rail-bike-and-The-Garden-of-Morning-Calm/d973-48881P11",
+    rawPayload: specimen48881p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "55262P2",
+    publicUrl: "https://www.viator.com/tours/Seoul/Mount-Seorak-and-Nami-Island-Full-Day-Sightseeing-Tour/d973-55262P2",
+    rawPayload: specimen55262p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "48881P82",
+    publicUrl: "https://www.viator.com/tours/Seoul/Explore-Koreas-Traditional-Korean-Folk-Village-and-GwangMyeong-Cave/d973-48881P82",
+    rawPayload: specimen48881p82Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33054P5",
+    publicUrl: "https://www.viator.com/tours/Seoul/Korean-Kimchi-making-day-experience/d973-33054P5",
+    rawPayload: specimen33054p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "121170P1",
+    publicUrl: "https://www.viator.com/tours/Seoul/Korean-Cooking-Class-with-Full-Course-Meal-and-Local-Market-Tour/d973-121170P1",
+    rawPayload: specimen121170p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "359901P1",
+    publicUrl: "https://www.viator.com/tours/Seoul/Dongdaemun-and-Gwangjang-Market-walking-tour-with-local/d973-359901P1",
+    rawPayload: specimen359901p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "255235P5",
+    publicUrl: "https://www.viator.com/tours/Seoul/Bukhansan-National-Park-The-Summit-Course/d973-255235P5",
+    rawPayload: specimen255235p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "47013P23",
+    publicUrl: "https://www.viator.com/tours/Seoul/Seoul-Night-Explorer-4-in-1-Day-including-Gwangmyeong-Cave-and-N-Seoul-Tower/d973-47013P23",
+    rawPayload: specimen47013p23Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

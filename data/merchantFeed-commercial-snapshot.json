@@ -4439,6 +4439,118 @@
       "averageRating": "4.9",
       "ratingCount": "230",
       "reviewCount": "230"
+    },
+    {
+      "productCode": "42053P19",
+      "price": "230 USD",
+      "averageRating": "4.9",
+      "ratingCount": "196",
+      "reviewCount": "196"
+    },
+    {
+      "productCode": "6780P36",
+      "price": "240 USD",
+      "averageRating": "4.8",
+      "ratingCount": "81",
+      "reviewCount": "81"
+    },
+    {
+      "productCode": "470724P1",
+      "price": "130 USD",
+      "averageRating": "5.0",
+      "ratingCount": "77",
+      "reviewCount": "77"
+    },
+    {
+      "productCode": "11214P21",
+      "price": "245 USD",
+      "averageRating": "4.9",
+      "ratingCount": "34",
+      "reviewCount": "34"
+    },
+    {
+      "productCode": "6780CITY_FULLDAY",
+      "price": "80 USD",
+      "averageRating": "4.8",
+      "ratingCount": "1372",
+      "reviewCount": "1372"
+    },
+    {
+      "productCode": "6780P26",
+      "price": "79 USD",
+      "averageRating": "4.8",
+      "ratingCount": "96",
+      "reviewCount": "96"
+    },
+    {
+      "productCode": "30023P9",
+      "price": "43.66 USD",
+      "averageRating": "4.7",
+      "ratingCount": "47",
+      "reviewCount": "47"
+    },
+    {
+      "productCode": "42053P14",
+      "price": "53 USD",
+      "averageRating": "4.9",
+      "ratingCount": "461",
+      "reviewCount": "461"
+    },
+    {
+      "productCode": "48881P11",
+      "price": "73.33 USD",
+      "averageRating": "4.7",
+      "ratingCount": "277",
+      "reviewCount": "277"
+    },
+    {
+      "productCode": "55262P2",
+      "price": "91.89 USD",
+      "averageRating": "4.8",
+      "ratingCount": "531",
+      "reviewCount": "531"
+    },
+    {
+      "productCode": "48881P82",
+      "price": "53.33 USD",
+      "averageRating": "4.8",
+      "ratingCount": "56",
+      "reviewCount": "56"
+    },
+    {
+      "productCode": "33054P5",
+      "price": "89 USD",
+      "averageRating": "5.0",
+      "ratingCount": "79",
+      "reviewCount": "79"
+    },
+    {
+      "productCode": "121170P1",
+      "price": "91 USD",
+      "averageRating": "5.0",
+      "ratingCount": "907",
+      "reviewCount": "907"
+    },
+    {
+      "productCode": "359901P1",
+      "price": "47 USD",
+      "averageRating": "4.9",
+      "ratingCount": "55",
+      "reviewCount": "55"
+    },
+    {
+      "productCode": "255235P5",
+      "price": "61.75 USD",
+      "averageRating": "5.0",
+      "ratingCount": "53",
+      "reviewCount": "53"
+    },
+    {
+      "productCode": "47013P23",
+      "price": "45 USD",
+      "averageRating": "5.0",
+      "ratingCount": "50",
+      "reviewCount": "50"
     }
   ]
 }

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "6780P26",
+    "productUrl": "https://www.viator.com/tours/Seoul/Full-Day-Palace-Tour/d973-6780P26",
+    "title": "Full-Day Palace Tour in Seoul",
+    "description": {
+      "text": "In Seoul, this eight-hour palace day leaves a hotel for Gyeongbokgung Palace, UNESCO-listed Changdeokgung Palace, Jogyesa Temple, and Insadong. A professional guide, air-conditioned vehicle, lunch, and hotel pickup are listed. On Tuesdays the public page notes a Deoksugung substitution if Gyeongbokgung is closed. The format suits visitors who want a guided two-palace day without assembling temple and market transfers independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Gyeongbokgung, Changdeokgung, Jogyesa, and Insadong that define this outing rather than an N Seoul Tower finish."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 96
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/47/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eight-hour Seoul palace circuit",
+      "Gyeongbokgung Palace and Changdeokgung Palace",
+      "Jogyesa Temple and Insadong",
+      "Lunch and hotel pickup listed",
+      "Air-conditioned coach"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Seoul hotel for the palace circuit."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this eight-hour palace day leaves a hotel for Gyeongbokgung Palace, UNESCO-listed Changdeokgung Palace, Jogyesa Temple, and Insadong.",
+    "itineraryItems": [
+      {
+        "title": "Gyeongbokgung Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Changdeokgung Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jogyesa Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Insadong",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Professional guide",
+      "Lunch",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Palace Tour in Seoul?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "The host picks up at the booked Seoul hotel for the palace circuit."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

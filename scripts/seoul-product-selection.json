@@ -1,0 +1,35 @@
+{
+  "destinationLabel": "Seoul",
+  "destinationCitySlug": "seoul",
+  "viatorDestinationSlug": "Seoul",
+  "viatorDestinationId": "d973",
+  "catalogUrl": "https://www.viator.com/Seoul/d973-ttd",
+  "targetPremiumShare": 0.4,
+  "selectedCount": 16,
+  "premiumCount": 4,
+  "selectionNote": "Selected 16 guided Seoul d973 products with live public USD From prices (From$ or From US$), combined ratings, unique 674x446 heroes, and commercially diverse categories (private city/hanbok, private DMZ, private DMZ-with-defector, night palace-and-Han-River cruise, city sightseeing, palace days, morning palaces, group DMZ with Korean BBQ, Nami/rail-bike/garden, Seoraksan day trip, Suwon folk-village and fortress, kimchi class, home cooking class, Han River bike, Bukhansan summit). The live catalog supports far more than 20 tours, including additional DMZ SKUs, Nami Island variants, palace loops, cooking classes, private-driver days, and night walks, but Viator DataDome blocking plus geo-currency dumps (EUR/GBP/CHF/AUD/ZAR/A$) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live helicopter tour, stargazing, or Indigenous-only cultural page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs (for example 191127P1 at 5.0/4), near-duplicates, private-driver-only, ticket-only, K-pop makeup, or products with unusable heroes. Same completeness constraint documented on Bali (12), Singapore (12), Bangkok (10), Kyoto (14), and Tokyo (11).",
+  "selectedProductCodes": [
+    "42053P19",
+    "6780P36",
+    "470724P1",
+    "11214P21",
+    "6780CITY_FULLDAY",
+    "6780P26",
+    "30023P9",
+    "42053P14",
+    "48881P11",
+    "55262P2",
+    "48881P82",
+    "33054P5",
+    "121170P1",
+    "359901P1",
+    "255235P5",
+    "47013P23"
+  ],
+  "premiumProductCodes": [
+    "42053P19",
+    "6780P36",
+    "470724P1",
+    "11214P21"
+  ]
+}

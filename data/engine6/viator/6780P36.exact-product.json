@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "6780P36",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korea-DMZ-Tour/d973-6780P36",
+    "title": "Private DMZ Tour",
+    "description": {
+      "text": "In Seoul, this private six-hour DMZ day leaves a city hotel for Imjingak Park, Freedom Bridge, Dora Observatory, and the Third Tunnel of Aggression. A private guide and air-conditioned vehicle are listed, with DMZ admission included. The published page notes the DMZ Exhibition Hall among the Freedom Bridge stops. The format suits visitors who want a guided border circuit without joining a large coach. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Imjingak, Freedom Bridge, Dora Observatory, and the Third Tunnel that define this outing rather than a palace loop."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $240.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/b4/3d/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour DMZ circuit from Seoul",
+      "Dora Observatory views toward North Korea",
+      "Third Tunnel and Freedom Bridge",
+      "Private guide and hotel pickup",
+      "DMZ Exhibition Hall stop listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Seoul hotel for the private DMZ circuit."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this private six-hour DMZ day leaves a city hotel for Imjingak Park, Freedom Bridge, Dora Observatory, and the Third Tunnel of Aggression.",
+    "itineraryItems": [
+      {
+        "title": "Imjingak Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Freedom Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dora Observatory",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Third Tunnel of Aggression",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Hotel pickup and drop-off",
+      "Air-conditioned vehicle",
+      "DMZ admission"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private DMZ Tour?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "The host picks up at the booked Seoul hotel for the private DMZ circuit."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 240
+      },
+      "currency": "USD"
+    }
+  }
+}

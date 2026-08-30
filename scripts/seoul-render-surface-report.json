@@ -1,0 +1,237 @@
+{
+  "selectedCount": 16,
+  "listingCount": 16,
+  "listingMatchesSelection": true,
+  "okCount": 16,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "42053P19",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/full-day-customizable-private-seoul-highlight-tour-42053P19",
+      "title": "Full-day Customizable Private Seoul Highlight Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/2d/69.jpg",
+      "card": "In Seoul, this private eight-to-nine-hour circuit pairs an English-speaking driver-guide with an air-conditioned vehicle and hotel pickup.",
+      "itineraryTitles": [
+        "Gyeongbokgung Palace",
+        "Insadong",
+        "Bukchon Hanok Village"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6780P36",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/private-dmz-tour-6780P36",
+      "title": "Private DMZ Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/b4/3d/d8.jpg",
+      "card": "In Seoul, this private six-hour DMZ day leaves a city hotel for Imjingak Park, Freedom Bridge, Dora Observatory, and the Third Tunnel of Agg",
+      "itineraryTitles": [
+        "Imjingak Park",
+        "Freedom Bridge",
+        "Dora Observatory",
+        "Third Tunnel of Aggression"
+      ],
+      "issues": []
+    },
+    {
+      "code": "470724P1",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/private-dmz-tour-with-north-korean-defector-n-korean-lu-470724P1",
+      "title": "Private DMZ Tour with North Korean Defector + N Korean Lunch",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/78/7b/a2.jpg",
+      "card": "In Seoul, this private seven-to-eight-hour DMZ day travels with a North Korean defector guide who left in 2017, then sits down for a North K",
+      "itineraryTitles": [
+        "Imjingak Park",
+        "Dora Observatory",
+        "North Korean restaurant"
+      ],
+      "issues": []
+    },
+    {
+      "code": "11214P21",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/seoul-night-tour-with-han-river-cruise-and-gyeongbokgun-11214P21",
+      "title": "Seoul Night Tour with Han River Cruise and Gyeongbokgung Palace",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/90/02/37.jpg",
+      "card": "In Seoul, this private nine-hour evening starts at Gyeongbokgung Palace after a hotel-lobby pickup, then continues onto a Han River night cr",
+      "itineraryTitles": [
+        "Gyeongbokgung Palace",
+        "Han River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6780CITY_FULLDAY",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/seoul-city-sightseeing-tour-including-gyeongbokgung-pal-6780CITY_FULLDAY",
+      "title": "Seoul City Sightseeing Tour Including Gyeongbokgung Palace, N Seoul Tower, and Namsangol Hanok Village",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg",
+      "card": "In Seoul, this eight-hour city day meets at Jogyesa Temple or adds downtown hotel pickup, then covers Gyeongbokgung Palace, the National Fol",
+      "itineraryTitles": [
+        "Jogyesa Temple",
+        "Gyeongbokgung Palace",
+        "National Folk Museum of Korea",
+        "Gwanghwamun Gate",
+        "N Seoul Tower",
+        "Namsangol Hanok Village"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6780P26",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/full-day-palace-tour-in-seoul-6780P26",
+      "title": "Full-Day Palace Tour in Seoul",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/47/c3.jpg",
+      "card": "In Seoul, this eight-hour palace day leaves a hotel for Gyeongbokgung Palace, UNESCO-listed Changdeokgung Palace, Jogyesa Temple, and Insado",
+      "itineraryTitles": [
+        "Gyeongbokgung Palace",
+        "Changdeokgung Palace",
+        "Jogyesa Temple",
+        "Insadong"
+      ],
+      "issues": []
+    },
+    {
+      "code": "30023P9",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/small-group-seoul-morning-royal-palaces-tour-30023P9",
+      "title": "Small-Group Seoul Morning Royal Palaces Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8d/c4/85.jpg",
+      "card": "In Seoul, this three-and-a-half-hour morning covers Jogyesa Temple, the changing of the guard at Gwanghwamun Gate, Gyeongbokgung Palace, and",
+      "itineraryTitles": [
+        "Jogyesa Temple",
+        "Gwanghwamun Gate",
+        "Gyeongbokgung Palace",
+        "National Folk Museum of Korea"
+      ],
+      "issues": []
+    },
+    {
+      "code": "42053P14",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/insightful-dmz-tour-by-expert-opt-suspension-bridge-wit-42053P14",
+      "title": "Insightful DMZ Tour by Expert opt. Suspension Bridge with Pickup",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/79/76.jpg",
+      "card": "In Seoul, this six-to-ten-hour DMZ day adds optional hotel pickup in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, then",
+      "itineraryTitles": [
+        "Imjingak Park",
+        "Third Tunnel of Aggression",
+        "Dora Observatory"
+      ],
+      "issues": []
+    },
+    {
+      "code": "48881P11",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/day-trip-to-nami-island-with-rail-bike-and-the-garden-o-48881P11",
+      "title": "Day Trip to Nami Island with Rail bike and The Garden of Morning Calm",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/20/46.jpg",
+      "card": "In Seoul, this eleven-to-twelve-hour coach day leaves a central meeting point for the Garden of Morning Calm, Nami Island, and Gangchon Rail",
+      "itineraryTitles": [
+        "Garden of Morning Calm",
+        "Nami Island",
+        "Gangchon Railbike Park"
+      ],
+      "issues": []
+    },
+    {
+      "code": "55262P2",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/mt-seorak-nami-island-garden-of-morning-calm-day-trip-f-55262P2",
+      "title": "Mt. Seorak+Nami Island+Garden of Morning Calm Day Trip from Seoul",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/39/3d.jpg",
+      "card": "In Seoul, this fourteen-hour coach day reaches Seoraksan National Park and Shinheungsa, then continues to Nami Island and the Garden of Morn",
+      "itineraryTitles": [
+        "Seoraksan National Park",
+        "Shinheungsa",
+        "Nami Island",
+        "Garden of Morning Calm"
+      ],
+      "issues": []
+    },
+    {
+      "code": "48881P82",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/korean-folk-village-and-suwon-hwaseong-fortress-day-tou-48881P82",
+      "title": "Korean Folk Village and Suwon Hwaseong Fortress Day Tour(EG Tour)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/bc/a5.jpg",
+      "card": "In Seoul, this seven-to-eight-hour coach day travels to the Korean Folk Village in Yongin and UNESCO-listed Suwon Hwaseong Fortress, with Su",
+      "itineraryTitles": [
+        "Korean Folk Village",
+        "Suwon Hwaseong Fortress",
+        "Suwon Nammun Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "33054P5",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/korean-kimchi-making-day-experience-33054P5",
+      "title": "Korean Kimchi making day experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/48/00/f5.jpg",
+      "card": "In Seoul, this three-and-a-half-hour class meets at Mangwon Station Exit 2, walks Mangwon Market for ingredients, then cooks four kimchi typ",
+      "itineraryTitles": [
+        "Mangwon Market",
+        "Kimchi cooking studio"
+      ],
+      "issues": []
+    },
+    {
+      "code": "121170P1",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/korean-cooking-class-with-full-course-meal-local-market-121170P1",
+      "title": "Korean Cooking Class with Full-Course Meal & Local Market Tour in Seoul",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0d/b9/89.jpg",
+      "card": "In Seoul, this three-and-a-half-hour home class meets at Mangwon Station Exit 2, walks Mangwon Market for street-food snacks and ingredients",
+      "itineraryTitles": [
+        "Mangwon Market",
+        "Home cooking kitchen"
+      ],
+      "issues": []
+    },
+    {
+      "code": "359901P1",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/seoul-urban-nature-bike-tour-along-han-river-359901P1",
+      "title": "Seoul Urban Nature Bike Tour along Han River",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/f3/44.jpg",
+      "card": "In Seoul, this three-hour guided ride meets outside Jayang Station Exit 2 at Ttukseom Recreation Area, then follows the Han River path throu",
+      "itineraryTitles": [
+        "Han River",
+        "Seoul Forest",
+        "Seongsu-dong"
+      ],
+      "issues": []
+    },
+    {
+      "code": "255235P5",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/bukhansan-national-park-the-summit-course-255235P5",
+      "title": "Bukhansan National Park: The Summit Course",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/79/5c.jpg",
+      "card": "In Seoul, this guided Bukhansan summit course meets outside Exit 2 of Bukhansan Ui Station by 8:00 a.m. and hikes the published granite-peak",
+      "itineraryTitles": [
+        "Bukhansan Ui Station",
+        "Bukhansan summit"
+      ],
+      "issues": []
+    },
+    {
+      "code": "47013P23",
+      "ok": true,
+      "path": "/destinations/south-korea/seoul/tours/seoul-night-tour-gwangjang-market-royal-palace-and-naks-47013P23",
+      "title": "Seoul Night Tour (Gwangjang Market, Royal Palace and Naksan Park)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7e/df/75.jpg",
+      "card": "In Seoul, this five-hour evening covers Changgyeonggung Palace, Gwangjang Market, Naksan Park on the Hanyang city wall, and Cheonggyecheon S",
+      "itineraryTitles": [
+        "Changgyeonggung Palace",
+        "Gwangjang Market",
+        "Naksan Park",
+        "Cheonggyecheon Stream"
+      ],
+      "issues": []
+    }
+  ]
+}

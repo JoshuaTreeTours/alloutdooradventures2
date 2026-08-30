@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "48881P11",
+    "productUrl": "https://www.viator.com/tours/Seoul/Day-Trip-to-Nami-Island-with-Rail-bike-and-The-Garden-of-Morning-Calm/d973-48881P11",
+    "title": "Day Trip to Nami Island with Rail bike and The Garden of Morning Calm",
+    "description": {
+      "text": "In Seoul, this eleven-to-twelve-hour coach day leaves a central meeting point for the Garden of Morning Calm, Nami Island, and Gangchon Railbike Park. Round-trip transport, English- or Chinese-speaking staff, the three entry tickets, and traveler's insurance are listed. The railbike default is a shared four-seater. The format suits visitors who want a guided Gapyeong day without assembling island and garden tickets independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on the Garden of Morning Calm, Nami Island, and Gangchon Railbike that define this outing rather than a Seoraksan start."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "11 to 12 hours (approx.)",
+    "priceFrom": "From $73.33",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 277
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/20/46.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eleven-to-twelve-hour day from Seoul",
+      "Nami Island ferry crossing",
+      "Gangchon Railbike ride",
+      "Garden of Morning Calm",
+      "Round-trip coach and entry tickets listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed central Seoul meeting point for the coach departure."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this eleven-to-twelve-hour coach day leaves a central meeting point for the Garden of Morning Calm, Nami Island, and Gangchon Railbike Park.",
+    "itineraryItems": [
+      {
+        "title": "Garden of Morning Calm",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nami Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gangchon Railbike Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip transportation",
+      "English/Chinese speaking staff",
+      "Nami Island ticket",
+      "Gangchon Railbike ticket",
+      "Garden of Morning Calm ticket",
+      "Traveler's insurance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Trip to Nami Island with Rail bike and The Garden of Morning Calm?",
+        "answer": "The planned duration is 11 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at the confirmed central Seoul meeting point for the coach departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 73.33
+      },
+      "currency": "USD"
+    }
+  }
+}

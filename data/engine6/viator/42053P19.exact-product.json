@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "42053P19",
+    "productUrl": "https://www.viator.com/tours/Seoul/Full-day-Customizable-Private-Seoul-Highlight-Tour-with-Hanbok-Experience/d973-42053P19",
+    "title": "Full-day Customizable Private Seoul Highlight Tour",
+    "description": {
+      "text": "In Seoul, this private eight-to-nine-hour circuit pairs an English-speaking driver-guide with an air-conditioned vehicle and hotel pickup. The published suggestion covers Gyeongbokgung Palace, Insadong, and Bukchon Hanok Village, with a hanbok rental listed as an add-on for palace photographs and lunch on the suggested plan. Entrance fees follow the booked option. The format suits visitors who want a single guided city sweep without assembling palace tickets and neighborhood transfers independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Gyeongbokgung, Insadong, and Bukchon that define this outing rather than a DMZ crossing."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $230.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 196
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/2d/69.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-to-nine-hour Seoul circuit",
+      "Gyeongbokgung Palace, Insadong, and Bukchon Hanok Village",
+      "Optional hanbok rental for palace photographs",
+      "Hotel pickup and air-conditioned vehicle",
+      "Suggested-plan entrance fees and lunch listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Seoul hotel and confirms the day's palace, market, and village stops."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this private eight-to-nine-hour circuit pairs an English-speaking driver-guide with an air-conditioned vehicle and hotel pickup.",
+    "itineraryItems": [
+      {
+        "title": "Gyeongbokgung Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Insadong",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bukchon Hanok Village",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and dropoff",
+      "English speaking Driver/tour guide",
+      "Air-conditioned vehicle",
+      "Entrance fee on suggestion plan",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-day Customizable Private Seoul Highlight Tour?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "The host picks up at the booked Seoul hotel and confirms the day's palace, market, and village stops."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 230
+      },
+      "currency": "USD"
+    }
+  }
+}

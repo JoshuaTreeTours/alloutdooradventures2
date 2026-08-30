@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "48881P82",
+    "productUrl": "https://www.viator.com/tours/Seoul/Explore-Koreas-Traditional-Korean-Folk-Village-and-GwangMyeong-Cave/d973-48881P82",
+    "title": "Korean Folk Village and Suwon Hwaseong Fortress Day Tour(EG Tour)",
+    "description": {
+      "text": "In Seoul, this seven-to-eight-hour coach day travels to the Korean Folk Village in Yongin and UNESCO-listed Suwon Hwaseong Fortress, with Suwon Nammun Market on the published route. Round-trip transport, English-speaking staff, and both admissions are listed. The village page notes Joseon-era houses and seasonal farmer-music or horseback performances. The format suits visitors who want a guided fortress-and-folk-village day without self-driving to Suwon. Meeting points are confirmed at booking in Seoul, and the itinerary stays on the Korean Folk Village, Hwaseong Fortress, and Nammun Market that define this outing rather than a Nami Island ferry."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $53.33",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 56
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/bc/a5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Seven-to-eight-hour day from Seoul",
+      "Korean Folk Village in Yongin",
+      "Suwon Hwaseong Fortress walls and gates",
+      "Suwon Nammun Market stop",
+      "Coach transport and admissions listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Seoul meeting point for the coach to Yongin and Suwon."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this seven-to-eight-hour coach day travels to the Korean Folk Village in Yongin and UNESCO-listed Suwon Hwaseong Fortress, with Suwon Nammun Market on the published route.",
+    "itineraryItems": [
+      {
+        "title": "Korean Folk Village",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Suwon Hwaseong Fortress",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Suwon Nammun Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip transport from Seoul",
+      "English-speaking tour staff",
+      "Korean Folk Village admission",
+      "Suwon Hwaseong Fortress admission"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Korean Folk Village and Suwon Hwaseong Fortress Day Tour(EG Tour)?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at the confirmed Seoul meeting point for the coach to Yongin and Suwon."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 53.33
+      },
+      "currency": "USD"
+    }
+  }
+}

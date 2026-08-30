@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "255235P5",
+    "productUrl": "https://www.viator.com/tours/Seoul/Bukhansan-National-Park-The-Summit-Course/d973-255235P5",
+    "title": "Bukhansan National Park: The Summit Course",
+    "description": {
+      "text": "In Seoul, this guided Bukhansan summit course meets outside Exit 2 of Bukhansan Ui Station by 8:00 a.m. and hikes the published granite-peak route. The public page lists an optional post-hike tofu lunch paid on site and hiking-pole rental if requested in advance. The group is capped at twenty. The format suits visitors who want a guided summit without assembling trailheads independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Bukhansan Ui Station and the Bukhansan summit that define this outing rather than a Han River bike path."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $61.75",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 53
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/79/5c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Bukhansan summit course from Seoul",
+      "Meet at Bukhansan Ui Station",
+      "Granite-peak trail",
+      "Optional tofu lunch paid on site",
+      "Maximum 20 travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet outside Exit 2 of Bukhansan Ui Station in Seoul by 8:00 a.m."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this guided Bukhansan summit course meets outside Exit 2 of Bukhansan Ui Station by 8:00 a.",
+    "itineraryItems": [
+      {
+        "title": "Bukhansan Ui Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bukhansan summit",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided summit hike"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bukhansan National Park: The Summit Course?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet outside Exit 2 of Bukhansan Ui Station in Seoul by 8:00 a.m."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 61.75
+      },
+      "currency": "USD"
+    }
+  }
+}
