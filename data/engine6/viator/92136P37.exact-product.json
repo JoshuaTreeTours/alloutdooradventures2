@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "92136P37",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P37",
+    "title": "Kyoto 4hr Private Tour with Government-Licensed Guide",
+    "description": {
+      "text": "In Kyoto, this private four-hour circuit pairs a government-licensed guide with a published half-day stop list rather than a full coach loop. The group chooses two or three sights such as Nishiki Market, Kiyomizu-dera Temple, Gion, Nijo Castle, or Fushimi Inari-taisha Shrine, then moves between them on foot and public transport. Hotel-front pickup on foot is listed; a private car is an optional upgrade booked in advance. Guide entry fees apply only to the listed What to Expect sights. The format suits visitors who want a compact licensed window without assembling a full-day temple circuit. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Nishiki Market, Kiyomizu-dera, and Gion that define this half-day rather than an Arashiyama transfer."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $107.24",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 515
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/eb/24/18.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private four-hour circuit with a government-licensed Kyoto guide",
+      "Choose two or three published stops such as Nishiki Market, Kiyomizu-dera, or Gion",
+      "Half-day pacing instead of a full coach loop",
+      "Meet on foot in the designated Kyoto area",
+      "Transportation and most entrance fees listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private four-hour circuit pairs a government-licensed guide with a published half-day stop list rather than a full coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Nishiki Market Shopping District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Customizable Tour of your choice of 2-3 sites from 'What to expect' list",
+      "Meet up with guide on foot within designated area of Kyoto"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kyoto 4hr Private Tour with Government-Licensed Guide?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 107.24
+      },
+      "currency": "USD"
+    }
+  }
+}

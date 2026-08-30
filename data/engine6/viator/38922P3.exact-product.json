@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "38922P3",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Bamboo-Forest-Electric-Bike-Tour/d332-38922P3",
+    "title": "Arashiyama Bamboo Forest E-Biking Tour",
+    "description": {
+      "text": "In Kyoto, this small-group e-bike outing leaves NORU Kyoto Bike Tours in Kamigyo for Arashiyama Bamboo Forest and nearby temple lanes such as Adashino Nenbutsu-ji. An electric-assist bike, helmet, temple fees, water, and snacks are included for the published 4-hour-15-minute loop of about 25 kilometers. The group is capped at eight and returns to the Cycle Village meeting point. The route stays on bamboo groves and quieter temple approaches rather than a five-highlight city cram. The format suits visitors who want a guided Arashiyama ride without renting independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Arashiyama Bamboo Forest and Adashino Nenbutsu-ji that shape this outing rather than a Fushimi Inari hike."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "4 hours 15 minutes (approx.)",
+    "priceFrom": "From $121.95",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 158
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/ee/89/de.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided e-bike loop around Arashiyama bamboo and nearby temples",
+      "About 25 kilometers with electric assist",
+      "Bike, helmet, temple fees, and snacks included",
+      "Group capped at eight",
+      "Meet at NORU Kyoto Bike Tours in Kamigyo"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at NORU Kyoto Bike Tours, 429-22 Takigahanacho, Kamigyo Ward. Look for the green TripAdvisor flag outside the Cycle Village bike shop."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this small-group e-bike outing leaves NORU Kyoto Bike Tours in Kamigyo for Arashiyama Bamboo Forest and nearby temple lanes such as Adashino Nenbutsu-ji.",
+    "itineraryItems": [
+      {
+        "title": "Arashiyama Bamboo Forest",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Adashino Nenbutsu-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Use of bicycle",
+      "Snacks",
+      "Helmet",
+      "Temple Fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arashiyama Bamboo Forest E-Biking Tour?",
+        "answer": "The planned duration is 4 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet at NORU Kyoto Bike Tours, 429-22 Takigahanacho, Kamigyo Ward. Look for the green TripAdvisor flag outside the Cycle Village bike shop."
+      }
+    ],
+    "categories": [
+      {
+        "label": "E-Bike Tours"
+      },
+      {
+        "label": "Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 121.95
+      },
+      "currency": "USD"
+    }
+  }
+}

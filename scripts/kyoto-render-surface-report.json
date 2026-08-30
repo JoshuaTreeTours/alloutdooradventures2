@@ -1,0 +1,238 @@
+{
+  "selectedCount": 14,
+  "listingCount": 14,
+  "listingMatchesSelection": true,
+  "okCount": 14,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "92136P55",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/kyoto-6hr-private-tour-with-government-licensed-guide-92136P55",
+      "title": "Kyoto 6hr Private Tour with Government-Licensed Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/1c/e7.jpg",
+      "card": "In Kyoto, this private six-hour circuit pairs a government-licensed guide with a published list of neighborhood stops rather than a fixed co",
+      "itineraryTitles": [
+        "Nijo Castle",
+        "Higashiyama",
+        "Gion",
+        "Kiyomizu-dera Temple",
+        "Fushimi Inari-taisha Shrine"
+      ],
+      "issues": []
+    },
+    {
+      "code": "92136P37",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/kyoto-4hr-private-tour-with-government-licensed-guide-92136P37",
+      "title": "Kyoto 4hr Private Tour with Government-Licensed Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/eb/24/18.jpg",
+      "card": "In Kyoto, this private four-hour circuit pairs a government-licensed guide with a published half-day stop list rather than a full coach loop",
+      "itineraryTitles": [
+        "Nishiki Market Shopping District",
+        "Kiyomizu-dera Temple",
+        "Gion",
+        "Nijo Castle",
+        "Fushimi Inari-taisha Shrine"
+      ],
+      "issues": []
+    },
+    {
+      "code": "92136P49",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/private-kyoto-tour-with-licensed-guide-vehicle-max-15-p-92136P49",
+      "title": "Private Kyoto Tour with Licensed Guide & Vehicle (Max 15 persons)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/af/7e.jpg",
+      "card": "In Kyoto, this private six-hour charter pairs a licensed guide with a vehicle and door-to-door hotel transfers instead of public-transport w",
+      "itineraryTitles": [
+        "Fushimi Inari-taisha Shrine",
+        "Nijo Castle",
+        "Kiyomizu-dera Temple",
+        "Nishiki Market Shopping District",
+        "Gion",
+        "Kyoto Imperial Palace",
+        "Kinkakuji Temple"
+      ],
+      "issues": []
+    },
+    {
+      "code": "21490P11",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/kyoto-custom-highlight-private-walking-tour-with-licens-21490P11",
+      "title": "Kyoto Custom Highlight: Private Walking Tour with Licensed Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/29/d1/13.jpg",
+      "card": "In Kyoto, this private walking outing lets the group pick a four-hour or eight-hour window and two to four published stops instead of a scri",
+      "itineraryTitles": [
+        "Kinkakuji Temple",
+        "Fushimi Inari-taisha Shrine",
+        "Ryoanji Temple",
+        "Bamboo Forest Street",
+        "Gion",
+        "Kiyomizu-dera Temple",
+        "Sannenzaka Ninenzaka",
+        "Nishiki Market Shopping District",
+        "Nijo Castle",
+        "Pontocho District",
+        "Tenryu-ji Temple",
+        "Kyoto Imperial Palace",
+        "Philosopher's Walk",
+        "Nanzen-ji Temple",
+        "Ginkakuji Temple"
+      ],
+      "issues": []
+    },
+    {
+      "code": "285124P1",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/10-must-see-spots-in-kyoto-one-day-private-tour-up-to-7-285124P1",
+      "title": "10 Must-see Spots in Kyoto One Day Private Tour (up to 7 people)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/37/0f/ca.jpg",
+      "card": "In Kyoto, this private eight-hour circuit starts at Kitaoji Station and covers ten published sights with a guide handling district transfers",
+      "itineraryTitles": [
+        "Kinkakuji Temple",
+        "Bamboo Forest Street",
+        "Tenryu-ji Temple",
+        "Togetsukyo Bridge",
+        "Arashiyama Kimono Forest",
+        "Fushimi Inari-taisha Shrine",
+        "Kiyomizu-dera Temple",
+        "Sannenzaka Ninenzaka",
+        "Yasakanoto",
+        "Gion"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5924KYOCUSTOM_FULL",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/private-custom-tour-kyoto-in-one-day-5924KYOCUSTOM_FULL",
+      "title": "Private Custom Tour: Kyoto in One Day",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c0/8e.jpg",
+      "card": "In Kyoto, this private custom day builds a half-day or full-day route from a published UNESCO stop list rather than a fixed coach loop.",
+      "itineraryTitles": [
+        "Kinkakuji Temple",
+        "Nijo Castle",
+        "Fushimi Inari-taisha Shrine",
+        "Tenryu-ji Temple",
+        "Kiyomizu-dera"
+      ],
+      "issues": []
+    },
+    {
+      "code": "407697P2",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/private-tour-kyoto-nara-w-hotel-pick-up-drop-off-from-k-407697P2",
+      "title": "Private Tour Kyoto-Nara w/Hotel Pick Up & Drop off from Kyoto",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/55/17/e8.jpg",
+      "card": "In Kyoto, this private six-to-ten-hour charter leaves a hotel lobby for a combined Kyoto and Nara day with an English-speaking driver-host a",
+      "itineraryTitles": [
+        "Kinkakuji Temple",
+        "Todai-ji Temple",
+        "Nara Park",
+        "Kasuga-Taisha Shrine"
+      ],
+      "issues": []
+    },
+    {
+      "code": "374249P4",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/osaka-nara-in-1-day-by-private-van-with-local-japanese-374249P4",
+      "title": "Osaka & Nara in 1-Day by Private Van with Local Japanese Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6e/59/21.jpg",
+      "card": "In Kyoto, this private van day can hold Osaka, Nara, or both, with flexible pickup listed from Kyoto as well as Osaka or Nara hotels.",
+      "itineraryTitles": [
+        "Todai-ji Temple",
+        "Nara Park",
+        "Kasuga-Taisha Shrine",
+        "Osaka Castle"
+      ],
+      "issues": []
+    },
+    {
+      "code": "103013P3",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/5-top-highlights-of-kyoto-full-day-bike-tour-e-bike-opt-103013P3",
+      "title": "5 Top Highlights of Kyoto Full Day Bike Tour (E-bike option)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1a/54/7a.jpg",
+      "card": "In Kyoto, this small-group bike or e-bike day leaves JR Saga-Arashiyama Station for five published highlights: Kinkaku-ji, Kiyomizu-dera Tem",
+      "itineraryTitles": [
+        "Kinkakuji Temple",
+        "Kiyomizu-dera Temple",
+        "Fushimi Inari-taisha Shrine",
+        "Arashiyama Bamboo Forest",
+        "Gion"
+      ],
+      "issues": []
+    },
+    {
+      "code": "38922P3",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/arashiyama-bamboo-forest-e-biking-tour-38922P3",
+      "title": "Arashiyama Bamboo Forest E-Biking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/ee/89/de.jpg",
+      "card": "In Kyoto, this small-group e-bike outing leaves NORU Kyoto Bike Tours in Kamigyo for Arashiyama Bamboo Forest and nearby temple lanes such a",
+      "itineraryTitles": [
+        "Arashiyama Bamboo Forest",
+        "Adashino Nenbutsu-ji Temple"
+      ],
+      "issues": []
+    },
+    {
+      "code": "63670P28",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/fushimi-inari-hidden-hiking-tour-63670P28",
+      "title": "Fushimi Inari Hidden Hiking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/af/fa/d6.jpg",
+      "card": "In Kyoto, this guided three-hour hike leaves the paved Fushimi Inari-taisha corridor for forest trails, a bamboo stand, a small shrine off t",
+      "itineraryTitles": [
+        "Fushimi Inari-taisha Shrine",
+        "Bamboo forest trail",
+        "Fushimi-Momoyama Castle viewpoint"
+      ],
+      "issues": []
+    },
+    {
+      "code": "92281P2",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/your-private-vacation-photography-session-in-kyoto-92281P2",
+      "title": "Your Private Vacation Photography Session In Kyoto",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/18/81.jpg",
+      "card": "In Kyoto, this private one-hour photography session pairs a professional photographer with a chosen neighborhood window such as Yasaka Shrin",
+      "itineraryTitles": [
+        "Yasaka Shrine",
+        "Gion",
+        "Higashiyama"
+      ],
+      "issues": []
+    },
+    {
+      "code": "293458P17",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/kimono-tea-ceremony-experience-at-kyoto-oritsuruya-nish-293458P17",
+      "title": "Kimono Tea Ceremony Experience at Kyoto Oritsuruya, Nishiki",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/de/49/4e.jpg",
+      "card": "In Kyoto, this two-hour cultural session at Nishiki Orizuruya pairs kimono dressing and simple hairstyling with a matcha ceremony and season",
+      "itineraryTitles": [
+        "Nishiki Orizuruya",
+        "Nishiki Market Shopping District"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5522662P20",
+      "ok": true,
+      "path": "/destinations/japan/kyoto/tours/kyoto-nijo-kinkaku-ji-arashiyama-kiyomizu-fushimi-inari-5522662P20",
+      "title": "Kyoto: Nijo, Kinkaku-ji, Arashiyama, Kiyomizu & Fushimi Inari",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/61/ac.jpg",
+      "card": "In Kyoto, this guided coach day leaves Hotel Keihan Kyoto Grande for a published ten-hour circuit of Arashiyama Bamboo Forest, Kinkaku-ji, N",
+      "itineraryTitles": [
+        "Arashiyama Bamboo Forest",
+        "Kinkakuji Temple",
+        "Nijo Castle",
+        "Kiyomizu-dera Temple",
+        "Fushimi Inari-taisha Shrine"
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -103,6 +103,26 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
     expect(merged.badges.reviewCount).toBe(836);
   });
 
+  it("keeps bundled USD From$ when live hydration returns yen-scale amounts", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "92136P55",
+        title: "Kyoto 6hr Private Tour with Government-Licensed Guide",
+        destination: {
+          country: "Japan",
+          countryCode: "JP",
+          countrySlug: "japan",
+          state: "Japan",
+          stateSlug: "japan",
+          city: "Kyoto",
+          citySlug: "kyoto",
+        },
+        badges: {
+          rating: 4.9,
+          reviewCount: 1106,
+          priceFrom: "From $156.60",
+        },
+        startingPrice: 156.6,
   it("does not overwrite a USD commercial listing price with a live JPY amount", () => {
     const merged = mergeEngine6LiveFieldsIntoTour(
       makeEngine6Tour({
@@ -144,6 +164,14 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
       {
         priceAmount: 16500,
         priceFormatted: "From $16,500.00",
+        aggregateRating: 4.9,
+        reviewCount: 1636,
+      }
+    );
+
+    expect(merged.startingPrice).toBe(156.6);
+    expect(merged.badges.priceFrom).toBe("From $156.60");
+    expect(merged.badges.reviewCount).toBe(1636);
       }
     );
 

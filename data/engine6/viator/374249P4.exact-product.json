@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "374249P4",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Best-Day-trip-from-Kyoto-Ancient-Temples-and-Dreamy-Lantern-Shrines-Private-Car/d332-374249P4",
+    "title": "Osaka & Nara in 1-Day by Private Van with Local Japanese Guide",
+    "description": {
+      "text": "In Kyoto, this private van day can hold Osaka, Nara, or both, with flexible pickup listed from Kyoto as well as Osaka or Nara hotels. An English-speaking guide and an air-conditioned Nissan van keep one group on published stops such as Todai-ji Temple, Nara Park, Kasuga-Taisha Shrine, and Osaka Castle. Fuel and highway fees are included; Todai-ji entry and meals stay separate. The published window is about six hours, with pickup and drop-off allowed at different cities. The format suits visitors basing in Kyoto who want a guided Nara or Osaka day without renting a highway car. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Todai-ji, Nara Park, and Osaka Castle that shape this outing rather than a Fushimi Inari walking loop."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $337.59",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 64
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6e/59/21.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private van day covering Osaka, Nara, or both",
+      "Pickup listed from Kyoto, Osaka, or Nara",
+      "English-speaking guide and air-conditioned vehicle",
+      "Published Nara stops such as Todai-ji",
+      "Entry fees listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private van pickup is listed from Kyoto, Osaka, or Nara hotels. Confirm the meeting point when booking."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private van day can hold Osaka, Nara, or both, with flexible pickup listed from Kyoto as well as Osaka or Nara hotels.",
+    "itineraryItems": [
+      {
+        "title": "Todai-ji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nara Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kasuga-Taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Full English Guide",
+      "Air-Conditioned Nissan Van (2-5 guests) / Mini Convertible (1 guest)",
+      "Fuel & Highway Fees",
+      "Flexible Pickup and Dropping-off at anywhere in Kyoto, Osaka or Nara"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka & Nara in 1-Day by Private Van with Local Japanese Guide?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Private van pickup is listed from Kyoto, Osaka, or Nara hotels. Confirm the meeting point when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 337.59
+      },
+      "currency": "USD"
+    }
+  }
+}

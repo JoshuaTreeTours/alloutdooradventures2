@@ -37,6 +37,7 @@ import { getCuscoTargetedNarrativeDescription } from "./cuscoApprovedNarrativeDe
 import { getLimaTargetedNarrativeDescription } from "./limaApprovedNarrativeDescriptions";
 import { getRioDeJaneiroTargetedNarrativeDescription } from "./rioDeJaneiroApprovedNarrativeDescriptions";
 import { getTokyoTargetedNarrativeDescription } from "./tokyoApprovedNarrativeDescriptions";
+import { getKyotoTargetedNarrativeDescription } from "./kyotoApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -159,6 +160,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getLimaTargetedNarrativeDescription(productCode) ??
   getRioDeJaneiroTargetedNarrativeDescription(productCode) ??
   getTokyoTargetedNarrativeDescription(productCode) ??
+  getKyotoTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

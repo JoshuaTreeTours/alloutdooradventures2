@@ -1,6 +1,7 @@
 import type { Tour } from "../data/tours.types";
 import type { Engine6Tour } from "./types";
 import { getEngine6LiveRatingSourceOfTruth } from "./ratingSourceOfTruth";
+import { shouldAcceptLiveAmountAsUsd } from "./usdPriceGuard";
 import {
   looksLikeCurrencyMismatch,
   shouldApplyLivePriceAsUsd,
@@ -61,6 +62,18 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
+  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
+    priceAmount,
+    tour.priceAmount
+  );
+  const resolvedPriceAmount = acceptLivePrice ? priceAmount : tour.priceAmount;
+  const resolvedPriceFormatted = acceptLivePrice
+    ? resolveLivePriceFormatted(
+        priceAmount,
+        priceFormatted,
+        tour.priceFormatted
+      )
+    : tour.priceFormatted;
   const applyLivePrice =
     shouldApplyLivePriceAsUsd(liveFields) &&
     !looksLikeCurrencyMismatch(tour.priceAmount, priceAmount);
@@ -115,6 +128,16 @@ export const mergeEngine6LiveFieldsIntoTour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
+  const parsedFromFormatted = parsePriceFromFormatted(priceFormatted);
+  const candidateLivePrice = priceAmount ?? parsedFromFormatted;
+  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
+    candidateLivePrice,
+    tour.startingPrice ?? null
+  );
+  const resolvedStartingPrice = acceptLivePrice
+    ? (candidateLivePrice ?? tour.startingPrice ?? undefined)
+    : tour.startingPrice;
+  const resolvedPriceBadge = acceptLivePrice
   const applyLivePrice =
     shouldApplyLivePriceAsUsd(liveFields) &&
     !looksLikeCurrencyMismatch(tour.startingPrice, priceAmount);

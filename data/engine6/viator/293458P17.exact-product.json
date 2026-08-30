@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "293458P17",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kimono-Tea-Ceremony-Experience-at-Kyoto-Oritsuruya-NISHIKI/d332-293458P17",
+    "title": "Kimono Tea Ceremony Experience at Kyoto Oritsuruya, Nishiki",
+    "description": {
+      "text": "In Kyoto, this two-hour cultural session at Nishiki Orizuruya pairs kimono dressing and simple hairstyling with a matcha ceremony and seasonal wagashi. A licensed guide covers tea-room etiquette and matcha preparation, with an optional calligraphy window in the same tea house near Nishiki Market. The group is capped at ten. Hotel pickup is not listed; the meeting point is a short walk from Hankyu Karasuma or subway Shijo. The format suits visitors who want a guided tea-and-kimono window without booking a full temple circuit. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Nishiki Orizuruya and Nishiki Market that define this session rather than a Fushimi Inari hike."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $55.05",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 40
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/de/49/4e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-hour kimono dressing and matcha ceremony in Nishiki",
+      "Wagashi, utensils, and simple hairstyling included",
+      "Small group capped at ten",
+      "Optional calligraphy window",
+      "Meet at Nishiki Orizuruya near Nishiki Market"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Nishiki Orizuruya, 452 Jumonjicho, Nakagyo Ward, a short walk from Hankyu Karasuma Station exit 13 or Kyoto Municipal Subway Shijo Station."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this two-hour cultural session at Nishiki Orizuruya pairs kimono dressing and simple hairstyling with a matcha ceremony and seasonal wagashi.",
+    "itineraryItems": [
+      {
+        "title": "Nishiki Orizuruya",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nishiki Market Shopping District",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Wagashi and matcha",
+      "Kimono costume",
+      "Utensils",
+      "Hairstyling (simple style)",
+      "Licensed Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kimono Tea Ceremony Experience at Kyoto Oritsuruya, Nishiki?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet at Nishiki Orizuruya, 452 Jumonjicho, Nakagyo Ward, a short walk from Hankyu Karasuma Station exit 13 or Kyoto Municipal Subway Shijo Station."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Classes & Workshops"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55.05
+      },
+      "currency": "USD"
+    }
+  }
+}

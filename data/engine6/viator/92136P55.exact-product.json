@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "92136P55",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P55",
+    "title": "Kyoto 6hr Private Tour with Government-Licensed Guide",
+    "description": {
+      "text": "In Kyoto, this private six-hour circuit pairs a government-licensed guide with a published list of neighborhood stops rather than a fixed coach loop. The group chooses three or four sights such as Nijo Castle, Higashiyama, Gion, Kiyomizu-dera Temple, or Fushimi Inari-taisha Shrine, then moves between them on foot and public transport. Guide entry fees apply only to the listed What to Expect sights; meals and most tickets stay separate. The meeting is on foot inside the designated Kyoto area, not in Osaka. The format suits visitors who want licensed commentary without assembling bus and train transfers independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Nijo Castle, Higashiyama, Gion, and Kiyomizu-dera that define this private city window rather than a Nara add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $156.60",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1106
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/1c/e7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour circuit with a government-licensed Kyoto guide",
+      "Choose three or four published stops such as Nijo Castle, Higashiyama, or Gion",
+      "Neighborhood pacing instead of a fixed coach loop",
+      "Meet on foot in the designated Kyoto area",
+      "Transportation and most entrance fees listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private six-hour circuit pairs a government-licensed guide with a published list of neighborhood stops rather than a fixed coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Higashiyama",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Customizable Tour of your choice of 3-4 sites from 'What to expect' list",
+      "Meet up with guide on foot within designated area of Kyoto"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kyoto 6hr Private Tour with Government-Licensed Guide?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 156.6
+      },
+      "currency": "USD"
+    }
+  }
+}

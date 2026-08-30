@@ -1496,6 +1496,56 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_KYOTO_92136P55_PRODUCT_CODE = "92136P55";
+export const ENGINE6_KYOTO_92136P55_ROUTE =
+  "/destinations/japan/kyoto/tours/kyoto-6hr-private-tour-with-government-licensed-guide-92136P55";
+export const ENGINE6_KYOTO_92136P37_PRODUCT_CODE = "92136P37";
+export const ENGINE6_KYOTO_92136P37_ROUTE =
+  "/destinations/japan/kyoto/tours/kyoto-4hr-private-tour-with-government-licensed-guide-92136P37";
+export const ENGINE6_KYOTO_92136P49_PRODUCT_CODE = "92136P49";
+export const ENGINE6_KYOTO_92136P49_ROUTE =
+  "/destinations/japan/kyoto/tours/private-kyoto-tour-with-licensed-guide-vehicle-max-15-p-92136P49";
+export const ENGINE6_KYOTO_21490P11_PRODUCT_CODE = "21490P11";
+export const ENGINE6_KYOTO_21490P11_ROUTE =
+  "/destinations/japan/kyoto/tours/kyoto-custom-highlight-private-walking-tour-with-licens-21490P11";
+export const ENGINE6_KYOTO_285124P1_PRODUCT_CODE = "285124P1";
+export const ENGINE6_KYOTO_285124P1_ROUTE =
+  "/destinations/japan/kyoto/tours/10-must-see-spots-in-kyoto-one-day-private-tour-up-to-7-285124P1";
+export const ENGINE6_KYOTO_5924KYOCUSTOM_FULL_PRODUCT_CODE = "5924KYOCUSTOM_FULL";
+export const ENGINE6_KYOTO_5924KYOCUSTOM_FULL_ROUTE =
+  "/destinations/japan/kyoto/tours/private-custom-tour-kyoto-in-one-day-5924KYOCUSTOM_FULL";
+export const ENGINE6_KYOTO_407697P2_PRODUCT_CODE = "407697P2";
+export const ENGINE6_KYOTO_407697P2_ROUTE =
+  "/destinations/japan/kyoto/tours/private-tour-kyoto-nara-w-hotel-pick-up-drop-off-from-k-407697P2";
+export const ENGINE6_KYOTO_374249P4_PRODUCT_CODE = "374249P4";
+export const ENGINE6_KYOTO_374249P4_ROUTE =
+  "/destinations/japan/kyoto/tours/osaka-nara-in-1-day-by-private-van-with-local-japanese-374249P4";
+export const ENGINE6_KYOTO_103013P3_PRODUCT_CODE = "103013P3";
+export const ENGINE6_KYOTO_103013P3_ROUTE =
+  "/destinations/japan/kyoto/tours/5-top-highlights-of-kyoto-full-day-bike-tour-e-bike-opt-103013P3";
+export const ENGINE6_KYOTO_38922P3_PRODUCT_CODE = "38922P3";
+export const ENGINE6_KYOTO_38922P3_ROUTE =
+  "/destinations/japan/kyoto/tours/arashiyama-bamboo-forest-e-biking-tour-38922P3";
+export const ENGINE6_KYOTO_63670P28_PRODUCT_CODE = "63670P28";
+export const ENGINE6_KYOTO_63670P28_ROUTE =
+  "/destinations/japan/kyoto/tours/fushimi-inari-hidden-hiking-tour-63670P28";
+export const ENGINE6_KYOTO_92281P2_PRODUCT_CODE = "92281P2";
+export const ENGINE6_KYOTO_92281P2_ROUTE =
+  "/destinations/japan/kyoto/tours/your-private-vacation-photography-session-in-kyoto-92281P2";
+export const ENGINE6_KYOTO_293458P17_PRODUCT_CODE = "293458P17";
+export const ENGINE6_KYOTO_293458P17_ROUTE =
+  "/destinations/japan/kyoto/tours/kimono-tea-ceremony-experience-at-kyoto-oritsuruya-nish-293458P17";
+export const ENGINE6_KYOTO_5522662P20_PRODUCT_CODE = "5522662P20";
+export const ENGINE6_KYOTO_5522662P20_ROUTE =
+  "/destinations/japan/kyoto/tours/kyoto-nijo-kinkaku-ji-arashiyama-kiyomizu-fushimi-inari-5522662P20";
+
+export const ENGINE6_KYOTO_TOUR_PATH_PREFIX =
+  "/destinations/japan/kyoto/tours/";
+
+export const isEngine6KyotoTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_KYOTO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_TOKYO_92136P34_PRODUCT_CODE = "92136P34";
 export const ENGINE6_TOKYO_92136P34_ROUTE =
   "/destinations/japan/tokyo/tours/tokyo-6hr-private-tour-with-government-licensed-guide-92136P34";
@@ -5022,6 +5072,62 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_92136P55_ROUTE,
+    ENGINE6_KYOTO_92136P55_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_92136P37_ROUTE,
+    ENGINE6_KYOTO_92136P37_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_92136P49_ROUTE,
+    ENGINE6_KYOTO_92136P49_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_21490P11_ROUTE,
+    ENGINE6_KYOTO_21490P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_285124P1_ROUTE,
+    ENGINE6_KYOTO_285124P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_5924KYOCUSTOM_FULL_ROUTE,
+    ENGINE6_KYOTO_5924KYOCUSTOM_FULL_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_407697P2_ROUTE,
+    ENGINE6_KYOTO_407697P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_374249P4_ROUTE,
+    ENGINE6_KYOTO_374249P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_103013P3_ROUTE,
+    ENGINE6_KYOTO_103013P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_38922P3_ROUTE,
+    ENGINE6_KYOTO_38922P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_63670P28_ROUTE,
+    ENGINE6_KYOTO_63670P28_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_92281P2_ROUTE,
+    ENGINE6_KYOTO_92281P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_293458P17_ROUTE,
+    ENGINE6_KYOTO_293458P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KYOTO_5522662P20_ROUTE,
+    ENGINE6_KYOTO_5522662P20_PRODUCT_CODE,
   ],
   [
     ENGINE6_TOKYO_92136P34_ROUTE,

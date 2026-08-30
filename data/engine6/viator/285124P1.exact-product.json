@@ -1,0 +1,136 @@
+{
+  "product": {
+    "productCode": "285124P1",
+    "productUrl": "https://www.viator.com/tours/Kyoto/The-10-must-see-spots-in-Kyoto-one-day-private-tour/d332-285124P1",
+    "title": "10 Must-see Spots in Kyoto One Day Private Tour (up to 7 people)",
+    "description": {
+      "text": "In Kyoto, this private eight-hour circuit starts at Kitaoji Station and covers ten published sights with a guide handling district transfers for one group of up to seven. The listed route includes Kinkaku-ji, Arashiyama Bamboo Forest Street, Tenryu-ji Temple, Togetsukyo Bridge, Arashiyama Kimono Forest, Fushimi Inari-taisha Shrine, Kiyomizu-dera Temple, Sannenzaka and Ninenzaka, Yasakanoto, and Gion. Navigation stays with the guide so the day can hold both the north-city pavilion and the east-side temple lanes. The format suits visitors with a short stay who want a single guided sweep rather than assembling ten tickets independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Kinkaku-ji, Arashiyama, Fushimi Inari, and Kiyomizu-dera that define this outing rather than an Osaka transfer."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $192.19",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 766
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/37/0f/ca.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fushimi Inari-taisha Shrine",
+      "Kiyomizu-dera Temple",
+      "Sannenzaka Ninenzaka",
+      "Yasakanoto",
+      "Gion"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at Kitaoji Station in northern Kyoto, then continue the published ten-stop circuit."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private eight-hour circuit starts at Kitaoji Station and covers ten published sights with a guide handling district transfers for one group of up to seven.",
+    "itineraryItems": [
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bamboo Forest Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tenryu-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Togetsukyo Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arashiyama Kimono Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sannenzaka Ninenzaka",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yasakanoto",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Private transportation for one group"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 10 Must-see Spots in Kyoto One Day Private Tour (up to 7 people)?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the guide at Kitaoji Station in northern Kyoto, then continue the published ten-stop circuit."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 192.19
+      },
+      "currency": "USD"
+    }
+  }
+}

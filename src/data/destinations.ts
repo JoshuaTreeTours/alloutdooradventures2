@@ -6007,16 +6007,16 @@ const japanState: StateDestination = {
   slug: "japan",
   name: "Japan",
   description:
-    "Tokyo neighborhoods, shrine and temple days, Mount Fuji and Hakone scenic circuits, and guided touring from the capital.",
+    "Tokyo neighborhoods, shrine and temple days, Mount Fuji and Hakone scenic circuits, and guided touring from the capital, plus Kyoto temple, shrine, bamboo, and Nara day touring.",
   featuredDescription:
-    "Explore Tokyo tours with private city walking, coast and shrine bike rides, photography walks, tea tastings, Kamakura and Nikko days, and Mount Fuji or Hakone outings.",
+    "Explore Tokyo tours with private city walking, coast and shrine bike rides, photography walks, tea tastings, Kamakura and Nikko days, and Mount Fuji or Hakone outings, plus Kyoto private temple circuits, Arashiyama bike rides, Fushimi Inari hikes, and tea or photography sessions.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/2a/70.jpg",
   region: "Asia",
   intro:
-    "Japan pairs walkable Tokyo districts and shrine or temple days with Mount Fuji, Hakone, Kamakura, and Nikko outings from the capital.",
+    "Japan pairs walkable Tokyo districts and shrine or temple days with Mount Fuji, Hakone, Kamakura, and Nikko outings from the capital. In the former imperial city, Kyoto adds temple, shrine, bamboo, and Nara day touring.",
   longDescription:
-    "Tokyo anchors Japan tour inventory with licensed private city circuits, neighborhood walking, Meiji Jingu and Asakusa shrine stops, Imperial Palace and Shinjuku Gyoen windows, Ginza photography walks, and coast or park bike rides. Day trips from the capital add Mount Fuji fifth-station and lake viewpoints, Hakone ropeway and Lake Ashi cruises, Kamakura Great Buddha and Enoshima coastal stops, and Nikko Toshogu shrine circuits.",
+    "Tokyo anchors Japan tour inventory with licensed private city circuits, neighborhood walking, Meiji Jingu and Asakusa shrine stops, Imperial Palace and Shinjuku Gyoen windows, Ginza photography walks, and coast or park bike rides. Day trips from the capital add Mount Fuji fifth-station and lake viewpoints, Hakone ropeway and Lake Ashi cruises, Kamakura Great Buddha and Enoshima coastal stops, and Nikko Toshogu shrine circuits. Kyoto adds licensed private temple circuits, Kinkaku-ji and Kiyomizu-dera days, Fushimi Inari hikes, Arashiyama bike rides, Nishiki tea sessions, and Nara outings from the former capital.",
   topRegions: [
     {
       title: "Shrines, gardens, and historic neighborhoods",
@@ -6032,6 +6032,11 @@ const japanState: StateDestination = {
       title: "Kamakura and Nikko",
       description:
         "Kotoku-in Great Buddha, Tsurugaoka Hachimangu, Enoshima, Toshogu Shrine, and Kegon Falls on full-day routes from Tokyo.",
+    },
+    {
+      title: "Kyoto temples and Nara",
+      description:
+        "Kinkaku-ji, Kiyomizu-dera, Fushimi Inari, Arashiyama bamboo, Gion, and Nara park days reachable from Kyoto.",
     },
   ],
   cities: [
@@ -6097,6 +6102,71 @@ const japanState: StateDestination = {
           question: "What are the signature Tokyo tours?",
           answer:
             "Licensed private city circuits, neighborhood walking, Meiji Jingu and Imperial Palace bike rides, Ginza photography walks, tea tastings, and full-day Mount Fuji, Hakone, Kamakura, or Nikko itineraries are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Kyoto",
+      slug: "kyoto",
+      stateSlug: "japan",
+      region: "Kyoto",
+      lat: 35.0116,
+      lng: 135.7681,
+      shortDescription:
+        "Temple and shrine circuits, Arashiyama bike rides, and Nara days from Kyoto.",
+      intro:
+        "Kyoto is Japan's former imperial capital with Kinkaku-ji, Kiyomizu-dera, Fushimi Inari-taisha, Arashiyama bamboo, Gion, and guided walking, cycling, hiking, tea, and photography tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/1c/e7.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "hiking"],
+      whereItIs: [
+        "Kyoto sits in the Kansai basin of western Honshu, with Higashiyama, Arashiyama, Fushimi, and the historic center framing most sightseeing.",
+        "Most guided tours depart from Kyoto Station, Kitaoji, Saga-Arashiyama, Nishiki, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Fushimi Inari forest trails and Arashiyama hillside temples sit on half-day hiking or bike routes from central Kyoto.",
+        lakesWater:
+          "Togetsukyo Bridge and riverside Arashiyama paths appear on scenic bike and private-vehicle days.",
+        desertForest:
+          "Arashiyama Bamboo Forest and Fushimi Inari woodland trails offer grove and shrine-forest stops between city neighborhoods.",
+        cycling:
+          "Guided bike and e-bike rides cover Arashiyama bamboo, Kinkaku-ji, Fushimi Inari, Kiyomizu-dera, and Gion on mixed park and street routes.",
+        scenicDrives:
+          "Private vans cover Kinkaku-ji, Fushimi Inari, Kiyomizu-dera, and Nara park roads from Kyoto hotels.",
+        seasonalNotes:
+          "Cherry-blossom and autumn-color months favor temple gardens and bamboo paths; summer heat favors early Fushimi Inari starts.",
+      },
+      thingsToDo: [
+        "Walk Kinkaku-ji, Kiyomizu-dera, and Fushimi Inari with a licensed or local guide.",
+        "Ride a guided bike loop past Arashiyama bamboo, Gion, and the Golden Pavilion.",
+        "Spend a full day at Nara Park or a private Kyoto-Nara circuit.",
+      ],
+      toursCopy: [
+        "Book a private licensed city circuit or neighborhood walk for a compact introduction.",
+        "Pair an Arashiyama bike ride or Fushimi Inari hike with a Nara day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Kinkaku-ji, Fushimi Inari, or a licensed private city circuit.",
+          "Afternoon: Kiyomizu-dera, Gion, or an Arashiyama bamboo ride.",
+          "Evening: Return to Kyoto Station or Gion.",
+        ],
+        dayTwo: [
+          "Morning: Nara Park, Todai-ji, or a Kyoto-Nara private day.",
+          "Afternoon: Continue the published shrine or temple circuit.",
+          "Evening: Return to central Kyoto.",
+        ],
+      },
+      gettingThere: [
+        "Kansai International and Itami airports serve Kyoto with trains, buses, and hotel transfers to Kyoto Station, Gion, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Kyoto tours?",
+          answer:
+            "Licensed private temple circuits, Arashiyama bike rides, Fushimi Inari hidden hikes, Nishiki tea ceremonies, photography sessions, and full-day Nara itineraries are the most popular departures.",
         },
       ],
     },

@@ -113,6 +113,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "japan",
     citySlug: "tokyo",
   },
+  kyoto: {
+    destinationLabel: "Kyoto",
+    destinationCitySlug: "kyoto",
+    stateSlug: "japan",
+    citySlug: "kyoto",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

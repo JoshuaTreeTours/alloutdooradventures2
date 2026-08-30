@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "407697P2",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Nara-Private-tour-w-Hotel-pick-up-and-Drop-off-from-Kyoto/d332-407697P2",
+    "title": "Private Tour Kyoto-Nara w/Hotel Pick Up & Drop off from Kyoto",
+    "description": {
+      "text": "In Kyoto, this private six-to-ten-hour charter leaves a hotel lobby for a combined Kyoto and Nara day with an English-speaking driver-host and an air-conditioned vehicle. The published Nara window can include Todai-ji Temple, Nara Park, and Kasuga-Taisha Shrine, with Kinkaku-ji available on the Kyoto side of the same booking. Parking fees are listed; lunch and some admissions stay separate. Hotel pickup and drop-off are published from Kyoto so the group can stay with the two-city route rather than assembling express-train transfers. The format suits visitors who want a guided Kyoto-to-Nara day without self-driving. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Kinkaku-ji, Todai-ji, and Nara Park that define this outing rather than an Osaka castle add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "6 to 10 hours (approx.)",
+    "priceFrom": "From $361.03",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 69
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/55/17/e8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-to-ten-hour Kyoto and Nara charter",
+      "Hotel pickup and drop-off from Kyoto",
+      "English-speaking driver-host and air-conditioned vehicle",
+      "Published Nara stops such as Todai-ji",
+      "Lunch and some admissions listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet in the hotel lobby in Kyoto. Contact details for pickup are listed on the booking ticket."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private six-to-ten-hour charter leaves a hotel lobby for a combined Kyoto and Nara day with an English-speaking driver-host and an air-conditioned vehicle.",
+    "itineraryItems": [
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Todai-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nara Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kasuga-Taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "English Speaking Driver /Host",
+      "Air-conditioned vehicle",
+      "Parking Fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour Kyoto-Nara w/Hotel Pick Up & Drop off from Kyoto?",
+        "answer": "The planned duration is 6 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet in the hotel lobby in Kyoto. Contact details for pickup are listed on the booking ticket."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 361.03
+      },
+      "currency": "USD"
+    }
+  }
+}

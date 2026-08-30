@@ -11,6 +11,7 @@ import {
   applyLiveReviewsCommercial,
   fetchViatorLiveJson,
 } from "./viatorLiveCommercialFetch.js";
+import { preferUsdCommercialPrice } from "../../src/engine6/usdPriceGuard.js";
 import { shouldApplyLivePriceAsUsd } from "../../src/engine6/priceCurrency.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
@@ -430,6 +431,22 @@ const respondWithBundledFallback = (
         ...merged,
         extracted: {
           ...merged.extracted,
+          ...preferUsdCommercialPrice(
+            {
+              priceAmount:
+                typeof dynamicExtraction.priceAmount === "number"
+                  ? dynamicExtraction.priceAmount
+                  : null,
+              priceFormatted:
+                typeof dynamicExtraction.priceFormatted === "string"
+                  ? dynamicExtraction.priceFormatted
+                  : null,
+            },
+            {
+              priceAmount: merged.extracted.priceAmount,
+              priceFormatted: merged.extracted.priceFormatted,
+            }
+          ),
           priceAmount: applyLivePrice
             ? typeof dynamicExtraction.priceAmount === "number"
               ? dynamicExtraction.priceAmount
@@ -675,6 +692,7 @@ export default async function handler(req: any, res: any) {
     baseUrl: normalizedBaseUrl,
     productCode,
     extracted: extracted.extracted,
+    livePayload: payload,
   });
   const extractedWithReviews = await applyLiveReviewsCommercial({
     apiKey: key,
@@ -682,28 +700,35 @@ export default async function handler(req: any, res: any) {
     productCode,
     extracted: extractedWithAvailabilityPrice,
   });
+  const bundledExtractionForPrice = bundledPayload
+    ? safeExtractEngine6Product(bundledPayload)
+    : null;
+  const usdSafeExtracted = preferUsdCommercialPrice(
+    extractedWithReviews,
+    bundledExtractionForPrice?.extracted ?? null
+  );
   const extractedWithLiveCommercial: ReturnType<typeof extractEngine6Product> =
     {
       ...extracted,
       diagnostics: {
         ...extracted.diagnostics,
-        ...(typeof extractedWithReviews.priceAmount === "number"
+        ...(typeof usdSafeExtracted.priceAmount === "number"
           ? {
               commercialPriceFieldPath:
                 extracted.diagnostics.commercialPriceFieldPath ??
                 "availability.summary.fromPrice",
-              commercialPriceRawValue: extractedWithReviews.priceAmount,
+              commercialPriceRawValue: usdSafeExtracted.priceAmount,
               priceSourceUsed: "live-price" as const,
             }
           : {}),
-        ...(typeof extractedWithReviews.aggregateRating === "number"
+        ...(typeof usdSafeExtracted.aggregateRating === "number"
           ? {
               ratingFieldPath:
                 extracted.diagnostics.ratingFieldPath ??
                 "reviews.product.totalReviewsSummary",
             }
           : {}),
-        ...(typeof extractedWithReviews.reviewCount === "number"
+        ...(typeof usdSafeExtracted.reviewCount === "number"
           ? {
               reviewCountFieldPath:
                 extracted.diagnostics.reviewCountFieldPath ??
@@ -711,7 +736,7 @@ export default async function handler(req: any, res: any) {
             }
           : {}),
       },
-      extracted: extractedWithReviews,
+      extracted: usdSafeExtracted,
     };
 
   const extractedProductCode =

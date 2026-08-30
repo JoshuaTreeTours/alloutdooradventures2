@@ -1,0 +1,136 @@
+{
+  "destinationLabel": "Kyoto",
+  "destinationCitySlug": "kyoto",
+  "viatorDestinationSlug": "Kyoto",
+  "viatorDestinationId": "d332",
+  "catalogUrl": "https://www.viator.com/Kyoto/d332-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 14,
+  "premiumCount": 10,
+  "selectionNote": "Selected 14 guided Kyoto d332 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including additional helicopter, sake-brewery, night-walk, early-morning bike, Mount Takao hiking, and private-driver SKUs, but Viator DataDome blocking plus geo-currency dumps (EUR/ZAR/SEK/SGD/BRL/CHF) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d332 Jeep/off-road or stargazing page with combined USD+rating+hero was captured. Helicopter pages (50365P13 / 50365P11 / 50365P71) had thin reviews or Tokyo-title bleed and CHF-only dumps. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Tokyo (11), Lima (9), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "92136P55",
+    "92136P37",
+    "92136P49",
+    "21490P11",
+    "285124P1",
+    "5924KYOCUSTOM_FULL",
+    "407697P2",
+    "374249P4",
+    "103013P3",
+    "38922P3",
+    "63670P28",
+    "92281P2",
+    "293458P17",
+    "5522662P20"
+  ],
+  "premiumProductCodes": [
+    "92136P55",
+    "92136P37",
+    "92136P49",
+    "21490P11",
+    "285124P1",
+    "5924KYOCUSTOM_FULL",
+    "407697P2",
+    "374249P4",
+    "103013P3",
+    "92281P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "28575P18",
+      "title": "PERFECT KYOTO 1-Day Bus Tour",
+      "reason": "USD $188.81 4.9/9530 verified; rejected because the published inclusions list multilingual audio guidance"
+    },
+    {
+      "productCode": "2142KYO_N100",
+      "title": "Kyoto 1 Day Tour - Golden Pavilion and Kiyomizu Temple from Kyoto",
+      "reason": "USD $163.71 4.2/575 below the quality bar"
+    },
+    {
+      "productCode": "392082P1",
+      "title": "Kyoto Private Customizable Sightseeing Tour by Car-up to 9 people",
+      "reason": "USD $536 4.4/56 below the quality bar"
+    },
+    {
+      "productCode": "92136P349",
+      "title": "Kyoto Early Morning Private Tour with Government-Licensed Guide",
+      "reason": "Near-duplicate of selected 92136P37 half-day licensed walking"
+    },
+    {
+      "productCode": "92136P61",
+      "title": "Nara 8hr Private Tour - Kyoto DEP. with Licensed Guide",
+      "reason": "4.9/108; EUR-only complete dump and a Nara-day near-duplicate of selected 407697P2"
+    },
+    {
+      "productCode": "87343P19",
+      "title": "Kyoto Day Trip using Private Car with English Driver (up to 5)",
+      "reason": "4.8/72; EUR-only complete dump and a private-car near-duplicate of selected 92136P49 / 407697P2"
+    },
+    {
+      "productCode": "420350P4",
+      "title": "Private Kyoto Customizable Day Tour with Guide & Luxury Vehicle",
+      "reason": "4.3/291 below the quality bar; no verified USD From$ on the complete dump"
+    },
+    {
+      "productCode": "63670P15",
+      "title": "Kyoto Sake Brewery & Tasting Walking Tour",
+      "reason": "Preferred sake/wine type; 4.9/515; BRL-only complete dump"
+    },
+    {
+      "productCode": "102848P24",
+      "title": "Private Kyoto Tea Ceremony Experience by Tea Master at Local Home",
+      "reason": "Preferred cultural/tea type; 5.0/49; EUR-only complete dump"
+    },
+    {
+      "productCode": "103013P1",
+      "title": "Arashiyama Bamboo Forest & Hidden Gems Bike Tour (Early Bird)",
+      "reason": "Preferred bike type; 5.0/448; ZAR-only complete dump and near-duplicate of selected 38922P3 / 103013P3"
+    },
+    {
+      "productCode": "92163P220",
+      "title": "Kyoto Gion Night Walk - Small Group Guided Tour",
+      "reason": "4.8/434; SEK-only complete dump"
+    },
+    {
+      "productCode": "470367P2",
+      "title": "Kyoto Fushimi-Inari Night Walking Tour",
+      "reason": "5.0/172; SGD-only complete dump"
+    },
+    {
+      "productCode": "402518P2",
+      "title": "Private Tea Ceremony and Sake Tasting in Kyoto Samurai House",
+      "reason": "Public page resolved to a similar-experiences replacement landing; treated as inactive"
+    },
+    {
+      "productCode": "50365P13",
+      "title": "Kyoto Helicopter Tour 20 min : Major Shrines and Temples",
+      "reason": "Preferred helicopter type; CHF-only dump and too thin (5.0/2)"
+    },
+    {
+      "productCode": "50365P11",
+      "title": "12 mins City lights Helicopter Tour : Kyoto night view",
+      "reason": "Preferred helicopter type; CHF-only dump"
+    },
+    {
+      "productCode": "50365P71",
+      "title": "43 Mins Kyoto-Osaka night view excursion",
+      "reason": "Preferred helicopter type; public URL/title bleed to a Tokyo city-lights product"
+    },
+    {
+      "productCode": "30791P164",
+      "title": "Private Kyoto Tour with a Local, Highlights & Hidden Gems, Personalised",
+      "reason": "Snippet USD $97 4.8/1346; no complete combined USD+rating+hero dump captured after DataDome/empty fetches"
+    },
+    {
+      "productCode": "74401P5",
+      "title": "Kyoto Mount Takao Hiking Tour",
+      "reason": "Preferred guided hiking type; empty/blocked complete dump"
+    },
+    {
+      "productCode": "374485P1",
+      "title": "Kyoto Photography Tour",
+      "reason": "Preferred photography type; empty/blocked complete dump and near-duplicate of selected 92281P2"
+    }
+  ]
+}
