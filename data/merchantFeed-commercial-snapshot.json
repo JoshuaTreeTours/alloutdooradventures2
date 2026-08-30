@@ -4355,6 +4355,90 @@
       "averageRating": "4.9",
       "ratingCount": "545",
       "reviewCount": "545"
+    },
+    {
+      "productCode": "86621P5",
+      "price": "100 USD",
+      "averageRating": "5.0",
+      "ratingCount": "14252",
+      "reviewCount": "14252"
+    },
+    {
+      "productCode": "86621P2",
+      "price": "105 USD",
+      "averageRating": "5.0",
+      "ratingCount": "3142",
+      "reviewCount": "3142"
+    },
+    {
+      "productCode": "86621P3",
+      "price": "100 USD",
+      "averageRating": "5.0",
+      "ratingCount": "1708",
+      "reviewCount": "1708"
+    },
+    {
+      "productCode": "60357P25",
+      "price": "87 USD",
+      "averageRating": "4.7",
+      "ratingCount": "681",
+      "reviewCount": "681"
+    },
+    {
+      "productCode": "206176P2",
+      "price": "35 USD",
+      "averageRating": "4.9",
+      "ratingCount": "1757",
+      "reviewCount": "1757"
+    },
+    {
+      "productCode": "11769P30",
+      "price": "39 USD",
+      "averageRating": "5.0",
+      "ratingCount": "2141",
+      "reviewCount": "2141"
+    },
+    {
+      "productCode": "243038P1",
+      "price": "37 USD",
+      "averageRating": "5.0",
+      "ratingCount": "228",
+      "reviewCount": "228"
+    },
+    {
+      "productCode": "416971P1",
+      "price": "39.47 USD",
+      "averageRating": "5.0",
+      "ratingCount": "415",
+      "reviewCount": "415"
+    },
+    {
+      "productCode": "52577P9",
+      "price": "26 USD",
+      "averageRating": "4.9",
+      "ratingCount": "500",
+      "reviewCount": "500"
+    },
+    {
+      "productCode": "92029P158",
+      "price": "43 USD",
+      "averageRating": "4.9",
+      "ratingCount": "113",
+      "reviewCount": "113"
+    },
+    {
+      "productCode": "117975P5",
+      "price": "41.80 USD",
+      "averageRating": "5.0",
+      "ratingCount": "580",
+      "reviewCount": "580"
+    },
+    {
+      "productCode": "66791P20",
+      "price": "25.87 USD",
+      "averageRating": "4.9",
+      "ratingCount": "230",
+      "reviewCount": "230"
     }
   ]
 }

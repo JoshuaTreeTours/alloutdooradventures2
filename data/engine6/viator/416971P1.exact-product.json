@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "416971P1",
+    "productUrl": "https://www.viator.com/tours/Ubud/Bali-Downhill-Cycling-Tours/d5467-416971P1",
+    "title": "Ubud: Downhill Cycling with Volcano, Rice Terraces and Meal",
+    "description": {
+      "text": "In Bali, this six-hour small-group downhill ride starts with a Mount Batur caldera and lake viewpoint, then follows an English-speaking guide through farms, villages, and rice fields, with stops at a local school, a family compound, and a temple. Cycling gear, insurance, lunch, bottled water, and Ubud-area hotel pickup are listed. The group is capped at four. Pickup outside Ubud is not listed as standard. The format suits visitors who want a short guided volcano-to-village ride without assembling bikes and transfers independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on Mount Batur, the village compound, and the rice-field descent that define this outing rather than a Nusa Penida boat day."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $39.47",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 415
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/d2/1d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-hour small-group downhill ride",
+      "Mount Batur caldera and lake viewpoint",
+      "Village compound and rice-field descent",
+      "Group capped at four",
+      "Lunch and Ubud-area hotel pickup listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Ubud-area hotel pickup is listed; pickup outside Ubud is not listed as standard."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this six-hour small-group downhill ride starts with a Mount Batur caldera and lake viewpoint, then follows an English-speaking guide through farms, villages, and rice fields, with stops at a local school, a family compound, and a temple.",
+    "itineraryItems": [
+      {
+        "title": "Mount Batur",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rice Terraces",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Traditional Village",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Cycling gear",
+      "Insurance",
+      "Lunch",
+      "Bottled water",
+      "Ubud-area hotel pickup",
+      "English-speaking guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ubud: Downhill Cycling with Volcano, Rice Terraces and Meal?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Ubud-area hotel pickup is listed; pickup outside Ubud is not listed as standard."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39.47
+      },
+      "currency": "USD"
+    }
+  }
+}

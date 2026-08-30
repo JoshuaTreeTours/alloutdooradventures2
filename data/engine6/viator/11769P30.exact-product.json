@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "11769P30",
+    "productUrl": "https://www.viator.com/tours/Ubud/Bali-Full-Day-Water-Temples-and-UNESCO-Rice-Terraces-Tour/d5467-11769P30",
+    "title": "Full-Day Tour to Water Temples and UNESCO Rice Terraces",
+    "description": {
+      "text": "In Bali, this private ten-hour west-highland day leaves a hotel in Ubud or south Bali for Ulun Danu Bratan Temple on Lake Beratan, UNESCO-listed Jatiluwih Green Land, Luhur Batukaru Temple on the slopes of Mount Batukaru, and a late Indian Ocean stop at Tanah Lot Temple. A driver-guide, air-conditioned minivan, bottled water, and hotel pickup are listed; lunch and entrance fees follow the booked option. The format suits visitors who want a guided water-temple and rice-terrace circuit that includes Batukaru rather than a Banyumala swim add-on. Meeting points are confirmed at booking in Bali, and the itinerary stays on Ulun Danu Bratan, Jatiluwih, Luhur Batukaru, and Tanah Lot that define this outing rather than an east-Bali Lempuyang start."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $39.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2141
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/31/6c/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private ten-hour west-highland circuit",
+      "Ulun Danu Bratan Temple on Lake Beratan",
+      "UNESCO-listed Jatiluwih Green Land",
+      "Luhur Batukaru Temple",
+      "Late stop at Tanah Lot Temple"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked hotel in Ubud or south Bali."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private ten-hour west-highland day leaves a hotel in Ubud or south Bali for Ulun Danu Bratan Temple on Lake Beratan, UNESCO-listed Jatiluwih Green Land, Luhur Batukaru Temple on the slopes of Mount Batukaru, and a late Indian Ocean stop at Tanah Lot Temple.",
+    "itineraryItems": [
+      {
+        "title": "Ulun Danu Bratan Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jatiluwih Green Land",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Luhur Batukaru Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tanah Lot Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Air-conditioned minivan",
+      "Hotel pickup and drop-off",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Tour to Water Temples and UNESCO Rice Terraces?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked hotel in Ubud or south Bali."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39
+      },
+      "currency": "USD"
+    }
+  }
+}

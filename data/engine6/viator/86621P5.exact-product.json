@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "86621P5",
+    "productUrl": "https://www.viator.com/tours/Ubud/Private-Sightseeing-Tour-Ubud-and-Waterfall/d5467-86621P5",
+    "title": "All-Inclusive Ubud Private Tour",
+    "description": {
+      "text": "In Bali, this private eight-to-ten-hour circuit pairs an English-speaking driver-guide with an air-conditioned van and hotel pickup across Ubud and much of the south coast. The published day covers the Sacred Monkey Forest Sanctuary, Tegalalang Rice Terrace, a jungle swing and lunch at D Alas Warung, Tirta Empul Temple, and Tegenungan Waterfall, with entrance fees, bottled water, and the swing listed. The format suits visitors who want a single guided Ubud sweep without assembling separate tickets and transfers. Meeting points are confirmed at booking in Bali, and the itinerary stays on the Monkey Forest, Tegalalang, Tirta Empul, and Tegenungan that define this outing rather than a Nusa Penida crossing."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14252
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8d/52/be.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-to-ten-hour Ubud circuit",
+      "Sacred Monkey Forest Sanctuary and Tegalalang Rice Terrace",
+      "Tirta Empul Temple and Tegenungan Waterfall",
+      "Hotel pickup and air-conditioned van",
+      "Entrance fees, bottled water, swing, and lunch listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Bali hotel in Ubud or the south-coast hotel belt."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private eight-to-ten-hour circuit pairs an English-speaking driver-guide with an air-conditioned van and hotel pickup across Ubud and much of the south coast.",
+    "itineraryItems": [
+      {
+        "title": "Sacred Monkey Forest Sanctuary",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tegalalang Rice Terrace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tirta Empul Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tegenungan Waterfall",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private English-speaking driver-guide",
+      "Air-conditioned van",
+      "Hotel pickup and drop-off",
+      "Entrance fees",
+      "Bottled water",
+      "Jungle swing",
+      "Lunch at D Alas Warung"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the All-Inclusive Ubud Private Tour?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked Bali hotel in Ubud or the south-coast hotel belt."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

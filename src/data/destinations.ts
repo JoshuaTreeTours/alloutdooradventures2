@@ -6174,6 +6174,107 @@ const japanState: StateDestination = {
   isFallback: true,
 };
 
+const indonesiaState: StateDestination = {
+  slug: "indonesia",
+  name: "Indonesia",
+  description:
+    "Bali temple and rice-terrace days, Ubud countryside circuits, Nusa Penida crossings, and guided touring from the island's south and central hotel belts.",
+  featuredDescription:
+    "Explore Bali tours with private Ubud and east-Bali circuits, Tanah Lot and water-temple days, jungle ATV and Ayung rafting, countryside cycling, cooking classes, Blue Lagoon snorkeling, and Nusa Penida land trips.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/88/6f/2b.jpg",
+  region: "Asia",
+  intro:
+    "Indonesia pairs walkable Bali temple, rice-terrace, and waterfall days with Nusa Penida crossings, Ayung River rafting, and countryside cycling from Ubud and the south-coast hotel belts.",
+  longDescription:
+    "Bali anchors Indonesia tour inventory with private Ubud circuits covering the Sacred Monkey Forest, Tegalalang, Tirta Empul, and Tegenungan, plus east-Bali Lempuyang and Tirta Gangga days, Tanah Lot and Ulun Danu Beratan water-temple routes, jungle ATV tracks, Ayung River rafting, Kintamani downhill cycling, Ubud cooking classes, Padangbai Blue Lagoon snorkeling, and Nusa Penida land itineraries from Sanur.",
+  topRegions: [
+    {
+      title: "Ubud temples and rice terraces",
+      description:
+        "Sacred Monkey Forest, Tegalalang, Tirta Empul, Tegenungan Waterfall, and guided walking, cycling, or private-vehicle circuits through central Bali.",
+    },
+    {
+      title: "East and north Bali",
+      description:
+        "Lempuyang Gate of Heaven, Tirta Gangga, Sidemen, Ulun Danu Beratan, Jatiluwih, and Tanah Lot on full-day private routes.",
+    },
+    {
+      title: "Water and adventure",
+      description:
+        "Nusa Penida land days from Sanur, Blue Lagoon snorkeling at Padangbai, Ayung River rafting, and Ubud jungle ATV tracks.",
+    },
+  ],
+  cities: [
+    {
+      name: "Bali",
+      slug: "bali",
+      stateSlug: "indonesia",
+      region: "Bali",
+      lat: -8.4095,
+      lng: 115.1889,
+      shortDescription:
+        "Private temple circuits, Nusa Penida days, and Ubud adventure outings from Bali.",
+      intro:
+        "Bali is Indonesia's main tour island with Ubud temples and rice terraces, Lempuyang and Tanah Lot, Nusa Penida crossings, Ayung rafting, and guided cycling, cooking, and snorkeling tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/88/6f/2b.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "adventure"],
+      whereItIs: [
+        "Bali sits east of Java in Indonesia, with Ubud, Kintamani, east-Bali temples, and the south-coast hotel belts framing most sightseeing.",
+        "Most guided tours depart from Ubud, Sanur, Kuta, Seminyak, Canggu, Nusa Dua, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips to Mount Batur viewpoints, Kintamani downhill cycling, and Lempuyang on the slopes of Mount Lempuyang sit on full-day routes from Ubud and south Bali.",
+        lakesWater:
+          "Lake Beratan temples, Blue Lagoon snorkeling, Nusa Penida beaches, and Ayung River rafting appear on scenic days from the island.",
+        desertForest:
+          "Ubud jungle tracks, Tegenungan and Tukad Cepung waterfalls, and rice-terrace paths offer woodland and cultivated-field stops between villages.",
+        cycling:
+          "Guided downhill rides cover Mount Batur viewpoints, countryside villages, and rice terraces on mixed paved and rural routes.",
+        scenicDrives:
+          "Private vans cover Ubud temples, Lempuyang, Tirta Gangga, Tanah Lot, Jatiluwih, and Sanur harbor approaches from island hotels.",
+        seasonalNotes:
+          "The dry season favors full-day temple and Nusa Penida circuits; the wet season can close some waterfall paths and choppy crossings.",
+      },
+      thingsToDo: [
+        "Walk the Sacred Monkey Forest, Tirta Empul, and Tegalalang with a private driver-guide.",
+        "Ride a countryside bike loop or an Ubud jungle ATV track.",
+        "Spend a day at Nusa Penida, Blue Lagoon, or the Tanah Lot and Ulun Danu water temples.",
+      ],
+      toursCopy: [
+        "Book a private Ubud or east-Bali circuit for a compact introduction.",
+        "Pair a cooking class or Ayung rafting morning with a Nusa Penida or water-temple day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Sacred Monkey Forest, Tegalalang, or a licensed private Ubud circuit.",
+          "Afternoon: Tirta Empul, Tegenungan, or an Ubud cooking class.",
+          "Evening: Return to Ubud or the south-coast hotels.",
+        ],
+        dayTwo: [
+          "Morning: Nusa Penida, Blue Lagoon, or a Tanah Lot and Ulun Danu day.",
+          "Afternoon: Continue the published temple, beach, or market circuit.",
+          "Evening: Return to central Bali.",
+        ],
+      },
+      gettingThere: [
+        "Ngurah Rai International Airport serves Bali with taxis and hotel transfers to Kuta, Seminyak, Canggu, Sanur, Nusa Dua, and Ubud tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Bali tours?",
+          answer:
+            "Private Ubud temple circuits, east-Bali Lempuyang days, Tanah Lot and water-temple routes, Nusa Penida land trips, Blue Lagoon snorkeling, Ayung rafting, countryside cycling, and Ubud cooking classes are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 const thailandState: StateDestination = {
   slug: "thailand",
   name: "Thailand",
@@ -6399,6 +6500,7 @@ export const states: StateDestination[] = [
   japanState,
   thailandState,
   singaporeState,
+  indonesiaState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

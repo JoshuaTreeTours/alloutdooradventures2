@@ -339,6 +339,18 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen86621p5Payload from "../../data/engine6/viator/86621P5.exact-product.json";
+import specimen86621p2Payload from "../../data/engine6/viator/86621P2.exact-product.json";
+import specimen86621p3Payload from "../../data/engine6/viator/86621P3.exact-product.json";
+import specimen60357p25Payload from "../../data/engine6/viator/60357P25.exact-product.json";
+import specimen206176p2Payload from "../../data/engine6/viator/206176P2.exact-product.json";
+import specimen11769p30Payload from "../../data/engine6/viator/11769P30.exact-product.json";
+import specimen243038p1Payload from "../../data/engine6/viator/243038P1.exact-product.json";
+import specimen416971p1Payload from "../../data/engine6/viator/416971P1.exact-product.json";
+import specimen52577p9Payload from "../../data/engine6/viator/52577P9.exact-product.json";
+import specimen92029p158Payload from "../../data/engine6/viator/92029P158.exact-product.json";
+import specimen117975p5Payload from "../../data/engine6/viator/117975P5.exact-product.json";
+import specimen66791p20Payload from "../../data/engine6/viator/66791P20.exact-product.json";
 import specimen24380p161Payload from "../../data/engine6/viator/24380P161.exact-product.json";
 import specimen18897p6Payload from "../../data/engine6/viator/18897P6.exact-product.json";
 import specimen36435p43Payload from "../../data/engine6/viator/36435P43.exact-product.json";
@@ -3665,6 +3677,78 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86621P5",
+    publicUrl: "https://www.viator.com/tours/Ubud/Private-Sightseeing-Tour-Ubud-and-Waterfall/d5467-86621P5",
+    rawPayload: specimen86621p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86621P2",
+    publicUrl: "https://www.viator.com/tours/Ubud/Tanah-Lot-Jatiluwih-Green-Land-Ulundanu-Temple-Private-Tour/d5467-86621P2",
+    rawPayload: specimen86621p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86621P3",
+    publicUrl: "https://www.viator.com/tours/Ubud/Gate-of-Heaven-Water-Palace-Taman-Ujung-Virgin-Beach-Private-Tour/d5467-86621P3",
+    rawPayload: specimen86621p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "60357P25",
+    publicUrl: "https://www.viator.com/tours/Nusa-Dua/Private-Tour-Nusa-Penida-One-Day-Trip-with-All-inclusive/d22287-60357P25",
+    rawPayload: specimen60357p25Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "206176P2",
+    publicUrl: "https://www.viator.com/tours/Ubud/Bali-ATV-Quad-Bike-Through-Tunnel-and-Waterfall/d5467-206176P2",
+    rawPayload: specimen206176p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "11769P30",
+    publicUrl: "https://www.viator.com/tours/Ubud/Bali-Full-Day-Water-Temples-and-UNESCO-Rice-Terraces-Tour/d5467-11769P30",
+    rawPayload: specimen11769p30Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "243038P1",
+    publicUrl: "https://www.viator.com/tours/Ubud/Love-Bali-Bike-Tours/d5467-243038P1",
+    rawPayload: specimen243038p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "416971P1",
+    publicUrl: "https://www.viator.com/tours/Ubud/Bali-Downhill-Cycling-Tours/d5467-416971P1",
+    rawPayload: specimen416971p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "52577P9",
+    publicUrl: "https://www.viator.com/tours/Ubud/Subak-cooking-class-Balinese-cooking-school-9-Dish-Cooking-and-Market-Tour/d5467-52577P9",
+    rawPayload: specimen52577p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92029P158",
+    publicUrl: "https://www.viator.com/tours/Ubud/Bali-Ubud-Paon-Cooking-Class/d5467-92029P158",
+    rawPayload: specimen92029p158Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117975P5",
+    publicUrl: "https://www.viator.com/tours/Ubud/Best-Blue-Lagoon-Snorkling-With-Visit-Traditional-Salt-Factory/d5467-117975P5",
+    rawPayload: specimen117975p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "66791P20",
+    publicUrl: "https://www.viator.com/tours/Ubud/Bali-Rafting-Ayung-River-Ubud-White-Water-Rafting/d5467-66791P20",
+    rawPayload: specimen66791p20Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

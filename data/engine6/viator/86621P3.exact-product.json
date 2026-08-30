@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "86621P3",
+    "productUrl": "https://www.viator.com/tours/Ubud/Gate-of-Heaven-Water-Palace-Taman-Ujung-Virgin-Beach-Private-Tour/d5467-86621P3",
+    "title": "East Bali Tour: Gate of Heaven, Water Palace, Sleeping Gajah",
+    "description": {
+      "text": "In Bali, this private ten-hour east-island day starts early so the group can reach Lempuyang Temple's Gate of Heaven before cloud cover closes the Mount Agung view. A driver-guide and seven-seat air-conditioned car continue to Tirta Gangga Water Palace, a Mount Agung viewpoint, and Sidemen, with lunch and river-and-infinity-pool access listed at Sleeping Gajah Kitchen & Lounge at Wapa di Ume Sidemen. Entrance fees, bottled water, and hotel pickup are listed. The format suits visitors who want a guided Lempuyang morning without assembling the long east-Bali drive independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on Lempuyang Temple, Tirta Gangga, and Sidemen that define this outing rather than a Tanah Lot sunset circuit."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1708
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/82/fc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private ten-hour east-Bali circuit",
+      "Lempuyang Temple Gate of Heaven",
+      "Tirta Gangga Water Palace",
+      "Sidemen lunch at Sleeping Gajah",
+      "Hotel pickup and entrance fees listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Bali hotel for an early Lempuyang start."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private ten-hour east-island day starts early so the group can reach Lempuyang Temple's Gate of Heaven before cloud cover closes the Mount Agung view.",
+    "itineraryItems": [
+      {
+        "title": "Lempuyang Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tirta Gangga",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sidemen",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Seven-seat air-conditioned car",
+      "Hotel pickup and drop-off",
+      "Entrance fees",
+      "Bottled water",
+      "Lunch at Sleeping Gajah Kitchen & Lounge"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the East Bali Tour: Gate of Heaven, Water Palace, Sleeping Gajah?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked Bali hotel for an early Lempuyang start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

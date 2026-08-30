@@ -1,0 +1,133 @@
+{
+  "destinationLabel": "Bali",
+  "destinationCitySlug": "bali",
+  "viatorDestinationSlug": "Bali",
+  "viatorDestinationId": "d98",
+  "catalogUrl": "https://www.viator.com/Bali/d98-ttd",
+  "targetPremiumShare": 0.4,
+  "selectedCount": 12,
+  "premiumCount": 4,
+  "selectionNote": "Selected 12 guided Bali d98/d5467/d22287 products with live public USD From prices (From$, From US$, or FromUSD), combined ratings, unique 674x446 heroes, and commercially diverse categories (private Ubud/east/north days, Nusa Penida land, ATV, water temples, cycling, cooking, snorkeling, rafting). The live catalog supports far more than 20 tours, including additional Nusa Penida boats, Uluwatu Kecak, Instagram circuits, waterfall SKUs, ATV+rafting combos, and Batur sunrise treks, but Viator DataDome blocking plus geo-currency dumps (EUR/GBP/CAD/AUD/BRL/CHF/SGD/IDR/A$) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live helicopter tour, stargazing, or Indigenous-only cultural page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, private-driver-only, ticket-only, Java-only, or products with unusable heroes. Same completeness constraint documented on Bangkok (10), Kyoto (14), Tokyo (11), Lima (9), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "86621P5",
+    "86621P2",
+    "86621P3",
+    "60357P25",
+    "206176P2",
+    "11769P30",
+    "243038P1",
+    "416971P1",
+    "52577P9",
+    "92029P158",
+    "117975P5",
+    "66791P20"
+  ],
+  "premiumProductCodes": [
+    "86621P5",
+    "86621P2",
+    "86621P3",
+    "60357P25"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "182013P1",
+      "title": "Nusa Penida boat day",
+      "reason": "Catalog ~$98 4.9/6123; complete product pages dumped BRL/CAD. Missing verified USD."
+    },
+    {
+      "productCode": "117539P4",
+      "title": "Uluwatu Kecak dance evening",
+      "reason": "Catalog ~$35 4.9/2867; complete product pages dumped EUR. Missing verified USD."
+    },
+    {
+      "productCode": "109615P9",
+      "title": "Instagram photo circuit",
+      "reason": "Catalog ~$114 5.0/2813; complete product pages dumped CHF/EUR. Missing verified USD."
+    },
+    {
+      "productCode": "11769P31",
+      "title": "Bali waterfalls tour",
+      "reason": "Catalog ~$53 5.0/2813; US URL dumped A$. Missing verified USD."
+    },
+    {
+      "productCode": "7516P44",
+      "title": "ATV and rafting combo",
+      "reason": "Catalog ~$47; complete product pages dumped EUR. Missing verified USD."
+    },
+    {
+      "productCode": "29296P3",
+      "title": "Mount Batur sunrise trek",
+      "reason": "Complete product pages dumped EUR. Missing verified USD."
+    },
+    {
+      "productCode": "6964P12",
+      "title": "Bora Bora on Bali",
+      "reason": "Destination-name bleed (Bora Bora); rejected."
+    },
+    {
+      "productCode": "163605P4",
+      "title": "Private driver only",
+      "reason": "Private-driver/transfer product, not a guided tour itinerary."
+    },
+    {
+      "productCode": "172095P21",
+      "title": "Bicycle rental",
+      "reason": "Self-guided rental, not a guided tour."
+    },
+    {
+      "productCode": "155929P4",
+      "title": "Helicopter transfer",
+      "reason": "Airport/hotel helicopter transfer, not a scenic air tour."
+    },
+    {
+      "productCode": "126148P1",
+      "title": "Kawah Ijen",
+      "reason": "Java overnight (not Bali)."
+    },
+    {
+      "productCode": "349605P2",
+      "title": "Skip-the-line ticket",
+      "reason": "Admission ticket only, not a guided tour."
+    },
+    {
+      "productCode": "157226P3",
+      "title": "Batur jeep",
+      "reason": "USD $24 verified; rejected as ≤$25 thin commercial value."
+    },
+    {
+      "productCode": "125156P3",
+      "title": "Cooking class",
+      "reason": "USD $29 but 5.0/2 too thin."
+    },
+    {
+      "productCode": "64753P6",
+      "title": "Ubud/Kintamani private day",
+      "reason": "USD $70 but 5.0/6 too thin."
+    },
+    {
+      "productCode": "142948P6",
+      "title": "Ubud private circuit near-duplicate",
+      "reason": "Near-duplicate of selected 86621P5 Ubud private day."
+    },
+    {
+      "productCode": "11769P26",
+      "title": "Water-temple near-duplicate",
+      "reason": "Near-duplicate of selected 11769P30 / 86621P2 water-temple days."
+    },
+    {
+      "productCode": "67711P5",
+      "title": "Nusa Penida near-duplicate",
+      "reason": "Near-duplicate of selected 60357P25 Nusa Penida land day."
+    },
+    {
+      "productCode": "360682P1",
+      "title": "ATV near-duplicate",
+      "reason": "Near-duplicate of selected 206176P2 ATV tunnel/waterfall."
+    },
+    {
+      "productCode": "67379P17",
+      "title": "Ayung rafting near-duplicate",
+      "reason": "Near-duplicate of selected 66791P20 Ayung rafting."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "86621P2",
+    "productUrl": "https://www.viator.com/tours/Ubud/Tanah-Lot-Jatiluwih-Green-Land-Ulundanu-Temple-Private-Tour/d5467-86621P2",
+    "title": "Tanah Lot and North Bali Tour: Scenic Journey",
+    "description": {
+      "text": "In Bali, this private eight-to-ten-hour north-and-west day leaves a hotel in Ubud or south Bali for Ulun Danu Bratan Temple on Lake Beratan, photo stops at Buyan Lake and Tamblingan Lake, a swim window at Banyumala Twin Waterfalls, lunch-scale views at UNESCO-listed Jatiluwih Green Land, and a late stop at Pura Batu Bolong and Tanah Lot Temple. A driver-guide, air-conditioned van, parking, entrance fees, and bottled water are listed. The format suits visitors who want a guided water-temple and rice-terrace circuit without self-driving the Bedugul and Jatiluwih roads. Meeting points are confirmed at booking in Bali, and the itinerary stays on Ulun Danu Bratan, Banyumala, Jatiluwih, and Tanah Lot that define this outing rather than an Ubud Monkey Forest loop."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a3/81/e3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-to-ten-hour north-and-west circuit",
+      "Ulun Danu Bratan Temple on Lake Beratan",
+      "Banyumala Twin Waterfalls swim window",
+      "UNESCO-listed Jatiluwih Green Land",
+      "Late stop at Tanah Lot Temple"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked hotel in Ubud or south Bali."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private eight-to-ten-hour north-and-west day leaves a hotel in Ubud or south Bali for Ulun Danu Bratan Temple on Lake Beratan, photo stops at Buyan Lake and Tamblingan Lake, a swim window at Banyumala Twin Waterfalls, lunch-scale views at UNESCO-listed Jatiluwih Green Land, and a late stop at Pura Batu Bolong and Tanah Lot Temple.",
+    "itineraryItems": [
+      {
+        "title": "Ulun Danu Bratan Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Banyumala Twin Waterfalls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jatiluwih Green Land",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tanah Lot Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Air-conditioned van",
+      "Hotel pickup and drop-off",
+      "Parking",
+      "Entrance fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tanah Lot and North Bali Tour: Scenic Journey?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked hotel in Ubud or south Bali."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}
