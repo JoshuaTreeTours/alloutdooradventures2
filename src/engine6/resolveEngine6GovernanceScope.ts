@@ -57,6 +57,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     singapore: ["Singapore"],
     bali: ["Bali"],
     indonesia: ["Bali"],
+    seoul: ["Seoul"],
+    "south-korea": ["Seoul"],
     mexico: ["Mexico City", "Cancun", "Puerto Vallarta", "Cabo San Lucas"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],

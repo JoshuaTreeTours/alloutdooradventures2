@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "11214P21",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-Nightlife-Chimaek-Night-Cruise-with-Han-River-Sightseeing/d973-11214P21",
+    "title": "Seoul Night Tour with Han River Cruise and Gyeongbokgung Palace",
+    "description": {
+      "text": "In Seoul, this private nine-hour evening starts at Gyeongbokgung Palace after a hotel-lobby pickup, then continues onto a Han River night cruise. A driver-guide, private vehicle, fuel, and parking are listed; food and palace or cruise entrance fees follow the booked option. The format suits visitors who want a guided palace-and-river night without assembling a cruise ticket independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Gyeongbokgung Palace and the Han River that define this outing rather than a Gwangjang Market walk."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $245.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 34
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/90/02/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private nine-hour Seoul night circuit",
+      "Gyeongbokgung Palace",
+      "Han River night cruise",
+      "Hotel pickup in a private vehicle",
+      "Parking and fuel listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Seoul hotel lobby for the palace and river evening."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this private nine-hour evening starts at Gyeongbokgung Palace after a hotel-lobby pickup, then continues onto a Han River night cruise.",
+    "itineraryItems": [
+      {
+        "title": "Gyeongbokgung Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Han River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "Hotel pickup and drop-off",
+      "Transport by private vehicle",
+      "All taxes, fuel and parking fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seoul Night Tour with Han River Cruise and Gyeongbokgung Palace?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "The host picks up at the booked Seoul hotel lobby for the palace and river evening."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 245
+      },
+      "currency": "USD"
+    }
+  }
+}

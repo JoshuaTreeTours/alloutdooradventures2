@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "55262P2",
+    "productUrl": "https://www.viator.com/tours/Seoul/Mount-Seorak-and-Nami-Island-Full-Day-Sightseeing-Tour/d973-55262P2",
+    "title": "Mt. Seorak+Nami Island+Garden of Morning Calm Day Trip from Seoul",
+    "description": {
+      "text": "In Seoul, this fourteen-hour coach day reaches Seoraksan National Park and Shinheungsa, then continues to Nami Island and the Garden of Morning Calm. Round-trip transport, the Seoraksan entrance ticket, the Nami ferry ticket, and the garden ticket are listed. The public page notes that the Seorak cable car can close in weather and that a Nami zip wire is own expense. The format suits visitors who want a long guided mountain-and-island day from the capital. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Seoraksan, Shinheungsa, Nami Island, and the Garden of Morning Calm that define this outing rather than a Gangchon railbike add-on."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "14 hours (approx.)",
+    "priceFrom": "From $91.89",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 531
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/39/3d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fourteen-hour day from Seoul",
+      "Seoraksan National Park and Shinheungsa",
+      "Nami Island ferry crossing",
+      "Garden of Morning Calm",
+      "Park and ferry tickets listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Seoul meeting point for the early coach departure."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this fourteen-hour coach day reaches Seoraksan National Park and Shinheungsa, then continues to Nami Island and the Garden of Morning Calm.",
+    "itineraryItems": [
+      {
+        "title": "Seoraksan National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinheungsa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nami Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Garden of Morning Calm",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip transport from Seoul",
+      "Entrance ticket for Mt. Seorak",
+      "Ferry ticket for Nami Island",
+      "Entrance ticket for Garden of Morning Calm"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mt. Seorak+Nami Island+Garden of Morning Calm Day Trip from Seoul?",
+        "answer": "The planned duration is 14 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at the confirmed Seoul meeting point for the early coach departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 91.89
+      },
+      "currency": "USD"
+    }
+  }
+}

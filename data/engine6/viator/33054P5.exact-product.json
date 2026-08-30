@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "33054P5",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korean-Kimchi-making-day-experience/d973-33054P5",
+    "title": "Korean Kimchi making day experience",
+    "description": {
+      "text": "In Seoul, this three-and-a-half-hour class meets at Mangwon Station Exit 2, walks Mangwon Market for ingredients, then cooks four kimchi types at individual stations in a home kitchen. A cookbook, takeaway container, bottled water, and rice wine are listed, with a tasting of kimchi, boiled pork, and fried tofu. The group is capped at four. The format suits visitors who want a guided kimchi window without booking a full-day countryside transfer. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Mangwon Market and the kimchi studio that define this class rather than a four-dish hanjeongsik dinner."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 79
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/48/00/f5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-and-a-half-hour Seoul kimchi class",
+      "Mangwon Market ingredient walk",
+      "Four kimchi types in a home kitchen",
+      "Cookbook and takeaway container listed",
+      "Maximum four guests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet outside Exit 2 of Mangwon Station on Seoul subway line 6."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this three-and-a-half-hour class meets at Mangwon Station Exit 2, walks Mangwon Market for ingredients, then cooks four kimchi types at individual stations in a home kitchen.",
+    "itineraryItems": [
+      {
+        "title": "Mangwon Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kimchi cooking studio",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Individual cooking table and cookers",
+      "Fresh local ingredients",
+      "Professionally designed cookbook",
+      "Kimchi takeaway container",
+      "Bottled water and rice wine"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Korean Kimchi making day experience?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet outside Exit 2 of Mangwon Station on Seoul subway line 6."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cooking Classes"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

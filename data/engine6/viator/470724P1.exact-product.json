@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "470724P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/DMZ-Tour-1-Day-Class-with-North-Korean-Defectors/d973-470724P1",
+    "title": "Private DMZ Tour with North Korean Defector + N Korean Lunch",
+    "description": {
+      "text": "In Seoul, this private seven-to-eight-hour DMZ day travels with a North Korean defector guide who left in 2017, then sits down for a North Korean lunch at a restaurant run by defectors. Imjingak Park and Dora Observatory appear on the published route, with hotel pickup, drop-off, admission fees, and travel insurance listed. The format suits visitors who want a guided border day with first-person context rather than a standard coach briefing. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Imjingak, Dora Observatory, and the defector-run lunch that define this outing rather than a Han River evening."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $130.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 77
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/78/7b/a2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private seven-to-eight-hour DMZ day from Seoul",
+      "North Korean defector guide",
+      "Dora Observatory and Imjingak Park",
+      "North Korean lunch listed",
+      "Hotel pickup and admission fees"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Seoul hotel or a nearby station confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this private seven-to-eight-hour DMZ day travels with a North Korean defector guide who left in 2017, then sits down for a North Korean lunch at a restaurant run by defectors.",
+    "itineraryItems": [
+      {
+        "title": "Imjingak Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dora Observatory",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Korean restaurant",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch (North Korean Food)",
+      "All admission fees",
+      "Hotel pick up",
+      "Travel insurance",
+      "Hotel drop off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private DMZ Tour with North Korean Defector + N Korean Lunch?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "The host picks up at the booked Seoul hotel or a nearby station confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130
+      },
+      "currency": "USD"
+    }
+  }
+}

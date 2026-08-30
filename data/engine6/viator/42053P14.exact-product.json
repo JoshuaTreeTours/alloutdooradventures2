@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "42053P14",
+    "productUrl": "https://www.viator.com/tours/Seoul/Day-tour-for-food-lovers-Demilitarized-Zone-DMZ-Tour-with-Korean-BBQ/d973-42053P14",
+    "title": "Insightful DMZ Tour by Expert opt. Suspension Bridge with Pickup",
+    "description": {
+      "text": "In Seoul, this six-to-ten-hour DMZ day adds optional hotel pickup in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, then covers Imjingak Park, the Third Tunnel of Aggression, and Dora Observatory. A guide, DMZ entrance, an air-conditioned vehicle, and binoculars are listed, with Korean barbecue described on the public page. Drop-off is published for Hongdae, Myeongdong, Gwangjang Market, or Dongdaemun. The format suits visitors who want a guided border day without hiring a car. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Imjingak, the Third Tunnel, and Dora Observatory that define this outing rather than a private defector lunch."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "6 to 10 hours (approx.)",
+    "priceFrom": "From $53.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 461
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/79/76.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-to-ten-hour DMZ day from Seoul",
+      "Third Tunnel and Dora Observatory",
+      "Korean barbecue listed on the public page",
+      "Optional hotel pickup",
+      "Binoculars for the observatory listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Seoul pickup window in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, or at the listed meeting place."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this six-to-ten-hour DMZ day adds optional hotel pickup in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, then covers Imjingak Park, the Third Tunnel of Aggression, and Dora Observatory.",
+    "itineraryItems": [
+      {
+        "title": "Imjingak Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Third Tunnel of Aggression",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dora Observatory",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Experienced tour guide",
+      "Entrance fee - DMZ",
+      "Hotel pickup (optional)",
+      "Air-conditioned vehicle",
+      "Free rental of monocular or binoculars"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Insightful DMZ Tour by Expert opt. Suspension Bridge with Pickup?",
+        "answer": "The planned duration is 6 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at the confirmed Seoul pickup window in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, or at the listed meeting place."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 53
+      },
+      "currency": "USD"
+    }
+  }
+}

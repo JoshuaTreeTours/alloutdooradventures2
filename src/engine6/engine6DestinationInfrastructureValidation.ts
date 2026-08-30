@@ -137,6 +137,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "indonesia",
     citySlug: "bali",
   },
+  seoul: {
+    destinationLabel: "Seoul",
+    destinationCitySlug: "seoul",
+    stateSlug: "south-korea",
+    citySlug: "seoul",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

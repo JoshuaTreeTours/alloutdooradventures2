@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "6780CITY_FULLDAY",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-City-Sightseeing-Tour-Including-Gyeongbokgung-Palace-N-Seoul-Tower-and-Namsangol-Hanok-Village/d973-6780CITY_FULLDAY",
+    "title": "Seoul City Sightseeing Tour Including Gyeongbokgung Palace, N Seoul Tower, and Namsangol Hanok Village",
+    "description": {
+      "text": "In Seoul, this eight-hour city day meets at Jogyesa Temple or adds downtown hotel pickup, then covers Gyeongbokgung Palace, the National Folk Museum of Korea, Gwanghwamun Gate, N Seoul Tower on Namsan, and Namsangol Hanok Village. A professional guide, air-conditioned vehicle, and listed admission fees are included. Drop-off is published for Myeongdong, City Hall, or Itaewon. The format suits first-time visitors who want a single guided landmark circuit. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Jogyesa, Gyeongbokgung, N Seoul Tower, and Namsangol that define this outing rather than a Suwon fortress day."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $80.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1372
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eight-hour Seoul city circuit",
+      "Jogyesa Temple and Gyeongbokgung Palace",
+      "National Folk Museum and Gwanghwamun Gate",
+      "N Seoul Tower on Namsan",
+      "Namsangol Hanok Village"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Jogyesa Temple or request hotel pickup in downtown Seoul as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this eight-hour city day meets at Jogyesa Temple or adds downtown hotel pickup, then covers Gyeongbokgung Palace, the National Folk Museum of Korea, Gwanghwamun Gate, N Seoul Tower on Namsan, and Namsangol Hanok Village.",
+    "itineraryItems": [
+      {
+        "title": "Jogyesa Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gyeongbokgung Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Folk Museum of Korea",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gwanghwamun Gate",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "N Seoul Tower",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Namsangol Hanok Village",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Professional guide",
+      "Air-conditioned vehicle",
+      "Admission Fee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seoul City Sightseeing Tour Including Gyeongbokgung Palace, N Seoul Tower, and Namsangol Hanok Village?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet at Jogyesa Temple or request hotel pickup in downtown Seoul as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 80
+      },
+      "currency": "USD"
+    }
+  }
+}

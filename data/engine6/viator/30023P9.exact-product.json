@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "30023P9",
+    "productUrl": "https://www.viator.com/tours/Seoul/Small-Group-Seoul-Morning-Royal-Palaces-Tour/d973-30023P9",
+    "title": "Small-Group Seoul Morning Royal Palaces Tour",
+    "description": {
+      "text": "In Seoul, this three-and-a-half-hour morning covers Jogyesa Temple, the changing of the guard at Gwanghwamun Gate, Gyeongbokgung Palace, and the National Folk Museum of Korea. Hotel pickup, a guide, entrance fees, and transport are listed, with drop-off at City Hall or Insadong. The format suits visitors who want a short guided palace window before an afternoon on their own. Meeting points are confirmed at booking in Seoul, and the itinerary stays on Jogyesa, Gwanghwamun, Gyeongbokgung, and the Folk Museum that define this outing rather than a full Namsan day."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $43.66",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8d/c4/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-and-a-half-hour morning palace circuit",
+      "Jogyesa Temple and Gwanghwamun Gate",
+      "Gyeongbokgung Palace and the National Folk Museum",
+      "Hotel pickup listed",
+      "Drop-off at City Hall or Insadong"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Seoul is confirmed at booking; drop-off is City Hall or Insadong."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this three-and-a-half-hour morning covers Jogyesa Temple, the changing of the guard at Gwanghwamun Gate, Gyeongbokgung Palace, and the National Folk Museum of Korea.",
+    "itineraryItems": [
+      {
+        "title": "Jogyesa Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gwanghwamun Gate",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gyeongbokgung Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Folk Museum of Korea",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Professional guide",
+      "Entrance fees",
+      "Transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group Seoul Morning Royal Palaces Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Hotel pickup in Seoul is confirmed at booking; drop-off is City Hall or Insadong."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 43.66
+      },
+      "currency": "USD"
+    }
+  }
+}

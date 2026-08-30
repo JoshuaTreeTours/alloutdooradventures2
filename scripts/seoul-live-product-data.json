@@ -1,0 +1,530 @@
+[
+  {
+    "productCode": "42053P19",
+    "productUrl": "https://www.viator.com/tours/Seoul/Full-day-Customizable-Private-Seoul-Highlight-Tour-with-Hanbok-Experience/d973-42053P19",
+    "title": "Full-day Customizable Private Seoul Highlight Tour",
+    "priceFrom": "From $230.00",
+    "price": 230,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 196,
+    "duration": "8 to 9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/2d/69.jpg",
+    "overview": "Private Seoul day covering Gyeongbokgung Palace, Insadong, and Bukchon Hanok Village with hotel pickup, an optional hanbok rental, and a suggested-plan lunch.",
+    "itineraryStops": ["Gyeongbokgung Palace", "Insadong", "Bukchon Hanok Village"],
+    "inclusions": [
+      "Hotel pickup and dropoff",
+      "English speaking Driver/tour guide",
+      "Air-conditioned vehicle",
+      "Entrance fee on suggestion plan",
+      "Lunch"
+    ],
+    "startDescription": "The host picks up at the booked Seoul hotel and confirms the day's palace, market, and village stops.",
+    "highlights": [
+      "Private eight-to-nine-hour Seoul circuit",
+      "Gyeongbokgung Palace, Insadong, and Bukchon Hanok Village",
+      "Optional hanbok rental for palace photographs",
+      "Hotel pickup and air-conditioned vehicle",
+      "Suggested-plan entrance fees and lunch listed"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "Cultural Tours"]
+  },
+  {
+    "productCode": "6780P36",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korea-DMZ-Tour/d973-6780P36",
+    "title": "Private DMZ Tour",
+    "priceFrom": "From $240.00",
+    "price": 240,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 81,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/b4/3d/d8.jpg",
+    "overview": "Private DMZ day from Seoul covering Freedom Bridge, the DMZ Exhibition Hall, Dora Observatory, and the Third Tunnel with a private guide.",
+    "itineraryStops": ["Imjingak Park", "Freedom Bridge", "Dora Observatory", "Third Tunnel of Aggression"],
+    "inclusions": [
+      "Private guide",
+      "Hotel pickup and drop-off",
+      "Air-conditioned vehicle",
+      "DMZ admission"
+    ],
+    "startDescription": "The host picks up at the booked Seoul hotel for the private DMZ circuit.",
+    "highlights": [
+      "Private six-hour DMZ circuit from Seoul",
+      "Dora Observatory views toward North Korea",
+      "Third Tunnel and Freedom Bridge",
+      "Private guide and hotel pickup",
+      "DMZ Exhibition Hall stop listed"
+    ],
+    "experienceType": "private-dmz",
+    "categories": ["Private Sightseeing Tours", "Historical Tours"]
+  },
+  {
+    "productCode": "470724P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/DMZ-Tour-1-Day-Class-with-North-Korean-Defectors/d973-470724P1",
+    "title": "Private DMZ Tour with North Korean Defector + N Korean Lunch",
+    "priceFrom": "From $130.00",
+    "price": 130,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 77,
+    "duration": "7 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/78/7b/a2.jpg",
+    "overview": "Private Seoul DMZ day with a North Korean defector guide, observatory views, and a North Korean lunch at a restaurant run by defectors.",
+    "itineraryStops": ["Imjingak Park", "Dora Observatory", "North Korean restaurant"],
+    "inclusions": [
+      "Lunch (North Korean Food)",
+      "All admission fees",
+      "Hotel pick up",
+      "Travel insurance",
+      "Hotel drop off"
+    ],
+    "startDescription": "The host picks up at the booked Seoul hotel or a nearby station confirmed at booking.",
+    "highlights": [
+      "Private seven-to-eight-hour DMZ day from Seoul",
+      "North Korean defector guide",
+      "Dora Observatory and Imjingak Park",
+      "North Korean lunch listed",
+      "Hotel pickup and admission fees"
+    ],
+    "experienceType": "private-dmz-defector",
+    "categories": ["Private Sightseeing Tours", "Historical Tours"]
+  },
+  {
+    "productCode": "11214P21",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-Nightlife-Chimaek-Night-Cruise-with-Han-River-Sightseeing/d973-11214P21",
+    "title": "Seoul Night Tour with Han River Cruise and Gyeongbokgung Palace",
+    "priceFrom": "From $245.00",
+    "price": 245,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 34,
+    "duration": "9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/90/02/37.jpg",
+    "overview": "Private Seoul evening covering Gyeongbokgung Palace and a Han River night cruise with hotel pickup.",
+    "itineraryStops": ["Gyeongbokgung Palace", "Han River"],
+    "inclusions": [
+      "Driver/guide",
+      "Hotel pickup and drop-off",
+      "Transport by private vehicle",
+      "All taxes, fuel and parking fees"
+    ],
+    "startDescription": "The host picks up at the booked Seoul hotel lobby for the palace and river evening.",
+    "highlights": [
+      "Private nine-hour Seoul night circuit",
+      "Gyeongbokgung Palace",
+      "Han River night cruise",
+      "Hotel pickup in a private vehicle",
+      "Parking and fuel listed"
+    ],
+    "experienceType": "private-night",
+    "categories": ["Night Tours", "Private Sightseeing Tours"]
+  },
+  {
+    "productCode": "6780CITY_FULLDAY",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-City-Sightseeing-Tour-Including-Gyeongbokgung-Palace-N-Seoul-Tower-and-Namsangol-Hanok-Village/d973-6780CITY_FULLDAY",
+    "title": "Seoul City Sightseeing Tour Including Gyeongbokgung Palace, N Seoul Tower, and Namsangol Hanok Village",
+    "priceFrom": "From $80.00",
+    "price": 80,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 1372,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg",
+    "overview": "Guided Seoul city day covering Jogyesa Temple, Gyeongbokgung Palace, the National Folk Museum, Gwanghwamun Gate, N Seoul Tower, and Namsangol Hanok Village.",
+    "itineraryStops": [
+      "Jogyesa Temple",
+      "Gyeongbokgung Palace",
+      "National Folk Museum of Korea",
+      "Gwanghwamun Gate",
+      "N Seoul Tower",
+      "Namsangol Hanok Village"
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Professional guide",
+      "Air-conditioned vehicle",
+      "Admission Fee"
+    ],
+    "startDescription": "Meet at Jogyesa Temple or request hotel pickup in downtown Seoul as confirmed at booking.",
+    "highlights": [
+      "Eight-hour Seoul city circuit",
+      "Jogyesa Temple and Gyeongbokgung Palace",
+      "National Folk Museum and Gwanghwamun Gate",
+      "N Seoul Tower on Namsan",
+      "Namsangol Hanok Village"
+    ],
+    "experienceType": "city-sightseeing",
+    "categories": ["Sightseeing Tours", "Cultural Tours"]
+  },
+  {
+    "productCode": "6780P26",
+    "productUrl": "https://www.viator.com/tours/Seoul/Full-Day-Palace-Tour/d973-6780P26",
+    "title": "Full-Day Palace Tour in Seoul",
+    "priceFrom": "From $79.00",
+    "price": 79,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 96,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/47/c3.jpg",
+    "overview": "Guided Seoul palace day covering Gyeongbokgung Palace, UNESCO-listed Changdeokgung Palace, Jogyesa Temple, and Insadong with lunch and hotel pickup.",
+    "itineraryStops": [
+      "Gyeongbokgung Palace",
+      "Changdeokgung Palace",
+      "Jogyesa Temple",
+      "Insadong"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Professional guide",
+      "Lunch",
+      "Air-conditioned vehicle"
+    ],
+    "startDescription": "The host picks up at the booked Seoul hotel for the palace circuit.",
+    "highlights": [
+      "Eight-hour Seoul palace circuit",
+      "Gyeongbokgung Palace and Changdeokgung Palace",
+      "Jogyesa Temple and Insadong",
+      "Lunch and hotel pickup listed",
+      "Air-conditioned coach"
+    ],
+    "experienceType": "palace-day",
+    "categories": ["Historical Tours", "Cultural Tours"]
+  },
+  {
+    "productCode": "30023P9",
+    "productUrl": "https://www.viator.com/tours/Seoul/Small-Group-Seoul-Morning-Royal-Palaces-Tour/d973-30023P9",
+    "title": "Small-Group Seoul Morning Royal Palaces Tour",
+    "priceFrom": "From $43.66",
+    "price": 43.66,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.7,
+    "reviewCount": 47,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/8d/c4/85.jpg",
+    "overview": "Morning Seoul circuit covering Jogyesa Temple, Gwanghwamun Gate, Gyeongbokgung Palace, and the National Folk Museum with hotel pickup.",
+    "itineraryStops": [
+      "Jogyesa Temple",
+      "Gwanghwamun Gate",
+      "Gyeongbokgung Palace",
+      "National Folk Museum of Korea"
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Professional guide",
+      "Entrance fees",
+      "Transportation"
+    ],
+    "startDescription": "Hotel pickup in Seoul is confirmed at booking; drop-off is City Hall or Insadong.",
+    "highlights": [
+      "Three-and-a-half-hour morning palace circuit",
+      "Jogyesa Temple and Gwanghwamun Gate",
+      "Gyeongbokgung Palace and the National Folk Museum",
+      "Hotel pickup listed",
+      "Drop-off at City Hall or Insadong"
+    ],
+    "experienceType": "morning-palace",
+    "categories": ["Half-day Tours", "Historical Tours"]
+  },
+  {
+    "productCode": "42053P14",
+    "productUrl": "https://www.viator.com/tours/Seoul/Day-tour-for-food-lovers-Demilitarized-Zone-DMZ-Tour-with-Korean-BBQ/d973-42053P14",
+    "title": "Insightful DMZ Tour by Expert opt. Suspension Bridge with Pickup",
+    "priceFrom": "From $53.00",
+    "price": 53,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 461,
+    "duration": "6 to 10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/79/76.jpg",
+    "overview": "Guided DMZ day from Seoul covering the Third Tunnel and Dora Observatory, with Korean barbecue and optional hotel pickup.",
+    "itineraryStops": ["Imjingak Park", "Third Tunnel of Aggression", "Dora Observatory"],
+    "inclusions": [
+      "Experienced tour guide",
+      "Entrance fee - DMZ",
+      "Hotel pickup (optional)",
+      "Air-conditioned vehicle",
+      "Free rental of monocular or binoculars"
+    ],
+    "startDescription": "Meet at the confirmed Seoul pickup window in Jongno-gu, Yongsan-gu, Jung-gu, Gangnam-gu, Songpa-gu, or Mapo-gu, or at the listed meeting place.",
+    "highlights": [
+      "Six-to-ten-hour DMZ day from Seoul",
+      "Third Tunnel and Dora Observatory",
+      "Korean barbecue listed on the public page",
+      "Optional hotel pickup",
+      "Binoculars for the observatory listed"
+    ],
+    "experienceType": "group-dmz",
+    "categories": ["Day Trips", "Historical Tours"]
+  },
+  {
+    "productCode": "48881P11",
+    "productUrl": "https://www.viator.com/tours/Seoul/Day-Trip-to-Nami-Island-with-Rail-bike-and-The-Garden-of-Morning-Calm/d973-48881P11",
+    "title": "Day Trip to Nami Island with Rail bike and The Garden of Morning Calm",
+    "priceFrom": "From $73.33",
+    "price": 73.33,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.7,
+    "reviewCount": 277,
+    "duration": "11 to 12 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/e7/20/46.jpg",
+    "overview": "Full-day outing from Seoul to Nami Island, Gangchon Railbike Park, and the Garden of Morning Calm with round-trip coach transport and entry tickets.",
+    "itineraryStops": ["Garden of Morning Calm", "Nami Island", "Gangchon Railbike Park"],
+    "inclusions": [
+      "Round-trip transportation",
+      "English/Chinese speaking staff",
+      "Nami Island ticket",
+      "Gangchon Railbike ticket",
+      "Garden of Morning Calm ticket",
+      "Traveler's insurance"
+    ],
+    "startDescription": "Meet at the confirmed central Seoul meeting point for the coach departure.",
+    "highlights": [
+      "Eleven-to-twelve-hour day from Seoul",
+      "Nami Island ferry crossing",
+      "Gangchon Railbike ride",
+      "Garden of Morning Calm",
+      "Round-trip coach and entry tickets listed"
+    ],
+    "experienceType": "nami-day",
+    "categories": ["Day Trips", "Outdoor Activities"]
+  },
+  {
+    "productCode": "55262P2",
+    "productUrl": "https://www.viator.com/tours/Seoul/Mount-Seorak-and-Nami-Island-Full-Day-Sightseeing-Tour/d973-55262P2",
+    "title": "Mt. Seorak+Nami Island+Garden of Morning Calm Day Trip from Seoul",
+    "priceFrom": "From $91.89",
+    "price": 91.89,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 531,
+    "duration": "14 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/39/3d.jpg",
+    "overview": "Long day from Seoul to Seoraksan National Park, Shinheungsa, Nami Island, and the Garden of Morning Calm with coach transport and park tickets.",
+    "itineraryStops": [
+      "Seoraksan National Park",
+      "Shinheungsa",
+      "Nami Island",
+      "Garden of Morning Calm"
+    ],
+    "inclusions": [
+      "Round-trip transport from Seoul",
+      "Entrance ticket for Mt. Seorak",
+      "Ferry ticket for Nami Island",
+      "Entrance ticket for Garden of Morning Calm"
+    ],
+    "startDescription": "Meet at the confirmed Seoul meeting point for the early coach departure.",
+    "highlights": [
+      "Fourteen-hour day from Seoul",
+      "Seoraksan National Park and Shinheungsa",
+      "Nami Island ferry crossing",
+      "Garden of Morning Calm",
+      "Park and ferry tickets listed"
+    ],
+    "experienceType": "seorak-day",
+    "categories": ["Day Trips", "Hiking Tours"]
+  },
+  {
+    "productCode": "48881P82",
+    "productUrl": "https://www.viator.com/tours/Seoul/Explore-Koreas-Traditional-Korean-Folk-Village-and-GwangMyeong-Cave/d973-48881P82",
+    "title": "Korean Folk Village and Suwon Hwaseong Fortress Day Tour(EG Tour)",
+    "priceFrom": "From $53.33",
+    "price": 53.33,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 56,
+    "duration": "7 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/bc/a5.jpg",
+    "overview": "Day from Seoul to the Korean Folk Village in Yongin and UNESCO-listed Suwon Hwaseong Fortress, with a Suwon Nammun Market stop on the published route.",
+    "itineraryStops": [
+      "Korean Folk Village",
+      "Suwon Hwaseong Fortress",
+      "Suwon Nammun Market"
+    ],
+    "inclusions": [
+      "Round-trip transport from Seoul",
+      "English-speaking tour staff",
+      "Korean Folk Village admission",
+      "Suwon Hwaseong Fortress admission"
+    ],
+    "startDescription": "Meet at the confirmed Seoul meeting point for the coach to Yongin and Suwon.",
+    "highlights": [
+      "Seven-to-eight-hour day from Seoul",
+      "Korean Folk Village in Yongin",
+      "Suwon Hwaseong Fortress walls and gates",
+      "Suwon Nammun Market stop",
+      "Coach transport and admissions listed"
+    ],
+    "experienceType": "suwon-folk",
+    "categories": ["Day Trips", "Cultural Tours"]
+  },
+  {
+    "productCode": "33054P5",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korean-Kimchi-making-day-experience/d973-33054P5",
+    "title": "Korean Kimchi making day experience",
+    "priceFrom": "From $89.00",
+    "price": 89,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 79,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/48/00/f5.jpg",
+    "overview": "Small-group Seoul class covering a Mangwon Market walk and four kimchi types in a home kitchen, with leftovers packed to take away.",
+    "itineraryStops": ["Mangwon Market", "Kimchi cooking studio"],
+    "inclusions": [
+      "Individual cooking table and cookers",
+      "Fresh local ingredients",
+      "Professionally designed cookbook",
+      "Kimchi takeaway container",
+      "Bottled water and rice wine"
+    ],
+    "startDescription": "Meet outside Exit 2 of Mangwon Station on Seoul subway line 6.",
+    "highlights": [
+      "Three-and-a-half-hour Seoul kimchi class",
+      "Mangwon Market ingredient walk",
+      "Four kimchi types in a home kitchen",
+      "Cookbook and takeaway container listed",
+      "Maximum four guests"
+    ],
+    "experienceType": "kimchi-class",
+    "categories": ["Cooking Classes", "Food Tours"]
+  },
+  {
+    "productCode": "121170P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/Korean-Cooking-Class-with-Full-Course-Meal-and-Local-Market-Tour/d973-121170P1",
+    "title": "Korean Cooking Class with Full-Course Meal & Local Market Tour in Seoul",
+    "priceFrom": "From $91.00",
+    "price": 91,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 907,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0d/b9/89.jpg",
+    "overview": "Small-group Seoul home class with a Mangwon Market walk, four Korean dishes such as bibimbap or dakgalbi, and a hanjeongsik meal with side dishes and makgeolli.",
+    "itineraryStops": ["Mangwon Market", "Home cooking kitchen"],
+    "inclusions": [
+      "Meals and more than 10 side dishes",
+      "Dessert and beverages",
+      "Makgeolli",
+      "All equipment for a class",
+      "Local market tour with street food"
+    ],
+    "startDescription": "Meet outside Exit 2 of Mangwon Station on the brown subway line in Seoul.",
+    "highlights": [
+      "Three-and-a-half-hour Seoul home cooking class",
+      "Mangwon Market street-food walk",
+      "Four Korean dishes and hanjeongsik sides",
+      "Makgeolli listed",
+      "Small-group home kitchen"
+    ],
+    "experienceType": "cooking-class",
+    "categories": ["Cooking Classes", "Food Tours"]
+  },
+  {
+    "productCode": "359901P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/Dongdaemun-and-Gwangjang-Market-walking-tour-with-local/d973-359901P1",
+    "title": "Seoul Urban Nature Bike Tour along Han River",
+    "priceFrom": "From $47.00",
+    "price": 47,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 55,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/f3/44.jpg",
+    "overview": "Guided Seoul bike ride along the Han River through Seoul Forest and Seongsu-dong, meeting at Ttukseom Recreation Area.",
+    "itineraryStops": ["Han River", "Seoul Forest", "Seongsu-dong"],
+    "inclusions": [
+      "Friendly local guide",
+      "Bicycle rental fee",
+      "Rain coat (if needed)",
+      "Snacks"
+    ],
+    "startDescription": "Meet outside Exit 2 of Jayang Station (line 7) at Ttukseom Recreation Area in Seoul.",
+    "highlights": [
+      "Three-hour Han River bike ride from Seoul",
+      "Seoul Forest and Seongsu-dong",
+      "Bicycle rental listed",
+      "Small-group riverside path",
+      "Optional picnic mentioned on the public page"
+    ],
+    "experienceType": "bike",
+    "categories": ["Bike Tours", "Outdoor Activities"]
+  },
+  {
+    "productCode": "255235P5",
+    "productUrl": "https://www.viator.com/tours/Seoul/Bukhansan-National-Park-The-Summit-Course/d973-255235P5",
+    "title": "Bukhansan National Park: The Summit Course",
+    "priceFrom": "From $61.75",
+    "price": 61.75,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 53,
+    "duration": "4 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5c/79/5c.jpg",
+    "overview": "Guided Bukhansan summit hike from Seoul meeting at Bukhansan Ui Station Exit 2, with an optional post-hike tofu lunch paid on site.",
+    "itineraryStops": ["Bukhansan Ui Station", "Bukhansan summit"],
+    "inclusions": ["Guided summit hike"],
+    "startDescription": "Meet outside Exit 2 of Bukhansan Ui Station in Seoul by 8:00 a.m.",
+    "highlights": [
+      "Guided Bukhansan summit course from Seoul",
+      "Meet at Bukhansan Ui Station",
+      "Granite-peak trail",
+      "Optional tofu lunch paid on site",
+      "Maximum 20 travelers"
+    ],
+    "experienceType": "hiking",
+    "categories": ["Hiking Tours", "Outdoor Activities"]
+  },
+  {
+    "productCode": "47013P23",
+    "productUrl": "https://www.viator.com/tours/Seoul/Seoul-Night-Explorer-4-in-1-Day-including-Gwangmyeong-Cave-and-N-Seoul-Tower/d973-47013P23",
+    "title": "Seoul Night Tour (Gwangjang Market, Royal Palace and Naksan Park)",
+    "priceFrom": "From $45.00",
+    "price": 45,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 50,
+    "duration": "5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7e/df/75.jpg",
+    "overview": "Evening Seoul walk covering Changgyeonggung Palace, Gwangjang Market, Naksan Park on the Hanyang city wall, and Cheonggyecheon Stream.",
+    "itineraryStops": [
+      "Changgyeonggung Palace",
+      "Gwangjang Market",
+      "Naksan Park",
+      "Cheonggyecheon Stream"
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "English speaking tour staff",
+      "Admission fees"
+    ],
+    "startDescription": "Meet at the confirmed Seoul meeting point for the evening circuit.",
+    "highlights": [
+      "Five-hour Seoul night circuit",
+      "Changgyeonggung Palace",
+      "Gwangjang Market food stalls",
+      "Naksan Park on the Hanyang wall",
+      "Cheonggyecheon Stream"
+    ],
+    "experienceType": "night-walk",
+    "categories": ["Night Tours", "Walking Tours"]
+  }
+]

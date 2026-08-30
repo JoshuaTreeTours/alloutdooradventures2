@@ -6477,6 +6477,107 @@ const singaporeState: StateDestination = {
   isFallback: true,
 };
 
+const southKoreaState: StateDestination = {
+  slug: "south-korea",
+  name: "South Korea",
+  description:
+    "Seoul palace and hanok days, DMZ border circuits, Han River bike rides, Mangwon cooking classes, and day trips to Nami Island, Seoraksan, and Suwon Hwaseong.",
+  featuredDescription:
+    "Explore Seoul tours with private palace and hanbok circuits, private and group DMZ days, night palace and Han River cruises, Bukhansan summit hikes, Han River bike rides, kimchi and home cooking classes, and coach days to Nami Island, Seoraksan, and Suwon.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg",
+  region: "Asia",
+  intro:
+    "South Korea pairs walkable Seoul palace, hanok, and market days with DMZ border circuits, Han River bike rides, and day trips to Nami Island, Seoraksan, and Suwon Hwaseong.",
+  longDescription:
+    "Seoul anchors South Korea tour inventory with private Gyeongbokgung, Insadong, and Bukchon circuits, morning and full-day palace routes, N Seoul Tower and Namsangol, night walks through Changgyeonggung, Gwangjang Market, and Naksan Park, and Han River cruises. Border days add Imjingak, Dora Observatory, and the Third Tunnel. Outdoor days cover Bukhansan summit hikes and Han River bike rides through Seoul Forest. Cooking classes meet at Mangwon Market. Coach days reach Nami Island, the Garden of Morning Calm, Seoraksan and Shinheungsa, the Korean Folk Village, and Suwon Hwaseong Fortress.",
+  topRegions: [
+    {
+      title: "Palaces and the old city",
+      description:
+        "Gyeongbokgung Palace, Changdeokgung Palace, Jogyesa Temple, Bukchon Hanok Village, Insadong, and Namsangol on guided walking or private-vehicle circuits.",
+    },
+    {
+      title: "DMZ and day trips",
+      description:
+        "Imjingak, Dora Observatory, and the Third Tunnel, plus Nami Island, Seoraksan, the Garden of Morning Calm, the Korean Folk Village, and Suwon Hwaseong Fortress.",
+    },
+    {
+      title: "River, markets, and mountains",
+      description:
+        "Han River bike rides and night cruises, Gwangjang and Mangwon markets, kimchi and home cooking classes, and Bukhansan summit hikes.",
+    },
+  ],
+  cities: [
+    {
+      name: "Seoul",
+      slug: "seoul",
+      stateSlug: "south-korea",
+      region: "Seoul",
+      lat: 37.5665,
+      lng: 126.978,
+      shortDescription:
+        "Palace circuits, DMZ days, Han River rides, and Nami or Seoraksan outings from Seoul.",
+      intro:
+        "Seoul is South Korea's capital with Gyeongbokgung Palace, Bukchon Hanok Village, Gwangjang Market, the Han River, and guided walking, cycling, cooking, hiking, and DMZ tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "hiking"],
+      whereItIs: [
+        "Seoul sits on the Han River in northwestern South Korea, with Jongno palaces, Bukchon, Gwangjang Market, and Namsan framing most sightseeing.",
+        "Most guided tours depart from downtown hotels, Jogyesa Temple, Mangwon Station, Jayang Station, Bukhansan Ui Station, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Bukhansan summit hikes and Seoraksan National Park days sit on guided routes from Seoul.",
+        lakesWater:
+          "Han River bike paths and night cruises appear on scenic days from the capital.",
+        desertForest:
+          "Seoul Forest, Nami Island woodland paths, and Seoraksan temple trails offer woodland stops beyond the palace core.",
+        cycling:
+          "Guided bike rides cover the Han River, Seoul Forest, and Seongsu-dong from Ttukseom Recreation Area.",
+        scenicDrives:
+          "Private vans and coaches cover Gyeongbokgung, the DMZ, Nami Island, Seoraksan, and Suwon Hwaseong from Seoul hotels.",
+        seasonalNotes:
+          "Cooler months favor full-day palace and DMZ circuits; summer heat favors early bike and hiking starts.",
+      },
+      thingsToDo: [
+        "Walk Gyeongbokgung Palace, Bukchon Hanok Village, and Insadong with a private or small-group guide.",
+        "Ride the Han River path or hike Bukhansan.",
+        "Spend a day at the DMZ, Nami Island, Seoraksan, or Suwon Hwaseong Fortress.",
+      ],
+      toursCopy: [
+        "Book a private palace circuit or a morning royal-palace walk for a compact introduction.",
+        "Pair a Mangwon cooking class or Han River bike ride with a DMZ or Nami Island day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Gyeongbokgung Palace, Jogyesa Temple, or a licensed private city circuit.",
+          "Afternoon: Bukchon Hanok Village, Insadong, or a Mangwon cooking class.",
+          "Evening: Gwangjang Market, Naksan Park, or a Han River cruise.",
+        ],
+        dayTwo: [
+          "Morning: DMZ, Bukhansan, or a Nami Island and Garden of Morning Calm coach.",
+          "Afternoon: Continue the published fortress, island, or mountain circuit.",
+          "Evening: Return to central Seoul.",
+        ],
+      },
+      gettingThere: [
+        "Incheon and Gimpo airports serve Seoul with trains, taxis, and hotel transfers to Jongno, Myeongdong, Hongdae, Gangnam, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Seoul tours?",
+          answer:
+            "Private palace and hanbok circuits, private and group DMZ days, night palace and Han River cruises, Bukhansan summit hikes, Han River bike rides, Mangwon kimchi and cooking classes, and coach days to Nami Island, Seoraksan, and Suwon Hwaseong are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6501,6 +6602,7 @@ export const states: StateDestination[] = [
   thailandState,
   singaporeState,
   indonesiaState,
+  southKoreaState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

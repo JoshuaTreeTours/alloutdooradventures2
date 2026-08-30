@@ -1496,6 +1496,62 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_SEOUL_42053P19_PRODUCT_CODE = "42053P19";
+export const ENGINE6_SEOUL_42053P19_ROUTE =
+  "/destinations/south-korea/seoul/tours/full-day-customizable-private-seoul-highlight-tour-42053P19";
+export const ENGINE6_SEOUL_6780P36_PRODUCT_CODE = "6780P36";
+export const ENGINE6_SEOUL_6780P36_ROUTE =
+  "/destinations/south-korea/seoul/tours/private-dmz-tour-6780P36";
+export const ENGINE6_SEOUL_470724P1_PRODUCT_CODE = "470724P1";
+export const ENGINE6_SEOUL_470724P1_ROUTE =
+  "/destinations/south-korea/seoul/tours/private-dmz-tour-with-north-korean-defector-n-korean-lu-470724P1";
+export const ENGINE6_SEOUL_11214P21_PRODUCT_CODE = "11214P21";
+export const ENGINE6_SEOUL_11214P21_ROUTE =
+  "/destinations/south-korea/seoul/tours/seoul-night-tour-with-han-river-cruise-and-gyeongbokgun-11214P21";
+export const ENGINE6_SEOUL_6780CITY_FULLDAY_PRODUCT_CODE = "6780CITY_FULLDAY";
+export const ENGINE6_SEOUL_6780CITY_FULLDAY_ROUTE =
+  "/destinations/south-korea/seoul/tours/seoul-city-sightseeing-tour-including-gyeongbokgung-pal-6780CITY_FULLDAY";
+export const ENGINE6_SEOUL_6780P26_PRODUCT_CODE = "6780P26";
+export const ENGINE6_SEOUL_6780P26_ROUTE =
+  "/destinations/south-korea/seoul/tours/full-day-palace-tour-in-seoul-6780P26";
+export const ENGINE6_SEOUL_30023P9_PRODUCT_CODE = "30023P9";
+export const ENGINE6_SEOUL_30023P9_ROUTE =
+  "/destinations/south-korea/seoul/tours/small-group-seoul-morning-royal-palaces-tour-30023P9";
+export const ENGINE6_SEOUL_42053P14_PRODUCT_CODE = "42053P14";
+export const ENGINE6_SEOUL_42053P14_ROUTE =
+  "/destinations/south-korea/seoul/tours/insightful-dmz-tour-by-expert-opt-suspension-bridge-wit-42053P14";
+export const ENGINE6_SEOUL_48881P11_PRODUCT_CODE = "48881P11";
+export const ENGINE6_SEOUL_48881P11_ROUTE =
+  "/destinations/south-korea/seoul/tours/day-trip-to-nami-island-with-rail-bike-and-the-garden-o-48881P11";
+export const ENGINE6_SEOUL_55262P2_PRODUCT_CODE = "55262P2";
+export const ENGINE6_SEOUL_55262P2_ROUTE =
+  "/destinations/south-korea/seoul/tours/mt-seorak-nami-island-garden-of-morning-calm-day-trip-f-55262P2";
+export const ENGINE6_SEOUL_48881P82_PRODUCT_CODE = "48881P82";
+export const ENGINE6_SEOUL_48881P82_ROUTE =
+  "/destinations/south-korea/seoul/tours/korean-folk-village-and-suwon-hwaseong-fortress-day-tou-48881P82";
+export const ENGINE6_SEOUL_33054P5_PRODUCT_CODE = "33054P5";
+export const ENGINE6_SEOUL_33054P5_ROUTE =
+  "/destinations/south-korea/seoul/tours/korean-kimchi-making-day-experience-33054P5";
+export const ENGINE6_SEOUL_121170P1_PRODUCT_CODE = "121170P1";
+export const ENGINE6_SEOUL_121170P1_ROUTE =
+  "/destinations/south-korea/seoul/tours/korean-cooking-class-with-full-course-meal-local-market-121170P1";
+export const ENGINE6_SEOUL_359901P1_PRODUCT_CODE = "359901P1";
+export const ENGINE6_SEOUL_359901P1_ROUTE =
+  "/destinations/south-korea/seoul/tours/seoul-urban-nature-bike-tour-along-han-river-359901P1";
+export const ENGINE6_SEOUL_255235P5_PRODUCT_CODE = "255235P5";
+export const ENGINE6_SEOUL_255235P5_ROUTE =
+  "/destinations/south-korea/seoul/tours/bukhansan-national-park-the-summit-course-255235P5";
+export const ENGINE6_SEOUL_47013P23_PRODUCT_CODE = "47013P23";
+export const ENGINE6_SEOUL_47013P23_ROUTE =
+  "/destinations/south-korea/seoul/tours/seoul-night-tour-gwangjang-market-royal-palace-and-naks-47013P23";
+
+export const ENGINE6_SEOUL_TOUR_PATH_PREFIX =
+  "/destinations/south-korea/seoul/tours/";
+
+export const isEngine6SeoulTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_SEOUL_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BALI_86621P5_PRODUCT_CODE = "86621P5";
 export const ENGINE6_BALI_86621P5_ROUTE =
   "/destinations/indonesia/bali/tours/all-inclusive-ubud-private-tour-86621P5";
@@ -5198,6 +5254,70 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_42053P19_ROUTE,
+    ENGINE6_SEOUL_42053P19_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_6780P36_ROUTE,
+    ENGINE6_SEOUL_6780P36_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_470724P1_ROUTE,
+    ENGINE6_SEOUL_470724P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_11214P21_ROUTE,
+    ENGINE6_SEOUL_11214P21_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_6780CITY_FULLDAY_ROUTE,
+    ENGINE6_SEOUL_6780CITY_FULLDAY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_6780P26_ROUTE,
+    ENGINE6_SEOUL_6780P26_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_30023P9_ROUTE,
+    ENGINE6_SEOUL_30023P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_42053P14_ROUTE,
+    ENGINE6_SEOUL_42053P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_48881P11_ROUTE,
+    ENGINE6_SEOUL_48881P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_55262P2_ROUTE,
+    ENGINE6_SEOUL_55262P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_48881P82_ROUTE,
+    ENGINE6_SEOUL_48881P82_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_33054P5_ROUTE,
+    ENGINE6_SEOUL_33054P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_121170P1_ROUTE,
+    ENGINE6_SEOUL_121170P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_359901P1_ROUTE,
+    ENGINE6_SEOUL_359901P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_255235P5_ROUTE,
+    ENGINE6_SEOUL_255235P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEOUL_47013P23_ROUTE,
+    ENGINE6_SEOUL_47013P23_PRODUCT_CODE,
   ],
   [
     ENGINE6_BALI_86621P5_ROUTE,

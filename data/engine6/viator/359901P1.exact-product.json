@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "359901P1",
+    "productUrl": "https://www.viator.com/tours/Seoul/Dongdaemun-and-Gwangjang-Market-walking-tour-with-local/d973-359901P1",
+    "title": "Seoul Urban Nature Bike Tour along Han River",
+    "description": {
+      "text": "In Seoul, this three-hour guided ride meets outside Jayang Station Exit 2 at Ttukseom Recreation Area, then follows the Han River path through Seoul Forest and Seongsu-dong. Bicycle rental, a rain coat if needed, snacks, and a local guide are listed. Reviews on the public page mention an optional chicken picnic at the end. The format suits visitors who want a guided riverside ride without renting independently. Meeting points are confirmed at booking in Seoul, and the itinerary stays on the Han River, Seoul Forest, and Seongsu-dong that define this outing rather than a palace coach day."
+    },
+    "location": {
+      "city": "Seoul",
+      "state": "South Korea"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $47.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 55
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/f3/44.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-hour Han River bike ride from Seoul",
+      "Seoul Forest and Seongsu-dong",
+      "Bicycle rental listed",
+      "Small-group riverside path",
+      "Optional picnic mentioned on the public page"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet outside Exit 2 of Jayang Station (line 7) at Ttukseom Recreation Area in Seoul."
+      },
+      "end": {
+        "description": "Return to your Seoul meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Seoul, this three-hour guided ride meets outside Jayang Station Exit 2 at Ttukseom Recreation Area, then follows the Han River path through Seoul Forest and Seongsu-dong.",
+    "itineraryItems": [
+      {
+        "title": "Han River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seoul Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seongsu-dong",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Friendly local guide",
+      "Bicycle rental fee",
+      "Rain coat (if needed)",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seoul Urban Nature Bike Tour along Han River?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Seoul?",
+        "answer": "Meet outside Exit 2 of Jayang Station (line 7) at Ttukseom Recreation Area in Seoul."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 47
+      },
+      "currency": "USD"
+    }
+  }
+}
