@@ -155,6 +155,43 @@ export const extractAvailabilitySearchPrice = (
   return null;
 };
 
+const asRecord = (value: unknown): Record<string, unknown> | null =>
+  value && typeof value === "object" && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : null;
+
+export const readViatorPricingCurrency = (
+  payload: unknown
+): string | null => {
+  const root = asRecord(payload);
+  if (!root) {
+    return null;
+  }
+
+  const product = asRecord(root.product) ?? root;
+  const candidates = [
+    asRecord(product.pricing)?.currency,
+    asRecord(product.pricingInfo)?.currency,
+    product.currency,
+    asRecord(root.pricing)?.currency,
+    root.currency,
+  ];
+
+  for (const candidate of candidates) {
+    if (
+      typeof candidate === "string" &&
+      /^[A-Z]{3}$/i.test(candidate.trim())
+    ) {
+      return candidate.trim().toUpperCase();
+    }
+  }
+
+  return null;
+};
+
+const formatUsdFromPriceLabel = (amount: number) =>
+  `From $${amount.toFixed(2)}`;
+
 export const fetchAvailabilitySearchPrice = async (args: {
   apiKey: string;
   baseUrl: string;
@@ -183,7 +220,30 @@ export const applyAvailabilitySummaryPrice = async (args: {
   baseUrl: string;
   productCode: string;
   extracted: Engine6Extracted;
+  livePayload?: unknown;
 }): Promise<Engine6Extracted> => {
+  const pricingCurrency = readViatorPricingCurrency(args.livePayload);
+  const needsUsdOverlay =
+    pricingCurrency !== null && pricingCurrency !== "USD";
+
+  if (needsUsdOverlay) {
+    const usdPrice = await fetchAvailabilitySearchPrice({
+      apiKey: args.apiKey,
+      baseUrl: args.baseUrl,
+      productCode: args.productCode,
+    });
+
+    if (typeof usdPrice === "number") {
+      return {
+        ...args.extracted,
+        priceAmount: usdPrice,
+        priceFormatted: formatUsdFromPriceLabel(usdPrice),
+      };
+    }
+
+    return args.extracted;
+  }
+
   if (typeof args.extracted.priceAmount === "number") {
     return args.extracted;
   }
@@ -198,7 +258,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
     return {
       ...args.extracted,
       priceAmount: schedulePrice,
-      priceFormatted: `From $${schedulePrice.toFixed(2)}`,
+      priceFormatted: formatUsdFromPriceLabel(schedulePrice),
     };
   }
 
@@ -215,7 +275,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
   return {
     ...args.extracted,
     priceAmount: searchPrice,
-    priceFormatted: `From $${searchPrice.toFixed(2)}`,
+    priceFormatted: formatUsdFromPriceLabel(searchPrice),
   };
 };
 

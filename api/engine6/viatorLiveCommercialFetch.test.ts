@@ -4,6 +4,7 @@ import {
   applyAvailabilitySummaryPrice,
   applyLiveReviewsCommercial,
   fetchViatorLiveJson,
+  readViatorPricingCurrency,
 } from "./viatorLiveCommercialFetch";
 
 vi.mock("../../lib/viator.js", () => ({
@@ -129,6 +130,75 @@ describe("applyAvailabilitySummaryPrice", () => {
     expect(extracted.priceAmount).toBe(385);
     expect(extracted.priceFormatted).toBe("From $385.00");
     expect(fetchViatorWithCurl).toHaveBeenCalledTimes(2);
+  });
+
+  it("overlays USD availability search when the live product is in supplier currency", async () => {
+    vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
+    vi.mocked(fetchViatorWithCurl).mockResolvedValue({
+      status: 200,
+      body: JSON.stringify({
+        bookableItems: [{ pricing: { recommendedRetailPrice: 156.6 } }],
+      }),
+    });
+
+    const extracted = await applyAvailabilitySummaryPrice({
+      apiKey: "test-key",
+      baseUrl: "https://api.viator.com/partner",
+      productCode: "92136P55",
+      extracted: buildExtracted({
+        priceAmount: 23000,
+        priceFormatted: "From $23000.00",
+      }),
+      livePayload: {
+        product: {
+          productCode: "92136P55",
+          pricing: { summary: { fromPrice: 23000 }, currency: "JPY" },
+        },
+      },
+    });
+
+    expect(extracted.priceAmount).toBe(156.6);
+    expect(extracted.priceFormatted).toBe("From $156.60");
+    expect(fetchViatorWithCurl).toHaveBeenCalledTimes(1);
+    expect(fetchViatorWithCurl).toHaveBeenCalledWith(
+      "https://api.viator.com/partner/availability/schedules/search",
+      "test-key",
+      expect.objectContaining({
+        method: "POST",
+        body: expect.stringContaining('"currency":"USD"'),
+      })
+    );
+  });
+
+  it("keeps an existing USD product price without an availability overlay", async () => {
+    const extracted = await applyAvailabilitySummaryPrice({
+      apiKey: "test-key",
+      baseUrl: "https://api.viator.com/partner",
+      productCode: "92136P55",
+      extracted: buildExtracted({
+        priceAmount: 156.6,
+        priceFormatted: "From $156.60",
+      }),
+      livePayload: {
+        product: {
+          pricing: { summary: { fromPrice: 156.6 }, currency: "USD" },
+        },
+      },
+    });
+
+    expect(extracted.priceAmount).toBe(156.6);
+    expect(extracted.priceFormatted).toBe("From $156.60");
+    expect(fetchViatorWithCurl).not.toHaveBeenCalled();
+  });
+});
+
+describe("readViatorPricingCurrency", () => {
+  it("reads product.pricing.currency from a wrapped payload", () => {
+    expect(
+      readViatorPricingCurrency({
+        product: { pricing: { currency: "jpy" } },
+      })
+    ).toBe("JPY");
   });
 });
 

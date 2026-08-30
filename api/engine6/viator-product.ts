@@ -667,6 +667,7 @@ export default async function handler(req: any, res: any) {
     baseUrl: normalizedBaseUrl,
     productCode,
     extracted: extracted.extracted,
+    livePayload: payload,
   });
   const extractedWithReviews = await applyLiveReviewsCommercial({
     apiKey: key,

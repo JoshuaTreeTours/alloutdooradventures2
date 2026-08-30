@@ -402,6 +402,7 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     baseUrl,
     productCode: normalizedProductCode,
     extracted: liveExtraction.extracted,
+    livePayload,
   });
 
   const liveWithReviews = await applyLiveReviewsCommercial({

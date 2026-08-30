@@ -15,8 +15,12 @@ import { engine6ListingTours } from "./listing";
 import {
   KYOTO_VIATOR_PUBLIC_RATINGS,
   KYOTO_VIATOR_PUBLIC_PRODUCT_CODES,
+  KYOTO_VIATOR_PUBLIC_USD_FROM_PRICES,
 } from "./kyotoViatorPublicRatings";
 import { ENGINE6_KYOTO_CANONICAL_CITY_HERO_URL } from "./displayHero";
+import { formatStartingPrice } from "../lib/pricing";
+import { formatEngine6StartingPriceLabel } from "./priceDisplay";
+import { formatMerchantPrice } from "../utils/merchantPricing";
 import { engine6ResolvedTours } from "./registry";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -35,6 +39,8 @@ const readMerchantFeedRows = () => {
         /,Outdoor Adventures,([\d.]+),(\d+),(\d+)$/
       );
 
+      const priceMatch = line.match(/,in stock,([\d.]+ USD),new,/);
+
       return [
         id,
         match
@@ -42,6 +48,7 @@ const readMerchantFeedRows = () => {
               averageRating: match[1],
               ratingCount: match[2],
               reviewCount: match[3],
+              price: priceMatch?.[1] ?? null,
             }
           : null,
       ] as const;
@@ -144,13 +151,53 @@ describe("Kyoto Engine6 rating/review parity", () => {
       expect(listingEntry!.tour.heroImage).toBe(tour!.heroImageUrl);
       expect(listingEntry!.tour.resolvedImageUrl).toBe(tour!.heroImageUrl);
 
+      const expectedUsd =
+        KYOTO_VIATOR_PUBLIC_USD_FROM_PRICES[productCode];
+      expect(expectedUsd).toBeDefined();
+      expect(tour?.priceAmount).toBe(expectedUsd);
+      expect(tour?.priceFormatted).toBe(
+        formatEngine6StartingPriceLabel(expectedUsd)
+      );
+      expect(listingEntry!.tour.startingPrice).toBe(expectedUsd);
+      expect(listingEntry!.tour.currency).toBe("USD");
+      expect(listingEntry!.tour.badges.priceFrom).toBe(
+        formatEngine6StartingPriceLabel(expectedUsd)
+      );
+      expect(normalizedCardHtml).toContain(
+        `From ${formatStartingPrice(expectedUsd, "USD")}`
+      );
+      expect(normalizedDetailHtml).toContain(
+        formatEngine6StartingPriceLabel(expectedUsd)
+      );
+      expect(tour?.bookingUrl).toContain("currency=USD");
+
+      const offerNode = graph.find(node => node["@type"] === "Offer") as {
+        price?: number;
+        priceCurrency?: string;
+        description?: string;
+      };
+      expect(offerNode?.price).toBe(expectedUsd);
+      expect(offerNode?.priceCurrency).toBe("USD");
+      expect(offerNode?.description).toBe(
+        formatEngine6StartingPriceLabel(expectedUsd)
+      );
+
       const merchantRow = merchantFeedRows.get(productCode);
       expect(merchantRow).not.toBeNull();
       expect(merchantRow?.averageRating).toBe(expected.rating.toFixed(1));
       expect(merchantRow?.ratingCount).toBe(String(expected.reviewCount));
       expect(merchantRow?.reviewCount).toBe(String(expected.reviewCount));
+      expect(merchantRow?.price).toBe(
+        formatMerchantPrice(expectedUsd, "USD")
+      );
     }
   );
+
+  it("covers USD From$ for every selected Kyoto product", () => {
+    expect(Object.keys(KYOTO_VIATOR_PUBLIC_USD_FROM_PRICES).sort()).toEqual(
+      [...KYOTO_VIATOR_PUBLIC_PRODUCT_CODES].sort()
+    );
+  });
 
   it("lists exactly the selected Engine6 cards for the Kyoto cohort", () => {
     const kyotoListing = getToursByCityUnified("japan", "kyoto");
@@ -168,6 +215,7 @@ describe("Kyoto Engine6 rating/review parity", () => {
       averageRating: "4.9",
       ratingCount: "95",
       reviewCount: "95",
+      price: "930 USD",
     });
   });
 

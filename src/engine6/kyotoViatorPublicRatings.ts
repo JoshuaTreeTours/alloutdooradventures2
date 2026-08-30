@@ -27,3 +27,21 @@ export const KYOTO_VIATOR_PUBLIC_RATINGS: Record<
 export const KYOTO_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(
   KYOTO_VIATOR_PUBLIC_RATINGS
 );
+
+/** Public Viator From$ amounts in USD for the selected Kyoto d332 products. */
+export const KYOTO_VIATOR_PUBLIC_USD_FROM_PRICES: Record<string, number> = {
+  "92136P55": 156.6,
+  "92136P37": 107.24,
+  "92136P49": 659.84,
+  "21490P11": 150,
+  "285124P1": 192.19,
+  "5924KYOCUSTOM_FULL": 191.74,
+  "407697P2": 361.03,
+  "374249P4": 337.59,
+  "103013P3": 181.28,
+  "38922P3": 121.95,
+  "63670P28": 61.06,
+  "92281P2": 321.71,
+  "293458P17": 55.05,
+  "5522662P20": 49.5,
+};

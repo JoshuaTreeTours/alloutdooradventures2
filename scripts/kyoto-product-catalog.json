@@ -18,7 +18,8 @@
       "Gion",
       "Kiyomizu-dera Temple",
       "Fushimi Inari-taisha Shrine"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "92136P37",
@@ -39,7 +40,8 @@
       "Gion",
       "Nijo Castle",
       "Fushimi Inari-taisha Shrine"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "92136P49",
@@ -62,7 +64,8 @@
       "Gion",
       "Kyoto Imperial Palace",
       "Kinkakuji Temple"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "21490P11",
@@ -93,7 +96,8 @@
       "Philosopher's Walk",
       "Nanzen-ji Temple",
       "Ginkakuji Temple"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "285124P1",
@@ -119,7 +123,8 @@
       "Sannenzaka Ninenzaka",
       "Yasakanoto",
       "Gion"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "5924KYOCUSTOM_FULL",
@@ -140,7 +145,8 @@
       "Fushimi Inari-taisha Shrine",
       "Tenryu-ji Temple",
       "Kiyomizu-dera"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "407697P2",
@@ -160,7 +166,8 @@
       "Todai-ji Temple",
       "Nara Park",
       "Kasuga-Taisha Shrine"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "374249P4",
@@ -180,7 +187,8 @@
       "Nara Park",
       "Kasuga-Taisha Shrine",
       "Osaka Castle"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "103013P3",
@@ -201,7 +209,8 @@
       "Fushimi Inari-taisha Shrine",
       "Arashiyama Bamboo Forest",
       "Gion"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "38922P3",
@@ -219,7 +228,8 @@
     "itineraryTitles": [
       "Arashiyama Bamboo Forest",
       "Adashino Nenbutsu-ji Temple"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "63670P28",
@@ -238,7 +248,8 @@
       "Fushimi Inari-taisha Shrine",
       "Bamboo forest trail",
       "Fushimi-Momoyama Castle viewpoint"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "92281P2",
@@ -257,7 +268,8 @@
       "Yasaka Shrine",
       "Gion",
       "Higashiyama"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "293458P17",
@@ -275,7 +287,8 @@
     "itineraryTitles": [
       "Nishiki Orizuruya",
       "Nishiki Market Shopping District"
-    ]
+    ],
+    "currency": "USD"
   },
   {
     "productCode": "5522662P20",
@@ -296,6 +309,7 @@
       "Nijo Castle",
       "Kiyomizu-dera Temple",
       "Fushimi Inari-taisha Shrine"
-    ]
+    ],
+    "currency": "USD"
   }
 ]
