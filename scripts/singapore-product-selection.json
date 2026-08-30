@@ -1,0 +1,101 @@
+{
+  "destinationLabel": "Singapore",
+  "destinationCitySlug": "singapore",
+  "viatorDestinationSlug": "Singapore",
+  "viatorDestinationId": "d18",
+  "catalogUrl": "https://www.viator.com/Singapore/d18-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 12,
+  "premiumCount": 7,
+  "selectionNote": "Selected 12 guided Singapore d18/d60449 products with verified public USD From prices (en-SG From US$ / FromUS$, Tripadvisor US from $X per adult, or TourFinder US$), combined ratings of at least 4.5 with 20+ reviews, and unique 674x446 heroes. The live catalog supports more than 20 tours, including additional private-car, yacht, Pulau Ubin bike, and night-cruise SKUs, but Viator DataDome blocking plus geo-currency dumps (EUR/GBP/CAD/AUD) and bare From$ pages without a US$ marker blocked otherwise-strong products from being verified in USD. SGD $ / S$ was never treated as USD. Did not force audio/self-guided/app tours, hop-on, transfers, tickets-only, Night Safari 3.8, thin-review SKUs (<20), 4.4 night-cruise 434501P2, near-duplicates of selected food or walking SKUs, or products with unusable heroes. Same completeness constraint documented on Tokyo (11), Lima (9), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11).",
+  "selectedProductCodes": [
+    "203208P12",
+    "30791P719",
+    "40856P7",
+    "223757P4",
+    "102132P3",
+    "24380P991",
+    "124015P1",
+    "45610P13",
+    "5570MGK",
+    "277546P4",
+    "104357P24",
+    "57811P2"
+  ],
+  "premiumProductCodes": [
+    "203208P12",
+    "30791P719",
+    "40856P7",
+    "223757P4",
+    "102132P3",
+    "24380P991",
+    "124015P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "45610P20",
+      "title": "Private Customized Singapore Car Tour (Half Day or Full Day)",
+      "reason": "4.9/81 complete dump; From$283.64 without US$. Cannot treat as USD."
+    },
+    {
+      "productCode": "40856P18",
+      "title": "Private One Day Highlight Tour of Singapore with Singapore Flyer",
+      "reason": "4.9/25 complete dump; From$300.00 without US$."
+    },
+    {
+      "productCode": "30791P172",
+      "title": "Singapore Street Food Tour with a Local: A Feast for Foodies 100% Personalized",
+      "reason": "4.8/125 complete dump; From£130.00 GBP only."
+    },
+    {
+      "productCode": "9592P192",
+      "title": "Private Singapore Customized Tour With Driver in small group",
+      "reason": "4.6/390 complete dump; en-SG From€73.37 EUR only."
+    },
+    {
+      "productCode": "124015P2",
+      "title": "PRIVATE Singapore Walking Tour with a Local, Half Day or Full Day",
+      "reason": "from US$111 on en-SG related card, 5.0/42; skipped as a near-duplicate of selected 124015P1 private walking."
+    },
+    {
+      "productCode": "434501P2",
+      "title": "Singapore Starry Night Cruise, Garden Rhapsody & Spectra Show",
+      "reason": "From US$87.69 en-CA; 4.4/888 below the quality bar and a night-cruise near-duplicate of selected 40856P7."
+    },
+    {
+      "productCode": "5570UBINBIKE",
+      "title": "4 Hours Cycling in the Nature at Pulau Ubin Singapore",
+      "reason": "FromUS$97.93 en-SG; 4.2/29 below the quality bar."
+    },
+    {
+      "productCode": "430482P4",
+      "title": "Splendour of Colonial Singapore Walking Tour with Lunch",
+      "reason": "FromUS$49.11 en-SG; 4.9/19 too thin."
+    },
+    {
+      "productCode": "215063P1",
+      "title": "Speed to Serenity - Kusu Island Heritage Tour",
+      "reason": "FromUS$92.16; 5.0/16 too thin."
+    },
+    {
+      "productCode": "277546P8",
+      "title": "Singapore: Chinatown Hawker Food Tasting Tour",
+      "reason": "From US$88.58; skipped as a Chinatown hawker near-duplicate of selected 45610P13."
+    },
+    {
+      "productCode": "3695NSC",
+      "title": "Singapore Night Safari",
+      "reason": "3.8/1215 below the quality bar."
+    },
+    {
+      "productCode": "42843P21",
+      "title": "Big Bus Singapore Hop-On Hop-Off Tour",
+      "reason": "Hop-on hop-off."
+    },
+    {
+      "productCode": "242747P76",
+      "title": "Singapore River Cruise Tour with E-Tickets",
+      "reason": "Tickets-only river cruise."
+    }
+  ]
+}

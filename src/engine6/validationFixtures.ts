@@ -349,6 +349,18 @@ import specimen198444p1Payload from "../../data/engine6/viator/198444P1.exact-pr
 import specimen112650p5Payload from "../../data/engine6/viator/112650P5.exact-product.json";
 import specimen6924bkkghtb07Payload from "../../data/engine6/viator/6924BKKGHTB07.exact-product.json";
 import specimen8374p24Payload from "../../data/engine6/viator/8374P24.exact-product.json";
+import specimen203208p12Payload from "../../data/engine6/viator/203208P12.exact-product.json";
+import specimen30791p719Payload from "../../data/engine6/viator/30791P719.exact-product.json";
+import specimen40856p7Payload from "../../data/engine6/viator/40856P7.exact-product.json";
+import specimen223757p4Payload from "../../data/engine6/viator/223757P4.exact-product.json";
+import specimen102132p3Payload from "../../data/engine6/viator/102132P3.exact-product.json";
+import specimen24380p991Payload from "../../data/engine6/viator/24380P991.exact-product.json";
+import specimen124015p1Payload from "../../data/engine6/viator/124015P1.exact-product.json";
+import specimen45610p13Payload from "../../data/engine6/viator/45610P13.exact-product.json";
+import specimen5570mgkPayload from "../../data/engine6/viator/5570MGK.exact-product.json";
+import specimen277546p4Payload from "../../data/engine6/viator/277546P4.exact-product.json";
+import specimen104357p24Payload from "../../data/engine6/viator/104357P24.exact-product.json";
+import specimen57811p2Payload from "../../data/engine6/viator/57811P2.exact-product.json";
 import specimen92136p55Payload from "../../data/engine6/viator/92136P55.exact-product.json";
 import specimen92136p37Payload from "../../data/engine6/viator/92136P37.exact-product.json";
 import specimen92136p49Payload from "../../data/engine6/viator/92136P49.exact-product.json";
@@ -3713,6 +3725,78 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "8374P24",
     publicUrl: "https://www.viator.com/tours/Bangkok/Half-Day-Railway-Market-and-Floating-Market-Tour-in-Thailand/d343-8374P24",
     rawPayload: specimen8374p24Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "203208P12",
+    publicUrl: "https://www.viator.com/tours/Singapore/Singapore-6-Hours-Private-Car-or-Minibus-Rental-with-Driver/d60449-203208P12",
+    rawPayload: specimen203208p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30791P719",
+    publicUrl: "https://www.viator.com/tours/Singapore/A-Full-Day-in-Singapore-with-a-Local-Private-and-Personalized/d60449-30791P719",
+    rawPayload: specimen30791p719Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "40856P7",
+    publicUrl: "https://www.viator.com/tours/Singapore/Private-Night-Sightseeing-Tour-with-River-Cruise-from-Singapore/d60449-40856P7",
+    rawPayload: specimen40856p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "223757P4",
+    publicUrl: "https://www.viator.com/tours/Singapore/Singapore-hawker-centre-street-food-tour-with-intro-to-public-transport-MRT-Bus/d60449-223757P4",
+    rawPayload: specimen223757p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "102132P3",
+    publicUrl: "https://www.viator.com/tours/Singapore/Private-Tour-Marina-Bay-and-Ethnic-Quarters/d60449-102132P3",
+    rawPayload: specimen102132p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24380P991",
+    publicUrl: "https://www.viator.com/tours/Singapore/Singapore-Street-Food-Hawker-Centre-Tastings-Private-Tour/d60449-24380P991",
+    rawPayload: specimen24380p991Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "124015P1",
+    publicUrl: "https://www.viator.com/tours/Singapore/Picturing-Places-of-Colonial-Singapore/d60449-124015P1",
+    rawPayload: specimen124015p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "45610P13",
+    publicUrl: "https://www.viator.com/tours/Singapore/Small-Group-Michelin-and-Local-Hawker-Food-Tour/d60449-45610P13",
+    rawPayload: specimen45610p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5570MGK",
+    publicUrl: "https://www.viator.com/tours/Singapore/Pulau-Ubin-Mangrove-Kayak-Adventure-from-Singapore/d60449-5570MGK",
+    rawPayload: specimen5570mgkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "277546P4",
+    publicUrl: "https://www.viator.com/tours/Singapore/City-Highlights-Tour-Chinatown-Little-India-Kampong-Gelam/d60449-277546P4",
+    rawPayload: specimen277546p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "104357P24",
+    publicUrl: "https://www.viator.com/tours/Singapore/Private-custom-Tour-with-a-Local-Guide-Singapour/d60449-104357P24",
+    rawPayload: specimen104357p24Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "57811P2",
+    publicUrl: "https://www.viator.com/tours/Singapore/Marina-Bay-Night-Cycling-Tour/d60449-57811P2",
+    rawPayload: specimen57811p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

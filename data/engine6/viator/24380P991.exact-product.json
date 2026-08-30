@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "24380P991",
+    "productUrl": "https://www.viator.com/tours/Singapore/Singapore-Street-Food-Hawker-Centre-Tastings-Private-Tour/d60449-24380P991",
+    "title": "A Taste of Singapore: Hawker Center Private Customized Food Tour",
+    "description": {
+      "text": "In Singapore, this private 2.5-hour hawker tasting stays in the Chinatown area with a local host and five included dishes such as chicken rice, spring rolls, dim sum, and kaya toast. Morning, noon, or night departures are published so the group can work around flights. The meeting is Chinatown MRT Exit A; the published end is Lau Pa Sat on Raffles Quay. Local transport is included; extra drinks stay separate. The route is a compact Chinatown hawker window rather than a three-quarter cultural day. The format suits visitors who want a private tasting without joining a ten-person morning group. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Maxwell Food Centre and Lau Pa Sat that shape this outing rather than a Kampong Glam add-on."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $130.10",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 33
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/36/41/8e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Chinatown hawker-centre tasting",
+      "Five included tastings such as chicken rice and kaya toast",
+      "Morning, noon, or night departure windows",
+      "Ends at Lau Pa Sat on Raffles Quay",
+      "Local transport included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Chinatown MRT station, Exit A on street level."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private 2.",
+    "itineraryItems": [
+      {
+        "title": "Maxwell Food Centre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lau Pa Sat",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Tour",
+      "5 tastings",
+      "Local transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the A Taste of Singapore: Hawker Center Private Customized Food Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Chinatown MRT station, Exit A on street level."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130.1
+      },
+      "currency": "USD"
+    }
+  }
+}

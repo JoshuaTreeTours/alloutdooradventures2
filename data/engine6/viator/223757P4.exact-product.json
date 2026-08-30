@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "223757P4",
+    "productUrl": "https://www.viator.com/tours/Singapore/Singapore-hawker-centre-street-food-tour-with-intro-to-public-transport-MRT-Bus/d60449-223757P4",
+    "title": "Singapore: Chinese, Indian & Malay Quarters, Culture & Food Tour",
+    "description": {
+      "text": "In Singapore, this small-group food and culture walk covers Chinatown, Little India, and Kampong Glam with a fourth-generation Singapore-Chinese-Peranakan host. The published 5.5-hour window includes street food from UNESCO-inscribed hawker centres plus a Sultan Mosque stop, with coffee, lunch, dinner snacks, and drinks listed among inclusions. Groups are capped at eight. Central hotel or MRT pickup is offered for a 9:00 am start in Chinatown. The route stays on the three historic quarters rather than a Marina Bay night circuit. The format suits visitors who want a guided three-culture tasting day without assembling hawker and mosque timing independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Chinatown, Little India, Kampong Glam, and Sultan Mosque that shape this outing rather than a private car day."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $148.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 616
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/2a/a6/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group walk through Chinatown, Little India, and Kampong Glam",
+      "Street food from UNESCO-inscribed hawker centres",
+      "Sultan Mosque stop in Kampong Glam",
+      "Fourth-generation Singapore-Chinese-Peranakan host",
+      "Group capped at eight"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Chinatown, Singapore. Operator advises meeting at a hotel lobby or MRT station for centralised city locations. Start 9:00 am. Pickup offered for central locations."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this small-group food and culture walk covers Chinatown, Little India, and Kampong Glam with a fourth-generation Singapore-Chinese-Peranakan host.",
+    "itineraryItems": [
+      {
+        "title": "Chinatown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little India",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kampong Glam",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sultan Mosque",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coffee and/or Tea",
+      "Lunch",
+      "Dinner",
+      "Snacks",
+      "Alcoholic Beverages",
+      "Soda/Pop",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Singapore: Chinese, Indian & Malay Quarters, Culture & Food Tour?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Chinatown, Singapore. Operator advises meeting at a hotel lobby or MRT station for centralised city locations. Start 9:00 am. Pickup offered for central locations."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 148
+      },
+      "currency": "USD"
+    }
+  }
+}

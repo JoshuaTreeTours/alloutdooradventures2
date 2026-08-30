@@ -1,0 +1,804 @@
+{
+  "harvestedAt": "2026-08-30",
+  "method": "WebSearch of exact en-SG Viator URLs, Tripadvisor US from $X per adult, TourFinder US$. No curl to viator.com.",
+  "usdRule": "Only FromUS$ / From US$ / FromUSD / TourFinder US$ / Tripadvisor US 'from $X per adult' count as USD. Bare From$ / S$ / SGD / EUR / GBP / AUD / CAD rejected.",
+  "shippableCount": 15,
+  "shippable": [
+    {
+      "productCode": "104357P24",
+      "title": "Singapore Customized Private Walking Tour With A Licensed Guide",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Private-custom-Tour-with-a-Local-Guide-Singapour/d60449-104357P24",
+      "priceFrom": 57.02,
+      "priceFromFormatted": "FromUS$57.02",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/Private-custom-Tour-with-a-Local-Guide-Singapour/d60449-104357P24",
+        "verbatim": "FromUS$57.02"
+      },
+      "rating": 4.7,
+      "reviewCount": 30,
+      "duration": "2 to 8 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5a/d3/13.jpg",
+      "overview": "Explore Singapore alongside a local licensed guide. The itinerary is designed by your guide based on your preferences. Meet where you're staying to get familiar with the neighborhood, find out about the best places to eat, the easiest ways to get around, and the hidden gems you might have missed. By the end of the tour, you'll feel comfortable navigating the city. This itinerary is completely customizable according to your wishes.",
+      "itineraryStops": [
+        { "name": "Customizable Singapore neighborhoods and monuments (pass-by unless requested as a visit)", "passBy": true }
+      ],
+      "inclusions": [
+        "Private Walking tour",
+        "Customization of the tour",
+        "Meet up at your accommodation (If located in the city) or cruise terminal",
+        "Help from our team to book the tickets for the desired visits"
+      ],
+      "exclusions": [
+        "Drink or Food (If you want to have a break during the tour)",
+        "Ticket to any attraction",
+        "Tips (Optional)"
+      ],
+      "startDescription": "The local guide will pick you up at your hotel (if located in Singapore). Travelers can request the tour to start from any centrally located hotel. In case your hotel is outside the city center we will select a convenient meeting point in the city center.",
+      "endDescription": "Tour may end at a different location from the departure point unless requested in advance of the tour.",
+      "highlights": [
+        "Private walking tour with a licensed local guide",
+        "Fully customizable itinerary (2, 3, 4, 6, or 8 hours)",
+        "Hotel or cruise-terminal meetup in the city",
+        "Help booking tickets for desired visits"
+      ],
+      "categories": ["Walking Tours", "Private and Custom Tours"],
+      "experienceType": "walking"
+    },
+    {
+      "productCode": "124015P1",
+      "title": "Private Singapore Walking Tour: City Highlights & Hidden Gems",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Picturing-Places-of-Colonial-Singapore/d60449-124015P1",
+      "priceFrom": 106.44,
+      "priceFromFormatted": "FromUS$106.44",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/Picturing-Places-of-Colonial-Singapore/d60449-124015P1",
+        "verbatim": "FromUS$106.44"
+      },
+      "rating": 5.0,
+      "reviewCount": 54,
+      "duration": "3 to 6 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/7a/cd/b9.jpg",
+      "overview": "Go deeper into Singapore’s heritage during this immersive, private walking tour. Travel back to Singapore's humble beginnings in the 19th century and hear about its history through a collection of artworks. Discover the Civic District, Chinatown, and Marina Bay as well as iconic landmarks like Merlion Park and Thian Hock Keng Temple. Your guide also points out important architecture and art, as well as helps you understand the culture of the area.",
+      "itineraryStops": [
+        { "name": "Chinatown", "passBy": false },
+        { "name": "Civic District", "passBy": false },
+        { "name": "Thian Hock Keng Temple", "passBy": false },
+        { "name": "Marina Bay / Marina Bay Sands", "passBy": false },
+        { "name": "Merlion Park", "passBy": false },
+        { "name": "Kampong Glam", "passBy": false, "note": "6-hour option end point" },
+        { "name": "Little India", "passBy": false, "note": "6-hour option end point" }
+      ],
+      "inclusions": [
+        "Your Local Expert Licensed Guide",
+        "Coffee and/or Tea — choice of a local drink (iced or hot coffee, tea, soda pop or bottled water)",
+        "3 hour (WITHOUT hotel pickup) — Meet at Chinatown MRT or Telok Ayer MRT station",
+        "4 & 6 Hour — Hotel pickup in Central Areas & Ports",
+        "For 4 & 6 hour hotel pickup, public transport used to get to the tour start point",
+        "Good, Services and Tax"
+      ],
+      "startDescription": "3 hour (WITHOUT hotel pickup): meet at Chinatown MRT or Telok Ayer MRT station. 4 & 6 Hour: hotel pickup in Central Areas & Ports.",
+      "endDescription": "For 3 & 4 hour Private Tour, end near City Hall MRT Station (City Hall MRT, Singapore 178959). For 6 Hour Private Tour, the end point can be at Kampong Glam, Little India or a centrally located neighbourhood. You may also decide your end point on the actual day.",
+      "highlights": [
+        "Get a comprehensive overview of Singapore and its main areas",
+        "A guide tells you interesting stories about the culture and history of the area",
+        "See Thian Hock Keng Temple and the Marina Bay Sands hotel",
+        "A walking tour is a perfect way to get acquainted with the city"
+      ],
+      "categories": [
+        "Walking Tours",
+        "Historical & Heritage Tours",
+        "Cultural Tours",
+        "Private and Luxury",
+        "Half-day Tours"
+      ],
+      "experienceType": "walking"
+    },
+    {
+      "productCode": "124015P2",
+      "title": "PRIVATE Singapore Walking Tour with a Local, Half Day or Full Day",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Private-Customized-Tour-of-Singapore-Half-Day-or-Full-Day/d60449-124015P2",
+      "priceFrom": 111,
+      "priceFromFormatted": "from US$111",
+      "usdSource": {
+        "kind": "viator-en-SG-related-card",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/Small-Group-Michelin-and-Local-Hawker-Food-Tour/d60449-45610P13",
+        "verbatim": "PRIVATE Singapore Walking Tour with a Local, Half Day or Full Day from US$111",
+        "note": "Exact requested slug /Private-Singapore-Walking-Tour/d60449-124015P2 missed; live slug is Private-Customized-Tour-of-Singapore-Half-Day-or-Full-Day. USD taken from en-SG related-product card showing From US$111."
+      },
+      "rating": 5.0,
+      "reviewCount": 42,
+      "duration": "Half day or full day (private, customizable)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/05/de/09.jpg",
+      "overview": "Private customized walking tour of Singapore with a local, offered as half-day or full-day. Itinerary is tailored to the group (sibling product 124015P1 covers Chinatown, Civic District, Marina Bay, Merlion Park, and Thian Hock Keng).",
+      "itineraryStops": [
+        { "name": "Customizable city highlights (Chinatown / Civic District / Marina Bay typical)", "passBy": false }
+      ],
+      "inclusions": [
+        "Private local guide",
+        "Half-day or full-day duration options"
+      ],
+      "startDescription": "Not fully dumped on the exact requested slug; booking page confirms private customized half/full-day walk.",
+      "endDescription": null,
+      "highlights": [
+        "Private walking tour with a local",
+        "Half-day or full-day options",
+        "Likely to sell out on en-SG listings"
+      ],
+      "categories": ["Walking Tours", "Private and Custom Tours"],
+      "experienceType": "walking",
+      "dumpCompleteness": "partial — USD, rating, title, hero, and URL confirmed; full itinerary/inclusions not on a complete product-page dump"
+    },
+    {
+      "productCode": "57811P2",
+      "title": "Marina Bay Night Cycling Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/Marina-Bay-Night-Cycling-Tour/d60449-57811P2",
+      "priceFrom": 47.01,
+      "priceFromFormatted": "FromUSD 47.01",
+      "usdSource": {
+        "kind": "viator-en-AU-explicit-USD",
+        "url": "https://www.viator.com/en-AU/tours/Singapore/Marina-Bay-Night-Cycling-Tour/d60449-57811P2",
+        "verbatim": "FromUSD 47.01",
+        "tripadvisorUs": {
+          "url": "https://www.tripadvisor.com/AttractionProductReview-g294265-d12968501-Marina_Bay_Night_Cycling_Tour-Singapore.html",
+          "verbatim": "$47.85 per adult (price varies by group size)"
+        }
+      },
+      "rating": 4.9,
+      "reviewCount": 545,
+      "duration": "2 hours (approx.)",
+      "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/db/6a/c4/caption.jpg",
+      "overview": "Singapore’s Marina Bay truly comes into its own at night. Discover the Bay, and so much more, on this guided evening bike tour. Pedal past the Singapore River, the towering neon-lit “super trees” at Gardens by the Bay, the Singapore Flyer wheel, Marina Bay Sands, and more. Your bike rental comes with a helmet, poncho, and water.",
+      "itineraryStops": [
+        { "name": "Let's Go Bike shop / Blk 462 Crawford Lane #01-57", "passBy": false },
+        { "name": "Kallang River / Kallang Riverside Park", "passBy": false },
+        { "name": "National Stadium", "passBy": true },
+        { "name": "Singapore Flyer", "passBy": true },
+        { "name": "Formula One Pit Building / F1 track section", "passBy": false },
+        { "name": "Gardens by the Bay Super Trees (viewed across the river; bikes not allowed inside)", "passBy": true },
+        { "name": "Marina Bay Sands", "passBy": true },
+        { "name": "Merlion Park", "passBy": false },
+        { "name": "Esplanade Theatres on the Bay", "passBy": true },
+        { "name": "Fullerton Hotel", "passBy": true }
+      ],
+      "inclusions": [
+        "Rental of Bicycle & helmet for the duration of tour",
+        "Bottled water and Poncho",
+        "Licensed Local guide",
+        "Lockers available for bags during the tour"
+      ],
+      "exclusions": [
+        "Food and drinks, unless specified",
+        "Gratuities",
+        "Hotel pickup and drop-off"
+      ],
+      "startDescription": "Block 462 Crawford Lane, Unit 01-57, Singapore 190462 (Let's Go Tour Singapore). Arrive ~15 min before 7:00 pm start.",
+      "endDescription": "Ends back at the bike shop.",
+      "highlights": [
+        "See some of Singapore’s most iconic landmarks lit up in lights",
+        "Marvel at the Singapore Flyer, Marina Bay Sands, and the Gardens by the Bay",
+        "Cycle through the heart of Singapore",
+        "Learn about Singapore’s history and heritage from your guide"
+      ],
+      "categories": ["Bike Tours", "Night Tours"],
+      "experienceType": "bike"
+    },
+    {
+      "productCode": "40856P7",
+      "title": "Private Tour: Nighttime Sightseeing with River Cruise",
+      "productUrl": "https://www.viator.com/tours/Singapore/Private-Night-Sightseeing-Tour-with-River-Cruise-from-Singapore/d60449-40856P7",
+      "priceFrom": 140.06,
+      "priceFromFormatted": "US$140.06",
+      "usdSource": {
+        "kind": "tourfinder-US$",
+        "url": "https://tourfinder.au/experience/private-tour-nighttime-sightseeing-with-river-cruise-vt-40856P7",
+        "verbatim": "US$140.06 US$149.00",
+        "note": "Default Viator dump was From£113.08 (GBP — rejected). TourFinder US$ used. Tripadvisor attraction cards also show $149 for this title."
+      },
+      "rating": 4.7,
+      "reviewCount": 567,
+      "duration": "3 hours 30 minutes (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b3/2d/2d.jpg",
+      "overview": "Make the most of a short amount of time in Singapore on this private nighttime sightseeing tour, perfect for overnight layovers or as a family-friendly alternative to nightlife. Visit top attractions like Little India, in addition to sights only seen at night, like the synchronized light and music show at Gardens by the Bay. Tour also includes entrance to Marina Bay Sands SkyPark and a Singapore River cruise.",
+      "itineraryStops": [
+        { "name": "Little India", "passBy": false },
+        { "name": "Gardens by the Bay / Super Trees Garden Rhapsody light show", "passBy": false },
+        { "name": "Clarke Quay", "passBy": false },
+        { "name": "Singapore River Cruise", "passBy": false },
+        { "name": "Marina Bay Sands SkyPark observation deck", "passBy": false }
+      ],
+      "inclusions": [
+        "Hotel pickup and drop-off (Singapore city only)",
+        "Private transport in an air-conditioned vehicle",
+        "English Speaking Tour Guide",
+        "Private Sightseeing Tour as per itinerary",
+        "Entrance Fees as mentioned visit",
+        "Singapore River Cruise Sharing Basis"
+      ],
+      "exclusions": [
+        "Food and Drinks",
+        "Personal Expenses",
+        "Gratuities",
+        "Dinner Stop"
+      ],
+      "startDescription": "Please wait in your Hotel Lobby at 6 pm. Pickup from hotels or preferred accommodation in Singapore City only.",
+      "endDescription": "Hotel drop-off after the river cruise / SkyPark.",
+      "highlights": [
+        "Private nighttime sightseeing tour of Singapore",
+        "Visit top Singapore attractions like Little India",
+        "Watch a popular light show in Gardens by the Bay",
+        "See the city skyline light up on a Singapore River cruise",
+        "Admire panoramic views from the observation tower at SkyPark (included)",
+        "All transportation included with hotel pickup and drop-off"
+      ],
+      "categories": ["Night Tours", "Private Sightseeing Tours", "Boat Tours and Cruises"],
+      "experienceType": "night"
+    },
+    {
+      "productCode": "102132P3",
+      "title": "Kampong Glam, Little India & Chinatown with Local Street Food Tastings",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Private-Tour-Marina-Bay-and-Ethnic-Quarters/d60449-102132P3",
+      "priceFrom": 165,
+      "priceFromFormatted": "from $165",
+      "usdSource": {
+        "kind": "tripadvisor-US",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g294265-d324757-Reviews-Arab_Street-Singapore.html",
+        "verbatim": "Kampong Glam, Little India & Chinatown with Local Street Food Tastings $165",
+        "note": "en-SG product page showed From$204.84 without US$ (treated as non-USD / possible SGD). Tripadvisor US card used."
+      },
+      "rating": 4.7,
+      "reviewCount": 55,
+      "duration": "3 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/36/0a/44.jpg",
+      "overview": "Singapore’s unique character derives from the three cultures that shaped it: Malay, Chinese, and Indian. Discover their history and food on this private walking and tasting tour of the city’s three most characterful neighborhoods: Little India, Chinatown, and Malay-dominated Kampong Glam. You’ll enjoy nine included tastings at authentic local eateries or hawker centers. Upgrade to add a private vehicle and 2-way hotel transfers.",
+      "itineraryStops": [
+        { "name": "Kampong Glam / Arab Street / Haji Lane", "passBy": false },
+        { "name": "Little India / hawker centre (tosai tasting in reviews)", "passBy": false },
+        { "name": "Chinatown", "passBy": false },
+        { "name": "Buddha Tooth Relic Temple", "passBy": false }
+      ],
+      "inclusions": [
+        "Private licensed guide",
+        "Snacks — 9 tastings of local food & drinks inclusive of 7 or 8 food/snacks (sharing portion) and 2 or 1 local drinks (individual portion)",
+        "MRT tickets",
+        "If With Hotel Transfers option is chosen, pick-up & drop-off are included"
+      ],
+      "exclusions": [
+        "Additional food and drink",
+        "Gratuities (optional)"
+      ],
+      "startDescription": "56 Arab St, Singapore 199753. Your guide will meet you outside the entrance of the % Arabica cafe. Pickup only if booking With Private Vehicle.",
+      "endDescription": "Buddha Tooth Relic Temple, 288 South Bridge Rd, Singapore 058840. The tour will end in the vicinity of the Buddha Tooth Relic Temple in Chinatown.",
+      "highlights": [
+        "Explore Kampong Glam, Little India, and Chinatown with a private guide",
+        "Savor nine delicious food tastings from three separate cultural traditions",
+        "Wide choice of departure times to book online, exact to within half an hour",
+        "Upgrade to add a private vehicle with transfers to and from your hotel"
+      ],
+      "categories": ["Food Tours", "Walking Tours", "Cultural Tours", "City Tours"],
+      "experienceType": "food"
+    },
+    {
+      "productCode": "24380P991",
+      "title": "A Taste of Singapore: Hawker Center Private Customized Food Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/Singapore-Street-Food-Hawker-Centre-Tastings-Private-Tour/d60449-24380P991",
+      "priceFrom": 130.1,
+      "priceFromFormatted": "FromUS$130.10",
+      "usdSource": {
+        "kind": "viator-en-GB-explicit-USD",
+        "url": "https://www.viator.com/en-GB/tours/Singapore/Singapore-Street-Food-Hawker-Centre-Tastings-Private-Tour/d60449-24380P991",
+        "verbatim": "FromUS$130.10",
+        "tripadvisorUs": {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g294265-d13078277-Reviews-Maxwell_Food_Centre-Singapore.html",
+          "verbatim": "A Taste of Singapore: Hawker Center Private Customized Food Tour $133.90 per adult (price varies by group size)"
+        }
+      },
+      "rating": 4.5,
+      "reviewCount": 33,
+      "duration": "2 hours 30 minutes (approx.)",
+      "heroUrl": null,
+      "overview": "Singaporeans eat out more than any other nation on earth. Find out why on this delectable private food tour with a local host, with five tastings at different hawker centers in the Chinatown area. Set out at a time that suits your body clock—morning, noon, or night—then savor highlights from legendary chicken rice through to spring rolls, dim sum, and the local breakfast favorite, kaya toast.",
+      "itineraryStops": [
+        { "name": "Chinatown / Maxwell Food Centre", "passBy": false },
+        { "name": "Telok Ayer Street / Lau Pa Sat (Telok Ayer Market)", "passBy": false }
+      ],
+      "inclusions": [
+        "Private Tour",
+        "5 tastings",
+        "Local transport",
+        "This tour is carbon neutral"
+      ],
+      "startDescription": "Chinatown MRT station, Exit A on street level.",
+      "endDescription": "18 Raffles Quay, Singapore 048582 (Lau Pa Sat / Raffles Quay).",
+      "highlights": [
+        "Private guided Singapore Chinatown hawker center food tour",
+        "Take away tailored tips and recommendations from your local host",
+        "Skip the group tours and explore at your own pace on a more personal tour",
+        "Wide range of departure times lets you work around flights and other plans"
+      ],
+      "categories": ["Food Tours"],
+      "experienceType": "food"
+    },
+    {
+      "productCode": "45610P13",
+      "title": "Small Group: Michelin and Local Hawker Food Tour with 9 tastings",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Small-Group-Michelin-and-Local-Hawker-Food-Tour/d60449-45610P13",
+      "priceFrom": 87.36,
+      "priceFromFormatted": "From US$87.36",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/Small-Group-Michelin-and-Local-Hawker-Food-Tour/d60449-45610P13",
+        "verbatim": "From US$87.36"
+      },
+      "rating": 4.9,
+      "reviewCount": 2113,
+      "duration": "3 hours 30 minutes (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6f/11/5a.jpg",
+      "overview": "Singapore is a very diverse place, and on this food-focused walking tour, you are introduced to a huge range of different cuisines in the heart of Chinatown. Follow your tour guide through the vibrant neighborhood to see where the locals eat and learn about Singaporean culture. Sample various dishes from Michelin guide hawkers to popular food stalls. This tasting tour is a must-do for adventurous foodies!",
+      "itineraryStops": [
+        { "name": "Chinatown", "passBy": false },
+        { "name": "Maxwell Food Centre", "passBy": false },
+        { "name": "South Bridge Road", "passBy": false },
+        { "name": "Jamae Mosque", "passBy": true },
+        { "name": "Sri Mariamman Temple", "passBy": true },
+        { "name": "Sago Street (Street Of The Dead)", "passBy": false },
+        { "name": "Buddha Tooth Relic Temple and Museum", "passBy": true },
+        { "name": "Chinatown Street Market", "passBy": false }
+      ],
+      "inclusions": [
+        "Guided Hawker Food & Cultural Tour",
+        "English-speaking Tour Guide",
+        "9 to 10 Local Hawker Food & Drinks"
+      ],
+      "exclusions": [
+        "Transport",
+        "Optional food & drinks",
+        "Personal expenses",
+        "Guide tips and gratuities"
+      ],
+      "startDescription": "133 New Bridge Rd, Singapore 059413. Exact meeting point is Chinatown MRT Station, Exit E (Street Level). Look for tour guides in purple Monster Day Tours shirt. Start 9:30 am.",
+      "endDescription": "Chinatown Complex, 335 Smith St, Singapore 050335.",
+      "highlights": [
+        "Enjoy tastings at Michelin Guide–listed and Bib Gourmand hawker stalls",
+        "Designed for people of all ages and any fitness level",
+        "Hear exclusive insider stories about Singapore’s culinary heritage",
+        "A small-group experience means a more personalized tour"
+      ],
+      "categories": ["Food Tours", "Walking Tours"],
+      "experienceType": "food"
+    },
+    {
+      "productCode": "277546P4",
+      "title": "Chinatown, Little India, Kampong Gelam City Highlights Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/City-Highlights-Tour-Chinatown-Little-India-Kampong-Gelam/d60449-277546P4",
+      "priceFrom": 81,
+      "priceFromFormatted": "from $81",
+      "usdSource": {
+        "kind": "tripadvisor-US",
+        "url": "https://www.tripadvisor.com/AttractionProductReview-g294265-d24072052-Chinatown_Little_India_Kampong_Gelam_City_Highlights_Tour-Singapore.html",
+        "verbatim": "$81",
+        "note": "Default Viator dump was From€61.80 (EUR — rejected). US walking-tours listing also showed from $70 without US$. Tripadvisor US $81 used."
+      },
+      "rating": 4.9,
+      "reviewCount": 183,
+      "duration": "3 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/bd/79/d1.jpg",
+      "overview": "Even if you only have half a day to spare, get a taste of Singapore’s three main cultures—Chinese, Indian, and Malay—on this guided walking tour covering Chinatown, Little India, and Kampong Glam. Hear about Singapore’s past and present, fill your camera roll with colorful shots, and see temples, murals, the Tekka Center market, and more.",
+      "itineraryStops": [
+        { "name": "Kampong Glam", "passBy": false },
+        { "name": "Little India / Tekka Centre", "passBy": false },
+        { "name": "Chinatown", "passBy": false },
+        { "name": "Buddha Tooth Relic Temple and Museum", "passBy": false }
+      ],
+      "inclusions": [
+        "Licensed English-speaking guide"
+      ],
+      "exclusions": [
+        "Gratuities"
+      ],
+      "startDescription": "Let's Go Tour Singapore, Block 462 Crawford Ln, #01-57, Singapore 190462.",
+      "endDescription": "Chinatown Complex, 335 Smith St, Singapore 050335.",
+      "highlights": [
+        "See Chinatown, Little India, and Kampong Glam from street level—on foot",
+        "Visit the Buddha Tooth Relic Temple and Museum, the Tekka Center, and more",
+        "Curated selection of photo stops lets you bag the best angles",
+        "Licensed guide explains Singapore’s rich Malay, Indian, and Chinese heritage"
+      ],
+      "categories": ["Walking Tours", "Historical & Heritage Tours", "Cultural Tours"],
+      "experienceType": "cultural"
+    },
+    {
+      "productCode": "223757P4",
+      "title": "Singapore: Chinese, Indian & Malay Quarters, Culture & Food Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/Singapore-hawker-centre-street-food-tour-with-intro-to-public-transport-MRT-Bus/d60449-223757P4",
+      "priceFrom": 148,
+      "priceFromFormatted": "from $148.00 per adult",
+      "usdSource": {
+        "kind": "tripadvisor-US",
+        "url": "https://www.tripadvisor.com/AttractionProductReview-g294265-d18274845-Lonely_Planet_Experience_Best_of_Singapore-Singapore.html",
+        "verbatim": "Singapore: Chinese, Indian Malay Quarters from $148.00 per adult",
+        "note": "Default Viator dump was From$148.00 without US$ — not treated as USD. Tripadvisor US per-adult string used."
+      },
+      "rating": 5.0,
+      "reviewCount": 616,
+      "duration": "5 hours 30 minutes (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/2a/a6/d9.jpg",
+      "overview": "This small-group tour introduces visitors to a variety of local street food and the vibrant culture and history of Chinatown, Little India, and Kampong Glam in Singapore. The host of this tour is a fourth-generation Singapore-Chinese-Peranakan who is dedicated to sharing authentic experiences of Singapore. A fun adventure for those who want to experience traditional street food while learning about the history and culture of Singapore.",
+      "itineraryStops": [
+        { "name": "Chinatown / UNESCO hawker centres", "passBy": false },
+        { "name": "Little India", "passBy": false },
+        { "name": "Kampong Glam / Sultan Mosque", "passBy": false }
+      ],
+      "inclusions": [
+        "Coffee and/or Tea",
+        "Dinner",
+        "Snacks",
+        "Alcoholic Beverages",
+        "Lunch",
+        "Soda/Pop",
+        "Bottled water"
+      ],
+      "exclusions": [
+        "Gratuities"
+      ],
+      "startDescription": "Chinatown, Singapore. Operator advises meeting at hotel lobby or MRT Station for centralised city locations. Start 9:00 am. Pickup offered for central locations.",
+      "endDescription": "This activity ends back at the meeting point.",
+      "highlights": [
+        "Alcoholic and non-alcoholic beverages are included",
+        "The local food is sourced in UNESCO inscribed hawker centres",
+        "Be enthralled by the grand Sultan Mosque while in Kampong Glam",
+        "Experience a culture that has been embedded in Singapore since the early 19th century"
+      ],
+      "categories": ["Food Tours", "Cultural Tours", "Walking Tours"],
+      "experienceType": "food"
+    },
+    {
+      "productCode": "5570MGK",
+      "title": "Mangrove Kayaking Adventure in Singapore",
+      "productUrl": "https://www.viator.com/tours/Singapore/Pulau-Ubin-Mangrove-Kayak-Adventure-from-Singapore/d60449-5570MGK",
+      "priceFrom": 84.9,
+      "priceFromFormatted": "US$84.90",
+      "usdSource": {
+        "kind": "trip.com-US$ + tripadvisor-US",
+        "url": "https://www.trip.com/things-to-do/detail/16252755/",
+        "verbatim": "From US$84.90",
+        "tripadvisorUs": {
+          "url": "https://www.tripadvisor.com/AttractionProductReview-g294265-d12463661-Mangrove_Kayaking_Adventure_in_Singapore-Singapore.html",
+          "verbatim": "$85"
+        }
+      },
+      "rating": 4.8,
+      "reviewCount": 140,
+      "duration": "4 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e6/2c/13.jpg",
+      "overview": "See a different side of Singapore with a guided kayaking tour around Pulau Ubin. Paddle in a pair or with the guide on a tandem kayak. Spend a short time crossing the open sea before reaching the calm waters of the mangrove forest. Soak in the tranquil environment while learning about the ecosystem and looking for birds like Kingfishers, Eagles and Herons. All equipment provided, and no kayaking experience is necessary.",
+      "itineraryStops": [
+        { "name": "Pulau Ubin jetty / shophouse No. 34", "passBy": false },
+        { "name": "Open-sea crossing to mangrove channels", "passBy": false },
+        { "name": "Pulau Ubin mangrove forest", "passBy": false }
+      ],
+      "inclusions": [
+        "Equipment for kayaking",
+        "English-speaking Adventures Leader",
+        "Drinking-Water for the Refill",
+        "Facility for a simple rinse off after the programme",
+        "Lockers to put the valuables behind"
+      ],
+      "exclusions": [
+        "Gratuities",
+        "Ferry transfers between Changi Point Ferry Terminal and Pulau Ubin or vice versa (approx. SGD 3–5 each way)",
+        "Food and drinks (except the Refill of Drinking Water)"
+      ],
+      "startDescription": "Adventures by Asian Detours, 34 Pulau Ubin, Singapore 508287. After Ubin Jetty, walk toward the welcome sign, turn left past bicycle rental shops. Green-and-white shophouse on the right. Sessions 09:00–13:00 or 13:30–17:30.",
+      "endDescription": "This activity ends back at the meeting point.",
+      "highlights": [
+        "See Singapore’s Pulau Ubin from the water on a kayaking tour",
+        "Ideal for beginner kayakers and bird watchers",
+        "Kayak equipment, including personal floatation device, provided",
+        "Storage lockers, drinking water and rinse-off facilities available"
+      ],
+      "categories": ["Kayaking and Canoeing", "Water Sports"],
+      "experienceType": "kayak"
+    },
+    {
+      "productCode": "30791P719",
+      "title": "Full-Day Singapore Tour: 8-Hour Private Experience with a Local",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/A-Full-Day-in-Singapore-with-a-Local-Private-and-Personalized/d60449-30791P719",
+      "priceFrom": 297.73,
+      "priceFromFormatted": "FromUS$297.73",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/A-Full-Day-in-Singapore-with-a-Local-Private-and-Personalized/d60449-30791P719",
+        "verbatim": "FromUS$297.73"
+      },
+      "rating": 4.9,
+      "reviewCount": 22,
+      "duration": "8 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/b1/a9/7a.jpg",
+      "overview": "Get more out of your visit to Singapore with a customized full-day tour led by your own private guide who creates an itinerary that suits your interests. Choose to visit top destinations such as Marina Bay Sands Skypark, Gardens by the Bay, Chinatown, and Tiong Bahru, or go to other places that you would like to explore. Benefit from the personalized attention of your guide throughout the day.",
+      "itineraryStops": [
+        { "name": "Marina Bay Sands Skypark", "passBy": false },
+        { "name": "Gardens by the Bay", "passBy": false },
+        { "name": "Chinatown", "passBy": false },
+        { "name": "Tiong Bahru", "passBy": false }
+      ],
+      "inclusions": [
+        "8 hours with a host",
+        "Private and personalised experience",
+        "Walking experience (if required, your host can suggest public transport or private taxi options)",
+        "Hotel meet-up (available on request for central location)"
+      ],
+      "exclusions": [
+        "Food & drinks",
+        "Tickets to any attractions",
+        "Transportation costs",
+        "Gratuities (optional)"
+      ],
+      "startDescription": "Starbucks Chinatown Point, 133 New Bridge Rd, #01-08 Chinatown Point, Singapore 059413. Upon booking a different meeting point can be arranged (e.g. hotel) if confirmed in advance.",
+      "endDescription": "This activity ends back at the meeting point.",
+      "highlights": [
+        "Private full-day tour of Singapore",
+        "Receive personalized recommendations from your guide",
+        "Learn about Singapore’s history and cultural attractions",
+        "Cover more ground in one day with a private tour"
+      ],
+      "categories": ["Walking Tours", "Private and Custom Tours", "Full-day Tours"],
+      "experienceType": "private-city"
+    },
+    {
+      "productCode": "430482P4",
+      "title": "Splendour of Colonial Singapore Walking Tour with Lunch",
+      "productUrl": "https://www.viator.com/en-SG/tours/Singapore/Splendour-of-Colonial-Singapore-Walking-Tour-with-3-Course-Lunch/d60449-430482P4",
+      "priceFrom": 49.11,
+      "priceFromFormatted": "FromUS$49.11",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Singapore/Splendour-of-Colonial-Singapore-Walking-Tour-with-3-Course-Lunch/d60449-430482P4",
+        "verbatim": "FromUS$49.11"
+      },
+      "rating": null,
+      "reviewCount": null,
+      "duration": "3 hours 30 minutes (approx.)",
+      "heroUrl": null,
+      "overview": "Discover Singapore's colonial heritage in the Old European Town and Civic District. Uncover fascinating stories behind iconic buildings, then enjoy a 3-course lunch by the scenic Singapore River at Boat Quay.",
+      "itineraryStops": [
+        { "name": "Civic District / Old European Town", "passBy": false },
+        { "name": "Singapore River", "passBy": false },
+        { "name": "Boat Quay (3-course riverside lunch)", "passBy": false },
+        { "name": "Armenian Apostolic Church of St. Gregory the Illuminator", "passBy": false }
+      ],
+      "inclusions": [
+        "3-course lunch by the river, with vegetarian and non-vegetarian options",
+        "Licensed tourist guide and disposable poncho in the event of rain"
+      ],
+      "exclusions": [
+        "Gratuities"
+      ],
+      "startDescription": "City Hall MRT Station Exit B (Street Level), 150 N Bridge Rd, Singapore 179100. Meet 09:55, start 10:00.",
+      "endDescription": "Armenian Apostolic Church of St. Gregory the Illuminator, 60 Hill St, Singapore 179366. Short walk from City Hall MRT.",
+      "highlights": [
+        "Colonial Civic District walking tour",
+        "3-course riverside lunch at Boat Quay",
+        "Licensed tourist guide"
+      ],
+      "categories": ["Walking Tours", "Historical & Heritage Tours"],
+      "experienceType": "cultural",
+      "dumpCompleteness": "USD + logistics complete; rating/reviewCount not confirmed on dump — flag before merchandising if thin"
+    },
+    {
+      "productCode": "434501P2",
+      "title": "Singapore Starry Night Cruise, Garden Rhapsody & Spectra Show",
+      "productUrl": "https://www.viator.com/en-CA/tours/Singapore/Starry-Night-Adventure-Singapore/d60449-434501P2",
+      "priceFrom": 87.69,
+      "priceFromFormatted": "From US$87.69",
+      "usdSource": {
+        "kind": "viator-en-CA-explicit-USD",
+        "url": "https://www.viator.com/en-CA/tours/Singapore/Starry-Night-Adventure-Singapore/d60449-434501P2",
+        "verbatim": "From US$87.69"
+      },
+      "rating": 4.4,
+      "reviewCount": 888,
+      "duration": "4 hours 30 minutes (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/2a/7e/e6.jpg",
+      "overview": "Explore the beauty of Singapore at night on a tour that highlights some of the city’s most incredible nighttime sights. This attraction-packed tour features an itinerary that showcases the city when it's illuminated. Admire Singapore from the water on a river cruise, then watch the Rhapsody Light Show at Gardens by the Bay and the spectacular Spectra Light Show at Marina Bay Sands. You'll also have the option to stop at Lau Pa Sat for local food.",
+      "itineraryStops": [
+        { "name": "Singapore Flyer", "passBy": false },
+        { "name": "Merlion Park", "passBy": false },
+        { "name": "Garden Rhapsody / Gardens by the Bay", "passBy": false },
+        { "name": "Marina Bay", "passBy": false },
+        { "name": "Singapore River Cruise", "passBy": false },
+        { "name": "Spectra - A Light And Water Show", "passBy": false },
+        { "name": "Lau Pa Sat", "passBy": true }
+      ],
+      "inclusions": [
+        "Garden Rhapsody Light Show",
+        "Spectra – Marina Bay Sands Light & Water Show",
+        "River cruise"
+      ],
+      "startDescription": "30 Raffles Ave., Singapore 039803. The tour starts at Singapore Flyer. Exact meeting location and timing shared via WhatsApp or email on the day of the tour. Arrive 10–15 minutes early.",
+      "endDescription": "Lau Pa Sat, 18 Raffles Quay, Singapore 048582. Guests may enjoy supper, explore the area, or make their own return arrangements.",
+      "highlights": [
+        "River cruise plus two iconic night light shows",
+        "Merlion Park photo stop",
+        "Optional Lau Pa Sat food stop"
+      ],
+      "categories": ["Night Tours", "Boat Tours and Cruises"],
+      "experienceType": "night"
+    },
+    {
+      "productCode": "5570UBINBIKE",
+      "title": "4 Hours Cycling in the Nature at Pulau Ubin Singapore",
+      "productUrl": "https://www.viator.com/en-SG/tours/Pulau-Ubin/Singapore-Bike-Adventure-around-Pulau-Ubin/d50463-5570UBINBIKE",
+      "priceFrom": 97.93,
+      "priceFromFormatted": "FromUS$97.93",
+      "usdSource": {
+        "kind": "viator-en-SG",
+        "url": "https://www.viator.com/en-SG/tours/Pulau-Ubin/Singapore-Bike-Adventure-around-Pulau-Ubin/d50463-5570UBINBIKE",
+        "verbatim": "FromUS$97.93"
+      },
+      "rating": null,
+      "reviewCount": null,
+      "duration": "4 hours (approx.)",
+      "heroUrl": null,
+      "overview": "Guided nature cycling on Pulau Ubin with bicycle and accident insurance. Ferry from Changi Point is at guest expense (approx. SGD 3–5 each way).",
+      "itineraryStops": [
+        { "name": "Pulau Ubin villages / nature trails", "passBy": false }
+      ],
+      "inclusions": [
+        "English-speaking adventure cycling leader",
+        "Use of bicycle",
+        "Accident Insurance"
+      ],
+      "exclusions": [
+        "Gratuities",
+        "Ferry transfers from Changi Point Ferry Terminal to / from Pulau Ubin",
+        "Food and drinks"
+      ],
+      "startDescription": "34 Pulau Ubin, Singapore 508287. After Ubin Jetty, walk toward the welcome sign, turn left past bicycle rental shops. Green-and-white shophouse on the right. Minimum 4 participants.",
+      "endDescription": "Ends at the meeting point.",
+      "highlights": [
+        "4-hour Pulau Ubin nature bike ride",
+        "Bicycle and insurance included"
+      ],
+      "categories": ["Bike Tours"],
+      "experienceType": "bike",
+      "dumpCompleteness": "USD + logistics complete; rating/reviewCount not confirmed — do not merchandize if reviews are thin"
+    }
+  ],
+  "rejected": [
+    {
+      "productCode": "124015P2",
+      "requestedUrl": "https://www.viator.com/en-SG/tours/Singapore/Private-Singapore-Walking-Tour/d60449-124015P2",
+      "reason": "Requested slug missed. Recovered as Private-Customized-Tour-of-Singapore-Half-Day-or-Full-Day with from US$111 on en-SG related card — included in shippable with partial dump.",
+      "status": "recovered-partial"
+    },
+    {
+      "productCode": "45610P20",
+      "title": "Private Customized Singapore Car Tour (Half Day or Full Day)",
+      "productUrl": "https://www.viator.com/tours/Singapore/Private-Customised-Singapore-Car-Tour-Half-Day-or-Full-Day/d60449-45610P20",
+      "reason": "Complete dump exists (4.9/81, 4–8 hrs, From$283.64) but price is bare From$ without US$. en-SG URL search did not return FromUS$. Cannot treat as USD.",
+      "rating": 4.9,
+      "reviewCount": 81
+    },
+    {
+      "productCode": "40856P18",
+      "title": "Private One Day Highlight Tour of Singapore with Singapore Flyer",
+      "productUrl": "https://www.viator.com/tours/Singapore/Private-One-Day-Highlight-Tour-of-Singapore-with-Singapore-Flyer/d60449-40856P18",
+      "reason": "Complete dump (4.9/25, 7 hrs, Gardens/Flyer/Chinatown/Little India/river cruise) but price is From$300.00 without US$. AAA $300 and tourist-copy $300 are not explicit US$.",
+      "rating": 4.9,
+      "reviewCount": 25
+    },
+    {
+      "productCode": "40856P8",
+      "title": "Private Singapore Night Tour with Gardens by the Bay&River Cruise",
+      "productUrl": "https://www.viator.com/tours/Singapore/Private-Tour-Singapore-Unique-Night-Tour-Including-Trishaw-Ride-and-Bumboat-Ride/d60449-40856P8",
+      "reason": "Viator dump From£151.78 (GBP). TourFinder A$275.81 (AUD). No explicit US$ found.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "30791P172",
+      "title": "Singapore Street Food Tour with a Local: A Feast for Foodies 100% Personalized",
+      "productUrl": "https://www.viator.com/tours/Singapore/Chinatown-Street-Food-Eat-with-a-Local/d60449-30791P172",
+      "reason": "Complete dump (4.8/125, 3 hrs, 6–8 tastings, Nanyang Old Coffee meet) but price is From£130.00 (GBP). No en-SG FromUS$ hit. Quality would otherwise ship.",
+      "rating": 4.8,
+      "reviewCount": 125
+    },
+    {
+      "productCode": "63071P4",
+      "title": "Private Pulau Ubin Bike Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/Pulau-Ubin-Bike-Tour/d60449-63071P4",
+      "reason": "Viator dump FromCA$132.15 (CAD). AAA/Explorevia ~$95–96 not accepted as Viator/Tripadvisor-US/TourFinder US$. No FromUS$ on en-SG.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "224575P2",
+      "title": "Singapore - bike adventure beyond the concrete jungle",
+      "productUrl": "https://www.viator.com/tours/Singapore/Singapore-bike-adventure-beyond-the-concrete-jungle/d60449-224575P2",
+      "reason": "From$74.71 without US$. Pelago SGD 145.53. No Tripadvisor US per-adult hit.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "113744P2",
+      "title": "BEST Singapore Private City Tour by an Insider (1/2/3 x full-day)",
+      "productUrl": "https://www.viator.com/tours/Singapore/BEST-Singapore-Customized-Tour-1-Full-day-or-Multiple-days/d60449-113744P2",
+      "reason": "From$676.36 per group without US$. en-PH dump FromCA$948.10. No explicit US$.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "67144P3",
+      "title": "*Most Popular* The Singapore City Tour (Transportation Included)",
+      "productUrl": "https://www.viator.com/tours/Singapore/Most-Popular-The-Singapore-City-Tour-Transportation-Included/d60449-67144P3",
+      "reason": "From$550.52 per group (up to 8) without US$. No Tripadvisor/TourFinder US$ citation found.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "195064P4",
+      "title": "Mount Faber, Henderson Waves and Southern Ridges Tour",
+      "productUrl": "https://www.viator.com/tours/Singapore/Mount-Faber-Henderson-Waves-and-Southern-Ridges/d60449-195064P4",
+      "reason": "From$40.61 without US$. en-CA dump From€36.72. No explicit US$.",
+      "rating": null,
+      "reviewCount": null
+    },
+    {
+      "productCode": "5577222P7",
+      "requestedUrl": "https://www.viator.com/en-SG/tours/Singapore/Night-River-Cruise-and-Lights/d60449-5577222P7",
+      "reason": "Exact URL and code search did not return a live 5577222P7 product page. Nearby night-cruise SKUs are 5577222P5 / 434501P2 / 434501P9. 434501P2 harvested as substitute extra."
+    },
+    {
+      "productCode": "3695NSC",
+      "reason": "Pre-rejected: Night Safari 3.8 rating per brief."
+    },
+    {
+      "productCode": "42843P21",
+      "reason": "Pre-rejected: hop-on hop-off."
+    },
+    {
+      "productCode": "42843P1",
+      "title": "Big Bus Singapore Night Tour with Gardens by the Bay Light Show",
+      "reason": "Hop-on / Big Bus night product; en-SG dump FromA$79.48 (AUD). Reject hop-on family."
+    },
+    {
+      "productCode": "9592P192",
+      "title": "Private Singapore Customized Tour With Driver in small group",
+      "reason": "en-SG dump From€73.37 (EUR). 4.6/390 would otherwise be strong private-city inventory.",
+      "rating": 4.6,
+      "reviewCount": 390
+    },
+    {
+      "productCode": "430482P7",
+      "title": "Botanic Gardens & Tiong Bahru Walking Tour with Breakfast",
+      "reason": "From US$55.06 seen on a related en-SG card, but listing also showed 5.0 (1) — thin reviews (<20).",
+      "reviewCount": 1
+    },
+    {
+      "productCode": "29188P3",
+      "title": "Pulau Ubin Cycling Adventure",
+      "reason": "en-SG page dump had no FromUS$. Related-card from US$109 not on the product page itself. Tripadvisor.in is not US."
+    },
+    {
+      "productCode": "242747P76",
+      "title": "Singapore River Cruise Tour with E-Tickets",
+      "reason": "Tickets-only river cruise (FromUS$22.11). Reject tickets-only."
+    },
+    {
+      "productCode": "5494222P1",
+      "title": "Live Like a Local in Singapore (Half-day Tour)",
+      "reason": "from US$3 per group on related card — not a real commercial From price / thin (18 reviews)."
+    }
+  ],
+  "notes": [
+    "15 shippable with explicit USD. Target 20–25 not reached without relaxing USD (several complete high-quality dumps are GBP/EUR/CAD/bare From$).",
+    "Strongest USD+quality cores: 45610P13 (4.9/2113, From US$87.36), 223757P4 (5.0/616, TA $148/adult), 40856P7 (4.7/567, TourFinder US$140.06), 57811P2 (4.9/545, FromUSD 47.01), 434501P2 (4.4/888, From US$87.69), 277546P4 (4.9/183, TA $81).",
+    "If USD rule is later relaxed for default-locale From$ on US Viator, immediately add 45610P20 ($283.64, 4.9/81), 40856P18 ($300, 4.9/25), 67144P3 ($550.52/group), 113744P2 ($676.36/group), 195064P4 ($40.61), 224575P2 ($74.71).",
+    "If GBP/EUR conversion is later allowed, immediately add 30791P172 (£130, 4.8/125), 40856P8 (£151.78), 9592P192 (€73.37, 4.6/390), 277546P4 (€61.80 already covered via TA).",
+    "124015P2 requested slug was wrong; live slug Private-Customized-Tour-of-Singapore-Half-Day-or-Full-Day.",
+    "5577222P7 not found; 434501P2 is the harvestable night-cruise+lights substitute.",
+    "430482P4 and 5570UBINBIKE have explicit en-SG FromUS$ but unconfirmed review counts — hold from merchandising until ratings are confirmed ≥20."
+  ]
+}

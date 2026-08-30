@@ -1534,6 +1534,50 @@ export const isEngine6BangkokTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_BANGKOK_TOUR_PATH_PREFIX);
 
+export const ENGINE6_SINGAPORE_203208P12_PRODUCT_CODE = "203208P12";
+export const ENGINE6_SINGAPORE_203208P12_ROUTE =
+  "/destinations/singapore/singapore/tours/6-hours-singapore-tour-in-private-car-or-minibus-with-d-203208P12";
+export const ENGINE6_SINGAPORE_30791P719_PRODUCT_CODE = "30791P719";
+export const ENGINE6_SINGAPORE_30791P719_ROUTE =
+  "/destinations/singapore/singapore/tours/full-day-singapore-tour-8-hour-private-experience-with-30791P719";
+export const ENGINE6_SINGAPORE_40856P7_PRODUCT_CODE = "40856P7";
+export const ENGINE6_SINGAPORE_40856P7_ROUTE =
+  "/destinations/singapore/singapore/tours/private-tour-nighttime-sightseeing-with-river-cruise-40856P7";
+export const ENGINE6_SINGAPORE_223757P4_PRODUCT_CODE = "223757P4";
+export const ENGINE6_SINGAPORE_223757P4_ROUTE =
+  "/destinations/singapore/singapore/tours/singapore-chinese-indian-malay-quarters-culture-food-to-223757P4";
+export const ENGINE6_SINGAPORE_102132P3_PRODUCT_CODE = "102132P3";
+export const ENGINE6_SINGAPORE_102132P3_ROUTE =
+  "/destinations/singapore/singapore/tours/kampong-glam-little-india-chinatown-with-local-street-f-102132P3";
+export const ENGINE6_SINGAPORE_24380P991_PRODUCT_CODE = "24380P991";
+export const ENGINE6_SINGAPORE_24380P991_ROUTE =
+  "/destinations/singapore/singapore/tours/a-taste-of-singapore-hawker-center-private-customized-f-24380P991";
+export const ENGINE6_SINGAPORE_124015P1_PRODUCT_CODE = "124015P1";
+export const ENGINE6_SINGAPORE_124015P1_ROUTE =
+  "/destinations/singapore/singapore/tours/private-singapore-walking-tour-city-highlights-hidden-g-124015P1";
+export const ENGINE6_SINGAPORE_45610P13_PRODUCT_CODE = "45610P13";
+export const ENGINE6_SINGAPORE_45610P13_ROUTE =
+  "/destinations/singapore/singapore/tours/small-group-michelin-and-local-hawker-food-tour-with-9-45610P13";
+export const ENGINE6_SINGAPORE_5570MGK_PRODUCT_CODE = "5570MGK";
+export const ENGINE6_SINGAPORE_5570MGK_ROUTE =
+  "/destinations/singapore/singapore/tours/mangrove-kayaking-adventure-in-singapore-5570MGK";
+export const ENGINE6_SINGAPORE_277546P4_PRODUCT_CODE = "277546P4";
+export const ENGINE6_SINGAPORE_277546P4_ROUTE =
+  "/destinations/singapore/singapore/tours/chinatown-little-india-kampong-gelam-city-highlights-to-277546P4";
+export const ENGINE6_SINGAPORE_104357P24_PRODUCT_CODE = "104357P24";
+export const ENGINE6_SINGAPORE_104357P24_ROUTE =
+  "/destinations/singapore/singapore/tours/singapore-customized-private-walking-tour-with-a-licens-104357P24";
+export const ENGINE6_SINGAPORE_57811P2_PRODUCT_CODE = "57811P2";
+export const ENGINE6_SINGAPORE_57811P2_ROUTE =
+  "/destinations/singapore/singapore/tours/marina-bay-night-cycling-tour-57811P2";
+
+export const ENGINE6_SINGAPORE_TOUR_PATH_PREFIX =
+  "/destinations/singapore/singapore/tours/";
+
+export const isEngine6SingaporeTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_SINGAPORE_TOUR_PATH_PREFIX);
+
 export const ENGINE6_KYOTO_92136P55_PRODUCT_CODE = "92136P55";
 export const ENGINE6_KYOTO_92136P55_ROUTE =
   "/destinations/japan/kyoto/tours/kyoto-6hr-private-tour-with-government-licensed-guide-92136P55";
@@ -5150,6 +5194,54 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_BANGKOK_8374P24_ROUTE,
     ENGINE6_BANGKOK_8374P24_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_203208P12_ROUTE,
+    ENGINE6_SINGAPORE_203208P12_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_30791P719_ROUTE,
+    ENGINE6_SINGAPORE_30791P719_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_40856P7_ROUTE,
+    ENGINE6_SINGAPORE_40856P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_223757P4_ROUTE,
+    ENGINE6_SINGAPORE_223757P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_102132P3_ROUTE,
+    ENGINE6_SINGAPORE_102132P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_24380P991_ROUTE,
+    ENGINE6_SINGAPORE_24380P991_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_124015P1_ROUTE,
+    ENGINE6_SINGAPORE_124015P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_45610P13_ROUTE,
+    ENGINE6_SINGAPORE_45610P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_5570MGK_ROUTE,
+    ENGINE6_SINGAPORE_5570MGK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_277546P4_ROUTE,
+    ENGINE6_SINGAPORE_277546P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_104357P24_ROUTE,
+    ENGINE6_SINGAPORE_104357P24_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SINGAPORE_57811P2_ROUTE,
+    ENGINE6_SINGAPORE_57811P2_PRODUCT_CODE,
   ],
   [
     ENGINE6_KYOTO_92136P55_ROUTE,

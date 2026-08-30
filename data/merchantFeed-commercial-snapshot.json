@@ -4271,6 +4271,90 @@
       "averageRating": "4.5",
       "ratingCount": "3445",
       "reviewCount": "3445"
+    },
+    {
+      "productCode": "203208P12",
+      "price": "249.39 USD",
+      "averageRating": "4.7",
+      "ratingCount": "461",
+      "reviewCount": "461"
+    },
+    {
+      "productCode": "30791P719",
+      "price": "297.73 USD",
+      "averageRating": "4.9",
+      "ratingCount": "22",
+      "reviewCount": "22"
+    },
+    {
+      "productCode": "40856P7",
+      "price": "140.06 USD",
+      "averageRating": "4.7",
+      "ratingCount": "567",
+      "reviewCount": "567"
+    },
+    {
+      "productCode": "223757P4",
+      "price": "148 USD",
+      "averageRating": "5.0",
+      "ratingCount": "616",
+      "reviewCount": "616"
+    },
+    {
+      "productCode": "102132P3",
+      "price": "165 USD",
+      "averageRating": "4.7",
+      "ratingCount": "55",
+      "reviewCount": "55"
+    },
+    {
+      "productCode": "24380P991",
+      "price": "130.10 USD",
+      "averageRating": "4.5",
+      "ratingCount": "33",
+      "reviewCount": "33"
+    },
+    {
+      "productCode": "124015P1",
+      "price": "106.44 USD",
+      "averageRating": "5.0",
+      "ratingCount": "54",
+      "reviewCount": "54"
+    },
+    {
+      "productCode": "45610P13",
+      "price": "87.36 USD",
+      "averageRating": "4.9",
+      "ratingCount": "2113",
+      "reviewCount": "2113"
+    },
+    {
+      "productCode": "5570MGK",
+      "price": "84.90 USD",
+      "averageRating": "4.8",
+      "ratingCount": "140",
+      "reviewCount": "140"
+    },
+    {
+      "productCode": "277546P4",
+      "price": "81 USD",
+      "averageRating": "4.9",
+      "ratingCount": "183",
+      "reviewCount": "183"
+    },
+    {
+      "productCode": "104357P24",
+      "price": "57.02 USD",
+      "averageRating": "4.7",
+      "ratingCount": "30",
+      "reviewCount": "30"
+    },
+    {
+      "productCode": "57811P2",
+      "price": "47.01 USD",
+      "averageRating": "4.9",
+      "ratingCount": "545",
+      "reviewCount": "545"
     }
   ]
 }

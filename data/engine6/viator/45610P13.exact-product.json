@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "45610P13",
+    "productUrl": "https://www.viator.com/tours/Singapore/Small-Group-Michelin-and-Local-Hawker-Food-Tour/d60449-45610P13",
+    "title": "Small Group: Michelin and Local Hawker Food Tour with 9 tastings",
+    "description": {
+      "text": "In Singapore, this small-group Chinatown hawker walk leaves Chinatown MRT Exit E at 9:30 am for nine to ten tastings at Michelin Guide and Bib Gourmand stalls. Published stops include Maxwell Food Centre, South Bridge Road, Sago Street, and Chinatown Street Market, with Jamae Mosque, Sri Mariamman Temple, and Buddha Tooth Relic Temple listed as pass-bys. The group is capped at ten. Food and drinks on the tasting list are included; transport and extra purchases stay separate. The walk ends at Chinatown Complex on Smith Street. The format suits visitors who want a guided hawker introduction without queuing independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Chinatown, Maxwell Food Centre, Sago Street, and Chinatown Street Market that define this tasting rather than a Little India add-on."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $87.36",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 2113
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6f/11/5a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sago Street (Street Of The Dead)",
+      "Buddha Tooth Relic Temple and Museum",
+      "Chinatown Street Market",
+      "Nine to ten hawker tastings in Chinatown",
+      "Michelin Guide and Bib Gourmand stalls on the route"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Chinatown MRT Station, Exit E at street level, 133 New Bridge Rd, Singapore 059413. Look for guides in purple Monster Day Tours shirts. Start 9:30 am."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this small-group Chinatown hawker walk leaves Chinatown MRT Exit E at 9:30 am for nine to ten tastings at Michelin Guide and Bib Gourmand stalls.",
+    "itineraryItems": [
+      {
+        "title": "Chinatown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maxwell Food Centre",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Bridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jamae Mosque",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sri Mariamman Temple",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sago Street (Street Of The Dead)",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buddha Tooth Relic Temple and Museum",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Chinatown Street Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided Hawker Food & Cultural Tour",
+      "English-speaking Tour Guide",
+      "9 to 10 Local Hawker Food & Drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small Group: Michelin and Local Hawker Food Tour with 9 tastings?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Chinatown MRT Station, Exit E at street level, 133 New Bridge Rd, Singapore 059413. Look for guides in purple Monster Day Tours shirts. Start 9:30 am."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 87.36
+      },
+      "currency": "USD"
+    }
+  }
+}

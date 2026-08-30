@@ -35,6 +35,38 @@ describe("Engine6 commercial USD currency guard", () => {
     });
   });
 
+  it("never treats an SGD source amount or S$ formatted price as USD", () => {
+    expect(
+      isUsdCommercialSource({
+        priceCurrency: "SGD",
+        priceFormatted: "From S$60.00",
+      })
+    ).toBe(false);
+    expect(
+      shouldApplyLivePriceAsUsd({
+        priceAmount: 60,
+        priceCurrency: "SGD",
+        priceFormatted: "From $60.00",
+      })
+    ).toBe(false);
+    expect(
+      resolveEngine6ListingPriceFields({
+        priceAmount: 60,
+        priceFormatted: "From S$60.00",
+        priceCurrency: "SGD",
+      })
+    ).toEqual({
+      startingPrice: undefined,
+      currency: undefined,
+      priceFrom: undefined,
+    });
+    expect(
+      isUsdCommercialSource({
+        priceFormatted: "From S$60.00",
+      })
+    ).toBe(false);
+  });
+
   it("keeps USD merchant-feed commercial amounts as USD", () => {
     expect(
       resolveEngine6ListingPriceFields({

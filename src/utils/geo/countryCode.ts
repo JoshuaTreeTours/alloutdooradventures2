@@ -35,6 +35,7 @@ export const COUNTRY_SLUG_TO_ISO2: Record<string, string> = {
   australia: "AU",
   "new-zealand": "NZ",
   japan: "JP",
+  singapore: "SG",
   thailand: "TH",
   vietnam: "VN",
   india: "IN",
@@ -87,6 +88,7 @@ export const COUNTRY_NAME_TO_ISO2: Record<string, string> = {
   brazil: "BR",
   japan: "JP",
   thailand: "TH",
+  singapore: "SG",
   switzerland: "CH",
   austria: "AT",
 };

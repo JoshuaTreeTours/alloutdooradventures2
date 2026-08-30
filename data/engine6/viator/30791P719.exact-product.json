@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "30791P719",
+    "productUrl": "https://www.viator.com/tours/Singapore/A-Full-Day-in-Singapore-with-a-Local-Private-and-Personalized/d60449-30791P719",
+    "title": "Full-Day Singapore Tour: 8-Hour Private Experience with a Local",
+    "description": {
+      "text": "In Singapore, this private eight-hour walking day is shaped by a local host instead of a fixed coach script. Published options include Marina Bay Sands Skypark, Gardens by the Bay, Chinatown, and Tiong Bahru, with the host suggesting MRT or taxi links when the group wants to cover more ground. The default meeting is Starbucks at Chinatown Point on New Bridge Road; a central hotel meetup can be confirmed in advance. Food, attraction tickets, and transport fares are listed separately. The format suits visitors who want a full Singapore day without booking four district tours independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Marina Bay Sands Skypark, Gardens by the Bay, Chinatown, and Tiong Bahru that shape this outing rather than a Pulau Ubin add-on."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $297.73",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 22
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/b1/a9/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-hour Singapore day with a local host",
+      "Published options include Marina Bay Sands Skypark, Gardens by the Bay, Chinatown, and Tiong Bahru",
+      "Hotel meetup available for central locations",
+      "Tickets and transport listed separately",
+      "Walking format with taxi or MRT suggestions from the host"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Starbucks Chinatown Point, 133 New Bridge Rd, #01-08 Chinatown Point, Singapore 059413. A different meeting point can be arranged if confirmed in advance."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private eight-hour walking day is shaped by a local host instead of a fixed coach script.",
+    "itineraryItems": [
+      {
+        "title": "Marina Bay Sands Skypark",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gardens by the Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tiong Bahru",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "8 hours with a host",
+      "Private and personalised experience",
+      "Hotel meet-up (available on request for central location)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Singapore Tour: 8-Hour Private Experience with a Local?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Starbucks Chinatown Point, 133 New Bridge Rd, #01-08 Chinatown Point, Singapore 059413. A different meeting point can be arranged if confirmed in advance."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Private and Custom Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 297.73
+      },
+      "currency": "USD"
+    }
+  }
+}
