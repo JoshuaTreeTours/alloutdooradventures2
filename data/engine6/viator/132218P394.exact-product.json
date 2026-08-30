@@ -1,0 +1,40 @@
+{
+  "product": {
+    "productCode": "132218P394",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Small-Group-Valley-of-Fire-Half-Day-Hiking-Tour-from-Las-Vegas/d684-132218P394",
+    "title": null,
+    "description": null,
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": null,
+    "duration": null,
+    "reviews": {
+      "combinedAverageRating": null,
+      "totalReviews": null
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/f0/50/d7/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [],
+    "meetingPoint": {
+      "address": null
+    },
+    "itineraryItems": [],
+    "inclusions": [],
+    "additionalInfo": [],
+    "categories": []
+  }
+}
