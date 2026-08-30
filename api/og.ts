@@ -1,4 +1,8 @@
 export const config = { runtime: "edge" };
+import { toursGenerated } from "../src/data/tours.generated";
+import { oregonRows } from "../src/engine2/data/oregon.rows";
+import { flagstaffTours } from "../src/data/flagstaffTours";
+import { buildTourMeta } from "../src/lib/tourMeta";
 
 const ROOT_OG_IMAGE = "/hero.jpg";
 
@@ -42,7 +46,67 @@ function parseTourPath(path: string): ParsedTourPath | null {
   };
 }
 
-function getStaticOgMeta(path: string, origin: string): OgMeta | null {
+function isScopedLegacyTourPath(path: string) {
+  return [
+    /^\/destinations\/california\/santa-barbara\/tours\/[^/?#]+\/?$/i,
+    /^\/destinations\/united-states\/california\/santa-barbara\/tours\/[^/?#]+\/?$/i,
+    /^\/destinations\/oregon\/portland\/tours\/[^/?#]+\/?$/i,
+    /^\/destinations\/united-states\/oregon\/portland\/tours\/[^/?#]+\/?$/i,
+    /^\/destinations\/arizona\/flagstaff\/tours\/[^/?#]+\/?$/i,
+    /^\/destinations\/united-states\/arizona\/flagstaff\/tours\/[^/?#]+\/?$/i,
+    /^\/tours\/california\/santa-barbara\/[^/?#]+\/?$/i,
+    /^\/tours\/oregon\/portland\/[^/?#]+\/?$/i,
+    /^\/tours\/arizona\/flagstaff\/[^/?#]+\/?$/i,
+  ].some(pattern => pattern.test(path));
+}
+
+function slugFromPath(path: string) {
+  const normalized = path.split("?")[0].split("#")[0].replace(/\/+$/, "");
+  const parts = normalized.split("/").filter(Boolean);
+  return parts[parts.length - 1] ?? "";
+}
+
+function jsonLdEscape(str: string) {
+  return str.replaceAll("</script>", "<\\/script>");
+}
+
+function resolveScopedLegacyTourMeta(path: string, origin: string): OgMeta | null {
+  if (!isScopedLegacyTourPath(path)) return null;
+  const slug = slugFromPath(path);
+  const generatedTour = toursGenerated.find(
+    entry => entry.slug === slug && entry.engine !== "engine6"
+  );
+  const flagstaffTour = flagstaffTours.find(entry => entry.slug === slug);
+  const oregonMatch = oregonRows.find(entry => `${entry.item_name}-${entry.item_id}`.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") === slug);
+  const tour = generatedTour ?? flagstaffTour;
+  if (!tour && !oregonMatch) return null;
+  const canonicalPath = tour
+    ? `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`
+    : `/destinations/oregon/portland/tours/${slug}`;
+  const canonical = `${origin}${canonicalPath}`;
+  const meta = tour
+    ? buildTourMeta(tour, canonical)
+    : {
+        title: `${oregonMatch!.item_name} | Portland, Oregon | All Outdoor Adventures`,
+        description: `${oregonMatch!.item_name} in Portland, Oregon with ${oregonMatch!.company_name}.`,
+      };
+  const visibleTourImage = tour
+    ? tour.heroImage || tour.galleryImages?.[0] || null
+    : oregonMatch?.image_url || null;
+  const image =
+    visibleTourImage && !visibleTourImage.includes("/hero.jpg")
+      ? visibleTourImage
+      : null;
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    canonical,
+    image,
+  };
+}
+
+export function getStaticOgMeta(path: string, origin: string): OgMeta | null {
   if (path === "/") {
     return {
       title: "All Outdoor Adventures | Tours, Guides & Outdoor Experiences",
@@ -79,6 +143,9 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
         image: null,
       },
   };
+
+  const scopedLegacy = resolveScopedLegacyTourMeta(path, origin);
+  if (scopedLegacy) return scopedLegacy;
 
   const hit = map[path];
   if (hit) {
@@ -117,7 +184,18 @@ export default async function handler(req: Request) {
   const title = htmlEscape(meta.title);
   const description = htmlEscape(meta.description);
   const canonical = htmlEscape(meta.canonical);
-  const image = meta.image ? htmlEscape(meta.image) : "";
+  const rawImage = meta.image ?? "";
+  const image = rawImage ? htmlEscape(rawImage) : "";
+  const jsonLd =
+    rawImage
+      ? jsonLdEscape(
+          JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            image: rawImage,
+          })
+        )
+      : "";
 
   const html = `<!doctype html>
 <html lang="en">
@@ -139,7 +217,9 @@ ${image ? `<meta property="og:image" content="${image}" />` : ""}
 <meta name="twitter:description" content="${description}" />
 ${image ? `<meta name="twitter:image" content="${image}" />` : ""}
 </head>
-<body></body>
+<body>
+${jsonLd ? `<script type="application/ld+json">${jsonLd}</script>` : ""}
+</body>
 </html>`;
 
   return new Response(html, {
