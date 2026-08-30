@@ -228,6 +228,27 @@ describe("readViatorPricingCurrency", () => {
         product: { pricing: { currency: "jpy" } },
       })
     ).toBe("JPY");
+  it("replaces a non-USD extracted amount with the USD availability price", async () => {
+    vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
+    vi.mocked(fetchViatorWithCurl).mockResolvedValue({
+      status: 200,
+      body: JSON.stringify({ summary: { fromPrice: 106.77 } }),
+    });
+
+    const extracted = await applyAvailabilitySummaryPrice({
+      apiKey: "test-key",
+      baseUrl: "https://api.viator.com/partner",
+      productCode: "33215P1",
+      extracted: buildExtracted({
+        priceAmount: 16500,
+        priceCurrency: "JPY",
+        priceFormatted: "From ¥16,500.00",
+      }),
+    });
+
+    expect(extracted.priceAmount).toBe(106.77);
+    expect(extracted.priceCurrency).toBe("USD");
+    expect(extracted.priceFormatted).toBe("From $106.77");
   });
 });
 

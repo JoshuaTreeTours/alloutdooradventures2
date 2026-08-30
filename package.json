@@ -28,6 +28,7 @@
     "sync:fareharbor:force": "tsx scripts/syncTourEnrichmentFromFareHarbor.ts --force",
     "generate:tour-descriptions": "tsx scripts/generateTourDescriptions.ts",
     "gen:merchant": "tsx scripts/generate-merchant-feed.ts",
+    "gen:merchant-snapshot": "tsx scripts/generate-merchant-feed.ts --snapshot-from-csv",
     "refresh:merchant-commercial-backfill": "tsx scripts/refresh-merchant-feed-commercial-backfill.ts",
     "audit:merchant-feed-parity": "vitest run src/engine6/merchantFeedGovernance.test.ts",
     "audit:merchant-feed-commercial-parity": "tsx scripts/audit-merchant-feed-commercial-parity.ts",

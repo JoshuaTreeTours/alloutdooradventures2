@@ -66,6 +66,7 @@ const EMPTY_ENGINE6_EXTRACTED: Engine6Extracted = {
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
+  priceCurrency: null,
   durationText: null,
   aggregateRating: null,
   reviewCount: null,

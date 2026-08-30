@@ -5,16 +5,14 @@ import {
   resolveProductScopedHero,
   type Engine6HeroCandidate,
 } from "./heroResolver.js";
-import {
-  extractEngine6Product,
-  type Engine6Extracted,
-} from "./viatorExtractors.js";
+import { extractEngine6Product, type Engine6Extracted } from "./viatorExtractors.js";
 import {
   applyAvailabilitySummaryPrice,
   applyLiveReviewsCommercial,
   fetchViatorLiveJson,
 } from "./viatorLiveCommercialFetch.js";
 import { preferUsdCommercialPrice } from "../../src/engine6/usdPriceGuard.js";
+import { shouldApplyLivePriceAsUsd } from "../../src/engine6/priceCurrency.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -165,6 +163,7 @@ const EMPTY_EXTRACTED_PRODUCT: Engine6Extracted = {
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
+  priceCurrency: null,
   durationText: null,
   aggregateRating: null,
   reviewCount: null,
@@ -425,6 +424,8 @@ const respondWithBundledFallback = (
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
   });
+  const applyLivePrice =
+    dynamicExtraction !== null && shouldApplyLivePriceAsUsd(dynamicExtraction);
   const mergedWithLiveDynamicFields = dynamicExtraction
     ? {
         ...merged,
@@ -446,6 +447,21 @@ const respondWithBundledFallback = (
               priceFormatted: merged.extracted.priceFormatted,
             }
           ),
+          priceAmount: applyLivePrice
+            ? typeof dynamicExtraction.priceAmount === "number"
+              ? dynamicExtraction.priceAmount
+              : merged.extracted.priceAmount
+            : merged.extracted.priceAmount,
+          priceFormatted: applyLivePrice
+            ? typeof dynamicExtraction.priceFormatted === "string"
+              ? dynamicExtraction.priceFormatted
+              : merged.extracted.priceFormatted
+            : merged.extracted.priceFormatted,
+          priceCurrency: applyLivePrice
+            ? (dynamicExtraction.priceCurrency ??
+              merged.extracted.priceCurrency ??
+              "USD")
+            : merged.extracted.priceCurrency,
           aggregateRating:
             typeof dynamicExtraction.aggregateRating === "number"
               ? dynamicExtraction.aggregateRating

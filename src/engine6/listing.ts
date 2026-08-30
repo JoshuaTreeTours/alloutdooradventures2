@@ -15,6 +15,7 @@ import {
   resolveEngine6CityDisplayHeroes,
   resolveEngine6DisplayHero,
 } from "./displayHero";
+import { resolveEngine6ListingPriceFields } from "./priceCurrency";
 import type { Engine6Tour } from "./types";
 
 // Viator bookable experiences routed under /tours despite supplier titles that
@@ -107,6 +108,7 @@ const toEngine6ListingTour = (
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
   const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
+  const listingPrice = resolveEngine6ListingPriceFields(tour);
   const heroImageUrl =
     governedHeroImageUrl ??
     resolveEngine6DisplayHero({
@@ -152,10 +154,10 @@ const toEngine6ListingTour = (
     badges: {
       rating: ratingSourceOfTruth.aggregateRating ?? undefined,
       reviewCount: ratingSourceOfTruth.reviewCount ?? undefined,
-      priceFrom: tour.priceFormatted,
+      priceFrom: listingPrice.priceFrom,
     },
-    startingPrice: tour.priceAmount ?? undefined,
-    currency: "USD",
+    startingPrice: listingPrice.startingPrice,
+    currency: listingPrice.currency,
     tagPills: tour.primaryDisplayCategory
       ? [tour.primaryDisplayCategory]
       : tour.categoryLabel

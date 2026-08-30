@@ -1,6 +1,7 @@
 import { fetchViatorWithCurl } from "../../lib/viator.js";
 
 import type { Engine6Extracted } from "./viatorExtractors.js";
+import { isUsdCurrency, normalizeIsoCurrency } from "../../src/engine6/priceCurrency.js";
 
 const VIATOR_FETCH_TIMEOUT_SECONDS = 25;
 
@@ -253,8 +254,22 @@ export const applyAvailabilitySummaryPrice = async (args: {
   }
 
   if (typeof args.extracted.priceAmount === "number") {
+  const extractedCurrency = normalizeIsoCurrency(args.extracted.priceCurrency);
+  if (
+    typeof args.extracted.priceAmount === "number" &&
+    (!extractedCurrency || isUsdCurrency(extractedCurrency))
+  ) {
     return args.extracted;
   }
+
+  const applyUsdAvailabilityPrice = (
+    amount: number
+  ): Engine6Extracted => ({
+    ...args.extracted,
+    priceAmount: amount,
+    priceFormatted: `From $${amount.toFixed(2)}`,
+    priceCurrency: "USD",
+  });
 
   const schedulePrice = await fetchAvailabilitySummaryPrice({
     apiKey: args.apiKey,
@@ -268,6 +283,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
       priceAmount: schedulePrice,
       priceFormatted: formatUsdFromPriceLabel(schedulePrice),
     };
+    return applyUsdAvailabilityPrice(schedulePrice);
   }
 
   const searchPrice = await fetchAvailabilitySearchPrice({
@@ -285,6 +301,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
     priceAmount: searchPrice,
     priceFormatted: formatUsdFromPriceLabel(searchPrice),
   };
+  return applyUsdAvailabilityPrice(searchPrice);
 };
 
 const sumReviewCountTotals = (value: unknown): number | null => {

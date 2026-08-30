@@ -939,8 +939,69 @@ const main = async () => {
   }
 };
 
+const writeCommercialSnapshotFromExistingCsv = async () => {
+  const rows = await readExistingMerchantFeedRows();
+  if (rows.length === 0) {
+    throw new Error(
+      "Cannot build merchant feed commercial snapshot: data/merchantFeed.csv is empty or missing."
+    );
+  }
+
+  const csvSnapshot = buildMerchantFeedCommercialSnapshot(rows);
+  const csvRowsByProductCode = new Map(
+    rows.map(row => [row.id.trim().toUpperCase(), row])
+  );
+  let snapshot = csvSnapshot;
+
+  try {
+    const existing = JSON.parse(
+      await readFile(COMMERCIAL_SNAPSHOT_PATH, "utf8")
+    ) as ReturnType<typeof buildMerchantFeedCommercialSnapshot>;
+    const existingByProductCode = new Map(
+      (existing.rows ?? []).map(row => [
+        row.productCode.trim().toUpperCase(),
+        row,
+      ])
+    );
+    const appendedRows = csvSnapshot.rows.filter(row => {
+      const productCode = row.productCode.trim().toUpperCase();
+      if (existingByProductCode.has(productCode)) {
+        return false;
+      }
+      const csvRow = csvRowsByProductCode.get(productCode);
+      return Boolean(csvRow?.link.includes("/japan/tokyo/"));
+    });
+    snapshot = {
+      generatedAt: csvSnapshot.generatedAt,
+      source: existing.source ?? csvSnapshot.source,
+      rows: [...(existing.rows ?? []), ...appendedRows],
+    };
+    console.log(
+      `Preserved ${existingByProductCode.size} existing commercial snapshot rows; appended ${appendedRows.length} Tokyo merchant-feed rows.`
+    );
+  } catch {
+    console.log(
+      "No existing commercial snapshot found; writing snapshot from merchant feed CSV."
+    );
+  }
+
+  await mkdir(path.dirname(COMMERCIAL_SNAPSHOT_PATH), { recursive: true });
+  await writeFile(
+    COMMERCIAL_SNAPSHOT_PATH,
+    `${JSON.stringify(snapshot, null, 2)}\n`,
+    "utf8"
+  );
+
+  console.log(
+    `Wrote ${snapshot.rows.length} merchant feed commercial snapshot rows to ${COMMERCIAL_SNAPSHOT_PATH}.`
+  );
+};
+
 if (process.argv[1]?.includes("generate-merchant-feed")) {
-  main().catch(error => {
+  const run = process.argv.includes("--snapshot-from-csv")
+    ? writeCommercialSnapshotFromExistingCsv
+    : main;
+  run().catch(error => {
     console.error(
       "[merchant-feed-build] failed:",
       error instanceof Error ? error.message : error
