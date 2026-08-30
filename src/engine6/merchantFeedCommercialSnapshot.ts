@@ -1,4 +1,7 @@
-import { parsePrice } from "../utils/merchantPricing";
+import {
+  parseMerchantPriceCurrency,
+  parsePrice,
+} from "../utils/merchantPricing";
 import { resolveEngine6TourForProductSchema } from "./resolveEngine6TourForProductSchema";
 import type { Engine6Tour } from "./types";
 
@@ -70,11 +73,20 @@ export const resolveToursWithMerchantFeedCommercialSnapshot = (
       return tour;
     }
 
+    const snapshotCurrency = parseMerchantPriceCurrency(snapshotRow.price);
+    if (snapshotCurrency && snapshotCurrency !== "USD") {
+      return tour;
+    }
+
+    const snapshotPriceAmount = parsePrice(snapshotRow.price);
+
     return resolveEngine6TourForProductSchema(tour, {
-      priceAmount: parsePrice(snapshotRow.price),
-      priceFormatted: snapshotRow.price
-        ? `From $${parsePrice(snapshotRow.price)?.toFixed(2) ?? ""}`
-        : null,
+      priceAmount: snapshotPriceAmount,
+      priceFormatted:
+        typeof snapshotPriceAmount === "number"
+          ? `From $${snapshotPriceAmount.toFixed(2)}`
+          : null,
+      priceCurrency: "USD",
       aggregateRating: parseNumber(snapshotRow.averageRating),
       reviewCount: parseCount(
         snapshotRow.reviewCount || snapshotRow.ratingCount

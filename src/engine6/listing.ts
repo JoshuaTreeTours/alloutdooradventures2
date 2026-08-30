@@ -15,6 +15,7 @@ import {
   resolveEngine6CityDisplayHeroes,
   resolveEngine6DisplayHero,
 } from "./displayHero";
+import { resolveEngine6ListingPriceFields } from "./priceCurrency";
 import type { Engine6Tour } from "./types";
 
 // Viator bookable experiences routed under /tours despite supplier titles that
@@ -26,45 +27,6 @@ const ENGINE6_LISTING_TOUR_TYPE_OVERRIDES: Record<string, "tour"> = {
 
 const ENGINE6_CANONICAL_TOUR_PATH =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
-
-// Tokyo's public Viator pages can geo-localize their visible prices into JPY.
-// Engine6 is a USD marketplace surface, so pin the Tokyo listing cards to the
-// verified USD values captured in the Tokyo source fixtures / merchant feed.
-// This prevents yen amounts such as 16,000 from ever being rendered with a "$".
-const TOKYO_VERIFIED_USD_LISTING_PRICES: Record<
-  string,
-  { amount: number; label: string }
-> = {
-  "92136P34": { amount: 156.6, label: "From $156.60" },
-  "30791P157": { amount: 74.48, label: "From $74.48" },
-  "33215P1": { amount: 106.77, label: "From $106.77" },
-  "6869TYOTM": { amount: 166.06, label: "From $166.06" },
-  "434880P1": { amount: 63.21, label: "From $63.21" },
-  "130384P1": { amount: 533.85, label: "From $533.85" },
-  "65053P9": { amount: 465.41, label: "From $465.41" },
-  "40436P1": { amount: 1281.24, label: "From $1,281.24" },
-  "40436P7": { amount: 1179.61, label: "From $1,179.61" },
-  "65053P10": { amount: 443.53, label: "From $443.53" },
-  "319176P1": { amount: 132.48, label: "From $132.48" },
-};
-
-const resolveEngine6ListingPrice = (
-  tour: Engine6Tour,
-  stateSlug: string,
-  citySlug: string
-) => {
-  if (stateSlug === "japan" && citySlug === "tokyo") {
-    const verified = TOKYO_VERIFIED_USD_LISTING_PRICES[tour.productCode];
-    if (verified) {
-      return verified;
-    }
-  }
-
-  return {
-    amount: tour.priceAmount ?? undefined,
-    label: tour.priceFormatted,
-  };
-};
 
 const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
   if (isUSStateName(tour.state) || stateSlug === "united-states") {
@@ -146,7 +108,7 @@ const toEngine6ListingTour = (
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
   const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
-  const listingPrice = resolveEngine6ListingPrice(tour, stateSlug, citySlug);
+  const listingPrice = resolveEngine6ListingPriceFields(tour);
   const heroImageUrl =
     governedHeroImageUrl ??
     resolveEngine6DisplayHero({
@@ -192,10 +154,10 @@ const toEngine6ListingTour = (
     badges: {
       rating: ratingSourceOfTruth.aggregateRating ?? undefined,
       reviewCount: ratingSourceOfTruth.reviewCount ?? undefined,
-      priceFrom: listingPrice.label,
+      priceFrom: listingPrice.priceFrom,
     },
-    startingPrice: listingPrice.amount,
-    currency: "USD",
+    startingPrice: listingPrice.startingPrice,
+    currency: listingPrice.currency,
     tagPills: tour.primaryDisplayCategory
       ? [tour.primaryDisplayCategory]
       : tour.categoryLabel

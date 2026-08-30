@@ -102,4 +102,52 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
     expect(merged.badges.rating).toBe(4.6);
     expect(merged.badges.reviewCount).toBe(836);
   });
+
+  it("does not overwrite a USD commercial listing price with a live JPY amount", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "33215P1",
+        startingPrice: 106.77,
+        currency: "USD",
+        badges: {
+          rating: 5,
+          reviewCount: 1147,
+          priceFrom: "From $106.77",
+        },
+      }),
+      {
+        priceAmount: 16500,
+        priceCurrency: "JPY",
+        priceFormatted: "From ¥16,500.00",
+        aggregateRating: 5,
+        reviewCount: 1147,
+      }
+    );
+
+    expect(merged.startingPrice).toBe(106.77);
+    expect(merged.currency).toBe("USD");
+    expect(merged.badges.priceFrom).toBe("From $106.77");
+  });
+
+  it("rejects a live amount that is orders of magnitude above the USD commercial price", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "33215P1",
+        startingPrice: 106.77,
+        currency: "USD",
+        badges: {
+          rating: 5,
+          reviewCount: 1147,
+          priceFrom: "From $106.77",
+        },
+      }),
+      {
+        priceAmount: 16500,
+        priceFormatted: "From $16,500.00",
+      }
+    );
+
+    expect(merged.startingPrice).toBe(106.77);
+    expect(merged.badges.priceFrom).toBe("From $106.77");
+  });
 });

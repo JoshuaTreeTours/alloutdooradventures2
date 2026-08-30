@@ -1,10 +1,15 @@
 import type { Tour } from "../data/tours.types";
 import type { Engine6Tour } from "./types";
 import { getEngine6LiveRatingSourceOfTruth } from "./ratingSourceOfTruth";
+import {
+  looksLikeCurrencyMismatch,
+  shouldApplyLivePriceAsUsd,
+} from "./priceCurrency";
 
 export type Engine6LiveProductFields = {
   priceAmount: number | null;
   priceFormatted: string | null;
+  priceCurrency?: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
   durationText: string | null;
@@ -56,12 +61,22 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
-  const resolvedPriceAmount = priceAmount ?? tour.priceAmount;
-  const resolvedPriceFormatted = resolveLivePriceFormatted(
-    priceAmount,
-    priceFormatted,
-    tour.priceFormatted
-  );
+  const applyLivePrice =
+    shouldApplyLivePriceAsUsd(liveFields) &&
+    !looksLikeCurrencyMismatch(tour.priceAmount, priceAmount);
+  const resolvedPriceAmount = applyLivePrice
+    ? (priceAmount ?? tour.priceAmount)
+    : tour.priceAmount;
+  const resolvedPriceFormatted = applyLivePrice
+    ? (resolveLivePriceFormatted(
+        priceAmount,
+        priceFormatted,
+        tour.priceFormatted
+      ) ?? tour.priceFormatted)
+    : tour.priceFormatted;
+  const resolvedPriceCurrency = applyLivePrice
+    ? (liveFields.priceCurrency ?? "USD")
+    : tour.priceCurrency;
 
   const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
 
@@ -69,6 +84,7 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     ...tour,
     priceAmount: resolvedPriceAmount,
     priceFormatted: resolvedPriceFormatted ?? tour.priceFormatted,
+    priceCurrency: resolvedPriceCurrency,
     aggregateRating:
       liveRatingSourceOfTruth.aggregateRating ?? tour.aggregateRating,
     reviewCount: liveRatingSourceOfTruth.reviewCount ?? tour.reviewCount,
@@ -99,20 +115,31 @@ export const mergeEngine6LiveFieldsIntoTour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
-  const parsedFromFormatted = parsePriceFromFormatted(priceFormatted);
-  const resolvedStartingPrice =
-    priceAmount ?? parsedFromFormatted ?? tour.startingPrice ?? undefined;
-  const resolvedPriceBadge =
-    priceFormatted ||
-    (typeof resolvedStartingPrice === "number"
-      ? formatLivePriceLabel(resolvedStartingPrice)
-      : tour.badges.priceFrom);
+  const applyLivePrice =
+    shouldApplyLivePriceAsUsd(liveFields) &&
+    !looksLikeCurrencyMismatch(tour.startingPrice, priceAmount);
+  const parsedFromFormatted = applyLivePrice
+    ? parsePriceFromFormatted(priceFormatted)
+    : null;
+  const resolvedStartingPrice = applyLivePrice
+    ? (priceAmount ?? parsedFromFormatted ?? tour.startingPrice ?? undefined)
+    : tour.startingPrice;
+  const resolvedPriceBadge = applyLivePrice
+    ? priceFormatted ||
+      (typeof resolvedStartingPrice === "number"
+        ? formatLivePriceLabel(resolvedStartingPrice)
+        : tour.badges.priceFrom)
+    : tour.badges.priceFrom;
+  const resolvedCurrency = applyLivePrice
+    ? (liveFields.priceCurrency ?? tour.currency ?? "USD")
+    : tour.currency;
 
   const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
 
   return {
     ...tour,
     startingPrice: resolvedStartingPrice,
+    currency: resolvedCurrency,
     badges: {
       ...tour.badges,
       rating: liveRatingSourceOfTruth.aggregateRating ?? tour.badges.rating,
@@ -162,6 +189,10 @@ export const fetchEngine6LiveProductFields = async (
     priceFormatted:
       typeof extracted.priceFormatted === "string"
         ? extracted.priceFormatted
+        : null,
+    priceCurrency:
+      typeof extracted.priceCurrency === "string"
+        ? extracted.priceCurrency
         : null,
     aggregateRating:
       typeof extracted.aggregateRating === "number"

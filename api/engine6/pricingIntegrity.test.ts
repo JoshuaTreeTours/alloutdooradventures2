@@ -40,6 +40,26 @@ describe("Engine6 pricing integrity", () => {
     );
   });
 
+  it("does not format a JPY Viator amount as USD", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "33215P1",
+        title: "Tokyo Guided Small-Group Biking Tour",
+        pricing: {
+          summary: {
+            fromPrice: 16500,
+          },
+          currency: "JPY",
+        },
+      },
+    });
+
+    expect(result.extracted.priceAmount).toBe(16500);
+    expect(result.extracted.priceCurrency).toBe("JPY");
+    expect(result.extracted.priceFormatted).toContain("¥");
+    expect(result.extracted.priceFormatted).not.toContain("$16,500");
+  });
+
   it("keeps null pricing when no valid numeric price exists", () => {
     const result = extractEngine6Product({
       product: {
