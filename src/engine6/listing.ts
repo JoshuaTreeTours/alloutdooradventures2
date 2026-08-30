@@ -44,6 +44,10 @@ const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
     return "Peru";
   }
 
+  if (stateSlug === "brazil") {
+    return "Brazil";
+  }
+
   return tour.state;
 };
 
@@ -128,7 +132,9 @@ const toEngine6ListingTour = (
           ? { countryCode: "MX", countrySlug: "mexico" }
           : stateSlug === "peru"
             ? { countryCode: "PE", countrySlug: "peru" }
-            : {}),
+            : stateSlug === "brazil"
+              ? { countryCode: "BR", countrySlug: "brazil" }
+              : {}),
       state: tour.state,
       stateSlug,
       city: tour.city,

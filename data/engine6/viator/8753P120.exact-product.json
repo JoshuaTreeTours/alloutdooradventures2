@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "8753P120",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Rio-de-Janeiro-in-One-Day/d712-8753P120",
+    "title": "Christ the Redeemer, Sugarloaf, Lunch and Small Group City Tour",
+    "description": {
+      "text": "In Rio de Janeiro, this small-group 9-hour day combines the Sambadromo, Christ the Redeemer, the Tijuca Rainforest, Sugarloaf Mountain, and Maracana Stadium. Buffet lunch is included, while drinks and desserts are listed separately. Admission tickets to Christ the Redeemer, Sugarloaf, the Sambodromo, and Maracana Stadium are published on the product page, with an air-conditioned vehicle and bilingual guide. Pickup runs from hotels in Leblon, Ipanema, Copacabana, Flamengo, and Centro between 8:00 a.m. and 9:30 a.m.; groups that skip hotel confirmation meet at Hotel Rio Othon Palace on Avenida Atlântica in Copacabana. The format suits visitors who want a single guided highlights day without buying four attraction tickets independently. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on the Sambadromo, Corcovado, Tijuca Rainforest, and Sugarloaf Mountain that define this outing rather than a private tailor-made loop."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $112.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 590
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/28/87/18.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group 9-hour circuit of the Sambadromo, Christ the Redeemer, Tijuca Rainforest, and Sugarloaf Mountain",
+      "Buffet lunch included; drinks and desserts listed separately",
+      "Admission tickets to Christ the Redeemer, Sugarloaf, the Sambodromo, and Maracana Stadium",
+      "Air-conditioned vehicle and bilingual guide",
+      "Hotel pickup from Leblon, Ipanema, Copacabana, Flamengo, and Centro"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed from most hotels in Leblon, Ipanema, Copacabana, Flamengo, and Downtown (Centro) between 8:00 a.m. and 9:30 a.m. Groups that do not confirm a hotel meet at Hotel Rio Othon Palace, Av. Atlântica 3264, Copacabana."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this small-group 9-hour day combines the Sambadromo, Christ the Redeemer, the Tijuca Rainforest, Sugarloaf Mountain, and Maracana Stadium.",
+    "itineraryItems": [
+      {
+        "title": "Sambadromo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tijuca Rainforest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugarloaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maracana Stadium",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Buffet lunch (drinks and desserts not included)",
+      "Air-conditioned vehicle",
+      "Entrance to the Sugarloaf",
+      "Entrance to the Christ the Redeemer",
+      "Bilingual tour guide",
+      "Entrance to the Sambodromo",
+      "Entrance to the Maracana Stadium"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Christ the Redeemer, Sugarloaf, Lunch and Small Group City Tour?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Pickup is listed from most hotels in Leblon, Ipanema, Copacabana, Flamengo, and Downtown (Centro) between 8:00 a.m. and 9:30 a.m. Groups that do not confirm a hotel meet at Hotel Rio Othon Palace, Av. Atlântica 3264, Copacabana."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 112
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "destinationLabel": "Rio de Janeiro",
+  "destinationCitySlug": "rio-de-janeiro",
+  "viatorDestinationSlug": "Rio-de-Janeiro",
+  "viatorDestinationId": "d712",
+  "catalogUrl": "https://www.viator.com/Rio-de-Janeiro/d712-ttd",
+  "suppliedCatalogUrl": "https://www.viator.com/Rio-de-Janeiro/d712-ttd",
+  "catalogIdNote": "Live Viator destination id for Rio de Janeiro is d712. Product URLs use /tours/Rio-de-Janeiro/.../d712-CODE.",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 9,
+  "premiumCount": 6,
+  "selectionNote": "Selected 9 guided Rio de Janeiro d712 products with live public USD From prices, combined ratings, and unique 674x446 heroes. The live catalog supports far more than 20 tours, including additional jeep, bike, hiking, photography, and helicopter SKUs, but Viator DataDome blocking plus geo-currency dumps (EUR/CAD/GBP) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d712 wine, stargazing, or Indigenous-culture page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, airport transfers, inactive products, thin-review SKUs, near-duplicates, or products with unusable heroes. Same completeness constraint documented on Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), Mexico City (11), and Lima (9).",
+  "selectedProductCodes": [
+    "20297P1",
+    "11557P1",
+    "38668P1",
+    "21513P8",
+    "21715P2",
+    "8753P120",
+    "186670P1",
+    "179234P2",
+    "305170P2"
+  ],
+  "premiumProductCodes": [
+    "20297P1",
+    "11557P1",
+    "38668P1",
+    "21513P8",
+    "186670P1",
+    "179234P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "2484_08",
+      "title": "Tijuca Rain Forest Jeep Tour from Rio de Janeiro",
+      "reason": "USD $68.40 4.0/474 below the quality bar used on Cabo and Lima"
+    },
+    {
+      "productCode": "2484_10",
+      "title": "Petrópolis Imperial City Tour",
+      "reason": "USD $74 4.0/96 below the quality bar"
+    },
+    {
+      "productCode": "2484COREX",
+      "title": "Helicopter and Sugarloaf combination",
+      "reason": "2.5/4 thin and below the quality bar"
+    },
+    {
+      "productCode": "2484HELICOPTER",
+      "title": "Rio helicopter flight",
+      "reason": "USD $270 4.1/41 below the quality bar"
+    },
+    {
+      "productCode": "2484SGDAY",
+      "title": "Rio sightseeing day",
+      "reason": "USD $66 3.7/14 below the quality bar and too thin"
+    },
+    {
+      "productCode": "21715P45",
+      "title": "Santa Teresa tram tour",
+      "reason": "USD $63 4.3/184 below the quality bar"
+    },
+    {
+      "productCode": "8753P9",
+      "title": "Ancient Rio and Santa Teresa",
+      "reason": "USD $55 4.4/118 below the quality bar"
+    },
+    {
+      "productCode": "8753P132",
+      "title": "Petrópolis and Bohemia Brewery",
+      "reason": "CAD $57.12 3.8/22 below the quality bar; no verified USD From$ on a complete page"
+    },
+    {
+      "productCode": "13877P32",
+      "title": "Ilha Grande day",
+      "reason": "USD $100.99 3.2/15 below the quality bar and too thin"
+    },
+    {
+      "productCode": "21715P41",
+      "title": "Ilha Grande day",
+      "reason": "2.5/6 thin and below the quality bar"
+    },
+    {
+      "productCode": "8753P185",
+      "title": "Little Africa walking tour",
+      "reason": "GBP/BRL dump 4.3–4.4 / 6–7 too thin and no verified USD From$ on a complete page"
+    },
+    {
+      "productCode": "24120P4",
+      "title": "Jungle bike tour",
+      "reason": "Preferred bike type; 5.0/5 too thin"
+    },
+    {
+      "productCode": "33394P1",
+      "title": "Pedra da Gávea hike",
+      "reason": "Preferred guided hiking type; USD $79.05 5.0/11 too thin"
+    },
+    {
+      "productCode": "40403P2",
+      "title": "Private Sugar Loaf tour",
+      "reason": "USD $119.20/group 5.0/9 too thin"
+    },
+    {
+      "productCode": "9388P20",
+      "title": "Photo tour Christ and Sugarloaf",
+      "reason": "Preferred photography type; USD $170 5.0/6 too thin"
+    },
+    {
+      "productCode": "72313P145",
+      "title": "Private helicopter charter",
+      "reason": "USD $2450 5.0/3 too thin"
+    },
+    {
+      "productCode": "17136P1",
+      "title": "Hang gliding experience",
+      "reason": "USD $179 4.5/255 skipped as a near-duplicate of selected 186670P1"
+    },
+    {
+      "productCode": "197279P1",
+      "title": "Jeep tour with photography and hike",
+      "reason": "Preferred jeep/photo type; 5.0/322 EUR-only complete dump (€61.13); did not convert currency"
+    },
+    {
+      "productCode": "147257P1",
+      "title": "Telegraph Peak hiking",
+      "reason": "Preferred guided hiking type; 5.0/292 EUR-only complete dump (€116.42)"
+    },
+    {
+      "productCode": "13847P2",
+      "title": "Tijuca caves",
+      "reason": "4.9/349 EUR-only complete dump (€61.97)"
+    },
+    {
+      "productCode": "107130P6",
+      "title": "Tijuca National Park discovery",
+      "reason": "4.9/683 EUR-only complete dump"
+    },
+    {
+      "productCode": "159251P1",
+      "title": "Rio2Fly helicopter Sugar Loaf and Christ",
+      "reason": "Preferred helicopter type; 4.9/561 EUR-only complete dump (€269.67)"
+    },
+    {
+      "productCode": "34989P1",
+      "title": "Bike and hike Two Brothers",
+      "reason": "Preferred bike type; 5.0/49 with no verified USD From$ on a complete US page"
+    },
+    {
+      "productCode": "333592P1",
+      "title": "Tijuca trails",
+      "reason": "5.0/74; CAD/GBP dumps and affiliate $37.52 snippet, not a complete US page"
+    },
+    {
+      "productCode": "9388P2",
+      "title": "Photo tour Grumari",
+      "reason": "USD $175 snippet; no rating on complete dumps"
+    },
+    {
+      "productCode": "299150P2",
+      "title": "Panoramic helicopter flight",
+      "reason": "5.0/44 with no verified USD From$ on a complete page"
+    },
+    {
+      "productCode": "72313P43",
+      "title": "Rio helicopter flight",
+      "reason": "4.9/2253; markdown dump had no current From$; search $140.60 was an expired April 2025 deal and was not used"
+    }
+  ]
+}

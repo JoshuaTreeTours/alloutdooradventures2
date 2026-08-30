@@ -25,7 +25,9 @@ const resolveEngine6AddressCountry = (stateSlug: string) =>
       ? "MX"
       : stateSlug === "peru"
         ? "PE"
-        : "US";
+        : stateSlug === "brazil"
+          ? "BR"
+          : "US";
 
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());

@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "305170P2",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Full-Day-Excursion-to-Petropolis-from-Rio-de-Janeiro/d712-305170P2",
+    "title": "Full Day Excursion to Petrópolis from Rio de Janeiro",
+    "description": {
+      "text": "In Rio de Janeiro, this full-day excursion leaves the coast for Petrópolis, the former imperial summer capital in the Serra dos Órgãos. An accredited guide covers the Imperial Museum with the included ticket, then continues to Palácio Quitandinha and the Santos Dumont House. A buffet lunch is included; drinks, desserts, and optional Bohemia Brewery entry are listed separately on the product page. Round-trip transport uses an air-conditioned vehicle from a Rio de Janeiro hotel pickup or listed meeting point, with a published 8:00 a.m. start. The mountain day is aimed at visitors who want a guided imperial-history window without self-driving the serra road. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on the Imperial Museum, Palácio Quitandinha, and the Santos Dumont House that shape this Petrópolis outing rather than a Corcovado or Sugar Loaf city circuit."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $39.05",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 759
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/a5/79/c0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day transfer from Rio de Janeiro to Petrópolis",
+      "Imperial Museum ticket included",
+      "Stops at Palácio Quitandinha and the Santos Dumont House",
+      "Buffet lunch included; drinks and desserts listed separately",
+      "Bohemia Brewery entry listed as an optional extra"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup or a listed meeting point in Rio de Janeiro is offered, with a published 8:00 a.m. start before the mountain transfer to Petrópolis."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this full-day excursion leaves the coast for Petrópolis, the former imperial summer capital in the Serra dos Órgãos.",
+    "itineraryItems": [
+      {
+        "title": "Imperial Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palacio Quitandinha",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Santos Dumont House",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Free buffet lunch (drinks and desserts not included)",
+      "Accredited tour guide",
+      "Imperial Museum ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Excursion to Petrópolis from Rio de Janeiro?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Hotel pickup or a listed meeting point in Rio de Janeiro is offered, with a published 8:00 a.m. start before the mountain transfer to Petrópolis."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39.05
+      },
+      "currency": "USD"
+    }
+  }
+}

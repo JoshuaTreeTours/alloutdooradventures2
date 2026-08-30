@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "11557P1",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Private-City-Tour-of-Rio-de-Janeiro/d712-11557P1",
+    "title": "Private City Tour of Rio de Janeiro",
+    "description": {
+      "text": "In Rio de Janeiro, this private 8-hour city tour keeps one group with a dedicated guide for historic downtown, the Sambadrome, and the Metropolitan Cathedral before the Corcovado and Sugar Loaf ascents. The published route includes a Christ the Redeemer stop and lists the Colombo tea house as an own-expense lunch or snack. Hotel or airport pickup and an air-conditioned vehicle are included, with tickets listed on the product page. The format suits visitors who want a guided landmark day without assembling cable-car, van, and downtown timing independently. Commentary stays on the historic center and the two granite peaks rather than a rainforest jeep add-on. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on historic downtown, the Sambadrome, the Metropolitan Cathedral, Corcovado, and Sugar Loaf that shape this private circuit rather than a hang-gliding or helicopter window."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $165.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 343
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/e4/dd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 8-hour circuit of historic downtown, the Sambadrome, and the Metropolitan Cathedral",
+      "Ascents of Corcovado and Sugar Loaf with a Christ the Redeemer stop",
+      "Dedicated guide and air-conditioned vehicle for one group",
+      "Hotel or airport pickup listed on the product page",
+      "Colombo tea house listed as an own-expense lunch or snack stop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel or airport pickup is listed for accommodations in Rio de Janeiro. The guide meets with a name sign at the confirmed pickup point."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this private 8-hour city tour keeps one group with a dedicated guide for historic downtown, the Sambadrome, and the Metropolitan Cathedral before the Corcovado and Sugar Loaf ascents.",
+    "itineraryItems": [
+      {
+        "title": "Historic downtown Rio de Janeiro",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sambadrome",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Metropolitan Cathedral of Saint Sebastian",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugar Loaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Hotel/airport pickup and drop-off",
+      "Air-conditioned vehicle",
+      "Tickets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private City Tour of Rio de Janeiro?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Hotel or airport pickup is listed for accommodations in Rio de Janeiro. The guide meets with a name sign at the confirmed pickup point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 165
+      },
+      "currency": "USD"
+    }
+  }
+}

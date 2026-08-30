@@ -9,6 +9,10 @@ export function buildDestinationUrl(countrySlug: string) {
     return "/destinations/peru";
   }
 
+  if (countrySlug === "brazil") {
+    return "/destinations/brazil";
+  }
+
   return isEuropeCountrySlug(countrySlug)
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;

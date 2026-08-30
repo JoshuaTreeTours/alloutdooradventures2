@@ -339,6 +339,15 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen20297p1Payload from "../../data/engine6/viator/20297P1.exact-product.json";
+import specimen11557p1Payload from "../../data/engine6/viator/11557P1.exact-product.json";
+import specimen38668p1Payload from "../../data/engine6/viator/38668P1.exact-product.json";
+import specimen21513p8Payload from "../../data/engine6/viator/21513P8.exact-product.json";
+import specimen21715p2Payload from "../../data/engine6/viator/21715P2.exact-product.json";
+import specimen8753p120Payload from "../../data/engine6/viator/8753P120.exact-product.json";
+import specimen186670p1Payload from "../../data/engine6/viator/186670P1.exact-product.json";
+import specimen179234p2Payload from "../../data/engine6/viator/179234P2.exact-product.json";
+import specimen305170p2Payload from "../../data/engine6/viator/305170P2.exact-product.json";
 import specimen20336p1Payload from "../../data/engine6/viator/20336P1.exact-product.json";
 import specimen155286p1Payload from "../../data/engine6/viator/155286P1.exact-product.json";
 import specimen148831p28Payload from "../../data/engine6/viator/148831P28.exact-product.json";
@@ -3609,6 +3618,60 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "20297P1",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/City-Tour-The-Essentials-Classic-tour-visiting-the-most-famous-attractions-in-Rio-de-Janeiro/d712-20297P1",
+    rawPayload: specimen20297p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "11557P1",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Private-City-Tour-of-Rio-de-Janeiro/d712-11557P1",
+    rawPayload: specimen11557p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38668P1",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Private-Full-Day-Rio-de-Janeiro-Sightseeing-Tour/d712-38668P1",
+    rawPayload: specimen38668p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "21513P8",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Rio-de-Janeiro-Tailor-Made-Private-Tour/d712-21513P8",
+    rawPayload: specimen21513p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "21715P2",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/One-Day-In-Rio-de-Janeiro-City-Sightseeing-Tour/d712-21715P2",
+    rawPayload: specimen21715p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8753P120",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Rio-de-Janeiro-in-One-Day/d712-8753P120",
+    rawPayload: specimen8753p120Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "186670P1",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Hang-Gliding-and-Paragliding-with-Beto-Rotor/d712-186670P1",
+    rawPayload: specimen186670p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "179234P2",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Helicopter-tour-in-Rio-de-Janeiro/d712-179234P2",
+    rawPayload: specimen179234p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "305170P2",
+    publicUrl: "https://www.viator.com/tours/Rio-de-Janeiro/Full-Day-Excursion-to-Petropolis-from-Rio-de-Janeiro/d712-305170P2",
+    rawPayload: specimen305170p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

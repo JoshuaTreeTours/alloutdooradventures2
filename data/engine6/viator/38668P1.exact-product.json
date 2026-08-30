@@ -1,0 +1,132 @@
+{
+  "product": {
+    "productCode": "38668P1",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Private-Full-Day-Rio-de-Janeiro-Sightseeing-Tour/d712-38668P1",
+    "title": "Private Custom Full-Day Highlights in Rio: Only the Best Sights!",
+    "description": {
+      "text": "In Rio de Janeiro, this private 8-to-9-hour outing starts at Corcovado and Christ the Redeemer, continues to Escadaria Selaron and Sugarloaf Mountain, then offers an afternoon choice of historic center, Tijuca Forest, or Santa Teresa. A driver-guide or a separate guide and driver stay with one group. Pickup is listed from hotels including Barra da Tijuca, plus airports and the cruise terminal. Entry tickets and lunch are not treated as guaranteed inclusions on the published page. History-focused afternoons use Cinelandia, the Metropolitan Cathedral, and the Etnias mural; nature-focused afternoons use Cascatinha Taunay and Pepino Beach. The format suits visitors who want a customizable guided day without booking three separate circuits. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on Corcovado, Escadaria Selaron, and Sugarloaf Mountain that define this private circuit rather than a Petrópolis imperial add-on."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $195.37",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 561
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/b8/98.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Pepino Beach",
+      "Cascatinha Taunay",
+      "Santa Teresa",
+      "Etnias - Mural de Graffiti (Estúdio Kobra)",
+      "Private 8-to-9-hour circuit of Christ the Redeemer, Sugarloaf Mountain, and Escadaria Selaron"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed from hotels in Rio de Janeiro including Barra da Tijuca, plus national and international airports and the cruise terminal. The guide waits in the hotel lobby or at the port or airport gate."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this private 8-to-9-hour outing starts at Corcovado and Christ the Redeemer, continues to Escadaria Selaron and Sugarloaf Mountain, then offers an afternoon choice of historic center, Tijuca Forest, or Santa Teresa.",
+    "itineraryItems": [
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Escadaria Selaron",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugarloaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cinelandia",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Metropolitan Cathedral of Saint Sebastian",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pepino Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cascatinha Taunay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Santa Teresa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Etnias - Mural de Graffiti (Estúdio Kobra)",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Pick-up and drop-off anywhere in the city of Rio",
+      "Driver-guide or separate driver and guide as booked",
+      "8 hours without lunch or 9 hours with lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Custom Full-Day Highlights in Rio: Only the Best Sights!?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Pickup is listed from hotels in Rio de Janeiro including Barra da Tijuca, plus national and international airports and the cruise terminal. The guide waits in the hotel lobby or at the port or airport gate."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 195.37
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "21513P8",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Rio-de-Janeiro-Tailor-Made-Private-Tour/d712-21513P8",
+    "title": "The Best of Rio de Janeiro in a Private Guided Tour",
+    "description": {
+      "text": "In Rio de Janeiro, this private 8-hour outing pairs a carioca guide and driver with one group so the day can stay on Christ the Redeemer, Sugar Loaf Mountain, Copacabana and Ipanema beaches, São Bento Monastery, Maracanã Stadium, or the Sambadrome. Hotel pickup and drop-off are included. The guide confirms themes such as food, history, or sport before departure and keeps the published stops limited to sites the group actually wants. Entrance tickets, food, and drinks are listed separately on the product page. The format suits visitors who want undivided attention without joining a coach loop or assembling taxi and ticket timing independently. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on the granite peaks, South Zone beaches, and carnival landmarks that define this private day rather than a hang-gliding or Petrópolis add-on."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $420.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 61
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c1/8c/22.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Maracana Stadium",
+      "Sambadrome",
+      "Private 8-hour circuit tailored around Christ the Redeemer, Sugar Loaf, beaches, or sport landmarks",
+      "Dedicated carioca guide and driver for one group",
+      "Hotel pickup and drop-off listed on the product page"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup and drop-off are included from the confirmed Rio de Janeiro accommodations listed when booking. The guide contacts the group before departure to confirm the itinerary."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this private 8-hour outing pairs a carioca guide and driver with one group so the day can stay on Christ the Redeemer, Sugar Loaf Mountain, Copacabana and Ipanema beaches, São Bento Monastery, Maracanã Stadium, or the Sambadrome.",
+    "itineraryItems": [
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugar Loaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copacabana Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ipanema Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sao Bento Monastery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maracana Stadium",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sambadrome",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Certified multilingual guide and driver",
+      "Hotel pickup and drop-off",
+      "Private tour for up to 14 people",
+      "Transport by private vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Best of Rio de Janeiro in a Private Guided Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Hotel pickup and drop-off are included from the confirmed Rio de Janeiro accommodations listed when booking. The guide contacts the group before departure to confirm the itinerary."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 420
+      },
+      "currency": "USD"
+    }
+  }
+}

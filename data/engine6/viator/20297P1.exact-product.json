@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "20297P1",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/City-Tour-The-Essentials-Classic-tour-visiting-the-most-famous-attractions-in-Rio-de-Janeiro/d712-20297P1",
+    "title": "Private Tour: Rio City Essentials including Christ the Redeemer and Sugar Loaf",
+    "description": {
+      "text": "In Rio de Janeiro, this private 7-to-8-hour circuit keeps one group in an air-conditioned vehicle for Christ the Redeemer atop Corcovado, Sugar Loaf Mountain, the Selarón Steps, the Metropolitan Cathedral, and the city's famous beaches. A certified guide and driver handle hotel, airport, or seaport pickup, and complimentary bottled water is listed on the product page. Christ the Redeemer and Sugar Loaf tickets are not treated as a guaranteed inclusion; the operator helps arrange them. The itinerary can change during the day to match the group's pace. Barra da Tijuca and Recreio pickups are asked to start at 6:30 a.m. to avoid heavy traffic. The format suits visitors who want a guided city window without assembling taxi, ticket, and landmark timing independently. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on Corcovado, Sugar Loaf, the Selarón Steps, and the Metropolitan Cathedral that define this private outing rather than a Petrópolis mountain add-on."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $206.32",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 302
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/f8/92/e5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ipanema Beach",
+      "Private 7-to-8-hour circuit of Christ the Redeemer, Sugar Loaf, Selarón Steps, and the Metropolitan Cathedral",
+      "Dedicated guide and air-conditioned vehicle for one group",
+      "Hotel, airport, or seaport pickup listed on the product page",
+      "Complimentary bottled water"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick-up and drop-off are included from the confirmed Rio de Janeiro hotel, airport, or seaport listed when booking. Barra da Tijuca and Recreio stays are asked to start at 6:30 a.m. to avoid heavy traffic."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this private 7-to-8-hour circuit keeps one group in an air-conditioned vehicle for Christ the Redeemer atop Corcovado, Sugar Loaf Mountain, the Selarón Steps, the Metropolitan Cathedral, and the city's famous beaches.",
+    "itineraryItems": [
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugar Loaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Escadaria Selarón",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Metropolitan Cathedral of Saint Sebastian",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copacabana Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ipanema Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private air-conditioned vehicle with professional driver",
+      "Certified Tour Guide",
+      "Pickup and drop-off in hotels, airports, seaport",
+      "Complimentary bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Rio City Essentials including Christ the Redeemer and Sugar Loaf?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Pick-up and drop-off are included from the confirmed Rio de Janeiro hotel, airport, or seaport listed when booking. Barra da Tijuca and Recreio stays are asked to start at 6:30 a.m. to avoid heavy traffic."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 206.32
+      },
+      "currency": "USD"
+    }
+  }
+}
