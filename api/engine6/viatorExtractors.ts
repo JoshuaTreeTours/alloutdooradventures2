@@ -13,6 +13,7 @@ import {
 import { shouldSuppressEngine6ItineraryRow } from "./itineraryRenderingGovernance.js";
 import { governEngine6ItineraryStopTitle } from "./itineraryTitleGovernance.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
+import { normalizeIsoCurrency } from "../../src/engine6/priceCurrency.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
@@ -109,6 +110,7 @@ export type Engine6Extracted = {
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
+  priceCurrency?: string | null;
   durationText: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
@@ -289,6 +291,37 @@ const parsePriceAmount = (value: unknown): number | null => {
   return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
 };
 
+const inferCurrencyFromRawPrice = (raw: unknown): string | null => {
+  if (typeof raw !== "string") {
+    return null;
+  }
+  if (/¥|\bJPY\b/i.test(raw)) return "JPY";
+  if (/€|\bEUR\b/i.test(raw)) return "EUR";
+  if (/£|\bGBP\b/i.test(raw)) return "GBP";
+  if (/\$|\bUSD\b/i.test(raw)) return "USD";
+  return null;
+};
+
+const extractProductPriceCurrency = (product: RecordLike): string | null => {
+  const candidates = [
+    readPath(product, ["pricing", "currency"]),
+    readPath(product, ["pricing", "summary", "currency"]),
+    readPath(product, ["currency"]),
+    readPath(product, ["currencyCode"]),
+    readPath(product, ["pricingInfo", "currency"]),
+    readPath(product, ["pricingInfo", "currencyCode"]),
+  ];
+
+  for (const candidate of candidates) {
+    const normalized = normalizeIsoCurrency(asNonEmptyString(candidate));
+    if (normalized) {
+      return normalized;
+    }
+  }
+
+  return null;
+};
+
 const asHttpUrl = (value: unknown): string | null => {
   const url = asNonEmptyString(value);
   if (!url) return null;
@@ -395,6 +428,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
+  priceCurrency: null,
   durationText: null,
   aggregateRating: null,
   reviewCount: null,
@@ -883,9 +917,25 @@ const detectViableViatorCommercialPriceCandidates = (
   };
 };
 
-const buildPriceLabel = ({ amount }: { amount: number | null }) => {
+const buildPriceLabel = ({
+  amount,
+  currency,
+}: {
+  amount: number | null;
+  currency: string | null;
+}) => {
   if (amount === null) {
     return null;
+  }
+  const normalizedCurrency = normalizeIsoCurrency(currency) ?? "USD";
+  if (normalizedCurrency !== "USD") {
+    // Never label a local Viator amount as USD.
+    return `From ${new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: normalizedCurrency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount)}`;
   }
   const formatted = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -1973,6 +2023,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     viablePriceDetection.detectedFieldPaths;
 
   const price = extractPlaybookPrice(product);
+  const priceCurrency =
+    extractProductPriceCurrency(product) ??
+    inferCurrencyFromRawPrice(price.rawValue);
   diagnostics.commercialPriceFieldPath = price.path;
   diagnostics.commercialPriceRawValue = price.rawValue;
   diagnostics.priceSourceUsed =
@@ -2087,7 +2140,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       priceAmount: price.amount,
       priceFormatted: buildPriceLabel({
         amount: price.amount,
+        currency: priceCurrency,
       }),
+      priceCurrency,
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
       durationText: duration.value,

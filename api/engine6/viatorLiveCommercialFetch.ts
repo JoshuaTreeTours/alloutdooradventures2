@@ -1,6 +1,7 @@
 import { fetchViatorWithCurl } from "../../lib/viator.js";
 
 import type { Engine6Extracted } from "./viatorExtractors.js";
+import { isUsdCurrency, normalizeIsoCurrency } from "../../src/engine6/priceCurrency.js";
 
 const VIATOR_FETCH_TIMEOUT_SECONDS = 25;
 
@@ -184,9 +185,22 @@ export const applyAvailabilitySummaryPrice = async (args: {
   productCode: string;
   extracted: Engine6Extracted;
 }): Promise<Engine6Extracted> => {
-  if (typeof args.extracted.priceAmount === "number") {
+  const extractedCurrency = normalizeIsoCurrency(args.extracted.priceCurrency);
+  if (
+    typeof args.extracted.priceAmount === "number" &&
+    (!extractedCurrency || isUsdCurrency(extractedCurrency))
+  ) {
     return args.extracted;
   }
+
+  const applyUsdAvailabilityPrice = (
+    amount: number
+  ): Engine6Extracted => ({
+    ...args.extracted,
+    priceAmount: amount,
+    priceFormatted: `From $${amount.toFixed(2)}`,
+    priceCurrency: "USD",
+  });
 
   const schedulePrice = await fetchAvailabilitySummaryPrice({
     apiKey: args.apiKey,
@@ -195,11 +209,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
   });
 
   if (typeof schedulePrice === "number") {
-    return {
-      ...args.extracted,
-      priceAmount: schedulePrice,
-      priceFormatted: `From $${schedulePrice.toFixed(2)}`,
-    };
+    return applyUsdAvailabilityPrice(schedulePrice);
   }
 
   const searchPrice = await fetchAvailabilitySearchPrice({
@@ -212,11 +222,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
     return args.extracted;
   }
 
-  return {
-    ...args.extracted,
-    priceAmount: searchPrice,
-    priceFormatted: `From $${searchPrice.toFixed(2)}`,
-  };
+  return applyUsdAvailabilityPrice(searchPrice);
 };
 
 const sumReviewCountTotals = (value: unknown): number | null => {

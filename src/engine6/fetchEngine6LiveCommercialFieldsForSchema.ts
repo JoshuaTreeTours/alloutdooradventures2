@@ -21,6 +21,7 @@ const toLiveCommercialFields = (
 ): Partial<Engine6LiveProductFields> => ({
   priceAmount: commercial.priceAmount,
   priceFormatted: commercial.priceFormatted,
+  priceCurrency: "USD",
   aggregateRating: commercial.aggregateRating,
   reviewCount: commercial.reviewCount,
 });
@@ -64,6 +65,10 @@ const fetchProductionRuntimeCommercialFields = async (
     priceFormatted:
       typeof body.extracted.priceFormatted === "string"
         ? body.extracted.priceFormatted
+        : null,
+    priceCurrency:
+      typeof body.extracted.priceCurrency === "string"
+        ? body.extracted.priceCurrency
         : null,
     aggregateRating:
       typeof body.extracted.aggregateRating === "number"

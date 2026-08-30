@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T00:16:33.155Z",
+  "generatedAt": "2026-08-30T16:09:51.943Z",
   "source": "merchant feed generation using shared Engine6 commercial resolver snapshot",
   "rows": [
     {
@@ -4124,6 +4124,83 @@
       "averageRating": "5.0",
       "ratingCount": "89",
       "reviewCount": "89"
+    },
+    {
+      "productCode": "92136P34",
+      "price": "156.60 USD",
+      "averageRating": "4.9",
+      "ratingCount": "3046",
+      "reviewCount": "3046"
+    },
+    {
+      "productCode": "30791P157",
+      "price": "74.48 USD",
+      "averageRating": "4.9",
+      "ratingCount": "1032",
+      "reviewCount": "1032"
+    },
+    {
+      "productCode": "33215P1",
+      "price": "106.77 USD",
+      "averageRating": "5.0",
+      "ratingCount": "1147",
+      "reviewCount": "1147"
+    },
+    {
+      "productCode": "6869TYOTM",
+      "price": "166.06 USD",
+      "averageRating": "5.0",
+      "ratingCount": "50",
+      "reviewCount": "50"
+    },
+    {
+      "productCode": "434880P1",
+      "price": "63.21 USD",
+      "averageRating": "5.0",
+      "ratingCount": "27",
+      "reviewCount": "27"
+    },
+    {
+      "productCode": "130384P1",
+      "price": "533.85 USD",
+      "averageRating": "4.9",
+      "ratingCount": "1493",
+      "reviewCount": "1493"
+    },
+    {
+      "productCode": "65053P9",
+      "price": "465.41 USD",
+      "averageRating": "4.8",
+      "ratingCount": "677",
+      "reviewCount": "677"
+    },
+    {
+      "productCode": "40436P1",
+      "price": "1281.24 USD",
+      "averageRating": "5.0",
+      "ratingCount": "356",
+      "reviewCount": "356"
+    },
+    {
+      "productCode": "40436P7",
+      "price": "1179.61 USD",
+      "averageRating": "4.9",
+      "ratingCount": "48",
+      "reviewCount": "48"
+    },
+    {
+      "productCode": "65053P10",
+      "price": "443.53 USD",
+      "averageRating": "4.6",
+      "ratingCount": "35",
+      "reviewCount": "35"
+    },
+    {
+      "productCode": "319176P1",
+      "price": "132.48 USD",
+      "averageRating": "4.4",
+      "ratingCount": "77",
+      "reviewCount": "77"
     }
   ]
 }

@@ -160,6 +160,7 @@ export type Engine6Tour = {
   } | null;
   priceAmount: number | null;
   priceFormatted: string;
+  priceCurrency?: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string;
@@ -198,6 +199,7 @@ export type Engine6ApiResponse = {
     productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
+    priceCurrency?: string | null;
     aggregateRating: number | null;
     reviewCount: number | null;
     durationText?: string | null;
