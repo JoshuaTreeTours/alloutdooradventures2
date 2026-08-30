@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "434880P1",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Matcha-tea-ceremony-and-5-kinds-of-Japanese-tea-tasting-in-Tokyo/d334-434880P1",
+    "title": "Matcha Experience with of Japanese Tea Tasting in Tokyo",
+    "description": {
+      "text": "In Tokyo, this 90-minute tasting sits in Asakusa Tawaramachi with a former tea farmer who covers cultivation, processing, and a matcha ceremony. Five Japanese teas, including matcha and sencha, plus snacks are listed, and the group is capped at five. The meeting point is the second floor of Henn na Hotel Tokyo Asakusa Tawaramachi in Kotobuki, Taito City. The session stays on tasting and ceremony instruction rather than a temple-hopping walk. The format suits visitors who want a guided tea window without booking a full cultural workshop independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Asakusa and the matcha ceremony that define this tasting rather than a sake-brewery transfer."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $63.21",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 27
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ee/97/35.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tasting of five Japanese teas including matcha",
+      "Matcha ceremony instruction from a former tea farmer",
+      "Small group limited to five",
+      "Asakusa Tawaramachi meeting point",
+      "Snacks included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet on the second floor of Henn na Hotel Tokyo Asakusa Tawaramachi, 3-chome 19-8 Kotobuki, Taito City."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this 90-minute tasting sits in Asakusa Tawaramachi with a former tea farmer who covers cultivation, processing, and a matcha ceremony.",
+    "itineraryItems": [
+      {
+        "title": "Asakusa",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Matcha Tea Ceremony",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Five Japanese tea samples including matcha and sencha",
+      "Matcha ceremony instruction",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Matcha Experience with of Japanese Tea Tasting in Tokyo?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Meet on the second floor of Henn na Hotel Tokyo Asakusa Tawaramachi, 3-chome 19-8 Kotobuki, Taito City."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 63.21
+      },
+      "currency": "USD"
+    }
+  }
+}

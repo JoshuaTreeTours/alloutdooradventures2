@@ -339,6 +339,17 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen92136p34Payload from "../../data/engine6/viator/92136P34.exact-product.json";
+import specimen30791p157Payload from "../../data/engine6/viator/30791P157.exact-product.json";
+import specimen33215p1Payload from "../../data/engine6/viator/33215P1.exact-product.json";
+import specimen6869tyotmPayload from "../../data/engine6/viator/6869TYOTM.exact-product.json";
+import specimen434880p1Payload from "../../data/engine6/viator/434880P1.exact-product.json";
+import specimen130384p1Payload from "../../data/engine6/viator/130384P1.exact-product.json";
+import specimen65053p9Payload from "../../data/engine6/viator/65053P9.exact-product.json";
+import specimen40436p1Payload from "../../data/engine6/viator/40436P1.exact-product.json";
+import specimen40436p7Payload from "../../data/engine6/viator/40436P7.exact-product.json";
+import specimen65053p10Payload from "../../data/engine6/viator/65053P10.exact-product.json";
+import specimen319176p1Payload from "../../data/engine6/viator/319176P1.exact-product.json";
 import specimen20297p1Payload from "../../data/engine6/viator/20297P1.exact-product.json";
 import specimen11557p1Payload from "../../data/engine6/viator/11557P1.exact-product.json";
 import specimen38668p1Payload from "../../data/engine6/viator/38668P1.exact-product.json";
@@ -3618,6 +3629,72 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P34",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Tokyo-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d334-92136P34",
+    rawPayload: specimen92136p34Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30791P157",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Tokyo-Explore-the-City-with-a-Local/d334-30791P157",
+    rawPayload: specimen30791p157Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33215P1",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Small-Group-Tokyo-Local-Biking-Tour/d334-33215P1",
+    rawPayload: specimen33215p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6869TYOTM",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Tokyo-Photography-Tour-Historic-Edo-to-Modern-Day-Tokyo/d334-6869TYOTM",
+    rawPayload: specimen6869tyotmPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "434880P1",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Matcha-tea-ceremony-and-5-kinds-of-Japanese-tea-tasting-in-Tokyo/d334-434880P1",
+    rawPayload: specimen434880p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130384P1",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Mt-Fuji-and-Hakone-Day-Trip/d334-130384P1",
+    rawPayload: specimen130384p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "65053P9",
+    publicUrl: "https://www.viator.com/tours/Tokyo/1-Day-Private-Mt-Fuji-Tour-Charter-English-Speaking-Driver/d334-65053P9",
+    rawPayload: specimen65053p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "40436P1",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Full-Day-Chartered-Car-Service-to-Mt-Fuji-and-Hakone-Lake-Ashi/d334-40436P1",
+    rawPayload: specimen40436p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "40436P7",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Private-Tour-to-see-Highlights-of-Kamakura-Enoshima-Yokohama-from-Tokyo/d334-40436P7",
+    rawPayload: specimen40436p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "65053P10",
+    publicUrl: "https://www.viator.com/tours/Tokyo/1-Day-Private-Nikko-World-Heritage-Tour-Charter-English-Speaking-Driver/d334-65053P10",
+    rawPayload: specimen65053p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "319176P1",
+    publicUrl: "https://www.viator.com/tours/Tokyo/Mt-Fuji-and-Hakone-Sky-Gondola-Ride-Lake-Cruise-One-day-Tour/d334-319176P1",
+    rawPayload: specimen319176p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

@@ -1496,6 +1496,47 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_TOKYO_92136P34_PRODUCT_CODE = "92136P34";
+export const ENGINE6_TOKYO_92136P34_ROUTE =
+  "/destinations/japan/tokyo/tours/tokyo-6hr-private-tour-with-government-licensed-guide-92136P34";
+export const ENGINE6_TOKYO_30791P157_PRODUCT_CODE = "30791P157";
+export const ENGINE6_TOKYO_30791P157_ROUTE =
+  "/destinations/japan/tokyo/tours/private-tokyo-tour-with-a-local-guide-tailored-to-your-30791P157";
+export const ENGINE6_TOKYO_33215P1_PRODUCT_CODE = "33215P1";
+export const ENGINE6_TOKYO_33215P1_ROUTE =
+  "/destinations/japan/tokyo/tours/tokyo-guided-small-group-biking-tour-33215P1";
+export const ENGINE6_TOKYO_6869TYOTM_PRODUCT_CODE = "6869TYOTM";
+export const ENGINE6_TOKYO_6869TYOTM_ROUTE =
+  "/destinations/japan/tokyo/tours/tokyo-metropolis-6869TYOTM";
+export const ENGINE6_TOKYO_434880P1_PRODUCT_CODE = "434880P1";
+export const ENGINE6_TOKYO_434880P1_ROUTE =
+  "/destinations/japan/tokyo/tours/matcha-experience-with-of-japanese-tea-tasting-in-tokyo-434880P1";
+export const ENGINE6_TOKYO_130384P1_PRODUCT_CODE = "130384P1";
+export const ENGINE6_TOKYO_130384P1_ROUTE =
+  "/destinations/japan/tokyo/tours/private-sightseeing-to-mt-fuji-and-hakone-green-number-130384P1";
+export const ENGINE6_TOKYO_65053P9_PRODUCT_CODE = "65053P9";
+export const ENGINE6_TOKYO_65053P9_ROUTE =
+  "/destinations/japan/tokyo/tours/mt-fuji-hakone-private-day-tour-w-english-speaking-driv-65053P9";
+export const ENGINE6_TOKYO_40436P1_PRODUCT_CODE = "40436P1";
+export const ENGINE6_TOKYO_40436P1_ROUTE =
+  "/destinations/japan/tokyo/tours/private-car-tour-to-mt-fuji-lake-kawaguchiko-or-hakone-40436P1";
+export const ENGINE6_TOKYO_40436P7_PRODUCT_CODE = "40436P7";
+export const ENGINE6_TOKYO_40436P7_ROUTE =
+  "/destinations/japan/tokyo/tours/private-car-tour-to-see-highlights-of-kamakura-enoshima-40436P7";
+export const ENGINE6_TOKYO_65053P10_PRODUCT_CODE = "65053P10";
+export const ENGINE6_TOKYO_65053P10_ROUTE =
+  "/destinations/japan/tokyo/tours/nikko-world-heritage-private-day-tour-w-english-speakin-65053P10";
+export const ENGINE6_TOKYO_319176P1_PRODUCT_CODE = "319176P1";
+export const ENGINE6_TOKYO_319176P1_ROUTE =
+  "/destinations/japan/tokyo/tours/mt-fuji-hakone-tour-tokyo-hotel-pick-up-by-grayline-319176P1";
+
+export const ENGINE6_TOKYO_TOUR_PATH_PREFIX =
+  "/destinations/japan/tokyo/tours/";
+
+export const isEngine6TokyoTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_TOKYO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_RIO_DE_JANEIRO_20297P1_PRODUCT_CODE = "20297P1";
 export const ENGINE6_RIO_DE_JANEIRO_20297P1_ROUTE =
   "/destinations/brazil/rio-de-janeiro/tours/private-tour-rio-city-essentials-including-christ-the-r-20297P1";
@@ -4981,6 +5022,50 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_92136P34_ROUTE,
+    ENGINE6_TOKYO_92136P34_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_30791P157_ROUTE,
+    ENGINE6_TOKYO_30791P157_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_33215P1_ROUTE,
+    ENGINE6_TOKYO_33215P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_6869TYOTM_ROUTE,
+    ENGINE6_TOKYO_6869TYOTM_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_434880P1_ROUTE,
+    ENGINE6_TOKYO_434880P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_130384P1_ROUTE,
+    ENGINE6_TOKYO_130384P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_65053P9_ROUTE,
+    ENGINE6_TOKYO_65053P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_40436P1_ROUTE,
+    ENGINE6_TOKYO_40436P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_40436P7_ROUTE,
+    ENGINE6_TOKYO_40436P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_65053P10_ROUTE,
+    ENGINE6_TOKYO_65053P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_TOKYO_319176P1_ROUTE,
+    ENGINE6_TOKYO_319176P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_RIO_DE_JANEIRO_20297P1_ROUTE,

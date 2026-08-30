@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "65053P10",
+    "productUrl": "https://www.viator.com/tours/Tokyo/1-Day-Private-Nikko-World-Heritage-Tour-Charter-English-Speaking-Driver/d334-65053P10",
+    "title": "Nikko World Heritage Private Day Tour w/ English Speaking Driver",
+    "description": {
+      "text": "In Tokyo, this private 10-hour charter heads north to Nikko for Toshogu Shrine, Shinkyo Bridge, Kegon Falls, and Lake Chuzenji with an English-speaking driver. Meet-and-greet, highway tolls, and an air-conditioned vehicle are listed for Tokyo 23-ward pickups; meals and some admissions stay separate. The published window is 10 hours from hotel pickup, with overtime listed at 2,500 yen per 30 minutes. Commentary stays on the UNESCO shrine precinct and waterfall approaches rather than a city walking loop. The format suits visitors who want a guided World Heritage day without self-driving the Nikko mountain road. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Toshogu Shrine, Kegon Falls, and Lake Chuzenji that shape this outing rather than a Hakone ropeway add-on."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $443.53",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4f/a5/3e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 10-hour Nikko World Heritage charter from Tokyo",
+      "Toshogu Shrine and Shinkyo Bridge options",
+      "Kegon Falls and Lake Chuzenji stops",
+      "English-speaking driver and air-conditioned vehicle",
+      "Customizable published Nikko list"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for Tokyo 23 wards. Confirm the 10-hour Nikko window when booking."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private 10-hour charter heads north to Nikko for Toshogu Shrine, Shinkyo Bridge, Kegon Falls, and Lake Chuzenji with an English-speaking driver.",
+    "itineraryItems": [
+      {
+        "title": "Toshogu Shrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kegon Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Chuzenji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinkyo Bridge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Meet & Greet",
+      "English Speaking Driver",
+      "Air-conditioned vehicle",
+      "Highway Tolls"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Nikko World Heritage Private Day Tour w/ English Speaking Driver?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Hotel pickup is listed for Tokyo 23 wards. Confirm the 10-hour Nikko window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 443.53
+      },
+      "currency": "USD"
+    }
+  }
+}

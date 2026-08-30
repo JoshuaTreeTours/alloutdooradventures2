@@ -85,6 +85,7 @@ export const COUNTRY_NAME_TO_ISO2: Record<string, string> = {
   mexico: "MX",
   peru: "PE",
   brazil: "BR",
+  japan: "JP",
   switzerland: "CH",
   austria: "AT",
 };

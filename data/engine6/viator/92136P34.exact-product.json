@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "92136P34",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Tokyo-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d334-92136P34",
+    "title": "Tokyo 6hr Private Tour with Government-Licensed Guide",
+    "description": {
+      "text": "In Tokyo, this private six-hour circuit pairs a government-licensed guide with a published list of neighborhood stops rather than a fixed coach loop. The group chooses three or four sights such as Asakusa, the Imperial Palace, Shinjuku Gyoen National Garden, Tsukiji Fish Market, Meiji Jingu Shrine, or Senso-ji Temple, then moves between them on foot and public transport. Guide entry fees apply only to the listed What to Expect sights; meals and most tickets stay separate. The meeting is on foot inside the designated Tokyo area, not at Narita. The format suits visitors who want licensed commentary without assembling subway transfers independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Asakusa, the Imperial Palace, Shinjuku Gyoen, and Meiji Jingu that define this private city window rather than a Mount Fuji add-on."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $156.60",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3046
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/2a/70.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Meiji Jingu Shrine",
+      "Senso-ji Temple",
+      "Private six-hour circuit with a government-licensed Tokyo guide",
+      "Choose three or four published stops such as Asakusa, the Imperial Palace, or Meiji Jingu",
+      "Neighborhood pacing instead of a fixed coach loop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the licensed guide on foot within the designated Tokyo area listed when booking. Public transportation or local taxis may be used between sites."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private six-hour circuit pairs a government-licensed guide with a published list of neighborhood stops rather than a fixed coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Asakusa",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Imperial Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinjuku Gyoen National Garden",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shibuya Crossing",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Tsukiji Fish Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Meiji Jingu Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Senso-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Customizable Walking Tour of your choice of 3-4 sites from 'What to expect' list",
+      "Meet up with guide on foot within designated area of Tokyo",
+      "Guide Entry fees are only covered for sights listed under What to Expect"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tokyo 6hr Private Tour with Government-Licensed Guide?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Meet the licensed guide on foot within the designated Tokyo area listed when booking. Public transportation or local taxis may be used between sites."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 156.6
+      },
+      "currency": "USD"
+    }
+  }
+}

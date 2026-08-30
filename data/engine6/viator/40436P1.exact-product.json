@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "40436P1",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Full-Day-Chartered-Car-Service-to-Mt-Fuji-and-Hakone-Lake-Ashi/d334-40436P1",
+    "title": "Private Car Tour to Mt. Fuji Lake Kawaguchiko or Hakone",
+    "description": {
+      "text": "In Tokyo, this private 10-to-11-hour chartered car keeps one group with a guide and driver for either Mount Fuji and Lake Kawaguchiko or Hakone and Lake Ashi. Hotel pickup and an air-conditioned minivan are listed so the day stays on lake viewpoints, shrine approaches, or ropeway windows rather than a mixed coach itinerary. Entrance fees for hot springs or museums remain separate. The published choice is one axis, not a combined Fuji-and-Hakone cram. The format suits visitors who want a private scenic day without renting a highway car. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Mount Fuji, Lake Kawaguchiko, Hakone, and Lake Ashi that shape this charter rather than a Kamakura coastal add-on."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 to 11 hours (approx.)",
+    "priceFrom": "From $1281.24",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 356
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/31/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 10-to-11-hour chartered car from Tokyo",
+      "Choose the Mount Fuji and Kawaguchiko or Hakone and Lake Ashi option",
+      "English-speaking guide and driver",
+      "Air-conditioned minivan",
+      "Hotel pickup listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for Tokyo accommodations. Confirm the Kawaguchiko or Hakone published option when booking."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private 10-to-11-hour chartered car keeps one group with a guide and driver for either Mount Fuji and Lake Kawaguchiko or Hakone and Lake Ashi.",
+    "itineraryItems": [
+      {
+        "title": "Mount Fuji",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Kawaguchiko",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hakone",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Ashi",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Private transportation by air-conditioned minivan",
+      "Private guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Car Tour to Mt. Fuji Lake Kawaguchiko or Hakone?",
+        "answer": "The planned duration is 10 to 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Hotel pickup is listed for Tokyo accommodations. Confirm the Kawaguchiko or Hakone published option when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1281.24
+      },
+      "currency": "USD"
+    }
+  }
+}

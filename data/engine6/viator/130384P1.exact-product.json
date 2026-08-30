@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "130384P1",
+    "productUrl": "https://www.viator.com/tours/Tokyo/Mt-Fuji-and-Hakone-Day-Trip/d334-130384P1",
+    "title": "Private Sightseeing to Mt. Fuji and Hakone GREEN NUMBER PLATES",
+    "description": {
+      "text": "In Tokyo, this private 10-hour charter leaves 23-ward hotels for Mount Fuji viewpoints or a Hakone option, not both on the same published day. The Fuji-area list includes the Subaru Line 5th Station, Lake Kawaguchiko, Oshino Hakkai, Arakurayama Sengen Park, and Chureito Pagoda, with an English-speaking driver-guide and private vehicle. Activity tickets and the Fuji entrance fee are listed separately. Weather can close the upper Subaru Line, so the driver keeps the group at the highest open station or a lake viewpoint. The format suits visitors who want a guided mountain day without self-driving the Fuji lakes. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on Mount Fuji, Lake Kawaguchiko, and Oshino Hakkai that shape this outing rather than a Kamakura add-on."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $533.85",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1493
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/73/ef/00.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Chureito Pagoda",
+      "Private 10-hour Mount Fuji or Hakone circuit from Tokyo",
+      "Fifth Station, Lake Kawaguchiko, and Oshino Hakkai options",
+      "Arakurayama Sengen Park and Chureito Pagoda photo stops",
+      "English-speaking driver-guide and private vehicle"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for Tokyo 23 wards at the driveway, valet stand, or taxi lane of the confirmed accommodations."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private 10-hour charter leaves 23-ward hotels for Mount Fuji viewpoints or a Hakone option, not both on the same published day.",
+    "itineraryItems": [
+      {
+        "title": "Mount Fuji",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mt. Fuji Subaru Line 5th Station",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Kawaguchiko",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oshino Hakkai",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arakurayama Sengen Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chureito Pagoda",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "English speaking driver cum guide",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Sightseeing to Mt. Fuji and Hakone GREEN NUMBER PLATES?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Hotel pickup is listed for Tokyo 23 wards at the driveway, valet stand, or taxi lane of the confirmed accommodations."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 533.85
+      },
+      "currency": "USD"
+    }
+  }
+}

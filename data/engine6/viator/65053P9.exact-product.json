@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "65053P9",
+    "productUrl": "https://www.viator.com/tours/Tokyo/1-Day-Private-Mt-Fuji-Tour-Charter-English-Speaking-Driver/d334-65053P9",
+    "title": "Mt Fuji & Hakone Private Day Tour w/ English Speaking Driver",
+    "description": {
+      "text": "In Tokyo, this private 10-hour charter pairs an English-speaking driver with a published Mount Fuji and Hakone stop list from central hotels. Weather permitting, the route can include the Fifth Station, Owakudani Valley, the Hakone Ropeway, Lake Ashinoko, Hakone Shrine, and Oishi Park. Fuel, tolls, and the vehicle are included; meals and some admissions stay separate. The published window is 10 hours from Tokyo pickup to drop-off, with overtime listed at 2,500 yen per 30 minutes. The format suits visitors who want a guided Fuji-Hakone day without assembling ropeway and lake timing independently. Meeting points are confirmed at booking in Tokyo, and the itinerary stays on the Fifth Station, Owakudani, and Lake Ashinoko that define this charter rather than a Nikko shrine day."
+    },
+    "location": {
+      "city": "Tokyo",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $465.41",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 677
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c1/ef/45.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Oishi Park",
+      "Private 10-hour Mount Fuji and Hakone charter from Tokyo",
+      "Fifth Station, Owakudani, and Hakone Ropeway options",
+      "Lake Ashinoko and Hakone Shrine stops",
+      "English-speaking driver and air-conditioned vehicle"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for central Tokyo accommodations. Confirm the 10-hour window when booking."
+      },
+      "end": {
+        "description": "Return to your Tokyo meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Tokyo, this private 10-hour charter pairs an English-speaking driver with a published Mount Fuji and Hakone stop list from central hotels.",
+    "itineraryItems": [
+      {
+        "title": "Mt. Fuji 5th Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Owaku-dani Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hakone Ropeway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Ashinoko",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hakone Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oishi Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Meet & Greet",
+      "Air-conditioned vehicle",
+      "English speaking driver/guide",
+      "Pickup and drop off in Tokyo"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mt Fuji & Hakone Private Day Tour w/ English Speaking Driver?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Tokyo?",
+        "answer": "Hotel pickup is listed for central Tokyo accommodations. Confirm the 10-hour window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 465.41
+      },
+      "currency": "USD"
+    }
+  }
+}
