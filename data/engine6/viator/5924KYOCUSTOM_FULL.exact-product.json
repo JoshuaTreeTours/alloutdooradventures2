@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5924KYOCUSTOM_FULL",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Private-Custom-Tour-Kyoto-in-One-Day/d332-5924KYOCUSTOM_FULL",
+    "title": "Private Custom Tour: Kyoto in One Day",
+    "description": {
+      "text": "In Kyoto, this private custom day builds a half-day or full-day route from a published UNESCO stop list rather than a fixed coach loop. The listed options include Kinkaku-ji, Nijo Castle, Fushimi Inari-taisha Shrine, Tenryu-ji Temple, and Kiyomizu-dera, with hotel pickup inside Kyoto city. A professional English-speaking guide travels by public transport or a private vehicle depending on the selected option, and lunch is listed on the full-day window. Pickup outside Kyoto city is not offered. The format suits first-time visitors who want a tailored temple day without assembling shrine and castle timing independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Kinkaku-ji, Nijo Castle, Fushimi Inari, and Kiyomizu-dera that shape this outing rather than a Nara park add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $191.74",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 78
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c0/8e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private custom day with a Kyoto guide",
+      "Published options include Kinkaku-ji, Nijo Castle, Fushimi Inari, and Kiyomizu-dera",
+      "Half-day or full-day window",
+      "Public transport or private-vehicle option",
+      "Lunch listed on the full-day option"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The guide meets the group within Kyoto city for hotel pickup. Pickup outside Kyoto city is not listed."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private custom day builds a half-day or full-day route from a published UNESCO stop list rather than a fixed coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tenryu-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off in Kyoto city",
+      "Professional English speaking guide",
+      "Transport by private vehicle (if by private vehicle)",
+      "Transportation fares (if by public transport)",
+      "Lunch (full-day option only)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Custom Tour: Kyoto in One Day?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "The guide meets the group within Kyoto city for hotel pickup. Pickup outside Kyoto city is not listed."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 191.74
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "103013P3",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Best-of-Kyoto-Bike-Tour/d332-103013P3",
+    "title": "5 Top Highlights of Kyoto Full Day Bike Tour (E-bike option)",
+    "description": {
+      "text": "In Kyoto, this small-group bike or e-bike day leaves JR Saga-Arashiyama Station for five published highlights: Kinkaku-ji, Kiyomizu-dera Temple, Fushimi Inari-taisha Shrine, Arashiyama Bamboo Forest, and Gion. A cycling guide, bike, helmet, lunch, snacks, and listed admission fees are included for the seven-to-eight-hour loop covering up to 44 kilometers. The ride ends back at Saga-Arashiyama Station. Hotel pickup is not listed. The format suits visitors who want a guided bike window across shrine forest and downtown districts without renting independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Kinkaku-ji, Kiyomizu-dera, Fushimi Inari, and Arashiyama that define this ride rather than a Nara park add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $181.28",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 439
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1a/54/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day guided bike or e-bike loop across five Kyoto highlights",
+      "Kinkaku-ji, Kiyomizu-dera, Fushimi Inari, Arashiyama bamboo, and Gion",
+      "Bikes, helmets, lunch, and snacks included",
+      "Small-group format from Saga-Arashiyama Station",
+      "Hotel pickup is not listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at JR Saga-Arashiyama Station. Exit right at the ticket gates. The ride ends back at the same station."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this small-group bike or e-bike day leaves JR Saga-Arashiyama Station for five published highlights: Kinkaku-ji, Kiyomizu-dera Temple, Fushimi Inari-taisha Shrine, Arashiyama Bamboo Forest, and Gion.",
+    "itineraryItems": [
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arashiyama Bamboo Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Native English speaking bilingual guide",
+      "Bicycle",
+      "Helmet",
+      "Bottled water",
+      "Admission Fees",
+      "Light Lunch",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 5 Top Highlights of Kyoto Full Day Bike Tour (E-bike option)?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet at JR Saga-Arashiyama Station. Exit right at the ticket gates. The ride ends back at the same station."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 181.28
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -376,6 +376,7 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
   "peru/lima",
   "brazil/rio-de-janeiro",
   "japan/tokyo",
+  "japan/kyoto",
 ]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>

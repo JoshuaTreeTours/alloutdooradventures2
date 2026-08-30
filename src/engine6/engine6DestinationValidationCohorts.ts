@@ -199,6 +199,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Kyoto",
+      matches: tour =>
+        /\/japan\/kyoto\//i.test(tour.canonicalPath) ||
+        (/\bkyoto\b/i.test(tour.city) && /\bjapan\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Paris",
       matches: tour =>
         /\/france\/paris\//i.test(tour.canonicalPath) ||

@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "92281P2",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Your-Private-Vacation-Photography-Session-In-Kyoto/d332-92281P2",
+    "title": "Your Private Vacation Photography Session In Kyoto",
+    "description": {
+      "text": "In Kyoto, this private one-hour photography session pairs a professional photographer with a chosen neighborhood window such as Yasaka Shrine, Gion, or Higashiyama. About 50 edited images are listed after the shoot, with photographer commentary on Kyoto history and culture during the walk. Kimono rental and transport fees are not treated as inclusions. The meeting point is confirmed when booking. The format suits visitors who want guided location shooting without assembling a self-directed photo walk. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Yasaka Shrine, Gion, and Higashiyama that shape this session rather than a full temple-hopping day."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $321.71",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 103
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/18/81.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private one-hour photography session in Kyoto",
+      "About 50 edited images after the shoot",
+      "Location choice such as Yasaka Shrine or Gion",
+      "Photographer commentary on Kyoto history and culture",
+      "Kimono rental listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the photographer at the confirmed Kyoto location listed when booking. Kimono rental is not included."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private one-hour photography session pairs a professional photographer with a chosen neighborhood window such as Yasaka Shrine, Gion, or Higashiyama.",
+    "itineraryItems": [
+      {
+        "title": "Yasaka Shrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Higashiyama",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "About 50 beautiful edited photos (could be more)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Your Private Vacation Photography Session In Kyoto?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the photographer at the confirmed Kyoto location listed when booking. Kimono rental is not included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 321.71
+      },
+      "currency": "USD"
+    }
+  }
+}

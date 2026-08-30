@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "5522662P20",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Highlights-with-Nijo-Castle-Ticket-and-Bamboo-Forest/d332-5522662P20",
+    "title": "Kyoto: Nijo, Kinkaku-ji, Arashiyama, Kiyomizu & Fushimi Inari",
+    "description": {
+      "text": "In Kyoto, this guided coach day leaves Hotel Keihan Kyoto Grande for a published ten-hour circuit of Arashiyama Bamboo Forest, Kinkaku-ji, Nijo Castle, Kiyomizu-dera Temple, and Fushimi Inari-taisha Shrine. Ticket-inclusive or ticket-excluded packages are listed so admission at the Golden Pavilion, Kiyomizu-dera, and Nijo Castle can be added or left separate. The tour ends at Fushimi Inari-taisha, with directions back to Kyoto Station given on site. Arrive at least ten minutes before departure. The format suits visitors who want a coordinated five-stop day without assembling coach and ticket timing independently. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Arashiyama, Kinkaku-ji, Nijo Castle, Kiyomizu-dera, and Fushimi Inari that define this outing rather than a private walking custom day."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $49.50",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 739
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/61/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day coach circuit of five published Kyoto landmarks",
+      "Arashiyama bamboo, Kinkaku-ji, Nijo Castle, Kiyomizu-dera, and Fushimi Inari",
+      "Ticket-inclusive or ticket-excluded package options",
+      "Meet at Hotel Keihan Kyoto Grande",
+      "Ends at Fushimi Inari-taisha"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide outside Hotel Keihan Kyoto Grande. The guide waits with an Amigo Tours sign. Arrive at least 10 minutes before departure. The tour ends at Fushimi Inari-taisha."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this guided coach day leaves Hotel Keihan Kyoto Grande for a published ten-hour circuit of Arashiyama Bamboo Forest, Kinkaku-ji, Nijo Castle, Kiyomizu-dera Temple, and Fushimi Inari-taisha Shrine.",
+    "itineraryItems": [
+      {
+        "title": "Arashiyama Bamboo Forest",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Admission to Golden Pavilion (if option selected)",
+      "Admission to Kiyomizu-dera (if option selected)",
+      "Admission to Nijo Castle (if option selected)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kyoto: Nijo, Kinkaku-ji, Arashiyama, Kiyomizu & Fushimi Inari?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the guide outside Hotel Keihan Kyoto Grande. The guide waits with an Amigo Tours sign. Arrive at least 10 minutes before departure. The tour ends at Fushimi Inari-taisha."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49.5
+      },
+      "currency": "USD"
+    }
+  }
+}

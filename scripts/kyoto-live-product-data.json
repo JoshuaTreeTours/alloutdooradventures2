@@ -1,0 +1,506 @@
+[
+  {
+    "productCode": "92136P55",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P55",
+    "title": "Kyoto 6hr Private Tour with Government-Licensed Guide",
+    "priceFrom": "From $156.60",
+    "price": 156.6,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 1106,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/1c/e7.jpg",
+    "overview": "Discover both modern and traditional sides of history-rich Kyoto during this full-day private tour. Travel like a local by public transportation as you tick off the city’s most celebrated sights, from UNESCO-listed Nijo Castle to the well-preserved neighborhood of Higashiyama and streets of Gion, otherwise known as Kyoto’s Geisha district.",
+    "itineraryStops": [
+      "Nijo Castle",
+      "Higashiyama",
+      "Gion",
+      "Kiyomizu-dera Temple",
+      "Fushimi Inari-taisha Shrine"
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Customizable Tour of your choice of 3-4 sites from 'What to expect' list",
+      "Meet up with guide on foot within designated area of Kyoto"
+    ],
+    "startDescription": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites.",
+    "highlights": [
+      "Private six-hour circuit with a government-licensed Kyoto guide",
+      "Choose three or four published stops such as Nijo Castle, Higashiyama, or Gion",
+      "Neighborhood pacing instead of a fixed coach loop",
+      "Meet on foot in the designated Kyoto area",
+      "Transportation and most entrance fees listed separately"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "City Tours"]
+  },
+  {
+    "productCode": "92136P37",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P37",
+    "title": "Kyoto 4hr Private Tour with Government-Licensed Guide",
+    "priceFrom": "From $107.24",
+    "price": 107.24,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 515,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/eb/24/18.jpg",
+    "overview": "Follow a customizable itinerary through Kyoto during this bespoke half-day private tour. Simply select which attractions you’d like to visit and enjoy an in-depth visit in the company of your own personal nationally licensed guide. Tours include a front-door pickup at the front of your hotel. Travel like a local by public transportation or taxi; upgrade to include a private car at an additional cost.",
+    "itineraryStops": [
+      "Nishiki Market Shopping District",
+      "Kiyomizu-dera Temple",
+      "Gion",
+      "Nijo Castle",
+      "Fushimi Inari-taisha Shrine"
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Customizable Tour of your choice of 2-3 sites from 'What to expect' list",
+      "Meet up with guide on foot within designated area of Kyoto"
+    ],
+    "startDescription": "Meet the licensed guide on foot within the designated Kyoto area listed when booking. Public transportation or local taxis may be used between sites.",
+    "highlights": [
+      "Private four-hour circuit with a government-licensed Kyoto guide",
+      "Choose two or three published stops such as Nishiki Market, Kiyomizu-dera, or Gion",
+      "Half-day pacing instead of a full coach loop",
+      "Meet on foot in the designated Kyoto area",
+      "Transportation and most entrance fees listed separately"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "92136P49",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Private-Kyoto-Tour/d332-92136P49",
+    "title": "Private Kyoto Tour with Licensed Guide & Vehicle (Max 15 persons)",
+    "priceFrom": "From $659.84",
+    "price": 659.84,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 310,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/af/7e.jpg",
+    "overview": "The subway system and local bus network can be very confusing for tourists visiting Kyoto, so save yourself the risk of getting lost and opt for this worry-free private tour instead. Door-to-door hotel transfers are included, and a guide takes you to a selection of key sights, such as Fushimi Inari-taisha Shrine, Nijo Castle, Kiyomizu-dera Temple, or Nishiki Market.",
+    "itineraryStops": [
+      "Fushimi Inari-taisha Shrine",
+      "Nijo Castle",
+      "Kiyomizu-dera Temple",
+      "Nishiki Market Shopping District",
+      "Gion",
+      "Kyoto Imperial Palace",
+      "Kinkakuji Temple"
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Private vehicle",
+      "Customizable Walking Tour of your choice of 3-4 sites from 'What to expect' list"
+    ],
+    "startDescription": "The guide and driver pick up at a Kyoto-area hotel or a preferred location around Kyoto Station. The tour does not pick up in Osaka, Kobe, or Nara.",
+    "highlights": [
+      "Private six-hour circuit with a licensed Kyoto guide and vehicle",
+      "Choose three or four published stops such as Fushimi Inari, Nijo Castle, or Kiyomizu-dera",
+      "Door-to-door Kyoto hotel transfers",
+      "Kyoto-only pickup, not Osaka or Nara",
+      "Entrance fees and meals listed separately"
+    ],
+    "experienceType": "private-vehicle",
+    "categories": ["Private Sightseeing Tours", "City Tours"]
+  },
+  {
+    "productCode": "21490P11",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Full-Day-Kyoto-Private-Custom-Walking-Tour/d332-21490P11",
+    "title": "Kyoto Custom Highlight: Private Walking Tour with Licensed Guide",
+    "priceFrom": "From $150.00",
+    "price": 150,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 263,
+    "duration": "4 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/29/d1/13.jpg",
+    "overview": "Take control of your Kyoto sightseeing and visit only the sights you wish to see on this private walking tour. Ideal for first-time visitors, this tour lets you customize a half-day or full-day itinerary. Opt to visit the Golden Pavilion (Kinkaku-ji), Fushimi Inari Shrine, and Nijo Castle, or to stray from the beaten path to see an alternative side of Kyoto. Hotel pickup and drop-off are included.",
+    "itineraryStops": [
+      "Kinkakuji Temple",
+      "Fushimi Inari-taisha Shrine",
+      "Ryoanji Temple",
+      "Bamboo Forest Street",
+      "Gion",
+      "Kiyomizu-dera Temple",
+      "Sannenzaka Ninenzaka",
+      "Nishiki Market Shopping District",
+      "Nijo Castle",
+      "Pontocho District (Pass By)",
+      "Tenryu-ji Temple",
+      "Kyoto Imperial Palace",
+      "Philosopher's Walk (Pass By)",
+      "Nanzen-ji Temple",
+      "Ginkakuji Temple"
+    ],
+    "inclusions": [
+      "Hotel meet up",
+      "Private customized walking tour. Public transportation or taxis maybe used",
+      "4 or 8 hours of your choice",
+      "Professional local guide"
+    ],
+    "startDescription": "Meet the licensed guide at the confirmed Kyoto hotel meeting point listed when booking. Public transportation or local taxis may be used between sites.",
+    "highlights": [
+      "Private walking route with a licensed Kyoto guide",
+      "Choose two stops on the four-hour option or three to four on the eight-hour option",
+      "Published list includes Kinkaku-ji, Fushimi Inari, and Nijo Castle",
+      "Hotel meetup in Kyoto",
+      "Entrance fees and transport listed separately"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "285124P1",
+    "productUrl": "https://www.viator.com/tours/Kyoto/The-10-must-see-spots-in-Kyoto-one-day-private-tour/d332-285124P1",
+    "title": "10 Must-see Spots in Kyoto One Day Private Tour (up to 7 people)",
+    "priceFrom": "From $192.19",
+    "price": 192.19,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 766,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/37/0f/ca.jpg",
+    "overview": "If your time in Kyoto is limited and you want to see lots of its famous sights in a day, then this private guided tour is an excellent choice. Explore the city with a private guide to take care of navigating. Along the way, tick off 10 top attractions including the beautiful temple of Kiyomizu-dera, the geisha district of Gion, lush bamboo groves, and plenty more scenic surprises.",
+    "itineraryStops": [
+      "Kinkakuji Temple",
+      "Bamboo Forest Street",
+      "Tenryu-ji Temple",
+      "Togetsukyo Bridge",
+      "Arashiyama Kimono Forest",
+      "Fushimi Inari-taisha Shrine",
+      "Kiyomizu-dera Temple",
+      "Sannenzaka Ninenzaka",
+      "Yasakanoto",
+      "Gion"
+    ],
+    "inclusions": [
+      "Private guide",
+      "Private transportation for one group"
+    ],
+    "startDescription": "Meet the guide at Kitaoji Station in northern Kyoto, then continue the published ten-stop circuit.",
+    "highlights": [
+      "Private eight-hour circuit covering ten published Kyoto sights",
+      "Kinkaku-ji, Arashiyama bamboo, Fushimi Inari, and Kiyomizu-dera on one day",
+      "Pickup at Kitaoji Station",
+      "Group capped at seven",
+      "Guide handles navigation between districts"
+    ],
+    "experienceType": "private-vehicle",
+    "categories": ["Private Sightseeing Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "5924KYOCUSTOM_FULL",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Private-Custom-Tour-Kyoto-in-One-Day/d332-5924KYOCUSTOM_FULL",
+    "title": "Private Custom Tour: Kyoto in One Day",
+    "priceFrom": "From $191.74",
+    "price": 191.74,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 78,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c0/8e.jpg",
+    "overview": "Make the most of your time in Kyoto with a customized private tour. Create your own sightseeing itinerary, choosing from dozens of cultural and historic landmarks, including 17 UNESCO World Heritage sites such as Kiyomizu-dera Temple and Kinkaku-ji (Golden Temple). Choose either a half-day or full-day itinerary and travel via public transport or a private vehicle, depending on the option selected. Lunch is also included on the full-day tour option.",
+    "itineraryStops": [
+      "Kinkakuji Temple",
+      "Nijo Castle",
+      "Fushimi Inari-taisha Shrine",
+      "Tenryu-ji Temple",
+      "Kiyomizu-dera"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off in Kyoto city",
+      "Professional English speaking guide",
+      "Transport by private vehicle (if by private vehicle)",
+      "Transportation fares (if by public transport)",
+      "Lunch (full-day option only)"
+    ],
+    "startDescription": "The guide meets the group within Kyoto city for hotel pickup. Pickup outside Kyoto city is not listed.",
+    "highlights": [
+      "Private custom day with a Kyoto guide",
+      "Published options include Kinkaku-ji, Nijo Castle, Fushimi Inari, and Kiyomizu-dera",
+      "Half-day or full-day window",
+      "Public transport or private-vehicle option",
+      "Lunch listed on the full-day option"
+    ],
+    "experienceType": "private-city",
+    "categories": ["Private Sightseeing Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "407697P2",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Nara-Private-tour-w-Hotel-pick-up-and-Drop-off-from-Kyoto/d332-407697P2",
+    "title": "Private Tour Kyoto-Nara w/Hotel Pick Up & Drop off from Kyoto",
+    "priceFrom": "From $361.03",
+    "price": 361.03,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 69,
+    "duration": "6 to 10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/55/17/e8.jpg",
+    "overview": "Cover Kyoto and Nara in one private day with hotel pickup and drop-off from Kyoto. An English-speaking driver-host keeps one group in an air-conditioned vehicle so the itinerary can hold both city temples and Nara park stops without assembling train transfers independently.",
+    "itineraryStops": [
+      "Kinkakuji Temple",
+      "Todai-ji Temple",
+      "Nara Park",
+      "Kasuga-Taisha Shrine"
+    ],
+    "inclusions": [
+      "Private transportation",
+      "English Speaking Driver /Host",
+      "Air-conditioned vehicle",
+      "Parking Fees"
+    ],
+    "startDescription": "Meet in the hotel lobby in Kyoto. Contact details for pickup are listed on the booking ticket.",
+    "highlights": [
+      "Private six-to-ten-hour Kyoto and Nara charter",
+      "Hotel pickup and drop-off from Kyoto",
+      "English-speaking driver-host and air-conditioned vehicle",
+      "Published Nara stops such as Todai-ji",
+      "Lunch and some admissions listed separately"
+    ],
+    "experienceType": "private-vehicle",
+    "categories": ["Private Sightseeing Tours", "Day Trips"]
+  },
+  {
+    "productCode": "374249P4",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Best-Day-trip-from-Kyoto-Ancient-Temples-and-Dreamy-Lantern-Shrines-Private-Car/d332-374249P4",
+    "title": "Osaka & Nara in 1-Day by Private Van with Local Japanese Guide",
+    "priceFrom": "From $337.59",
+    "price": 337.59,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 64,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6e/59/21.jpg",
+    "overview": "This private tour of Osaka and Nara offers you flexibility. Choose your preferred pickup and drop-off point–they can be different–from Kyoto, Osaka, or Nara. Customize the itinerary to your preferences, ensuring you only visit the sites you care. Make the most of your time with day trips that focus on just one city or tackle both in the same timeframe.",
+    "itineraryStops": [
+      "Todai-ji Temple",
+      "Nara Park",
+      "Kasuga-Taisha Shrine",
+      "Osaka Castle"
+    ],
+    "inclusions": [
+      "Full English Guide",
+      "Air-Conditioned Nissan Van (2-5 guests) / Mini Convertible (1 guest)",
+      "Fuel & Highway Fees",
+      "Flexible Pickup and Dropping-off at anywhere in Kyoto, Osaka or Nara"
+    ],
+    "startDescription": "Private van pickup is listed from Kyoto, Osaka, or Nara hotels. Confirm the meeting point when booking.",
+    "highlights": [
+      "Private van day covering Osaka, Nara, or both",
+      "Pickup listed from Kyoto, Osaka, or Nara",
+      "English-speaking guide and air-conditioned vehicle",
+      "Published Nara stops such as Todai-ji",
+      "Entry fees listed separately"
+    ],
+    "experienceType": "private-vehicle",
+    "categories": ["Private Sightseeing Tours", "Day Trips"]
+  },
+  {
+    "productCode": "103013P3",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Best-of-Kyoto-Bike-Tour/d332-103013P3",
+    "title": "5 Top Highlights of Kyoto Full Day Bike Tour (E-bike option)",
+    "priceFrom": "From $181.28",
+    "price": 181.28,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 439,
+    "duration": "7 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1a/54/7a.jpg",
+    "overview": "Kyoto’s traditional neighborhoods and scenic parklands are ideal for exploring by bike. On this tour, save time by cycling around the city and visit five of Kyoto’s most popular attractions in one day. Enjoy stunning views of the Golden Pavilion and Kiyomizu Temple, pose for photos by the red torii gates of Fushimi Inari Shrine, hop off to stroll around the Arashiyama’s bamboo forest, and explore Gion, the geisha district.",
+    "itineraryStops": [
+      "Kinkakuji Temple",
+      "Kiyomizu-dera Temple",
+      "Fushimi Inari-taisha Shrine",
+      "Arashiyama Bamboo Forest",
+      "Gion"
+    ],
+    "inclusions": [
+      "Native English speaking bilingual guide",
+      "Bicycle",
+      "Helmet",
+      "Bottled water",
+      "Admission Fees",
+      "Light Lunch",
+      "Snacks"
+    ],
+    "startDescription": "Meet at JR Saga-Arashiyama Station. Exit right at the ticket gates. The ride ends back at the same station.",
+    "highlights": [
+      "Full-day guided bike or e-bike loop across five Kyoto highlights",
+      "Kinkaku-ji, Kiyomizu-dera, Fushimi Inari, Arashiyama bamboo, and Gion",
+      "Bikes, helmets, lunch, and snacks included",
+      "Small-group format from Saga-Arashiyama Station",
+      "Hotel pickup is not listed"
+    ],
+    "experienceType": "bike",
+    "categories": ["Bike Tours", "Full-day Tours"]
+  },
+  {
+    "productCode": "38922P3",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Bamboo-Forest-Electric-Bike-Tour/d332-38922P3",
+    "title": "Arashiyama Bamboo Forest E-Biking Tour",
+    "priceFrom": "From $121.95",
+    "price": 121.95,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 158,
+    "duration": "4 hours 15 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/ee/89/de.jpg",
+    "overview": "Get a more comprehensive understanding of the Arashiyama Bamboo Grove as you explore the surrounding area on an electric bike tour. Cover more ground than you ever could by walking as you visit stunning temples and areas away from the main tourist hubs. The tour includes everything you need, including a bike, helmet, temple fees, and snacks.",
+    "itineraryStops": [
+      "Arashiyama Bamboo Forest",
+      "Adashino Nenbutsu-ji Temple"
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Use of bicycle",
+      "Snacks",
+      "Helmet",
+      "Temple Fees"
+    ],
+    "startDescription": "Meet at NORU Kyoto Bike Tours, 429-22 Takigahanacho, Kamigyo Ward. Look for the green TripAdvisor flag outside the Cycle Village bike shop.",
+    "highlights": [
+      "Guided e-bike loop around Arashiyama bamboo and nearby temples",
+      "About 25 kilometers with electric assist",
+      "Bike, helmet, temple fees, and snacks included",
+      "Group capped at eight",
+      "Meet at NORU Kyoto Bike Tours in Kamigyo"
+    ],
+    "experienceType": "bike",
+    "categories": ["E-Bike Tours", "Bike Tours"]
+  },
+  {
+    "productCode": "63670P28",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Fushimi-Inari-Hidden-Hiking-Tour/d332-63670P28",
+    "title": "Fushimi Inari Hidden Hiking Tour",
+    "priceFrom": "From $61.06",
+    "price": 61.06,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 971,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/af/fa/d6.jpg",
+    "overview": "Discover hidden hiking routes that you likely wouldn’t find alone on this guided tour near the spectacular Fushimi Inari-taisha shrine—a place known for its bright orange torii gates. Following a guide, venture off paved paths and onto secret forest trails to the famous attraction, passing a natural bamboo forest, and a small shrine that’s off the usual tourist trail. The trip also reveals scenic views of Fushimi-Momoyama Castle.",
+    "itineraryStops": [
+      "Fushimi Inari-taisha Shrine",
+      "Bamboo forest trail",
+      "Fushimi-Momoyama Castle viewpoint"
+    ],
+    "inclusions": [
+      "Guided hike",
+      "Forest trail routing away from the main paved approach"
+    ],
+    "startDescription": "Meet the guide at the confirmed Fushimi Inari area meeting point listed when booking.",
+    "highlights": [
+      "Guided three-hour hike around Fushimi Inari-taisha",
+      "Forest trails instead of only the paved torii corridor",
+      "Bamboo-forest and Fushimi-Momoyama Castle viewpoints",
+      "Small-shrine stop off the usual tourist trail",
+      "Guide commentary on shrine etiquette"
+    ],
+    "experienceType": "hiking",
+    "categories": ["Hiking Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "92281P2",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Your-Private-Vacation-Photography-Session-In-Kyoto/d332-92281P2",
+    "title": "Your Private Vacation Photography Session In Kyoto",
+    "priceFrom": "From $321.71",
+    "price": 321.71,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 103,
+    "duration": "1 hour (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/18/81.jpg",
+    "overview": "Capture your visit to Kyoto with a special photo session conducted by a professional photographer. Choose the locations and types of images you want, and receive around 50 edited images after your private photo shoot. You’ll also receive suggestions from your photographer about places to see in Kyoto, along with an overview of Kyoto’s history and culture.",
+    "itineraryStops": [
+      "Yasaka Shrine",
+      "Gion",
+      "Higashiyama"
+    ],
+    "inclusions": [
+      "About 50 beautiful edited photos (could be more)"
+    ],
+    "startDescription": "Meet the photographer at the confirmed Kyoto location listed when booking. Kimono rental is not included.",
+    "highlights": [
+      "Private one-hour photography session in Kyoto",
+      "About 50 edited images after the shoot",
+      "Location choice such as Yasaka Shrine or Gion",
+      "Photographer commentary on Kyoto history and culture",
+      "Kimono rental listed separately"
+    ],
+    "experienceType": "photography",
+    "categories": ["Photography Tours", "Private Sightseeing Tours"]
+  },
+  {
+    "productCode": "293458P17",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kimono-Tea-Ceremony-Experience-at-Kyoto-Oritsuruya-NISHIKI/d332-293458P17",
+    "title": "Kimono Tea Ceremony Experience at Kyoto Oritsuruya, Nishiki",
+    "priceFrom": "From $55.05",
+    "price": 55.05,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviewCount": 40,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/de/49/4e.jpg",
+    "overview": "The refined setting of a Japanese tea ceremony can feel intimidating to travelers. This immersive small-group Kyoto experience unravels some of the mystery. With the help of an expert, don a beautiful kimono and have your hair styled, then participate in a traditional tea ceremony in an elegant tea room; learn how to prepare matcha; and, if you like, create your own piece of calligraphy.",
+    "itineraryStops": [
+      "Nishiki Orizuruya",
+      "Nishiki Market Shopping District"
+    ],
+    "inclusions": [
+      "Wagashi and matcha",
+      "Kimono costume",
+      "Utensils",
+      "Hairstyling (simple style)",
+      "Licensed Guide"
+    ],
+    "startDescription": "Meet at Nishiki Orizuruya, 452 Jumonjicho, Nakagyo Ward, a short walk from Hankyu Karasuma Station exit 13 or Kyoto Municipal Subway Shijo Station.",
+    "highlights": [
+      "Two-hour kimono dressing and matcha ceremony in Nishiki",
+      "Wagashi, utensils, and simple hairstyling included",
+      "Small group capped at ten",
+      "Optional calligraphy window",
+      "Meet at Nishiki Orizuruya near Nishiki Market"
+    ],
+    "experienceType": "cultural",
+    "categories": ["Cultural Tours", "Classes & Workshops"]
+  },
+  {
+    "productCode": "5522662P20",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Kyoto-Highlights-with-Nijo-Castle-Ticket-and-Bamboo-Forest/d332-5522662P20",
+    "title": "Kyoto: Nijo, Kinkaku-ji, Arashiyama, Kiyomizu & Fushimi Inari",
+    "priceFrom": "From $49.50",
+    "price": 49.5,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 739,
+    "duration": "10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/61/ac.jpg",
+    "overview": "This bus tour is an efficient way to see Kyoto’s highlights in a single day. Instead of spending hours researching and planning, enjoy a well-planned itinerary with stops at the Arashiyama Bamboo Grove, Fushimi Inari Taisha Shrine, and Nijo Castle. You can also choose between packages that include attraction tickets or exclude them, giving you added flexibility.",
+    "itineraryStops": [
+      "Arashiyama Bamboo Forest",
+      "Kinkakuji Temple",
+      "Nijo Castle",
+      "Kiyomizu-dera Temple",
+      "Fushimi Inari-taisha Shrine"
+    ],
+    "inclusions": [
+      "Admission to Golden Pavilion (if option selected)",
+      "Admission to Kiyomizu-dera (if option selected)",
+      "Admission to Nijo Castle (if option selected)"
+    ],
+    "startDescription": "Meet the guide outside Hotel Keihan Kyoto Grande. The guide waits with an Amigo Tours sign. Arrive at least 10 minutes before departure. The tour ends at Fushimi Inari-taisha.",
+    "highlights": [
+      "Full-day coach circuit of five published Kyoto landmarks",
+      "Arashiyama bamboo, Kinkaku-ji, Nijo Castle, Kiyomizu-dera, and Fushimi Inari",
+      "Ticket-inclusive or ticket-excluded package options",
+      "Meet at Hotel Keihan Kyoto Grande",
+      "Ends at Fushimi Inari-taisha"
+    ],
+    "experienceType": "sightseeing",
+    "categories": ["Full-day Tours", "Bus Tours"]
+  }
+]

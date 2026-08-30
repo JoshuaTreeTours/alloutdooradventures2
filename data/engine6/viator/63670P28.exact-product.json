@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "63670P28",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Fushimi-Inari-Hidden-Hiking-Tour/d332-63670P28",
+    "title": "Fushimi Inari Hidden Hiking Tour",
+    "description": {
+      "text": "In Kyoto, this guided three-hour hike leaves the paved Fushimi Inari-taisha corridor for forest trails, a bamboo stand, a small shrine off the usual tourist path, and a viewpoint toward Fushimi-Momoyama Castle. A guide handles routing so the group can stay on unpaved approaches rather than only the lowest torii tunnel. The published window is about three hours on mixed forest and shrine paths. The format suits visitors who want a guided hike at the shrine without assembling a self-guided mountain loop. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Fushimi Inari-taisha, the bamboo-forest trail, and the Fushimi-Momoyama Castle viewpoint that define this outing rather than an Arashiyama bike add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $61.06",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 971
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/af/fa/d6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided three-hour hike around Fushimi Inari-taisha",
+      "Forest trails instead of only the paved torii corridor",
+      "Bamboo-forest and Fushimi-Momoyama Castle viewpoints",
+      "Small-shrine stop off the usual tourist trail",
+      "Guide commentary on shrine etiquette"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at the confirmed Fushimi Inari area meeting point listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this guided three-hour hike leaves the paved Fushimi Inari-taisha corridor for forest trails, a bamboo stand, a small shrine off the usual tourist path, and a viewpoint toward Fushimi-Momoyama Castle.",
+    "itineraryItems": [
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bamboo forest trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi-Momoyama Castle viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided hike",
+      "Forest trail routing away from the main paved approach"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fushimi Inari Hidden Hiking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the guide at the confirmed Fushimi Inari area meeting point listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 61.06
+      },
+      "currency": "USD"
+    }
+  }
+}

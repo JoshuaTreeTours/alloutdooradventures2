@@ -339,6 +339,20 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen92136p55Payload from "../../data/engine6/viator/92136P55.exact-product.json";
+import specimen92136p37Payload from "../../data/engine6/viator/92136P37.exact-product.json";
+import specimen92136p49Payload from "../../data/engine6/viator/92136P49.exact-product.json";
+import specimen21490p11Payload from "../../data/engine6/viator/21490P11.exact-product.json";
+import specimen285124p1Payload from "../../data/engine6/viator/285124P1.exact-product.json";
+import specimen5924kyocustom_fullPayload from "../../data/engine6/viator/5924KYOCUSTOM_FULL.exact-product.json";
+import specimen407697p2Payload from "../../data/engine6/viator/407697P2.exact-product.json";
+import specimen374249p4Payload from "../../data/engine6/viator/374249P4.exact-product.json";
+import specimen103013p3Payload from "../../data/engine6/viator/103013P3.exact-product.json";
+import specimen38922p3Payload from "../../data/engine6/viator/38922P3.exact-product.json";
+import specimen63670p28Payload from "../../data/engine6/viator/63670P28.exact-product.json";
+import specimen92281p2Payload from "../../data/engine6/viator/92281P2.exact-product.json";
+import specimen293458p17Payload from "../../data/engine6/viator/293458P17.exact-product.json";
+import specimen5522662p20Payload from "../../data/engine6/viator/5522662P20.exact-product.json";
 import specimen92136p34Payload from "../../data/engine6/viator/92136P34.exact-product.json";
 import specimen30791p157Payload from "../../data/engine6/viator/30791P157.exact-product.json";
 import specimen33215p1Payload from "../../data/engine6/viator/33215P1.exact-product.json";
@@ -3629,6 +3643,90 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P55",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kyoto-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P55",
+    rawPayload: specimen92136p55Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P37",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kyoto-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d332-92136P37",
+    rawPayload: specimen92136p37Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P49",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Private-Kyoto-Tour/d332-92136P49",
+    rawPayload: specimen92136p49Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "21490P11",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Full-Day-Kyoto-Private-Custom-Walking-Tour/d332-21490P11",
+    rawPayload: specimen21490p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "285124P1",
+    publicUrl: "https://www.viator.com/tours/Kyoto/The-10-must-see-spots-in-Kyoto-one-day-private-tour/d332-285124P1",
+    rawPayload: specimen285124p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5924KYOCUSTOM_FULL",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Private-Custom-Tour-Kyoto-in-One-Day/d332-5924KYOCUSTOM_FULL",
+    rawPayload: specimen5924kyocustom_fullPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "407697P2",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kyoto-Nara-Private-tour-w-Hotel-pick-up-and-Drop-off-from-Kyoto/d332-407697P2",
+    rawPayload: specimen407697p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "374249P4",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Best-Day-trip-from-Kyoto-Ancient-Temples-and-Dreamy-Lantern-Shrines-Private-Car/d332-374249P4",
+    rawPayload: specimen374249p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "103013P3",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Best-of-Kyoto-Bike-Tour/d332-103013P3",
+    rawPayload: specimen103013p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38922P3",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kyoto-Bamboo-Forest-Electric-Bike-Tour/d332-38922P3",
+    rawPayload: specimen38922p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "63670P28",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Fushimi-Inari-Hidden-Hiking-Tour/d332-63670P28",
+    rawPayload: specimen63670p28Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92281P2",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Your-Private-Vacation-Photography-Session-In-Kyoto/d332-92281P2",
+    rawPayload: specimen92281p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "293458P17",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kimono-Tea-Ceremony-Experience-at-Kyoto-Oritsuruya-NISHIKI/d332-293458P17",
+    rawPayload: specimen293458p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5522662P20",
+    publicUrl: "https://www.viator.com/tours/Kyoto/Kyoto-Highlights-with-Nijo-Castle-Ticket-and-Bamboo-Forest/d332-5522662P20",
+    rawPayload: specimen5522662p20Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

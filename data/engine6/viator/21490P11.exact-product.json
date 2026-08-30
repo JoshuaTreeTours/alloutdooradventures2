@@ -1,0 +1,163 @@
+{
+  "product": {
+    "productCode": "21490P11",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Full-Day-Kyoto-Private-Custom-Walking-Tour/d332-21490P11",
+    "title": "Kyoto Custom Highlight: Private Walking Tour with Licensed Guide",
+    "description": {
+      "text": "In Kyoto, this private walking outing lets the group pick a four-hour or eight-hour window and two to four published stops instead of a scripted coach loop. The listed options include Kinkaku-ji, Fushimi Inari-taisha Shrine, Nijo Castle, Gion, Kiyomizu-dera Temple, Nishiki Market, Tenryu-ji Temple, and the Kyoto Imperial Palace, with Philosopher's Walk and Pontocho as pass-bys. Hotel meetup is included; entrance fees and transport fares stay separate. Public transportation or taxis may be used between sites. The format suits first-time visitors who want a licensed walk without booking three district tours separately. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Kinkaku-ji, Fushimi Inari, and Nijo Castle that shape this outing rather than a Nara day."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "4 to 8 hours (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 263
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/29/d1/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Kiyomizu-dera Temple",
+      "Sannenzaka Ninenzaka",
+      "Nishiki Market Shopping District",
+      "Nijo Castle",
+      "Pontocho District"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the licensed guide at the confirmed Kyoto hotel meeting point listed when booking. Public transportation or local taxis may be used between sites."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private walking outing lets the group pick a four-hour or eight-hour window and two to four published stops instead of a scripted coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ryoanji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bamboo Forest Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sannenzaka Ninenzaka",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nishiki Market Shopping District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pontocho District",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Tenryu-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kyoto Imperial Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Philosopher's Walk",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Nanzen-ji Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ginkakuji Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel meet up",
+      "Private customized walking tour. Public transportation or taxis maybe used",
+      "4 or 8 hours of your choice",
+      "Professional local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kyoto Custom Highlight: Private Walking Tour with Licensed Guide?",
+        "answer": "The planned duration is 4 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "Meet the licensed guide at the confirmed Kyoto hotel meeting point listed when booking. Public transportation or local taxis may be used between sites."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "92136P49",
+    "productUrl": "https://www.viator.com/tours/Kyoto/Private-Kyoto-Tour/d332-92136P49",
+    "title": "Private Kyoto Tour with Licensed Guide & Vehicle (Max 15 persons)",
+    "description": {
+      "text": "In Kyoto, this private six-hour charter pairs a licensed guide with a vehicle and door-to-door hotel transfers instead of public-transport walking. The group chooses three or four published sights such as Fushimi Inari-taisha Shrine, Nijo Castle, Kiyomizu-dera Temple, Nishiki Market, Gion, the Kyoto Imperial Palace, or Kinkaku-ji. Pickup is listed for Kyoto-area hotels or Kyoto Station, not Osaka, Kobe, or Nara. Entrance fees, lunch, and personal expenses stay separate. The format suits visitors who want licensed commentary and a private van without navigating the city bus network. Meeting points are confirmed at booking in Kyoto, and the itinerary stays on Fushimi Inari, Nijo Castle, and Kiyomizu-dera that define this vehicle window rather than a Nara park add-on."
+    },
+    "location": {
+      "city": "Kyoto",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $659.84",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 310
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/af/7e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Kyoto Imperial Palace",
+      "Kinkakuji Temple",
+      "Private six-hour circuit with a licensed Kyoto guide and vehicle",
+      "Choose three or four published stops such as Fushimi Inari, Nijo Castle, or Kiyomizu-dera",
+      "Door-to-door Kyoto hotel transfers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The guide and driver pick up at a Kyoto-area hotel or a preferred location around Kyoto Station. The tour does not pick up in Osaka, Kobe, or Nara."
+      },
+      "end": {
+        "description": "Return to your Kyoto meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kyoto, this private six-hour charter pairs a licensed guide with a vehicle and door-to-door hotel transfers instead of public-transport walking.",
+    "itineraryItems": [
+      {
+        "title": "Fushimi Inari-taisha Shrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nijo Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kiyomizu-dera Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nishiki Market Shopping District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gion",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kyoto Imperial Palace",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kinkakuji Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed Local English Speaking Guide",
+      "Private vehicle",
+      "Customizable Walking Tour of your choice of 3-4 sites from 'What to expect' list"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Kyoto Tour with Licensed Guide & Vehicle (Max 15 persons)?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Kyoto?",
+        "answer": "The guide and driver pick up at a Kyoto-area hotel or a preferred location around Kyoto Station. The tour does not pick up in Osaka, Kobe, or Nara."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 659.84
+      },
+      "currency": "USD"
+    }
+  }
+}
