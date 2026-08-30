@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "186670P1",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/Hang-Gliding-and-Paragliding-with-Beto-Rotor/d712-186670P1",
+    "title": "Hang gliding Hang gliding Experience Rotorfly",
+    "description": {
+      "text": "In Rio de Janeiro, this hang-gliding or paragliding outing starts with a short training session, then launches from the Pedra Bonita ramp inside Tijuca National Park and lands on São Conrado beach. No prior flight experience is required. A Level 4 instructor, helmet, emergency parachute, flight belt, and one GoPro photo-and-video set are included. Mandatory insurance and extra cameras are listed separately. Flight time depends on weather, and the published duration is about one hour and thirty minutes including briefing and recovery. The meeting point is BETO ROTOR on Avenida Prefecto Mendes de Morais in São Conrado; an optional South Zone hotel shuttle is listed at extra cost. The format suits visitors who want a guided tandem flight without arranging ramp access independently. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on Pedra Bonita, Tijuca National Park, and São Conrado beach that define this aerial window rather than a city-van or helicopter add-on."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $199.44",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1643
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/3a/bd/fe.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tandem hang-gliding or paragliding launch from the Pedra Bonita ramp in Tijuca National Park",
+      "Landing on São Conrado beach",
+      "Short training session before takeoff; no prior flight experience required",
+      "Helmet, emergency parachute, and Level 4 instructor included",
+      "GoPro photos and one video included; extra cameras listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at BETO ROTOR - Asa Delta, Av. Pref. Mendes de Morais 1402, São Conrado, Rio de Janeiro. Optional hotel shuttle from the South Zone is listed separately."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this hang-gliding or paragliding outing starts with a short training session, then launches from the Pedra Bonita ramp inside Tijuca National Park and lands on São Conrado beach.",
+    "itineraryItems": [
+      {
+        "title": "Pedra Bonita",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tijuca National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sao Conrado Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hang gliding",
+      "Emergency parachute",
+      "Flight belt and carabiner",
+      "Helmet",
+      "Level 4 Instructor",
+      "photos and 1 video Gopro"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hang gliding Hang gliding Experience Rotorfly?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Meet at BETO ROTOR - Asa Delta, Av. Pref. Mendes de Morais 1402, São Conrado, Rio de Janeiro. Optional hotel shuttle from the South Zone is listed separately."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Air Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 199.44
+      },
+      "currency": "USD"
+    }
+  }
+}

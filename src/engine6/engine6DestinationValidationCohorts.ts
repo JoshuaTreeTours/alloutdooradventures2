@@ -185,6 +185,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Rio de Janeiro",
+      matches: tour =>
+        /\/brazil\/rio-de-janeiro\//i.test(tour.canonicalPath) ||
+        (/\brio de janeiro\b/i.test(tour.city) && /\bbrazil\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Paris",
       matches: tour =>
         /\/france\/paris\//i.test(tour.canonicalPath) ||

@@ -5902,6 +5902,107 @@ const peruState: StateDestination = {
   isFallback: true,
 };
 
+const brazilState: StateDestination = {
+  slug: "brazil",
+  name: "Brazil",
+  description:
+    "Rio de Janeiro granite peaks, South Zone beaches, Tijuca Forest days, and Petrópolis imperial excursions from the Marvelous City.",
+  featuredDescription:
+    "Explore Rio de Janeiro tours with private Christ the Redeemer and Sugar Loaf circuits, small-group city days, hang gliding from Pedra Bonita, helicopter flights, and Petrópolis museum outings.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/69/c1/75.jpg",
+  region: "South America",
+  intro:
+    "Brazil's Rio de Janeiro inventory pairs Corcovado and Sugar Loaf city circuits with Tijuca Forest approaches, South Zone beach pass-bys, hang-gliding launches, helicopter windows, and Petrópolis imperial days.",
+  longDescription:
+    "Rio de Janeiro anchors Brazil tour inventory with Christ the Redeemer and Sugar Loaf private or small-group days, Escadaria Selarón and Metropolitan Cathedral downtown stops, Tijuca Forest approaches through Paineiras, hang-gliding from Pedra Bonita to São Conrado, Jacarepaguá helicopter flights, and Petrópolis Imperial Museum excursions. Copacabana, Ipanema, Maracanã, and the Sambadrome appear on longer guided sightseeing days.",
+  topRegions: [
+    {
+      title: "Granite peaks and South Zone beaches",
+      description:
+        "Christ the Redeemer, Sugar Loaf, Copacabana, Ipanema, and Morro da Urca cable-car windows.",
+    },
+    {
+      title: "Downtown and carnival landmarks",
+      description:
+        "Escadaria Selarón, the Metropolitan Cathedral, Cinelandia, Maracanã, and the Sambadrome.",
+    },
+    {
+      title: "Forest and mountain days",
+      description:
+        "Tijuca Forest, Pedra Bonita hang-gliding launches, Jacarepaguá helicopter flights, and Petrópolis imperial museum days.",
+    },
+  ],
+  cities: [
+    {
+      name: "Rio de Janeiro",
+      slug: "rio-de-janeiro",
+      stateSlug: "brazil",
+      region: "Rio de Janeiro",
+      lat: -22.9068,
+      lng: -43.1729,
+      shortDescription:
+        "Christ the Redeemer, Sugar Loaf, Tijuca Forest, and Petrópolis days from Rio de Janeiro.",
+      intro:
+        "Rio de Janeiro is Brazil's coastal landmark city with Corcovado, Sugar Loaf, Copacabana, Ipanema, Tijuca Forest, and Petrópolis day trips.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/69/c1/75.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "air-tours"],
+      whereItIs: [
+        "Rio de Janeiro sits on Brazil's southeast Atlantic coast, with Copacabana, Ipanema, and Corcovado framing most sightseeing.",
+        "Most guided tours depart from South Zone hotels, Barra da Tijuca, or meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Corcovado, Sugar Loaf, Pedra Bonita, and the Petrópolis serra sit on full-day or aerial routes from the city.",
+        lakesWater:
+          "South Zone beach pass-bys cover Copacabana and Ipanema, while hang-gliding lands at São Conrado.",
+        desertForest:
+          "Tijuca Forest van approaches and Pedra Bonita launches sit inside the urban national park.",
+        cycling:
+          "Guided bike inventory is limited on verified USD pages; most Rio de Janeiro days use vans, cable cars, or aerial launches.",
+        scenicDrives:
+          "Private and small-group vans cover Corcovado, downtown, the Sambadrome, and the Petrópolis mountain road.",
+        seasonalNotes:
+          "Coastal sightseeing runs year-round; hang-gliding and helicopter windows depend on wind and cloud at the granite peaks.",
+      },
+      thingsToDo: [
+        "Ride to Christ the Redeemer and take the Sugar Loaf cable car.",
+        "Walk Escadaria Selarón and the Metropolitan Cathedral downtown.",
+        "Add hang gliding, a helicopter flight, or a Petrópolis imperial day.",
+      ],
+      toursCopy: [
+        "Book a private Christ the Redeemer and Sugar Loaf circuit for a compact introduction.",
+        "Pair a small-group city day with hang gliding or a Petrópolis museum outing.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Corcovado and Christ the Redeemer.",
+          "Afternoon: Sugar Loaf and South Zone beaches.",
+          "Evening: Return to Copacabana or Ipanema.",
+        ],
+        dayTwo: [
+          "Morning: Downtown, Escadaria Selarón, or hang gliding from Pedra Bonita.",
+          "Afternoon: Petrópolis or a helicopter window.",
+          "Evening: Return to central Rio de Janeiro.",
+        ],
+      },
+      gettingThere: [
+        "Galeão International Airport and Santos Dumont Airport serve Rio de Janeiro with taxis and hotel transfers to Copacabana, Ipanema, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Rio de Janeiro tours?",
+          answer:
+            "Private Christ the Redeemer and Sugar Loaf circuits, small-group city days with lunch, hang gliding from Pedra Bonita, Jacarepaguá helicopter flights, and Petrópolis Imperial Museum excursions are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5921,6 +6022,7 @@ export const states: StateDestination[] = [
   irelandState,
   mexicoState,
   peruState,
+  brazilState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

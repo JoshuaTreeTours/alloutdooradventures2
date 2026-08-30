@@ -1496,6 +1496,41 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_RIO_DE_JANEIRO_20297P1_PRODUCT_CODE = "20297P1";
+export const ENGINE6_RIO_DE_JANEIRO_20297P1_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/private-tour-rio-city-essentials-including-christ-the-r-20297P1";
+export const ENGINE6_RIO_DE_JANEIRO_11557P1_PRODUCT_CODE = "11557P1";
+export const ENGINE6_RIO_DE_JANEIRO_11557P1_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/private-city-tour-of-rio-de-janeiro-11557P1";
+export const ENGINE6_RIO_DE_JANEIRO_38668P1_PRODUCT_CODE = "38668P1";
+export const ENGINE6_RIO_DE_JANEIRO_38668P1_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/private-custom-full-day-highlights-in-rio-only-the-best-38668P1";
+export const ENGINE6_RIO_DE_JANEIRO_21513P8_PRODUCT_CODE = "21513P8";
+export const ENGINE6_RIO_DE_JANEIRO_21513P8_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/the-best-of-rio-de-janeiro-in-a-private-guided-tour-21513P8";
+export const ENGINE6_RIO_DE_JANEIRO_21715P2_PRODUCT_CODE = "21715P2";
+export const ENGINE6_RIO_DE_JANEIRO_21715P2_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/full-day-christ-redeemer-sugarloaf-city-tour-barbecue-l-21715P2";
+export const ENGINE6_RIO_DE_JANEIRO_8753P120_PRODUCT_CODE = "8753P120";
+export const ENGINE6_RIO_DE_JANEIRO_8753P120_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/christ-the-redeemer-sugarloaf-lunch-and-small-group-cit-8753P120";
+export const ENGINE6_RIO_DE_JANEIRO_186670P1_PRODUCT_CODE = "186670P1";
+export const ENGINE6_RIO_DE_JANEIRO_186670P1_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/hang-gliding-hang-gliding-experience-rotorfly-186670P1";
+export const ENGINE6_RIO_DE_JANEIRO_179234P2_PRODUCT_CODE = "179234P2";
+export const ENGINE6_RIO_DE_JANEIRO_179234P2_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/helicopter-tour-in-rio-de-janeiro-25-minutes-179234P2";
+export const ENGINE6_RIO_DE_JANEIRO_305170P2_PRODUCT_CODE = "305170P2";
+export const ENGINE6_RIO_DE_JANEIRO_305170P2_ROUTE =
+  "/destinations/brazil/rio-de-janeiro/tours/full-day-excursion-to-petr-polis-from-rio-de-janeiro-305170P2";
+
+export const ENGINE6_RIO_DE_JANEIRO_TOUR_PATH_PREFIX =
+  "/destinations/brazil/rio-de-janeiro/tours/";
+
+export const isEngine6RioDeJaneiroTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_RIO_DE_JANEIRO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_LIMA_20336P1_PRODUCT_CODE = "20336P1";
 export const ENGINE6_LIMA_20336P1_ROUTE =
   "/destinations/peru/lima/tours/historic-downtown-miraflores-catacombs-private-tour-20336P1";
@@ -4946,6 +4981,42 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_20297P1_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_20297P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_11557P1_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_11557P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_38668P1_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_38668P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_21513P8_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_21513P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_21715P2_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_21715P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_8753P120_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_8753P120_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_186670P1_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_186670P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_179234P2_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_179234P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_RIO_DE_JANEIRO_305170P2_ROUTE,
+    ENGINE6_RIO_DE_JANEIRO_305170P2_PRODUCT_CODE,
   ],
   [
     ENGINE6_LIMA_20336P1_ROUTE,

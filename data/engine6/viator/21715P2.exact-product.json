@@ -1,0 +1,156 @@
+{
+  "product": {
+    "productCode": "21715P2",
+    "productUrl": "https://www.viator.com/tours/Rio-de-Janeiro/One-Day-In-Rio-de-Janeiro-City-Sightseeing-Tour/d712-21715P2",
+    "title": "Full Day: Christ Redeemer, Sugarloaf, City Tour & Barbecue Lunch",
+    "description": {
+      "text": "In Rio de Janeiro, this full-day van circuit travels through Tijuca Forest, stops at Centro De Visitantes Paineiras, and continues to Corcovado and Christ the Redeemer. The published route then uses the Morro da Urca cable car toward Sugarloaf Mountain and adds Maracana, Sambodromo da Marques de Sapucai, the Metropolitan Cathedral of Saint Sebastian, and Escadaria Selaron. Copacabana Beach, Ipanema Beach, and Avenida Atlantica appear as pass-bys. Hotel pickup is listed from South Zone and Barra da Tijuca hotels, with a published 8:30 a.m. start. Christ the Redeemer van admission is included; Sugarloaf tickets and barbecue lunch appear only on the upgraded full option. The format suits visitors who want a guided landmark day without coordinating forest, cable-car, and downtown timing independently. Meeting points are confirmed at booking in Rio de Janeiro, and the itinerary stays on Paineiras, Corcovado, Sugarloaf Mountain, and the Sambodrome that shape this outing rather than a private custom circuit."
+    },
+    "location": {
+      "city": "Rio de Janeiro",
+      "state": "Brazil"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 2644
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/69/c1/75.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Parque Nacional da Tijuca",
+      "Corcovado - Christ the Redeemer",
+      "Maracana",
+      "Sambodromo da Marques de Sapucai",
+      "The Metropolitan Cathedral of Saint Sebastian"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed from South Zone hotels in Copacabana, Leme, Ipanema, and Leblon, plus West Zone hotels in Barra da Tijuca. Published start time is 8:30 a.m."
+      },
+      "end": {
+        "description": "Return to your Rio de Janeiro meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Rio de Janeiro, this full-day van circuit travels through Tijuca Forest, stops at Centro De Visitantes Paineiras, and continues to Corcovado and Christ the Redeemer.",
+    "itineraryItems": [
+      {
+        "title": "Avenida Atlantica",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Copacabana Beach",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Estatua Carlos Drummond de Andrade",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Ipanema Beach",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Centro De Visitantes Paineiras",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Parque Nacional da Tijuca",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Corcovado - Christ the Redeemer",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maracana",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sambodromo da Marques de Sapucai",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Metropolitan Cathedral of Saint Sebastian",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Escadaria Selaron",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Morro da Urca",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sugarloaf Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided full-day city tour of Rio de Janeiro via air-conditioned van",
+      "Entrance fees to Christ the Redeemer by van",
+      "Professional guide with live tour commentary in English, Spanish and Portuguese",
+      "Hotel pickup and drop-off from South Zone and Barra da Tijuca hotels"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day: Christ Redeemer, Sugarloaf, City Tour & Barbecue Lunch?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Rio de Janeiro?",
+        "answer": "Pickup is listed from South Zone hotels in Copacabana, Leme, Ipanema, and Leblon, plus West Zone hotels in Barra da Tijuca. Published start time is 8:30 a.m."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}
