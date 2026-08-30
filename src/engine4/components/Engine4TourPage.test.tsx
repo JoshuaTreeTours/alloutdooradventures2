@@ -193,6 +193,34 @@ describe("Engine4TourPage booking CTA", () => {
     expect(noReviewsHtml).not.toContain('data-testid="rating-stars"');
   });
 
+  it("does not render visual rating or AggregateRating schema when rating data is non-positive", () => {
+    const zeroRating: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        ratingValue: 0,
+        reviewCount: 100,
+      },
+    };
+
+    const zeroReviews: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        ratingValue: 4.9,
+        reviewCount: 0,
+      },
+    };
+
+    const zeroRatingHtml = renderToStaticMarkup(<Engine4TourPage tour={zeroRating} />);
+    const zeroReviewsHtml = renderToStaticMarkup(<Engine4TourPage tour={zeroReviews} />);
+
+    expect(zeroRatingHtml).not.toContain('data-testid="rating-stars"');
+    expect(zeroReviewsHtml).not.toContain('data-testid="rating-stars"');
+    expect(zeroRatingHtml).not.toContain('"@type":"AggregateRating"');
+    expect(zeroReviewsHtml).not.toContain('"@type":"AggregateRating"');
+  });
+
   it("renders destination tree links above the heading", () => {
     const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
 

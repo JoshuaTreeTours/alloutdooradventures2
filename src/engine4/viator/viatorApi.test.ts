@@ -116,6 +116,53 @@ describe("getEngine4ViatorTourData", () => {
     expect(tour?.provenance?.heroImageSource).toBe("api");
     expect(tour?.provenance?.descriptionSource).toBe("api.summary");
   });
+
+  it("normalizes rating and review count using required fallback order", async () => {
+    process.env.VIATOR_API_KEY = "test-key";
+    mockedFetchViator.mockResolvedValue({
+      product: {
+        productCode: "132218P209",
+        title: "Small-Group Yosemite Tour from San Francisco",
+        shortDescription: "Small-group day trip to Yosemite.",
+        aggregateRating: {
+          ratingValue: "4.8",
+          rating: "4.7",
+          reviewCount: "718",
+        },
+        ratingValue: "4.6",
+        rating: "4.5",
+        reviews: {
+          summary: {
+            rating: "4.4",
+            count: "700",
+          },
+        },
+        statistics: {
+          rating: "4.3",
+          reviewCount: "690",
+        },
+        reviewCount: "680",
+        images: [
+          {
+            isCover: true,
+            variants: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/11/22/33/45/caption.jpg?w=1100&h=800&s=1",
+                width: 1100,
+                height: 800,
+              },
+            ],
+          },
+        ],
+      },
+    });
+
+    const tour = await getEngine4ViatorTourData("132218P209");
+
+    expect(tour?.rating).toBe(4.8);
+    expect(tour?.reviewCount).toBe(718);
+  });
+
   it("uses fallback with explicit provenance when API fails", async () => {
     process.env.VIATOR_API_KEY = "test-key";
     mockedFetchViator.mockRejectedValue(new Error("network down"));
