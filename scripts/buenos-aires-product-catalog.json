@@ -1,0 +1,115 @@
+[
+  {
+    "productCode": "50158P1",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Full-Day-in-San-Antonio-de-Areco-from-Buenos-Aires/d901-50158P1",
+    "title": "Private Tour to San Antonio de Areco: Gaucho town & Estancia from Buenos Aires",
+    "duration": "10 hours (approx.)",
+    "priceFrom": 255,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/20/0b/81.jpg",
+    "categories": [
+      "Cultural Tours",
+      "Private and Luxury",
+      "Day Trips"
+    ],
+    "itineraryTitles": [
+      "San Antonio de Areco",
+      "Working estancia"
+    ]
+  },
+  {
+    "productCode": "5030REC",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Recoleta-Afternoon-Walking-Tour/d901-5030REC",
+    "title": "Recoleta in Depth (not literally) Private Walking Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 109,
+    "rating": 4.5,
+    "reviewCount": 86,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b7/07/2e.jpg",
+    "categories": [
+      "Walking Tours",
+      "Cultural Tours",
+      "Private and Luxury"
+    ],
+    "itineraryTitles": [
+      "Gomero de la Recoleta",
+      "La Recoleta Cemetery",
+      "Eva Peron's Tomb",
+      "Basilica de Nuestra Senora Del Pilar",
+      "Monumento al General Carlos Maria de Alvear",
+      "Museo Nacional de Bellas Artes",
+      "Palais de Glace-Salas Nacionales de Cultura",
+      "Monumento A Eva Peron",
+      "San Martin National Institute",
+      "Monumento de Francia a la Argentina",
+      "Casa Alcorta",
+      "Museo Nacional De Arte Decorativo",
+      "Museo de Arte Latinoamericano de Buenos Aires",
+      "Floralis Generica"
+    ]
+  },
+  {
+    "productCode": "26466P5",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Hidden-Graffiti-And-Urban-Art-Tour/d901-26466P5",
+    "title": "Off the Beaten Path: Hidden Urban Art Bike Tour",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 93,
+    "rating": 4.9,
+    "reviewCount": 54,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6f/bf/66.jpg",
+    "categories": [
+      "Bike Tours",
+      "Cultural Tours"
+    ],
+    "itineraryTitles": [
+      "San Telmo",
+      "La Boca",
+      "Barracas",
+      "Pasaje Lanin"
+    ]
+  },
+  {
+    "productCode": "14659P1",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Shared-City-Tour-of-Buenos-Aires/d901-14659P1",
+    "title": "5hs Small Group City Tour of Buenos Aires (optional street food)",
+    "duration": "5 hours (approx.)",
+    "priceFrom": 59,
+    "rating": 4.6,
+    "reviewCount": 220,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg",
+    "categories": [
+      "Sightseeing Tours",
+      "Cultural Tours"
+    ],
+    "itineraryTitles": [
+      "Plaza de Mayo",
+      "Puerto Madero",
+      "San Telmo",
+      "La Boca",
+      "Recoleta",
+      "Palermo"
+    ]
+  },
+  {
+    "productCode": "52462P4",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Intimate-Bike-Tour-BA-South-Route-Historical-and-Cultural-Lunch-included/d901-52462P4",
+    "title": "Cultural Immersion Experience by Bike around old BA Max 6 ppl",
+    "duration": "5 hours (approx.)",
+    "priceFrom": 52.11,
+    "rating": 5,
+    "reviewCount": 103,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/a9/24/bb.jpg",
+    "categories": [
+      "Bike Tours",
+      "Cultural Tours",
+      "Food Tours"
+    ],
+    "itineraryTitles": [
+      "Plaza de Mayo",
+      "La Boca",
+      "Puerto Madero",
+      "San Telmo"
+    ]
+  }
+]

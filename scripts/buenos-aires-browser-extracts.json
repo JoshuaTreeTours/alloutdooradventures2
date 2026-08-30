@@ -1,0 +1,159 @@
+{
+  "available": [],
+  "rejected": [
+    {
+      "url": "https://www.viator.com/Buenos-Aires/d901-ttd",
+      "reason": "DataDome captcha/anti-bot protection blocked all access attempts"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/35min-Private-Helicopter-Tour-of-Greater-Buenos-Aires/d901-342988P4",
+      "productCode": "342988P4",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Private-Helicopter-Experience-by-Tigre-and-Buenos-Aires/d901-342988P5",
+      "productCode": "342988P5",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/PHOTOGRAPHY-TOUR-IN-BUENOS-AIRES/d901-207838P1",
+      "productCode": "207838P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Private-Gaucho-Day-with-Estancia-and-Areco-town/d901-162204P4",
+      "productCode": "162204P4",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Become-a-Polo-Player-Day-Trip-to-Puesto-Viejo-Estancia/d901-6909DAY",
+      "productCode": "6909DAY",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Custom-Buenos-Aires-City-Tour/d901-27376P1",
+      "productCode": "27376P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Buenos-Aires-Full-Day-Private-City-Tour/d901-177576P1",
+      "productCode": "177576P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Halh-Day-Private-Safari-in-Delta-Tigre/d901-353250P1",
+      "productCode": "353250P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Tigre-Delta-Sightseeing-Cruise-from-Buenos-Aires/d901-9059P1",
+      "productCode": "9059P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Bike-and-Kayak-to-Tigre-Delta/d901-26466P6",
+      "productCode": "26466P6",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Intimate-Full-Day-Bike-Tour-BA-South-and-BA-North/d901-52462P5",
+      "productCode": "52462P5",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Hidden-Graffiti-And-Urban-Art-Tour/d901-26466P5",
+      "productCode": "26466P5",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Recoleta-y-Palermo-BIKE-TOUR/d901-30302P2",
+      "productCode": "30302P2",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Malbec-Wine-Tasting-Experience-Tour-in-Buenos-Aires/d901-14659P9",
+      "productCode": "14659P9",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Estancia-Gaucho-Santa-Susana-Day-Tour-from-Buenos-Aires/d901-18016P35",
+      "productCode": "18016P35",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Full-Day-Tour-at-a-Estancia-in-San-Antonio-de-Areco-from-Buenos-Aires/d901-14659P3",
+      "productCode": "14659P3",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Recoleta-Afternoon-Walking-Tour/d901-5030REC",
+      "productCode": "5030REC",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Customizable-Buenos-Aires-tour/d901-16694P21",
+      "productCode": "16694P21",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Private-tour-of-Buenos-Aires/d901-485999P1",
+      "productCode": "485999P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Intimate-Bike-Tour-BA-South-Route-Historical-and-Cultural-Lunch-included/d901-52462P4",
+      "productCode": "52462P4",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/South-Buenos-Aires-Bike-Tour/d901-40777P1",
+      "productCode": "40777P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/A-different-Buenos-Aires-BIKE-TOUR/d901-30302P1",
+      "productCode": "30302P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Basic-Sculling-Tour/d901-8184P1",
+      "productCode": "8184P1",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Row-and-Ride-Experience-From-Palermo-Woods-to-Tigres-Delta/d901-61643P6",
+      "productCode": "61643P6",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Palermo-Woods-and-the-natural-history-of-the-City/d901-11143P280",
+      "productCode": "11143P280",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Private-Gaucho-Day-with-Estancia/d901-162204P5",
+      "productCode": "162204P5",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Polo-Day-with-Argentine-Asado-Day-Tour-from-Buenos-Aires/d901-400984P3",
+      "productCode": "400984P3",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Shore-Excursion-Small-Group-Tigre-Tour-from-Buenos-Aires/d901-11143P24",
+      "productCode": "11143P24",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Evita-Peron-Private-Tour-the-woman-behind-Dont-cry-for-me-Argentina-and-more/d901-157139P33",
+      "productCode": "157139P33",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    },
+    {
+      "url": "https://www.viator.com/tours/Buenos-Aires/Your-Private-Photographer-in-Buenos-Aires/d901-207838P4",
+      "productCode": "207838P4",
+      "reason": "DataDome blocked - unable to bypass captcha protection"
+    }
+  ]
+}

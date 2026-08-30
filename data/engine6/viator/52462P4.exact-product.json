@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "52462P4",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Intimate-Bike-Tour-BA-South-Route-Historical-and-Cultural-Lunch-included/d901-52462P4",
+    "title": "Cultural Immersion Experience by Bike around old BA Max 6 ppl",
+    "description": {
+      "text": "In Buenos Aires, this small-group bike outing covers Plaza de Mayo, La Boca, Puerto Madero, and San Telmo, with mate, alfajores, and a local sandwich listed. Bikes, helmets, and water are included; the meeting point is a parking garage on Avenida Hipolito Yrigoyen near Plaza de Mayo. The published duration is about five hours, and the group is capped. The format suits visitors who want a guided cultural bike day without renting independently. Meeting points are confirmed at booking in Buenos Aires, and the itinerary stays on those four historic-south stops that define this outing rather than a Tigre kayak add-on or a Recoleta cemetery walk."
+    },
+    "location": {
+      "city": "Buenos Aires",
+      "state": "Argentina"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $52.11",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 103
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/a9/24/bb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the South of Buenos Aires on this small-group bike tour",
+      "Lose yourself in the historic atmosphere of the Plaza de Mayo, the colorful streets of La Boca, the stylish modern feel",
+      "Visit some of the city’s loveliest green areas, and enjoy mate, alfajores, and a tasty sandwich from a local food truck",
+      "Cultural Immersion Experience by Bike around old BA Max 6 ppl near Buenos Aires",
+      "Professional Buenos Aires guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Av. Hipolito Yrigoyen 762, a car parking 400 meters from Plaza de Mayo."
+      },
+      "end": {
+        "description": "Return to your Buenos Aires meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Buenos Aires, this small-group bike outing covers Plaza de Mayo, La Boca, Puerto Madero, and San Telmo, with mate, alfajores, and a local sandwich listed.",
+    "itineraryItems": [
+      {
+        "title": "Plaza de Mayo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Boca",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Puerto Madero",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Telmo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Use of helmet",
+      "Use of bike with gears & shocks",
+      "Local host (english speaker)",
+      "Mate (infusion) + alfajor (local snack)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cultural Immersion Experience by Bike around old BA Max 6 ppl?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Buenos Aires?",
+        "answer": "Meet at Av. Hipolito Yrigoyen 762, a car parking 400 meters from Plaza de Mayo."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 52.11
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -44,6 +44,7 @@ export const COUNTRY_SLUG_TO_ISO2: Record<string, string> = {
   morocco: "MA",
   nepal: "NP",
   peru: "PE",
+  argentina: "AR",
   brazil: "BR",
   chile: "CL",
   ecuador: "EC",
@@ -84,6 +85,7 @@ export const COUNTRY_NAME_TO_ISO2: Record<string, string> = {
   scotland: "GB",
   mexico: "MX",
   peru: "PE",
+  argentina: "AR",
   switzerland: "CH",
   austria: "AT",
 };

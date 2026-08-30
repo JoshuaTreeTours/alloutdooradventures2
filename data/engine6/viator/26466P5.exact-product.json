@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "26466P5",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Hidden-Graffiti-And-Urban-Art-Tour/d901-26466P5",
+    "title": "Off the Beaten Path: Hidden Urban Art Bike Tour",
+    "description": {
+      "text": "In Buenos Aires, this guided urban-art bike outing covers street murals and graffiti walls in San Telmo, La Boca, Barracas, and Pasaje Lanin. A cycling guide handles bikes and neighborhood routing so the published four-hour window stays on mural streets rather than a generic plaza hop. The format suits visitors who want a guided look at southern-neighborhood street art without renting independently. Meeting points are confirmed at booking in Buenos Aires, and the itinerary stays on San Telmo, La Boca, Barracas, and Pasaje Lanin that define this outing rather than a Palermo park loop or a Recoleta cemetery walk. Routes stay oriented to those four stops, with a guide handling bike fit and street pacing so the day stays focused on the mural circuit rather than navigation."
+    },
+    "location": {
+      "city": "Buenos Aires",
+      "state": "Argentina"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $93.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6f/bf/66.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Off the Beaten Path: Hidden Urban Art Bike Tour from Buenos Aires",
+      "Plaza de Mayo, San Telmo, and Recoleta views",
+      "Professional guide with Buenos Aires local expertise",
+      "Small-group or private format as listed",
+      "Guided Buenos Aires sightseeing with local commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Buenos Aires meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Buenos Aires meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Buenos Aires, this guided urban-art bike outing covers street murals and graffiti walls in San Telmo, La Boca, Barracas, and Pasaje Lanin.",
+    "itineraryItems": [
+      {
+        "title": "San Telmo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Boca",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barracas",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pasaje Lanin",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Off the Beaten Path: Hidden Urban Art Bike Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Buenos Aires?",
+        "answer": "Meet your guide at the confirmed Buenos Aires meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 93
+      },
+      "currency": "USD"
+    }
+  }
+}
