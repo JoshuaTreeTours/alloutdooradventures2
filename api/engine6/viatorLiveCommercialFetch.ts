@@ -223,6 +223,15 @@ export const applyAvailabilitySummaryPrice = async (args: {
   extracted: Engine6Extracted;
   livePayload?: unknown;
 }): Promise<Engine6Extracted> => {
+  const applyUsdAvailabilityPrice = (
+    amount: number
+  ): Engine6Extracted => ({
+    ...args.extracted,
+    priceAmount: amount,
+    priceFormatted: formatUsdFromPriceLabel(amount),
+    priceCurrency: "USD",
+  });
+
   const pricingCurrency = readViatorPricingCurrency(args.livePayload);
   const needsUsdOverlay =
     args.livePayload != null && pricingCurrency !== "USD";
@@ -235,11 +244,7 @@ export const applyAvailabilitySummaryPrice = async (args: {
     });
 
     if (typeof usdPrice === "number") {
-      return {
-        ...args.extracted,
-        priceAmount: usdPrice,
-        priceFormatted: formatUsdFromPriceLabel(usdPrice),
-      };
+      return applyUsdAvailabilityPrice(usdPrice);
     }
 
     if (pricingCurrency && pricingCurrency !== "USD") {
@@ -253,7 +258,6 @@ export const applyAvailabilitySummaryPrice = async (args: {
     return args.extracted;
   }
 
-  if (typeof args.extracted.priceAmount === "number") {
   const extractedCurrency = normalizeIsoCurrency(args.extracted.priceCurrency);
   if (
     typeof args.extracted.priceAmount === "number" &&
@@ -262,15 +266,6 @@ export const applyAvailabilitySummaryPrice = async (args: {
     return args.extracted;
   }
 
-  const applyUsdAvailabilityPrice = (
-    amount: number
-  ): Engine6Extracted => ({
-    ...args.extracted,
-    priceAmount: amount,
-    priceFormatted: `From $${amount.toFixed(2)}`,
-    priceCurrency: "USD",
-  });
-
   const schedulePrice = await fetchAvailabilitySummaryPrice({
     apiKey: args.apiKey,
     baseUrl: args.baseUrl,
@@ -278,11 +273,6 @@ export const applyAvailabilitySummaryPrice = async (args: {
   });
 
   if (typeof schedulePrice === "number") {
-    return {
-      ...args.extracted,
-      priceAmount: schedulePrice,
-      priceFormatted: formatUsdFromPriceLabel(schedulePrice),
-    };
     return applyUsdAvailabilityPrice(schedulePrice);
   }
 
@@ -296,11 +286,6 @@ export const applyAvailabilitySummaryPrice = async (args: {
     return args.extracted;
   }
 
-  return {
-    ...args.extracted,
-    priceAmount: searchPrice,
-    priceFormatted: formatUsdFromPriceLabel(searchPrice),
-  };
   return applyUsdAvailabilityPrice(searchPrice);
 };
 
