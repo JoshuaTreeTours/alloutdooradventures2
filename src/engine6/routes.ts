@@ -1496,6 +1496,74 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_OSAKA_92136P44_PRODUCT_CODE = "92136P44";
+export const ENGINE6_OSAKA_92136P44_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-6hr-private-walking-tour-with-government-licensed-92136P44";
+export const ENGINE6_OSAKA_92136P45_PRODUCT_CODE = "92136P45";
+export const ENGINE6_OSAKA_92136P45_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-4hr-private-tour-with-government-licensed-guide-92136P45";
+export const ENGINE6_OSAKA_30791P615_PRODUCT_CODE = "30791P615";
+export const ENGINE6_OSAKA_30791P615_ROUTE =
+  "/destinations/japan/osaka/tours/private-osaka-tour-with-a-local-highlights-hidden-gems-30791P615";
+export const ENGINE6_OSAKA_429399P2_PRODUCT_CODE = "429399P2";
+export const ENGINE6_OSAKA_429399P2_ROUTE =
+  "/destinations/japan/osaka/tours/3-4-5-hours-private-tour-in-osaka-with-local-guide-429399P2";
+export const ENGINE6_OSAKA_425662P3_PRODUCT_CODE = "425662P3";
+export const ENGINE6_OSAKA_425662P3_ROUTE =
+  "/destinations/japan/osaka/tours/hungry-osaka-street-food-tour-15-dishes-feast-like-a-lo-425662P3";
+export const ENGINE6_OSAKA_130036P2_PRODUCT_CODE = "130036P2";
+export const ENGINE6_OSAKA_130036P2_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-food-tour-13-delicious-dishes-at-5-local-eateries-130036P2";
+export const ENGINE6_OSAKA_62558P5_PRODUCT_CODE = "62558P5";
+export const ENGINE6_OSAKA_62558P5_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-backstreet-night-tour-62558P5";
+export const ENGINE6_OSAKA_63670P21_PRODUCT_CODE = "63670P21";
+export const ENGINE6_OSAKA_63670P21_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-local-foodie-walking-tour-in-dotonbori-and-shinse-63670P21";
+export const ENGINE6_OSAKA_62558P2_PRODUCT_CODE = "62558P2";
+export const ENGINE6_OSAKA_62558P2_ROUTE =
+  "/destinations/japan/osaka/tours/eat-drink-cycle-osaka-food-and-bike-tour-62558P2";
+export const ENGINE6_OSAKA_20415P6_PRODUCT_CODE = "20415P6";
+export const ENGINE6_OSAKA_20415P6_ROUTE =
+  "/destinations/japan/osaka/tours/ancient-capital-tour-kyoto-and-nara-highlights-from-kyo-20415P6";
+export const ENGINE6_OSAKA_6806OSAKOSAKA_PRODUCT_CODE = "6806OSAKOSAKA";
+export const ENGINE6_OSAKA_6806OSAKOSAKA_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-local-food-and-japanese-cuisines-cooking-experien-6806OSAKOSAKA";
+export const ENGINE6_OSAKA_218199P1_PRODUCT_CODE = "218199P1";
+export const ENGINE6_OSAKA_218199P1_ROUTE =
+  "/destinations/japan/osaka/tours/eat-osaka-street-food-cooking-in-an-authentic-kitchen-218199P1";
+export const ENGINE6_OSAKA_22288P1_PRODUCT_CODE = "22288P1";
+export const ENGINE6_OSAKA_22288P1_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-walking-tour-22288P1";
+export const ENGINE6_OSAKA_425662P2_PRODUCT_CODE = "425662P2";
+export const ENGINE6_OSAKA_425662P2_ROUTE =
+  "/destinations/japan/osaka/tours/ultimate-osaka-walking-tour-castle-dotonbori-group-or-p-425662P2";
+export const ENGINE6_OSAKA_63670P11_PRODUCT_CODE = "63670P11";
+export const ENGINE6_OSAKA_63670P11_ROUTE =
+  "/destinations/japan/osaka/tours/kuromon-market-food-walking-tour-in-osaka-63670P11";
+export const ENGINE6_OSAKA_130036P1_PRODUCT_CODE = "130036P1";
+export const ENGINE6_OSAKA_130036P1_ROUTE =
+  "/destinations/japan/osaka/tours/deep-backstreet-osaka-tours-option-to-add-dinner-130036P1";
+export const ENGINE6_OSAKA_130036P4_PRODUCT_CODE = "130036P4";
+export const ENGINE6_OSAKA_130036P4_ROUTE =
+  "/destinations/japan/osaka/tours/kuromon-market-tour-all-inclusive-6-8-dishes-130036P4";
+export const ENGINE6_OSAKA_460493P3_PRODUCT_CODE = "460493P3";
+export const ENGINE6_OSAKA_460493P3_ROUTE =
+  "/destinations/japan/osaka/tours/private-6hr-food-tour-from-osaka-castle-kuromon-dotonbo-460493P3";
+export const ENGINE6_OSAKA_394526P1_PRODUCT_CODE = "394526P1";
+export const ENGINE6_OSAKA_394526P1_ROUTE =
+  "/destinations/japan/osaka/tours/walking-tour-of-osakas-5-must-see-sights-with-ramen-for-394526P1";
+export const ENGINE6_OSAKA_427786P5_PRODUCT_CODE = "427786P5";
+export const ENGINE6_OSAKA_427786P5_ROUTE =
+  "/destinations/japan/osaka/tours/osaka-early-bird-top-highlights-with-english-speaking-g-427786P5";
+
+export const ENGINE6_OSAKA_TOUR_PATH_PREFIX =
+  "/destinations/japan/osaka/tours/";
+
+export const isEngine6OsakaTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_OSAKA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_SEOUL_42053P19_PRODUCT_CODE = "42053P19";
 export const ENGINE6_SEOUL_42053P19_ROUTE =
   "/destinations/south-korea/seoul/tours/full-day-customizable-private-seoul-highlight-tour-42053P19";
@@ -5254,6 +5322,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_92136P44_ROUTE,
+    ENGINE6_OSAKA_92136P44_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_92136P45_ROUTE,
+    ENGINE6_OSAKA_92136P45_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_30791P615_ROUTE,
+    ENGINE6_OSAKA_30791P615_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_429399P2_ROUTE,
+    ENGINE6_OSAKA_429399P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_425662P3_ROUTE,
+    ENGINE6_OSAKA_425662P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_130036P2_ROUTE,
+    ENGINE6_OSAKA_130036P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_62558P5_ROUTE,
+    ENGINE6_OSAKA_62558P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_63670P21_ROUTE,
+    ENGINE6_OSAKA_63670P21_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_62558P2_ROUTE,
+    ENGINE6_OSAKA_62558P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_20415P6_ROUTE,
+    ENGINE6_OSAKA_20415P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_6806OSAKOSAKA_ROUTE,
+    ENGINE6_OSAKA_6806OSAKOSAKA_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_218199P1_ROUTE,
+    ENGINE6_OSAKA_218199P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_22288P1_ROUTE,
+    ENGINE6_OSAKA_22288P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_425662P2_ROUTE,
+    ENGINE6_OSAKA_425662P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_63670P11_ROUTE,
+    ENGINE6_OSAKA_63670P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_130036P1_ROUTE,
+    ENGINE6_OSAKA_130036P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_130036P4_ROUTE,
+    ENGINE6_OSAKA_130036P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_460493P3_ROUTE,
+    ENGINE6_OSAKA_460493P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_394526P1_ROUTE,
+    ENGINE6_OSAKA_394526P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OSAKA_427786P5_ROUTE,
+    ENGINE6_OSAKA_427786P5_PRODUCT_CODE,
   ],
   [
     ENGINE6_SEOUL_42053P19_ROUTE,

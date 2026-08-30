@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "92136P44",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P44",
+    "title": "Osaka 6hr Private Walking Tour with Government Licensed Guide",
+    "description": {
+      "text": "In Osaka, this private six-hour walk pairs a government-licensed guide with a customizable circuit that typically covers Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon Market. The published format is on foot, with public transit or local taxis between sites settled on the day rather than a private vehicle. The guide meets the booked hotel or a confirmed city point. The format suits visitors who want a licensed half-day sweep without assembling tickets and transfers independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon that define this outing rather than a Kyoto temple day."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $156.59",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 146
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/05/14.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour licensed walking circuit",
+      "Osaka Castle and Dotonbori",
+      "Shitenno-ji and Shinsekai",
+      "Kuromon Market food window",
+      "Hotel or confirmed Osaka meeting point"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The licensed guide meets the booked Osaka hotel or confirmed city meeting point on foot. Public transit or local taxis between sites are settled on the day."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this private six-hour walk pairs a government-licensed guide with a customizable circuit that typically covers Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon Market.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shitenno-ji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private government-licensed guide",
+      "Customizable six-hour walking itinerary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka 6hr Private Walking Tour with Government Licensed Guide?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "The licensed guide meets the booked Osaka hotel or confirmed city meeting point on foot. Public transit or local taxis between sites are settled on the day."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 156.59
+      },
+      "currency": "USD"
+    }
+  }
+}

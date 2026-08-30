@@ -1,0 +1,76 @@
+export const OSAKA_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
+  "92136P44",
+  "92136P45",
+  "30791P615",
+  "429399P2",
+  "425662P3",
+  "130036P2",
+  "62558P5",
+  "63670P21",
+  "62558P2",
+  "20415P6",
+  "6806OSAKOSAKA",
+  "218199P1",
+  "22288P1",
+  "425662P2",
+  "63670P11",
+  "130036P1",
+  "130036P4",
+  "460493P3",
+  "394526P1",
+  "427786P5",
+] as const;
+
+export type OsakaTargetedNarrativeDescriptionProductCode =
+  (typeof OSAKA_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES)[number];
+
+export const OSAKA_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
+  OsakaTargetedNarrativeDescriptionProductCode,
+  string
+> = {
+  "92136P44":
+    "In Osaka, this private six-hour walk pairs a government-licensed guide with a customizable circuit that typically covers Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon Market. The published format is on foot, with public transit or local taxis between sites settled on the day rather than a private vehicle. The guide meets the booked hotel or a confirmed city point. The format suits visitors who want a licensed half-day sweep without assembling tickets and transfers independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon that define this outing rather than a Kyoto temple day.",
+  "92136P45":
+    "In Osaka, this private four-hour walk pairs a government-licensed guide with a customizable half-day that typically covers Osaka Castle, the Umeda Sky Building, and Dotonbori. The published format is on foot, with public transit or local taxis between sites settled on the day. The guide meets the booked hotel. The format suits visitors who want a licensed morning or afternoon without booking a six-hour circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Umeda Sky Building, and Dotonbori that define this outing rather than a Shinsekai food crawl.",
+  "30791P615":
+    "In Osaka, this private walking outing meets at DAISO Namba Nansan-dori or a nearby confirmed point, then follows a local host on a two-to-eight-hour route shaped at booking. Published highlight options include Namba, Osaka Castle, and Dotonbori, with walking, public transit, or short taxis settled on the day. A private vehicle is not listed. The format suits visitors who want a personalized city window without a fixed coach itinerary. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Namba, Osaka Castle, and Dotonbori options that define this outing rather than a Kuromon tasting circuit.",
+  "429399P2":
+    "In Osaka, this private three-to-five-hour circuit pairs a local guide with a hotel pickup in the published Osaka area, or a confirmed train station if the hotel sits outside the city. The published route typically covers Osaka Castle, Shinsekai, and Shitenno-ji. Duration is selected at booking. The format suits visitors who want a private highlight window without a licensed six-hour walk. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Shinsekai, and Shitenno-ji that define this outing rather than a Dotonbori night food crawl.",
+  "425662P3":
+    "In Osaka, this three-hour Shinsekai food walk starts at Ebisucho Station exit 3 and finishes at Dobutsuen-mae, with 15 dishes at five eateries and two included drinks. The published tastings cover takoyaki, kushikatsu, karaage, yakitori, udon, and oden in izakayas, stalls, and small restaurants. The format suits visitors who want a guided Shinsekai dinner window without assembling menus independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Ebisucho, and Dobutsuen-mae that define this outing rather than a Kuromon morning market walk.",
+  "130036P2":
+    "In Osaka, this three-hour small-group food walk covers 13 dishes at five Shinsekai and Nishinari eateries, with two included drinks. The published route moves through standing bars, izakayas, and stalls near Dobutsuen-mae rather than a Dotonbori neon circuit. The format suits visitors who want a guided neighborhood dinner without assembling five separate reservations. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Nishinari, and Dobutsuen-mae that define this outing rather than a castle-and-Umeda sightseeing loop.",
+  "62558P5":
+    "In Osaka, this evening backstreet walk covers Namba, Shinsaibashi, Dotonbori, and Amerikamura with published food stops after dark. The route stays on central south-Osaka streets rather than a Shinsekai stall crawl. The format suits visitors who want a guided night window without assembling separate dinner reservations. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Namba, Shinsaibashi, Dotonbori, and Amerikamura that define this outing rather than an Osaka Castle morning.",
+  "63670P21":
+    "In Osaka, this three-hour small-group food walk starts at Imamiyaebisu Station, covers Shinsekai and Tsutenkaku, then finishes at the Glico Sign in Dotonbori. Kushikatsu, okonomiyaki, takoyaki, and two drinks are listed. Local transit between neighborhoods is own expense on the public page. The format suits visitors who want a guided Shinsekai-to-Dotonbori tasting without assembling the walk independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Tsutenkaku, Dotonbori, and the Glico Sign that define this outing rather than a Kuromon market class.",
+  "62558P2":
+    "In Osaka, this three-to-four-hour bike-and-food outing meets at the Cycle Osaka shop in Tenma, then rides past Osaka Castle Park between multiple food stops. A bicycle, English-speaking guide, lunch tastings, bottled water, and drinks are listed. Hotel pickup is not listed. The format suits visitors who want a guided ride-and-eat window without renting independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Tenma, Osaka Castle Park, and the published food stops that define this outing rather than a Dotonbori walking crawl.",
+  "20415P6":
+    "In Osaka, this full-day coach outing departs from a booked central Osaka or Kyoto point for Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji. Osaka and Kyoto depart on different dates and buses. Lunch is a listed upgrade rather than part of the base fare. The format suits visitors based in Osaka who want a single guided Kyoto-and-Nara day without assembling separate trains. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji that define this outing rather than an Osaka Castle and Dotonbori city walk.",
+  "6806OSAKOSAKA":
+    "In Osaka, this small-group cooking class meets at a Fukushima Ward studio in Yoshino for hands-on work on okonomiyaki, miso soup, and green tea, then a shared tasting of the cooked dishes. A cooking instructor and guide are listed, with the group capped at eight. The format suits visitors who want a guided kitchen window without booking a street-food crawl. Meeting points are confirmed at booking in Osaka, and the itinerary stays on the Osaka cooking studio and shared tasting table that define this class rather than a Kuromon stall walk.",
+  "218199P1":
+    "In Osaka, this hands-on street-food class meets at a published working kitchen for a cooking session, then a shared meal of the dishes cooked in class. The format suits visitors who want a kitchen window focused on Osaka street-food techniques rather than a market tasting walk. Meeting points are confirmed at booking in Osaka, and the itinerary stays on the street-food kitchen and shared meal table that define this class rather than a Shinsekai night crawl.",
+  "22288P1":
+    "In Osaka, this small-group walking introduction starts at Ebisu Bridge, covers Dotonbori and Hozen-ji, then continues to Shinsekai with a kushikatsu tasting and one non-alcoholic drink. Subway fares are own expense on the public page. The format suits first-time visitors who want a compact guided orientation without a private licensed circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Dotonbori, Hozen-ji, and Shinsekai that define this outing rather than an Osaka Castle morning.",
+  "425662P2":
+    "In Osaka, this group or private walking circuit covers Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori on a published highlights day. The booking page lists both group and private options. The format suits visitors who want a single guided castle-to-canal sweep without assembling four separate neighborhoods. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori that define this outing rather than a Shinsekai dinner crawl.",
+  "63670P11":
+    "In Osaka, this guided food walk starts at Kuromon Market, continues through Doguyasuji kitchenware street, and finishes in Dotonbori. Published market tastings are listed. The format suits visitors who want a compact market-and-canal window without a six-hour private circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Kuromon Market, Doguyasuji, and Dotonbori that define this outing rather than a Namba night walk.",
+  "130036P1":
+    "In Osaka, this evening walk meets at Daikokucho Station Exit 1 beside FamilyMart, then follows a local guide through historic backstreets and street stalls, with an optional dinner upgrade. The public page describes older city districts rather than a castle sightseeing loop. The format suits visitors who want a guided night neighborhood window without a Shinsekai tasting crawl. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Daikokucho, the historic backstreets, and street stalls that define this outing rather than an Osaka Castle morning.",
+  "130036P4":
+    "In Osaka, this all-inclusive Kuromon Market walk covers six to eight dishes at market stalls with a local guide. The format suits visitors who want a compact tasting window without assembling stall orders independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Kuromon Market and its tasting stalls that define this outing rather than a Dotonbori night crawl.",
+  "460493P3":
+    "In Osaka, this private six-hour food-and-sightseeing walk starts at Morinomiya Station Exit 3b, covers Osaka Castle, Kuromon Market, and Doguyasuji, then finishes at the Glico Sign in Dotonbori. The format suits visitors who want a private castle-to-market-to-canal day without a group coach. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Kuromon Market, Doguyasuji, and Dotonbori that define this outing rather than a Shinsekai dinner crawl.",
+  "394526P1":
+    "In Osaka, this guided walking circuit covers published city highlights including Osaka Castle and Dotonbori, with a ramen lunch stop listed. The format suits visitors who want a single highlights walk with a set lunch rather than a night food crawl. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Dotonbori, and the ramen lunch stop that define this outing rather than a Kuromon stall class.",
+  "427786P5":
+    "In Osaka, this early-start highlights walk pairs an English-speaking guide with Osaka Castle, Dotonbori, and Kuromon Market before later crowds build. The format suits visitors who want a compact morning circuit without a six-hour private booking. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Dotonbori, and Kuromon Market that define this outing rather than a Shinsekai night crawl.",
+};
+
+export const getOsakaTargetedNarrativeDescription = (productCode: string) =>
+  OSAKA_TARGETED_NARRATIVE_DESCRIPTIONS[
+    productCode as OsakaTargetedNarrativeDescriptionProductCode
+  ];

@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "92136P45",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P45",
+    "title": "Osaka 4hr Private Tour with Government-Licensed Guide",
+    "description": {
+      "text": "In Osaka, this private four-hour walk pairs a government-licensed guide with a customizable half-day that typically covers Osaka Castle, the Umeda Sky Building, and Dotonbori. The published format is on foot, with public transit or local taxis between sites settled on the day. The guide meets the booked hotel. The format suits visitors who want a licensed morning or afternoon without booking a six-hour circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Umeda Sky Building, and Dotonbori that define this outing rather than a Shinsekai food crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $106.77",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 300
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/04/f1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private four-hour licensed walking circuit",
+      "Osaka Castle and Umeda Sky Building",
+      "Dotonbori canal district",
+      "Hotel meeting point in Osaka"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The licensed guide meets the booked Osaka hotel. Public transit or local taxis between sites are settled on the day."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this private four-hour walk pairs a government-licensed guide with a customizable half-day that typically covers Osaka Castle, the Umeda Sky Building, and Dotonbori.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Umeda Sky Building",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private government-licensed guide",
+      "Customizable four-hour walking itinerary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka 4hr Private Tour with Government-Licensed Guide?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "The licensed guide meets the booked Osaka hotel. Public transit or local taxis between sites are settled on the day."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 106.77
+      },
+      "currency": "USD"
+    }
+  }
+}

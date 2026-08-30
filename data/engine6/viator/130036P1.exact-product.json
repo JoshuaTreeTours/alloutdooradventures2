@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "130036P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Deep-Backstreet-Osaka-Tours/d333-130036P1",
+    "title": "Deep Backstreet Osaka Tours (Option to add Dinner)",
+    "description": {
+      "text": "In Osaka, this evening walk meets at Daikokucho Station Exit 1 beside FamilyMart, then follows a local guide through historic backstreets and street stalls, with an optional dinner upgrade. The public page describes older city districts rather than a castle sightseeing loop. The format suits visitors who want a guided night neighborhood window without a Shinsekai tasting crawl. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Daikokucho, the historic backstreets, and street stalls that define this outing rather than an Osaka Castle morning."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $57.46",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1193
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/23/eb/8b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Evening historic-backstreet walk",
+      "Daikokucho Station start",
+      "Street-stall tasting",
+      "Optional dinner upgrade"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Daikokucho Station, Exit 1, in front of FamilyMart MYS Daikokucho."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this evening walk meets at Daikokucho Station Exit 1 beside FamilyMart, then follows a local guide through historic backstreets and street stalls, with an optional dinner upgrade.",
+    "itineraryItems": [
+      {
+        "title": "Daikokucho",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic backstreets",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Street stalls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Street-stall tasting",
+      "Optional dinner upgrade"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Deep Backstreet Osaka Tours (Option to add Dinner)?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at Daikokucho Station, Exit 1, in front of FamilyMart MYS Daikokucho."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 57.46
+      },
+      "currency": "USD"
+    }
+  }
+}

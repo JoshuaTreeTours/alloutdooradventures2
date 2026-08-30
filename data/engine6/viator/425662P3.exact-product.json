@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "425662P3",
+    "productUrl": "https://www.viator.com/tours/Osaka/Premium-Osaka-Foodie-Tour-Shinsekai-Feast-Like-a-Local/d333-425662P3",
+    "title": "Hungry Osaka Street Food Tour (15 Dishes) - Feast Like a Local",
+    "description": {
+      "text": "In Osaka, this three-hour Shinsekai food walk starts at Ebisucho Station exit 3 and finishes at Dobutsuen-mae, with 15 dishes at five eateries and two included drinks. The published tastings cover takoyaki, kushikatsu, karaage, yakitori, udon, and oden in izakayas, stalls, and small restaurants. The format suits visitors who want a guided Shinsekai dinner window without assembling menus independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Ebisucho, and Dobutsuen-mae that define this outing rather than a Kuromon morning market walk."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $93.38",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 880
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/fb/ff.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fifteen dishes at five Shinsekai eateries",
+      "Takoyaki, kushikatsu, and karaage tastings",
+      "Ebisucho Station start",
+      "Dobutsuen-mae finish"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Ebisucho Station on the Sakaisuji Line, exit 3, at the top of the stairs."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this three-hour Shinsekai food walk starts at Ebisucho Station exit 3 and finishes at Dobutsuen-mae, with 15 dishes at five eateries and two included drinks.",
+    "itineraryItems": [
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ebisucho Station",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dobutsuen-mae",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "15 dishes at five eateries",
+      "Two included drinks",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hungry Osaka Street Food Tour (15 Dishes) - Feast Like a Local?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at Ebisucho Station on the Sakaisuji Line, exit 3, at the top of the stairs."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 93.38
+      },
+      "currency": "USD"
+    }
+  }
+}

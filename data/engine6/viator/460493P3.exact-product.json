@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "460493P3",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Castle-Kuromon-Market-and-Dotonbori-6hour-tour/d333-460493P3",
+    "title": "PRIVATE 6hr, Food tour from Osaka Castle, Kuromon, Dotonbori.",
+    "description": {
+      "text": "In Osaka, this private six-hour food-and-sightseeing walk starts at Morinomiya Station Exit 3b, covers Osaka Castle, Kuromon Market, and Doguyasuji, then finishes at the Glico Sign in Dotonbori. The format suits visitors who want a private castle-to-market-to-canal day without a group coach. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Kuromon Market, Doguyasuji, and Dotonbori that define this outing rather than a Shinsekai dinner crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $155.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/65/ea/38.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour food circuit",
+      "Osaka Castle and Kuromon Market",
+      "Doguyasuji and Dotonbori",
+      "Morinomiya Station start"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Morinomiya Station Exit 3b. The walk finishes at the Glico Sign in Dotonbori."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this private six-hour food-and-sightseeing walk starts at Morinomiya Station Exit 3b, covers Osaka Castle, Kuromon Market, and Doguyasuji, then finishes at the Glico Sign in Dotonbori.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doguyasuji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Six-hour food-and-sightseeing circuit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE 6hr, Food tour from Osaka Castle, Kuromon, Dotonbori.?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at Morinomiya Station Exit 3b. The walk finishes at the Glico Sign in Dotonbori."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 155
+      },
+      "currency": "USD"
+    }
+  }
+}

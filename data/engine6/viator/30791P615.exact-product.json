@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "30791P615",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-and-Personalized-Experience-See-Osaka-with-a-Local/d333-30791P615",
+    "title": "Private Osaka Tour with a Local, Highlights & Hidden Gems 100% Personalised",
+    "description": {
+      "text": "In Osaka, this private walking outing meets at DAISO Namba Nansan-dori or a nearby confirmed point, then follows a local host on a two-to-eight-hour route shaped at booking. Published highlight options include Namba, Osaka Castle, and Dotonbori, with walking, public transit, or short taxis settled on the day. A private vehicle is not listed. The format suits visitors who want a personalized city window without a fixed coach itinerary. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Namba, Osaka Castle, and Dotonbori options that define this outing rather than a Kuromon tasting circuit."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "2 to 8 hours (approx.)",
+    "priceFrom": "From $60.93",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 487
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/83/73/e3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private personalized walking format",
+      "Namba meeting at DAISO Nansan-dori",
+      "Osaka Castle and Dotonbori options",
+      "Flexible two-to-eight-hour window"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet in front of DAISO Namba Nansan-dori Store, or request a nearby Osaka meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this private walking outing meets at DAISO Namba Nansan-dori or a nearby confirmed point, then follows a local host on a two-to-eight-hour route shaped at booking.",
+    "itineraryItems": [
+      {
+        "title": "Namba",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private local host",
+      "Flexible duration selected at booking"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Osaka Tour with a Local, Highlights & Hidden Gems 100% Personalised?",
+        "answer": "The planned duration is 2 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet in front of DAISO Namba Nansan-dori Store, or request a nearby Osaka meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60.93
+      },
+      "currency": "USD"
+    }
+  }
+}

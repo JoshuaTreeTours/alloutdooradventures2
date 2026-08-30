@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "218199P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Street-Food-Class/d333-218199P1",
+    "title": "Eat Osaka: Street Food Cooking in an Authentic Kitchen!",
+    "description": {
+      "text": "In Osaka, this hands-on street-food class meets at a published working kitchen for a cooking session, then a shared meal of the dishes cooked in class. The format suits visitors who want a kitchen window focused on Osaka street-food techniques rather than a market tasting walk. Meeting points are confirmed at booking in Osaka, and the itinerary stays on the street-food kitchen and shared meal table that define this class rather than a Shinsekai night crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $83.67",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 43
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/55/53/99.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hands-on street-food cooking",
+      "Working Osaka kitchen",
+      "Shared meal of the cooked dishes"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Osaka kitchen address confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this hands-on street-food class meets at a published working kitchen for a cooking session, then a shared meal of the dishes cooked in class.",
+    "itineraryItems": [
+      {
+        "title": "Street Food Kitchen",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shared Meal Table",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Cooking instructor",
+      "Ingredients and shared meal"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Eat Osaka: Street Food Cooking in an Authentic Kitchen!?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Osaka kitchen address confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cooking Classes"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 83.67
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "selectedCount": 20,
+  "listingCount": 20,
+  "listingMatchesSelection": true,
+  "okCount": 20,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "92136P44",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-6hr-private-walking-tour-with-government-licensed-92136P44",
+      "title": "Osaka 6hr Private Walking Tour with Government Licensed Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/05/14.jpg",
+      "card": "In Osaka, this private six-hour walk pairs a government-licensed guide with a customizable circuit that typically covers Osaka Castle, Doton",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Dotonbori",
+        "Shitenno-ji",
+        "Shinsekai",
+        "Kuromon Market"
+      ],
+      "issues": []
+    },
+    {
+      "code": "92136P45",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-4hr-private-tour-with-government-licensed-guide-92136P45",
+      "title": "Osaka 4hr Private Tour with Government-Licensed Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/04/f1.jpg",
+      "card": "In Osaka, this private four-hour walk pairs a government-licensed guide with a customizable half-day that typically covers Osaka Castle, the",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Umeda Sky Building",
+        "Dotonbori"
+      ],
+      "issues": []
+    },
+    {
+      "code": "30791P615",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/private-osaka-tour-with-a-local-highlights-hidden-gems-30791P615",
+      "title": "Private Osaka Tour with a Local, Highlights & Hidden Gems 100% Personalised",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/83/73/e3.jpg",
+      "card": "In Osaka, this private walking outing meets at DAISO Namba Nansan-dori or a nearby confirmed point, then follows a local host on a two-to-ei",
+      "itineraryTitles": [
+        "Namba",
+        "Osaka Castle",
+        "Dotonbori"
+      ],
+      "issues": []
+    },
+    {
+      "code": "429399P2",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/3-4-5-hours-private-tour-in-osaka-with-local-guide-429399P2",
+      "title": "3/4/5 Hours Private Tour in Osaka with Local Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/04/62.jpg",
+      "card": "In Osaka, this private three-to-five-hour circuit pairs a local guide with a hotel pickup in the published Osaka area, or a confirmed train ",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Shinsekai",
+        "Shitenno-ji"
+      ],
+      "issues": []
+    },
+    {
+      "code": "425662P3",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/hungry-osaka-street-food-tour-15-dishes-feast-like-a-lo-425662P3",
+      "title": "Hungry Osaka Street Food Tour (15 Dishes) - Feast Like a Local",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/fb/ff.jpg",
+      "card": "In Osaka, this three-hour Shinsekai food walk starts at Ebisucho Station exit 3 and finishes at Dobutsuen-mae, with 15 dishes at five eateri",
+      "itineraryTitles": [
+        "Shinsekai",
+        "Ebisucho Station",
+        "Dobutsuen-mae"
+      ],
+      "issues": []
+    },
+    {
+      "code": "130036P2",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-food-tour-13-delicious-dishes-at-5-local-eateries-130036P2",
+      "title": "Osaka Food Tour - 13 Delicious Dishes at 5 Local Eateries",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/3a/83/36.jpg",
+      "card": "In Osaka, this three-hour small-group food walk covers 13 dishes at five Shinsekai and Nishinari eateries, with two included drinks.",
+      "itineraryTitles": [
+        "Shinsekai",
+        "Nishinari",
+        "Dobutsuen-mae"
+      ],
+      "issues": []
+    },
+    {
+      "code": "62558P5",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-backstreet-night-tour-62558P5",
+      "title": "Osaka Backstreet Night Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/27/d6/ee.jpg",
+      "card": "In Osaka, this evening backstreet walk covers Namba, Shinsaibashi, Dotonbori, and Amerikamura with published food stops after dark.",
+      "itineraryTitles": [
+        "Namba",
+        "Shinsaibashi",
+        "Dotonbori",
+        "Amerikamura"
+      ],
+      "issues": []
+    },
+    {
+      "code": "63670P21",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-local-foodie-walking-tour-in-dotonbori-and-shinse-63670P21",
+      "title": "Osaka Local Foodie Walking Tour in Dotonbori and Shinsekai",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/84/4b.jpg",
+      "card": "In Osaka, this three-hour small-group food walk starts at Imamiyaebisu Station, covers Shinsekai and Tsutenkaku, then finishes at the Glico ",
+      "itineraryTitles": [
+        "Shinsekai",
+        "Tsutenkaku",
+        "Dotonbori",
+        "Glico Sign"
+      ],
+      "issues": []
+    },
+    {
+      "code": "62558P2",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/eat-drink-cycle-osaka-food-and-bike-tour-62558P2",
+      "title": "Eat, Drink, Cycle: Osaka Food and Bike Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/58/3d.jpg",
+      "card": "In Osaka, this three-to-four-hour bike-and-food outing meets at the Cycle Osaka shop in Tenma, then rides past Osaka Castle Park between mul",
+      "itineraryTitles": [
+        "Tenma",
+        "Osaka Castle Park",
+        "Local food stops"
+      ],
+      "issues": []
+    },
+    {
+      "code": "20415P6",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/ancient-capital-tour-kyoto-and-nara-highlights-from-kyo-20415P6",
+      "title": "Ancient Capital Tour: Kyoto and Nara Highlights from Kyoto/Osaka",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5f/70/4c.jpg",
+      "card": "In Osaka, this full-day coach outing departs from a booked central Osaka or Kyoto point for Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji.",
+      "itineraryTitles": [
+        "Arashiyama",
+        "Kinkaku-ji",
+        "Nara Park",
+        "Todai-ji"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6806OSAKOSAKA",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-local-food-and-japanese-cuisines-cooking-experien-6806OSAKOSAKA",
+      "title": "Osaka local food and Japanese cuisines cooking experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/dc/0a.jpg",
+      "card": "In Osaka, this small-group cooking class meets at a Fukushima Ward studio in Yoshino for hands-on work on okonomiyaki, miso soup, and green ",
+      "itineraryTitles": [
+        "Osaka Cooking Studio",
+        "Shared Tasting Table"
+      ],
+      "issues": []
+    },
+    {
+      "code": "218199P1",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/eat-osaka-street-food-cooking-in-an-authentic-kitchen-218199P1",
+      "title": "Eat Osaka: Street Food Cooking in an Authentic Kitchen!",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/55/53/99.jpg",
+      "card": "In Osaka, this hands-on street-food class meets at a published working kitchen for a cooking session, then a shared meal of the dishes cooke",
+      "itineraryTitles": [
+        "Street Food Kitchen",
+        "Shared Meal Table"
+      ],
+      "issues": []
+    },
+    {
+      "code": "22288P1",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-walking-tour-22288P1",
+      "title": "Osaka Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/6d/c8.jpg",
+      "card": "In Osaka, this small-group walking introduction starts at Ebisu Bridge, covers Dotonbori and Hozen-ji, then continues to Shinsekai with a ku",
+      "itineraryTitles": [
+        "Dotonbori",
+        "Hozen-ji",
+        "Shinsekai"
+      ],
+      "issues": []
+    },
+    {
+      "code": "425662P2",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/ultimate-osaka-walking-tour-castle-dotonbori-group-or-p-425662P2",
+      "title": "Ultimate Osaka Walking Tour (Castle, Dotonbori) GROUP OR PRIVATE",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/22/4d/ff.jpg",
+      "card": "In Osaka, this group or private walking circuit covers Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori on a published highlights da",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Kuromon Market",
+        "Amerikamura",
+        "Dotonbori"
+      ],
+      "issues": []
+    },
+    {
+      "code": "63670P11",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/kuromon-market-food-walking-tour-in-osaka-63670P11",
+      "title": "Kuromon Market Food Walking Tour in Osaka",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/b3/8c.jpg",
+      "card": "In Osaka, this guided food walk starts at Kuromon Market, continues through Doguyasuji kitchenware street, and finishes in Dotonbori.",
+      "itineraryTitles": [
+        "Kuromon Market",
+        "Doguyasuji",
+        "Dotonbori"
+      ],
+      "issues": []
+    },
+    {
+      "code": "130036P1",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/deep-backstreet-osaka-tours-option-to-add-dinner-130036P1",
+      "title": "Deep Backstreet Osaka Tours (Option to add Dinner)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/23/eb/8b.jpg",
+      "card": "In Osaka, this evening walk meets at Daikokucho Station Exit 1 beside FamilyMart, then follows a local guide through historic backstreets an",
+      "itineraryTitles": [
+        "Daikokucho",
+        "Historic backstreets",
+        "Street stalls"
+      ],
+      "issues": []
+    },
+    {
+      "code": "130036P4",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/kuromon-market-tour-all-inclusive-6-8-dishes-130036P4",
+      "title": "Kuromon Market Tour: All inclusive 6~8 Dishes",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9d/fb/97.jpg",
+      "card": "In Osaka, this all-inclusive Kuromon Market walk covers six to eight dishes at market stalls with a local guide.",
+      "itineraryTitles": [
+        "Kuromon Market",
+        "Market tasting stalls"
+      ],
+      "issues": []
+    },
+    {
+      "code": "460493P3",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/private-6hr-food-tour-from-osaka-castle-kuromon-dotonbo-460493P3",
+      "title": "PRIVATE 6hr, Food tour from Osaka Castle, Kuromon, Dotonbori.",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/65/ea/38.jpg",
+      "card": "In Osaka, this private six-hour food-and-sightseeing walk starts at Morinomiya Station Exit 3b, covers Osaka Castle, Kuromon Market, and Dog",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Kuromon Market",
+        "Doguyasuji",
+        "Dotonbori"
+      ],
+      "issues": []
+    },
+    {
+      "code": "394526P1",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/walking-tour-of-osakas-5-must-see-sights-with-ramen-for-394526P1",
+      "title": "Walking Tour of Osaka's 5 Must-See Sights, with Ramen for Lunch",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/47/76/71.jpg",
+      "card": "In Osaka, this guided walking circuit covers published city highlights including Osaka Castle and Dotonbori, with a ramen lunch stop listed.",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Dotonbori",
+        "Ramen lunch stop"
+      ],
+      "issues": []
+    },
+    {
+      "code": "427786P5",
+      "ok": true,
+      "path": "/destinations/japan/osaka/tours/osaka-early-bird-top-highlights-with-english-speaking-g-427786P5",
+      "title": "Osaka Early Bird / Top Highlights with English-Speaking Guide",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/d7/0e.jpg",
+      "card": "In Osaka, this early-start highlights walk pairs an English-speaking guide with Osaka Castle, Dotonbori, and Kuromon Market before later cro",
+      "itineraryTitles": [
+        "Osaka Castle",
+        "Dotonbori",
+        "Kuromon Market"
+      ],
+      "issues": []
+    }
+  ]
+}

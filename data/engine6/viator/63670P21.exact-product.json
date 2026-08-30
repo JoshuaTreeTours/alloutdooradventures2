@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "63670P21",
+    "productUrl": "https://www.viator.com/tours/Osaka/Dotonbori-Street-Food-Crawl-and-Sample-Walking-Tour-in-Osaka/d333-63670P21",
+    "title": "Osaka Local Foodie Walking Tour in Dotonbori and Shinsekai",
+    "description": {
+      "text": "In Osaka, this three-hour small-group food walk starts at Imamiyaebisu Station, covers Shinsekai and Tsutenkaku, then finishes at the Glico Sign in Dotonbori. Kushikatsu, okonomiyaki, takoyaki, and two drinks are listed. Local transit between neighborhoods is own expense on the public page. The format suits visitors who want a guided Shinsekai-to-Dotonbori tasting without assembling the walk independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Tsutenkaku, Dotonbori, and the Glico Sign that define this outing rather than a Kuromon market class."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $110.71",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 785
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/84/4b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Shinsekai and Dotonbori food walk",
+      "Tsutenkaku neighborhood",
+      "Kushikatsu, okonomiyaki, and takoyaki",
+      "Finish at the Glico Sign"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Imamiyaebisu Station. The walk finishes at the Glico Sign in Dotonbori."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this three-hour small-group food walk starts at Imamiyaebisu Station, covers Shinsekai and Tsutenkaku, then finishes at the Glico Sign in Dotonbori.",
+    "itineraryItems": [
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tsutenkaku",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glico Sign",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Kushikatsu tasting",
+      "Okonomiyaki tasting",
+      "Takoyaki tasting",
+      "Two drinks",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka Local Foodie Walking Tour in Dotonbori and Shinsekai?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at Imamiyaebisu Station. The walk finishes at the Glico Sign in Dotonbori."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 110.71
+      },
+      "currency": "USD"
+    }
+  }
+}

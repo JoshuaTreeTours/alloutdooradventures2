@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "425662P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-Downtown-Osaka-Walking-Tour-Backstreets-Hidden-Gems/d333-425662P2",
+    "title": "Ultimate Osaka Walking Tour (Castle, Dotonbori) GROUP OR PRIVATE",
+    "description": {
+      "text": "In Osaka, this group or private walking circuit covers Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori on a published highlights day. The booking page lists both group and private options. The format suits visitors who want a single guided castle-to-canal sweep without assembling four separate neighborhoods. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori that define this outing rather than a Shinsekai dinner crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $90.64",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 581
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/22/4d/ff.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Osaka Castle and Kuromon Market",
+      "Amerikamura and Dotonbori",
+      "Group or private booking option"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Osaka meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this group or private walking circuit covers Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori on a published highlights day.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amerikamura",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "English-speaking guide",
+      "Group or private option selected at booking"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ultimate Osaka Walking Tour (Castle, Dotonbori) GROUP OR PRIVATE?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Osaka meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.64
+      },
+      "currency": "USD"
+    }
+  }
+}
