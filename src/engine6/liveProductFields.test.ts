@@ -123,6 +123,20 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
           priceFrom: "From $156.60",
         },
         startingPrice: 156.6,
+      }),
+      {
+        priceAmount: 16500,
+        priceFormatted: "From $16,500.00",
+        aggregateRating: 4.9,
+        reviewCount: 1636,
+      }
+    );
+
+    expect(merged.startingPrice).toBe(156.6);
+    expect(merged.badges.priceFrom).toBe("From $156.60");
+    expect(merged.badges.reviewCount).toBe(1636);
+  });
+
   it("does not overwrite a USD commercial listing price with a live JPY amount", () => {
     const merged = mergeEngine6LiveFieldsIntoTour(
       makeEngine6Tour({
@@ -164,14 +178,6 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
       {
         priceAmount: 16500,
         priceFormatted: "From $16,500.00",
-        aggregateRating: 4.9,
-        reviewCount: 1636,
-      }
-    );
-
-    expect(merged.startingPrice).toBe(156.6);
-    expect(merged.badges.priceFrom).toBe("From $156.60");
-    expect(merged.badges.reviewCount).toBe(1636);
       }
     );
 

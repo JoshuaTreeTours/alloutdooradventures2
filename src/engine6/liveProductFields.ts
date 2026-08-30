@@ -62,19 +62,8 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
-  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
-    priceAmount,
-    tour.priceAmount
-  );
-  const resolvedPriceAmount = acceptLivePrice ? priceAmount : tour.priceAmount;
-  const resolvedPriceFormatted = acceptLivePrice
-    ? resolveLivePriceFormatted(
-        priceAmount,
-        priceFormatted,
-        tour.priceFormatted
-      )
-    : tour.priceFormatted;
   const applyLivePrice =
+    shouldAcceptLiveAmountAsUsd(priceAmount, tour.priceAmount) &&
     shouldApplyLivePriceAsUsd(liveFields) &&
     !looksLikeCurrencyMismatch(tour.priceAmount, priceAmount);
   const resolvedPriceAmount = applyLivePrice
@@ -130,22 +119,15 @@ export const mergeEngine6LiveFieldsIntoTour = (
       : "";
   const parsedFromFormatted = parsePriceFromFormatted(priceFormatted);
   const candidateLivePrice = priceAmount ?? parsedFromFormatted;
-  const acceptLivePrice = shouldAcceptLiveAmountAsUsd(
-    candidateLivePrice,
-    tour.startingPrice ?? null
-  );
-  const resolvedStartingPrice = acceptLivePrice
-    ? (candidateLivePrice ?? tour.startingPrice ?? undefined)
-    : tour.startingPrice;
-  const resolvedPriceBadge = acceptLivePrice
   const applyLivePrice =
+    shouldAcceptLiveAmountAsUsd(
+      candidateLivePrice,
+      tour.startingPrice ?? null
+    ) &&
     shouldApplyLivePriceAsUsd(liveFields) &&
     !looksLikeCurrencyMismatch(tour.startingPrice, priceAmount);
-  const parsedFromFormatted = applyLivePrice
-    ? parsePriceFromFormatted(priceFormatted)
-    : null;
   const resolvedStartingPrice = applyLivePrice
-    ? (priceAmount ?? parsedFromFormatted ?? tour.startingPrice ?? undefined)
+    ? (candidateLivePrice ?? tour.startingPrice ?? undefined)
     : tour.startingPrice;
   const resolvedPriceBadge = applyLivePrice
     ? priceFormatted ||

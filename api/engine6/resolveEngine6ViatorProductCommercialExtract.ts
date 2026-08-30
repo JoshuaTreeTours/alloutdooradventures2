@@ -11,6 +11,7 @@ import {
   fetchViatorLiveJson,
 } from "./viatorLiveCommercialFetch.js";
 import { preferUsdCommercialPrice } from "../../src/engine6/usdPriceGuard.js";
+import { shouldApplyLivePriceAsUsd } from "../../src/engine6/priceCurrency.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -158,11 +159,20 @@ const mergeLiveDynamicCommercialExtract = (
   }
 
   const usdPrices = preferUsdCommercialPrice(live, bundled);
+  const applyLivePrice =
+    shouldApplyLivePriceAsUsd(live) &&
+    usdPrices.priceAmount === live.priceAmount &&
+    typeof live.priceAmount === "number";
 
   return {
     ...bundled,
-    priceAmount: usdPrices.priceAmount,
-    priceFormatted: usdPrices.priceFormatted,
+    priceAmount: applyLivePrice ? usdPrices.priceAmount : bundled.priceAmount,
+    priceFormatted: applyLivePrice
+      ? usdPrices.priceFormatted
+      : bundled.priceFormatted,
+    priceCurrency: applyLivePrice
+      ? (live.priceCurrency ?? bundled.priceCurrency ?? "USD")
+      : bundled.priceCurrency,
     aggregateRating:
       typeof live.aggregateRating === "number"
         ? live.aggregateRating
@@ -409,10 +419,31 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
     productCode: normalizedProductCode,
     extracted: liveWithAvailabilityPrice,
   });
-  const usdSafeLive = preferUsdCommercialPrice(
-    liveWithReviews,
-    bundledExtracted
-  );
+  const usdSafeLive = (() => {
+    const preferred = preferUsdCommercialPrice(
+      liveWithReviews,
+      bundledExtracted
+    );
+    if (shouldApplyLivePriceAsUsd(preferred)) {
+      return {
+        ...preferred,
+        priceCurrency: preferred.priceCurrency ?? "USD",
+      };
+    }
+    if (bundledExtracted && typeof bundledExtracted.priceAmount === "number") {
+      return {
+        ...preferred,
+        priceAmount: bundledExtracted.priceAmount,
+        priceFormatted: bundledExtracted.priceFormatted,
+        priceCurrency: bundledExtracted.priceCurrency,
+      };
+    }
+    return {
+      ...preferred,
+      priceAmount: null,
+      priceFormatted: "Check latest price",
+    };
+  })();
 
   const extractedProductCode =
     typeof liveExtraction.product?.productCode === "string"

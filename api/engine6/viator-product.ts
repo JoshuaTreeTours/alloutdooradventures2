@@ -424,38 +424,40 @@ const respondWithBundledFallback = (
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
   });
+  const usdSafePrices = dynamicExtraction
+    ? preferUsdCommercialPrice(
+        {
+          priceAmount:
+            typeof dynamicExtraction.priceAmount === "number"
+              ? dynamicExtraction.priceAmount
+              : null,
+          priceFormatted:
+            typeof dynamicExtraction.priceFormatted === "string"
+              ? dynamicExtraction.priceFormatted
+              : null,
+        },
+        {
+          priceAmount: merged.extracted.priceAmount,
+          priceFormatted: merged.extracted.priceFormatted,
+        }
+      )
+    : null;
   const applyLivePrice =
-    dynamicExtraction !== null && shouldApplyLivePriceAsUsd(dynamicExtraction);
+    dynamicExtraction !== null &&
+    usdSafePrices !== null &&
+    shouldApplyLivePriceAsUsd(dynamicExtraction) &&
+    usdSafePrices.priceAmount === dynamicExtraction.priceAmount &&
+    typeof dynamicExtraction.priceAmount === "number";
   const mergedWithLiveDynamicFields = dynamicExtraction
     ? {
         ...merged,
         extracted: {
           ...merged.extracted,
-          ...preferUsdCommercialPrice(
-            {
-              priceAmount:
-                typeof dynamicExtraction.priceAmount === "number"
-                  ? dynamicExtraction.priceAmount
-                  : null,
-              priceFormatted:
-                typeof dynamicExtraction.priceFormatted === "string"
-                  ? dynamicExtraction.priceFormatted
-                  : null,
-            },
-            {
-              priceAmount: merged.extracted.priceAmount,
-              priceFormatted: merged.extracted.priceFormatted,
-            }
-          ),
           priceAmount: applyLivePrice
-            ? typeof dynamicExtraction.priceAmount === "number"
-              ? dynamicExtraction.priceAmount
-              : merged.extracted.priceAmount
+            ? usdSafePrices.priceAmount
             : merged.extracted.priceAmount,
           priceFormatted: applyLivePrice
-            ? typeof dynamicExtraction.priceFormatted === "string"
-              ? dynamicExtraction.priceFormatted
-              : merged.extracted.priceFormatted
+            ? usdSafePrices.priceFormatted
             : merged.extracted.priceFormatted,
           priceCurrency: applyLivePrice
             ? (dynamicExtraction.priceCurrency ??
@@ -707,28 +709,46 @@ export default async function handler(req: any, res: any) {
     extractedWithReviews,
     bundledExtractionForPrice?.extracted ?? null
   );
+  const extractedForUsdDisplay = shouldApplyLivePriceAsUsd(usdSafeExtracted)
+    ? {
+        ...usdSafeExtracted,
+        priceCurrency: usdSafeExtracted.priceCurrency ?? "USD",
+      }
+    : {
+        ...usdSafeExtracted,
+        ...(bundledExtractionForPrice?.extracted
+          ? {
+              priceAmount: bundledExtractionForPrice.extracted.priceAmount,
+              priceFormatted: bundledExtractionForPrice.extracted.priceFormatted,
+              priceCurrency: bundledExtractionForPrice.extracted.priceCurrency,
+            }
+          : {
+              priceAmount: null,
+              priceFormatted: "Check latest price",
+            }),
+      };
   const extractedWithLiveCommercial: ReturnType<typeof extractEngine6Product> =
     {
       ...extracted,
       diagnostics: {
         ...extracted.diagnostics,
-        ...(typeof usdSafeExtracted.priceAmount === "number"
+        ...(typeof extractedForUsdDisplay.priceAmount === "number"
           ? {
               commercialPriceFieldPath:
                 extracted.diagnostics.commercialPriceFieldPath ??
                 "availability.summary.fromPrice",
-              commercialPriceRawValue: usdSafeExtracted.priceAmount,
+              commercialPriceRawValue: extractedForUsdDisplay.priceAmount,
               priceSourceUsed: "live-price" as const,
             }
           : {}),
-        ...(typeof usdSafeExtracted.aggregateRating === "number"
+        ...(typeof extractedForUsdDisplay.aggregateRating === "number"
           ? {
               ratingFieldPath:
                 extracted.diagnostics.ratingFieldPath ??
                 "reviews.product.totalReviewsSummary",
             }
           : {}),
-        ...(typeof usdSafeExtracted.reviewCount === "number"
+        ...(typeof extractedForUsdDisplay.reviewCount === "number"
           ? {
               reviewCountFieldPath:
                 extracted.diagnostics.reviewCountFieldPath ??
@@ -736,7 +756,7 @@ export default async function handler(req: any, res: any) {
             }
           : {}),
       },
-      extracted: usdSafeExtracted,
+      extracted: extractedForUsdDisplay,
     };
 
   const extractedProductCode =
