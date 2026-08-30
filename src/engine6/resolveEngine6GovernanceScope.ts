@@ -52,6 +52,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     tokyo: ["Tokyo"],
     kyoto: ["Kyoto"],
     japan: ["Tokyo", "Kyoto"],
+    bangkok: ["Bangkok"],
+    thailand: ["Bangkok"],
     mexico: ["Mexico City", "Cancun", "Puerto Vallarta", "Cabo San Lucas"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],

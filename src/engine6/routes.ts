@@ -1496,6 +1496,44 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_BANGKOK_24380P161_PRODUCT_CODE = "24380P161";
+export const ENGINE6_BANGKOK_24380P161_ROUTE =
+  "/destinations/thailand/bangkok/tours/the-ultimate-ancient-city-of-ayutthaya-private-day-trip-24380P161";
+export const ENGINE6_BANGKOK_18897P6_PRODUCT_CODE = "18897P6";
+export const ENGINE6_BANGKOK_18897P6_ROUTE =
+  "/destinations/thailand/bangkok/tours/private-tour-best-of-bangkok-in-a-day-18897P6";
+export const ENGINE6_BANGKOK_36435P43_PRODUCT_CODE = "36435P43";
+export const ENGINE6_BANGKOK_36435P43_ROUTE =
+  "/destinations/thailand/bangkok/tours/private-half-day-bangkok-city-tour-with-the-grand-palac-36435P43";
+export const ENGINE6_BANGKOK_30727P34_PRODUCT_CODE = "30727P34";
+export const ENGINE6_BANGKOK_30727P34_ROUTE =
+  "/destinations/thailand/bangkok/tours/floating-market-damnoen-saduak-and-meklong-railway-mark-30727P34";
+export const ENGINE6_BANGKOK_90546P140_PRODUCT_CODE = "90546P140";
+export const ENGINE6_BANGKOK_90546P140_ROUTE =
+  "/destinations/thailand/bangkok/tours/silom-thai-cooking-school-with-market-tour-90546P140";
+export const ENGINE6_BANGKOK_5086TUD_PRODUCT_CODE = "5086TUD";
+export const ENGINE6_BANGKOK_5086TUD_ROUTE =
+  "/destinations/thailand/bangkok/tours/bangkok-hidden-gems-talad-noi-chinatown-street-food-tou-5086TUD";
+export const ENGINE6_BANGKOK_198444P1_PRODUCT_CODE = "198444P1";
+export const ENGINE6_BANGKOK_198444P1_ROUTE =
+  "/destinations/thailand/bangkok/tours/tingly-thai-cooking-class-with-morning-market-tour-198444P1";
+export const ENGINE6_BANGKOK_112650P5_PRODUCT_CODE = "112650P5";
+export const ENGINE6_BANGKOK_112650P5_ROUTE =
+  "/destinations/thailand/bangkok/tours/bangkok-canal-tour-2-hour-longtail-boat-ride-112650P5";
+export const ENGINE6_BANGKOK_6924BKKGHTB07_PRODUCT_CODE = "6924BKKGHTB07";
+export const ENGINE6_BANGKOK_6924BKKGHTB07_ROUTE =
+  "/destinations/thailand/bangkok/tours/bangkok-backstreets-and-temple-historic-bike-tour-6924BKKGHTB07";
+export const ENGINE6_BANGKOK_8374P24_PRODUCT_CODE = "8374P24";
+export const ENGINE6_BANGKOK_8374P24_ROUTE =
+  "/destinations/thailand/bangkok/tours/half-day-railway-market-and-floating-market-tour-in-tha-8374P24";
+
+export const ENGINE6_BANGKOK_TOUR_PATH_PREFIX =
+  "/destinations/thailand/bangkok/tours/";
+
+export const isEngine6BangkokTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_BANGKOK_TOUR_PATH_PREFIX);
+
 export const ENGINE6_KYOTO_92136P55_PRODUCT_CODE = "92136P55";
 export const ENGINE6_KYOTO_92136P55_ROUTE =
   "/destinations/japan/kyoto/tours/kyoto-6hr-private-tour-with-government-licensed-guide-92136P55";
@@ -5072,6 +5110,46 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_24380P161_ROUTE,
+    ENGINE6_BANGKOK_24380P161_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_18897P6_ROUTE,
+    ENGINE6_BANGKOK_18897P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_36435P43_ROUTE,
+    ENGINE6_BANGKOK_36435P43_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_30727P34_ROUTE,
+    ENGINE6_BANGKOK_30727P34_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_90546P140_ROUTE,
+    ENGINE6_BANGKOK_90546P140_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_5086TUD_ROUTE,
+    ENGINE6_BANGKOK_5086TUD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_198444P1_ROUTE,
+    ENGINE6_BANGKOK_198444P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_112650P5_ROUTE,
+    ENGINE6_BANGKOK_112650P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_6924BKKGHTB07_ROUTE,
+    ENGINE6_BANGKOK_6924BKKGHTB07_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BANGKOK_8374P24_ROUTE,
+    ENGINE6_BANGKOK_8374P24_PRODUCT_CODE,
   ],
   [
     ENGINE6_KYOTO_92136P55_ROUTE,

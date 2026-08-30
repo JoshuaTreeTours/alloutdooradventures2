@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "5086TUD",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Bangkok-Hidden-Gems-Talad-Noi-Chinatown-Street-Food-Tour/d343-5086TUD",
+    "title": "Bangkok Hidden Gems: Talad Noi, Chinatown & Street Food Tour",
+    "description": {
+      "text": "In Bangkok, this two-and-a-half-hour small-group walk leaves Si Phraya pier for Talad Noi lanes, Holy Rosary Church, Chow Sue Kong Shrine, Chinatown, and Wat Mangkon Kamalawat. A local guide keeps the route on street-food stalls and neighborhood shrines rather than a Grand Palace ticket window. Vegetarian notes can be sent at least a day ahead; other diets are not listed. The walk covers about two kilometers. The format suits visitors who want a guided evening food circuit without assembling a self-directed Yaowarat route. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Talad Noi, Holy Rosary Church, and Chinatown that define this outing rather than a Damnoen Saduak boat."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $40.17",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 51
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/32/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group walk through Talad Noi and Chinatown",
+      "Holy Rosary Church and Chow Sue Kong Shrine",
+      "Thai and Chinese street-food tastings",
+      "Wat Mangkon Kamalawat",
+      "Meet at Si Phraya pier in Bangkok"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the guide at Si Phraya - Chao Phraya Express Pier / River City Bangkok, as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this two-and-a-half-hour small-group walk leaves Si Phraya pier for Talad Noi lanes, Holy Rosary Church, Chow Sue Kong Shrine, Chinatown, and Wat Mangkon Kamalawat.",
+    "itineraryItems": [
+      {
+        "title": "Talat Noi",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Holy Rosary Church",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chow Sue Kong Shrine",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Mangkon Kamalawat",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Street-food tastings as listed",
+      "Walking route through Talad Noi and Chinatown"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bangkok Hidden Gems: Talad Noi, Chinatown & Street Food Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Meet the guide at Si Phraya - Chao Phraya Express Pier / River City Bangkok, as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 40.17
+      },
+      "currency": "USD"
+    }
+  }
+}

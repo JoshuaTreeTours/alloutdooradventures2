@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "24380P161",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Private-Day-Trip-to-Ayutthaya-from-Bangkok/d343-24380P161",
+    "title": "The Ultimate Ancient city of Ayutthaya Private Day Trip",
+    "description": {
+      "text": "In Bangkok, this private eight-hour day leaves a central hotel for Ayutthaya, the former Siamese capital and a UNESCO World Heritage Site about an hour north of the city. A private guide and air-conditioned car cover Bang Pa-In Summer Palace, Wat Phra Sri Sanphet, and Wat Mahathat, including the stone Buddha head held in a bodhi tree. A boat circuit around Ayutthaya island and a quieter stop at Wat Worachettharam are listed after lunch, which stays own expense on the public page. Ayutthaya admission tickets and hotel pickup and drop-off in Bangkok are included. The format suits visitors who want a guided former-capital day without assembling train and temple tickets independently. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Bang Pa-In, Wat Phra Sri Sanphet, Wat Mahathat, and Wat Worachettharam that define this outing rather than a Grand Palace city loop."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $257.72",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b9/a5/e7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private eight-hour Ayutthaya day from Bangkok hotels",
+      "Bang Pa-In Summer Palace and Wat Phra Sri Sanphet",
+      "Wat Mahathat Buddha head in a bodhi tree",
+      "Boat circuit around Ayutthaya island",
+      "Quieter stop at Wat Worachettharam"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked Bangkok hotel or a confirmed central meeting point in Bangkok."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this private eight-hour day leaves a central hotel for Ayutthaya, the former Siamese capital and a UNESCO World Heritage Site about an hour north of the city.",
+    "itineraryItems": [
+      {
+        "title": "Bang Pa-In Summer Palace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Phra Sri Sanphet",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Mahathat",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic City of Ayutthaya",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wat Worachettharam",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Air-conditioned car",
+      "Hotel pickup and drop-off in Bangkok",
+      "Tickets for Ayutthaya"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Ultimate Ancient city of Ayutthaya Private Day Trip?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "The host picks up at the booked Bangkok hotel or a confirmed central meeting point in Bangkok."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 257.72
+      },
+      "currency": "USD"
+    }
+  }
+}

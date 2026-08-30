@@ -4201,6 +4201,76 @@
       "averageRating": "4.4",
       "ratingCount": "77",
       "reviewCount": "77"
+    },
+    {
+      "productCode": "24380P161",
+      "price": "257.72 USD",
+      "averageRating": "5.0",
+      "ratingCount": "137",
+      "reviewCount": "137"
+    },
+    {
+      "productCode": "18897P6",
+      "price": "207.20 USD",
+      "averageRating": "4.8",
+      "ratingCount": "419",
+      "reviewCount": "419"
+    },
+    {
+      "productCode": "36435P43",
+      "price": "145 USD",
+      "averageRating": "4.5",
+      "ratingCount": "64",
+      "reviewCount": "64"
+    },
+    {
+      "productCode": "30727P34",
+      "price": "115.80 USD",
+      "averageRating": "4.7",
+      "ratingCount": "71",
+      "reviewCount": "71"
+    },
+    {
+      "productCode": "90546P140",
+      "price": "55.23 USD",
+      "averageRating": "5.0",
+      "ratingCount": "62",
+      "reviewCount": "62"
+    },
+    {
+      "productCode": "5086TUD",
+      "price": "40.17 USD",
+      "averageRating": "4.5",
+      "ratingCount": "51",
+      "reviewCount": "51"
+    },
+    {
+      "productCode": "198444P1",
+      "price": "38.37 USD",
+      "averageRating": "5.0",
+      "ratingCount": "424",
+      "reviewCount": "424"
+    },
+    {
+      "productCode": "112650P5",
+      "price": "36.44 USD",
+      "averageRating": "4.7",
+      "ratingCount": "6401",
+      "reviewCount": "6401"
+    },
+    {
+      "productCode": "6924BKKGHTB07",
+      "price": "35 USD",
+      "averageRating": "4.9",
+      "ratingCount": "81",
+      "reviewCount": "81"
+    },
+    {
+      "productCode": "8374P24",
+      "price": "30.70 USD",
+      "averageRating": "4.5",
+      "ratingCount": "3445",
+      "reviewCount": "3445"
     }
   ]
 }

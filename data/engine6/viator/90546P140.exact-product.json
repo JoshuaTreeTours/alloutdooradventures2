@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "90546P140",
+    "productUrl": "https://www.viator.com/tours/Bangkok/Silom-Thai-Cooking-School-with-Market-Tour/d343-90546P140",
+    "title": "Silom Thai Cooking School with Market Tour",
+    "description": {
+      "text": "In Bangkok, this three-hour class at Silom Thai Cooking School covers five classic dishes such as pad thai and tom yum, then sits the group down to eat what they cooked. Morning bookings add a short walk to a nearby market for fresh ingredients; afternoon and evening sessions stay at the school on Soi Decho near Chong Nonsi BTS. A recipe book is listed. Hotel pickup is not listed. The format suits visitors who want a guided cooking window in Silom without booking a full-day countryside market transfer. Meeting points are confirmed at booking in Bangkok, and the itinerary stays on Silom Market and Silom Thai Cooking School that define this class rather than a Chinatown food walk."
+    },
+    "location": {
+      "city": "Bangkok",
+      "state": "Thailand"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $55.23",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 62
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/3f/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-hour cooking class in Silom, Bangkok",
+      "Five classic Thai dishes such as pad thai and tom yum",
+      "Morning option includes a local market visit",
+      "Recipe book to take home",
+      "Meal of the dishes prepared in class"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Silom Thai Cooking School on Soi Decho near Chong Nonsi BTS, as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Bangkok meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bangkok, this three-hour class at Silom Thai Cooking School covers five classic dishes such as pad thai and tom yum, then sits the group down to eat what they cooked.",
+    "itineraryItems": [
+      {
+        "title": "Silom Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silom Thai Cooking School",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hands-on cooking class",
+      "Meal of the dishes prepared in class",
+      "Recipe book",
+      "Fresh local market visit on morning classes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Silom Thai Cooking School with Market Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bangkok?",
+        "answer": "Meet at Silom Thai Cooking School on Soi Decho near Chong Nonsi BTS, as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55.23
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -6174,6 +6174,107 @@ const japanState: StateDestination = {
   isFallback: true,
 };
 
+const thailandState: StateDestination = {
+  slug: "thailand",
+  name: "Thailand",
+  description:
+    "Bangkok temple and palace days, Thonburi canal rides, Silom cooking classes, Chinatown food walks, and day trips to Ayutthaya, Damnoen Saduak, and Maeklong.",
+  featuredDescription:
+    "Explore Bangkok tours with private Grand Palace circuits, longtail canal rides, historic bike routes, street-food walks, Thai cooking classes, and day trips to Ayutthaya or the floating and railway markets.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/1a/ed/f5.jpg",
+  region: "Asia",
+  intro:
+    "Thailand pairs walkable Bangkok temple and market days with canal, cooking, and historic-city bike outings, plus Ayutthaya and Damnoen Saduak day trips from the capital.",
+  longDescription:
+    "Bangkok anchors Thailand tour inventory with private Grand Palace, Wat Pho, and Wat Arun circuits, Thonburi longtail canal rides, Phra Nakhon bike routes, Talad Noi and Chinatown food walks, and Silom or morning-market cooking classes. Day trips from the capital add Ayutthaya temples and Bang Pa-In, plus Damnoen Saduak Floating Market and Maeklong Railway Market.",
+  topRegions: [
+    {
+      title: "Temples and the old city",
+      description:
+        "Grand Palace, Wat Pho, Wat Arun, and guided walking or private-vehicle circuits through Rattanakosin.",
+    },
+    {
+      title: "Canals and the river",
+      description:
+        "Thonburi khlong longtail rides, Baan Silapin, Wat Paknam Phasi Charoen viewpoints, and Chao Phraya crossings.",
+    },
+    {
+      title: "Markets and day trips",
+      description:
+        "Ayutthaya, Bang Pa-In, Damnoen Saduak Floating Market, and Maeklong Railway Market on full-day or half-day routes from Bangkok.",
+    },
+  ],
+  cities: [
+    {
+      name: "Bangkok",
+      slug: "bangkok",
+      stateSlug: "thailand",
+      region: "Bangkok",
+      lat: 13.7563,
+      lng: 100.5018,
+      shortDescription:
+        "Private temple circuits, canal rides, cooking classes, and Ayutthaya or market days from Bangkok.",
+      intro:
+        "Bangkok is Thailand's capital with the Grand Palace, Wat Pho, Wat Arun, Thonburi canals, Chinatown, and guided walking, cycling, cooking, and day-trip tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/1a/ed/f5.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "food"],
+      whereItIs: [
+        "Bangkok sits on the Chao Phraya River in central Thailand, with Rattanakosin, Thonburi, Silom, and Chinatown framing most sightseeing.",
+        "Most guided tours depart from city hotels, Wat Pho, Si Phraya pier, Silom, Phra Nakhon, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Day trips to Ayutthaya temple ruins and Bang Pa-In sit on full-day private routes from Bangkok.",
+        lakesWater:
+          "Thonburi canals, Chao Phraya longtail rides, and Damnoen Saduak floating-market boats appear on scenic days from the capital.",
+        desertForest:
+          "Temple courtyards, canal-side wooden houses, and market lanes offer the city's outdoor walking and cycling stops.",
+        cycling:
+          "Guided bike rides cover Phra Nakhon backstreets, Rama 8 Bridge, and Chao Phraya ferry segments.",
+        scenicDrives:
+          "Private vans cover the Grand Palace, Wat Arun, Ayutthaya, Damnoen Saduak, and Maeklong from Bangkok hotels.",
+        seasonalNotes:
+          "Cooler months favor full-day temple and market circuits; the hot season favors early bike and cooking starts.",
+      },
+      thingsToDo: [
+        "Walk the Grand Palace, Wat Pho, and Wat Arun with a private guide.",
+        "Ride a longtail through Thonburi canals or a historic-city bike loop.",
+        "Spend a day at Ayutthaya or the Damnoen Saduak and Maeklong markets.",
+      ],
+      toursCopy: [
+        "Book a private temple circuit or canal ride for a compact introduction.",
+        "Pair a Silom cooking class or Chinatown food walk with an Ayutthaya or market day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Grand Palace, Wat Pho, or a licensed private city circuit.",
+          "Afternoon: Wat Arun, a Thonburi canal ride, or a Silom cooking class.",
+          "Evening: Return to Silom or Chinatown.",
+        ],
+        dayTwo: [
+          "Morning: Ayutthaya, Damnoen Saduak, or Maeklong Railway Market.",
+          "Afternoon: Continue the published temple or market circuit.",
+          "Evening: Return to central Bangkok.",
+        ],
+      },
+      gettingThere: [
+        "Suvarnabhumi and Don Mueang airports serve Bangkok with trains, taxis, and hotel transfers to Silom, Rattanakosin, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Bangkok tours?",
+          answer:
+            "Private Grand Palace circuits, Thonburi longtail canal rides, historic-city bike routes, Chinatown food walks, Thai cooking classes, and full-day Ayutthaya or floating-market itineraries are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6195,6 +6296,7 @@ export const states: StateDestination[] = [
   peruState,
   brazilState,
   japanState,
+  thailandState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({
