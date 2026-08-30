@@ -8,6 +8,7 @@ import { getToursByCityUnified } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import { parseMerchantPriceCurrency, parsePrice } from "../utils/merchantPricing";
 import { engine6ListingTours } from "./listing";
+import { mergeEngine6LiveFieldsIntoTour } from "./liveProductFields";
 import type { MerchantFeedCommercialSnapshot } from "./merchantFeedCommercialSnapshot";
 import { TOKYO_VIATOR_PUBLIC_PRODUCT_CODES } from "./tokyoViatorPublicRatings";
 
@@ -66,6 +67,27 @@ describe("Tokyo Engine6 commercial USD listing prices", () => {
     expect(html).not.toContain("$16500");
   });
 
+  it("keeps the Tokyo detail/listing price at $106.77 when live Viator hydration returns JPY 16,500", () => {
+    const listing = getToursByCityUnified("japan", "tokyo").find(
+      entry => entry.tour.productCode === "33215P1"
+    );
+    expect(listing).toBeDefined();
+
+    const merged = mergeEngine6LiveFieldsIntoTour(listing!.tour, {
+      priceAmount: 16500,
+      priceFormatted: "From $16,500.00",
+      priceCurrency: "JPY",
+      aggregateRating: 5,
+      reviewCount: 1291,
+      durationText: "390 minutes",
+    });
+
+    expect(merged.startingPrice).toBeCloseTo(106.77, 2);
+    expect(merged.currency).toBe("USD");
+    expect(merged.badges.priceFrom).toBe("From $106.77");
+    expect(merged.badges.priceFrom).not.toContain("16,500");
+  });
+
   it.each(TOKYO_VIATOR_PUBLIC_PRODUCT_CODES)(
     "lists %s with the USD merchant-feed commercial price",
     productCode => {
@@ -83,12 +105,12 @@ describe("Tokyo Engine6 commercial USD listing prices", () => {
         `From $${feedPrice!.toFixed(2)}`
       );
 
-    const html = renderToString(
-      <TourCard tour={listing!.tour} href={listing!.href} />
-    ).replace(/<!-- -->/g, "");
-    expect(html).toContain(
-      `From ${formatStartingPrice(listing!.tour.startingPrice, listing!.tour.currency)}`
-    );
+      const html = renderToString(
+        <TourCard tour={listing!.tour} href={listing!.href} />
+      ).replace(/<!-- -->/g, "");
+      expect(html).toContain(
+        `From ${formatStartingPrice(listing!.tour.startingPrice, listing!.tour.currency)}`
+      );
       expect(html).not.toMatch(/From\s+\$16,500/);
       expect(html).not.toMatch(/From\s+\$9,800/);
       expect(html).not.toMatch(/From\s+\$69,865/);
