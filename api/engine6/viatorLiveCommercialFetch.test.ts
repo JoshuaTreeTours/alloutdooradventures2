@@ -159,6 +159,7 @@ describe("applyAvailabilitySummaryPrice", () => {
 
     expect(extracted.priceAmount).toBe(156.6);
     expect(extracted.priceFormatted).toBe("From $156.60");
+    expect(extracted.priceCurrency).toBe("USD");
     expect(fetchViatorWithCurl).toHaveBeenCalledTimes(1);
     expect(fetchViatorWithCurl).toHaveBeenCalledWith(
       "https://api.viator.com/partner/availability/schedules/search",
@@ -218,16 +219,9 @@ describe("applyAvailabilitySummaryPrice", () => {
 
     expect(extracted.priceAmount).toBe(156.6);
     expect(extracted.priceFormatted).toBe("From $156.60");
+    expect(extracted.priceCurrency).toBe("USD");
   });
-});
 
-describe("readViatorPricingCurrency", () => {
-  it("reads product.pricing.currency from a wrapped payload", () => {
-    expect(
-      readViatorPricingCurrency({
-        product: { pricing: { currency: "jpy" } },
-      })
-    ).toBe("JPY");
   it("replaces a non-USD extracted amount with the USD availability price", async () => {
     vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
     vi.mocked(fetchViatorWithCurl).mockResolvedValue({
@@ -249,6 +243,16 @@ describe("readViatorPricingCurrency", () => {
     expect(extracted.priceAmount).toBe(106.77);
     expect(extracted.priceCurrency).toBe("USD");
     expect(extracted.priceFormatted).toBe("From $106.77");
+  });
+});
+
+describe("readViatorPricingCurrency", () => {
+  it("reads product.pricing.currency from a wrapped payload", () => {
+    expect(
+      readViatorPricingCurrency({
+        product: { pricing: { currency: "jpy" } },
+      })
+    ).toBe("JPY");
   });
 });
 
