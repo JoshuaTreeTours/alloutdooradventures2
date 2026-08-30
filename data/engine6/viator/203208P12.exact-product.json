@@ -1,0 +1,142 @@
+{
+  "product": {
+    "productCode": "203208P12",
+    "productUrl": "https://www.viator.com/tours/Singapore/Singapore-6-Hours-Private-Car-or-Minibus-Rental-with-Driver/d60449-203208P12",
+    "title": "6 Hours - Singapore Tour in Private Car or Minibus with Driver",
+    "description": {
+      "text": "In Singapore, this private six-hour car or minibus charter leaves a hotel lobby for a published highlights list rather than a shared coach loop. The driver can keep Merlion Park, the Singapore River, Raffles City, China Square, Buddha Tooth Relic Temple and Museum, Little India, Mount Faber Park, Henderson Waves, Marina Bay, Gardens by the Bay, and Sentosa Island on the window, or swap stops when the group wants more time at a ridge or quarter. An air-conditioned vehicle and bottled water are listed; entrance fees stay separate. Jurong, Woodlands, and Malaysian-border pickups carry a published surcharge. The format suits visitors who want a guided island circuit without assembling MRT transfers independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Merlion Park, Little India, Mount Faber, and Gardens by the Bay that define this private city day rather than a hop-on ticket."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $249.39",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 461
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/5a/2b/4b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Little India",
+      "Mount Faber Park",
+      "Henderson Waves",
+      "Marina Bay",
+      "Gardens by the Bay"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Singapore hotels. Jurong, Woodlands, and Malaysian-border pickups carry a listed surcharge."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private six-hour car or minibus charter leaves a hotel lobby for a published highlights list rather than a shared coach loop.",
+    "itineraryItems": [
+      {
+        "title": "Merlion Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Singapore River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Raffles City",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "China Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buddha Tooth Relic Temple and Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little India",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Faber Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Henderson Waves",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marina Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gardens by the Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentosa Island",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Bottled water",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Hours - Singapore Tour in Private Car or Minibus with Driver?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Hotel pickup from Singapore hotels. Jurong, Woodlands, and Malaysian-border pickups carry a listed surcharge."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249.39
+      },
+      "currency": "USD"
+    }
+  }
+}

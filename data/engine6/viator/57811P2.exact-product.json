@@ -1,0 +1,132 @@
+{
+  "product": {
+    "productCode": "57811P2",
+    "productUrl": "https://www.viator.com/tours/Singapore/Marina-Bay-Night-Cycling-Tour/d60449-57811P2",
+    "title": "Marina Bay Night Cycling Tour",
+    "description": {
+      "text": "In Singapore, this two-hour guided night bike ride leaves the Crawford Lane shop for Kallang Riverside Park, a Formula One pit-building stretch, Merlion Park, and pass-bys of the Singapore Flyer, Gardens by the Bay Super Trees, Marina Bay Sands, Esplanade Theatres on the Bay, and the Fullerton Hotel. A bicycle, helmet, poncho, and water are included with a licensed local guide. The ride returns to the bike shop. Hotel pickup is not listed. The format suits visitors who want a guided Marina Bay night loop without renting independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Kallang Riverside, Merlion Park, and the Marina Bay landmarks that define this ride rather than a Chinatown hawker walk."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $47.01",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 545
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/42/d3/fe.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Marina Bay Sands",
+      "Merlion Park",
+      "Esplanade Theatres on the Bay",
+      "Fullerton Hotel",
+      "Two-hour guided night bike around Marina Bay"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Block 462 Crawford Lane, Unit 01-57, Singapore 190462. Arrive about 15 minutes before the 7:00 pm start."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this two-hour guided night bike ride leaves the Crawford Lane shop for Kallang Riverside Park, a Formula One pit-building stretch, Merlion Park, and pass-bys of the Singapore Flyer, Gardens by the Bay Super Trees, Marina Bay Sands, Esplanade Theatres on the Bay, and the Fullerton Hotel.",
+    "itineraryItems": [
+      {
+        "title": "Kallang Riverside Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Stadium",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Singapore Flyer",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Formula One Pit Building",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gardens by the Bay",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Marina Bay Sands",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Merlion Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Esplanade Theatres on the Bay",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Fullerton Hotel",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Rental of Bicycle & helmet for the duration of tour",
+      "Bottled water and Poncho",
+      "Licensed Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Marina Bay Night Cycling Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Block 462 Crawford Lane, Unit 01-57, Singapore 190462. Arrive about 15 minutes before the 7:00 pm start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 47.01
+      },
+      "currency": "USD"
+    }
+  }
+}

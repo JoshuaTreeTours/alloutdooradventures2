@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "40856P7",
+    "productUrl": "https://www.viator.com/tours/Singapore/Private-Night-Sightseeing-Tour-with-River-Cruise-from-Singapore/d60449-40856P7",
+    "title": "Private Tour: Nighttime Sightseeing with River Cruise",
+    "description": {
+      "text": "In Singapore, this private evening circuit leaves a city hotel lobby at 6 pm for Little India, the Gardens by the Bay light show, Clarke Quay, a shared Singapore River cruise, and Marina Bay Sands SkyPark. An English-speaking guide and air-conditioned private vehicle are listed, with the SkyPark entrance and river-cruise ticket included on the published visit list. Food, dinner stops, and gratuities stay separate. The window is about three hours 30 minutes from pickup to hotel drop-off. The format suits visitors on a short layover who want guided night landmarks without buying cruise and SkyPark tickets independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Little India, Gardens by the Bay, the Singapore River, and SkyPark that define this night outing rather than a daytime hawker walk."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $140.06",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 567
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b3/2d/2d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private nighttime sightseeing with hotel pickup",
+      "Little India stop plus Gardens by the Bay light show",
+      "Singapore River cruise on a shared boat",
+      "Marina Bay Sands SkyPark observation deck included",
+      "Air-conditioned private vehicle"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Wait in the hotel lobby at 6 pm. Pickup from hotels or preferred accommodation in Singapore City only."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private evening circuit leaves a city hotel lobby at 6 pm for Little India, the Gardens by the Bay light show, Clarke Quay, a shared Singapore River cruise, and Marina Bay Sands SkyPark.",
+    "itineraryItems": [
+      {
+        "title": "Little India",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gardens by the Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clarke Quay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Singapore River Cruise",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marina Bay Sands SkyPark",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off (Singapore city only)",
+      "Private transport in an air-conditioned vehicle",
+      "English Speaking Tour Guide",
+      "Entrance Fees as mentioned visit",
+      "Singapore River Cruise Sharing Basis"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Nighttime Sightseeing with River Cruise?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Wait in the hotel lobby at 6 pm. Pickup from hotels or preferred accommodation in Singapore City only."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Boat Tours and Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 140.06
+      },
+      "currency": "USD"
+    }
+  }
+}

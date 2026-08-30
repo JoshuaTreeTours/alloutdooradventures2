@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "277546P4",
+    "productUrl": "https://www.viator.com/tours/Singapore/City-Highlights-Tour-Chinatown-Little-India-Kampong-Gelam/d60449-277546P4",
+    "title": "Chinatown, Little India, Kampong Gelam City Highlights Tour",
+    "description": {
+      "text": "In Singapore, this three-hour licensed heritage walk covers Kampong Glam, Little India including Tekka Centre, and Chinatown including Buddha Tooth Relic Temple and Museum. The meeting is the Let's Go Tour shop on Crawford Lane; the published end is Chinatown Complex. Commentary stays on Chinese, Indian, and Malay street history and photo stops rather than included tastings. Gratuities are listed separately. The route is a compact three-quarter introduction rather than a 5.5-hour food day. The format suits visitors who want guided heritage streets without booking three neighbourhood walks independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Kampong Glam, Little India, Tekka Centre, and Chinatown that shape this outing rather than a Gardens by the Bay night show."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $81.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 183
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/bd/79/d1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-hour heritage walk across Kampong Glam, Little India, and Chinatown",
+      "Tekka Centre and Buddha Tooth Relic Temple on the published list",
+      "Licensed English-speaking guide",
+      "Street-level photo stops in the historic quarters",
+      "Ends at Chinatown Complex"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Let's Go Tour Singapore, Block 462 Crawford Ln, #01-57, Singapore 190462."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this three-hour licensed heritage walk covers Kampong Glam, Little India including Tekka Centre, and Chinatown including Buddha Tooth Relic Temple and Museum.",
+    "itineraryItems": [
+      {
+        "title": "Kampong Glam",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little India",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tekka Centre",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buddha Tooth Relic Temple and Museum",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed English-speaking guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chinatown, Little India, Kampong Gelam City Highlights Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Let's Go Tour Singapore, Block 462 Crawford Ln, #01-57, Singapore 190462."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical & Heritage Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 81
+      },
+      "currency": "USD"
+    }
+  }
+}

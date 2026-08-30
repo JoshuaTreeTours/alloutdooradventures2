@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "104357P24",
+    "productUrl": "https://www.viator.com/tours/Singapore/Private-custom-Tour-with-a-Local-Guide-Singapour/d60449-104357P24",
+    "title": "Singapore Customized Private Walking Tour With A Licensed Guide",
+    "description": {
+      "text": "In Singapore, this private licensed walking outing is customizable from two to eight hours, with a hotel or cruise-terminal meetup when the stay is in the city. The guide shapes the day around published neighbourhood preferences such as the Civic District and Chinatown, plus ticket-booking help for visits the group wants to add. Food and attraction tickets stay separate. Hotels outside the centre use a convenient city meeting point. The format suits visitors who want a tailored walk without a fixed coach script. Meeting points are confirmed at booking in Singapore, and the itinerary stays on the Civic District and Chinatown that define this custom window rather than a Mount Faber car day."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "2 to 8 hours (approx.)",
+    "priceFrom": "From $57.02",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 30
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/5a/d3/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private licensed walking tour with a custom duration from two to eight hours",
+      "Hotel or cruise-terminal meetup in the city",
+      "Itinerary shaped around Civic District and Chinatown preferences",
+      "Help booking tickets for desired visits",
+      "Food and attraction tickets listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The licensed guide meets at a Singapore city hotel or cruise terminal. Hotels outside the centre use a convenient city-centre meeting point."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private licensed walking outing is customizable from two to eight hours, with a hotel or cruise-terminal meetup when the stay is in the city.",
+    "itineraryItems": [
+      {
+        "title": "Civic District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Walking tour",
+      "Customization of the tour",
+      "Meet up at your accommodation (If located in the city) or cruise terminal"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Singapore Customized Private Walking Tour With A Licensed Guide?",
+        "answer": "The planned duration is 2 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "The licensed guide meets at a Singapore city hotel or cruise terminal. Hotels outside the centre use a convenient city-centre meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Private and Custom Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 57.02
+      },
+      "currency": "USD"
+    }
+  }
+}

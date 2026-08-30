@@ -6275,6 +6275,107 @@ const thailandState: StateDestination = {
   isFallback: true,
 };
 
+const singaporeState: StateDestination = {
+  slug: "singapore",
+  name: "Singapore",
+  description:
+    "Hawker-centre food walks, Chinatown and Little India heritage circuits, Marina Bay night touring, Pulau Ubin kayaking, and private city days across the island.",
+  featuredDescription:
+    "Explore Singapore tours with Michelin hawker tastings, three-quarter cultural walks, Marina Bay night cycling and river cruises, licensed private walking, Pulau Ubin mangrove kayaking, and hotel-pickup private car days.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/5a/2b/4b.jpg",
+  region: "Asia",
+  intro:
+    "Singapore pairs walkable Chinatown, Little India, and Kampong Glam quarters with Marina Bay night circuits, Gardens by the Bay light shows, and Pulau Ubin mangrove or village days from the city-state.",
+  longDescription:
+    "Singapore tour inventory covers licensed private walking in the Civic District and Chinatown, small-group hawker tastings at Maxwell Food Centre, three-culture food and heritage circuits through Little India and Kampong Glam, Marina Bay night cycling past the Singapore Flyer and Merlion Park, private night sightseeing with a Singapore River cruise and Marina Bay Sands SkyPark, and Pulau Ubin mangrove kayaking. Private car or minibus days add Mount Faber, Henderson Waves, Gardens by the Bay, and Sentosa Island with hotel pickup.",
+  topRegions: [
+    {
+      title: "Chinatown, Little India, and Kampong Glam",
+      description:
+        "Hawker centres, Sri Mariamman Temple, Tekka Centre, Sultan Mosque, and guided food or heritage walks through the three historic quarters.",
+    },
+    {
+      title: "Marina Bay and the Civic District",
+      description:
+        "Merlion Park, Gardens by the Bay Super Trees, Marina Bay Sands SkyPark, the Singapore Flyer, and night river cruises along the Singapore River.",
+    },
+    {
+      title: "Southern ridges and islands",
+      description:
+        "Mount Faber, Henderson Waves, Sentosa Island, and Pulau Ubin mangrove channels reachable on private car or kayak days.",
+    },
+  ],
+  cities: [
+    {
+      name: "Singapore",
+      slug: "singapore",
+      stateSlug: "singapore",
+      region: "Singapore",
+      lat: 1.3521,
+      lng: 103.8198,
+      shortDescription:
+        "Hawker food walks, Marina Bay night circuits, and Pulau Ubin kayak days from Singapore.",
+      intro:
+        "Singapore is a city-state with Chinatown hawker centres, Little India and Kampong Glam heritage streets, Marina Bay night landmarks, and guided walking, cycling, kayaking, and private-car tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/5a/2b/4b.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "food"],
+      whereItIs: [
+        "Singapore sits at the southern tip of the Malay Peninsula, with Chinatown, Marina Bay, Little India, and Kampong Glam framing central sightseeing.",
+        "Most guided tours depart from Chinatown MRT, City Hall MRT, Crawford Lane bike shops, Pulau Ubin jetty, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Mount Faber Park and Henderson Waves sit on private-car circuits that also cover Marina Bay and Sentosa Island.",
+        lakesWater:
+          "Singapore River cruises, Marina Bay waterfront rides, and Pulau Ubin mangrove kayaking appear on night and nature days.",
+        desertForest:
+          "Pulau Ubin mangrove forest and Southern Ridges woodland paths offer island and ridge stops beyond the downtown core.",
+        cycling:
+          "Guided night bike rides cover Kallang Riverside, the Singapore Flyer, Gardens by the Bay Super Trees, Merlion Park, and Marina Bay Sands.",
+        scenicDrives:
+          "Private cars cover Merlion Park, Little India, Mount Faber, Henderson Waves, Gardens by the Bay, and Sentosa Island from Singapore hotels.",
+        seasonalNotes:
+          "Tours run year-round in a tropical climate; afternoon storms favor covered hawker centres and evening Marina Bay starts.",
+      },
+      thingsToDo: [
+        "Walk Chinatown, Little India, and Kampong Glam with a licensed or local guide.",
+        "Taste Michelin-listed hawker stalls at Maxwell Food Centre.",
+        "Cycle Marina Bay at night or kayak Pulau Ubin mangrove channels.",
+      ],
+      toursCopy: [
+        "Book a small-group hawker tasting or a three-quarter cultural food walk for a compact introduction.",
+        "Pair a Marina Bay night bike or river-cruise evening with a private city or Pulau Ubin day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Chinatown hawker tasting or a licensed private walking circuit.",
+          "Afternoon: Little India, Kampong Glam, or Gardens by the Bay.",
+          "Evening: Marina Bay night cycling or a river cruise and SkyPark.",
+        ],
+        dayTwo: [
+          "Morning: Pulau Ubin mangrove kayaking or a six-hour private car day.",
+          "Afternoon: Continue Mount Faber, Henderson Waves, or Sentosa Island.",
+          "Evening: Return to Marina Bay or Chinatown.",
+        ],
+      },
+      gettingThere: [
+        "Changi Airport serves Singapore with MRT, taxis, and hotel transfers to Chinatown, Marina Bay, Little India, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Singapore tours?",
+          answer:
+            "Michelin hawker tastings, three-quarter cultural food walks, licensed private Civic District circuits, Marina Bay night cycling, private night sightseeing with a Singapore River cruise, Pulau Ubin mangrove kayaking, and hotel-pickup private car days are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6297,6 +6398,7 @@ export const states: StateDestination[] = [
   brazilState,
   japanState,
   thailandState,
+  singaporeState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

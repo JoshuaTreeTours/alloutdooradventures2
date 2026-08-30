@@ -31,7 +31,9 @@ const resolveEngine6AddressCountry = (stateSlug: string) =>
             ? "JP"
             : stateSlug === "thailand"
               ? "TH"
-              : "US";
+              : stateSlug === "singapore"
+                ? "SG"
+                : "US";
 
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());

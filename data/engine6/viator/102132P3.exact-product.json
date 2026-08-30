@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "102132P3",
+    "productUrl": "https://www.viator.com/tours/Singapore/Private-Tour-Marina-Bay-and-Ethnic-Quarters/d60449-102132P3",
+    "title": "Kampong Glam, Little India & Chinatown with Local Street Food Tastings",
+    "description": {
+      "text": "In Singapore, this private three-hour tasting walk starts on Arab Street in Kampong Glam and continues through Little India and Chinatown with nine included food and drink stops. A licensed guide and MRT tickets are listed; extra dishes and gratuities stay separate. The published end is near Buddha Tooth Relic Temple on South Bridge Road. An upgrade adds a private vehicle with hotel transfers. The route stays on Malay, Indian, and Chinese neighbourhood eateries rather than a Michelin-only Chinatown loop. The format suits visitors who want a guided three-quarter tasting without coordinating stall queues independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Kampong Glam, Arab Street, Little India, and Chinatown that define this private food window rather than a night river cruise."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $165.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 55
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/36/0a/44.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private three-neighbourhood food walk",
+      "Nine tastings across Malay, Indian, and Chinese stalls",
+      "Starts at Arab Street in Kampong Glam",
+      "Ends near Buddha Tooth Relic Temple in Chinatown",
+      "Optional private-vehicle hotel transfers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "56 Arab St, Singapore 199753. Meet outside the entrance of the % Arabica cafe. Pickup only if booking With Private Vehicle."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private three-hour tasting walk starts on Arab Street in Kampong Glam and continues through Little India and Chinatown with nine included food and drink stops.",
+    "itineraryItems": [
+      {
+        "title": "Kampong Glam",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arab Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little India",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buddha Tooth Relic Temple",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private licensed guide",
+      "9 tastings of local food and drinks",
+      "MRT tickets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kampong Glam, Little India & Chinatown with Local Street Food Tastings?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "56 Arab St, Singapore 199753. Meet outside the entrance of the % Arabica cafe. Pickup only if booking With Private Vehicle."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 165
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 const ISO_CURRENCY = /^[A-Z]{3}$/;
 
 const NON_USD_AMOUNT_PATTERN =
-  /¥|€|£|฿|\bJPY\b|\bEUR\b|\bGBP\b|\bKRW\b|\bCNY\b|\bTHB\b/i;
+  /¥|€|£|฿|S\$|\bJPY\b|\bEUR\b|\bGBP\b|\bKRW\b|\bCNY\b|\bTHB\b|\bSGD\b/i;
 
 export const normalizeIsoCurrency = (
   value: string | null | undefined
@@ -23,6 +23,10 @@ export const formattedPriceLooksNonUsd = (
   const formatted = value?.trim() ?? "";
   if (!formatted) {
     return false;
+  }
+  // S$ / SGD must win before the generic `$` / USD early-return.
+  if (/S\$|\bSGD\b/i.test(formatted)) {
+    return true;
   }
   if (/\$|\bUSD\b/i.test(formatted)) {
     return false;

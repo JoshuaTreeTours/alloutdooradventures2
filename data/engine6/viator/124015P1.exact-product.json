@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "124015P1",
+    "productUrl": "https://www.viator.com/tours/Singapore/Picturing-Places-of-Colonial-Singapore/d60449-124015P1",
+    "title": "Private Singapore Walking Tour: City Highlights & Hidden Gems",
+    "description": {
+      "text": "In Singapore, this private licensed walk covers Chinatown, the Civic District, Thian Hock Keng Temple, Marina Bay, and Merlion Park on three-, four-, or six-hour options. The three-hour meeting is Chinatown MRT or Telok Ayer MRT; longer options add hotel pickup in central areas and ports. A local drink is included. Commentary stays on colonial streets, temple architecture, and waterfront landmarks rather than a hawker tasting script. The six-hour window can finish in Kampong Glam or Little India. The format suits visitors who want a guided heritage circuit without assembling Civic District and Chinatown stops independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Chinatown, the Civic District, Thian Hock Keng Temple, and Merlion Park that define this walk rather than a Pulau Ubin kayak day."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "3 to 6 hours (approx.)",
+    "priceFrom": "From $106.44",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/7a/cd/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private licensed walk through Chinatown, the Civic District, and Marina Bay",
+      "Thian Hock Keng Temple and Merlion Park on the published list",
+      "Three-, four-, or six-hour duration options",
+      "Local drink included",
+      "Hotel pickup on longer options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Three-hour option: meet at Chinatown MRT or Telok Ayer MRT. Four- and six-hour options include hotel pickup in central areas and ports."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this private licensed walk covers Chinatown, the Civic District, Thian Hock Keng Temple, Marina Bay, and Merlion Park on three-, four-, or six-hour options.",
+    "itineraryItems": [
+      {
+        "title": "Chinatown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Civic District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thian Hock Keng Temple",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marina Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Merlion Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Your Local Expert Licensed Guide",
+      "Coffee and/or Tea — choice of a local drink",
+      "Goods and Services Tax"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Singapore Walking Tour: City Highlights & Hidden Gems?",
+        "answer": "The planned duration is 3 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Three-hour option: meet at Chinatown MRT or Telok Ayer MRT. Four- and six-hour options include hotel pickup in central areas and ports."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical & Heritage Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 106.44
+      },
+      "currency": "USD"
+    }
+  }
+}

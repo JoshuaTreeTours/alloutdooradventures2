@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "5570MGK",
+    "productUrl": "https://www.viator.com/tours/Singapore/Pulau-Ubin-Mangrove-Kayak-Adventure-from-Singapore/d60449-5570MGK",
+    "title": "Mangrove Kayaking Adventure in Singapore",
+    "description": {
+      "text": "In Singapore, this four-hour guided kayak session leaves a Pulau Ubin shophouse near the jetty for an open-sea crossing and mangrove-forest channels. Tandem kayaks, personal flotation devices, lockers, drinking-water refills, and a rinse-off are listed. No prior kayaking experience is required. The Changi Point ferry is at guest expense. Commentary stays on mangrove birds such as kingfishers, eagles, and herons rather than a downtown bike loop. Sessions run morning or afternoon from shophouse No. 34. The format suits visitors who want a guided island paddle without renting kayaks independently. Meeting points are confirmed at booking in Singapore, and the itinerary stays on Pulau Ubin and the mangrove forest that define this outing rather than a Marina Bay night ride."
+    },
+    "location": {
+      "city": "Singapore",
+      "state": "Singapore"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $84.90",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 140
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e6/2c/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tandem kayak on Pulau Ubin mangrove channels",
+      "Open-sea crossing then calm forest water",
+      "Kayak, PFD, lockers, and rinse-off included",
+      "Beginner-friendly birdwatching window",
+      "Changi Point ferry listed separately"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Adventures by Asian Detours, 34 Pulau Ubin, Singapore 508287. After Ubin Jetty, walk toward the welcome sign, turn left past bicycle rental shops to the green-and-white shophouse."
+      },
+      "end": {
+        "description": "Return to your Singapore meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Singapore, this four-hour guided kayak session leaves a Pulau Ubin shophouse near the jetty for an open-sea crossing and mangrove-forest channels.",
+    "itineraryItems": [
+      {
+        "title": "Pulau Ubin",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pulau Ubin mangrove forest",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Equipment for kayaking",
+      "English-speaking Adventures Leader",
+      "Drinking-Water for the Refill",
+      "Facility for a simple rinse off after the programme",
+      "Lockers to put the valuables behind"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mangrove Kayaking Adventure in Singapore?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Singapore?",
+        "answer": "Adventures by Asian Detours, 34 Pulau Ubin, Singapore 508287. After Ubin Jetty, walk toward the welcome sign, turn left past bicycle rental shops to the green-and-white shophouse."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking and Canoeing"
+      },
+      {
+        "label": "Water Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 84.9
+      },
+      "currency": "USD"
+    }
+  }
+}
