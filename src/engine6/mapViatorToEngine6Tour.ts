@@ -1,6 +1,7 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
+import { normalizeIsoCurrency } from "./priceCurrency";
 import { resolveEngine6PathForProductCode } from "./routes";
 import { isEngine6NewBuildProductCode } from "./engine6NewBuilds";
 import { rewriteEngine6Overview } from "./overviewGovernance";
@@ -1190,9 +1191,15 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.meetingPointText ? "meetingPointText" : null,
   ].filter((value): value is string => Boolean(value));
 
-  const formattedStartingPrice = formatEngine6StartingPriceLabel(
-    payload.extracted.priceAmount
+  const extractedCurrency = normalizeIsoCurrency(
+    payload.extracted.priceCurrency
   );
+  const usdCommercialAmount =
+    extractedCurrency && extractedCurrency !== "USD"
+      ? null
+      : payload.extracted.priceAmount;
+  const formattedStartingPrice =
+    formatEngine6StartingPriceLabel(usdCommercialAmount);
   const synthesizedOverview = buildAuthoritativeOverview({
     title,
     city,
@@ -1255,8 +1262,9 @@ export const mapViatorToEngine6Tour = (
     resolvedImageUrl: strictResolvedHero.url,
     heroImageUrl: strictResolvedHero.url,
     resolvedHero: strictResolvedHero,
-    priceAmount: payload.extracted.priceAmount,
+    priceAmount: usdCommercialAmount,
     priceFormatted: formattedStartingPrice,
+    priceCurrency: usdCommercialAmount !== null ? "USD" : extractedCurrency,
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
     durationText: payload.extracted.durationText ?? null,
