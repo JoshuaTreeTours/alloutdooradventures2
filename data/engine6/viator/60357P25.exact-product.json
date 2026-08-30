@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "60357P25",
+    "productUrl": "https://www.viator.com/tours/Nusa-Dua/Private-Tour-Nusa-Penida-One-Day-Trip-with-All-inclusive/d22287-60357P25",
+    "title": "Nusa Penida One Day Trip with All-inclusive",
+    "description": {
+      "text": "In Bali, this private twelve-hour Nusa Penida day starts with hotel pickup in Ubud, Nusa Dua, Jimbaran, Kuta, Legian, Seminyak, Sanur, or Canggu, then a fast-boat crossing from Sanur Beach Harbour. On the island a private car and English-speaking driver cover Pasih Uug Beach (Broken Beach), Angel's Billabong, Kelingking Beach, and Crystal Bay, with Indonesian lunch, entrance tickets, and the return boat listed. Snorkeling gear at Crystal Bay is own expense on the public page. The format suits visitors who want a guided west-Penida land circuit without assembling boat and island taxis independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on Sanur Harbour, Broken Beach, Angel's Billabong, Kelingking, and Crystal Bay that define this outing rather than an Ubud temple day."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $87.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 681
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/9e/a7/2f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private twelve-hour Nusa Penida land day",
+      "Sanur Beach Harbour fast-boat crossing",
+      "Pasih Uug Beach and Angel's Billabong",
+      "Kelingking Beach and Crystal Bay",
+      "Lunch and island entrance tickets listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked hotel in Ubud, Nusa Dua, Jimbaran, Kuta, Legian, Seminyak, Sanur, or Canggu."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private twelve-hour Nusa Penida day starts with hotel pickup in Ubud, Nusa Dua, Jimbaran, Kuta, Legian, Seminyak, Sanur, or Canggu, then a fast-boat crossing from Sanur Beach Harbour.",
+    "itineraryItems": [
+      {
+        "title": "Sanur Beach",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pasih Uug Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Angel's Billabong",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kelingking Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Crystal Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Fast-boat tickets from Sanur",
+      "Private car and English-speaking driver on Nusa Penida",
+      "Indonesian lunch",
+      "Entrance tickets",
+      "Return boat"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Nusa Penida One Day Trip with All-inclusive?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked hotel in Ubud, Nusa Dua, Jimbaran, Kuta, Legian, Seminyak, Sanur, or Canggu."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 87
+      },
+      "currency": "USD"
+    }
+  }
+}

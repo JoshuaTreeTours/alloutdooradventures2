@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "92029P158",
+    "productUrl": "https://www.viator.com/tours/Ubud/Bali-Ubud-Paon-Cooking-Class/d5467-92029P158",
+    "title": "Bali Ubud Paon Cooking Class",
+    "description": {
+      "text": "In Bali, this five-hour Paon class meets with hotel pickup for an afternoon session at Wayan's family home kitchen, or adds a morning market visit before the same hands-on cooking window. The group cooks listed Balinese dishes, then eats the meal, with a recipe book listed. Sessions are published around ten guests. The format suits visitors who want a guided home-kitchen class in Ubud without assembling a market-and-farm itinerary independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on the Ubud market and Paon kitchen that define this class rather than a nine-dish Subak school session."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $43.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 113
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2c/af/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Five-hour Paon home-kitchen class",
+      "Optional morning Ubud Market visit",
+      "Hands-on Balinese dishes",
+      "Meal and recipe book listed",
+      "Sessions published around ten guests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for the afternoon Paon kitchen session or the morning market-and-class option."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this five-hour Paon class meets with hotel pickup for an afternoon session at Wayan's family home kitchen, or adds a morning market visit before the same hands-on cooking window.",
+    "itineraryItems": [
+      {
+        "title": "Ubud Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paon Bali Kitchen",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup",
+      "Hands-on cooking class",
+      "Meal of the cooked dishes",
+      "Recipe book"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bali Ubud Paon Cooking Class?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Hotel pickup is listed for the afternoon Paon kitchen session or the morning market-and-class option."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Cooking Classes"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 43
+      },
+      "currency": "USD"
+    }
+  }
+}

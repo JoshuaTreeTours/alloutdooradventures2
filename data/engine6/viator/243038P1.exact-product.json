@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "243038P1",
+    "productUrl": "https://www.viator.com/tours/Ubud/Love-Bali-Bike-Tours/d5467-243038P1",
+    "title": "Bali Countryside Cycling Tours",
+    "description": {
+      "text": "In Bali, this guided countryside bike day includes hotel transfers, then a downhill ride past rice harvest scenes and village lanes after stops at Tegalalang Rice Terrace, a coffee plantation, and viewpoints over Lake Batur and Mount Batur. Water, morning coffee, and an Indonesian lunch are listed. The pace is published as mellow rather than a technical mountain-bike route. The format suits visitors who want a guided rural ride without renting independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on Tegalalang, the coffee plantation, Lake Batur, and Mount Batur that define this outing rather than a temple-ticket city loop."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $37.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 228
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/49/39/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided countryside downhill ride",
+      "Tegalalang Rice Terrace stop",
+      "Coffee plantation visit",
+      "Lake Batur and Mount Batur viewpoints",
+      "Water, coffee, and lunch listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup is listed for the booked Bali countryside cycling day."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this guided countryside bike day includes hotel transfers, then a downhill ride past rice harvest scenes and village lanes after stops at Tegalalang Rice Terrace, a coffee plantation, and viewpoints over Lake Batur and Mount Batur.",
+    "itineraryItems": [
+      {
+        "title": "Tegalalang Rice Terrace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coffee Plantation",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Batur",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Batur",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel transfers",
+      "Bicycle and guide",
+      "Water",
+      "Morning coffee",
+      "Indonesian lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bali Countryside Cycling Tours?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Hotel pickup is listed for the booked Bali countryside cycling day."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 37
+      },
+      "currency": "USD"
+    }
+  }
+}

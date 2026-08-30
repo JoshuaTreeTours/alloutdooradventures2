@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "52577P9",
+    "productUrl": "https://www.viator.com/tours/Ubud/Subak-cooking-class-Balinese-cooking-school-9-Dish-Cooking-and-Market-Tour/d5467-52577P9",
+    "title": "Balinese cooking school (9 Dish Cooking and Market Tour)",
+    "description": {
+      "text": "In Bali, this five-hour Subak class covers nine Balinese dishes in a family kitchen, with a morning option that adds Ubud traditional market shopping and a rice-paddy stop. Bottled water, a buffet lunch of the cooked dishes, a local guide, and a central-Ubud shuttle from Ubud Palace are listed. Afternoon sessions swap the market for a Balinese offering workshop. Pickup outside central Ubud is a surcharge. The format suits visitors who want a guided cooking window without booking a full-day countryside transfer. Meeting points are confirmed at booking in Bali, and the itinerary stays on the Ubud market, rice paddies, and Subak kitchen that define this class rather than a Paon home session."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $26.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 500
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/3f/12/ba.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Five-hour nine-dish Subak class",
+      "Morning Ubud Traditional Market option",
+      "Rice-paddy stop",
+      "Family-kitchen cooking and buffet lunch",
+      "Central-Ubud shuttle from Ubud Palace"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet the central-Ubud shuttle from Ubud Palace, or pay a surcharge for pickup outside central Ubud."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this five-hour Subak class covers nine Balinese dishes in a family kitchen, with a morning option that adds Ubud traditional market shopping and a rice-paddy stop.",
+    "itineraryItems": [
+      {
+        "title": "Ubud Traditional Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rice Paddies",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Subak Cooking School",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Bottled water",
+      "Buffet lunch of the cooked dishes",
+      "Central-Ubud shuttle from Ubud Palace"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Balinese cooking school (9 Dish Cooking and Market Tour)?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Meet the central-Ubud shuttle from Ubud Palace, or pay a surcharge for pickup outside central Ubud."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Cooking Classes"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 26
+      },
+      "currency": "USD"
+    }
+  }
+}

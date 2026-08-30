@@ -1496,6 +1496,50 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_BALI_86621P5_PRODUCT_CODE = "86621P5";
+export const ENGINE6_BALI_86621P5_ROUTE =
+  "/destinations/indonesia/bali/tours/all-inclusive-ubud-private-tour-86621P5";
+export const ENGINE6_BALI_86621P2_PRODUCT_CODE = "86621P2";
+export const ENGINE6_BALI_86621P2_ROUTE =
+  "/destinations/indonesia/bali/tours/tanah-lot-and-north-bali-tour-scenic-journey-86621P2";
+export const ENGINE6_BALI_86621P3_PRODUCT_CODE = "86621P3";
+export const ENGINE6_BALI_86621P3_ROUTE =
+  "/destinations/indonesia/bali/tours/east-bali-tour-gate-of-heaven-water-palace-sleeping-gaj-86621P3";
+export const ENGINE6_BALI_60357P25_PRODUCT_CODE = "60357P25";
+export const ENGINE6_BALI_60357P25_ROUTE =
+  "/destinations/indonesia/bali/tours/nusa-penida-one-day-trip-with-all-inclusive-60357P25";
+export const ENGINE6_BALI_206176P2_PRODUCT_CODE = "206176P2";
+export const ENGINE6_BALI_206176P2_ROUTE =
+  "/destinations/indonesia/bali/tours/atv-quad-bike-through-tunnel-and-waterfall-in-bali-206176P2";
+export const ENGINE6_BALI_11769P30_PRODUCT_CODE = "11769P30";
+export const ENGINE6_BALI_11769P30_ROUTE =
+  "/destinations/indonesia/bali/tours/full-day-tour-to-water-temples-and-unesco-rice-terraces-11769P30";
+export const ENGINE6_BALI_243038P1_PRODUCT_CODE = "243038P1";
+export const ENGINE6_BALI_243038P1_ROUTE =
+  "/destinations/indonesia/bali/tours/bali-countryside-cycling-tours-243038P1";
+export const ENGINE6_BALI_416971P1_PRODUCT_CODE = "416971P1";
+export const ENGINE6_BALI_416971P1_ROUTE =
+  "/destinations/indonesia/bali/tours/ubud-downhill-cycling-with-volcano-rice-terraces-and-me-416971P1";
+export const ENGINE6_BALI_52577P9_PRODUCT_CODE = "52577P9";
+export const ENGINE6_BALI_52577P9_ROUTE =
+  "/destinations/indonesia/bali/tours/balinese-cooking-school-9-dish-cooking-and-market-tour-52577P9";
+export const ENGINE6_BALI_92029P158_PRODUCT_CODE = "92029P158";
+export const ENGINE6_BALI_92029P158_ROUTE =
+  "/destinations/indonesia/bali/tours/bali-ubud-paon-cooking-class-92029P158";
+export const ENGINE6_BALI_117975P5_PRODUCT_CODE = "117975P5";
+export const ENGINE6_BALI_117975P5_ROUTE =
+  "/destinations/indonesia/bali/tours/all-inclusive-bali-blue-lagoon-snorkeling-lunch-and-tra-117975P5";
+export const ENGINE6_BALI_66791P20_PRODUCT_CODE = "66791P20";
+export const ENGINE6_BALI_66791P20_ROUTE =
+  "/destinations/indonesia/bali/tours/bali-rafting-ayung-river-ubud-white-water-rafting-66791P20";
+
+export const ENGINE6_BALI_TOUR_PATH_PREFIX =
+  "/destinations/indonesia/bali/tours/";
+
+export const isEngine6BaliTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_BALI_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BANGKOK_24380P161_PRODUCT_CODE = "24380P161";
 export const ENGINE6_BANGKOK_24380P161_ROUTE =
   "/destinations/thailand/bangkok/tours/the-ultimate-ancient-city-of-ayutthaya-private-day-trip-24380P161";
@@ -5154,6 +5198,54 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_86621P5_ROUTE,
+    ENGINE6_BALI_86621P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_86621P2_ROUTE,
+    ENGINE6_BALI_86621P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_86621P3_ROUTE,
+    ENGINE6_BALI_86621P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_60357P25_ROUTE,
+    ENGINE6_BALI_60357P25_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_206176P2_ROUTE,
+    ENGINE6_BALI_206176P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_11769P30_ROUTE,
+    ENGINE6_BALI_11769P30_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_243038P1_ROUTE,
+    ENGINE6_BALI_243038P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_416971P1_ROUTE,
+    ENGINE6_BALI_416971P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_52577P9_ROUTE,
+    ENGINE6_BALI_52577P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_92029P158_ROUTE,
+    ENGINE6_BALI_92029P158_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_117975P5_ROUTE,
+    ENGINE6_BALI_117975P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BALI_66791P20_ROUTE,
+    ENGINE6_BALI_66791P20_PRODUCT_CODE,
   ],
   [
     ENGINE6_BANGKOK_24380P161_ROUTE,

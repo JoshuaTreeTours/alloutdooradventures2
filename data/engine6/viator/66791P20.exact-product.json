@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "66791P20",
+    "productUrl": "https://www.viator.com/tours/Ubud/Bali-Rafting-Ayung-River-Ubud-White-Water-Rafting/d5467-66791P20",
+    "title": "Bali Rafting Ayung River - Ubud White Water Rafting",
+    "description": {
+      "text": "In Bali, this half-day Ayung River raft covers about 12 kilometers of Class II and III water through forest, rice paddies, stone carvings, and waterfall banks, with a guide in each boat. A safety briefing, helmet, life jacket, paddle, buffet lunch, shower, and insurance are listed. Hotel pickup from Ubud, Seminyak, Kuta, Nusa Dua, Canggu, and Sanur is a listed upgrade. Boats hold five to six people. The format suits visitors who want a guided river window without assembling rafting gear independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on the Ayung River and its waterfall banks that define this outing rather than an Ubud ATV tunnel track."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $25.87",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 230
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/36/2a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day Ayung River raft",
+      "About 12 kilometers of Class II and III water",
+      "Forest, rice paddies, and waterfall banks",
+      "Guide, helmet, life jacket, and lunch listed",
+      "Optional hotel pickup upgrade"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Ayung River rafting base, or add hotel pickup from Ubud, Seminyak, Kuta, Nusa Dua, Canggu, or Sanur."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this half-day Ayung River raft covers about 12 kilometers of Class II and III water through forest, rice paddies, stone carvings, and waterfall banks, with a guide in each boat.",
+    "itineraryItems": [
+      {
+        "title": "Ayung River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jungle Waterfalls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Rafting guide",
+      "Safety briefing",
+      "Helmet, life jacket, and paddle",
+      "Buffet lunch",
+      "Shower",
+      "Insurance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bali Rafting Ayung River - Ubud White Water Rafting?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Meet at the Ayung River rafting base, or add hotel pickup from Ubud, Seminyak, Kuta, Nusa Dua, Canggu, or Sanur."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Water Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 25.87
+      },
+      "currency": "USD"
+    }
+  }
+}

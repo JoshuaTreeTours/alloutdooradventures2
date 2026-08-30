@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "206176P2",
+    "productUrl": "https://www.viator.com/tours/Ubud/Bali-ATV-Quad-Bike-Through-Tunnel-and-Waterfall/d5467-206176P2",
+    "title": "ATV Quad Bike Through Tunnel and Waterfall in Bali",
+    "description": {
+      "text": "In Bali, this guided ATV outing meets at the Payangan track or adds hotel pickup from Ubud, Kuta, Seminyak, Canggu, Sanur, Jimbaran, and Nusa Dua. After a safety briefing, insurance paperwork, boots, and helmet, the published route covers about eight kilometers of rice fields, jungle, river crossings, a waterfall plunge, and a natural tunnel. Solo riders are listed from age 13; tandem seats cover ages 6 to 13 with a parent. The ride window is about 90 minutes. The format suits visitors who want a guided off-road track without renting independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on the Payangan rice-field, jungle, tunnel, and waterfall track that define this outing rather than an Ayung River raft."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "1.5 hours (approx.)",
+    "priceFrom": "From $35.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1757
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/a9/07/09.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided 90-minute ATV ride",
+      "Rice-field and jungle track",
+      "Natural tunnel and waterfall",
+      "Helmet, boots, and insurance listed",
+      "Solo from age 13; tandem ages 6 to 13"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Payangan track or add hotel pickup from Ubud, Kuta, Seminyak, Canggu, Sanur, Jimbaran, or Nusa Dua."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this guided ATV outing meets at the Payangan track or adds hotel pickup from Ubud, Kuta, Seminyak, Canggu, Sanur, Jimbaran, and Nusa Dua.",
+    "itineraryItems": [
+      {
+        "title": "Ubud Rice Fields",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jungle Track",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Natural Tunnel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waterfall",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "ATV rental",
+      "Safety briefing",
+      "Insurance",
+      "Boots and helmet",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the ATV Quad Bike Through Tunnel and Waterfall in Bali?",
+        "answer": "The planned duration is 1.5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "Meet at the Payangan track or add hotel pickup from Ubud, Kuta, Seminyak, Canggu, Sanur, Jimbaran, or Nusa Dua."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 35
+      },
+      "currency": "USD"
+    }
+  }
+}

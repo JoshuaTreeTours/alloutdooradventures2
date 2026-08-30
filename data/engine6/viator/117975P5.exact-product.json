@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "117975P5",
+    "productUrl": "https://www.viator.com/tours/Ubud/Best-Blue-Lagoon-Snorkling-With-Visit-Traditional-Salt-Factory/d5467-117975P5",
+    "title": "All Inclusive : Bali Blue Lagoon Snorkeling, Lunch, and Transport",
+    "description": {
+      "text": "In Bali, this private six-hour snorkeling outing collects the group from Ubud or south-coast hotels, then boards a traditional boat at Padangbai for Blue Lagoon Beach and Tanjung Jepun. A snorkeling instructor, gear, Indonesian lunch, bottled water, and entrance fees are listed. Optional add-ons for a canyon hike, ATV, or waterfalls appear on the booking page and are not part of the base circuit. The format suits visitors who want a guided reef morning without assembling a Padangbai boat independently. Meeting points are confirmed at booking in Bali, and the itinerary stays on Blue Lagoon and Tanjung Jepun that define this outing rather than a Nusa Penida manta crossing."
+    },
+    "location": {
+      "city": "Bali",
+      "state": "Indonesia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $41.80",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 580
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/84/eb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour snorkeling outing",
+      "Blue Lagoon Beach and Tanjung Jepun",
+      "Traditional boat from Padangbai",
+      "Instructor, gear, and lunch listed",
+      "Hotel pickup from Ubud or the south coast"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The host picks up at the booked hotel in Ubud or on the south coast, then continues to Padangbai."
+      },
+      "end": {
+        "description": "Return to your Bali meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bali, this private six-hour snorkeling outing collects the group from Ubud or south-coast hotels, then boards a traditional boat at Padangbai for Blue Lagoon Beach and Tanjung Jepun.",
+    "itineraryItems": [
+      {
+        "title": "Blue Lagoon Beach",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tanjung Jepun",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Traditional boat from Padangbai",
+      "Snorkeling instructor and gear",
+      "Indonesian lunch",
+      "Bottled water",
+      "Entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the All Inclusive : Bali Blue Lagoon Snorkeling, Lunch, and Transport?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Bali?",
+        "answer": "The host picks up at the booked hotel in Ubud or on the south coast, then continues to Padangbai."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Water Sports"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 41.8
+      },
+      "currency": "USD"
+    }
+  }
+}
