@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "62558P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Half-Day-Foodie-Bike-Tour/d333-62558P2",
+    "title": "Eat, Drink, Cycle: Osaka Food and Bike Tour",
+    "description": {
+      "text": "In Osaka, this three-to-four-hour bike-and-food outing meets at the Cycle Osaka shop in Tenma, then rides past Osaka Castle Park between multiple food stops. A bicycle, English-speaking guide, lunch tastings, bottled water, and drinks are listed. Hotel pickup is not listed. The format suits visitors who want a guided ride-and-eat window without renting independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Tenma, Osaka Castle Park, and the published food stops that define this outing rather than a Dotonbori walking crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $88.77",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 131
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/58/3d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided bike-and-food circuit",
+      "Osaka Castle Park ride window",
+      "Multiple food stops from Tenma",
+      "Bicycle, lunch, and drinks listed"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Cycle Osaka shop, 1-chome-10-7 Tenma, Kita Ward."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this three-to-four-hour bike-and-food outing meets at the Cycle Osaka shop in Tenma, then rides past Osaka Castle Park between multiple food stops.",
+    "itineraryItems": [
+      {
+        "title": "Tenma",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Osaka Castle Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Local food stops",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "English-speaking guide",
+      "Lunch tastings",
+      "Bottled water",
+      "Alcoholic drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Eat, Drink, Cycle: Osaka Food and Bike Tour?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the Cycle Osaka shop, 1-chome-10-7 Tenma, Kita Ward."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 88.77
+      },
+      "currency": "USD"
+    }
+  }
+}

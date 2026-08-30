@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "130036P4",
+    "productUrl": "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Tour-10-13-dishes/d333-130036P4",
+    "title": "Kuromon Market Tour: All inclusive 6~8 Dishes",
+    "description": {
+      "text": "In Osaka, this all-inclusive Kuromon Market walk covers six to eight dishes at market stalls with a local guide. The format suits visitors who want a compact tasting window without assembling stall orders independently. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Kuromon Market and its tasting stalls that define this outing rather than a Dotonbori night crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $68.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 94
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9d/fb/97.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "All-inclusive Kuromon tasting",
+      "Six to eight market dishes",
+      "Guided stall walk"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Kuromon Market meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this all-inclusive Kuromon Market walk covers six to eight dishes at market stalls with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market tasting stalls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Six to eight market dishes",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kuromon Market Tour: All inclusive 6~8 Dishes?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Kuromon Market meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 68
+      },
+      "currency": "USD"
+    }
+  }
+}

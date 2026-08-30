@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "429399P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-4-Hour-Tour-in-Osaka-with-Local-Guide/d333-429399P2",
+    "title": "3/4/5 Hours Private Tour in Osaka with Local Guide",
+    "description": {
+      "text": "In Osaka, this private three-to-five-hour circuit pairs a local guide with a hotel pickup in the published Osaka area, or a confirmed train station if the hotel sits outside the city. The published route typically covers Osaka Castle, Shinsekai, and Shitenno-ji. Duration is selected at booking. The format suits visitors who want a private highlight window without a licensed six-hour walk. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Shinsekai, and Shitenno-ji that define this outing rather than a Dotonbori night food crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 to 5 hours (approx.)",
+    "priceFrom": "From $128.12",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/04/62.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private three-to-five-hour circuit",
+      "Osaka Castle and Shinsekai",
+      "Shitenno-ji",
+      "Osaka hotel or station meeting point"
+    ],
+    "logistics": {
+      "start": {
+        "description": "The guide meets an Osaka hotel in the published pickup area, or a confirmed train station if the hotel is outside Osaka."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this private three-to-five-hour circuit pairs a local guide with a hotel pickup in the published Osaka area, or a confirmed train station if the hotel sits outside the city.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shitenno-ji",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private local guide",
+      "Duration option selected at booking"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3/4/5 Hours Private Tour in Osaka with Local Guide?",
+        "answer": "The planned duration is 3 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "The guide meets an Osaka hotel in the published pickup area, or a confirmed train station if the hotel is outside Osaka."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 128.12
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -6007,16 +6007,16 @@ const japanState: StateDestination = {
   slug: "japan",
   name: "Japan",
   description:
-    "Tokyo neighborhoods, shrine and temple days, Mount Fuji and Hakone scenic circuits, and guided touring from the capital, plus Kyoto temple, shrine, bamboo, and Nara day touring.",
+    "Tokyo neighborhoods, shrine and temple days, Mount Fuji and Hakone scenic circuits, and guided touring from the capital, plus Kyoto temple, shrine, bamboo, and Nara day touring, plus Osaka castle, market, and street-food touring.",
   featuredDescription:
-    "Explore Tokyo tours with private city walking, coast and shrine bike rides, photography walks, tea tastings, Kamakura and Nikko days, and Mount Fuji or Hakone outings, plus Kyoto private temple circuits, Arashiyama bike rides, Fushimi Inari hikes, and tea or photography sessions.",
+    "Explore Tokyo tours with private city walking, coast and shrine bike rides, photography walks, tea tastings, Kamakura and Nikko days, and Mount Fuji or Hakone outings, plus Kyoto private temple circuits, Arashiyama bike rides, Fushimi Inari hikes, and tea or photography sessions, plus Osaka castle walks, Kuromon and Dotonbori food tours, and cooking classes.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/2a/70.jpg",
   region: "Asia",
   intro:
-    "Japan pairs walkable Tokyo districts and shrine or temple days with Mount Fuji, Hakone, Kamakura, and Nikko outings from the capital. In the former imperial city, Kyoto adds temple, shrine, bamboo, and Nara day touring.",
+    "Japan pairs walkable Tokyo districts and shrine or temple days with Mount Fuji, Hakone, Kamakura, and Nikko outings from the capital. In the former imperial city, Kyoto adds temple, shrine, bamboo, and Nara day touring. Osaka adds castle, market, and street-food touring in Japan's kitchen city.",
   longDescription:
-    "Tokyo anchors Japan tour inventory with licensed private city circuits, neighborhood walking, Meiji Jingu and Asakusa shrine stops, Imperial Palace and Shinjuku Gyoen windows, Ginza photography walks, and coast or park bike rides. Day trips from the capital add Mount Fuji fifth-station and lake viewpoints, Hakone ropeway and Lake Ashi cruises, Kamakura Great Buddha and Enoshima coastal stops, and Nikko Toshogu shrine circuits. Kyoto adds licensed private temple circuits, Kinkaku-ji and Kiyomizu-dera days, Fushimi Inari hikes, Arashiyama bike rides, Nishiki tea sessions, and Nara outings from the former capital.",
+    "Tokyo anchors Japan tour inventory with licensed private city circuits, neighborhood walking, Meiji Jingu and Asakusa shrine stops, Imperial Palace and Shinjuku Gyoen windows, Ginza photography walks, and coast or park bike rides. Day trips from the capital add Mount Fuji fifth-station and lake viewpoints, Hakone ropeway and Lake Ashi cruises, Kamakura Great Buddha and Enoshima coastal stops, and Nikko Toshogu shrine circuits. Kyoto adds licensed private temple circuits, Kinkaku-ji and Kiyomizu-dera days, Fushimi Inari hikes, Arashiyama bike rides, Nishiki tea sessions, and Nara outings from the former capital. Osaka adds licensed private city circuits, Osaka Castle and Dotonbori walks, Kuromon Market food tours, night backstreet circuits, and cooking classes.",
   topRegions: [
     {
       title: "Shrines, gardens, and historic neighborhoods",
@@ -6037,6 +6037,11 @@ const japanState: StateDestination = {
       title: "Kyoto temples and Nara",
       description:
         "Kinkaku-ji, Kiyomizu-dera, Fushimi Inari, Arashiyama bamboo, Gion, and Nara park days reachable from Kyoto.",
+    },
+    {
+      title: "Osaka castle, markets, and food streets",
+      description:
+        "Osaka Castle, Kuromon Market, Dotonbori, Shinsekai, and guided food, walking, or cooking tours in Osaka.",
     },
   ],
   cities: [
@@ -6167,6 +6172,71 @@ const japanState: StateDestination = {
           question: "What are the signature Kyoto tours?",
           answer:
             "Licensed private temple circuits, Arashiyama bike rides, Fushimi Inari hidden hikes, Nishiki tea ceremonies, photography sessions, and full-day Nara itineraries are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Osaka",
+      slug: "osaka",
+      stateSlug: "japan",
+      region: "Osaka",
+      lat: 34.6937,
+      lng: 135.5023,
+      shortDescription:
+        "Castle walks, market food tours, and Dotonbori nights from Osaka.",
+      intro:
+        "Osaka is Japan's kitchen city with Osaka Castle, Kuromon Market, Dotonbori, Shinsekai, and guided walking, food, bike, and cooking tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/dc/61/3f.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "food"],
+      whereItIs: [
+        "Osaka sits in the Kansai basin of western Honshu, with Osaka Castle, Namba, Dotonbori, and Shinsekai framing most sightseeing.",
+        "Most guided tours depart from Namba, Daikokucho, Kuromon Market, Tenma, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Osaka Castle Park mounds and nearby shrine grounds sit on half-day walking or bike routes from central Osaka.",
+        lakesWater:
+          "The Dotonbori canal and Okawa riverfront appear on scenic walking and bike days.",
+        desertForest:
+          "Osaka Castle Park woodland and shrine groves offer garden stops between city neighborhoods.",
+        cycling:
+          "Guided bike rides cover Tenma, Osaka Castle Park, and food-stop circuits on mixed park and street routes.",
+        scenicDrives:
+          "Day coaches cover Kyoto and Nara highlight roads from Osaka meeting points.",
+        seasonalNotes:
+          "Cherry-blossom months favor Osaka Castle Park; summer heat favors early-start castle and market walks.",
+      },
+      thingsToDo: [
+        "Walk Osaka Castle, Kuromon Market, and Dotonbori with a licensed or local guide.",
+        "Join a Shinsekai or Kuromon food tour, or a Tenma bike-and-food circuit.",
+        "Spend a full day on a Kyoto and Nara coach outing from Osaka.",
+      ],
+      toursCopy: [
+        "Book a private licensed city circuit or neighborhood walk for a compact introduction.",
+        "Pair a Kuromon or Shinsekai food tour with a castle-and-Dotonbori walking day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Osaka Castle, Kuromon Market, or a licensed private city circuit.",
+          "Afternoon: Dotonbori, Amerikamura, or a Shinsekai food walk.",
+          "Evening: Return to Namba or Dotonbori.",
+        ],
+        dayTwo: [
+          "Morning: A Kyoto and Nara day from Osaka, or a cooking class in Fukushima Ward.",
+          "Afternoon: Continue the published temple, park, or kitchen circuit.",
+          "Evening: Return to central Osaka.",
+        ],
+      },
+      gettingThere: [
+        "Kansai International and Itami airports serve Osaka with trains, buses, and hotel transfers to Namba, Umeda, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Osaka tours?",
+          answer:
+            "Licensed private city circuits, Osaka Castle and Dotonbori walks, Kuromon Market and Shinsekai food tours, night backstreet circuits, cooking classes, and Kyoto-Nara day trips are the most popular departures.",
         },
       ],
     },

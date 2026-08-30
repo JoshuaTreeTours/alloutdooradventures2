@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "63670P11",
+    "productUrl": "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Walking-Tour-in-Osaka/d333-63670P11",
+    "title": "Kuromon Market Food Walking Tour in Osaka",
+    "description": {
+      "text": "In Osaka, this guided food walk starts at Kuromon Market, continues through Doguyasuji kitchenware street, and finishes in Dotonbori. Published market tastings are listed. The format suits visitors who want a compact market-and-canal window without a six-hour private circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Kuromon Market, Doguyasuji, and Dotonbori that define this outing rather than a Namba night walk."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $49.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 393
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/b3/8c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Kuromon Market food walk",
+      "Doguyasuji kitchenware street",
+      "Dotonbori finish"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Kuromon Market meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this guided food walk starts at Kuromon Market, continues through Doguyasuji kitchenware street, and finishes in Dotonbori.",
+    "itineraryItems": [
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Doguyasuji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Published market tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kuromon Market Food Walking Tour in Osaka?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Kuromon Market meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "62558P5",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Backstreet-Night-Tour/d333-62558P5",
+    "title": "Osaka Backstreet Night Tour",
+    "description": {
+      "text": "In Osaka, this evening backstreet walk covers Namba, Shinsaibashi, Dotonbori, and Amerikamura with published food stops after dark. The route stays on central south-Osaka streets rather than a Shinsekai stall crawl. The format suits visitors who want a guided night window without assembling separate dinner reservations. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Namba, Shinsaibashi, Dotonbori, and Amerikamura that define this outing rather than an Osaka Castle morning."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $117.45",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 865
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/27/d6/ee.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Evening Namba and Shinsaibashi walk",
+      "Dotonbori canal streets",
+      "Amerikamura night window",
+      "Published food tastings"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Namba meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this evening backstreet walk covers Namba, Shinsaibashi, Dotonbori, and Amerikamura with published food stops after dark.",
+    "itineraryItems": [
+      {
+        "title": "Namba",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinsaibashi",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amerikamura",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local night guide",
+      "Published food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka Backstreet Night Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Namba meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 117.45
+      },
+      "currency": "USD"
+    }
+  }
+}

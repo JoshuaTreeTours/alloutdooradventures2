@@ -1,0 +1,113 @@
+{
+  "destinationLabel": "Osaka",
+  "destinationCitySlug": "osaka",
+  "viatorDestinationSlug": "Osaka",
+  "viatorDestinationId": "d333",
+  "catalogUrl": "https://www.viator.com/Osaka/d333-ttd",
+  "targetPremiumShare": 0.3,
+  "selectedCount": 20,
+  "premiumCount": 6,
+  "selectionNote": "Selected 20 guided Osaka d333 products with live public USD From prices (From$, From US$, or FromUSD on US-facing listings), combined ratings, unique 674x446 heroes, and commercially diverse categories (licensed private walking, personalized private, street-food nights, bike-and-food, cooking, Kuromon market, castle/Dotonbori walking, and one Kyoto-Nara day trip from Osaka). Did not pad with audio/self-guided/app/GPS tours, USJ tickets, JR/ICOCA/Amazing Pass products, airport transfers, driver-only charters, sake/tea SKUs without verified USD, thin-review SKUs, or near-duplicates of the same licensed 4hr/6hr walking SKU. No live helicopter, stargazing, or Indigenous-only cultural page with combined USD+rating+hero was captured. Same completeness constraint documented on Bali (12), Bangkok (10), Kyoto (14), and Tokyo (11).",
+  "selectedProductCodes": [
+    "92136P44",
+    "92136P45",
+    "30791P615",
+    "429399P2",
+    "425662P3",
+    "130036P2",
+    "62558P5",
+    "63670P21",
+    "62558P2",
+    "20415P6",
+    "6806OSAKOSAKA",
+    "218199P1",
+    "22288P1",
+    "425662P2",
+    "63670P11",
+    "130036P1",
+    "130036P4",
+    "460493P3",
+    "394526P1",
+    "427786P5"
+  ],
+  "premiumProductCodes": [
+    "92136P44",
+    "92136P45",
+    "30791P615",
+    "429399P2",
+    "460493P3",
+    "425662P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "92136P3",
+      "title": "Private Osaka driver-only",
+      "reason": "Driver only, no licensed guide; EUR dumps. Missing verified USD."
+    },
+    {
+      "productCode": "92136P39",
+      "title": "Private licensed guide and vehicle",
+      "reason": "From$828.23 but only 9 reviews; weak commercial data."
+    },
+    {
+      "productCode": "92136P287",
+      "title": "Licensed private SKU",
+      "reason": "A$ only. Missing verified USD."
+    },
+    {
+      "productCode": "33348P18",
+      "title": "Private Osaka circuit",
+      "reason": "No verified USD."
+    },
+    {
+      "productCode": "2142OSA_K611",
+      "title": "Osaka highlights",
+      "reason": "Thin reviews (19) and no verified USD."
+    },
+    {
+      "productCode": "20415P7",
+      "title": "Related Kyoto/Nara SKU",
+      "reason": "No verified USD."
+    },
+    {
+      "productCode": "427198P1",
+      "title": "Osaka walking SKU",
+      "reason": "EUR only; operator JPY 7980. Missing verified USD."
+    },
+    {
+      "productCode": "401323P2",
+      "title": "Sake tasting",
+      "reason": "No Viator USD; operator JPY only."
+    },
+    {
+      "productCode": "51440P8",
+      "title": "Tea ceremony",
+      "reason": "No verified USD."
+    },
+    {
+      "productCode": "450908P1",
+      "title": "Private Osaka day",
+      "reason": "$190.28 but only 26 reviews; weak commercial data."
+    },
+    {
+      "productCode": "444978P6",
+      "title": "Osaka private SKU",
+      "reason": "From$71.90 but only 9 reviews."
+    },
+    {
+      "productCode": "63670P19",
+      "title": "Castle bike tour",
+      "reason": "From$75.30 in snippets but no Viator combined rating captured; skipped rather than invent."
+    },
+    {
+      "productCode": "33348P14",
+      "title": "Private vehicle charter",
+      "reason": "US listing ~$600 private vehicle; rating not fully locked."
+    },
+    {
+      "productCode": "17229P121",
+      "title": "Driver-only charter",
+      "reason": "Driver-only charter, not a guided tour itinerary."
+    }
+  ]
+}

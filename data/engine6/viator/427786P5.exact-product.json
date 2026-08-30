@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "427786P5",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Early-Bird-Top-Highlights-with-English-Speaking-Guide/d333-427786P5",
+    "title": "Osaka Early Bird / Top Highlights with English-Speaking Guide",
+    "description": {
+      "text": "In Osaka, this early-start highlights walk pairs an English-speaking guide with Osaka Castle, Dotonbori, and Kuromon Market before later crowds build. The format suits visitors who want a compact morning circuit without a six-hour private booking. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Osaka Castle, Dotonbori, and Kuromon Market that define this outing rather than a Shinsekai night crawl."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $82.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 70
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/d7/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Early-start Osaka highlights",
+      "Osaka Castle and Dotonbori",
+      "Kuromon Market",
+      "English-speaking guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Osaka meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this early-start highlights walk pairs an English-speaking guide with Osaka Castle, Dotonbori, and Kuromon Market before later crowds build.",
+    "itineraryItems": [
+      {
+        "title": "Osaka Castle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuromon Market",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "English-speaking guide",
+      "Early-start highlights circuit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka Early Bird / Top Highlights with English-Speaking Guide?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Osaka meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 82
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,653 @@
+[
+  {
+    "productCode": "92136P44",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P44",
+    "title": "Osaka 6hr Private Walking Tour with Government Licensed Guide",
+    "priceFrom": "From $156.59",
+    "price": 156.59,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 146,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/05/14.jpg",
+    "overview": "Private six-hour walking circuit with a government-licensed guide covering Osaka Castle, Dotonbori, Shitenno-ji, Shinsekai, and Kuromon Market.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Dotonbori",
+      "Shitenno-ji",
+      "Shinsekai",
+      "Kuromon Market"
+    ],
+    "inclusions": [
+      "Private government-licensed guide",
+      "Customizable six-hour walking itinerary"
+    ],
+    "startDescription": "The licensed guide meets the booked Osaka hotel or confirmed city meeting point on foot. Public transit or local taxis between sites are settled on the day.",
+    "highlights": [
+      "Private six-hour licensed walking circuit",
+      "Osaka Castle and Dotonbori",
+      "Shitenno-ji and Shinsekai",
+      "Kuromon Market food window",
+      "Hotel or confirmed Osaka meeting point"
+    ],
+    "experienceType": "private-licensed",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "92136P45",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P45",
+    "title": "Osaka 4hr Private Tour with Government-Licensed Guide",
+    "priceFrom": "From $106.77",
+    "price": 106.77,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 300,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/04/f1.jpg",
+    "overview": "Private four-hour customizable walking tour with a government-licensed guide covering Osaka Castle, Umeda Sky Building, and Dotonbori.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Umeda Sky Building",
+      "Dotonbori"
+    ],
+    "inclusions": [
+      "Private government-licensed guide",
+      "Customizable four-hour walking itinerary"
+    ],
+    "startDescription": "The licensed guide meets the booked Osaka hotel. Public transit or local taxis between sites are settled on the day.",
+    "highlights": [
+      "Private four-hour licensed walking circuit",
+      "Osaka Castle and Umeda Sky Building",
+      "Dotonbori canal district",
+      "Hotel meeting point in Osaka"
+    ],
+    "experienceType": "private-licensed",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "30791P615",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-and-Personalized-Experience-See-Osaka-with-a-Local/d333-30791P615",
+    "title": "Private Osaka Tour with a Local, Highlights & Hidden Gems 100% Personalised",
+    "priceFrom": "From $60.93",
+    "price": 60.93,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 487,
+    "duration": "2 to 8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/83/73/e3.jpg",
+    "overview": "Private personalized walking outing with a local host from Namba, with published highlight options including Osaka Castle and Dotonbori.",
+    "itineraryStops": [
+      "Namba",
+      "Osaka Castle",
+      "Dotonbori"
+    ],
+    "inclusions": [
+      "Private local host",
+      "Flexible duration selected at booking"
+    ],
+    "startDescription": "Meet in front of DAISO Namba Nansan-dori Store, or request a nearby Osaka meeting point confirmed at booking.",
+    "highlights": [
+      "Private personalized walking format",
+      "Namba meeting at DAISO Nansan-dori",
+      "Osaka Castle and Dotonbori options",
+      "Flexible two-to-eight-hour window"
+    ],
+    "experienceType": "private-personalized",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "429399P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-4-Hour-Tour-in-Osaka-with-Local-Guide/d333-429399P2",
+    "title": "3/4/5 Hours Private Tour in Osaka with Local Guide",
+    "priceFrom": "From $128.12",
+    "price": 128.12,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 142,
+    "duration": "3 to 5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/cc/04/62.jpg",
+    "overview": "Private three-to-five-hour Osaka circuit with a local guide covering Osaka Castle, Shinsekai, and Shitenno-ji.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Shinsekai",
+      "Shitenno-ji"
+    ],
+    "inclusions": [
+      "Private local guide",
+      "Duration option selected at booking"
+    ],
+    "startDescription": "The guide meets an Osaka hotel in the published pickup area, or a confirmed train station if the hotel is outside Osaka.",
+    "highlights": [
+      "Private three-to-five-hour circuit",
+      "Osaka Castle and Shinsekai",
+      "Shitenno-ji",
+      "Osaka hotel or station meeting point"
+    ],
+    "experienceType": "private-sightseeing",
+    "categories": ["Private Sightseeing Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "425662P3",
+    "productUrl": "https://www.viator.com/tours/Osaka/Premium-Osaka-Foodie-Tour-Shinsekai-Feast-Like-a-Local/d333-425662P3",
+    "title": "Hungry Osaka Street Food Tour (15 Dishes) - Feast Like a Local",
+    "priceFrom": "From $93.38",
+    "price": 93.38,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 880,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ac/fb/ff.jpg",
+    "overview": "Three-hour Shinsekai street-food walk with 15 dishes at five eateries and included drinks.",
+    "itineraryStops": [
+      "Shinsekai",
+      "Ebisucho Station",
+      "Dobutsuen-mae"
+    ],
+    "inclusions": [
+      "15 dishes at five eateries",
+      "Two included drinks",
+      "Local guide"
+    ],
+    "startDescription": "Meet at Ebisucho Station on the Sakaisuji Line, exit 3, at the top of the stairs.",
+    "highlights": [
+      "Fifteen dishes at five Shinsekai eateries",
+      "Takoyaki, kushikatsu, and karaage tastings",
+      "Ebisucho Station start",
+      "Dobutsuen-mae finish"
+    ],
+    "experienceType": "food-tour",
+    "categories": ["Food Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "130036P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Deep-Osaka-Food-Tours/d333-130036P2",
+    "title": "Osaka Food Tour - 13 Delicious Dishes at 5 Local Eateries",
+    "priceFrom": "From $92.94",
+    "price": 92.94,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 1564,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/3a/83/36.jpg",
+    "overview": "Three-hour small-group food walk through Shinsekai and Nishinari with 13 dishes at five local eateries and two drinks.",
+    "itineraryStops": [
+      "Shinsekai",
+      "Nishinari",
+      "Dobutsuen-mae"
+    ],
+    "inclusions": [
+      "13 dishes at five eateries",
+      "Two included drinks",
+      "Local guide"
+    ],
+    "startDescription": "Meet at the published Dobutsuen-mae / Shinsekai meeting point confirmed at booking.",
+    "highlights": [
+      "Thirteen dishes at five eateries",
+      "Shinsekai and Nishinari neighborhoods",
+      "Takoyaki, kushikatsu, and kitsune udon",
+      "Two included drinks"
+    ],
+    "experienceType": "food-tour",
+    "categories": ["Food Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "62558P5",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Backstreet-Night-Tour/d333-62558P5",
+    "title": "Osaka Backstreet Night Tour",
+    "priceFrom": "From $117.45",
+    "price": 117.45,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 865,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/27/d6/ee.jpg",
+    "overview": "Evening backstreet walk through Namba, Shinsaibashi, Dotonbori, and Amerikamura with food stops.",
+    "itineraryStops": [
+      "Namba",
+      "Shinsaibashi",
+      "Dotonbori",
+      "Amerikamura"
+    ],
+    "inclusions": [
+      "Local night guide",
+      "Published food tastings"
+    ],
+    "startDescription": "Meet at the published Namba meeting point confirmed at booking.",
+    "highlights": [
+      "Evening Namba and Shinsaibashi walk",
+      "Dotonbori canal streets",
+      "Amerikamura night window",
+      "Published food tastings"
+    ],
+    "experienceType": "night-food",
+    "categories": ["Food Tours", "Night Tours"]
+  },
+  {
+    "productCode": "63670P21",
+    "productUrl": "https://www.viator.com/tours/Osaka/Dotonbori-Street-Food-Crawl-and-Sample-Walking-Tour-in-Osaka/d333-63670P21",
+    "title": "Osaka Local Foodie Walking Tour in Dotonbori and Shinsekai",
+    "priceFrom": "From $110.71",
+    "price": 110.71,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 785,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/84/4b.jpg",
+    "overview": "Small-group food walk from Shinsekai to Dotonbori with kushikatsu, okonomiyaki, takoyaki, and two drinks.",
+    "itineraryStops": [
+      "Shinsekai",
+      "Tsutenkaku",
+      "Dotonbori",
+      "Glico Sign"
+    ],
+    "inclusions": [
+      "Kushikatsu tasting",
+      "Okonomiyaki tasting",
+      "Takoyaki tasting",
+      "Two drinks",
+      "Local guide"
+    ],
+    "startDescription": "Meet at Imamiyaebisu Station. The walk finishes at the Glico Sign in Dotonbori.",
+    "highlights": [
+      "Shinsekai and Dotonbori food walk",
+      "Tsutenkaku neighborhood",
+      "Kushikatsu, okonomiyaki, and takoyaki",
+      "Finish at the Glico Sign"
+    ],
+    "experienceType": "food-tour",
+    "categories": ["Food Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "62558P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Half-Day-Foodie-Bike-Tour/d333-62558P2",
+    "title": "Eat, Drink, Cycle: Osaka Food and Bike Tour",
+    "priceFrom": "From $88.77",
+    "price": 88.77,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 131,
+    "duration": "3 to 4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/58/3d.jpg",
+    "overview": "Guided bike-and-food outing from Tenma past Osaka Castle Park with multiple food stops, bicycle, lunch, and drinks.",
+    "itineraryStops": [
+      "Tenma",
+      "Osaka Castle Park",
+      "Local food stops"
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "English-speaking guide",
+      "Lunch tastings",
+      "Bottled water",
+      "Alcoholic drinks"
+    ],
+    "startDescription": "Meet at the Cycle Osaka shop, 1-chome-10-7 Tenma, Kita Ward.",
+    "highlights": [
+      "Guided bike-and-food circuit",
+      "Osaka Castle Park ride window",
+      "Multiple food stops from Tenma",
+      "Bicycle, lunch, and drinks listed"
+    ],
+    "experienceType": "bike-food",
+    "categories": ["Bike Tours", "Food Tours"]
+  },
+  {
+    "productCode": "20415P6",
+    "productUrl": "https://www.viator.com/tours/Osaka/Day-Trip-by-Bus-to-Kyoto-and-Nara-from-Osaka/d333-20415P6",
+    "title": "Ancient Capital Tour: Kyoto and Nara Highlights from Kyoto/Osaka",
+    "priceFrom": "From $90.35",
+    "price": 90.35,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.6,
+    "reviewCount": 297,
+    "duration": "10 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5f/70/4c.jpg",
+    "overview": "Full-day bus outing from Osaka or Kyoto covering Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji.",
+    "itineraryStops": [
+      "Arashiyama",
+      "Kinkaku-ji",
+      "Nara Park",
+      "Todai-ji"
+    ],
+    "inclusions": [
+      "Coach transportation",
+      "English-speaking guide"
+    ],
+    "startDescription": "Meet at the booked central Osaka or central Kyoto departure point. Osaka and Kyoto depart on different dates and buses.",
+    "highlights": [
+      "Full-day Kyoto and Nara circuit from Osaka",
+      "Arashiyama and Kinkaku-ji",
+      "Nara Park and Todai-ji",
+      "Coach departure from Osaka or Kyoto"
+    ],
+    "experienceType": "day-trip",
+    "categories": ["Day Trips", "Sightseeing Tours"]
+  },
+  {
+    "productCode": "6806OSAKOSAKA",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Cooking-Class/d333-6806OSAKOSAKA",
+    "title": "Osaka local food and Japanese cuisines cooking experience",
+    "priceFrom": "From $109.47",
+    "price": 109.47,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 225,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/dc/0a.jpg",
+    "overview": "Small-group Osaka cooking class covering okonomiyaki, miso soup, and green tea, then a shared tasting of the cooked dishes.",
+    "itineraryStops": [
+      "Osaka Cooking Studio",
+      "Shared Tasting Table"
+    ],
+    "inclusions": [
+      "Cooking instructor",
+      "Guide",
+      "Ingredients and tasting meal"
+    ],
+    "startDescription": "Meet at the published Yoshino studio in Fukushima Ward, Osaka.",
+    "highlights": [
+      "Small-group Osaka cooking class",
+      "Okonomiyaki and miso soup",
+      "Shared tasting of the cooked dishes",
+      "Fukushima Ward studio"
+    ],
+    "experienceType": "cooking",
+    "categories": ["Cooking Classes", "Food & Drink"]
+  },
+  {
+    "productCode": "218199P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Street-Food-Class/d333-218199P1",
+    "title": "Eat Osaka: Street Food Cooking in an Authentic Kitchen!",
+    "priceFrom": "From $83.67",
+    "price": 83.67,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 43,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/55/53/99.jpg",
+    "overview": "Hands-on Osaka street-food cooking session in a working kitchen, followed by a shared meal of the dishes cooked in class.",
+    "itineraryStops": [
+      "Street Food Kitchen",
+      "Shared Meal Table"
+    ],
+    "inclusions": [
+      "Cooking instructor",
+      "Ingredients and shared meal"
+    ],
+    "startDescription": "Meet at the published Osaka kitchen address confirmed at booking.",
+    "highlights": [
+      "Hands-on street-food cooking",
+      "Working Osaka kitchen",
+      "Shared meal of the cooked dishes"
+    ],
+    "experienceType": "cooking",
+    "categories": ["Cooking Classes", "Food & Drink"]
+  },
+  {
+    "productCode": "22288P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Walking-Tour/d333-22288P1",
+    "title": "Osaka Walking Tour",
+    "priceFrom": "From $55.35",
+    "price": 55.35,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 262,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/6d/c8.jpg",
+    "overview": "Small-group walking introduction covering Dotonbori, Hozen-ji, and Shinsekai with a kushikatsu tasting.",
+    "itineraryStops": [
+      "Dotonbori",
+      "Hozen-ji",
+      "Shinsekai"
+    ],
+    "inclusions": [
+      "Local guide",
+      "Kushikatsu tasting",
+      "One non-alcoholic drink"
+    ],
+    "startDescription": "Meet at Ebisu Bridge in Dotonbori. The walk finishes on Ebisu-bashi.",
+    "highlights": [
+      "Dotonbori waterfront walk",
+      "Hozen-ji",
+      "Shinsekai neighborhood",
+      "Kushikatsu tasting"
+    ],
+    "experienceType": "walking",
+    "categories": ["Walking Tours", "Sightseeing Tours"]
+  },
+  {
+    "productCode": "425662P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Private-Downtown-Osaka-Walking-Tour-Backstreets-Hidden-Gems/d333-425662P2",
+    "title": "Ultimate Osaka Walking Tour (Castle, Dotonbori) GROUP OR PRIVATE",
+    "priceFrom": "From $90.64",
+    "price": 90.64,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 581,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/22/4d/ff.jpg",
+    "overview": "Group or private walking circuit covering Osaka Castle, Kuromon Market, Amerikamura, and Dotonbori.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Kuromon Market",
+      "Amerikamura",
+      "Dotonbori"
+    ],
+    "inclusions": [
+      "English-speaking guide",
+      "Group or private option selected at booking"
+    ],
+    "startDescription": "Meet at the published Osaka meeting point confirmed at booking.",
+    "highlights": [
+      "Osaka Castle and Kuromon Market",
+      "Amerikamura and Dotonbori",
+      "Group or private booking option"
+    ],
+    "experienceType": "walking",
+    "categories": ["Walking Tours", "Sightseeing Tours"]
+  },
+  {
+    "productCode": "63670P11",
+    "productUrl": "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Walking-Tour-in-Osaka/d333-63670P11",
+    "title": "Kuromon Market Food Walking Tour in Osaka",
+    "priceFrom": "From $49.00",
+    "price": 49,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 393,
+    "duration": "2 to 3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/b3/8c.jpg",
+    "overview": "Guided Kuromon Market food walk continuing to Doguyasuji and Dotonbori.",
+    "itineraryStops": [
+      "Kuromon Market",
+      "Doguyasuji",
+      "Dotonbori"
+    ],
+    "inclusions": [
+      "Local guide",
+      "Published market tastings"
+    ],
+    "startDescription": "Meet at the published Kuromon Market meeting point confirmed at booking.",
+    "highlights": [
+      "Kuromon Market food walk",
+      "Doguyasuji kitchenware street",
+      "Dotonbori finish"
+    ],
+    "experienceType": "food-tour",
+    "categories": ["Food Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "130036P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Deep-Backstreet-Osaka-Tours/d333-130036P1",
+    "title": "Deep Backstreet Osaka Tours (Option to add Dinner)",
+    "priceFrom": "From $57.46",
+    "price": 57.46,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 1193,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/23/eb/8b.jpg",
+    "overview": "Evening historic-backstreet walk from Daikokucho through older Osaka districts with street-stall tastings and an optional dinner upgrade.",
+    "itineraryStops": [
+      "Daikokucho",
+      "Historic backstreets",
+      "Street stalls"
+    ],
+    "inclusions": [
+      "Local guide",
+      "Street-stall tasting",
+      "Optional dinner upgrade"
+    ],
+    "startDescription": "Meet at Daikokucho Station, Exit 1, in front of FamilyMart MYS Daikokucho.",
+    "highlights": [
+      "Evening historic-backstreet walk",
+      "Daikokucho Station start",
+      "Street-stall tasting",
+      "Optional dinner upgrade"
+    ],
+    "experienceType": "cultural-night",
+    "categories": ["Walking Tours", "Cultural Tours"]
+  },
+  {
+    "productCode": "130036P4",
+    "productUrl": "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Tour-10-13-dishes/d333-130036P4",
+    "title": "Kuromon Market Tour: All inclusive 6~8 Dishes",
+    "priceFrom": "From $68.00",
+    "price": 68,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 94,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9d/fb/97.jpg",
+    "overview": "All-inclusive Kuromon Market tasting walk covering six to eight dishes at market stalls.",
+    "itineraryStops": [
+      "Kuromon Market",
+      "Market tasting stalls"
+    ],
+    "inclusions": [
+      "Six to eight market dishes",
+      "Local guide"
+    ],
+    "startDescription": "Meet at the published Kuromon Market meeting point confirmed at booking.",
+    "highlights": [
+      "All-inclusive Kuromon tasting",
+      "Six to eight market dishes",
+      "Guided stall walk"
+    ],
+    "experienceType": "food-tour",
+    "categories": ["Food Tours", "Walking Tours"]
+  },
+  {
+    "productCode": "460493P3",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Castle-Kuromon-Market-and-Dotonbori-6hour-tour/d333-460493P3",
+    "title": "PRIVATE 6hr, Food tour from Osaka Castle, Kuromon, Dotonbori.",
+    "priceFrom": "From $155.00",
+    "price": 155,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.9,
+    "reviewCount": 47,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/65/ea/38.jpg",
+    "overview": "Private six-hour food-and-sightseeing walk from Osaka Castle through Kuromon Market and Doguyasuji to Dotonbori.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Kuromon Market",
+      "Doguyasuji",
+      "Dotonbori"
+    ],
+    "inclusions": [
+      "Private guide",
+      "Six-hour food-and-sightseeing circuit"
+    ],
+    "startDescription": "Meet at Morinomiya Station Exit 3b. The walk finishes at the Glico Sign in Dotonbori.",
+    "highlights": [
+      "Private six-hour food circuit",
+      "Osaka Castle and Kuromon Market",
+      "Doguyasuji and Dotonbori",
+      "Morinomiya Station start"
+    ],
+    "experienceType": "private-food",
+    "categories": ["Private Sightseeing Tours", "Food Tours"]
+  },
+  {
+    "productCode": "394526P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Walking-Tour-of-Osakas-5-Must-See-Sights-with-Ramen-for-Lunch/d333-394526P1",
+    "title": "Walking Tour of Osaka's 5 Must-See Sights, with Ramen for Lunch",
+    "priceFrom": "From $79.00",
+    "price": 79,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 4.8,
+    "reviewCount": 135,
+    "duration": "5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/47/76/71.jpg",
+    "overview": "Guided walking circuit of published Osaka highlights including Osaka Castle and Dotonbori, with a ramen lunch stop.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Dotonbori",
+      "Ramen lunch stop"
+    ],
+    "inclusions": [
+      "English-speaking guide",
+      "Ramen lunch"
+    ],
+    "startDescription": "Meet at the published Osaka meeting point confirmed at booking.",
+    "highlights": [
+      "Osaka Castle and Dotonbori",
+      "Ramen lunch stop",
+      "Guided walking format"
+    ],
+    "experienceType": "walking",
+    "categories": ["Walking Tours", "Sightseeing Tours"]
+  },
+  {
+    "productCode": "427786P5",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Early-Bird-Top-Highlights-with-English-Speaking-Guide/d333-427786P5",
+    "title": "Osaka Early Bird / Top Highlights with English-Speaking Guide",
+    "priceFrom": "From $82.00",
+    "price": 82,
+    "currency": "USD",
+    "sourceCurrency": "USD",
+    "rating": 5.0,
+    "reviewCount": 70,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/d7/0e.jpg",
+    "overview": "Early-start guided highlights walk covering Osaka Castle, Dotonbori, and Kuromon Market.",
+    "itineraryStops": [
+      "Osaka Castle",
+      "Dotonbori",
+      "Kuromon Market"
+    ],
+    "inclusions": [
+      "English-speaking guide",
+      "Early-start highlights circuit"
+    ],
+    "startDescription": "Meet at the published Osaka meeting point confirmed at booking.",
+    "highlights": [
+      "Early-start Osaka highlights",
+      "Osaka Castle and Dotonbori",
+      "Kuromon Market",
+      "English-speaking guide"
+    ],
+    "experienceType": "sightseeing",
+    "categories": ["Sightseeing Tours", "Walking Tours"]
+  }
+]

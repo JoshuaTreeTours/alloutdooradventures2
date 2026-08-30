@@ -339,6 +339,26 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen92136p44Payload from "../../data/engine6/viator/92136P44.exact-product.json";
+import specimen92136p45Payload from "../../data/engine6/viator/92136P45.exact-product.json";
+import specimen30791p615Payload from "../../data/engine6/viator/30791P615.exact-product.json";
+import specimen429399p2Payload from "../../data/engine6/viator/429399P2.exact-product.json";
+import specimen425662p3Payload from "../../data/engine6/viator/425662P3.exact-product.json";
+import specimen130036p2Payload from "../../data/engine6/viator/130036P2.exact-product.json";
+import specimen62558p5Payload from "../../data/engine6/viator/62558P5.exact-product.json";
+import specimen63670p21Payload from "../../data/engine6/viator/63670P21.exact-product.json";
+import specimen62558p2Payload from "../../data/engine6/viator/62558P2.exact-product.json";
+import specimen20415p6Payload from "../../data/engine6/viator/20415P6.exact-product.json";
+import specimen6806osakosakaPayload from "../../data/engine6/viator/6806OSAKOSAKA.exact-product.json";
+import specimen218199p1Payload from "../../data/engine6/viator/218199P1.exact-product.json";
+import specimen22288p1Payload from "../../data/engine6/viator/22288P1.exact-product.json";
+import specimen425662p2Payload from "../../data/engine6/viator/425662P2.exact-product.json";
+import specimen63670p11Payload from "../../data/engine6/viator/63670P11.exact-product.json";
+import specimen130036p1Payload from "../../data/engine6/viator/130036P1.exact-product.json";
+import specimen130036p4Payload from "../../data/engine6/viator/130036P4.exact-product.json";
+import specimen460493p3Payload from "../../data/engine6/viator/460493P3.exact-product.json";
+import specimen394526p1Payload from "../../data/engine6/viator/394526P1.exact-product.json";
+import specimen427786p5Payload from "../../data/engine6/viator/427786P5.exact-product.json";
 import specimen42053p19Payload from "../../data/engine6/viator/42053P19.exact-product.json";
 import specimen6780p36Payload from "../../data/engine6/viator/6780P36.exact-product.json";
 import specimen470724p1Payload from "../../data/engine6/viator/470724P1.exact-product.json";
@@ -3693,6 +3713,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P44",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Full-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P44",
+    rawPayload: specimen92136p44Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "92136P45",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Half-day-Private-Custom-Tour-with-National-Licensed-Guide/d333-92136P45",
+    rawPayload: specimen92136p45Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30791P615",
+    publicUrl: "https://www.viator.com/tours/Osaka/Private-and-Personalized-Experience-See-Osaka-with-a-Local/d333-30791P615",
+    rawPayload: specimen30791p615Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "429399P2",
+    publicUrl: "https://www.viator.com/tours/Osaka/Private-4-Hour-Tour-in-Osaka-with-Local-Guide/d333-429399P2",
+    rawPayload: specimen429399p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "425662P3",
+    publicUrl: "https://www.viator.com/tours/Osaka/Premium-Osaka-Foodie-Tour-Shinsekai-Feast-Like-a-Local/d333-425662P3",
+    rawPayload: specimen425662p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130036P2",
+    publicUrl: "https://www.viator.com/tours/Osaka/Deep-Osaka-Food-Tours/d333-130036P2",
+    rawPayload: specimen130036p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "62558P5",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Backstreet-Night-Tour/d333-62558P5",
+    rawPayload: specimen62558p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "63670P21",
+    publicUrl: "https://www.viator.com/tours/Osaka/Dotonbori-Street-Food-Crawl-and-Sample-Walking-Tour-in-Osaka/d333-63670P21",
+    rawPayload: specimen63670p21Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "62558P2",
+    publicUrl: "https://www.viator.com/tours/Osaka/Half-Day-Foodie-Bike-Tour/d333-62558P2",
+    rawPayload: specimen62558p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "20415P6",
+    publicUrl: "https://www.viator.com/tours/Osaka/Day-Trip-by-Bus-to-Kyoto-and-Nara-from-Osaka/d333-20415P6",
+    rawPayload: specimen20415p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6806OSAKOSAKA",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Cooking-Class/d333-6806OSAKOSAKA",
+    rawPayload: specimen6806osakosakaPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "218199P1",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Street-Food-Class/d333-218199P1",
+    rawPayload: specimen218199p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22288P1",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Walking-Tour/d333-22288P1",
+    rawPayload: specimen22288p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "425662P2",
+    publicUrl: "https://www.viator.com/tours/Osaka/Private-Downtown-Osaka-Walking-Tour-Backstreets-Hidden-Gems/d333-425662P2",
+    rawPayload: specimen425662p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "63670P11",
+    publicUrl: "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Walking-Tour-in-Osaka/d333-63670P11",
+    rawPayload: specimen63670p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130036P1",
+    publicUrl: "https://www.viator.com/tours/Osaka/Deep-Backstreet-Osaka-Tours/d333-130036P1",
+    rawPayload: specimen130036p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130036P4",
+    publicUrl: "https://www.viator.com/tours/Osaka/Kuromon-Market-Food-Tour-10-13-dishes/d333-130036P4",
+    rawPayload: specimen130036p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "460493P3",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Castle-Kuromon-Market-and-Dotonbori-6hour-tour/d333-460493P3",
+    rawPayload: specimen460493p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "394526P1",
+    publicUrl: "https://www.viator.com/tours/Osaka/Walking-Tour-of-Osakas-5-Must-See-Sights-with-Ramen-for-Lunch/d333-394526P1",
+    rawPayload: specimen394526p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "427786P5",
+    publicUrl: "https://www.viator.com/tours/Osaka/Osaka-Early-Bird-Top-Highlights-with-English-Speaking-Guide/d333-427786P5",
+    rawPayload: specimen427786p5Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

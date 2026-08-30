@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "130036P2",
+    "productUrl": "https://www.viator.com/tours/Osaka/Deep-Osaka-Food-Tours/d333-130036P2",
+    "title": "Osaka Food Tour - 13 Delicious Dishes at 5 Local Eateries",
+    "description": {
+      "text": "In Osaka, this three-hour small-group food walk covers 13 dishes at five Shinsekai and Nishinari eateries, with two included drinks. The published route moves through standing bars, izakayas, and stalls near Dobutsuen-mae rather than a Dotonbori neon circuit. The format suits visitors who want a guided neighborhood dinner without assembling five separate reservations. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Shinsekai, Nishinari, and Dobutsuen-mae that define this outing rather than a castle-and-Umeda sightseeing loop."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $92.94",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1564
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/3a/83/36.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Thirteen dishes at five eateries",
+      "Shinsekai and Nishinari neighborhoods",
+      "Takoyaki, kushikatsu, and kitsune udon",
+      "Two included drinks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the published Dobutsuen-mae / Shinsekai meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this three-hour small-group food walk covers 13 dishes at five Shinsekai and Nishinari eateries, with two included drinks.",
+    "itineraryItems": [
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nishinari",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dobutsuen-mae",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "13 dishes at five eateries",
+      "Two included drinks",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka Food Tour - 13 Delicious Dishes at 5 Local Eateries?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the published Dobutsuen-mae / Shinsekai meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 92.94
+      },
+      "currency": "USD"
+    }
+  }
+}

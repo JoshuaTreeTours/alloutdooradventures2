@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "22288P1",
+    "productUrl": "https://www.viator.com/tours/Osaka/Osaka-Walking-Tour/d333-22288P1",
+    "title": "Osaka Walking Tour",
+    "description": {
+      "text": "In Osaka, this small-group walking introduction starts at Ebisu Bridge, covers Dotonbori and Hozen-ji, then continues to Shinsekai with a kushikatsu tasting and one non-alcoholic drink. Subway fares are own expense on the public page. The format suits first-time visitors who want a compact guided orientation without a private licensed circuit. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Dotonbori, Hozen-ji, and Shinsekai that define this outing rather than an Osaka Castle morning."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $55.35",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 262
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/6d/c8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Dotonbori waterfront walk",
+      "Hozen-ji",
+      "Shinsekai neighborhood",
+      "Kushikatsu tasting"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Ebisu Bridge in Dotonbori. The walk finishes on Ebisu-bashi."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this small-group walking introduction starts at Ebisu Bridge, covers Dotonbori and Hozen-ji, then continues to Shinsekai with a kushikatsu tasting and one non-alcoholic drink.",
+    "itineraryItems": [
+      {
+        "title": "Dotonbori",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hozen-ji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shinsekai",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Kushikatsu tasting",
+      "One non-alcoholic drink"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Osaka Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at Ebisu Bridge in Dotonbori. The walk finishes on Ebisu-bashi."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55.35
+      },
+      "currency": "USD"
+    }
+  }
+}

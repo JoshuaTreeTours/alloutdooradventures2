@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "20415P6",
+    "productUrl": "https://www.viator.com/tours/Osaka/Day-Trip-by-Bus-to-Kyoto-and-Nara-from-Osaka/d333-20415P6",
+    "title": "Ancient Capital Tour: Kyoto and Nara Highlights from Kyoto/Osaka",
+    "description": {
+      "text": "In Osaka, this full-day coach outing departs from a booked central Osaka or Kyoto point for Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji. Osaka and Kyoto depart on different dates and buses. Lunch is a listed upgrade rather than part of the base fare. The format suits visitors based in Osaka who want a single guided Kyoto-and-Nara day without assembling separate trains. Meeting points are confirmed at booking in Osaka, and the itinerary stays on Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji that define this outing rather than an Osaka Castle and Dotonbori city walk."
+    },
+    "location": {
+      "city": "Osaka",
+      "state": "Japan"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $90.35",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 297
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5f/70/4c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Kyoto and Nara circuit from Osaka",
+      "Arashiyama and Kinkaku-ji",
+      "Nara Park and Todai-ji",
+      "Coach departure from Osaka or Kyoto"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the booked central Osaka or central Kyoto departure point. Osaka and Kyoto depart on different dates and buses."
+      },
+      "end": {
+        "description": "Return to your Osaka meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Osaka, this full-day coach outing departs from a booked central Osaka or Kyoto point for Arashiyama, Kinkaku-ji, Nara Park, and Todai-ji.",
+    "itineraryItems": [
+      {
+        "title": "Arashiyama",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kinkaku-ji",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nara Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Todai-ji",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach transportation",
+      "English-speaking guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ancient Capital Tour: Kyoto and Nara Highlights from Kyoto/Osaka?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Osaka?",
+        "answer": "Meet at the booked central Osaka or central Kyoto departure point. Osaka and Kyoto depart on different dates and buses."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.35
+      },
+      "currency": "USD"
+    }
+  }
+}
