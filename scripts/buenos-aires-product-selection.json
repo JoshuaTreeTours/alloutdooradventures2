@@ -1,0 +1,149 @@
+{
+  "destinationLabel": "Buenos Aires",
+  "destinationCitySlug": "buenos-aires",
+  "viatorDestinationSlug": "Buenos Aires",
+  "viatorDestinationId": "d901",
+  "catalogUrl": "https://www.viator.com/Buenos-Aires/d901-ttd",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 5,
+  "premiumCount": 2,
+  "selectionNote": "Selected 5 guided Buenos Aires d901 products with live public USD From prices, combined ratings, unique 674x446 named heroes, and verified itinerary POIs. The live catalog supports far more than 20 tours, including preferred private city, gaucho, polo, helicopter, wine, photography, Tigre safari, and additional bike SKUs, but Viator DataDome blocking plus geo-currency dumps (AUD/EUR/GBP/CAD/SEK) blocked many otherwise-strong pages from being verified in USD on a complete product page. No live d901 helicopter page with combined USD+rating+hero was captured. Did not force audio/self-guided/app tours, inactive products, thin-review SKUs, near-duplicates, aggregator-only prices, FX-converted non-USD dumps, or products with unusable heroes. Same completeness constraint documented on Cusco (10), Cabo San Lucas (14), Puerto Vallarta (10), Cancun (13), and Mexico City (11). Premium share is 2/5 (40%) because additional private, helicopter, and gaucho SKUs lacked a complete USD+hero+rating dump.",
+  "selectedProductCodes": [
+    "50158P1",
+    "5030REC",
+    "26466P5",
+    "14659P1",
+    "52462P4"
+  ],
+  "premiumProductCodes": [
+    "50158P1",
+    "5030REC"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "52462P5",
+      "title": "Intimate Full Day Bike Tour BA South and BA North",
+      "reason": "Preferred full-day bike type; FromA$167.45 only on the live dump. Operator-site USD is not Viator. Did not convert."
+    },
+    {
+      "productCode": "30302P1",
+      "title": "A different Buenos Aires BIKE TOUR",
+      "reason": "4.9/888; From€35.82 only"
+    },
+    {
+      "productCode": "30302P2",
+      "title": "Recoleta y Palermo BIKE TOUR",
+      "reason": "4.8/139; FromCA$57.04 only"
+    },
+    {
+      "productCode": "27376P1",
+      "title": "Custom Buenos Aires City Tour",
+      "reason": "Preferred private type; From£142.77 only"
+    },
+    {
+      "productCode": "162204P4",
+      "title": "Private Gaucho Day with Estancia and Areco town",
+      "reason": "Preferred private gaucho type; EUR/GBP dump. Aggregator $239 is not a Viator product-page USD From."
+    },
+    {
+      "productCode": "162204P5",
+      "title": "Private Gaucho Day with Estancia",
+      "reason": "Preferred private gaucho type; From€244.41 / £198.14 only"
+    },
+    {
+      "productCode": "14659P3",
+      "title": "Full Day Tour at a Estancia in San Antonio de Areco from Buenos Aires",
+      "reason": "4.7/943; FromSEK 1,666.42 only. AAA $159 is not Viator."
+    },
+    {
+      "productCode": "14659P9",
+      "title": "Malbec Wine Tasting Experience Tour in Buenos Aires",
+      "reason": "Preferred wine type; FromA$83.48 on Viator. Aggregator $55 is not Viator. 4.0/4 too thin."
+    },
+    {
+      "productCode": "375289P1",
+      "title": "Private city tour",
+      "reason": "4.9/301 preferred private type; FromCA$70.81 only"
+    },
+    {
+      "productCode": "6909DAY",
+      "title": "Become a Polo Player Day Trip to Puesto Viejo Estancia",
+      "reason": "4.9/157 preferred cultural type; unavailable similar-options dump with no From price"
+    },
+    {
+      "productCode": "342988P4",
+      "title": "35min Private Helicopter Tour of Greater Buenos Aires",
+      "reason": "Preferred helicopter type; catalog card price only; 1 review and no complete USD+hero product-page dump"
+    },
+    {
+      "productCode": "342988P2",
+      "title": "Private Helicopter Aerobaptism in Buenos Aires",
+      "reason": "Preferred helicopter type; incomplete product-page USD+hero dump"
+    },
+    {
+      "productCode": "342988P5",
+      "title": "Private Helicopter Experience by Tigre and Buenos Aires",
+      "reason": "Preferred helicopter type; incomplete product-page USD+hero dump"
+    },
+    {
+      "productCode": "207838P1",
+      "title": "PHOTOGRAPHY TOUR IN BUENOS AIRES",
+      "reason": "Preferred photography type; From$190 on a thin 4.6/11 dump"
+    },
+    {
+      "productCode": "109228P24",
+      "title": "Small-group Buenos Aires City Tour",
+      "reason": "From$59.50 and 4.4/57; below the quality bar and near-duplicate of 14659P1"
+    },
+    {
+      "productCode": "11143P1",
+      "title": "Half-day city bike highlights",
+      "reason": "From$38; Mexico City pattern rejected price at or below 50. Aggregator dump only."
+    },
+    {
+      "productCode": "11143P53",
+      "title": "Private city variant",
+      "reason": "From$100 with 4.2/11; thin reviews"
+    },
+    {
+      "productCode": "353250P1",
+      "title": "Half Day Private Safari in Delta Tigre",
+      "reason": "Preferred Jeep/safari type; 5.0/73 and aggregator $130/$160, but no verified 674x446 Viator hero (only aggregator 720x480). Did not reconstruct a tacdn URL."
+    },
+    {
+      "productCode": "26466P6",
+      "title": "Bike and Kayak to Tigre Delta",
+      "reason": "Preferred bike type; aggregator $150 only, not a complete Viator USD+hero dump"
+    },
+    {
+      "productCode": "307527P1",
+      "title": "Helicopter (province catalog)",
+      "reason": "Preferred helicopter type; d51386 not d901; CAD dump"
+    },
+    {
+      "productCode": "11143P71",
+      "title": "Private Full-Day Iguazu Falls Tour with Airfare from Buenos Aires",
+      "reason": "From$370 and 4.7/334; destination bleed to Iguazu National Park / Puerto Iguazu"
+    },
+    {
+      "productCode": "11143P13",
+      "title": "Iguazu Falls from Buenos Aires",
+      "reason": "Destination bleed to Iguazu"
+    },
+    {
+      "productCode": "11143P70",
+      "title": "Iguazu Falls from Buenos Aires",
+      "reason": "From€438.81; destination bleed to Iguazu"
+    },
+    {
+      "productCode": "166985P1",
+      "title": "Colonia del Sacramento day trip",
+      "reason": "Destination bleed to Uruguay"
+    },
+    {
+      "productCode": "435811P1",
+      "title": "Airport transfer",
+      "reason": "Airport-transfer-only; From€54.81"
+    }
+  ]
+}

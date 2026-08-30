@@ -329,6 +329,11 @@ import specimen218207p4Payload from "../../data/engine6/viator/218207P4.exact-pr
 import specimen428665p1Payload from "../../data/engine6/viator/428665P1.exact-product.json";
 import specimen368259p2Payload from "../../data/engine6/viator/368259P2.exact-product.json";
 import specimen46209p5Payload from "../../data/engine6/viator/46209P5.exact-product.json";
+import specimen50158p1Payload from "../../data/engine6/viator/50158P1.exact-product.json";
+import specimen5030recPayload from "../../data/engine6/viator/5030REC.exact-product.json";
+import specimen26466p5Payload from "../../data/engine6/viator/26466P5.exact-product.json";
+import specimen14659p1Payload from "../../data/engine6/viator/14659P1.exact-product.json";
+import specimen52462p4Payload from "../../data/engine6/viator/52462P4.exact-product.json";
 import specimen89089p57Payload from "../../data/engine6/viator/89089P57.exact-product.json";
 import specimen49313p1Payload from "../../data/engine6/viator/49313P1.exact-product.json";
 import specimen120993p16Payload from "../../data/engine6/viator/120993P16.exact-product.json";
@@ -3549,6 +3554,36 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "46209P5",
     publicUrl: "https://www.viator.com/tours/Puerto-Vallarta/Private-Whale-Watching-Tour-in-Puerto-Vallarta/d630-46209P5",
     rawPayload: specimen46209p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "50158P1",
+    publicUrl: "https://www.viator.com/tours/Buenos-Aires/Full-Day-in-San-Antonio-de-Areco-from-Buenos-Aires/d901-50158P1",
+    rawPayload: specimen50158p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5030REC",
+    publicUrl: "https://www.viator.com/tours/Buenos-Aires/Recoleta-Afternoon-Walking-Tour/d901-5030REC",
+    rawPayload: specimen5030recPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "26466P5",
+    publicUrl: "https://www.viator.com/tours/Buenos-Aires/Hidden-Graffiti-And-Urban-Art-Tour/d901-26466P5",
+    rawPayload: specimen26466p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14659P1",
+    publicUrl: "https://www.viator.com/tours/Buenos-Aires/Shared-City-Tour-of-Buenos-Aires/d901-14659P1",
+    rawPayload: specimen14659p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "52462P4",
+    publicUrl: "https://www.viator.com/tours/Buenos-Aires/Intimate-Bike-Tour-BA-South-Route-Historical-and-Cultural-Lunch-included/d901-52462P4",
+    rawPayload: specimen52462p4Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

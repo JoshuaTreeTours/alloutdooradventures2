@@ -14,7 +14,8 @@ export const isKnownInternationalCountrySlug = (slug: string): boolean => {
     INTERNATIONAL_COUNTRY_SLUGS.has(normalizedSlug) ||
     normalizedSlug === "canada" ||
     normalizedSlug === "mexico" ||
-    normalizedSlug === "peru"
+    normalizedSlug === "peru" ||
+    normalizedSlug === "argentina"
   );
 };
 
@@ -63,7 +64,8 @@ export const resolveSafeTourListHref = ({
     if (
       isUsDestinationSlug(normalizedStateSlug) ||
       normalizedStateSlug === "mexico" ||
-      normalizedStateSlug === "peru"
+      normalizedStateSlug === "peru" ||
+      normalizedStateSlug === "argentina"
     ) {
       return `/destinations/${normalizedStateSlug}/${normalizedCitySlug}/tours`;
     }

@@ -1458,6 +1458,29 @@ export const isEngine6PuertoVallartaTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_PUERTO_VALLARTA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_BUENOS_AIRES_50158P1_PRODUCT_CODE = "50158P1";
+export const ENGINE6_BUENOS_AIRES_50158P1_ROUTE =
+  "/destinations/argentina/buenos-aires/tours/private-tour-to-san-antonio-de-areco-gaucho-town-estanc-50158P1";
+export const ENGINE6_BUENOS_AIRES_5030REC_PRODUCT_CODE = "5030REC";
+export const ENGINE6_BUENOS_AIRES_5030REC_ROUTE =
+  "/destinations/argentina/buenos-aires/tours/recoleta-in-depth-not-literally-private-walking-tour-5030REC";
+export const ENGINE6_BUENOS_AIRES_26466P5_PRODUCT_CODE = "26466P5";
+export const ENGINE6_BUENOS_AIRES_26466P5_ROUTE =
+  "/destinations/argentina/buenos-aires/tours/off-the-beaten-path-hidden-urban-art-bike-tour-26466P5";
+export const ENGINE6_BUENOS_AIRES_14659P1_PRODUCT_CODE = "14659P1";
+export const ENGINE6_BUENOS_AIRES_14659P1_ROUTE =
+  "/destinations/argentina/buenos-aires/tours/5hs-small-group-city-tour-of-buenos-aires-optional-stre-14659P1";
+export const ENGINE6_BUENOS_AIRES_52462P4_PRODUCT_CODE = "52462P4";
+export const ENGINE6_BUENOS_AIRES_52462P4_ROUTE =
+  "/destinations/argentina/buenos-aires/tours/cultural-immersion-experience-by-bike-around-old-ba-max-52462P4";
+
+export const ENGINE6_BUENOS_AIRES_TOUR_PATH_PREFIX =
+  "/destinations/argentina/buenos-aires/tours/";
+
+export const isEngine6BuenosAiresTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_BUENOS_AIRES_TOUR_PATH_PREFIX);
+
 export const ENGINE6_CUSCO_89089P57_PRODUCT_CODE = "89089P57";
 export const ENGINE6_CUSCO_89089P57_ROUTE =
   "/destinations/peru/cusco/tours/excursi-n-to-humantay-lake-full-day-from-cusco-89089P57";
@@ -4906,6 +4929,26 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PUERTO_VALLARTA_46209P5_ROUTE,
     ENGINE6_PUERTO_VALLARTA_46209P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BUENOS_AIRES_50158P1_ROUTE,
+    ENGINE6_BUENOS_AIRES_50158P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BUENOS_AIRES_5030REC_ROUTE,
+    ENGINE6_BUENOS_AIRES_5030REC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BUENOS_AIRES_26466P5_ROUTE,
+    ENGINE6_BUENOS_AIRES_26466P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BUENOS_AIRES_14659P1_ROUTE,
+    ENGINE6_BUENOS_AIRES_14659P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BUENOS_AIRES_52462P4_ROUTE,
+    ENGINE6_BUENOS_AIRES_52462P4_PRODUCT_CODE,
   ],
   [
     ENGINE6_CUSCO_89089P57_ROUTE,

@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "14659P1",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Shared-City-Tour-of-Buenos-Aires/d901-14659P1",
+    "title": "5hs Small Group City Tour of Buenos Aires (optional street food)",
+    "description": {
+      "text": "In Buenos Aires, this five-hour small-group city outing covers Plaza de Mayo, Puerto Madero, San Telmo, La Boca, Recoleta, and Palermo, with hotel pickup and drop-off listed. A local guide handles neighborhood pacing and live commentary; an optional street-food snack upgrade appears separately from the From price. The published cap is about 16. The format suits visitors who want a longer guided sightseeing introduction without coordinating each district independently. Meeting points are confirmed at booking in Buenos Aires, and the itinerary stays on those six districts that shape this city day rather than a private Recoleta walk or a gaucho ranch outing."
+    },
+    "location": {
+      "city": "Buenos Aires",
+      "state": "Argentina"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 220
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Palermo",
+      "Discover all the different sides to Buenos Aires on this city tour, including convenient hotel pickup and drop-off",
+      "See the grand presidential buildings of Plaza de Mayo, the modern waterfront of Puerto Madero and the cobblestone alleyw",
+      "This tour also includes a visit to La Boca neighborhood",
+      "5hs Small Group City Tour of Buenos Aires (optional street food) near Buenos Aires"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed at centrally located hotels and apartments in Buenos Aires, with a 9:00am start."
+      },
+      "end": {
+        "description": "Return to your Buenos Aires meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Buenos Aires, this five-hour small-group city outing covers Plaza de Mayo, Puerto Madero, San Telmo, La Boca, Recoleta, and Palermo, with hotel pickup and drop-off listed.",
+    "itineraryItems": [
+      {
+        "title": "Plaza de Mayo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Puerto Madero",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Telmo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Boca",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Recoleta",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palermo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional Local Guide",
+      "Hotel Pick-Up and Drop-Off",
+      "Live Commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 5hs Small Group City Tour of Buenos Aires (optional street food)?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Buenos Aires?",
+        "answer": "Pickup is listed at centrally located hotels and apartments in Buenos Aires, with a 9:00am start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

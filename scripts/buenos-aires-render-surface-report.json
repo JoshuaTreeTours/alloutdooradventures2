@@ -1,0 +1,94 @@
+{
+  "selectedCount": 5,
+  "listingCount": 5,
+  "listingMatchesSelection": true,
+  "okCount": 5,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "50158P1",
+      "ok": true,
+      "path": "/destinations/argentina/buenos-aires/tours/private-tour-to-san-antonio-de-areco-gaucho-town-estanc-50158P1",
+      "title": "Private Tour to San Antonio de Areco: Gaucho town & Estancia from Buenos Aires",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/20/0b/81.jpg",
+      "card": "In Buenos Aires, this private day leaves the city for San Antonio de Areco, a gaucho town on the Pampas, then continues to a working estanci",
+      "itineraryTitles": [
+        "San Antonio de Areco",
+        "Working estancia"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5030REC",
+      "ok": true,
+      "path": "/destinations/argentina/buenos-aires/tours/recoleta-in-depth-not-literally-private-walking-tour-5030REC",
+      "title": "Recoleta in Depth (not literally) Private Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b7/07/2e.jpg",
+      "card": "In Buenos Aires, this private afternoon walk covers Recoleta on a two-mile circuit from La Biela cafe to Floralis Generica.",
+      "itineraryTitles": [
+        "Gomero de la Recoleta",
+        "La Recoleta Cemetery",
+        "Eva Peron's Tomb",
+        "Basilica de Nuestra Senora Del Pilar",
+        "Monumento al General Carlos Maria de Alvear",
+        "Museo Nacional de Bellas Artes",
+        "Palais de Glace-Salas Nacionales de Cultura",
+        "Monumento A Eva Peron",
+        "San Martin National Institute",
+        "Monumento de Francia a la Argentina",
+        "Casa Alcorta",
+        "Museo Nacional De Arte Decorativo",
+        "Museo de Arte Latinoamericano de Buenos Aires",
+        "Floralis Generica"
+      ],
+      "issues": []
+    },
+    {
+      "code": "26466P5",
+      "ok": true,
+      "path": "/destinations/argentina/buenos-aires/tours/off-the-beaten-path-hidden-urban-art-bike-tour-26466P5",
+      "title": "Off the Beaten Path: Hidden Urban Art Bike Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6f/bf/66.jpg",
+      "card": "In Buenos Aires, this guided urban-art bike outing covers street murals and graffiti walls in San Telmo, La Boca, Barracas, and Pasaje Lanin",
+      "itineraryTitles": [
+        "San Telmo",
+        "La Boca",
+        "Barracas",
+        "Pasaje Lanin"
+      ],
+      "issues": []
+    },
+    {
+      "code": "14659P1",
+      "ok": true,
+      "path": "/destinations/argentina/buenos-aires/tours/5hs-small-group-city-tour-of-buenos-aires-optional-stre-14659P1",
+      "title": "5hs Small Group City Tour of Buenos Aires (optional street food)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg",
+      "card": "In Buenos Aires, this five-hour small-group city outing covers Plaza de Mayo, Puerto Madero, San Telmo, La Boca, Recoleta, and Palermo, with",
+      "itineraryTitles": [
+        "Plaza de Mayo",
+        "Puerto Madero",
+        "San Telmo",
+        "La Boca",
+        "Recoleta",
+        "Palermo"
+      ],
+      "issues": []
+    },
+    {
+      "code": "52462P4",
+      "ok": true,
+      "path": "/destinations/argentina/buenos-aires/tours/cultural-immersion-experience-by-bike-around-old-ba-max-52462P4",
+      "title": "Cultural Immersion Experience by Bike around old BA Max 6 ppl",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/a9/24/bb.jpg",
+      "card": "In Buenos Aires, this small-group bike outing covers Plaza de Mayo, La Boca, Puerto Madero, and San Telmo, with mate, alfajores, and a local",
+      "itineraryTitles": [
+        "Plaza de Mayo",
+        "La Boca",
+        "Puerto Madero",
+        "San Telmo"
+      ],
+      "issues": []
+    }
+  ]
+}

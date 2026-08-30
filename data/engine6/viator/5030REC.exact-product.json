@@ -1,0 +1,159 @@
+{
+  "product": {
+    "productCode": "5030REC",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Recoleta-Afternoon-Walking-Tour/d901-5030REC",
+    "title": "Recoleta in Depth (not literally) Private Walking Tour",
+    "description": {
+      "text": "In Buenos Aires, this private afternoon walk covers Recoleta on a two-mile circuit from La Biela cafe to Floralis Generica. The published route includes Gomero de la Recoleta, La Recoleta Cemetery, Eva Peron's Tomb, Basilica de Nuestra Senora Del Pilar, Palais de Glace, Museo Nacional de Bellas Artes, and Floralis Generica, with a pass-by at MALBA. Cemetery admission is included; hotel pickup is not listed. The published duration is about three hours. A local guide covers Spanish, British, Italian, and French influences in the neighborhood. The format suits visitors who want a private Recoleta walk without assembling cemetery tickets independently. Meeting points are confirmed at booking in Buenos Aires, and the itinerary stays on Recoleta landmarks that shape this outing rather than a full-city coach circuit or a La Boca stop."
+    },
+    "location": {
+      "city": "Buenos Aires",
+      "state": "Argentina"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $109.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 86
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b7/07/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Museo Nacional de Bellas Artes",
+      "Palais de Glace-Salas Nacionales de Cultura",
+      "Monumento A Eva Peron",
+      "San Martin National Institute",
+      "Monumento de Francia a la Argentina"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at La Biela, Av. Pres. Manuel Quintana 596, outside the corner door of the cafe near the red telephone booths."
+      },
+      "end": {
+        "description": "Return to your Buenos Aires meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Buenos Aires, this private afternoon walk covers Recoleta on a two-mile circuit from La Biela cafe to Floralis Generica.",
+    "itineraryItems": [
+      {
+        "title": "Gomero de la Recoleta",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "La Recoleta Cemetery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eva Peron's Tomb",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Basilica de Nuestra Senora Del Pilar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monumento al General Carlos Maria de Alvear",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museo Nacional de Bellas Artes",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palais de Glace-Salas Nacionales de Cultura",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monumento A Eva Peron",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Martin National Institute",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monumento de Francia a la Argentina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Casa Alcorta",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museo Nacional De Arte Decorativo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museo de Arte Latinoamericano de Buenos Aires",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Floralis Generica",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional English-speaking guide",
+      "Cemetery admission ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Recoleta in Depth (not literally) Private Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Buenos Aires?",
+        "answer": "Meet at La Biela, Av. Pres. Manuel Quintana 596, outside the corner door of the cafe near the red telephone booths."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109
+      },
+      "currency": "USD"
+    }
+  }
+}

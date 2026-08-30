@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "50158P1",
+    "productUrl": "https://www.viator.com/tours/Buenos-Aires/Full-Day-in-San-Antonio-de-Areco-from-Buenos-Aires/d901-50158P1",
+    "title": "Private Tour to San Antonio de Areco: Gaucho town & Estancia from Buenos Aires",
+    "description": {
+      "text": "In Buenos Aires, this private day leaves the city for San Antonio de Areco, a gaucho town on the Pampas, then continues to a working estancia. A local guide covers the town streets and ranch activities, with horseback riding or a carriage ride, an asado lunch, folkloric dance, and an equestrian demonstration listed on the published itinerary. Hotel pickup from any Buenos Aires hotel or address is included, with an 8:30am start and a published duration of about 10 hours. Empanadas and drinks appear at the ranch reception. The format suits visitors who want a private gaucho cultural day without coordinating rural driving or ranch reservations independently. Meeting points are confirmed at booking in Buenos Aires, and the itinerary stays on San Antonio de Areco and the working estancia that define this outing rather than a city-neighborhood loop or a Tigre delta cruise."
+    },
+    "location": {
+      "city": "Buenos Aires",
+      "state": "Argentina"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $255.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 94
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/20/0b/81.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Take a deep dive into Argentina’s gaucho culture on this day tour to the town of San Antonio de Areco",
+      "Explore with a local who knows the intimate details of life on the Pampas",
+      "Private Tour to San Antonio de Areco: Gaucho town & Estancia from Buenos Aires near Buenos Aires",
+      "Professional Buenos Aires guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is listed from any Buenos Aires hotel or from the address of choice in Buenos Aires, with an 8:30am start."
+      },
+      "end": {
+        "description": "Return to your Buenos Aires meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Buenos Aires, this private day leaves the city for San Antonio de Areco, a gaucho town on the Pampas, then continues to a working estancia.",
+    "itineraryItems": [
+      {
+        "title": "San Antonio de Areco",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Working estancia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All activities at the Estancia (ranch): horse riding or carriage, folkloric dance, equestrian gauchos' performance",
+      "Asado lunch: a selection of meats, grilled on an Argentine BBQ (parilla) accompanied by salad, drinks, dessert & coffee",
+      "Private and comfortable transfer in/out from Buenos Aires, with air conditioned",
+      "Professional local guide",
+      "Tailor-made tour of the town",
+      "Snacks",
+      "Reception with empanadas and drinks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour to San Antonio de Areco: Gaucho town & Estancia from Buenos Aires?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Buenos Aires?",
+        "answer": "Pickup is listed from any Buenos Aires hotel or from the address of choice in Buenos Aires, with an 8:30am start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 255
+      },
+      "currency": "USD"
+    }
+  }
+}

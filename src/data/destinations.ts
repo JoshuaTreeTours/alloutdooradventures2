@@ -5902,6 +5902,102 @@ const peruState: StateDestination = {
   isFallback: true,
 };
 
+const argentinaState: StateDestination = {
+  slug: "argentina",
+  name: "Argentina",
+  description:
+    "Buenos Aires plazas, Recoleta walks, southern-neighborhood bike days, and gaucho estancia outings from the capital.",
+  featuredDescription:
+    "Explore Buenos Aires tours with city sightseeing, Recoleta walking circuits, urban-art and cultural bike days, and private gaucho town and estancia itineraries.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg",
+  region: "South America",
+  intro:
+    "Argentina pairs walkable Buenos Aires districts and riverfront plazas with Recoleta architecture days and pampas gaucho outings from the capital.",
+  longDescription:
+    "Buenos Aires anchors Argentina tour inventory with Plaza de Mayo, Puerto Madero, San Telmo, La Boca, Recoleta, and Palermo city circuits, cemetery and museum walks, southern-neighborhood bike days, and private San Antonio de Areco gaucho town and estancia itineraries.",
+  topRegions: [
+    {
+      title: "Historic center and southern neighborhoods",
+      description:
+        "Plaza de Mayo, Puerto Madero, San Telmo, La Boca, Barracas, and Pasaje Lanin.",
+    },
+    {
+      title: "Recoleta, Palermo, and pampas days",
+      description:
+        "La Recoleta Cemetery, Floralis Generica, Palermo parks, and San Antonio de Areco estancia days.",
+    },
+  ],
+  cities: [
+    {
+      name: "Buenos Aires",
+      slug: "buenos-aires",
+      stateSlug: "argentina",
+      region: "Buenos Aires",
+      lat: -34.6037,
+      lng: -58.3816,
+      shortDescription:
+        "City sightseeing, Recoleta walks, bike days, and gaucho estancia outings from Buenos Aires.",
+      intro:
+        "Buenos Aires is the Argentine capital with Plaza de Mayo, Recoleta, southern neighborhoods, and pampas day-trip departures.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "adventure"],
+      whereItIs: [
+        "Buenos Aires sits on the Rio de la Plata in Argentina, with Plaza de Mayo, Recoleta, and southern neighborhoods framing central sightseeing.",
+        "Most guided tours depart from city-center hotels, La Biela, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Pampas grassland and ranch days sit outside the city rather than Andean hiking routes.",
+        lakesWater:
+          "Puerto Madero waterfront and listed Tigre delta days appear on some Buenos Aires itineraries.",
+        desertForest:
+          "San Antonio de Areco and working estancias sit on full-day gaucho routes from the capital.",
+        cycling:
+          "Guided bike inventory covers southern neighborhoods, urban-art walls, and historic-south cultural loops.",
+        scenicDrives:
+          "Shared and private vans cover Recoleta, Palermo, and San Antonio de Areco roads from Buenos Aires.",
+        seasonalNotes:
+          "Mild months favor walking and bike days; summer heat can shift afternoon Recoleta and pampas pacing.",
+      },
+      thingsToDo: [
+        "Walk Recoleta Cemetery and the surrounding monuments on a private afternoon circuit.",
+        "Spend a half day on a small-group city tour or a southern-neighborhood bike outing.",
+        "Take a private gaucho day to San Antonio de Areco and a working estancia.",
+      ],
+      toursCopy: [
+        "Book a Buenos Aires city circuit or Recoleta walk for a compact introduction.",
+        "Pair a southern-neighborhood bike day with a private gaucho estancia outing.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Small-group city tour covering Plaza de Mayo, San Telmo, and La Boca.",
+          "Afternoon: Recoleta walk or urban-art bike circuit.",
+          "Evening: Return to central Buenos Aires.",
+        ],
+        dayTwo: [
+          "Morning: Private San Antonio de Areco and estancia day.",
+          "Afternoon: Continue the published ranch circuit.",
+          "Evening: Return to Buenos Aires.",
+        ],
+      },
+      gettingThere: [
+        "Ministro Pistarini International Airport and Jorge Newbery Airpark serve Buenos Aires with taxis and hotel transfers to Plaza de Mayo and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Buenos Aires tours?",
+          answer:
+            "Small-group city sightseeing, private Recoleta walking circuits, southern-neighborhood bike days, and private San Antonio de Areco gaucho town and estancia itineraries are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -5921,6 +6017,7 @@ export const states: StateDestination[] = [
   irelandState,
   mexicoState,
   peruState,
+  argentinaState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

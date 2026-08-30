@@ -82,6 +82,9 @@ export const ENGINE6_CUSCO_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_LIMA_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/97/94.jpg";
 
+export const ENGINE6_BUENOS_AIRES_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/17/7b/d1.jpg";
+
 export const ENGINE6_PARIS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg";
 
@@ -209,6 +212,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   peru: {
     cusco: ENGINE6_CUSCO_CANONICAL_CITY_HERO_URL,
     lima: ENGINE6_LIMA_CANONICAL_CITY_HERO_URL,
+  },
+  argentina: {
+    "buenos-aires": ENGINE6_BUENOS_AIRES_CANONICAL_CITY_HERO_URL,
   },
   france: {
     paris: ENGINE6_PARIS_CANONICAL_CITY_HERO_URL,
