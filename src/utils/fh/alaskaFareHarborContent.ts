@@ -33,12 +33,14 @@ export const getAlaskaFareHarborContent = (
   const requirements = Array.from(
     new Set([...minimumDetails, ...(source.requirements ?? [])])
   );
+  const pickup =
+    source.pickup && source.pickup !== "unknown" ? source.pickup : undefined;
 
   return {
     quickFacts: {
       duration: source.duration,
       startLocationArea: source.meetingLocation,
-      pickup: source.pickup,
+      pickup,
       difficulty: source.difficulty,
       ageOrMinimumRequirements: source.minimumAge
         ? `Minimum age: ${source.minimumAge}`
