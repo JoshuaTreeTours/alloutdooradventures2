@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "3253P11",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-Cruise-Gold-Class-VIP-Lounge-Package/d754-3253P11",
+    "title": "Great Barrier Reef Cruise - Gold Class VIP Lounge Package",
+    "description": {
+      "text": "In Cairns, this Gold Class package boards at Reef Fleet Terminal on Spence Street and runs to two exclusive Outer Reef sites on a 35-meter catamaran. The published format keeps a private lounge, concierge service, guided snorkel time, and a BBQ lunch on one ticket rather than a shared pontoon day. The format suits visitors who want a smaller lounge group on the reef without chartering the whole vessel. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Reef Fleet Terminal and the Outer Reef that define this outing rather than a Green Island ferry."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $520.74",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 52
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ed/43/5e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cairns Reef Fleet Terminal departure",
+      "Gold Class VIP lounge on a 35-meter catamaran",
+      "Two exclusive Outer Reef locations",
+      "Guided snorkel time on the reef",
+      "BBQ lunch onboard"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Cairns Reef Fleet Terminal, 1 Spence Street, Cairns City QLD 4870."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this Gold Class package boards at Reef Fleet Terminal on Spence Street and runs to two exclusive Outer Reef sites on a 35-meter catamaran.",
+    "itineraryItems": [
+      {
+        "title": "Cairns Reef Fleet Terminal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Outer Reef",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Gold Class lounge access for up to 8 guests",
+      "Dedicated concierge service",
+      "Guided snorkel tour",
+      "BBQ lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Barrier Reef Cruise - Gold Class VIP Lounge Package?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in at Cairns Reef Fleet Terminal, 1 Spence Street, Cairns City QLD 4870."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 520.74
+      },
+      "currency": "USD"
+    }
+  }
+}

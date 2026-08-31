@@ -6652,16 +6652,16 @@ const australiaState: StateDestination = {
   slug: "australia",
   name: "Australia",
   description:
-    "Sydney harbour walks, Circular Quay cruises, Blue Mountains days, Bondi and The Rocks circuits, and guided touring from the harbour city.",
+    "Sydney harbour walks, Circular Quay cruises, Blue Mountains days, Bondi and The Rocks circuits, plus Cairns reef, rainforest, Kuranda, and Tablelands touring from Tropical North Queensland.",
   featuredDescription:
-    "Explore Sydney tours with harbour cruises, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, food and brewery walks, and scenic helicopter flights.",
+    "Explore Sydney tours with harbour cruises, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, food and brewery walks, and scenic helicopter flights, plus Cairns Great Barrier Reef days, Green Island and Fitzroy Island ferries, Daintree and Cape Tribulation coach outings, Kuranda rail and Skyrail, and Atherton Tablelands food or wildlife tours.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/0b/2b.jpg",
   region: "Oceania",
   intro:
-    "Australia pairs walkable Sydney harbour, The Rocks, and Bondi days with Circular Quay cruises, Blue Mountains plateau outings, and Port Stephens coastal trips from the harbour city.",
+    "Australia pairs walkable Sydney harbour, The Rocks, and Bondi days with Circular Quay cruises, Blue Mountains plateau outings, and Port Stephens coastal trips from the harbour city. In Tropical North Queensland, Cairns adds Great Barrier Reef, Green Island, Daintree, Kuranda, and Atherton Tablelands touring.",
   longDescription:
-    "Sydney anchors Australia tour inventory with Hyde Park and The Rocks walking circuits, Circular Quay harbour cruises, seasonal whale watches, BridgeClimb on the Sydney Harbour Bridge, Blue Mountains days covering Scenic World and the Three Sisters, private Opera House and Bondi half-days, Port Stephens dune circuits, Mascot helicopter hops, Surry Hills food walks, Royal Botanic Garden forages, and brewery or dinner-cruise evenings.",
+    "Sydney anchors Australia tour inventory with Hyde Park and The Rocks walking circuits, Circular Quay harbour cruises, seasonal whale watches, BridgeClimb on the Sydney Harbour Bridge, Blue Mountains days covering Scenic World and the Three Sisters, private Opera House and Bondi half-days, Port Stephens dune circuits, Mascot helicopter hops, Surry Hills food walks, Royal Botanic Garden forages, and brewery or dinner-cruise evenings. Cairns adds Outer Reef and Green Island boat days, Fitzroy Island ferries, Daintree and Cape Tribulation rainforest circuits, Kuranda Scenic Railway and Skyrail Rainforest Cableway, Paronella Park historic stops, and Atherton Tablelands food or night-wildlife outings.",
   topRegions: [
     {
       title: "Harbour and historic streets",
@@ -6677,6 +6677,11 @@ const australiaState: StateDestination = {
       title: "Food, bikes, and air",
       description:
         "Surry Hills tasting walks, Sydney brewery circuits, electric-bike harbour rides, and scenic helicopter flights from Mascot.",
+    },
+    {
+      title: "Cairns reef and rainforest",
+      description:
+        "Great Barrier Reef, Green Island, Fitzroy Island, Mossman Gorge, Daintree River, Cape Tribulation, Kuranda Scenic Railway, Skyrail Rainforest Cableway, and Atherton Tablelands days from Cairns.",
     },
   ],
   cities: [
@@ -6742,6 +6747,71 @@ const australiaState: StateDestination = {
           question: "What are the signature Sydney tours?",
           answer:
             "Harbour cruises from Circular Quay, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, Surry Hills food walks, and scenic helicopter flights are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Cairns",
+      slug: "cairns",
+      stateSlug: "australia",
+      region: "Cairns",
+      lat: -16.9186,
+      lng: 145.7781,
+      shortDescription:
+        "Great Barrier Reef days, Green Island and Fitzroy Island ferries, and Daintree or Kuranda circuits from Cairns.",
+      intro:
+        "Cairns is Tropical North Queensland's reef and rainforest gateway, with Reef Fleet Terminal departures, Green Island and Fitzroy Island days, Daintree and Cape Tribulation coach outings, Kuranda rail and Skyrail, and Atherton Tablelands food or wildlife tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/d3/1c.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "food"],
+      whereItIs: [
+        "Cairns sits on Trinity Inlet in Tropical North Queensland, with Reef Fleet Terminal, the northern beaches, and the Wet Tropics hinterland framing most sightseeing.",
+        "Most guided tours depart from Cairns Reef Fleet Terminal, hotel pickups, GSL Aviation, Smithfield Skyrail, and meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Kuranda Scenic Railway, Skyrail Rainforest Cableway, and Atherton Tablelands waterfall or wildlife days sit on full-day routes from Cairns.",
+        lakesWater:
+          "Great Barrier Reef pontoon and sailing days, Green Island and Fitzroy Island ferries, and Daintree River cruises appear on scenic outings from the city.",
+        desertForest:
+          "Mossman Gorge, Daintree Rainforest, Cape Tribulation, and Atherton Tablelands woodland paths offer rainforest stops beyond the reef fleet.",
+        cycling:
+          "Published Cairns inventory on this build is boat, coach, rail, and flight touring rather than a dedicated city bike circuit.",
+        scenicDrives:
+          "Coaches cover Mossman Gorge, Cape Tribulation, Kuranda, Paronella Park, and Atherton Tablelands stops from Cairns hotels.",
+        seasonalNotes:
+          "Dry-season months favor reef and island days; wet-season rain can change Daintree and Tablelands trail conditions.",
+      },
+      thingsToDo: [
+        "Board a reef catamaran or schooner from Reef Fleet Terminal.",
+        "Ride Kuranda Scenic Railway and Skyrail Rainforest Cableway.",
+        "Spend a day in the Daintree, at Cape Tribulation, or on the Atherton Tablelands.",
+      ],
+      toursCopy: [
+        "Book a Great Barrier Reef or Green Island day for a compact introduction.",
+        "Pair a Kuranda rail day or Daintree coach outing with a Tablelands food or night-wildlife tour.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Reef Fleet Terminal departure for the Outer Reef or Green Island.",
+          "Afternoon: Continue snorkeling, island time, or a scenic reef flight.",
+          "Evening: Return to central Cairns.",
+        ],
+        dayTwo: [
+          "Morning: Kuranda rail and Skyrail, or a Daintree and Cape Tribulation coach day.",
+          "Afternoon: Continue the published rainforest, waterfall, or village circuit.",
+          "Evening: Return to Cairns, or join a Tablelands night wildlife outing.",
+        ],
+      },
+      gettingThere: [
+        "Cairns Airport serves the city with taxis, hotel transfers, and published tour pickups to Reef Fleet Terminal, Smithfield, and most meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Cairns tours?",
+          answer:
+            "Great Barrier Reef catamaran and sailing days, Green Island and Fitzroy Island ferries, Daintree and Cape Tribulation coach outings, Kuranda Scenic Railway and Skyrail, Paronella Park historic days, and Atherton Tablelands food or night-wildlife tours are the most popular departures.",
         },
       ],
     },

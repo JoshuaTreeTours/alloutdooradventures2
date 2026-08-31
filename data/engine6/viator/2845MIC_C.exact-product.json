@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "2845MIC_C",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Ocean-Spirit-Sail-to-Michaelmas-Cay-Snorkel-or-Dive-from-Cairns/d754-2845MIC_C",
+    "title": "Ocean Spirit Sail to Michaelmas Cay Snorkel or Dive, from Cairns",
+    "description": {
+      "text": "In Cairns, Ocean Spirit checks in at Reef Fleet Terminal and sails to Michaelmas Cay for beach snorkeling, a semi-submersible, and a marine-biologist briefing. The published format lands on the cay rather than a Green Island village stop or an Outer Reef pontoon. The format suits visitors who want a sand-cay reef window without a Tablelands food tour. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Reef Fleet Terminal and Michaelmas Cay that define this outing rather than a Paronella Park historic day."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $179.80",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 150
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ec/11/c6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cairns Reef Fleet Terminal departure",
+      "Michaelmas Cay beach and coral gardens",
+      "Semi-submersible reef viewing",
+      "Marine biologist presentation",
+      "Buffet lunch"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Ocean Spirit counter inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, Ocean Spirit checks in at Reef Fleet Terminal and sails to Michaelmas Cay for beach snorkeling, a semi-submersible, and a marine-biologist briefing.",
+    "itineraryItems": [
+      {
+        "title": "Cairns Reef Fleet Terminal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Michaelmas Cay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Roundtrip cruise to Michaelmas Cay",
+      "Snorkel equipment",
+      "Semi-submersible coral viewing",
+      "Buffet lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ocean Spirit Sail to Michaelmas Cay Snorkel or Dive, from Cairns?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in at the Ocean Spirit counter inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179.8
+      },
+      "currency": "USD"
+    }
+  }
+}

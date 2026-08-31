@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "2570KURANDA",
+    "productUrl": "https://www.viator.com/tours/Queensland/Skip-the-Line-Kuranda-Scenic-Railway-Gold-Class-and-Skyrail-Rainforest-Cableway/d122-2570KURANDA",
+    "title": "Skip the Line Kuranda Scenic Railway Gold Class and Skyrail Rainforest Cableway",
+    "description": {
+      "text": "In Cairns, this skip-the-line day pairs Gold Class on the Kuranda Scenic Railway with a one-way Skyrail Rainforest Cableway gondola and free time in Kuranda village. The published format is rail-and-cableway transit rather than a small-group Army Duck add-on. Pickup is listed from Cairns, Palm Cove, Trinity Beach, or Port Douglas, or at the Smithfield Skyrail terminal. Meeting points are confirmed at booking in Cairns, and the itinerary stays on the scenic railway, Kuranda, and Skyrail that define this outing rather than a Fitzroy Island ferry."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $180.77",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 519
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/bb/07/3c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Gold Class Kuranda Scenic Railway",
+      "Skyrail Rainforest Cableway gondola",
+      "Free time in Kuranda village",
+      "Heritage Markets leisure time",
+      "Pickup from Cairns or Port Douglas"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from published locations in Cairns, Palm Cove, Trinity Beach, or Port Douglas, or meet at Skyrail Rainforest Cableway, 6 Skyrail Drive, Smithfield."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this skip-the-line day pairs Gold Class on the Kuranda Scenic Railway with a one-way Skyrail Rainforest Cableway gondola and free time in Kuranda village.",
+    "itineraryItems": [
+      {
+        "title": "Kuranda Scenic Railway",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuranda",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Skyrail Rainforest Cableway",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Kuranda Scenic Railway Gold Class one way",
+      "Skyrail Rainforest Cableway one way",
+      "Pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Skip the Line Kuranda Scenic Railway Gold Class and Skyrail Rainforest Cableway?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Pickup from published locations in Cairns, Palm Cove, Trinity Beach, or Port Douglas, or meet at Skyrail Rainforest Cableway, 6 Skyrail Drive, Smithfield."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180.77
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "11730P6",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Adventure-Taste-Atherton-Tablelands-Food-Wine-Tour-from-Cairns/d754-11730P6",
+    "title": "Adventure &Taste Atherton Tablelands Food & Wine Tour from Cairns",
+    "description": {
+      "text": "In Cairns, this ten-hour food and wine day climbs onto the Atherton Tablelands for produce tastings, breakfast, buffet lunch, and wine samples. The published format is a guided tasting circuit rather than a waterfall-and-castle historic day at Paronella Park. The format suits visitors who want plateau food stops without a night spotlighting walk. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Cairns pickup and the Atherton Tablelands that define this outing rather than a Michaelmas Cay sail."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $166.18",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 258
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/86/51/cc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Atherton Tablelands produce tasting",
+      "Breakfast and buffet lunch",
+      "Wine tasting",
+      "Guided commentary on the plateau",
+      "Pickup from Cairns and Palm Cove"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Palm Cove through Cairns city as listed when booking."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this ten-hour food and wine day climbs onto the Atherton Tablelands for produce tastings, breakfast, buffet lunch, and wine samples.",
+    "itineraryItems": [
+      {
+        "title": "Cairns",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Atherton Tablelands",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Breakfast",
+      "Buffet lunch",
+      "Food tasting",
+      "Wine tasting",
+      "Driver/guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Adventure &Taste Atherton Tablelands Food & Wine Tour from Cairns?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Hotel pickup from Palm Cove through Cairns city as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 166.18
+      },
+      "currency": "USD"
+    }
+  }
+}

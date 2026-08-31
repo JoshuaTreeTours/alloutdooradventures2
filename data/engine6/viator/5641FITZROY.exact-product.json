@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "5641FITZROY",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Fitzroy-Island-Day-Tour-from-Cairns/d754-5641FITZROY",
+    "title": "Fitzroy Island Day Tour from Cairns",
+    "description": {
+      "text": "In Cairns, this ferry day crosses to Fitzroy Island with published free time for snorkeling, beach hours, a glass-bottom upgrade, or rainforest trails. The public page is an island ferry ticket rather than a guided Outer Reef pontoon or a Kuranda Gold Class rail ride. The format suits visitors who want a continental-island day without a Daintree River cruise. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Cairns and Fitzroy Island that define this outing rather than a night wildlife walk at Lake Barrine."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $65.15",
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 648
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7c/0b/eb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ferry from Cairns to Fitzroy Island",
+      "Fitzroy Island beach and rainforest trails",
+      "Optional snorkeling on the reef edge",
+      "Optional glass-bottom boat upgrade",
+      "Full island day with return ferry"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board the Fitzroy Island ferry from the published Cairns departure listed at booking."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this ferry day crosses to Fitzroy Island with published free time for snorkeling, beach hours, a glass-bottom upgrade, or rainforest trails.",
+    "itineraryItems": [
+      {
+        "title": "Cairns",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fitzroy Island",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Round-trip ferry from Cairns",
+      "Island day visitor access"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fitzroy Island Day Tour from Cairns?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Board the Fitzroy Island ferry from the published Cairns departure listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65.15
+      },
+      "currency": "USD"
+    }
+  }
+}

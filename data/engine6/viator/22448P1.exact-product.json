@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "22448P1",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Snorkel-Dive-the-Reef-Sustainable-Scientific-Cultural-Tour/d754-22448P1",
+    "title": "Snorkel & Dive the Reef: Sustainable, Scientific & Cultural Tour",
+    "description": {
+      "text": "In Cairns, this full-day catamaran outing runs from Reef Fleet Terminal to the Marine World outer-reef platform with marine-biologist guides. The public page lists snorkeling, a glass-bottom boat, an observatory, and a buffet lunch on one booking rather than a 25-guest schooner to Green Island. The format suits visitors who want a science-led reef window without assembling snorkel and glass-bottom tickets separately. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Reef Fleet Terminal and Marine World that define this outing rather than a Fitzroy Island ferry day."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $212.96",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 811
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/94/ef/e7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cairns departure to the Marine World platform",
+      "Marine biologist presentation",
+      "Snorkeling on the outer reef",
+      "Glass-bottom boat and observatory",
+      "Buffet lunch with morning and afternoon tea"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the vessel at Cairns Reef Fleet Terminal, 1 Spence Street."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this full-day catamaran outing runs from Reef Fleet Terminal to the Marine World outer-reef platform with marine-biologist guides.",
+    "itineraryItems": [
+      {
+        "title": "Cairns Reef Fleet Terminal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marine World",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Marine biologist presentation",
+      "Snorkeling equipment",
+      "Glass-bottom boat tour",
+      "Underwater reef viewing observatory",
+      "Hot and cold buffet lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Snorkel & Dive the Reef: Sustainable, Scientific & Cultural Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in at the vessel at Cairns Reef Fleet Terminal, 1 Spence Street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 212.96
+      },
+      "currency": "USD"
+    }
+  }
+}

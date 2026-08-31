@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "2570CTR",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Daintree-Rainforest-and-Cape-Tribulation-Day-Tour-from-Cairns/d754-2570CTR",
+    "title": "Daintree Rainforest and Cape Tribulation Day Tour from Cairns",
+    "description": {
+      "text": "In Cairns, this coach day covers a guided walk at Mossman Gorge, a Daintree River wildlife cruise, and time at Cape Tribulation Beach. The published format stays in the Wet Tropics rather than a reef catamaran or a Skyrail gondola. The format suits visitors who want rainforest and river time in one booking without assembling gorge and cruise tickets independently. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Mossman Gorge, the Daintree River, and Cape Tribulation that define this outing rather than a 40-minute Reef Hopper flight."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $192.24",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 449
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/25/e3/1e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Mossman Gorge guided rainforest walk",
+      "Daintree River wildlife cruise",
+      "Cape Tribulation Beach and boardwalk",
+      "BBQ lunch in the rainforest",
+      "Coach transport from Cairns"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from published Cairns and nearby locations listed when booking."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this coach day covers a guided walk at Mossman Gorge, a Daintree River wildlife cruise, and time at Cape Tribulation Beach.",
+    "itineraryItems": [
+      {
+        "title": "Mossman Gorge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Daintree River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cape Tribulation",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided rainforest walk at Mossman Gorge",
+      "Daintree River wildlife cruise",
+      "BBQ lunch",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Daintree Rainforest and Cape Tribulation Day Tour from Cairns?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Hotel pickup from published Cairns and nearby locations listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 192.24
+      },
+      "currency": "USD"
+    }
+  }
+}

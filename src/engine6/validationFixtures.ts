@@ -339,6 +339,21 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen3253p11Payload from "../../data/engine6/viator/3253P11.exact-product.json";
+import specimen2845p3Payload from "../../data/engine6/viator/2845P3.exact-product.json";
+import specimen22448p1Payload from "../../data/engine6/viator/22448P1.exact-product.json";
+import specimen76865p1Payload from "../../data/engine6/viator/76865P1.exact-product.json";
+import specimen5364freePayload from "../../data/engine6/viator/5364FREE.exact-product.json";
+import specimen2845mic_cPayload from "../../data/engine6/viator/2845MIC_C.exact-product.json";
+import specimen5641fitzroyPayload from "../../data/engine6/viator/5641FITZROY.exact-product.json";
+import specimen2570ctrPayload from "../../data/engine6/viator/2570CTR.exact-product.json";
+import specimen611960119t1Payload from "../../data/engine6/viator/611960119T1.exact-product.json";
+import specimen11730p6Payload from "../../data/engine6/viator/11730P6.exact-product.json";
+import specimen20046p3Payload from "../../data/engine6/viator/20046P3.exact-product.json";
+import specimen42277p10Payload from "../../data/engine6/viator/42277P10.exact-product.json";
+import specimen2570kurandaPayload from "../../data/engine6/viator/2570KURANDA.exact-product.json";
+import specimen37685p1Payload from "../../data/engine6/viator/37685P1.exact-product.json";
+import specimen2845p1Payload from "../../data/engine6/viator/2845P1.exact-product.json";
 import specimen184156p4Payload from "../../data/engine6/viator/184156P4.exact-product.json";
 import specimen6793p35Payload from "../../data/engine6/viator/6793P35.exact-product.json";
 import specimen3378whalePayload from "../../data/engine6/viator/3378WHALE.exact-product.json";
@@ -3733,6 +3748,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3253P11",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-Cruise-Gold-Class-VIP-Lounge-Package/d754-3253P11",
+    rawPayload: specimen3253p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2845P3",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-Adventure-from-Cairns-including-Snorkeling/d754-2845P3",
+    rawPayload: specimen2845p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22448P1",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Snorkel-Dive-the-Reef-Sustainable-Scientific-Cultural-Tour/d754-22448P1",
+    rawPayload: specimen22448p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76865P1",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Full-Day-Great-Barrier-Reef-Sailing-Trip-from-Cairns/d754-76865P1",
+    rawPayload: specimen76865p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5364FREE",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Ocean-Free-25-guest-Great-Barrier-Reef-visit-Green-Island-Tour/d754-5364FREE",
+    rawPayload: specimen5364freePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2845MIC_C",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Ocean-Spirit-Sail-to-Michaelmas-Cay-Snorkel-or-Dive-from-Cairns/d754-2845MIC_C",
+    rawPayload: specimen2845mic_cPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5641FITZROY",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Fitzroy-Island-Day-Tour-from-Cairns/d754-5641FITZROY",
+    rawPayload: specimen5641fitzroyPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2570CTR",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Daintree-Rainforest-and-Cape-Tribulation-Day-Tour-from-Cairns/d754-2570CTR",
+    rawPayload: specimen2570ctrPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "611960119T1",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Atherton-Tablelands-Rain-Forest-by-Night-from-Cairns/d754-611960119T1",
+    rawPayload: specimen611960119t1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "11730P6",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Adventure-Taste-Atherton-Tablelands-Food-Wine-Tour-from-Cairns/d754-11730P6",
+    rawPayload: specimen11730p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "20046P3",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-40-Minute-Scenic-Flight-from-Cairns-Reef-Hopper/d754-20046P3",
+    rawPayload: specimen20046p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42277P10",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Cairns-Kuranda-Skyrail-and-Railway-Small-group-tour/d754-42277P10",
+    rawPayload: specimen42277p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2570KURANDA",
+    publicUrl: "https://www.viator.com/tours/Queensland/Skip-the-Line-Kuranda-Scenic-Railway-Gold-Class-and-Skyrail-Rainforest-Cableway/d122-2570KURANDA",
+    rawPayload: specimen2570kurandaPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37685P1",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Day-Tour-to-Paronella-Park-Lake-Barrine-and-Millaa-Millaa-Falls/d754-37685P1",
+    rawPayload: specimen37685p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2845P1",
+    publicUrl: "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Snorkelling-and-Glass-Bottom-Boat-at-Green-Island-from-Cairns/d754-2845P1",
+    rawPayload: specimen2845p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

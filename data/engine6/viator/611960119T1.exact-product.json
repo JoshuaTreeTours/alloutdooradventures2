@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "611960119T1",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Atherton-Tablelands-Rain-Forest-by-Night-from-Cairns/d754-611960119T1",
+    "title": "Atherton Tablelands Rain Forest by Night from Cairns",
+    "description": {
+      "text": "In Cairns, this small-group outing heads onto the Atherton Tablelands for daylight wildlife walks, afternoon tea at Lake Barrine, and after-dark spotlighting. The public page lists dinner and a maximum of 11 travelers rather than a daytime food-and-wine tasting circuit. The format suits visitors who want a nocturnal rainforest window without a reef sailing day. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Lake Barrine and the Atherton Tablelands that define this outing rather than a Green Island snorkel transfer."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $143.37",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 378
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/be/c9/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Atherton Tablelands rainforest trails",
+      "Afternoon tea at Lake Barrine",
+      "After-dark wildlife spotlighting",
+      "Dinner at a country restaurant",
+      "Small group limited to 11"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from published accommodations in and around Cairns."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this small-group outing heads onto the Atherton Tablelands for daylight wildlife walks, afternoon tea at Lake Barrine, and after-dark spotlighting.",
+    "itineraryItems": [
+      {
+        "title": "Lake Barrine",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Atherton Tablelands",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Local guide",
+      "Afternoon tea",
+      "Dinner",
+      "Spotlighting equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Atherton Tablelands Rain Forest by Night from Cairns?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Hotel pickup from published accommodations in and around Cairns."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 143.37
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -155,6 +155,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "australia",
     citySlug: "sydney",
   },
+  cairns: {
+    destinationLabel: "Cairns",
+    destinationCitySlug: "cairns",
+    stateSlug: "australia",
+    citySlug: "cairns",
+  },
   paris: {
     destinationLabel: "Paris",
     destinationCitySlug: "paris",

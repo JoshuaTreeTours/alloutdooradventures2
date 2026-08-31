@@ -44,6 +44,7 @@ import { getBaliTargetedNarrativeDescription } from "./baliApprovedNarrativeDesc
 import { getSeoulTargetedNarrativeDescription } from "./seoulApprovedNarrativeDescriptions";
 import { getOsakaTargetedNarrativeDescription } from "./osakaApprovedNarrativeDescriptions";
 import { getSydneyTargetedNarrativeDescription } from "./sydneyApprovedNarrativeDescriptions";
+import { getCairnsTargetedNarrativeDescription } from "./cairnsApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -169,6 +170,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getKyotoTargetedNarrativeDescription(productCode) ??
   getOsakaTargetedNarrativeDescription(productCode) ??
   getSydneyTargetedNarrativeDescription(productCode) ??
+  getCairnsTargetedNarrativeDescription(productCode) ??
   getBangkokTargetedNarrativeDescription(productCode) ??
   getSingaporeTargetedNarrativeDescription(productCode) ??
   getBaliTargetedNarrativeDescription(productCode) ??

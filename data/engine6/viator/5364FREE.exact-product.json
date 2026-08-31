@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "5364FREE",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Ocean-Free-25-guest-Great-Barrier-Reef-visit-Green-Island-Tour/d754-5364FREE",
+    "title": "Ocean Free 25 guest Great Barrier Reef & visit Green Island Tour",
+    "description": {
+      "text": "In Cairns, Ocean Free boards at Reef Fleet Terminal on a 25-guest schooner and moors at Green Island for snorkeling and island time. The public page lists snorkel tuition, a seafood smorgasbord, and a glass of wine on the return sail rather than an Outer Reef pontoon stay. The format suits visitors who want a small sailing group at Green Island without a scenic flight. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Reef Fleet Terminal and Green Island that define this outing rather than a Daintree and Cape Tribulation coach day."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $181.76",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 606
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/bc/c0/57.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "25-guest schooner from Cairns",
+      "Green Island reef mooring",
+      "Snorkeling tuition and equipment",
+      "Smorgasbord lunch",
+      "Glass of wine on the return sail"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Ocean Free and Ocean Freedom desk inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, Ocean Free boards at Reef Fleet Terminal on a 25-guest schooner and moors at Green Island for snorkeling and island time.",
+    "itineraryItems": [
+      {
+        "title": "Cairns Reef Fleet Terminal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Green Island",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Sailing cruise to Green Island",
+      "Snorkeling equipment and tuition",
+      "Smorgasbord lunch with seafood",
+      "Morning and afternoon tea"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ocean Free 25 guest Great Barrier Reef & visit Green Island Tour?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in at the Ocean Free and Ocean Freedom desk inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 181.76
+      },
+      "currency": "USD"
+    }
+  }
+}
