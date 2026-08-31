@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "5507708P5",
+    "productUrl": "https://www.viator.com/tours/Sydney/Guided-Electric-Bike-Tour-of-Sydney/d357-5507708P5",
+    "title": "Guided Electric Bike Tour of Sydney with Bluetooth helmets",
+    "description": {
+      "text": "In Sydney, this guided electric-bike ride meets at 10 Beauchamp Lane, Surry Hills, then covers Pyrmont, Sydney Fish Market, Darling Harbour, Barangaroo, the Sydney Harbour Bridge cycleway, Circular Quay, the Sydney Opera House, and Chinatown. Bluetooth helmets are listed on the public page. The format suits visitors who want a guided harbour-edge ride without renting independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Pyrmont, Darling Harbour, Circular Quay, and the Opera House that define this outing rather than a brewery-only walking circuit."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $84.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 124
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7b/7d/c7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Surry Hills e-bike start",
+      "Pyrmont and Sydney Fish Market",
+      "Darling Harbour and Barangaroo",
+      "Harbour Bridge cycleway",
+      "Circular Quay and Sydney Opera House"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 10 Beauchamp Lane, Surry Hills, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this guided electric-bike ride meets at 10 Beauchamp Lane, Surry Hills, then covers Pyrmont, Sydney Fish Market, Darling Harbour, Barangaroo, the Sydney Harbour Bridge cycleway, Circular Quay, the Sydney Opera House, and Chinatown.",
+    "itineraryItems": [
+      {
+        "title": "Pyrmont",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Fish Market",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Darling Harbour",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barangaroo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Harbour Bridge cycleway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Circular Quay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Opera House",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Electric bike",
+      "Bluetooth helmet",
+      "Guided harbour-edge ride"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Electric Bike Tour of Sydney with Bluetooth helmets?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at 10 Beauchamp Lane, Surry Hills, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 84
+      },
+      "currency": "USD"
+    }
+  }
+}

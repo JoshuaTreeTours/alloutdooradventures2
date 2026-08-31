@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "455986P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Secret-Sydney-Foodie-Walking-Tour/d357-455986P1",
+    "title": "Secret Sydney Foodie Walking Tour",
+    "description": {
+      "text": "In Sydney, this secret foodie walking tour covers inner Sydney tasting stops on a guided foot circuit rather than a Surry Hills-only Forkabout booking or a harbour dinner cruise. The published format stays in the city with local food stops rather than a Blue Mountains lunch day. The format suits visitors who want a compact inner-city tasting window without assembling restaurant reservations independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney and inner Sydney tasting stops that define this outing rather than a Bondi beach half-day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d7/c4/d3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Inner Sydney tasting circuit",
+      "Guided food walk",
+      "City tasting stops",
+      "Foot format in Sydney"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this secret foodie walking tour covers inner Sydney tasting stops on a guided foot circuit rather than a Surry Hills-only Forkabout booking or a harbour dinner cruise.",
+    "itineraryItems": [
+      {
+        "title": "Sydney",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "inner Sydney",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided food walk",
+      "Inner Sydney tasting stops"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Secret Sydney Foodie Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

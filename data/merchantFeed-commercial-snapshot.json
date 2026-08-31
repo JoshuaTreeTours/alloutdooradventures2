@@ -4691,6 +4691,146 @@
       "averageRating": "5.0",
       "ratingCount": "70",
       "reviewCount": "70"
+    },
+    {
+      "productCode": "184156P4",
+      "price": "32.79 USD",
+      "averageRating": "4.9",
+      "ratingCount": "194",
+      "reviewCount": "194"
+    },
+    {
+      "productCode": "6793P35",
+      "price": "27.04 USD",
+      "averageRating": "4.4",
+      "ratingCount": "154",
+      "reviewCount": "154"
+    },
+    {
+      "productCode": "3378WHALE",
+      "price": "61.81 USD",
+      "averageRating": "4.3",
+      "ratingCount": "207",
+      "reviewCount": "207"
+    },
+    {
+      "productCode": "5657BRIDGECLIMB",
+      "price": "194.14 USD",
+      "averageRating": "4.8",
+      "ratingCount": "2400",
+      "reviewCount": "2400"
+    },
+    {
+      "productCode": "24058P1",
+      "price": "62.44 USD",
+      "averageRating": "4.7",
+      "ratingCount": "1473",
+      "reviewCount": "1473"
+    },
+    {
+      "productCode": "22584P1",
+      "price": "162.21 USD",
+      "averageRating": "4.9",
+      "ratingCount": "6144",
+      "reviewCount": "6144"
+    },
+    {
+      "productCode": "156795P5",
+      "price": "134.38 USD",
+      "averageRating": "4.4",
+      "ratingCount": "231",
+      "reviewCount": "231"
+    },
+    {
+      "productCode": "14172P3",
+      "price": "257.33 USD",
+      "averageRating": "4.9",
+      "ratingCount": "108",
+      "reviewCount": "108"
+    },
+    {
+      "productCode": "392485P1",
+      "price": "143.38 USD",
+      "averageRating": "4.8",
+      "ratingCount": "137",
+      "reviewCount": "137"
+    },
+    {
+      "productCode": "3293SYDHARBOUR",
+      "price": "162.87 USD",
+      "averageRating": "4.8",
+      "ratingCount": "572",
+      "reviewCount": "572"
+    },
+    {
+      "productCode": "6770P22",
+      "price": "86.37 USD",
+      "averageRating": "4.6",
+      "ratingCount": "104",
+      "reviewCount": "104"
+    },
+    {
+      "productCode": "5507708P5",
+      "price": "84 USD",
+      "averageRating": "4.9",
+      "ratingCount": "124",
+      "reviewCount": "124"
+    },
+    {
+      "productCode": "146921P1",
+      "price": "105 USD",
+      "averageRating": "5.0",
+      "ratingCount": "23",
+      "reviewCount": "23"
+    },
+    {
+      "productCode": "455986P1",
+      "price": "99 USD",
+      "averageRating": "5.0",
+      "ratingCount": "12",
+      "reviewCount": "12"
+    },
+    {
+      "productCode": "6088P3",
+      "price": "184 USD",
+      "averageRating": "4.8",
+      "ratingCount": "13",
+      "reviewCount": "13"
+    },
+    {
+      "productCode": "5509792P1",
+      "price": "49 USD",
+      "averageRating": "4.7",
+      "ratingCount": "18",
+      "reviewCount": "18"
+    },
+    {
+      "productCode": "186752P1",
+      "price": "357 USD",
+      "averageRating": "4.9",
+      "ratingCount": "30",
+      "reviewCount": "30"
+    },
+    {
+      "productCode": "5951P10",
+      "price": "43 USD",
+      "averageRating": "4.7",
+      "ratingCount": "822",
+      "reviewCount": "822"
+    },
+    {
+      "productCode": "6912BEER",
+      "price": "101 USD",
+      "averageRating": "4.9",
+      "ratingCount": "391",
+      "reviewCount": "391"
+    },
+    {
+      "productCode": "3378GOLD",
+      "price": "171 USD",
+      "averageRating": "4.4",
+      "ratingCount": "148",
+      "reviewCount": "148"
     }
   ]
 }

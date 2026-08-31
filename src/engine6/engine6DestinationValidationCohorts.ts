@@ -241,6 +241,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Sydney",
+      matches: tour =>
+        /\/australia\/sydney\//i.test(tour.canonicalPath) ||
+        (/\bsydney\b/i.test(tour.city) && /\baustralia\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Paris",
       matches: tour =>
         /\/france\/paris\//i.test(tour.canonicalPath) ||

@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "3293SYDHARBOUR",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Harbour-Tour-by-Helicopter/d357-3293SYDHARBOUR",
+    "title": "Sydney Harbour Scenic Helicopter Flight",
+    "description": {
+      "text": "In Sydney, this scenic helicopter flight departs Sydney Helitours at 44-46 Airport Drive, Mascot, and passes the Sydney Harbour Bridge, Sydney Opera House, Sydney Harbour, and Bondi Beach. The published duration is a short aerial circuit rather than a multi-hour cruise or climb. The format suits visitors who want an aerial harbour window without booking a dinner cruise. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Helitours and the harbour landmarks that define this outing rather than a Surry Hills food walk."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "15 minutes (approx.)",
+    "priceFrom": "From $162.87",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 572
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/69/3b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sydney Helitours departure in Mascot",
+      "Sydney Harbour Bridge",
+      "Sydney Opera House",
+      "Sydney Harbour",
+      "Bondi Beach aerial pass"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Sydney Helitours, 44-46 Airport Drive, Mascot."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this scenic helicopter flight departs Sydney Helitours at 44-46 Airport Drive, Mascot, and passes the Sydney Harbour Bridge, Sydney Opera House, Sydney Harbour, and Bondi Beach.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Helitours",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Harbour Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Opera House",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Harbour",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bondi Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Scenic helicopter flight",
+      "Harbour aerial circuit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Harbour Scenic Helicopter Flight?",
+        "answer": "The planned duration is 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at Sydney Helitours, 44-46 Airport Drive, Mascot."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 162.87
+      },
+      "currency": "USD"
+    }
+  }
+}

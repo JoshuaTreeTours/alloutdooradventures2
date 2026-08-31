@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "5509792P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Australian-Food-Walking-Tour/d357-5509792P1",
+    "title": "Native Australian Food, Wine, Botanic Garden Forage",
+    "description": {
+      "text": "In Sydney, this native-food forage meets at the Royal Botanic Garden Sydney for a guided walk covering Australian plants, food, and wine context in the garden and adjoining Sydney grounds. The published format is a shorter garden-based outing rather than a three-hour inner-city food crawl. The format suits visitors who want a botanic-garden tasting window without a harbour cruise. Meeting points are confirmed at booking in Sydney, and the itinerary stays on the Royal Botanic Garden Sydney and Sydney that define this outing rather than a Port Stephens dune day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $49.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 18
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/40/78/2f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Royal Botanic Garden Sydney",
+      "Native Australian food context",
+      "Garden forage",
+      "Shorter Sydney outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Royal Botanic Garden Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this native-food forage meets at the Royal Botanic Garden Sydney for a guided walk covering Australian plants, food, and wine context in the garden and adjoining Sydney grounds.",
+    "itineraryItems": [
+      {
+        "title": "Royal Botanic Garden Sydney",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided garden forage",
+      "Native food and wine context"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Native Australian Food, Wine, Botanic Garden Forage?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the Royal Botanic Garden Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49
+      },
+      "currency": "USD"
+    }
+  }
+}

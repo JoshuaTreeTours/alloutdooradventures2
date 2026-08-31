@@ -1,0 +1,146 @@
+{
+  "product": {
+    "productCode": "184156P4",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-and-The-Rocks-Walking-Tour/d357-184156P4",
+    "title": "Sydney Walking Tour including The Rocks",
+    "description": {
+      "text": "In Sydney, this walking circuit starts at Hyde Park and St. Mary's Cathedral, then continues past Hyde Park Barracks, Queen's Square, and Macquarie Street before the Royal Botanic Garden Sydney. The later stretch covers The Rocks lanes around Suez Canal, Nurses Walk, Playfair Street, Argyle Street, and Campbells Cove. The published format is on foot rather than a harbour cruise or coach day. The format suits visitors who want a compact historic-core walk without assembling those streets independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Hyde Park, The Rocks, and the garden edge that define this outing rather than a Bondi beach circuit."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $32.79",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 194
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/50/30/e4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hyde Park and St. Mary's Cathedral",
+      "Hyde Park Barracks and Queen's Square",
+      "Macquarie Street and Royal Botanic Garden Sydney",
+      "The Rocks lanes including Suez Canal",
+      "Campbells Cove finish"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Archibald Memorial Fountain, Hyde Park North, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this walking circuit starts at Hyde Park and St.",
+    "itineraryItems": [
+      {
+        "title": "Hyde Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Mary's Cathedral",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hyde Park Barracks",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Queen's Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Macquarie Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Royal Botanic Garden Sydney",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Rocks",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Suez Canal",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nurses Walk",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Playfair Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Argyle Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Campbells Cove",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional walking guide",
+      "Historic-core walking circuit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Walking Tour including The Rocks?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the Archibald Memorial Fountain, Hyde Park North, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 32.79
+      },
+      "currency": "USD"
+    }
+  }
+}

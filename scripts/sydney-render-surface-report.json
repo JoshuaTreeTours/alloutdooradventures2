@@ -1,0 +1,304 @@
+{
+  "selectedCount": 20,
+  "listingCount": 20,
+  "listingMatchesSelection": true,
+  "okCount": 20,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "184156P4",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-walking-tour-including-the-rocks-184156P4",
+      "title": "Sydney Walking Tour including The Rocks",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/50/30/e4.jpg",
+      "card": "In Sydney, this walking circuit starts at Hyde Park and St.",
+      "itineraryTitles": [
+        "Hyde Park",
+        "St. Mary's Cathedral",
+        "Hyde Park Barracks",
+        "Queen's Square",
+        "Macquarie Street",
+        "Royal Botanic Garden Sydney",
+        "The Rocks",
+        "Suez Canal",
+        "Nurses Walk",
+        "Playfair Street",
+        "Argyle Street",
+        "Campbells Cove"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6793P35",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-harbour-sightseeing-highlights-cruise-6793P35",
+      "title": "Sydney Harbour Sightseeing Highlights Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/4f/d3/2c.jpg",
+      "card": "In Sydney, this one-hour sightseeing cruise leaves Circular Quay and passes the Sydney Opera House, Royal Botanic Garden Sydney, Mrs Macquar",
+      "itineraryTitles": [
+        "Sydney Opera House",
+        "Royal Botanic Garden Sydney",
+        "Mrs Macquarie's Chair",
+        "Garden Island",
+        "Fort Denison",
+        "Taronga Zoo",
+        "Sydney Harbour Bridge",
+        "Luna Park Sydney",
+        "Barangaroo"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3378WHALE",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-whale-watching-cruise-from-circular-quay-3378WHALE",
+      "title": "Sydney Whale Watching Cruise from Circular Quay",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/ee/e8/d8.jpg",
+      "card": "In Sydney, this seasonal whale-watching cruise departs Circular Quay Wharf 6 and spends the published block on Sydney Harbour looking for mi",
+      "itineraryTitles": [
+        "Sydney Harbour",
+        "Circular Quay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5657BRIDGECLIMB",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/bridgeclimb-sydney-5657BRIDGECLIMB",
+      "title": "BridgeClimb Sydney",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/8a/e1/d6.jpg",
+      "card": "In Sydney, BridgeClimb starts at 3 Cumberland Street in The Rocks and follows the published climb onto the Sydney Harbour Bridge.",
+      "itineraryTitles": [
+        "Sydney Harbour Bridge",
+        "The Rocks"
+      ],
+      "issues": []
+    },
+    {
+      "code": "24058P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/blue-mountains-day-tour-including-parramatta-river-crui-24058P1",
+      "title": "Blue Mountains Day Tour Including Parramatta River Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/87/48/94.jpg",
+      "card": "In Sydney, this full-day coach outing combines a Parramatta River cruise with Blue Mountains time at Scenic World and the Three Sisters.",
+      "itineraryTitles": [
+        "Parramatta River",
+        "Blue Mountains",
+        "Scenic World",
+        "Three Sisters"
+      ],
+      "issues": []
+    },
+    {
+      "code": "22584P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/1-rated-blue-mountains-tour-scenic-world-lunch-rivercru-22584P1",
+      "title": "#1 Rated Blue Mountains Tour, Scenic World, Lunch, RiverCruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/87/2f/0e.jpg",
+      "card": "In Sydney, this all-inclusive Blue Mountains day covers the Three Sisters, Scenic World, a wildlife stop at Sydney Zoo, and a Parramatta Riv",
+      "itineraryTitles": [
+        "Three Sisters",
+        "Scenic World",
+        "Sydney Zoo",
+        "Parramatta River"
+      ],
+      "issues": []
+    },
+    {
+      "code": "156795P5",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/blue-mountains-sydney-zoo-scenic-world-from-sydney-156795P5",
+      "title": "Blue Mountains, Sydney Zoo, Scenic World from Sydney",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/70/fd.jpg",
+      "card": "In Sydney, this deluxe Blue Mountains day lists Sydney Zoo, the Blue Mountains plateau, and Scenic World on a long coach outing from the cit",
+      "itineraryTitles": [
+        "Sydney Zoo",
+        "Blue Mountains",
+        "Scenic World"
+      ],
+      "issues": []
+    },
+    {
+      "code": "14172P3",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-half-day-private-tour-opera-house-and-bondi-14172P3",
+      "title": "Sydney Half Day Private Tour: Opera House and Bondi",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/98/25/90.jpg",
+      "card": "In Sydney, this private half-day circuit covers the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach with hotel pickup listed on t",
+      "itineraryTitles": [
+        "Sydney Opera House",
+        "Sydney Harbour Bridge",
+        "Bondi Beach"
+      ],
+      "issues": []
+    },
+    {
+      "code": "392485P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/port-stephens-experience-392485P1",
+      "title": "Port Stephens Experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/63/8a/1a.jpg",
+      "card": "In Sydney, this long day trip heads north to Port Stephens, Nelson Bay, Stockton Beach, and Anna Bay with hotel pickup listed on the public ",
+      "itineraryTitles": [
+        "Port Stephens",
+        "Nelson Bay",
+        "Stockton Beach",
+        "Anna Bay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3293SYDHARBOUR",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-harbour-scenic-helicopter-flight-3293SYDHARBOUR",
+      "title": "Sydney Harbour Scenic Helicopter Flight",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/69/3b.jpg",
+      "card": "In Sydney, this scenic helicopter flight departs Sydney Helitours at 44-46 Airport Drive, Mascot, and passes the Sydney Harbour Bridge, Sydn",
+      "itineraryTitles": [
+        "Sydney Helitours",
+        "Sydney Harbour Bridge",
+        "Sydney Opera House",
+        "Sydney Harbour",
+        "Bondi Beach"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6770P22",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/blue-mountains-sunset-nature-based-waterfall-tour-6770P22",
+      "title": "Blue Mountains Sunset Nature-based & Waterfall Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/47/c9/43.jpg",
+      "card": "In Sydney, this later-day Blue Mountains outing lists a nature-based circuit with waterfall lookouts and a sunset window on the plateau.",
+      "itineraryTitles": [
+        "Blue Mountains",
+        "Blue Mountains waterfalls"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5507708P5",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/guided-electric-bike-tour-of-sydney-with-bluetooth-helm-5507708P5",
+      "title": "Guided Electric Bike Tour of Sydney with Bluetooth helmets",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7b/7d/c7.jpg",
+      "card": "In Sydney, this guided electric-bike ride meets at 10 Beauchamp Lane, Surry Hills, then covers Pyrmont, Sydney Fish Market, Darling Harbour,",
+      "itineraryTitles": [
+        "Pyrmont",
+        "Sydney Fish Market",
+        "Darling Harbour",
+        "Barangaroo",
+        "Sydney Harbour Bridge cycleway",
+        "Circular Quay",
+        "Sydney Opera House",
+        "Chinatown"
+      ],
+      "issues": []
+    },
+    {
+      "code": "146921P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/forkabout-sydney-foodie-walking-tour-146921P1",
+      "title": "Forkabout Sydney foodie walking tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/91/ac/08.jpg",
+      "card": "In Sydney, this Forkabout food walk stays in Surry Hills for a guided tasting circuit through the inner-city neighborhood rather than a harb",
+      "itineraryTitles": [
+        "Surry Hills",
+        "Sydney"
+      ],
+      "issues": []
+    },
+    {
+      "code": "455986P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/secret-sydney-foodie-walking-tour-455986P1",
+      "title": "Secret Sydney Foodie Walking Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d7/c4/d3.jpg",
+      "card": "In Sydney, this secret foodie walking tour covers inner Sydney tasting stops on a guided foot circuit rather than a Surry Hills-only Forkabo",
+      "itineraryTitles": [
+        "Sydney",
+        "inner Sydney"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6088P3",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/taste-of-sydney-tour-6088P3",
+      "title": "Taste of Sydney Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/85/a3/ac.jpg",
+      "card": "In Sydney, this Taste of Sydney circuit is a guided tasting outing through city venues rather than a single-neighborhood Surry Hills walk or",
+      "itineraryTitles": [
+        "Sydney",
+        "city tasting venues"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5509792P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/native-australian-food-wine-botanic-garden-forage-5509792P1",
+      "title": "Native Australian Food, Wine, Botanic Garden Forage",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/40/78/2f.jpg",
+      "card": "In Sydney, this native-food forage meets at the Royal Botanic Garden Sydney for a guided walk covering Australian plants, food, and wine con",
+      "itineraryTitles": [
+        "Royal Botanic Garden Sydney",
+        "Sydney"
+      ],
+      "issues": []
+    },
+    {
+      "code": "186752P1",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-the-rocks-watsons-bay-bondi-full-day-private-186752P1",
+      "title": "Sydney, The Rocks, Watsons Bay, Bondi FULL DAY PRIVATE",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d8/00/98.jpg",
+      "card": "In Sydney, this full-day private outing lists The Rocks, Watsons Bay, and Bondi Beach with hotel pickup on the public page.",
+      "itineraryTitles": [
+        "The Rocks",
+        "Watsons Bay",
+        "Bondi Beach"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5951P10",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-harbour-discovery-cruise-morning-tea-5951P10",
+      "title": "Sydney Harbour Discovery Cruise (morning tea)",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9c/0c/27.jpg",
+      "card": "In Sydney, this harbour discovery cruise leaves Circular Quay for a Sydney Harbour outing with morning tea listed on the public page.",
+      "itineraryTitles": [
+        "Sydney Harbour",
+        "Circular Quay"
+      ],
+      "issues": []
+    },
+    {
+      "code": "6912BEER",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-beer-and-brewery-tour-6912BEER",
+      "title": "Sydney Beer and Brewery Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/81/90/61.jpg",
+      "card": "In Sydney, this beer and brewery tour covers Sydney breweries on a guided tasting circuit rather than a Surry Hills food walk or a harbour d",
+      "itineraryTitles": [
+        "Sydney breweries",
+        "Sydney"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3378GOLD",
+      "ok": true,
+      "path": "/destinations/australia/sydney/tours/sydney-gourmet-gold-penfolds-dinner-cruise-3378GOLD",
+      "title": "Sydney Gourmet Gold Penfolds Dinner Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/b7/ed/18.jpg",
+      "card": "In Sydney, this Gourmet Gold Penfolds dinner cruise runs on Sydney Harbour from Circular Quay with a plated dinner listed on the public page",
+      "itineraryTitles": [
+        "Sydney Harbour",
+        "Circular Quay"
+      ],
+      "issues": []
+    }
+  ]
+}

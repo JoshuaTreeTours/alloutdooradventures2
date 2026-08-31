@@ -339,6 +339,26 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen184156p4Payload from "../../data/engine6/viator/184156P4.exact-product.json";
+import specimen6793p35Payload from "../../data/engine6/viator/6793P35.exact-product.json";
+import specimen3378whalePayload from "../../data/engine6/viator/3378WHALE.exact-product.json";
+import specimen5657bridgeclimbPayload from "../../data/engine6/viator/5657BRIDGECLIMB.exact-product.json";
+import specimen24058p1Payload from "../../data/engine6/viator/24058P1.exact-product.json";
+import specimen22584p1Payload from "../../data/engine6/viator/22584P1.exact-product.json";
+import specimen156795p5Payload from "../../data/engine6/viator/156795P5.exact-product.json";
+import specimen14172p3Payload from "../../data/engine6/viator/14172P3.exact-product.json";
+import specimen392485p1Payload from "../../data/engine6/viator/392485P1.exact-product.json";
+import specimen3293sydharbourPayload from "../../data/engine6/viator/3293SYDHARBOUR.exact-product.json";
+import specimen6770p22Payload from "../../data/engine6/viator/6770P22.exact-product.json";
+import specimen5507708p5Payload from "../../data/engine6/viator/5507708P5.exact-product.json";
+import specimen146921p1Payload from "../../data/engine6/viator/146921P1.exact-product.json";
+import specimen455986p1Payload from "../../data/engine6/viator/455986P1.exact-product.json";
+import specimen6088p3Payload from "../../data/engine6/viator/6088P3.exact-product.json";
+import specimen5509792p1Payload from "../../data/engine6/viator/5509792P1.exact-product.json";
+import specimen186752p1Payload from "../../data/engine6/viator/186752P1.exact-product.json";
+import specimen5951p10Payload from "../../data/engine6/viator/5951P10.exact-product.json";
+import specimen6912beerPayload from "../../data/engine6/viator/6912BEER.exact-product.json";
+import specimen3378goldPayload from "../../data/engine6/viator/3378GOLD.exact-product.json";
 import specimen92136p44Payload from "../../data/engine6/viator/92136P44.exact-product.json";
 import specimen92136p45Payload from "../../data/engine6/viator/92136P45.exact-product.json";
 import specimen30791p615Payload from "../../data/engine6/viator/30791P615.exact-product.json";
@@ -3713,6 +3733,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "184156P4",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-and-The-Rocks-Walking-Tour/d357-184156P4",
+    rawPayload: specimen184156p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6793P35",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Harbour-1-Hour-Sightseeing-Cruise-departing-Circular-Quay/d357-6793P35",
+    rawPayload: specimen6793p35Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3378WHALE",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Whale-Watching-Cruise/d357-3378WHALE",
+    rawPayload: specimen3378whalePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5657BRIDGECLIMB",
+    publicUrl: "https://www.viator.com/tours/Sydney/BridgeClimb-Sydney/d357-5657BRIDGECLIMB",
+    rawPayload: specimen5657bridgeclimbPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24058P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Blue-Mountains-Day-Trip-Including-Parramatta-River-Cruise/d357-24058P1",
+    rawPayload: specimen24058p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22584P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/All-Inclusive-Blue-Mountains-Small-Group-Day-Trip-from-Sydney/d357-22584P1",
+    rawPayload: specimen22584p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "156795P5",
+    publicUrl: "https://www.viator.com/tours/Sydney/Blue-Mountains-Deluxe-Tour-from-Sydney/d357-156795P5",
+    rawPayload: specimen156795p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14172P3",
+    publicUrl: "https://www.viator.com/tours/Sydney/Private-Sydney-Half-Day-Sightseeing-Tour-Including-Sydney-Opera-House-Harbour-Bridge-and-Bondi-Beach/d357-14172P3",
+    rawPayload: specimen14172p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "392485P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Port-Stephens-Experience-Day-Tour/d357-392485P1",
+    rawPayload: specimen392485p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3293SYDHARBOUR",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Harbour-Tour-by-Helicopter/d357-3293SYDHARBOUR",
+    rawPayload: specimen3293sydharbourPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6770P22",
+    publicUrl: "https://www.viator.com/tours/Sydney/From-Sydney-Sunset-Blue-Mountains-Wilderness-and-Wildlife-Tour-Without-the-Crowds/d357-6770P22",
+    rawPayload: specimen6770p22Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5507708P5",
+    publicUrl: "https://www.viator.com/tours/Sydney/Guided-Electric-Bike-Tour-of-Sydney/d357-5507708P5",
+    rawPayload: specimen5507708p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "146921P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Forkabout-Surry-Hills-foodie-walking-tour/d357-146921P1",
+    rawPayload: specimen146921p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "455986P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Secret-Sydney-Foodie-Walking-Tour/d357-455986P1",
+    rawPayload: specimen455986p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6088P3",
+    publicUrl: "https://www.viator.com/tours/Sydney/Taste-of-Sydney-Tour/d357-6088P3",
+    rawPayload: specimen6088p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5509792P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Australian-Food-Walking-Tour/d357-5509792P1",
+    rawPayload: specimen5509792p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "186752P1",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-and-Bondi-Beach-8-Hour-Tour-with-Personalised-Sydney-Tours/d357-186752P1",
+    rawPayload: specimen186752p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5951P10",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Harbour-Discovery-Cruise-Morning-Tea/d357-5951P10",
+    rawPayload: specimen5951p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6912BEER",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Beer-and-Brewery-Tour/d357-6912BEER",
+    rawPayload: specimen6912beerPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3378GOLD",
+    publicUrl: "https://www.viator.com/tours/Sydney/Sydney-Harbour-Sky-Deck-Gold-Dinner-Cruise/d357-3378GOLD",
+    rawPayload: specimen3378goldPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
