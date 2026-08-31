@@ -3,6 +3,7 @@ import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { buildTourCopy } from "../content/templates/buildTourCopy";
 import type { Engine2Tour } from "./loadEngine2";
 import { alaskaRows } from "./alaska.rows";
+import { getAlaskaFareHarborRecord } from "./alaskaFareHarborContent";
 
 const BLOCKED_ALASKA_PRODUCT_IDS = new Set([
   "517077",
@@ -53,6 +54,13 @@ const parseLatLng = (latRaw: string, lngRaw: string) => {
   return { lat, lng };
 };
 
+const toMetaDescription = (value: string) => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= 158) return normalized;
+  const shortened = normalized.slice(0, 158).replace(/\s+\S*$/, "").trim();
+  return `${shortened}…`;
+};
+
 export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
   const byId = new Map<string, Engine2Tour>();
 
@@ -88,6 +96,11 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
       city: cityName,
       region: "Alaska",
     });
+    const sourceContent = getAlaskaFareHarborRecord(id);
+    const experienceText = sourceContent?.overview?.trim() || copy.experienceText;
+    const highlights = sourceContent?.highlights?.filter(Boolean).length
+      ? sourceContent.highlights.filter(Boolean)
+      : copy.highlights;
     const coords = parseLatLng(clean(row.location_lat), clean(row.location_long));
 
     byId.set(id, {
@@ -110,13 +123,13 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
       },
       seo: {
         title: `${name} | ${cityName}, Alaska Tour`,
-        description: copy.metaDescription,
+        description: toMetaDescription(experienceText || copy.metaDescription),
         canonicalPath,
         ogImage: primaryImage,
       },
       content: {
-        experienceText: copy.experienceText,
-        highlights: copy.highlights,
+        experienceText,
+        highlights,
       },
       images: {
         hero: primaryImage,
