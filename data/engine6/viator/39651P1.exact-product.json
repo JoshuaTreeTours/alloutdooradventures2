@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "39651P1",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Melbourne-Street-Art-Tour/d384-39651P1",
+    "title": "Melbourne Street Art Tour",
+    "description": {
+      "text": "In Melbourne, this street-artist-led walk meets at ACMI on Flinders Street and continues through Hosier Lane and State Library Victoria before a studio visit at The Blender Studios. The published route is a laneway and studio circuit rather than a sports-precinct walk to the MCG. The format suits visitors who want working-studio time and laneway context without a Great Ocean Road coach. Meeting points are confirmed at ACMI in Melbourne, and the itinerary stays on those inner-city art stops that define this outing rather than a Yarra Valley balloon launch."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "3 hours 5 minutes (approx.)",
+    "priceFrom": "From $52.12",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 352
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/92/a7/ad.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Street-artist guide through Melbourne laneways",
+      "Hosier Lane and hidden CBD works",
+      "State Library Victoria stop",
+      "Blender Studios warehouse visit with snacks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet on Flinders St out the front of ACMI's Street Entrance, Federation Square, Flinders St, Melbourne VIC 3000, Australia."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this street-artist-led walk meets at ACMI on Flinders Street and continues through Hosier Lane and State Library Victoria before a studio visit at The Blender Studios.",
+    "itineraryItems": [
+      {
+        "title": "ACMI",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hosier Lane",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "State Library Victoria",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Blender Studios",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Afternoon tea",
+      "Beverages",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Melbourne Street Art Tour?",
+        "answer": "The planned duration is 3 hours 5 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Meet on Flinders St out the front of ACMI's Street Entrance, Federation Square, Flinders St, Melbourne VIC 3000, Australia."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 52.12
+      },
+      "currency": "USD"
+    }
+  }
+}

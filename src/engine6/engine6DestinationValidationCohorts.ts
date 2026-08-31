@@ -255,6 +255,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Melbourne",
+      matches: tour =>
+        /\/australia\/melbourne\//i.test(tour.canonicalPath) ||
+        (/\bmelbourne\b/i.test(tour.city) && /\baustralia\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Queenstown",
       matches: tour =>
         /\/new-zealand\/queenstown\//i.test(tour.canonicalPath) ||

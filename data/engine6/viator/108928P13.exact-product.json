@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "108928P13",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Tour-Plus-Koalas-Forest-Walk-and-Morning-Tea/d384-108928P13",
+    "title": "Great Ocean Road Tour Plus Koalas, Forest Walk and Morning Tea",
+    "description": {
+      "text": "In Melbourne, this Great Ocean Road day includes morning tea and published stops at Kennett River, Apollo Bay, Gibsons Steps, the Twelve Apostles, and Loch Ard Gorge. The public page lists a forest walk among tall trees and koala spotting rather than a reverse luxury-bus timing. The format suits visitors who want wildlife and morning tea on the coast without a Grampians lookout hike. Meeting points are confirmed at booking in Melbourne, including The Great Southern Hotel on Spencer Street, and the itinerary stays on those coastal stops that define this outing rather than a Balgownie Estate balloon."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $86.64",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1001
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/cb/71/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Morning tea included",
+      "Kennett River koala stop",
+      "Gibsons Steps and the Twelve Apostles",
+      "Loch Ard Gorge",
+      "Apollo Bay lunch stop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick up from your choice of Melbourne CBD approximately 7am, or meet at The Great Southern Hotel Melbourne, 44 Spencer St, Melbourne VIC 3000, Australia."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this Great Ocean Road day includes morning tea and published stops at Kennett River, Apollo Bay, Gibsons Steps, the Twelve Apostles, and Loch Ard Gorge.",
+    "itineraryItems": [
+      {
+        "title": "Kennett River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Apollo Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gibsons Steps",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Twelve Apostles",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ard Gorge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Morning tea",
+      "Guided Great Ocean Road touring"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Ocean Road Tour Plus Koalas, Forest Walk and Morning Tea?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Pick up from your choice of Melbourne CBD approximately 7am, or meet at The Great Southern Hotel Melbourne, 44 Spencer St, Melbourne VIC 3000, Australia."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 86.64
+      },
+      "currency": "USD"
+    }
+  }
+}

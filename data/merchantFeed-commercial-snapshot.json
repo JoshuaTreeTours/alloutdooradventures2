@@ -5027,6 +5027,76 @@
       "averageRating": "4.9",
       "ratingCount": "53",
       "reviewCount": "53"
+    },
+    {
+      "productCode": "3181GOWEST1",
+      "price": "97.94 USD",
+      "averageRating": "4.8",
+      "ratingCount": "6062",
+      "reviewCount": "6062"
+    },
+    {
+      "productCode": "39651P1",
+      "price": "52.12 USD",
+      "averageRating": "4.9",
+      "ratingCount": "352",
+      "reviewCount": "352"
+    },
+    {
+      "productCode": "3181P7",
+      "price": "104.51 USD",
+      "averageRating": "4.9",
+      "ratingCount": "873",
+      "reviewCount": "873"
+    },
+    {
+      "productCode": "5706M2",
+      "price": "159.68 USD",
+      "averageRating": "4.8",
+      "ratingCount": "263",
+      "reviewCount": "263"
+    },
+    {
+      "productCode": "478616P1",
+      "price": "90.29 USD",
+      "averageRating": "4.9",
+      "ratingCount": "462",
+      "reviewCount": "462"
+    },
+    {
+      "productCode": "6770TOUR4",
+      "price": "101.02 USD",
+      "averageRating": "4.8",
+      "ratingCount": "102",
+      "reviewCount": "102"
+    },
+    {
+      "productCode": "3127YARRA",
+      "price": "322.61 USD",
+      "averageRating": "4.9",
+      "ratingCount": "489",
+      "reviewCount": "489"
+    },
+    {
+      "productCode": "13938P1",
+      "price": "188.90 USD",
+      "averageRating": "5.0",
+      "ratingCount": "601",
+      "reviewCount": "601"
+    },
+    {
+      "productCode": "108928P13",
+      "price": "86.64 USD",
+      "averageRating": "4.7",
+      "ratingCount": "1001",
+      "reviewCount": "1001"
+    },
+    {
+      "productCode": "179363P2",
+      "price": "74.92 USD",
+      "averageRating": "5.0",
+      "ratingCount": "115",
+      "reviewCount": "115"
     }
   ]
 }

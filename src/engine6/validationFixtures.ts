@@ -339,6 +339,16 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen3181gowest1Payload from "../../data/engine6/viator/3181GOWEST1.exact-product.json";
+import specimen39651p1Payload from "../../data/engine6/viator/39651P1.exact-product.json";
+import specimen3181p7Payload from "../../data/engine6/viator/3181P7.exact-product.json";
+import specimen5706m2Payload from "../../data/engine6/viator/5706M2.exact-product.json";
+import specimen478616p1Payload from "../../data/engine6/viator/478616P1.exact-product.json";
+import specimen6770tour4Payload from "../../data/engine6/viator/6770TOUR4.exact-product.json";
+import specimen3127yarraPayload from "../../data/engine6/viator/3127YARRA.exact-product.json";
+import specimen13938p1Payload from "../../data/engine6/viator/13938P1.exact-product.json";
+import specimen108928p13Payload from "../../data/engine6/viator/108928P13.exact-product.json";
+import specimen179363p2Payload from "../../data/engine6/viator/179363P2.exact-product.json";
 import specimen76369p1Payload from "../../data/engine6/viator/76369P1.exact-product.json";
 import specimen460492p1Payload from "../../data/engine6/viator/460492P1.exact-product.json";
 import specimen5762p6Payload from "../../data/engine6/viator/5762P6.exact-product.json";
@@ -3761,6 +3771,66 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3181GOWEST1",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Small-Group-Eco-Tour-from-Melbourne/d384-3181GOWEST1",
+    rawPayload: specimen3181gowest1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "39651P1",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Melbourne-Street-Art-Tour/d384-39651P1",
+    rawPayload: specimen39651p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3181P7",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Sunset-Tour/d384-3181P7",
+    rawPayload: specimen3181p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5706M2",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Small-Group-Great-Ocean-Road-Day-Trip-from-Melbourne/d384-5706M2",
+    rawPayload: specimen5706m2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "478616P1",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Reverse-Itinerary-Luxury-Bus-Small-Group-13-Pax/d384-478616P1",
+    rawPayload: specimen478616p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6770TOUR4",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Small-Group-Grampians-Day-Trip-from-Melbourne/d384-6770TOUR4",
+    rawPayload: specimen6770tour4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3127YARRA",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Yarra-Valley-Balloon-Flight-at-Sunrise/d384-3127YARRA",
+    rawPayload: specimen3127yarraPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "13938P1",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Yarra-Valley-Food-and-Wine-Daytour/d384-13938P1",
+    rawPayload: specimen13938p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "108928P13",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Tour-Plus-Koalas-Forest-Walk-and-Morning-Tea/d384-108928P13",
+    rawPayload: specimen108928p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "179363P2",
+    publicUrl: "https://www.viator.com/tours/Melbourne/Melbourne-Sports-Experience-and-MCG-Tour/d384-179363P2",
+    rawPayload: specimen179363p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

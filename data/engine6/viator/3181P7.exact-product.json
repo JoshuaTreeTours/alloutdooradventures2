@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "3181P7",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Sunset-Tour/d384-3181P7",
+    "title": "Great Ocean Road Full-Day Sunset Eco Tour from Melbourne",
+    "description": {
+      "text": "In Melbourne, this later-start Great Ocean Road eco day is timed for sunset at the Twelve Apostles, with Anglesea, the Memorial Arch, Lorne, Kennett River, and Loch Ard Gorge on the published circuit. The public page lists a 9am-to-11am hotel pickup window rather than the early-morning Go West eco departure. The format suits visitors who want dusk light on the limestone stacks without a reverse-itinerary luxury bus. Meeting points are confirmed at booking in Melbourne, and the itinerary stays on those Surf Coast and Port Campbell stops that define this outing rather than a Halls Gap hiking day."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "11 to 14 hours (approx.)",
+    "priceFrom": "From $104.51",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 873
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/1f/38/08.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset at the Twelve Apostles",
+      "Loch Ard Gorge on the Shipwreck Coast",
+      "Kennett River koala stop",
+      "Lorne and Anglesea coastal towns",
+      "Selected Melbourne hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is only available from the list of hotels provided upon checkout. Pickup is between 9am-10am (AEST) and 10am-11am (AEDT) depending on which hotel you selected."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this later-start Great Ocean Road eco day is timed for sunset at the Twelve Apostles, with Anglesea, the Memorial Arch, Lorne, Kennett River, and Loch Ard Gorge on the published circuit.",
+    "itineraryItems": [
+      {
+        "title": "Anglesea",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Great Ocean Road Memorial Archway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lorne",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kennett River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ard Gorge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Twelve Apostles",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Friendly and informative tour guide",
+      "Pickup from selected hotels",
+      "Air-conditioned vehicle",
+      "WiFi on board",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Ocean Road Full-Day Sunset Eco Tour from Melbourne?",
+        "answer": "The planned duration is 11 to 14 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Pickup is only available from the list of hotels provided upon checkout. Pickup is between 9am-10am (AEST) and 10am-11am (AEDT) depending on which hotel you selected."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sunset Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 104.51
+      },
+      "currency": "USD"
+    }
+  }
+}

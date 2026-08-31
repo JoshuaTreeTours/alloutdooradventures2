@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "179363P2",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Melbourne-Sports-Experience-and-MCG-Tour/d384-179363P2",
+    "title": "Melbourne Sports Experience + MCG Tour Combo",
+    "description": {
+      "text": "In Melbourne, this half-day sports walk meets at Federation Square, follows Birrarung Marr to Rod Laver Arena, Melbourne Olympic Park, and AAMI Park, then finishes with a guided Melbourne Cricket Ground tour. The published ticket includes MCG entry, cake, and tea rather than a laneway studio visit. The format suits visitors who want stadium context without a Great Ocean Road coach. Meeting points are confirmed at Federation Square in Melbourne, and the itinerary stays on those sports-precinct stops that define this outing rather than a Yarra Valley cellar door."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $74.92",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 115
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/24/97/2a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Melbourne Cricket Ground stadium tour",
+      "Rod Laver Arena and Olympic Park",
+      "AAMI Park soccer and rugby precinct",
+      "Birrarung Marr river walk from Federation Square"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Federation Square, between Transport Bar and Princes Bridge, 1 Princes Walk, Melbourne VIC 3000, Australia. Look out for the tour guide playing with a tennis ball."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this half-day sports walk meets at Federation Square, follows Birrarung Marr to Rod Laver Arena, Melbourne Olympic Park, and AAMI Park, then finishes with a guided Melbourne Cricket Ground tour.",
+    "itineraryItems": [
+      {
+        "title": "Federation Square",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Birrarung Marr",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rod Laver Arena",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Melbourne Olympic Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "AAMI Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Melbourne Cricket Ground",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "MCG tour entry",
+      "Cake, coffee, water, and tea"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Melbourne Sports Experience + MCG Tour Combo?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Meet at Federation Square, between Transport Bar and Princes Bridge, 1 Princes Walk, Melbourne VIC 3000, Australia. Look out for the tour guide playing with a tennis ball."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.92
+      },
+      "currency": "USD"
+    }
+  }
+}
