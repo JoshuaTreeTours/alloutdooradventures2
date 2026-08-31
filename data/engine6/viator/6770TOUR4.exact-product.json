@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "6770TOUR4",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Small-Group-Grampians-Day-Trip-from-Melbourne/d384-6770TOUR4",
+    "title": "Small-Group Grampians Great Wilderness Escape Day Trip with Hiking",
+    "description": {
+      "text": "In Melbourne, this small-group wilderness day leaves a central meeting point for Halls Gap, Boroka Lookout, MacKenzie Falls, The Balconies, and Brambuk The National Park & Cultural Centre. The public page notes Silverband Falls if MacKenzie Falls is closed rather than inventing a substitute circuit. The format suits visitors who want guided Grampians hiking without a Great Ocean Road limestone-stack day. Meeting points are confirmed at booking in Melbourne, and the itinerary stays on those lookouts and cultural-centre stops that define this outing rather than a Hosier Lane studio walk."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "12 hours 30 minutes (approx.)",
+    "priceFrom": "From $101.02",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 102
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/69/cd/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Boroka Lookout and The Balconies",
+      "MacKenzie Falls bushwalk",
+      "Halls Gap valley stop",
+      "Brambuk cultural centre",
+      "Small-group mini-coach from Melbourne"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at a confirmed central Melbourne meeting point listed when booking. Start time is 7:35am."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this small-group wilderness day leaves a central meeting point for Halls Gap, Boroka Lookout, MacKenzie Falls, The Balconies, and Brambuk The National Park & Cultural Centre.",
+    "itineraryItems": [
+      {
+        "title": "Halls Gap Visitor Information Centre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boroka Lookout",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "MacKenzie Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Balconies",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Brambuk The National Park & Cultural Centre",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Admission to Grampians National Park",
+      "Guided bush walks",
+      "Experienced local driver-guide",
+      "Air-conditioned mini-coach"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group Grampians Great Wilderness Escape Day Trip with Hiking?",
+        "answer": "The planned duration is 12 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Meet at a confirmed central Melbourne meeting point listed when booking. Start time is 7:35am."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 101.02
+      },
+      "currency": "USD"
+    }
+  }
+}

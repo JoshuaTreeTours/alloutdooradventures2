@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "13938P1",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Yarra-Valley-Food-and-Wine-Daytour/d384-13938P1",
+    "title": "Yarra Valley Wine Day Tour",
+    "description": {
+      "text": "In Melbourne, this full-day wine outing uses selected city hotels and published cellar doors including De Bortoli Winery for a cheese pairing and Yering Station for tasting and lunch. The public page lists an a la carte vineyard lunch and a maximum of 11 travelers rather than a sunrise balloon. The format suits visitors who want guided Yarra Valley tastings without a Great Ocean Road coastal day. Meeting points are confirmed the evening before in Melbourne, and the itinerary stays on those wineries that define this outing rather than a Rod Laver Arena sports circuit."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $188.90",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 601
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/bb/6c/2a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "De Bortoli cheese and wine pairing",
+      "Yering Station tasting and lunch",
+      "Small-group Yarra Valley cellar doors",
+      "Selected Melbourne hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "You MUST contact the local tour operator by calling 96998148 up until 9:00pm the evening prior to confirm your exact pick up point and time from the published Melbourne hotel list, or meet at the confirmed Melbourne VIC 3000 meeting point."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this full-day wine outing uses selected city hotels and published cellar doors including De Bortoli Winery for a cheese pairing and Yering Station for tasting and lunch.",
+    "itineraryItems": [
+      {
+        "title": "De Bortoli Winery",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yering Station",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Lunch",
+      "Wine tasting",
+      "Driver/guide",
+      "Hotel pickup and drop-off (selected hotels only)",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yarra Valley Wine Day Tour?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "You MUST contact the local tour operator by calling 96998148 up until 9:00pm the evening prior to confirm your exact pick up point and time from the published Melbourne hotel list, or meet at the confirmed Melbourne VIC 3000 meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting Tours"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 188.9
+      },
+      "currency": "USD"
+    }
+  }
+}

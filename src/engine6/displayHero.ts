@@ -115,6 +115,9 @@ export const ENGINE6_CAIRNS_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_QUEENSTOWN_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/88/e5.jpg";
 
+export const ENGINE6_MELBOURNE_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/52/01.jpg";
+
 export const ENGINE6_PARIS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg";
 
@@ -266,6 +269,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   australia: {
     sydney: ENGINE6_SYDNEY_CANONICAL_CITY_HERO_URL,
     cairns: ENGINE6_CAIRNS_CANONICAL_CITY_HERO_URL,
+    melbourne: ENGINE6_MELBOURNE_CANONICAL_CITY_HERO_URL,
   },
   "new-zealand": {
     queenstown: ENGINE6_QUEENSTOWN_CANONICAL_CITY_HERO_URL,

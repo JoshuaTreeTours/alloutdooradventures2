@@ -1,0 +1,20 @@
+{
+  "selectedProductCodes": [
+    "3181GOWEST1",
+    "39651P1",
+    "3181P7",
+    "5706M2",
+    "478616P1",
+    "6770TOUR4",
+    "3127YARRA",
+    "13938P1",
+    "108928P13",
+    "179363P2"
+  ],
+  "premiumOrHighValueProductCodes": [
+    "3127YARRA",
+    "13938P1",
+    "5706M2"
+  ],
+  "notes": "10 live Melbourne, Australia products with verified Viator USD. Additional quality inventory was rejected for missing verified USD (EUR/GBP/AUD/DKK/SGD/SEK/CHF-only pages), missing verified Viator ratings, missing product-specific heroes, self-guided/audio formats, near-duplicate Great Ocean Road coaches, two-day combos, or unusable commercial data. Catalog d384 did not support padding to 20 without violating those gates."
+}

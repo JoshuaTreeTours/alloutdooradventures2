@@ -384,6 +384,7 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
   "south-korea/seoul",
   "australia/sydney",
   "australia/cairns",
+  "australia/melbourne",
   "new-zealand/queenstown",
 ]);
 

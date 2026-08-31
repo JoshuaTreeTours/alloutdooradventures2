@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "5706M2",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Small-Group-Great-Ocean-Road-Day-Trip-from-Melbourne/d384-5706M2",
+    "title": "Small-Group Great Ocean Road Day Trip from Melbourne",
+    "description": {
+      "text": "In Melbourne, this max-11 minivan day leaves Mercure Melbourne Southbank or selected city hotels for Apollo Bay, Great Otway National Park wildlife time, the Twelve Apostles, and Loch Ard Gorge. The published format is a smaller vehicle with hotel transfers rather than a 24-seat eco coach. The format suits visitors who want a tighter Great Ocean Road group without a sunset timing. Meeting points are confirmed at booking in Melbourne, and the itinerary stays on those Otway and Port Campbell stops that define this outing rather than a Federation Square sports walk."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $159.68",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 263
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a6/60/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Maximum 11 travelers",
+      "Twelve Apostles and Loch Ard Gorge",
+      "Apollo Bay coastal stop",
+      "Great Otway National Park wildlife time",
+      "Central Melbourne hotel transfers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please meet your guide at the entrance of Mercure Melbourne Southbank hotel, 9 Riverside Quay, Southbank VIC 3006, Australia, or at a confirmed city-centre hotel pickup."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this max-11 minivan day leaves Mercure Melbourne Southbank or selected city hotels for Apollo Bay, Great Otway National Park wildlife time, the Twelve Apostles, and Loch Ard Gorge.",
+    "itineraryItems": [
+      {
+        "title": "Apollo Bay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Great Otway National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Twelve Apostles",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ard Gorge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Selected city-centre hotel pickup and drop-off",
+      "Transport by air-conditioned minivan",
+      "Live commentary on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group Great Ocean Road Day Trip from Melbourne?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Please meet your guide at the entrance of Mercure Melbourne Southbank hotel, 9 Riverside Quay, Southbank VIC 3006, Australia, or at a confirmed city-centre hotel pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159.68
+      },
+      "currency": "USD"
+    }
+  }
+}

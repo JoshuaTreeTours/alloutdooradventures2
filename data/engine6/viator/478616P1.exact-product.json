@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "478616P1",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Reverse-Itinerary-Luxury-Bus-Small-Group-13-Pax/d384-478616P1",
+    "title": "Great Ocean Road Tour Reverse -Luxury 13 Small Group-Hotel PickUP",
+    "description": {
+      "text": "In Melbourne, this reverse-itinerary luxury bus heads for the Twelve Apostles and Loch Ard Gorge before the main crowds, then walks the rainforest at Mait's Rest. The published format is a maximum of 13 travelers on a deluxe bus rather than an early eco mini-coach or a minivan wildlife lodge stop. The format suits visitors who want earlier lookout time without a Grampians cultural-centre day. Meeting points are confirmed at booking in Melbourne CBD or Southbank, and the itinerary stays on those reverse-order coastal stops that define this outing rather than a De Bortoli tasting."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $90.29",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 462
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/07/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Reverse itinerary to reach lookouts earlier",
+      "Twelve Apostles and Loch Ard Gorge",
+      "Mait's Rest rainforest walk",
+      "Maximum 13 travelers on a luxury bus"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from Melbourne CBD and Southbank is confirmed the day before the tour, or meet at 400 Flinders St, Melbourne VIC 3000, Australia."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this reverse-itinerary luxury bus heads for the Twelve Apostles and Loch Ard Gorge before the main crowds, then walks the rainforest at Mait's Rest.",
+    "itineraryItems": [
+      {
+        "title": "Twelve Apostles",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ard Gorge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mait's Rest",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned luxury deluxe bus",
+      "All fees and taxes",
+      "Morning tea/coffee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Ocean Road Tour Reverse -Luxury 13 Small Group-Hotel PickUP?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Hotel pickup from Melbourne CBD and Southbank is confirmed the day before the tour, or meet at 400 Flinders St, Melbourne VIC 3000, Australia."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.29
+      },
+      "currency": "USD"
+    }
+  }
+}

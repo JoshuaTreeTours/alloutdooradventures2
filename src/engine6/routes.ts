@@ -1496,6 +1496,44 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_MELBOURNE_3181GOWEST1_PRODUCT_CODE = "3181GOWEST1";
+export const ENGINE6_MELBOURNE_3181GOWEST1_ROUTE =
+  "/destinations/australia/melbourne/tours/great-ocean-road-small-group-eco-tour-from-melbourne-3181GOWEST1";
+export const ENGINE6_MELBOURNE_39651P1_PRODUCT_CODE = "39651P1";
+export const ENGINE6_MELBOURNE_39651P1_ROUTE =
+  "/destinations/australia/melbourne/tours/melbourne-street-art-tour-39651P1";
+export const ENGINE6_MELBOURNE_3181P7_PRODUCT_CODE = "3181P7";
+export const ENGINE6_MELBOURNE_3181P7_ROUTE =
+  "/destinations/australia/melbourne/tours/great-ocean-road-full-day-sunset-eco-tour-from-melbourn-3181P7";
+export const ENGINE6_MELBOURNE_5706M2_PRODUCT_CODE = "5706M2";
+export const ENGINE6_MELBOURNE_5706M2_ROUTE =
+  "/destinations/australia/melbourne/tours/small-group-great-ocean-road-day-trip-from-melbourne-5706M2";
+export const ENGINE6_MELBOURNE_478616P1_PRODUCT_CODE = "478616P1";
+export const ENGINE6_MELBOURNE_478616P1_ROUTE =
+  "/destinations/australia/melbourne/tours/great-ocean-road-tour-reverse-luxury-13-small-group-hot-478616P1";
+export const ENGINE6_MELBOURNE_6770TOUR4_PRODUCT_CODE = "6770TOUR4";
+export const ENGINE6_MELBOURNE_6770TOUR4_ROUTE =
+  "/destinations/australia/melbourne/tours/small-group-grampians-great-wilderness-escape-day-trip-6770TOUR4";
+export const ENGINE6_MELBOURNE_3127YARRA_PRODUCT_CODE = "3127YARRA";
+export const ENGINE6_MELBOURNE_3127YARRA_ROUTE =
+  "/destinations/australia/melbourne/tours/yarra-valley-balloon-flight-at-sunrise-3127YARRA";
+export const ENGINE6_MELBOURNE_13938P1_PRODUCT_CODE = "13938P1";
+export const ENGINE6_MELBOURNE_13938P1_ROUTE =
+  "/destinations/australia/melbourne/tours/yarra-valley-wine-day-tour-13938P1";
+export const ENGINE6_MELBOURNE_108928P13_PRODUCT_CODE = "108928P13";
+export const ENGINE6_MELBOURNE_108928P13_ROUTE =
+  "/destinations/australia/melbourne/tours/great-ocean-road-tour-plus-koalas-forest-walk-and-morni-108928P13";
+export const ENGINE6_MELBOURNE_179363P2_PRODUCT_CODE = "179363P2";
+export const ENGINE6_MELBOURNE_179363P2_ROUTE =
+  "/destinations/australia/melbourne/tours/melbourne-sports-experience-mcg-tour-combo-179363P2";
+
+export const ENGINE6_MELBOURNE_TOUR_PATH_PREFIX =
+  "/destinations/australia/melbourne/tours/";
+
+export const isEngine6MelbourneTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_MELBOURNE_TOUR_PATH_PREFIX);
+
 export const ENGINE6_QUEENSTOWN_76369P1_PRODUCT_CODE = "76369P1";
 export const ENGINE6_QUEENSTOWN_76369P1_ROUTE =
   "/destinations/new-zealand/queenstown/tours/lord-of-the-rings-scenic-half-day-tour-from-queenstown-76369P1";
@@ -5490,6 +5528,46 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_3181GOWEST1_ROUTE,
+    ENGINE6_MELBOURNE_3181GOWEST1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_39651P1_ROUTE,
+    ENGINE6_MELBOURNE_39651P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_3181P7_ROUTE,
+    ENGINE6_MELBOURNE_3181P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_5706M2_ROUTE,
+    ENGINE6_MELBOURNE_5706M2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_478616P1_ROUTE,
+    ENGINE6_MELBOURNE_478616P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_6770TOUR4_ROUTE,
+    ENGINE6_MELBOURNE_6770TOUR4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_3127YARRA_ROUTE,
+    ENGINE6_MELBOURNE_3127YARRA_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_13938P1_ROUTE,
+    ENGINE6_MELBOURNE_13938P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_108928P13_ROUTE,
+    ENGINE6_MELBOURNE_108928P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MELBOURNE_179363P2_ROUTE,
+    ENGINE6_MELBOURNE_179363P2_PRODUCT_CODE,
   ],
   [
     ENGINE6_QUEENSTOWN_76369P1_ROUTE,

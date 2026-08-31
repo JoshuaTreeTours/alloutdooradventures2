@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "3181GOWEST1",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Great-Ocean-Road-Small-Group-Eco-Tour-from-Melbourne/d384-3181GOWEST1",
+    "title": "Great Ocean Road Small-Group Eco Tour from Melbourne",
+    "description": {
+      "text": "In Melbourne, this small-group eco coach leaves selected city hotels for a full Great Ocean Road day covering Torquay, the Memorial Arch, Kennett River koala spotting, Apollo Bay, Mait's Rest, the Twelve Apostles, and Loch Ard Gorge. The published format is an early-start deluxe mini-coach rather than a later sunset timing or a reverse-order luxury bus. The format suits visitors who want a classic coastal and rainforest circuit without a Grampians hiking day. Meeting points are confirmed at booking in Melbourne, and the itinerary stays on those Shipwreck Coast and Otway stops that define this outing rather than a Yarra Valley cellar-door afternoon."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "14 hours (approx.)",
+    "priceFrom": "From $97.94",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 6062
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/52/01.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Twelve Apostles and Loch Ard Gorge",
+      "Kennett River koala spotting",
+      "Mait's Rest rainforest walk",
+      "Great Ocean Road Memorial Archway",
+      "Selected Melbourne hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is only available from the list of hotels provided upon checkout. Pickup is between 7am-8am depending on which hotel you selected."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this small-group eco coach leaves selected city hotels for a full Great Ocean Road day covering Torquay, the Memorial Arch, Kennett River koala spotting, Apollo Bay, Mait's Rest, the Twelve Apostles, and Loch Ard Gorge.",
+    "itineraryItems": [
+      {
+        "title": "Torquay",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Great Ocean Road Memorial Archway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kennett River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Apollo Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mait's Rest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Twelve Apostles",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loch Ard Gorge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coffee and/or tea",
+      "Friendly and informative guide",
+      "Pickup from selected hotels",
+      "National park fees",
+      "WiFi on board",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Ocean Road Small-Group Eco Tour from Melbourne?",
+        "answer": "The planned duration is 14 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Pickup is only available from the list of hotels provided upon checkout. Pickup is between 7am-8am depending on which hotel you selected."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 97.94
+      },
+      "currency": "USD"
+    }
+  }
+}

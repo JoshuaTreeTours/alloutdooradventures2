@@ -6652,16 +6652,16 @@ const australiaState: StateDestination = {
   slug: "australia",
   name: "Australia",
   description:
-    "Sydney harbour walks, Circular Quay cruises, Blue Mountains days, Bondi and The Rocks circuits, plus Cairns reef, rainforest, Kuranda, and Tablelands touring from Tropical North Queensland.",
+    "Sydney harbour walks, Circular Quay cruises, Blue Mountains days, Bondi and The Rocks circuits, Cairns reef, rainforest, Kuranda, and Tablelands touring from Tropical North Queensland, plus Melbourne laneways, Great Ocean Road, Grampians, and Yarra Valley days from Victoria.",
   featuredDescription:
-    "Explore Sydney tours with harbour cruises, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, food and brewery walks, and scenic helicopter flights, plus Cairns Great Barrier Reef days, Green Island and Fitzroy Island ferries, Daintree and Cape Tribulation coach outings, Kuranda rail and Skyrail, and Atherton Tablelands food or wildlife tours.",
+    "Explore Sydney tours with harbour cruises, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, food and brewery walks, and scenic helicopter flights, plus Cairns Great Barrier Reef days, Green Island and Fitzroy Island ferries, Daintree and Cape Tribulation coach outings, Kuranda rail and Skyrail, and Atherton Tablelands food or wildlife tours, and Melbourne street-art walks, Great Ocean Road and Grampians days, Yarra Valley wine or balloon flights, and MCG sports circuits.",
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/0b/2b.jpg",
   region: "Oceania",
   intro:
-    "Australia pairs walkable Sydney harbour, The Rocks, and Bondi days with Circular Quay cruises, Blue Mountains plateau outings, and Port Stephens coastal trips from the harbour city. In Tropical North Queensland, Cairns adds Great Barrier Reef, Green Island, Daintree, Kuranda, and Atherton Tablelands touring.",
+    "Australia pairs walkable Sydney harbour, The Rocks, and Bondi days with Circular Quay cruises, Blue Mountains plateau outings, and Port Stephens coastal trips from the harbour city. In Tropical North Queensland, Cairns adds Great Barrier Reef, Green Island, Daintree, Kuranda, and Atherton Tablelands touring. In Victoria, Melbourne adds laneway walks, Great Ocean Road and Grampians days, and Yarra Valley wine or balloon flights.",
   longDescription:
-    "Sydney anchors Australia tour inventory with Hyde Park and The Rocks walking circuits, Circular Quay harbour cruises, seasonal whale watches, BridgeClimb on the Sydney Harbour Bridge, Blue Mountains days covering Scenic World and the Three Sisters, private Opera House and Bondi half-days, Port Stephens dune circuits, Mascot helicopter hops, Surry Hills food walks, Royal Botanic Garden forages, and brewery or dinner-cruise evenings. Cairns adds Outer Reef and Green Island boat days, Fitzroy Island ferries, Daintree and Cape Tribulation rainforest circuits, Kuranda Scenic Railway and Skyrail Rainforest Cableway, Paronella Park historic stops, and Atherton Tablelands food or night-wildlife outings.",
+    "Sydney anchors Australia tour inventory with Hyde Park and The Rocks walking circuits, Circular Quay harbour cruises, seasonal whale watches, BridgeClimb on the Sydney Harbour Bridge, Blue Mountains days covering Scenic World and the Three Sisters, private Opera House and Bondi half-days, Port Stephens dune circuits, Mascot helicopter hops, Surry Hills food walks, Royal Botanic Garden forages, and brewery or dinner-cruise evenings. Cairns adds Outer Reef and Green Island boat days, Fitzroy Island ferries, Daintree and Cape Tribulation rainforest circuits, Kuranda Scenic Railway and Skyrail Rainforest Cableway, Paronella Park historic stops, and Atherton Tablelands food or night-wildlife outings. Melbourne adds street-art laneway walks, Great Ocean Road and Twelve Apostles days, Grampians hiking, Yarra Valley wine or sunrise balloon flights, and Melbourne Cricket Ground sports circuits.",
   topRegions: [
     {
       title: "Harbour and historic streets",
@@ -6682,6 +6682,11 @@ const australiaState: StateDestination = {
       title: "Cairns reef and rainforest",
       description:
         "Great Barrier Reef, Green Island, Fitzroy Island, Mossman Gorge, Daintree River, Cape Tribulation, Kuranda Scenic Railway, Skyrail Rainforest Cableway, and Atherton Tablelands days from Cairns.",
+    },
+    {
+      title: "Melbourne laneways and Victoria days",
+      description:
+        "Hosier Lane and Blender Studios walks, Great Ocean Road and Twelve Apostles coaches, Grampians lookouts, Yarra Valley cellar doors and balloons, and Melbourne Cricket Ground sports circuits.",
     },
   ],
   cities: [
@@ -6812,6 +6817,71 @@ const australiaState: StateDestination = {
           question: "What are the signature Cairns tours?",
           answer:
             "Great Barrier Reef catamaran and sailing days, Green Island and Fitzroy Island ferries, Daintree and Cape Tribulation coach outings, Kuranda Scenic Railway and Skyrail, Paronella Park historic days, and Atherton Tablelands food or night-wildlife tours are the most popular departures.",
+        },
+      ],
+    },
+    {
+      name: "Melbourne",
+      slug: "melbourne",
+      stateSlug: "australia",
+      region: "Melbourne",
+      lat: -37.8136,
+      lng: 144.9631,
+      shortDescription:
+        "Laneway walks, Great Ocean Road and Grampians days, and Yarra Valley wine or balloon flights from Melbourne.",
+      intro:
+        "Melbourne is Victoria's laneway and day-trip gateway, with street-art studio walks, Great Ocean Road and Twelve Apostles coaches, Grampians hiking, Yarra Valley cellar doors and sunrise balloons, and Melbourne Cricket Ground sports circuits.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/52/01.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "food"],
+      whereItIs: [
+        "Melbourne sits on the Yarra River in Victoria, with Federation Square, the CBD laneways, and day-trip routes to the Great Ocean Road, Grampians, and Yarra Valley framing most sightseeing.",
+        "Most guided tours depart from central Melbourne hotels, Federation Square, Southbank, or meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Grampians National Park lookouts, MacKenzie Falls, and Brambuk sit on full-day hiking routes from Melbourne.",
+        lakesWater:
+          "Great Ocean Road limestone stacks, Loch Ard Gorge, and Apollo Bay coastal stops appear on scenic outings from the city.",
+        desertForest:
+          "Otway rainforest walks at Mait's Rest and Kennett River koala stops sit on Great Ocean Road days from Melbourne.",
+        cycling:
+          "Published Melbourne inventory on this build is walking, coach, balloon, and sports touring rather than a dedicated city bike circuit.",
+        scenicDrives:
+          "Coaches cover Torquay, the Memorial Arch, the Twelve Apostles, Loch Ard Gorge, Halls Gap, and Yarra Valley cellar doors from Melbourne hotels.",
+        seasonalNotes:
+          "Summer daylight stretches Great Ocean Road sunset returns; cooler months favor earlier coastal departures and Yarra Valley balloon weather holds.",
+      },
+      thingsToDo: [
+        "Walk Melbourne laneways with a street-art studio visit.",
+        "Spend a day on the Great Ocean Road or in the Grampians.",
+        "Join a Yarra Valley wine tasting or sunrise balloon flight.",
+      ],
+      toursCopy: [
+        "Book a Great Ocean Road or Grampians day for a compact introduction beyond the CBD.",
+        "Pair a laneway or MCG walk with a Yarra Valley wine or balloon morning.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Federation Square or ACMI meeting point for a laneway or sports walk.",
+          "Afternoon: Continue through Hosier Lane, the MCG precinct, or a Yarra Valley tasting.",
+          "Evening: Return to central Melbourne.",
+        ],
+        dayTwo: [
+          "Morning: Great Ocean Road or Grampians coach departure from a city hotel.",
+          "Afternoon: Twelve Apostles, Loch Ard Gorge, or Halls Gap lookouts.",
+          "Evening: Return to Melbourne.",
+        ],
+      },
+      gettingThere: [
+        "Melbourne Airport serves the city with taxis, hotel transfers, and published tour pickups to Federation Square, Southbank, and most meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Melbourne tours?",
+          answer:
+            "Street-art laneway walks, Great Ocean Road and Twelve Apostles days, Grampians hiking, Yarra Valley wine or sunrise balloon flights, and Melbourne Cricket Ground sports circuits are the most popular departures.",
         },
       ],
     },

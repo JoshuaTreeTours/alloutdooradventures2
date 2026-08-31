@@ -161,6 +161,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "australia",
     citySlug: "cairns",
   },
+  melbourne: {
+    destinationLabel: "Melbourne",
+    destinationCitySlug: "melbourne",
+    stateSlug: "australia",
+    citySlug: "melbourne",
+  },
   queenstown: {
     destinationLabel: "Queenstown",
     destinationCitySlug: "queenstown",

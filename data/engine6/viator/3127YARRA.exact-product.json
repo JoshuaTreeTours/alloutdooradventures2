@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "3127YARRA",
+    "productUrl": "https://www.viator.com/tours/Melbourne/Yarra-Valley-Balloon-Flight-at-Sunrise/d384-3127YARRA",
+    "title": "Yarra Valley Balloon Flight at Sunrise",
+    "description": {
+      "text": "In Melbourne, this sunrise balloon meets at Balgownie Estate in the Yarra Valley, or at Pullman Melbourne on the Park when the transfer package is booked, then floats over vineyards before an optional sparkling-wine breakfast. The published format is a valley launch rather than a city-skyline flight over the MCG. The format suits visitors who want aerial vineyard time without a cellar-door tasting van. Meeting points are confirmed at booking in Melbourne or Yarra Glen, and the itinerary stays on Balgownie Estate and the Yarra Valley that define this outing rather than a Twelve Apostles coach."
+    },
+    "location": {
+      "city": "Melbourne",
+      "state": "Australia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $322.61",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 489
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/7a/f8/a3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunrise balloon over Yarra Valley vineyards",
+      "Balgownie Estate launch",
+      "Optional sparkling-wine breakfast",
+      "Optional Melbourne CBD hotel transfer"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Balgownie Estate, 1309 Melba Hwy, Yarra Glen VIC 3775, Australia. Optional pickup from Pullman Melbourne on the Park, 192 Wellington Pde, Melbourne, Victoria 3002 Australia when the breakfast-and-transfer package is booked."
+      },
+      "end": {
+        "description": "Return to the Melbourne meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Melbourne, this sunrise balloon meets at Balgownie Estate in the Yarra Valley, or at Pullman Melbourne on the Park when the transfer package is booked, then floats over vineyards before an optional sparkling-wine breakfast.",
+    "itineraryItems": [
+      {
+        "title": "Balgownie Estate",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yarra Valley",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Approximate one-hour sunrise hot air balloon flight",
+      "Flight, ground insurance, and launch/landing government fees",
+      "Complimentary in-flight photos",
+      "Digital flight certificate"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yarra Valley Balloon Flight at Sunrise?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Melbourne?",
+        "answer": "Meet at Balgownie Estate, 1309 Melba Hwy, Yarra Glen VIC 3775, Australia. Optional pickup from Pullman Melbourne on the Park, 192 Wellington Pde, Melbourne, Victoria 3002 Australia when the breakfast-and-transfer package is booked."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hot Air Balloon Rides"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 322.61
+      },
+      "currency": "USD"
+    }
+  }
+}
