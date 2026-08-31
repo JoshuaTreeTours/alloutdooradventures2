@@ -69,6 +69,7 @@ export const COUNTRY_NAME_TO_ISO2: Record<string, string> = {
   usa: "US",
   us: "US",
   australia: "AU",
+  "new zealand": "NZ",
   canada: "CA",
   denmark: "DK",
   france: "FR",

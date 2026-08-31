@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "5762P6",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Wakatipu-Basin-Tour-Safari-of-the-Scenes/d407-5762P6",
+    "title": "Half-Day Lord of the Rings 4WD Tour from Queenstown",
+    "description": {
+      "text": "In Queenstown, this 4WD half-day leaves Info & Track on Shotover Street for the Remarkables, Deer Park Heights, Kawarau Gorge, Arrowtown, the Arrow River, and Coronet Peak. The published format is an off-road Wakatipu Basin safari with a tea stop rather than a sealed-road Glenorchy coach. The format suits visitors who want river crossings and gold panning without a Milford Sound cruise. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those basin landmarks that define this outing rather than a TSS Earnslaw crossing to Walter Peak."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $168.79",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 251
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7e/29/5b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "4WD Wakatipu Basin circuit",
+      "Remarkables and Deer Park Heights",
+      "Arrowtown and Arrow River gold panning",
+      "Coronet Peak return views"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick up is from Info & Track, 37 Shotover Street, Queenstown 9300, New Zealand."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this 4WD half-day leaves Info & Track on Shotover Street for the Remarkables, Deer Park Heights, Kawarau Gorge, Arrowtown, the Arrow River, and Coronet Peak.",
+    "itineraryItems": [
+      {
+        "title": "The Remarkables",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Deer Park Heights",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kawarau Gorge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arrowtown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arrow River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coronet Peak",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Transport by 4WD vehicle",
+      "Hotel pickup and drop-off",
+      "Tea rest break"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Lord of the Rings 4WD Tour from Queenstown?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Pick up is from Info & Track, 37 Shotover Street, Queenstown 9300, New Zealand."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 168.79
+      },
+      "currency": "USD"
+    }
+  }
+}

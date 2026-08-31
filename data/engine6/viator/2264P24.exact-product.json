@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "2264P24",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Walter-Peak-Horse-Trek/d407-2264P24",
+    "title": "Half Day Walter Peak Horse Trek and Cruise from Queenstown",
+    "description": {
+      "text": "In Queenstown, this half-day pairs a TSS Earnslaw crossing of Lake Wakatipu with tea at the Colonel's Homestead and a guided horse trek at Walter Peak High Country Farm. The published format is a steamship-and-saddle outing rather than a gourmet barbecue lunch on the same farm. The format suits visitors who want time on horseback without a Doubtful Sound wilderness day. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on the Earnslaw, Walter Peak, and the homestead that define this outing rather than a Dart River jet."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $163.70",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 84
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/52/30.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "TSS Earnslaw crossing of Lake Wakatipu",
+      "Walter Peak High Country Farm",
+      "Guided horse trek",
+      "Tea at the Colonel's Homestead"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board the TSS Earnslaw from the Queenstown waterfront wharf for the published morning or afternoon sailing."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this half-day pairs a TSS Earnslaw crossing of Lake Wakatipu with tea at the Colonel's Homestead and a guided horse trek at Walter Peak High Country Farm.",
+    "itineraryItems": [
+      {
+        "title": "Queenstown Wharf",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "TSS Earnslaw",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Walter Peak High Country Farm",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colonel's Homestead",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Return cruise on the TSS Earnslaw",
+      "Horseback trek",
+      "Morning or afternoon tea",
+      "Safety equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Walter Peak Horse Trek and Cruise from Queenstown?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Board the TSS Earnslaw from the Queenstown waterfront wharf for the published morning or afternoon sailing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 163.7
+      },
+      "currency": "USD"
+    }
+  }
+}

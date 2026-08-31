@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "38244P1",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Half-Day-Milford-Sound-Flight-and-Cruise-from-Queenstown/d407-38244P1",
+    "title": "Half-Day Milford Sound Flight and Cruise from Queenstown",
+    "description": {
+      "text": "In Queenstown, this Air Milford half-day leaves Tex Smith Lane in Frankton for a scenic flight over Paradise, Skippers Canyon, and Donne Glacier, then a reserved-seat Milford Sound cruise past Mitre Peak and Bowen Falls. The return flight is listed over Sutherland Falls rather than a two-landing helicopter. The format suits visitors who want air-and-water time without a 13-hour coach. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those alpine and fiord landmarks that define this outing rather than a Walter Peak farm cruise."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $457.10",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 639
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/e8/a7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Round-trip scenic flight from Queenstown",
+      "Reserved Milford Sound cruise",
+      "Mitre Peak and Bowen Falls",
+      "Return over Sutherland Falls"
+    ],
+    "logistics": {
+      "start": {
+        "description": "3 Tex Smith Lane, Frankton, Queenstown 9300, New Zealand, with optional central Queenstown hotel pickup."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this Air Milford half-day leaves Tex Smith Lane in Frankton for a scenic flight over Paradise, Skippers Canyon, and Donne Glacier, then a reserved-seat Milford Sound cruise past Mitre Peak and Bowen Falls.",
+    "itineraryItems": [
+      {
+        "title": "Air Milford Queenstown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Skippers Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Donne Glacier",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Milford Sound",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mitre Peak",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bowen Falls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Live pilot commentary",
+      "Reserved seating aboard the Nature Cruise of Milford Sound",
+      "Hotel pickup and drop-off from centrally located hotels"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Milford Sound Flight and Cruise from Queenstown?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "3 Tex Smith Lane, Frankton, Queenstown 9300, New Zealand, with optional central Queenstown hotel pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 457.1
+      },
+      "currency": "USD"
+    }
+  }
+}

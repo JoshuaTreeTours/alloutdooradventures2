@@ -1496,6 +1496,53 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_QUEENSTOWN_76369P1_PRODUCT_CODE = "76369P1";
+export const ENGINE6_QUEENSTOWN_76369P1_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/lord-of-the-rings-scenic-half-day-tour-from-queenstown-76369P1";
+export const ENGINE6_QUEENSTOWN_460492P1_PRODUCT_CODE = "460492P1";
+export const ENGINE6_QUEENSTOWN_460492P1_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/half-day-in-middle-earth-lord-of-the-rings-tour-460492P1";
+export const ENGINE6_QUEENSTOWN_5762P6_PRODUCT_CODE = "5762P6";
+export const ENGINE6_QUEENSTOWN_5762P6_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/half-day-lord-of-the-rings-4wd-tour-from-queenstown-5762P6";
+export const ENGINE6_QUEENSTOWN_58045P5_PRODUCT_CODE = "58045P5";
+export const ENGINE6_QUEENSTOWN_58045P5_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/best-of-queenstown-sightseeing-tour-58045P5";
+export const ENGINE6_QUEENSTOWN_87033P3_PRODUCT_CODE = "87033P3";
+export const ENGINE6_QUEENSTOWN_87033P3_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/queenstown-wine-tour-with-wine-dog-adults-only-87033P3";
+export const ENGINE6_QUEENSTOWN_2264P24_PRODUCT_CODE = "2264P24";
+export const ENGINE6_QUEENSTOWN_2264P24_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/half-day-walter-peak-horse-trek-and-cruise-from-queenst-2264P24";
+export const ENGINE6_QUEENSTOWN_3910GS76_PRODUCT_CODE = "3910GS76";
+export const ENGINE6_QUEENSTOWN_3910GS76_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/milford-sound-day-tour-with-lunch-from-queenstown-3910GS76";
+export const ENGINE6_QUEENSTOWN_3287_ZQN_PRODUCT_CODE = "3287_ZQN";
+export const ENGINE6_QUEENSTOWN_3287_ZQN_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/small-group-award-winning-full-day-milford-sound-experi-3287_ZQN";
+export const ENGINE6_QUEENSTOWN_5627WILDERNESS_PRODUCT_CODE = "5627WILDERNESS";
+export const ENGINE6_QUEENSTOWN_5627WILDERNESS_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/dart-river-jet-boat-and-wilderness-experience-5627WILDERNESS";
+export const ENGINE6_QUEENSTOWN_43964P1_PRODUCT_CODE = "43964P1";
+export const ENGINE6_QUEENSTOWN_43964P1_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/luxury-milford-sound-coach-and-scenic-cruise-43964P1";
+export const ENGINE6_QUEENSTOWN_2264RJ301_PRODUCT_CODE = "2264RJ301";
+export const ENGINE6_QUEENSTOWN_2264RJ301_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/doubtful-sound-wilderness-cruise-from-queenstown-2264RJ301";
+export const ENGINE6_QUEENSTOWN_38244P1_PRODUCT_CODE = "38244P1";
+export const ENGINE6_QUEENSTOWN_38244P1_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/half-day-milford-sound-flight-and-cruise-from-queenstow-38244P1";
+export const ENGINE6_QUEENSTOWN_3434ZQN_HLQ1B_PRODUCT_CODE = "3434ZQN_HLQ1B";
+export const ENGINE6_QUEENSTOWN_3434ZQN_HLQ1B_ROUTE =
+  "/destinations/new-zealand/queenstown/tours/milford-sound-heli-tour-from-queenstown-with-2-alpine-l-3434ZQN_HLQ1B";
+
+export const ENGINE6_QUEENSTOWN_TOUR_PATH_PREFIX =
+  "/destinations/new-zealand/queenstown/tours/";
+
+export const isEngine6QueenstownTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_QUEENSTOWN_TOUR_PATH_PREFIX);
+
 export const ENGINE6_CAIRNS_3253P11_PRODUCT_CODE = "3253P11";
 export const ENGINE6_CAIRNS_3253P11_ROUTE =
   "/destinations/australia/cairns/tours/great-barrier-reef-cruise-gold-class-vip-lounge-package-3253P11";
@@ -5443,6 +5490,58 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_76369P1_ROUTE,
+    ENGINE6_QUEENSTOWN_76369P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_460492P1_ROUTE,
+    ENGINE6_QUEENSTOWN_460492P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_5762P6_ROUTE,
+    ENGINE6_QUEENSTOWN_5762P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_58045P5_ROUTE,
+    ENGINE6_QUEENSTOWN_58045P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_87033P3_ROUTE,
+    ENGINE6_QUEENSTOWN_87033P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_2264P24_ROUTE,
+    ENGINE6_QUEENSTOWN_2264P24_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_3910GS76_ROUTE,
+    ENGINE6_QUEENSTOWN_3910GS76_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_3287_ZQN_ROUTE,
+    ENGINE6_QUEENSTOWN_3287_ZQN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_5627WILDERNESS_ROUTE,
+    ENGINE6_QUEENSTOWN_5627WILDERNESS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_43964P1_ROUTE,
+    ENGINE6_QUEENSTOWN_43964P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_2264RJ301_ROUTE,
+    ENGINE6_QUEENSTOWN_2264RJ301_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_38244P1_ROUTE,
+    ENGINE6_QUEENSTOWN_38244P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_QUEENSTOWN_3434ZQN_HLQ1B_ROUTE,
+    ENGINE6_QUEENSTOWN_3434ZQN_HLQ1B_PRODUCT_CODE,
   ],
   [
     ENGINE6_CAIRNS_3253P11_ROUTE,

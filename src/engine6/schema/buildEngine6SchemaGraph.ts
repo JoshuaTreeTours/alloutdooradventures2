@@ -39,6 +39,8 @@ const resolveEngine6AddressCountry = (stateSlug: string) =>
                     ? "KR"
                     : stateSlug === "australia"
                       ? "AU"
+                      : stateSlug === "new-zealand"
+                        ? "NZ"
                 : "US";
 
 const includesTerm = (source: string, term: string) =>

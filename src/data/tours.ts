@@ -384,6 +384,7 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>([
   "south-korea/seoul",
   "australia/sydney",
   "australia/cairns",
+  "new-zealand/queenstown",
 ]);
 
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
