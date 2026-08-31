@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-08-31T01:50:00.000Z",
+  "applied": true,
+  "method": "Viator public product-page USD adult From widget (FromUS$ / FromUSD / US-facing From$ / dual-currency $ leg). Direct HTML fetch is DataDome 403; amounts were read from the live public pages.",
+  "changedCount": 1,
+  "blockedCount": 0,
+  "rows": [
+    {
+      "productCode": "3253P11",
+      "storedUsdAdultFrom": 520.74,
+      "liveUsdAdultFrom": 520.74,
+      "source": "from-dollar-usd-page",
+      "unit": "per-group",
+      "changed": false,
+      "notes": "US page From$520.74 per group (up to 2). en-AU FromUSD 525.18 not used."
+    },
+    {
+      "productCode": "2845P3",
+      "storedUsdAdultFrom": 194.79,
+      "liveUsdAdultFrom": 194.79,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false
+    },
+    {
+      "productCode": "22448P1",
+      "storedUsdAdultFrom": 212.96,
+      "liveUsdAdultFrom": 212.96,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "en-AU also FromUSD 212.96."
+    },
+    {
+      "productCode": "76865P1",
+      "storedUsdAdultFrom": 162.21,
+      "liveUsdAdultFrom": 162.21,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "US page From$162.21. en-AU From$249.00 is AUD and must not be stored as USD."
+    },
+    {
+      "productCode": "5364FREE",
+      "storedUsdAdultFrom": 181.76,
+      "liveUsdAdultFrom": 181.76,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "US page From$181.76. en-AU FromUSD 181.83 not used."
+    },
+    {
+      "productCode": "2845MIC_C",
+      "storedUsdAdultFrom": 179.8,
+      "liveUsdAdultFrom": 179.8,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false
+    },
+    {
+      "productCode": "5641FITZROY",
+      "storedUsdAdultFrom": 65.15,
+      "liveUsdAdultFrom": 65.15,
+      "source": "dual-currency-usd-leg",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "US page From$65.15. en-CA FromA$100.00 is AUD."
+    },
+    {
+      "productCode": "2570CTR",
+      "storedUsdAdultFrom": 192.16,
+      "liveUsdAdultFrom": 192.16,
+      "previousStoredUsdAdultFrom": 192.24,
+      "source": "from-us-dollar",
+      "unit": "per-person",
+      "changed": true,
+      "notes": "US page From$192.16 and locale pages FromUS$192.16. Replaced stale 192.24."
+    },
+    {
+      "productCode": "611960119T1",
+      "storedUsdAdultFrom": 143.37,
+      "liveUsdAdultFrom": 143.37,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false
+    },
+    {
+      "productCode": "11730P6",
+      "storedUsdAdultFrom": 166.18,
+      "liveUsdAdultFrom": 166.18,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "US page From$166.18. en-IN From$167.61 not used."
+    },
+    {
+      "productCode": "20046P3",
+      "storedUsdAdultFrom": 170.24,
+      "liveUsdAdultFrom": 170.24,
+      "source": "from-us-dollar",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "FromUS$170.24. A GBP From£128.01 locale page is not USD."
+    },
+    {
+      "productCode": "42277P10",
+      "storedUsdAdultFrom": 190.61,
+      "liveUsdAdultFrom": 190.61,
+      "source": "from-us-dollar",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "FromUS$190.61 on NZ/US-facing USD. en-GB FromUS$188.92 is another locale FX print, not used."
+    },
+    {
+      "productCode": "2570KURANDA",
+      "storedUsdAdultFrom": 180.77,
+      "liveUsdAdultFrom": 180.77,
+      "source": "from-usd-word",
+      "unit": "per-person",
+      "changed": false,
+      "notes": "FromUSD 180.77. FromR$1,033.82 rejected."
+    },
+    {
+      "productCode": "37685P1",
+      "storedUsdAdultFrom": 124.14,
+      "liveUsdAdultFrom": 124.14,
+      "source": "from-usd-word",
+      "unit": "per-person",
+      "changed": false
+    },
+    {
+      "productCode": "2845P1",
+      "storedUsdAdultFrom": 97.72,
+      "liveUsdAdultFrom": 97.72,
+      "source": "from-dollar-usd-page",
+      "unit": "per-person",
+      "changed": false
+    }
+  ]
+}

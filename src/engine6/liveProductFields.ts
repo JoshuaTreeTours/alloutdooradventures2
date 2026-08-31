@@ -6,6 +6,7 @@ import {
   looksLikeCurrencyMismatch,
   shouldApplyLivePriceAsUsd,
 } from "./priceCurrency";
+import { shouldApplyCairnsLiveUsdAdultFromPrice } from "./cairnsUsdAdultFromPrice";
 
 export type Engine6LiveProductFields = {
   priceAmount: number | null;
@@ -65,6 +66,11 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
   const applyLivePrice =
     shouldAcceptLiveAmountAsUsd(priceAmount, tour.priceAmount) &&
     shouldApplyLivePriceAsUsd(liveFields) &&
+    shouldApplyCairnsLiveUsdAdultFromPrice(
+      tour.productCode,
+      liveFields,
+      tour.priceAmount
+    ) &&
     !looksLikeCurrencyMismatch(tour.priceAmount, priceAmount);
   const resolvedPriceAmount = applyLivePrice
     ? (priceAmount ?? tour.priceAmount)
@@ -125,6 +131,11 @@ export const mergeEngine6LiveFieldsIntoTour = (
       tour.startingPrice ?? null
     ) &&
     shouldApplyLivePriceAsUsd(liveFields) &&
+    shouldApplyCairnsLiveUsdAdultFromPrice(
+      tour.productCode,
+      liveFields,
+      tour.startingPrice ?? null
+    ) &&
     !looksLikeCurrencyMismatch(tour.startingPrice, priceAmount);
   const resolvedStartingPrice = applyLivePrice
     ? (candidateLivePrice ?? tour.startingPrice ?? undefined)

@@ -30,9 +30,10 @@ export const CAIRNS_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(
 );
 
 /**
- * Public Viator From US$ / FromUSD / US-facing From$ amounts in USD.
- * Source currency was verified on the product page before storage.
- * AUD amounts such as A$100.00 were never stored as USD.
+ * Public Viator USD adult From amounts for Cairns Engine6 products.
+ * Source of truth is the product-page price widget:
+ * FromUS$ / FromUSD / US-facing From$ / $ leg of an A$+$ pair.
+ * AUD From$ (including en-AU From$249.00) is never stored as USD.
  * Fitzroy 5641FITZROY stores 65.15 USD from the dual A$100 / $65.15 pair.
  */
 export const CAIRNS_VIATOR_PUBLIC_USD_FROM_PRICES: Record<string, number> = {
@@ -43,7 +44,7 @@ export const CAIRNS_VIATOR_PUBLIC_USD_FROM_PRICES: Record<string, number> = {
   "5364FREE": 181.76,
   "2845MIC_C": 179.8,
   "5641FITZROY": 65.15,
-  "2570CTR": 192.24,
+  "2570CTR": 192.16,
   "611960119T1": 143.37,
   "11730P6": 166.18,
   "20046P3": 170.24,

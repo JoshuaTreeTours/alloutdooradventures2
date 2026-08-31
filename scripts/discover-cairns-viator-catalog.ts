@@ -6,6 +6,7 @@ import { writeFileSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
+import { extractCairnsUsdAdultFromPrice } from "../src/engine6/cairnsUsdAdultFromPrice";
 import {
   assessViatorPublicPageAvailability,
   fetchViatorPublicPage,
@@ -95,28 +96,11 @@ const decodeJsonString = (value: string) =>
     )
     .trim();
 
-const parseAmount = (raw: string | undefined | null) => {
-  if (!raw) {
-    return null;
-  }
-  const match = raw.match(/([0-9][0-9,]*(?:\.[0-9]{2})?)/);
-  return match ? parseFloat(match[1].replace(/,/g, "")) : null;
-};
-
-const extractFromHtml = (html: string) => {
+const extractFromHtml = (html: string, sourceUrl?: string) => {
   const titleMatch = html.match(/<h1[^>]*>([^<]+)<\/h1>/i);
   const title = titleMatch?.[1]?.trim().replace(/\s+/g, " ") ?? null;
 
-  const fromUsMatch = html.match(
-    /From\s*US\$\s*([0-9][0-9,]*(?:\.[0-9]{2})?)/i
-  );
-  const fromUsdWordMatch = html.match(
-    /From\s*USD\s*\$?\s*([0-9][0-9,]*(?:\.[0-9]{2})?)/i
-  );
-  const fromDollarMatch = html.match(
-    /From\s*\$\s*([0-9][0-9,]*(?:\.[0-9]{2})?)/i
-  );
-  const fromPriceJson = html.match(/"fromPrice"\s*:\s*([0-9.]+)/i);
+  const usdAdultFrom = extractCairnsUsdAdultFromPrice({ html, sourceUrl });
   const priceCurrencyJson = html.match(/"priceCurrency"\s*:\s*"([A-Z]{3})"/i);
   const currencyJson = html.match(/"currency"\s*:\s*"([A-Z]{3})"/i);
 
@@ -155,30 +139,9 @@ const extractFromHtml = (html: string) => {
       )
   );
 
-  const usdConfirmed = Boolean(
-    (fromUsMatch || fromUsdWordMatch) &&
-      !(audMatch && !fromUsMatch && !fromUsdWordMatch)
-  )
-    ? true
-    : Boolean(
-        (fromUsMatch || fromUsdWordMatch) ||
-          (jsonCurrency === "USD" &&
-            (fromDollarMatch || fromPriceJson) &&
-            !audMatch) ||
-          (/From\s*\$/.test(html) &&
-            !localCurrencyDetected &&
-            !/From\s*(?:€|£|CA\$|AU\$|A\$|฿|¥|JP¥|Rp|IDR|JPY|AUD)/.test(html))
-      );
-
-  const priceFrom = fromUsMatch
-    ? parseAmount(fromUsMatch[1])
-    : fromUsdWordMatch
-      ? parseAmount(fromUsdWordMatch[1])
-      : usdConfirmed && fromDollarMatch
-        ? parseAmount(fromDollarMatch[1])
-        : usdConfirmed && fromPriceJson
-          ? parseFloat(fromPriceJson[1])
-          : null;
+  const usdConfirmed =
+    usdAdultFrom.amount != null && usdAdultFrom.currency === "USD";
+  const priceFrom = usdAdultFrom.amount;
 
   const ratingMatch =
     html.match(/"combinedAverageRating"\s*:\s*([0-9.]+)/i) ??
@@ -302,7 +265,13 @@ const extractFromHtml = (html: string) => {
     localCurrencyDetected,
     jsonCurrency: jsonCurrency || null,
     audAmount: audMatch ? audMatch[1] : null,
-    usAmount: fromUsMatch?.[1] ?? fromUsdWordMatch?.[1] ?? null,
+    usAmount:
+      usdAdultFrom.currency === "USD" && usdAdultFrom.amount != null
+        ? String(usdAdultFrom.amount)
+        : null,
+    usdAdultFromSource: usdAdultFrom.source,
+    usdAdultFromUnit: usdAdultFrom.unit,
+    usdAdultFromRejectedReason: usdAdultFrom.rejectedReason,
     htmlLength: html.length,
     blocked: /datadome|captcha|Access denied/i.test(html),
   };
@@ -405,7 +374,7 @@ const main = async () => {
         finalUrl: page.finalUrl,
         httpStatus: page.httpStatus,
       });
-      const extracted = extractFromHtml(page.html);
+      const extracted = extractFromHtml(page.html, candidate.sourceUrl);
       const haystack = `${extracted.title ?? ""} ${extracted.categories.join(" ")}`;
       const titleRejected = Boolean(
         extracted.title && REJECT_TITLE_PATTERN.test(extracted.title)

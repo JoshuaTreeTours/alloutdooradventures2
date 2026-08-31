@@ -184,4 +184,59 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
     expect(merged.startingPrice).toBe(106.77);
     expect(merged.badges.priceFrom).toBe("From $106.77");
   });
+
+  it("does not treat a Cairns AUD From$ amount as USD when currency is omitted", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "76865P1",
+        startingPrice: 162.21,
+        currency: "USD",
+        destination: {
+          country: "Australia",
+          state: "Australia",
+          stateSlug: "australia",
+          city: "Cairns",
+          citySlug: "cairns",
+        },
+        badges: {
+          rating: 4.8,
+          reviewCount: 375,
+          priceFrom: "From $162.21",
+        },
+      }),
+      {
+        priceAmount: 249,
+        priceFormatted: "From $249.00",
+        aggregateRating: 4.8,
+        reviewCount: 375,
+      }
+    );
+
+    expect(merged.startingPrice).toBe(162.21);
+    expect(merged.currency).toBe("USD");
+    expect(merged.badges.priceFrom).toBe("From $162.21");
+  });
+
+  it("still applies a 1.5x live USD increase for a non-Cairns product", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "2660SFOWIN",
+        startingPrice: 129,
+        currency: "USD",
+        badges: {
+          rating: 4.5,
+          reviewCount: 4200,
+          priceFrom: "From $129.00",
+        },
+      }),
+      {
+        priceAmount: 193.5,
+        priceFormatted: "From $193.50",
+        priceCurrency: "USD",
+      }
+    );
+
+    expect(merged.startingPrice).toBe(193.5);
+    expect(merged.badges.priceFrom).toBe("From $193.50");
+  });
 });

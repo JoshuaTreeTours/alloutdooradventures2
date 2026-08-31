@@ -92,6 +92,26 @@ describe("Cairns Engine6 commercial USD listing prices", () => {
     expect(merged.startingPrice).not.toBe(100);
   });
 
+  it("rejects an en-AU From$ 249 live hydration as USD for 76865P1", () => {
+    const listing = getToursByCityUnified("australia", "cairns").find(
+      entry => entry.tour.productCode === "76865P1"
+    );
+    expect(listing).toBeDefined();
+    expect(listing!.tour.startingPrice).toBeCloseTo(162.21, 2);
+
+    const merged = mergeEngine6LiveFieldsIntoTour(listing!.tour, {
+      priceAmount: 249,
+      priceFormatted: "From $249.00",
+      aggregateRating: 4.8,
+      reviewCount: 375,
+      durationText: "9 hours",
+    });
+
+    expect(merged.currency).toBe("USD");
+    expect(merged.startingPrice).toBeCloseTo(162.21, 2);
+    expect(merged.startingPrice).not.toBe(249);
+  });
+
   it.each(CAIRNS_VIATOR_PUBLIC_PRODUCT_CODES)(
     "lists %s with the USD merchant-feed commercial price",
     productCode => {
