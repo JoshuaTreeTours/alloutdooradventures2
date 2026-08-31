@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "20046P3",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-40-Minute-Scenic-Flight-from-Cairns-Reef-Hopper/d754-20046P3",
+    "title": "Great Barrier Reef 40 Minute Scenic Flight from Cairns - Reef Hopper",
+    "description": {
+      "text": "In Cairns, this 40-minute Reef Hopper flight leaves GSL Aviation on Royal Flying Doctor Street and passes Green Island, Arlington Reef, Upolu Reef, Double Island, and Palm Cove. The published format is a high-wing aerial circuit with guaranteed window seats rather than a full-day snorkel cruise. The format suits visitors who want an overhead reef window without boarding a pontoon. Meeting points are confirmed at booking in Cairns, and the itinerary stays on those coastal and reef landmarks that define this outing rather than a Mossman Gorge walk."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "40 minutes (approx.)",
+    "priceFrom": "From $170.24",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 131
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c6/1d/8a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "GSL Aviation departure in Cairns",
+      "Aerial pass over Green Island",
+      "Arlington Reef and Upolu Reef",
+      "Double Island and Palm Cove",
+      "Guaranteed window seats"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at GSL Aviation, 83 Royal Flying Doctor St, Cairns City QLD 4870, or request the published central Cairns pickup."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this 40-minute Reef Hopper flight leaves GSL Aviation on Royal Flying Doctor Street and passes Green Island, Arlington Reef, Upolu Reef, Double Island, and Palm Cove.",
+    "itineraryItems": [
+      {
+        "title": "Green Island",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Arlington Reef",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Upolu Reef",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Double Island",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Palm Cove",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "40-minute high-wing scenic flight",
+      "Guaranteed window seats",
+      "In-flight commentary",
+      "Hotel pickup from central Cairns"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Barrier Reef 40 Minute Scenic Flight from Cairns - Reef Hopper?",
+        "answer": "The planned duration is 40 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Meet at GSL Aviation, 83 Royal Flying Doctor St, Cairns City QLD 4870, or request the published central Cairns pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 170.24
+      },
+      "currency": "USD"
+    }
+  }
+}

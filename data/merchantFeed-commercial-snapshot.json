@@ -4831,6 +4831,111 @@
       "averageRating": "4.4",
       "ratingCount": "148",
       "reviewCount": "148"
+    },
+    {
+      "productCode": "3253P11",
+      "price": "520.74 USD",
+      "averageRating": "4.9",
+      "ratingCount": "52",
+      "reviewCount": "52"
+    },
+    {
+      "productCode": "2845P3",
+      "price": "194.79 USD",
+      "averageRating": "4.3",
+      "ratingCount": "122",
+      "reviewCount": "122"
+    },
+    {
+      "productCode": "22448P1",
+      "price": "212.96 USD",
+      "averageRating": "4.6",
+      "ratingCount": "811",
+      "reviewCount": "811"
+    },
+    {
+      "productCode": "76865P1",
+      "price": "162.21 USD",
+      "averageRating": "4.8",
+      "ratingCount": "375",
+      "reviewCount": "375"
+    },
+    {
+      "productCode": "5364FREE",
+      "price": "181.76 USD",
+      "averageRating": "4.9",
+      "ratingCount": "606",
+      "reviewCount": "606"
+    },
+    {
+      "productCode": "2845MIC_C",
+      "price": "179.80 USD",
+      "averageRating": "4.5",
+      "ratingCount": "150",
+      "reviewCount": "150"
+    },
+    {
+      "productCode": "5641FITZROY",
+      "price": "65.15 USD",
+      "averageRating": "4.2",
+      "ratingCount": "648",
+      "reviewCount": "648"
+    },
+    {
+      "productCode": "2570CTR",
+      "price": "192.24 USD",
+      "averageRating": "4.7",
+      "ratingCount": "449",
+      "reviewCount": "449"
+    },
+    {
+      "productCode": "611960119T1",
+      "price": "143.37 USD",
+      "averageRating": "4.8",
+      "ratingCount": "378",
+      "reviewCount": "378"
+    },
+    {
+      "productCode": "11730P6",
+      "price": "166.18 USD",
+      "averageRating": "4.9",
+      "ratingCount": "258",
+      "reviewCount": "258"
+    },
+    {
+      "productCode": "20046P3",
+      "price": "170.24 USD",
+      "averageRating": "4.8",
+      "ratingCount": "131",
+      "reviewCount": "131"
+    },
+    {
+      "productCode": "42277P10",
+      "price": "190.61 USD",
+      "averageRating": "4.9",
+      "ratingCount": "38",
+      "reviewCount": "38"
+    },
+    {
+      "productCode": "2570KURANDA",
+      "price": "180.77 USD",
+      "averageRating": "4.5",
+      "ratingCount": "519",
+      "reviewCount": "519"
+    },
+    {
+      "productCode": "37685P1",
+      "price": "124.14 USD",
+      "averageRating": "4.8",
+      "ratingCount": "270",
+      "reviewCount": "270"
+    },
+    {
+      "productCode": "2845P1",
+      "price": "97.72 USD",
+      "averageRating": "4.2",
+      "ratingCount": "348",
+      "reviewCount": "348"
     }
   ]
 }

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "2845P3",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Great-Barrier-Reef-Adventure-from-Cairns-including-Snorkeling/d754-2845P3",
+    "title": "Great Barrier Reef Adventure from Cairns including Snorkeling",
+    "description": {
+      "text": "In Cairns, this Great Adventures day leaves Reef Fleet Terminal by fast catamaran for an Outer Reef activity platform with snorkeling, a semi-submersible, and an underwater observatory. The published block lists about three hours at the platform plus buffet lunch rather than a sailing lagoon stop at Upolu Reef. The format suits visitors who want pontoon facilities and reef education without a VIP lounge upgrade. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Reef Fleet Terminal and the Outer Reef platform that define this outing rather than a Michaelmas Cay beach landing."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $194.79",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 122
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0c/29/54.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fast catamaran from Cairns Reef Fleet Terminal",
+      "Outer Reef activity platform",
+      "Snorkeling equipment and instruction",
+      "Underwater observatory and semi-submersible",
+      "Buffet lunch with morning and afternoon tea"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Great Adventures counter inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this Great Adventures day leaves Reef Fleet Terminal by fast catamaran for an Outer Reef activity platform with snorkeling, a semi-submersible, and an underwater observatory.",
+    "itineraryItems": [
+      {
+        "title": "Cairns Reef Fleet Terminal",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Outer Reef",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Return fast catamaran transfer from Cairns",
+      "Snorkeling equipment and instruction",
+      "Underwater observatory",
+      "Semi-submersible coral viewing tour",
+      "Hot and cold buffet lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Barrier Reef Adventure from Cairns including Snorkeling?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in at the Great Adventures counter inside Cairns Reef Fleet Terminal, 1 Spence Street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 194.79
+      },
+      "currency": "USD"
+    }
+  }
+}

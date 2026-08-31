@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "76865P1",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Full-Day-Great-Barrier-Reef-Sailing-Trip-from-Cairns/d754-76865P1",
+    "title": "Full-Day Great Barrier Reef Sailing Trip from Cairns",
+    "description": {
+      "text": "In Cairns, Reef Daytripper checks in on Marlin Marina D-Finger and sails to Upolu Reef for guided snorkeling in a sheltered lagoon. The published format is a smaller sailing day with tropical buffet lunch rather than a large Outer Reef pontoon. The format suits visitors who want lagoon snorkeling without a Green Island shore stop. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Marlin Marina and Upolu Reef that define this outing rather than a Kuranda rail and cableway circuit."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $162.21",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 375
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/5b/89.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Marlin Marina departure in Cairns",
+      "Sail to Upolu Reef",
+      "Guided snorkeling in a sheltered lagoon",
+      "Tropical buffet lunch",
+      "Morning tea and snacks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in onboard Reef Daytripper on Marlin Marina D-Finger, 1 Spence Street, Cairns."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, Reef Daytripper checks in on Marlin Marina D-Finger and sails to Upolu Reef for guided snorkeling in a sheltered lagoon.",
+    "itineraryItems": [
+      {
+        "title": "Marlin Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Upolu Reef",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Tropical buffet lunch",
+      "Morning tea",
+      "Snorkeling equipment",
+      "Guided snorkel tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Great Barrier Reef Sailing Trip from Cairns?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Check in onboard Reef Daytripper on Marlin Marina D-Finger, 1 Spence Street, Cairns."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 162.21
+      },
+      "currency": "USD"
+    }
+  }
+}

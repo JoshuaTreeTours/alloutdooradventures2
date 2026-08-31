@@ -1,0 +1,25 @@
+{
+  "selectedProductCodes": [
+    "3253P11",
+    "2845P3",
+    "22448P1",
+    "76865P1",
+    "5364FREE",
+    "2845MIC_C",
+    "5641FITZROY",
+    "2570CTR",
+    "611960119T1",
+    "11730P6",
+    "20046P3",
+    "42277P10",
+    "2570KURANDA",
+    "37685P1",
+    "2845P1"
+  ],
+  "premiumOrHighValueProductCodes": [
+    "3253P11",
+    "2570KURANDA",
+    "20046P3"
+  ],
+  "notes": "15 products with product-page verified USD. Additional live quality inventory was rejected because the public page showed only AUD, EUR, GBP, ZAR, DKK, or BRL."
+}

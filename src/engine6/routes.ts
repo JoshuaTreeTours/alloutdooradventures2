@@ -1496,6 +1496,59 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CAIRNS_3253P11_PRODUCT_CODE = "3253P11";
+export const ENGINE6_CAIRNS_3253P11_ROUTE =
+  "/destinations/australia/cairns/tours/great-barrier-reef-cruise-gold-class-vip-lounge-package-3253P11";
+export const ENGINE6_CAIRNS_2845P3_PRODUCT_CODE = "2845P3";
+export const ENGINE6_CAIRNS_2845P3_ROUTE =
+  "/destinations/australia/cairns/tours/great-barrier-reef-adventure-from-cairns-including-snor-2845P3";
+export const ENGINE6_CAIRNS_22448P1_PRODUCT_CODE = "22448P1";
+export const ENGINE6_CAIRNS_22448P1_ROUTE =
+  "/destinations/australia/cairns/tours/snorkel-dive-the-reef-sustainable-scientific-cultural-t-22448P1";
+export const ENGINE6_CAIRNS_76865P1_PRODUCT_CODE = "76865P1";
+export const ENGINE6_CAIRNS_76865P1_ROUTE =
+  "/destinations/australia/cairns/tours/full-day-great-barrier-reef-sailing-trip-from-cairns-76865P1";
+export const ENGINE6_CAIRNS_5364FREE_PRODUCT_CODE = "5364FREE";
+export const ENGINE6_CAIRNS_5364FREE_ROUTE =
+  "/destinations/australia/cairns/tours/ocean-free-25-guest-great-barrier-reef-visit-green-isla-5364FREE";
+export const ENGINE6_CAIRNS_2845MIC_C_PRODUCT_CODE = "2845MIC_C";
+export const ENGINE6_CAIRNS_2845MIC_C_ROUTE =
+  "/destinations/australia/cairns/tours/ocean-spirit-sail-to-michaelmas-cay-snorkel-or-dive-fro-2845MIC_C";
+export const ENGINE6_CAIRNS_5641FITZROY_PRODUCT_CODE = "5641FITZROY";
+export const ENGINE6_CAIRNS_5641FITZROY_ROUTE =
+  "/destinations/australia/cairns/tours/fitzroy-island-day-tour-from-cairns-5641FITZROY";
+export const ENGINE6_CAIRNS_2570CTR_PRODUCT_CODE = "2570CTR";
+export const ENGINE6_CAIRNS_2570CTR_ROUTE =
+  "/destinations/australia/cairns/tours/daintree-rainforest-and-cape-tribulation-day-tour-from-2570CTR";
+export const ENGINE6_CAIRNS_611960119T1_PRODUCT_CODE = "611960119T1";
+export const ENGINE6_CAIRNS_611960119T1_ROUTE =
+  "/destinations/australia/cairns/tours/atherton-tablelands-rain-forest-by-night-from-cairns-611960119T1";
+export const ENGINE6_CAIRNS_11730P6_PRODUCT_CODE = "11730P6";
+export const ENGINE6_CAIRNS_11730P6_ROUTE =
+  "/destinations/australia/cairns/tours/adventure-taste-atherton-tablelands-food-wine-tour-from-11730P6";
+export const ENGINE6_CAIRNS_20046P3_PRODUCT_CODE = "20046P3";
+export const ENGINE6_CAIRNS_20046P3_ROUTE =
+  "/destinations/australia/cairns/tours/great-barrier-reef-40-minute-scenic-flight-from-cairns-20046P3";
+export const ENGINE6_CAIRNS_42277P10_PRODUCT_CODE = "42277P10";
+export const ENGINE6_CAIRNS_42277P10_ROUTE =
+  "/destinations/australia/cairns/tours/cairns-kuranda-skyrail-and-railway-small-group-tour-42277P10";
+export const ENGINE6_CAIRNS_2570KURANDA_PRODUCT_CODE = "2570KURANDA";
+export const ENGINE6_CAIRNS_2570KURANDA_ROUTE =
+  "/destinations/australia/cairns/tours/skip-the-line-kuranda-scenic-railway-gold-class-and-sky-2570KURANDA";
+export const ENGINE6_CAIRNS_37685P1_PRODUCT_CODE = "37685P1";
+export const ENGINE6_CAIRNS_37685P1_ROUTE =
+  "/destinations/australia/cairns/tours/day-tour-to-paronella-park-lake-barrine-and-millaa-mill-37685P1";
+export const ENGINE6_CAIRNS_2845P1_PRODUCT_CODE = "2845P1";
+export const ENGINE6_CAIRNS_2845P1_ROUTE =
+  "/destinations/australia/cairns/tours/snorkelling-and-glass-bottom-boat-at-green-island-from-2845P1";
+
+export const ENGINE6_CAIRNS_TOUR_PATH_PREFIX =
+  "/destinations/australia/cairns/tours/";
+
+export const isEngine6CairnsTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_CAIRNS_TOUR_PATH_PREFIX);
+
 export const ENGINE6_SYDNEY_184156P4_PRODUCT_CODE = "184156P4";
 export const ENGINE6_SYDNEY_184156P4_ROUTE =
   "/destinations/australia/sydney/tours/sydney-walking-tour-including-the-rocks-184156P4";
@@ -5390,6 +5443,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_3253P11_ROUTE,
+    ENGINE6_CAIRNS_3253P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_2845P3_ROUTE,
+    ENGINE6_CAIRNS_2845P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_22448P1_ROUTE,
+    ENGINE6_CAIRNS_22448P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_76865P1_ROUTE,
+    ENGINE6_CAIRNS_76865P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_5364FREE_ROUTE,
+    ENGINE6_CAIRNS_5364FREE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_2845MIC_C_ROUTE,
+    ENGINE6_CAIRNS_2845MIC_C_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_5641FITZROY_ROUTE,
+    ENGINE6_CAIRNS_5641FITZROY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_2570CTR_ROUTE,
+    ENGINE6_CAIRNS_2570CTR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_611960119T1_ROUTE,
+    ENGINE6_CAIRNS_611960119T1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_11730P6_ROUTE,
+    ENGINE6_CAIRNS_11730P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_20046P3_ROUTE,
+    ENGINE6_CAIRNS_20046P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_42277P10_ROUTE,
+    ENGINE6_CAIRNS_42277P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_2570KURANDA_ROUTE,
+    ENGINE6_CAIRNS_2570KURANDA_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_37685P1_ROUTE,
+    ENGINE6_CAIRNS_37685P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_CAIRNS_2845P1_ROUTE,
+    ENGINE6_CAIRNS_2845P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_SYDNEY_184156P4_ROUTE,

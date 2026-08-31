@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "42277P10",
+    "productUrl": "https://www.viator.com/tours/Cairns-and-the-Tropical-North/Cairns-Kuranda-Skyrail-and-Railway-Small-group-tour/d754-42277P10",
+    "title": "Cairns Kuranda Skyrail and Railway Small group tour",
+    "description": {
+      "text": "In Cairns, this small-group Kuranda day links Skyrail Rainforest Cableway, the Kuranda Scenic Railway, and the Army Duck tour at Rainforestation Nature Park. The public page includes both transit tickets and the Army Duck rather than Gold Class rail seating alone. The format suits visitors who want guided transfers between the cableway, railway, and rainforest park without assembling those tickets independently. Meeting points are confirmed at booking in Cairns, and the itinerary stays on Skyrail, the scenic railway, and Rainforestation Nature Park that define this outing rather than an Outer Reef VIP lounge day."
+    },
+    "location": {
+      "city": "Cairns",
+      "state": "Australia"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $190.61",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 38
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/cc/ab.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Skyrail Rainforest Cableway",
+      "Kuranda Scenic Railway",
+      "Army Duck rainforest tour",
+      "Small-group transfers from Cairns",
+      "Licensed guide at each stop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from published hotels or apartments within Cairns city."
+      },
+      "end": {
+        "description": "Return to the Cairns meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Cairns, this small-group Kuranda day links Skyrail Rainforest Cableway, the Kuranda Scenic Railway, and the Army Duck tour at Rainforestation Nature Park.",
+    "itineraryItems": [
+      {
+        "title": "Skyrail Rainforest Cableway",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kuranda Scenic Railway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainforestation Nature Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Skyrail Rainforest Cableway ticket",
+      "Kuranda Scenic Railway ticket",
+      "Army Duck tour",
+      "Guided transfers"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cairns Kuranda Skyrail and Railway Small group tour?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Cairns?",
+        "answer": "Hotel pickup from published hotels or apartments within Cairns city."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 190.61
+      },
+      "currency": "USD"
+    }
+  }
+}
