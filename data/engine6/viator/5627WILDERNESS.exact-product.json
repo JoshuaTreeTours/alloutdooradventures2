@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "5627WILDERNESS",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Dart-River-Jet-Boat-Ride-and-Wilderness-Safari-from-Queenstown/d407-5627WILDERNESS",
+    "title": "Dart River Jet Boat and Wilderness Experience",
+    "description": {
+      "text": "In Queenstown, this half-day jet-boat safari checks in at the Station Building on Duke Street or at the Glenorchy base on Mull Street, then runs the Dart River into Mount Aspiring National Park. The published format is a wilderness jet rather than a Skippers Canyon road-and-boat combo. The format suits visitors who want a braided-river window without a Lord of the Rings costume stop. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Glenorchy, the Dart River, and Mount Aspiring National Park that define this outing rather than a Walter Peak horse trek."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $187.14",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 477
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/52/24/ef.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Dart River jet boat",
+      "Mount Aspiring National Park",
+      "Glenorchy gateway",
+      "Optional Queenstown coach"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check-in inside the Station Building, Duke Street, Queenstown, 1 hour 15 minutes prior if using return transport, or at 45 Mull Street, Glenorchy if self-driving."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this half-day jet-boat safari checks in at the Station Building on Duke Street or at the Glenorchy base on Mull Street, then runs the Dart River into Mount Aspiring National Park.",
+    "itineraryItems": [
+      {
+        "title": "The Station Building Queenstown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glenorchy",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dart River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Aspiring National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jet boat ride",
+      "Life jackets and optional spray jackets",
+      "Round-trip transport from Queenstown on selected departures",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dart River Jet Boat and Wilderness Experience?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Check-in inside the Station Building, Duke Street, Queenstown, 1 hour 15 minutes prior if using return transport, or at 45 Mull Street, Glenorchy if self-driving."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jet Boats"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 187.14
+      },
+      "currency": "USD"
+    }
+  }
+}

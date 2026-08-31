@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "87033P3",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Valley-of-the-Vines-Wine-Tour-Lunch-from-Queenstown/d407-87033P3",
+    "title": "Queenstown Wine Tour with Wine Dog | Adults Only",
+    "description": {
+      "text": "In Queenstown, this adults-only afternoon heads into Gibbston Valley for cellar-door tastings and a tour of New Zealand's oldest wine cave, with hotel transfers or a Camp Street meeting point. The published ticket covers tastings and the cave rather than lunch, which the public page lists as an extra at a winery restaurant. The format suits visitors who want a guided wine window without a self-guided bike trail. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Gibbston Valley and the wine cave that define this outing rather than an Arrowtown gold-panning walk."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $138.30",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 200
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/38/b1/48.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Gibbston Valley cellar doors",
+      "Oldest wine cave tour",
+      "Adults-only small group",
+      "Queenstown hotel transfers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the tour operators bus stop at 43 Camp Street, corner of Camp and Shotover Streets, Queenstown, or selected hotel pickup."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this adults-only afternoon heads into Gibbston Valley for cellar-door tastings and a tour of New Zealand's oldest wine cave, with hotel transfers or a Camp Street meeting point.",
+    "itineraryItems": [
+      {
+        "title": "Queenstown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gibbston Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wine Cave",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Wine tastings",
+      "Local guide and live commentary",
+      "Air-conditioned vehicle",
+      "Wine cave tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Queenstown Wine Tour with Wine Dog | Adults Only?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Meet at the tour operators bus stop at 43 Camp Street, corner of Camp and Shotover Streets, Queenstown, or selected hotel pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 138.3
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "460492P1",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Half-Day-in-Middle-Earth/d407-460492P1",
+    "title": "Half Day in Middle Earth - Lord of the Rings Tour",
+    "description": {
+      "text": "In Queenstown, this small-group Middle-earth half-day leaves Shotover Street for Skippers Canyon, Arrowtown, and Lake Hayes with movie props for photographs. The published circuit stays in the Wakatipu Basin rather than the Glenorchy and Arcadia Station route used by the Paradise Valley outing. The format suits visitors who want a compact filming-location window without a 4WD river crossing. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Skippers Canyon, Arrowtown, and Lake Hayes that define this outing rather than a Gibbston Valley wine cave afternoon."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $115.32",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 167
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/56/66/28.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Skippers Canyon and Arrowtown filming stops",
+      "Lake Hayes viewpoints",
+      "Movie props for photographs",
+      "Central Queenstown departure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "25 Shotover Street, Queenstown 9300, New Zealand."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this small-group Middle-earth half-day leaves Shotover Street for Skippers Canyon, Arrowtown, and Lake Hayes with movie props for photographs.",
+    "itineraryItems": [
+      {
+        "title": "Queenstown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Skippers Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arrowtown",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Hayes",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small-group guide",
+      "Authentic movie props for photos",
+      "Live commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day in Middle Earth - Lord of the Rings Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "25 Shotover Street, Queenstown 9300, New Zealand."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 115.32
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "3434ZQN_HLQ1B",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Milford-Sound-Helicopter-Tour-from-Queenstown/d407-3434ZQN_HLQ1B",
+    "title": "Milford Sound Heli Tour from Queenstown with 2 Alpine Landings",
+    "description": {
+      "text": "In Queenstown, this 90-minute helicopter circuit flies into Fiordland National Park for a Milford Sound landing and a remote alpine landing near Tukuko Glacier or Glacier Basin. The published format is two landings with hotel pickup rather than a reserved-seat nature cruise. The format suits visitors who want an aerial fiord window without a coach day. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Mitre Peak, Milford Sound, and the alpine landing that define this outing rather than a Gibbston Valley wine cave."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $712.35",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 53
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/d8/9e/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two alpine landings",
+      "Milford Sound and Mitre Peak from the air",
+      "Tukuko Glacier or Glacier Basin landing",
+      "Hotel transfers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Queenstown before the published helicopter departure."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this 90-minute helicopter circuit flies into Fiordland National Park for a Milford Sound landing and a remote alpine landing near Tukuko Glacier or Glacier Basin.",
+    "itineraryItems": [
+      {
+        "title": "Queenstown",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fiordland National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mitre Peak",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Milford Sound",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tukuko Glacier",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "1.5-hour scenic helicopter flight with two alpine landings",
+      "Hotel pickup and drop-off",
+      "Pilot guide and live commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Milford Sound Heli Tour from Queenstown with 2 Alpine Landings?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Hotel pickup in Queenstown before the published helicopter departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Air Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 712.35
+      },
+      "currency": "USD"
+    }
+  }
+}

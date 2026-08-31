@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "3287_ZQN",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Full-Day-Milford-Sound-and-Fiordland-National-Park-Tour-including-Milford-Sound-Cruise-and-BBQ-Lunch-from-Queenstown/d407-3287_ZQN",
+    "title": "Small Group, Award Winning Full Day Milford Sound Experience",
+    "description": {
+      "text": "In Queenstown, this small-group Fiordland day covers The Remarkables, Lake Wakatipu, Lake Te Anau, and Mirror Lakes before a two-hour Milford Sound nature cruise. The public page lists scenic photo stops and a local driver-guide rather than a luxury-coach picnic package. The format suits visitors who want a smaller coach and more roadside stops without a helicopter landing. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those lakes and the fiord that define this outing rather than a Gibbston Valley tasting van."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $186.62",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 2127
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/2b/2c/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Fiordland coach",
+      "Mirror Lakes photo stop",
+      "Two-hour Milford Sound cruise",
+      "Remarkables and Lake Te Anau views"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Convenient pickup locations around Queenstown as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this small-group Fiordland day covers The Remarkables, Lake Wakatipu, Lake Te Anau, and Mirror Lakes before a two-hour Milford Sound nature cruise.",
+    "itineraryItems": [
+      {
+        "title": "The Remarkables",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Wakatipu",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Te Anau",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mirror Lakes",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Milford Sound",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Queenstown pickup and drop-off",
+      "2-hour nature cruise on Milford Sound",
+      "Local driver-guide",
+      "Scenic photo stops"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small Group, Award Winning Full Day Milford Sound Experience?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Convenient pickup locations around Queenstown as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Small Group"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 186.62
+      },
+      "currency": "USD"
+    }
+  }
+}

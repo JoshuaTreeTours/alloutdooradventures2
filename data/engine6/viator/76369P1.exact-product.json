@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "76369P1",
+    "productUrl": "https://www.viator.com/tours/Queenstown/Pure-Glenorchy-Scenic-Lord-of-the-Rings-Tour/d407-76369P1",
+    "title": "Lord of the Rings Scenic Half Day Tour from Queenstown",
+    "description": {
+      "text": "In Queenstown, this half-day filming circuit leaves Marmolada Cafe on Camp Street for Glenorchy, private Arcadia Station in Paradise Valley, and Mount Aspiring National Park. The published stops include Bennets Bluff, Twelve Mile Delta, Glenorchy Wharf, and Isengard Lookout rather than an Arrowtown and Skippers Canyon 4WD loop. The format suits visitors who want exclusive station access and optional costumes without a full-day Fiordland coach. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on the Glenorchy road and Paradise Valley that define this outing rather than a Dart River jet boat."
+    },
+    "location": {
+      "city": "Queenstown",
+      "state": "New Zealand"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $120.07",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1389
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/53/75/a3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Exclusive Arcadia Station access in Paradise Valley",
+      "Glenorchy and Mount Aspiring filming stops",
+      "Central Queenstown transfer from Camp Street",
+      "Optional costumes and replica swords",
+      "Morning or afternoon picnic"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please wait outside Marmolada Cafe, 43 Camp Street, Queenstown 9300, New Zealand."
+      },
+      "end": {
+        "description": "Return to the Queenstown meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Queenstown, this half-day filming circuit leaves Marmolada Cafe on Camp Street for Glenorchy, private Arcadia Station in Paradise Valley, and Mount Aspiring National Park.",
+    "itineraryItems": [
+      {
+        "title": "Glenorchy-Queenstown Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bennets Bluff Lookout",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Twelve Mile Delta to Bob's Cove Track",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glenorchy Wharf & Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Aspiring",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Isengard Lookout",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "A light morning or afternoon tea with cake, biscuits and hot tea & coffee",
+      "Professional local guides",
+      "Live commentary",
+      "Optional Lord of the Rings costumes and replica swords",
+      "Exclusive access to Arcadia Station filming locations"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lord of the Rings Scenic Half Day Tour from Queenstown?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Queenstown?",
+        "answer": "Please wait outside Marmolada Cafe, 43 Camp Street, Queenstown 9300, New Zealand."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120.07
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -63,6 +63,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     sydney: ["Sydney"],
     cairns: ["Cairns"],
     australia: ["Sydney", "Cairns"],
+    queenstown: ["Queenstown"],
+    "new-zealand": ["Queenstown"],
     mexico: ["Mexico City", "Cancun", "Puerto Vallarta", "Cabo San Lucas"],
     "united-kingdom": ["London"],
     scotland: ["Edinburgh"],

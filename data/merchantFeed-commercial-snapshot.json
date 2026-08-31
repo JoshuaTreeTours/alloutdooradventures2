@@ -4936,6 +4936,97 @@
       "averageRating": "4.2",
       "ratingCount": "348",
       "reviewCount": "348"
+    },
+    {
+      "productCode": "76369P1",
+      "price": "120.07 USD",
+      "averageRating": "4.9",
+      "ratingCount": "1389",
+      "reviewCount": "1389"
+    },
+    {
+      "productCode": "460492P1",
+      "price": "115.32 USD",
+      "averageRating": "5.0",
+      "ratingCount": "167",
+      "reviewCount": "167"
+    },
+    {
+      "productCode": "5762P6",
+      "price": "168.79 USD",
+      "averageRating": "4.7",
+      "ratingCount": "251",
+      "reviewCount": "251"
+    },
+    {
+      "productCode": "58045P5",
+      "price": "133.48 USD",
+      "averageRating": "4.9",
+      "ratingCount": "85",
+      "reviewCount": "85"
+    },
+    {
+      "productCode": "87033P3",
+      "price": "138.30 USD",
+      "averageRating": "4.9",
+      "ratingCount": "200",
+      "reviewCount": "200"
+    },
+    {
+      "productCode": "2264P24",
+      "price": "163.70 USD",
+      "averageRating": "4.3",
+      "ratingCount": "84",
+      "reviewCount": "84"
+    },
+    {
+      "productCode": "3910GS76",
+      "price": "165.86 USD",
+      "averageRating": "4.4",
+      "ratingCount": "651",
+      "reviewCount": "651"
+    },
+    {
+      "productCode": "3287_ZQN",
+      "price": "186.62 USD",
+      "averageRating": "4.9",
+      "ratingCount": "2127",
+      "reviewCount": "2127"
+    },
+    {
+      "productCode": "5627WILDERNESS",
+      "price": "187.14 USD",
+      "averageRating": "4.7",
+      "ratingCount": "477",
+      "reviewCount": "477"
+    },
+    {
+      "productCode": "43964P1",
+      "price": "204.74 USD",
+      "averageRating": "4.5",
+      "ratingCount": "301",
+      "reviewCount": "301"
+    },
+    {
+      "productCode": "2264RJ301",
+      "price": "271.41 USD",
+      "averageRating": "4.7",
+      "ratingCount": "213",
+      "reviewCount": "213"
+    },
+    {
+      "productCode": "38244P1",
+      "price": "457.10 USD",
+      "averageRating": "5.0",
+      "ratingCount": "639",
+      "reviewCount": "639"
+    },
+    {
+      "productCode": "3434ZQN_HLQ1B",
+      "price": "712.35 USD",
+      "averageRating": "4.9",
+      "ratingCount": "53",
+      "reviewCount": "53"
     }
   ]
 }

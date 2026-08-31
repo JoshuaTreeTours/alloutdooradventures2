@@ -73,6 +73,10 @@ const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
     return "Australia";
   }
 
+  if (stateSlug === "new-zealand") {
+    return "New Zealand";
+  }
+
   return tour.state;
 };
 
@@ -172,6 +176,11 @@ const toEngine6ListingTour = (
                         ? { countryCode: "KR", countrySlug: "south-korea" }
                         : stateSlug === "australia"
                           ? { countryCode: "AU", countrySlug: "australia" }
+                          : stateSlug === "new-zealand"
+                            ? {
+                                countryCode: "NZ",
+                                countrySlug: "new-zealand",
+                              }
                     : {}),
       state: tour.state,
       stateSlug,

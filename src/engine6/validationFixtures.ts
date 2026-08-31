@@ -339,6 +339,19 @@ import specimen101268p6Payload from "../../data/engine6/viator/101268P6.exact-pr
 import specimen168853p1Payload from "../../data/engine6/viator/168853P1.exact-product.json";
 import specimen19345p9Payload from "../../data/engine6/viator/19345P9.exact-product.json";
 import specimen19345p27Payload from "../../data/engine6/viator/19345P27.exact-product.json";
+import specimen76369p1Payload from "../../data/engine6/viator/76369P1.exact-product.json";
+import specimen460492p1Payload from "../../data/engine6/viator/460492P1.exact-product.json";
+import specimen5762p6Payload from "../../data/engine6/viator/5762P6.exact-product.json";
+import specimen58045p5Payload from "../../data/engine6/viator/58045P5.exact-product.json";
+import specimen87033p3Payload from "../../data/engine6/viator/87033P3.exact-product.json";
+import specimen2264p24Payload from "../../data/engine6/viator/2264P24.exact-product.json";
+import specimen3910gs76Payload from "../../data/engine6/viator/3910GS76.exact-product.json";
+import specimen3287zqnPayload from "../../data/engine6/viator/3287_ZQN.exact-product.json";
+import specimen5627wildernessPayload from "../../data/engine6/viator/5627WILDERNESS.exact-product.json";
+import specimen43964p1Payload from "../../data/engine6/viator/43964P1.exact-product.json";
+import specimen2264rj301Payload from "../../data/engine6/viator/2264RJ301.exact-product.json";
+import specimen38244p1Payload from "../../data/engine6/viator/38244P1.exact-product.json";
+import specimen3434zqnhlq1bPayload from "../../data/engine6/viator/3434ZQN_HLQ1B.exact-product.json";
 import specimen3253p11Payload from "../../data/engine6/viator/3253P11.exact-product.json";
 import specimen2845p3Payload from "../../data/engine6/viator/2845P3.exact-product.json";
 import specimen22448p1Payload from "../../data/engine6/viator/22448P1.exact-product.json";
@@ -3748,6 +3761,84 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "19345P27",
     publicUrl: "https://www.viator.com/tours/Cusco/Machu-Picchu-Private-Full-Day-Tour-from-Cusco/d937-19345P27",
     rawPayload: specimen19345p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76369P1",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Pure-Glenorchy-Scenic-Lord-of-the-Rings-Tour/d407-76369P1",
+    rawPayload: specimen76369p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "460492P1",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Half-Day-in-Middle-Earth/d407-460492P1",
+    rawPayload: specimen460492p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5762P6",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Wakatipu-Basin-Tour-Safari-of-the-Scenes/d407-5762P6",
+    rawPayload: specimen5762p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "58045P5",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Best-of-Queenstown-Sightseeing-Tour/d407-58045P5",
+    rawPayload: specimen58045p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87033P3",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Valley-of-the-Vines-Wine-Tour-Lunch-from-Queenstown/d407-87033P3",
+    rawPayload: specimen87033p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2264P24",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Walter-Peak-Horse-Trek/d407-2264P24",
+    rawPayload: specimen2264p24Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3910GS76",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Milford-Sound-Full-Day-Tour-from-Queenstown/d407-3910GS76",
+    rawPayload: specimen3910gs76Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3287_ZQN",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Full-Day-Milford-Sound-and-Fiordland-National-Park-Tour-including-Milford-Sound-Cruise-and-BBQ-Lunch-from-Queenstown/d407-3287_ZQN",
+    rawPayload: specimen3287zqnPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5627WILDERNESS",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Dart-River-Jet-Boat-Ride-and-Wilderness-Safari-from-Queenstown/d407-5627WILDERNESS",
+    rawPayload: specimen5627wildernessPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "43964P1",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Milford-Sound-Day-Trip-Including-Cruise-and-Luxury-Coach-from-Queenstown/d407-43964P1",
+    rawPayload: specimen43964p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2264RJ301",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Doubtful-Sound-Wilderness-Cruise-from-Queenstown/d407-2264RJ301",
+    rawPayload: specimen2264rj301Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38244P1",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Half-Day-Milford-Sound-Flight-and-Cruise-from-Queenstown/d407-38244P1",
+    rawPayload: specimen38244p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3434ZQN_HLQ1B",
+    publicUrl: "https://www.viator.com/tours/Queenstown/Milford-Sound-Helicopter-Tour-from-Queenstown/d407-3434ZQN_HLQ1B",
+    rawPayload: specimen3434zqnhlq1bPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

@@ -6819,6 +6819,107 @@ const australiaState: StateDestination = {
   isFallback: true,
 };
 
+const newZealandState: StateDestination = {
+  slug: "new-zealand",
+  name: "New Zealand",
+  description:
+    "Queenstown sits on Lake Wakatipu beneath the Remarkables, with Glenorchy, Arrowtown, Gibbston Valley, and coach or flight days into Fiordland.",
+  featuredDescription:
+    "Explore Queenstown tours with Lord of the Rings filming circuits, Arrowtown and Wakatipu sightseeing, Gibbston Valley wine, TSS Earnslaw farm crossings, Dart River jets, and Milford or Doubtful Sound coach, cruise, flight, and helicopter days.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/88/e5.jpg",
+  region: "Oceania",
+  intro:
+    "New Zealand's Queenstown inventory covers Lake Wakatipu, Glenorchy, Arrowtown, Gibbston Valley, the Dart River, and full-day routes into Fiordland National Park for Milford Sound and Doubtful Sound.",
+  longDescription:
+    "Queenstown anchors New Zealand tour inventory on Lake Wakatipu with Glenorchy and Paradise Valley filming circuits, Skippers Canyon and Arrowtown half-days, Gibbston Valley cellar-door tastings, TSS Earnslaw crossings to Walter Peak, and Dart River jet-boat safaris into Mount Aspiring National Park. Full-day coaches reach Te Anau, Mirror Lakes, and Milford Sound cruises past Mitre Peak, while wilderness days continue over Lake Manapouri and Wilmot Pass to Doubtful Sound. Air days add scenic flights from Frankton and helicopter landings at Milford Sound.",
+  topRegions: [
+    {
+      title: "Lake Wakatipu and the Remarkables",
+      description:
+        "Queenstown waterfront, Steamer Wharf, the TSS Earnslaw, Walter Peak High Country Farm, and the Remarkables skyline above the lake.",
+    },
+    {
+      title: "Glenorchy, Arrowtown, and Gibbston Valley",
+      description:
+        "Glenorchy-Queenstown Road, Paradise Valley, Skippers Canyon, Arrowtown Chinese Settlement, and Gibbston Valley cellar doors and wine cave.",
+    },
+    {
+      title: "Fiordland National Park",
+      description:
+        "Te Anau, Mirror Lakes, Milford Sound and Mitre Peak, plus Lake Manapouri, Wilmot Pass, Deep Cove, and Doubtful Sound.",
+    },
+  ],
+  cities: [
+    {
+      name: "Queenstown",
+      slug: "queenstown",
+      stateSlug: "new-zealand",
+      region: "Queenstown",
+      lat: -45.0312,
+      lng: 168.6626,
+      shortDescription:
+        "Lake Wakatipu sightseeing, Glenorchy and Arrowtown circuits, Gibbston wine, and Fiordland cruise or flight days from Queenstown.",
+      intro:
+        "Queenstown sits on Lake Wakatipu in Otago, New Zealand, with the Remarkables, Glenorchy, Arrowtown, Gibbston Valley, and guided coach, cruise, jet-boat, and flight tours into Fiordland.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/88/e5.jpg",
+      ],
+      activityTags: ["sightseeing", "adventure", "food"],
+      whereItIs: [
+        "Queenstown sits on Lake Wakatipu in Otago, New Zealand, with the Remarkables, Glenorchy, Arrowtown, and Gibbston Valley framing most sightseeing.",
+        "Most guided tours depart from Camp Street, Shotover Street, Steamer Wharf, Frankton, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "The Remarkables, Coronet Peak, and alpine landings near Tukuko Glacier sit on 4WD, coach, and helicopter days from Queenstown.",
+        lakesWater:
+          "Lake Wakatipu cruises, Dart River jets, and Milford or Doubtful Sound catamarans appear on scenic and wilderness days.",
+        desertForest:
+          "Fiordland beech forest, Wilmot Pass, and Mount Aspiring National Park trails sit on coach and jet-boat circuits beyond the town centre.",
+        cycling:
+          "Published Queenstown inventory on this build is coach, cruise, 4WD, wine, and air touring rather than a dedicated city bike circuit.",
+        scenicDrives:
+          "Coaches cover Glenorchy-Queenstown Road, Skippers Canyon, Arrowtown, Gibbston Valley, Te Anau, and the Milford Road from Queenstown hotels.",
+        seasonalNotes:
+          "Shoulder-season months favor lake and wine half-days; winter alpine weather can change helicopter landings and Fiordland road conditions.",
+      },
+      thingsToDo: [
+        "Cruise Lake Wakatipu on the TSS Earnslaw or walk Arrowtown's Chinese Settlement.",
+        "Ride a Dart River jet into Mount Aspiring National Park.",
+        "Spend a day at Milford Sound or Doubtful Sound by coach, cruise, or scenic flight.",
+      ],
+      toursCopy: [
+        "Book a Wakatipu Basin or Glenorchy filming half-day for a compact introduction.",
+        "Pair a Gibbston Valley wine afternoon with a Milford Sound coach, cruise, or flight day.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Glenorchy filming circuit, Arrowtown sightseeing, or a Dart River jet.",
+          "Afternoon: Continue Skippers Canyon, Gibbston Valley, or a Walter Peak farm crossing.",
+          "Evening: Return to Steamer Wharf or central Queenstown.",
+        ],
+        dayTwo: [
+          "Morning: Milford Sound coach and cruise, or a Frankton scenic flight.",
+          "Afternoon: Continue the published fiord, alpine, or wilderness circuit.",
+          "Evening: Return to Queenstown, or join a shorter lake outing.",
+        ],
+      },
+      gettingThere: [
+        "Queenstown Airport in Frankton serves the town with taxis, hotel transfers, and published tour pickups to Camp Street, Shotover Street, Steamer Wharf, and most meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Queenstown tours?",
+          answer:
+            "Lord of the Rings filming circuits, Arrowtown and Lake Wakatipu sightseeing, Gibbston Valley wine, TSS Earnslaw farm crossings, Dart River jets, and Milford or Doubtful Sound coach, cruise, flight, and helicopter days are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6845,6 +6946,7 @@ export const states: StateDestination[] = [
   indonesiaState,
   southKoreaState,
   australiaState,
+  newZealandState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

@@ -1,0 +1,214 @@
+{
+  "selectedCount": 13,
+  "listingCount": 13,
+  "listingMatchesSelection": true,
+  "okCount": 13,
+  "failCount": 0,
+  "results": [
+    {
+      "code": "76369P1",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/lord-of-the-rings-scenic-half-day-tour-from-queenstown-76369P1",
+      "title": "Lord of the Rings Scenic Half Day Tour from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/53/75/a3.jpg",
+      "card": "In Queenstown, this half-day filming circuit leaves Marmolada Cafe on Camp Street for Glenorchy, private Arcadia Station in Paradise Valley,",
+      "itineraryTitles": [
+        "Glenorchy-Queenstown Road",
+        "Bennets Bluff Lookout",
+        "Twelve Mile Delta to Bob's Cove Track",
+        "Glenorchy Wharf & Viewpoint",
+        "Mount Aspiring",
+        "Isengard Lookout"
+      ],
+      "issues": []
+    },
+    {
+      "code": "460492P1",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/half-day-in-middle-earth-lord-of-the-rings-tour-460492P1",
+      "title": "Half Day in Middle Earth - Lord of the Rings Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/56/66/28.jpg",
+      "card": "In Queenstown, this small-group Middle-earth half-day leaves Shotover Street for Skippers Canyon, Arrowtown, and Lake Hayes with movie props",
+      "itineraryTitles": [
+        "Queenstown",
+        "Skippers Canyon",
+        "Arrowtown",
+        "Lake Hayes"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5762P6",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/half-day-lord-of-the-rings-4wd-tour-from-queenstown-5762P6",
+      "title": "Half-Day Lord of the Rings 4WD Tour from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7e/29/5b.jpg",
+      "card": "In Queenstown, this 4WD half-day leaves Info & Track on Shotover Street for the Remarkables, Deer Park Heights, Kawarau Gorge, Arrowtown, th",
+      "itineraryTitles": [
+        "The Remarkables",
+        "Deer Park Heights",
+        "Kawarau Gorge",
+        "Arrowtown",
+        "Arrow River",
+        "Coronet Peak"
+      ],
+      "issues": []
+    },
+    {
+      "code": "58045P5",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/best-of-queenstown-sightseeing-tour-58045P5",
+      "title": "Best of Queenstown Sightseeing Tour",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/28/91/86.jpg",
+      "card": "In Queenstown, this guided sightseeing half-day leaves the Station Building on Camp Street for Shotover River viewpoints, the Arrowtown Chin",
+      "itineraryTitles": [
+        "Shotover River",
+        "Arrowtown Chinese Settlement",
+        "Dudley's Cottage",
+        "Kawarau Bridge",
+        "Lake Wakatipu",
+        "Steamer Wharf"
+      ],
+      "issues": []
+    },
+    {
+      "code": "87033P3",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/queenstown-wine-tour-with-wine-dog-adults-only-87033P3",
+      "title": "Queenstown Wine Tour with Wine Dog | Adults Only",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/38/b1/48.jpg",
+      "card": "In Queenstown, this adults-only afternoon heads into Gibbston Valley for cellar-door tastings and a tour of New Zealand's oldest wine cave, ",
+      "itineraryTitles": [
+        "Queenstown",
+        "Gibbston Valley",
+        "Wine Cave"
+      ],
+      "issues": []
+    },
+    {
+      "code": "2264P24",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/half-day-walter-peak-horse-trek-and-cruise-from-queenst-2264P24",
+      "title": "Half Day Walter Peak Horse Trek and Cruise from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/52/30.jpg",
+      "card": "In Queenstown, this half-day pairs a TSS Earnslaw crossing of Lake Wakatipu with tea at the Colonel's Homestead and a guided horse trek at W",
+      "itineraryTitles": [
+        "Queenstown Wharf",
+        "TSS Earnslaw",
+        "Walter Peak High Country Farm",
+        "Colonel's Homestead"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3910GS76",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/milford-sound-day-tour-with-lunch-from-queenstown-3910GS76",
+      "title": "Milford Sound Day Tour with Lunch from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a3/33/7f.jpg",
+      "card": "In Queenstown, this full-day luxury-coach outing runs through Fiordland National Park with a Te Anau stop, picnic lunch, and a Milford Sound",
+      "itineraryTitles": [
+        "Queenstown",
+        "Te Anau",
+        "Fiordland National Park",
+        "Milford Sound",
+        "Mitre Peak"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3287_ZQN",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/small-group-award-winning-full-day-milford-sound-experi-3287_ZQN",
+      "title": "Small Group, Award Winning Full Day Milford Sound Experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/2b/2c/37.jpg",
+      "card": "In Queenstown, this small-group Fiordland day covers The Remarkables, Lake Wakatipu, Lake Te Anau, and Mirror Lakes before a two-hour Milfor",
+      "itineraryTitles": [
+        "The Remarkables",
+        "Lake Wakatipu",
+        "Lake Te Anau",
+        "Mirror Lakes",
+        "Milford Sound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "5627WILDERNESS",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/dart-river-jet-boat-and-wilderness-experience-5627WILDERNESS",
+      "title": "Dart River Jet Boat and Wilderness Experience",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/52/24/ef.jpg",
+      "card": "In Queenstown, this half-day jet-boat safari checks in at the Station Building on Duke Street or at the Glenorchy base on Mull Street, then ",
+      "itineraryTitles": [
+        "The Station Building Queenstown",
+        "Glenorchy",
+        "Dart River",
+        "Mount Aspiring National Park"
+      ],
+      "issues": []
+    },
+    {
+      "code": "43964P1",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/luxury-milford-sound-coach-and-scenic-cruise-43964P1",
+      "title": "Luxury Milford Sound Coach and Scenic Cruise",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/bd/09/5d.jpg",
+      "card": "In Queenstown, this luxury-coach day travels into Fiordland National Park for a scenic Milford Sound cruise.",
+      "itineraryTitles": [
+        "Queenstown",
+        "Fiordland National Park",
+        "Milford Sound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "2264RJ301",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/doubtful-sound-wilderness-cruise-from-queenstown-2264RJ301",
+      "title": "Doubtful Sound Wilderness Cruise from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f0/2d/84.jpg",
+      "card": "In Queenstown, this full-day wilderness outing leaves Beach Street for Lake Manapouri, Wilmot Pass, Deep Cove, and a catamaran cruise on Dou",
+      "itineraryTitles": [
+        "Queenstown",
+        "Lake Manapouri",
+        "Wilmot Pass",
+        "Deep Cove",
+        "Doubtful Sound"
+      ],
+      "issues": []
+    },
+    {
+      "code": "38244P1",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/half-day-milford-sound-flight-and-cruise-from-queenstow-38244P1",
+      "title": "Half-Day Milford Sound Flight and Cruise from Queenstown",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/e8/a7.jpg",
+      "card": "In Queenstown, this Air Milford half-day leaves Tex Smith Lane in Frankton for a scenic flight over Paradise, Skippers Canyon, and Donne Gla",
+      "itineraryTitles": [
+        "Air Milford Queenstown",
+        "Skippers Canyon",
+        "Donne Glacier",
+        "Milford Sound",
+        "Mitre Peak",
+        "Bowen Falls"
+      ],
+      "issues": []
+    },
+    {
+      "code": "3434ZQN_HLQ1B",
+      "ok": true,
+      "path": "/destinations/new-zealand/queenstown/tours/milford-sound-heli-tour-from-queenstown-with-2-alpine-l-3434ZQN_HLQ1B",
+      "title": "Milford Sound Heli Tour from Queenstown with 2 Alpine Landings",
+      "hero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/d8/9e/74.jpg",
+      "card": "In Queenstown, this 90-minute helicopter circuit flies into Fiordland National Park for a Milford Sound landing and a remote alpine landing ",
+      "itineraryTitles": [
+        "Queenstown",
+        "Fiordland National Park",
+        "Mitre Peak",
+        "Milford Sound",
+        "Tukuko Glacier"
+      ],
+      "issues": []
+    }
+  ]
+}

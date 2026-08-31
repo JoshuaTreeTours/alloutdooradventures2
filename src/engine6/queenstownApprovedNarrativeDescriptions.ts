@@ -1,0 +1,55 @@
+export const QUEENSTOWN_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
+  "76369P1",
+  "460492P1",
+  "5762P6",
+  "58045P5",
+  "87033P3",
+  "2264P24",
+  "3910GS76",
+  "3287_ZQN",
+  "5627WILDERNESS",
+  "43964P1",
+  "2264RJ301",
+  "38244P1",
+  "3434ZQN_HLQ1B",
+] as const;
+
+export type QueenstownTargetedNarrativeDescriptionProductCode =
+  (typeof QUEENSTOWN_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES)[number];
+
+export const QUEENSTOWN_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
+  QueenstownTargetedNarrativeDescriptionProductCode,
+  string
+> = {
+  "76369P1":
+    "In Queenstown, this half-day filming circuit leaves Marmolada Cafe on Camp Street for Glenorchy, private Arcadia Station in Paradise Valley, and Mount Aspiring National Park. The published stops include Bennets Bluff, Twelve Mile Delta, Glenorchy Wharf, and Isengard Lookout rather than an Arrowtown and Skippers Canyon 4WD loop. The format suits visitors who want exclusive station access and optional costumes without a full-day Fiordland coach. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on the Glenorchy road and Paradise Valley that define this outing rather than a Dart River jet boat.",
+  "460492P1":
+    "In Queenstown, this small-group Middle-earth half-day leaves Shotover Street for Skippers Canyon, Arrowtown, and Lake Hayes with movie props for photographs. The published circuit stays in the Wakatipu Basin rather than the Glenorchy and Arcadia Station route used by the Paradise Valley outing. The format suits visitors who want a compact filming-location window without a 4WD river crossing. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Skippers Canyon, Arrowtown, and Lake Hayes that define this outing rather than a Gibbston Valley wine cave afternoon.",
+  "5762P6":
+    "In Queenstown, this 4WD half-day leaves Info & Track on Shotover Street for the Remarkables, Deer Park Heights, Kawarau Gorge, Arrowtown, the Arrow River, and Coronet Peak. The published format is an off-road Wakatipu Basin safari with a tea stop rather than a sealed-road Glenorchy coach. The format suits visitors who want river crossings and gold panning without a Milford Sound cruise. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those basin landmarks that define this outing rather than a TSS Earnslaw crossing to Walter Peak.",
+  "58045P5":
+    "In Queenstown, this guided sightseeing half-day leaves the Station Building on Camp Street for Shotover River viewpoints, the Arrowtown Chinese Settlement, Dudley's Cottage, the Kawarau Bridge, and a Lake Wakatipu boat finish at Steamer Wharf. The public page lists wine tasting and a shared cheese board rather than a full Gibbston Valley cellar-door circuit. The format suits visitors who want a mixed town-and-lake introduction without a Fiordland coach day. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Arrowtown and Lake Wakatipu that define this outing rather than a helicopter landing at Milford Sound.",
+  "87033P3":
+    "In Queenstown, this adults-only afternoon heads into Gibbston Valley for cellar-door tastings and a tour of New Zealand's oldest wine cave, with hotel transfers or a Camp Street meeting point. The published ticket covers tastings and the cave rather than lunch, which the public page lists as an extra at a winery restaurant. The format suits visitors who want a guided wine window without a self-guided bike trail. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Gibbston Valley and the wine cave that define this outing rather than an Arrowtown gold-panning walk.",
+  "2264P24":
+    "In Queenstown, this half-day pairs a TSS Earnslaw crossing of Lake Wakatipu with tea at the Colonel's Homestead and a guided horse trek at Walter Peak High Country Farm. The published format is a steamship-and-saddle outing rather than a gourmet barbecue lunch on the same farm. The format suits visitors who want time on horseback without a Doubtful Sound wilderness day. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on the Earnslaw, Walter Peak, and the homestead that define this outing rather than a Dart River jet.",
+  "3910GS76":
+    "In Queenstown, this full-day luxury-coach outing runs through Fiordland National Park with a Te Anau stop, picnic lunch, and a Milford Sound catamaran past Mitre Peak. The published format is a panoramic-window coach and cruise rather than a small-group BBQ circuit with Mirror Lakes. The format suits visitors who want a classic land-and-water Milford day without a scenic flight. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Te Anau, Fiordland, and Milford Sound that define this outing rather than a Deep Cove Doubtful Sound transfer.",
+  "3287_ZQN":
+    "In Queenstown, this small-group Fiordland day covers The Remarkables, Lake Wakatipu, Lake Te Anau, and Mirror Lakes before a two-hour Milford Sound nature cruise. The public page lists scenic photo stops and a local driver-guide rather than a luxury-coach picnic package. The format suits visitors who want a smaller coach and more roadside stops without a helicopter landing. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those lakes and the fiord that define this outing rather than a Gibbston Valley tasting van.",
+  "5627WILDERNESS":
+    "In Queenstown, this half-day jet-boat safari checks in at the Station Building on Duke Street or at the Glenorchy base on Mull Street, then runs the Dart River into Mount Aspiring National Park. The published format is a wilderness jet rather than a Skippers Canyon road-and-boat combo. The format suits visitors who want a braided-river window without a Lord of the Rings costume stop. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Glenorchy, the Dart River, and Mount Aspiring National Park that define this outing rather than a Walter Peak horse trek.",
+  "43964P1":
+    "In Queenstown, this luxury-coach day travels into Fiordland National Park for a scenic Milford Sound cruise. The published format is a higher-comfort coach-and-cruise ticket rather than the small-group Mirror Lakes circuit. The format suits visitors who want a quieter coach day without a flight from Frankton. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Fiordland and Milford Sound that define this outing rather than a Lake Manapouri and Wilmot Pass wilderness transfer.",
+  "2264RJ301":
+    "In Queenstown, this full-day wilderness outing leaves Beach Street for Lake Manapouri, Wilmot Pass, Deep Cove, and a catamaran cruise on Doubtful Sound. The published format is a remote fiord day rather than a Milford Sound coach cruise. The format suits visitors who want a quieter sound without a scenic flight. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Manapouri, Wilmot Pass, and Doubtful Sound that define this outing rather than a Mitre Peak fly-cruise.",
+  "38244P1":
+    "In Queenstown, this Air Milford half-day leaves Tex Smith Lane in Frankton for a scenic flight over Paradise, Skippers Canyon, and Donne Glacier, then a reserved-seat Milford Sound cruise past Mitre Peak and Bowen Falls. The return flight is listed over Sutherland Falls rather than a two-landing helicopter. The format suits visitors who want air-and-water time without a 13-hour coach. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on those alpine and fiord landmarks that define this outing rather than a Walter Peak farm cruise.",
+  "3434ZQN_HLQ1B":
+    "In Queenstown, this 90-minute helicopter circuit flies into Fiordland National Park for a Milford Sound landing and a remote alpine landing near Tukuko Glacier or Glacier Basin. The published format is two landings with hotel pickup rather than a reserved-seat nature cruise. The format suits visitors who want an aerial fiord window without a coach day. Meeting points are confirmed at booking in Queenstown, and the itinerary stays on Mitre Peak, Milford Sound, and the alpine landing that define this outing rather than a Gibbston Valley wine cave.",
+};
+
+export const getQueenstownTargetedNarrativeDescription = (productCode: string) =>
+  QUEENSTOWN_TARGETED_NARRATIVE_DESCRIPTIONS[
+    productCode as QueenstownTargetedNarrativeDescriptionProductCode
+  ];
