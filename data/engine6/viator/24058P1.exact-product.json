@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "24058P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Blue-Mountains-Day-Trip-Including-Parramatta-River-Cruise/d357-24058P1",
+    "title": "Blue Mountains Day Tour Including Parramatta River Cruise",
+    "description": {
+      "text": "In Sydney, this full-day coach outing combines a Parramatta River cruise with Blue Mountains time at Scenic World and the Three Sisters. The published route leaves from Central Station on Eddy Avenue rather than a private harbour half-day. The public page lists a long day covering river and plateau stops in one booking. The format suits visitors who want a combined river-and-mountains day without assembling separate cruise and coach tickets. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Parramatta River, the Blue Mountains, Scenic World, and the Three Sisters that define this outing rather than a Port Stephens sand-dune day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $62.44",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1473
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/87/48/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Parramatta River cruise",
+      "Blue Mountains plateau",
+      "Scenic World",
+      "Three Sisters",
+      "Central Station departure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Central Station, Eddy Avenue, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this full-day coach outing combines a Parramatta River cruise with Blue Mountains time at Scenic World and the Three Sisters.",
+    "itineraryItems": [
+      {
+        "title": "Parramatta River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Blue Mountains",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic World",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Three Sisters",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach transport from Sydney",
+      "Parramatta River cruise"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Blue Mountains Day Tour Including Parramatta River Cruise?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at Central Station, Eddy Avenue, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 62.44
+      },
+      "currency": "USD"
+    }
+  }
+}

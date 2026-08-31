@@ -6648,6 +6648,107 @@ const southKoreaState: StateDestination = {
   isFallback: true,
 };
 
+const australiaState: StateDestination = {
+  slug: "australia",
+  name: "Australia",
+  description:
+    "Sydney harbour walks, Circular Quay cruises, Blue Mountains days, Bondi and The Rocks circuits, and guided touring from the harbour city.",
+  featuredDescription:
+    "Explore Sydney tours with harbour cruises, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, food and brewery walks, and scenic helicopter flights.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/0b/2b.jpg",
+  region: "Oceania",
+  intro:
+    "Australia pairs walkable Sydney harbour, The Rocks, and Bondi days with Circular Quay cruises, Blue Mountains plateau outings, and Port Stephens coastal trips from the harbour city.",
+  longDescription:
+    "Sydney anchors Australia tour inventory with Hyde Park and The Rocks walking circuits, Circular Quay harbour cruises, seasonal whale watches, BridgeClimb on the Sydney Harbour Bridge, Blue Mountains days covering Scenic World and the Three Sisters, private Opera House and Bondi half-days, Port Stephens dune circuits, Mascot helicopter hops, Surry Hills food walks, Royal Botanic Garden forages, and brewery or dinner-cruise evenings.",
+  topRegions: [
+    {
+      title: "Harbour and historic streets",
+      description:
+        "Sydney Opera House, Sydney Harbour Bridge, The Rocks, Circular Quay, Royal Botanic Garden Sydney, and guided walking, cruise, or climb outings.",
+    },
+    {
+      title: "Blue Mountains and coastal days",
+      description:
+        "Three Sisters, Scenic World, Parramatta River, Port Stephens, Nelson Bay, Stockton Beach, and Bondi Beach on full-day or private routes.",
+    },
+    {
+      title: "Food, bikes, and air",
+      description:
+        "Surry Hills tasting walks, Sydney brewery circuits, electric-bike harbour rides, and scenic helicopter flights from Mascot.",
+    },
+  ],
+  cities: [
+    {
+      name: "Sydney",
+      slug: "sydney",
+      stateSlug: "australia",
+      region: "Sydney",
+      lat: -33.8688,
+      lng: 151.2093,
+      shortDescription:
+        "Harbour cruises, Blue Mountains days, and The Rocks or Bondi circuits from Sydney.",
+      intro:
+        "Sydney is Australia's harbour city with the Sydney Opera House, Sydney Harbour Bridge, The Rocks, Bondi Beach, Circular Quay, and guided walking, cruise, climb, food, bike, and day-trip tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/0b/2b.jpg",
+      ],
+      activityTags: ["sightseeing", "cycling", "food"],
+      whereItIs: [
+        "Sydney sits on Port Jackson in New South Wales, with Circular Quay, The Rocks, the Opera House, and Bondi framing most sightseeing.",
+        "Most guided tours depart from Circular Quay, Hyde Park, The Rocks, Surry Hills, Central Station, Mascot, and hotel meeting points confirmed at booking.",
+      ],
+      experiences: {
+        mountains:
+          "Blue Mountains days cover the Three Sisters, Scenic World, and waterfall lookouts on full-day coach routes from Sydney.",
+        lakesWater:
+          "Sydney Harbour cruises, Parramatta River segments, and Port Stephens bay days appear on scenic outings from the city.",
+        desertForest:
+          "Royal Botanic Garden Sydney and Blue Mountains woodland paths offer garden and plateau stops beyond the harbour core.",
+        cycling:
+          "Guided electric-bike rides cover Pyrmont, Darling Harbour, Barangaroo, the Harbour Bridge cycleway, and Circular Quay.",
+        scenicDrives:
+          "Private vans and coaches cover the Opera House, Bondi, Watsons Bay, the Blue Mountains, and Port Stephens from Sydney hotels.",
+        seasonalNotes:
+          "Whale-watch months favor Circular Quay wildlife cruises; summer heat favors early harbour and beach starts.",
+      },
+      thingsToDo: [
+        "Walk Hyde Park, Macquarie Street, and The Rocks, or climb the Sydney Harbour Bridge.",
+        "Cruise Sydney Harbour from Circular Quay, or ride an electric bike past Darling Harbour.",
+        "Spend a day in the Blue Mountains or at Port Stephens.",
+      ],
+      toursCopy: [
+        "Book a harbour cruise or Rocks walking circuit for a compact introduction.",
+        "Pair a Blue Mountains day or private Bondi half-day with a food walk or dinner cruise.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Hyde Park and The Rocks walk, or a Circular Quay harbour cruise.",
+          "Afternoon: Bondi Beach, BridgeClimb, or a Surry Hills food walk.",
+          "Evening: Return to Circular Quay or a harbour dinner cruise.",
+        ],
+        dayTwo: [
+          "Morning: Blue Mountains, Port Stephens, or a private Opera House and Bondi circuit.",
+          "Afternoon: Continue the published plateau, dune, or beach circuit.",
+          "Evening: Return to central Sydney.",
+        ],
+      },
+      gettingThere: [
+        "Sydney Airport serves the city with trains, taxis, and hotel transfers to Circular Quay, The Rocks, Bondi, and most tour meeting points.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Sydney tours?",
+          answer:
+            "Harbour cruises from Circular Quay, BridgeClimb, Blue Mountains coach days, private Opera House and Bondi circuits, electric-bike harbour rides, Surry Hills food walks, and scenic helicopter flights are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates.filter(state => state.slug !== "massachusetts"),
@@ -6673,6 +6774,7 @@ export const states: StateDestination[] = [
   singaporeState,
   indonesiaState,
   southKoreaState,
+  australiaState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

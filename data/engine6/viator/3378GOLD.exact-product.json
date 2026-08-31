@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "3378GOLD",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Harbour-Sky-Deck-Gold-Dinner-Cruise/d357-3378GOLD",
+    "title": "Sydney Gourmet Gold Penfolds Dinner Cruise",
+    "description": {
+      "text": "In Sydney, this Gourmet Gold Penfolds dinner cruise runs on Sydney Harbour from Circular Quay with a plated dinner listed on the public page. The published format is an evening harbour dining outing rather than a morning-tea discovery cruise or a one-hour sightseeing loop. The format suits visitors who want a dinner-on-the-harbour window without a helicopter booking. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Harbour and Circular Quay that define this outing rather than a Blue Mountains sunset walk."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $171.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 148
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/b7/ed/18.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sydney Harbour dinner cruise",
+      "Circular Quay departure",
+      "Gourmet Gold dining",
+      "Evening harbour window"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board for the Sydney Harbour dinner cruise from Circular Quay."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this Gourmet Gold Penfolds dinner cruise runs on Sydney Harbour from Circular Quay with a plated dinner listed on the public page.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Harbour",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Circular Quay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Harbour dinner cruise",
+      "Plated dinner"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Gourmet Gold Penfolds Dinner Cruise?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Board for the Sydney Harbour dinner cruise from Circular Quay."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 171
+      },
+      "currency": "USD"
+    }
+  }
+}

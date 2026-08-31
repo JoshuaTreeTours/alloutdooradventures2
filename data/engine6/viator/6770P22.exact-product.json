@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "6770P22",
+    "productUrl": "https://www.viator.com/tours/Sydney/From-Sydney-Sunset-Blue-Mountains-Wilderness-and-Wildlife-Tour-Without-the-Crowds/d357-6770P22",
+    "title": "Blue Mountains Sunset Nature-based & Waterfall Tour",
+    "description": {
+      "text": "In Sydney, this later-day Blue Mountains outing lists a nature-based circuit with waterfall lookouts and a sunset window on the plateau. The published format avoids the busiest Scenic World midday blocks and stays on Blue Mountains wilderness and waterfall stops rather than a zoo-inclusive coach package. The format suits visitors who want a quieter plateau afternoon without a harbour cruise add-on. Meeting points are confirmed at booking in Sydney, and the itinerary stays on the Blue Mountains and Blue Mountains waterfalls that define this outing rather than a Three Sisters plus Sydney Zoo day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $86.37",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 104
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/47/c9/43.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Blue Mountains wilderness circuit",
+      "Blue Mountains waterfalls",
+      "Sunset plateau window",
+      "Later-day departure from Sydney"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney departure point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this later-day Blue Mountains outing lists a nature-based circuit with waterfall lookouts and a sunset window on the plateau.",
+    "itineraryItems": [
+      {
+        "title": "Blue Mountains",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Blue Mountains waterfalls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach transport from Sydney",
+      "Sunset plateau window"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Blue Mountains Sunset Nature-based & Waterfall Tour?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney departure point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 86.37
+      },
+      "currency": "USD"
+    }
+  }
+}

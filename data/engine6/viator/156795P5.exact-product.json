@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "156795P5",
+    "productUrl": "https://www.viator.com/tours/Sydney/Blue-Mountains-Deluxe-Tour-from-Sydney/d357-156795P5",
+    "title": "Blue Mountains, Sydney Zoo, Scenic World from Sydney",
+    "description": {
+      "text": "In Sydney, this deluxe Blue Mountains day lists Sydney Zoo, the Blue Mountains plateau, and Scenic World on a long coach outing from the city. The published format keeps the zoo and scenic-railway complex on one ticket rather than a harbour cruise plus a separate mountains day. The format suits visitors who want a wildlife-and-plateau circuit without booking Scenic World independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Zoo, the Blue Mountains, and Scenic World that define this outing rather than a private Opera House and Bondi half-day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $134.38",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 231
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7e/70/fd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sydney Zoo",
+      "Blue Mountains plateau",
+      "Scenic World",
+      "Long-day coach circuit from Sydney"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney departure point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this deluxe Blue Mountains day lists Sydney Zoo, the Blue Mountains plateau, and Scenic World on a long coach outing from the city.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Zoo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Blue Mountains",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic World",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach transport from Sydney",
+      "Sydney Zoo visit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Blue Mountains, Sydney Zoo, Scenic World from Sydney?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney departure point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 134.38
+      },
+      "currency": "USD"
+    }
+  }
+}

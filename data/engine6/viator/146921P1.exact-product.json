@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "146921P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Forkabout-Surry-Hills-foodie-walking-tour/d357-146921P1",
+    "title": "Forkabout Sydney foodie walking tour",
+    "description": {
+      "text": "In Sydney, this Forkabout food walk stays in Surry Hills for a guided tasting circuit through the inner-city neighborhood rather than a harbour cruise or Blue Mountains day. The published format is on foot with food stops listed for Surry Hills and the surrounding Sydney streets. The format suits visitors who want a neighborhood tasting window without a private full-day sightseeing booking. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Surry Hills and Sydney tasting stops that define this outing rather than a Royal Botanic Garden forage."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours 15 minutes (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 23
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/91/ac/08.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Surry Hills neighborhood walk",
+      "Sydney tasting stops",
+      "Guided food circuit",
+      "Inner-city foot format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet in Surry Hills, Sydney, at the confirmed booking point."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this Forkabout food walk stays in Surry Hills for a guided tasting circuit through the inner-city neighborhood rather than a harbour cruise or Blue Mountains day.",
+    "itineraryItems": [
+      {
+        "title": "Surry Hills",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided food walk",
+      "Surry Hills tasting stops"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Forkabout Sydney foodie walking tour?",
+        "answer": "The planned duration is 3 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet in Surry Hills, Sydney, at the confirmed booking point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

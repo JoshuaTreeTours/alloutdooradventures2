@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "6912BEER",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Beer-and-Brewery-Tour/d357-6912BEER",
+    "title": "Sydney Beer and Brewery Tour",
+    "description": {
+      "text": "In Sydney, this beer and brewery tour covers Sydney breweries on a guided tasting circuit rather than a Surry Hills food walk or a harbour dinner cruise. The published format stays on brewery stops in Sydney with tasting time listed for the outing. The format suits visitors who want a guided beer window without assembling brewery reservations independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney breweries and Sydney that define this outing rather than a native-food garden forage."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $101.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 391
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/81/90/61.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sydney breweries",
+      "Guided beer tastings",
+      "City brewery circuit",
+      "Four-hour format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this beer and brewery tour covers Sydney breweries on a guided tasting circuit rather than a Surry Hills food walk or a harbour dinner cruise.",
+    "itineraryItems": [
+      {
+        "title": "Sydney breweries",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided brewery circuit",
+      "Beer tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Beer and Brewery Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 101
+      },
+      "currency": "USD"
+    }
+  }
+}

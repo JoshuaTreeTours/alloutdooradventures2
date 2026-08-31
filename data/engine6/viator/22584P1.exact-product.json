@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "22584P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/All-Inclusive-Blue-Mountains-Small-Group-Day-Trip-from-Sydney/d357-22584P1",
+    "title": "#1 Rated Blue Mountains Tour, Scenic World, Lunch, RiverCruise",
+    "description": {
+      "text": "In Sydney, this all-inclusive Blue Mountains day covers the Three Sisters, Scenic World, a wildlife stop at Sydney Zoo, and a Parramatta River segment, with lunch listed on the public page. The published format is a small-group coach day from Sydney rather than a self-paced train outing. The format suits visitors who want the plateau, scenic railway complex, and zoo window in one booking without assembling tickets independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on the Three Sisters, Scenic World, Sydney Zoo, and Parramatta River that define this outing rather than a sunset-only waterfall circuit."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "10 hours 30 minutes (approx.)",
+    "priceFrom": "From $162.21",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 6144
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/87/2f/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three Sisters lookout",
+      "Scenic World",
+      "Sydney Zoo wildlife stop",
+      "Parramatta River segment",
+      "Listed lunch"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney departure point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this all-inclusive Blue Mountains day covers the Three Sisters, Scenic World, a wildlife stop at Sydney Zoo, and a Parramatta River segment, with lunch listed on the public page.",
+    "itineraryItems": [
+      {
+        "title": "Three Sisters",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic World",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Zoo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Parramatta River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small-group coach day",
+      "Lunch",
+      "Scenic World visit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the #1 Rated Blue Mountains Tour, Scenic World, Lunch, RiverCruise?",
+        "answer": "The planned duration is 10 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney departure point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 162.21
+      },
+      "currency": "USD"
+    }
+  }
+}

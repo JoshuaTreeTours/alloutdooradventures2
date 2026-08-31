@@ -106,6 +106,9 @@ export const ENGINE6_BALI_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_SEOUL_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c2/be/80.jpg";
 
+export const ENGINE6_SYDNEY_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/0b/2b.jpg";
+
 export const ENGINE6_PARIS_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/18/42.jpg";
 
@@ -253,6 +256,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   "south-korea": {
     seoul: ENGINE6_SEOUL_CANONICAL_CITY_HERO_URL,
+  },
+  australia: {
+    sydney: ENGINE6_SYDNEY_CANONICAL_CITY_HERO_URL,
   },
   france: {
     paris: ENGINE6_PARIS_CANONICAL_CITY_HERO_URL,

@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "6088P3",
+    "productUrl": "https://www.viator.com/tours/Sydney/Taste-of-Sydney-Tour/d357-6088P3",
+    "title": "Taste of Sydney Tour",
+    "description": {
+      "text": "In Sydney, this Taste of Sydney circuit is a guided tasting outing through city venues rather than a single-neighborhood Surry Hills walk or a harbour Gold dinner cruise. The published format keeps the focus on Sydney tasting rooms and food stops in one booking. The format suits visitors who want a broader city tasting window without a brewery-only circuit. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney and the city tasting venues that define this outing rather than a Circular Quay morning-tea cruise."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $184.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 13
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/85/a3/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Taste of Sydney circuit",
+      "City tasting venues",
+      "Guided food stops",
+      "Sydney city format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sydney point listed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this Taste of Sydney circuit is a guided tasting outing through city venues rather than a single-neighborhood Surry Hills walk or a harbour Gold dinner cruise.",
+    "itineraryItems": [
+      {
+        "title": "Sydney",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "city tasting venues",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided tasting circuit",
+      "City tasting venues"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Taste of Sydney Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at the confirmed Sydney point listed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food & Drink"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 184
+      },
+      "currency": "USD"
+    }
+  }
+}

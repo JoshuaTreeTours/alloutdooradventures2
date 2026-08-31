@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "392485P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Port-Stephens-Experience-Day-Tour/d357-392485P1",
+    "title": "Port Stephens Experience",
+    "description": {
+      "text": "In Sydney, this long day trip heads north to Port Stephens, Nelson Bay, Stockton Beach, and Anna Bay with hotel pickup listed on the public page. The published format is a coastal dune and bay circuit rather than a harbour cruise or Blue Mountains plateau day. The format suits visitors who want a Port Stephens window without assembling transfers independently. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Port Stephens, Nelson Bay, Stockton Beach, and Anna Bay that define this outing rather than a Circular Quay whale watch."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $143.38",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/63/8a/1a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Port Stephens",
+      "Nelson Bay",
+      "Stockton Beach",
+      "Anna Bay",
+      "Hotel pickup from Sydney"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Sydney as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this long day trip heads north to Port Stephens, Nelson Bay, Stockton Beach, and Anna Bay with hotel pickup listed on the public page.",
+    "itineraryItems": [
+      {
+        "title": "Port Stephens",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nelson Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Stockton Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Anna Bay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach day from Sydney",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Port Stephens Experience?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Hotel pickup in Sydney as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 143.38
+      },
+      "currency": "USD"
+    }
+  }
+}

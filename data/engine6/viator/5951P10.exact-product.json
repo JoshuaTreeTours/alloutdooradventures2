@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "5951P10",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Harbour-Discovery-Cruise-Morning-Tea/d357-5951P10",
+    "title": "Sydney Harbour Discovery Cruise (morning tea)",
+    "description": {
+      "text": "In Sydney, this harbour discovery cruise leaves Circular Quay for a Sydney Harbour outing with morning tea listed on the public page. The published duration is longer than the one-hour highlights loop and shorter than a Gold dinner cruise. The format suits visitors who want a daytime harbour window with tea service without booking a whale-watch departure. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Harbour and Circular Quay that define this outing rather than a BridgeClimb ascent."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $43.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 822
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9c/0c/27.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Circular Quay departure",
+      "Sydney Harbour cruise",
+      "Morning tea service",
+      "Daytime harbour window"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Circular Quay, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this harbour discovery cruise leaves Circular Quay for a Sydney Harbour outing with morning tea listed on the public page.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Harbour",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Circular Quay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Harbour cruise",
+      "Morning tea"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Harbour Discovery Cruise (morning tea)?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Board at Circular Quay, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 43
+      },
+      "currency": "USD"
+    }
+  }
+}

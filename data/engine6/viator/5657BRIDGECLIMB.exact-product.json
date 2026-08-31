@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "5657BRIDGECLIMB",
+    "productUrl": "https://www.viator.com/tours/Sydney/BridgeClimb-Sydney/d357-5657BRIDGECLIMB",
+    "title": "BridgeClimb Sydney",
+    "description": {
+      "text": "In Sydney, BridgeClimb starts at 3 Cumberland Street in The Rocks and follows the published climb onto the Sydney Harbour Bridge. The public page lists a multi-hour guided ascent with the operator's safety briefing and climb gear rather than a harbour cruise viewed from the water. The format suits visitors who want the bridge structure itself rather than a lookout photo stop from Circular Quay. Meeting points are confirmed at booking in Sydney, and the itinerary stays on the Sydney Harbour Bridge and The Rocks that define this outing rather than a Bondi or Opera House walking circuit."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours 15 minutes (approx.)",
+    "priceFrom": "From $194.14",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2400
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/8a/e1/d6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sydney Harbour Bridge climb",
+      "The Rocks departure",
+      "Guided ascent with climb gear",
+      "Harbour structure viewpoint"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at BridgeClimb Sydney, 3 Cumberland Street, The Rocks."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, BridgeClimb starts at 3 Cumberland Street in The Rocks and follows the published climb onto the Sydney Harbour Bridge.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Harbour Bridge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Rocks",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided bridge climb",
+      "Climb safety gear"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the BridgeClimb Sydney?",
+        "answer": "The planned duration is 3 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Meet at BridgeClimb Sydney, 3 Cumberland Street, The Rocks."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 194.14
+      },
+      "currency": "USD"
+    }
+  }
+}

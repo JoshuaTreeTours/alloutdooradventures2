@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "6793P35",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Harbour-1-Hour-Sightseeing-Cruise-departing-Circular-Quay/d357-6793P35",
+    "title": "Sydney Harbour Sightseeing Highlights Cruise",
+    "description": {
+      "text": "In Sydney, this one-hour sightseeing cruise leaves Circular Quay and passes the Sydney Opera House, Royal Botanic Garden Sydney, Mrs Macquarie's Chair, Garden Island, Fort Denison, Taronga Zoo, the Sydney Harbour Bridge, Luna Park Sydney, and Barangaroo. The published format stays on the water with commentary rather than a walking circuit through The Rocks. The format suits visitors who want a short harbour orientation without booking a dinner cruise or helicopter hop. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Harbour landmarks that define this outing rather than a Blue Mountains coach day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $27.04",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 154
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/4f/d3/2c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Circular Quay departure",
+      "Sydney Opera House and Harbour Bridge",
+      "Mrs Macquarie's Chair and Garden Island",
+      "Fort Denison and Taronga Zoo",
+      "Luna Park Sydney and Barangaroo"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Circular Quay, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this one-hour sightseeing cruise leaves Circular Quay and passes the Sydney Opera House, Royal Botanic Garden Sydney, Mrs Macquarie's Chair, Garden Island, Fort Denison, Taronga Zoo, the Sydney Harbour Bridge, Luna Park Sydney, and Barangaroo.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Opera House",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Royal Botanic Garden Sydney",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mrs Macquarie's Chair",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Garden Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Denison",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Taronga Zoo",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Harbour Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Luna Park Sydney",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barangaroo",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Harbour cruise",
+      "Live commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Harbour Sightseeing Highlights Cruise?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Board at Circular Quay, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 27.04
+      },
+      "currency": "USD"
+    }
+  }
+}

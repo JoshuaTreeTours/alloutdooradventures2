@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "14172P3",
+    "productUrl": "https://www.viator.com/tours/Sydney/Private-Sydney-Half-Day-Sightseeing-Tour-Including-Sydney-Opera-House-Harbour-Bridge-and-Bondi-Beach/d357-14172P3",
+    "title": "Sydney Half Day Private Tour: Opera House and Bondi",
+    "description": {
+      "text": "In Sydney, this private half-day circuit covers the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach with hotel pickup listed on the public page. The published format is a private vehicle outing rather than a shared harbour cruise or walking tour of The Rocks. The format suits visitors who want a compact private highlight window without a full-day Rocks-to-Watsons-Bay booking. Meeting points are confirmed at booking in Sydney, and the itinerary stays on the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach that define this outing rather than a Blue Mountains coach day."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $257.33",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 108
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/98/25/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day circuit",
+      "Sydney Opera House",
+      "Sydney Harbour Bridge",
+      "Bondi Beach",
+      "Hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Sydney as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this private half-day circuit covers the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach with hotel pickup listed on the public page.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Opera House",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sydney Harbour Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bondi Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private vehicle",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Half Day Private Tour: Opera House and Bondi?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Hotel pickup in Sydney as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 257.33
+      },
+      "currency": "USD"
+    }
+  }
+}

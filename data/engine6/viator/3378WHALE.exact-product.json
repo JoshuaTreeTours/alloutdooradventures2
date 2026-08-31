@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "3378WHALE",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-Whale-Watching-Cruise/d357-3378WHALE",
+    "title": "Sydney Whale Watching Cruise from Circular Quay",
+    "description": {
+      "text": "In Sydney, this seasonal whale-watching cruise departs Circular Quay Wharf 6 and spends the published block on Sydney Harbour looking for migrating whales. The public page lists a multi-hour outing from Circular Quay rather than a one-hour highlights loop past the Opera House. Sightings depend on the season and the day's conditions. The format suits visitors who want a guided harbour wildlife window without assembling a private charter. Meeting points are confirmed at booking in Sydney, and the itinerary stays on Sydney Harbour and Circular Quay that define this outing rather than a BridgeClimb ascent."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $61.81",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 207
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/ee/e8/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Circular Quay Wharf 6 departure",
+      "Sydney Harbour wildlife window",
+      "Seasonal whale migration",
+      "Multi-hour harbour cruise"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Circular Quay Wharf 6, Sydney."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this seasonal whale-watching cruise departs Circular Quay Wharf 6 and spends the published block on Sydney Harbour looking for migrating whales.",
+    "itineraryItems": [
+      {
+        "title": "Sydney Harbour",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Circular Quay",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Whale-watching cruise",
+      "Harbour commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney Whale Watching Cruise from Circular Quay?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Board at Circular Quay Wharf 6, Sydney."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 61.81
+      },
+      "currency": "USD"
+    }
+  }
+}

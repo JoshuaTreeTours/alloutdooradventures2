@@ -1496,6 +1496,74 @@ export const isEngine6CuscoTourCanonicalPath = (
   path: string
 ) => path.startsWith(ENGINE6_CUSCO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_SYDNEY_184156P4_PRODUCT_CODE = "184156P4";
+export const ENGINE6_SYDNEY_184156P4_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-walking-tour-including-the-rocks-184156P4";
+export const ENGINE6_SYDNEY_6793P35_PRODUCT_CODE = "6793P35";
+export const ENGINE6_SYDNEY_6793P35_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-harbour-sightseeing-highlights-cruise-6793P35";
+export const ENGINE6_SYDNEY_3378WHALE_PRODUCT_CODE = "3378WHALE";
+export const ENGINE6_SYDNEY_3378WHALE_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-whale-watching-cruise-from-circular-quay-3378WHALE";
+export const ENGINE6_SYDNEY_5657BRIDGECLIMB_PRODUCT_CODE = "5657BRIDGECLIMB";
+export const ENGINE6_SYDNEY_5657BRIDGECLIMB_ROUTE =
+  "/destinations/australia/sydney/tours/bridgeclimb-sydney-5657BRIDGECLIMB";
+export const ENGINE6_SYDNEY_24058P1_PRODUCT_CODE = "24058P1";
+export const ENGINE6_SYDNEY_24058P1_ROUTE =
+  "/destinations/australia/sydney/tours/blue-mountains-day-tour-including-parramatta-river-crui-24058P1";
+export const ENGINE6_SYDNEY_22584P1_PRODUCT_CODE = "22584P1";
+export const ENGINE6_SYDNEY_22584P1_ROUTE =
+  "/destinations/australia/sydney/tours/1-rated-blue-mountains-tour-scenic-world-lunch-rivercru-22584P1";
+export const ENGINE6_SYDNEY_156795P5_PRODUCT_CODE = "156795P5";
+export const ENGINE6_SYDNEY_156795P5_ROUTE =
+  "/destinations/australia/sydney/tours/blue-mountains-sydney-zoo-scenic-world-from-sydney-156795P5";
+export const ENGINE6_SYDNEY_14172P3_PRODUCT_CODE = "14172P3";
+export const ENGINE6_SYDNEY_14172P3_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-half-day-private-tour-opera-house-and-bondi-14172P3";
+export const ENGINE6_SYDNEY_392485P1_PRODUCT_CODE = "392485P1";
+export const ENGINE6_SYDNEY_392485P1_ROUTE =
+  "/destinations/australia/sydney/tours/port-stephens-experience-392485P1";
+export const ENGINE6_SYDNEY_3293SYDHARBOUR_PRODUCT_CODE = "3293SYDHARBOUR";
+export const ENGINE6_SYDNEY_3293SYDHARBOUR_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-harbour-scenic-helicopter-flight-3293SYDHARBOUR";
+export const ENGINE6_SYDNEY_6770P22_PRODUCT_CODE = "6770P22";
+export const ENGINE6_SYDNEY_6770P22_ROUTE =
+  "/destinations/australia/sydney/tours/blue-mountains-sunset-nature-based-waterfall-tour-6770P22";
+export const ENGINE6_SYDNEY_5507708P5_PRODUCT_CODE = "5507708P5";
+export const ENGINE6_SYDNEY_5507708P5_ROUTE =
+  "/destinations/australia/sydney/tours/guided-electric-bike-tour-of-sydney-with-bluetooth-helm-5507708P5";
+export const ENGINE6_SYDNEY_146921P1_PRODUCT_CODE = "146921P1";
+export const ENGINE6_SYDNEY_146921P1_ROUTE =
+  "/destinations/australia/sydney/tours/forkabout-sydney-foodie-walking-tour-146921P1";
+export const ENGINE6_SYDNEY_455986P1_PRODUCT_CODE = "455986P1";
+export const ENGINE6_SYDNEY_455986P1_ROUTE =
+  "/destinations/australia/sydney/tours/secret-sydney-foodie-walking-tour-455986P1";
+export const ENGINE6_SYDNEY_6088P3_PRODUCT_CODE = "6088P3";
+export const ENGINE6_SYDNEY_6088P3_ROUTE =
+  "/destinations/australia/sydney/tours/taste-of-sydney-tour-6088P3";
+export const ENGINE6_SYDNEY_5509792P1_PRODUCT_CODE = "5509792P1";
+export const ENGINE6_SYDNEY_5509792P1_ROUTE =
+  "/destinations/australia/sydney/tours/native-australian-food-wine-botanic-garden-forage-5509792P1";
+export const ENGINE6_SYDNEY_186752P1_PRODUCT_CODE = "186752P1";
+export const ENGINE6_SYDNEY_186752P1_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-the-rocks-watsons-bay-bondi-full-day-private-186752P1";
+export const ENGINE6_SYDNEY_5951P10_PRODUCT_CODE = "5951P10";
+export const ENGINE6_SYDNEY_5951P10_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-harbour-discovery-cruise-morning-tea-5951P10";
+export const ENGINE6_SYDNEY_6912BEER_PRODUCT_CODE = "6912BEER";
+export const ENGINE6_SYDNEY_6912BEER_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-beer-and-brewery-tour-6912BEER";
+export const ENGINE6_SYDNEY_3378GOLD_PRODUCT_CODE = "3378GOLD";
+export const ENGINE6_SYDNEY_3378GOLD_ROUTE =
+  "/destinations/australia/sydney/tours/sydney-gourmet-gold-penfolds-dinner-cruise-3378GOLD";
+
+export const ENGINE6_SYDNEY_TOUR_PATH_PREFIX =
+  "/destinations/australia/sydney/tours/";
+
+export const isEngine6SydneyTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_SYDNEY_TOUR_PATH_PREFIX);
+
 export const ENGINE6_OSAKA_92136P44_PRODUCT_CODE = "92136P44";
 export const ENGINE6_OSAKA_92136P44_ROUTE =
   "/destinations/japan/osaka/tours/osaka-6hr-private-walking-tour-with-government-licensed-92136P44";
@@ -5322,6 +5390,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_CUSCO_19345P27_ROUTE,
     ENGINE6_CUSCO_19345P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_184156P4_ROUTE,
+    ENGINE6_SYDNEY_184156P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_6793P35_ROUTE,
+    ENGINE6_SYDNEY_6793P35_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_3378WHALE_ROUTE,
+    ENGINE6_SYDNEY_3378WHALE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_5657BRIDGECLIMB_ROUTE,
+    ENGINE6_SYDNEY_5657BRIDGECLIMB_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_24058P1_ROUTE,
+    ENGINE6_SYDNEY_24058P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_22584P1_ROUTE,
+    ENGINE6_SYDNEY_22584P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_156795P5_ROUTE,
+    ENGINE6_SYDNEY_156795P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_14172P3_ROUTE,
+    ENGINE6_SYDNEY_14172P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_392485P1_ROUTE,
+    ENGINE6_SYDNEY_392485P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_3293SYDHARBOUR_ROUTE,
+    ENGINE6_SYDNEY_3293SYDHARBOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_6770P22_ROUTE,
+    ENGINE6_SYDNEY_6770P22_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_5507708P5_ROUTE,
+    ENGINE6_SYDNEY_5507708P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_146921P1_ROUTE,
+    ENGINE6_SYDNEY_146921P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_455986P1_ROUTE,
+    ENGINE6_SYDNEY_455986P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_6088P3_ROUTE,
+    ENGINE6_SYDNEY_6088P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_5509792P1_ROUTE,
+    ENGINE6_SYDNEY_5509792P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_186752P1_ROUTE,
+    ENGINE6_SYDNEY_186752P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_5951P10_ROUTE,
+    ENGINE6_SYDNEY_5951P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_6912BEER_ROUTE,
+    ENGINE6_SYDNEY_6912BEER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SYDNEY_3378GOLD_ROUTE,
+    ENGINE6_SYDNEY_3378GOLD_PRODUCT_CODE,
   ],
   [
     ENGINE6_OSAKA_92136P44_ROUTE,

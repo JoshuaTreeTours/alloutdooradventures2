@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "186752P1",
+    "productUrl": "https://www.viator.com/tours/Sydney/Sydney-and-Bondi-Beach-8-Hour-Tour-with-Personalised-Sydney-Tours/d357-186752P1",
+    "title": "Sydney, The Rocks, Watsons Bay, Bondi FULL DAY PRIVATE",
+    "description": {
+      "text": "In Sydney, this full-day private outing lists The Rocks, Watsons Bay, and Bondi Beach with hotel pickup on the public page. The published format is an eight-hour private circuit rather than a four-hour Opera House and Bondi half-day. The format suits visitors who want a longer private harbour-and-beach window without a shared coach day to the Blue Mountains. Meeting points are confirmed at booking in Sydney, and the itinerary stays on The Rocks, Watsons Bay, and Bondi Beach that define this outing rather than a Mascot helicopter hop."
+    },
+    "location": {
+      "city": "Sydney",
+      "state": "Australia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $357.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 30
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d8/00/98.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day circuit",
+      "The Rocks",
+      "Watsons Bay",
+      "Bondi Beach",
+      "Hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup in Sydney as confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the Sydney meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Sydney, this full-day private outing lists The Rocks, Watsons Bay, and Bondi Beach with hotel pickup on the public page.",
+    "itineraryItems": [
+      {
+        "title": "The Rocks",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Watsons Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bondi Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private vehicle",
+      "Hotel pickup",
+      "Full-day circuit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sydney, The Rocks, Watsons Bay, Bondi FULL DAY PRIVATE?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from for Sydney?",
+        "answer": "Hotel pickup in Sydney as confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 357
+      },
+      "currency": "USD"
+    }
+  }
+}
