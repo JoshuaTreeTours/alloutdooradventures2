@@ -1,5 +1,67 @@
 import type { Engine6Tour } from "./types";
 
+const NATURALIZED_MERCHANT_HEAD_CITIES = new Set([
+  "Santa Barbara",
+  "Las Vegas",
+  "Avalon",
+  "San Francisco",
+  "Los Angeles",
+  "Jackson",
+  "Anchorage",
+  "New York",
+  "New Orleans",
+  "San Diego",
+  "Palm Springs",
+  "Joshua Tree",
+  "Miami",
+  "Lucerne",
+  "Zurich",
+  "Interlaken",
+  "Portland",
+  "Seattle",
+  "Monterey",
+  "Napa",
+  "Lake Tahoe",
+  "Yosemite",
+  "Grand Canyon National Park",
+  "Zion National Park",
+  "Yellowstone National Park",
+  "Glacier National Park",
+  "Great Smoky Mountains National Park",
+  "Sedona",
+  "Washington",
+  "Chicago",
+  "Boston",
+  "Philadelphia",
+  "Rocky Mountain National Park",
+  "Moab",
+  "Key West",
+]);
+
+const NATURALIZED_MERCHANT_HEAD_OVERLAP_PRODUCT_CODES = new Set([
+  "383300P6",
+  "89173P8",
+  "76145P2",
+  "118958P8",
+  "6331BAHA",
+  "57834P1",
+  "89173P10",
+  "3170P78",
+  "331790P2",
+  "42054P2",
+  "3170P51",
+  "42054P4",
+  "3170P40",
+  "123164P1",
+  "120040P3",
+  "317042",
+  "3170P41",
+  "42054P5",
+  "3170P32",
+  "42627P1",
+  "5580079P3",
+]);
+
 const NATURALIZED_MERCHANT_MIDDLE_CITIES = new Set([
   "Orlando",
   "Fort Lauderdale",
@@ -51,29 +113,16 @@ const NATURALIZED_MERCHANT_TAIL_CITIES = new Set([
   "Melbourne",
 ]);
 
-// Orlando begins before the user-approved line-500 scope. Keep physical lines
-// 488-499 byte-stable while naturalizing the rest of the Orlando block.
-const MERCHANT_MIDDLE_SCOPE_EXCLUSIONS = new Set([
-  "3170P78",
-  "331790P2",
-  "42054P2",
-  "3170P51",
-  "42054P4",
-  "3170P40",
-  "123164P1",
-  "120040P3",
-  "317042",
-  "3170P41",
-  "42054P5",
-  "3170P32",
-]);
+export const isEngine6MerchantHeadNaturalizationTarget = (tour: Engine6Tour) =>
+  NATURALIZED_MERCHANT_HEAD_CITIES.has(tour.city) ||
+  NATURALIZED_MERCHANT_HEAD_OVERLAP_PRODUCT_CODES.has(tour.productCode);
 
 export const isEngine6MerchantMiddleNaturalizationTarget = (
   tour: Engine6Tour
 ) =>
+  isEngine6MerchantHeadNaturalizationTarget(tour) ||
   tour.productCode === "181888P1" ||
-  (NATURALIZED_MERCHANT_MIDDLE_CITIES.has(tour.city) &&
-    !MERCHANT_MIDDLE_SCOPE_EXCLUSIONS.has(tour.productCode));
+  NATURALIZED_MERCHANT_MIDDLE_CITIES.has(tour.city);
 
 export const isEngine6MerchantTailNaturalizationTarget = (tour: Engine6Tour) =>
   isEngine6MerchantMiddleNaturalizationTarget(tour) ||
@@ -126,6 +175,7 @@ const naturalizeSentence = (tour: Engine6Tour, sentence: string) => {
   const normalized = sentence.trim();
   const useExpandedNaturalization =
     isEngine6MerchantMiddleNaturalizationTarget(tour);
+  const useHeadNaturalization = isEngine6MerchantHeadNaturalizationTarget(tour);
   if (!normalized) {
     return "";
   }
@@ -155,6 +205,32 @@ const naturalizeSentence = (tour: Engine6Tour, sentence: string) => {
   }
 
   if (useExpandedNaturalization) {
+    match = normalized.match(
+      /^See (.+?)'s landmark neighborhoods(?:, including (.+?))?,? on a guided city circuit with strategic photo stops\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      const landmark = match[2] ?? match[1];
+      if (/\b(?:high ropes?|aerial|treetop|zipline)\b/i.test(tour.title)) {
+        return `Head to a forested high-ropes course near ${match[1]} for a guided outdoor challenge.`;
+      }
+      if (/\b(?:fish|fishing|angling)\b/i.test(tour.title)) {
+        return `Set out from ${landmark} for a guided fishing trip in the waters around ${match[1]}.`;
+      }
+      if (
+        /\b(?:boat|boating|cruise|sail|sailing|kayak|rafting|float|jet ski|watersports?)\b/i.test(
+          tour.title
+        )
+      ) {
+        return `Explore the waters around ${match[1]} on a guided route with views of ${landmark}.`;
+      }
+      if (/^Jackson\b/i.test(tour.city)) {
+        return `Explore Jackson Hole and ${landmark} on a guided route with well-placed stops for mountain views and photos.`;
+      }
+      return match[2]
+        ? `Explore ${match[1]} and ${landmark} on a guided route with well-placed stops for views and photos.`
+        : `Explore ${match[1]} on a guided route with well-placed stops for views and photos.`;
+    }
+
     match = normalized.match(
       /^Transportation, equipment, and local commentary are handled so you can focus on (.+)\.$/i
     );
@@ -202,6 +278,133 @@ const naturalizeSentence = (tour: Engine6Tour, sentence: string) => {
       )
     ) {
       return "Your booking covers the guided activity and the appropriate safety equipment for the selected option.";
+    }
+
+    if (
+      useHeadNaturalization &&
+      /^Professional guide or outfitter, Tour activity as described on Viator, and Safety equipment where applicable are included\.$/i.test(
+        normalized
+      )
+    ) {
+      return "The experience includes professional guiding, with safety equipment supplied when the activity requires it.";
+    }
+
+    if (
+      useHeadNaturalization &&
+      /^Professional guide or outfitter, Tour activity as described on Viator, and Timed-entry reservation coordination when required are included\.$/i.test(
+        normalized
+      )
+    ) {
+      return "The experience includes professional guiding and help coordinating any required timed-entry reservation.";
+    }
+
+    if (
+      useHeadNaturalization &&
+      /^The aerial course combines treetop obstacles, challenge levels, and forest setting details that define the .+ outing\.$/i.test(
+        normalized
+      ) &&
+      !/\b(?:aerial|ropes?|treetop|zipline)\b/i.test(tour.title)
+    ) {
+      return "";
+    }
+
+    match = normalized.match(
+      /^(?:(.+?) )?remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      return match[1] ? `The route also includes ${match[1]}.` : "";
+    }
+
+    match = normalized.match(/^Visit (.+?) during the (.+?) stop\.$/i);
+    if (useHeadNaturalization && match) {
+      return `The itinerary allows about ${match[2]} at ${match[1]}.`;
+    }
+
+    match = normalized.match(
+      /^Climb into rugged backcountry near Moab, reaching (.+?), on an off-road route shaped by desert terrain and scenic overlooks\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      return `Climb into the rugged backcountry near Moab on an off-road route linking ${match[1]} with desert terrain and scenic overlooks.`;
+    }
+
+    match = normalized.match(
+      /^Coastal waters around (.+?) provide the main setting for seasonal wildlife viewing and open-water scenery\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      if (/\b(?:raft|rafting|float|river)\b/i.test(tour.title)) {
+        return /^Jackson\b/i.test(tour.city)
+          ? "The Snake River and surrounding Teton landscape provide the setting for this scenic float or rafting experience near Jackson."
+          : `The waterways around ${match[1]} provide the setting for this scenic float or rafting experience.`;
+      }
+      if (/\b(?:bike|bicycle|cycling|e-bike)\b/i.test(tour.title)) {
+        return `Trails, greenbelts, and waterfront views around ${tour.city} provide the setting for this guided cycling route.`;
+      }
+      return `The landscape around ${match[1]} provides the setting for wildlife viewing and scenic exploration.`;
+    }
+
+    if (
+      useHeadNaturalization &&
+      /^The outing keeps focus on place, route structure, and destination context(?: rather than .+)?\.$/i.test(
+        normalized
+      )
+    ) {
+      return "The experience stays centered on the scenery, route, and character of the destination.";
+    }
+
+    match = normalized.match(
+      /^Park landscapes, scenic stops, and mountain or valley viewpoints structure the wildlife outside (.+?)\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      return `Park roads, scenic stops, and mountain and valley viewpoints shape this wildlife-focused day trip from ${match[1]}.`;
+    }
+
+    match = normalized.match(
+      /^Together, these elements describe the destination experience, activity format, and route emphasis for guests planning time in (.+?)\.$/i
+    );
+    if (useHeadNaturalization && match) {
+      return `Together, the route, activity format, and setting give visitors a practical sense of what to expect in ${match[1]}.`;
+    }
+
+    if (
+      useHeadNaturalization &&
+      (/^Ideal for (?:visitors|guests) basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times (?:independently|on (?:their|your) own)\.$/i.test(
+        normalized
+      ) ||
+        /^If you're staying in Key West, this is a straightforward way to enjoy a guided Florida Keys experience without having to coordinate boats, gear, or launch times yourself\.$/i.test(
+          normalized
+        )) &&
+      /\b(?:food|walking|cultural)\b/i.test(tour.title)
+    ) {
+      return "If you're staying in Key West, this is an easy way to explore local food and culture on foot with the route and tastings organized for you.";
+    }
+
+    if (
+      useHeadNaturalization &&
+      (/^Ideal for (?:visitors|guests) basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times (?:independently|on (?:their|your) own)\.$/i.test(
+        normalized
+      ) ||
+        /^If you're staying in Orlando, this is a straightforward way to enjoy a guided Florida experience beyond the theme parks without having to coordinate boats, gear, or launch times yourself\.$/i.test(
+          normalized
+        ))
+    ) {
+      if (/\b(?:Kennedy|Space Center|Space Coast)\b/i.test(tour.title)) {
+        return "If you're staying in Orlando, this is a convenient way to visit Kennedy Space Center and Florida's Space Coast without arranging the journey yourself.";
+      }
+      if (/\bhelicopter\b/i.test(tour.title)) {
+        return "If you're staying in Orlando, this flight offers an aerial perspective on the theme parks, downtown skyline, and Central Florida landmarks.";
+      }
+      if (/\b(?:murder|dinner show|speakeasy)\b/i.test(tour.title)) {
+        return "For visitors staying in Orlando, this offers an evening of dinner and interactive entertainment away from the theme parks.";
+      }
+      if (/\bdune buggy\b/i.test(tour.title)) {
+        return "For visitors staying in Orlando, this adds an off-road driving experience to a Central Florida itinerary.";
+      }
+      if (/\bSt\. Augustine\b/i.test(tour.title)) {
+        return "If you're staying in Orlando, this is a convenient way to explore historic St. Augustine without arranging a separate drive.";
+      }
+      if (/\bClearwater Beach\b/i.test(tour.title)) {
+        return "If you're staying in Orlando, this is a convenient way to spend a day at Clearwater Beach without arranging the round-trip transportation yourself.";
+      }
     }
 
     if (/^Naples\b/i.test(tour.city)) {
@@ -454,7 +657,9 @@ export const naturalizeEngine6CatalogDescription = (
     isEngine6MerchantMiddleNaturalizationTarget(tour);
   let normalizedValue = value
     .replace(/\b(\d+) your\b/gi, "$1 guests")
-    .replace(/\btravelers\b/gi, "guests");
+    .replace(/\btravelers\b/gi, "guests")
+    .replace(/,\s*and\s+YEARS IN BUSINESS\b/gi, "")
+    .replace(/\bYEARS IN BUSINESS\b/gi, "");
   if (useExpandedNaturalization) {
     normalizedValue = normalizedValue
       .replace(/([.!?])(?=[A-Z])/g, "$1 ")

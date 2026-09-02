@@ -181,6 +181,21 @@ const polishEngine6FinalDescriptionText = (value: string) =>
     .replace(/\.\s*\./g, ".")
     .trim();
 
+const finishEngine6GovernedDescription = (tour: Engine6Tour, value: string) => {
+  const polished = polishEngine6FinalDescriptionText(
+    ensureEngine6EditorialLength(tour, value)
+  );
+  if (polished.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
+    return polished;
+  }
+
+  return trimToEditorialCharBudget(
+    `${polished.replace(/[.!?]$/, "")}. The route is paced so you can enjoy the setting and the named sights without feeling rushed.`,
+    ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
+    true
+  );
+};
+
 const hasUsableEngine6OverviewFirstDescription = (tour: Engine6Tour) => {
   if (!ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES.has(tour.city)) {
     return false;
@@ -210,30 +225,24 @@ export const resolveEngine6GovernedProductDescription = (
     tour.productCode
   );
   if (targetedNarrative) {
-    return polishEngine6FinalDescriptionText(
-      ensureEngine6EditorialLength(
-        tour,
-        naturalizeEngine6CatalogDescription(tour, targetedNarrative)
-      )
+    return finishEngine6GovernedDescription(
+      tour,
+      naturalizeEngine6CatalogDescription(tour, targetedNarrative)
     );
   }
 
   if (hasUsableEngine6OverviewFirstDescription(tour)) {
-    return polishEngine6FinalDescriptionText(
-      ensureEngine6EditorialLength(
-        tour,
-        naturalizeEngine6CatalogDescription(tour, tour.description)
-      )
+    return finishEngine6GovernedDescription(
+      tour,
+      naturalizeEngine6CatalogDescription(tour, tour.description)
     );
   }
 
-  return polishEngine6FinalDescriptionText(
-    ensureEngine6EditorialLength(
+  return finishEngine6GovernedDescription(
+    tour,
+    naturalizeEngine6CatalogDescription(
       tour,
-      naturalizeEngine6CatalogDescription(
-        tour,
-        buildEngine6PremiumEditorialDescriptionFromTour(tour)
-      )
+      buildEngine6PremiumEditorialDescriptionFromTour(tour)
     )
   );
 };
