@@ -9,16 +9,31 @@ import {
   isEngine6ForbiddenEditorialPhrase,
 } from "./buildEngine6PremiumEditorialDescription";
 import type { Engine6Tour } from "./types";
+import {
+  isEngine6MerchantTailNaturalizationTarget,
+  naturalizeEngine6CatalogDescription,
+} from "./naturalizeEngine6CatalogDescription";
 
 const trimToEditorialCharBudget = (
   value: string,
-  maxChars = ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS
+  maxChars = ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
+  preferCompleteSentence = false
 ) => {
   if (value.length <= maxChars) {
     return value;
   }
 
   const clipped = value.slice(0, maxChars).trim();
+  if (preferCompleteSentence) {
+    const sentenceBoundary = Math.max(
+      clipped.lastIndexOf("."),
+      clipped.lastIndexOf("!"),
+      clipped.lastIndexOf("?")
+    );
+    if (sentenceBoundary + 1 >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
+      return clipped.slice(0, sentenceBoundary + 1).trim();
+    }
+  }
   const lastWordBoundary = clipped.lastIndexOf(" ");
   const safe =
     lastWordBoundary > maxChars * 0.7
@@ -41,7 +56,11 @@ const ensureEngine6EditorialLength = (
   }
 
   if (normalized.length > ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS) {
-    return trimToEditorialCharBudget(normalized);
+    return trimToEditorialCharBudget(
+      normalized,
+      ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
+      isEngine6MerchantTailNaturalizationTarget(tour)
+    );
   }
 
   const paddingSentences = [
@@ -88,11 +107,15 @@ const ensureEngine6EditorialLength = (
     if (composed.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
       break;
     }
-    composed = `${composed.replace(/[.!?]$/, "")}. The format suits visitors who want destination context without sorting tickets or routes on their own.`;
+    composed = `${composed.replace(/[.!?]$/, "")}. A guide handles the practical details, leaving you free to enjoy the destination.`;
     break;
   }
 
-  return trimToEditorialCharBudget(composed);
+  return trimToEditorialCharBudget(
+    composed,
+    ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
+    isEngine6MerchantTailNaturalizationTarget(tour)
+  );
 };
 
 const ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES = new Set([
@@ -126,13 +149,25 @@ const polishEngine6FinalDescriptionText = (value: string) =>
     .replace(/\bwith\s+,\s*/gi, "with ")
     .replace(/,\s+on a guided city circuit/g, " on a guided city circuit")
     .replace(/\b(?:and|or)\s+and\b/gi, "and")
-    .replace(/\b(?:The route connects|Landmarks along the route include|The route tracks)\s*(?:\.|along the shoreline\.)/gi, "")
+    .replace(
+      /\b(?:The route connects|Landmarks along the route include|The route tracks)\s*(?:\.|along the shoreline\.)/gi,
+      ""
+    )
     .replace(/\bThe route connects\s+(?=The experience)/gi, "")
-    .replace(/\bThe route connects\s+([^.]+),\s+and\s+the route\b/gi, "The route connects $1 and follows the route")
+    .replace(
+      /\bThe route connects\s+([^.]+),\s+and\s+the route\b/gi,
+      "The route connects $1 and follows the route"
+    )
     .replace(/\bThe route connects\s+the route\b/gi, "Follow the route")
     .replace(/\.\s+the route\b/g, ". Follow the route")
-    .replace(/\bPlan on ([^.]+) for the outing\. Plan on \1 for the outing\./gi, "Plan on $1 for the outing.")
-    .replace(/\b(Plan on ([^.]+) for the outing\..*) Plan on \2 for the outing\./gi, "$1")
+    .replace(
+      /\bPlan on ([^.]+) for the outing\. Plan on \1 for the outing\./gi,
+      "Plan on $1 for the outing."
+    )
+    .replace(
+      /\b(Plan on ([^.]+) for the outing\..*) Plan on \2 for the outing\./gi,
+      "$1"
+    )
     .replace(/\s+([,.;!?])/g, "$1")
     .replace(/,\s*,+/g, ",")
     .replace(/\s+/g, " ")
@@ -170,20 +205,29 @@ export const resolveEngine6GovernedProductDescription = (
   );
   if (targetedNarrative) {
     return polishEngine6FinalDescriptionText(
-      ensureEngine6EditorialLength(tour, targetedNarrative)
+      ensureEngine6EditorialLength(
+        tour,
+        naturalizeEngine6CatalogDescription(tour, targetedNarrative)
+      )
     );
   }
 
   if (hasUsableEngine6OverviewFirstDescription(tour)) {
     return polishEngine6FinalDescriptionText(
-      ensureEngine6EditorialLength(tour, tour.description)
+      ensureEngine6EditorialLength(
+        tour,
+        naturalizeEngine6CatalogDescription(tour, tour.description)
+      )
     );
   }
 
   return polishEngine6FinalDescriptionText(
     ensureEngine6EditorialLength(
       tour,
-      buildEngine6PremiumEditorialDescriptionFromTour(tour)
+      naturalizeEngine6CatalogDescription(
+        tour,
+        buildEngine6PremiumEditorialDescriptionFromTour(tour)
+      )
     )
   );
 };
