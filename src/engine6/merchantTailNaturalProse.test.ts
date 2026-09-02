@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { engine6ResolvedTours } from "./registry";
 
-const FIRST_AUDITED_LINE = 800;
+const FIRST_AUDITED_LINE = 500;
 
 const parseCsvLine = (line: string) => {
   const values: string[] = [];
@@ -46,7 +46,7 @@ const tourByProductCode = new Map(
   engine6ResolvedTours.map(tour => [tour.productCode, tour])
 );
 
-describe("merchant feed line 800+ natural-prose governance", () => {
+describe("merchant feed line 500+ natural-prose governance", () => {
   it("keeps every tail row aligned with the governed Engine6 description", () => {
     for (const row of tailRows) {
       const tour = tourByProductCode.get(row[0]);
@@ -69,8 +69,17 @@ describe("merchant feed line 800+ natural-prose governance", () => {
       /\bmaximum of \d+ your\b/i,
       /(?:^|\s)(?:the|a|an|with|on|to|of|and|or|rather than)\.$/i,
     ];
+    const line500To800Forbidden = [
+      /\bIdeal for guests basing\b/i,
+      /\bIdeal for [A-Z][^.]+ guests who\b/,
+      /\bChoose this option if you're (?:basing|touring)\b/i,
+      /\bTour activity as described on Viator\b/i,
+      /\bSee Naples's landmark neighborhoods\b/i,
+      /\b(?:c|wildl|fro|picku|max|no)\. Ideal\b/i,
+      /\.[A-Z]/,
+    ];
 
-    for (const row of tailRows) {
+    for (const [index, row] of tailRows.entries()) {
       expect(row, row[0]).toHaveLength(12);
       expect(
         row[2].length,
@@ -80,7 +89,12 @@ describe("merchant feed line 800+ natural-prose governance", () => {
         800
       );
       expect(row[2], `${row[0]} ending`).toMatch(/[.!?]$/);
-      for (const pattern of forbidden) {
+      const physicalLine = FIRST_AUDITED_LINE + index;
+      const applicablePatterns =
+        physicalLine <= 800
+          ? [...forbidden, ...line500To800Forbidden]
+          : forbidden;
+      for (const pattern of applicablePatterns) {
         expect(row[2], `${row[0]} matched ${pattern}`).not.toMatch(pattern);
       }
     }

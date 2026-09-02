@@ -10,6 +10,7 @@ import {
 } from "./buildEngine6PremiumEditorialDescription";
 import type { Engine6Tour } from "./types";
 import {
+  isEngine6MerchantMiddleNaturalizationTarget,
   isEngine6MerchantTailNaturalizationTarget,
   naturalizeEngine6CatalogDescription,
 } from "./naturalizeEngine6CatalogDescription";
@@ -47,6 +48,8 @@ const ensureEngine6EditorialLength = (
   tour: Engine6Tour,
   description: string
 ) => {
+  const usesNaturalizedMerchantPadding =
+    isEngine6MerchantMiddleNaturalizationTarget(tour);
   const normalized = description.trim().replace(/\s+/g, " ");
   if (
     normalized.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS &&
@@ -77,10 +80,13 @@ const ensureEngine6EditorialLength = (
           )
           .join(", ")}.`
       : "",
-    tour.highlights.length > 0
+    usesNaturalizedMerchantPadding
+      ? `Taken together, the route and inclusions make this a convenient way to experience ${tour.city} without arranging each part separately.`
+      : "",
+    !usesNaturalizedMerchantPadding && tour.highlights.length > 0
       ? `${tour.highlights.slice(0, 2).join(" and ")} are included in the experience.`
       : "",
-    tour.included.length > 0
+    !usesNaturalizedMerchantPadding && tour.included.length > 0
       ? `${tour.included.slice(0, 2).join(" and ")} are included.`
       : "",
     tour.durationText?.trim()

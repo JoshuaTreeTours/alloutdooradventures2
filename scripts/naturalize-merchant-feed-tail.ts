@@ -4,7 +4,7 @@ import { resolveEngine6GovernedProductDescription } from "../src/engine6/governe
 import { engine6ResolvedTours } from "../src/engine6/registry";
 
 const MERCHANT_FEED_PATH = "data/merchantFeed.csv";
-const FIRST_AUDITED_LINE = 800;
+const FIRST_AUDITED_LINE = 500;
 const EXPECTED_COLUMN_COUNT = 12;
 
 const parseCsvLine = (line: string) => {
