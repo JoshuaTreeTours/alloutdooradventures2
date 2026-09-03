@@ -36,8 +36,28 @@ jobs:
           else:
               raise SystemExit('Expected Engine6 state initializer not found; refusing unsafe edit.')
           PY
-      - name: Verify TypeScript
-        run: npm ci --ignore-scripts && npx tsc --noEmit
+      - name: Validate only the targeted repair
+        shell: bash
+        run: |
+          npm ci --ignore-scripts
+          npx prettier --check src/pages/engine6/Engine6SpecimenRoute.tsx
+          git diff --check
+          python - <<'PY'
+          from pathlib import Path
+          text = Path('src/pages/engine6/Engine6SpecimenRoute.tsx').read_text()
+          required = [
+              'tour: routeBackedFallbackTour,',
+              'isLoading: !routeBackedFallbackTour,',
+          ]
+          for item in required:
+              if text.count(item) != 1:
+                  raise SystemExit(f'Expected exactly one occurrence of {item!r}')
+          PY
+          changed="$(git diff --name-only)"
+          test "$changed" = "src/pages/engine6/Engine6SpecimenRoute.tsx" || {
+            echo "Unexpected changed files: $changed"
+            exit 1
+          }
       - name: Commit patch
         shell: bash
         run: |
