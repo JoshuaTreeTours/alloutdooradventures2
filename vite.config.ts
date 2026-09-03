@@ -4,8 +4,12 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-export default defineConfig({
-  plugins: [react(), tailwindcss(), vitePluginManusRuntime()],
+export default defineConfig(({ mode }) => ({
+  plugins: [
+    react(),
+    tailwindcss(),
+    ...(mode === "development" ? [vitePluginManusRuntime()] : []),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
@@ -27,4 +31,4 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
-});
+}));
