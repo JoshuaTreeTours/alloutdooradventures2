@@ -722,13 +722,13 @@ export default function Engine6SpecimenRoute() {
     [requestedPath]
   );
   const [state, setState] = useState<Engine6SpecimenViewState>(() => ({
-    tour: null,
+    tour: routeBackedFallbackTour,
     error: null,
     debug: buildInitialEngine6SpecimenDebug(
       requestedProductCode ?? "",
       apiUrl ?? ""
     ),
-    isLoading: true,
+    isLoading: !routeBackedFallbackTour,
   }));
   const showDiagnostics = useMemo(() => {
     if (typeof window === "undefined") {
