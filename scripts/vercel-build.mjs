@@ -370,6 +370,16 @@ if (exists("scripts/ensure-prerendered-route-files.mjs")) {
   run("node scripts/ensure-prerendered-route-files.mjs");
 }
 
+// Route files must be created from the empty-root template first. Only the
+// actual homepage receives rendered body content, so no other route flashes
+// homepage markup while its client bundle loads.
+if (exists("scripts/prerender-homepage.tsx")) {
+  run("node --import tsx scripts/prerender-homepage.tsx", {
+    NODE_ENV: "production",
+    TSX_TSCONFIG_PATH: "tsconfig.prerender.json",
+  });
+}
+
 if (runBuildArtifactVerification) {
   if (exists("scripts/verify-engine6-route-seo.mjs")) {
     run("node scripts/verify-engine6-route-seo.mjs");
