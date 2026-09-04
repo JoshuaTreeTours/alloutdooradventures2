@@ -74,7 +74,7 @@ for (const [pathname, params] of routes) {
         <Router ssrPath={pathname}>
           <StructuredDataProvider>
             <Header />
-            <CityTourDetailRoute params={{ params }} />
+            <CityTourDetailRoute params={params} />
             <Footer />
           </StructuredDataProvider>
         </Router>
