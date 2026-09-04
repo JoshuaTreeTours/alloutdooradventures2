@@ -200,3 +200,9 @@ for (const pathname of paths) {
 }
 
 console.log(`[ensure-prerendered-route-files] created ${created} missing HTML files from sitemap URLs.`);
+
+// Activity discovery pages use the same client app shell as tour and guide
+// pages. Once their route files exist, render the existing activity page tree
+// into the root so every canonical activity URL ships meaningful first-response
+// HTML instead of an empty <div id="root"></div>.
+await tsImport('./prerender-activity-routes.tsx', import.meta.url);
