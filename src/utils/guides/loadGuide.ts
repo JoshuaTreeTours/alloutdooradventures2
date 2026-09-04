@@ -45,7 +45,7 @@ const resolveWikiUrl = (thing: GuidePageData["thingsToDo"][number]) => {
     : undefined;
 };
 
-const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
+export const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
   const heroSelection = resolveGuideHeroImage(guide);
 
   const shouldSkipRewrite =
