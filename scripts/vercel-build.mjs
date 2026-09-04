@@ -370,6 +370,16 @@ if (exists("scripts/ensure-prerendered-route-files.mjs")) {
   run("node scripts/ensure-prerendered-route-files.mjs");
 }
 
+// Internal tour route files are otherwise SEO-only shells with an empty React
+// root. Render the existing route tree into that root so first response content
+// is immediately paintable and crawlable; client hydration preserves the UI.
+if (exists("scripts/prerender-tour-routes.tsx")) {
+  run("node --import tsx scripts/prerender-tour-routes.tsx", {
+    NODE_ENV: "production",
+    TSX_TSCONFIG_PATH: "tsconfig.prerender.json",
+  });
+}
+
 // Route files must be created from the empty-root template first. Only the
 // actual homepage receives rendered body content, so no other route flashes
 // homepage markup while its client bundle loads.
