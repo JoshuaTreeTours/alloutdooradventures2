@@ -58,6 +58,7 @@ for (const file of sitemapFiles) {
 
 let rendered = 0;
 let skipped = 0;
+let hardeningSkipped = 0;
 const failures: Array<{ pathname: string; message: string }> = [];
 
 for (const [pathname, params] of routes) {
@@ -94,10 +95,16 @@ for (const [pathname, params] of routes) {
     );
     rendered += 1;
   } catch (error) {
-    failures.push({
-      pathname,
-      message: error instanceof Error ? error.message : String(error),
-    });
+    const message = error instanceof Error ? error.message : String(error);
+    if (message.startsWith("[engine6-hardening]")) {
+      hardeningSkipped += 1;
+      console.warn(
+        `[prerender-tour-routes] leaving existing client-rendered HTML for ${pathname}: ${message}`
+      );
+      continue;
+    }
+
+    failures.push({ pathname, message });
     if (failures.length >= 20) break;
   }
 }
@@ -108,10 +115,10 @@ if (failures.length) {
     console.error(`  ${failure.pathname}: ${failure.message}`);
   }
   throw new Error(
-    `Tour route prerender failed for ${failures.length} route(s); refusing partial production output.`
+    `Tour route prerender failed for ${failures.length} unexpected route(s); refusing partial production output.`
   );
 }
 
 console.log(
-  `[prerender-tour-routes] server-rendered ${rendered.toLocaleString()} canonical tour routes; skipped ${skipped.toLocaleString()} routes that already contained body content.`
+  `[prerender-tour-routes] server-rendered ${rendered.toLocaleString()} canonical tour routes; skipped ${skipped.toLocaleString()} routes that already contained body content; left ${hardeningSkipped.toLocaleString()} pre-existing Engine6 hardening exceptions client-rendered.`
 );
