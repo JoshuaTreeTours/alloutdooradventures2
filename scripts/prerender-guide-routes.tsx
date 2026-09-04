@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import React from "react";
@@ -59,15 +59,14 @@ const parseGuideRoute = (pathname: string): GuideRoute | null => {
   return null;
 };
 
+const getUsCityGuideSourcePath = (stateSlug: string, citySlug: string) =>
+  path.resolve("src/data/guides/us", stateSlug, `${citySlug}.json`);
+
 const loadUsCityGuideForPrerender = (
   stateSlug: string,
   citySlug: string
 ): GuidePageData => {
-  const sourcePath = path.resolve(
-    "src/data/guides/us",
-    stateSlug,
-    `${citySlug}.json`
-  );
+  const sourcePath = getUsCityGuideSourcePath(stateSlug, citySlug);
   const raw = JSON.parse(readFileSync(sourcePath, "utf8")) as GuidePageData;
   return withResolvedGuideData(raw);
 };
@@ -122,10 +121,26 @@ for (const file of sitemapFiles) {
 
 let rendered = 0;
 let skipped = 0;
+let missingSourceSkipped = 0;
+const missingSourceRoutes: string[] = [];
 const failures: Array<{ pathname: string; message: string }> = [];
 
 for (const [pathname, route] of routes) {
   const outputPath = outputPathFor(pathname);
+
+  // Some legacy sitemap guide URLs do not have a matching source JSON file.
+  // They were already client-rendered before guide SSR was added, so preserve
+  // that behavior instead of allowing a stale sitemap/data mismatch to abort
+  // the entire production deployment. Unexpected SSR failures remain fatal.
+  if (
+    route.kind === "us-city" &&
+    !existsSync(getUsCityGuideSourcePath(route.stateSlug, route.citySlug))
+  ) {
+    missingSourceSkipped += 1;
+    missingSourceRoutes.push(pathname);
+    continue;
+  }
+
   try {
     const template = await readFile(outputPath, "utf8");
     if (!template.includes(emptyRoot)) {
@@ -167,6 +182,15 @@ for (const [pathname, route] of routes) {
   }
 }
 
+if (missingSourceRoutes.length) {
+  console.warn(
+    `[prerender-guide-routes] left ${missingSourceRoutes.length} US guide route(s) client-rendered because no matching source JSON exists:`
+  );
+  for (const pathname of missingSourceRoutes) {
+    console.warn(`  ${pathname}`);
+  }
+}
+
 if (failures.length) {
   console.error("[prerender-guide-routes] failed routes:");
   for (const failure of failures) {
@@ -178,5 +202,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; skipped ${skipped.toLocaleString()} routes that already contained body content; left ${parisGuidePath} client-rendered because its dedicated route depends on Vite-only import.meta.glob.`
+  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; skipped ${skipped.toLocaleString()} routes that already contained body content; left ${missingSourceSkipped.toLocaleString()} US guide route(s) client-rendered because source JSON is absent; left ${parisGuidePath} client-rendered because its dedicated route depends on Vite-only import.meta.glob.`
 );
