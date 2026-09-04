@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import React from "react";
@@ -11,9 +12,11 @@ import GuidesIndex from "../src/pages/guides/GuidesIndex";
 import UsGuidesIndex from "../src/pages/guides/UsGuidesIndex";
 import InternationalGuidesIndex from "../src/pages/guides/InternationalGuidesIndex";
 import StateGuideRoute from "../src/pages/guides/StateGuideRoute";
-import CityGuideUsRoute from "../src/pages/guides/CityGuideUsRoute";
 import CountryGuideRoute from "../src/pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "../src/pages/guides/CityGuideWorldRoute";
+import GuidePageTemplate from "../src/templates/GuidePageTemplate";
+import type { GuidePageData } from "../src/utils/loadGuide";
+import { withResolvedGuideData } from "../src/utils/guides/loadGuide";
 
 const distDir = path.resolve("dist");
 const emptyRoot = '<div id="root"></div>';
@@ -56,6 +59,19 @@ const parseGuideRoute = (pathname: string): GuideRoute | null => {
   return null;
 };
 
+const loadUsCityGuideForPrerender = (
+  stateSlug: string,
+  citySlug: string
+): GuidePageData => {
+  const sourcePath = path.resolve(
+    "src/data/guides/us",
+    stateSlug,
+    `${citySlug}.json`
+  );
+  const raw = JSON.parse(readFileSync(sourcePath, "utf8")) as GuidePageData;
+  return withResolvedGuideData(raw);
+};
+
 const renderGuideRoute = (route: GuideRoute) => {
   switch (route.kind) {
     case "guides-index":
@@ -68,8 +84,8 @@ const renderGuideRoute = (route: GuideRoute) => {
       return <StateGuideRoute params={{ stateSlug: route.stateSlug }} />;
     case "us-city":
       return (
-        <CityGuideUsRoute
-          params={{ stateSlug: route.stateSlug, citySlug: route.citySlug }}
+        <GuidePageTemplate
+          guide={loadUsCityGuideForPrerender(route.stateSlug, route.citySlug)}
         />
       );
     case "world-country":
@@ -132,6 +148,9 @@ for (const [pathname, route] of routes) {
     const renderedApp = renderToString(app);
     if (!renderedApp.trim()) {
       throw new Error("SSR returned an empty React tree");
+    }
+    if (renderedApp.includes("Guide not found")) {
+      throw new Error("SSR rendered the Guide not found fallback");
     }
 
     await mkdir(path.dirname(outputPath), { recursive: true });
