@@ -1,3 +1,5 @@
+import { CURRENT_YEAR } from "./currentYear";
+
 export const SEO_BRAND_SUFFIX = " | Outdoor Adventures";
 
 type TitleParts = {
@@ -7,7 +9,7 @@ type TitleParts = {
 };
 
 export const buildGuideSeoTitle = ({ city }: TitleParts) =>
-  `Top 10 Things to Do in ${city} (2026 Guide)${SEO_BRAND_SUFFIX}`;
+  `Top 10 Things to Do in ${city} (${CURRENT_YEAR} Guide)${SEO_BRAND_SUFFIX}`;
 
 export const buildGuideH1 = ({ city }: TitleParts) =>
   `Top 10 Things to Do in ${city}`;
