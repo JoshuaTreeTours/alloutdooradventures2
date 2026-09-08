@@ -1,7 +1,11 @@
 import { getGuideStates } from "./guideRegistry";
 import { hasUsGuide } from "./guideIndex";
 import { resolveInternationalGuideBreadcrumb } from "./internationalGuideBreadcrumbs";
-import { isUsDestinationSlug } from "../tours/tourNavigation";
+import {
+  isKnownInternationalCountrySlug,
+  isUsDestinationSlug,
+} from "../tours/tourNavigation";
+import { slugify } from "../slugify";
 
 export type ResolvedUsGuideHref = {
   href: string;
@@ -54,6 +58,33 @@ export type ResolvedDestinationGuideHref = {
   isInternational: boolean;
 };
 
+export const resolveDestinationCountrySlug = ({
+  stateSlug,
+  countrySlug,
+  countryName,
+}: {
+  stateSlug: string;
+  countrySlug?: string | null;
+  countryName?: string | null;
+}): string => {
+  const normalizedStateSlug = stateSlug.trim().toLowerCase();
+  const explicitCountrySlug = (countrySlug ?? "").trim().toLowerCase();
+  const namedCountrySlug = countryName?.trim() ? slugify(countryName) : "";
+
+  // Some legacy international inventory stores a province/region in stateSlug
+  // and leaves countrySlug blank. Prefer the actual country name when it maps
+  // to a supported international country so Alberta does not become a
+  // fictitious /destinations/world/alberta country.
+  if (
+    namedCountrySlug &&
+    isKnownInternationalCountrySlug(namedCountrySlug)
+  ) {
+    return namedCountrySlug;
+  }
+
+  return explicitCountrySlug || normalizedStateSlug;
+};
+
 export const resolveDestinationGuideHref = ({
   stateSlug,
   citySlug,
@@ -69,9 +100,11 @@ export const resolveDestinationGuideHref = ({
 }): ResolvedDestinationGuideHref => {
   const normalizedStateSlug = stateSlug.trim().toLowerCase();
   const normalizedCitySlug = citySlug.trim().toLowerCase();
-  const normalizedCountrySlug = (countrySlug ?? normalizedStateSlug)
-    .trim()
-    .toLowerCase();
+  const normalizedCountrySlug = resolveDestinationCountrySlug({
+    stateSlug,
+    countrySlug,
+    countryName,
+  });
 
   if (isUsDestinationSlug(normalizedStateSlug)) {
     return {

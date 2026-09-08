@@ -59,7 +59,9 @@ export const getExpandedTourDescription = (tour: Tour) => {
   return [...baseParagraphs, ...expandedParagraphs]
     .map(stripReviewMentions)
     .map(paragraph => paragraph.trim())
-    .filter(Boolean);
+    // Suppress import noise such as the stray single-character "E" seen on
+    // the Calgary E-bike Tours page without discarding legitimate copy.
+    .filter(paragraph => paragraph.length > 1);
 };
 
 export const getTourHighlights = (tour: Tour) => {
