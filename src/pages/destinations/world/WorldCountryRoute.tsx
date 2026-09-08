@@ -14,6 +14,7 @@ import {
   worldToursByCountry,
 } from "../../../data/worldIndex";
 import { getTourDetailPath } from "../../../data/tours";
+import { getEngine2CanadaProvinceIndex } from "../../../engine2/data/loadEngine2";
 import { resolveHeroImage, resolveTourHeroImage } from "../../../utils/hero";
 import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
@@ -57,6 +58,11 @@ export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
   const categoryLabel = getActivityLabelFromSlug(filterActivitySlug);
   const guideCountry = getGuideCountryBySlug(params.countrySlug);
   const guideCities = guideCountry?.cities.slice(0, 8) ?? [];
+  const canadaProvince = !country
+    ? getEngine2CanadaProvinceIndex().find(
+        province => province.provinceSlug === params.countrySlug
+      )
+    : undefined;
 
   const heroImage = resolveHeroImage({
     pageType: "destination",
@@ -94,6 +100,14 @@ export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
   }, [country, filteredTours]);
 
   useStructuredData(structuredDataNodes);
+
+  if (!country && canadaProvince) {
+    return (
+      <RouteRedirect
+        to={`/destinations/world/canada/${canadaProvince.provinceSlug}`}
+      />
+    );
+  }
 
   if (!country && isUsCountryAlias(params.countrySlug)) {
     return <RouteRedirect to="/guides/us" />;
