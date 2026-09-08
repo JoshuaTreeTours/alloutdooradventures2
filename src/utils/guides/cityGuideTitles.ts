@@ -1,3 +1,4 @@
+import { CURRENT_YEAR } from "../../lib/seo/currentYear";
 import {
   buildGuideH1,
   buildGuideSeoTitle,
@@ -10,6 +11,6 @@ export const buildCityGuideMetaTitle = (city: string) => buildGuideSeoTitle({ ci
 export const buildCityGuideH1 = (city: string) => buildGuideH1({ city });
 
 export const buildCityGuideIntroParagraphs = (city: string) => ({
-  primary: `Planning a trip to ${city}? This 2026 guide covers the top 10 things to do, from iconic outdoor experiences to local attractions worth adding to your itinerary.`,
+  primary: `Planning a trip to ${city}? This ${CURRENT_YEAR} guide covers the top 10 things to do, from iconic outdoor experiences to local attractions worth adding to your itinerary.`,
   secondary: `Use this list to compare highlights, discover what makes ${city} unique, and find tours that match your travel style.`,
 });
