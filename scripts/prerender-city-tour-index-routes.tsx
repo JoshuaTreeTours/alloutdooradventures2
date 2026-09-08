@@ -166,3 +166,8 @@ if (noVisibleTourCardPaths.length) {
 console.log(
   `[prerender-city-tour-index-routes] server-rendered ${rendered.toLocaleString()} canonical city-tour listing routes; skipped ${skipped.toLocaleString()} routes that already contained body content; Flagstaff includes visible tour cards.`
 );
+
+// Canada has a special province/city route hierarchy that is not covered by
+// the generic /destinations/world/:country/cities/:city prerender. Render it
+// now so Canada hubs never inherit the homepage title/canonical in view-source.
+await import("./prerender-canada-destination-routes.tsx");
