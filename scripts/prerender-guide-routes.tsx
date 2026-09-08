@@ -14,13 +14,23 @@ import InternationalGuidesIndex from "../src/pages/guides/InternationalGuidesInd
 import StateGuideRoute from "../src/pages/guides/StateGuideRoute";
 import CountryGuideRoute from "../src/pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "../src/pages/guides/CityGuideWorldRoute";
+import ParisGuideRoute from "../src/pages/guides/ParisGuideRoute";
 import GuidePageTemplate from "../src/templates/GuidePageTemplate";
+import { getTopToursForPlace, type GuidePlace } from "../src/data/tourIndex";
+import { getToursByCityUnified } from "../src/data/tours";
 import type { GuidePageData } from "../src/utils/loadGuide";
 import { withResolvedGuideData } from "../src/utils/guides/loadGuide";
 
 const distDir = path.resolve("dist");
 const emptyRoot = '<div id="root"></div>';
 const parisGuidePath = "/guides/world/france/paris";
+
+const titleCase = (value: string) =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
 type GuideRoute =
   | { kind: "guides-index" }
@@ -29,12 +39,14 @@ type GuideRoute =
   | { kind: "us-state"; stateSlug: string }
   | { kind: "us-city"; stateSlug: string; citySlug: string }
   | { kind: "world-country"; countrySlug: string }
-  | { kind: "world-city"; countrySlug: string; citySlug: string };
+  | { kind: "world-city"; countrySlug: string; citySlug: string }
+  | { kind: "paris-city" };
 
 const parseGuideRoute = (pathname: string): GuideRoute | null => {
   if (pathname === "/guides") return { kind: "guides-index" };
   if (pathname === "/guides/us") return { kind: "us-index" };
   if (pathname === "/guides/world") return { kind: "world-index" };
+  if (pathname === parisGuidePath) return { kind: "paris-city" };
 
   let match = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (match) {
@@ -98,7 +110,41 @@ const renderGuideRoute = (route: GuideRoute) => {
           }}
         />
       );
+    case "paris-city":
+      return <ParisGuideRoute />;
   }
+};
+
+const getExpectedVisibleTourCount = (route: GuideRoute): number => {
+  if (route.kind === "us-city") {
+    return getToursByCityUnified(route.stateSlug, route.citySlug).length;
+  }
+
+  let place: GuidePlace | null = null;
+  if (route.kind === "us-state") {
+    place = {
+      type: "state",
+      slug: route.stateSlug,
+      name: titleCase(route.stateSlug),
+    };
+  } else if (route.kind === "world-country") {
+    place = {
+      type: "country",
+      slug: route.countrySlug,
+      name: titleCase(route.countrySlug),
+    };
+  } else if (route.kind === "world-city") {
+    place = {
+      type: "city",
+      slug: route.citySlug,
+      name: titleCase(route.citySlug),
+      parentSlug: route.countrySlug,
+      parentName: titleCase(route.countrySlug),
+      regionType: "country",
+    };
+  }
+
+  return place ? getTopToursForPlace(place, { min: 3, max: 8 }).length : 0;
 };
 
 const outputPathFor = (pathname: string) =>
@@ -113,7 +159,6 @@ for (const file of sitemapFiles) {
   const xml = await readFile(path.join(distDir, file), "utf8");
   for (const match of xml.matchAll(/<loc>(.*?)<\/loc>/g)) {
     const pathname = new URL(match[1]).pathname.replace(/\/$/, "") || "/";
-    if (pathname === parisGuidePath) continue;
     const route = parseGuideRoute(pathname);
     if (route) routes.set(pathname, route);
   }
@@ -122,16 +167,16 @@ for (const file of sitemapFiles) {
 let rendered = 0;
 let skipped = 0;
 let missingSourceSkipped = 0;
+let tourBearingGuideAudits = 0;
 const missingSourceRoutes: string[] = [];
 const failures: Array<{ pathname: string; message: string }> = [];
 
 for (const [pathname, route] of routes) {
   const outputPath = outputPathFor(pathname);
 
-  // Some legacy sitemap guide URLs do not have a matching source JSON file.
-  // They were already client-rendered before guide SSR was added, so preserve
-  // that behavior instead of allowing a stale sitemap/data mismatch to abort
-  // the entire production deployment. Unexpected SSR failures remain fatal.
+  // Legacy sitemap guide URLs without source JSON are retained as client-side
+  // redirect/fallback routes. Every source-backed canonical guide is audited
+  // below and must ship visible SSR content.
   if (
     route.kind === "us-city" &&
     !existsSync(getUsCityGuideSourcePath(route.stateSlug, route.citySlug))
@@ -164,16 +209,37 @@ for (const [pathname, route] of routes) {
     if (!renderedApp.trim()) {
       throw new Error("SSR returned an empty React tree");
     }
+    if (!renderedApp.includes("<main")) {
+      throw new Error("SSR output does not contain visible page content");
+    }
     if (renderedApp.includes("Guide not found")) {
       throw new Error("SSR rendered the Guide not found fallback");
     }
 
-    await mkdir(path.dirname(outputPath), { recursive: true });
-    await writeFile(
-      outputPath,
-      template.replace(emptyRoot, `<div id="root">${renderedApp}</div>`),
-      "utf8"
+    const expectedVisibleTours = getExpectedVisibleTourCount(route);
+    if (expectedVisibleTours > 0) {
+      tourBearingGuideAudits += 1;
+      if (!/(View Tour|View Rental|View tour)/.test(renderedApp)) {
+        throw new Error(
+          `guide has ${expectedVisibleTours} current/top tour(s) but SSR contains no visible tour cards`
+        );
+      }
+    }
+
+    if (route.kind === "paris-city" && !/View tour/i.test(renderedApp)) {
+      throw new Error("Paris guide SSR contains no visible tour cards");
+    }
+
+    const html = template.replace(
+      emptyRoot,
+      `<div id="root">${renderedApp}</div>`
     );
+    if (html.includes(emptyRoot)) {
+      throw new Error("empty React root remains after prerender");
+    }
+
+    await mkdir(path.dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, html, "utf8");
     rendered += 1;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -184,7 +250,7 @@ for (const [pathname, route] of routes) {
 
 if (missingSourceRoutes.length) {
   console.warn(
-    `[prerender-guide-routes] left ${missingSourceRoutes.length} US guide route(s) client-rendered because no matching source JSON exists:`
+    `[prerender-guide-routes] ${missingSourceRoutes.length} legacy US guide route(s) have no matching source JSON and remain client-side redirect/fallback routes:`
   );
   for (const pathname of missingSourceRoutes) {
     console.warn(`  ${pathname}`);
@@ -202,5 +268,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; skipped ${skipped.toLocaleString()} routes that already contained body content; left ${missingSourceSkipped.toLocaleString()} US guide route(s) client-rendered because source JSON is absent; left ${parisGuidePath} client-rendered because its dedicated route depends on Vite-only import.meta.glob.`
+  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; audited ${tourBearingGuideAudits.toLocaleString()} tour-bearing state/city/country guides for visible SSR tour cards; skipped ${skipped.toLocaleString()} routes that already contained body content; ${missingSourceSkipped.toLocaleString()} legacy US guide route(s) remain client-side redirect/fallback routes; Paris now prerenders with visible tour content.`
 );
