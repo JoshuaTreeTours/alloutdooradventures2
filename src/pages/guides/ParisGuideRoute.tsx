@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 
+import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
 import { getEngine2ParisTours } from "../../engine2/data/parisTours";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
@@ -56,17 +57,6 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
 
   return Array.isArray(guide.gettingAround) && Array.isArray(guide.dayTrips);
 };
-
-const parisGuideModule = import.meta.glob(
-  "../../content/guides/world/france/paris.generated.json",
-  {
-    eager: true,
-    import: "default",
-  }
-);
-
-const rawParisGuide =
-  parisGuideModule["../../content/guides/world/france/paris.generated.json"];
 
 const parisGuide = isGuideLike(rawParisGuide) ? rawParisGuide : null;
 
