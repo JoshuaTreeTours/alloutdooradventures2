@@ -16,6 +16,7 @@ import CountryGuideRoute from "../src/pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "../src/pages/guides/CityGuideWorldRoute";
 import ParisGuideRoute from "../src/pages/guides/ParisGuideRoute";
 import GuidePageTemplate from "../src/templates/GuidePageTemplate";
+import { getTopToursForPlace, type GuidePlace } from "../src/data/tourIndex";
 import { getToursByCityUnified } from "../src/data/tours";
 import type { GuidePageData } from "../src/utils/loadGuide";
 import { withResolvedGuideData } from "../src/utils/guides/loadGuide";
@@ -23,6 +24,13 @@ import { withResolvedGuideData } from "../src/utils/guides/loadGuide";
 const distDir = path.resolve("dist");
 const emptyRoot = '<div id="root"></div>';
 const parisGuidePath = "/guides/world/france/paris";
+
+const titleCase = (value: string) =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
 type GuideRoute =
   | { kind: "guides-index" }
@@ -107,6 +115,38 @@ const renderGuideRoute = (route: GuideRoute) => {
   }
 };
 
+const getExpectedVisibleTourCount = (route: GuideRoute): number => {
+  if (route.kind === "us-city") {
+    return getToursByCityUnified(route.stateSlug, route.citySlug).length;
+  }
+
+  let place: GuidePlace | null = null;
+  if (route.kind === "us-state") {
+    place = {
+      type: "state",
+      slug: route.stateSlug,
+      name: titleCase(route.stateSlug),
+    };
+  } else if (route.kind === "world-country") {
+    place = {
+      type: "country",
+      slug: route.countrySlug,
+      name: titleCase(route.countrySlug),
+    };
+  } else if (route.kind === "world-city") {
+    place = {
+      type: "city",
+      slug: route.citySlug,
+      name: titleCase(route.citySlug),
+      parentSlug: route.countrySlug,
+      parentName: titleCase(route.countrySlug),
+      regionType: "country",
+    };
+  }
+
+  return place ? getTopToursForPlace(place, { min: 3, max: 8 }).length : 0;
+};
+
 const outputPathFor = (pathname: string) =>
   path.join(distDir, pathname.replace(/^\/+|\/+$/g, ""), "index.html");
 
@@ -127,7 +167,7 @@ for (const file of sitemapFiles) {
 let rendered = 0;
 let skipped = 0;
 let missingSourceSkipped = 0;
-let cityGuideTourAudits = 0;
+let tourBearingGuideAudits = 0;
 const missingSourceRoutes: string[] = [];
 const failures: Array<{ pathname: string; message: string }> = [];
 
@@ -176,18 +216,13 @@ for (const [pathname, route] of routes) {
       throw new Error("SSR rendered the Guide not found fallback");
     }
 
-    if (route.kind === "us-city") {
-      const currentTours = getToursByCityUnified(
-        route.stateSlug,
-        route.citySlug
-      );
-      if (currentTours.length) {
-        cityGuideTourAudits += 1;
-        if (!/(View Tour|View Rental)/.test(renderedApp)) {
-          throw new Error(
-            `guide has ${currentTours.length} current tour(s) but SSR contains no visible tour cards`
-          );
-        }
+    const expectedVisibleTours = getExpectedVisibleTourCount(route);
+    if (expectedVisibleTours > 0) {
+      tourBearingGuideAudits += 1;
+      if (!/(View Tour|View Rental|View tour)/.test(renderedApp)) {
+        throw new Error(
+          `guide has ${expectedVisibleTours} current/top tour(s) but SSR contains no visible tour cards`
+        );
       }
     }
 
@@ -233,5 +268,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; audited ${cityGuideTourAudits.toLocaleString()} source-backed US city guides with current tour inventory for visible tour cards; skipped ${skipped.toLocaleString()} routes that already contained body content; ${missingSourceSkipped.toLocaleString()} legacy US guide route(s) remain client-side redirect/fallback routes; Paris now prerenders with visible tour content.`
+  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; audited ${tourBearingGuideAudits.toLocaleString()} tour-bearing state/city/country guides for visible SSR tour cards; skipped ${skipped.toLocaleString()} routes that already contained body content; ${missingSourceSkipped.toLocaleString()} legacy US guide route(s) remain client-side redirect/fallback routes; Paris now prerenders with visible tour content.`
 );
