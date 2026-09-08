@@ -329,16 +329,36 @@ export type Engine2CanadaProvinceIndexEntry = {
 };
 
 export const getEngine2CanadaProvinceIndex =
-  (): Engine2CanadaProvinceIndexEntry[] =>
-    (
+  (): Engine2CanadaProvinceIndexEntry[] => {
+    const liveTourIds = new Set(
+      getEngine2CanadaTours().map(tour => String(tour.id))
+    );
+
+    return (
       canadaEngine2ProvincesIndex as unknown as Engine2CanadaProvinceIndexEntry[]
-    ).map(province => ({
-      ...province,
-      cities: province.cities.map(city => ({
-        ...city,
-        tourIds: [...city.tourIds],
-      })),
-    }));
+    )
+      .map(province => {
+        const cities = Array.isArray(province.cities)
+          ? province.cities
+              .map(city => ({
+                ...city,
+                tourIds: Array.isArray(city.tourIds)
+                  ? city.tourIds.filter(tourId =>
+                      liveTourIds.has(String(tourId))
+                    )
+                  : [],
+              }))
+              .filter(city => city.tourIds.length > 0)
+          : [];
+
+        return {
+          ...province,
+          tourCount: new Set(cities.flatMap(city => city.tourIds)).size,
+          cities,
+        };
+      })
+      .filter(province => province.tourCount > 0);
+  };
 
 export const getEngine2ToursBySourceCity = (citySlug: string): Engine2Tour[] =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);
