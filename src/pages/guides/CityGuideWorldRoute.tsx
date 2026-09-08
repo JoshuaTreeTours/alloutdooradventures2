@@ -1,4 +1,5 @@
 import RouteRedirect from "../../components/RouteRedirect";
+import { getDestinationCityAlias } from "../../data/destinationAliases";
 import { buildCityGuide, buildCountryGuide } from "../../data/guideData";
 import { getInternationalGuideCityAlias } from "../../data/internationalGuideAliases";
 import { getRetiredInternationalGuideRedirect } from "../../utils/guides/internationalGuideRetention";
@@ -14,10 +15,9 @@ type CityGuideWorldRouteProps = {
 export default function CityGuideWorldRoute({
   params,
 }: CityGuideWorldRouteProps) {
-  const alias = getInternationalGuideCityAlias(
-    params.countrySlug,
-    params.citySlug
-  );
+  const alias =
+    getInternationalGuideCityAlias(params.countrySlug, params.citySlug) ??
+    getDestinationCityAlias(params.countrySlug, params.citySlug);
 
   if (alias) {
     const queryString =

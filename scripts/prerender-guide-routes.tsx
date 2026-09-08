@@ -16,10 +16,13 @@ import CountryGuideRoute from "../src/pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "../src/pages/guides/CityGuideWorldRoute";
 import ParisGuideRoute from "../src/pages/guides/ParisGuideRoute";
 import GuidePageTemplate from "../src/templates/GuidePageTemplate";
+import { getDestinationCityAlias } from "../src/data/destinationAliases";
+import { getInternationalGuideCityAlias } from "../src/data/internationalGuideAliases";
 import { getTopToursForPlace, type GuidePlace } from "../src/data/tourIndex";
 import { getToursByCityUnified } from "../src/data/tours";
 import type { GuidePageData } from "../src/utils/loadGuide";
 import { withResolvedGuideData } from "../src/utils/guides/loadGuide";
+import { getRetiredInternationalGuideRedirect } from "../src/utils/guides/internationalGuideRetention";
 
 const distDir = path.resolve("dist");
 const emptyRoot = '<div id="root"></div>';
@@ -147,6 +150,18 @@ const getExpectedVisibleTourCount = (route: GuideRoute): number => {
   return place ? getTopToursForPlace(place, { min: 3, max: 8 }).length : 0;
 };
 
+const isRedirectOnlyWorldCityRoute = (route: GuideRoute) => {
+  if (route.kind !== "world-city") {
+    return false;
+  }
+
+  return Boolean(
+    getInternationalGuideCityAlias(route.countrySlug, route.citySlug) ||
+      getDestinationCityAlias(route.countrySlug, route.citySlug) ||
+      getRetiredInternationalGuideRedirect(route.countrySlug, route.citySlug)
+  );
+};
+
 const outputPathFor = (pathname: string) =>
   path.join(distDir, pathname.replace(/^\/+|\/+$/g, ""), "index.html");
 
@@ -167,12 +182,22 @@ for (const file of sitemapFiles) {
 let rendered = 0;
 let skipped = 0;
 let missingSourceSkipped = 0;
+let redirectOnlySkipped = 0;
 let tourBearingGuideAudits = 0;
 const missingSourceRoutes: string[] = [];
+const redirectOnlyRoutes: string[] = [];
 const failures: Array<{ pathname: string; message: string }> = [];
 
 for (const [pathname, route] of routes) {
   const outputPath = outputPathFor(pathname);
+
+  // Redirect-only aliases and explicitly retired international guides are not
+  // canonical content pages. Do not require them to render a <main> or tour cards.
+  if (isRedirectOnlyWorldCityRoute(route)) {
+    redirectOnlySkipped += 1;
+    redirectOnlyRoutes.push(pathname);
+    continue;
+  }
 
   // Legacy sitemap guide URLs without source JSON are retained as client-side
   // redirect/fallback routes. Every source-backed canonical guide is audited
@@ -248,6 +273,15 @@ for (const [pathname, route] of routes) {
   }
 }
 
+if (redirectOnlyRoutes.length) {
+  console.warn(
+    `[prerender-guide-routes] ${redirectOnlyRoutes.length} international guide redirect route(s) were excluded from canonical content auditing:`
+  );
+  for (const pathname of redirectOnlyRoutes) {
+    console.warn(`  ${pathname}`);
+  }
+}
+
 if (missingSourceRoutes.length) {
   console.warn(
     `[prerender-guide-routes] ${missingSourceRoutes.length} legacy US guide route(s) have no matching source JSON and remain client-side redirect/fallback routes:`
@@ -268,5 +302,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; audited ${tourBearingGuideAudits.toLocaleString()} tour-bearing state/city/country guides for visible SSR tour cards; skipped ${skipped.toLocaleString()} routes that already contained body content; ${missingSourceSkipped.toLocaleString()} legacy US guide route(s) remain client-side redirect/fallback routes; Paris now prerenders with visible tour content.`
+  `[prerender-guide-routes] server-rendered ${rendered.toLocaleString()} canonical guide routes; audited ${tourBearingGuideAudits.toLocaleString()} tour-bearing state/city/country guides for visible SSR tour cards; skipped ${skipped.toLocaleString()} routes that already contained body content; ${redirectOnlySkipped.toLocaleString()} international redirect-only route(s) excluded from content auditing; ${missingSourceSkipped.toLocaleString()} legacy US guide route(s) remain client-side redirect/fallback routes; Paris now prerenders with visible tour content.`
 );
