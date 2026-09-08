@@ -1,10 +1,13 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { tsImport } from "tsx/esm/api";
 
 const SITE = "https://www.alloutdooradventures.com";
 const distDir = path.resolve("dist");
 const sitemapPath = path.join(distDir, "sitemap-guides.xml");
 const usGuideSourceRoot = path.resolve("src/data/guides/us");
+const currentYearModule = await tsImport("../src/lib/seo/currentYear.ts", import.meta.url);
+const CURRENT_YEAR = currentYearModule.CURRENT_YEAR;
 
 const titleCase = value =>
   value
@@ -129,7 +132,7 @@ const buildSeo = async pathname => {
       kind: "us-city",
       stateSlug: match[1],
       citySlug: match[2],
-      title: `Top 10 Things to Do in ${names.city} (2026 Guide) | Outdoor Adventures`,
+      title: `Top 10 Things to Do in ${names.city} (${CURRENT_YEAR} Guide) | Outdoor Adventures`,
       description: `Plan a trip to ${names.city}, ${names.state} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
       url: `${SITE}${pathname}`,
     };
@@ -156,7 +159,7 @@ const buildSeo = async pathname => {
       kind: "world-city",
       stateSlug: match[1],
       citySlug: match[2],
-      title: `Top 10 Things to Do in ${city} (2026 Guide) | Outdoor Adventures`,
+      title: `Top 10 Things to Do in ${city} (${CURRENT_YEAR} Guide) | Outdoor Adventures`,
       description: `Plan a trip to ${city}, ${country} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
       url: `${SITE}${pathname}`,
     };

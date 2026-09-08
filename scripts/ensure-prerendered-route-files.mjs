@@ -5,6 +5,8 @@ import { tsImport } from 'tsx/esm/api';
 const distDir = path.resolve('dist');
 const templatePath = path.join(distDir, 'index.html');
 const SITE = 'https://www.alloutdooradventures.com';
+const currentYearModule = await tsImport('../src/lib/seo/currentYear.ts', import.meta.url);
+const CURRENT_YEAR = currentYearModule.CURRENT_YEAR;
 
 const buildOutputPath = (pathname) => {
   if (!pathname || pathname === '/') return templatePath;
@@ -23,7 +25,7 @@ const buildGenericRouteSeo = (pathname) => {
     const state = titleCase(guidesUsCity[1]);
     const city = titleCase(guidesUsCity[2]);
     return {
-      title: `Top 10 Things to Do in ${city} (2026 Guide) | Outdoor Adventures`,
+      title: `Top 10 Things to Do in ${city} (${CURRENT_YEAR} Guide) | Outdoor Adventures`,
       description: `Plan a trip to ${city}, ${state} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
       url: `${SITE}${pathname}`,
       image: ``,
@@ -46,7 +48,7 @@ const buildGenericRouteSeo = (pathname) => {
     const country = titleCase(guidesWorldCity[1]);
     const city = titleCase(guidesWorldCity[2]);
     return {
-      title: `Top 10 Things to Do in ${city} (2026 Guide) | Outdoor Adventures`,
+      title: `Top 10 Things to Do in ${city} (${CURRENT_YEAR} Guide) | Outdoor Adventures`,
       description: `Plan a trip to ${city}, ${country} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
       url: `${SITE}${pathname}`,
       image: ``,

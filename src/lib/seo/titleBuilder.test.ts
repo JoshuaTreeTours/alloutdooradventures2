@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { CURRENT_YEAR } from "./currentYear";
 import {
   buildCategoryH1,
   buildCategorySeoTitle,
@@ -13,7 +14,7 @@ import {
 describe("titleBuilder", () => {
   it("builds guide and tours titles", () => {
     expect(buildGuideSeoTitle({ city: "San Diego" })).toBe(
-      "Top 10 Things to Do in San Diego (2026 Guide) | Outdoor Adventures"
+      `Top 10 Things to Do in San Diego (${CURRENT_YEAR} Guide) | Outdoor Adventures`
     );
     expect(buildGuideH1({ city: "San Diego" })).toBe(
       "Top 10 Things to Do in San Diego"
