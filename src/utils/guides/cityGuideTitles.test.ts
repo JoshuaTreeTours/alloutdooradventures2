@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { CURRENT_YEAR } from "../../lib/seo/currentYear";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
@@ -13,7 +14,7 @@ describe("cityGuideTitles", () => {
       "Top 10 Things to Do in San Diego"
     );
     expect(buildCityGuideMetaTitle("San Diego")).toBe(
-      "Top 10 Things to Do in San Diego (2026 Guide) | Outdoor Adventures"
+      `Top 10 Things to Do in San Diego (${CURRENT_YEAR} Guide) | Outdoor Adventures`
     );
     expect(buildCityGuideH1("San Diego")).toBe(
       "Top 10 Things to Do in San Diego"
@@ -27,8 +28,9 @@ describe("cityGuideTitles", () => {
     expect(buildCityGuideH1("Zürich")).toBe("Top 10 Things to Do in Zürich");
   });
 
-  it("builds intro paragraphs with top 10 phrasing", () => {
+  it("builds intro paragraphs with top 10 phrasing and the current year", () => {
     const intro = buildCityGuideIntroParagraphs("Rome");
+    expect(intro.primary).toContain(`${CURRENT_YEAR} guide`);
     expect(intro.primary).toContain("top 10 things to do");
     expect(intro.secondary).toContain("Rome");
   });
