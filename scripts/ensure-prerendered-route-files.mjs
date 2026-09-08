@@ -18,13 +18,47 @@ const titleCase = value => value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUp
 const buildGenericRouteSeo = (pathname) => {
   if (!pathname || pathname === '/') return null;
 
-  const guidesCity = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
-  if (guidesCity) {
-    const state = titleCase(guidesCity[1]);
-    const city = titleCase(guidesCity[2]);
+  const guidesUsCity = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
+  if (guidesUsCity) {
+    const state = titleCase(guidesUsCity[1]);
+    const city = titleCase(guidesUsCity[2]);
     return {
-      title: `${city} Travel Guide | All Outdoor Adventures`,
-      description: `Explore travel guides, outdoor activities, tours, neighborhoods, and local experiences in ${city}, ${state}.`,
+      title: `Top 10 Things to Do in ${city} (2026 Guide) | Outdoor Adventures`,
+      description: `Plan a trip to ${city}, ${state} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
+      url: `${SITE}${pathname}`,
+      image: ``,
+    };
+  }
+
+  const guidesUsState = /^\/guides\/us\/([^/]+)$/.exec(pathname);
+  if (guidesUsState) {
+    const state = titleCase(guidesUsState[1]);
+    return {
+      title: `${state} Outdoor Adventure Guide | Tours & Tips`,
+      description: `Plan outdoor adventures in ${state} with guided tours, activities, itineraries, destination ideas, and practical travel tips.`,
+      url: `${SITE}${pathname}`,
+      image: ``,
+    };
+  }
+
+  const guidesWorldCity = /^\/guides\/world\/([^/]+)\/([^/]+)$/.exec(pathname);
+  if (guidesWorldCity) {
+    const country = titleCase(guidesWorldCity[1]);
+    const city = titleCase(guidesWorldCity[2]);
+    return {
+      title: `Top 10 Things to Do in ${city} (2026 Guide) | Outdoor Adventures`,
+      description: `Plan a trip to ${city}, ${country} with outdoor activities, tours, local attractions, itineraries, and practical travel tips.`,
+      url: `${SITE}${pathname}`,
+      image: ``,
+    };
+  }
+
+  const guidesWorldCountry = /^\/guides\/world\/([^/]+)$/.exec(pathname);
+  if (guidesWorldCountry) {
+    const country = titleCase(guidesWorldCountry[1]);
+    return {
+      title: `${country} Outdoor Adventure Guide | Tours & Tips`,
+      description: `Plan outdoor adventures in ${country} with guided tours, activities, itineraries, destination ideas, and practical travel tips.`,
       url: `${SITE}${pathname}`,
       image: ``,
     };
