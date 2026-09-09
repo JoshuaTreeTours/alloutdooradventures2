@@ -1,6 +1,7 @@
 export type GuidePlaceType =
   | "city"
   | "town"
+  | "village"
   | "unincorporated-community"
   | "gateway-community"
   | "national-park"
@@ -14,6 +15,8 @@ export type ProtectedAreaType =
   | "national-monument"
   | "state-park"
   | "national-forest"
+  | "national-seashore"
+  | "national-wildlife-refuge"
   | "other-protected-area";
 
 export type GuidePlaceClassification = {
@@ -28,197 +31,44 @@ export type GuidePlaceClassification = {
   notes?: string;
 };
 
-const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<
-  string,
-  GuidePlaceClassification
-> = {
-  "us/california/joshua-tree": {
-    placeType: "gateway-community",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Joshua Tree National Park",
-      type: "national-park",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://countywideplan.sbcounty.gov/community/east-desert-unincorporated/joshua-tree/",
-      "https://www.nps.gov/jotr/",
-    ],
-    notes:
-      "Joshua Tree is an unincorporated gateway community. Joshua Tree National Park is a separate federally managed national park and must not be described as a city or urban park.",
-  },
-  "us/california/santa-barbara": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://santabarbaraca.gov/",
-      "https://santabarbaraca.com/",
-    ],
-    notes:
-      "Santa Barbara is an incorporated California coastal city. Montecito, Goleta, Los Padres National Forest, and Channel Islands National Park are separate neighboring communities or protected landscapes and must not be represented as Santa Barbara municipal attractions.",
-  },
-  "us/california/palm-springs": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://www.palmspringsca.gov/",
-      "https://visitpalmsprings.com/",
-      "https://www.aguacaliente.org/",
-      "https://www.nps.gov/jotr/",
-    ],
-    notes:
-      "Palm Springs is an incorporated city in the Coachella Valley. Indian Canyons and Tahquitz Canyon are Agua Caliente cultural landscapes; Mount San Jacinto State Park and Joshua Tree National Park are separate protected areas with their own managers and rules.",
-  },
-  "us/california/oakhurst": {
-    placeType: "gateway-community",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Yosemite National Park",
-      type: "national-park",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs26/tigerweb_acs26_cdp_2025_acs25_ca.html",
-      "https://www.nps.gov/yose/planyourvisit/gateways.htm",
-      "https://www.yosemitethisyear.com/",
-    ],
-    notes:
-      "Oakhurst is an unincorporated census-designated community in Madera County and a Highway 41 gateway to Yosemite. Yosemite National Park, Sierra National Forest, Bass Lake, and Fish Camp are separate places or jurisdictions and must not be described as Oakhurst municipal attractions.",
-  },
-  "us/florida/key-west": {
-    placeType: "city",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Dry Tortugas National Park",
-      type: "national-park",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://www.cityofkeywest-fl.gov/",
-      "https://fla-keys.com/key-west/",
-      "https://www.nps.gov/drto/",
-    ],
-    notes:
-      "Key West is an incorporated Florida island city. Dry Tortugas National Park is a separate remote National Park Service unit about 70 miles west of Key West and is reached by boat or seaplane rather than road.",
-  },
-  "us/texas/houston": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://www.houstontx.gov/",
-      "https://www.visithoustontexas.com/",
-    ],
-    notes:
-      "Houston is an incorporated Texas city. Regional Gulf Coast attractions and bayou corridors may be discussed as nearby experiences, but must not be represented as neighborhoods or municipal parkland unless they actually are within Houston.",
-  },
-  "us/texas/san-antonio": {
-    placeType: "city",
-    verified: true,
-    associatedProtectedArea: {
-      name: "San Antonio Missions National Historical Park",
-      type: "other-protected-area",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://www.sa.gov/",
-      "https://www.nps.gov/saan/",
-      "https://www.visitsanantonio.com/",
-    ],
-    notes:
-      "San Antonio is an incorporated Texas city. San Antonio Missions National Historical Park is a separate National Park Service unit within the city and must be described as federal historic parkland, not a city park.",
-  },
-  "us/texas/dallas": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://dallascityhall.com/",
-      "https://www.visitdallas.com/",
-    ],
-    notes:
-      "Dallas is an incorporated Texas city. Fort Worth and other Metroplex destinations are separate cities and should be framed as regional trips rather than Dallas neighborhoods.",
-  },
-  "us/florida/tampa": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://www.tampa.gov/",
-      "https://www.visittampabay.com/",
-    ],
-    notes:
-      "Tampa is an incorporated Florida city on Tampa Bay. Clearwater, St. Petersburg, and the Gulf beach communities are separate municipalities and should be framed as regional trips rather than Tampa neighborhoods or city beaches.",
-  },
-  "us/ohio/cleveland": {
-    placeType: "city",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Cuyahoga Valley National Park",
-      type: "national-park",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://www.clevelandohio.gov/",
-      "https://www.thisiscleveland.com/",
-      "https://www.nps.gov/cuva/",
-    ],
-    notes:
-      "Cleveland is an incorporated Ohio city. Cuyahoga Valley National Park is a separate National Park Service unit between Cleveland and Akron and must not be described as Cleveland municipal parkland.",
-  },
-  "us/ohio/columbus": {
-    placeType: "city",
-    verified: true,
-    verificationSources: [
-      "https://www.columbus.gov/",
-      "https://www.experiencecolumbus.com/",
-    ],
-    notes:
-      "Columbus is an incorporated Ohio city. Central Ohio Metro Parks and surrounding municipalities are separate jurisdictions and should be identified accurately when used as regional outdoor recommendations.",
-  },
-  "us/south-carolina/charleston": {
-    placeType: "city",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Fort Sumter and Fort Moultrie National Historical Park",
-      type: "other-protected-area",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://www.charleston-sc.gov/",
-      "https://www.charlestoncvb.com/",
-      "https://www.nps.gov/fosu/",
-    ],
-    notes:
-      "Charleston is an incorporated South Carolina city. Fort Sumter is a separate National Park Service site in Charleston Harbor, and surrounding beach communities such as Folly Beach and Sullivan's Island are separate municipalities.",
-  },
-  "us/utah/moab": {
-    placeType: "city",
-    verified: true,
-    associatedProtectedArea: {
-      name: "Arches National Park",
-      type: "national-park",
-      managingAuthority: "National Park Service",
-    },
-    verificationSources: [
-      "https://moabcity.org/",
-      "https://www.discovermoab.com/",
-      "https://www.nps.gov/arch/",
-      "https://www.nps.gov/cany/",
-    ],
-    notes:
-      "Moab is an incorporated Utah city and outdoor gateway. Arches and Canyonlands are separate National Park Service units; Dead Horse Point is a Utah state park; extensive surrounding recreation lands are managed separately, including by the Bureau of Land Management.",
-  },
+const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<string, GuidePlaceClassification> = {
+  "us/california/joshua-tree": { placeType: "gateway-community", verified: true, associatedProtectedArea: { name: "Joshua Tree National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://countywideplan.sbcounty.gov/community/east-desert-unincorporated/joshua-tree/", "https://www.nps.gov/jotr/"], notes: "Joshua Tree is an unincorporated gateway community. Joshua Tree National Park is a separate federally managed national park and must not be described as a city or urban park." },
+  "us/california/santa-barbara": { placeType: "city", verified: true, verificationSources: ["https://santabarbaraca.gov/", "https://santabarbaraca.com/"], notes: "Santa Barbara is an incorporated California coastal city. Montecito, Goleta, Los Padres National Forest, and Channel Islands National Park are separate neighboring communities or protected landscapes." },
+  "us/california/palm-springs": { placeType: "city", verified: true, verificationSources: ["https://www.palmspringsca.gov/", "https://visitpalmsprings.com/", "https://www.aguacaliente.org/", "https://www.nps.gov/jotr/"], notes: "Palm Springs is an incorporated city in the Coachella Valley. Indian Canyons and Tahquitz Canyon are Agua Caliente cultural landscapes; Mount San Jacinto State Park and Joshua Tree National Park are separate protected areas." },
+  "us/california/oakhurst": { placeType: "gateway-community", verified: true, associatedProtectedArea: { name: "Yosemite National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://tigerweb.geo.census.gov/tigerwebmain/Files/acs26/tigerweb_acs26_cdp_2025_acs25_ca.html", "https://www.nps.gov/yose/planyourvisit/gateways.htm", "https://www.yosemitethisyear.com/"], notes: "Oakhurst is an unincorporated census-designated community in Madera County and a Highway 41 gateway to Yosemite. Yosemite National Park, Sierra National Forest, Bass Lake, and Fish Camp are separate places or jurisdictions." },
+  "us/florida/key-west": { placeType: "city", verified: true, associatedProtectedArea: { name: "Dry Tortugas National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://www.cityofkeywest-fl.gov/", "https://fla-keys.com/key-west/", "https://www.nps.gov/drto/"], notes: "Key West is an incorporated Florida island city. Dry Tortugas National Park is a separate remote National Park Service unit west of Key West and is reached by boat or seaplane rather than road." },
+  "us/florida/miami": { placeType: "city", verified: true, associatedProtectedArea: { name: "Everglades National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://www.miami.gov/", "https://www.miamiandbeaches.com/", "https://www.nps.gov/ever/"], notes: "Miami is an incorporated mainland city. Miami Beach, including South Beach, is a separate municipality across Biscayne Bay. Everglades National Park is a separate federal park reached as a regional day trip." },
+  "us/florida/orlando": { placeType: "city", verified: true, verificationSources: ["https://www.orlando.gov/", "https://www.visitorlando.com/", "https://www.floridastateparks.org/WekiwaSprings"], notes: "Orlando is an incorporated city. Walt Disney World, much of the International Drive resort corridor, and several famous attractions marketed as Orlando are outside Orlando city limits and must be framed as Greater Orlando experiences rather than downtown or municipal attractions." },
+  "us/florida/fort-lauderdale": { placeType: "city", verified: true, verificationSources: ["https://www.fortlauderdale.gov/", "https://www.visitlauderdale.com/"], notes: "Fort Lauderdale is an incorporated Atlantic coastal city shaped by the New River, Intracoastal Waterway, canals, beaches, and downtown districts. Neighboring beach municipalities are separate jurisdictions." },
+  "us/florida/st-petersburg": { placeType: "city", verified: true, verificationSources: ["https://www.stpete.org/", "https://www.visitstpeteclearwater.com/"], notes: "St. Petersburg is an incorporated city on the Pinellas peninsula. St. Pete Beach, Clearwater, and other Gulf beach communities are separate municipalities; Fort De Soto Park is a county park rather than St. Petersburg municipal parkland." },
+  "us/florida/crystal-river": { placeType: "city", verified: true, associatedProtectedArea: { name: "Crystal River National Wildlife Refuge", type: "national-wildlife-refuge", managingAuthority: "U.S. Fish and Wildlife Service" }, verificationSources: ["https://www.crystalriverfl.org/", "https://www.discovercrystalriverfl.com/", "https://www.fws.gov/refuge/crystal-river"], notes: "Crystal River is an incorporated city on Kings Bay. The Crystal River National Wildlife Refuge protects manatee habitat in and around the spring-fed bay and is federally managed, not a city park." },
+  "us/florida/cocoa-beach": { placeType: "city", verified: true, verificationSources: ["https://www.cityofcocoabeach.com/", "https://www.visitspacecoast.com/"], notes: "Cocoa Beach is an incorporated barrier-island city. Cape Canaveral is a separate city to the north, while Kennedy Space Center is on Merritt Island and must be framed as a regional Space Coast excursion." },
+  "us/florida/cape-canaveral": { placeType: "city", verified: true, verificationSources: ["https://www.cityofcapecanaveral.org/", "https://www.visitspacecoast.com/"], notes: "Cape Canaveral is an incorporated city beside Port Canaveral. Kennedy Space Center, Cape Canaveral Space Force Station, and Merritt Island are separate federal or geographic entities and should not be represented as city-owned attractions." },
+  "us/florida/titusville": { placeType: "city", verified: true, associatedProtectedArea: { name: "Canaveral National Seashore", type: "national-seashore", managingAuthority: "National Park Service" }, verificationSources: ["https://www.titusville.com/", "https://www.visitspacecoast.com/", "https://www.nps.gov/cana/", "https://www.fws.gov/refuge/merritt-island"], notes: "Titusville is an incorporated city on the Indian River Lagoon. Merritt Island National Wildlife Refuge and Canaveral National Seashore are separate federally managed protected lands east of the city." },
+  "us/florida/marathon": { placeType: "city", verified: true, verificationSources: ["https://www.ci.marathon.fl.us/", "https://fla-keys.com/marathon/"], notes: "Marathon is an incorporated Middle Keys city spread across several islands. Bahia Honda State Park and other neighboring Keys are separate destinations; offshore reefs and waters are not municipal parkland." },
+  "us/florida/marco-island": { placeType: "city", verified: true, verificationSources: ["https://www.cityofmarcoisland.com/", "https://www.paradisecoast.com/"], notes: "Marco Island is an incorporated city occupying much of a Gulf barrier island. The Ten Thousand Islands, Rookery Bay, and Everglades protected lands extend beyond city jurisdiction and should be framed as regional ecosystems and excursions." },
+  "us/florida/key-biscayne": { placeType: "village", verified: true, verificationSources: ["https://keybiscayne.fl.gov/", "https://www.miamiandbeaches.com/"], notes: "Key Biscayne is an incorporated village on a barrier island. Crandon Park is a Miami-Dade County park north of the village and Bill Baggs Cape Florida State Park is a Florida state park south of it." },
+  "us/florida/fort-myers": { placeType: "city", verified: true, verificationSources: ["https://www.cityftmyers.com/", "https://www.visitfortmyers.com/"], notes: "Fort Myers is an incorporated city on the Caloosahatchee River. Fort Myers Beach, Sanibel, and other Gulf islands are separate municipalities or communities and should be framed as regional trips." },
+  "us/florida/fort-myers-beach": { placeType: "town", verified: true, verificationSources: ["https://www.fortmyersbeachfl.gov/", "https://www.visitfortmyers.com/neighborhoods/fort-myers-beach"], notes: "Fort Myers Beach is an incorporated town on Estero Island. Fort Myers is a separate mainland city; Lovers Key State Park and neighboring islands are separate protected areas or communities." },
+  "us/florida/homestead": { placeType: "city", verified: true, associatedProtectedArea: { name: "Everglades National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://www.cityofhomestead.com/", "https://www.nps.gov/ever/", "https://www.nps.gov/bisc/"], notes: "Homestead is an incorporated agricultural gateway city. Everglades National Park and Biscayne National Park are separate federal parks; the Redland agricultural district includes unincorporated areas outside the city." },
+  "us/florida/everglades-city": { placeType: "city", verified: true, associatedProtectedArea: { name: "Everglades National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://www.cityofeverglades.org/", "https://www.nps.gov/ever/", "https://www.paradisecoast.com/"], notes: "Everglades City is a small incorporated city and Gulf Coast gateway to Everglades National Park and the Ten Thousand Islands. Chokoloskee, Big Cypress National Preserve, and federal park waters are separate places or jurisdictions." },
+  "us/florida/jacksonville": { placeType: "city", verified: true, associatedProtectedArea: { name: "Timucuan Ecological and Historic Preserve", type: "other-protected-area", managingAuthority: "National Park Service" }, verificationSources: ["https://www.jacksonville.gov/", "https://www.visitjacksonville.com/", "https://www.nps.gov/timu/"], notes: "Jacksonville is a consolidated city-county on the St. Johns River. Jacksonville Beach, Atlantic Beach, and Neptune Beach are separate municipalities; Timucuan Preserve is a National Park Service unit containing multiple sites and partner lands." },
+  "us/florida/west-palm-beach": { placeType: "city", verified: true, verificationSources: ["https://www.wpb.org/", "https://www.thepalmbeaches.com/"], notes: "West Palm Beach is an incorporated mainland city on the Lake Worth Lagoon. Palm Beach is a separate town on the barrier island across the lagoon and must not be described as a West Palm Beach neighborhood." },
+  "us/florida/vero-beach": { placeType: "city", verified: true, verificationSources: ["https://www.covb.org/", "https://visitindianrivercounty.com/"], notes: "Vero Beach is an incorporated Atlantic coastal city divided by the Indian River Lagoon. Pelican Island National Wildlife Refuge and Sebastian Inlet State Park are separate protected areas outside city jurisdiction." },
+  "us/florida/new-smyrna-beach": { placeType: "city", verified: true, associatedProtectedArea: { name: "Canaveral National Seashore", type: "national-seashore", managingAuthority: "National Park Service" }, verificationSources: ["https://www.cityofnsb.com/", "https://www.visitnsbfl.com/", "https://www.nps.gov/cana/"], notes: "New Smyrna Beach is an incorporated coastal city. Canaveral National Seashore begins south of the developed beach area and is a separate National Park Service unit rather than municipal beach parkland." },
+  "us/florida/tarpon-springs": { placeType: "city", verified: true, associatedProtectedArea: { name: "Anclote Key Preserve State Park", type: "state-park", managingAuthority: "Florida State Parks" }, verificationSources: ["https://www.ctsfl.us/", "https://www.visitstpeteclearwater.com/communities/tarpon-springs", "https://www.floridastateparks.org/parks-and-trails/anclote-key-preserve-state-park"], notes: "Tarpon Springs is an incorporated Gulf Coast city known for its sponge-diving and Greek American heritage. Anclote Key Preserve State Park is an offshore state park reached by boat and is not city parkland." },
+  "us/texas/houston": { placeType: "city", verified: true, verificationSources: ["https://www.houstontx.gov/", "https://www.visithoustontexas.com/"], notes: "Houston is an incorporated Texas city. Regional Gulf Coast attractions and bayou corridors may be discussed as nearby experiences, but must not be represented as neighborhoods or municipal parkland unless they actually are within Houston." },
+  "us/texas/san-antonio": { placeType: "city", verified: true, associatedProtectedArea: { name: "San Antonio Missions National Historical Park", type: "other-protected-area", managingAuthority: "National Park Service" }, verificationSources: ["https://www.sa.gov/", "https://www.nps.gov/saan/", "https://www.visitsanantonio.com/"], notes: "San Antonio is an incorporated Texas city. San Antonio Missions National Historical Park is a separate National Park Service unit within the city and must be described as federal historic parkland, not a city park." },
+  "us/texas/dallas": { placeType: "city", verified: true, verificationSources: ["https://dallascityhall.com/", "https://www.visitdallas.com/"], notes: "Dallas is an incorporated Texas city. Fort Worth and other Metroplex destinations are separate cities and should be framed as regional trips rather than Dallas neighborhoods." },
+  "us/florida/tampa": { placeType: "city", verified: true, verificationSources: ["https://www.tampa.gov/", "https://www.visittampabay.com/"], notes: "Tampa is an incorporated Florida city on Tampa Bay. Clearwater, St. Petersburg, and the Gulf beach communities are separate municipalities and should be framed as regional trips rather than Tampa neighborhoods or city beaches." },
+  "us/ohio/cleveland": { placeType: "city", verified: true, associatedProtectedArea: { name: "Cuyahoga Valley National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://www.clevelandohio.gov/", "https://www.thisiscleveland.com/", "https://www.nps.gov/cuva/"], notes: "Cleveland is an incorporated Ohio city. Cuyahoga Valley National Park is a separate National Park Service unit between Cleveland and Akron and must not be described as Cleveland municipal parkland." },
+  "us/ohio/columbus": { placeType: "city", verified: true, verificationSources: ["https://www.columbus.gov/", "https://www.experiencecolumbus.com/"], notes: "Columbus is an incorporated Ohio city. Central Ohio Metro Parks and surrounding municipalities are separate jurisdictions and should be identified accurately when used as regional outdoor recommendations." },
+  "us/south-carolina/charleston": { placeType: "city", verified: true, associatedProtectedArea: { name: "Fort Sumter and Fort Moultrie National Historical Park", type: "other-protected-area", managingAuthority: "National Park Service" }, verificationSources: ["https://www.charleston-sc.gov/", "https://www.charlestoncvb.com/", "https://www.nps.gov/fosu/"], notes: "Charleston is an incorporated South Carolina city. Fort Sumter is a separate National Park Service site in Charleston Harbor, and surrounding beach communities such as Folly Beach and Sullivan's Island are separate municipalities." },
+  "us/utah/moab": { placeType: "city", verified: true, associatedProtectedArea: { name: "Arches National Park", type: "national-park", managingAuthority: "National Park Service" }, verificationSources: ["https://moabcity.org/", "https://www.discovermoab.com/", "https://www.nps.gov/arch/", "https://www.nps.gov/cany/"], notes: "Moab is an incorporated Utah city and outdoor gateway. Arches and Canyonlands are separate National Park Service units; Dead Horse Point is a Utah state park; extensive surrounding recreation lands are managed separately, including by the Bureau of Land Management." },
 };
 
-export const getGuidePlaceClassification = (
-  stateSlug: string,
-  citySlug: string,
-  _displayName?: string
-): GuidePlaceClassification =>
-  VERIFIED_GUIDE_PLACE_CLASSIFICATIONS[`us/${stateSlug}/${citySlug}`] ?? {
-    placeType: "city",
-    verified: false,
-  };
+export const getGuidePlaceClassification = (stateSlug: string, citySlug: string, _displayName?: string): GuidePlaceClassification =>
+  VERIFIED_GUIDE_PLACE_CLASSIFICATIONS[`us/${stateSlug}/${citySlug}`] ?? { placeType: "city", verified: false };
 
-export const isGuidePlaceClassificationVerified = (
-  stateSlug: string,
-  citySlug: string
-) => getGuidePlaceClassification(stateSlug, citySlug).verified;
+export const isGuidePlaceClassificationVerified = (stateSlug: string, citySlug: string) =>
+  getGuidePlaceClassification(stateSlug, citySlug).verified;
