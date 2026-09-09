@@ -47,6 +47,44 @@ const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<
     notes:
       "Joshua Tree is an unincorporated gateway community. Joshua Tree National Park is a separate federally managed national park and must not be described as a city or urban park.",
   },
+  "us/california/santa-barbara": {
+    placeType: "city",
+    verified: true,
+    verificationSources: [
+      "https://santabarbaraca.gov/",
+      "https://santabarbaraca.com/",
+    ],
+    notes:
+      "Santa Barbara is an incorporated California coastal city. Montecito, Goleta, Los Padres National Forest, and Channel Islands National Park are separate neighboring communities or protected landscapes and must not be represented as Santa Barbara municipal attractions.",
+  },
+  "us/california/palm-springs": {
+    placeType: "city",
+    verified: true,
+    verificationSources: [
+      "https://www.palmspringsca.gov/",
+      "https://visitpalmsprings.com/",
+      "https://www.aguacaliente.org/",
+      "https://www.nps.gov/jotr/",
+    ],
+    notes:
+      "Palm Springs is an incorporated city in the Coachella Valley. Indian Canyons and Tahquitz Canyon are Agua Caliente cultural landscapes; Mount San Jacinto State Park and Joshua Tree National Park are separate protected areas with their own managers and rules.",
+  },
+  "us/florida/key-west": {
+    placeType: "city",
+    verified: true,
+    associatedProtectedArea: {
+      name: "Dry Tortugas National Park",
+      type: "national-park",
+      managingAuthority: "National Park Service",
+    },
+    verificationSources: [
+      "https://www.cityofkeywest-fl.gov/",
+      "https://fla-keys.com/key-west/",
+      "https://www.nps.gov/drto/",
+    ],
+    notes:
+      "Key West is an incorporated Florida island city. Dry Tortugas National Park is a separate remote National Park Service unit about 70 miles west of Key West and is reached by boat or seaplane rather than road.",
+  },
   "us/texas/houston": {
     placeType: "city",
     verified: true,
