@@ -115,9 +115,8 @@ export const citiesByCountry = Object.fromEntries(
     const cities: EuropeCitySummary[] = Array.from(byCity.entries())
       .map(([citySlug, cityEntries]) => ({
         name:
-          cityEntries.find(
-            entry => canonicalCitySlugFor(entry) === citySlug
-          )?.tour.destination.city || citySlug.replace(/-/g, " "),
+          cityEntries.find(entry => canonicalCitySlugFor(entry) === citySlug)
+            ?.tour.destination.city || citySlug.replace(/-/g, " "),
         slug: citySlug,
         countrySlug,
         tourCount: cityEntries.length,
@@ -138,6 +137,10 @@ export const citiesByCountry = Object.fromEntries(
     return [countrySlug, cities];
   })
 ) as Record<string, EuropeCitySummary[]>;
+
+export const getEuropeCountryTourEntries = (
+  countrySlug: string
+): UnifiedCityTour[] => entriesByCountry[countrySlug] ?? [];
 
 export const getEuropeCityTourEntries = (
   countrySlug: string,
