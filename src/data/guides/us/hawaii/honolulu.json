@@ -1,162 +1,22 @@
 {
-  "title": "Honolulu Travel Guide",
-  "country": "United States",
-  "state": "Hawaii",
-  "city": "Honolulu",
-  "slug": "guides/us/hawaii/honolulu",
-  "hero": {
-    "image": "",
-    "alt": "Honolulu skyline and landmarks",
-    "headline": "Honolulu Travel Guide",
-    "subheadline": "Plan a high-value Honolulu itinerary with top neighborhoods, outdoor access, and proven tour ideas."
-  },
-  "overview": [
-    "Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling."
+  "title":"Honolulu Travel Guide","country":"United States","state":"Hawaii","city":"Honolulu","slug":"guides/us/hawaii/honolulu",
+  "hero":{"image":"","alt":"Honolulu and Oahu south shore","headline":"Honolulu Travel Guide","subheadline":"Plan Honolulu around Waikiki, Native Hawaiian history, volcanic landscapes, museums, neighborhoods, and the contrasting coast and mountains of southeastern Oahu."},
+  "overview":["Honolulu is both Hawaii's capital and a major Pacific city, not simply a beach resort. Waikiki, downtown civic and historic sites, museums, volcanic landforms, food neighborhoods, and nearby mountain valleys create several distinct itinerary zones.","The most useful planning rule is geographic: group Waikiki and Diamond Head, downtown and the Capitol district, or Pearl Harbor and western Honolulu rather than repeatedly crossing the city. Reserve high-demand historic sites and hikes when required, and use current state and federal guidance for access."],
+  "highlights":[{"title":"Waikiki and surf history","description":"The famous resort district combines public beaches, historic surf culture, dense hospitality, and easy access to southeastern Honolulu."},{"title":"Hawaiian history and culture","description":"Iolani Palace, Bishop Museum, and other cultural institutions provide essential context that a beach-only itinerary misses."},{"title":"Volcanic and mountain landscapes","description":"Diamond Head and the Koolau-backed valleys reveal the volcanic geography that shapes Oahu."},{"title":"Pacific and wartime history","description":"Pearl Harbor memorial sites west of downtown connect Honolulu to one of the defining events of the twentieth-century Pacific."}],
+  "thingsToDo":[
+    {"title":"Experience Waikiki beyond the hotel strip","description":"Waikiki is Honolulu's best-known visitor district, but its significance goes beyond resorts. Walk the public shoreline, learn about Duke Kahanamoku and Hawaiian surfing traditions, and notice how beaches, parks, historic hotels, and the Ala Wai define the neighborhood. Early morning is particularly good for walking before heat and crowds build."},
+    {"title":"Hike Diamond Head State Monument","description":"Diamond Head, or Leahi, is a volcanic tuff cone at the eastern edge of Waikiki and one of Honolulu's defining landforms. The summit route climbs through exposed terrain and historic military infrastructure to broad coastal views. Check current Hawaii State Parks reservation requirements before visiting, carry water, and avoid treating the short distance as an effortless walk in midday heat."},
+    {"title":"Visit Iolani Palace and the historic civic district","description":"Iolani Palace was the royal residence of the Hawaiian monarchy and is fundamental to understanding the political history of the Hawaiian Kingdom and its overthrow. Give the site enough time for interpretation rather than using it as a photo stop. Nearby landmarks make downtown Honolulu a coherent history-focused walking block."},
+    {"title":"Spend time at Bishop Museum","description":"Bishop Museum is one of the strongest places to build context for Native Hawaiian and wider Pacific history, culture, and natural science. It is especially valuable early in a trip because the collections help explain landscapes, traditions, and historical events encountered elsewhere on Oahu. Allow several hours rather than trying to combine it with too many distant attractions."},
+    {"title":"Visit Pearl Harbor's memorial sites thoughtfully","description":"Pearl Harbor is an active harbor and military landscape as well as a collection of historic and memorial sites. The USS Arizona Memorial and related visitor experiences require more planning than a casual roadside stop, and some components have separate operators or ticketing. Use official federal information for current reservations, security rules, and access."},
+    {"title":"Explore Kakaako and the waterfront","description":"Kakaako provides a contemporary counterpoint to Waikiki and historic downtown, with murals, food, new development, and waterfront spaces layered over an older industrial district. Walk a defined area rather than driving from mural to mural. The neighborhood also illustrates current questions about redevelopment, housing, and public shoreline access in urban Honolulu."},
+    {"title":"Hike or walk in a Koolau-backed valley","description":"Mānoa and other inland valleys show how quickly Honolulu changes from dry or developed coast to wetter tropical mountain terrain. Trails can be muddy and conditions can change after heavy rain, so use current land-manager information rather than relying on generic trail summaries. This landscape contrast is one of the most revealing experiences in the city."},
+    {"title":"Treat the North Shore as a separate day trip","description":"Haleiwa, Waimea, Sunset Beach, and the North Shore are not Honolulu neighborhoods. A North Shore day requires substantial driving and has its own seasonal surf, traffic, and safety considerations. If you go, build the day around that region rather than presenting it as another Honolulu attraction."}
   ],
-  "highlights": [
-    {
-      "title": "Signature sights in Honolulu",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
-  ],
-  "thingsToDo": [
-    {
-      "title": "Explore Waikiki Beach",
-      "description": "Waikiki is a beachfront neighborhood of Honolulu on Oʻahu’s south shore that developed from wetlands and royal retreat lands into Hawaii’s best-known resort district during the 20th century. The shoreline includes multiple named beaches along a broad coastal strip fronting hotels, parks, and historic surf breaks. Tourism growth accelerated after the opening of the Ala Wai Canal in 1928, a drainage project that reshaped local hydrology and enabled urban development inland of the beach. Waikiki is also central to modern surf history, associated with figures such as Duke Kahanamoku in the early 1900s. Today the area combines high-density hospitality infrastructure with public shoreline access and major cultural events.",
-      "source_url": "https://en.wikipedia.org/wiki/Waikiki_Beach",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Waikiki_Beach"
-    },
-    {
-      "title": "Explore Diamond Head",
-      "description": "Diamond Head, called Lēʻahi in Hawaiian, is a volcanic tuff cone on the eastern edge of Waikiki formed about 300,000 years ago during Honolulu’s volcanic series. The crater rises roughly 760 feet above sea level and became a strategic U.S. military lookout in the early 20th century, with fire-control stations and bunkers still visible. The state monument includes a trail to the summit through switchbacks, tunnels, and old fortification structures. Its English name dates to 19th-century sailors who mistook calcite crystals for diamonds. Diamond Head State Monument is one of Hawaii’s most recognizable geologic landmarks and provides a clear example of Oʻahu’s volcanic origin and coastal topography.",
-      "source_url": "https://en.wikipedia.org/wiki/Diamond_Head",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Diamond_Head"
-    },
-    {
-      "title": "Explore Iolani Palace",
-      "description": "ʻIolani Palace in downtown Honolulu was completed in 1882 under King Kalākaua and served as the official royal residence of the Hawaiian Kingdom. It is the only formal royal palace on U.S. soil and includes architectural features influenced by Florentine and American styles, plus early electrical and communication systems for its era. After the overthrow of the Hawaiian Kingdom in 1893, the building was used as a government capitol for the Republic, Territory, and State of Hawaii. Restoration work in the 20th century returned many rooms to their late-19th-century appearance, and the palace reopened as a museum in 1978. The site is central to Hawaiian political history and sovereignty memory.",
-      "source_url": "https://en.wikipedia.org/wiki/Iolani_Palace",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Iolani_Palace"
-    },
-    {
-      "title": "Explore Ala Moana Beach Park",
-      "description": "Ala Moana Beach Park is a 100-acre public park between Waikiki and downtown Honolulu, created on reclaimed coastal land in the 1930s and 1940s. The shoreline includes a protected swimming area behind an offshore reef and a long sandy beach facing the south coast of Oʻahu. The park’s name means “path to the sea,” and the site became a major urban recreation space as Honolulu expanded after World War II. Facilities include courts, open lawns, a promenade, and access near Ala Wai Boat Harbor and Ala Moana Center. Its location and scale make it one of the most heavily used municipal parks in Hawaii for daily exercise, community gatherings, and ocean access. Park construction began in the 1930s, and major postwar expansion continued through the 1950s. The park is commonly listed at about 100 acres with roughly a half-mile protected swimming shoreline.",
-      "source_url": "https://en.wikipedia.org/wiki/Ala_Moana_Beach_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Ala_Moana_Beach_Park"
-    },
-    {
-      "title": "Explore Kaka‘ako",
-      "description": "Kakaʻako is a Honolulu district between downtown and Waikiki that historically contained salt pans, fishing areas, and later light-industrial and warehouse uses. In recent decades, large redevelopment efforts led by the Hawaii Community Development Authority transformed much of the area into mixed-use residential and commercial neighborhoods. The district includes Kakaʻako Waterfront Park, opened in 1992 on a former landfill site, and a growing concentration of public murals and cultural events. Street grids such as Auahi, Cooke, and Keawe now combine new high-rise construction with older industrial buildings. Kakaʻako’s ongoing change illustrates contemporary land-use pressure in urban Honolulu and the policy debates around housing supply, public shoreline access, and local identity. Kakaʻako Waterfront Park opened in 1992, and major high-rise redevelopment accelerated after 2010.",
-      "source_url": "https://en.wikipedia.org/wiki/Kakaako",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Kakaako"
-    },
-    {
-      "title": "Explore Pearl Harbor",
-      "description": "Pearl Harbor is a natural lagoon harbor on Oʻahu’s south coast west of Honolulu and has been a major U.S. naval base since the late 19th century. The attack on Pearl Harbor on December 7, 1941, by the Imperial Japanese Navy brought the United States into World War II and remains one of the most consequential events in modern Pacific history. Today Joint Base Pearl Harbor–Hickam operates on the harbor, while memorial sites such as the USS Arizona Memorial and USS Missouri attract visitors. The harbor’s geography, dredged channels, and protected waters made it strategically important for fleet operations. Pearl Harbor links military history, memorial culture, and active defense infrastructure in Hawaii.",
-      "source_url": "https://en.wikipedia.org/wiki/Pearl_Harbor",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_Harbor"
-    },
-    {
-      "title": "Explore Manoa Falls",
-      "description": "Mānoa Falls is a waterfall in the Mānoa Valley uplands of Oʻahu, with a drop commonly cited at about 150 feet depending on seasonal flow. The trail to the falls passes through tropical rainforest with high annual rainfall fed by trade-wind moisture against the Koʻolau Range. The valley has long been significant in Hawaiian history and agriculture due to reliable water and fertile soils. Modern access is managed through designated paths and watershed protections because steep terrain and frequent mud create erosion and safety concerns. As part of Honolulu’s inland mountain landscape, Mānoa Falls contrasts with coastal Waikiki by highlighting the island’s rapid elevation changes and wet forest ecosystems. The waterfall height is commonly cited at about 150 feet, and trail access has been managed in modern form since the 20th century.",
-      "source_url": "https://en.wikipedia.org/wiki/Manoa_Falls",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Manoa_Falls"
-    },
-    {
-      "title": "Explore North Shore",
-      "description": "Oʻahu’s North Shore refers to the island’s northern coastal region, including communities such as Haleʻiwa, Sunset Beach, Waimea, and Kahuku. The area is globally known for large winter surf generated by North Pacific swells, with breaks such as Banzai Pipeline hosting major professional competitions. Historically, the region included plantation-era agriculture, especially pineapple and sugar operations, before shifting toward tourism, small-town services, and ocean sports economies. Waimea Bay and nearby heiau sites also hold deep cultural significance in Native Hawaiian history. Compared with urban Honolulu, the North Shore has lower-density development and a more rural road network centered on Kamehameha Highway. Seasonal wave cycles define much of its annual rhythm. The region includes communities spread along roughly 20 miles of coastline, and Pipeline events are held each winter season from November to February. Haleʻiwa sits near the western gateway, and Waimea Bay is about 9 miles east along Kamehameha Highway.",
-      "source_url": "https://en.wikipedia.org/wiki/North_Shore",
-      "wikiUrl": "https://en.wikipedia.org/wiki/North_Shore"
-    }
-  ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
-    "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
-    ]
-  },
-  "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
-  ],
-  "faq": [
-    {
-      "q": "How many days are ideal for Honolulu?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Honolulu good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
-    }
-  ],
-  "tours": {
-    "stateSlug": "hawaii",
-    "citySlug": "honolulu",
-    "limit": 6,
-    "title": "Top Honolulu tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.gohawaii.com/islands/oahu"
-  },
-  "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling. Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling. Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling. Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Honolulu without over-scheduling. Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling. Honolulu is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
-  }
+  "bestTimeToVisit":{"title":"Honolulu works year-round, with tradeoffs by season and location","bullets":["Warm weather is normal year-round, but rainfall, surf exposure, and wind vary across Oahu.","Winter brings the famous large surf to the North Shore while Honolulu's south shore can be comparatively calmer.","High-demand attractions, holiday periods, and major events reward advance reservations even though there is no single short visitor season."]},
+  "travelTips":["Group sights geographically; Oahu traffic can turn a poorly planned itinerary into hours in the car.","Use official state or federal reservation systems for managed hikes and memorial sites rather than assuming walk-up access.","Respect Native Hawaiian cultural sites and avoid reducing Hawaiian history to decorative background for beach tourism.","Honolulu, Waikiki, Pearl Harbor, and the North Shore are related but not interchangeable geographic entities."],
+  "faq":[{"q":"How many days should I spend in Honolulu?","a":"Three to five days gives enough time for Waikiki, cultural and historic sites, one substantial outdoor experience, and a carefully chosen day beyond the urban core."},{"q":"Is Waikiki the same as Honolulu?","a":"Waikiki is a neighborhood within Honolulu, not a separate city."},{"q":"Is the North Shore in Honolulu?","a":"No. The North Shore is a separate region of Oahu and should be planned as a substantial excursion rather than a Honolulu neighborhood stop."}],
+  "tours":{"stateSlug":"hawaii","citySlug":"honolulu","limit":6,"title":"Top Honolulu tours"},
+  "seoLinks":{"officialTourism":"https://www.gohawaii.com/islands/oahu"},
+  "aboutCity":{"sections":[{"heading":"Overview","paragraphs":["Honolulu is Hawaii's capital and principal urban center, occupying Oahu's south shore and combining dense city districts with beaches, volcanic landforms, and mountain valleys." ]},{"heading":"Geography & setting","paragraphs":["The city sits between the Pacific and the Koolau Range. Volcanic features such as Diamond Head and wetter valleys such as Manoa make geology and rainfall patterns visible within a relatively small area." ]},{"heading":"History & culture","paragraphs":["Honolulu's story includes Native Hawaiian settlement and governance, the Hawaiian Kingdom, nineteenth-century global trade, overthrow and annexation, territorial and statehood eras, immigration, and the city's continuing role as a Pacific cultural crossroads." ]},{"heading":"Outdoor & seasonal highlights","paragraphs":["Swimming, surfing, hiking, paddling, coastal walking, and mountain-valley trails can all fit into an urban stay. Conditions vary by exposure and season, so daily ocean and weather information matters." ]},{"heading":"Getting around","paragraphs":["Walking and transit work well in selected central corridors, while distant trailheads and regional excursions often require a car or tour. Grouping activities by district is more important than trying to cover the entire island each day." ]}]}
 }

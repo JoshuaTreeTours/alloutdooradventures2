@@ -1,120 +1,20 @@
 {
-  "tier": "tier2",
-  "title": "Hanalei, Hawaii Travel Guide",
-  "country": "United States",
-  "state": "Hawaii",
-  "city": "Hanalei",
-  "slug": "guides/us/hawaii/hanalei",
-  "hero": {
-    "image": "https://cdn.filestackcontent.com/u4x9IdqdT9KmWDFKcf89",
-    "alt": "Hanalei, Hawaii — Morning Nā Pali Adventure Tour",
-    "headline": "Hanalei, Hawaii Travel Guide",
-    "subheadline": "Plan a focused Hanalei trip with practical highlights, local context, and easy tour connections."
-  },
-  "overview": [
-    "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
+  "title":"Hanalei Travel Guide","country":"United States","state":"Hawaii","city":"Hanalei","slug":"guides/us/hawaii/hanalei",
+  "hero":{"image":"https://cdn.filestackcontent.com/u4x9IdqdT9KmWDFKcf89","alt":"Hanalei Bay and Kauai north shore","headline":"Hanalei Travel Guide","subheadline":"Plan Hanalei around its broad bay, river and taro landscapes, North Shore communities, and carefully managed access toward the Na Pali Coast."},
+  "overview":["Hanalei is a small Kauai North Shore community set between a broad crescent bay and steep, rain-fed mountains. The setting—not a collection of tour operators—is the reason to stay: beach time, paddling, local food, cultural landscape, and access to the island's wetter northern coast.","Rain, surf, flooding, road conditions, and limited parking can change plans quickly. A strong Hanalei itinerary leaves room for weather and treats Haena State Park and the Na Pali Coast as separate managed landscapes rather than extensions of town."],
+  "highlights":[{"title":"Hanalei Bay","description":"A broad mountain-backed bay anchors the community and changes character with seasonal surf and weather."},{"title":"River and taro landscape","description":"Wetlands, the Hanalei River, and cultivated taro fields give the valley a cultural and agricultural identity distinct from resort areas."},{"title":"Kauai North Shore","description":"Nearby beaches and communities reward slow exploration, but the narrow road network makes geographic planning important."},{"title":"Gateway toward Haena and Na Pali","description":"Hanalei is a practical base for reaching managed trail and coastal access farther west, subject to reservations and current conditions."}],
+  "thingsToDo":[
+    {"title":"Spend time on Hanalei Bay","description":"Hanalei Bay is the community's defining landscape, with a long arc of sand backed by mountains that collect abundant rainfall. Walk the shoreline, swim only when conditions are appropriate, or simply watch how weather moves across the valley. Winter surf and currents can be powerful, while calmer periods create better conditions for casual water recreation."},
+    {"title":"Walk Hanalei town and understand the valley","description":"The compact town center has restaurants, small shops, galleries, and historic buildings, but its setting makes more sense when viewed together with the surrounding river and agricultural lands. Slow down rather than treating Hanalei as a transfer point for boat tours. Respect working farms and private property around the valley."},
+    {"title":"Paddle or explore the Hanalei River responsibly","description":"The river provides a gentler perspective on the valley and its lush vegetation when water and weather conditions cooperate. Guided paddling can add useful interpretation and reduce uncertainty about access. Heavy rain can change river conditions quickly, so check locally before committing to a route."},
+    {"title":"Explore the North Shore beaches east and west of town","description":"Kauai's North Shore contains beaches with very different exposure, reef structure, parking, and swimming conditions. Choose a beach for the day's actual surf rather than assuming every picturesque cove is safe. Roadside parking and residential impacts are recurring concerns, so use designated areas and avoid blocking local access."},
+    {"title":"Plan Haena State Park and Na Pali access in advance","description":"The road west of Hanalei leads toward Haena State Park and the trailhead for the Kalalau Trail, but this is controlled access rather than a casual extension of town. Reservations, parking or shuttle arrangements, weather, trail conditions, and ocean safety can all determine whether a visit is practical. Verify current state requirements before setting out."},
+    {"title":"Experience the Na Pali Coast by an appropriate route","description":"The Na Pali Coast is one of Kauai's defining landscapes, but it is not a Hanalei city attraction. Depending on season and conditions, visitors may experience it by permitted trail access, boat excursion, or scenic flight. North Shore boat operations can be especially sensitive to seasonal ocean conditions, so departure points and schedules vary."}
   ],
-  "highlights": [
-    {
-      "title": "Hanalei essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
-    },
-    {
-      "title": "Hanalei local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
-    }
-  ],
-  "thingsToDo": [
-    {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Hanalei, Hawaii. Regional parks and preserves near Hanalei are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Morning N",
-      "description": "Morning N is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Fathom Five Divers",
-      "description": "Fathom Five Divers is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Na Pali Coast Hanalei Tours",
-      "description": "Na Pali Coast Hanalei Tours is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    }
-  ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Hanalei",
-    "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
-    ]
-  },
-  "travelTips": [
-    "Group activities by area to reduce transfers across Hanalei.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
-  "faq": [
-    {
-      "q": "How many days should I plan for Hanalei?",
-      "a": "Two to three days is enough for core Hanalei highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Hanalei?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
-  ],
-  "tours": {
-    "stateSlug": "hawaii",
-    "citySlug": "hanalei",
-    "limit": 6,
-    "title": "Top Hanalei tours"
-  },
-  "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Hanalei",
-    "officialTourism": "https://www.gohawaii.com/",
-    "reference": "https://www.britannica.com/place/Hanalei"
-  },
-  "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Hanalei",
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Hanalei, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hanalei itinerary efficient while still feeling varied and local."
-        ]
-      }
-    ]
-  }
+  "bestTimeToVisit":{"title":"Weather and ocean conditions matter more than a simple peak-season rule","bullets":["The North Shore is wetter than much of Kauai, and showers can occur in any season.","Winter can bring large north swells and rough seas; summer often provides calmer ocean conditions for North Shore boating and swimming.","High-demand access toward Haena and Na Pali should be planned well ahead regardless of season."]},
+  "travelTips":["Leave slack in the itinerary for rain, surf, road delays, and changing trail conditions.","Do not drive beyond Hanalei toward Haena without understanding current reservation and parking requirements.","Use designated parking and respect residential neighborhoods and agricultural land.","Treat boat operators and tour products as bookable experiences, not permanent Things to Do landmarks."],
+  "faq":[{"q":"How many days should I spend in Hanalei?","a":"Two to three days allows time for the bay, town, North Shore beaches, and one larger outdoor experience without overloading the narrow road corridor."},{"q":"Is the Na Pali Coast in Hanalei?","a":"No. Hanalei is a gateway community; the Na Pali Coast is a separate protected landscape reached through managed trail, boat, or air experiences."},{"q":"Does Hanalei get a lot of rain?","a":"The North Shore is one of Kauai's wetter regions, so flexible planning is valuable even during otherwise favorable travel periods."}],
+  "tours":{"stateSlug":"hawaii","citySlug":"hanalei","limit":6,"title":"Top Hanalei tours"},
+  "seoLinks":{"officialTourism":"https://www.gohawaii.com/islands/kauai/regions/north-shore/hanalei"},
+  "aboutCity":{"sections":[{"heading":"Overview","paragraphs":["Hanalei is a small North Shore Kauai community whose appeal comes from the relationship among bay, river, mountains, agriculture, and nearby coastal access." ]},{"heading":"Geography & setting","paragraphs":["The community occupies a low coastal valley backed by steep green mountains. Frequent rainfall feeds streams, waterfalls, wetlands, and the Hanalei River before reaching the broad bay." ]},{"heading":"History & culture","paragraphs":["Native Hawaiian history and wetland agriculture long predate modern tourism. Taro cultivation remains an important visible part of the valley's cultural landscape and should be treated as working land, not scenery to trespass upon." ]},{"heading":"Outdoor & seasonal highlights","paragraphs":["Beach walking, surfing, paddling, hiking access, boating, and scenic touring dominate outdoor plans, with rainfall and seasonal north swells shaping what is safe and available." ]},{"heading":"Getting around","paragraphs":["Hanalei town is compact, but broader North Shore exploration usually requires a car or tour. The two-lane road network, limited parking, and controlled access farther west reward advance planning." ]}]}
 }
