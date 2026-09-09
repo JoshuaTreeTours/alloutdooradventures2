@@ -6,141 +6,62 @@
   "slug": "guides/us/florida/tampa",
   "hero": {
     "image": "",
-    "alt": "Tampa skyline and landmarks",
+    "alt": "Tampa skyline and waterfront",
     "headline": "Tampa Travel Guide",
-    "subheadline": "Plan a high-value Tampa itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+    "subheadline": "Plan Tampa around the Riverwalk, Ybor City, waterfront attractions, bay ecology, food, and easy outdoor time."
   },
   "overview": [
-    "Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling."
+    "Tampa is a Gulf Coast city built around the Hillsborough River, Tampa Bay, historic Ybor City, and a rapidly changing downtown waterfront. The Riverwalk makes many central attractions unusually easy to connect on foot, while the free TECO Line Streetcar links downtown and Channelside with Ybor City.",
+    "For a first trip, spend one day along the Riverwalk and Channelside, another in Ybor City and nearby neighborhoods, and leave time for the water itself through kayaking, a wildlife cruise, or a broader Tampa Bay outing. Beaches are across the bay rather than in downtown Tampa, so treat them as separate regional excursions."
   ],
   "highlights": [
-    {
-      "title": "Signature sights in Tampa",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
+    {"title": "Tampa Riverwalk", "description": "Walk or bike the central waterfront between parks, museums, restaurants, and Channelside attractions."},
+    {"title": "Ybor City", "description": "Explore Tampa's cigar-making history, Latin cultural heritage, architecture, food, and nightlife."},
+    {"title": "Tampa Bay ecology", "description": "Get onto the water for paddling, dolphin watching, birding, or other coastal experiences."},
+    {"title": "Waterfront attractions", "description": "Combine the Florida Aquarium, Sparkman Wharf, museums, and public spaces without repeated driving."}
   ],
   "thingsToDo": [
-    {
-      "title": "Explore Tampa Riverwalk",
-      "description": "One of the most valuable things to do in Tampa is spend time around Tampa Riverwalk. Travelers comparing attractions in Tampa consistently rank Tampa Riverwalk as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Tampa Riverwalk early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Ybor City",
-      "description": "One of the most valuable things to do in Tampa is spend time around Ybor City. Travelers comparing attractions in Tampa consistently rank Ybor City as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Ybor City early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Busch Gardens Tampa Bay",
-      "description": "One of the most valuable things to do in Tampa is spend time around Busch Gardens Tampa Bay. Travelers comparing attractions in Tampa consistently rank Busch Gardens Tampa Bay as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Busch Gardens Tampa Bay early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Armature Works",
-      "description": "One of the most valuable things to do in Tampa is spend time around Armature Works. Travelers comparing attractions in Tampa consistently rank Armature Works as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Armature Works early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Tampa Museum of Art",
-      "description": "One of the most valuable things to do in Tampa is spend time around Tampa Museum of Art. Travelers comparing attractions in Tampa consistently rank Tampa Museum of Art as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Tampa Museum of Art early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Bayshore Boulevard",
-      "description": "One of the most valuable things to do in Tampa is spend time around Bayshore Boulevard. Travelers comparing attractions in Tampa consistently rank Bayshore Boulevard as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Bayshore Boulevard early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Sparkman Wharf",
-      "description": "One of the most valuable things to do in Tampa is spend time around Sparkman Wharf. Travelers comparing attractions in Tampa consistently rank Sparkman Wharf as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Sparkman Wharf early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Fort De Soto Park",
-      "description": "One of the most valuable things to do in Tampa is spend time around Fort De Soto Park. Travelers comparing attractions in Tampa consistently rank Fort De Soto Park as a high-impact stop. If you want to visit Tampa with a balanced itinerary, prioritize Fort De Soto Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Tampa, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    }
+    {"title": "Walk the Tampa Riverwalk", "description": "The Tampa Riverwalk follows the Hillsborough River and Garrison Channel through the downtown waterfront, linking parks, museums, restaurants, Armature Works, Curtis Hixon Waterfront Park, and the Channelside area. It works as both an attraction and a transportation spine. Walk a section during the day, then return after sunset when the waterfront is cooler and the bridges and buildings are illuminated."},
+    {"title": "Explore historic Ybor City", "description": "Ybor City grew around the cigar industry and immigrant communities from Cuba, Spain, Italy, and elsewhere, leaving Tampa with a distinctive historic district of brick buildings, social clubs, restaurants, and cultural sites. Visit during daylight for architecture and history, then return in the evening if nightlife interests you. The TECO Line Streetcar makes Ybor easy to pair with downtown without moving the car."},
+    {"title": "Visit the Florida Aquarium", "description": "The Florida Aquarium in Channelside focuses heavily on Florida wetlands, coastal habitats, coral reefs, marine wildlife, and conservation. It is a strong indoor choice during hot or stormy afternoons and sits close to the Riverwalk, Sparkman Wharf, and the streetcar. Allow several hours rather than treating it as a quick stop, particularly with children."},
+    {"title": "Spend time at Sparkman Wharf and Water Street", "description": "Sparkman Wharf and the adjoining Water Street district have reshaped the eastern downtown waterfront with dining, public spaces, events, and easy access to the aquarium and arena. The area is most useful as a meal or evening anchor within a larger Riverwalk day. Check event schedules because games and concerts can change traffic and crowds quickly."},
+    {"title": "See Tampa Bay from the water", "description": "Boat trips, paddling outings, and wildlife cruises reveal the estuary that defines the region far better than another highway drive. Depending on season and location, visitors may encounter dolphins, manatees, seabirds, mangroves, and working waterfronts. Choose trips based on duration and natural-history focus, and remember that wind, thunderstorms, and tides can change conditions."},
+    {"title": "Walk or cycle Bayshore Boulevard", "description": "Bayshore Boulevard runs along Hillsborough Bay south of downtown with a long waterfront sidewalk used by walkers, runners, and cyclists. It offers open bay views and a simple outdoor break from museums and restaurants. There is little shade on exposed sections, so early morning or evening is much more comfortable during warm months."},
+    {"title": "Explore Lettuce Lake Park", "description": "Lettuce Lake Park on the Hillsborough River offers boardwalks, wooded trails, paddling access, and wildlife viewing in a landscape that feels far removed from downtown. It is a useful place to see cypress wetlands and river habitat without making a full-day regional trip. Bring insect protection and check park or river conditions after heavy rain."},
+    {"title": "Make a separate beach day", "description": "Tampa itself is a bayfront city rather than a Gulf beach town. Clearwater Beach, St. Pete Beach, Fort De Soto, and other Gulf destinations lie across or around Tampa Bay and should be planned as dedicated outings. Traffic over the bay can be significant, so avoid describing a beach visit as a quick extension of a downtown afternoon."}
   ],
   "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
+    "title": "Late fall through spring is most comfortable for outdoor exploration",
     "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
+      "November through April generally offers the easiest combination of lower humidity and comfortable waterfront weather.",
+      "Summer is hot, humid, and storm-prone; use early mornings for outdoor activity and keep indoor alternatives for afternoon thunderstorms.",
+      "Atlantic hurricane season runs through the warm-weather months, so monitor forecasts and travel advisories when storms are active.",
+      "Winter and spring can be busy around major events and school breaks, so reserve popular tours and lodging early."
     ]
   },
   "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
+    "Use the Riverwalk and free TECO Line Streetcar to connect central Tampa and Ybor City before reaching for the car.",
+    "Plan Gulf beaches as separate regional trips; downtown Tampa is not directly on an ocean beach.",
+    "Carry water, sunscreen, and rain protection, especially from late spring through early fall.",
+    "Check marine weather before paddling or boating because thunderstorms and wind can develop quickly.",
+    "Group Channelside, Water Street, the aquarium, and the southern Riverwalk into one itinerary."
   ],
   "faq": [
-    {
-      "q": "How many days are ideal for Tampa?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Tampa good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    {"q": "How many days should I spend in Tampa?", "a": "Two to three days covers Tampa's core neighborhoods and waterfront, while a fourth day gives room for a beach, paddling trip, wildlife outing, or a visit elsewhere around Tampa Bay."},
+    {"q": "Does Tampa have beaches?", "a": "Tampa has bayfront waterfront but the region's famous Gulf beaches are west across Tampa Bay in Pinellas County and nearby barrier islands. Plan them as separate outings."},
+    {"q": "Can I explore Tampa without a car?", "a": "A central trip is possible without one because the Riverwalk, streetcar, walking, and rideshare connect many major sights. A car becomes more useful for parks, beaches, and wider regional trips."},
+    {"q": "What outdoor experiences are best in Tampa?", "a": "The Riverwalk, Bayshore Boulevard, Hillsborough River parks, kayaking, wildlife cruises, and broader Tampa Bay coastal outings provide the strongest outdoor options."
     }
   ],
-  "tours": {
-    "stateSlug": "florida",
-    "citySlug": "tampa",
-    "limit": 6,
-    "title": "Top Tampa tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.visittampabay.com/"
-  },
+  "tours": {"stateSlug": "florida", "citySlug": "tampa", "limit": 6, "title": "Top Tampa tours"},
+  "seoLinks": {"officialTourism": "https://www.visittampabay.com/"},
   "aboutCity": {
     "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling. Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling. Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling. Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Tampa without over-scheduling. Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling. Tampa is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Tampa without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Tampa is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
+      {"heading": "Overview", "paragraphs": ["Tampa sits on Florida's west coast where the Hillsborough River meets Tampa Bay. Its modern visitor core stretches from the riverfront through Channelside and Water Street, while older districts such as Ybor City preserve a very different urban scale and history.", "The larger Tampa Bay region includes several separate cities and beach communities. Tampa, St. Petersburg, Clearwater, and the Gulf beaches are connected economically and geographically, but they should not be collapsed into one city when describing attractions or travel times."]},
+      {"heading": "History & culture", "paragraphs": ["Tampa's growth accelerated in the late 19th century with rail connections, port development, and the cigar industry centered in Ybor City and West Tampa. Cuban, Spanish, Italian, and Afro-Cuban communities helped shape the city's food, architecture, labor history, and cultural identity.", "That history remains visible in Ybor's historic buildings, social clubs, bakeries, restaurants, and cigar traditions, while downtown Tampa has increasingly turned toward the river and bay through parks and mixed-use waterfront development."]},
+      {"heading": "Bay & ecology", "paragraphs": ["Tampa Bay is a large estuary where freshwater rivers mix with Gulf water, supporting seagrass, mangroves, fish, birds, dolphins, and manatees. The Hillsborough River adds cypress wetlands and wooded floodplain habitat farther inland.", "For outdoor travelers, the most distinctive experiences involve these waters rather than simply visiting city parks: paddling, boating, birding, and wildlife observation connect the urban trip to the natural system that made Tampa possible."]},
+      {"heading": "Seasonal highlights", "paragraphs": ["Cooler months are ideal for long Riverwalk days, cycling, outdoor dining, and paddling. Summer travel works better with early starts, indoor midday attractions, and flexibility for thunderstorms.", "Tropical weather is a real planning consideration during hurricane season. Visitors should follow official forecasts rather than relying on normal seasonal averages when a storm is in the Gulf or Atlantic."]},
+      {"heading": "Getting around", "paragraphs": ["Downtown, Channelside, and Ybor City can be linked efficiently by walking, the Riverwalk, and the free streetcar. That makes central Tampa more manageable than its metropolitan scale suggests.", "For beaches, Lettuce Lake, suburban attractions, and broader Tampa Bay exploration, rideshare or a car is more practical. Allow extra time when crossing the bay, especially during commuter periods and beach weekends."]}
     ]
   }
 }
