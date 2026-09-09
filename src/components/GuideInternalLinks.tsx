@@ -203,8 +203,8 @@ const buildAreaLinks = (guide: GuideContent): GuideLink[] => {
       }
       if (guide.parentSlug) {
         links.push({
-          label: `${guide.name} destination`,
-          href: `/guides/us/${guide.parentSlug}/${guide.slug}`,
+          label: `${guide.name} tours`,
+          href: `/destinations/${guide.parentSlug}/${guide.slug}/tours`,
         });
       }
       return links;
@@ -523,6 +523,22 @@ export default function GuideInternalLinks({
               href={getGuideTourDetailPath(tour)}
             />
           ))}
+        </div>
+        <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#2f4a2f]">
+          <Link href={getAllToursHref(place)}>
+            <a className="font-semibold underline underline-offset-4">
+              View all tours in {placeLabel}
+            </a>
+          </Link>
+          {guide.type === "city" &&
+          guide.regionType === "state" &&
+          guide.parentSlug ? (
+            <Link href={`/guides/us/${guide.parentSlug}`}>
+              <a className="font-semibold underline underline-offset-4">
+                Explore {guide.parentName ?? "state"} guide
+              </a>
+            </Link>
+          ) : null}
         </div>
       </section>
     );
