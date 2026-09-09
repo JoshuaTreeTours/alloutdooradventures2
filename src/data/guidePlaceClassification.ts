@@ -69,6 +69,22 @@ const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<
     notes:
       "Palm Springs is an incorporated city in the Coachella Valley. Indian Canyons and Tahquitz Canyon are Agua Caliente cultural landscapes; Mount San Jacinto State Park and Joshua Tree National Park are separate protected areas with their own managers and rules.",
   },
+  "us/california/oakhurst": {
+    placeType: "gateway-community",
+    verified: true,
+    associatedProtectedArea: {
+      name: "Yosemite National Park",
+      type: "national-park",
+      managingAuthority: "National Park Service",
+    },
+    verificationSources: [
+      "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs26/tigerweb_acs26_cdp_2025_acs25_ca.html",
+      "https://www.nps.gov/yose/planyourvisit/gateways.htm",
+      "https://www.yosemitethisyear.com/",
+    ],
+    notes:
+      "Oakhurst is an unincorporated census-designated community in Madera County and a Highway 41 gateway to Yosemite. Yosemite National Park, Sierra National Forest, Bass Lake, and Fish Camp are separate places or jurisdictions and must not be described as Oakhurst municipal attractions.",
+  },
   "us/florida/key-west": {
     placeType: "city",
     verified: true,
