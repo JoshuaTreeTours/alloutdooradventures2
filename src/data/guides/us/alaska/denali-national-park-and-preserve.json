@@ -5,124 +5,41 @@
   "state": "Alaska",
   "city": "Denali National Park and Preserve",
   "slug": "guides/us/alaska/denali-national-park-and-preserve",
-  "hero": {
-    "image": "https://cdn.filestackcontent.com/zS0hQjuTxi4HGauFPXER",
-    "alt": "Denali National Park and Preserve, Alaska — Canyon Wave",
-    "headline": "Denali National Park and Preserve, Alaska Travel Guide",
-    "subheadline": "Plan a focused Denali National Park and Preserve trip with practical highlights, local context, and easy tour connections."
-  },
+  "hero": {"image": "https://cdn.filestackcontent.com/zS0hQjuTxi4HGauFPXER", "alt": "Denali National Park and Preserve, Alaska — Canyon Wave", "headline": "Denali National Park and Preserve, Alaska Travel Guide", "subheadline": "Plan Denali around the park road, wildlife, tundra, mountain weather, and the access rules that make this national park fundamentally different from a city destination."},
   "overview": [
-    "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
+    "Denali National Park and Preserve is a vast federally managed wilderness centered on the Alaska Range and North America's highest mountain. It is not a town or a conventional sightseeing district: most visitor activity follows a single park road, and access beyond the entrance area is deliberately limited to protect wildlife and wilderness character.",
+    "A good Denali itinerary starts with transportation and current road conditions rather than a list of attractions. In summer 2026 buses travel no farther than East Fork at Mile 43 because of the Pretty Rocks closure; the new bridge is complete, and the National Park Service expects public bus service to the west end to resume for the 2027 visitor season."
   ],
   "highlights": [
-    {
-      "title": "Denali National Park and Preserve essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
-    },
-    {
-      "title": "Denali National Park and Preserve local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
-    }
+    {"title": "One road into immense wilderness", "description": "The Denali Park Road is the principal visitor corridor, with private-vehicle access far more limited than in most national parks."},
+    {"title": "Wildlife on its own terms", "description": "Moose, caribou, Dall sheep, bears, wolves, and smaller wildlife may be seen, but sightings are never guaranteed and safe distance is essential."},
+    {"title": "The mountain is not always visible", "description": "Clouds frequently obscure Denali, so build the trip around the whole tundra-and-mountain ecosystem rather than making one summit view the measure of success."},
+    {"title": "Access changes by season", "description": "Bus operations, private-vehicle limits, trails, facilities, and road openings change substantially through the year; current NPS conditions outrank generic travel advice."}
   ],
   "thingsToDo": [
-    {
-      "title": "Denali National Park And Preserve",
-      "description": "Denali National Park And Preserve is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska."
-    },
-    {
-      "title": "Denali National Park",
-      "description": "Denali National Park is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Hour Into",
-      "description": "Hour Into is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Northern Epics",
-      "description": "Northern Epics is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Denali Day Hikes",
-      "description": "Denali Day Hikes is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Canyon Wave",
-      "description": "Canyon Wave is a practical stop for understanding Denali National Park and Preserve's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Denali National Park and Preserve, Alaska. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    }
+    {"title": "Ride the Denali Park Road", "description": "The park road is the main route into Denali's interior and the foundation of most first visits. In summer, private vehicles normally travel only the first 15 miles to Savage River while buses provide access farther west; 2026 bus operations stop at East Fork, Mile 43, because of the Pretty Rocks project. Reserve ahead when your schedule is tight and check current National Park Service conditions immediately before travel."},
+    {"title": "Use the entrance area for orientation", "description": "The Denali Visitor Center area, bus depot, railroad depot, trails, and nearby facilities make the park entrance much more than a place to collect a map. Start here to understand current road access, wildlife closures, ranger programs, and transportation choices. This is especially valuable when weather or seasonal operations have changed since an itinerary was booked."},
+    {"title": "Hike the front-country trail system", "description": "Trails near the entrance provide forest, river, and ridge experiences without requiring a long bus journey into the park. Route difficulty ranges from easy walks to steeper climbs, and conditions can change quickly with rain, snow, mud, or wildlife activity. Ask about current closures and carry layers even when the entrance area feels mild."},
+    {"title": "Explore Savage River when access allows", "description": "Savage River near Mile 15 marks the usual end of summer private-vehicle access and offers tundra scenery and walking opportunities in a dramatically more open landscape than the entrance forest. Parking and access can be constrained, so transportation planning matters. Wind and weather are often more exposed here than visitors expect from the short distance on a map."},
+    {"title": "Watch wildlife without chasing sightings", "description": "Denali protects large intact habitats, which is why wildlife viewing can be extraordinary, but the animals are dispersed across a huge landscape. Binoculars improve the experience, and a bus ride often provides better opportunities than trying to drive repeatedly around the entrance area. Never approach or feed wildlife, and follow temporary closures around nesting, denning, or feeding sites."},
+    {"title": "Learn why sled dogs still matter in Denali", "description": "Denali maintains a working sled-dog kennel because dog teams remain useful for winter patrols in designated wilderness. Ranger programs and kennel visits, when offered, connect modern park operations with a long history of winter travel. Check the daily schedule because program availability changes by season."},
+    {"title": "Treat backcountry travel as a separate level of planning", "description": "Much of Denali has no constructed trail network, which allows genuine wilderness travel but demands navigation, river, wildlife, and weather judgment. Backcountry permits and orientation requirements may apply, and conditions can turn serious quickly. First-time visitors should not interpret the absence of technical trail infrastructure as evidence that cross-country travel is easy."},
+    {"title": "Use clear weather when it arrives", "description": "Denali itself can remain hidden behind clouds for long periods, so clear views should be treated as an opportunity rather than an expectation. When visibility improves, viewpoints along the road and higher trails can reveal the scale of the Alaska Range. A trip remains worthwhile without a summit view because tundra, wildlife, glacial valleys, and seasonal light are the larger experience."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Denali National Park and Preserve",
-    "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
-    ]
-  },
-  "travelTips": [
-    "Group activities by area to reduce transfers across Denali National Park and Preserve.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
+  "bestTimeToVisit": {"title": "Summer offers the broadest access, but every season changes the park", "bullets": ["The main summer visitor season runs roughly late May through mid-September, when buses and most visitor services operate.", "Fall road access changes after bus season and can close quickly with winter weather.", "Winter is quiet and powerful but requires cold-weather preparation and current knowledge of road and facility access."]},
+  "travelTips": ["Check the NPS current-conditions page shortly before arrival; Denali access can change faster than printed guidebooks.", "Reserve bus transportation early if you have only one or two full days.", "Bring binoculars, rain protection, warm layers, food, and water for long park-road days.", "Do not build the trip around a guaranteed view of Denali or a guaranteed sighting of any particular animal."],
   "faq": [
-    {
-      "q": "How many days should I plan for Denali National Park and Preserve?",
-      "a": "Two to three days is enough for core Denali National Park and Preserve highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Denali National Park and Preserve?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
+    {"q": "Can I drive my own car through Denali?", "a": "Only partway. In the normal summer system, private vehicles generally drive the first 15 miles to Savage River; buses handle most travel farther into the park. Seasonal and construction-related limits can change, so check NPS conditions."},
+    {"q": "What is different in 2026?", "a": "Summer 2026 buses travel no farther than East Fork at Mile 43 because of the Pretty Rocks closure. The bridge was completed in September 2026, and NPS expects public bus service to the west end to resume for the 2027 season."},
+    {"q": "How long should I stay?", "a": "Two or three full days gives useful flexibility for a park-road day, entrance-area hiking and interpretation, and weather. Longer stays improve the odds of seeing different wildlife and mountain conditions."}
   ],
-  "tours": {
-    "stateSlug": "alaska",
-    "citySlug": "denali-national-park-and-preserve",
-    "limit": 6,
-    "title": "Top Denali National Park and Preserve tours"
-  },
-  "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve",
-    "officialTourism": "https://www.travelalaska.com/",
-    "reference": "https://www.britannica.com/place/Denali-National-Park-and-Preserve"
-  },
-  "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve",
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Denali National Park and Preserve, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denali National Park and Preserve itinerary efficient while still feeling varied and local."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug": "alaska", "citySlug": "denali-national-park-and-preserve", "limit": 6, "title": "Top Denali National Park and Preserve tours"},
+  "seoLinks": {"officialTourism": "https://www.nps.gov/dena/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Denali National Park and Preserve is a National Park Service unit, not a city. The park protects millions of acres of Alaska Range mountains, taiga, tundra, rivers, glaciers, wildlife habitat, and designated wilderness."]},
+    {"heading": "Geography & setting", "paragraphs": ["Elevation rises from forested lowlands to alpine tundra, glaciers, and the 20,310-foot summit of Denali. The single park road crosses this ecological transition and is the organizing spine for most visitor access."]},
+    {"heading": "History & stewardship", "paragraphs": ["Congress established the original park in 1917, initially with strong emphasis on protecting Dall sheep. Later expansion created today's National Park and Preserve, while Indigenous connections to the broader landscape extend far deeper than the park's federal history."]},
+    {"heading": "Outdoor & seasonal highlights", "paragraphs": ["Summer emphasizes bus travel, hiking, wildlife viewing, camping, and long daylight. Autumn is brief, winter is severe and quiet, and spring road openings depend heavily on weather and snow conditions."]},
+    {"heading": "Getting there and around", "paragraphs": ["The park entrance is on the George Parks Highway about 240 road miles north of Anchorage and 120 miles south of Fairbanks. The Alaska Railroad also stops at the park entrance. Once inside, the park-road transportation system and current seasonal rules determine how far most visitors can travel."]}
+  ]}
 }

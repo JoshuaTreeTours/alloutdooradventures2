@@ -5,124 +5,41 @@
   "state": "Alaska",
   "city": "Fairbanks",
   "slug": "guides/us/alaska/fairbanks",
-  "hero": {
-    "image": "https://cdn.filestackcontent.com/jjEvl7jVS0Wgihs51lQW",
-    "alt": "Fairbanks, Alaska — 1-Hour Private Day Mush",
-    "headline": "Fairbanks, Alaska Travel Guide",
-    "subheadline": "Plan a focused Fairbanks trip with practical highlights, local context, and easy tour connections."
-  },
+  "hero": {"image": "https://cdn.filestackcontent.com/jjEvl7jVS0Wgihs51lQW", "alt": "Fairbanks, Alaska — dog mushing in Interior Alaska", "headline": "Fairbanks, Alaska Travel Guide", "subheadline": "Plan Fairbanks around Interior Alaska's river landscape, northern lights, midnight sun, museums, hot springs, and genuinely seasonal outdoor life."},
   "overview": [
-    "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
+    "Fairbanks is a river city in Interior Alaska where season and daylight shape the trip more dramatically than almost anywhere in the United States. Summer revolves around the midnight sun and long outdoor days; late August through April brings dark skies and aurora opportunities; deep winter adds serious cold, snow, dog mushing, skiing, and ice-centered experiences.",
+    "The city is also a useful base for understanding Interior Alaska rather than merely a launch point for aurora tours. The Chena River, Alaska Native culture, gold-rush history, university museums, boreal forest, hot springs, and routes toward Denali and the Arctic all belong to the larger Fairbanks story."
   ],
   "highlights": [
-    {
-      "title": "Fairbanks essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
-    },
-    {
-      "title": "Fairbanks local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
-    }
+    {"title": "Aurora season", "description": "Fairbanks' official aurora season runs from August 21 through April 21, when sufficiently dark and clear skies create regular viewing opportunities."},
+    {"title": "Midnight sun", "description": "Late spring and summer bring extraordinary daylight, changing how travelers pace hiking, river trips, festivals, and evening activities."},
+    {"title": "Interior Alaska culture", "description": "Museums, cultural institutions, gold-rush history, and the Chena River explain why Fairbanks developed where it did."},
+    {"title": "A base for bigger journeys", "description": "Denali, the Arctic Circle, Chena Hot Springs, and remote Interior landscapes are separate excursions requiring realistic time and transportation planning."}
   ],
   "thingsToDo": [
-    {
-      "title": "Tundra Trekkers",
-      "description": "Tundra Trekkers is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Maia Hartwigsen",
-      "description": "Maia Hartwigsen is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Chena River Nature Trail Walk",
-      "description": "Chena River Nature Trail Walk is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Husky Hike",
-      "description": "Husky Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Mastodon Trail Hike",
-      "description": "Mastodon Trail Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Table Top Mountain Hike",
-      "description": "Table Top Mountain Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    }
+    {"title": "Plan an aurora night intelligently", "description": "Fairbanks is one of North America's best-known aurora bases, but the northern lights still require darkness, clear enough skies, and solar activity. Aurora season runs from August 21 through April 21, and viewing often means staying awake well beyond normal sightseeing hours. Keep the following morning flexible, dress for prolonged inactivity in the cold, and use current forecasts rather than assuming a tour can guarantee a display."},
+    {"title": "Experience the Chena River", "description": "The Chena River runs through the heart of Fairbanks and is central to both the city's history and present-day recreation. In summer it supports paddling, boating, fishing, riverside walks, and long evenings under the midnight sun; in winter the frozen river becomes part of a very different outdoor landscape. Seeing the river helps make sense of Fairbanks as a place rather than a collection of isolated attractions."},
+    {"title": "Visit the University of Alaska Museum of the North", "description": "The Museum of the North is one of the strongest places in Fairbanks to understand Alaska's natural history, art, wildlife, geology, and cultural diversity. It is especially useful near the beginning of a trip because the exhibits give context to the enormous landscapes beyond the city. Allow more than a quick photo stop; the museum's value is in interpretation."},
+    {"title": "Learn Interior Alaska history downtown", "description": "Downtown Fairbanks and nearby historic sites connect the modern city to river transportation, mining, aviation, and the early twentieth-century gold rush. Rather than treating downtown as a generic shopping stop, use museums, public interpretation, and the riverfront to understand why a settlement grew here. The compact core pairs naturally with the Morris Thompson Cultural and Visitors Center."},
+    {"title": "Make Chena Hot Springs a deliberate excursion", "description": "Chena Hot Springs lies well outside central Fairbanks and should be planned as a regional trip, not described as a downtown attraction. The drive passes through Interior Alaska boreal landscape, and visitors often combine the springs with winter or aurora experiences. Road conditions, darkness, and extreme cold can materially affect the outing, so check conditions before leaving the city."},
+    {"title": "Experience dog mushing as a living Alaska tradition", "description": "Dog mushing is not simply a visitor novelty in Interior Alaska; it remains a competitive sport, winter transportation tradition, and important part of regional culture. Kennel visits and guided rides can provide useful context when operators emphasize the dogs, training, and seasonal realities rather than only a short ride. Winter offers the classic snow experience, while some kennels provide dryland programs in warmer months."},
+    {"title": "Use the midnight sun for a different kind of summer day", "description": "Fairbanks' summer light can make late-evening hiking, paddling, photography, and events feel surprisingly natural. The official visitor bureau identifies a Midnight Sun season from April 22 through August 20, with the longest days clustered around the solstice. Travelers still need sleep, so use the extra light strategically rather than filling every hour with activity."},
+    {"title": "Treat the Arctic Circle as a major day or overnight trip", "description": "The Arctic Circle is roughly 196 driving miles north of Fairbanks, so it is not a quick side trip. Road conditions, limited services, dust, weather, and the length of the return drive make guided transportation attractive for many visitors. The value of the trip is the changing boreal and subarctic landscape and the scale of Interior Alaska, not merely standing beside a latitude sign."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Fairbanks",
-    "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
-    ]
-  },
-  "travelTips": [
-    "Group activities by area to reduce transfers across Fairbanks.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
+  "bestTimeToVisit": {"title": "Fairbanks has distinct travel seasons rather than one best month", "bullets": ["Aurora season is August 21 through April 21; darker months offer longer viewing windows but progressively colder conditions.", "Midnight Sun season runs April 22 through August 20, with extremely long daylight around the June solstice.", "Deep winter can be exceptionally cold; the experience is rewarding only with appropriate clothing, transportation planning, and schedule flexibility."]},
+  "travelTips": ["Protect sleep on aurora trips by keeping late mornings flexible after nighttime viewing.", "Winter clothing needs to support long periods standing outdoors, not merely walking from a vehicle to a building.", "Treat Denali, Chena Hot Springs, and the Arctic Circle as separate excursions with realistic travel time.", "In summer, use long daylight to spread activities out rather than over-scheduling the middle of the day."],
   "faq": [
-    {
-      "q": "How many days should I plan for Fairbanks?",
-      "a": "Two to three days is enough for core Fairbanks highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Fairbanks?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
+    {"q": "When can I see the northern lights in Fairbanks?", "a": "The local visitor bureau defines aurora season as August 21 through April 21. You still need dark, sufficiently clear skies and auroral activity, so no individual night is guaranteed."},
+    {"q": "Can I visit Fairbanks in summer if there is no aurora?", "a": "Absolutely. Summer emphasizes the midnight sun, river activities, hiking, wildlife, museums, road trips, and events; it is a fundamentally different Fairbanks experience rather than an inferior aurora trip."},
+    {"q": "How many days should I plan?", "a": "Three or four days works well for the city plus one major regional excursion. Add time if you want both multiple aurora attempts and long trips toward the Arctic or Denali."}
   ],
-  "tours": {
-    "stateSlug": "alaska",
-    "citySlug": "fairbanks",
-    "limit": 6,
-    "title": "Top Fairbanks tours"
-  },
-  "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Fairbanks",
-    "officialTourism": "https://www.travelalaska.com/",
-    "reference": "https://www.britannica.com/place/Fairbanks"
-  },
-  "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Fairbanks",
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Fairbanks, Alaska is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fairbanks itinerary efficient while still feeling varied and local."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug": "alaska", "citySlug": "fairbanks", "limit": 6, "title": "Top Fairbanks tours"},
+  "seoLinks": {"officialTourism": "https://www.explorefairbanks.com/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Fairbanks is the principal urban center of Interior Alaska and a year-round destination whose rhythm changes with daylight, temperature, and snow. It combines a functioning northern city with unusually direct access to boreal forest, rivers, winter recreation, and long-distance routes into Alaska's interior."]},
+    {"heading": "Geography & setting", "paragraphs": ["Fairbanks sits in the Tanana Valley near the Chena and Tanana rivers, between the Alaska Range to the south and Brooks Range far to the north. Its continental interior climate produces warmer summers and much colder winters than coastal Alaska." ]},
+    {"heading": "History & culture", "paragraphs": ["The region has deep Alaska Native history, while modern Fairbanks expanded rapidly after gold discoveries in the early twentieth century. Mining, aviation, military activity, university research, transportation, and Indigenous cultures all contribute to the city's identity today."]},
+    {"heading": "Outdoor & seasonal highlights", "paragraphs": ["Summer brings near-continuous daylight, river recreation, hiking, birding, and road travel. Aurora season returns with darker nights in late August, while winter adds dog mushing, skiing, snowshoeing, ice art, and temperatures that can demand serious cold-weather preparation."]},
+    {"heading": "Getting around", "paragraphs": ["Central Fairbanks is manageable by car, taxi, rideshare, or limited transit, but many signature experiences lie well beyond downtown. The Alaska Railroad and Parks Highway connect Fairbanks south toward Denali and Anchorage, while northern road trips quickly enter remote country with sparse services."]}
+  ]}
 }
