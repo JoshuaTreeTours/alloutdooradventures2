@@ -87,7 +87,8 @@ const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<
 
 export const getGuidePlaceClassification = (
   stateSlug: string,
-  citySlug: string
+  citySlug: string,
+  _displayName?: string
 ): GuidePlaceClassification =>
   VERIFIED_GUIDE_PLACE_CLASSIFICATIONS[`us/${stateSlug}/${citySlug}`] ?? {
     placeType: "city",
