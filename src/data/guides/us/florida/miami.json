@@ -6,157 +6,43 @@
   "slug": "guides/us/florida/miami",
   "hero": {
     "image": "",
-    "alt": "Miami skyline and landmarks",
+    "alt": "Miami skyline, Biscayne Bay, and palm-lined waterfront",
     "headline": "Miami Travel Guide",
-    "subheadline": "Plan a high-value Miami itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+    "subheadline": "Build a Miami trip around distinct neighborhoods, Biscayne Bay, tropical gardens, and carefully planned excursions to South Florida's protected landscapes."
   },
   "overview": [
-    "Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling."
+    "Build a Miami trip around distinct neighborhoods, Biscayne Bay, tropical gardens, and carefully planned excursions to South Florida's protected landscapes.",
+    "Miami works best when Little Havana, Wynwood, Brickell, Coconut Grove, Miami Beach, and the Everglades are treated as different places rather than one generic downtown."
   ],
   "highlights": [
-    {
-      "title": "Signature sights in Miami",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
+    {"title":"Miami essentials","description":"Use the destination's defining landscapes, neighborhoods, and cultural sites to structure the visit."},
+    {"title":"Outdoor access","description":"Build in time for the water, parks, preserves, or trails that genuinely define Miami."},
+    {"title":"Local context","description":"Keep nearby municipalities and protected lands distinct so the itinerary stays geographically accurate."},
+    {"title":"Practical pacing","description":"Group stops by area and leave room for weather, traffic, and seasonal conditions."}
   ],
   "thingsToDo": [
-    {
-      "title": "Explore South Beach",
-      "description": "South Beach is the southern section of Miami Beach, extending roughly from South Pointe Park north to about 23rd Street on a barrier island between the Atlantic Ocean and Biscayne Bay. The district is closely identified with the Miami Beach Architectural District, which contains one of the largest concentrations of Art Deco architecture in the world, with many buildings constructed in the 1920s through 1940s. Ocean Drive, Collins Avenue, and Washington Avenue form the neighborhood’s main corridors, and Lummus Park runs along the oceanfront. The area’s 1980s preservation campaigns and later restoration work helped protect historic hotels and façades that now define South Beach’s built environment as much as its beach culture.",
-      "source_url": "https://en.wikipedia.org/wiki/South_Beach",
-      "wikiUrl": "https://en.wikipedia.org/wiki/South_Beach"
-    },
-    {
-      "title": "Explore Wynwood Walls",
-      "description": "Wynwood Walls is an outdoor street-art installation in Miami’s Wynwood neighborhood that opened in 2009 as part of a redevelopment project led by Tony Goldman. The complex transformed former warehouse walls into large-scale mural surfaces, and its roster has included internationally known artists from multiple countries working in aerosol, paste-up, and mixed techniques. Wynwood itself was historically an industrial district north of Downtown, and the walls became a focal point in the area’s transition toward galleries, studios, and creative businesses. Because murals rotate over time, the site functions as a changing exhibition rather than a static monument. Its location near NW 2nd Avenue also places it within the broader Wynwood Arts District grid.",
-      "source_url": "https://en.wikipedia.org/wiki/Wynwood_Walls",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Wynwood_Walls"
-    },
-    {
-      "title": "Explore Little Havana",
-      "description": "Little Havana is a Miami neighborhood west of Downtown centered along SW 8th Street, commonly known as Calle Ocho, and it developed as a major hub for Cuban immigrants after the Cuban Revolution of 1959. The district’s commercial strip includes cultural landmarks such as Máximo Gómez Park, where domino games are a long-standing daily practice, and the annual Calle Ocho Festival, one of the largest Hispanic street festivals in the United States. The neighborhood’s population profile later broadened to include residents from Nicaragua, Honduras, and other Latin American countries, but Cuban influence remains visible in language, music venues, and civic institutions. Little Havana’s history is therefore tied to both exile-era migration and continuing demographic change in Miami.",
-      "source_url": "https://en.wikipedia.org/wiki/Little_Havana",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Little_Havana"
-    },
-    {
-      "title": "Explore Vizcaya Museum and Gardens",
-      "description": "Vizcaya Museum and Gardens is a historic estate in Miami’s Coconut Grove area built between 1914 and 1922 for industrialist James Deering. The Main House follows an Italian Renaissance Revival model, and the waterfront property includes formal gardens, grottos, and a stone barge breakwater sculpture in Biscayne Bay. Architect F. Burrall Hoffman designed the house, while landscape architect Diego Suarez planned the gardens using Mediterranean and Italian references adapted to South Florida conditions. The property was later designated a National Historic Landmark in 1994. Today, Vizcaya preserves both architecture and decorative arts collections, offering a clear record of early 20th-century estate design in subtropical Miami rather than a purely contemporary museum environment.",
-      "source_url": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens"
-    },
-    {
-      "title": "Explore Bayside Marketplace",
-      "description": "Bayside Marketplace is a two-level festival marketplace in Downtown Miami on Biscayne Bay, adjacent to Bayfront Park and the Kaseya Center arena district. Developed by Rouse Company and opened in 1987, the complex followed the late-20th-century urban waterfront retail model used in projects like Baltimore’s Harborplace. Its marina frontage makes it a departure point for sightseeing cruises into Biscayne Bay, and the open-air layout includes covered walkways facing the water. The marketplace sits near Miami’s Metromover system and major downtown streets, which helps connect it to nearby civic and cultural sites. Beyond retail and dining, its significance in Miami history comes from how it anchored downtown bayfront revitalization during the 1980s redevelopment period.",
-      "source_url": "https://en.wikipedia.org/wiki/Bayside_Marketplace",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bayside_Marketplace"
-    },
-    {
-      "title": "Explore Brickell",
-      "description": "Brickell is a high-density neighborhood south of the Miami River in central Miami and is often described as the city’s financial district because it concentrates banking towers, corporate offices, and mixed-use residential skyscrapers. The area’s modern skyline grew rapidly after the late 20th century, with substantial condo and office construction during the 2000s and 2010s. Brickell Avenue and South Miami Avenue are key corridors, and Brickell City Centre, opened in 2016, added a multi-block retail and transit-integrated development linked to Metromover and Metrorail stations. Historically, the neighborhood takes its name from early landholders Mary and William Brickell, whose properties influenced Miami’s original urban layout. Today Brickell combines financial infrastructure with one of the densest residential populations in the city.",
-      "source_url": "https://en.wikipedia.org/wiki/Brickell",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Brickell"
-    },
-    {
-      "title": "Explore Key Biscayne",
-      "description": "Key Biscayne is an island town south of Miami Beach connected to the mainland by the Rickenbacker Causeway, a toll road completed in 1947 that reshaped access to the barrier island. The island includes two major park landscapes: Crandon Park on the northern section and Bill Baggs Cape Florida State Park at the southern end, where the Cape Florida Lighthouse dates to 1825 and is one of the oldest standing structures in the Miami area. Key Biscayne incorporated as a village in 1991 after decades of residential development tied to causeway-era growth. Its geography between Biscayne Bay and the Atlantic gives it a distinct municipal identity compared with mainland Miami neighborhoods, with beaches, dunes, and coastal habitats as defining features.",
-      "source_url": "https://en.wikipedia.org/wiki/Key_Biscayne",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Key_Biscayne"
-    },
-    {
-      "title": "Explore Everglades National Park",
-      "description": "Everglades National Park was established in 1947 and protects 1.5 million acres of subtropical wetlands across South Florida, making it the largest tropical wilderness reserve in the contiguous United States. The park preserves interconnected habitats including sawgrass marsh, mangrove estuaries, and pinelands, and it is a critical refuge for species such as the American crocodile, West Indian manatee, and Florida panther. Everglades received UNESCO Biosphere Reserve designation in 1976, World Heritage inscription in 1979, and Ramsar Wetland status in 1987, reflecting international ecological significance. For Miami travelers, the nearest major access routes are via Shark Valley and Ernest F. Coe Visitor Center corridors, where boardwalks, tram roads, and ranger programs interpret the region’s water-driven landscape system.",
-      "source_url": "https://en.wikipedia.org/wiki/Everglades_National_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Everglades_National_Park"
-    }
+    {"title":"Little Havana","description":"Walk Calle Ocho for Cuban-American food, music, bakeries, cigar shops, and Máximo Gómez Park; it is one of the clearest ways to understand modern Miami's immigrant history."},
+    {"title":"Wynwood","description":"Explore the former warehouse district for large-scale murals, galleries, restaurants, and street art, then pair it with the nearby Design District if time allows."},
+    {"title":"Vizcaya Museum and Gardens","description":"Visit the early-20th-century Biscayne Bay estate for architecture, formal gardens, and a useful look at Miami before the modern skyline."},
+    {"title":"Brickell and Downtown","description":"Combine Brickell's high-rise district with Downtown's bayfront and use Metromover to reduce short car trips."},
+    {"title":"South Beach — in the separate City of Miami Beach","description":"Cross Biscayne Bay for the Art Deco Historic District, Ocean Drive, Lummus Park, and the Atlantic beach. South Beach is not inside the City of Miami."},
+    {"title":"Everglades National Park day trip","description":"Plan the Everglades as a dedicated excursion to a separate National Park Service unit; it is a regional protected landscape, not a Miami city park."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
-    "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
-    ]
-  },
-  "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
-  ],
+  "bestTimeToVisit": {"title":"Cooler months are easiest for outdoor planning","bullets":["Late fall through early spring generally brings lower humidity and comfortable outdoor conditions.","Summer is hot, humid, and storm-prone; start exposed activities early and keep afternoon plans flexible.","Busy winter and holiday periods reward advance reservations for popular tours and timed attractions."]},
+  "travelTips": ["Group each day by geography instead of crossing the region repeatedly.","Use early mornings for exposed outdoor activities and waterfront time.","Check park, marine, and weather conditions before nature-focused plans.","Treat nearby municipalities and protected areas as separate destinations with their own access rules."],
   "faq": [
-    {
-      "q": "How many days are ideal for Miami?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Miami good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
-    }
+    {"q":"How many days should I plan for Miami?","a":"Two to three days is a good starting point for the core sights plus one outdoor or regional experience."},
+    {"q":"Is Miami good for outdoor travelers?","a":"Yes. The strongest itineraries combine the destination itself with nearby water, parks, preserves, or trails."},
+    {"q":"Do I need a car?","a":"It depends on the destination, but a car or guided tour is often useful for protected lands and regional excursions."},
+    {"q":"Should I book tours in advance?","a":"For high-demand wildlife, boating, park, and holiday-period experiences, advance booking is sensible."}
   ],
-  "tours": {
-    "stateSlug": "florida",
-    "citySlug": "miami",
-    "limit": 6,
-    "title": "Top Miami tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.miamiandbeaches.com/"
-  },
-  "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling. Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling. Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling. Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Miami without over-scheduling. Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling. Miami is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Miami without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Miami is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug":"florida","citySlug":"miami","limit":6,"title":"Top Miami tours"},
+  "seoLinks": {"officialTourism":"https://www.miamiandbeaches.com/"},
+  "aboutCity": {"sections":[
+    {"heading":"Overview","paragraphs":["Miami is a mainland South Florida city shaped by immigration, finance, arts, food, and Biscayne Bay."]},
+    {"heading":"Geography & setting","paragraphs":["The city occupies the coastal plain along Biscayne Bay; Miami Beach sits on barrier islands as a separate municipality."]},
+    {"heading":"History & culture","paragraphs":["Cuban, Caribbean, Latin American, and global influences are central to Miami's neighborhoods and food culture."]},
+    {"heading":"Outdoor & seasonal highlights","paragraphs":["Biscayne Bay supports boating and paddling, while Everglades and Biscayne national parks provide major protected landscapes outside the municipality."]},
+    {"heading":"Getting around","paragraphs":["Metromover works well in the urban core; rideshare, rental cars, or tours are useful for cross-bay and regional trips."]}
+  ]}
 }
