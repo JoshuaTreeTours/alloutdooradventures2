@@ -1,4 +1,8 @@
 import nevadaGuide from "../data/guides/us/nevada/index.json";
+import {
+  getGuidePlaceClassification,
+  type GuidePlaceClassification,
+} from "../data/guidePlaceClassification";
 import { loadUsCityGuide as loadUsCityGuideFromRegistry } from "./guides/loadGuide";
 
 export type GuideSeoLinks = {
@@ -14,6 +18,7 @@ export type GuidePageData = {
   state: string;
   city?: string;
   slug: string;
+  placeClassification?: GuidePlaceClassification;
   hero: {
     image: string;
     alt: string;
@@ -61,6 +66,18 @@ export type GuidePageData = {
   seoLinks: GuideSeoLinks;
 };
 
+const withPlaceClassification = (
+  guide: GuidePageData | undefined,
+  stateSlug: string,
+  citySlug: string
+): GuidePageData | undefined =>
+  guide
+    ? {
+        ...guide,
+        placeClassification: getGuidePlaceClassification(stateSlug, citySlug),
+      }
+    : undefined;
+
 export const loadGuide = (key: string) => {
   if (key === "us/nevada/index") {
     return nevadaGuide as GuidePageData;
@@ -71,11 +88,19 @@ export const loadGuide = (key: string) => {
     return undefined;
   }
 
-  return loadUsCityGuideFromRegistry(stateSlug, citySlug);
+  return withPlaceClassification(
+    loadUsCityGuideFromRegistry(stateSlug, citySlug),
+    stateSlug,
+    citySlug
+  );
 };
 
 export const loadUsCityGuide = (stateSlug: string, citySlug: string) =>
-  loadUsCityGuideFromRegistry(stateSlug, citySlug);
+  withPlaceClassification(
+    loadUsCityGuideFromRegistry(stateSlug, citySlug),
+    stateSlug,
+    citySlug
+  );
 
 export const loadUsStateGuide = (stateSlug: string) =>
   stateSlug === "nevada" ? (nevadaGuide as GuidePageData) : undefined;
