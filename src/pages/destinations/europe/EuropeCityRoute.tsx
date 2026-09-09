@@ -5,6 +5,7 @@ import {
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
 import { getDestinationCityAlias } from "../../../data/destinationAliases";
+import { getEuropeInternalStateSlugs } from "../../../data/europeIndex";
 
 type EuropeCityRouteProps = {
   params: {
@@ -15,11 +16,6 @@ type EuropeCityRouteProps = {
 
 export default function EuropeCityRoute({ params }: EuropeCityRouteProps) {
   const alias = getDestinationCityAlias(params.countrySlug, params.citySlug);
-  const state = getFallbackStateBySlug(params.countrySlug);
-  const city = getFallbackCityBySlugs(
-    params.countrySlug,
-    alias?.canonicalCitySlug ?? params.citySlug
-  );
 
   if (alias) {
     return (
@@ -28,6 +24,20 @@ export default function EuropeCityRoute({ params }: EuropeCityRouteProps) {
       />
     );
   }
+
+  const location = getEuropeInternalStateSlugs(
+    params.countrySlug,
+    params.citySlug
+  )
+    .map(stateSlug => ({
+      stateSlug,
+      state: getFallbackStateBySlug(stateSlug),
+      city: getFallbackCityBySlugs(stateSlug, params.citySlug),
+    }))
+    .find(entry => entry.state && entry.city);
+
+  const state = location?.state;
+  const city = location?.city;
 
   if (!state || !city) {
     return (
