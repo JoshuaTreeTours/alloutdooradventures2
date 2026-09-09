@@ -7,82 +7,98 @@
   "slug": "guides/us/california/joshua-tree",
   "hero": {
     "image": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
-    "alt": "Joshua Tree, California — Private Stargazing with an Astronomer",
+    "alt": "Joshua Tree National Park desert landscape near Joshua Tree, California",
     "headline": "Joshua Tree, California Travel Guide",
-    "subheadline": "Plan a focused Joshua Tree trip with practical highlights, local context, and easy tour connections."
+    "subheadline": "Use the Joshua Tree community as a gateway to Joshua Tree National Park, with practical planning for desert hikes, rock formations, viewpoints, dark skies, and guided adventures."
   },
   "overview": [
-    "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+    "Joshua Tree is a desert community in San Bernardino County's Morongo Basin and one of the best-known gateways to Joshua Tree National Park. The community and the park share a name, but they are not the same place: Joshua Tree is a census-designated, unincorporated community, while Joshua Tree National Park is federally protected land managed by the National Park Service.",
+    "For most visitors, the national park is the main reason to come. Its landscape brings together two distinct desert ecosystems, the higher Mojave Desert and the lower Colorado Desert, with Joshua tree woodlands, vast creosote basins, sculpted rock formations, palm oases, mountain views, and exceptionally dark night skies. Build your trip around early starts, realistic driving times, plenty of water, and one or two major park areas per day rather than trying to rush through the entire park at once."
   ],
   "highlights": [
     {
-      "title": "Joshua Tree essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
+      "title": "Joshua Tree National Park",
+      "description": "Explore a National Park Service landscape where the Mojave and Colorado deserts meet—not an urban or city park."
     },
     {
-      "title": "Joshua Tree local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
+      "title": "Monzogranite boulders and desert geology",
+      "description": "See the rounded rock piles, exposed bedrock, and weathered formations that make the park a world-class setting for hiking and climbing."
+    },
+    {
+      "title": "Joshua tree woodlands",
+      "description": "Find the park's namesake Yucca brevifolia primarily in the higher, cooler Mojave Desert portions of the park."
+    },
+    {
+      "title": "Gateway community and dark skies",
+      "description": "Use Joshua Tree village for lodging, food, local art, guides, and access to one of Southern California's signature desert landscapes."
     }
   ],
   "thingsToDo": [
     {
-      "title": "Joshua Tree National Park (West Entrance)",
-      "description": "Joshua Tree National Park (West Entrance) is a major urban park in Joshua Tree, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city.",
-      "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance"
+      "title": "Enter Joshua Tree National Park through the West Entrance",
+      "description": "The West Entrance near the Joshua Tree community is one of the principal gateways into Joshua Tree National Park. It leads into federally protected desert managed by the National Park Service, not a landscaped municipal park. From here, visitors can reach Joshua tree woodlands, major boulder formations, Hidden Valley, Keys View, Barker Dam, and other signature park areas. Traffic can build at popular times, especially on weekends and holidays, so an early start is valuable. Bring water before entering, check current NPS alerts and entrance information, and remember that services inside the park are limited compared with the communities outside its boundaries."
     },
     {
-      "title": "Hidden Valley",
-      "description": "Hidden Valley is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
-      "source_url": "https://en.wikipedia.org/wiki/Hidden_Valley",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hidden_Valley"
+      "title": "Walk Hidden Valley",
+      "description": "Hidden Valley is one of the best introductions to Joshua Tree National Park's famous rock landscape. The short loop passes through a natural basin enclosed by massive monzogranite formations and is accessible enough for many first-time visitors while still feeling distinctly wild. The area is also closely associated with the park's climbing culture because the surrounding boulders and rock faces contain numerous established routes. Go early for cooler temperatures and easier parking, and resist the temptation to treat the rocks as a playground without regard for route difficulty or fragile desert habitat."
     },
     {
-      "title": "Keys View",
-      "description": "Keys View is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
-      "source_url": "https://en.wikipedia.org/wiki/Keys_View",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Keys_View"
+      "title": "Drive to Keys View",
+      "description": "Keys View provides one of the park's broadest overlooks, with a high-elevation panorama across the Coachella Valley and the mountain ranges beyond. The drive climbs well above the lower desert and gives visitors an immediate sense of how dramatically elevation changes the character of Joshua Tree National Park. On clear days the view can extend for great distances, while wind and temperature at the overlook may be very different from conditions lower in the park. Sunset is popular, but arriving earlier gives you more time to appreciate the geography and avoids making the entire visit dependent on the final few minutes of daylight."
     },
     {
-      "title": "Barker Dam",
-      "description": "Barker Dam is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
-      "source_url": "https://en.wikipedia.org/wiki/Barker_Dam",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Barker_Dam"
+      "title": "Hike the Barker Dam Trail",
+      "description": "Barker Dam is a relatively easy loop through the Mojave Desert that combines Joshua trees, large monzogranite boulders, cultural history, and a historic water-storage site. The National Park Service describes the loop as about 1.1 miles and notes that the reservoir is often dry except after substantial rainfall. Interpretive material along the route helps connect the landscape to the people who have lived and worked in this desert. Rock art is present in the area and should be viewed without touching, climbing on, or disturbing the surrounding surfaces."
     },
     {
-      "title": "Joshua Tree",
-      "description": "Joshua Tree is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
-      "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree"
+      "title": "See the Cholla Cactus Garden",
+      "description": "The Cholla Cactus Garden offers one of the clearest visual transitions into the Colorado Desert portion of Joshua Tree National Park. Here the landscape feels lower, hotter, and more open than the Joshua tree country farther west. Dense stands of teddy-bear cholla create striking patterns in morning and late-afternoon light, but their barbed joints detach easily and should be given generous space. This stop works especially well as part of a longer drive through the park because it demonstrates that Joshua Tree is not one uniform desert environment."
     },
     {
-      "title": "Hour Visitor Pass",
-      "description": "Hour Visitor Pass is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
-      "source_url": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass"
+      "title": "Explore Jumbo Rocks and the park's boulder country",
+      "description": "Jumbo Rocks showcases the sculpted boulder piles that make Joshua Tree instantly recognizable. These formations developed from ancient crystalline rock that fractured and weathered over immense spans of geologic time, eventually producing the rounded blocks and stacked forms seen today. The area is excellent for photography, scrambling, and short walks, but loose footing and steep drops can appear quickly between rocks. If you are new to climbing or scrambling, stay conservative and use a qualified guide for technical objectives."
+    },
+    {
+      "title": "Experience Joshua Tree after dark",
+      "description": "Joshua Tree National Park is known for exceptionally dark skies, and nighttime can be as memorable as the daytime landscape. Stargazing is best away from headlights and developed areas, with clear, moonless nights revealing far more stars than most visitors see at home. Temperatures can drop quickly after sunset, even when afternoons are warm, so bring layers and a light source. Guided astronomy experiences can add useful context without requiring visitors to identify constellations, planets, or deep-sky objects on their own."
+    },
+    {
+      "title": "Spend time in the Joshua Tree community",
+      "description": "The community of Joshua Tree is more than a road to the park entrance. San Bernardino County describes it as a gateway community with a distinctive rural desert identity, local businesses, artists, guides, cafes, shops, and a strong relationship with the national park next door. Use town for meals, supplies, galleries, and downtime between park outings. That separation matters: downtown Joshua Tree is a community in the Morongo Basin, while the national park begins beyond its federal boundary and follows a very different set of land-management rules."
     }
   ],
   "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Joshua Tree",
+    "title": "Fall through spring usually offers the easiest desert conditions",
     "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
+      "Cooler months are generally best for hiking, climbing, and longer days in exposed terrain.",
+      "Spring and holiday weekends can be very busy, so start early and expect congestion at entrances and popular trailheads.",
+      "Summer requires much more conservative planning because extreme heat, limited shade, and long distances between services increase risk.",
+      "Night temperatures can drop sharply in every season; bring layers if you plan to stay for sunset or stargazing."
     ]
   },
   "travelTips": [
-    "Group activities by area to reduce transfers across Joshua Tree.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
+    "Treat Joshua Tree National Park as a large protected desert landscape, not a city attraction; driving between major areas takes time.",
+    "Carry plenty of water and fuel up before entering because services inside the park are limited.",
+    "Check National Park Service alerts, road conditions, entrance information, and current trail guidance before departure.",
+    "Group your day geographically—for example, West Entrance, Hidden Valley, Barker Dam, and Keys View—rather than crossing the park repeatedly.",
+    "Use local guides for climbing, specialized hikes, astronomy, or deeper natural-history interpretation when that adds value to your trip."
   ],
   "faq": [
     {
+      "q": "Is Joshua Tree National Park a city park?",
+      "a": "No. Joshua Tree National Park is a unit of the U.S. National Park Service. It protects a vast desert landscape where the Mojave and Colorado Desert ecosystems meet. The nearby Joshua Tree community is a separate unincorporated census-designated place in San Bernardino County."
+    },
+    {
       "q": "How many days should I plan for Joshua Tree?",
-      "a": "Two to three days is enough for core Joshua Tree highlights plus one or two local experiences."
+      "a": "Two to three days is a strong first visit: one or two days for major national park areas and another block of time for hiking, climbing, stargazing, or the Joshua Tree community."
+    },
+    {
+      "q": "Where are the Joshua trees inside the park?",
+      "a": "Joshua trees are most characteristic of the higher, cooler Mojave Desert portions of the park. The lower Colorado Desert sections have a different plant community dominated more by creosote, cholla, ocotillo, and other desert species."
     },
     {
       "q": "Should I book tours ahead in Joshua Tree?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes for popular guided hikes, climbing trips, off-road sightseeing, and stargazing experiences, especially on weekends, holidays, and during the cooler high season."
     }
   ],
   "tours": {
@@ -92,47 +108,51 @@
     "title": "Top Joshua Tree tours"
   },
   "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Joshua_Tree",
-    "officialTourism": "https://www.visitcalifornia.com/",
-    "reference": "https://www.britannica.com/place/Joshua-Tree"
+    "officialTourism": "https://www.nps.gov/jotr/index.htm",
+    "reference": "https://countywideplan.sbcounty.gov/community/east-desert-unincorporated/joshua-tree/"
   },
   "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Joshua_Tree",
     "sections": [
       {
-        "heading": "Overview",
+        "heading": "Joshua Tree community and national park",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "Joshua Tree is an unincorporated community and census-designated place in San Bernardino County's Morongo Basin. Its identity is inseparable from the national park nearby, but the two should not be confused. The community contains homes, businesses, art spaces, restaurants, lodging, guides, and visitor services; Joshua Tree National Park is a separate federally managed landscape protected by the National Park Service.",
+          "San Bernardino County explicitly describes Joshua Tree as a gateway community to the national park and emphasizes its rural desert character, local art culture, dark skies, small businesses, and connection to the surrounding natural environment."
         ]
       },
       {
-        "heading": "Geography & setting",
+        "heading": "Two deserts, one national park",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "Joshua Tree National Park sits at the meeting point of the Mojave and Colorado Desert ecosystems. Elevation is one of the major controls on what visitors see. The higher Mojave Desert supports the park's iconic Joshua tree woodlands, while the hotter, lower Colorado Desert supports broad creosote basins, cholla, ocotillo, and other warm-desert vegetation.",
+          "This ecological transition is one of the park's defining features. A drive across Joshua Tree National Park is therefore more than a sequence of viewpoints: it is a passage between distinct desert environments."
         ]
       },
       {
-        "heading": "History (brief)",
+        "heading": "Geology and the famous boulders",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "Joshua Tree's rock scenery is rooted in a long geologic history of igneous intrusion, tectonic activity, uplift, fracturing, and erosion. Ancient crystalline rocks were broken along joints and gradually weathered into the rounded blocks, domes, and boulder piles seen around Hidden Valley, Jumbo Rocks, and many climbing areas.",
+          "The result is one of the most recognizable climbing landscapes in North America and an unusually accessible place to see how deep geologic time can shape a desert surface."
         ]
       },
       {
-        "heading": "Culture & neighborhoods",
+        "heading": "Human history and living desert culture",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "People have lived in and moved through this desert for thousands of years. The National Park Service recognizes deep Indigenous connections to the region, including peoples known today as Cahuilla, Chemehuevi, Mojave, and Serrano, followed by later ranching, mining, homesteading, and tourism history.",
+          "Outside the park, the Joshua Tree community has developed its own contemporary identity around art, music, desert architecture, conservation, guiding, and small businesses. That living culture belongs to the community rather than to the national park itself, even though the two influence one another strongly."
         ]
       },
       {
-        "heading": "Outdoor & seasonal highlights",
+        "heading": "Outdoor and seasonal highlights",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "Hiking, rock climbing, photography, scenic driving, wildlife observation, wildflower viewing in favorable years, and stargazing are among the park's major experiences. The cooler months allow longer and more ambitious days outside, while summer requires far more caution because of heat and limited shade.",
+          "Joshua Tree also rewards slower travel. Sunrise among Joshua trees, an hour walking through boulder country, a quiet stop in the Colorado Desert, or an evening under dark skies often leaves a stronger impression than trying to check every landmark off a list."
         ]
       },
       {
         "heading": "Getting around",
         "paragraphs": [
-          "Joshua Tree, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Joshua Tree itinerary efficient while still feeling varied and local."
+          "A private vehicle remains the most practical way to explore Joshua Tree National Park because major attractions are spread across a large road network and services inside the park are limited. The West Entrance is closest to the Joshua Tree community, while other entrances connect toward Twentynine Palms and the Coachella Valley.",
+          "Plan routes before entering, download or carry offline navigation, keep fuel and water levels conservative, and avoid assuming that a short distance on a map means a quick desert transfer. Guided tours can simplify logistics for visitors who prefer not to navigate, drive, or plan the park independently."
         ]
       }
     ]
