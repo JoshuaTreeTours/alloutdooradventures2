@@ -1,5 +1,6 @@
 import RouteRedirect from "../../../components/RouteRedirect";
 import { getDestinationCityAlias } from "../../../data/destinationAliases";
+import { getEuropeInternalStateSlugs } from "../../../data/europeIndex";
 import CityToursIndexRoute from "../states/tours/CityToursIndexRoute";
 
 type EuropeCityToursRouteProps = {
@@ -22,9 +23,13 @@ export default function EuropeCityToursRoute({
     );
   }
 
+  const internalStateSlug =
+    getEuropeInternalStateSlugs(params.countrySlug, params.citySlug)[0] ??
+    params.countrySlug;
+
   return (
     <CityToursIndexRoute
-      params={{ stateSlug: params.countrySlug, citySlug: params.citySlug }}
+      params={{ stateSlug: internalStateSlug, citySlug: params.citySlug }}
       basePathOverride={`/destinations/europe/${params.countrySlug}`}
     />
   );
