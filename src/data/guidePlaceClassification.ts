@@ -83,6 +83,75 @@ const VERIFIED_GUIDE_PLACE_CLASSIFICATIONS: Record<
     notes:
       "Dallas is an incorporated Texas city. Fort Worth and other Metroplex destinations are separate cities and should be framed as regional trips rather than Dallas neighborhoods.",
   },
+  "us/florida/tampa": {
+    placeType: "city",
+    verified: true,
+    verificationSources: [
+      "https://www.tampa.gov/",
+      "https://www.visittampabay.com/",
+    ],
+    notes:
+      "Tampa is an incorporated Florida city on Tampa Bay. Clearwater, St. Petersburg, and the Gulf beach communities are separate municipalities and should be framed as regional trips rather than Tampa neighborhoods or city beaches.",
+  },
+  "us/ohio/cleveland": {
+    placeType: "city",
+    verified: true,
+    associatedProtectedArea: {
+      name: "Cuyahoga Valley National Park",
+      type: "national-park",
+      managingAuthority: "National Park Service",
+    },
+    verificationSources: [
+      "https://www.clevelandohio.gov/",
+      "https://www.thisiscleveland.com/",
+      "https://www.nps.gov/cuva/",
+    ],
+    notes:
+      "Cleveland is an incorporated Ohio city. Cuyahoga Valley National Park is a separate National Park Service unit between Cleveland and Akron and must not be described as Cleveland municipal parkland.",
+  },
+  "us/ohio/columbus": {
+    placeType: "city",
+    verified: true,
+    verificationSources: [
+      "https://www.columbus.gov/",
+      "https://www.experiencecolumbus.com/",
+    ],
+    notes:
+      "Columbus is an incorporated Ohio city. Central Ohio Metro Parks and surrounding municipalities are separate jurisdictions and should be identified accurately when used as regional outdoor recommendations.",
+  },
+  "us/south-carolina/charleston": {
+    placeType: "city",
+    verified: true,
+    associatedProtectedArea: {
+      name: "Fort Sumter and Fort Moultrie National Historical Park",
+      type: "other-protected-area",
+      managingAuthority: "National Park Service",
+    },
+    verificationSources: [
+      "https://www.charleston-sc.gov/",
+      "https://www.charlestoncvb.com/",
+      "https://www.nps.gov/fosu/",
+    ],
+    notes:
+      "Charleston is an incorporated South Carolina city. Fort Sumter is a separate National Park Service site in Charleston Harbor, and surrounding beach communities such as Folly Beach and Sullivan's Island are separate municipalities.",
+  },
+  "us/utah/moab": {
+    placeType: "city",
+    verified: true,
+    associatedProtectedArea: {
+      name: "Arches National Park",
+      type: "national-park",
+      managingAuthority: "National Park Service",
+    },
+    verificationSources: [
+      "https://moabcity.org/",
+      "https://www.discovermoab.com/",
+      "https://www.nps.gov/arch/",
+      "https://www.nps.gov/cany/",
+    ],
+    notes:
+      "Moab is an incorporated Utah city and outdoor gateway. Arches and Canyonlands are separate National Park Service units; Dead Horse Point is a Utah state park; extensive surrounding recreation lands are managed separately, including by the Bureau of Land Management.",
+  },
 };
 
 export const getGuidePlaceClassification = (
