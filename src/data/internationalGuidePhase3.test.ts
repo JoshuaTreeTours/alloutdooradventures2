@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import type { GuideContent } from "./guideData";
 import {
   enhanceInternationalGuidePhase3,
+  getInternationalPhase3ProfileKey,
   INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS,
   INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS,
 } from "./internationalGuidePhase3";
@@ -47,9 +48,13 @@ const expectParagonPoiQuality = (description: string) => {
 
 describe("international guide Phase 3", () => {
   it("adds the complete audited Phase 3 cohort", () => {
-    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toHaveLength(60);
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toHaveLength(68);
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
       "australia/port-douglas",
+    );
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("australia/cairns");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "australia/melbourne",
     );
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("thailand/bangkok");
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
@@ -65,12 +70,43 @@ describe("international guide Phase 3", () => {
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
       "united-kingdom/glasgow",
     );
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "mexico/mexico-city",
+    );
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "mexico/puerto-vallarta",
+    );
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "mexico/cabo-san-lucas",
+    );
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("peru/cusco");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("peru/lima");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "brazil/rio-de-janeiro",
+    );
   });
 
   it("retains every Phase 2 paragon under Phase 3 governance", () => {
     for (const key of INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS) {
       expect(INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS).toContain(key);
     }
+  });
+
+  it("canonicalizes the legacy Mexico City guide slug into the new profile", () => {
+    expect(
+      getInternationalPhase3ProfileKey("mexico", "ciudad-de-mexico"),
+    ).toBe("mexico/mexico-city");
+
+    const guide = enhanceInternationalGuidePhase3(
+      "mexico",
+      "ciudad-de-mexico",
+      baseGuide("Mexico City"),
+    );
+
+    expect(guide.intro).toContain("Basin of Mexico");
+    expect(guide.topThingsToDo?.some(poi => poi.title === "Templo Mayor")).toBe(
+      true,
+    );
   });
 
   it("enforces six unique factual POIs and Paragon narrative depth everywhere", () => {
