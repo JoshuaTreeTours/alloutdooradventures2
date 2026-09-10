@@ -1,6 +1,7 @@
 import GuideTemplate from "../../templates/GuideTemplate";
+import InternationalCityGuideTemplate from "../../templates/InternationalCityGuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
-import { enhanceInternationalGuide } from "../../data/internationalGuideEnhancements";
+import { enhanceInternationalGuidePhase2 } from "../../data/internationalGuidePhase2";
 import { withEngine6OnlyInternationalCityTopTours } from "../../data/internationalGuideEngine6Tours";
 
 type CityGuideRouteProps = {
@@ -41,7 +42,7 @@ export default function CityGuideRoute({
   });
   const enhancedGuide =
     baseGuide && regionType === "country"
-      ? enhanceInternationalGuide(
+      ? enhanceInternationalGuidePhase2(
           getInternationalEnhancementParentSlug(
             params.parentSlug,
             params.citySlug,
@@ -71,5 +72,9 @@ export default function CityGuideRoute({
     );
   }
 
-  return <GuideTemplate guide={guide} />;
+  return regionType === "country" ? (
+    <InternationalCityGuideTemplate guide={guide} />
+  ) : (
+    <GuideTemplate guide={guide} />
+  );
 }
