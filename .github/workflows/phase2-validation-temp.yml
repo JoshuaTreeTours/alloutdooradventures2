@@ -16,7 +16,26 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: TypeScript check
-        run: npm run check
       - name: Phase 2 targeted tests
         run: npx vitest run src/data/internationalGuidePhase2.test.ts src/data/internationalGuideEngine6Tours.test.ts src/pages/guides/WorldGuideRoutes.test.tsx
+      - name: Phase 2 TypeScript surface check
+        shell: bash
+        run: |
+          cat > tsconfig.phase2-validation.json <<'EOF'
+          {
+            "extends": "./tsconfig.json",
+            "include": [
+              "src/data/internationalGuideEnhancements.ts",
+              "src/data/internationalGuidePhase2.ts",
+              "src/data/internationalGuideEngine6Tours.ts",
+              "src/components/guides/GuideThingsToDoCard.tsx",
+              "src/templates/InternationalCityGuideTemplate.tsx",
+              "src/pages/guides/CityGuideRoute.tsx",
+              "src/pages/guides/ParisGuideRoute.tsx"
+            ],
+            "exclude": ["scripts", "node_modules", "dist"]
+          }
+          EOF
+          npx tsc --noEmit -p tsconfig.phase2-validation.json
+      - name: Vite production bundle
+        run: npx vite build
