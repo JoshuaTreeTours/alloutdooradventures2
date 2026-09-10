@@ -8,7 +8,6 @@ import { isGenericHeroFallbackImage } from "../../utils/hero";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
-  buildCityGuideIntroParagraphs,
   buildCityGuideMetaTitle,
 } from "../../utils/guides/cityGuideTitles";
 
@@ -43,6 +42,7 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
   const guide = value as Record<string, unknown>;
   if (
     !isNonEmptyString(guide.seoTitle) ||
+    !isNonEmptyString(guide.seoDescription) ||
     !isNonEmptyString(guide.intro) ||
     !isNonEmptyString(guide.wikipediaUrl) ||
     !isNonEmptyString(guide.wikipediaTitle) ||
@@ -77,13 +77,12 @@ export default function ParisGuideRoute() {
   const cityGuideDisplayTitle = buildCityGuideDisplayTitle(parisGuide.city);
   const cityGuideMetaTitle = buildCityGuideMetaTitle(parisGuide.city);
   const cityGuideH1 = buildCityGuideH1(parisGuide.city);
-  const cityGuideIntro = buildCityGuideIntroParagraphs(parisGuide.city);
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12 text-[#1f2a1f]">
       <Seo
         title={cityGuideMetaTitle}
-        description={cityGuideIntro.primary}
+        description={parisGuide.seoDescription}
         url="/guides/world/france/paris"
         image={parisGuide.leadImageUrl ?? null}
       />
@@ -93,8 +92,7 @@ export default function ParisGuideRoute() {
         </p>
         <h1 className="mt-2 text-4xl font-bold">{cityGuideH1}</h1>
         <div className="mt-4 space-y-3 text-lg text-[#334433]">
-          <p>{cityGuideIntro.primary}</p>
-          <p>{cityGuideIntro.secondary}</p>
+          <p>{parisGuide.intro}</p>
         </div>
         {parisGuide.leadImageUrl ? (
           <img
