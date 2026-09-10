@@ -24,3 +24,7 @@ jobs:
 
       - name: Run city guide audit (strict)
         run: npm run audit:city-guides:strict
+
+      - name: Rank city guide repair priorities
+        if: always()
+        run: npx tsx scripts/rank-city-guide-quality.ts
