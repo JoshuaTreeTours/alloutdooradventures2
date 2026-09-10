@@ -2,9 +2,10 @@ import GuideTemplate from "../../templates/GuideTemplate";
 import InternationalCityGuideTemplate from "../../templates/InternationalCityGuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
 import {
-  enhanceInternationalGuidePhase2,
-  INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS,
-} from "../../data/internationalGuidePhase2";
+  enhanceInternationalGuidePhase3,
+  getInternationalPhase3ProfileKey,
+  INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS,
+} from "../../data/internationalGuidePhase3";
 import { withEngine6OnlyInternationalCityTopTours } from "../../data/internationalGuideEngine6Tours";
 
 type CityGuideRouteProps = {
@@ -41,10 +42,13 @@ export default function CityGuideRoute({
     params.parentSlug,
     params.citySlug,
   );
-  const phase2Key = `${enhancementParentSlug}/${params.citySlug}`;
-  const isPhase2Paragon =
+  const paragonKey = getInternationalPhase3ProfileKey(
+    enhancementParentSlug,
+    params.citySlug,
+  );
+  const isInternationalParagon =
     regionType === "country" &&
-    INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS.includes(phase2Key);
+    INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS.includes(paragonKey);
 
   const baseGuide = buildCityGuide({
     parentSlug: params.parentSlug,
@@ -54,7 +58,7 @@ export default function CityGuideRoute({
   });
   const enhancedGuide =
     baseGuide && regionType === "country"
-      ? enhanceInternationalGuidePhase2(
+      ? enhanceInternationalGuidePhase3(
           enhancementParentSlug,
           params.citySlug,
           baseGuide,
@@ -81,7 +85,7 @@ export default function CityGuideRoute({
     );
   }
 
-  return isPhase2Paragon ? (
+  return isInternationalParagon ? (
     <InternationalCityGuideTemplate guide={guide} />
   ) : (
     <GuideTemplate guide={guide} />
