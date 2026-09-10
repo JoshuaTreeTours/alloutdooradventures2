@@ -22,7 +22,7 @@ describe("world guide route rendering", () => {
     expectRenderableGuide(html, "Mexico Outdoor Adventure Guide");
   });
 
-  it("renders major Mexico city guide routes", () => {
+  it("renders Cabo San Lucas and Puerto Vallarta through the Paragon treatment", () => {
     const caboHtml = renderToStaticMarkup(
       <Router
         hook={() => ["/guides/world/mexico/cabo-san-lucas", () => undefined]}
@@ -42,11 +42,15 @@ describe("world guide route rendering", () => {
       </Router>
     );
 
-    expectRenderableGuide(caboHtml, "Top 10 Things to Do in Cabo San Lucas");
+    expectRenderableGuide(caboHtml, "Things to Do in Cabo San Lucas");
+    expect(caboHtml).toContain("El Arco and Land&#x27;s End");
+    expect(caboHtml).toContain("Sierra de la Laguna Foothills");
     expectRenderableGuide(
       puertoVallartaHtml,
-      "Top 10 Things to Do in Puerto Vallarta"
+      "Things to Do in Puerto Vallarta"
     );
+    expect(puertoVallartaHtml).toContain("Río Cuale and Isla Cuale");
+    expect(puertoVallartaHtml).toContain("Banderas Bay");
   });
 
   it("renders the Cancun paragon with specific local POIs", () => {
@@ -62,6 +66,46 @@ describe("world guide route rendering", () => {
     expect(html).toContain("San Miguelito Archaeological Site");
     expect(html.toLowerCase()).not.toContain("generic checklist item");
     expect(html.toLowerCase()).not.toContain("quick way to add variety");
+  });
+
+  it("renders the legacy Mexico City guide slug with the canonical Phase 3 profile", () => {
+    const html = renderToStaticMarkup(
+      <Router
+        hook={() => ["/guides/world/mexico/ciudad-de-mexico", () => undefined]}
+      >
+        <CityGuideWorldRoute
+          params={{ countrySlug: "mexico", citySlug: "ciudad-de-mexico" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Templo Mayor");
+    expect(html).toContain("National Museum of Anthropology");
+    expect(html).toContain("Basin of Mexico");
+  });
+
+  it("renders Cusco and Rio de Janeiro as Latin America Paragons", () => {
+    const cuscoHtml = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/peru/cusco", () => undefined]}>
+        <CityGuideWorldRoute params={{ countrySlug: "peru", citySlug: "cusco" }} />
+      </Router>
+    );
+    const rioHtml = renderToStaticMarkup(
+      <Router
+        hook={() => ["/guides/world/brazil/rio-de-janeiro", () => undefined]}
+      >
+        <CityGuideWorldRoute
+          params={{ countrySlug: "brazil", citySlug: "rio-de-janeiro" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(cuscoHtml, "Things to Do in Cusco");
+    expect(cuscoHtml).toContain("Qorikancha and Santo Domingo");
+    expect(cuscoHtml).toContain("Sacsayhuamán");
+    expectRenderableGuide(rioHtml, "Things to Do in Rio de Janeiro");
+    expect(rioHtml).toContain("Christ the Redeemer and Corcovado");
+    expect(rioHtml).toContain("Tijuca National Park");
   });
 
   it("renders Berlin Phase 2 as image-backed Santa Monica-style POI cards", () => {
@@ -129,6 +173,32 @@ describe("world guide route rendering", () => {
     expect(html).toContain("Four Mile Beach");
     expect(html).toContain("Mossman Gorge");
     expect(html).toContain("Great Barrier Reef");
+  });
+
+  it("renders Cairns and Melbourne through the Australian Paragon treatment", () => {
+    const cairnsHtml = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/australia/cairns", () => undefined]}>
+        <CityGuideWorldRoute
+          params={{ countrySlug: "australia", citySlug: "cairns" }}
+        />
+      </Router>
+    );
+    const melbourneHtml = renderToStaticMarkup(
+      <Router
+        hook={() => ["/guides/world/australia/melbourne", () => undefined]}
+      >
+        <CityGuideWorldRoute
+          params={{ countrySlug: "australia", citySlug: "melbourne" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(cairnsHtml, "Things to Do in Cairns");
+    expect(cairnsHtml).toContain("Barron Gorge National Park");
+    expect(cairnsHtml).toContain("Cairns Marina and Reef Fleet Terminal");
+    expectRenderableGuide(melbourneHtml, "Things to Do in Melbourne");
+    expect(melbourneHtml).toContain("Queen Victoria Market");
+    expect(melbourneHtml).toContain("Royal Botanic Gardens Victoria");
   });
 
   it("renders Hamburg Phase 3 through the international Paragon template", () => {
