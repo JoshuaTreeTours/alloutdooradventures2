@@ -54,21 +54,32 @@ export const withEngine6OnlyInternationalCityTopTours = (
   guide: import("./guideData").GuideContent,
   countrySlug: string,
   citySlug: string,
-): import("./guideData").GuideContent => ({
-  ...guide,
-  featuredTours: getInternationalEngine6CityGuideTours(
+): import("./guideData").GuideContent => {
+  const engine6Tours = getInternationalEngine6CityGuideTours(
     countrySlug,
     citySlug,
-  ).slice(0, 12),
-});
+  );
+
+  return {
+    ...guide,
+    featuredTours: (engine6Tours.length ? engine6Tours : guide.featuredTours).slice(
+      0,
+      12,
+    ),
+  };
+};
 
 export const withEngine6OnlyInternationalCountryTopTours = (
   guide: import("./guideData").GuideContent,
   countrySlug: string,
-): import("./guideData").GuideContent => ({
-  ...guide,
-  featuredTours: getInternationalEngine6CountryGuideTours(countrySlug).slice(
-    0,
-    12,
-  ),
-});
+): import("./guideData").GuideContent => {
+  const engine6Tours = getInternationalEngine6CountryGuideTours(countrySlug);
+
+  return {
+    ...guide,
+    featuredTours: (engine6Tours.length ? engine6Tours : guide.featuredTours).slice(
+      0,
+      12,
+    ),
+  };
+};
