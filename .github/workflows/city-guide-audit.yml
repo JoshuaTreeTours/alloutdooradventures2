@@ -32,3 +32,12 @@ jobs:
       - name: Rank Phase III Engine6 guide priorities
         if: always()
         run: npx tsx scripts/rank-phase3-engine6-guide-priority.ts
+
+      - name: Upload Phase III Engine6 priority report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-engine6-guide-priority
+          path: |
+            reports/phase3-engine6-guide-priority.md
+            reports/phase3-engine6-guide-priority.json
