@@ -9,6 +9,7 @@ import { enhanceCaliforniaSoCalRegionalGuide } from "../src/data/californiaSoCal
 import { enhanceCaliforniaParagonCityGuide } from "../src/data/californiaParagonCityEnhancements";
 import { enhancePhase1ParagonCityGuide } from "../src/data/phase1ParagonCityEnhancements";
 import { enhancePhase2ParagonCityGuide } from "../src/data/phase2ParagonCityEnhancements";
+import { enhancePhase3Engine6CityGuide } from "../src/data/phase3Engine6CityEnhancements";
 import { tours } from "../src/data/tours";
 
 type RankedGuide = {
@@ -63,25 +64,29 @@ const applyRuntimeEnhancements = (
   citySlug: string,
   guide: GuidePageData
 ): GuidePageData =>
-  enhancePhase2ParagonCityGuide(
+  enhancePhase3Engine6CityGuide(
     stateSlug,
     citySlug,
-    enhancePhase1ParagonCityGuide(
+    enhancePhase2ParagonCityGuide(
       stateSlug,
       citySlug,
-      enhanceCaliforniaParagonCityGuide(
+      enhancePhase1ParagonCityGuide(
         stateSlug,
         citySlug,
-        enhanceCaliforniaSoCalRegionalGuide(
+        enhanceCaliforniaParagonCityGuide(
           stateSlug,
           citySlug,
-          enhanceSacramentoGuide(
+          enhanceCaliforniaSoCalRegionalGuide(
             stateSlug,
             citySlug,
-            enhanceCaliforniaMajorCityGuide(
+            enhanceSacramentoGuide(
               stateSlug,
               citySlug,
-              enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+              enhanceCaliforniaMajorCityGuide(
+                stateSlug,
+                citySlug,
+                enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+              )
             )
           )
         )
@@ -110,8 +115,6 @@ const scoreGuide = (
   const city = guide.city?.trim() || citySlug;
   const classification = resolveGuidePlaceClassification(stateSlug, citySlug, city);
 
-  // National parks were completed in the preceding guide phase. The city cleanup
-  // queue intentionally keeps those park guides out of the ranking.
   if (classification.placeType === "national-park") return null;
 
   const reasons: string[] = [];
@@ -173,6 +176,7 @@ const scoreGuide = (
       ...(guide.bestTimeToVisit?.bullets ?? []),
       ...(guide.travelTips ?? []),
       ...(guide.faq ?? []).flatMap(item => [item.q, item.a]),
+      ...(guide.aboutCity?.sections ?? []).flatMap(section => [section.heading, ...(section.paragraphs ?? [])]),
       guide.aboutCity?.wikiSummaryText,
       guide.aboutCity?.wikiExtractText,
     ]
@@ -186,17 +190,7 @@ const scoreGuide = (
     reasons.push(`boilerplate: ${boilerplateHits.map(([label]) => label).join(", ")}`);
   }
 
-  const serialized = JSON.stringify(guide);
-  const wikipediaMentions = (serialized.match(/wikipedia/gi) ?? []).length;
-  if (wikipediaMentions > 0) {
-    qualityRisk += Math.min(30, 12 + wikipediaMentions * 3);
-    reasons.push(`Wikipedia residue (${wikipediaMentions} mentions/fields)`);
-  }
-
-  if (guide.aboutCity?.wikiSummaryText || guide.aboutCity?.wikiExtractText) {
-    qualityRisk += 12;
-    reasons.push("legacy wiki-derived About content still active");
-  }
+  // Wikipedia and other source references are neutral. Source attribution is not a quality defect.
 
   if ((guide.highlights?.length ?? 0) < 2) {
     qualityRisk += 5;
@@ -277,7 +271,7 @@ const md = [
   "",
   `Scored **${rows.length}** U.S. city/town/community guides after applying the same runtime enhancement layers used by the live guide registry. National-park guides are excluded because they were completed in the preceding phase.`,
   "",
-  "`qualityRisk` measures stale/thin/boilerplate risk (0–100). `repairPriority` adds up to 20 points for live tour inventory so commercially important weak guides rise in the queue.",
+  "`qualityRisk` measures stale/thin/boilerplate risk (0–100). `repairPriority` adds up to 20 points for live tour inventory so commercially important weak guides rise in the queue. Wikipedia/source links are intentionally neutral.",
   "",
   "## Top 50 repair queue",
   "",
