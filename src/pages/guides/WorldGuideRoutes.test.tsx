@@ -97,4 +97,52 @@ describe("world guide route rendering", () => {
       "Visit early or near sunset for broad city views, then stroll the lawns"
     );
   });
+
+  it("renders the Vancouver Phase 3 guide with destination-specific POIs", () => {
+    const html = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/canada/vancouver", () => undefined]}>
+        <CityGuideWorldRoute
+          params={{ countrySlug: "canada", citySlug: "vancouver" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Things to Do in Vancouver");
+    expect(html).toContain("Stanley Park");
+    expect(html).toContain("Museum of Anthropology at UBC");
+    expect(html).toContain("How to plan Vancouver");
+    expect(html.toLowerCase()).not.toContain("generic checklist item");
+  });
+
+  it("renders Port Douglas Phase 3 as a reef-and-rainforest guide", () => {
+    const html = renderToStaticMarkup(
+      <Router
+        hook={() => ["/guides/world/australia/port-douglas", () => undefined]}
+      >
+        <CityGuideWorldRoute
+          params={{ countrySlug: "australia", citySlug: "port-douglas" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Things to Do in Port Douglas");
+    expect(html).toContain("Four Mile Beach");
+    expect(html).toContain("Mossman Gorge");
+    expect(html).toContain("Great Barrier Reef");
+  });
+
+  it("renders Hamburg Phase 3 through the international Paragon template", () => {
+    const html = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/germany/hamburg", () => undefined]}>
+        <CityGuideWorldRoute
+          params={{ countrySlug: "germany", citySlug: "hamburg" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Things to Do in Hamburg");
+    expect(html).toContain("Speicherstadt");
+    expect(html).toContain("Elbphilharmonie");
+    expect(html).toContain("How to plan Hamburg");
+  });
 });
