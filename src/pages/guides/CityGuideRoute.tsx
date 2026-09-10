@@ -1,5 +1,6 @@
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
+import { enhanceInternationalGuide } from "../../data/internationalGuideEnhancements";
 
 type CityGuideRouteProps = {
   params: {
@@ -23,12 +24,16 @@ export default function CityGuideRoute({
   regionType,
 }: CityGuideRouteProps) {
   const activity = getActivityFilter() ?? undefined;
-  const guide = buildCityGuide({
+  const baseGuide = buildCityGuide({
     parentSlug: params.parentSlug,
     citySlug: params.citySlug,
     regionType,
     activityFocus: activity,
   });
+  const guide =
+    baseGuide && regionType === "country"
+      ? enhanceInternationalGuide(params.parentSlug, params.citySlug, baseGuide)
+      : baseGuide;
 
   if (!guide) {
     return (
