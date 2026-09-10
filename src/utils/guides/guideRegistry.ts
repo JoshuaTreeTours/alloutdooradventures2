@@ -2,6 +2,7 @@ import type { GuidePageData } from "../loadGuide";
 import { isRetiredLowInventoryGuide } from "./retiredLowInventoryGuides";
 import { enhanceCaliforniaGuide } from "../../data/californiaGuideEnhancements";
 import { enhanceCaliforniaMajorCityGuide } from "../../data/californiaMajorCityEnhancements";
+import { enhanceSacramentoGuide } from "../../data/californiaSacramentoEnhancement";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -36,10 +37,14 @@ const parseGuidePath = (path: string) => {
 };
 
 const enhanceGuide = (stateSlug: string, citySlug: string, guide: GuidePageData) =>
-  enhanceCaliforniaMajorCityGuide(
+  enhanceSacramentoGuide(
     stateSlug,
     citySlug,
-    enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+    enhanceCaliforniaMajorCityGuide(
+      stateSlug,
+      citySlug,
+      enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+    )
   );
 
 export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(
