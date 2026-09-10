@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 
 import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
-import { getEngine2ParisTours } from "../../engine2/data/parisTours";
+import { getInternationalEngine6CityGuideTours } from "../../data/internationalGuideEngine6Tours";
+import { getTourDetailPath } from "../../data/tours";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { isGenericHeroFallbackImage } from "../../utils/hero";
@@ -60,7 +61,10 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
 
 const parisGuide = isGuideLike(rawParisGuide) ? rawParisGuide : null;
 
-const topParisTours = getEngine2ParisTours().slice(0, 10);
+const topParisTours = getInternationalEngine6CityGuideTours(
+  "france",
+  "paris",
+).slice(0, 10);
 
 export default function ParisGuideRoute() {
   if (!parisGuide) {
@@ -161,12 +165,13 @@ export default function ParisGuideRoute() {
         <section className="mt-14">
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-2xl font-semibold">Top tours in Paris</h2>
-            <p className="text-sm text-[#405040]">Swipe to browse 10 picks</p>
+            <p className="text-sm text-[#405040]">
+              Swipe to browse {topParisTours.length} picks
+            </p>
           </div>
           <div className="mt-4 flex gap-4 overflow-x-auto pb-3">
             {topParisTours.map(tour => {
-              const rawImage =
-                tour.images.hero || tour.seo.ogImage || undefined;
+              const rawImage = tour.heroImage || undefined;
               const image =
                 rawImage && !isGenericHeroFallbackImage(rawImage)
                   ? rawImage
@@ -182,7 +187,7 @@ export default function ParisGuideRoute() {
                       <Image
                         src={image}
                         fallbackSrc={image}
-                        alt={tour.name}
+                        alt={tour.title}
                         className="h-full w-full object-cover"
                         loading="lazy"
                       />
@@ -190,12 +195,12 @@ export default function ParisGuideRoute() {
                   </div>
                   <div className="p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-[#7a8a6b]">
-                      {tour.provider.name}
+                      {tour.operator}
                     </p>
                     <h3 className="mt-2 line-clamp-2 min-h-[3rem] text-base font-semibold text-[#1f2a1f]">
-                      {tour.name}
+                      {tour.title}
                     </h3>
-                    <Link href={tour.seo.canonicalPath}>
+                    <Link href={getTourDetailPath(tour)}>
                       <a className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white hover:bg-[#287a35]">
                         View tour
                       </a>
