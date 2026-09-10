@@ -7,6 +7,12 @@ import {
   INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS,
 } from "./internationalGuidePhase2";
 
+const titleCaseSlug = (value: string) =>
+  value
+    .split("-")
+    .map(part => (part ? `${part[0].toUpperCase()}${part.slice(1)}` : part))
+    .join(" ");
+
 const baseGuide = (name: string): GuideContent => ({
   type: "city",
   name,
@@ -27,6 +33,14 @@ const baseGuide = (name: string): GuideContent => ({
 const countSentences = (value: string) =>
   (value.match(/[.!?](?:\s|$)/g) ?? []).length;
 
+const expectPhase2PoiQuality = (description: string) => {
+  expect(countSentences(description)).toBeGreaterThanOrEqual(4);
+  expect(description.length).toBeGreaterThanOrEqual(340);
+  expect(description.toLowerCase()).not.toContain("generic checklist item");
+  expect(description.toLowerCase()).not.toContain("quick way to add variety");
+  expect(description.toLowerCase()).not.toContain("easy change of scenery");
+};
+
 describe("international guide Phase 2", () => {
   it("deepens short POI copy into a four-sentence guide narrative", () => {
     const description = deepenInternationalPoiNarrative(
@@ -35,8 +49,7 @@ describe("international guide Phase 2", () => {
       "Brandenburg Gate is a neoclassical monument in central Berlin. It stands at Pariser Platz near Tiergarten. The gate became an enduring symbol of German reunification.",
     );
 
-    expect(countSentences(description)).toBeGreaterThanOrEqual(4);
-    expect(description.length).toBeGreaterThanOrEqual(340);
+    expectPhase2PoiQuality(description);
     expect(description).toContain("Brandenburg Gate");
   });
 
@@ -49,10 +62,7 @@ describe("international guide Phase 2", () => {
 
     expect(berlin.topThingsToDo?.length).toBeGreaterThanOrEqual(6);
     for (const poi of berlin.topThingsToDo ?? []) {
-      expect(countSentences(poi.description)).toBeGreaterThanOrEqual(4);
-      expect(poi.description.length).toBeGreaterThanOrEqual(340);
-      expect(poi.description.toLowerCase()).not.toContain("generic checklist item");
-      expect(poi.description.toLowerCase()).not.toContain("quick way to add variety");
+      expectPhase2PoiQuality(poi.description);
     }
   });
 
@@ -61,5 +71,31 @@ describe("international guide Phase 2", () => {
     expect(INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS).toContain("germany/berlin");
     expect(INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS).toContain("germany/munich");
     expect(INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS.length).toBeGreaterThanOrEqual(20);
+  });
+
+  it("validates substantive POI depth across every Phase 2 profile", () => {
+    for (const key of INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS) {
+      const [countrySlug, citySlug] = key.split("/");
+      const cityName = titleCaseSlug(citySlug);
+      const guide = enhanceInternationalGuidePhase2(
+        countrySlug,
+        citySlug,
+        baseGuide(cityName),
+      );
+
+      expect(
+        guide.topThingsToDo?.length,
+        `${key} should keep at least six factual POIs`,
+      ).toBeGreaterThanOrEqual(6);
+
+      const titles = new Set<string>();
+      for (const poi of guide.topThingsToDo ?? []) {
+        expectPhase2PoiQuality(poi.description);
+        expect(titles.has(poi.title.toLowerCase()), `${key}: ${poi.title}`).toBe(
+          false,
+        );
+        titles.add(poi.title.toLowerCase());
+      }
+    }
   });
 });
