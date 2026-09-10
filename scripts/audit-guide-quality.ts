@@ -120,11 +120,10 @@ for (const file of guides) {
       issues.push({ file: relative, severity: "error", code: "suspicious-attraction", detail: `Suspicious Things to Do entry: ${thing.title}` });
     }
     const sourceFields = [thing.wikiUrl, thing.sourceUrl, thing.source_url].filter(Boolean) as string[];
+    // Wikipedia/source-reference links are allowed. Count them for observability,
+    // but do not classify a legitimate citation as a content-quality defect.
     for (const source of sourceFields) {
-      if (/wikipedia\.org/i.test(source)) {
-        wikipediaFieldCount += 1;
-        issues.push({ file: relative, severity: "error", code: "wikipedia-item-source", detail: `Things to Do entry exposes Wikipedia source: ${thing.title ?? "untitled"}` });
-      }
+      if (/wikipedia\.org/i.test(source)) wikipediaFieldCount += 1;
     }
     const description = normalize(thing.description ?? "");
     if (description.length < 120) {
@@ -170,7 +169,7 @@ console.log(`AOA guide quality audit`);
 console.log(`Guides scanned: ${guides.length}`);
 console.log(`Verified classifications: ${verifiedCount}`);
 console.log(`Unverified classifications: ${unverifiedCount}`);
-console.log(`Wikipedia item-source fields: ${wikipediaFieldCount}`);
+console.log(`Wikipedia item-source fields (allowed): ${wikipediaFieldCount}`);
 console.log(`Duplicate About paragraphs: ${duplicateParagraphCount}`);
 console.log(`Errors: ${errors.length}`);
 console.log(`Warnings: ${warnings.length}`);
