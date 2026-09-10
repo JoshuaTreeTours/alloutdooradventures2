@@ -19,6 +19,14 @@ const getActivityFilter = () => {
   return params.get("activity");
 };
 
+const getInternationalEnhancementParentSlug = (
+  parentSlug: string,
+  citySlug: string,
+) =>
+  parentSlug === "united-kingdom" && citySlug === "edinburgh"
+    ? "scotland"
+    : parentSlug;
+
 export default function CityGuideRoute({
   params,
   regionType,
@@ -32,7 +40,14 @@ export default function CityGuideRoute({
   });
   const guide =
     baseGuide && regionType === "country"
-      ? enhanceInternationalGuide(params.parentSlug, params.citySlug, baseGuide)
+      ? enhanceInternationalGuide(
+          getInternationalEnhancementParentSlug(
+            params.parentSlug,
+            params.citySlug,
+          ),
+          params.citySlug,
+          baseGuide,
+        )
       : baseGuide;
 
   if (!guide) {
