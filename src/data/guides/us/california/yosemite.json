@@ -1,0 +1,90 @@
+{
+  "tier": "tier1",
+  "title": "Yosemite National Park Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Yosemite National Park",
+  "slug": "guides/us/california/yosemite",
+  "hero": {
+    "image": "",
+    "alt": "Yosemite Valley granite cliffs, waterfalls, and Sierra Nevada scenery",
+    "headline": "Yosemite National Park Travel Guide",
+    "subheadline": "Plan Yosemite around Yosemite Valley, Glacier Point, giant sequoias, Tuolumne Meadows, waterfalls, granite domes, and the Sierra Nevada landscape that helped shape American conservation."
+  },
+  "overview": [
+    "Yosemite National Park protects nearly 1,200 square miles of the central Sierra Nevada, where uplifted granite, rivers, glaciers, fire, and erosion created a landscape of sheer walls, waterfalls, alpine meadows, deep canyons, and giant sequoia groves. Yosemite Valley is the famous center, but it occupies only a small fraction of the park.",
+    "A strong first visit uses geography rather than a long checklist. Give Yosemite Valley substantial time on foot, add Glacier Point when the road is open, reserve a separate block for Mariposa Grove, and use Tioga Road and Tuolumne Meadows when seasonal access allows. Road closures, snow, wildfire conditions, waterfalls, parking, and permit requirements can change the character of a Yosemite trip from one month to the next."
+  ],
+  "highlights": [
+    {"title": "Granite icons", "description": "See El Capitan, Half Dome, Cathedral Rocks, and other immense granite forms sculpted by uplift, weathering, and glaciers."},
+    {"title": "Waterfalls and river corridors", "description": "Follow the Merced River through Yosemite Valley and see Yosemite Falls, Bridalveil Fall, Vernal Fall, and Nevada Fall when seasonal flows permit."},
+    {"title": "High-country Yosemite", "description": "Use Tioga Road, Tuolumne Meadows, Tenaya Lake, and surrounding trails to experience the park above the crowded valley floor."},
+    {"title": "Conservation history", "description": "Connect Indigenous stewardship, the 1864 Yosemite Grant, the 1890 national park, and later preservation debates that influenced the American conservation movement."}
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Yosemite Valley beneath El Capitan and Half Dome",
+      "description": "Yosemite Valley is the park's best-known landscape: a glacially deepened valley lined by enormous granite cliffs and waterfalls. El Capitan rises roughly 3,000 feet above the valley floor and has become one of the world's defining big-wall climbing landmarks, while Half Dome dominates many eastern-valley views. Walk or bicycle between meadows, the Merced River, Yosemite Village, and trailheads instead of treating the valley as a sequence of parking lots. Look for evidence of glaciation in the broad U-shaped valley and polished granite. The valley is also an Indigenous homeland, not an empty wilderness discovered by later visitors; Native people lived in and traveled through this landscape for thousands of years before federal park creation."
+    },
+    {
+      "title": "See Yosemite Falls and the valley's seasonal waterfalls",
+      "description": "Yosemite Falls drops 2,425 feet in three major sections, making it one of North America's tallest waterfalls. Its flow is strongly seasonal: snowmelt usually makes spring and early summer the most dramatic period, while late-summer flow can shrink substantially or stop in dry years. The lower-fall loop gives an accessible close view, while more strenuous trails climb toward Columbia Rock and the upper fall. Bridalveil Fall, Ribbon Fall, and seasonal cascades add to the valley's spring spectacle. Waterfall conditions are a useful reminder that Yosemite is not static; snowpack, temperature, drought, storms, and runoff determine what visitors actually see in a given year."
+    },
+    {
+      "title": "Hike the Mist Trail toward Vernal and Nevada Falls",
+      "description": "The Mist Trail is one of Yosemite's classic routes because it climbs directly beside the Merced River's dramatic descent from the high country. Vernal Fall drops 317 feet and Nevada Fall 594 feet, with steep granite steps and spray making the route especially memorable during strong runoff. The same conditions that make the trail beautiful can make stone steps wet and slippery. Continue only as far as your fitness, daylight, weather, and trail conditions support. The corridor also connects to longer wilderness routes, including approaches toward Half Dome, where permits are required for day hikers when the cables are up. Check current NPS trail and permit information before committing to a long day."
+    },
+    {
+      "title": "Look down on the valley from Glacier Point",
+      "description": "Glacier Point sits more than 3,000 feet above Yosemite Valley and provides one of the clearest single views of Half Dome, Yosemite Falls, Nevada Fall, Vernal Fall, and the Sierra high country. The viewpoint is reached by Glacier Point Road when that seasonal mountain road is open; snow can keep it closed well beyond the start of spring at lower elevations. The view makes Yosemite's glacial geometry easy to read: a deep trough below, hanging valleys feeding waterfalls, and massive granite domes and cliffs surrounding the basin. Pair the overlook with nearby short walks or longer trails rather than racing back to the valley immediately."
+    },
+    {
+      "title": "Walk among giant sequoias in Mariposa Grove",
+      "description": "Mariposa Grove contains about 500 mature giant sequoias and is Yosemite's largest sequoia grove. These trees are not the world's tallest—that distinction belongs to coast redwoods—but giant sequoias are among the largest living organisms by volume and can survive for thousands of years. The Grizzly Giant is one of the grove's most famous trees. The grove also carries unusual conservation history: protection of Mariposa Grove was included in the Yosemite Grant signed by President Abraham Lincoln in 1864, an important federal precedent for setting scenic and natural lands aside for public use and preservation. Shuttle operations and access vary seasonally, so check current transportation details before visiting."
+    },
+    {
+      "title": "Drive Tioga Road to Tuolumne Meadows and Tenaya Lake",
+      "description": "Tioga Road crosses Yosemite's high country and reaches Tioga Pass at 9,945 feet, opening a completely different park from Yosemite Valley. Stops around Tenaya Lake, Olmsted Point, granite domes, and Tuolumne Meadows reveal broad glacial surfaces, subalpine forest, and the headwaters of major Sierra rivers. Tuolumne Meadows lies around 8,600 feet, so even midsummer mornings can be cold and thunderstorms can develop quickly. The road is seasonal and often remains snowbound into late spring or early summer. When it is open, give the high country a full day rather than treating Tioga Road merely as a shortcut across the Sierra."
+    },
+    {
+      "title": "Visit Wawona and the park's human-history landscape",
+      "description": "Wawona provides a quieter counterpoint to Yosemite Valley and helps explain how travel, tourism, ranching, stage routes, and park management developed along Yosemite's southern approach. Historic structures and the Wawona area connect the era of horse-drawn travel with later automobile tourism, while nearby forest and river corridors provide access to trails and picnic areas. This landscape also has much deeper Native history than the surviving Euro-American buildings suggest. Use museum and interpretive material to place the preserved structures within the longer story of Indigenous homelands, dispossession, tourism, and the changing idea of what a national park should protect."
+    },
+    {
+      "title": "See Hetch Hetchy and the conservation debate it represents",
+      "description": "Hetch Hetchy is a glacial valley in the park's northwest, now partly occupied by a reservoir behind O'Shaughnessy Dam. Congress authorized the project in 1913 after a national fight over whether a protected national-park valley should be dammed to supply water and power to San Francisco. The debate became a landmark episode in American conservation history and sharpened the distinction between preservation and managed resource use. Today visitors can see the reservoir, granite walls, waterfalls, and trails while considering a landscape that is both scenic and politically historic. Access is via a separate entrance road with operating hours and seasonal considerations, so verify current NPS information before making the drive."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Yosemite changes dramatically with snow, runoff, and elevation",
+    "bullets": [
+      "Spring and early summer usually bring the strongest waterfalls, but high-country roads and trails may still be snowbound.",
+      "Summer provides the broadest access to Tioga Road and Glacier Point in typical years, but Yosemite Valley is busiest and parking pressure is highest.",
+      "Fall brings cooler weather and fewer visitors after peak season, while waterfall flow is often much lower than in spring.",
+      "Winter transforms the valley and closes many high-elevation roads; tire-chain controls and storm conditions can affect access even when the valley road remains open."
+    ]
+  },
+  "travelTips": [
+    "Check the National Park Service current-conditions, road, fire, and permit pages before each major Yosemite day.",
+    "Use park shuttles and walking routes in Yosemite Valley when available rather than repeatedly moving a car between nearby sights.",
+    "Do not assume Tioga Road or Glacier Point Road is open because the valley is snow-free; high-elevation access follows a different season.",
+    "Carry water, food, layers, sun protection, and an offline map. Cell service is unreliable in much of the park.",
+    "Store food exactly as required. Yosemite black bears are powerful, intelligent, and highly motivated by improperly stored human food."
+  ],
+  "faq": [
+    {"q": "How many days should I spend in Yosemite?", "a": "Three to four days is a strong first visit when high-country roads are open. That allows a Yosemite Valley day, a Glacier Point or hiking day, Mariposa Grove, and at least part of the Tioga Road high country without turning the trip into constant driving."},
+    {"q": "Is Yosemite Valley the whole park?", "a": "No. Yosemite Valley is the most famous visitor area, but the park extends across nearly 1,200 square miles of Sierra Nevada wilderness, high country, forests, sequoia groves, river canyons, and remote trail systems."},
+    {"q": "Do I need permits in Yosemite?", "a": "Some activities require permits, including wilderness trips and the Half Dome cables route. Entry-reservation systems have also changed between seasons and years, so use the current NPS Yosemite planning pages rather than relying on an old itinerary."},
+    {"q": "When are Yosemite waterfalls strongest?", "a": "They are generally strongest during spring snowmelt and into early summer, but timing and volume depend on the year's snowpack and temperatures. Some falls become very small or dry later in the season."},
+    {"q": "Why is Yosemite important to conservation history?", "a": "The 1864 Yosemite Grant protected Yosemite Valley and Mariposa Grove for public use and preservation before the national park system existed. Yosemite became a national park in 1890 and later figured prominently in debates over preservation, tourism, wilderness, and water development."}
+  ],
+  "tours": {"stateSlug": "california", "citySlug": "yosemite", "limit": 6, "title": "Top Yosemite National Park tours"},
+  "seoLinks": {"officialTourism": "https://www.nps.gov/yose/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Yosemite National Park is a federally protected Sierra Nevada landscape, not a city. Its famous valley is only one part of a much larger park containing high-elevation wilderness, giant sequoias, deep river canyons, granite domes, and extensive trail networks."]},
+    {"heading": "Geography & geology", "paragraphs": ["Much of Yosemite's visual identity comes from resistant granitic rock formed deep underground and later exposed as the Sierra Nevada rose and erosion stripped away overlying material. Repeated glaciations widened and deepened valleys, polished bedrock, carved basins, and left hanging valleys whose streams now plunge as waterfalls."]},
+    {"heading": "Indigenous and conservation history", "paragraphs": ["Native peoples have lived in and traveled through the Yosemite region for thousands of years, and contemporary Tribal communities maintain cultural ties to these lands. The Yosemite Grant of 1864 and national-park designation in 1890 became milestones in U.S. conservation history, although park creation also involved displacement and restrictions on Indigenous residents." ]},
+    {"heading": "Outdoor & seasonal highlights", "paragraphs": ["Hiking, climbing, backpacking, cycling, scenic driving, wildlife observation, photography, snow travel, and river-oriented recreation all change with elevation and season. Spring emphasizes waterfalls, summer opens more high country, autumn cools the park, and winter sharply reduces road access while transforming the landscape."]},
+    {"heading": "Getting around", "paragraphs": ["Yosemite's roads connect distinct regions rather than a compact urban grid. Yosemite Valley, Wawona and Mariposa Grove, Glacier Point, Tioga Road, and Hetch Hetchy can require substantial driving between them. Build each day around one region and use shuttles where offered."]}
+  ]}
+}
