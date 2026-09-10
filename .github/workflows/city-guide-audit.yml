@@ -28,3 +28,7 @@ jobs:
       - name: Rank city guide repair priorities
         if: always()
         run: npx tsx scripts/rank-city-guide-quality.ts
+
+      - name: Rank Phase III Engine6 guide priorities
+        if: always()
+        run: npx tsx scripts/rank-phase3-engine6-guide-priority.ts
