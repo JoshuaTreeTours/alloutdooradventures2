@@ -8,6 +8,7 @@ import { enhanceSacramentoGuide } from "../src/data/californiaSacramentoEnhancem
 import { enhanceCaliforniaSoCalRegionalGuide } from "../src/data/californiaSoCalRegionalEnhancements";
 import { enhanceCaliforniaParagonCityGuide } from "../src/data/californiaParagonCityEnhancements";
 import { enhancePhase1ParagonCityGuide } from "../src/data/phase1ParagonCityEnhancements";
+import { enhancePhase2ParagonCityGuide } from "../src/data/phase2ParagonCityEnhancements";
 import { tours } from "../src/data/tours";
 
 type RankedGuide = {
@@ -62,22 +63,26 @@ const applyRuntimeEnhancements = (
   citySlug: string,
   guide: GuidePageData
 ): GuidePageData =>
-  enhancePhase1ParagonCityGuide(
+  enhancePhase2ParagonCityGuide(
     stateSlug,
     citySlug,
-    enhanceCaliforniaParagonCityGuide(
+    enhancePhase1ParagonCityGuide(
       stateSlug,
       citySlug,
-      enhanceCaliforniaSoCalRegionalGuide(
+      enhanceCaliforniaParagonCityGuide(
         stateSlug,
         citySlug,
-        enhanceSacramentoGuide(
+        enhanceCaliforniaSoCalRegionalGuide(
           stateSlug,
           citySlug,
-          enhanceCaliforniaMajorCityGuide(
+          enhanceSacramentoGuide(
             stateSlug,
             citySlug,
-            enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+            enhanceCaliforniaMajorCityGuide(
+              stateSlug,
+              citySlug,
+              enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+            )
           )
         )
       )
@@ -105,8 +110,8 @@ const scoreGuide = (
   const city = guide.city?.trim() || citySlug;
   const classification = resolveGuidePlaceClassification(stateSlug, citySlug, city);
 
-  // National parks were completed in the preceding guide phase. Phase I is the
-  // city/town/community cleanup queue, so keep parks out of this ranking.
+  // National parks were completed in the preceding guide phase. The city cleanup
+  // queue intentionally keeps those park guides out of the ranking.
   if (classification.placeType === "national-park") return null;
 
   const reasons: string[] = [];
