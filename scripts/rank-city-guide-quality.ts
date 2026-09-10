@@ -7,6 +7,7 @@ import { enhanceCaliforniaMajorCityGuide } from "../src/data/californiaMajorCity
 import { enhanceSacramentoGuide } from "../src/data/californiaSacramentoEnhancement";
 import { enhanceCaliforniaSoCalRegionalGuide } from "../src/data/californiaSoCalRegionalEnhancements";
 import { enhanceCaliforniaParagonCityGuide } from "../src/data/californiaParagonCityEnhancements";
+import { enhancePhase1ParagonCityGuide } from "../src/data/phase1ParagonCityEnhancements";
 import { tours } from "../src/data/tours";
 
 type RankedGuide = {
@@ -61,19 +62,23 @@ const applyRuntimeEnhancements = (
   citySlug: string,
   guide: GuidePageData
 ): GuidePageData =>
-  enhanceCaliforniaParagonCityGuide(
+  enhancePhase1ParagonCityGuide(
     stateSlug,
     citySlug,
-    enhanceCaliforniaSoCalRegionalGuide(
+    enhanceCaliforniaParagonCityGuide(
       stateSlug,
       citySlug,
-      enhanceSacramentoGuide(
+      enhanceCaliforniaSoCalRegionalGuide(
         stateSlug,
         citySlug,
-        enhanceCaliforniaMajorCityGuide(
+        enhanceSacramentoGuide(
           stateSlug,
           citySlug,
-          enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+          enhanceCaliforniaMajorCityGuide(
+            stateSlug,
+            citySlug,
+            enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+          )
         )
       )
     )
@@ -265,7 +270,7 @@ const top = queue.slice(0, 50);
 const md = [
   "# Phase I — City Guide Repair Ranking",
   "",
-  `Scored **${rows.length}** U.S. city/town/community guides after applying the same California enhancement layers used by the live guide registry. National-park guides are excluded because they were completed in the preceding phase.`,
+  `Scored **${rows.length}** U.S. city/town/community guides after applying the same runtime enhancement layers used by the live guide registry. National-park guides are excluded because they were completed in the preceding phase.`,
   "",
   "`qualityRisk` measures stale/thin/boilerplate risk (0–100). `repairPriority` adds up to 20 points for live tour inventory so commercially important weak guides rise in the queue.",
   "",
