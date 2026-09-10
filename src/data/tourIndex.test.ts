@@ -72,4 +72,31 @@ describe("guide top tours prioritize Engine6 first", () => {
       );
     }
   });
+
+  it("shows only Engine6 tours on an international city when Engine6 exists", () => {
+    const parisTopTours = getTopToursForPlace(
+      {
+        type: "city",
+        slug: "paris",
+        name: "Paris",
+        parentSlug: "france",
+        parentName: "France",
+        regionType: "country",
+      },
+      { min: 3, max: 10 }
+    );
+
+    expect(parisTopTours.length).toBeGreaterThan(0);
+    expect(parisTopTours.every(tour => tour.engine === "engine6")).toBe(true);
+  });
+
+  it("shows only Engine6 tours on an international country when Engine6 exists", () => {
+    const italyTopTours = getTopToursForPlace(
+      { type: "country", slug: "italy", name: "Italy" },
+      { min: 3, max: 10 }
+    );
+
+    expect(italyTopTours.length).toBeGreaterThan(0);
+    expect(italyTopTours.every(tour => tour.engine === "engine6")).toBe(true);
+  });
 });

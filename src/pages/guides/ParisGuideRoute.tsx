@@ -1,14 +1,18 @@
 import { Link } from "wouter";
 
-import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
-import { getEngine2ParisTours } from "../../engine2/data/parisTours";
+import GuideThingsToDoCard from "../../components/guides/GuideThingsToDoCard";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
+import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
+import { getInternationalEngine6CityGuideTours } from "../../data/internationalGuideEngine6Tours";
+import { deepenInternationalPoiNarrative } from "../../data/internationalGuidePhase2";
+import { getTourDetailPath } from "../../data/tours";
+import type { Tour } from "../../data/tours.types";
+import { getEngine2ParisTours } from "../../engine2/data/parisTours";
 import { isGenericHeroFallbackImage } from "../../utils/hero";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
-  buildCityGuideIntroParagraphs,
   buildCityGuideMetaTitle,
 } from "../../utils/guides/cityGuideTitles";
 
@@ -43,6 +47,7 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
   const guide = value as Record<string, unknown>;
   if (
     !isNonEmptyString(guide.seoTitle) ||
+    !isNonEmptyString(guide.seoDescription) ||
     !isNonEmptyString(guide.intro) ||
     !isNonEmptyString(guide.wikipediaUrl) ||
     !isNonEmptyString(guide.wikipediaTitle) ||
@@ -60,7 +65,54 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
 
 const parisGuide = isGuideLike(rawParisGuide) ? rawParisGuide : null;
 
-const topParisTours = getEngine2ParisTours().slice(0, 10);
+const legacyParisTours: Tour[] = getEngine2ParisTours().map(tour => {
+  const image = tour.images.hero || tour.seo.ogImage || "";
+
+  return {
+    id: `engine2-guide-${tour.id}`,
+    engine: "engine2",
+    slug: tour.slug,
+    title: tour.name,
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country,
+      state: tour.geo.country,
+      stateSlug: tour.sourceCountrySlug || "france",
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug || "paris",
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: image,
+    galleryImages: image ? [image] : [],
+    badges: { tagline: "Tour" },
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    bookingWidgetUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText || tour.seo.description,
+  };
+});
+
+const engine6ParisTours = getInternationalEngine6CityGuideTours(
+  "france",
+  "paris",
+);
+const topParisTours = (
+  engine6ParisTours.length ? engine6ParisTours : legacyParisTours
+).slice(0, 10);
+
+const phase2ParisTopThings =
+  parisGuide?.topThings.map(item => ({
+    ...item,
+    description: deepenInternationalPoiNarrative(
+      parisGuide.city,
+      item.title,
+      item.description,
+    ),
+  })) ?? [];
 
 export default function ParisGuideRoute() {
   if (!parisGuide) {
@@ -77,13 +129,12 @@ export default function ParisGuideRoute() {
   const cityGuideDisplayTitle = buildCityGuideDisplayTitle(parisGuide.city);
   const cityGuideMetaTitle = buildCityGuideMetaTitle(parisGuide.city);
   const cityGuideH1 = buildCityGuideH1(parisGuide.city);
-  const cityGuideIntro = buildCityGuideIntroParagraphs(parisGuide.city);
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12 text-[#1f2a1f]">
       <Seo
         title={cityGuideMetaTitle}
-        description={cityGuideIntro.primary}
+        description={parisGuide.seoDescription}
         url="/guides/world/france/paris"
         image={parisGuide.leadImageUrl ?? null}
       />
@@ -93,8 +144,7 @@ export default function ParisGuideRoute() {
         </p>
         <h1 className="mt-2 text-4xl font-bold">{cityGuideH1}</h1>
         <div className="mt-4 space-y-3 text-lg text-[#334433]">
-          <p>{cityGuideIntro.primary}</p>
-          <p>{cityGuideIntro.secondary}</p>
+          <p>{parisGuide.intro}</p>
         </div>
         {parisGuide.leadImageUrl ? (
           <img
@@ -106,19 +156,21 @@ export default function ParisGuideRoute() {
         ) : null}
       </header>
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold">Top things to do</h2>
-        <ul className="mt-4 space-y-4">
-          {parisGuide.topThings.map(item => (
-            <li
+      <section className="mt-10 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
+        <h2 className="text-2xl font-semibold">Things to Do in Paris</h2>
+        <ol className="mt-6 space-y-6">
+          {phase2ParisTopThings.map((item, index) => (
+            <GuideThingsToDoCard
               key={item.title}
-              className="rounded-lg border border-[#dde7dd] p-4"
-            >
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="mt-1 text-[#405040]">{item.description}</p>
-            </li>
+              index={index + 1}
+              city={parisGuide.city}
+              title={item.title}
+              description={item.description}
+              fallbackImageUrl={parisGuide.leadImageUrl ?? null}
+              fallbackImageAlt="Paris travel scenery"
+            />
           ))}
-        </ul>
+        </ol>
       </section>
 
       {parisGuide.neighborhoods?.length ? (
@@ -163,12 +215,13 @@ export default function ParisGuideRoute() {
         <section className="mt-14">
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-2xl font-semibold">Top tours in Paris</h2>
-            <p className="text-sm text-[#405040]">Swipe to browse 10 picks</p>
+            <p className="text-sm text-[#405040]">
+              Swipe to browse {topParisTours.length} picks
+            </p>
           </div>
           <div className="mt-4 flex gap-4 overflow-x-auto pb-3">
             {topParisTours.map(tour => {
-              const rawImage =
-                tour.images.hero || tour.seo.ogImage || undefined;
+              const rawImage = tour.heroImage || undefined;
               const image =
                 rawImage && !isGenericHeroFallbackImage(rawImage)
                   ? rawImage
@@ -184,7 +237,7 @@ export default function ParisGuideRoute() {
                       <Image
                         src={image}
                         fallbackSrc={image}
-                        alt={tour.name}
+                        alt={tour.title}
                         className="h-full w-full object-cover"
                         loading="lazy"
                       />
@@ -192,12 +245,12 @@ export default function ParisGuideRoute() {
                   </div>
                   <div className="p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-[#7a8a6b]">
-                      {tour.provider.name}
+                      {tour.operator}
                     </p>
                     <h3 className="mt-2 line-clamp-2 min-h-[3rem] text-base font-semibold text-[#1f2a1f]">
-                      {tour.name}
+                      {tour.title}
                     </h3>
-                    <Link href={tour.seo.canonicalPath}>
+                    <Link href={getTourDetailPath(tour)}>
                       <a className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white hover:bg-[#287a35]">
                         View tour
                       </a>

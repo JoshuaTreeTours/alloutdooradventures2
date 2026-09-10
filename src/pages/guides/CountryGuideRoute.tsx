@@ -1,5 +1,6 @@
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildCountryGuide } from "../../data/guideData";
+import { withEngine6OnlyInternationalCountryTopTours } from "../../data/internationalGuideEngine6Tours";
 
 type CountryGuideRouteProps = {
   params: {
@@ -8,7 +9,13 @@ type CountryGuideRouteProps = {
 };
 
 export default function CountryGuideRoute({ params }: CountryGuideRouteProps) {
-  const guide = buildCountryGuide(params.countrySlug);
+  const baseGuide = buildCountryGuide(params.countrySlug);
+  const guide = baseGuide
+    ? withEngine6OnlyInternationalCountryTopTours(
+        baseGuide,
+        params.countrySlug,
+      )
+    : null;
 
   if (!guide) {
     return (

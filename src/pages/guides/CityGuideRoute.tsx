@@ -1,5 +1,11 @@
 import GuideTemplate from "../../templates/GuideTemplate";
+import InternationalCityGuideTemplate from "../../templates/InternationalCityGuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
+import {
+  enhanceInternationalGuidePhase2,
+  INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS,
+} from "../../data/internationalGuidePhase2";
+import { withEngine6OnlyInternationalCityTopTours } from "../../data/internationalGuideEngine6Tours";
 
 type CityGuideRouteProps = {
   params: {
@@ -18,17 +24,50 @@ const getActivityFilter = () => {
   return params.get("activity");
 };
 
+const getInternationalEnhancementParentSlug = (
+  parentSlug: string,
+  citySlug: string,
+) =>
+  parentSlug === "united-kingdom" && citySlug === "edinburgh"
+    ? "scotland"
+    : parentSlug;
+
 export default function CityGuideRoute({
   params,
   regionType,
 }: CityGuideRouteProps) {
   const activity = getActivityFilter() ?? undefined;
-  const guide = buildCityGuide({
+  const enhancementParentSlug = getInternationalEnhancementParentSlug(
+    params.parentSlug,
+    params.citySlug,
+  );
+  const phase2Key = `${enhancementParentSlug}/${params.citySlug}`;
+  const isPhase2Paragon =
+    regionType === "country" &&
+    INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS.includes(phase2Key);
+
+  const baseGuide = buildCityGuide({
     parentSlug: params.parentSlug,
     citySlug: params.citySlug,
     regionType,
     activityFocus: activity,
   });
+  const enhancedGuide =
+    baseGuide && regionType === "country"
+      ? enhanceInternationalGuidePhase2(
+          enhancementParentSlug,
+          params.citySlug,
+          baseGuide,
+        )
+      : baseGuide;
+  const guide =
+    enhancedGuide && regionType === "country"
+      ? withEngine6OnlyInternationalCityTopTours(
+          enhancedGuide,
+          params.parentSlug,
+          params.citySlug,
+        )
+      : enhancedGuide;
 
   if (!guide) {
     return (
@@ -42,5 +81,9 @@ export default function CityGuideRoute({
     );
   }
 
-  return <GuideTemplate guide={guide} />;
+  return isPhase2Paragon ? (
+    <InternationalCityGuideTemplate guide={guide} />
+  ) : (
+    <GuideTemplate guide={guide} />
+  );
 }
