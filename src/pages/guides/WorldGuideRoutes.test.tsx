@@ -76,7 +76,7 @@ describe("world guide route rendering", () => {
     expectRenderableGuide(html, "Things to Do in Berlin");
     expect(html).toContain("Brandenburg Gate");
     expect(html).toContain("Understand Berlin");
-    expect(html).toContain("Check the official site for");
+    expect(html).toContain("Approach Brandenburg Gate");
     expect((html.match(/<img/g) ?? []).length).toBeGreaterThanOrEqual(7);
     expect(html.toLowerCase()).not.toContain("generic checklist item");
   });
