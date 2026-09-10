@@ -64,16 +64,35 @@ describe("world guide route rendering", () => {
     expect(html.toLowerCase()).not.toContain("quick way to add variety");
   });
 
-  it("renders Paris with factual POI copy instead of the former thin cards", () => {
+  it("renders Berlin Phase 2 as image-backed Santa Monica-style POI cards", () => {
+    const html = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/germany/berlin", () => undefined]}>
+        <CityGuideWorldRoute
+          params={{ countrySlug: "germany", citySlug: "berlin" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Things to Do in Berlin");
+    expect(html).toContain("Brandenburg Gate");
+    expect(html).toContain("Understand Berlin");
+    expect(html).toContain("Check the official site for");
+    expect((html.match(/<img/g) ?? []).length).toBeGreaterThanOrEqual(7);
+    expect(html.toLowerCase()).not.toContain("generic checklist item");
+  });
+
+  it("renders Paris with Phase 2 narrative depth and image-backed POI cards", () => {
     const html = renderToStaticMarkup(
       <Router hook={() => ["/guides/world/france/paris", () => undefined]}>
         <ParisGuideRoute />
       </Router>
     );
 
-    expectRenderableGuide(html, "The Eiffel Tower was completed for the 1889");
+    expectRenderableGuide(html, "Things to Do in Paris");
+    expect(html).toContain("The Eiffel Tower was completed for the 1889");
     expect(html).toContain("Notre-Dame Cathedral and Île de la Cité");
     expect(html).toContain("Arc de Triomphe");
+    expect((html.match(/<img/g) ?? []).length).toBeGreaterThanOrEqual(9);
     expect(html).not.toContain(
       "Visit early or near sunset for broad city views, then stroll the lawns"
     );
