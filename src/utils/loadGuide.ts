@@ -1,8 +1,8 @@
 import nevadaGuide from "../data/guides/us/nevada/index.json";
 import {
-  getGuidePlaceClassification,
+  resolveGuidePlaceClassification,
   type GuidePlaceClassification,
-} from "../data/guidePlaceClassification";
+} from "../data/resolveGuidePlaceClassification";
 import { loadUsCityGuide as loadUsCityGuideFromRegistry } from "./guides/loadGuide";
 
 export type GuideSeoLinks = {
@@ -74,7 +74,11 @@ const withPlaceClassification = (
   guide
     ? {
         ...guide,
-        placeClassification: getGuidePlaceClassification(stateSlug, citySlug),
+        placeClassification: resolveGuidePlaceClassification(
+          stateSlug,
+          citySlug,
+          guide.city
+        ),
       }
     : undefined;
 

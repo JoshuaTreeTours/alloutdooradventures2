@@ -1,0 +1,150 @@
+{
+  "tier": "tier2",
+  "title": "Hawaiʻi Volcanoes National Park Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Hawaiʻi Volcanoes National Park",
+  "slug": "guides/us/hawaii/hawaii-volcanoes-national-park",
+  "hero": {
+    "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/54/58.jpg",
+    "alt": "Hawaiʻi Volcanoes National Park volcanic landscape",
+    "headline": "Hawaiʻi Volcanoes National Park Travel Guide",
+    "subheadline": "Plan around Kīlauea and Mauna Loa, rainforest trails, lava landscapes, Native Hawaiian cultural sites, and conditions that can change rapidly in an active volcanic park."
+  },
+  "overview": [
+    "Hawaiʻi Volcanoes National Park protects an extraordinary landscape shaped by Kīlauea and Mauna Loa, two of the world's most significant active volcanoes. A visit can move from cool, wet summit forest to recent lava fields and the Pacific coast in a single day, making elevation, weather and road conditions as important to planning as distance.",
+    "This is also a living Native Hawaiian cultural landscape, not simply a geology exhibit. Volcanic features, trails, petroglyphs and place names carry cultural meaning alongside their scientific importance. Eruptions, volcanic gases, earthquakes, fires and repair work can alter access with little notice, so current National Park Service alerts should always outrank a fixed itinerary."
+  ],
+  "highlights": [
+    {
+      "title": "Two immense active volcanoes",
+      "description": "Kīlauea and Mauna Loa define the park's geology, but visible eruptive activity is never guaranteed and safe access depends on current conditions."
+    },
+    {
+      "title": "Rainforest to lava coast",
+      "description": "Elevation and exposure create striking ecological transitions from fern-rich uplands to stark lava fields and wind-exposed coastal terrain."
+    },
+    {
+      "title": "A Native Hawaiian cultural landscape",
+      "description": "The park protects places, traditions and stories deeply connected to Native Hawaiian history and continuing cultural practice."
+    },
+    {
+      "title": "Conditions determine the itinerary",
+      "description": "Closures, volcanic gases, weather and eruption activity can change rapidly, so flexible planning is part of visiting an active volcanic park responsibly."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore the Kīlauea summit area",
+      "description": "The summit district gives first-time visitors essential context for Kīlauea's enormous caldera, recent eruptions and continuing geologic change. Use open overlooks and trails to understand the scale of the summit rather than expecting one fixed lava-viewing point. Check NPS alerts before arrival because eruption activity, volcanic gases and safety closures can change access quickly."
+    },
+    {
+      "title": "Hike Kīlauea Iki when the trail is open",
+      "description": "The Kīlauea Iki route descends through rainforest to the floor of a crater transformed by the dramatic 1959 eruption. The contrast between lush crater rim and exposed volcanic floor makes it one of the park's clearest geology walks. The climb back to the rim, heat on exposed sections and wet roots in forest deserve more preparation than the landscape may suggest from an overlook."
+    },
+    {
+      "title": "Walk through Nāhuku",
+      "description": "Nāhuku, commonly known as Thurston Lava Tube, reveals how flowing lava can leave a tunnel behind after its molten interior drains away. The surrounding rainforest makes the transition into the tube especially memorable. Parking, lighting, trail conditions and access can vary, so combine the stop with nearby summit-area trails rather than building an entire day around a short walk."
+    },
+    {
+      "title": "Drive Chain of Craters Road",
+      "description": "Chain of Craters Road descends thousands of feet from Kīlauea's uplands toward the coast, crossing lava flows of different ages and exposing the park's remarkable elevation change. Pullouts and short walks reveal craters, lava textures and broad ocean views. Fuel, food and shade are limited along the route, and coastal heat can be dramatically different from summit weather."
+    },
+    {
+      "title": "Visit the Puʻuloa Petroglyphs",
+      "description": "Puʻuloa preserves a major concentration of Native Hawaiian petroglyphs reached by a walk across exposed lava terrain. Visit with the understanding that these markings are culturally significant records within a living Hawaiian landscape, not decorative curiosities. Stay on the established route, never touch the carvings and prepare for sun, wind and uneven footing."
+    },
+    {
+      "title": "Experience the park's coastal lava landscape",
+      "description": "The lower end of Chain of Craters Road brings visitors into a stark meeting of lava and Pacific surf, where cliffs, sea views and young volcanic surfaces show how the island continues to be reshaped. Ocean conditions and unstable coastal edges demand caution. Treat barriers and closures seriously and do not assume old guidebook viewpoints remain accessible after later volcanic or coastal change."
+    },
+    {
+      "title": "Discover the Kahuku Unit",
+      "description": "The Kahuku Unit on Mauna Loa's southwest flank offers a quieter view of volcanic landscapes, ranching history, forest recovery and the scale of the larger mountain. Its roads, programs and open days can differ from the Kīlauea summit district, so confirm current operating information before making the drive. It is especially useful for travelers with enough time to see beyond the park's busiest corridor."
+    },
+    {
+      "title": "Learn about Mauna Loa beyond the viewpoints",
+      "description": "Mauna Loa is the massive shield volcano forming much of the park and should not be reduced to a distant backdrop. Open roads and trails can reveal older flows, high-elevation environments and the enormous scale of the mountain, but upper-elevation travel is more demanding than summit-area sightseeing. Check weather, volcanic conditions and road status before committing to a Mauna Loa outing."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "The park is year-round, but weather and volcanic conditions matter more than the calendar",
+    "bullets": [
+      "Kīlauea's summit is much cooler and wetter than Hawaiʻi Island's resort coast, so carry rain protection and a warm layer in every season.",
+      "Early starts can help with parking and leave time to adjust when clouds, rain, volcanic gases or closures change the plan.",
+      "Visible lava is never guaranteed; use current NPS eruption and alert information rather than planning around old photographs or social posts."
+    ]
+  },
+  "travelTips": [
+    "Read the National Park Service alerts and current conditions shortly before entering the park.",
+    "Bring water, rain protection, sun protection and layers; summit and coast conditions can feel like different climates.",
+    "Stay on open trails and behind barriers around craters, cliffs, cracks and volcanic features.",
+    "Do not collect lava rock, disturb petroglyphs or treat culturally significant sites as props; leave the landscape intact.",
+    "If volcanic gases affect your breathing or visibility becomes poor, follow posted guidance and change plans rather than pushing through."
+  ],
+  "faq": [
+    {
+      "q": "Will I see flowing lava at Hawaiʻi Volcanoes National Park?",
+      "a": "Maybe, but never count on it. Eruptions can begin, pause or end, and safe viewing locations can change. Check the current NPS eruption information immediately before your visit."
+    },
+    {
+      "q": "How much time should I allow?",
+      "a": "A full day allows a useful combination of the Kīlauea summit area, a substantial walk and part or all of Chain of Craters Road. Two days gives much better flexibility for weather, closures and the Kahuku or Mauna Loa areas."
+    },
+    {
+      "q": "Is the park hot like the beaches?",
+      "a": "Not necessarily. The Kīlauea summit sits at roughly 4,000 feet and can be cool, rainy and windy even when the coast is warm and sunny. Temperatures rise substantially as Chain of Craters Road descends toward the ocean."
+    },
+    {
+      "q": "Are Kīlauea and Mauna Loa the same volcano?",
+      "a": "No. They are distinct shield volcanoes with separate summit systems and eruptive histories, both protected within the park."
+    },
+    {
+      "q": "Is Hawaiʻi Volcanoes National Park a city destination?",
+      "a": "No. It is a federally managed national park on Hawaiʻi Island. Nearby communities provide lodging and services, but the park itself is protected landscape managed by the National Park Service."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "hawaii-volcanoes-national-park",
+    "limit": 6,
+    "title": "Top Hawaiʻi Volcanoes National Park tours"
+  },
+  "seoLinks": {
+    "officialTourism": "https://www.nps.gov/havo/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Hawaiʻi Volcanoes National Park is a National Park Service destination on Hawaiʻi Island, not a city. It protects volcanic systems, native ecosystems, cultural sites, archaeological resources and landscapes extending from high volcanic slopes toward the sea."
+        ]
+      },
+      {
+        "heading": "Geography & geology",
+        "paragraphs": [
+          "Kīlauea and Mauna Loa are broad shield volcanoes built by repeated basaltic lava flows. Elevation changes create sharp differences in rainfall, vegetation and temperature, while eruptions and collapses continually rewrite portions of the visible landscape."
+        ]
+      },
+      {
+        "heading": "History & culture",
+        "paragraphs": [
+          "Native Hawaiian relationships with these volcanic landscapes extend far beyond the creation of the national park. Federal protection began with Hawaii National Park in 1916, later separated into Hawaiʻi Volcanoes and Haleakalā national parks; responsible interpretation should keep Indigenous history and continuing cultural connections central to the story."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Hiking, crater overlooks, lava-field walks, rainforest trails and scenic driving are possible year-round, but rain, volcanic gases, fire, earthquakes and active eruptions can change what is safe or open. The best itinerary is therefore one with alternatives rather than a rigid checklist."
+        ]
+      },
+      {
+        "heading": "Getting there and around",
+        "paragraphs": [
+          "The main Kīlauea entrance is reached by highway from Hilo or the Kona side of Hawaiʻi Island. A vehicle is the practical way to connect the summit district with Chain of Craters Road and more distant park areas; drive times can be substantial, and services become limited away from the entrance and nearby communities."
+        ]
+      }
+    ]
+  }
+}

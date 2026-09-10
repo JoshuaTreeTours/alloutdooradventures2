@@ -1,5 +1,9 @@
 import type { City, StateDestination } from "./destinations";
-import { getFallbackStateBySlug } from "./tourFallbacks";
+import {
+  getFallbackCityBySlugs,
+  getFallbackStateBySlug,
+} from "./tourFallbacks";
+import { getNationalParkDestinationsByState } from "./nationalParkDestinations";
 import { getToursByState } from "./tours";
 import type { Tour } from "./tours.types";
 import { pickBestHeroImageFromTours } from "../utils/heroImage";
@@ -98,6 +102,28 @@ export const getEligibleChildDestinationCities = (
     if (cityKey) {
       bySlug.set(cityKey, city);
     }
+  });
+
+  getNationalParkDestinationsByState(state.slug).forEach(park => {
+    if (bySlug.has(park.citySlug)) {
+      return;
+    }
+
+    const tourCount = getDestinationCityTourCount(state.slug, park.citySlug);
+    if (tourCount <= 0) {
+      return;
+    }
+
+    const fallbackCity = getFallbackCityBySlugs(state.slug, park.citySlug);
+    if (!fallbackCity) {
+      return;
+    }
+
+    bySlug.set(park.citySlug, {
+      ...fallbackCity,
+      name: park.name,
+      slug: park.citySlug,
+    });
   });
 
   const fallbackState = getFallbackStateBySlug(state.slug);

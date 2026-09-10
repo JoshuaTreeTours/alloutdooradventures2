@@ -1,4 +1,5 @@
 import { getStateBySlug } from "./destinations";
+import { getNationalParkDestinationsByState } from "./nationalParkDestinations";
 import { getAllRouteBackedTourEntries } from "./tours";
 import { slugify } from "../utils/slugify";
 
@@ -19,6 +20,7 @@ const shouldUseCityName = (currentName: string, candidateName: string) =>
 export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
   const bySlug = new Map<string, StateCityOption>();
   const staticCitySlugs = new Set<string>();
+  const protectedDisplaySlugs = new Set<string>();
   const state = getStateBySlug(stateSlug);
 
   state?.cities.forEach(city => {
@@ -32,6 +34,14 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
     bySlug.set(citySlug, {
       name: cityName,
       slug: citySlug,
+    });
+  });
+
+  getNationalParkDestinationsByState(stateSlug).forEach(park => {
+    protectedDisplaySlugs.add(park.citySlug);
+    bySlug.set(park.citySlug, {
+      name: park.name,
+      slug: park.citySlug,
     });
   });
 
@@ -58,6 +68,7 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
 
       if (
         !staticCitySlugs.has(citySlug) &&
+        !protectedDisplaySlugs.has(citySlug) &&
         shouldUseCityName(existing.name, cityName)
       ) {
         bySlug.set(citySlug, {
