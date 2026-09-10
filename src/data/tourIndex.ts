@@ -181,6 +181,22 @@ const compareTours = (a: Tour, b: Tour) => {
   return a.id.localeCompare(b.id);
 };
 
+const isInternationalGuidePlace = (place: GuidePlace) =>
+  place.type === "country" ||
+  (place.type === "city" && place.regionType === "country");
+
+const preferEngine6ForInternationalGuide = (
+  place: GuidePlace,
+  candidateTours: Tour[]
+) => {
+  if (!isInternationalGuidePlace(place)) {
+    return candidateTours;
+  }
+
+  const engine6Tours = candidateTours.filter(tour => tour.engine === "engine6");
+  return engine6Tours.length ? engine6Tours : candidateTours;
+};
+
 export const getTourCountsForActivities = (
   place: GuidePlace,
   activitySlugs: string[]
@@ -207,8 +223,12 @@ export const getTopToursForPlace = (
   const filteredTours = activitySlug
     ? toursForPlace.filter(tour => matchesActivity(tour, activitySlug))
     : toursForPlace;
+  const governedTours = preferEngine6ForInternationalGuide(
+    place,
+    filteredTours
+  );
   const sortedTours = prioritizeEngine6Tours(
-    [...filteredTours].sort(compareTours)
+    [...governedTours].sort(compareTours)
   );
   const limit = Math.min(sortedTours.length, max);
   if (sortedTours.length <= min) {
