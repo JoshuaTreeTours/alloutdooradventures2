@@ -9,6 +9,7 @@ import { enhanceCaliforniaSoCalRegionalGuide } from "../src/data/californiaSoCal
 import { enhanceCaliforniaParagonCityGuide } from "../src/data/californiaParagonCityEnhancements";
 import { enhancePhase1ParagonCityGuide, PHASE1_PARAGON_CITY_KEYS } from "../src/data/phase1ParagonCityEnhancements";
 import { enhancePhase2ParagonCityGuide, PHASE2_PARAGON_CITY_KEYS } from "../src/data/phase2ParagonCityEnhancements";
+import { enhancePhase3Engine6CityGuide, PHASE3_ENGINE6_CITY_KEYS } from "../src/data/phase3Engine6CityEnhancements";
 import { engine6ListingTours } from "../src/engine6/listing";
 import { tours } from "../src/data/tours";
 
@@ -44,25 +45,29 @@ const applyRuntimeEnhancements = (
   citySlug: string,
   guide: GuidePageData
 ): GuidePageData =>
-  enhancePhase2ParagonCityGuide(
+  enhancePhase3Engine6CityGuide(
     stateSlug,
     citySlug,
-    enhancePhase1ParagonCityGuide(
+    enhancePhase2ParagonCityGuide(
       stateSlug,
       citySlug,
-      enhanceCaliforniaParagonCityGuide(
+      enhancePhase1ParagonCityGuide(
         stateSlug,
         citySlug,
-        enhanceCaliforniaSoCalRegionalGuide(
+        enhanceCaliforniaParagonCityGuide(
           stateSlug,
           citySlug,
-          enhanceSacramentoGuide(
+          enhanceCaliforniaSoCalRegionalGuide(
             stateSlug,
             citySlug,
-            enhanceCaliforniaMajorCityGuide(
+            enhanceSacramentoGuide(
               stateSlug,
               citySlug,
-              enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+              enhanceCaliforniaMajorCityGuide(
+                stateSlug,
+                citySlug,
+                enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+              )
             )
           )
         )
@@ -106,6 +111,7 @@ type Row = {
   qualityRisk: number;
   phase3Priority: number;
   recommendation: "rebuild" | "surgical" | "leave";
+  phase3Implemented: boolean;
   reasons: string[];
 };
 
@@ -199,9 +205,6 @@ const scoreGuide = (stateSlug: string, citySlug: string, rawGuide: GuidePageData
 
   const engine6Tours = engine6CountByCity.get(key) ?? 0;
   const totalTours = totalTourCountByCity.get(key) ?? 0;
-
-  // Engine6 inventory is the commercial driver for Phase III. Quality risk determines
-  // whether a high-inventory destination needs a rebuild, a surgical cleanup, or no action.
   const phase3Priority = Math.round(engine6Tours * 6 + Math.min(totalTours, 40) * 0.5 + qualityRisk);
   const recommendation = qualityRisk >= 45 ? "rebuild" : qualityRisk >= 20 ? "surgical" : "leave";
 
@@ -214,6 +217,7 @@ const scoreGuide = (stateSlug: string, citySlug: string, rawGuide: GuidePageData
     qualityRisk,
     phase3Priority,
     recommendation,
+    phase3Implemented: PHASE3_ENGINE6_CITY_KEYS.has(key),
     reasons,
   };
 };
@@ -233,15 +237,21 @@ const ranked = rows
   .sort((a, b) => b.phase3Priority - a.phase3Priority || b.engine6Tours - a.engine6Tours || b.qualityRisk - a.qualityRisk);
 
 const top = ranked.slice(0, 40);
-const actionable = ranked.filter(row => row.recommendation !== "leave").slice(0, 30);
+const implemented = ranked
+  .filter(row => row.phase3Implemented)
+  .sort((a, b) => b.engine6Tours - a.engine6Tours);
+const remainingActionable = ranked
+  .filter(row => !row.phase3Implemented && row.recommendation !== "leave")
+  .slice(0, 30);
 
 fs.mkdirSync(REPORT_DIR, { recursive: true });
 const report = {
   generatedAt: new Date().toISOString(),
   policy: "Wikipedia/source links are neutral; prioritize Engine6 inventory and genuine content defects.",
   totalRemainingEngine6Cities: ranked.length,
+  implemented,
   top,
-  actionable,
+  remainingActionable,
 };
 fs.writeFileSync(path.join(REPORT_DIR, "phase3-engine6-guide-priority.json"), JSON.stringify(report, null, 2));
 
@@ -250,7 +260,13 @@ const md = [
   "",
   "Wikipedia/source links are intentionally neutral. This audit prioritizes real guide defects in destinations with native Engine6 inventory.",
   "",
-  "Already rebuilt Phase I/II cities and national-park guides are excluded.",
+  "Phase I/II cities and national-park guides are excluded. The seven Phase III destinations are re-scored after their runtime enhancement so the report verifies the implemented result rather than hiding it.",
+  "",
+  "## Phase III implemented destinations",
+  "",
+  "| Guide | Engine6 | Total tours | Post-repair risk | Result |",
+  "|---|---:|---:|---:|---|",
+  ...implemented.map(row => `| ${row.state} — ${row.city} | ${row.engine6Tours} | ${row.totalTours} | ${row.qualityRisk} | ${row.recommendation} |`),
   "",
   "## Top remaining Engine6 destinations",
   "",
@@ -258,11 +274,11 @@ const md = [
   "|---:|---|---:|---:|---:|---:|---|---|",
   ...top.map((row, index) => `| ${index + 1} | ${row.state} — ${row.city} | ${row.engine6Tours} | ${row.totalTours} | ${row.qualityRisk} | ${row.phase3Priority} | ${row.recommendation} | ${row.reasons.slice(0, 3).join("; ").replaceAll("|", "\\|") || "passes current quality checks"} |`),
   "",
-  "## Actionable Phase III candidates",
+  "## Remaining actionable candidates after Phase III",
   "",
   "| Rank | Guide | Engine6 | Risk | Recommendation |",
   "|---:|---|---:|---:|---|",
-  ...actionable.map((row, index) => `| ${index + 1} | ${row.state} — ${row.city} | ${row.engine6Tours} | ${row.qualityRisk} | ${row.recommendation} |`),
+  ...remainingActionable.map((row, index) => `| ${index + 1} | ${row.state} — ${row.city} | ${row.engine6Tours} | ${row.qualityRisk} | ${row.recommendation} |`),
   "",
 ].join("\n");
 
