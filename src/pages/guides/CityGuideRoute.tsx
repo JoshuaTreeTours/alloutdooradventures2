@@ -3,6 +3,7 @@ import InternationalCityGuideTemplate from "../../templates/InternationalCityGui
 import { buildCityGuide } from "../../data/guideData";
 import {
   enhanceInternationalGuidePhase3,
+  getInternationalPhase3ProfileKey,
   INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS,
 } from "../../data/internationalGuidePhase3";
 import { withEngine6OnlyInternationalCityTopTours } from "../../data/internationalGuideEngine6Tours";
@@ -41,7 +42,10 @@ export default function CityGuideRoute({
     params.parentSlug,
     params.citySlug,
   );
-  const paragonKey = `${enhancementParentSlug}/${params.citySlug}`;
+  const paragonKey = getInternationalPhase3ProfileKey(
+    enhancementParentSlug,
+    params.citySlug,
+  );
   const isInternationalParagon =
     regionType === "country" &&
     INTERNATIONAL_PARAGON_PHASE3_GUIDE_KEYS.includes(paragonKey);
