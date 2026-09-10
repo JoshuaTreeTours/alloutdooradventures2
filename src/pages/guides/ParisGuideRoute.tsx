@@ -1,12 +1,14 @@
 import { Link } from "wouter";
 
+import GuideThingsToDoCard from "../../components/guides/GuideThingsToDoCard";
+import Image from "../../components/Image";
+import Seo from "../../components/Seo";
 import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
 import { getInternationalEngine6CityGuideTours } from "../../data/internationalGuideEngine6Tours";
+import { deepenInternationalPoiNarrative } from "../../data/internationalGuidePhase2";
 import { getTourDetailPath } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import { getEngine2ParisTours } from "../../engine2/data/parisTours";
-import Image from "../../components/Image";
-import Seo from "../../components/Seo";
 import { isGenericHeroFallbackImage } from "../../utils/hero";
 import {
   buildCityGuideDisplayTitle,
@@ -102,6 +104,16 @@ const topParisTours = (
   engine6ParisTours.length ? engine6ParisTours : legacyParisTours
 ).slice(0, 10);
 
+const phase2ParisTopThings =
+  parisGuide?.topThings.map(item => ({
+    ...item,
+    description: deepenInternationalPoiNarrative(
+      parisGuide.city,
+      item.title,
+      item.description,
+    ),
+  })) ?? [];
+
 export default function ParisGuideRoute() {
   if (!parisGuide) {
     return (
@@ -144,19 +156,21 @@ export default function ParisGuideRoute() {
         ) : null}
       </header>
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold">Top things to do</h2>
-        <ul className="mt-4 space-y-4">
-          {parisGuide.topThings.map(item => (
-            <li
+      <section className="mt-10 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
+        <h2 className="text-2xl font-semibold">Things to Do in Paris</h2>
+        <ol className="mt-6 space-y-6">
+          {phase2ParisTopThings.map((item, index) => (
+            <GuideThingsToDoCard
               key={item.title}
-              className="rounded-lg border border-[#dde7dd] p-4"
-            >
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="mt-1 text-[#405040]">{item.description}</p>
-            </li>
+              index={index + 1}
+              city={parisGuide.city}
+              title={item.title}
+              description={item.description}
+              fallbackImageUrl={parisGuide.leadImageUrl ?? null}
+              fallbackImageAlt="Paris travel scenery"
+            />
           ))}
-        </ul>
+        </ol>
       </section>
 
       {parisGuide.neighborhoods?.length ? (
