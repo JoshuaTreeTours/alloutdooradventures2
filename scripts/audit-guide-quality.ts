@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { getGuidePlaceClassification } from "../src/data/guidePlaceClassification";
+import { resolveGuidePlaceClassification } from "../src/data/resolveGuidePlaceClassification";
 
 type ThingToDo = {
   title?: string;
@@ -101,7 +101,7 @@ for (const file of guides) {
     continue;
   }
 
-  const classification = getGuidePlaceClassification(stateSlug, citySlug, city);
+  const classification = resolveGuidePlaceClassification(stateSlug, citySlug, city);
   if (classification.verified) verifiedCount += 1;
   else {
     unverifiedCount += 1;
