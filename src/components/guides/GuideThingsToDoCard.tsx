@@ -13,6 +13,8 @@ type GuideThingsToDoCardProps = {
   sourceUrl?: string;
   wikiUrl?: string;
   imageUrl?: string | null;
+  fallbackImageUrl?: string | null;
+  fallbackImageAlt?: string;
   disableImage?: boolean;
 };
 
@@ -24,10 +26,15 @@ export default function GuideThingsToDoCard({
   sourceUrl,
   wikiUrl,
   imageUrl,
+  fallbackImageUrl,
+  fallbackImageAlt,
   disableImage,
 }: GuideThingsToDoCardProps) {
+  const initialImageUrl = disableImage
+    ? null
+    : imageUrl ?? fallbackImageUrl ?? null;
   const [resolvedImageUrl, setResolvedImageUrl] = useState<string | null>(
-    disableImage ? null : imageUrl ?? null
+    initialImageUrl
   );
   const [isImageBroken, setIsImageBroken] = useState(false);
 
@@ -41,40 +48,65 @@ export default function GuideThingsToDoCard({
     [description]
   );
 
-
   useEffect(() => {
-    setResolvedImageUrl(disableImage ? null : imageUrl ?? null);
+    setResolvedImageUrl(
+      disableImage ? null : imageUrl ?? fallbackImageUrl ?? null
+    );
     setIsImageBroken(false);
-  }, [disableImage, imageUrl]);
+  }, [disableImage, fallbackImageUrl, imageUrl]);
 
   useEffect(() => {
     let cancelled = false;
 
-    if (disableImage || resolvedImageUrl) {
+    if (disableImage || imageUrl) {
       return;
     }
 
     getLandmarkImage(landmarkName, city).then(result => {
       if (!cancelled) {
-        setResolvedImageUrl(result);
+        setResolvedImageUrl(result ?? fallbackImageUrl ?? null);
+        setIsImageBroken(false);
       }
     });
 
     return () => {
       cancelled = true;
     };
-  }, [city, disableImage, landmarkName, resolvedImageUrl]);
+  }, [city, disableImage, fallbackImageUrl, imageUrl, landmarkName]);
+
+  const isUsingFallbackImage =
+    Boolean(fallbackImageUrl) &&
+    resolvedImageUrl === fallbackImageUrl &&
+    resolvedImageUrl !== imageUrl;
+
+  const handleImageError = () => {
+    if (
+      fallbackImageUrl &&
+      resolvedImageUrl &&
+      resolvedImageUrl !== fallbackImageUrl
+    ) {
+      setResolvedImageUrl(fallbackImageUrl);
+      setIsImageBroken(false);
+      return;
+    }
+
+    setIsImageBroken(true);
+  };
 
   return (
-    <li className="overflow-hidden rounded-2xl border border-black/10 bg-white p-4 md:p-5">
+    <li className="overflow-hidden rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-5">
       {resolvedImageUrl && !isImageBroken ? (
         <div className="-m-4 mb-4 overflow-hidden md:-m-5 md:mb-5">
           <img
             src={resolvedImageUrl}
-            alt={title}
+            alt={
+              isUsingFallbackImage
+                ? fallbackImageAlt ?? `${city} travel scenery`
+                : title
+            }
             loading="lazy"
-            className="h-48 w-full object-cover md:h-56"
-            onError={() => setIsImageBroken(true)}
+            className="h-48 w-full object-cover md:h-64"
+            onError={handleImageError}
           />
         </div>
       ) : null}
