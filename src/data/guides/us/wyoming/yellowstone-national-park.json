@@ -1,72 +1,117 @@
 {
   "tier": "tier2",
-  "title": "Yellowstone National Park, Wyoming Travel Guide",
+  "title": "Yellowstone National Park Travel Guide",
   "country": "United States",
   "state": "Wyoming",
   "city": "Yellowstone National Park",
   "slug": "guides/us/wyoming/yellowstone-national-park",
   "hero": {
     "image": "https://cdn.filestackcontent.com/P5u0CcAySL2sPhFiNqWS",
-    "alt": "Yellowstone National Park, Wyoming — Two Lakes Kayaking and Hiking Full Day Combo with Lunch!",
-    "headline": "Yellowstone National Park, Wyoming Travel Guide",
-    "subheadline": "Plan a focused Yellowstone National Park trip with practical highlights, local context, and easy tour connections."
+    "alt": "Yellowstone National Park geothermal landscape and mountain scenery",
+    "headline": "Yellowstone National Park Travel Guide",
+    "subheadline": "Plan Yellowstone around Old Faithful, Grand Prismatic Spring, Mammoth Hot Springs, the Grand Canyon of the Yellowstone, wildlife valleys, geyser basins, and Yellowstone Lake."
   },
   "overview": [
-    "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
+    "Yellowstone is not a city destination with neighborhoods to collect between attractions. It is a vast national park spread across Wyoming, Montana, and Idaho, with most visitor roads arranged around the Grand Loop. The experience is defined by hydrothermal systems, volcanic geology, wildlife habitat, large lakes and rivers, and a human history that reaches back more than 11,000 years.",
+    "A strong first visit is built by region rather than by a checklist. Give the Old Faithful and Upper Geyser Basin area several hours, pair Midway Geyser Basin with nearby thermal features, devote a separate block to the Canyon area, and allow substantial time for Mammoth, Norris, Yellowstone Lake, and wildlife country in Hayden or Lamar valleys. Road distances can be deceptive because wildlife jams, construction, weather, parking, and scenic stops frequently slow travel."
   ],
   "highlights": [
     {
-      "title": "Yellowstone National Park essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
+      "title": "Geysers and hot springs",
+      "description": "See Old Faithful, Grand Prismatic Spring, Norris Geyser Basin, West Thumb, and other expressions of Yellowstone's immense hydrothermal system."
     },
     {
-      "title": "Yellowstone National Park local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
+      "title": "Canyons, waterfalls, and Yellowstone Lake",
+      "description": "Explore the Grand Canyon of the Yellowstone, Lower Falls, Yellowstone River, and the largest high-elevation lake in North America."
+    },
+    {
+      "title": "Wildlife country",
+      "description": "Use Lamar and Hayden valleys for patient wildlife watching, especially for bison, elk, wolves, bears, pronghorn, and birdlife."
+    },
+    {
+      "title": "Human and conservation history",
+      "description": "Connect more than 11,000 years of Indigenous presence with Fort Yellowstone, early expeditions, park protection, and the birth of the National Park Service."
     }
   ],
   "thingsToDo": [
     {
-      "title": "Visit Two Lakes Kayaking and Hiking Full Day",
-      "description": "Two Lakes Kayaking and Hiking Full Day is a park in Yellowstone National Park, Wyoming. Two Lakes Kayaking and Hiking Full Day is a recognized destination connected to tours operating in Yellowstone National Park, Wyoming, and appears frequently in local itineraries for its sightseeing value and geographic setting."
+      "title": "Watch Old Faithful and explore the Upper Geyser Basin",
+      "description": "Old Faithful is the famous anchor, but the larger Upper Geyser Basin is the real destination. The basin contains about 150 geysers within roughly one square mile, plus hundreds of hot springs, making it one of the densest concentrations of hydrothermal activity on Earth. Old Faithful received its name during the Washburn-Langford-Doane Expedition of 1870, one of the organized expeditions that helped bring national attention to Yellowstone. Do not leave after a single eruption: walk the boardwalks toward features such as Castle, Grand, Riverside, and Morning Glory Pool and use the visitor center's current prediction board for geysers that can be forecast. The human history here is unusually visible as well. Old Faithful Inn opened in 1904, became one of the defining examples of large-scale rustic park architecture, and is now a National Historic Landmark. Give the district several hours rather than treating Old Faithful as a roadside photograph."
     },
     {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Yellowstone National Park, Wyoming. Regional parks and preserves near Yellowstone National Park are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "See Grand Prismatic Spring at Midway Geyser Basin",
+      "description": "Grand Prismatic Spring is Yellowstone's largest hot spring, measuring roughly 200 to 330 feet across and more than 121 feet deep. Its famous bands of orange, yellow, and green are produced largely by heat-loving microorganisms living at different temperature zones around the spring, while the deepest hot water reflects blue light. Midway Geyser Basin is compact, but it also contains Excelsior Geyser Crater, a roughly 200-by-300-foot hydrothermal crater that continuously releases thousands of gallons of hot water per minute into the Firehole River. The boardwalk gives a close ground-level view, while the overlook reached from the Fairy Falls trail area provides the broader elevated perspective that reveals Grand Prismatic's full scale and color pattern. Steam can obscure the spring, particularly in cool conditions, so the appearance changes dramatically with temperature, wind, and light. Stay on designated boardwalks and trails; the crust around thermal features can be thin and dangerous."
     },
     {
-      "title": "Two Lakes Kayaking",
-      "description": "Two Lakes Kayaking is a practical stop for understanding Yellowstone National Park's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Yellowstone National Park, Wyoming. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Walk Mammoth Hot Springs and historic Fort Yellowstone",
+      "description": "Mammoth combines two Yellowstone stories in one stop: active geology and the history of protecting the park. Hot water moving through limestone deposits calcium carbonate to build the pale travertine terraces, which continually change as springs shift, channels close, and new mineral deposits form. After walking the Lower and Upper Terrace areas, cross into the Mammoth historic district and look at Fort Yellowstone. The U.S. Army arrived in 1886 after early civilian administrators lacked the money and manpower to stop poaching, vandalism, and illegal development. Construction of the permanent fort began in 1891, and 35 structures remain from the Army era. Soldiers enforced wildlife laws, fought fires, managed visitors, and developed practices that influenced the later National Park Service. The NPS was created in 1916 and assumed full administration of Yellowstone in 1918. Mammoth therefore works best as both a thermal area and an outdoor museum of the park-protection movement."
     },
     {
-      "title": "Hiking Full Day Combo",
-      "description": "Hiking Full Day Combo is a practical stop for understanding Yellowstone National Park's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Yellowstone National Park, Wyoming. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Explore the Grand Canyon of the Yellowstone and Lower Falls",
+      "description": "The Canyon area is where Yellowstone's volcanic history, hydrothermal alteration, river erosion, and dramatic topography all meet. The present Grand Canyon of the Yellowstone is approximately 800 to 1,200 feet deep and 1,500 to 4,000 feet wide, and geologists estimate the modern canyon is no more than about 10,000 to 14,000 years old, although earlier canyons probably occupied the same zone. Hydrothermal activity altered and weakened the rhyolite, helping the Yellowstone River erode the colorful canyon walls. Lower Falls is the visual centerpiece, but the better experience is to see the canyon from several perspectives rather than one overlook. Artist Point provides the classic down-canyon composition, while viewpoints along the north and south rims reveal different sections of the falls and canyon. Early explorers and survey parties recognized the Canyon as one of Yellowstone's defining landscapes; images and paintings produced during 19th-century expeditions helped convince the public and Congress that this extraordinary region deserved protection."
     },
     {
-      "title": "Yellowstone National Park",
-      "description": "Yellowstone National Park is a practical stop for understanding Yellowstone National Park's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Yellowstone National Park, Wyoming. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Walk Norris Geyser Basin and look for Steamboat Geyser",
+      "description": "Norris is Yellowstone's hottest, oldest, and most dynamic major geyser basin. Evidence indicates hydrothermal activity has existed here for at least 115,000 years, and a scientific drill hole once recorded 459°F at only 1,087 feet below the surface. The basin differs from many other Yellowstone thermal areas because much of its water is acidic. Walk both Porcelain Basin and Back Basin to see a constantly changing mix of springs, geysers, fumaroles, and mineral-colored ground. Norris is also home to Steamboat Geyser, the world's tallest active geyser. Major eruptions can throw water more than 300 feet into the air, followed by a powerful steam phase, but they are completely unpredictable; never plan a visit around expecting one. The lack of a guaranteed spectacle is part of the appeal. Norris shows that Yellowstone is not a collection of static monuments but an active hydrothermal system whose vents, pools, temperatures, and flow patterns can change over remarkably short periods."
+    },
+    {
+      "title": "Watch wildlife in Lamar Valley and visit the historic Buffalo Ranch",
+      "description": "Lamar Valley is one of Yellowstone's premier wildlife landscapes because broad grasslands and the Lamar River create excellent habitat and long sightlines across the park's northern range. Dawn and dusk are particularly productive times to look for bison, elk, pronghorn, coyotes, bears, and wolves from established pullouts with binoculars or a spotting scope. The valley also carries major conservation history. By the early 20th century, Yellowstone's bison had been reduced to only a few dozen animals. Beginning in 1902, managers brought additional bison to Yellowstone and developed the Lamar Buffalo Ranch as part of an intensive recovery effort; those animals eventually mixed with the surviving wild herd. Lamar later became central to another famous restoration. Wolves were reintroduced to Yellowstone beginning in 1995 after decades of absence, restoring a native apex predator to the ecosystem. Wildlife watching here rewards patience rather than pursuit: remain at legal viewing distances, never stop in the roadway, and use pullouts so animals control the encounter rather than visitors."
+    },
+    {
+      "title": "Cross Hayden Valley and stop at Mud Volcano",
+      "description": "Hayden Valley is the broad grassland corridor between Yellowstone Lake and the Canyon area and one of the park's most reliable places to see large concentrations of bison. It occupies part of an ancient lake basin and today provides critical habitat for bison, elk, waterfowl, bears, coyotes, and other wildlife. Because the Grand Loop Road crosses the valley, animal traffic routinely becomes the day's schedule; a bison herd on or beside the road can stop vehicles for long periods. At the southern end of the valley, the Mud Volcano area adds a very different geological experience. Here acidic hydrothermal conditions break down rock into clay, producing churning mudpots, steaming vents, and strongly sulfurous features. Yellowstone's hydrothermal system includes four principal surface expressions—geysers, hot springs, fumaroles, and mudpots—and this area is one of the best places to understand the mudpot end of that spectrum. Pair Hayden with Canyon or Yellowstone Lake, but leave enough unscheduled time to watch wildlife without turning every sighting into a traffic problem."
+    },
+    {
+      "title": "Explore Yellowstone Lake and West Thumb Geyser Basin",
+      "description": "At 7,733 feet above sea level, Yellowstone Lake is the largest high-elevation lake above 7,000 feet in North America. It stretches roughly 20 miles long and 14 miles wide, with about 141 miles of shoreline, yet its average water temperature is only around 41°F, so the lake should never be mistaken for a warm recreational swimming destination. West Thumb Geyser Basin is the most revealing place to see the relationship between the lake and Yellowstone's volcanic system. The West Thumb itself occupies a smaller caldera created by an eruption about 174,000 years ago, and hydrothermal features occur both along the shore and beneath the lake. The area also has unusually early written history: trapper Daniel Potts described hot and boiling springs near West Thumb in a letter published in 1827, making this one of the first Yellowstone thermal areas described in print. Walk the boardwalk for Abyss Pool, Black Pool, Fishing Cone, and broad views across the lake toward the Absaroka Range."
+    },
+    {
+      "title": "Visit Tower Fall and the Roosevelt Lodge country",
+      "description": "Tower-Roosevelt links Yellowstone's northern wildlife range with some of its most important early tourism and artistic history. Tower Fall drops 132 feet through a gorge framed by eroded volcanic pinnacles. The waterfall was documented by early European-American visitors, and Thomas Moran's paintings of Yellowstone scenes, including Tower Fall, helped shape public support for creating the national park in 1872. Nearby Roosevelt Lodge adds another historical layer. A tent camp opened in this area in 1906 and evolved into Camp Roosevelt; the present lodge was completed in 1920 as automobile tourism changed how visitors moved through Yellowstone. Despite the name, Theodore Roosevelt did not stay in the lodge, which opened years after his presidency, although he camped nearby during his 1903 Yellowstone visit. The area is also a useful jumping-off point for Lamar Valley, Specimen Ridge, Calcite Springs, and the northern range, so it works best as part of a larger northeast Yellowstone day rather than an isolated waterfall stop."
+    },
+    {
+      "title": "Stop at Obsidian Cliff for Yellowstone's deeper human history",
+      "description": "Obsidian Cliff is one of Yellowstone's most important cultural landscapes and a powerful reminder that the region's story did not begin with the national park in 1872. The cliff exposes nearly 100 vertical feet of volcanic glass formed when silica-rich lava cooled without developing crystals. People were quarrying this obsidian for tools more than 11,000 years ago, and chemical analysis has traced Yellowstone obsidian across an extraordinary trade and travel network extending from western Canada to the Great Lakes and Ohio. Archaeologists have found that Obsidian Cliff was the source of much of the obsidian recovered at some Hopewell sites in the Ohio River Valley nearly two millennia ago. The site is now a National Historic Landmark. A 1931 roadside kiosk there was the first wayside exhibit built in a U.S. national park. Stop only where parking is permitted, read the landscape rather than collecting from it, and use the site to connect Yellowstone's volcanic geology with thousands of years of Indigenous travel, technology, and exchange."
     }
   ],
   "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Yellowstone National Park",
+    "title": "Yellowstone changes dramatically by season",
     "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
+      "Summer offers the broadest road and facility access, but it is also the busiest season. Start major thermal basins and wildlife days early and expect traffic delays.",
+      "Spring brings active wildlife and fewer visitors, but snow, cold, and phased road openings can limit access. Check current National Park Service road conditions before planning a loop.",
+      "Fall brings cooler weather, wildlife activity, and declining crowds, while early snow and seasonal facility closures become increasingly possible as autumn progresses.",
+      "Winter is a fundamentally different Yellowstone experience. Most park roads are not open to ordinary wheeled visitor traffic, and access to many interior areas requires authorized oversnow transportation."
     ]
   },
   "travelTips": [
-    "Group activities by area to reduce transfers across Yellowstone National Park.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
+    "Plan by park region instead of bouncing between distant attractions. Yellowstone is enormous, and wildlife jams, construction, weather, and parking can make drive times much longer than the mileage suggests.",
+    "Stay on boardwalks and designated trails in hydrothermal areas. Thin mineral crust can hide dangerously hot water immediately below the surface.",
+    "Give wildlife space and follow current National Park Service distance requirements. Use pullouts, binoculars, and spotting scopes rather than approaching animals or stopping in travel lanes.",
+    "Check current road, trail, fire, and weather conditions before each day's drive. Snow is possible in the high country outside the traditional winter season.",
+    "Carry water, food, layers, rain protection, and a paper or offline map. Cell service is limited across much of the park.",
+    "Do not try to see every famous feature in one day. Three to five days gives a first-time visitor a much better chance to experience Yellowstone as a landscape rather than a race between parking lots."
   ],
   "faq": [
     {
-      "q": "How many days should I plan for Yellowstone National Park?",
-      "a": "Two to three days is enough for core Yellowstone National Park highlights plus one or two local experiences."
+      "q": "How many days should I spend in Yellowstone?",
+      "a": "Three to five days is a strong first-visit range. Three days can cover the major thermal, canyon, lake, and wildlife regions at a brisk pace; four or five days gives you room for longer walks, wildlife viewing, weather, and inevitable road delays."
     },
     {
-      "q": "Should I book tours ahead in Yellowstone National Park?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "q": "What should a first-time Yellowstone visitor prioritize?",
+      "a": "Prioritize the Upper Geyser Basin and Old Faithful, Grand Prismatic Spring, the Grand Canyon of the Yellowstone and Lower Falls, Mammoth Hot Springs, one major wildlife valley, and Yellowstone Lake or Norris Geyser Basin. Add more only after those regions have enough time."
+    },
+    {
+      "q": "Is Old Faithful the only geyser worth seeing?",
+      "a": "No. Old Faithful is famous because its eruptions are relatively predictable, but the surrounding Upper Geyser Basin contains about 150 geysers in roughly one square mile. Norris, Midway, Lower Geyser Basin, and West Thumb reveal very different parts of Yellowstone's hydrothermal system."
+    },
+    {
+      "q": "Where are the best places to see wildlife in Yellowstone?",
+      "a": "Lamar Valley and Hayden Valley are the two classic wildlife areas. What you see varies by season, time of day, weather, and chance, so use established pullouts, remain at required distances, and bring binoculars or a spotting scope."
+    },
+    {
+      "q": "Why is Yellowstone historically important?",
+      "a": "People have used the Yellowstone region for more than 11,000 years, and numerous Tribal nations maintain ties to the area. Yellowstone was established in 1872 as the world's first national park, later administered for more than three decades by the U.S. Army, and became an important proving ground for conservation practices that influenced the National Park Service."
     }
   ],
   "tours": {
@@ -76,47 +121,42 @@
     "title": "Top Yellowstone National Park tours"
   },
   "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Yellowstone_National_Park",
-    "officialTourism": "https://travelwyoming.com/",
-    "reference": "https://www.britannica.com/place/Yellowstone-National-Park"
+    "officialTourism": "https://www.nps.gov/yell/"
   },
   "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Yellowstone_National_Park",
     "sections": [
       {
         "heading": "Overview",
         "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing."
+          "Yellowstone National Park protects more than a collection of famous geysers. Its landscape combines one of the world's great active volcanic and hydrothermal systems with mountains, forests, rivers, waterfalls, a vast high-elevation lake, and some of the most visible large-mammal wildlife in the contiguous United States. Most of the park lies in Wyoming, with smaller portions extending into Montana and Idaho."
         ]
       },
       {
-        "heading": "Geography & setting",
+        "heading": "Geography and geology",
         "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
+          "Yellowstone sits above a volcanic hotspot whose history includes enormous caldera-forming eruptions as well as later lava flows, faulting, glaciation, and continuing hydrothermal activity. The National Park Service counts more than 10,000 hydrothermal features and approximately 500 geysers in Yellowstone—more active geysers than anywhere else on Earth.",
+          "The park's major landscapes are connected by water as well as volcanism. Yellowstone Lake drains north through the Yellowstone River, which crosses Hayden Valley and then plunges over waterfalls into the Grand Canyon of the Yellowstone. To the north, carbonate-rich hot water creates Mammoth's travertine terraces rather than the silica-dominated features found in many of the central geyser basins."
         ]
       },
       {
-        "heading": "History (brief)",
+        "heading": "Human history and the national park idea",
         "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
+          "Archaeological evidence shows people have traveled through and used the Yellowstone region for more than 11,000 years, and many Tribal nations retain cultural connections to lands and resources now within the park. Obsidian from Yellowstone moved across trade networks reaching far beyond the Rocky Mountains long before Euro-American exploration.",
+          "Organized expeditions in 1870 and 1871 documented Yellowstone for a national audience, and Congress established Yellowstone National Park on March 1, 1872. Early civilian superintendents struggled to protect the park, so the U.S. Army assumed administration in 1886 and remained central to park management for more than three decades. The National Park Service was created in 1916 and took over Yellowstone administration in 1918."
         ]
       },
       {
-        "heading": "Culture & neighborhoods",
+        "heading": "Wildlife and conservation",
         "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
+          "Yellowstone's wildlife story includes both survival and restoration. The park preserved the last continuously free-ranging bison population in the lower 48 states, then used intensive early-20th-century management to rebuild numbers after the herd had fallen to only a few dozen animals. Wolves, eliminated from Yellowstone during the predator-control era, were reintroduced beginning in 1995 and again became part of the Greater Yellowstone ecosystem's predator community.",
+          "For visitors, conservation history becomes visible in places such as Lamar Valley, the historic Buffalo Ranch, Fort Yellowstone, and the wildlife-rich northern range. Responsible viewing means letting animals remain wild: keep the required distance, never feed wildlife, and use optics rather than proximity."
         ]
       },
       {
         "heading": "Getting around",
         "paragraphs": [
-          "Yellowstone National Park, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Yellowstone National Park itinerary efficient while still feeling varied and local."
+          "Yellowstone's road system is commonly understood as a figure-eight Grand Loop linking major areas including Mammoth, Norris, Canyon, Lake, West Thumb, Old Faithful, Madison, and Tower-Roosevelt. That geometry can make the park look compact on a map, but it is not. Build days around one section of the loop, expect frequent stops, and check current road status before committing to long cross-park drives.",
+          "Season matters enormously. Road openings and services change through the year, and winter access to most interior roads is very different from summer travel. The National Park Service's current conditions and road-status information should be part of daily planning, not an afterthought."
         ]
       }
     ]
