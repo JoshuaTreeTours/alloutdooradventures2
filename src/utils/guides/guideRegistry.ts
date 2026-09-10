@@ -1,5 +1,7 @@
 import type { GuidePageData } from "../loadGuide";
 import { isRetiredLowInventoryGuide } from "./retiredLowInventoryGuides";
+import { enhanceCaliforniaGuide } from "../../data/californiaGuideEnhancements";
+import { enhanceCaliforniaMajorCityGuide } from "../../data/californiaMajorCityEnhancements";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -33,6 +35,13 @@ const parseGuidePath = (path: string) => {
   };
 };
 
+const enhanceGuide = (stateSlug: string, citySlug: string, guide: GuidePageData) =>
+  enhanceCaliforniaMajorCityGuide(
+    stateSlug,
+    citySlug,
+    enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+  );
+
 export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(
   usGuideModules
 )
@@ -50,7 +59,7 @@ export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(
       country: "us" as const,
       stateSlug: parsed.stateSlug,
       citySlug: parsed.citySlug,
-      dataImport,
+      dataImport: enhanceGuide(parsed.stateSlug, parsed.citySlug, dataImport),
     };
   })
   .filter((record): record is GuideRegistryRecord => Boolean(record));
@@ -72,3 +81,6 @@ export const getGuidesByState = (stateSlug: string) =>
   usGuideRegistry
     .filter(record => record.stateSlug === stateSlug)
     .sort((a, b) => a.dataImport.city!.localeCompare(b.dataImport.city!));
+
+export const loadUsCityGuide = (stateSlug: string, citySlug: string) =>
+  getGuideRecord(stateSlug, citySlug)?.dataImport;
