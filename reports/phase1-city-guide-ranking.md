@@ -1,10 +1,30 @@
 # Phase I — City Guide Repair Ranking
 
-Scored **324** U.S. city/town/community guides using their effective runtime content after the same California enhancement layers used by the live guide registry. National-park guides are excluded because they were completed in the preceding phase.
+Scored **324** U.S. city/town/community guides using their effective runtime content. National-park guides are excluded because they were completed in the preceding phase.
 
 `qualityRisk` measures stale/thin/boilerplate risk (0–100). `repairPriority` adds up to 20 points for live tour inventory so commercially important weak guides rise in the queue.
 
-## Top 50 repair queue
+## First repair batch — implemented
+
+The first Phase I content batch now applies paragon-quality runtime enhancements to these nine destinations:
+
+- Georgia — Savannah
+- Tennessee — Nashville
+- Pennsylvania — Philadelphia
+- Wyoming — Jackson
+- Michigan — Traverse City
+- South Dakota — Rapid City
+- Massachusetts — Boston
+- Illinois — Chicago
+- Texas — Austin
+
+Each enhancement replaces the stale overview, highlights, Things to Do, seasonal guidance, travel tips, FAQ and legacy About/Wikipedia residue with destination-specific planning content. Los Angeles was reviewed for this batch and intentionally left unchanged.
+
+The ranking script now evaluates these effective runtime enhancements on subsequent runs, so repaired destinations should fall sharply in editorial risk and out of the high-priority queue except for any remaining classification-only penalty.
+
+## Original Top 50 repair snapshot
+
+This table is retained as the pre-repair baseline that selected the first batch.
 
 | Rank | Guide | Tours | Risk | Priority | Main reasons |
 |---:|---|---:|---:|---:|---|
@@ -61,7 +81,7 @@ Scored **324** U.S. city/town/community guides using their effective runtime con
 
 ## Paragon controls
 
-These guides are calibration controls and are not placed in the rewrite queue.
+These existing guides remain calibration controls and are not placed in the rewrite queue.
 
 | Guide | Tours | Risk | Priority | Result |
 |---|---:|---:|---:|---|
@@ -72,6 +92,4 @@ These guides are calibration controls and are not placed in the rewrite queue.
 
 ## Interpretation
 
-Santa Monica validates the scoring approach: its runtime enhancement contains destination-specific long-form attraction copy and is clean of the stale-template signals that dominate the worst guides. It should remain a control, not a rewrite target.
-
-For the first rewrite batch, use both editorial risk and commercial importance rather than blindly taking ranks 1–10. Strong candidates include Savannah, Nashville, Philadelphia, Jackson (WY), Traverse City, Rapid City, Boston, Chicago, Austin, and Los Angeles.
+Santa Monica remains the calibration control. The nine first-batch cities now use the same paragon principle: destination-specific, geographically honest planning copy instead of synthetic encyclopedia residue or repeated template prose.
