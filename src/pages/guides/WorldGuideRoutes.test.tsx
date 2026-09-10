@@ -4,6 +4,7 @@ import { Router } from "wouter";
 
 import CityGuideWorldRoute from "./CityGuideWorldRoute";
 import CountryGuideRoute from "./CountryGuideRoute";
+import ParisGuideRoute from "./ParisGuideRoute";
 
 const expectRenderableGuide = (html: string, expectedText: string) => {
   expect(html).toContain(expectedText);
@@ -45,6 +46,36 @@ describe("world guide route rendering", () => {
     expectRenderableGuide(
       puertoVallartaHtml,
       "Top 10 Things to Do in Puerto Vallarta"
+    );
+  });
+
+  it("renders the Cancun paragon with specific local POIs", () => {
+    const html = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/mexico/cancun", () => undefined]}>
+        <CityGuideWorldRoute
+          params={{ countrySlug: "mexico", citySlug: "cancun" }}
+        />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "Museo Maya de Cancún");
+    expect(html).toContain("San Miguelito Archaeological Site");
+    expect(html.toLowerCase()).not.toContain("generic checklist item");
+    expect(html.toLowerCase()).not.toContain("quick way to add variety");
+  });
+
+  it("renders Paris with factual POI copy instead of the former thin cards", () => {
+    const html = renderToStaticMarkup(
+      <Router hook={() => ["/guides/world/france/paris", () => undefined]}>
+        <ParisGuideRoute />
+      </Router>
+    );
+
+    expectRenderableGuide(html, "The Eiffel Tower was completed for the 1889");
+    expect(html).toContain("Notre-Dame Cathedral and Île de la Cité");
+    expect(html).toContain("Arc de Triomphe");
+    expect(html).not.toContain(
+      "Visit early or near sunset for broad city views, then stroll the lawns"
     );
   });
 });
