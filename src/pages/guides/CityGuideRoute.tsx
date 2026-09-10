@@ -1,6 +1,7 @@
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
 import { enhanceInternationalGuide } from "../../data/internationalGuideEnhancements";
+import { withEngine6OnlyInternationalCityTopTours } from "../../data/internationalGuideEngine6Tours";
 
 type CityGuideRouteProps = {
   params: {
@@ -38,7 +39,7 @@ export default function CityGuideRoute({
     regionType,
     activityFocus: activity,
   });
-  const guide =
+  const enhancedGuide =
     baseGuide && regionType === "country"
       ? enhanceInternationalGuide(
           getInternationalEnhancementParentSlug(
@@ -49,6 +50,14 @@ export default function CityGuideRoute({
           baseGuide,
         )
       : baseGuide;
+  const guide =
+    enhancedGuide && regionType === "country"
+      ? withEngine6OnlyInternationalCityTopTours(
+          enhancedGuide,
+          params.parentSlug,
+          params.citySlug,
+        )
+      : enhancedGuide;
 
   if (!guide) {
     return (
