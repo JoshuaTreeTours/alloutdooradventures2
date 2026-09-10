@@ -4,6 +4,7 @@ import { enhanceCaliforniaGuide } from "../../data/californiaGuideEnhancements";
 import { enhanceCaliforniaMajorCityGuide } from "../../data/californiaMajorCityEnhancements";
 import { enhanceSacramentoGuide } from "../../data/californiaSacramentoEnhancement";
 import { enhanceCaliforniaSoCalRegionalGuide } from "../../data/californiaSoCalRegionalEnhancements";
+import { enhanceCaliforniaParagonCityGuide } from "../../data/californiaParagonCityEnhancements";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -38,16 +39,20 @@ const parseGuidePath = (path: string) => {
 };
 
 const enhanceGuide = (stateSlug: string, citySlug: string, guide: GuidePageData) =>
-  enhanceCaliforniaSoCalRegionalGuide(
+  enhanceCaliforniaParagonCityGuide(
     stateSlug,
     citySlug,
-    enhanceSacramentoGuide(
+    enhanceCaliforniaSoCalRegionalGuide(
       stateSlug,
       citySlug,
-      enhanceCaliforniaMajorCityGuide(
+      enhanceSacramentoGuide(
         stateSlug,
         citySlug,
-        enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+        enhanceCaliforniaMajorCityGuide(
+          stateSlug,
+          citySlug,
+          enhanceCaliforniaGuide(stateSlug, citySlug, guide)
+        )
       )
     )
   );
