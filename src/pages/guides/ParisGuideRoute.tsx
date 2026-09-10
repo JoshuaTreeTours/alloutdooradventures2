@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import rawParisGuide from "../../content/guides/world/france/paris.generated.json";
 import { getInternationalEngine6CityGuideTours } from "../../data/internationalGuideEngine6Tours";
 import { getTourDetailPath } from "../../data/tours";
+import type { Tour } from "../../data/tours.types";
+import { getEngine2ParisTours } from "../../engine2/data/parisTours";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { isGenericHeroFallbackImage } from "../../utils/hero";
@@ -61,9 +63,43 @@ const isGuideLike = (value: unknown): value is ParisGeneratedGuide => {
 
 const parisGuide = isGuideLike(rawParisGuide) ? rawParisGuide : null;
 
-const topParisTours = getInternationalEngine6CityGuideTours(
+const legacyParisTours: Tour[] = getEngine2ParisTours().map(tour => {
+  const image = tour.images.hero || tour.seo.ogImage || "";
+
+  return {
+    id: `engine2-guide-${tour.id}`,
+    engine: "engine2",
+    slug: tour.slug,
+    title: tour.name,
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country,
+      state: tour.geo.country,
+      stateSlug: tour.sourceCountrySlug || "france",
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug || "paris",
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: image,
+    galleryImages: image ? [image] : [],
+    badges: { tagline: "Tour" },
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    bookingWidgetUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText || tour.seo.description,
+  };
+});
+
+const engine6ParisTours = getInternationalEngine6CityGuideTours(
   "france",
   "paris",
+);
+const topParisTours = (
+  engine6ParisTours.length ? engine6ParisTours : legacyParisTours
 ).slice(0, 10);
 
 export default function ParisGuideRoute() {
