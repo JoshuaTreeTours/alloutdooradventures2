@@ -1,124 +1,19 @@
 {
-  "tier": "tier2",
-  "title": "Cottonwood, Arizona Travel Guide",
-  "country": "United States",
-  "state": "Arizona",
-  "city": "Cottonwood",
-  "slug": "guides/us/arizona/cottonwood",
-  "hero": {
-    "image": "https://cdn.filestackcontent.com/x49l4AT9TtmEoxAghnxm",
-    "alt": "Cottonwood, Arizona — Pedal to Wine (E-Bikes)",
-    "headline": "Cottonwood, Arizona Travel Guide",
-    "subheadline": "Plan a focused Cottonwood trip with practical highlights, local context, and easy tour connections."
-  },
-  "overview": [
-    "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
+  "title": "Cottonwood Travel Guide","country":"United States","state":"Arizona","city":"Cottonwood","slug":"guides/us/arizona/cottonwood",
+  "hero":{"image":"https://cdn.filestackcontent.com/x49l4AT9TtmEoxAghnxm","alt":"Cottonwood, Arizona travel landscape","headline":"Cottonwood Travel Guide","subheadline":"Use Cottonwood as a relaxed Verde Valley base for Old Town, the Verde River, Arizona wine country, and nearby red-rock adventures."},
+  "overview":["Cottonwood sits in the Verde Valley between high desert and river corridor, making it an easy base for combining food, wine, paddling, state-park trails, and nearby historic towns.","Old Town is compact enough to explore on foot, while the Verde River and Dead Horse Ranch State Park put outdoor recreation only minutes from the commercial core."],
+  "highlights":[{"title":"Old Town Cottonwood","description":"Walkable tasting rooms, restaurants, shops, and historic storefronts make Old Town the city's natural first stop."},{"title":"Verde River","description":"The river adds a green riparian corridor to an otherwise dry landscape and supports paddling, wildlife viewing, and riverside recreation."},{"title":"Arizona wine country","description":"Cottonwood is a hub of the Verde Valley wine scene, with tasting rooms in town and vineyards spread through the surrounding valley."},{"title":"Dead Horse Ranch State Park","description":"This Arizona state park beside Cottonwood offers lagoons, trails, camping, and Verde River access; it is not a municipal city park."}],
+  "thingsToDo":[
+    {"title":"Walk Old Town Cottonwood","description":"Old Town is the easiest place to understand Cottonwood's visitor identity, with historic commercial blocks now filled with tasting rooms, restaurants, independent shops, and galleries. Give yourself time to walk the district rather than hopping from one business to another by car. It works especially well in the late afternoon and evening when you can combine shopping, dinner, and wine tasting in one compact area."},
+    {"title":"Explore Dead Horse Ranch State Park","description":"Dead Horse Ranch State Park sits beside Cottonwood along the Verde River and offers easy trails, lagoons, birding, camping, and river access. The contrast between water, cottonwoods, and surrounding dry hills makes it useful for understanding the Verde Valley landscape. Check Arizona State Parks for current fees, trail conditions, and seasonal restrictions before your visit."},
+    {"title":"Paddle or walk along the Verde River","description":"The Verde River is one of the defining natural features of the valley and supports paddling, wildlife viewing, and riparian walks. Guided trips can be useful for visitors unfamiliar with river conditions, while easier riverside routes suit travelers who prefer to stay on land. Spring and fall are usually more comfortable than hot summer afternoons, and water levels can affect paddling options."},
+    {"title":"Taste the Verde Valley wine scene","description":"Cottonwood's Old Town tasting rooms make it possible to sample regional wines without driving from vineyard to vineyard. The broader Verde Valley wine region also includes vineyards and tasting rooms outside the city, so plan transportation carefully if you want to explore farther. If alcohol is part of the itinerary, use a designated driver, rideshare, or guided wine tour."},
+    {"title":"Visit Tuzigoot National Monument","description":"Tuzigoot National Monument is a short drive from Cottonwood and protects the remains of a hilltop pueblo built by people of the Sinagua cultural tradition. The site adds essential Indigenous and archaeological context to a Verde Valley trip and includes broad views across the valley. It is managed by the National Park Service, not by the city of Cottonwood, so check NPS hours and conditions separately."},
+    {"title":"Pair Cottonwood with Jerome or Sedona","description":"Jerome and Sedona are separate destinations, but both are close enough to combine with a Cottonwood stay. Jerome adds mining history and steep hillside streets, while Sedona adds red-rock hiking and scenic viewpoints. Keep at least part of a day for Cottonwood itself so the city does not become merely a place to sleep between better-known neighbors."}
   ],
-  "highlights": [
-    {
-      "title": "Cottonwood essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
-    },
-    {
-      "title": "Cottonwood local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
-    }
-  ],
-  "thingsToDo": [
-    {
-      "title": "Visit Guided River",
-      "description": "Guided River is a district in Cottonwood, Arizona. Guided River is a recognized destination connected to tours operating in Cottonwood, Arizona, and appears frequently in local itineraries for its sightseeing value and geographic setting. The site helps explain how Cottonwood developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
-    },
-    {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Cottonwood, Arizona. Regional parks and preserves near Cottonwood are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Ribeye Kayaking Package",
-      "description": "Ribeye Kayaking Package is a practical stop for understanding Cottonwood's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Cottonwood, Arizona. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Cottonwood River",
-      "description": "Cottonwood River is a practical stop for understanding Cottonwood's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Cottonwood, Arizona. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "OAC Tours",
-      "description": "OAC Tours is a practical stop for understanding Cottonwood's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Cottonwood, Arizona. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    }
-  ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Cottonwood",
-    "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
-    ]
-  },
-  "travelTips": [
-    "Group activities by area to reduce transfers across Cottonwood.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
-  "faq": [
-    {
-      "q": "How many days should I plan for Cottonwood?",
-      "a": "Two to three days is enough for core Cottonwood highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Cottonwood?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
-  ],
-  "tours": {
-    "stateSlug": "arizona",
-    "citySlug": "cottonwood",
-    "limit": 6,
-    "title": "Top Cottonwood tours"
-  },
-  "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Cottonwood",
-    "officialTourism": "https://www.visitarizona.com/",
-    "reference": "https://www.britannica.com/place/Cottonwood"
-  },
-  "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Cottonwood",
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
-        ]
-      }
-    ]
-  }
+  "bestTimeToVisit":{"title":"Spring and fall are the easiest seasons for outdoor time","bullets":["Spring and fall usually bring comfortable temperatures for walking, paddling, and trail use.","Summer afternoons can be very hot; put river and trail activities early in the day.","Winter is quieter and can be cool, especially mornings and evenings."]},
+  "travelTips":["Old Town is compact, but a car is useful for state parks, vineyards, Tuzigoot, Jerome, and Sedona.","Reserve popular wine, paddling, and guided outdoor experiences on weekends.","Carry water and sun protection even when the Verde River makes the landscape look lush."],
+  "faq":[{"q":"How many days do I need in Cottonwood?","a":"Two days works well for Old Town, the river, and one regional excursion; three gives more room for wine or hiking."},{"q":"Is Cottonwood the same destination as Sedona?","a":"No. Cottonwood is a separate Verde Valley city west of Sedona with its own river, wine, and Old Town identity."},{"q":"Is Dead Horse Ranch a city park?","a":"No. Dead Horse Ranch is an Arizona state park next to Cottonwood."}],
+  "tours":{"stateSlug":"arizona","citySlug":"cottonwood","limit":6,"title":"Top Cottonwood tours"},"seoLinks":{"officialTourism":"https://visitcottonwoodaz.org/"},
+  "aboutCity":{"sections":[{"heading":"Overview","paragraphs":["Cottonwood is an incorporated Verde Valley city whose visitor appeal comes from the combination of Old Town, the Verde River, nearby public lands, and Arizona wine country."]},{"heading":"Geography & setting","paragraphs":["The Verde River corridor provides riparian habitat through a broader high-desert setting, while surrounding mesas and mountains connect Cottonwood to Sedona, Jerome, and the larger Verde Valley."]},{"heading":"History & culture","paragraphs":["Old Town preserves the city's commercial heritage, while nearby Tuzigoot and other sites place modern Cottonwood within a much longer Indigenous history."]},{"heading":"Outdoor highlights","paragraphs":["River paddling, state-park trails, birding, cycling, and regional hiking complement the food and wine scene."]},{"heading":"Getting around","paragraphs":["Walk Old Town, but use a car or guided transportation for the wider valley and neighboring destinations."]}]}
 }

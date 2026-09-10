@@ -1,128 +1,20 @@
 {
-  "tier": "tier2",
-  "title": "Haleiwa, Hawaii Travel Guide",
-  "country": "United States",
-  "state": "Hawaii",
-  "city": "Haleiwa",
-  "slug": "guides/us/hawaii/haleiwa",
-  "hero": {
-    "image": "https://cdn.filestackcontent.com/VjqRarneSD2ZMlnsg1K8",
-    "alt": "Haleiwa, Hawaii — Whale Watching + Marine Life Tour",
-    "headline": "Haleiwa, Hawaii Travel Guide",
-    "subheadline": "Plan a focused Haleiwa trip with practical highlights, local context, and easy tour connections."
-  },
-  "overview": [
-    "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
+  "title":"Haleiwa Travel Guide","country":"United States","state":"Hawaii","city":"Haleiwa","slug":"guides/us/hawaii/haleiwa",
+  "hero":{"image":"https://cdn.filestackcontent.com/VjqRarneSD2ZMlnsg1K8","alt":"Haleiwa and Oahu North Shore","headline":"Haleiwa Travel Guide","subheadline":"Use historic Haleiwa as a North Shore base for beaches, surf culture, marine wildlife, local food, and the rural landscapes of northern Oahu."},
+  "overview":["Haleiwa is a small North Shore community rather than a generic Honolulu suburb. Its plantation-era town center, harbor, surf culture, and proximity to Waimea Bay, Sunset Beach, and other famous breaks make it a natural orientation point for northern Oahu.","Ocean conditions should shape the itinerary. Winter can bring powerful North Pacific surf and hazardous swimming conditions, while calmer summer periods often favor snorkeling, paddling, and other water activities. Respect posted warnings and lifeguard guidance."],
+  "highlights":[{"title":"North Shore surf culture","description":"Haleiwa sits at the western gateway to a coastline internationally known for surfing, with conditions changing dramatically by season."},{"title":"Historic town center","description":"Low-rise shops, galleries, restaurants, and plantation-era character make Haleiwa worth exploring on foot rather than treating it only as a tour departure point."},{"title":"Marine experiences","description":"Harbor-based excursions can include snorkeling, diving, wildlife viewing, and seasonal whale watching, with conditions and wildlife varying through the year."},{"title":"Beaches and coastal scenery","description":"Nearby beaches range from protected swimming areas to powerful surf zones, so choose locations according to current ocean conditions and ability."}],
+  "thingsToDo":[
+    {"title":"Explore historic Haleiwa town","description":"Walk the compact commercial center for galleries, surf shops, local food, and reminders of the North Shore's plantation-era history. The town works best as more than a quick lunch stop: allow time to walk, browse, and understand how Haleiwa developed as the service center for this part of Oahu. Pair it with the harbor or a nearby beach rather than repeatedly driving the same stretch of Kamehameha Highway."},
+    {"title":"Spend time at Haleiwa harbor and nearby beaches","description":"The harbor connects the town directly to fishing and ocean recreation, while nearby shoreline areas provide easy access to the North Shore landscape. Conditions can change quickly, especially during winter swells, so a calm-looking beach should not be assumed safe without checking warnings. Morning visits often provide easier parking and cooler conditions."},
+    {"title":"Visit Waimea Bay and the Waimea Valley area","description":"Waimea is one of the North Shore's defining landscapes, combining a broad bay with the lush valley immediately inland. Winter surf can be enormous, while calmer periods create a very different coastal experience. Treat the beach and the valley as distinct destinations and allow extra time when North Shore traffic is heavy."},
+    {"title":"See the famous surf breaks toward Sunset Beach","description":"Continuing east from Haleiwa leads toward breaks such as Banzai Pipeline and Sunset Beach, where winter swells attract elite surfers and large crowds. Watching from shore can be memorable even for non-surfers, but stay well back from the water when surf is high. In summer the same coastline can look dramatically calmer, illustrating how seasonal swell patterns define the North Shore."},
+    {"title":"Choose a responsible marine-wildlife excursion","description":"Haleiwa Harbor supports guided ocean trips that may focus on snorkeling, diving, sharks, turtles, or seasonal whales. Treat these as bookable experiences rather than permanent 'attractions,' and choose operators whose practices emphasize wildlife distance, safety, and current conditions. Seasickness, wind, and surf can matter as much as the forecast on land."},
+    {"title":"Explore North Shore food and farm country","description":"The landscape around Haleiwa includes farms, roadside food stops, and communities that feel markedly less urban than Honolulu. Build food stops into the route instead of racing from beach to beach; it creates a better sense of place and reduces unnecessary driving. Keep in mind that businesses and parking areas can become crowded on weekends and major surf-event days."}
   ],
-  "highlights": [
-    {
-      "title": "Haleiwa essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
-    },
-    {
-      "title": "Haleiwa local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
-    }
-  ],
-  "thingsToDo": [
-    {
-      "title": "Dive Hawaii",
-      "description": "Dive Hawaii is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Shark Dive",
-      "description": "Shark Dive is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Whale Encounters",
-      "description": "Whale Encounters is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Turtle Encounters",
-      "description": "Turtle Encounters is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "North Shore Dive Shop",
-      "description": "North Shore Dive Shop is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Whale Watching",
-      "description": "Whale Watching is a practical stop for understanding Haleiwa's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Haleiwa, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    }
-  ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Haleiwa",
-    "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
-    ]
-  },
-  "travelTips": [
-    "Group activities by area to reduce transfers across Haleiwa.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
-  "faq": [
-    {
-      "q": "How many days should I plan for Haleiwa?",
-      "a": "Two to three days is enough for core Haleiwa highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Haleiwa?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
-  ],
-  "tours": {
-    "stateSlug": "hawaii",
-    "citySlug": "haleiwa",
-    "limit": 6,
-    "title": "Top Haleiwa tours"
-  },
-  "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Haleiwa",
-    "officialTourism": "https://www.gohawaii.com/",
-    "reference": "https://www.britannica.com/place/Haleiwa"
-  },
-  "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Haleiwa",
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Haleiwa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Haleiwa itinerary efficient while still feeling varied and local."
-        ]
-      }
-    ]
-  }
+  "bestTimeToVisit":{"title":"Choose the season according to the ocean experience you want","bullets":["Winter is the signature big-surf season, excellent for watching experienced surfers but often unsuitable for casual swimming at exposed North Shore beaches.","Summer generally brings calmer North Shore seas and can be better for snorkeling and paddling, though conditions still require daily checks.","Spring and fall can offer useful shoulder-season balance, but weather and surf should always be evaluated locally rather than by calendar alone."]},
+  "travelTips":["North Shore traffic can become slow; group stops geographically and avoid an overpacked itinerary.","Never infer swimming safety from appearance alone—follow lifeguards, warning signs, and current ocean advisories.","Treat marine tours as experiences connected to Haleiwa, not as civic landmarks.","Respect residential areas, private property, wildlife, and culturally significant places."],
+  "faq":[{"q":"How long should I spend in Haleiwa?","a":"A full day gives time for the town, coastline, and one major outdoor experience; two days allows a slower North Shore itinerary."},{"q":"Is Haleiwa the same as Honolulu?","a":"No. Haleiwa is a distinct North Shore community on Oahu, far from Honolulu's urban core."},{"q":"When is the North Shore surf biggest?","a":"The largest and most famous surf typically arrives during the winter swell season, but exact conditions vary day by day."}],
+  "tours":{"stateSlug":"hawaii","citySlug":"haleiwa","limit":6,"title":"Top Haleiwa tours"},
+  "seoLinks":{"officialTourism":"https://www.gohawaii.com/islands/oahu/regions/north-shore"},
+  "aboutCity":{"sections":[{"heading":"Overview","paragraphs":["Haleiwa is a small community and historic commercial center on Oahu's North Shore, serving as a gateway to beaches, surf breaks, farms, and marine recreation." ]},{"heading":"Geography & setting","paragraphs":["The town lies near the mouth of Anahulu Stream on Oahu's northern coast, with the Waianae Range inland and a chain of famous beaches extending east along Kamehameha Highway." ]},{"heading":"History & culture","paragraphs":["Haleiwa's modern form reflects Native Hawaiian history, plantation agriculture, rail-era development, and the later rise of international surf culture. Its identity should not be reduced to a collection of tour products." ]},{"heading":"Outdoor & seasonal highlights","paragraphs":["Surf, snorkeling, diving, wildlife viewing, paddling, beaches, and coastal drives dominate outdoor itineraries, but seasonal ocean conditions determine what is appropriate on any given day." ]},{"heading":"Getting around","paragraphs":["A car is useful for the broader North Shore, but Haleiwa itself is compact. Traffic and parking can become limiting factors, so fewer well-grouped stops generally produce a better day." ]}]}
 }

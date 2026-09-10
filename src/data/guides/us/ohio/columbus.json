@@ -4,143 +4,42 @@
   "state": "Ohio",
   "city": "Columbus",
   "slug": "guides/us/ohio/columbus",
-  "hero": {
-    "image": "",
-    "alt": "Columbus skyline and landmarks",
-    "headline": "Columbus Travel Guide",
-    "subheadline": "Plan a high-value Columbus itinerary with top neighborhoods, outdoor access, and proven tour ideas."
-  },
+  "hero": {"image": "", "alt": "Columbus skyline and Scioto riverfront", "headline": "Columbus Travel Guide", "subheadline": "Plan Columbus around distinctive neighborhoods, the Scioto riverfront, museums, markets, gardens, and accessible urban outdoor spaces."},
   "overview": [
-    "Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling."
+    "Columbus is Ohio's capital and a fast-growing city whose best visitor experiences are spread among downtown, the Short North, German Village, the university area, and parks along the Scioto River. It is less about one famous landmark than about combining neighborhoods, food, arts, science, and outdoor space into a well-paced itinerary.",
+    "For a first visit, pair downtown and the Scioto Mile with German Village, devote another block to the Short North and nearby cultural attractions, and choose one larger museum or garden. Columbus is relatively easy to navigate, but grouping nearby districts still leaves more time for walking and less time in traffic."
   ],
   "highlights": [
-    {
-      "title": "Signature sights in Columbus",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
+    {"title": "German Village", "description": "Walk brick streets, historic homes, independent shops, and Schiller Park just south of downtown."},
+    {"title": "Short North Arts District", "description": "Explore galleries, restaurants, murals, shops, and nightlife along High Street."},
+    {"title": "Scioto riverfront", "description": "Use the Scioto Mile and Scioto Audubon Metro Park for skyline views, trails, green space, and outdoor time."},
+    {"title": "Museums, science & gardens", "description": "Choose among COSI, Franklin Park Conservatory, the Columbus Museum of Art, and other institutions based on your interests."}
   ],
   "thingsToDo": [
-    {
-      "title": "Explore Short North Arts District",
-      "description": "One of the most valuable things to do in Columbus is spend time around Short North Arts District. Travelers comparing attractions in Columbus consistently rank Short North Arts District as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Short North Arts District early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Scioto Mile",
-      "description": "One of the most valuable things to do in Columbus is spend time around Scioto Mile. Travelers comparing attractions in Columbus consistently rank Scioto Mile as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Scioto Mile early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore German Village",
-      "description": "One of the most valuable things to do in Columbus is spend time around German Village. Travelers comparing attractions in Columbus consistently rank German Village as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize German Village early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Franklin Park Conservatory",
-      "description": "One of the most valuable things to do in Columbus is spend time around Franklin Park Conservatory. Travelers comparing attractions in Columbus consistently rank Franklin Park Conservatory as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Franklin Park Conservatory early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
-    },
-    {
-      "title": "Explore North Market",
-      "description": "One of the most valuable things to do in Columbus is spend time around North Market. Travelers comparing attractions in Columbus consistently rank North Market as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize North Market early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Columbus Museum of Art",
-      "description": "One of the most valuable things to do in Columbus is spend time around Columbus Museum of Art. Travelers comparing attractions in Columbus consistently rank Columbus Museum of Art as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Columbus Museum of Art early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Ohio State University",
-      "description": "One of the most valuable things to do in Columbus is spend time around Ohio State University. Travelers comparing attractions in Columbus consistently rank Ohio State University as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Ohio State University early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
-    },
-    {
-      "title": "Explore Hocking Hills",
-      "description": "One of the most valuable things to do in Columbus is spend time around Hocking Hills. Travelers comparing attractions in Columbus consistently rank Hocking Hills as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Hocking Hills early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    }
+    {"title": "Walk German Village", "description": "German Village is one of Columbus's most distinctive historic neighborhoods, known for brick streets, 19th-century homes, independent businesses, and compact pedestrian scale. Pick up a walking map, wander streets such as Beck and Mohawk, stop at the Book Loft, and spend time in Schiller Park. The neighborhood is best experienced slowly rather than as a drive-through photo stop."},
+    {"title": "Explore the Short North Arts District", "description": "The Short North stretches along High Street between downtown and the Ohio State University area with galleries, murals, restaurants, shops, performance spaces, and nightlife. It is easy to explore on foot once you arrive. Visit during the day for galleries and shopping or later for dining and entertainment, and check whether Gallery Hop or another major event overlaps with your dates."},
+    {"title": "Walk or bike the Scioto Mile", "description": "The Scioto Mile links downtown riverfront parks, paths, fountains, bridges, and skyline viewpoints along the Scioto River. It is a useful outdoor spine between central attractions and pairs naturally with COSI on the west bank. Early morning and evening provide softer light and cooler conditions during summer, while trail connections extend beyond the downtown core for longer rides."},
+    {"title": "Visit COSI", "description": "COSI is Columbus's major hands-on science center, with exhibits spanning space, energy, oceans, technology, natural history, and rotating special exhibitions. It is especially strong for families but can easily occupy adults interested in science and engineering for several hours. Its riverfront location makes it simple to combine with the Scioto Mile instead of treating it as an isolated indoor stop."},
+    {"title": "Explore Franklin Park Conservatory and Botanical Gardens", "description": "Franklin Park Conservatory combines glasshouse environments, botanical collections, seasonal gardens, art installations, and changing exhibitions east of downtown. It works year-round and is especially useful when weather makes a long outdoor itinerary less appealing. Allow enough time to move through both indoor collections and the surrounding grounds rather than limiting the visit to the main conservatory building."},
+    {"title": "Eat and browse at North Market", "description": "North Market brings together food vendors, specialty ingredients, prepared meals, and small businesses near downtown and the Short North. It is an efficient lunch stop but also reflects Columbus's diverse food culture more clearly than a generic restaurant list. Visit outside the busiest meal period if you want more room to browse and compare vendors."},
+    {"title": "Spend time at Scioto Audubon Metro Park", "description": "Scioto Audubon Metro Park sits just south of downtown with trails, restored habitat, birding, wetlands, skyline views, and a large outdoor climbing wall. It provides a more natural riverfront experience than the manicured downtown parks while remaining close to the city center. Bring binoculars if birding interests you and check Metro Parks information for current facilities and trail conditions."},
+    {"title": "Visit the Columbus Museum of Art", "description": "The Columbus Museum of Art offers American and European art, modern and contemporary work, photography, and rotating exhibitions near downtown. It is a manageable museum to pair with another central attraction rather than an all-day institution for most visitors. Check current exhibitions and opening hours before choosing it over the city's science or garden options."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
-    "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
-    ]
-  },
-  "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
-  ],
+  "bestTimeToVisit": {"title": "Spring through fall is best for combining neighborhoods and riverfront parks", "bullets": ["April through June and September through October generally offer comfortable walking weather and active neighborhood calendars.", "Summer can be hot and humid; use mornings and evenings for trails and neighborhoods and museums during the hottest hours.", "Fall color adds interest to parks and surrounding central Ohio day trips.", "Winter is colder but museums, markets, restaurants, sports, and the conservatory keep a city-focused visit practical."]},
+  "travelTips": ["Group German Village with downtown and the Scioto riverfront rather than crossing the city repeatedly.", "Use the Short North as a walkable district once you arrive; parking is not necessary between every stop.", "Check event calendars around Ohio State, conventions, festivals, and sports because they can affect traffic and hotel availability.", "Use Central Ohio's Metro Parks for outdoor time beyond the most obvious downtown green spaces.", "Build one flexible indoor option into outdoor-heavy days because Midwest weather can change quickly."],
   "faq": [
-    {
-      "q": "How many days are ideal for Columbus?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Columbus good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
-    }
+    {"q": "How many days should I spend in Columbus?", "a": "Two days covers the main neighborhoods and one or two major attractions; three days allows more museums, parks, food, or a regional outing without rushing."},
+    {"q": "What neighborhoods should first-time visitors see?", "a": "German Village and the Short North are the strongest starting points because they offer contrasting architecture, food, shops, parks, arts, and street life close to downtown."},
+    {"q": "Is Columbus good for outdoor travelers?", "a": "Yes for an urban trip. The Scioto Trail network, Scioto Audubon, Metro Parks, greenways, and nearby central Ohio recreation areas add substantial outdoor options."},
+    {"q": "Do I need a car in Columbus?", "a": "A downtown-focused trip can use walking, buses, bikes, and rideshare, but a car is helpful for gardens, suburban attractions, Metro Parks, and regional day trips."}
   ],
-  "tours": {
-    "stateSlug": "ohio",
-    "citySlug": "columbus",
-    "limit": 6,
-    "title": "Top Columbus tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.experiencecolumbus.com/"
-  },
-  "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling. Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling. Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling. Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Columbus without over-scheduling. Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling. Columbus is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug": "ohio", "citySlug": "columbus", "limit": 6, "title": "Top Columbus tours"},
+  "seoLinks": {"officialTourism": "https://www.experiencecolumbus.com/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Columbus is the capital of Ohio and one of the Midwest's fastest-growing metropolitan centers. State government, Ohio State University, healthcare, research, finance, technology, logistics, and a diverse service economy all shape the city.", "For visitors, Columbus is less monument-driven than many older cities. Its appeal comes from the combination of neighborhoods, markets, university culture, food, parks, riverfront redevelopment, museums, and a scale that allows several different experiences in a short trip."]},
+    {"heading": "Neighborhoods & history", "paragraphs": ["German Village preserves a substantial district of brick homes and streets associated with 19th-century German immigration, while the Short North evolved into a major arts, dining, and entertainment corridor along High Street. Downtown remains the civic core, anchored by state government and the Scioto riverfront.", "These districts are geographically close but visually and culturally distinct, which makes walking them more informative than treating Columbus as one generalized downtown destination."]},
+    {"heading": "River & landscape", "paragraphs": ["The Scioto and Olentangy rivers meet near central Columbus and form the backbone of an expanding trail and park network. Riverfront restoration has created more public access downtown while Metro Parks protect larger natural areas across central Ohio.", "The surrounding terrain is relatively gentle compared with mountain destinations, making cycling, running, birding, and walking accessible ways to add outdoor time to a city itinerary."]},
+    {"heading": "Culture, food & university life", "paragraphs": ["Ohio State University's scale influences the city's museums, sports, research, arts, and population, while Columbus's growing immigrant communities have broadened its food scene well beyond traditional Midwestern expectations.", "Markets, independent restaurants, breweries, galleries, festivals, and performing arts are spread among multiple districts, rewarding visitors who leave the immediate convention and government core."]},
+    {"heading": "Getting around", "paragraphs": ["Downtown, the Short North, and German Village are close enough to combine with walking, bikes, buses, or short rideshare trips. Once outside those central districts, Columbus becomes more car-oriented.", "Keep university events and commuter traffic in mind, and group attractions by side of town when visiting the conservatory, zoo, Metro Parks, or suburban destinations."]}
+  ]}
 }

@@ -4,143 +4,41 @@
   "state": "Alaska",
   "city": "Anchorage",
   "slug": "guides/us/alaska/anchorage",
-  "hero": {
-    "image": "",
-    "alt": "Anchorage skyline and landmarks",
-    "headline": "Anchorage Travel Guide",
-    "subheadline": "Plan a high-value Anchorage itinerary with top neighborhoods, outdoor access, and proven tour ideas."
-  },
+  "hero": {"image": "", "alt": "Anchorage skyline and landmarks", "headline": "Anchorage Travel Guide", "subheadline": "Plan Anchorage around Cook Inlet, Alaska Native culture, urban trails, and remarkably close access to the Chugach Mountains."},
   "overview": [
-    "Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling."
+    "Anchorage is Alaska's largest city and an unusually practical place to combine museums, restaurants, wildlife, coastal scenery, and mountain recreation without changing bases. Cook Inlet borders the city to the west while the Chugach Mountains rise immediately to the east, so a single day can move from downtown cultural sites to forest trails and broad tidal landscapes.",
+    "Treat Anchorage as both a destination and a Southcentral Alaska transportation hub. The city rewards several days on its own, while Turnagain Arm, Chugach State Park, and other regional landscapes work best as deliberate excursions rather than attractions casually folded into downtown sightseeing."
   ],
   "highlights": [
-    {
-      "title": "Signature sights in Anchorage",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
+    {"title": "City and wilderness meet", "description": "Anchorage's trail system, Cook Inlet shoreline, and Chugach foothills make outdoor access part of the city rather than a distant add-on."},
+    {"title": "Alaska Native context", "description": "Use the Alaska Native Heritage Center and Anchorage Museum to understand living cultures, history, art, and the landscapes encountered elsewhere in Alaska."},
+    {"title": "Coastal trail network", "description": "The Tony Knowles Coastal Trail links downtown with wetlands, earthquake history, viewpoints, and Kincaid Park."},
+    {"title": "Southcentral launch point", "description": "Anchorage supports rail, road, and air connections to major Alaska destinations, but travel distances remain much larger than a map can suggest."}
   ],
   "thingsToDo": [
-    {
-      "title": "Explore Tony Knowles Coastal Trail",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Tony Knowles Coastal Trail. Travelers comparing attractions in Anchorage consistently rank Tony Knowles Coastal Trail as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Tony Knowles Coastal Trail early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Anchorage Museum",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Anchorage Museum. Travelers comparing attractions in Anchorage consistently rank Anchorage Museum as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Anchorage Museum early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Flattop Mountain",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Flattop Mountain. Travelers comparing attractions in Anchorage consistently rank Flattop Mountain as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Flattop Mountain early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Alaska Native Heritage Center",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Alaska Native Heritage Center. Travelers comparing attractions in Anchorage consistently rank Alaska Native Heritage Center as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Alaska Native Heritage Center early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
-    },
-    {
-      "title": "Explore Downtown Anchorage",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Downtown Anchorage. Travelers comparing attractions in Anchorage consistently rank Downtown Anchorage as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Downtown Anchorage early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Kincaid Park",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Kincaid Park. Travelers comparing attractions in Anchorage consistently rank Kincaid Park as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Kincaid Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Turnagain Arm",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Turnagain Arm. Travelers comparing attractions in Anchorage consistently rank Turnagain Arm as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Turnagain Arm early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
-    },
-    {
-      "title": "Explore Chugach State Park",
-      "description": "One of the most valuable things to do in Anchorage is spend time around Chugach State Park. Travelers comparing attractions in Anchorage consistently rank Chugach State Park as a high-impact stop. If you want to visit Anchorage with a balanced itinerary, prioritize Chugach State Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Anchorage, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
-    }
+    {"title": "Walk or bike the Tony Knowles Coastal Trail", "description": "The paved Tony Knowles Coastal Trail follows Cook Inlet for about 11 miles between downtown Anchorage and Kincaid Park, passing Westchester Lagoon, Earthquake Park, coastal forest, and open viewpoints. A short downtown out-and-back gives a useful sample, while cycling makes the full corridor more practical. Moose and other wildlife can appear even inside the urban trail system, so give animals space and do not treat the route like an ordinary city greenway."},
+    {"title": "Build Alaska context at the Anchorage Museum", "description": "The Anchorage Museum is much more useful than a generic rainy-day stop: its collections connect Alaska history, northern science, art, and contemporary life. Visit early in an Alaska trip and the exhibits provide context for landscapes and communities you may encounter later. Allow enough time to read and explore rather than squeezing it between unrelated stops."},
+    {"title": "Visit the Alaska Native Heritage Center", "description": "The Alaska Native Heritage Center is a major place to learn about Alaska's Indigenous peoples through exhibits, cultural programs, demonstrations, and outdoor gathering spaces. Approach it as a living cultural institution rather than a collection of historic artifacts. Program schedules vary, so check current offerings and give the visit enough time for both indoor interpretation and the outdoor village sites."},
+    {"title": "Hike from the Chugach foothills", "description": "Chugach State Park begins at Anchorage's eastern edge and provides access to alpine terrain on a scale unusual for a major American city. Flattop Mountain is the famous objective, but it is not the only choice and its upper terrain can be steep, exposed, icy, or muddy depending on conditions. Match the route to weather and ability, carry layers, and remember that mountain conditions can be very different from downtown Anchorage."},
+    {"title": "Explore Kincaid Park", "description": "Kincaid Park combines forest, bluff viewpoints, extensive trails, and the southern end of the Coastal Trail close to the city. The trail network supports walking and cycling in warmer months and Nordic skiing and other winter recreation when snow arrives. Wildlife encounters are possible, and visitors should use current trail information rather than assuming every route is equally suitable in every season."},
+    {"title": "Understand the 1964 earthquake landscape", "description": "Earthquake Park and the nearby Coastal Trail corridor reveal physical evidence of the 1964 Great Alaska Earthquake and the ground failure that transformed parts of Anchorage. The site is most meaningful when paired with interpretation rather than treated only as a viewpoint. It also fits naturally into a coastal walk or bike ride from downtown."},
+    {"title": "Drive Turnagain Arm as a regional excursion", "description": "The Seward Highway along Turnagain Arm leaves urban Anchorage quickly for tidal flats, steep mountains, waterfalls, and broad viewpoints. Beluga whales and Dall sheep are possible sightings, but neither should be promised. Use designated pullouts, allow substantially more time than the mileage suggests, and treat destinations farther down the highway as separate regional experiences rather than Anchorage neighborhoods."},
+    {"title": "Spend time downtown and along Ship Creek", "description": "Downtown Anchorage is compact enough to combine local shops, public art, visitor information, the railroad area, and Ship Creek without repeated driving. It is a useful orientation block before heading into the city's larger trail and park system. Anchorage is spread out overall, so grouping downtown stops together saves time for the outdoor experiences that distinguish the city."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
-    "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
-    ]
-  },
-  "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
-  ],
+  "bestTimeToVisit": {"title": "Choose the season for the Alaska experience you want", "bullets": ["June through August brings very long daylight, the broadest tour schedules, and peak visitor demand.", "May and September can be quieter but require more flexibility for weather and seasonal services.", "Winter transforms the trail system and nearby mountains; short daylight, snow, ice, and cold require a genuinely different itinerary."]},
+  "travelTips": ["Carry layers even on summer days; Cook Inlet wind and mountain weather can change conditions quickly.", "Do not schedule Alaska road trips using Lower-48 assumptions about distance and driving time.", "Keep food and scented items controlled and follow local wildlife guidance on trails.", "Use official land-manager information before mountain hikes, especially when snow, wildfire, or trail closures are possible."],
   "faq": [
-    {
-      "q": "How many days are ideal for Anchorage?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Anchorage good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
-    }
+    {"q": "How many days should I spend in Anchorage?", "a": "Two to four days gives enough time for the city's cultural institutions, coastal trails, and at least one Chugach or Turnagain Arm outing without using Anchorage only as an airport stop."},
+    {"q": "Do I need a car in Anchorage?", "a": "Downtown can be explored without one, but a car or organized transportation is useful for trailheads, Chugach access, and Turnagain Arm. Plan by geographic cluster rather than repeatedly crossing the city."},
+    {"q": "Is wildlife really possible inside Anchorage?", "a": "Yes. Moose, birds, and other wildlife use parks and greenways within the municipality. Keep distance and follow local wildlife guidance rather than approaching animals for photographs."}
   ],
-  "tours": {
-    "stateSlug": "alaska",
-    "citySlug": "anchorage",
-    "limit": 6,
-    "title": "Top Anchorage tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.anchorage.net/"
-  },
-  "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling. Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling. Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling. Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Anchorage without over-scheduling. Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling. Anchorage is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug": "alaska", "citySlug": "anchorage", "limit": 6, "title": "Top Anchorage tours"},
+  "seoLinks": {"officialTourism": "https://www.anchorage.net/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Anchorage is Alaska's largest urban center, but its identity is inseparable from the surrounding water, mountains, and wild lands. It functions simultaneously as a cultural center, transportation hub, and unusually accessible base for outdoor recreation."]},
+    {"heading": "Geography & setting", "paragraphs": ["Anchorage sits on a lowland between Cook Inlet and the Chugach Mountains. Large tidal ranges, wetlands, forest, glacially shaped terrain, and steep mountain relief create striking landscape changes over short distances."]},
+    {"heading": "History & culture", "paragraphs": ["Anchorage is within the traditional homeland of the Dena'ina Athabascan people. Railroad development helped establish the modern city in the early twentieth century, and the 1964 earthquake profoundly altered both the landscape and built environment. Alaska Native cultures remain living and central to understanding the region."]},
+    {"heading": "Outdoor & seasonal highlights", "paragraphs": ["Summer emphasizes hiking, cycling, fishing, wildlife viewing, and long daylight. Winter brings Nordic skiing, fat biking, snowshoeing, and a much colder, darker version of the same landscape; shoulder seasons can involve rapidly changing snow and trail conditions."]},
+    {"heading": "Getting around", "paragraphs": ["Downtown is walkable, but the municipality is geographically large. A vehicle, rideshare, shuttle, bike, or guided transportation becomes useful for trailheads and regional excursions; the Alaska Railroad also links Anchorage with destinations including Denali and Fairbanks."]}
+  ]}
 }

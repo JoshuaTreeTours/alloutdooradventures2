@@ -4,159 +4,42 @@
   "state": "South Carolina",
   "city": "Charleston",
   "slug": "guides/us/south-carolina/charleston",
-  "hero": {
-    "image": "",
-    "alt": "Charleston skyline and landmarks",
-    "headline": "Charleston Travel Guide",
-    "subheadline": "Plan a high-value Charleston itinerary with top neighborhoods, outdoor access, and proven tour ideas."
-  },
+  "hero": {"image": "", "alt": "Charleston historic district and harbor", "headline": "Charleston Travel Guide", "subheadline": "Plan Charleston around its historic peninsula, harbor, African American and Gullah Geechee history, Lowcountry food, gardens, and coastal landscapes."},
   "overview": [
-    "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling."
+    "Charleston is a walkable historic port city whose architecture, harbor, food, and beauty are inseparable from a much more complicated history of colonization, slavery, rice culture, war, trade, and preservation. The peninsula contains many headline sights, but the strongest visit connects those streets to the people and systems that built the Lowcountry.",
+    "For a first trip, devote one day to the historic peninsula, another to museums and harbor history, and leave time for a coastal or marsh experience beyond downtown. Guided walking tours can add valuable interpretation, especially when they address African American, Gullah Geechee, architectural, and Civil War history rather than presenting the city only as a collection of photogenic houses."
   ],
   "highlights": [
-    {
-      "title": "Signature sights in Charleston",
-      "description": "Start with landmark districts and viewpoints during early hours."
-    },
-    {
-      "title": "Local neighborhoods",
-      "description": "Balance top attractions with one neighborhood known for food and culture."
-    },
-    {
-      "title": "Outdoor access",
-      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
-    },
-    {
-      "title": "Evening experiences",
-      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
-    }
+    {"title": "Historic peninsula", "description": "Walk the Battery, residential streets, churchyards, public squares, and waterfront while paying attention to the city's layered history."},
+    {"title": "Harbor & Fort Sumter", "description": "See Charleston from the water and visit the National Park Service site where the Civil War began in 1861."},
+    {"title": "African American history", "description": "Build the itinerary around museums, historic sites, and interpretation that include slavery, emancipation, and Gullah Geechee culture."},
+    {"title": "Lowcountry landscapes", "description": "Add tidal creeks, marshes, beaches, live oaks, or paddling to understand the coastal environment around the city."}
   ],
   "thingsToDo": [
-    {
-      "title": "Explore Rainbow Row",
-      "description": "One of the most valuable things to do in Charleston is spend time around Rainbow Row. Travelers comparing attractions in Charleston consistently rank Rainbow Row as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Rainbow Row early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do. coverage for Rainbow Row in Charleston, SC cites dated milestones in 1860, 1918, and 1975, including phases when the site was built or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 35 acres, corridors around 11 miles, or comparable capacity figures, and cross-links them with land-use files and riverfront plans to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Rainbow_Row",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Rainbow_Row"
-    },
-    {
-      "title": "Explore Waterfront Park",
-      "description": "One of the most valuable things to do in Charleston is spend time around Waterfront Park. Travelers comparing attractions in Charleston consistently rank Waterfront Park as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Waterfront Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do. coverage for Waterfront Park in Charleston, SC cites dated milestones in 1851, 2007, and 1972, including phases when the site was designated or later renovated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 389 acres, corridors around 3 miles, or comparable capacity figures, and cross-links them with engineering records and transit datasets to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Waterfront_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Waterfront_Park"
-    },
-    {
-      "title": "Explore King Street",
-      "description": "One of the most valuable things to do in Charleston is spend time around King Street. Travelers comparing attractions in Charleston consistently rank King Street as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize King Street early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do. coverage for King Street in Charleston, SC cites dated milestones in 1890, 1961, and 1986, including phases when the site was opened or later opened under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 369 acres, corridors around 2 miles, or comparable capacity figures, and cross-links them with land-use files and civic charters to keep the narrative evidence-based. Distinct article language for Explore King Street references lexical anchors such as watershed granite promenade courtyard granite rotunda masonry granite, plus chronology notes around 1907, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/King_Street",
-      "wikiUrl": "https://en.wikipedia.org/wiki/King_Street"
-    },
-    {
-      "title": "Explore Charleston City Market",
-      "description": "One of the most valuable things to do in Charleston is spend time around Charleston City Market. Travelers comparing attractions in Charleston consistently rank Charleston City Market as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Charleston City Market early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching. coverage for Charleston City Market in Charleston, SC cites dated milestones in 1936, 1968, and 2007, including phases when the site was renovated or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 284 acres, corridors around 1 miles, or comparable capacity figures, and cross-links them with preservation reports and design briefs to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Charleston_City_Market",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Charleston_City_Market"
-    },
-    {
-      "title": "Explore Battery and White Point Garden",
-      "description": "One of the most valuable things to do in Charleston is spend time around Battery and White Point Garden. Travelers comparing attractions in Charleston consistently rank Battery and White Point Garden as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Battery and White Point Garden early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is. coverage for Battery and White Point Garden in Charleston, SC cites dated milestones in 1890, 1974, and 1980, including phases when the site was reclassified or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 352 acres, corridors around 7 miles, or comparable capacity figures, and cross-links them with land-use files and civic charters to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Battery_and_White_Point_Garden",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Battery_and_White_Point_Garden"
-    },
-    {
-      "title": "Explore Boone Hall Plantation",
-      "description": "One of the most valuable things to do in Charleston is spend time around Boone Hall Plantation. Travelers comparing attractions in Charleston consistently rank Boone Hall Plantation as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Boone Hall Plantation early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching. coverage for Boone Hall Plantation in Charleston, SC cites dated milestones in 1914, 1914, and 1992, including phases when the site was renovated or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 269 acres, corridors around 6 miles, or comparable capacity figures, and cross-links them with heritage surveys and preservation reports to keep the narrative evidence-based. Distinct article language for Explore Boone Hall Plantation references lexical anchors such as foundry promenade rotunda granite estuary arcade headland courtyard, plus chronology notes around 1853, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Boone_Hall_Plantation",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Boone_Hall_Plantation"
-    },
-    {
-      "title": "Explore Shem Creek",
-      "description": "One of the most valuable things to do in Charleston is spend time around Shem Creek. Travelers comparing attractions in Charleston consistently rank Shem Creek as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Shem Creek early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do. coverage for Shem Creek in Charleston, SC cites dated milestones in 1892, 1925, and 1992, including phases when the site was opened or later reclassified under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 298 acres, corridors around 4 miles, or comparable capacity figures, and cross-links them with construction logs and civic charters to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Shem_Creek",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Shem_Creek"
-    },
-    {
-      "title": "Explore Folly Beach",
-      "description": "One of the most valuable things to do in Charleston is spend time around Folly Beach. Travelers comparing attractions in Charleston consistently rank Folly Beach as a high-impact stop. If you want to visit Charleston with a balanced itinerary, prioritize Folly Beach early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Charleston, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do. coverage for Folly Beach in Charleston, SC cites dated milestones in 1897, 1902, and 1957, including phases when the site was opened or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 313 acres, corridors around 4 miles, or comparable capacity figures, and cross-links them with civic charters and land-use files to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Folly_Beach",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Folly_Beach"
-    }
+    {"title": "Walk the historic peninsula", "description": "Charleston's peninsula rewards slow walking because the street plan, church steeples, courtyards, historic houses, public squares, and harbor views sit close together. Start around the Battery and White Point Garden, continue through residential streets, and use plaques or a knowledgeable guide for context. Avoid reducing the experience to architecture alone: many preserved buildings were created and maintained through enslaved labor and the wealth of the plantation economy."},
+    {"title": "Visit Fort Sumter", "description": "Fort Sumter sits on an island at the entrance to Charleston Harbor and is accessible by boat. The first shots of the American Civil War were fired here in April 1861, but the visitor experience is stronger when paired with the National Park Service exhibits at the departure point and broader interpretation of slavery, secession, and the war. Allow for ferry time and weather rather than treating the fort as a quick downtown stop."},
+    {"title": "Explore the International African American Museum", "description": "The International African American Museum stands near Gadsden's Wharf, one of the major historical arrival points for enslaved Africans in North America. Its exhibitions connect Charleston to the wider African diaspora, slavery, resistance, emancipation, family history, and contemporary culture. It provides essential context for many other Charleston sites and is worth scheduling early in a history-focused trip."},
+    {"title": "Spend time at Waterfront Park", "description": "Joe Riley Waterfront Park provides lawns, fountains, shade, harbor views, and a long pedestrian edge along the Cooper River. The Pineapple Fountain is the familiar image, but the park is most useful as a cooling, open-air pause between historic streets and museums. Morning and evening are especially pleasant during warm months."},
+    {"title": "Visit Charleston City Market with context", "description": "Charleston City Market is a long-standing public market with vendors, crafts, food, and sweetgrass basket makers. Sweetgrass basketry carries deep West African and Gullah Geechee cultural roots, so approach it as a living tradition rather than generic souvenir shopping. The market is easy to combine with downtown walking, but spend enough time to understand the people and craftsmanship behind what is sold."},
+    {"title": "Tour a historic house or preserved site thoughtfully", "description": "Charleston contains many preserved houses and plantations, but interpretation varies greatly. Choose sites that address the experiences of enslaved people, free Black Charlestonians, women, workers, and later residents alongside architecture and elite families. Reading the site's interpretive approach before booking helps avoid tours that romanticize the plantation economy or omit the labor that sustained it."},
+    {"title": "Get onto the harbor or tidal creeks", "description": "Boat tours, kayaking, and marsh outings reveal the tidal geography that shaped Charleston's economy and culture. The harbor connects rivers, barrier islands, forts, port facilities, and salt marsh, while quieter creeks can offer birding and wildlife observation. Tides, wind, heat, and thunderstorms matter, so guided paddling is useful for visitors unfamiliar with Lowcountry waters."},
+    {"title": "Make time for a beach or barrier-island outing", "description": "Folly Beach, Sullivan's Island, Isle of Palms, and other coastal destinations are separate communities outside the historic peninsula. Each has a different character and access pattern, so choose one rather than trying to sample every beach in a day. Traffic and bridge congestion can be significant in summer, making an early start worthwhile."}
   ],
-  "bestTimeToVisit": {
-    "title": "Shoulder seasons are best for comfort and flexibility",
-    "bullets": [
-      "Spring and fall typically offer the easiest weather for walking and tours.",
-      "Summer can be busy; reserve major attractions and timed entries early.",
-      "Winter trips can provide better rates and lighter midday crowds in many districts."
-    ]
-  },
-  "travelTips": [
-    "Use early starts for major sights and popular viewpoints.",
-    "Pre-book top attractions and guided activities during peak months.",
-    "Keep one flexible block each day for weather or traffic changes.",
-    "Stay close to transit hubs if you want to minimize transfer time."
-  ],
+  "bestTimeToVisit": {"title": "Spring and fall balance comfortable walking with coastal weather", "bullets": ["March through May and October into November are popular for mild temperatures, gardens, and long walking days.", "Summer is hot, humid, and storm-prone; start historic walks early and use museums or shaded spaces during the afternoon.", "Atlantic hurricane season requires attention to forecasts and official advisories when tropical systems threaten the coast.", "Winter is quieter and often mild, though cold fronts and wind can change conditions quickly."]},
+  "travelTips": ["Choose history tours and preserved sites that explicitly interpret slavery, African American history, and Gullah Geechee culture.", "Walk the peninsula when possible; parking and one-way streets make repeated short drives inefficient.", "Treat Fort Sumter as a boat excursion with fixed departure timing, not an open-ended downtown attraction.", "Plan beaches and plantations as separate regional outings because they are outside central Charleston.", "Carry water and sun protection, and leave flexibility for thunderstorms or coastal weather in warm months."],
   "faq": [
-    {
-      "q": "How many days are ideal for Charleston?",
-      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
-    },
-    {
-      "q": "Is Charleston good for outdoor travelers?",
-      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
-    },
-    {
-      "q": "Should I book tours in advance?",
-      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
-    }
+    {"q": "How many days should I spend in Charleston?", "a": "Three days gives enough time for the historic peninsula, museums and harbor history, and one coastal or regional outing. Four days allows a slower pace."},
+    {"q": "Is Charleston easy to explore on foot?", "a": "The historic peninsula is very walkable. Beaches, plantations, marsh outings, and some neighborhoods require a car, rideshare, boat, or guided transportation."},
+    {"q": "What is the best way to understand Charleston's history?", "a": "Combine a well-researched walking tour with museums and sites that address African American history, slavery, emancipation, Gullah Geechee culture, maritime history, and the Civil War rather than relying on architecture alone."},
+    {"q": "Is Fort Sumter part of Charleston city government?", "a": "No. Fort Sumter is part of Fort Sumter and Fort Moultrie National Historical Park, a National Park Service unit in Charleston Harbor, and is reached by boat."}
   ],
-  "tours": {
-    "stateSlug": "south-carolina",
-    "citySlug": "charleston",
-    "limit": 6,
-    "title": "Top Charleston tours"
-  },
-  "seoLinks": {
-    "officialTourism": "https://www.charlestoncvb.com/"
-  },
-  "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
-  }
+  "tours": {"stateSlug": "south-carolina", "citySlug": "charleston", "limit": 6, "title": "Top Charleston tours"},
+  "seoLinks": {"officialTourism": "https://www.charlestoncvb.com/", "reference": "https://www.nps.gov/fosu/"},
+  "aboutCity": {"sections": [
+    {"heading": "Overview", "paragraphs": ["Charleston occupies a low peninsula between the Ashley and Cooper rivers where they meet a broad tidal harbor. Its location made it a major Atlantic port and helped produce the dense historic core visitors see today.", "The city's preserved beauty is real, but so is the difficult history embedded in it. Colonial wealth, rice and indigo production, the slave trade, maritime commerce, war, emancipation, and preservation all shaped the buildings and landscapes that survive."]},
+    {"heading": "History & people", "paragraphs": ["Charleston was founded in the 17th century and became one of British North America's most important ports. Enslaved Africans and their descendants were central to the region's economy, agriculture, craftsmanship, foodways, language, and culture, while Charleston also became a major site in the domestic and Atlantic slave trades.", "The Civil War began at Fort Sumter in Charleston Harbor. After emancipation, African American communities continued to shape the city through churches, schools, businesses, political activity, arts, food, and the broader Gullah Geechee cultural landscape of the Lowcountry."]},
+    {"heading": "Coastal landscape", "paragraphs": ["Charleston's geography is defined by tidal rivers, salt marshes, barrier islands, creeks, and a very low elevation. These environments support fisheries, birds, dolphins, shellfish, and maritime traditions while also exposing the region to flooding, hurricanes, sea-level rise, and storm surge.", "The same waterways that make Charleston visually distinctive also explain why paddling, harbor tours, beach trips, and marsh ecology are valuable parts of a visit rather than optional scenery around the historic district."]},
+    {"heading": "Food & culture", "paragraphs": ["Lowcountry cuisine developed from Indigenous, West African, European, Caribbean, and later American influences, with rice, seafood, okra, benne, field peas, and other ingredients carrying deep histories. Modern Charleston dining ranges from traditional dishes to contemporary restaurants, but the cultural origins of the food matter as much as the restaurant list.", "Sweetgrass basketry, Gullah Geechee traditions, historic churches, visual arts, preservation, and a strong literary culture add layers that reward visitors who move beyond the most photographed streets."]},
+    {"heading": "Getting around", "paragraphs": ["Walking is the best way to understand the historic peninsula, where distances are short and details are easily missed from a car. Use rideshare, transit, or a vehicle for destinations outside the core.", "Regional trips require realistic timing. Beaches, plantations, Mount Pleasant, and other communities around the harbor may look close on a map but bridges, traffic, ferry schedules, and summer crowds can turn them into half-day or full-day outings."]}
+  ]}
 }
