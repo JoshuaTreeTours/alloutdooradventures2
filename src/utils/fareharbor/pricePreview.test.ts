@@ -37,6 +37,22 @@ describe("FareHarbor Commercial Reserve high-confidence resolver", () => {
     });
   });
 
+  it("accepts a plain age-qualified Adult rate", () => {
+    expect(
+      resolveHighConfidenceFareHarborPrice(
+        payload([{ singular: "Adult (15+)", price: 8500 }]),
+      )?.startingPrice,
+    ).toBe(85);
+  });
+
+  it("accepts One Adult as a standard customer type", () => {
+    expect(
+      resolveHighConfidenceFareHarborPrice(
+        payload([{ singular: "One Adult", price: 8500 }]),
+      )?.startingPrice,
+    ).toBe(85);
+  });
+
   it("ignores discounted Adult Member rates when a standard Adult rate exists", () => {
     expect(
       resolveHighConfidenceFareHarborPrice(
@@ -48,12 +64,23 @@ describe("FareHarbor Commercial Reserve high-confidence resolver", () => {
     ).toBe(40);
   });
 
-  it("rejects a member-only adult price", () => {
-    expect(
-      resolveHighConfidenceFareHarborPrice(
-        payload([{ singular: "Adult Member", price: 2500 }]),
-      ),
-    ).toBeNull();
+  it("rejects member, extra, group, and add-on Adult labels", () => {
+    for (const label of [
+      "Adult Member",
+      "Extra Adult",
+      "Additional Adult",
+      "Group Adult Lesson",
+      "Adult | Alcohol Included",
+      "Priority Boarding (Adult)",
+      "Adult • City Bike",
+    ]) {
+      expect(
+        resolveHighConfidenceFareHarborPrice(
+          payload([{ singular: label, price: 2500 }]),
+        ),
+        label,
+      ).toBeNull();
+    }
   });
 
   it("rejects accessory-only and child-only breakdowns", () => {
