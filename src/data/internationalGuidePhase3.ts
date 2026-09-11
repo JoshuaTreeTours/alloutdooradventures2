@@ -6,6 +6,7 @@ import {
   INTERNATIONAL_PARAGON_PHASE2_GUIDE_KEYS,
 } from "./internationalGuidePhase2";
 import { ASIA_PACIFIC_PHASE3_PROFILES } from "./internationalGuidePhase3/asiaPacific";
+import { ASIA_PACIFIC_FINAL_PHASE3_PROFILES } from "./internationalGuidePhase3/asiaPacificFinal";
 import { AUSTRALIA_PHASE3_PROFILES } from "./internationalGuidePhase3/australia";
 import { CANADA_PHASE3_PROFILES } from "./internationalGuidePhase3/canada";
 import { EUROPE_CENTRAL_PHASE3_PROFILES } from "./internationalGuidePhase3/europeCentral";
@@ -18,6 +19,7 @@ import type { InternationalGuidePhase3Profile } from "./internationalGuidePhase3
 
 const profiles: Record<string, InternationalGuidePhase3Profile> = {
   ...ASIA_PACIFIC_PHASE3_PROFILES,
+  ...ASIA_PACIFIC_FINAL_PHASE3_PROFILES,
   ...AUSTRALIA_PHASE3_PROFILES,
   ...CANADA_PHASE3_PROFILES,
   ...EUROPE_CENTRAL_PHASE3_PROFILES,
