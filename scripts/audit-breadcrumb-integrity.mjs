@@ -57,7 +57,7 @@ const isTourProductUrl = pathname => {
   const p = normalizePath(pathname);
   if (/\/book$/i.test(p)) return false;
   if (/^\/destinations\/.+\/tours\/[^/]+$/i.test(p)) return true;
-  if (/^\/tours\/[^/]+$/i.test(p)) return true;
+  if (/^\/tours\/(?:[^/]+|[^/]+\/[^/]+\/[^/]+)$/i.test(p)) return true;
   return false;
 };
 
