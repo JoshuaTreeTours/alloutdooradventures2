@@ -35,6 +35,18 @@ const MAX_ATTEMPTS = 3;
 const PHASE1_CURRENCY = "USD";
 const PHASE1_MIN_PRICE = 20;
 
+// The first production cohort must also be recognizably experiential. Engine 2
+// contains a few products whose titles do not say "rental" even though they are
+// equipment or accessories (for example a resort umbrella). Those stay out of
+// Phase 1 even if FareHarbor happens to label their quantity as "Adult".
+const EXPERIENCE_TITLE_SIGNAL =
+  /\b(tour|guided|cruise|sail|sailing|snorkel|snorkeling|hike|hiking|walk|walking|raft|rafting|zipline|scuba|dive|diving|safari|excursion|adventure|experience|tasting|food|wine|ghost|museum|admission|class|lesson|whale|dolphin|volcano|sunset|sunrise|stargazing|fishing|horseback|helicopter|flight|luau|show|cave|wildlife|waterfall|jeep|atv|utv)\b/i;
+const NON_EXPERIENCE_PRODUCT_SIGNAL =
+  /\b(rental|rentals|rent|umbrella|chair|locker|parking|gift\s*card|deposit|add[- ]?on|upgrade|merchandise|equipment|gear)\b/i;
+
+const isPhase1ExperienceTitle = (title: string) =>
+  EXPERIENCE_TITLE_SIGNAL.test(title) && !NON_EXPERIENCE_PRODUCT_SIGNAL.test(title);
+
 const buildCacheKey = (companyShortname: string, itemId: string) =>
   `${companyShortname}:${itemId}`;
 
@@ -98,6 +110,7 @@ const buildCandidates = () => {
   for (const tour of getAllEngine2Tours()) {
     if (tour.bookingProvider !== "fareharbor") continue;
     if (tour.type === "rental") continue;
+    if (!isPhase1ExperienceTitle(tour.name)) continue;
     if (isSuppressedFareHarborBookingPage(tour)) continue;
 
     const bookingUrl = tour.bookingUrl ?? tour.booking.bookingUrl;
