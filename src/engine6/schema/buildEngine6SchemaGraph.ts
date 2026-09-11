@@ -1,7 +1,6 @@
 import { buildCanonicalUrl } from "../../utils/seo";
 import {
   getSiteStructuredDataNodes,
-  SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
   getPriceValidUntil,
@@ -115,6 +114,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ??
     `/destinations/${stateSlug}/${pathSegments[2] ?? ""}/tours`;
+  const cityDestinationPath = parentCityToursPath.replace(/\/tours\/?$/, "");
   const destinationPlaceId = `${canonicalUrl}#destination`;
   const departurePlaceId = `${canonicalUrl}#departure`;
 
@@ -227,11 +227,17 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
             "@type": "ListItem",
             position: 3,
             name: tour.city,
-            item: buildCanonicalUrl(parentCityToursPath),
+            item: buildCanonicalUrl(cityDestinationPath),
           },
           {
             "@type": "ListItem",
             position: 4,
+            name: "Tours",
+            item: buildCanonicalUrl(parentCityToursPath),
+          },
+          {
+            "@type": "ListItem",
+            position: 5,
             name: tour.title,
             item: canonicalUrl,
           },
@@ -283,7 +289,10 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         description,
         category: categoryLabel ?? undefined,
         url: canonicalUrl,
-        brand: { "@id": SITE_BRAND_ID },
+        brand: {
+          "@type": "Brand",
+          name: SITE_BRAND_NAME,
+        },
         provider: { "@id": SITE_ORGANIZATION_ID },
         seller: { "@id": SITE_ORGANIZATION_ID },
         areaServed: { "@id": destinationPlaceId },
