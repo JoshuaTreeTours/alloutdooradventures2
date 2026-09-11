@@ -23,12 +23,13 @@ const labelOf = (record: JsonRecord) => {
   return "";
 };
 
-const isQualifiedAdultLabel = (label: string) => {
-  if (!/\badult\b/i.test(label)) return false;
-  return !/\b(member|membership|resident|local|military|student|senior|child|youth|teen|infant|baby|comp|complimentary|free)\b/i.test(
-    label,
-  );
-};
+// Phase 1 is deliberately conservative. We admit only a plain Adult customer
+// type (optionally with an age qualifier) and reject modifiers such as Extra,
+// Member, Resident, Upgrade, Group, BOGO, deck/class choices, rentals, etc.
+const STANDARD_ADULT_LABEL = /^(?:one\s+)?adult(?:\s*(?:\(\s*\d+\s*\+?\s*\)|[,\-]?\s*\d+\s*\+))?$/i;
+
+const isQualifiedAdultLabel = (label: string) =>
+  STANDARD_ADULT_LABEL.test(label.trim());
 
 export const resolveHighConfidenceFareHarborPrice = (
   payload: unknown,
