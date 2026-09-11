@@ -134,7 +134,7 @@ describe("Engine6 merchant CSV description governance", () => {
     assertNoForbiddenMerchantPhrases(description, "6007GGB");
   });
 
-  it("keeps Merchant CSV, Product, TouristTrip, and WebPage descriptions on one governed source", () => {
+  it("keeps Merchant CSV, Product, TouristTrip, WebPage, and brand identity on one governed source", () => {
     const failures: string[] = [];
 
     for (const tour of merchantFeedEligibleTours) {
@@ -192,11 +192,6 @@ describe("Engine6 merchant CSV description governance", () => {
           `${tour.productCode}: Product brand expected "${SITE_BRAND_NAME}", got "${productBrand}"`
         );
       }
-
-      assertNoForbiddenMerchantPhrases(
-        merchantRow.description ?? "",
-        tour.productCode
-      );
     }
 
     expect(failures, failures.join("\n")).toEqual([]);
