@@ -11,7 +11,7 @@ export type InternationalCountryGuide = {
 export const getInternationalCountries = (): InternationalCountryGuide[] =>
   getGuideCountries()
     .filter(
-      country => country.cities.length > 0 && !isUsCountryAlias(country.slug)
+      country => country.tourCount > 0 && !isUsCountryAlias(country.slug)
     )
     .map(country => ({
       name: country.name,
