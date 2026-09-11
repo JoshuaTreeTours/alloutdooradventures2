@@ -5,6 +5,7 @@ import {
   buildCountryGuide,
   getGuideCountries,
 } from "../../data/guideData";
+import { getCanonicalInternationalGuideCitySlug } from "../../data/internationalGuideAliases";
 import { tours } from "../../data/tours";
 import { US_STATES, slugify } from "../../data/tourCatalog";
 import { isUsCountryAlias } from "./usCountryAliases";
@@ -38,9 +39,13 @@ const liveInternationalCities = () => {
 
   for (const tour of tours) {
     const countrySlug = getInternationalCountrySlug(tour);
-    const citySlug = tour.destination.citySlug;
-    if (!countrySlug || !citySlug) continue;
+    const rawCitySlug = tour.destination.citySlug;
+    if (!countrySlug || !rawCitySlug) continue;
 
+    const citySlug = getCanonicalInternationalGuideCitySlug(
+      countrySlug,
+      rawCitySlug,
+    );
     const key = `${countrySlug}/${citySlug}`;
     const existing = counts.get(key);
     if (existing) {
