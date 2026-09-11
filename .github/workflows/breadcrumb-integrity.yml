@@ -26,6 +26,11 @@ jobs:
       - name: Build full prerendered site
         env:
           VERCEL_ENV: preview
+          # The normal preview build verifies Engine6 routing and expects Vercel
+          # to provide a preview hostname. GitHub Actions is not running inside
+          # Vercel, so provide a stable synthetic hostname solely to satisfy
+          # that build-time route verifier; no network request is made to it.
+          VERCEL_URL: breadcrumb-audit.local
         run: npm run build
 
       - name: Crawl all guide and tour breadcrumbs
