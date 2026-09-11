@@ -1,0 +1,42 @@
+name: FareHarbor pricing sample audit
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Run 75-product FareHarbor pricing audit
+        run: npx tsx scripts/audit-fareharbor-pricing-sample-v2.ts
+
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-pricing-audit
+          path: artifacts/fareharbor-pricing-audit*.json
+          if-no-files-found: warn
