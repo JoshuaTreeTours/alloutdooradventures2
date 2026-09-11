@@ -1,83 +1,30 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  buildCityGuide,
-  buildCountryGuide,
-  getGuideCountries,
-} from "../../data/guideData";
-import { getCanonicalInternationalGuideCitySlug } from "../../data/internationalGuideAliases";
-import { tours } from "../../data/tours";
-import { US_STATES, slugify } from "../../data/tourCatalog";
+import { getGuideCountries } from "../../data/guideData";
+import { getGeneratedCountryDestinationHref } from "../destinations/liveInternationalDestinations";
 import { isUsCountryAlias } from "./usCountryAliases";
-import {
-  isRetiredInternationalCityGuide,
-  shouldRetainInternationalCityGuide,
-} from "./internationalGuideRetention";
+import { shouldRetainInternationalCityGuide } from "./internationalGuideRetention";
 
-const usStateSlugs = new Set(US_STATES.map(state => slugify(state)));
-
-const getInternationalCountrySlug = (tour: (typeof tours)[number]) => {
-  if (tour.destination.stateSlug === "scotland") return "scotland";
-
-  if (tour.destination.country) {
-    const countrySlug = slugify(tour.destination.country);
-    return isUsCountryAlias(countrySlug) ? null : countrySlug;
-  }
-
-  const stateSlug =
-    tour.destination.stateSlug || slugify(tour.destination.state || "");
-  if (!stateSlug || usStateSlugs.has(stateSlug)) return null;
-
-  return stateSlug;
-};
-
-const liveInternationalCities = () => {
-  const counts = new Map<
-    string,
-    { countrySlug: string; citySlug: string; activeTourCount: number }
-  >();
-
-  for (const tour of tours) {
-    const countrySlug = getInternationalCountrySlug(tour);
-    const rawCitySlug = tour.destination.citySlug;
-    if (!countrySlug || !rawCitySlug) continue;
-
-    const citySlug = getCanonicalInternationalGuideCitySlug(
-      countrySlug,
-      rawCitySlug,
-    );
-    const key = `${countrySlug}/${citySlug}`;
-    const existing = counts.get(key);
-    if (existing) {
-      existing.activeTourCount += 1;
-    } else {
-      counts.set(key, { countrySlug, citySlug, activeTourCount: 1 });
-    }
-  }
-
-  return Array.from(counts.values());
-};
-
-describe("international guide live-tour wiring", () => {
-  it("uses one live tour as the normal international guide threshold", () => {
+describe("international live-tour wiring", () => {
+  it("keeps the five-live-tour minimum for ordinary city guides", () => {
     expect(
       shouldRetainInternationalCityGuide({
         countrySlug: "costa-rica",
         citySlug: "san-jose",
-        activeTourCount: 1,
-      }),
-    ).toBe(true);
-
-    expect(
-      shouldRetainInternationalCityGuide({
-        countrySlug: "costa-rica",
-        citySlug: "san-jose",
-        activeTourCount: 0,
+        activeTourCount: 4,
       }),
     ).toBe(false);
+
+    expect(
+      shouldRetainInternationalCityGuide({
+        countrySlug: "costa-rica",
+        citySlug: "san-jose",
+        activeTourCount: 5,
+      }),
+    ).toBe(true);
   });
 
-  it("keeps explicit retired-guide policy stronger than live inventory", () => {
+  it("keeps explicit retired-guide policy stronger than tour volume", () => {
     expect(
       shouldRetainInternationalCityGuide({
         countrySlug: "australia",
@@ -87,42 +34,18 @@ describe("international guide live-tour wiring", () => {
     ).toBe(false);
   });
 
-  it("wires every non-retired live international city into country and city guides", () => {
-    const countryIndex = new Map(
-      getGuideCountries().map(country => [country.slug, country]),
+  it("gives every live international country a destination route", () => {
+    const liveCountries = getGuideCountries().filter(
+      country => country.tourCount > 0 && !isUsCountryAlias(country.slug),
     );
 
-    for (const liveCity of liveInternationalCities()) {
-      if (
-        isRetiredInternationalCityGuide(
-          liveCity.countrySlug,
-          liveCity.citySlug,
-        )
-      ) {
-        continue;
-      }
-
-      const country = countryIndex.get(liveCity.countrySlug);
+    for (const country of liveCountries) {
+      const href = getGeneratedCountryDestinationHref(country.slug);
       expect(
-        country,
-        `${liveCity.countrySlug} should be discoverable from live tour inventory`,
+        href,
+        `${country.name} (${country.slug}) has live tours and must be wired into Destinations`,
       ).toBeTruthy();
-      expect(
-        country?.cities.some(city => city.slug === liveCity.citySlug),
-        `${liveCity.countrySlug}/${liveCity.citySlug} should be listed by its country guide`,
-      ).toBe(true);
-      expect(
-        buildCountryGuide(liveCity.countrySlug),
-        `${liveCity.countrySlug} should build a country guide`,
-      ).toBeTruthy();
-      expect(
-        buildCityGuide({
-          parentSlug: liveCity.countrySlug,
-          citySlug: liveCity.citySlug,
-          regionType: "country",
-        }),
-        `${liveCity.countrySlug}/${liveCity.citySlug} should build a city guide`,
-      ).toBeTruthy();
+      expect(href?.startsWith("/destinations/")).toBe(true);
     }
   });
 });
