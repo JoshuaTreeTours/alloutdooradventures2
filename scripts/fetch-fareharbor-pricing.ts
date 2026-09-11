@@ -28,6 +28,13 @@ const MAX_CONCURRENCY = 8;
 const REQUEST_TIMEOUT_MS = 12_000;
 const MAX_ATTEMPTS = 3;
 
+// Phase 1 activates only USD prices that clear the site's existing commercial
+// minimum. This prevents foreign-currency values from being rendered with the
+// legacy "$" page label and prevents a real sub-$20 fare from being re-floored
+// to the $129 fallback by existing Product/Offer code.
+const PHASE1_CURRENCY = "USD";
+const PHASE1_MIN_PRICE = 20;
+
 const buildCacheKey = (companyShortname: string, itemId: string) =>
   `${companyShortname}:${itemId}`;
 
@@ -123,6 +130,8 @@ const fetchCandidate = async (
 
   const resolved = resolveHighConfidenceFareHarborPrice(payload);
   if (!resolved) return null;
+  if (resolved.currency !== PHASE1_CURRENCY) return null;
+  if (resolved.startingPrice < PHASE1_MIN_PRICE) return null;
 
   return {
     startingPrice: resolved.startingPrice,
@@ -232,6 +241,8 @@ const main = async () => {
           ? Number((Object.keys(cache).length / entries.length).toFixed(4))
           : 0,
       requestFailures: failures,
+      phase1Currency: PHASE1_CURRENCY,
+      phase1MinPrice: PHASE1_MIN_PRICE,
       currencies,
     })}`,
   );
