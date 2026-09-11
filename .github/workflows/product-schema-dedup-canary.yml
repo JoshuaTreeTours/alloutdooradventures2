@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify Merchant and Product description parity
+        run: npx vitest run src/engine6/merchantDescriptionGovernance.test.ts
+
       - name: Build with Product manifest consolidation
         env:
           VERCEL_ENV: preview
