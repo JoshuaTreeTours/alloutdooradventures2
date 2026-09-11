@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify international live-tour guide wiring
+      - name: Verify international destination wiring
         run: npx vitest run src/utils/guides/internationalGuideLiveTourWiring.test.ts
 
       - name: Run city guide audit (strict)
