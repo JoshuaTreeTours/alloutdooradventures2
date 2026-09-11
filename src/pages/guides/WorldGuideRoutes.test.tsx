@@ -215,4 +215,56 @@ describe("world guide route rendering", () => {
     expect(html).toContain("Elbphilharmonie");
     expect(html).toContain("How to plan Hamburg");
   });
+
+  it("renders Tokyo, Kyoto, Osaka, Seoul and Queenstown as final Paragon guides", () => {
+    const routes = [
+      {
+        countrySlug: "japan",
+        citySlug: "tokyo",
+        expected: ["Things to Do in Tokyo", "Sensō-ji and Asakusa"],
+      },
+      {
+        countrySlug: "japan",
+        citySlug: "kyoto",
+        expected: ["Things to Do in Kyoto", "Fushimi Inari Taisha"],
+      },
+      {
+        countrySlug: "japan",
+        citySlug: "osaka",
+        expected: ["Things to Do in Osaka", "Dōtonbori and the Namba Canal District"],
+      },
+      {
+        countrySlug: "south-korea",
+        citySlug: "seoul",
+        expected: ["Things to Do in Seoul", "Gyeongbokgung Palace"],
+      },
+      {
+        countrySlug: "new-zealand",
+        citySlug: "queenstown",
+        expected: [
+          "Things to Do in Queenstown",
+          "Glenorchy and the Head of Lake Wakatipu",
+        ],
+      },
+    ];
+
+    for (const route of routes) {
+      const path = `/guides/world/${route.countrySlug}/${route.citySlug}`;
+      const html = renderToStaticMarkup(
+        <Router hook={() => [path, () => undefined]}>
+          <CityGuideWorldRoute
+            params={{
+              countrySlug: route.countrySlug,
+              citySlug: route.citySlug,
+            }}
+          />
+        </Router>
+      );
+
+      expectRenderableGuide(html, route.expected[0]);
+      expect(html).toContain(route.expected[1]);
+      expect(html).toContain(`How to plan ${route.expected[0].replace("Things to Do in ", "")}`);
+      expect(html.toLowerCase()).not.toContain("generic checklist item");
+    }
+  });
 });
