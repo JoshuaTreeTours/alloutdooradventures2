@@ -16,10 +16,7 @@ const normalizePath = value => {
 const outputCandidatesFor = pathname => {
   const clean = normalizePath(pathname).replace(/^\//, "");
   if (!clean) return [path.join(DIST, "index.html")];
-  return [
-    path.join(DIST, clean, "index.html"),
-    path.join(DIST, `${clean}.html`),
-  ];
+  return [path.join(DIST, clean, "index.html"), path.join(DIST, `${clean}.html`)];
 };
 
 const readFirstExisting = async pathname => {
@@ -85,7 +82,7 @@ const parseLdJson = html => {
     try {
       scripts.push(JSON.parse(raw));
     } catch {
-      // The downstream integrity audit reports malformed JSON-LD.
+      // The downstream audit owns malformed JSON-LD reporting.
     }
   }
   return scripts;
@@ -93,10 +90,10 @@ const parseLdJson = html => {
 
 const productMatchesCanonical = (product, canonicalUrl) => {
   const canonical = canonicalUrl.replace(/\/$/, "");
-  const values = [product?.url, product?.["@id"]]
+  return [product?.url, product?.["@id"]]
     .filter(value => typeof value === "string")
-    .map(value => value.split("#")[0].replace(/\/$/, ""));
-  return values.includes(canonical);
+    .map(value => value.split("#")[0].replace(/\/$/, ""))
+    .includes(canonical);
 };
 
 const hasCanonicalProduct = (html, canonicalUrl) =>
@@ -106,9 +103,7 @@ const hasCanonicalProduct = (html, canonicalUrl) =>
 
 const stripBreadcrumbs = value => {
   if (Array.isArray(value)) {
-    return value
-      .map(stripBreadcrumbs)
-      .filter(item => item !== null && item !== undefined);
+    return value.map(stripBreadcrumbs).filter(item => item != null);
   }
   if (!value || typeof value !== "object") return value;
   if (typeIncludes(value, "BreadcrumbList")) return null;
@@ -116,7 +111,7 @@ const stripBreadcrumbs = value => {
   const next = {};
   for (const [key, child] of Object.entries(value)) {
     const stripped = stripBreadcrumbs(child);
-    if (stripped === null || stripped === undefined) {
+    if (stripped == null) {
       if (key === "@graph") next[key] = [];
       continue;
     }
@@ -147,27 +142,44 @@ const upsertRepairScript = (html, graph) => {
     : `${script}${html}`;
 };
 
+const parseDestinationTourPath = pathname => {
+  let match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(pathname);
+  if (match) return { stateSlug: match[1], citySlug: match[2], tourSlug: match[3] };
+
+  match = /^\/destinations\/united-states\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(pathname);
+  if (match) return { stateSlug: match[1], citySlug: match[2], tourSlug: match[3] };
+
+  return null;
+};
+
 const [
   engine6Registry,
+  engine6LegacyRegistry,
   engine6SchemaModule,
   engine4SchemaModule,
   engine2DataModule,
   engine2SeoModule,
   engine2SchemaModule,
+  engine3RoutingModule,
+  engine3CacheModule,
+  engine3MapperModule,
+  engine3SchemaModule,
   toursDataModule,
   flagstaffModule,
   structuredDataModule,
   tourPathsModule,
 ] = await Promise.all([
   tsImport("../src/engine6/registry.ts", import.meta.url),
+  tsImport("../src/engine6/legacyFh/registry.ts", import.meta.url),
   tsImport("../src/engine6/schema/buildEngine6SchemaGraph.ts", import.meta.url),
-  tsImport(
-    "../src/engine4/schema/buildEngine4ViatorStructuredDataForPath.ts",
-    import.meta.url
-  ),
+  tsImport("../src/engine4/schema/buildEngine4ViatorStructuredDataForPath.ts", import.meta.url),
   tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url),
   tsImport("../src/engine2/seo/buildEngine2Seo.ts", import.meta.url),
   tsImport("../src/engine2/schema/buildSchemaGraph.ts", import.meta.url),
+  tsImport("../src/engine3/routing.ts", import.meta.url),
+  tsImport("../src/engine3/data/viatorProductCache.ts", import.meta.url),
+  tsImport("../src/engine3/viator/mapViatorToEngine3ViewModel.ts", import.meta.url),
+  tsImport("../src/engine3/schema/buildEngine3SchemaGraph.ts", import.meta.url),
   tsImport("../src/data/tours.ts", import.meta.url),
   tsImport("../src/data/flagstaffTours.ts", import.meta.url),
   tsImport("../src/utils/structuredData.ts", import.meta.url),
@@ -181,6 +193,8 @@ const engine6ByPath = new Map(
   engine6Tours.map(tour => [normalizePath(tour.canonicalPath), tour])
 );
 
+const getLegacyFhMigratedByPath =
+  engine6LegacyRegistry.getLegacyFhMigratedTourByCanonicalPath;
 const getEngine4Nodes =
   engine4SchemaModule.buildEngine4ViatorStructuredDataNodesForPath;
 const getEngine2ByPath = engine2DataModule.getEngine2TourByPath;
@@ -188,66 +202,74 @@ const getEngine2BySlug = engine2DataModule.getEngine2TourBySlug;
 const getEngine2CanadaBySlug = engine2DataModule.getEngine2CanadaTourBySlug;
 const buildEngine2Seo = engine2SeoModule.buildEngine2Seo;
 const buildEngine2Graph = engine2SchemaModule.buildSchemaGraph;
+const getEngine3BySlugs = engine3RoutingModule.getEngine3TourBySlugs;
+const viatorProductCacheByCode = engine3CacheModule.viatorProductCacheByCode ?? {};
+const mapViatorToEngine3ViewModel = engine3MapperModule.mapViatorToEngine3ViewModel;
+const buildEngine3SchemaGraph = engine3SchemaModule.buildEngine3SchemaGraph;
 const getTourBySlugs = toursDataModule.getTourBySlugs;
 const getFlagstaffTourBySlug = flagstaffModule.getFlagstaffTourBySlug;
 const normalizeStructuredData = structuredDataModule.normalizeStructuredData;
 const getSiteStructuredDataNodes = structuredDataModule.getSiteStructuredDataNodes;
-const buildWebPageStructuredData =
-  structuredDataModule.buildWebPageStructuredData;
-const buildTourProductStructuredData =
-  structuredDataModule.buildTourProductStructuredData;
-const buildTourTripStructuredData =
-  structuredDataModule.buildTourTripStructuredData;
+const buildWebPageStructuredData = structuredDataModule.buildWebPageStructuredData;
+const buildTourProductStructuredData = structuredDataModule.buildTourProductStructuredData;
+const buildTourTripStructuredData = structuredDataModule.buildTourTripStructuredData;
 const getTourBookingPath = tourPathsModule.getTourBookingPath;
 
 const resolveEngine2Tour = pathname => {
-  const exact =
-    typeof getEngine2ByPath === "function" ? getEngine2ByPath(pathname) : null;
+  const exact = typeof getEngine2ByPath === "function" ? getEngine2ByPath(pathname) : null;
   if (exact) return exact;
 
-  let match =
-    /^\/destinations\/united-states\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
-      pathname
-    );
-  if (match && typeof getEngine2BySlug === "function") {
-    return getEngine2BySlug(match[1], match[2], match[3]) ?? null;
+  const route = parseDestinationTourPath(pathname);
+  if (route && typeof getEngine2BySlug === "function") {
+    const match = getEngine2BySlug(route.stateSlug, route.citySlug, route.tourSlug);
+    if (match) return match;
   }
 
-  match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
-    pathname
-  );
-  if (match && typeof getEngine2BySlug === "function") {
-    return getEngine2BySlug(match[1], match[2], match[3]) ?? null;
-  }
-
-  match =
-    /^\/destinations\/world\/canada\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
-      pathname
-    );
-  if (match && typeof getEngine2CanadaBySlug === "function") {
-    return getEngine2CanadaBySlug(match[1], match[2], match[3]) ?? null;
+  const canada = /^\/destinations\/world\/canada\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(pathname);
+  if (canada && typeof getEngine2CanadaBySlug === "function") {
+    return getEngine2CanadaBySlug(canada[1], canada[2], canada[3]) ?? null;
   }
 
   return null;
 };
 
+const buildEngine3GraphForRoute = ({ pathname, canonicalUrl }) => {
+  const route = parseDestinationTourPath(pathname);
+  if (!route || typeof getEngine3BySlugs !== "function") return null;
+
+  const sourceTour = getEngine3BySlugs(route.stateSlug, route.citySlug, route.tourSlug);
+  if (!sourceTour || typeof mapViatorToEngine3ViewModel !== "function") return null;
+
+  const productData = viatorProductCacheByCode[sourceTour.id];
+  const vm = mapViatorToEngine3ViewModel(sourceTour, productData);
+  const image = vm.primaryImageUrl ?? vm.heroImageOverrideUrl ?? vm.heroImageUrl ?? undefined;
+  const description = vm.overview ?? vm.description ?? undefined;
+
+  return normalizeStructuredData({
+    "@context": "https://schema.org",
+    "@graph": buildEngine3SchemaGraph({
+      tour: { ...vm, canonicalPath: canonicalUrl },
+      seo: {
+        canonicalUrl,
+        title: vm.title,
+        description,
+        image,
+      },
+      route: { pathname, isBookingRoute: false },
+      affiliateBookingUrl: vm.bookingUrl || undefined,
+      breadcrumbs: [],
+    }),
+  });
+};
+
 const resolveUnifiedTour = pathname => {
-  let match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
-    pathname
-  );
-  if (match && typeof getTourBySlugs === "function") {
-    return getTourBySlugs(match[1], match[2], match[3]) ?? null;
+  const route = parseDestinationTourPath(pathname);
+  if (route && typeof getTourBySlugs === "function") {
+    const match = getTourBySlugs(route.stateSlug, route.citySlug, route.tourSlug);
+    if (match) return match;
   }
 
-  match =
-    /^\/destinations\/united-states\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
-      pathname
-    );
-  if (match && typeof getTourBySlugs === "function") {
-    return getTourBySlugs(match[1], match[2], match[3]) ?? null;
-  }
-
-  match = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(pathname);
+  let match = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (match && typeof getTourBySlugs === "function") {
     return getTourBySlugs(match[1], match[2], match[3]) ?? null;
   }
@@ -262,16 +284,12 @@ const resolveUnifiedTour = pathname => {
 
 const buildUnifiedGraph = ({ tour, canonicalUrl, html }) => {
   const description =
-    html
-      .match(/<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i)?.[1]
-      ?.trim() ??
+    html.match(/<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i)?.[1]?.trim() ??
     tour.longDescription ??
     tour.shortDescription ??
     "";
   const image =
-    html
-      .match(/<meta\b[^>]*property=["']og:image["'][^>]*content=["']([^"']*)["'][^>]*>/i)?.[1]
-      ?.trim() ??
+    html.match(/<meta\b[^>]*property=["']og:image["'][^>]*content=["']([^"']*)["'][^>]*>/i)?.[1]?.trim() ??
     tour.heroImage ??
     tour.primaryImageUrl ??
     "";
@@ -317,23 +335,17 @@ const buildUnifiedGraph = ({ tour, canonicalUrl, html }) => {
 };
 
 const buildGraphForRoute = ({ pathname, canonicalUrl, html }) => {
-  const engine6Tour = engine6ByPath.get(pathname);
-  if (engine6Tour) {
-    return {
-      source: "engine6",
-      graph: engine6SchemaModule.buildEngine6SchemaGraph(engine6Tour),
-    };
+  const nativeEngine6 = engine6ByPath.get(pathname);
+  if (nativeEngine6) {
+    return { source: "engine6", graph: engine6SchemaModule.buildEngine6SchemaGraph(nativeEngine6) };
   }
 
-  if (typeof getEngine4Nodes === "function") {
-    const engine4Nodes = getEngine4Nodes(pathname);
-    if (Array.isArray(engine4Nodes) && engine4Nodes.length) {
+  if (typeof getLegacyFhMigratedByPath === "function") {
+    const migrated = getLegacyFhMigratedByPath(pathname);
+    if (migrated) {
       return {
-        source: "engine4",
-        graph: normalizeStructuredData({
-          "@context": "https://schema.org",
-          "@graph": engine4Nodes,
-        }),
+        source: "engine6-legacy-fh-migrated",
+        graph: engine6SchemaModule.buildEngine6SchemaGraph(migrated),
       };
     }
   }
@@ -348,10 +360,7 @@ const buildGraphForRoute = ({ pathname, canonicalUrl, html }) => {
     const routeSeo = {
       ...sourceSeo,
       canonical: canonicalUrl,
-      og: {
-        ...sourceSeo.og,
-        url: canonicalUrl,
-      },
+      og: { ...sourceSeo.og, url: canonicalUrl },
     };
     const graph = normalizeStructuredData({
       "@context": "https://schema.org",
@@ -364,6 +373,36 @@ const buildGraphForRoute = ({ pathname, canonicalUrl, html }) => {
       )
     ) {
       return { source: "engine2-route-canonical", graph };
+    }
+  }
+
+  if (typeof buildEngine3SchemaGraph === "function") {
+    const graph = buildEngine3GraphForRoute({ pathname, canonicalUrl });
+    if (
+      graph &&
+      collectTypedNodes(graph, "Product").some(product =>
+        productMatchesCanonical(product, canonicalUrl)
+      )
+    ) {
+      return { source: "engine3-route", graph };
+    }
+  }
+
+  if (typeof getEngine4Nodes === "function") {
+    const engine4Nodes = getEngine4Nodes(pathname);
+    if (Array.isArray(engine4Nodes) && engine4Nodes.length) {
+      const graph = normalizeStructuredData({
+        "@context": "https://schema.org",
+        "@graph": engine4Nodes,
+      });
+      if (
+        graph &&
+        collectTypedNodes(graph, "Product").some(product =>
+          productMatchesCanonical(product, canonicalUrl)
+        )
+      ) {
+        return { source: "engine4", graph };
+      }
     }
   }
 
@@ -380,9 +419,7 @@ const buildGraphForRoute = ({ pathname, canonicalUrl, html }) => {
 
 const urls = [
   ...new Set(
-    (await sitemapUrls()).filter(url =>
-      isTourProductUrl(new URL(url).pathname)
-    )
+    (await sitemapUrls()).filter(url => isTourProductUrl(new URL(url).pathname))
   ),
 ];
 
@@ -392,8 +429,7 @@ const repairedBySource = new Map();
 const unresolved = [];
 
 for (const url of urls) {
-  const parsed = new URL(url);
-  const pathname = normalizePath(parsed.pathname);
+  const pathname = normalizePath(new URL(url).pathname);
   const artifact = await readFirstExisting(pathname);
   if (!artifact) {
     unresolved.push(`${pathname}: missing prerendered HTML artifact`);
@@ -413,20 +449,18 @@ for (const url of urls) {
     continue;
   }
 
-  const products = collectTypedNodes(graph, "Product");
-  if (!products.some(product => productMatchesCanonical(product, canonicalUrl))) {
-    unresolved.push(
-      `${pathname}: ${built.source} did not produce a canonical Product`
-    );
+  if (
+    !collectTypedNodes(graph, "Product").some(product =>
+      productMatchesCanonical(product, canonicalUrl)
+    )
+  ) {
+    unresolved.push(`${pathname}: ${built.source} did not produce a canonical Product`);
     continue;
   }
 
   await writeFile(artifact.path, upsertRepairScript(artifact.html, graph), "utf8");
   repaired += 1;
-  repairedBySource.set(
-    built.source,
-    (repairedBySource.get(built.source) ?? 0) + 1
-  );
+  repairedBySource.set(built.source, (repairedBySource.get(built.source) ?? 0) + 1);
 }
 
 const sourceSummary =
