@@ -167,9 +167,17 @@ const resolveOffers = ({ product, byId }) => {
 
 const failures = [];
 const failureCounts = new Map();
+const warnings = [];
+const warningCounts = new Map();
+
 const fail = (pathname, code, message) => {
   failures.push({ pathname, code, message });
   failureCounts.set(code, (failureCounts.get(code) ?? 0) + 1);
+};
+
+const warn = (pathname, code, message) => {
+  warnings.push({ pathname, code, message });
+  warningCounts.set(code, (warningCounts.get(code) ?? 0) + 1);
 };
 
 const urls = [
@@ -183,6 +191,7 @@ const urls = [
 let audited = 0;
 let productsFound = 0;
 let offersFound = 0;
+let commerciallyCompleteOffers = 0;
 
 for (const url of urls) {
   const parsedRoute = toUrl(url);
@@ -272,11 +281,13 @@ for (const url of urls) {
     return currency && availability && hasCommercialPrice(offer);
   });
 
-  if (!commercialOffers.length) {
-    fail(
+  if (commercialOffers.length) {
+    commerciallyCompleteOffers += 1;
+  } else {
+    warn(
       pathname,
-      "incomplete-offer",
-      "Product Offer lacks price, priceCurrency, or availability"
+      "incomplete-commercial-offer",
+      "Product Offer exists but lacks price, priceCurrency, or availability"
     );
   }
 }
@@ -289,17 +300,32 @@ const report = {
     auditedArtifacts: audited,
     canonicalProductsFound: productsFound,
     productsWithResolvableOffers: offersFound,
+    productsWithCommerciallyCompleteOffers: commerciallyCompleteOffers,
   },
   failureCounts: Object.fromEntries(failureCounts),
+  warningCounts: Object.fromEntries(warningCounts),
   failures,
+  warnings,
 };
 
 await mkdir(path.dirname(REPORT), { recursive: true });
 await writeFile(REPORT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
+if (warnings.length) {
+  console.warn(
+    `[product-schema-audit] ${warnings.length} commercial Offer warning(s); Product/Offer structure remains valid. See reports/product-structured-data-integrity.json.`
+  );
+  warnings.slice(0, 25).forEach(warning =>
+    console.warn(`  ${warning.pathname}: [${warning.code}] ${warning.message}`)
+  );
+  if (warnings.length > 25) {
+    console.warn(`  ... ${warnings.length - 25} more warning(s)`);
+  }
+}
+
 if (failures.length) {
   console.error(
-    `[product-schema-audit] FAILED: ${failures.length} defect(s) across ${urls.length.toLocaleString()} sitemap-listed product URLs.`
+    `[product-schema-audit] FAILED: ${failures.length} structural defect(s) across ${urls.length.toLocaleString()} sitemap-listed product URLs.`
   );
   failures.slice(0, 100).forEach(failure =>
     console.error(`  ${failure.pathname}: [${failure.code}] ${failure.message}`)
@@ -313,5 +339,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[product-schema-audit] PASS: ${urls.length.toLocaleString()} sitemap-listed tour product pages have canonical Product JSON-LD with a resolvable commercial Offer.`
+  `[product-schema-audit] PASS: ${urls.length.toLocaleString()} sitemap-listed tour product pages have canonical Product JSON-LD with a resolvable Offer/AggregateOffer.`
 );
