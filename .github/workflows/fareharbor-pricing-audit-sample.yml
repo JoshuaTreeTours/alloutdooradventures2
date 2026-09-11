@@ -30,13 +30,16 @@ jobs:
             npm install
           fi
 
-      - name: Run 75-product FareHarbor pricing audit
+      - name: Run 75-product FareHarbor API pricing audit
         run: npx tsx scripts/audit-fareharbor-pricing-sample-v2.ts
 
-      - name: Upload audit artifact
+      - name: Run 75-product FareHarbor embed pricing audit
+        run: npx tsx scripts/audit-fareharbor-embed-pricing.ts
+
+      - name: Upload audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: fareharbor-pricing-audit
-          path: artifacts/fareharbor-pricing-audit*.json
+          path: artifacts/fareharbor-*-pricing-audit*.json
           if-no-files-found: warn
