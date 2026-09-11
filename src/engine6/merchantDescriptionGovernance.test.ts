@@ -11,6 +11,7 @@ import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { engine6ResolvedTours } from "./registry";
 import { resolveMerchantDescription } from "./merchantDescriptions";
+import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 
 const parseCsv = (content: string) => {
   const rows: string[][] = [];
@@ -78,6 +79,14 @@ const assertNoForbiddenMerchantPhrases = (description: string, label: string) =>
   }
 };
 
+const schemaNode = (
+  tour: (typeof merchantFeedEligibleTours)[number],
+  type: string
+) =>
+  (buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>).find(
+    node => node["@type"] === type
+  );
+
 describe("Engine6 merchant CSV description governance", () => {
   it("derives merchant descriptions from overview copy without itinerary metadata", () => {
     const tour = engine6ResolvedTours.find(
@@ -117,11 +126,14 @@ describe("Engine6 merchant CSV description governance", () => {
     assertNoForbiddenMerchantPhrases(description, "6007GGB");
   });
 
-  it("keeps merchant feed rows aligned with governed editorial descriptions", () => {
+  it("keeps Merchant CSV, Product, TouristTrip, and WebPage descriptions on one governed source", () => {
     for (const tour of merchantFeedEligibleTours) {
       const expectedDescription = resolveEngine6GovernedProductDescription(tour);
       const merchantRow = merchantRowsById.get(tour.productCode);
       const generatedRow = buildMerchantFeedRowFromProductSchema(tour);
+      const productNode = schemaNode(tour, "Product");
+      const tripNode = schemaNode(tour, "TouristTrip");
+      const webPageNode = schemaNode(tour, "WebPage");
 
       expect(merchantRow, tour.productCode).toBeDefined();
       expect(generatedRow.description, tour.productCode).toBe(
@@ -129,6 +141,18 @@ describe("Engine6 merchant CSV description governance", () => {
       );
       expect(merchantRow?.description, tour.productCode).toBe(
         expectedDescription
+      );
+      expect(productNode?.description, tour.productCode).toBe(
+        expectedDescription
+      );
+      expect(tripNode?.description, tour.productCode).toBe(
+        expectedDescription
+      );
+      expect(webPageNode?.description, tour.productCode).toBe(
+        expectedDescription
+      );
+      expect(productNode?.description, tour.productCode).toBe(
+        merchantRow?.description
       );
       expect(
         resolveMerchantDescription({
