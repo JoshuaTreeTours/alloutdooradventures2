@@ -29,12 +29,20 @@ jobs:
           else
             npm install
           fi
+          npm install --no-save puppeteer-core
 
       - name: Run 75-product FareHarbor API pricing audit
         run: npx tsx scripts/audit-fareharbor-pricing-sample-v2.ts
 
       - name: Run 75-product FareHarbor embed pricing audit
         run: npx tsx scripts/audit-fareharbor-embed-pricing.ts
+
+      - name: Locate Chrome
+        run: |
+          which google-chrome || which chromium || which chromium-browser
+
+      - name: Run rendered FareHarbor pricing probe
+        run: npx tsx scripts/audit-fareharbor-rendered-pricing.ts
 
       - name: Upload audit artifacts
         if: always()
