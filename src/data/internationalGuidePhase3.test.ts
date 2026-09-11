@@ -48,7 +48,7 @@ const expectParagonPoiQuality = (description: string) => {
 
 describe("international guide Phase 3", () => {
   it("adds the complete audited Phase 3 cohort", () => {
-    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toHaveLength(68);
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toHaveLength(73);
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
       "australia/port-douglas",
     );
@@ -61,6 +61,13 @@ describe("international guide Phase 3", () => {
       "singapore/singapore",
     );
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("indonesia/bali");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("japan/tokyo");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("japan/kyoto");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("japan/osaka");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("south-korea/seoul");
+    expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain(
+      "new-zealand/queenstown",
+    );
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("canada/banff");
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("canada/vancouver");
     expect(INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS).toContain("germany/hamburg");
@@ -109,6 +116,44 @@ describe("international guide Phase 3", () => {
     );
   });
 
+  it("gives the final five major Asia-Pacific guides factual Paragon content", () => {
+    const tokyo = enhanceInternationalGuidePhase3(
+      "japan",
+      "tokyo",
+      baseGuide("Tokyo"),
+    );
+    const kyoto = enhanceInternationalGuidePhase3(
+      "japan",
+      "kyoto",
+      baseGuide("Kyoto"),
+    );
+    const osaka = enhanceInternationalGuidePhase3(
+      "japan",
+      "osaka",
+      baseGuide("Osaka"),
+    );
+    const seoul = enhanceInternationalGuidePhase3(
+      "south-korea",
+      "seoul",
+      baseGuide("Seoul"),
+    );
+    const queenstown = enhanceInternationalGuidePhase3(
+      "new-zealand",
+      "queenstown",
+      baseGuide("Queenstown"),
+    );
+
+    expect(tokyo.topThingsToDo?.some(poi => poi.title === "Sensō-ji and Asakusa")).toBe(true);
+    expect(kyoto.topThingsToDo?.some(poi => poi.title === "Fushimi Inari Taisha")).toBe(true);
+    expect(osaka.topThingsToDo?.some(poi => poi.title.includes("Dōtonbori"))).toBe(true);
+    expect(seoul.topThingsToDo?.some(poi => poi.title === "Gyeongbokgung Palace")).toBe(true);
+    expect(
+      queenstown.topThingsToDo?.some(
+        poi => poi.title === "Glenorchy and the Head of Lake Wakatipu",
+      ),
+    ).toBe(true);
+  });
+
   it("enforces six unique factual POIs and Paragon narrative depth everywhere", () => {
     for (const key of INTERNATIONAL_PHASE3_ONLY_GUIDE_KEYS) {
       const [countrySlug, citySlug] = key.split("/");
@@ -144,8 +189,8 @@ describe("international guide Phase 3", () => {
   });
 
   it("leaves an unrelated, unprofiled international guide alone", () => {
-    const base = baseGuide("Tokyo");
-    const result = enhanceInternationalGuidePhase3("japan", "tokyo", base);
+    const base = baseGuide("Nara");
+    const result = enhanceInternationalGuidePhase3("japan", "nara", base);
 
     expect(result).toEqual(base);
   });
