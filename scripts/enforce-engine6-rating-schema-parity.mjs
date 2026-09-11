@@ -290,7 +290,37 @@ for (const tour of engine6Tours) {
   }
 
   const replacement = `<script id="${PRIMARY_SCRIPT_ID}" type="application/ld+json">${JSON.stringify(nextGraph).replace(/</g, "\\u003c")}</script>`;
-  const nextHtml = artifact.html.replace(parsed.pattern, replacement);
+
+  // Use a replacement callback so JSON text is inserted literally. A string
+  // replacement would interpret sequences such as "$1" in price text (for
+  // example "From $199.00") as RegExp capture substitutions and corrupt the
+  // JSON-LD document.
+  const nextHtml = artifact.html.replace(parsed.pattern, () => replacement);
+
+  // Parse the actual HTML result before writing it. This makes malformed JSON-LD
+  // impossible to fan out across the catalog unnoticed.
+  let reparsed;
+  try {
+    reparsed = extractPrimaryStructuredData(nextHtml);
+  } catch (error) {
+    failures.push(
+      `${tour.productCode}: replacement produced malformed JSON-LD: ${error instanceof Error ? error.message : String(error)}`
+    );
+    continue;
+  }
+
+  if (
+    !reparsed ||
+    !verifyRatingParity({
+      graph: reparsed.graph,
+      canonicalUrl,
+      ...merchantRating,
+    })
+  ) {
+    failures.push(`${tour.productCode}: written AggregateRating parity verification failed`);
+    continue;
+  }
+
   await writeFile(artifact.path, nextHtml, "utf8");
   updated += 1;
 }
