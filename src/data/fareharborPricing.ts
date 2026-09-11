@@ -1,7 +1,10 @@
 export type FareharborPriceEntry = {
   startingPrice: number;
   currency: string;
-  source: "fareharbor-api";
+  source: "fareharbor-price-preview-v2";
+  confidence: "high";
+  basis: "adult";
+  basisLabel: string;
   lastUpdated: string;
 };
 
