@@ -4,33 +4,35 @@ import { Link } from "wouter";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import Seo from "../components/Seo";
 import { states } from "../data/destinations";
+import { getGuideCountries } from "../data/guideData";
 import { getStateCityOptions } from "../data/stateCityOptions";
-import {
-  EUROPE_COUNTRIES,
-  WORLD_DESTINATIONS,
-  slugify,
-} from "../data/tourCatalog";
 import { getStaticPageSeo } from "../utils/seo";
+import { getGeneratedCountryDestinationHref } from "../utils/destinations/liveInternationalDestinations";
 import { resolveUsGuideHref } from "../utils/guides/guideResolver";
+import { isUsCountryAlias } from "../utils/guides/usCountryAliases";
 
 export default function ToursIndex() {
   const seo = getStaticPageSeo("/tours");
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
-  const countryOptions = useMemo(() => {
-    const europeOptions = EUROPE_COUNTRIES.map(country => ({
-      name: country,
-      slug: `europe:${slugify(country)}`,
-    }));
-    const worldOptions = WORLD_DESTINATIONS.map(country => ({
-      name: country,
-      slug: `world:${slugify(country)}`,
-    }));
-    return [...europeOptions, ...worldOptions].sort((a, b) =>
-      a.name.localeCompare(b.name)
-    );
-  }, []);
+  const countryOptions = useMemo(
+    () =>
+      getGuideCountries()
+        .filter(
+          country => country.tourCount > 0 && !isUsCountryAlias(country.slug)
+        )
+        .map(country => {
+          const href = getGeneratedCountryDestinationHref(country.slug);
+          return href ? { name: country.name, slug: href } : null;
+        })
+        .filter(
+          (country): country is { name: string; slug: string } =>
+            Boolean(country)
+        )
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    []
+  );
 
   const stateOptions = useMemo(
     () =>
@@ -124,17 +126,9 @@ export default function ToursIndex() {
                 countryOptions.find(country => country.slug === selectedCountry)
                   ?.name
               }
-              onSelect={slug => {
-                const [region, countrySlug] = slug.split(":");
-                if (!countrySlug) {
-                  return;
-                }
-                setSelectedCountry(slug);
-                const basePath =
-                  region === "world"
-                    ? "/destinations/world"
-                    : "/destinations/europe";
-                window.location.assign(`${basePath}/${countrySlug}`);
+              onSelect={href => {
+                setSelectedCountry(href);
+                window.location.assign(href);
               }}
             />
             <div>
