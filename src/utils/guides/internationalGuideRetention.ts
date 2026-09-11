@@ -1,8 +1,6 @@
 import { getCanonicalInternationalGuideCitySlug } from "../../data/internationalGuideAliases";
 
-// Any live tour inventory is now sufficient to wire an international city
-// guide into the guide index. Explicitly retired guides remain excluded below.
-export const INTERNATIONAL_CITY_GUIDE_MIN_ACTIVE_TOURS = 1 as const;
+export const INTERNATIONAL_CITY_GUIDE_MIN_ACTIVE_TOURS = 5 as const;
 
 export type ProtectedInternationalGuideRecord = {
   countrySlug: string;
