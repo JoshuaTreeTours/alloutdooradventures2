@@ -58,6 +58,13 @@ export const resolveSafeTourListHref = ({
     return `/destinations/world/${worldCountryTourMatch[1]}`;
   }
 
+  const destinationCityTourMatch = normalizedCanonicalPath.match(
+    /^(\/destinations\/[^/]+\/[^/]+\/tours)\/[^/]+$/
+  );
+  if (destinationCityTourMatch?.[1]) {
+    return destinationCityTourMatch[1];
+  }
+
   const normalizedStateSlug = normalizeCountrySlug(stateSlug);
   const normalizedCitySlug = normalizeCountrySlug(citySlug);
   const normalizedCountrySlug = normalizeCountrySlug(countrySlug);

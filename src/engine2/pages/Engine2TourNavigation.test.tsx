@@ -21,6 +21,15 @@ const renderWithRoute = (route: string, component: React.ReactNode) =>
   );
 
 describe("Engine2 tour navigation", () => {
+  it("derives the domestic city tours parent from the canonical product path", () => {
+    expect(
+      resolveSafeTourListHref({
+        canonicalPath:
+          "/destinations/california/santa-barbara/tours/full-day-island-cruise-620790",
+      })
+    ).toBe("/destinations/california/santa-barbara/tours");
+  });
+
   it("does not render the unsupported Canada city/province tours index for the Lillooet Back to tours link", () => {
     const tour = getEngine2CanadaTourBySlug(
       "british-columbia",
