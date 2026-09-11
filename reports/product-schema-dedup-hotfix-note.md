@@ -1,0 +1,1 @@
+Hotfix objective: prevent multiple canonical Product JSON-LD nodes for the same tour page. Validation target: Santa Barbara Engine 6 canary `discover-santa-barbara-cruise-narrated-coastal-yacht-experience` and full sitemap-wide uniqueness audit.
