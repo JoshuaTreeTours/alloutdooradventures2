@@ -97,6 +97,7 @@ const buildCandidates = () => {
 
   for (const tour of getAllEngine2Tours()) {
     if (tour.bookingProvider !== "fareharbor") continue;
+    if (tour.type === "rental") continue;
     if (isSuppressedFareHarborBookingPage(tour)) continue;
 
     const bookingUrl = tour.bookingUrl ?? tour.booking.bookingUrl;
