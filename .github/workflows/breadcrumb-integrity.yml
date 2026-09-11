@@ -1,0 +1,45 @@
+name: Breadcrumb Integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  exhaustive-breadcrumb-crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build full prerendered site
+        env:
+          VERCEL_ENV: preview
+          # The normal preview build verifies Engine6 routing and expects Vercel
+          # to provide a preview hostname. GitHub Actions is not running inside
+          # Vercel, so provide a stable synthetic hostname solely to satisfy
+          # that build-time route verifier; no network request is made to it.
+          VERCEL_URL: breadcrumb-audit.local
+        run: npm run build
+
+      - name: Crawl all guide and tour breadcrumbs
+        run: node scripts/audit-breadcrumb-integrity.mjs
+
+      - name: Upload breadcrumb audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: breadcrumb-integrity-report
+          path: reports/breadcrumb-integrity.json
+          if-no-files-found: warn
