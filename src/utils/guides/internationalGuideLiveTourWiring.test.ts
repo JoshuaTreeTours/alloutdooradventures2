@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import { getGuideCountries } from "../../data/guideData";
+import type { Tour } from "../../data/tours.types";
+import { buildInternationalCityOptions } from "../../pages/tours/internationalSelectorData";
 import { getGeneratedCountryDestinationHref } from "../destinations/liveInternationalDestinations";
 import { isUsCountryAlias } from "./usCountryAliases";
 import { shouldRetainInternationalCityGuide } from "./internationalGuideRetention";
@@ -32,6 +34,44 @@ describe("international live-tour wiring", () => {
         activeTourCount: 50,
       }),
     ).toBe(false);
+  });
+
+  it("shows a city in destination search with one live tour and omits cities with zero", () => {
+    const oneTourCity = {
+      id: "one-tour-destination-test",
+      slug: "single-live-tour",
+      title: "Single live tour",
+      operator: "Test operator",
+      categories: ["adventure"],
+      activitySlugs: ["adventure"],
+      destination: {
+        country: "Testland",
+        state: "Testland",
+        stateSlug: "testland",
+        city: "One Tour City",
+        citySlug: "one-tour-city",
+      },
+    } as Tour;
+
+    const withOneTour = buildInternationalCityOptions({
+      selectedCountry: "Testland",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: [oneTourCity],
+      canadaProvinces: [],
+      mexicoTours: [],
+    });
+    expect(withOneTour).toEqual([
+      { name: "One Tour City", slug: "one-tour-city" },
+    ]);
+
+    const withZeroTours = buildInternationalCityOptions({
+      selectedCountry: "Testland",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: [],
+      canadaProvinces: [],
+      mexicoTours: [],
+    });
+    expect(withZeroTours).toEqual([]);
   });
 
   it("gives every live international country a destination route", () => {
