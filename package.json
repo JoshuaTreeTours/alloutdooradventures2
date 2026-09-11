@@ -13,6 +13,7 @@
     "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "SITEMAP_WRITE=1 node scripts/generate-sitemap.mjs && node scripts/vercel-build.mjs && NODE_ENV=production TSX_TSCONFIG_PATH=tsconfig.prerender.json node --import tsx scripts/prerender-guide-routes.tsx && NODE_ENV=production TSX_TSCONFIG_PATH=tsconfig.prerender.json node --import tsx scripts/prerender-activity-routes.tsx && NODE_ENV=production TSX_TSCONFIG_PATH=tsconfig.prerender.json node --import tsx scripts/prerender-city-tour-index-routes.tsx && node scripts/finalize-guide-prerender-output.mjs && node scripts/finalize-breadcrumb-structured-data.mjs && node scripts/repair-product-structured-data-route-aliases.mjs && node scripts/finalize-product-structured-data.mjs && node scripts/audit-product-structured-data.mjs",
+    "postbuild": "tsx scripts/audit-fareharbor-pricing-sample.ts",
     "preview": "vite preview --host",
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
@@ -104,7 +105,7 @@
     "sonner": "^2.0.7",
     "streamdown": "^1.4.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-animate": "^1.0.0",
     "vaul": "^1.1.2",
     "wouter": "^3.3.5",
     "zod": "^4.1.12"
