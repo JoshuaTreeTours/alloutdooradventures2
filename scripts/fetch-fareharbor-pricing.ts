@@ -1,587 +1,243 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { getAllEngine2Tours } from "../src/engine2/data/loadEngine2";
 import { getFareharborItemFromUrl } from "../src/lib/fareharbor";
-import {
-  buildAvailabilityQuery,
-  fareharborEndpoints,
-  parseAvailabilityResponse,
-} from "./fareharborClient";
+import { resolveHighConfidenceFareHarborPrice } from "../src/utils/fareharbor/pricePreview";
+import { isSuppressedFareHarborBookingPage } from "../src/utils/fareharbor/suppressedBookingPages";
 
 type FareharborPriceEntry = {
   startingPrice: number;
   currency: string;
-  source: "fareharbor-api";
+  source: "fareharbor-price-preview-v2";
+  confidence: "high";
+  basis: "adult";
+  basisLabel: string;
   lastUpdated: string;
 };
 
-type FareharborItemReference = {
+type Candidate = {
   companyShortname: string;
   itemId: string;
+  bookingUrl: string;
+  asn: string;
 };
 
-const DATA_DIR = path.resolve("data");
-const SRC_DATA_DIR = path.resolve("src/data");
 const OUTPUT_PATH = path.resolve("src/data/fareharborPricing.ts");
+const MAX_CONCURRENCY = 8;
+const REQUEST_TIMEOUT_MS = 12_000;
+const MAX_ATTEMPTS = 3;
 
-const buildCacheKey = ({ companyShortname, itemId }: FareharborItemReference) =>
+const buildCacheKey = (companyShortname: string, itemId: string) =>
   `${companyShortname}:${itemId}`;
 
-const splitCsvLine = (text: string) => {
-  const rows: string[][] = [];
-  let current = "";
-  let row: string[] = [];
-  let inQuotes = false;
-
-  for (let i = 0; i < text.length; i += 1) {
-    const char = text[i];
-    const next = text[i + 1];
-
-    if (char === '"' && inQuotes && next === '"') {
-      current += '"';
-      i += 1;
-      continue;
-    }
-
-    if (char === '"') {
-      inQuotes = !inQuotes;
-      continue;
-    }
-
-    if (char === "\n" && !inQuotes) {
-      row.push(current);
-      rows.push(row);
-      current = "";
-      row = [];
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      row.push(current);
-      current = "";
-      continue;
-    }
-
-    if (char !== "\r") {
-      current += char;
-    }
+const getAsn = (url: string) => {
+  try {
+    return new URL(url).searchParams.get("asn") || "fhdn";
+  } catch {
+    return "fhdn";
   }
-
-  if (current.length > 0 || row.length > 0) {
-    row.push(current);
-    rows.push(row);
-  }
-
-  return rows;
 };
 
-const parseCsv = (contents: string) => {
-  const rows = splitCsvLine(contents);
-  const [header, ...dataRows] = rows;
-  if (!header) {
-    return { header: [], records: [] as Record<string, string>[] };
-  }
+const buildPricePreviewUrl = (candidate: Candidate) =>
+  `https://fareharbor.com/api/embed/${encodeURIComponent(candidate.companyShortname)}/price-preview/per-item/v2/?asn=${encodeURIComponent(candidate.asn)}&item_pks=${encodeURIComponent(candidate.itemId)}&include_breakdown=yes&allow_unlisted_items=yes`;
 
-  const records = dataRows.map((row) => {
-    const record: Record<string, string> = {};
-    header.forEach((column, index) => {
-      record[column] = row[index] ?? "";
-    });
-    return record;
-  });
+const sleep = (ms: number) =>
+  new Promise(resolve => setTimeout(resolve, ms));
 
-  return { header, records };
-};
+const fetchJsonWithRetry = async (url: string) => {
+  let lastError: unknown = null;
 
-const listFiles = async (directory: string, extension: string) => {
-  const entries = await readdir(directory, { withFileTypes: true });
-  const files: string[] = [];
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-  for (const entry of entries) {
-    const fullPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...(await listFiles(fullPath, extension)));
-    } else if (entry.isFile() && entry.name.endsWith(extension)) {
-      files.push(fullPath);
-    }
-  }
-
-  return files;
-};
-
-const extractFareharborItemsFromCsv = async (csvPath: string) => {
-  const contents = await readFile(csvPath, "utf8");
-  const { records } = parseCsv(contents);
-  const items = new Map<string, FareharborItemReference>();
-
-  for (const record of records) {
-    const companyShortname = record.company_shortname?.trim();
-    const itemId = record.item_id?.trim();
-    if (companyShortname && itemId) {
-      const reference = { companyShortname, itemId };
-      items.set(buildCacheKey(reference), reference);
-      continue;
-    }
-
-    const bookingUrl =
-      record.booking_url?.trim() ||
-      record.regular_link?.trim() ||
-      record.calendar_link?.trim();
-    const reference = getFareharborItemFromUrl(bookingUrl);
-    if (reference) {
-      items.set(buildCacheKey(reference), reference);
-    }
-  }
-
-  return items;
-};
-
-const extractFareharborItemsFromSource = async (sourcePath: string) => {
-  const contents = await readFile(sourcePath, "utf8");
-  const matches =
-    contents.match(/https?:\/\/fareharbor\.com\/[^\s"'()]+/g) ?? [];
-  const items = new Map<string, FareharborItemReference>();
-
-  for (const match of matches) {
-    const reference = getFareharborItemFromUrl(match);
-    if (reference) {
-      items.set(buildCacheKey(reference), reference);
-    }
-  }
-
-  return items;
-};
-
-const normalizePriceValue = (value: unknown) => {
-  if (typeof value === "number") {
-    return Number.isFinite(value) ? value : null;
-  }
-  if (typeof value === "string") {
-    const parsed = Number.parseFloat(value);
-    return Number.isFinite(parsed) ? parsed : null;
-  }
-  return null;
-};
-
-const collectPriceCandidates = (payload: Record<string, unknown>) => {
-  const priceCandidates: number[] = [];
-
-  const directFields = [
-    payload.public_price,
-    payload.minimum_price,
-    payload.price,
-  ];
-  directFields.forEach((value) => {
-    const normalized = normalizePriceValue(value);
-    if (normalized !== null) {
-      priceCandidates.push(normalized);
-    }
-  });
-
-  const customerTypes = payload.customer_types;
-  if (Array.isArray(customerTypes)) {
-    customerTypes.forEach((customerType) => {
-      if (!customerType || typeof customerType !== "object") {
-        return;
-      }
-      const price = normalizePriceValue(
-        (customerType as Record<string, unknown>).price,
-      );
-      const publicPrice = normalizePriceValue(
-        (customerType as Record<string, unknown>).public_price,
-      );
-      if (price !== null) {
-        priceCandidates.push(price);
-      }
-      if (publicPrice !== null) {
-        priceCandidates.push(publicPrice);
-      }
-    });
-  }
-
-  return priceCandidates.filter((price) => price > 0);
-};
-
-const extractStartingPrice = (payload: Record<string, unknown>) => {
-  const priceCandidates = collectPriceCandidates(payload);
-
-  if (!priceCandidates.length) {
-    return null;
-  }
-
-  return Math.min(...priceCandidates);
-};
-
-const extractCurrency = (payload: Record<string, unknown>) => {
-  const candidates = [
-    payload.currency,
-    payload.currency_code,
-    payload.currency_type,
-  ];
-  for (const candidate of candidates) {
-    if (typeof candidate === "string" && candidate.trim().length > 0) {
-      return candidate.trim().toUpperCase();
-    }
-  }
-  return "USD";
-};
-
-const collectQuotePriceCandidates = (payload: Record<string, unknown>) => {
-  const candidates: number[] = [];
-
-  candidates.push(...collectPriceCandidates(payload));
-
-  const customerTypes = payload.customer_types;
-  if (Array.isArray(customerTypes)) {
-    customerTypes.forEach((customerType) => {
-      if (!customerType || typeof customerType !== "object") {
-        return;
-      }
-      candidates.push(
-        ...collectPriceCandidates(customerType as Record<string, unknown>),
-      );
-    });
-  }
-
-  const rateCandidates = [payload.rates, payload.rate_categories];
-  rateCandidates.forEach((rates) => {
-    if (!Array.isArray(rates)) {
-      return;
-    }
-    rates.forEach((rate) => {
-      if (!rate || typeof rate !== "object") {
-        return;
-      }
-      candidates.push(...collectPriceCandidates(rate as Record<string, unknown>));
-      const rateCustomerTypes = (rate as Record<string, unknown>).customer_types;
-      if (Array.isArray(rateCustomerTypes)) {
-        rateCustomerTypes.forEach((customerType) => {
-          if (!customerType || typeof customerType !== "object") {
-            return;
-          }
-          candidates.push(
-            ...collectPriceCandidates(customerType as Record<string, unknown>),
-          );
-        });
-      }
-    });
-  });
-
-  return candidates.filter((price) => price > 0);
-};
-
-const collectCurrencyCandidates = (payload: Record<string, unknown>) => {
-  const candidates = [
-    payload.currency,
-    payload.currency_code,
-    payload.currency_type,
-    payload.currency_symbol,
-  ];
-
-  const pricingCurrency =
-    payload.pricing && typeof payload.pricing === "object"
-      ? (payload.pricing as Record<string, unknown>).currency
-      : null;
-  if (pricingCurrency) {
-    candidates.push(pricingCurrency);
-  }
-
-  return candidates
-    .filter((candidate) => typeof candidate === "string")
-    .map((candidate) => (candidate as string).trim().toUpperCase())
-    .filter((candidate) => candidate.length > 0);
-};
-
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-const fetchWithRetry = async (
-  url: string,
-  options: RequestInit,
-  attempts = 3,
-) => {
-  let lastError: unknown;
-  for (let attempt = 0; attempt < attempts; attempt += 1) {
     try {
-      const response = await fetch(url, options);
+      const response = await fetch(url, {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "AOA-FareHarbor-Commercial-Reserve/1.0",
+        },
+        signal: controller.signal,
+      });
+
       if (response.ok) {
-        return response;
+        return {
+          status: response.status,
+          payload: (await response.json()) as unknown,
+        };
       }
-      if (response.status >= 500 || response.status === 429) {
-        lastError = new Error(
-          `Transient error ${response.status} on ${url}.`,
-        );
-      } else {
-        return response;
+
+      if (response.status !== 429 && response.status < 500) {
+        return { status: response.status, payload: null };
       }
+
+      lastError = new Error(`HTTP ${response.status}`);
     } catch (error) {
       lastError = error;
+    } finally {
+      clearTimeout(timeout);
     }
 
-    const delay = 300 * Math.pow(2, attempt);
-    await sleep(delay);
+    await sleep(300 * 2 ** attempt);
   }
 
-  throw lastError;
+  throw lastError ?? new Error("FareHarbor price-preview request failed");
 };
 
-const buildIsoDate = (date: Date) => date.toISOString().slice(0, 10);
+const buildCandidates = () => {
+  const candidates = new Map<string, Candidate>();
 
-const addDays = (date: Date, days: number) => {
-  const next = new Date(date);
-  next.setDate(next.getDate() + days);
-  return next;
-};
+  for (const tour of getAllEngine2Tours()) {
+    if (tour.bookingProvider !== "fareharbor") continue;
+    if (isSuppressedFareHarborBookingPage(tour)) continue;
 
-const MAX_CONCURRENCY = 6;
-const LOW_PRICE_SHORT_CIRCUIT = 1;
-const AVAILABILITY_WINDOW_DAYS = 30;
-const AVAILABILITY_LOOKAHEAD_DAYS = 90;
+    const bookingUrl = tour.bookingUrl ?? tour.booking.bookingUrl;
+    const reference = getFareharborItemFromUrl(bookingUrl);
+    if (!reference) continue;
 
-const createConcurrencyLimiter = (limit: number) => {
-  let active = 0;
-  const queue: Array<() => void> = [];
+    const key = buildCacheKey(
+      reference.companyShortname,
+      reference.itemId,
+    );
+    if (candidates.has(key)) continue;
 
-  const next = () => {
-    if (active >= limit || queue.length === 0) {
-      return;
-    }
-    const task = queue.shift();
-    if (!task) {
-      return;
-    }
-    active += 1;
-    task();
-  };
-
-  return <T>(fn: () => Promise<T>) =>
-    new Promise<T>((resolve, reject) => {
-      const run = async () => {
-        try {
-          resolve(await fn());
-        } catch (error) {
-          reject(error);
-        } finally {
-          active -= 1;
-          next();
-        }
-      };
-      queue.push(run);
-      next();
+    candidates.set(key, {
+      companyShortname: reference.companyShortname,
+      itemId: reference.itemId,
+      bookingUrl,
+      asn: getAsn(bookingUrl),
     });
-};
-
-const fetchAvailabilityWindow = async (
-  reference: FareharborItemReference,
-  startDate: string,
-  endDate: string,
-) => {
-  const baseUrl = fareharborEndpoints.availability(
-    reference.companyShortname,
-    reference.itemId,
-  );
-  const url = `${baseUrl}?${buildAvailabilityQuery(startDate, endDate)}`;
-  const response = await fetchWithRetry(url, { headers: { Accept: "application/json" } });
-  if (!response.ok) {
-    console.warn(
-      `Availability request failed for ${reference.companyShortname}/${reference.itemId}: ${response.status}`,
-    );
-    return [];
   }
 
-  const payload = (await response.json()) as unknown;
-  return parseAvailabilityResponse(payload);
+  return candidates;
 };
 
-const fetchQuotePayload = async (
-  reference: FareharborItemReference,
-  availabilityId: string,
-) => {
-  const url = fareharborEndpoints.quote(
-    reference.companyShortname,
-    reference.itemId,
-    availabilityId,
-  );
-  const response = await fetchWithRetry(url, { headers: { Accept: "application/json" } });
-  if (!response.ok) {
-    console.warn(
-      `Quote request failed for ${reference.companyShortname}/${reference.itemId} availability ${availabilityId}: ${response.status}`,
-    );
-    return null;
-  }
-  return (await response.json()) as Record<string, unknown>;
-};
-
-const fetchFareharborPricing = async (
-  reference: FareharborItemReference,
+const fetchCandidate = async (
+  candidate: Candidate,
 ): Promise<FareharborPriceEntry | null> => {
-  const today = new Date();
-  let minPrice: number | null = null;
-  let currency: string | null = null;
-  let sawAvailability = false;
-  let shouldStop = false;
+  const { status, payload } = await fetchJsonWithRetry(
+    buildPricePreviewUrl(candidate),
+  );
+  if (status !== 200 || payload === null) return null;
 
-  for (let offset = 0; offset < AVAILABILITY_LOOKAHEAD_DAYS; offset += AVAILABILITY_WINDOW_DAYS) {
-    const windowStart = buildIsoDate(addDays(today, offset));
-    const windowEnd = buildIsoDate(
-      addDays(today, Math.min(offset + AVAILABILITY_WINDOW_DAYS, AVAILABILITY_LOOKAHEAD_DAYS)),
-    );
-
-    const availabilityEntries = await fetchAvailabilityWindow(
-      reference,
-      windowStart,
-      windowEnd,
-    );
-
-    const availableEntries = availabilityEntries.filter(
-      (entry) => entry.isAvailable,
-    );
-
-    if (availableEntries.length > 0) {
-      sawAvailability = true;
-    }
-
-    for (const availability of availableEntries) {
-      const quotePayload = await fetchQuotePayload(
-        reference,
-        availability.availabilityId,
-      );
-      if (!quotePayload) {
-        continue;
-      }
-
-      const priceCandidates = collectQuotePriceCandidates(quotePayload);
-      if (priceCandidates.length > 0) {
-        const quoteMin = Math.min(...priceCandidates);
-        if (minPrice === null || quoteMin < minPrice) {
-          minPrice = quoteMin;
-        }
-      }
-
-      if (!currency) {
-        const currencyCandidates = [
-          ...collectCurrencyCandidates(quotePayload),
-          ...collectCurrencyCandidates(availability.raw),
-        ];
-        if (currencyCandidates.length > 0) {
-          currency = currencyCandidates[0];
-        }
-      }
-
-      if (minPrice !== null && minPrice <= LOW_PRICE_SHORT_CIRCUIT) {
-        shouldStop = true;
-        break;
-      }
-    }
-
-    if (shouldStop) {
-      break;
-    }
-  }
-
-  if (!sawAvailability) {
-    console.warn(
-      `No availability window price for ${reference.companyShortname}/${reference.itemId}.`,
-    );
-    return null;
-  }
-
-  if (minPrice === null) {
-    console.warn(
-      `No quote pricing found for ${reference.companyShortname}/${reference.itemId}.`,
-    );
-    return null;
-  }
+  const resolved = resolveHighConfidenceFareHarborPrice(payload);
+  if (!resolved) return null;
 
   return {
-    startingPrice: minPrice,
-    currency: currency ?? extractCurrency({}),
-    source: "fareharbor-api",
+    startingPrice: resolved.startingPrice,
+    currency: resolved.currency,
+    source: "fareharbor-price-preview-v2",
+    confidence: "high",
+    basis: resolved.basis,
+    basisLabel: resolved.basisLabel,
     lastUpdated: new Date().toISOString(),
   };
 };
 
-const writeCacheFile = async (cache: Record<string, FareharborPriceEntry>) => {
-  const fileContents = `export type FareharborPriceEntry = {
+const runPool = async <T, R>(
+  items: T[],
+  worker: (item: T, index: number) => Promise<R>,
+) => {
+  const results = new Array<R>(items.length);
+  let cursor = 0;
+
+  const runWorker = async () => {
+    while (true) {
+      const index = cursor;
+      cursor += 1;
+      if (index >= items.length) return;
+      results[index] = await worker(items[index], index);
+    }
+  };
+
+  await Promise.all(
+    Array.from(
+      { length: Math.min(MAX_CONCURRENCY, items.length) },
+      runWorker,
+    ),
+  );
+
+  return results;
+};
+
+const writeCacheFile = async (
+  cache: Record<string, FareharborPriceEntry>,
+) => {
+  const contents = `export type FareharborPriceEntry = {
   startingPrice: number;
   currency: string;
-  source: "fareharbor-api";
+  source: "fareharbor-price-preview-v2";
+  confidence: "high";
+  basis: "adult";
+  basisLabel: string;
   lastUpdated: string;
 };
 
 // This file is auto-generated by scripts/fetch-fareharbor-pricing.ts. Do not edit manually.
-export const fareharborPricing: Record<string, FareharborPriceEntry> = ${JSON.stringify(
-    cache,
-    null,
-    2,
-  )};
+export const fareharborPricing: Record<string, FareharborPriceEntry> = ${JSON.stringify(cache, null, 2)};
 `;
-  await writeFile(OUTPUT_PATH, fileContents, "utf8");
+
+  await writeFile(OUTPUT_PATH, contents, "utf8");
 };
 
-const run = async () => {
-  const csvFiles = await listFiles(DATA_DIR, ".csv");
-  const sourceFiles = await listFiles(SRC_DATA_DIR, ".ts");
-
-  const references = new Map<string, FareharborItemReference>();
-
-  for (const csvPath of csvFiles) {
-    const items = await extractFareharborItemsFromCsv(csvPath);
-    items.forEach((reference, key) => references.set(key, reference));
-  }
-
-  for (const sourcePath of sourceFiles) {
-    const items = await extractFareharborItemsFromSource(sourcePath);
-    items.forEach((reference, key) => references.set(key, reference));
-  }
-
-  if (!references.size) {
-    throw new Error("No FareHarbor items found for pricing.");
-  }
-
-  const sortedReferences = Array.from(references.entries()).sort(([a], [b]) =>
+const main = async () => {
+  const candidates = buildCandidates();
+  const entries = Array.from(candidates.entries()).sort(([a], [b]) =>
     a.localeCompare(b),
   );
-  const cacheEntries: [string, FareharborPriceEntry][] = [];
-  let pricedCount = 0;
 
-  const limit = createConcurrencyLimiter(MAX_CONCURRENCY);
-  const tasks = sortedReferences.map(([key, reference]) =>
-    limit(async () => {
-      const entry = await fetchFareharborPricing(reference);
-      if (entry) {
-        cacheEntries.push([key, entry]);
-        pricedCount += 1;
-        return;
-      }
-      console.warn(
-        `Missing price for ${reference.companyShortname}/${reference.itemId}.`,
-      );
-    }),
+  console.info(
+    `[commercial-reserve] candidates=${entries.length} concurrency=${MAX_CONCURRENCY}`,
   );
 
-  await Promise.all(tasks);
+  let completed = 0;
+  let failures = 0;
+  const resolved = await runPool(entries, async ([key, candidate]) => {
+    try {
+      const price = await fetchCandidate(candidate);
+      completed += 1;
+      if (completed % 100 === 0 || completed === entries.length) {
+        console.info(
+          `[commercial-reserve] ${completed}/${entries.length}`,
+        );
+      }
+      return { key, price };
+    } catch (error) {
+      failures += 1;
+      console.warn(
+        `[commercial-reserve] request failed for ${key}: ${error instanceof Error ? error.message : String(error)}`,
+      );
+      return { key, price: null };
+    }
+  });
 
-  if (pricedCount < 50) {
-    throw new Error(
-      `Only ${pricedCount} FareHarbor prices were found. Endpoint may have changed or credentials are missing.`,
-    );
+  const cache: Record<string, FareharborPriceEntry> = {};
+  for (const { key, price } of resolved) {
+    if (price) cache[key] = price;
   }
 
-  const cache = Object.fromEntries(
-    cacheEntries.sort(([a], [b]) => a.localeCompare(b)),
-  );
   await writeCacheFile(cache);
 
-  console.log(
-    `Wrote ${Object.keys(cache).length} FareHarbor price entries to ${OUTPUT_PATH}.`,
+  const currencies = Array.from(
+    new Set(Object.values(cache).map(entry => entry.currency)),
+  ).sort();
+
+  console.info(
+    `[commercial-reserve] SUMMARY ${JSON.stringify({
+      candidates: entries.length,
+      highConfidencePrices: Object.keys(cache).length,
+      coverageRate:
+        entries.length > 0
+          ? Number((Object.keys(cache).length / entries.length).toFixed(4))
+          : 0,
+      requestFailures: failures,
+      currencies,
+    })}`,
   );
-  console.log("FareHarbor pricing summary:");
-  console.log(`- Total tours processed: ${sortedReferences.length}`);
-  console.log(`- Total prices found: ${pricedCount}`);
-  console.log(`- Total written to cache: ${cacheEntries.length}`);
 };
 
-run().catch((error) => {
-  console.error("Failed to update FareHarbor pricing cache.", error);
+main().catch(error => {
+  console.error("[commercial-reserve] FATAL", error);
   process.exitCode = 1;
 });
