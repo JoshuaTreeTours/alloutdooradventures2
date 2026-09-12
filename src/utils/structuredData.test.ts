@@ -265,22 +265,27 @@ describe("tour product/trip schema safety", () => {
     expect(trip.aggregateRating).toBeUndefined();
   });
 
-  it("applies a USD 129.00 offer floor when price is missing or below threshold", () => {
+  it("omits offers when a tour has no reliable price instead of inventing $129", () => {
+    const unpricedTour = {
+      ...baseTour,
+      startingPrice: 0,
+    };
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
     const product = buildTourProductStructuredData({
-      tour: {
-        ...baseTour,
-        startingPrice: 0,
-      },
-      detailUrl:
-        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      tour: unpricedTour,
+      detailUrl,
+    });
+    const trip = buildTourTripStructuredData({
+      tour: unpricedTour,
+      detailUrl,
     });
 
-    expect(product).toMatchObject({
-      offers: {
-        price: "129.00",
-        priceCurrency: "USD",
-      },
-    });
+    expect(product).not.toHaveProperty("offers");
+    expect(product).not.toHaveProperty("priceSpecification");
+    expect(trip).not.toHaveProperty("offers");
+    expect(trip).not.toHaveProperty("priceSpecification");
+    expect(JSON.stringify([product, trip])).not.toContain('"129.00"');
   });
 
   it("emits Place/PostalAddress with US region code and containing state on tours", () => {

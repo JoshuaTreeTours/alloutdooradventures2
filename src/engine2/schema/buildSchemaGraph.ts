@@ -16,7 +16,7 @@ import {
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
 import { DEFAULT_CURRENCY } from "../../constants/merchantDefaults";
-import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 import { buildTourItinerary } from "../../utils/buildTourItinerary";
@@ -110,10 +110,11 @@ export const buildSchemaGraph = (
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const isViatorTour = tour.bookingProvider === "viator";
   const effectiveHeroImage = tour.images.hero || undefined;
-  const fallbackPrice = applyPriceFloor(
-    parsePrice(tour.pricing?.price ?? null)
+  const fallbackPrice = resolveReliableMerchantPrice(tour.pricing?.price);
+  const rewriteSchemaPrice = resolveReliableMerchantPrice(
+    rewriteV3Content?.schemaPrice
   );
-  const schemaPrice = rewriteV3Content?.schemaPrice ?? fallbackPrice;
+  const schemaPrice = rewriteSchemaPrice ?? fallbackPrice;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
   const canonicalProductUrl = resolveCanonicalProductUrl(seo.canonical);

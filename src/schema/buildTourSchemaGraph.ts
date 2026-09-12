@@ -270,7 +270,11 @@ export function buildTourSchemaGraph(args: {
       ? null
       : Number(args.offers.highPrice);
 
-  const offerNode: Record<string, unknown> =
+  const singlePrice =
+    args.offers.price === null || args.offers.price === undefined
+      ? null
+      : Number(args.offers.price);
+  const offerNode: Record<string, unknown> | null =
     Number.isFinite(lowPrice) && Number.isFinite(highPrice)
       ? {
           "@type": "AggregateOffer",
@@ -283,16 +287,16 @@ export function buildTourSchemaGraph(args: {
             ? { offerCount: args.offers.offerCount }
             : {}),
         }
-      : {
-          "@type": "Offer",
-          url: args.offers.url,
-          availability: offerAvailability,
-          ...(args.offers.price !== null && args.offers.price !== undefined
-            ? { price: Number(args.offers.price).toFixed(2) }
-            : {}),
-          priceCurrency: args.offers.priceCurrency,
-          priceValidUntil: getPriceValidUntil(),
-        };
+      : Number.isFinite(singlePrice) && Number(singlePrice) > 0
+        ? {
+            "@type": "Offer",
+            url: args.offers.url,
+            availability: offerAvailability,
+            price: Number(singlePrice).toFixed(2),
+            priceCurrency: args.offers.priceCurrency,
+            priceValidUntil: getPriceValidUntil(),
+          }
+        : null;
 
   return {
     "@context": "https://schema.org",
@@ -332,7 +336,7 @@ export function buildTourSchemaGraph(args: {
         brand: { "@id": args.brandOrgIds.brandId },
         seller: { "@id": args.brandOrgIds.orgId },
         provider: { "@id": args.brandOrgIds.orgId },
-        offers: offerNode,
+        ...(offerNode ? { offers: offerNode } : {}),
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": `${args.url}#webpage`,
@@ -406,7 +410,7 @@ export function buildTourSchemaGraph(args: {
               },
             }
           : {}),
-        offers: offerNode,
+        ...(offerNode ? { offers: offerNode } : {}),
       },
     ],
   };

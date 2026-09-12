@@ -1,6 +1,6 @@
 import type { Tour } from "../data/tours.types";
 import { DEFAULT_CURRENCY } from "../constants/merchantDefaults";
-import { applyPriceFloor } from "./merchantPricing";
+import { resolveReliableMerchantPrice } from "./merchantPricing";
 import { filterHeroImages, resolveTourHeroImage } from "./hero";
 import { cleanImageUrls, toSchemaImageValue } from "./cleanImageUrls";
 import {
@@ -224,7 +224,9 @@ export const dedupeGraphNodesById = (
 export const getSiteStructuredDataNodes = ({
   includeRootImage = false,
 }: { includeRootImage?: boolean } = {}) => {
-  const logoUrl = buildImageUrl("/images/Outdoor-Adventures-Logo-Transparent.png");
+  const logoUrl = buildImageUrl(
+    "/images/Outdoor-Adventures-Logo-Transparent.png"
+  );
   const organizationImageFields = includeRootImage
     ? { image: buildImageUrl(ROOT_OG_IMAGE) }
     : {};
@@ -402,7 +404,7 @@ const TOUR_PRICE_DESCRIPTION =
   "Pricing varies by date and group size; see booking partner for current rates.";
 
 const toOfferPrice = (tour: Tour) =>
-  applyPriceFloor(tour.startingPrice ?? null);
+  resolveReliableMerchantPrice(tour.startingPrice);
 
 const toOfferCurrency = (tour: Tour) =>
   tour.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
@@ -596,14 +598,18 @@ export const buildTourProductStructuredData = ({
       : undefined;
   const tourDuration = tour.badges?.duration?.trim() || undefined;
 
-  const offer = {
-    "@type": "Offer",
-    url: offerUrl,
-    availability: "https://schema.org/InStock",
-    price: toOfferPrice(tour).toFixed(2),
-    priceCurrency: toOfferCurrency(tour),
-    priceValidUntil: getPriceValidUntil(),
-  };
+  const offerPrice = toOfferPrice(tour);
+  const offer =
+    offerPrice === null
+      ? null
+      : {
+          "@type": "Offer",
+          url: offerUrl,
+          availability: "https://schema.org/InStock",
+          price: offerPrice.toFixed(2),
+          priceCurrency: toOfferCurrency(tour),
+          priceValidUntil: getPriceValidUntil(),
+        };
 
   return {
     "@type": "Product",
@@ -625,12 +631,16 @@ export const buildTourProductStructuredData = ({
           isRelatedTo: { "@id": `${canonicalProductUrl}#trip` },
         }
       : {}),
-    offers: offer,
+    ...(offer ? { offers: offer } : {}),
     ...(aggregateRating ? { aggregateRating } : {}),
-    priceSpecification: {
-      "@type": "PriceSpecification",
-      description: TOUR_PRICE_DESCRIPTION,
-    },
+    ...(offer
+      ? {
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            description: TOUR_PRICE_DESCRIPTION,
+          },
+        }
+      : {}),
     location: buildTourLocationStructuredData(tour, canonicalProductUrl),
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -702,19 +712,27 @@ export const buildTourTripStructuredData = ({
           isRelatedTo: { "@id": resolvedProductNodeId },
         }
       : {}),
-    offers: {
-      "@type": "Offer",
-      url: offerUrl,
-      availability: "https://schema.org/InStock",
-      price: toOfferPrice(tour).toFixed(2),
-      priceCurrency: toOfferCurrency(tour),
-      priceValidUntil: getPriceValidUntil(),
-    },
+    ...(toOfferPrice(tour) !== null
+      ? {
+          offers: {
+            "@type": "Offer",
+            url: offerUrl,
+            availability: "https://schema.org/InStock",
+            price: toOfferPrice(tour)!.toFixed(2),
+            priceCurrency: toOfferCurrency(tour),
+            priceValidUntil: getPriceValidUntil(),
+          },
+        }
+      : {}),
     ...(!safeSchemaEnabled && aggregateRating ? { aggregateRating } : {}),
-    priceSpecification: {
-      "@type": "PriceSpecification",
-      description: TOUR_PRICE_DESCRIPTION,
-    },
+    ...(toOfferPrice(tour) !== null
+      ? {
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            description: TOUR_PRICE_DESCRIPTION,
+          },
+        }
+      : {}),
     location: buildTourLocationStructuredData(tour, canonicalProductUrl),
     mainEntityOfPage: { "@id": `${canonicalProductUrl}#webpage` },
   };

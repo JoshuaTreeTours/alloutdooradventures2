@@ -19,6 +19,7 @@ import {
   recordBlockedFareharborEmbed,
 } from "../../utils/fareharbor/optOutOperators";
 import { resolveInternationalGuideBreadcrumb } from "../../utils/guides/internationalGuideBreadcrumbs";
+import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -116,6 +117,7 @@ export default function Engine2TourBookingPage({
     : normalizeFareHarborUrl(tour.bookingUrl ?? tour.booking.bookingUrl);
   const iframeUrl = isBlockedFareharborEmbed ? "" : generatedCalendarUrl;
   const fallbackUrl = generatedCalendarUrl;
+  const bookingPrice = resolveReliableMerchantPrice(tour.pricing?.price);
 
   useEffect(() => {
     if (!isBlockedFareharborEmbed || !fareharborOperatorSlug) {
@@ -143,16 +145,20 @@ export default function Engine2TourBookingPage({
           : `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
         ...(isRental ? { category: "EquipmentRental" } : {}),
         image: [seo.og.image],
-        offers: {
-          "@type": "Offer",
-          url: `${seo.canonical}/book`,
-          availability: "https://schema.org/InStock",
-          price: tour.pricing?.price ?? "129.00",
-          priceCurrency: tour.pricing?.currency ?? "USD",
-        },
+        ...(bookingPrice !== null
+          ? {
+              offers: {
+                "@type": "Offer",
+                url: `${seo.canonical}/book`,
+                availability: "https://schema.org/InStock",
+                price: bookingPrice.toFixed(2),
+                priceCurrency: tour.pricing?.currency ?? "USD",
+              },
+            }
+          : {}),
       },
     ],
-    [isRental, seo.canonical, seo.og.image, tour]
+    [bookingPrice, isRental, seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);
@@ -233,7 +239,7 @@ export default function Engine2TourBookingPage({
             className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
             href={fallbackUrl}
           >
-            BOOK
+            {bookingPrice !== null ? "BOOK" : "Learn More"}
           </BookingCtaLink>
           <Link href={tour.seo.canonicalPath}>
             <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
