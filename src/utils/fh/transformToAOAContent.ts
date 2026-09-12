@@ -39,7 +39,6 @@ export type TourRewriteV3 = TourRewriteV3_1;
 const DEFAULT_CATEGORY = "Jeep tour (geology + nature walk)";
 const DEFAULT_MEETING_POINT = "Metate Ranch — 38635 Monroe St, Indio, CA 92203";
 const DEFAULT_DURATION = "3 hours";
-const DEFAULT_PRICE = "$175 adult / $150 child";
 
 export const CURATED_34849_FAQS: Array<{ question: string; answer: string }> = [
   {
@@ -146,36 +145,6 @@ const mergeFareHarborAndCuratedFaqs = (
   return Array.from(faqByQuestion.values());
 };
 
-const derivePriceLabel = (
-  pricing: string[],
-  priceAdult?: number,
-  priceChild?: number,
-  parsedPriceLabel?: string
-) => {
-  if (parsedPriceLabel) {
-    return parsedPriceLabel;
-  }
-
-  if (priceAdult && priceChild) {
-    return `$${priceAdult.toFixed(0)} adult / $${priceChild.toFixed(0)} child`;
-  }
-
-  const text = pricing.join(" | ");
-  const adult = text.match(/adult[^$]*(\$\d+)/i)?.[1] ?? "";
-  const child = text.match(/child[^$]*(\$\d+)/i)?.[1] ?? "";
-
-  if (adult && child) {
-    return `${adult} adult / ${child} child`;
-  }
-
-  if (adult) {
-    return `From ${adult} per adult`;
-  }
-
-  const fallback = pricing.find(item => /\$\d+/.test(item));
-  return fallback ?? `From ${DEFAULT_PRICE}`;
-};
-
 const parseDurationMinutes = (duration: string): number | undefined => {
   const trimmed = duration.trim();
   if (!trimmed) {
@@ -215,12 +184,6 @@ export const transformToAOAContent = (
   const duration = parsedTour.duration || DEFAULT_DURATION;
   const meetingPoint = parsedTour.meetingPoint.rawText || DEFAULT_MEETING_POINT;
   const category = parsedTour.category.primary || DEFAULT_CATEGORY;
-  const priceLabel = derivePriceLabel(
-    parsedTour.pricing,
-    parsedTour.priceAdult,
-    parsedTour.priceChild,
-    parsedTour.priceLabel
-  );
 
   const paragraphs = [
     `This ${category.toLowerCase()} explores the San Andreas Fault in the Palm Springs and Coachella Valley region aboard an open-air Jeep through the Indio Hills fault zone, desert canyons, and active wash systems.`,
@@ -251,30 +214,14 @@ export const transformToAOAContent = (
   ).slice(0, 5);
   const durationMinutes = parseDurationMinutes(duration);
   const durationISO = toDurationISO(durationMinutes);
-  const priceLow = [parsedTour.priceAdult, parsedTour.priceChild]
-    .filter((price): price is number => typeof price === "number")
-    .sort((a, b) => a - b)[0];
-  const priceHigh = [parsedTour.priceAdult, parsedTour.priceChild]
-    .filter((price): price is number => typeof price === "number")
-    .sort((a, b) => b - a)[0];
-  const isAggregate =
-    typeof priceLow === "number" &&
-    typeof priceHigh === "number" &&
-    priceLow !== priceHigh;
 
   return {
-    heroPriceText: priceLabel,
-    schemaPrice: parsedTour.priceAdult,
-    priceCurrency: "USD",
+    heroPriceText: undefined,
+    schemaPrice: undefined,
+    priceCurrency: undefined,
     durationMinutes,
     durationISO,
-    pricing: {
-      currency: "USD",
-      low: priceLow,
-      high: priceHigh,
-      displayText: priceLabel,
-      isAggregate,
-    },
+    pricing: undefined,
     category: parsedTour.category,
     meetingPoint: parsedTour.meetingPoint,
     durationLabel: duration,
