@@ -32,185 +32,63 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/destinations">
-                  <a className="transition hover:text-white">
-                    United States Tours
-                  </a>
-                </Link>
+                <Link href="/destinations"><a className="transition hover:text-white">United States Tours</a></Link>
               </li>
-              <li>
-                <Link href="/destinations/world/canada">
-                  <a className="transition hover:text-white">Canada Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/united-kingdom">
-                  <a className="transition hover:text-white">
-                    United Kingdom Tours
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/europe">
-                  <a className="transition hover:text-white">Europe Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href={buildDestinationUrl("mexico")}>
-                  <a className="transition hover:text-white">Mexico Tours</a>
-                </Link>
-              </li>
+              <li><Link href="/destinations/world/canada"><a className="transition hover:text-white">Canada Tours</a></Link></li>
+              <li><Link href="/united-kingdom"><a className="transition hover:text-white">United Kingdom Tours</a></Link></li>
+              <li><Link href="/destinations/europe"><a className="transition hover:text-white">Europe Tours</a></Link></li>
+              <li><Link href={buildDestinationUrl("mexico")}><a className="transition hover:text-white">Mexico Tours</a></Link></li>
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-              Popular States
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Popular States</p>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link href="/destinations/california">
-                  <a className="transition hover:text-white">
-                    California Tours
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/colorado">
-                  <a className="transition hover:text-white">Colorado Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/arizona">
-                  <a className="transition hover:text-white">Arizona Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/utah">
-                  <a className="transition hover:text-white">Utah Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/oregon">
-                  <a className="transition hover:text-white">Oregon Tours</a>
-                </Link>
-              </li>
+              <li><Link href="/destinations/california"><a className="transition hover:text-white">California Tours</a></Link></li>
+              <li><Link href="/destinations/colorado"><a className="transition hover:text-white">Colorado Tours</a></Link></li>
+              <li><Link href="/destinations/arizona"><a className="transition hover:text-white">Arizona Tours</a></Link></li>
+              <li><Link href="/destinations/utah"><a className="transition hover:text-white">Utah Tours</a></Link></li>
+              <li><Link href="/destinations/oregon"><a className="transition hover:text-white">Oregon Tours</a></Link></li>
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-              Top Cities
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Top Cities</p>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link href="/destinations/california/joshua-tree/tours">
-                  <a className="transition hover:text-white">
-                    Joshua Tree Tours
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/california/palm-springs/tours">
-                  <a className="transition hover:text-white">
-                    Palm Springs Tours
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/arizona/sedona/tours">
-                  <a className="transition hover:text-white">Sedona Tours</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/california/santa-barbara/tours">
-                  <a className="transition hover:text-white">
-                    Santa Barbara Tours
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations/colorado/denver/tours">
-                  <a className="transition hover:text-white">Denver Tours</a>
-                </Link>
-              </li>
+              <li><Link href="/destinations/california/joshua-tree/tours"><a className="transition hover:text-white">Joshua Tree Tours</a></Link></li>
+              <li><Link href="/destinations/california/palm-springs/tours"><a className="transition hover:text-white">Palm Springs Tours</a></Link></li>
+              <li><Link href="/destinations/arizona/sedona/tours"><a className="transition hover:text-white">Sedona Tours</a></Link></li>
+              <li><Link href="/destinations/california/santa-barbara/tours"><a className="transition hover:text-white">Santa Barbara Tours</a></Link></li>
+              <li><Link href="/destinations/colorado/denver/tours"><a className="transition hover:text-white">Denver Tours</a></Link></li>
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
-              Support &amp; Company
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Support &amp; Company</p>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link href="/about">
-                  <a className="transition hover:text-white">About</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a className="transition hover:text-white">Contact</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/refund-policy">
-                  <a className="transition hover:text-white">Refund Policy</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy">
-                  <a className="transition hover:text-white">Privacy Policy</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms">
-                  <a className="transition hover:text-white">Terms of Use</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies">
-                  <a className="transition hover:text-white">Cookie Policy</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/disclosure">
-                  <a className="transition hover:text-white">Disclosure</a>
-                </Link>
-              </li>
+              <li><Link href="/about"><a className="transition hover:text-white">About</a></Link></li>
+              <li><Link href="/contact"><a className="transition hover:text-white">Contact</a></Link></li>
+              <li><Link href="/refund-policy"><a className="transition hover:text-white">Refund Policy</a></Link></li>
+              <li><Link href="/privacy"><a className="transition hover:text-white">Privacy Policy</a></Link></li>
+              <li><Link href="/terms"><a className="transition hover:text-white">Terms of Use</a></Link></li>
+              <li><Link href="/cookies"><a className="transition hover:text-white">Cookie Policy</a></Link></li>
+              <li><Link href="/disclosure"><a className="transition hover:text-white">Disclosure</a></Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
-          All Outdoor Adventures is a tour marketplace operated by Outdoor
-          Adventures, Inc. Most experiences are operated by independent
-          third-party providers, with select experiences operated directly by
-          Outdoor Adventures, Inc., as identified on each tour page. Tours are
-          displayed based on traveler reviews, ratings, and availability.
+          All Outdoor Adventures is a tour marketplace featuring experiences operated by independent tour providers and Outdoor Adventures, Inc.
         </div>
 
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">
           <div className="space-y-2">
-            <p className="text-base font-semibold text-white">
-              Plan something unforgettable.
-            </p>
-            <p className="text-sm text-white/85">
-              Custom journeys, private groups, and multi-day adventures.
-            </p>
+            <p className="text-base font-semibold text-white">Plan something unforgettable.</p>
+            <p className="text-sm text-white/85">Custom journeys, private groups, and multi-day adventures.</p>
           </div>
           <div className="mt-4 flex flex-col gap-2 md:mt-0 md:items-end">
-            <Link href="/contact">
-              <a className="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#2f4a2f]">
-                Contact us for a Custom Tour
-              </a>
-            </Link>
-            <a
-              href="tel:+18553148687"
-              aria-label={`Call ${SITE_BRAND_NAME} at 855-314-TOUR`}
-              className="sr-only text-sm font-semibold text-white md:not-sr-only"
-            >
-              855-314-TOUR
-            </a>
+            <Link href="/contact"><a className="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#2f4a2f]">Contact us for a Custom Tour</a></Link>
+            <a href="tel:+18553148687" aria-label={`Call ${SITE_BRAND_NAME} at 855-314-TOUR`} className="sr-only text-sm font-semibold text-white md:not-sr-only">855-314-TOUR</a>
           </div>
         </div>
       </div>
