@@ -30,4 +30,16 @@ if (!source.includes(overlayMarker)) {
 }
 
 await writeFile(target, source, "utf8");
-console.info("[fh-editorial] Engine2 editorial wiring present");
+
+const builderPath = path.resolve("src/utils/fh/buildFareHarborEditorial.ts");
+let builder = await readFile(builderPath, "utf8");
+const invalidActivityReturn = `  return activityMatchers.find(([pattern]) => pattern.test(combined))?.[1] ??\n    clean(input.activity) ||\n    "local tour";`;
+if (builder.includes(invalidActivityReturn)) {
+  builder = builder.replace(
+    invalidActivityReturn,
+    `  const detectedActivity = activityMatchers.find(([pattern]) =>\n    pattern.test(combined)\n  )?.[1];\n  return detectedActivity || clean(input.activity) || "local tour";`
+  );
+}
+await writeFile(builderPath, builder, "utf8");
+
+console.info("[fh-editorial] Engine2 editorial wiring and builder hardening present");
