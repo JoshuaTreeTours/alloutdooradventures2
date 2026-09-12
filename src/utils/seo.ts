@@ -4,6 +4,7 @@ import {
   extractVariantLabel,
 } from "./tourDescription";
 import { SITE_BRAND_NAME } from "./site";
+import { getFareHarborEditorialForBookingUrl } from "../data/fareharborEditorial";
 
 export const SITE_URL = "https://www.alloutdooradventures.com";
 export const ROOT_OG_IMAGE = "/hero.jpg";
@@ -126,6 +127,9 @@ export const buildTourMetaDescription = (
     id?: string;
     slug?: string;
     title?: string;
+    engine?: string;
+    bookingProvider?: string;
+    bookingUrl?: string;
     destination?: {
       city?: string;
       state?: string;
@@ -140,6 +144,13 @@ export const buildTourMetaDescription = (
   },
   options?: { isDuplicate?: boolean; diagnosticsLabel?: string }
 ) => {
+  if (tour.engine !== "engine6" && tour.bookingProvider === "fareharbor") {
+    const editorial = getFareHarborEditorialForBookingUrl(tour.bookingUrl);
+    if (editorial?.metaDescription) {
+      return editorial.metaDescription;
+    }
+  }
+
   return buildTourDescription({
     baseDescription: extractTourBaseDescription(tour),
     tourName: normalizeText(tour.title ?? "this tour"),
