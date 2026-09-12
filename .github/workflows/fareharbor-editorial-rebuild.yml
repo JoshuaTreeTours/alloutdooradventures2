@@ -1,0 +1,59 @@
+name: FareHarbor Editorial Rebuild
+
+on:
+  push:
+    branches:
+      - feat/fareharbor-editorial-rebuild
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/fareharbor-editorial-rebuild
+          fetch-depth: 0
+
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Apply editorial wiring
+        run: npx tsx scripts/apply-fareharbor-editorial-wiring.ts
+
+      - name: Generate FareHarbor editorial catalog
+        env:
+          FH_EDITORIAL_CONCURRENCY: 4
+        run: npx tsx scripts/generate-fareharbor-editorial-content.ts
+
+      - name: Verify catalog and rendering wires
+        run: npx tsx scripts/verify-fareharbor-editorial-rebuild.ts
+
+      - name: TypeScript and URL checks
+        run: npm run check
+
+      - name: Commit generated rebuild
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fareharborEditorial.generated.json \
+                  src/engine2/data/loadEngine2.ts \
+                  src/utils/fh/buildFareHarborEditorial.ts \
+                  reports/fareharbor-editorial-rebuild.md
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Generate FareHarbor editorial rebuild [skip ci]"
+            git push origin HEAD:feat/fareharbor-editorial-rebuild
+          fi
