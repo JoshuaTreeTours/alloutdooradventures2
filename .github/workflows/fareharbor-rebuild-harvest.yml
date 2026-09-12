@@ -1,0 +1,37 @@
+name: FareHarbor rebuild source harvest
+
+on:
+  push:
+    branches:
+      - feat/fareharbor-content-rebuild
+
+permissions:
+  contents: read
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout rebuild branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Harvest complete FareHarbor rebuild source
+        run: npx tsx scripts/harvest-fareharbor-rebuild-source.ts
+
+      - name: Upload rebuild harvest
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-rebuild-harvest
+          path: |
+            reports/fareharbor-rebuild-harvest.json
+            reports/fareharbor-rebuild-harvest.md
+          if-no-files-found: error
