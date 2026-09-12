@@ -17,7 +17,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:00.797Z"
+    "lastUpdated": "2026-09-12T20:08:23.865Z"
   },
   "akhorizon:702453": {
     "startingPrice": 329,
@@ -26,7 +26,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.123Z"
+    "lastUpdated": "2026-09-12T20:08:23.805Z"
   },
   "akhorizon:702520": {
     "startingPrice": 349,
@@ -35,7 +35,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:00.822Z"
+    "lastUpdated": "2026-09-12T20:08:23.712Z"
   },
   "akhorizon:702523": {
     "startingPrice": 249,
@@ -44,7 +44,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:00.874Z"
+    "lastUpdated": "2026-09-12T20:08:23.702Z"
   },
   "alaskatrailguides:110347": {
     "startingPrice": 119,
@@ -53,7 +53,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:00.951Z"
+    "lastUpdated": "2026-09-12T20:08:23.874Z"
   },
   "alohasunshinetours:316505": {
     "startingPrice": 199.99,
@@ -62,7 +62,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.546Z"
+    "lastUpdated": "2026-09-12T20:08:24.281Z"
   },
   "alohasunshinetours:340205": {
     "startingPrice": 479.99,
@@ -71,7 +71,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.544Z"
+    "lastUpdated": "2026-09-12T20:08:24.485Z"
   },
   "alohasunshinetours:340362": {
     "startingPrice": 479.99,
@@ -80,7 +80,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.482Z"
+    "lastUpdated": "2026-09-12T20:08:24.365Z"
   },
   "alohasunshinetours:340732": {
     "startingPrice": 479.99,
@@ -89,7 +89,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.445Z"
+    "lastUpdated": "2026-09-12T20:08:24.441Z"
   },
   "ancientriverkayak:13622": {
     "startingPrice": 136.74,
@@ -98,7 +98,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:01.892Z"
+    "lastUpdated": "2026-09-12T20:08:24.702Z"
   },
   "authenticadventurescencal:386943": {
     "startingPrice": 750,
@@ -107,7 +107,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:02.251Z"
+    "lastUpdated": "2026-09-12T20:08:24.947Z"
   },
   "authenticadventurescencal:419927": {
     "startingPrice": 200,
@@ -116,7 +116,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:02.313Z"
+    "lastUpdated": "2026-09-12T20:08:24.894Z"
   },
   "authenticadventurescencal:419959": {
     "startingPrice": 200,
@@ -125,7 +125,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:02.331Z"
+    "lastUpdated": "2026-09-12T20:08:25.021Z"
   },
   "authenticadventurescencal:419966": {
     "startingPrice": 200,
@@ -134,7 +134,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:02.295Z"
+    "lastUpdated": "2026-09-12T20:08:25.120Z"
   },
   "authenticadventurescencal:469274": {
     "startingPrice": 1000,
@@ -143,7 +143,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:02.435Z"
+    "lastUpdated": "2026-09-12T20:08:25.052Z"
   },
   "bigislandghosttours:321447": {
     "startingPrice": 265,
@@ -152,7 +152,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.460Z"
+    "lastUpdated": "2026-09-12T20:08:29.456Z"
   },
   "bikehawaii:547932": {
     "startingPrice": 140,
@@ -161,7 +161,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.359Z"
+    "lastUpdated": "2026-09-12T20:08:29.414Z"
   },
   "bikehawaii:547934": {
     "startingPrice": 90,
@@ -170,7 +170,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.583Z"
+    "lastUpdated": "2026-09-12T20:08:29.431Z"
   },
   "bikehawaii:547936": {
     "startingPrice": 90,
@@ -179,7 +179,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.663Z"
+    "lastUpdated": "2026-09-12T20:08:29.747Z"
   },
   "bikehawaii:556053": {
     "startingPrice": 175,
@@ -188,7 +188,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.735Z"
+    "lastUpdated": "2026-09-12T20:08:29.678Z"
   },
   "bikehawaii:556071": {
     "startingPrice": 260,
@@ -197,7 +197,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.742Z"
+    "lastUpdated": "2026-09-12T20:08:29.606Z"
   },
   "bikehawaii:556977": {
     "startingPrice": 95,
@@ -206,7 +206,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.728Z"
+    "lastUpdated": "2026-09-12T20:08:29.673Z"
   },
   "biketourhawaii:114800": {
     "startingPrice": 199,
@@ -215,7 +215,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.871Z"
+    "lastUpdated": "2026-09-12T20:08:29.909Z"
   },
   "biketourhawaii:20498": {
     "startingPrice": 169,
@@ -224,7 +224,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.882Z"
+    "lastUpdated": "2026-09-12T20:08:29.935Z"
   },
   "biketourhawaii:20506": {
     "startingPrice": 189,
@@ -233,7 +233,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.974Z"
+    "lastUpdated": "2026-09-12T20:08:29.925Z"
   },
   "biketourhawaii:395815": {
     "startingPrice": 169,
@@ -242,7 +242,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.906Z"
+    "lastUpdated": "2026-09-12T20:08:29.892Z"
   },
   "biketourhawaii:480009": {
     "startingPrice": 169,
@@ -251,7 +251,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.933Z"
+    "lastUpdated": "2026-09-12T20:08:29.963Z"
   },
   "biketourhawaii:558599": {
     "startingPrice": 119,
@@ -260,7 +260,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.980Z"
+    "lastUpdated": "2026-09-12T20:08:29.957Z"
   },
   "biketourhawaii:58782": {
     "startingPrice": 179,
@@ -269,7 +269,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:07.973Z"
+    "lastUpdated": "2026-09-12T20:08:29.915Z"
   },
   "bodyglove:409": {
     "startingPrice": 149.99,
@@ -278,7 +278,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.606Z"
+    "lastUpdated": "2026-09-12T20:08:30.362Z"
   },
   "bodyglove:497": {
     "startingPrice": 139.99,
@@ -287,7 +287,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.350Z"
+    "lastUpdated": "2026-09-12T20:08:30.327Z"
   },
   "bwa:646556": {
     "startingPrice": 57,
@@ -296,7 +296,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.689Z"
+    "lastUpdated": "2026-09-12T20:08:31.041Z"
   },
   "californiadreamvacation:632941": {
     "startingPrice": 263.94,
@@ -305,7 +305,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.768Z"
+    "lastUpdated": "2026-09-12T20:08:31.964Z"
   },
   "californiadreamvacation:632947": {
     "startingPrice": 263.94,
@@ -314,7 +314,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.838Z"
+    "lastUpdated": "2026-09-12T20:08:31.276Z"
   },
   "californiadreamvacation:632958": {
     "startingPrice": 2118.94,
@@ -323,7 +323,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:08.833Z"
+    "lastUpdated": "2026-09-12T20:08:31.015Z"
   },
   "californiawolfcenter:485416": {
     "startingPrice": 58.3,
@@ -332,7 +332,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:09.436Z"
+    "lastUpdated": "2026-09-12T20:08:31.267Z"
   },
   "californiawolfcenter:603116": {
     "startingPrice": 79.5,
@@ -341,7 +341,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:09.136Z"
+    "lastUpdated": "2026-09-12T20:08:31.664Z"
   },
   "cavetouring:548645": {
     "startingPrice": 25.44,
@@ -350,7 +350,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:10.869Z"
+    "lastUpdated": "2026-09-12T20:08:33.087Z"
   },
   "denaliadventure:25335": {
     "startingPrice": 125,
@@ -359,7 +359,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:12.783Z"
+    "lastUpdated": "2026-09-12T20:08:35.128Z"
   },
   "denalijeepexcursions:589580": {
     "startingPrice": 189,
@@ -368,7 +368,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:12.855Z"
+    "lastUpdated": "2026-09-12T20:08:35.134Z"
   },
   "diveoahu:166394": {
     "startingPrice": 129,
@@ -377,7 +377,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:13.444Z"
+    "lastUpdated": "2026-09-12T20:08:35.642Z"
   },
   "dolphinexcursions:161": {
     "startingPrice": 180,
@@ -386,7 +386,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:13.947Z"
+    "lastUpdated": "2026-09-12T20:08:35.991Z"
   },
   "dolphinexcursions:719": {
     "startingPrice": 105,
@@ -395,7 +395,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:13.813Z"
+    "lastUpdated": "2026-09-12T20:08:36.056Z"
   },
   "eatthisshootthat:247375": {
     "startingPrice": 159,
@@ -404,7 +404,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:14.412Z"
+    "lastUpdated": "2026-09-12T20:08:36.809Z"
   },
   "eatthisshootthat:247379": {
     "startingPrice": 153.7,
@@ -413,7 +413,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:14.409Z"
+    "lastUpdated": "2026-09-12T20:08:36.855Z"
   },
   "ebikemultnomahfalls:341903": {
     "startingPrice": 73.14,
@@ -422,7 +422,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:14.375Z"
+    "lastUpdated": "2026-09-12T20:08:36.770Z"
   },
   "farmsanctuary-california:313657": {
     "startingPrice": 26.5,
@@ -431,7 +431,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:15.971Z"
+    "lastUpdated": "2026-09-12T20:08:38.743Z"
   },
   "gabrielsohana:367278": {
     "startingPrice": 129,
@@ -440,7 +440,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:16.727Z"
+    "lastUpdated": "2026-09-12T20:08:39.781Z"
   },
   "gentlebarn:615189": {
     "startingPrice": 37.84,
@@ -449,7 +449,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:16.979Z"
+    "lastUpdated": "2026-09-12T20:08:39.899Z"
   },
   "hawaiianoceansports:18870": {
     "startingPrice": 130,
@@ -458,7 +458,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:17.998Z"
+    "lastUpdated": "2026-09-12T20:08:41.318Z"
   },
   "hawaiianoceansports:18953": {
     "startingPrice": 150,
@@ -467,7 +467,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.109Z"
+    "lastUpdated": "2026-09-12T20:08:41.375Z"
   },
   "hawaiiforestandtrail:17270": {
     "startingPrice": 190,
@@ -476,7 +476,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.404Z"
+    "lastUpdated": "2026-09-12T20:08:41.759Z"
   },
   "hawaiiforestandtrail:18176": {
     "startingPrice": 295,
@@ -485,7 +485,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.563Z"
+    "lastUpdated": "2026-09-12T20:08:42.525Z"
   },
   "hawaiiforestandtrail:337285": {
     "startingPrice": 100,
@@ -494,7 +494,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.505Z"
+    "lastUpdated": "2026-09-12T20:08:41.927Z"
   },
   "hawaiimarinelifecharters:515104": {
     "startingPrice": 120,
@@ -503,7 +503,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.499Z"
+    "lastUpdated": "2026-09-12T20:08:41.964Z"
   },
   "hawaiinautical-kona:127075": {
     "startingPrice": 159.95,
@@ -512,7 +512,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.543Z"
+    "lastUpdated": "2026-09-12T20:08:41.897Z"
   },
   "hawaiinautical-kona:127229": {
     "startingPrice": 109.05,
@@ -521,7 +521,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.507Z"
+    "lastUpdated": "2026-09-12T20:08:42.018Z"
   },
   "hawaiinautical-kona:263050": {
     "startingPrice": 149.95,
@@ -530,7 +530,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.716Z"
+    "lastUpdated": "2026-09-12T20:08:45.824Z"
   },
   "hawaiinautical-kona:277784": {
     "startingPrice": 99.95,
@@ -539,7 +539,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.830Z"
+    "lastUpdated": "2026-09-12T20:08:42.105Z"
   },
   "hawaiinautical-kona:288736": {
     "startingPrice": 79.95,
@@ -548,7 +548,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.785Z"
+    "lastUpdated": "2026-09-12T20:08:42.404Z"
   },
   "hawaiinautical:213709": {
     "startingPrice": 149.95,
@@ -557,7 +557,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.859Z"
+    "lastUpdated": "2026-09-12T20:08:42.411Z"
   },
   "hawaiinautical:214607": {
     "startingPrice": 99.95,
@@ -566,7 +566,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:18.795Z"
+    "lastUpdated": "2026-09-12T20:08:42.279Z"
   },
   "hawaiioceanrafting:377165": {
     "startingPrice": 189,
@@ -575,7 +575,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.063Z"
+    "lastUpdated": "2026-09-12T20:08:42.748Z"
   },
   "hawaiioceanrafting:377167": {
     "startingPrice": 179,
@@ -584,7 +584,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.129Z"
+    "lastUpdated": "2026-09-12T20:08:42.754Z"
   },
   "hawaiioceanrafting:610948": {
     "startingPrice": 84,
@@ -593,7 +593,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.385Z"
+    "lastUpdated": "2026-09-12T20:08:43.157Z"
   },
   "hawaiisurfandkayak:588": {
     "startingPrice": 179,
@@ -602,7 +602,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.366Z"
+    "lastUpdated": "2026-09-12T20:08:43.128Z"
   },
   "hawaiitourboat:5084": {
     "startingPrice": 125,
@@ -611,7 +611,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.636Z"
+    "lastUpdated": "2026-09-12T20:08:43.167Z"
   },
   "hawaiitourboat:6389": {
     "startingPrice": 99,
@@ -620,7 +620,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:19.500Z"
+    "lastUpdated": "2026-09-12T20:08:43.170Z"
   },
   "irukajapan:107736": {
     "startingPrice": 60,
@@ -629,7 +629,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:21.782Z"
+    "lastUpdated": "2026-09-12T20:08:45.539Z"
   },
   "irukajapan:380774": {
     "startingPrice": 179,
@@ -638,7 +638,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:21.812Z"
+    "lastUpdated": "2026-09-12T20:08:45.503Z"
   },
   "irukakona:542552": {
     "startingPrice": 88,
@@ -647,7 +647,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:21.988Z"
+    "lastUpdated": "2026-09-12T20:08:45.744Z"
   },
   "islandparadisetours:694493": {
     "startingPrice": 110,
@@ -656,7 +656,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.025Z"
+    "lastUpdated": "2026-09-12T20:08:46.155Z"
   },
   "islandparadisetours:694509": {
     "startingPrice": 125,
@@ -665,16 +665,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.036Z"
-  },
-  "kailuasailboards:323": {
-    "startingPrice": 179,
-    "currency": "USD",
-    "source": "fareharbor-price-preview-v2",
-    "confidence": "high",
-    "basis": "adult",
-    "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.697Z"
+    "lastUpdated": "2026-09-12T20:08:45.785Z"
   },
   "kaimanatours:29989": {
     "startingPrice": 39.99,
@@ -683,7 +674,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.526Z"
+    "lastUpdated": "2026-09-12T20:08:46.406Z"
   },
   "kaimanatours:29995": {
     "startingPrice": 52.99,
@@ -692,7 +683,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.553Z"
+    "lastUpdated": "2026-09-12T20:08:47.151Z"
   },
   "kapohokine:1098": {
     "startingPrice": 229,
@@ -701,7 +692,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.650Z"
+    "lastUpdated": "2026-09-12T20:08:46.415Z"
   },
   "kapohokine:118633": {
     "startingPrice": 249,
@@ -710,7 +701,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.851Z"
+    "lastUpdated": "2026-09-12T20:08:47.061Z"
   },
   "kapohokine:118639": {
     "startingPrice": 249,
@@ -719,7 +710,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.686Z"
+    "lastUpdated": "2026-09-12T20:08:46.598Z"
   },
   "kapohokine:118641": {
     "startingPrice": 189,
@@ -728,7 +719,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:23.030Z"
+    "lastUpdated": "2026-09-12T20:08:46.587Z"
   },
   "kapohokine:850": {
     "startingPrice": 229,
@@ -737,7 +728,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.986Z"
+    "lastUpdated": "2026-09-12T20:08:46.761Z"
   },
   "kapohokine:977": {
     "startingPrice": 169,
@@ -746,7 +737,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.811Z"
+    "lastUpdated": "2026-09-12T20:08:46.733Z"
   },
   "kauaibeachboys:140358": {
     "startingPrice": 89,
@@ -755,7 +746,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:22.949Z"
+    "lastUpdated": "2026-09-12T20:08:46.831Z"
   },
   "kauaiztours:34579": {
     "startingPrice": 135.5,
@@ -764,7 +755,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:23.490Z"
+    "lastUpdated": "2026-09-12T20:08:52.643Z"
   },
   "kauaiztours:34580": {
     "startingPrice": 115.5,
@@ -773,7 +764,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:23.463Z"
+    "lastUpdated": "2026-09-12T20:08:47.323Z"
   },
   "konasnorkelandsail:671": {
     "startingPrice": 165,
@@ -782,7 +773,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:24.989Z"
+    "lastUpdated": "2026-09-12T20:08:48.707Z"
   },
   "lostplate-asia:677978": {
     "startingPrice": 185.5,
@@ -791,7 +782,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:26.372Z"
+    "lastUpdated": "2026-09-12T20:08:49.995Z"
   },
   "malahinitours:138453": {
     "startingPrice": 199.99,
@@ -800,7 +791,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:26.479Z"
+    "lastUpdated": "2026-09-12T20:08:50.093Z"
   },
   "mauiecotours:448": {
     "startingPrice": 139,
@@ -809,7 +800,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:26.912Z"
+    "lastUpdated": "2026-09-12T20:08:50.566Z"
   },
   "mauiecotours:456": {
     "startingPrice": 109,
@@ -818,7 +809,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:26.906Z"
+    "lastUpdated": "2026-09-12T20:08:50.602Z"
   },
   "mauikayaks:26663": {
     "startingPrice": 95,
@@ -827,7 +818,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:27.240Z"
+    "lastUpdated": "2026-09-12T20:08:50.594Z"
   },
   "mauikayaks:26674": {
     "startingPrice": 115,
@@ -836,7 +827,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:27.194Z"
+    "lastUpdated": "2026-09-12T20:08:50.593Z"
   },
   "mauisunriders:181765": {
     "startingPrice": 119,
@@ -845,7 +836,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:27.570Z"
+    "lastUpdated": "2026-09-12T20:08:51.224Z"
   },
   "mendenhallicecaves:116148": {
     "startingPrice": 239,
@@ -854,7 +845,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:27.760Z"
+    "lastUpdated": "2026-09-12T20:08:51.648Z"
   },
   "mendenhallicecaves:23432": {
     "startingPrice": 359,
@@ -863,7 +854,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:27.816Z"
+    "lastUpdated": "2026-09-12T20:08:51.351Z"
   },
   "mountainriders:275180": {
     "startingPrice": 239,
@@ -872,7 +863,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.138Z"
+    "lastUpdated": "2026-09-12T20:08:52.075Z"
   },
   "mountainriders:275207": {
     "startingPrice": 145,
@@ -881,7 +872,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.142Z"
+    "lastUpdated": "2026-09-12T20:08:51.966Z"
   },
   "mountainriders:275245": {
     "startingPrice": 115,
@@ -890,7 +881,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.180Z"
+    "lastUpdated": "2026-09-12T20:08:52.382Z"
   },
   "mountainriders:275262": {
     "startingPrice": 112,
@@ -899,7 +890,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.367Z"
+    "lastUpdated": "2026-09-12T20:08:52.226Z"
   },
   "napaliexplorer:1652": {
     "startingPrice": 200,
@@ -908,7 +899,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.371Z"
+    "lastUpdated": "2026-09-12T20:08:52.553Z"
   },
   "napalihawaii:316332": {
     "startingPrice": 197,
@@ -917,16 +908,16 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.483Z"
+    "lastUpdated": "2026-09-12T20:08:52.650Z"
   },
   "napalitours:4377": {
-    "startingPrice": 250,
+    "startingPrice": 299,
     "currency": "USD",
     "source": "fareharbor-price-preview-v2",
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.620Z"
+    "lastUpdated": "2026-09-12T20:08:52.897Z"
   },
   "northernepics:450263": {
     "startingPrice": 199,
@@ -935,7 +926,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.712Z"
+    "lastUpdated": "2026-09-12T20:08:53.117Z"
   },
   "northernepics:450268": {
     "startingPrice": 199,
@@ -944,7 +935,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:28.913Z"
+    "lastUpdated": "2026-09-12T20:08:53.112Z"
   },
   "oceanjoy:186": {
     "startingPrice": 174,
@@ -953,7 +944,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:30.563Z"
+    "lastUpdated": "2026-09-12T20:08:54.668Z"
   },
   "oceanjoy:192": {
     "startingPrice": 174,
@@ -962,7 +953,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:30.437Z"
+    "lastUpdated": "2026-09-12T20:08:54.445Z"
   },
   "onokauaifoodtours:404652": {
     "startingPrice": 98,
@@ -971,7 +962,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:30.986Z"
+    "lastUpdated": "2026-09-12T20:08:55.013Z"
   },
   "paddleonmaui:2891": {
     "startingPrice": 169,
@@ -980,7 +971,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:31.581Z"
+    "lastUpdated": "2026-09-12T20:08:55.408Z"
   },
   "quicksilvermaui:372577": {
     "startingPrice": 99.95,
@@ -989,7 +980,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:31.990Z"
+    "lastUpdated": "2026-09-12T20:08:56.367Z"
   },
   "quicksilvermaui:372622": {
     "startingPrice": 139.95,
@@ -998,7 +989,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:32.268Z"
+    "lastUpdated": "2026-09-12T20:08:56.309Z"
   },
   "rainbowkayak:1890": {
     "startingPrice": 136.74,
@@ -1007,7 +998,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:32.041Z"
+    "lastUpdated": "2026-09-12T20:08:59.519Z"
   },
   "rochestertrolleytour:564408": {
     "startingPrice": 179,
@@ -1016,7 +1007,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult - 21+",
-    "lastUpdated": "2026-09-12T01:33:32.766Z"
+    "lastUpdated": "2026-09-12T20:08:57.407Z"
   },
   "rootedvinetours:4363": {
     "startingPrice": 212,
@@ -1025,7 +1016,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:33.109Z"
+    "lastUpdated": "2026-09-12T20:08:57.897Z"
   },
   "sailingcat:800": {
     "startingPrice": 139,
@@ -1034,7 +1025,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:33.274Z"
+    "lastUpdated": "2026-09-12T20:08:58.390Z"
   },
   "sealifeparkhi:625287": {
     "startingPrice": 299.99,
@@ -1043,7 +1034,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:33.962Z"
+    "lastUpdated": "2026-09-12T20:08:59.364Z"
   },
   "sealifeparkhi:625447": {
     "startingPrice": 229.99,
@@ -1052,7 +1043,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:34.051Z"
+    "lastUpdated": "2026-09-12T20:08:59.144Z"
   },
   "sealifeparkhi:625449": {
     "startingPrice": 89.99,
@@ -1061,7 +1052,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:34.159Z"
+    "lastUpdated": "2026-09-12T20:08:59.480Z"
   },
   "shakaalohaadventures:560904": {
     "startingPrice": 99,
@@ -1070,7 +1061,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:34.456Z"
+    "lastUpdated": "2026-09-12T20:08:59.737Z"
   },
   "sitkawalkingtours:456878": {
     "startingPrice": 119,
@@ -1079,7 +1070,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:34.549Z"
+    "lastUpdated": "2026-09-12T20:08:59.847Z"
   },
   "steliasguides:202511": {
     "startingPrice": 127,
@@ -1088,7 +1079,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:35.484Z"
+    "lastUpdated": "2026-09-12T20:09:01.326Z"
   },
   "steliasguides:202881": {
     "startingPrice": 172,
@@ -1097,7 +1088,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:35.731Z"
+    "lastUpdated": "2026-09-12T20:09:01.107Z"
   },
   "terrantravels:149182": {
     "startingPrice": 148.99,
@@ -1106,7 +1097,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:36.428Z"
+    "lastUpdated": "2026-09-12T20:09:02.308Z"
   },
   "tryscuba-honolulu:240875": {
     "startingPrice": 220,
@@ -1115,7 +1106,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:38.548Z"
+    "lastUpdated": "2026-09-12T20:09:04.795Z"
   },
   "volcanoohana:599245": {
     "startingPrice": 189,
@@ -1124,7 +1115,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:40.704Z"
+    "lastUpdated": "2026-09-12T20:09:07.684Z"
   },
   "wasabi:22901": {
     "startingPrice": 279,
@@ -1133,7 +1124,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:41.018Z"
+    "lastUpdated": "2026-09-12T20:09:08.147Z"
   },
   "wildbearsafari:375702": {
     "startingPrice": 145,
@@ -1142,7 +1133,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:41.614Z"
+    "lastUpdated": "2026-09-12T20:09:08.567Z"
   },
   "wildcabotours:653513": {
     "startingPrice": 120,
@@ -1151,7 +1142,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:41.630Z"
+    "lastUpdated": "2026-09-12T20:09:08.539Z"
   },
   "wildviewalaskatours:619306": {
     "startingPrice": 130,
@@ -1160,7 +1151,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:42.756Z"
+    "lastUpdated": "2026-09-12T20:09:09.155Z"
   },
   "wineroutebaja:193220": {
     "startingPrice": 40,
@@ -1169,7 +1160,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:42.603Z"
+    "lastUpdated": "2026-09-12T20:09:09.393Z"
   },
   "yosemite-tours:290059": {
     "startingPrice": 184,
@@ -1178,7 +1169,7 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:42.719Z"
+    "lastUpdated": "2026-09-12T20:09:09.549Z"
   },
   "ziplinetourshawaii:372871": {
     "startingPrice": 172,
@@ -1187,6 +1178,6 @@ export const fareharborPricing: Record<string, FareharborPriceEntry> = {
     "confidence": "high",
     "basis": "adult",
     "basisLabel": "Adult",
-    "lastUpdated": "2026-09-12T01:33:43.165Z"
+    "lastUpdated": "2026-09-12T20:09:09.838Z"
   }
 };
