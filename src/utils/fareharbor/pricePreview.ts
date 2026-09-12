@@ -13,10 +13,15 @@ export type FareHarborPhase2Price = {
   confidence: "medium";
 };
 
+type FareHarborPhase3Basis =
+  | "standard-traveler-consensus"
+  | "structured-adult"
+  | "standard-ticket";
+
 export type FareHarborPhase3Price = {
   startingPrice: number;
   currency: string;
-  basis: "standard-traveler-consensus";
+  basis: FareHarborPhase3Basis;
   basisLabels: string[];
   confidence: "medium";
 };
@@ -27,6 +32,11 @@ type ParsedPricePreview = {
   currency: string;
   divisor: number;
   customerTypes: JsonRecord[];
+};
+
+type LabeledRate = {
+  label: string;
+  price: number;
 };
 
 const isRecord = (value: unknown): value is JsonRecord =>
@@ -97,24 +107,39 @@ const STANDARD_TRAVELER_LABEL =
 const isQualifiedTravelerLabel = (label: string) =>
   STANDARD_TRAVELER_LABEL.test(label.trim());
 
-const collectQualifiedTravelerRates = (parsed: ParsedPricePreview) =>
+// Phase 3 is based on the shadow audit rather than a broad fuzzy match. These
+// are narrowly recognizable representations of an ordinary adult/standard
+// admission that Phase 1 and Phase 2 intentionally did not accept.
+const STRUCTURED_ADULT_LABEL =
+  /^(?:adults|traveler\s*\|\s*adult\s*\|\s*ages?\s*\d+\s*\+)$/i;
+const STANDARD_TICKET_LABEL =
+  /^(?:\([A-Za-z0-9 _-]{1,12}\)\s*)?standard\s+ticket$/i;
+
+const collectRatesMatching = (
+  parsed: ParsedPricePreview,
+  predicate: (label: string) => boolean,
+): LabeledRate[] =>
   parsed.customerTypes
     .map(entry => {
       const label = labelOf(entry);
       const rawPrice = numberValue(entry.price);
-      if (
-        !isQualifiedTravelerLabel(label) ||
-        rawPrice === null ||
-        rawPrice <= 0
-      ) {
+      if (!predicate(label) || rawPrice === null || rawPrice <= 0) {
         return null;
       }
-      return {
-        label,
-        price: rawPrice / parsed.divisor,
-      };
+      return { label, price: rawPrice / parsed.divisor };
     })
-    .filter((entry): entry is { label: string; price: number } => Boolean(entry));
+    .filter((entry): entry is LabeledRate => Boolean(entry));
+
+const collectQualifiedTravelerRates = (parsed: ParsedPricePreview) =>
+  collectRatesMatching(parsed, isQualifiedTravelerLabel);
+
+const consensusPrice = (rates: LabeledRate[]) => {
+  if (!rates.length) return null;
+  const pricesInCents = new Set(rates.map(entry => Math.round(entry.price * 100)));
+  if (pricesInCents.size !== 1) return null;
+  const price = rates[0].price;
+  return Number.isFinite(price) && price > 0 ? price : null;
+};
 
 export const resolveHighConfidenceFareHarborPrice = (
   payload: unknown,
@@ -122,20 +147,7 @@ export const resolveHighConfidenceFareHarborPrice = (
   const parsed = parsePricePreview(payload);
   if (!parsed) return null;
 
-  const adultRates = parsed.customerTypes
-    .map(entry => {
-      const label = labelOf(entry);
-      const rawPrice = numberValue(entry.price);
-      if (!isQualifiedAdultLabel(label) || rawPrice === null || rawPrice <= 0) {
-        return null;
-      }
-      return {
-        label,
-        price: rawPrice / parsed.divisor,
-      };
-    })
-    .filter((entry): entry is { label: string; price: number } => Boolean(entry));
-
+  const adultRates = collectRatesMatching(parsed, isQualifiedAdultLabel);
   if (!adultRates.length) return null;
 
   const winner = adultRates.reduce((best, current) =>
@@ -184,9 +196,6 @@ export const resolvePhase2FareHarborPrice = (
 export const resolvePhase3FareHarborPrice = (
   payload: unknown,
 ): FareHarborPhase3Price | null => {
-  // Phase 3 only examines payloads that were deliberately held out of the first
-  // two cohorts. It resolves the specific ambiguity where two or more distinct,
-  // standard traveler labels are present but all of them quote the same price.
   if (
     resolveHighConfidenceFareHarborPrice(payload) ||
     resolvePhase2FareHarborPrice(payload)
@@ -197,29 +206,68 @@ export const resolvePhase3FareHarborPrice = (
   const parsed = parsePricePreview(payload);
   if (!parsed) return null;
 
+  // First retain the original Phase 3 idea: multiple distinct ordinary traveler
+  // labels are safe only when every one of them quotes the same price.
   const travelerRates = collectQualifiedTravelerRates(parsed);
-  if (travelerRates.length < 2) return null;
-
-  const basisLabels = Array.from(
+  const travelerLabels = Array.from(
     new Set(travelerRates.map(entry => entry.label.trim())),
   );
-  if (basisLabels.length < 2) return null;
+  if (travelerRates.length >= 2 && travelerLabels.length >= 2) {
+    const startingPrice = consensusPrice(travelerRates);
+    if (startingPrice !== null) {
+      return {
+        startingPrice,
+        currency: parsed.currency,
+        basis: "standard-traveler-consensus",
+        basisLabels: travelerLabels.sort((a, b) => a.localeCompare(b)),
+        confidence: "medium",
+      };
+    }
+  }
 
-  // Compare in cents so harmless floating-point representation differences do
-  // not create false disagreements. Any genuine price disagreement remains out.
-  const pricesInCents = new Set(
-    travelerRates.map(entry => Math.round(entry.price * 100)),
+  // The first live audit showed a small number of very explicit adult labels
+  // such as "Adults" and "Traveler | Adult | Age 12+". They are admitted as a
+  // separate explainable cohort, never by a generic "contains Adult" rule.
+  const structuredAdultRates = collectRatesMatching(
+    parsed,
+    label => STRUCTURED_ADULT_LABEL.test(label.trim()),
   );
-  if (pricesInCents.size !== 1) return null;
+  if (structuredAdultRates.length) {
+    const startingPrice = consensusPrice(structuredAdultRates);
+    if (startingPrice !== null) {
+      return {
+        startingPrice,
+        currency: parsed.currency,
+        basis: "structured-adult",
+        basisLabels: Array.from(
+          new Set(structuredAdultRates.map(entry => entry.label.trim())),
+        ).sort((a, b) => a.localeCompare(b)),
+        confidence: "medium",
+      };
+    }
+  }
 
-  const startingPrice = travelerRates[0].price;
-  if (!Number.isFinite(startingPrice) || startingPrice <= 0) return null;
+  // Two audited operators prefix their ordinary Standard Ticket with a short
+  // tour code. Accept only that exact semantic form; VIP, member, child, add-on,
+  // upgrade and other ticket labels remain excluded.
+  const standardTicketRates = collectRatesMatching(
+    parsed,
+    label => STANDARD_TICKET_LABEL.test(label.trim()),
+  );
+  if (standardTicketRates.length) {
+    const startingPrice = consensusPrice(standardTicketRates);
+    if (startingPrice !== null) {
+      return {
+        startingPrice,
+        currency: parsed.currency,
+        basis: "standard-ticket",
+        basisLabels: Array.from(
+          new Set(standardTicketRates.map(entry => entry.label.trim())),
+        ).sort((a, b) => a.localeCompare(b)),
+        confidence: "medium",
+      };
+    }
+  }
 
-  return {
-    startingPrice,
-    currency: parsed.currency,
-    basis: "standard-traveler-consensus",
-    basisLabels: basisLabels.sort((a, b) => a.localeCompare(b)),
-    confidence: "medium",
-  };
+  return null;
 };
