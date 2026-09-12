@@ -11,6 +11,8 @@ import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { engine6ResolvedTours } from "./registry";
 import { resolveMerchantDescription } from "./merchantDescriptions";
+import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { SITE_BRAND_NAME } from "../utils/site";
 
 const parseCsv = (content: string) => {
   const rows: string[][] = [];
@@ -78,6 +80,21 @@ const assertNoForbiddenMerchantPhrases = (description: string, label: string) =>
   }
 };
 
+const schemaNode = (
+  tour: (typeof merchantFeedEligibleTours)[number],
+  type: string
+) =>
+  (buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>).find(
+    node => node["@type"] === type
+  );
+
+const brandNameFromProduct = (productNode?: Record<string, unknown>) => {
+  const brand = productNode?.brand;
+  if (!brand || typeof brand !== "object" || Array.isArray(brand)) return "";
+  const name = (brand as Record<string, unknown>).name;
+  return typeof name === "string" ? name : "";
+};
+
 describe("Engine6 merchant CSV description governance", () => {
   it("derives merchant descriptions from overview copy without itinerary metadata", () => {
     const tour = engine6ResolvedTours.find(
@@ -117,34 +134,66 @@ describe("Engine6 merchant CSV description governance", () => {
     assertNoForbiddenMerchantPhrases(description, "6007GGB");
   });
 
-  it("keeps merchant feed rows aligned with governed editorial descriptions", () => {
+  it("keeps Merchant CSV, Product, TouristTrip, WebPage, and brand identity on one governed source", () => {
+    const failures: string[] = [];
+
     for (const tour of merchantFeedEligibleTours) {
       const expectedDescription = resolveEngine6GovernedProductDescription(tour);
       const merchantRow = merchantRowsById.get(tour.productCode);
       const generatedRow = buildMerchantFeedRowFromProductSchema(tour);
+      const productNode = schemaNode(tour, "Product");
+      const tripNode = schemaNode(tour, "TouristTrip");
+      const webPageNode = schemaNode(tour, "WebPage");
+      const resolvedMerchantDescription = resolveMerchantDescription({
+        productCode: tour.productCode,
+        title: tour.title,
+        city: tour.city,
+        state: tour.state,
+        categoryLabel: tour.categoryLabel,
+        productOverviewDescription: tour.overviewText,
+      });
 
-      expect(merchantRow, tour.productCode).toBeDefined();
-      expect(generatedRow.description, tour.productCode).toBe(
-        expectedDescription
-      );
-      expect(merchantRow?.description, tour.productCode).toBe(
-        expectedDescription
-      );
-      expect(
-        resolveMerchantDescription({
-          productCode: tour.productCode,
-          title: tour.title,
-          city: tour.city,
-          state: tour.state,
-          categoryLabel: tour.categoryLabel,
-          productOverviewDescription: tour.overviewText,
-        }),
-        tour.productCode
-      ).toBe(expectedDescription);
-      assertNoForbiddenMerchantPhrases(
-        merchantRow?.description ?? "",
-        tour.productCode
-      );
+      if (!merchantRow) {
+        failures.push(`${tour.productCode}: missing Merchant CSV row`);
+        continue;
+      }
+
+      const descriptionChecks: Array<[string, unknown]> = [
+        ["generated Merchant row", generatedRow.description],
+        ["Merchant CSV", merchantRow.description],
+        ["Product", productNode?.description],
+        ["TouristTrip", tripNode?.description],
+        ["WebPage", webPageNode?.description],
+        ["Merchant resolver", resolvedMerchantDescription],
+      ];
+
+      for (const [surface, value] of descriptionChecks) {
+        if (value !== expectedDescription) {
+          failures.push(
+            `${tour.productCode}: ${surface} description differs from governed source`
+          );
+        }
+      }
+
+      if (productNode?.description !== merchantRow.description) {
+        failures.push(
+          `${tour.productCode}: Product description differs from Merchant CSV`
+        );
+      }
+
+      if (generatedRow.brand !== SITE_BRAND_NAME) {
+        failures.push(
+          `${tour.productCode}: generated Merchant brand expected "${SITE_BRAND_NAME}", got "${generatedRow.brand}"`
+        );
+      }
+      const productBrand = brandNameFromProduct(productNode);
+      if (productBrand !== SITE_BRAND_NAME) {
+        failures.push(
+          `${tour.productCode}: Product brand expected "${SITE_BRAND_NAME}", got "${productBrand}"`
+        );
+      }
     }
+
+    expect(failures, failures.join("\n")).toEqual([]);
   });
 });

@@ -1,0 +1,35 @@
+name: Product schema dedup canary
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify Merchant and Product description parity
+        run: npx vitest run src/engine6/merchantDescriptionGovernance.test.ts
+
+      - name: Build with Product manifest consolidation
+        env:
+          VERCEL_ENV: preview
+          VERCEL_URL: product-schema-audit.local
+        run: npm run build
