@@ -3,6 +3,7 @@ import { getActivityLabels, getActivityLabelFromSlug } from "./activityLabels";
 import { stripReviewMentions } from "../utils/text";
 import { isRentalTour } from "../utils/isRentalTour";
 import { buildRentalDescription } from "../templates/rentalDescription";
+import { getFareHarborEditorialForBookingUrl } from "./fareharborEditorial";
 
 const ACTIVITY_LABELS = getActivityLabels();
 
@@ -20,6 +21,11 @@ const getPrimaryActivitySlug = (tour: Tour) =>
   tour.activitySlugs[0] ??
   "adventure";
 
+const getFareHarborEditorial = (tour: Tour) =>
+  tour.bookingProvider === "fareharbor" && tour.engine !== "engine6"
+    ? getFareHarborEditorialForBookingUrl(tour.bookingUrl)
+    : null;
+
 export const getActivityLabel = (tour: Tour) => {
   const primarySlug = getPrimaryActivitySlug(tour);
   return getActivityLabelFromSlug(primarySlug) || "Outdoor adventure";
@@ -31,6 +37,15 @@ export const getSkillLevelLabel = (tour: Tour) => {
 };
 
 export const getExpandedTourDescription = (tour: Tour) => {
+  const editorial = getFareHarborEditorial(tour);
+  if (editorial?.overview) {
+    return editorial.overview
+      .split(/\n\n+/)
+      .map(stripReviewMentions)
+      .map(paragraph => paragraph.trim())
+      .filter(paragraph => paragraph.length > 1);
+  }
+
   if (isRentalTour(tour)) {
     return [
       buildRentalDescription({
@@ -59,12 +74,18 @@ export const getExpandedTourDescription = (tour: Tour) => {
   return [...baseParagraphs, ...expandedParagraphs]
     .map(stripReviewMentions)
     .map(paragraph => paragraph.trim())
-    // Suppress import noise such as the stray single-character "E" seen on
-    // the Calgary E-bike Tours page without discarding legitimate copy.
     .filter(paragraph => paragraph.length > 1);
 };
 
 export const getTourHighlights = (tour: Tour) => {
+  const editorial = getFareHarborEditorial(tour);
+  if (editorial?.highlights?.length) {
+    return editorial.highlights
+      .map(stripReviewMentions)
+      .map(highlight => highlight.trim())
+      .filter(Boolean);
+  }
+
   if (isRentalTour(tour)) {
     const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
     return [
