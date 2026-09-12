@@ -1,0 +1,44 @@
+name: FareHarbor content rebuild apply
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/fareharbor-content-rebuild]
+    paths:
+      - scripts/apply-fareharbor-rebuild.ts
+      - .github/workflows/fareharbor-rebuild-apply.yml
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/fareharbor-content-rebuild
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Harvest current FareHarbor source
+        run: npx tsx scripts/harvest-fareharbor-rebuild-source.ts
+      - name: Build and apply content overlay
+        run: npx tsx scripts/apply-fareharbor-rebuild.ts
+      - name: Verify no generic FH fallback price remains in Engine2 page
+        run: |
+          if grep -q 'From \$129 per person' src/engine2/pages/Engine2TourPage.tsx; then echo 'generic $129 fallback remains' >&2; exit 1; fi
+          grep -q 'Learn More' src/engine2/pages/Engine2TourPage.tsx
+      - name: Typecheck and build
+        run: |
+          npm run typecheck --if-present
+          npm run build
+      - name: Commit generated rebuild
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/fareharborContentOverlay.generated.ts src/data/tours.ts src/engine2/data/loadEngine2.ts src/engine2/pages/Engine2TourPage.tsx
+          git diff --cached --stat
+          git commit -m 'Rebuild FareHarbor content from harvested source' || exit 0
+          git push origin HEAD:feat/fareharbor-content-rebuild
