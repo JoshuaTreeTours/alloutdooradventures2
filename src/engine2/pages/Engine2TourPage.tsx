@@ -18,6 +18,7 @@ import {
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
+import { isAlaskaEngine2Tour } from "../../utils/fh/alaskaFareHarborContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
 
@@ -98,9 +99,11 @@ export default function Engine2TourPage({
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
+  const isAlaskaEnriched = isAlaskaEngine2Tour(tour);
   const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
+    tour.bookingUrl &&
+    (isAlaskaEnriched || (isFHPilotEnabled && isPalmSprings))
       ? getPalmSpringsPilotContent(tour)
       : null;
   const engine1Content = {
@@ -111,7 +114,7 @@ export default function Engine2TourPage({
     ? overrideContent.content
     : engine1Content;
 
-  if (isPalmSprings && typeof window === "undefined") {
+  if ((isPalmSprings || isAlaskaEnriched) && typeof window === "undefined") {
     console.info(
       `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
     );
@@ -385,6 +388,11 @@ export default function Engine2TourPage({
               {pilotContent.quickFacts.duration ? (
                 <li>
                   <strong>Duration:</strong> {pilotContent.quickFacts.duration}
+                </li>
+              ) : null}
+              {pilotContent.quickFacts.difficulty ? (
+                <li>
+                  <strong>Difficulty:</strong> {pilotContent.quickFacts.difficulty}
                 </li>
               ) : null}
               {pilotContent.quickFacts.startLocationArea ? (
