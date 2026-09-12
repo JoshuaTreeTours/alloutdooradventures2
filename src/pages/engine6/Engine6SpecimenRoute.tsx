@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import Engine6TourPage from "../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "../../engine6/mapViatorToEngine6Tour";
+import { preserveEngine6BaselineItineraryWhenStronger } from "../../engine6/liveItineraryMergeGuard";
 import { getEngine6NativeTourByCanonicalPath } from "../../engine6/registry";
 import { resolveEngine6ProductCodeForPath } from "../../engine6/routes";
 import { assertEngine6RequestedPathMatchesResolvedTour } from "../../engine6/routeIntegrity";
@@ -129,7 +130,10 @@ const withEngine6RouteBackedFallback = ({
     error: null,
     debug: {
       ...debug,
-      source: debug.source ?? fallbackTour.source ?? "route-backed-fallback",
+      source:
+        debug.source ??
+        fallbackTour.diagnostics.source ??
+        "route-backed-fallback",
     },
   };
 };
@@ -426,8 +430,14 @@ export const resolveEngine6SpecimenResponse = ({
   }
 
   try {
+    const liveTour = mapViatorToEngine6Tour(payload as Engine6ApiResponse);
+    const tour = preserveEngine6BaselineItineraryWhenStronger({
+      baselineTour: fallbackTour,
+      liveTour,
+    });
+
     return {
-      tour: mapViatorToEngine6Tour(payload as Engine6ApiResponse),
+      tour,
       error: httpStatus >= 400 ? (payloadError ?? "Engine6 API failed") : null,
       debug: {
         ...debug,
