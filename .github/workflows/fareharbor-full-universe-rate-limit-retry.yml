@@ -1,0 +1,38 @@
+name: FareHarbor universe rate-limit retry
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test FareHarbor pricing resolvers
+        run: npx vitest run src/utils/fareharbor/pricePreview.test.ts
+
+      - name: Retry only previously rate-limited FareHarbor items
+        run: npx tsx scripts/retry-fareharbor-full-universe-rate-limits.ts
+
+      - name: Upload retry audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-full-universe-rate-limit-retry
+          path: |
+            reports/fareharbor-full-universe-rate-limit-retry.json
+            reports/fareharbor-full-universe-rate-limit-retry.md
+          if-no-files-found: error

@@ -25,15 +25,26 @@ export const parsePrice = (value: unknown): number | null => {
   return Number.isFinite(parsed) ? parsed : null;
 };
 
-export const parseMerchantPriceCurrency = (
-  value: unknown
-): string | null => {
+export const parseMerchantPriceCurrency = (value: unknown): string | null => {
   if (typeof value !== "string") {
     return null;
   }
 
   const match = value.trim().match(/([A-Za-z]{3})\s*$/);
   return match ? match[1].toUpperCase() : null;
+};
+
+export const resolveReliableMerchantPrice = (value: unknown): number | null => {
+  const price = parsePrice(value);
+  if (
+    price === null ||
+    !Number.isFinite(price) ||
+    price < PRICE_MIN_THRESHOLD_USD
+  ) {
+    return null;
+  }
+
+  return price;
 };
 
 export const applyPriceFloor = (price: number | null): number => {

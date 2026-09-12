@@ -1,0 +1,45 @@
+name: FareHarbor rendered description probe
+
+on:
+  pull_request:
+    branches:
+      - feat/fareharbor-commercial-reserve-phase3
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Install Playwright locally for probe
+        run: npm install --no-save playwright@1.55.0
+
+      - name: Install Chromium
+        run: npx playwright install chromium
+
+      - name: Probe rendered FareHarbor descriptions
+        run: node scripts/probe-fareharbor-rendered-descriptions.mjs
+
+      - name: Upload description probe
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-rendered-description-probe
+          path: |
+            reports/fareharbor-rendered-description-probe.json
+            reports/fareharbor-rendered-description-probe.md
+          if-no-files-found: error

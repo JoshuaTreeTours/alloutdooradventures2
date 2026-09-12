@@ -56,7 +56,7 @@ const isTourProductUrl = pathname => {
   const p = normalizePath(pathname);
   if (/\/book$/i.test(p)) return false;
   if (/^\/destinations\/.+\/tours\/[^/]+$/i.test(p)) return true;
-  if (/^\/tours\/(?:[^/]+|[^/]+\/[^/]+\/[^/]+)$/i.test(p)) return true;
+  if (/^\/tours\/(?:[^/]+|[^/]+\/[^/]+)$/i.test(p)) return true;
   return false;
 };
 
@@ -265,10 +265,10 @@ for (const url of urls) {
 
   const offers = resolveOffers({ product, byId });
   if (!offers.length) {
-    fail(
+    warn(
       pathname,
       "missing-offer",
-      "canonical Product has no inline or resolvable Offer/AggregateOffer"
+      "canonical Product has no Offer because no reliable commercial price is available"
     );
     continue;
   }
@@ -314,7 +314,7 @@ await writeFile(REPORT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
 if (warnings.length) {
   console.warn(
-    `[product-schema-audit] ${warnings.length} commercial Offer warning(s); Product/Offer structure remains valid. See reports/product-structured-data-integrity.json.`
+    `[product-schema-audit] ${warnings.length} commercial Offer warning(s); truthful unpriced Products are allowed. See reports/product-structured-data-integrity.json.`
   );
   warnings.slice(0, 25).forEach(warning =>
     console.warn(`  ${warning.pathname}: [${warning.code}] ${warning.message}`)
@@ -340,5 +340,5 @@ if (failures.length) {
 }
 
 console.log(
-  `[product-schema-audit] PASS: ${urls.length.toLocaleString()} sitemap-listed tour product pages have canonical Product JSON-LD with a resolvable Offer/AggregateOffer.`
+  `[product-schema-audit] PASS: ${urls.length.toLocaleString()} sitemap-listed tour product pages have canonical Product JSON-LD; priced products expose resolvable Offer/AggregateOffer data.`
 );
