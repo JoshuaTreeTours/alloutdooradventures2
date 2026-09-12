@@ -194,7 +194,7 @@ describe("FareHarbor Commercial Reserve Phase 2 resolver", () => {
   });
 });
 
-describe("FareHarbor Commercial Reserve Phase 3 consensus resolver", () => {
+describe("FareHarbor Commercial Reserve Phase 3 audited resolver", () => {
   it("accepts multiple distinct standard traveler labels when every price agrees", () => {
     expect(
       resolvePhase3FareHarborPrice(
@@ -225,6 +225,46 @@ describe("FareHarbor Commercial Reserve Phase 3 consensus resolver", () => {
     ).toBe(65);
   });
 
+  it("accepts audited structured-adult labels", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([{ singular: "Traveler | Adult | Age 12+", price: 5500 }]),
+      ),
+    ).toEqual({
+      startingPrice: 55,
+      currency: "USD",
+      basis: "structured-adult",
+      basisLabels: ["Traveler | Adult | Age 12+"],
+      confidence: "medium",
+    });
+
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([{ singular: "Adults", price: 9218 }]),
+      ),
+    ).toEqual({
+      startingPrice: 92.18,
+      currency: "USD",
+      basis: "structured-adult",
+      basisLabels: ["Adults"],
+      confidence: "medium",
+    });
+  });
+
+  it("accepts the audited coded Standard Ticket form", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([{ singular: "(CGT) Standard Ticket", price: 8480 }]),
+      ),
+    ).toEqual({
+      startingPrice: 84.8,
+      currency: "USD",
+      basis: "standard-ticket",
+      basisLabels: ["(CGT) Standard Ticket"],
+      confidence: "medium",
+    });
+  });
+
   it("rejects multiple standard traveler labels when their prices disagree", () => {
     expect(
       resolvePhase3FareHarborPrice(
@@ -245,6 +285,25 @@ describe("FareHarbor Commercial Reserve Phase 3 consensus resolver", () => {
         ]),
       ),
     ).toBeNull();
+  });
+
+  it("keeps unsafe audited label families outside Phase 3", () => {
+    for (const label of [
+      "Adult | Alcohol Included",
+      "Additional Adult",
+      "Rider/Passenger",
+      "Single Person",
+      "Private Tour Guest",
+      "Certified Diver",
+      "Snorkeler",
+    ]) {
+      expect(
+        resolvePhase3FareHarborPrice(
+          payload([{ singular: label, price: 6500 }]),
+        ),
+        label,
+      ).toBeNull();
+    }
   });
 
   it("does not duplicate Phase 1 or Phase 2 cohorts", () => {
