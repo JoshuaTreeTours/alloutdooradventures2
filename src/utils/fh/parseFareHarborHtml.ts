@@ -48,16 +48,6 @@ const getListItems = (sectionHtml: string) =>
     .map(match => stripTags(match[1] ?? ""))
     .filter(Boolean);
 
-const parseDollarAmount = (value: string) => {
-  const match = value.match(/\$\s*([\d,]+(?:\.\d{1,2})?)/);
-  if (!match?.[1]) {
-    return undefined;
-  }
-
-  const parsed = Number.parseFloat(match[1].replace(/,/g, ""));
-  return Number.isFinite(parsed) ? parsed : undefined;
-};
-
 const detectCategory = (value: { title?: string; slug?: string; activityType?: string }) => {
   const haystack = [value.title, value.slug, value.activityType]
     .filter(Boolean)
@@ -142,24 +132,6 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
   });
 
   const faqSection = getSection(html, "faq");
-  const pricing = getListItems(getSection(html, "pricing"));
-  const pricingText = pricing.join(" | ");
-  const adultMatch = pricingText.match(
-    /adult[^$]*(\$\s*[\d,]+(?:\.\d{1,2})?)/i
-  );
-  const childMatch = pricingText.match(
-    /child[^$]*(\$\s*[\d,]+(?:\.\d{1,2})?)/i
-  );
-  const priceAdult = adultMatch?.[1]
-    ? parseDollarAmount(adultMatch[1])
-    : undefined;
-  const priceChild = childMatch?.[1]
-    ? parseDollarAmount(childMatch[1])
-    : undefined;
-  const priceLabel =
-    priceAdult && priceChild
-      ? `$${priceAdult.toFixed(0)} adult / $${priceChild.toFixed(0)} child`
-      : undefined;
 
   const faq = Array.from(
     faqSection.matchAll(
@@ -179,10 +151,7 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
     duration,
     meetingPoint,
     category,
-    pricing,
-    priceAdult,
-    priceChild,
-    priceLabel,
+    pricing: [],
     inclusions: getListItems(getSection(html, "inclusions")),
     exclusions: getListItems(getSection(html, "exclusions")),
     faq,
