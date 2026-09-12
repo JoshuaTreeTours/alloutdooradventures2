@@ -1,0 +1,51 @@
+name: FareHarbor content rebuild
+
+on:
+  push:
+    branches:
+      - feat/fareharbor-content-rebuild
+    paths:
+      - scripts/generate-fareharbor-content-rebuild.ts
+      - .github/workflows/fareharbor-content-rebuild.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      FH_REWRITE_MODEL: gpt-5-mini
+    steps:
+      - name: Checkout rebuild branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/fareharbor-content-rebuild
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate FareHarbor rewritten content and image overrides
+        run: npx tsx scripts/generate-fareharbor-content-rebuild.ts
+
+      - name: Commit generated rebuild data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fareharborContent.generated.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Generate FareHarbor rewritten content corpus"
+            git push origin HEAD:feat/fareharbor-content-rebuild
+          fi
