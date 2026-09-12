@@ -19,7 +19,6 @@ import {
   recordBlockedFareharborEmbed,
 } from "../../utils/fareharbor/optOutOperators";
 import { resolveInternationalGuideBreadcrumb } from "../../utils/guides/internationalGuideBreadcrumbs";
-import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -117,7 +116,6 @@ export default function Engine2TourBookingPage({
     : normalizeFareHarborUrl(tour.bookingUrl ?? tour.booking.bookingUrl);
   const iframeUrl = isBlockedFareharborEmbed ? "" : generatedCalendarUrl;
   const fallbackUrl = generatedCalendarUrl;
-  const bookingPrice = resolveReliableMerchantPrice(tour.pricing?.price);
 
   useEffect(() => {
     if (!isBlockedFareharborEmbed || !fareharborOperatorSlug) {
@@ -134,31 +132,20 @@ export default function Engine2TourBookingPage({
         { name: "Destinations", url: "/destinations" },
         ...getDestinationBreadcrumbs(tour),
         { name: tour.name, url: tour.seo.canonicalPath },
-        { name: "Book", url: `${tour.seo.canonicalPath}/book` },
+        { name: "Learn More", url: `${tour.seo.canonicalPath}/book` },
       ]),
       {
         "@type": "Product",
         "@id": `${seo.canonical}/book#product`,
-        name: `${tour.name} booking`,
+        name: `${tour.name} details`,
         description: isRental
-          ? `Reserve ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
-          : `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
+          ? `Learn more about ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
+          : `Learn more about ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
         ...(isRental ? { category: "EquipmentRental" } : {}),
         image: [seo.og.image],
-        ...(bookingPrice !== null
-          ? {
-              offers: {
-                "@type": "Offer",
-                url: `${seo.canonical}/book`,
-                availability: "https://schema.org/InStock",
-                price: bookingPrice.toFixed(2),
-                priceCurrency: tour.pricing?.currency ?? "USD",
-              },
-            }
-          : {}),
       },
     ],
-    [bookingPrice, isRental, seo.canonical, seo.og.image, tour]
+    [isRental, seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);
@@ -166,11 +153,11 @@ export default function Engine2TourBookingPage({
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={`${seo.title} | Book`}
+        title={`${seo.title} | Learn More`}
         description={
           isRental
-            ? `Reserve ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
-            : `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`
+            ? `Learn more about ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
+            : `Learn more about ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`
         }
         url={`${seo.canonical}/book`}
         image={seo.og.image}
@@ -181,7 +168,7 @@ export default function Engine2TourBookingPage({
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-            {isRental ? "Equipment Rental" : "Booking"}
+            {isRental ? "Equipment Rental" : "Tour Details"}
           </p>
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.name}
@@ -233,13 +220,13 @@ export default function Engine2TourBookingPage({
 
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
           <p className="text-sm text-[#405040]">
-            Having trouble with the embed? Open the booking page in a new tab.
+            Having trouble with the embed? Open the provider page in a new tab.
           </p>
           <BookingCtaLink
             className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
             href={fallbackUrl}
           >
-            {bookingPrice !== null ? "BOOK" : "Learn More"}
+            Learn More
           </BookingCtaLink>
           <Link href={tour.seo.canonicalPath}>
             <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
