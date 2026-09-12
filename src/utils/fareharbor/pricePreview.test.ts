@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   resolveHighConfidenceFareHarborPrice,
   resolvePhase2FareHarborPrice,
+  resolvePhase3FareHarborPrice,
 } from "./pricePreview";
 
 const payload = (customerTypes: Array<Record<string, unknown>>) => ({
@@ -188,6 +189,73 @@ describe("FareHarbor Commercial Reserve Phase 2 resolver", () => {
           { singular: "Waterproof Bag", price: 300 },
           { singular: "Child", price: 2900 },
         ]),
+      ),
+    ).toBeNull();
+  });
+});
+
+describe("FareHarbor Commercial Reserve Phase 3 consensus resolver", () => {
+  it("accepts multiple distinct standard traveler labels when every price agrees", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([
+          { singular: "Person", price: 7900 },
+          { singular: "Participant", price: 7900 },
+        ]),
+      ),
+    ).toEqual({
+      startingPrice: 79,
+      currency: "USD",
+      basis: "standard-traveler-consensus",
+      basisLabels: ["Participant", "Person"],
+      confidence: "medium",
+    });
+  });
+
+  it("accepts a three-label consensus while ignoring unrelated child rates", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([
+          { singular: "Guest", price: 6500 },
+          { singular: "Passenger", price: 6500 },
+          { singular: "Rider", price: 6500 },
+          { singular: "Child", price: 3200 },
+        ]),
+      )?.startingPrice,
+    ).toBe(65);
+  });
+
+  it("rejects multiple standard traveler labels when their prices disagree", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([
+          { singular: "Person", price: 7900 },
+          { singular: "Participant", price: 6900 },
+        ]),
+      ),
+    ).toBeNull();
+  });
+
+  it("does not treat duplicated copies of one label as consensus", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([
+          { singular: "Person", price: 7900 },
+          { singular: "Person", price: 7900 },
+        ]),
+      ),
+    ).toBeNull();
+  });
+
+  it("does not duplicate Phase 1 or Phase 2 cohorts", () => {
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([{ singular: "Adult", price: 8500 }]),
+      ),
+    ).toBeNull();
+    expect(
+      resolvePhase3FareHarborPrice(
+        payload([{ singular: "Person", price: 7900 }]),
       ),
     ).toBeNull();
   });
