@@ -8,10 +8,12 @@ import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
-import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { getToursByCityUnified } from "../../data/tours";
 import TourRating from "../components/TourRating";
-import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import {
+  parsePrice,
+  resolveReliableMerchantPrice,
+} from "../../utils/merchantPricing";
 import { isSuppressedFareHarborBookingPage } from "../../utils/fareharbor/suppressedBookingPages";
 import {
   getPalmSpringsOverrideContent,
@@ -126,21 +128,21 @@ export default function Engine2TourPage({
     citySlug: tour.sourceCitySlug,
   });
   const basePrice = parsePrice(tour.pricing?.price ?? null);
-  const displayPrice = applyPriceFloor(basePrice);
+  const displayPrice = resolveReliableMerchantPrice(basePrice);
   const enginePriceLabel =
-    basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD
+    displayPrice === null
       ? undefined
       : `From $${displayPrice.toFixed(2)} per person`;
   const overridePriceLabel = overrideContent?.enabled
     ? overrideContent.content.heroPriceText
     : undefined;
   const viatorPriceLabel =
-    isViatorTour && tour.pricing?.currency && displayPrice > 0
+    isViatorTour && tour.pricing?.currency && displayPrice !== null
       ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
       : undefined;
   const headerPriceLabel =
     viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
-  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+  const hasReliablePrice = Boolean(headerPriceLabel);
 
   const viatorRatingValue =
     typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
@@ -278,11 +280,6 @@ export default function Engine2TourPage({
               {headerPriceLabel}
             </p>
           ) : null}
-          {showFallbackPrice ? (
-            <p className="mt-4 text-sm font-semibold text-white/90">
-              From $129 per person
-            </p>
-          ) : null}
           {isViatorTour && viatorRatingValue && viatorReviewCount ? (
             <TourRating
               rating={viatorRatingValue}
@@ -311,7 +308,7 @@ export default function Engine2TourPage({
             ) : bookingPath ? (
               <Link href={bookingPath}>
                 <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                  BOOK
+                  {hasReliablePrice ? "BOOK" : "Learn More"}
                 </a>
               </Link>
             ) : null}
