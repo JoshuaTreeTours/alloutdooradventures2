@@ -1,10 +1,9 @@
 import { formatMerchantPrice } from "../utils/merchantPricing";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { parseEngine6StateCityFromCanonicalPath, resolveEngine6DisplayHero } from "./displayHero";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
-
-const DEFAULT_BRAND = "Outdoor Adventures";
 
 export type MerchantFeedProductSchemaSnapshot = {
   id: string;
@@ -150,7 +149,7 @@ export const buildMerchantFeedRowFromProductSchema = (
     availability: snapshot.availability,
     price: snapshot.price,
     condition: "new",
-    brand: DEFAULT_BRAND,
+    brand: SITE_BRAND_NAME,
     average_rating: snapshot.averageRating,
     rating_count: snapshot.ratingCount,
     review_count: snapshot.reviewCount,

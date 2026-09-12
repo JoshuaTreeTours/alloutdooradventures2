@@ -1,3 +1,4 @@
+import "./enforce-engine6-rating-schema-parity.mjs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
