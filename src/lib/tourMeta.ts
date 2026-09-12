@@ -1,4 +1,5 @@
 import { SITE_URL } from "../utils/seo";
+import { getFareHarborEditorialForBookingUrl } from "../data/fareharborEditorial";
 
 type TourLike = {
   title?: string;
@@ -8,6 +9,8 @@ type TourLike = {
   slug?: string;
   shortDescription?: string;
   longDescription?: string;
+  bookingProvider?: string;
+  bookingUrl?: string;
   destination?: {
     city?: string;
     state?: string;
@@ -182,6 +185,13 @@ const buildBookingDescription = (tour: TourLike) => {
 };
 
 const buildDescription = (tour: TourLike, canonicalUrl: string) => {
+  if (tour.engine !== "engine6" && tour.bookingProvider === "fareharbor") {
+    const editorial = getFareHarborEditorialForBookingUrl(tour.bookingUrl);
+    if (editorial?.metaDescription) {
+      return editorial.metaDescription;
+    }
+  }
+
   const tourName = pickTourName(tour) || "this tour";
   const city = pickCity(tour);
   const state = pickState(tour);
