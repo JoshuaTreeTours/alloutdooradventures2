@@ -27,6 +27,9 @@ import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 import { detectRental } from "../../utils/detectRental";
 import { buildRentalDescription } from "../../templates/rentalDescription";
 import { isHardDeletedLegacyTour } from "../../utils/tours/hardDeleteLegacyTours";
+import { getFareharborCachedPrice } from "../../data/tourPricing";
+import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import { parsePrice } from "../../utils/merchantPricing";
 
 export type Engine2Tour = {
   id: string;
@@ -194,40 +197,43 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours
           location: tour.geo.region,
         })
       : null;
+    const bookingProvider = tour.bookingProvider ?? "fareharbor";
+    const resolvedBookingUrl =
+      bookingProvider === "fareharbor" && tour.booking.fareharbor
+        ? buildFareHarborUrl({
+            company: tour.booking.fareharbor.shortname,
+            itemId: tour.booking.fareharbor.itemId,
+            calendarPath: tour.booking.bookingUrl,
+          })
+        : normalizeFareHarborUrl(tour.booking.bookingUrl);
+    const existingPrice = parsePrice(tour.pricing?.price ?? null);
+    const reservePrice =
+      bookingProvider === "fareharbor" &&
+      (existingPrice === null || existingPrice < PRICE_MIN_THRESHOLD_USD)
+        ? getFareharborCachedPrice(resolvedBookingUrl)
+        : null;
 
     return {
       ...tour,
       type: tourType,
-      bookingProvider: tour.bookingProvider ?? "fareharbor",
-      engine:
-        (tour.bookingProvider ?? "fareharbor") === "viator"
-          ? "engine3"
-          : "engine2",
+      bookingProvider,
+      engine: bookingProvider === "viator" ? "engine3" : "engine2",
       images: {
         ...tour.images,
         hero: getBestFareHarborImage(tour),
       },
       booking: {
         ...tour.booking,
-        bookingUrl:
-          (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
-          tour.booking.fareharbor
-            ? buildFareHarborUrl({
-                company: tour.booking.fareharbor.shortname,
-                itemId: tour.booking.fareharbor.itemId,
-                calendarPath: tour.booking.bookingUrl,
-              })
-            : normalizeFareHarborUrl(tour.booking.bookingUrl),
+        bookingUrl: resolvedBookingUrl,
       },
-      bookingUrl:
-        (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
-        tour.booking.fareharbor
-          ? buildFareHarborUrl({
-              company: tour.booking.fareharbor.shortname,
-              itemId: tour.booking.fareharbor.itemId,
-              calendarPath: tour.booking.bookingUrl,
-            })
-          : normalizeFareHarborUrl(tour.booking.bookingUrl),
+      bookingUrl: resolvedBookingUrl,
+      pricing: reservePrice
+        ? {
+            ...tour.pricing,
+            price: reservePrice.startingPrice.toFixed(2),
+            currency: reservePrice.currency,
+          }
+        : tour.pricing,
       seo: {
         ...tour.seo,
         description: rentalDescription ?? tour.seo.description,
