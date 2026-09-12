@@ -18,8 +18,6 @@ import {
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
-import { formatStartingPrice } from "../../lib/pricing";
-import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
@@ -79,7 +77,7 @@ export default function FlagstaffTourDetailRoute({
   const metaDescription = tour
     ? buildMetaDescription(
         tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-        `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
+        `Learn more about ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
       )
     : undefined;
   const cityHref = resolveUsGuideHref(state.slug, city.slug).href;
@@ -92,6 +90,14 @@ export default function FlagstaffTourDetailRoute({
       return null;
     }
     const schemaActivityLabel = resolveTourSchemaActivityLabel(tour);
+    const unpricedTour = {
+      ...tour,
+      startingPrice: undefined,
+      badges: {
+        ...tour.badges,
+        priceFrom: undefined,
+      },
+    };
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: detailUrl,
@@ -122,7 +128,7 @@ export default function FlagstaffTourDetailRoute({
           },
           offers: {
             url: bookingUrl,
-            price: resolveReliableMerchantPrice(tour.startingPrice),
+            price: null,
             priceCurrency: tour.currency ?? "USD",
           },
           brandOrgIds: {
@@ -139,13 +145,13 @@ export default function FlagstaffTourDetailRoute({
             image: heroImage,
           }),
           buildTourProductStructuredData({
-            tour,
+            tour: unpricedTour,
             detailUrl,
             description: productDescription,
             images: structuredImages.length ? structuredImages : undefined,
           }),
           buildTourTripStructuredData({
-            tour,
+            tour: unpricedTour,
             detailUrl,
             description: productDescription,
             images: structuredImages.length ? structuredImages : undefined,
@@ -204,19 +210,12 @@ export default function FlagstaffTourDetailRoute({
     metaDescription ??
     buildMetaDescription(
       tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
+      `Learn more about ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
     );
   const relatedTours = flagstaffTours.filter(
     item => getFlagstaffTourSlug(item) !== tourSlug
   );
   const disclosure = getAffiliateDisclosure(tour);
-  const reliableStartingPrice = resolveReliableMerchantPrice(
-    tour.startingPrice
-  );
-  const startingPriceLabel =
-    reliableStartingPrice === null
-      ? null
-      : formatStartingPrice(reliableStartingPrice, tour.currency);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -271,11 +270,6 @@ export default function FlagstaffTourDetailRoute({
                 {tour.badges.tagline}
               </p>
             ) : null}
-            {startingPriceLabel ? (
-              <p className="mt-3 text-sm font-semibold text-white/90">
-                From {startingPriceLabel} per person
-              </p>
-            ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href={bookingUrl}>
@@ -283,7 +277,7 @@ export default function FlagstaffTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                {reliableStartingPrice !== null ? "Book Now" : "Learn More"}
+                Learn More
               </a>
             </Link>
             <Link href={toursHref}>
@@ -370,9 +364,7 @@ export default function FlagstaffTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                {reliableStartingPrice !== null
-                  ? "Book This Tour"
-                  : "Learn More"}
+                Learn More
               </a>
             </Link>
           </div>
