@@ -36,9 +36,19 @@ jobs:
       - name: Seed Phase 3 consensus shadow cohort
         run: npx tsx scripts/fetch-fareharbor-pricing-phase3.ts
 
+      - name: Audit unresolved Phase 3 traveler labels
+        run: npx tsx scripts/audit-fareharbor-pricing-phase3.ts
+
       - name: Upload Phase 3 shadow reserve
         uses: actions/upload-artifact@v4
         with:
           name: fareharbor-commercial-reserve-phase3
           path: src/data/fareharborPricingPhase3.ts
+          if-no-files-found: error
+
+      - name: Upload Phase 3 unresolved-label audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-commercial-reserve-phase3-audit
+          path: reports/fareharbor-phase3-label-audit.json
           if-no-files-found: error
