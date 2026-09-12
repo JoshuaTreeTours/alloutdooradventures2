@@ -13,7 +13,10 @@ type FareharborPhase3PriceEntry = {
   currency: string;
   source: "fareharbor-price-preview-v2";
   confidence: "medium";
-  basis: "standard-traveler-consensus";
+  basis:
+    | "standard-traveler-consensus"
+    | "structured-adult"
+    | "standard-ticket";
   basisLabels: string[];
   lastUpdated: string;
 };
@@ -197,7 +200,10 @@ const writeCacheFile = async (
   currency: string;
   source: "fareharbor-price-preview-v2";
   confidence: "medium";
-  basis: "standard-traveler-consensus";
+  basis:
+    | "standard-traveler-consensus"
+    | "structured-adult"
+    | "standard-ticket";
   basisLabels: string[];
   lastUpdated: string;
 };
@@ -250,7 +256,7 @@ const main = async () => {
   console.info(
     `[commercial-reserve-phase3] SUMMARY ${JSON.stringify({
       candidates: entries.length,
-      consensusPrices: Object.keys(cache).length,
+      phase3Prices: Object.keys(cache).length,
       coverageRate:
         entries.length > 0
           ? Number((Object.keys(cache).length / entries.length).toFixed(4))
