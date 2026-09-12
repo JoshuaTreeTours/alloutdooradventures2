@@ -1,4 +1,4 @@
-name: FareHarbor rebuild source harvest
+name: FareHarbor content rebuild
 
 on:
   push:
@@ -6,15 +6,18 @@ on:
       - feat/fareharbor-content-rebuild
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  harvest:
+  rebuild:
+    if: ${{ !contains(github.event.head_commit.message, '[fh generated]') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     steps:
       - name: Checkout rebuild branch
         uses: actions/checkout@v4
+        with:
+          ref: feat/fareharbor-content-rebuild
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -27,11 +30,65 @@ jobs:
       - name: Harvest complete FareHarbor rebuild source
         run: npx tsx scripts/harvest-fareharbor-rebuild-source.ts
 
-      - name: Upload rebuild harvest
+      - name: Build generated FareHarbor content registry
+        run: npx tsx scripts/build-fareharbor-rebuild-registry.ts
+
+      - name: Apply FareHarbor page and schema rules
+        run: npx tsx scripts/apply-fareharbor-rebuild-code.ts
+
+      - name: Verify generic FareHarbor fallback rules are patched
+        run: |
+          grep -q 'unresolvedFareHarborPrice' src/engine2/pages/Engine2TourPage.tsx
+          grep -q 'Learn More' src/engine2/pages/Engine2TourPage.tsx
+          grep -q 'unresolvedFareHarborPrice' src/pages/tours/TourDetail.tsx
+          grep -q 'Learn More' src/pages/tours/TourDetail.tsx
+          grep -q 'PRICE_MIN_THRESHOLD_USD' src/engine2/schema/buildSchemaGraph.ts
+
+      - name: TypeScript and repository checks
+        run: npm run check
+
+      - name: Production build and structured-data audits
+        run: npm run build
+
+      - name: Write rebuild summary
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const harvest = JSON.parse(fs.readFileSync('reports/fareharbor-rebuild-harvest.json','utf8'));
+          const generated = fs.readFileSync('src/data/fareharborRebuild.generated.ts','utf8');
+          const routeCount = (generated.match(/^  "\/destinations\//gm) || []).length;
+          const summary = {
+            ...harvest.summary,
+            generatedRoutes: routeCount,
+            fallbackPricePolicy: 'Unverified FareHarbor prices omitted from visible page and Product Offer price',
+            unresolvedFareHarborCta: 'Learn More'
+          };
+          fs.writeFileSync('reports/fareharbor-content-rebuild-summary.json', JSON.stringify(summary, null, 2));
+          console.log('[fh-content-rebuild] SUMMARY', JSON.stringify(summary));
+          NODE
+
+      - name: Upload rebuild evidence
         uses: actions/upload-artifact@v4
         with:
-          name: fareharbor-rebuild-harvest
+          name: fareharbor-content-rebuild-evidence
           path: |
             reports/fareharbor-rebuild-harvest.json
             reports/fareharbor-rebuild-harvest.md
+            reports/fareharbor-content-rebuild-summary.json
           if-no-files-found: error
+
+      - name: Commit generated rebuild after green checks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fareharborRebuild.generated.ts \
+                  src/engine2/pages/Engine2TourPage.tsx \
+                  src/engine2/schema/buildSchemaGraph.ts \
+                  src/pages/tours/TourDetail.tsx \
+                  src/pages/tours/FlagstaffTourDetailRoute.tsx
+          if git diff --cached --quiet; then
+            echo "No generated rebuild changes to commit."
+          else
+            git commit -m "[fh generated] Rebuild FareHarbor product content"
+            git push origin HEAD:feat/fareharbor-content-rebuild
+          fi
