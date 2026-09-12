@@ -17,7 +17,7 @@ describe("Palm Springs 34849 override content", () => {
     );
   });
 
-  it("parses FareHarbor HTML into structured content", () => {
+  it("parses FareHarbor HTML into unpriced structured content", () => {
     const parsed = parseFareHarborHtml(
       fareHarborHtmlByUrl[FAREHARBOR_URL_34849]
     );
@@ -26,14 +26,14 @@ describe("Palm Springs 34849 override content", () => {
     expect(parsed.meetingPoint.addressLine1).toContain("38635 Monroe St");
     expect(parsed.category.primary).toContain("Jeep tour");
     expect(parsed.category.tags).toContain("geology");
-    expect(parsed.pricing.join(" ")).toContain("$175");
-    expect(parsed.priceLabel).toBe("$175 adult / $150 child");
-    expect(parsed.priceAdult).toBe(175);
-    expect(parsed.priceChild).toBe(150);
+    expect(parsed.pricing).toEqual([]);
+    expect(parsed.priceLabel).toBeUndefined();
+    expect(parsed.priceAdult).toBeUndefined();
+    expect(parsed.priceChild).toBeUndefined();
     expect(parsed.highlights.length).toBeGreaterThan(0);
   });
 
-  it("returns enriched override copy and labels for tour 34849", () => {
+  it("returns enriched override copy without FareHarbor pricing for tour 34849", () => {
     const tour = getEngine2TourByPath(
       "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849"
     );
@@ -44,14 +44,10 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.category?.primary).toContain("Jeep");
     expect(override?.content.durationLabel).toBe("3 hours");
     expect(override?.content.meetingPoint?.city).toBe("Indio");
-    expect(override?.content.heroPriceText).toBe("$175 adult / $150 child");
-    expect(override?.content.schemaPrice).toBe(175);
+    expect(override?.content.heroPriceText).toBeUndefined();
+    expect(override?.content.schemaPrice).toBeUndefined();
+    expect(override?.content.pricing).toBeUndefined();
     expect(override?.content.durationISO).toBe("PT3H");
-    expect(override?.content.pricing).toMatchObject({
-      low: 150,
-      high: 175,
-      isAggregate: true,
-    });
     expect(override?.content.canonicalPath).toBe(tour?.seo.canonicalPath);
     expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(
       3
