@@ -84,12 +84,17 @@ const collectCandidates = () => {
 
   for (const tour of getAllEngine2Tours()) {
     if (tour.bookingProvider !== "fareharbor") continue;
+    const bookingUrl = tour.bookingUrl ?? tour.booking.bookingUrl;
+    if (!bookingUrl) {
+      unparseable += 1;
+      continue;
+    }
     if (!addCandidate(
       map,
       "engine2",
       String(tour.id),
       tour.name,
-      tour.bookingUrl ?? tour.booking.bookingUrl,
+      bookingUrl,
       tour.seo.canonicalPath ?? null,
     )) {
       unparseable += 1;
