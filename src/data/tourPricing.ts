@@ -19,6 +19,17 @@ export const getFareharborCachedPrice = (bookingUrl?: string) => {
 };
 
 export const applyTourPricing = (tour: Tour): Tour => {
+  if (tour.bookingProvider === "fareharbor") {
+    return {
+      ...tour,
+      startingPrice: undefined,
+      badges: {
+        ...tour.badges,
+        priceFrom: undefined,
+      },
+    };
+  }
+
   if (tour.startingPrice !== undefined && tour.startingPrice !== null) {
     return tour;
   }
