@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { resolveHighConfidenceFareHarborPrice } from "./pricePreview";
+import {
+  resolveHighConfidenceFareHarborPrice,
+  resolvePhase2FareHarborPrice,
+} from "./pricePreview";
 
 const payload = (customerTypes: Array<Record<string, unknown>>) => ({
   details: {
@@ -98,5 +101,94 @@ describe("FareHarbor Commercial Reserve high-confidence resolver", () => {
     const ambiguous = payload([{ singular: "Adult", price: 8500 }]);
     ambiguous.items.push(ambiguous.items[0]);
     expect(resolveHighConfidenceFareHarborPrice(ambiguous)).toBeNull();
+  });
+});
+
+describe("FareHarbor Commercial Reserve Phase 2 resolver", () => {
+  it("accepts a standard Person price when Adult is not used", () => {
+    expect(
+      resolvePhase2FareHarborPrice(
+        payload([{ singular: "Person", price: 7900 }]),
+      ),
+    ).toEqual({
+      startingPrice: 79,
+      currency: "USD",
+      basis: "standard-traveler",
+      basisLabel: "Person",
+      confidence: "medium",
+    });
+  });
+
+  it("accepts Participant, Guest, Passenger, Rider, and General Admission labels", () => {
+    for (const label of [
+      "Participant",
+      "Guest",
+      "Passenger",
+      "Rider",
+      "General Admission",
+    ]) {
+      expect(
+        resolvePhase2FareHarborPrice(
+          payload([{ singular: label, price: 6500 }]),
+        )?.startingPrice,
+        label,
+      ).toBe(65);
+    }
+  });
+
+  it("accepts an age-qualified Person label", () => {
+    expect(
+      resolvePhase2FareHarborPrice(
+        payload([{ singular: "Person (12+)", price: 6100 }]),
+      )?.startingPrice,
+    ).toBe(61);
+  });
+
+  it("does not duplicate a Phase 1 Adult price", () => {
+    expect(
+      resolvePhase2FareHarborPrice(
+        payload([{ singular: "Adult", price: 8500 }]),
+      ),
+    ).toBeNull();
+  });
+
+  it("rejects qualified-looking labels with modifiers", () => {
+    for (const label of [
+      "Local Participant",
+      "Member Guest",
+      "Senior Passenger",
+      "Additional Rider",
+      "VIP Admission",
+      "Ticket + Gear",
+    ]) {
+      expect(
+        resolvePhase2FareHarborPrice(
+          payload([{ singular: label, price: 3500 }]),
+        ),
+        label,
+      ).toBeNull();
+    }
+  });
+
+  it("rejects ambiguous multiple standard traveler rates", () => {
+    expect(
+      resolvePhase2FareHarborPrice(
+        payload([
+          { singular: "Person", price: 7900 },
+          { singular: "Participant", price: 6900 },
+        ]),
+      ),
+    ).toBeNull();
+  });
+
+  it("keeps non-traveler accessories outside the second cohort", () => {
+    expect(
+      resolvePhase2FareHarborPrice(
+        payload([
+          { singular: "Waterproof Bag", price: 300 },
+          { singular: "Child", price: 2900 },
+        ]),
+      ),
+    ).toBeNull();
   });
 });
