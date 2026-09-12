@@ -3,7 +3,10 @@ export type FareharborPhase3PriceEntry = {
   currency: string;
   source: "fareharbor-price-preview-v2";
   confidence: "medium";
-  basis: "standard-traveler-consensus";
+  basis:
+    | "standard-traveler-consensus"
+    | "structured-adult"
+    | "standard-ticket";
   basisLabels: string[];
   lastUpdated: string;
 };
