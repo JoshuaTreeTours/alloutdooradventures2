@@ -1,0 +1,37 @@
+name: FareHarbor booking HTML feasibility probe
+
+on:
+  pull_request:
+    branches:
+      - feat/fareharbor-commercial-reserve-phase3
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Probe representative booking HTML
+        run: npx tsx scripts/probe-fareharbor-booking-html.ts
+
+      - name: Upload probe
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-booking-html-probe
+          path: reports/fareharbor-booking-html-probe.json
+          if-no-files-found: error

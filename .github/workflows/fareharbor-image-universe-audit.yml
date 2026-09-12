@@ -1,0 +1,39 @@
+name: FareHarbor image universe audit
+
+on:
+  pull_request:
+    branches:
+      - feat/fareharbor-commercial-reserve-phase3
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Audit FareHarbor image universe
+        run: npx tsx scripts/audit-fareharbor-image-universe.ts
+
+      - name: Upload image universe audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-image-universe-audit
+          path: |
+            reports/fareharbor-image-universe-audit.json
+            reports/fareharbor-image-universe-audit.md
+          if-no-files-found: error

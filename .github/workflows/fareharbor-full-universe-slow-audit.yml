@@ -1,0 +1,38 @@
+name: FareHarbor full-universe slow pricing audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test FareHarbor pricing resolvers
+        run: npx vitest run src/utils/fareharbor/pricePreview.test.ts
+
+      - name: Audit entire FareHarbor universe slowly
+        run: npx tsx scripts/audit-fareharbor-full-universe-slow.ts
+
+      - name: Upload slow full-universe pricing audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: fareharbor-full-universe-slow-pricing-audit
+          path: |
+            reports/fareharbor-full-universe-slow-audit.json
+            reports/fareharbor-full-universe-slow-audit.md
+          if-no-files-found: error
