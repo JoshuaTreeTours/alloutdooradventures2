@@ -19,8 +19,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
-import { applyPriceFloor } from "../../utils/merchantPricing";
+import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
@@ -123,7 +122,7 @@ export default function FlagstaffTourDetailRoute({
           },
           offers: {
             url: bookingUrl,
-            price: applyPriceFloor(tour.startingPrice ?? null),
+            price: resolveReliableMerchantPrice(tour.startingPrice),
             priceCurrency: tour.currency ?? "USD",
           },
           brandOrgIds: {
@@ -211,15 +210,13 @@ export default function FlagstaffTourDetailRoute({
     item => getFlagstaffTourSlug(item) !== tourSlug
   );
   const disclosure = getAffiliateDisclosure(tour);
-  const startingPriceLabel = formatStartingPrice(
-    applyPriceFloor(tour.startingPrice ?? null),
-    tour.currency
+  const reliableStartingPrice = resolveReliableMerchantPrice(
+    tour.startingPrice
   );
-  const isPriceFallbackApplied =
-    tour.startingPrice === undefined ||
-    tour.startingPrice === null ||
-    !Number.isFinite(tour.startingPrice) ||
-    tour.startingPrice < PRICE_MIN_THRESHOLD_USD;
+  const startingPriceLabel =
+    reliableStartingPrice === null
+      ? null
+      : formatStartingPrice(reliableStartingPrice, tour.currency);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -274,11 +271,11 @@ export default function FlagstaffTourDetailRoute({
                 {tour.badges.tagline}
               </p>
             ) : null}
-            <p className="mt-3 text-sm font-semibold text-white/90">
-              {isPriceFallbackApplied
-                ? "From $129 per person"
-                : `From ${startingPriceLabel} per person`}
-            </p>
+            {startingPriceLabel ? (
+              <p className="mt-3 text-sm font-semibold text-white/90">
+                From {startingPriceLabel} per person
+              </p>
+            ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href={bookingUrl}>
@@ -286,7 +283,7 @@ export default function FlagstaffTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book Now
+                {reliableStartingPrice !== null ? "Book Now" : "Learn More"}
               </a>
             </Link>
             <Link href={toursHref}>
@@ -373,7 +370,9 @@ export default function FlagstaffTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                {reliableStartingPrice !== null
+                  ? "Book This Tour"
+                  : "Learn More"}
               </a>
             </Link>
           </div>
