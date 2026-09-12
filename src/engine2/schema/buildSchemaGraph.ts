@@ -114,7 +114,9 @@ export const buildSchemaGraph = (
   const rewriteSchemaPrice = resolveReliableMerchantPrice(
     rewriteV3Content?.schemaPrice
   );
-  const schemaPrice = rewriteSchemaPrice ?? fallbackPrice;
+  const schemaPrice = isViatorTour
+    ? (rewriteSchemaPrice ?? fallbackPrice)
+    : null;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
   const canonicalProductUrl = resolveCanonicalProductUrl(seo.canonical);
@@ -223,11 +225,12 @@ export const buildSchemaGraph = (
         },
         offers: {
           url: offerUrl,
-          lowPrice: rewriteV3Content?.pricing?.low,
-          highPrice: rewriteV3Content?.pricing?.high,
+          lowPrice: isViatorTour ? rewriteV3Content?.pricing?.low : null,
+          highPrice: isViatorTour ? rewriteV3Content?.pricing?.high : null,
           price: schemaPrice,
           priceCurrency: offerCurrency,
           offerCount:
+            isViatorTour &&
             typeof rewriteV3Content?.pricing?.low === "number" &&
             typeof rewriteV3Content?.pricing?.high === "number"
               ? 2
