@@ -37,8 +37,7 @@ import {
 } from "../../schema/buildTourSchemaGraph";
 import { buildTourMeta } from "../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../schema/resolveTourSchemaActivityLabel";
-import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
-import { applyPriceFloor } from "../../utils/merchantPricing";
+import { resolveReliableMerchantPrice } from "../../utils/merchantPricing";
 import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../utils/fh/parseFareHarborHtml";
 
@@ -114,7 +113,7 @@ export default function TourDetail({ params }: TourDetailProps) {
           },
           offers: {
             url: bookingUrl,
-            price: applyPriceFloor(tour.startingPrice ?? null),
+            price: resolveReliableMerchantPrice(tour.startingPrice),
             priceCurrency: tour.currency ?? "USD",
           },
           brandOrgIds: {
@@ -186,21 +185,20 @@ export default function TourDetail({ params }: TourDetailProps) {
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
-  const startingPriceLabel = formatStartingPrice(
-    applyPriceFloor(tour.startingPrice ?? null),
-    tour.currency
+  const reliableStartingPrice = resolveReliableMerchantPrice(
+    tour.startingPrice
   );
-  const fareHarborHeroStartingPrice =
-    fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
+  const startingPriceLabel =
+    reliableStartingPrice === null
+      ? null
+      : formatStartingPrice(reliableStartingPrice, tour.currency);
+  const fareHarborAdultPrice = resolveReliableMerchantPrice(
+    fareHarborParsed?.priceAdult
+  );
   const heroStartingPriceLabel = formatStartingPrice(
-    fareHarborHeroStartingPrice ?? tour.startingPrice,
+    fareHarborAdultPrice ?? reliableStartingPrice ?? undefined,
     tour.currency
   );
-  const isPriceFallbackApplied =
-    tour.startingPrice === undefined ||
-    tour.startingPrice === null ||
-    !Number.isFinite(tour.startingPrice) ||
-    tour.startingPrice < PRICE_MIN_THRESHOLD_USD;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -284,17 +282,17 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
-              <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
-                {isPriceFallbackApplied
-                  ? "From $129 per person"
-                  : `From ${startingPriceLabel} per person`}
-              </p>
+              {startingPriceLabel ? (
+                <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
+                  From {startingPriceLabel} per person
+                </p>
+              ) : null}
               <Link href={bookingUrl}>
                 <a
                   rel="nofollow"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
                 >
-                  BOOK
+                  {reliableStartingPrice !== null ? "BOOK" : "Learn More"}
                 </a>
               </Link>
               <div className="mt-6 space-y-2 text-xs text-[#405040]">
@@ -346,7 +344,9 @@ export default function TourDetail({ params }: TourDetailProps) {
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                {reliableStartingPrice !== null
+                  ? "Book This Tour"
+                  : "Learn More"}
               </a>
             </Link>
           </div>

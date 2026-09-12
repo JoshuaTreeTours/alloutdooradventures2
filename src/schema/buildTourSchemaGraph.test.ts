@@ -166,6 +166,27 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
+  it("omits Product and TouristTrip offers when no truthful price is available", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      offers: {
+        ...baseArgs.offers,
+        price: null,
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const product = graph.find(node => node["@type"] === "Product") as Record<
+      string,
+      unknown
+    >;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as Record<
+      string,
+      unknown
+    >;
+
+    expect(product).not.toHaveProperty("offers");
+    expect(trip).not.toHaveProperty("offers");
+  });
+
   it("keeps non-US region values unchanged", () => {
     const graph = buildTourSchemaGraph({
       ...baseArgs,

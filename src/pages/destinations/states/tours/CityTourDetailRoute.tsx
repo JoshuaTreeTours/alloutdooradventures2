@@ -109,6 +109,7 @@ import { applyEngine1Template } from "../../../../utils/tours/applyEngine1Harden
 import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { resolveReliableMerchantPrice } from "../../../../utils/merchantPricing";
 import RemovedTourGone from "../../../RemovedTourGone";
 import { resolveSafeTourListHref } from "../../../../utils/tours/tourNavigation";
 import RouteRedirect from "../../../../components/RouteRedirect";
@@ -806,7 +807,7 @@ export default function CityTourDetailRoute({
                 ? viatorFromPrice && Number.isFinite(viatorFromPrice.price)
                   ? viatorFromPrice.price
                   : undefined
-                : tour.startingPrice,
+                : resolveReliableMerchantPrice(tour.startingPrice),
             priceCurrency:
               viatorProductCode && tour.bookingProvider === "viator"
                 ? "USD"
@@ -945,12 +946,22 @@ export default function CityTourDetailRoute({
       : item.slug !== tour.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
-  const fareHarborHeroStartingPrice =
-    fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
+  const reliableStartingPrice = resolveReliableMerchantPrice(
+    tour.startingPrice
+  );
+  const fareHarborAdultPrice = resolveReliableMerchantPrice(
+    fareHarborParsed?.priceAdult
+  );
+  const heroStartingPriceValue =
+    tour.bookingProvider === "fareharbor"
+      ? (fareHarborAdultPrice ?? reliableStartingPrice ?? undefined)
+      : tour.startingPrice;
   const heroStartingPriceLabel = formatStartingPrice(
-    fareHarborHeroStartingPrice ?? tour.startingPrice,
+    heroStartingPriceValue,
     tour.currency
   );
+  const neutralFareHarborCta =
+    tour.bookingProvider === "fareharbor" && !heroStartingPriceLabel;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -1015,7 +1026,9 @@ export default function CityTourDetailRoute({
                   rel="nofollow"
                   className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
                 >
-                  {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
+                  {neutralFareHarborCta
+                    ? "Learn More"
+                    : (hardenedTemplate?.primaryCtaLabel ?? "BOOK")}
                 </a>
               </Link>
             </div>
@@ -1176,7 +1189,7 @@ export default function CityTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                {neutralFareHarborCta ? "Learn More" : "Book This Tour"}
               </a>
             </Link>
           </div>
