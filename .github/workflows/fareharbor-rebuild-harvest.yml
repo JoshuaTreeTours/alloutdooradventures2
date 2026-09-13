@@ -73,7 +73,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/fareharbor-rebuild-check.log
+          git add -f reports/fareharbor-rebuild-check.log
           git commit -m "[fh diagnostic] Capture rebuild check failure"
           git push origin HEAD:feat/fareharbor-content-rebuild
           exit 1
