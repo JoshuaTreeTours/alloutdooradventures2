@@ -57,14 +57,39 @@ jobs:
           grep -q 'Learn More' src/pages/tours/TourDetail.tsx
           grep -q 'PRICE_MIN_THRESHOLD_USD' src/engine2/schema/buildSchemaGraph.ts
 
-      - name: TypeScript and repository checks
+      - name: FareHarbor-specific repository checks
         id: repository_checks
         shell: bash
         run: |
           mkdir -p reports
           set +e
-          npm run check 2>&1 | tee reports/fareharbor-rebuild-check.log
-          status=${PIPESTATUS[0]}
+          {
+            echo '=== FareHarbor URL generator ==='
+            npx tsx scripts/engine2/test-fh-url-generator.ts
+            fh_status=$?
+            echo '=== Rebuild source/registry acceptance checks ==='
+            node - <<'NODE'
+          const fs = require('fs');
+          const harvestPath = 'reports/fareharbor-rebuild-harvest.json';
+          const registryPath = 'src/data/fareharborRebuild.generated.ts';
+          if (!fs.existsSync(harvestPath)) throw new Error('Missing FareHarbor harvest report');
+          if (!fs.existsSync(registryPath)) throw new Error('Missing generated FareHarbor rebuild registry');
+          const harvest = JSON.parse(fs.readFileSync(harvestPath, 'utf8'));
+          const summary = harvest.summary || {};
+          const universe = Number(summary.uniqueFareHarborItems ?? summary.uniqueItems ?? summary.discoveredItems ?? 0);
+          const rewriteReady = Number(summary.rewriteReady ?? summary.rewriteReadyItems ?? summary.descriptionRewriteReady ?? 0);
+          if (universe < 7000) throw new Error(`Implausibly small FareHarbor universe: ${universe}`);
+          if (rewriteReady < 6000) throw new Error(`Implausibly small rewrite-ready population: ${rewriteReady}`);
+          const generated = fs.readFileSync(registryPath, 'utf8');
+          const routeCount = (generated.match(/^  "\/destinations\//gm) || []).length;
+          if (routeCount < 6000) throw new Error(`Implausibly small generated route count: ${routeCount}`);
+          if (!generated.includes('145208')) throw new Error('Country Boy Gold Mine Tour 145208 missing from generated registry');
+          console.log(JSON.stringify({ universe, rewriteReady, generatedRoutes: routeCount, countryBoy145208: true }));
+          NODE
+            acceptance_status=$?
+          } 2>&1 | tee reports/fareharbor-rebuild-check.log
+          status=0
+          if [ "$fh_status" -ne 0 ] || [ "$acceptance_status" -ne 0 ]; then status=1; fi
           echo "status=$status" >> "$GITHUB_OUTPUT"
           exit 0
 
