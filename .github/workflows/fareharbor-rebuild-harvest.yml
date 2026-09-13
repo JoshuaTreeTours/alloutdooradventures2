@@ -106,6 +106,8 @@ jobs:
       - name: Production build and structured-data audits
         id: production_build
         shell: bash
+        env:
+          MERCHANT_FEED_RUNTIME_BASE_URL: https://www.alloutdooradventures.com
         run: |
           mkdir -p reports
           set +e
