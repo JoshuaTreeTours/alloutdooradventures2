@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Marketplace disclosure already appears in the footer; suppress the duplicate tour-header copy. */
+p[class="mt-4 max-w-3xl text-sm leading-6 text-white/90"] {
+  display: none;
+}
