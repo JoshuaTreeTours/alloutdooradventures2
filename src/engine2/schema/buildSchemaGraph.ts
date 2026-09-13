@@ -15,7 +15,10 @@ import {
 } from "../../schema/buildTourSchemaGraph";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
-import { DEFAULT_CURRENCY } from "../../constants/merchantDefaults";
+import {
+  DEFAULT_CURRENCY,
+  PRICE_MIN_THRESHOLD_USD,
+} from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
@@ -110,9 +113,12 @@ export const buildSchemaGraph = (
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const isViatorTour = tour.bookingProvider === "viator";
   const effectiveHeroImage = tour.images.hero || undefined;
-  const fallbackPrice = applyPriceFloor(
-    parsePrice(tour.pricing?.price ?? null)
-  );
+  const parsedPrice = parsePrice(tour.pricing?.price ?? null);
+  const fallbackPrice = isViatorTour
+    ? applyPriceFloor(parsedPrice)
+    : parsedPrice !== null && parsedPrice >= PRICE_MIN_THRESHOLD_USD
+      ? parsedPrice
+      : undefined;
   const schemaPrice = rewriteV3Content?.schemaPrice ?? fallbackPrice;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
