@@ -65,13 +65,11 @@ function Engine6BookingCta({
   href,
   isExternal,
   className,
-  noteClassName = "mt-2 max-w-md text-xs leading-5 text-[#405040]",
   feedbackClassName = "mt-2 text-sm font-medium text-[#2f4a2f]",
 }: {
   href: string;
   isExternal: boolean;
   className: string;
-  noteClassName?: string;
   feedbackClassName?: string;
 }) {
   const [isOpening, setIsOpening] = useState(false);
@@ -94,12 +92,6 @@ function Engine6BookingCta({
       {isOpening ? (
         <p className={feedbackClassName} aria-live="polite">
           Opening secure Viator booking page…
-        </p>
-      ) : null}
-      {isExternal ? (
-        <p className={noteClassName}>
-          Booking opens on Viator, our secure travel partner. Some availability
-          pages may take a few seconds to load.
         </p>
       ) : null}
     </div>
@@ -510,7 +502,6 @@ export default function Engine6TourPage({
                 isExternal={isExternalBookingUrl}
                 className={BOOK_CTA_CLASSES}
                 feedbackClassName="mt-2 text-sm font-medium text-white"
-                noteClassName="mt-2 max-w-md text-xs leading-5 text-white/85"
               />
             </div>
           </div>
@@ -702,7 +693,6 @@ export default function Engine6TourPage({
               isExternal={isExternalBookingUrl}
               className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
               feedbackClassName="mt-2 text-sm font-medium text-white"
-              noteClassName="mx-auto mt-2 max-w-md text-xs leading-5 text-green-100"
             />
           </div>
         </section>
