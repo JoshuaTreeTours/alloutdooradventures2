@@ -36,6 +36,19 @@ jobs:
       - name: Apply FareHarbor page and schema rules
         run: npx tsx scripts/apply-fareharbor-rebuild-code.ts
 
+      - name: Harden optional FareHarbor CTA URL
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = 'src/engine2/pages/Engine2TourPage.tsx';
+          let source = fs.readFileSync(path, 'utf8');
+          source = source.replace(
+            'href={tour.bookingUrl ?? tour.booking.bookingUrl}',
+            'href={tour.bookingUrl ?? tour.booking.bookingUrl ?? "#"}',
+          );
+          fs.writeFileSync(path, source);
+          NODE
+
       - name: Verify generic FareHarbor fallback rules are patched
         run: |
           grep -q 'unresolvedFareHarborPrice' src/engine2/pages/Engine2TourPage.tsx
