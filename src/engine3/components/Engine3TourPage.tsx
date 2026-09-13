@@ -42,10 +42,6 @@ function ViatorAvailabilityCta({ href }: { href: string }) {
           Opening secure Viator booking page…
         </p>
       ) : null}
-      <p className="mt-2 max-w-md text-xs leading-5 text-[#405040]">
-        Booking opens on Viator, our secure travel partner. Some availability
-        pages may take a few seconds to load.
-      </p>
     </div>
   );
 }
