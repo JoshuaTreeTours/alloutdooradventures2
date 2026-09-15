@@ -125,11 +125,18 @@ export default function DestinationsIndex() {
               <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">Explore Tours by Destination</h2>
               <p className="mt-3 text-sm text-[#405040] md:text-base">Jump into destination tour hubs or browse the full tour index.</p>
               <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
-                {tourStates.map(state => (
-                  <Link key={state.stateSlug} href={`/destinations/states/${state.stateSlug}`}>
-                    <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">{state.name} tours</a>
-                  </Link>
-                ))}
+                {tourStates.map(state => {
+                  const isInternationalGuide = Boolean(getGuideCountryBySlug(state.stateSlug));
+                  const href = isInternationalGuide
+                    ? `/guides/international/${state.stateSlug}`
+                    : `/destinations/states/${state.stateSlug}`;
+
+                  return (
+                    <Link key={state.stateSlug} href={href}>
+                      <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">{state.name} tours</a>
+                    </Link>
+                  );
+                })}
               </div>
               <div className="mt-4"><Link href="/tours"><a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">View all tours</a></Link></div>
             </div>
