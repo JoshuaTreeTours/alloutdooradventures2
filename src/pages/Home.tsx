@@ -333,6 +333,8 @@ export default function Home() {
                 Unforgettable experiences around the world,
                 <br />
                 from desert canyons to mountain peaks.
+                <br />
+                Over 10,000 Tours / 70 Countries / 1,350 Cities
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link href="/destinations">
