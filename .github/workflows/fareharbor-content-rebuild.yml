@@ -1,0 +1,80 @@
+name: FareHarbor content rebuild
+
+on:
+  push:
+    branches:
+      - feat/fareharbor-content-rebuild
+    paths:
+      - scripts/generate-fareharbor-content-from-harvest.ts
+      - scripts/apply-fareharbor-runtime-integration.mjs
+      - .github/workflows/fareharbor-content-rebuild.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout rebuild branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/fareharbor-content-rebuild
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download completed FareHarbor source harvest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api /repos/${{ github.repository }}/actions/artifacts/10292190540/zip > /tmp/fh-harvest.zip
+          mkdir -p /tmp/fh-harvest
+          unzip -o /tmp/fh-harvest.zip -d /tmp/fh-harvest
+          test -s /tmp/fh-harvest/fareharbor-rebuild-harvest.json
+
+      - name: Generate grounded FareHarbor rewrite corpus
+        run: npx tsx scripts/generate-fareharbor-content-from-harvest.ts /tmp/fh-harvest/fareharbor-rebuild-harvest.json
+
+      - name: Integrate rebuilt content, images, CTA and price policy
+        run: node scripts/apply-fareharbor-runtime-integration.mjs
+
+      - name: Verify generic FareHarbor fallback removed
+        run: |
+          if grep -R -n 'From \$129 per person' src/pages/tours/TourDetail.tsx src/engine2/pages/Engine2TourPage.tsx; then
+            echo 'Generic $129 fallback remains in a FareHarbor tour page' >&2
+            exit 1
+          fi
+          grep -R -n 'Learn More' src/pages/tours/TourDetail.tsx src/engine2/pages/Engine2TourPage.tsx
+
+      - name: Typecheck
+        run: npm run typecheck --if-present
+
+      - name: Build
+        run: npm run build
+
+      - name: Product schema checks
+        run: npm run check:products --if-present
+
+      - name: Commit rebuilt FareHarbor corpus
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fareharborContent.generated.json src/data/fareharborContent.ts src/data/tours.ts src/engine2/data/loadEngine2.ts src/engine2/pages/Engine2TourPage.tsx src/engine2/schema/buildSchemaGraph.ts src/pages/tours/TourDetail.tsx
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'Rebuild FareHarbor product content from verified harvest'
+            git push origin HEAD:feat/fareharbor-content-rebuild
+          fi

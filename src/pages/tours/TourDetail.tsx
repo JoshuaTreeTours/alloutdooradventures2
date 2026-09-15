@@ -39,6 +39,10 @@ import { buildTourMeta } from "../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../schema/resolveTourSchemaActivityLabel";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
+import {
+  applyFareHarborRebuildToTour,
+  hasVerifiedTourPrice,
+} from "../../data/fareharborRebuild";
 import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../utils/fh/parseFareHarborHtml";
 
@@ -51,7 +55,8 @@ type TourDetailProps = {
 };
 
 export default function TourDetail({ params }: TourDetailProps) {
-  const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
+  const rawTour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
+  const tour = rawTour ? applyFareHarborRebuildToTour(rawTour) : null;
   const state = tour ? getStateBySlug(tour.destination.stateSlug) : null;
   const city =
     tour && tour.destination.stateSlug
@@ -63,7 +68,15 @@ export default function TourDetail({ params }: TourDetailProps) {
       route: detailUrl,
       tour,
     }) ?? undefined;
-  const structuredImages = heroImage ? [heroImage] : [];
+  const structuredImages = tour
+    ? Array.from(
+        new Set(
+          [heroImage, ...(tour.galleryImages ?? [])].filter(
+            (image): image is string => Boolean(image),
+          ),
+        ),
+      )
+    : [];
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const metaDescription = tour
     ? buildTourMetaDescription(tour, {
@@ -114,7 +127,11 @@ export default function TourDetail({ params }: TourDetailProps) {
           },
           offers: {
             url: bookingUrl,
-            price: applyPriceFloor(tour.startingPrice ?? null),
+            price:
+              tour.bookingProvider === "fareharbor" &&
+              !hasVerifiedTourPrice(tour)
+                ? undefined
+                : applyPriceFloor(tour.startingPrice ?? null),
             priceCurrency: tour.currency ?? "USD",
           },
           brandOrgIds: {
@@ -201,6 +218,8 @@ export default function TourDetail({ params }: TourDetailProps) {
     tour.startingPrice === null ||
     !Number.isFinite(tour.startingPrice) ||
     tour.startingPrice < PRICE_MIN_THRESHOLD_USD;
+  const unresolvedFareHarborPrice =
+    tour.bookingProvider === "fareharbor" && !hasVerifiedTourPrice(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -284,19 +303,32 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
-              <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
-                {isPriceFallbackApplied
-                  ? "From $129 per person"
-                  : `From ${startingPriceLabel} per person`}
-              </p>
-              <Link href={bookingUrl}>
+              {!unresolvedFareHarborPrice ? (
+                <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
+                  {isPriceFallbackApplied
+                    ? "From $129 per person"
+                    : `From ${startingPriceLabel} per person`}
+                </p>
+              ) : null}
+              {unresolvedFareHarborPrice ? (
                 <a
-                  rel="nofollow"
+                  href={tour.bookingUrl}
+                  target="_blank"
+                  rel="nofollow sponsored noopener noreferrer"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
                 >
-                  BOOK
+                  Learn More
                 </a>
-              </Link>
+              ) : (
+                <Link href={bookingUrl}>
+                  <a
+                    rel="nofollow"
+                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                  >
+                    BOOK
+                  </a>
+                </Link>
+              )}
               <div className="mt-6 space-y-2 text-xs text-[#405040]">
                 {disclosure ? <p>{disclosure}</p> : null}
                 <p className="rounded-xl border border-dashed border-black/10 bg-white/60 p-4">
@@ -341,14 +373,25 @@ export default function TourDetail({ params }: TourDetailProps) {
         ) : null}
         {bookingUrl ? (
           <div className="mt-12 text-center">
-            <Link href={bookingUrl}>
+            {unresolvedFareHarborPrice ? (
               <a
-                rel="nofollow"
+                href={tour.bookingUrl}
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                Learn More
               </a>
-            </Link>
+            ) : (
+              <Link href={bookingUrl}>
+                <a
+                  rel="nofollow"
+                  className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                >
+                  Book This Tour
+                </a>
+              </Link>
+            )}
           </div>
         ) : null}
       </section>
