@@ -330,11 +330,12 @@ export default function Home() {
                 Find Your Next Adventure
               </h1>
               <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/4 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white drop-shadow md:text-lg">
+                Over 10,000 Tours / 70 Countries / 1,350 Cities
+                <br />
+                <br />
                 Unforgettable experiences around the world,
                 <br />
                 from desert canyons to mountain peaks.
-                <br />
-                Over 10,000 Tours / 70 Countries / 1,350 Cities
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link href="/destinations">
