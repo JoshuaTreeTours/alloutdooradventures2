@@ -12,25 +12,17 @@ import {
   assertEngine6RequestedPathMatchesResolvedTour,
 } from "./routeIntegrity";
 import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes";
-
-const ENGINE6_DIRECT_PROMOTION_ROUTES: Readonly<Record<string, string>> = {
-  "6740JTREE":
-    "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
-};
+import {
+  ENGINE6_DIRECT_PROMOTION_PRODUCT_CODES,
+  resolveEngine6DirectPromotionPathForProductCode,
+} from "./directPromotions";
 
 const engine6ConfiguredAndPromotedProductCodes = Array.from(
   new Set([
     ...ENGINE6_CONFIGURED_PRODUCT_CODES,
-    ...Object.keys(ENGINE6_DIRECT_PROMOTION_ROUTES),
+    ...ENGINE6_DIRECT_PROMOTION_PRODUCT_CODES,
   ])
 );
-
-export const resolveEngine6DirectPromotionProductCodeForPath = (
-  path: string
-) =>
-  Object.entries(ENGINE6_DIRECT_PROMOTION_ROUTES).find(
-    ([, canonicalPath]) => canonicalPath === path
-  )?.[0] ?? null;
 
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
@@ -134,8 +126,9 @@ const configuredFixtures = engine6ConfiguredAndPromotedProductCodes.map(
 );
 
 const applyDirectPromotionCanonicalPath = (tour: Engine6Tour): Engine6Tour => {
-  const canonicalPath =
-    ENGINE6_DIRECT_PROMOTION_ROUTES[tour.productCode.toUpperCase()];
+  const canonicalPath = resolveEngine6DirectPromotionPathForProductCode(
+    tour.productCode
+  );
 
   if (!canonicalPath) {
     return tour;
