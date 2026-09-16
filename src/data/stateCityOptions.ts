@@ -61,6 +61,12 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
   const state = getStateBySlug(stateSlug);
 
   state?.cities.forEach(city => {
+    // A state selector must never inherit a city belonging to another state or
+    // country, even if a generated/static destination collection is polluted.
+    if (city.stateSlug !== stateSlug) {
+      return;
+    }
+
     const citySlug = city.slug.trim();
     const cityName = city.name.trim();
     if (!citySlug || !cityName) {
