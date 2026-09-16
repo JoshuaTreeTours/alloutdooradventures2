@@ -52,7 +52,7 @@ describe("state city options", () => {
     );
   });
 
-  it("includes all route-backed public Alaska tour cities", () => {
+  it("includes all route-backed public Alaska tour cities without country labels", () => {
     const alaskaCities = getStateCityOptions("alaska");
     const citySlugs = alaskaCities.map(city => city.slug);
     const normalizedCitySlugs = citySlugs.map(slug =>
@@ -71,7 +71,17 @@ describe("state city options", () => {
         }),
       ])
     );
+    expect(normalizedCitySlugs).not.toContain("united-states");
     expect(new Set(normalizedCitySlugs).size).toBe(normalizedCitySlugs.length);
+  });
+
+  it("does not admit country or cross-state labels into Vermont", () => {
+    const vermontCitySlugs = new Set(
+      getStateCityOptions("vermont").map(city => city.slug.trim().toLowerCase())
+    );
+
+    expect(vermontCitySlugs.has("united-states")).toBe(false);
+    expect(vermontCitySlugs.has("new-york")).toBe(false);
   });
 
   it("accepts Avalon in /tours query selection and returns Catalina results", () => {
