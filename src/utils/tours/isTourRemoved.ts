@@ -7,6 +7,7 @@ const REMOVED_TOUR_IDS = new Set([
   "34899",
   "34891",
   "574370",
+  "85932",
 ]);
 
 const REMOVED_OPERATOR_NAMES = new Set([
