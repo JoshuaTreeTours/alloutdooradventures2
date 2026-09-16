@@ -1,4 +1,8 @@
-import { engine6ResolvedTours, getEngine6NativeTourByCanonicalPath } from "../src/engine6/registry";
+import {
+  engine6ResolvedTours,
+  getEngine6NativeTourByCanonicalPath,
+  resolveEngine6DirectPromotionProductCodeForPath,
+} from "../src/engine6/registry";
 import { resolveEngine6ProductCodeForPath } from "../src/engine6/routes";
 
 const previewUrl = process.env.VERCEL_BRANCH_URL || process.env.VERCEL_URL;
@@ -15,7 +19,9 @@ if (engine6ResolvedTours.length === 0) {
 
 const unreachableRoutes = engine6ResolvedTours
   .map(tour => {
-    const expectedProductCode = resolveEngine6ProductCodeForPath(tour.canonicalPath);
+    const expectedProductCode =
+      resolveEngine6ProductCodeForPath(tour.canonicalPath) ??
+      resolveEngine6DirectPromotionProductCodeForPath(tour.canonicalPath);
     const resolvedTour = getEngine6NativeTourByCanonicalPath(tour.canonicalPath);
 
     if (expectedProductCode !== tour.productCode || !resolvedTour) {
