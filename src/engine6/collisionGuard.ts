@@ -10,6 +10,7 @@ import {
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
   engine6OverlapReplacementConfigs,
 } from "./routes";
+import { isEngine6DirectPromotionPath } from "./directPromotions";
 import type { Engine6Tour } from "./types";
 
 const legacyTourPath = (tour: {
@@ -37,9 +38,9 @@ export const detectEngine6LegacyCollisions = (tours: Engine6Tour[]) =>
       tour,
       collidesWithEngine4: LEGACY_ENGINE4_PATHS.has(tour.canonicalPath),
       collidesWithLegacyContent: LEGACY_TOUR_PATHS.has(tour.canonicalPath),
-      explicitlyReplaced: ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(
-        tour.canonicalPath
-      ),
+      explicitlyReplaced:
+        ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(tour.canonicalPath) ||
+        isEngine6DirectPromotionPath(tour.canonicalPath),
     }))
     .filter(entry => entry.collidesWithEngine4 || entry.collidesWithLegacyContent);
 
@@ -74,7 +75,6 @@ export const assertEngine6ReplacementModePolicy = (
         `Engine6 replacement mode misconfigured: missing Engine6 tour for product ${config.productCode}`
       );
     }
-
 
     if (
       !LEGACY_TOUR_PATHS.has(config.canonicalPath) &&
