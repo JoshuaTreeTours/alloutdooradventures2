@@ -23,6 +23,21 @@ const US_STATE_SLUGS = new Set([
   "west-virginia", "wisconsin", "wyoming", "district-of-columbia",
 ]);
 
+// Final rendered-selector safety gate. These are confirmed bad memberships in
+// the California source collection; filtering here prevents polluted static or
+// generated records from ever reaching the native city picker.
+const BLOCKED_CITY_SLUGS_BY_STATE: Record<string, Set<string>> = {
+  california: new Set([
+    "phoenix",
+    "portsmouth",
+    "puerto-vallarta",
+    "ensenada",
+  ]),
+};
+
+const isBlockedStateCity = (stateSlug: string, citySlug: string) =>
+  BLOCKED_CITY_SLUGS_BY_STATE[stateSlug]?.has(citySlug) ?? false;
+
 const preferredDisplayNameScore = (name: string) =>
   name.split(/\s+/).filter(word => PREFERRED_LOWERCASE_WORDS.has(word)).length;
 
@@ -61,15 +76,13 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
   const state = getStateBySlug(stateSlug);
 
   state?.cities.forEach(city => {
-    // A state selector must never inherit a city belonging to another state or
-    // country, even if a generated/static destination collection is polluted.
     if (city.stateSlug !== stateSlug) {
       return;
     }
 
     const citySlug = city.slug.trim();
     const cityName = city.name.trim();
-    if (!citySlug || !cityName) {
+    if (!citySlug || !cityName || isBlockedStateCity(stateSlug, citySlug)) {
       return;
     }
 
@@ -81,6 +94,9 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
   });
 
   getNationalParkDestinationsByState(stateSlug).forEach(park => {
+    if (isBlockedStateCity(stateSlug, park.citySlug)) {
+      return;
+    }
     protectedDisplaySlugs.add(park.citySlug);
     bySlug.set(park.citySlug, {
       name: park.name,
@@ -99,7 +115,7 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
       const citySlug = (
         entry.tour.destination.citySlug || slugify(cityName)
       ).trim();
-      if (!cityName || !citySlug) {
+      if (!cityName || !citySlug || isBlockedStateCity(stateSlug, citySlug)) {
         return;
       }
 
@@ -125,5 +141,7 @@ export const getStateCityOptions = (stateSlug: string): StateCityOption[] => {
       }
     });
 
-  return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
+  return [...bySlug.values()]
+    .filter(city => !isBlockedStateCity(stateSlug, city.slug))
+    .sort((a, b) => a.name.localeCompare(b.name));
 };
