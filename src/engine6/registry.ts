@@ -13,6 +13,25 @@ import {
 } from "./routeIntegrity";
 import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes";
 
+const ENGINE6_DIRECT_PROMOTION_ROUTES: Readonly<Record<string, string>> = {
+  "6740JTREE":
+    "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+};
+
+const engine6ConfiguredAndPromotedProductCodes = Array.from(
+  new Set([
+    ...ENGINE6_CONFIGURED_PRODUCT_CODES,
+    ...Object.keys(ENGINE6_DIRECT_PROMOTION_ROUTES),
+  ])
+);
+
+export const resolveEngine6DirectPromotionProductCodeForPath = (
+  path: string
+) =>
+  Object.entries(ENGINE6_DIRECT_PROMOTION_ROUTES).find(
+    ([, canonicalPath]) => canonicalPath === path
+  )?.[0] ?? null;
+
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ): Engine6ApiResponse => {
@@ -90,7 +109,7 @@ export const getEngine6BundledRawProductByProductCode = (
   return product as Record<string, unknown>;
 };
 
-const missingFixtureProductCodes = ENGINE6_CONFIGURED_PRODUCT_CODES.filter(
+const missingFixtureProductCodes = engine6ConfiguredAndPromotedProductCodes.filter(
   productCode => !fixtureByProductCode.has(productCode)
 );
 
@@ -102,21 +121,40 @@ if (missingFixtureProductCodes.length > 0) {
   );
 }
 
-const configuredFixtures = ENGINE6_CONFIGURED_PRODUCT_CODES.map(productCode => {
-  const fixture = fixtureByProductCode.get(productCode);
-  if (!fixture) {
-    throw new Error(
-      `Engine6 fixture lookup failed unexpectedly for ${productCode}`
-    );
+const configuredFixtures = engine6ConfiguredAndPromotedProductCodes.map(
+  productCode => {
+    const fixture = fixtureByProductCode.get(productCode);
+    if (!fixture) {
+      throw new Error(
+        `Engine6 fixture lookup failed unexpectedly for ${productCode}`
+      );
+    }
+    return fixture;
   }
-  return fixture;
-});
+);
+
+const applyDirectPromotionCanonicalPath = (tour: Engine6Tour): Engine6Tour => {
+  const canonicalPath =
+    ENGINE6_DIRECT_PROMOTION_ROUTES[tour.productCode.toUpperCase()];
+
+  if (!canonicalPath) {
+    return tour;
+  }
+
+  return {
+    ...tour,
+    pagePath: canonicalPath,
+    canonicalPath,
+  };
+};
 
 const tryResolveTour = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ) => {
   try {
-    return mapViatorToEngine6Tour(toEngine6FixturePayload(fixture));
+    return applyDirectPromotionCanonicalPath(
+      mapViatorToEngine6Tour(toEngine6FixturePayload(fixture))
+    );
   } catch {
     return null;
   }
@@ -141,7 +179,6 @@ export const getEngine6NativeTourBySlugs = (
   getEngine6NativeTourByCanonicalPath(
     `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
   );
-
 
 export const getEngine6NativeTourByCanonicalPath = (requestedPath: string) => {
   const matchedTour = engine6ResolvedTours.find(
