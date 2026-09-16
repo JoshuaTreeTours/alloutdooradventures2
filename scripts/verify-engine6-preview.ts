@@ -1,9 +1,9 @@
 import {
   engine6ResolvedTours,
   getEngine6NativeTourByCanonicalPath,
-  resolveEngine6DirectPromotionProductCodeForPath,
 } from "../src/engine6/registry";
 import { resolveEngine6ProductCodeForPath } from "../src/engine6/routes";
+import { resolveEngine6DirectPromotionProductCodeForPath } from "../src/engine6/directPromotions";
 
 const previewUrl = process.env.VERCEL_BRANCH_URL || process.env.VERCEL_URL;
 
