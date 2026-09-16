@@ -1,3 +1,4 @@
+import hummer6740JtreePayload from "../../data/engine6/viator/6740JTREE.exact-product.json";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { assertEngine6FixtureSourceOfTruth } from "./sourceOfTruthPolicy";
@@ -17,22 +18,20 @@ import {
   resolveEngine6DirectPromotionPathForProductCode,
 } from "./directPromotions";
 
-const engine6ConfiguredAndPromotedProductCodes = Array.from(
-  new Set([
-    ...ENGINE6_CONFIGURED_PRODUCT_CODES,
-    ...ENGINE6_DIRECT_PROMOTION_PRODUCT_CODES,
-  ])
-);
+const directPromotionRawPayloadByProductCode = new Map<
+  string,
+  Record<string, unknown>
+>([["6740JTREE", hummer6740JtreePayload as Record<string, unknown>]]);
 
-const toEngine6FixturePayload = (
-  fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
+const toEngine6RawPayload = (
+  productCode: string,
+  rawPayload: Record<string, unknown>
 ): Engine6ApiResponse => {
-  assertEngine6FixtureSourceOfTruth(fixture);
-  const extraction = extractEngine6Product(fixture.rawPayload);
+  const extraction = extractEngine6Product(rawPayload);
 
   return {
     source: "bundled-fallback",
-    rawProductCode: fixture.productCode,
+    rawProductCode: productCode,
     rawProduct: extraction.product,
     diagnostics: {
       source: "bundled-fallback",
@@ -51,6 +50,13 @@ const toEngine6FixturePayload = (
     },
     extracted: extraction.extracted,
   };
+};
+
+const toEngine6FixturePayload = (
+  fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
+): Engine6ApiResponse => {
+  assertEngine6FixtureSourceOfTruth(fixture);
+  return toEngine6RawPayload(fixture.productCode, fixture.rawPayload);
 };
 
 const hasStrictExactProductHero = (tour: Engine6Tour) =>
@@ -84,11 +90,14 @@ export const getEngine6BundledRawProductByProductCode = (
   }
 
   const fixture = fixtureByProductCode.get(normalizedProductCode);
-  if (!fixture) {
+  const rawPayload =
+    fixture?.rawPayload ??
+    directPromotionRawPayloadByProductCode.get(normalizedProductCode);
+  if (!rawPayload) {
     return null;
   }
 
-  const extraction = extractEngine6Product(fixture.rawPayload);
+  const extraction = extractEngine6Product(rawPayload);
   const product = extraction.product;
   if (!product || typeof product !== "object") {
     return null;
@@ -101,7 +110,7 @@ export const getEngine6BundledRawProductByProductCode = (
   return product as Record<string, unknown>;
 };
 
-const missingFixtureProductCodes = engine6ConfiguredAndPromotedProductCodes.filter(
+const missingFixtureProductCodes = ENGINE6_CONFIGURED_PRODUCT_CODES.filter(
   productCode => !fixtureByProductCode.has(productCode)
 );
 
@@ -113,17 +122,29 @@ if (missingFixtureProductCodes.length > 0) {
   );
 }
 
-const configuredFixtures = engine6ConfiguredAndPromotedProductCodes.map(
-  productCode => {
-    const fixture = fixtureByProductCode.get(productCode);
-    if (!fixture) {
-      throw new Error(
-        `Engine6 fixture lookup failed unexpectedly for ${productCode}`
-      );
-    }
-    return fixture;
+const missingDirectPromotionPayloadCodes =
+  ENGINE6_DIRECT_PROMOTION_PRODUCT_CODES.filter(
+    productCode =>
+      !directPromotionRawPayloadByProductCode.has(productCode.toUpperCase())
+  );
+
+if (missingDirectPromotionPayloadCodes.length > 0) {
+  throw new Error(
+    `Engine6 direct-promotion exact-product payload missing for: ${missingDirectPromotionPayloadCodes.join(
+      ", "
+    )}`
+  );
+}
+
+const configuredFixtures = ENGINE6_CONFIGURED_PRODUCT_CODES.map(productCode => {
+  const fixture = fixtureByProductCode.get(productCode);
+  if (!fixture) {
+    throw new Error(
+      `Engine6 fixture lookup failed unexpectedly for ${productCode}`
+    );
   }
-);
+  return fixture;
+});
 
 const applyDirectPromotionCanonicalPath = (tour: Engine6Tour): Engine6Tour => {
   const canonicalPath = resolveEngine6DirectPromotionPathForProductCode(
@@ -145,16 +166,38 @@ const tryResolveTour = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ) => {
   try {
+    return mapViatorToEngine6Tour(toEngine6FixturePayload(fixture));
+  } catch {
+    return null;
+  }
+};
+
+const tryResolveDirectPromotionTour = (productCode: string) => {
+  try {
+    const rawPayload = directPromotionRawPayloadByProductCode.get(
+      productCode.toUpperCase()
+    );
+    if (!rawPayload) {
+      return null;
+    }
+
     return applyDirectPromotionCanonicalPath(
-      mapViatorToEngine6Tour(toEngine6FixturePayload(fixture))
+      mapViatorToEngine6Tour(toEngine6RawPayload(productCode, rawPayload))
     );
   } catch {
     return null;
   }
 };
 
-const resolvedTours: Engine6Tour[] = configuredFixtures
-  .map(tryResolveTour)
+const directPromotionProductCodesToResolve =
+  ENGINE6_DIRECT_PROMOTION_PRODUCT_CODES.filter(
+    productCode => !ENGINE6_CONFIGURED_PRODUCT_CODES.includes(productCode)
+  );
+
+const resolvedTours: Engine6Tour[] = [
+  ...configuredFixtures.map(tryResolveTour),
+  ...directPromotionProductCodesToResolve.map(tryResolveDirectPromotionTour),
+]
   .filter((tour): tour is Engine6Tour => Boolean(tour))
   .filter(hasStrictExactProductHero);
 
