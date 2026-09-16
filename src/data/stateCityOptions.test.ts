@@ -30,6 +30,28 @@ describe("state city options", () => {
     );
   });
 
+  it("does not admit cross-state or international cities into California", () => {
+    const californiaCitySlugs = new Set(
+      getStateCityOptions("california").map(city => city.slug)
+    );
+
+    expect(californiaCitySlugs.has("puerto-vallarta")).toBe(false);
+    expect(californiaCitySlugs.has("portsmouth")).toBe(false);
+    expect(californiaCitySlugs.has("ensenada")).toBe(false);
+  });
+
+  it("keeps Puerto Vallarta connected to Mexico", () => {
+    const mexicoCities = getStateCityOptions("mexico");
+    expect(mexicoCities).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: "Puerto Vallarta",
+          slug: "puerto-vallarta",
+        }),
+      ])
+    );
+  });
+
   it("includes all route-backed public Alaska tour cities", () => {
     const alaskaCities = getStateCityOptions("alaska");
     const citySlugs = alaskaCities.map(city => city.slug);
