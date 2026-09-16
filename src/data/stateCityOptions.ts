@@ -23,9 +23,11 @@ const US_STATE_SLUGS = new Set([
   "west-virginia", "wisconsin", "wyoming", "district-of-columbia",
 ]);
 
+const NON_CITY_COUNTRY_SLUGS = new Set(["united-states", "usa", "us"]);
+
 // Final rendered-selector safety gate. These are confirmed bad memberships in
-// the California source collection; filtering here prevents polluted static or
-// generated records from ever reaching the native city picker.
+// source collections; filtering here prevents polluted static or generated
+// records from ever reaching the native city picker.
 const BLOCKED_CITY_SLUGS_BY_STATE: Record<string, Set<string>> = {
   california: new Set([
     "phoenix",
@@ -35,8 +37,29 @@ const BLOCKED_CITY_SLUGS_BY_STATE: Record<string, Set<string>> = {
   ]),
 };
 
+const isAdministrativeLabelForStateSelector = (
+  stateSlug: string,
+  citySlug: string
+) => {
+  const normalizedCitySlug = slugify(citySlug);
+
+  if (NON_CITY_COUNTRY_SLUGS.has(normalizedCitySlug)) {
+    return true;
+  }
+
+  // A different U.S. state name must never appear as a city under the selected
+  // state. This catches taxonomy leaks such as "New York" under Vermont while
+  // leaving the selected state's own slug untouched.
+  return (
+    US_STATE_SLUGS.has(stateSlug) &&
+    US_STATE_SLUGS.has(normalizedCitySlug) &&
+    normalizedCitySlug !== stateSlug
+  );
+};
+
 const isBlockedStateCity = (stateSlug: string, citySlug: string) =>
-  BLOCKED_CITY_SLUGS_BY_STATE[stateSlug]?.has(citySlug) ?? false;
+  (BLOCKED_CITY_SLUGS_BY_STATE[stateSlug]?.has(citySlug) ?? false) ||
+  isAdministrativeLabelForStateSelector(stateSlug, citySlug);
 
 const preferredDisplayNameScore = (name: string) =>
   name.split(/\s+/).filter(word => PREFERRED_LOWERCASE_WORDS.has(word)).length;
