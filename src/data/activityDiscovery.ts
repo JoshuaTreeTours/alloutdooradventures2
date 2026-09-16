@@ -3,6 +3,7 @@ import {
   normalizeTourCategoryText,
   TOUR_ACTIVITY_CATEGORIES,
 } from "../lib/tourCategoryClassifier";
+import { isUSStateName } from "../constants/usStates";
 import { getStateBySlug, states } from "./destinations";
 import { getAllRouteBackedTourEntries, getTourDetailPath } from "./tours";
 import type { Tour } from "./tours.types";
@@ -73,7 +74,7 @@ export const getActivityTourHref=(tour:Tour)=>{const key=getUniqueTourKey(tour);
 const matchesActivityLocation=(tour:Tour,{stateSlug,citySlug}:{stateSlug?:string;citySlug?:string})=>{const canonicalLocation=getCanonicalActivityLocationSlugs(tour);if(stateSlug&&canonicalLocation.stateSlug!==stateSlug)return false;if(citySlug&&canonicalLocation.citySlug!==citySlug)return false;return true};
 export const getActivityTourEntriesByLocation=({activitySlug,stateSlug,citySlug}:{activitySlug:string;stateSlug?:string;citySlug?:string})=>getActivityTourEntriesByCategory(activitySlug).filter(entry=>matchesActivityLocation(entry.tour,{stateSlug,citySlug}));
 export const getToursByActivityLocation=({activitySlug,stateSlug,citySlug}:{activitySlug:string;stateSlug?:string;citySlug?:string})=>getActivityTourEntriesByLocation({activitySlug,stateSlug,citySlug}).map(entry=>entry.tour);
-export const getActivityStateOptions=(activitySlug:string):ActivityLocationOption[]=>{const stateMap=new Map<string,string>();getToursByActivityCategory(activitySlug).forEach(tour=>{const{stateSlug}=getCanonicalActivityLocationSlugs(tour);if(!stateSlug||stateMap.has(stateSlug)||!getStateBySlug(stateSlug))return;stateMap.set(stateSlug,getStateBySlug(stateSlug)?.name||tour.destination.state||stateSlug)});return Array.from(stateMap.entries()).map(([slug,name])=>({slug,name})).sort((a,b)=>a.name.localeCompare(b.name))};
+export const getActivityStateOptions=(activitySlug:string):ActivityLocationOption[]=>{const stateMap=new Map<string,string>();getToursByActivityCategory(activitySlug).forEach(tour=>{const{stateSlug}=getCanonicalActivityLocationSlugs(tour);const state=stateSlug?getStateBySlug(stateSlug):null;const country=tour.destination.countrySlug||tour.destination.country;if(!stateSlug||stateMap.has(stateSlug)||!state||!isUSStateName(state.name)||(country&&!isUsCountryAlias(country)))return;stateMap.set(stateSlug,state.name)});return Array.from(stateMap.entries()).map(([slug,name])=>({slug,name})).sort((a,b)=>a.name.localeCompare(b.name))};
 
 const ACTIVITY_STATE_CITY_DENYLIST: Record<string, Set<string>> = {
   california: new Set(["phoenix", "portsmouth", "puerto-vallarta", "ensenada"]),
