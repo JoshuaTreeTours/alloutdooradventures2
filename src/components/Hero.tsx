@@ -17,7 +17,7 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section
-      className="relative mx-auto max-w-[1400px] px-6 pt-6"
+      className="relative mx-auto max-w-[1400px] px-6 pt-12 md:pt-6"
       aria-label="Hero"
     >
       <div className="relative overflow-hidden rounded-none md:rounded-md">
