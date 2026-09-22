@@ -842,7 +842,22 @@ const main = async () => {
 
   logMerchantFeedInformationalLegacyRuntimeDrifts(runtimeParityAudit);
 
-  if (!runtimeParityAudit.pass) {
+  // The weekly ratings workflow commits only live-API-derived rating metadata to
+  // data/merchantFeed.csv. Production necessarily still exposes the previous
+  // values while this deployment is building, so runtime parity is expected to
+  // drift until this deployment goes live. Keep the audit visible, but do not
+  // deadlock the deployment on its own pre-deploy production state.
+  const isAutomatedRatingRefreshCommit =
+    (process.env.VERCEL_GIT_COMMIT_MESSAGE ?? "").trim() ===
+    "Refresh merchant feed aggregate ratings";
+
+  if (!runtimeParityAudit.pass && isAutomatedRatingRefreshCommit) {
+    console.warn(
+      "[merchant-feed-build] weekly rating refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
+    );
+  }
+
+  if (!runtimeParityAudit.pass && !isAutomatedRatingRefreshCommit) {
     const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
       const tier =
         branchScopedGovernanceByProductCode.get(
