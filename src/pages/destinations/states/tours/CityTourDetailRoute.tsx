@@ -58,7 +58,7 @@ import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
-import merchantFeedCommercialSnapshot from "../../../../data/merchantFeed-commercial-snapshot.json";
+import merchantFeedCommercialSnapshot from "../../../../../data/merchantFeed-commercial-snapshot.json";
 import {
   resolveToursWithMerchantFeedCommercialSnapshot,
   type MerchantFeedCommercialSnapshot,
