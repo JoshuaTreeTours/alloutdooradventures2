@@ -842,22 +842,28 @@ const main = async () => {
 
   logMerchantFeedInformationalLegacyRuntimeDrifts(runtimeParityAudit);
 
-  // The weekly ratings workflow commits only live-API-derived rating metadata to
-  // data/merchantFeed.csv. Production necessarily still exposes the previous
-  // values while this deployment is building, so runtime parity is expected to
-  // drift until this deployment goes live. Keep the audit visible, but do not
-  // deadlock the deployment on its own pre-deploy production state.
-  const isAutomatedRatingRefreshCommit =
-    (process.env.VERCEL_GIT_COMMIT_MESSAGE ?? "").trim() ===
-    "Refresh merchant feed aggregate ratings";
+  // The weekly commercial refresh commits live-API-derived price, rating, and
+  // review metadata to both the Merchant CSV and the Engine6 website snapshot.
+  // Production necessarily still exposes the previous values while this
+  // deployment is building, so runtime parity is expected to drift until this
+  // deployment goes live. Keep the audit visible, but do not deadlock the
+  // deployment on its own pre-deploy production state.
+  const automatedCommercialRefreshCommitMessages = new Set([
+    "Refresh merchant feed aggregate ratings",
+    "Refresh merchant and website commercial metadata",
+  ]);
+  const isAutomatedCommercialRefreshCommit =
+    automatedCommercialRefreshCommitMessages.has(
+      (process.env.VERCEL_GIT_COMMIT_MESSAGE ?? "").trim()
+    );
 
-  if (!runtimeParityAudit.pass && isAutomatedRatingRefreshCommit) {
+  if (!runtimeParityAudit.pass && isAutomatedCommercialRefreshCommit) {
     console.warn(
-      "[merchant-feed-build] weekly rating refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
+      "[merchant-feed-build] weekly commercial refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
     );
   }
 
-  if (!runtimeParityAudit.pass && !isAutomatedRatingRefreshCommit) {
+  if (!runtimeParityAudit.pass && !isAutomatedCommercialRefreshCommit) {
     const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
       const tier =
         branchScopedGovernanceByProductCode.get(
