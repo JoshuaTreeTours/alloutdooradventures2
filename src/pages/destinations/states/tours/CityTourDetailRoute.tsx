@@ -58,6 +58,11 @@ import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
+import merchantFeedCommercialSnapshot from "../../../../data/merchantFeed-commercial-snapshot.json";
+import {
+  resolveToursWithMerchantFeedCommercialSnapshot,
+  type MerchantFeedCommercialSnapshot,
+} from "../../../../engine6/merchantFeedCommercialSnapshot";
 import type {
   Engine6ApiResponse,
   Engine6Tour,
@@ -428,6 +433,13 @@ export default function CityTourDetailRoute({
   }, [nativeEngine6Tour?.productCode, nativeEngine6Tour?.canonicalPath]);
 
   if (nativeEngine6Tour) {
+    const [snapshotNativeEngine6Tour] =
+      resolveToursWithMerchantFeedCommercialSnapshot(
+        [nativeEngine6Tour],
+        merchantFeedCommercialSnapshot as MerchantFeedCommercialSnapshot
+      );
+    const commercialBaselineEngine6Tour =
+      snapshotNativeEngine6Tour ?? nativeEngine6Tour;
     const liveDynamic =
       liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];
     const suppressLiveContentFields = isEngine6LiveItineraryMergeSuppressed(
@@ -439,49 +451,55 @@ export default function CityTourDetailRoute({
       isEngine6SeattleTourCanonicalPath(nativeEngine6Tour.canonicalPath);
     const resolvedEngine6Tour: Engine6Tour = liveDynamic
       ? {
-          ...nativeEngine6Tour,
+          ...commercialBaselineEngine6Tour,
           priceAmount:
             liveDynamic.priceAmount !== null
               ? liveDynamic.priceAmount
-              : nativeEngine6Tour.priceAmount,
+              : commercialBaselineEngine6Tour.priceAmount,
           priceFormatted:
-            liveDynamic.priceFormatted ?? nativeEngine6Tour.priceFormatted,
+            liveDynamic.priceFormatted ??
+            commercialBaselineEngine6Tour.priceFormatted,
           aggregateRating:
             liveDynamic.aggregateRating !== null
               ? liveDynamic.aggregateRating
-              : nativeEngine6Tour.aggregateRating,
+              : commercialBaselineEngine6Tour.aggregateRating,
           reviewCount:
             liveDynamic.reviewCount !== null
               ? liveDynamic.reviewCount
-              : nativeEngine6Tour.reviewCount,
+              : commercialBaselineEngine6Tour.reviewCount,
           durationText:
-            liveDynamic.durationText ?? nativeEngine6Tour.durationText,
+            liveDynamic.durationText ??
+            commercialBaselineEngine6Tour.durationText,
           meetingPointText:
-            liveDynamic.meetingPointText ?? nativeEngine6Tour.meetingPointText,
+            liveDynamic.meetingPointText ??
+            commercialBaselineEngine6Tour.meetingPointText,
           overviewText: suppressLiveContentFields
-            ? nativeEngine6Tour.overviewText
-            : (liveDynamic.overviewText ?? nativeEngine6Tour.overviewText),
+            ? commercialBaselineEngine6Tour.overviewText
+            : (liveDynamic.overviewText ??
+              commercialBaselineEngine6Tour.overviewText),
           itinerary: suppressLiveItineraryMerge
-            ? nativeEngine6Tour.itinerary
+            ? commercialBaselineEngine6Tour.itinerary
             : liveDynamic.itinerary
               ? mergeEngine6NativeItineraryWithLive(
-                  nativeEngine6Tour.itinerary,
+                  commercialBaselineEngine6Tour.itinerary,
                   liveDynamic.itinerary,
                   {
                     productCode: nativeEngine6Tour.productCode,
                     rawProduct: liveDynamic.rawProduct,
                   }
                 )
-              : nativeEngine6Tour.itinerary,
+              : commercialBaselineEngine6Tour.itinerary,
           itinerarySummaryText: suppressLiveItineraryMerge
-            ? nativeEngine6Tour.itinerarySummaryText
+            ? commercialBaselineEngine6Tour.itinerarySummaryText
             : (liveDynamic.itinerarySummaryText ??
-              nativeEngine6Tour.itinerarySummaryText),
-          included: liveDynamic.included ?? nativeEngine6Tour.included,
+              commercialBaselineEngine6Tour.itinerarySummaryText),
+          included:
+            liveDynamic.included ?? commercialBaselineEngine6Tour.included,
           requirements:
-            liveDynamic.requirements ?? nativeEngine6Tour.requirements,
+            liveDynamic.requirements ??
+            commercialBaselineEngine6Tour.requirements,
         }
-      : nativeEngine6Tour;
+      : commercialBaselineEngine6Tour;
 
     assertEngine6RendererSupremacy({
       tourEngine: "engine6",
