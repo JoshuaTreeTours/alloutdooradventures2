@@ -186,6 +186,7 @@ export const fetchEngine6LiveProductFields = async (
   );
   if (!response.ok) return null;
   const payload = await response.json();
+  if (payload?.source !== "live-api") return null;
   const extracted = payload?.extracted;
   if (!extracted) return null;
   return {
