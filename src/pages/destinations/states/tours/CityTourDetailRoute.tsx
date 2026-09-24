@@ -306,6 +306,9 @@ export default function CityTourDetailRoute({
           return null;
         }
         const payload = (await response.json()) as Partial<Engine6ApiResponse>;
+        if (payload?.source !== "live-api") {
+          return null;
+        }
         const extracted = payload?.extracted;
         if (!extracted) return null;
         return {
