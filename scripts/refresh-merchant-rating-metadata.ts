@@ -1,8 +1,17 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  buildMerchantFeedCommercialSnapshot,
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+} from "../src/engine6/merchantFeedCommercialSnapshot";
+
 const FEED_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
 const REPORT_PATH = path.resolve(process.cwd(), "merchant-rating-refresh-report.json");
+const SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
+);
 const AOA_BASE_URL = (process.env.MERCHANT_RATING_BASE_URL ?? "https://www.alloutdooradventures.com").replace(/\/$/, "");
 const BETWEEN_PRODUCTS_MS = Number(process.env.MERCHANT_RATING_DELAY_MS ?? "150");
 const REQUEST_TIMEOUT_MS = Number(process.env.MERCHANT_RATING_REQUEST_TIMEOUT_MS ?? "15000");
@@ -58,14 +67,21 @@ const escapeCsv = (value: string) => {
 const toCsv = (rows: string[][]) => `${rows.map(row => row.map(escapeCsv).join(",")).join("\n")}\n`;
 const normalizeRating = (value: number) => value.toFixed(1);
 
-type AoaRatingResult = {
-  aggregateRating: number;
-  reviewCount: number;
+type AoaCommercialResult = {
+  priceAmount: number;
+  priceCurrency: "USD";
+  aggregateRating: number | null;
+  reviewCount: number | null;
   source: string;
   attempt: number;
 };
 
-const fetchFromAoa = async (productCode: string): Promise<AoaRatingResult> => {
+const formatMerchantUsdPrice = (amount: number) => {
+  const rounded = Math.round(amount * 100) / 100;
+  return `${rounded} USD`;
+};
+
+const fetchFromAoa = async (productCode: string): Promise<AoaCommercialResult> => {
   let lastProblem = "unknown failure";
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
@@ -85,26 +101,43 @@ const fetchFromAoa = async (productCode: string): Promise<AoaRatingResult> => {
         const json = JSON.parse(text) as {
           source?: string;
           extracted?: {
+            priceAmount?: number | null;
+            priceCurrency?: string | null;
             reviewCount?: number | null;
             aggregateRating?: number | null;
           };
         };
+        const priceAmount = json?.extracted?.priceAmount;
+        const priceCurrency = json?.extracted?.priceCurrency;
         const count = json?.extracted?.reviewCount;
         const rating = json?.extracted?.aggregateRating;
         const source = json?.source ?? "unknown";
 
-        if (!Number.isFinite(count) || Number(count) <= 0) {
-          lastProblem = `missing positive extracted.reviewCount (${source})`;
-        } else if (!Number.isFinite(rating) || Number(rating) <= 0) {
-          lastProblem = `missing positive extracted.aggregateRating (${source})`;
+        const hasValidCount =
+          Number.isFinite(count) && Number(count) > 0;
+        const hasValidRating =
+          Number.isFinite(rating) && Number(rating) > 0;
+
+        if (!Number.isFinite(priceAmount) || Number(priceAmount) <= 0) {
+          lastProblem = `missing positive extracted.priceAmount (${source})`;
+        } else if (
+          typeof priceCurrency === "string" &&
+          priceCurrency.trim().toUpperCase() !== "USD"
+        ) {
+          lastProblem = `non-USD extracted.priceCurrency ${priceCurrency} (${source})`;
         } else if (source !== "live-api") {
-          // The successful Magpie-100 refresh returned source=live-api. Do not
-          // overwrite Merchant Center data with a bundled/stale fallback.
+          // Never let a bundled/stale fallback overwrite the Merchant feed or
+          // the website commercial snapshot.
           lastProblem = `non-live source ${source}`;
+        } else if (hasValidCount !== hasValidRating) {
+          lastProblem =
+            `incomplete live rating pair rating=${String(rating)} reviews=${String(count)}`;
         } else {
           return {
-            aggregateRating: Number(rating),
-            reviewCount: Math.trunc(Number(count)),
+            priceAmount: Number(priceAmount),
+            priceCurrency: "USD",
+            aggregateRating: hasValidRating ? Number(rating) : null,
+            reviewCount: hasValidCount ? Math.trunc(Number(count)) : null,
             source,
             attempt,
           };
@@ -129,12 +162,14 @@ const main = async () => {
 
   const headers = rows[0];
   const idIndex = headers.indexOf("id");
+  const priceIndex = headers.indexOf("price");
   const avgIndex = headers.indexOf("average_rating");
   const ratingCountIndex = headers.indexOf("rating_count");
   const reviewCountIndex = headers.indexOf("review_count");
 
   for (const [name, index] of [
     ["id", idIndex],
+    ["price", priceIndex],
     ["average_rating", avgIndex],
     ["rating_count", ratingCountIndex],
     ["review_count", reviewCountIndex],
@@ -144,7 +179,14 @@ const main = async () => {
 
   const dataRows = rows.slice(1);
   const failures: Array<{ id: string; error: string }> = [];
-  const refreshed: Array<{ id: string; rating: string; reviews: number; attempt: number }> = [];
+  const refreshed: Array<{
+    id: string;
+    price: string;
+    rating: string | null;
+    reviews: number | null;
+    attempt: number;
+  }> = [];
+  let priceChanges = 0;
   let ratingChanges = 0;
   let countChanges = 0;
 
@@ -161,19 +203,43 @@ const main = async () => {
 
     try {
       const live = await fetchFromAoa(productCode);
-      const liveRating = normalizeRating(live.aggregateRating);
-      const liveCount = String(live.reviewCount);
+      const livePrice = formatMerchantUsdPrice(live.priceAmount);
+      const liveRating =
+        live.aggregateRating !== null
+          ? normalizeRating(live.aggregateRating)
+          : null;
+      const liveCount =
+        live.reviewCount !== null ? String(live.reviewCount) : null;
 
-      if (row[avgIndex] !== liveRating) ratingChanges += 1;
-      if (row[ratingCountIndex] !== liveCount || row[reviewCountIndex] !== liveCount) countChanges += 1;
+      if (row[priceIndex] !== livePrice) priceChanges += 1;
+      row[priceIndex] = livePrice;
 
-      row[avgIndex] = liveRating;
-      row[ratingCountIndex] = liveCount;
-      row[reviewCountIndex] = liveCount;
-      refreshed.push({ id: productCode, rating: liveRating, reviews: live.reviewCount, attempt: live.attempt });
+      if (liveRating !== null && liveCount !== null) {
+        if (row[avgIndex] !== liveRating) ratingChanges += 1;
+        if (
+          row[ratingCountIndex] !== liveCount ||
+          row[reviewCountIndex] !== liveCount
+        ) {
+          countChanges += 1;
+        }
+
+        row[avgIndex] = liveRating;
+        row[ratingCountIndex] = liveCount;
+        row[reviewCountIndex] = liveCount;
+      }
+
+      refreshed.push({
+        id: productCode,
+        price: livePrice,
+        rating: liveRating,
+        reviews: live.reviewCount,
+        attempt: live.attempt,
+      });
 
       if (productCode.toUpperCase() === "6740P7") {
-        console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${liveRating} rating, ${liveCount} reviews (${live.source}, attempt ${live.attempt})`);
+        console.log(
+          `[merchant-rating-refresh] CANARY 6740P7 -> ${livePrice}, ${liveRating ?? "rating preserved"}, ${liveCount ?? "reviews preserved"} (${live.source}, attempt ${live.attempt})`
+        );
       }
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -190,13 +256,44 @@ const main = async () => {
   }
 
   await writeFile(FEED_PATH, toCsv([headers, ...dataRows]), "utf8");
+
+  const snapshotRows = dataRows.map(row => ({
+    id: row[idIndex] ?? "",
+    price: row[priceIndex] ?? "",
+    average_rating: row[avgIndex] ?? "",
+    rating_count: row[ratingCountIndex] ?? "",
+    review_count: row[reviewCountIndex] ?? "",
+  }));
+  const nextSnapshot = buildMerchantFeedCommercialSnapshot(snapshotRows);
+  try {
+    const existingSnapshot = JSON.parse(await readFile(SNAPSHOT_PATH, "utf8")) as {
+      generatedAt?: string;
+      rows?: unknown;
+    };
+    if (
+      existingSnapshot.generatedAt &&
+      JSON.stringify(existingSnapshot.rows) === JSON.stringify(nextSnapshot.rows)
+    ) {
+      nextSnapshot.generatedAt = existingSnapshot.generatedAt;
+    }
+  } catch {
+    // Missing or malformed snapshots are replaced from the governed feed rows.
+  }
+
+  await writeFile(
+    SNAPSHOT_PATH,
+    `${JSON.stringify(nextSnapshot, null, 2)}\n`,
+    "utf8"
+  );
+
   await writeFile(
     REPORT_PATH,
     `${JSON.stringify({
       generatedAt: new Date().toISOString(),
-      method: "Magpie-100 AOA production resolver (serial, 150ms pacing)",
+      method: "AOA production Engine6 commercial resolver (serial, 150ms pacing)",
       totalProducts: dataRows.length,
       liveApiRefreshed: refreshed.length,
+      priceChanges,
       ratingChanges,
       countChanges,
       refreshed,
@@ -206,7 +303,7 @@ const main = async () => {
   );
 
   console.log(
-    `[merchant-rating-refresh] complete: ${dataRows.length} products; ${refreshed.length} live-api refreshed; ${ratingChanges} rating change(s); ${countChanges} review-count change(s); ${failures.length} preserved unresolved.`
+    `[merchant-rating-refresh] complete: ${dataRows.length} products; ${refreshed.length} live-api refreshed; ${priceChanges} price change(s); ${ratingChanges} rating change(s); ${countChanges} review-count change(s); ${failures.length} preserved unresolved.`
   );
 };
 

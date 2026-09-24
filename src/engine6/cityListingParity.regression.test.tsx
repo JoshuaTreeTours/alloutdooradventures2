@@ -276,6 +276,7 @@ describe("engine6 city listing parity regression", () => {
         ({
           ok: true,
           json: async () => ({
+            source: "live-api",
             extracted: {
               priceAmount: 156.75,
               priceFormatted: "From $156.75",
@@ -302,6 +303,29 @@ describe("engine6 city listing parity regression", () => {
 
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: Location }).location = previousLocation;
+  });
+
+  it("rejects bundled fallback commercial fields so snapshot values are not overwritten", async () => {
+    const fields = await fetchEngine6LiveProductFields(
+      "76145P2",
+      (async () =>
+        ({
+          ok: true,
+          json: async () => ({
+            source: "bundled-fallback",
+            extracted: {
+              priceAmount: 95,
+              priceFormatted: "From $95.00",
+              aggregateRating: 4.8,
+              reviewCount: 24,
+              durationText: "1 hour 30 minutes",
+              meetingPointText: null,
+            },
+          }),
+        }) as Response) as typeof fetch
+    );
+
+    expect(fields).toBeNull();
   });
 
   it("hydrates San Francisco related-tour card render with live Engine6 values", async () => {
@@ -332,6 +356,7 @@ describe("engine6 city listing parity regression", () => {
         ({
           ok: true,
           json: async () => ({
+            source: "live-api",
             extracted: {
               priceAmount: 219,
               priceFormatted: "From $219.00",
