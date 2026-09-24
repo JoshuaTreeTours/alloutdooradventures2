@@ -70,8 +70,8 @@ const normalizeRating = (value: number) => value.toFixed(1);
 type AoaCommercialResult = {
   priceAmount: number;
   priceCurrency: "USD";
-  aggregateRating: number;
-  reviewCount: number;
+  aggregateRating: number | null;
+  reviewCount: number | null;
   source: string;
   attempt: number;
 };
@@ -113,6 +113,11 @@ const fetchFromAoa = async (productCode: string): Promise<AoaCommercialResult> =
         const rating = json?.extracted?.aggregateRating;
         const source = json?.source ?? "unknown";
 
+        const hasValidCount =
+          Number.isFinite(count) && Number(count) > 0;
+        const hasValidRating =
+          Number.isFinite(rating) && Number(rating) > 0;
+
         if (!Number.isFinite(priceAmount) || Number(priceAmount) <= 0) {
           lastProblem = `missing positive extracted.priceAmount (${source})`;
         } else if (
@@ -120,20 +125,19 @@ const fetchFromAoa = async (productCode: string): Promise<AoaCommercialResult> =
           priceCurrency.trim().toUpperCase() !== "USD"
         ) {
           lastProblem = `non-USD extracted.priceCurrency ${priceCurrency} (${source})`;
-        } else if (!Number.isFinite(count) || Number(count) <= 0) {
-          lastProblem = `missing positive extracted.reviewCount (${source})`;
-        } else if (!Number.isFinite(rating) || Number(rating) <= 0) {
-          lastProblem = `missing positive extracted.aggregateRating (${source})`;
         } else if (source !== "live-api") {
-          // The successful Magpie-100 refresh returned source=live-api. Do not
-          // overwrite Merchant Center data with a bundled/stale fallback.
+          // Never let a bundled/stale fallback overwrite the Merchant feed or
+          // the website commercial snapshot.
           lastProblem = `non-live source ${source}`;
+        } else if (hasValidCount !== hasValidRating) {
+          lastProblem =
+            `incomplete live rating pair rating=${String(rating)} reviews=${String(count)}`;
         } else {
           return {
             priceAmount: Number(priceAmount),
             priceCurrency: "USD",
-            aggregateRating: Number(rating),
-            reviewCount: Math.trunc(Number(count)),
+            aggregateRating: hasValidRating ? Number(rating) : null,
+            reviewCount: hasValidCount ? Math.trunc(Number(count)) : null,
             source,
             attempt,
           };
@@ -178,8 +182,8 @@ const main = async () => {
   const refreshed: Array<{
     id: string;
     price: string;
-    rating: string;
-    reviews: number;
+    rating: string | null;
+    reviews: number | null;
     attempt: number;
   }> = [];
   let priceChanges = 0;
@@ -200,17 +204,30 @@ const main = async () => {
     try {
       const live = await fetchFromAoa(productCode);
       const livePrice = formatMerchantUsdPrice(live.priceAmount);
-      const liveRating = normalizeRating(live.aggregateRating);
-      const liveCount = String(live.reviewCount);
+      const liveRating =
+        live.aggregateRating !== null
+          ? normalizeRating(live.aggregateRating)
+          : null;
+      const liveCount =
+        live.reviewCount !== null ? String(live.reviewCount) : null;
 
       if (row[priceIndex] !== livePrice) priceChanges += 1;
-      if (row[avgIndex] !== liveRating) ratingChanges += 1;
-      if (row[ratingCountIndex] !== liveCount || row[reviewCountIndex] !== liveCount) countChanges += 1;
-
       row[priceIndex] = livePrice;
-      row[avgIndex] = liveRating;
-      row[ratingCountIndex] = liveCount;
-      row[reviewCountIndex] = liveCount;
+
+      if (liveRating !== null && liveCount !== null) {
+        if (row[avgIndex] !== liveRating) ratingChanges += 1;
+        if (
+          row[ratingCountIndex] !== liveCount ||
+          row[reviewCountIndex] !== liveCount
+        ) {
+          countChanges += 1;
+        }
+
+        row[avgIndex] = liveRating;
+        row[ratingCountIndex] = liveCount;
+        row[reviewCountIndex] = liveCount;
+      }
+
       refreshed.push({
         id: productCode,
         price: livePrice,
@@ -220,7 +237,9 @@ const main = async () => {
       });
 
       if (productCode.toUpperCase() === "6740P7") {
-        console.log(`[merchant-rating-refresh] CANARY 6740P7 -> ${livePrice}, ${liveRating} rating, ${liveCount} reviews (${live.source}, attempt ${live.attempt})`);
+        console.log(
+          `[merchant-rating-refresh] CANARY 6740P7 -> ${livePrice}, ${liveRating ?? "rating preserved"}, ${liveCount ?? "reviews preserved"} (${live.source}, attempt ${live.attempt})`
+        );
       }
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -245,9 +264,25 @@ const main = async () => {
     rating_count: row[ratingCountIndex] ?? "",
     review_count: row[reviewCountIndex] ?? "",
   }));
+  const nextSnapshot = buildMerchantFeedCommercialSnapshot(snapshotRows);
+  try {
+    const existingSnapshot = JSON.parse(await readFile(SNAPSHOT_PATH, "utf8")) as {
+      generatedAt?: string;
+      rows?: unknown;
+    };
+    if (
+      existingSnapshot.generatedAt &&
+      JSON.stringify(existingSnapshot.rows) === JSON.stringify(nextSnapshot.rows)
+    ) {
+      nextSnapshot.generatedAt = existingSnapshot.generatedAt;
+    }
+  } catch {
+    // Missing or malformed snapshots are replaced from the governed feed rows.
+  }
+
   await writeFile(
     SNAPSHOT_PATH,
-    `${JSON.stringify(buildMerchantFeedCommercialSnapshot(snapshotRows), null, 2)}\n`,
+    `${JSON.stringify(nextSnapshot, null, 2)}\n`,
     "utf8"
   );
 
