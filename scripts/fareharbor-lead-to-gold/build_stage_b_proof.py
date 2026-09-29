@@ -18,6 +18,12 @@ REPORT_JSON = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-b-proof.json
 REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-b-proof.md"
 GENERATED_TS = ROOT / "src" / "data" / "fareharborLeadToGoldProof.generated.ts"
 EDITORIAL = ROOT / "scripts" / "fareharbor-lead-to-gold" / "editorial_copy.json"
+BOOKING_VALIDITY = (
+    ROOT
+    / "reports"
+    / "fareharbor-lead-to-gold"
+    / "stage-b-booking-page-validity.json"
+)
 
 PROOF_ORDER = [
     "145208",
@@ -429,7 +435,10 @@ def validate(product: dict, source_text: str) -> dict:
     if not product.get("removedClaims"):
         errors.append("provenance audit is missing removed claims")
     schema_words = word_count([schema]) if schema else 0
-    if product["exceptionStatus"] == "SOURCE_NOT_FOUND":
+    if product["exceptionStatus"] in {
+        "SOURCE_NOT_FOUND",
+        "BOOKING_PAGE_NOT_FOUND",
+    }:
         if schema.strip() != " ".join(product["paragraphs"]).strip():
             errors.append("missing-source schema description must match the short page copy")
     elif schema_words >= product["wordCount"]:
@@ -455,13 +464,13 @@ def validate(product: dict, source_text: str) -> dict:
         errors.append(f"verbatim overlap with source: {sample}")
     words = product["wordCount"]
     status = product["exceptionStatus"]
-    if status == "SOURCE_NOT_FOUND":
+    if status in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         if words >= 150:
-            errors.append("SOURCE_NOT_FOUND copy was padded")
+            errors.append(f"{status} copy was padded")
         if product["offer"] is not None or product["visiblePriceLabel"] is not None:
-            errors.append("missing-source product still has a price")
+            errors.append(f"{status} product still has a price")
         if product["durationLabel"] is not None:
-            errors.append("missing-source product still has a duration")
+            errors.append(f"{status} product still has a duration")
     elif words < 150:
         errors.append(
             f"editorial copy is {words} words; source-backed pages need 150 substantive words or INSUFFICIENT_SOURCE_CONTENT without padding"
@@ -503,7 +512,7 @@ def motorcycle_pricing_notes(source_text: str) -> list[str]:
     return notes
 
 
-def build_product(stage_a: dict, editorial: dict) -> dict:
+def build_product(stage_a: dict, editorial: dict, booking_validity: dict) -> dict:
     folder = HARVEST_ROOT / f"{stage_a['operatorShortname']}-{stage_a['itemId']}"
     meta = load_json(folder / "harvest-meta.json")
     content_raw = load_json(folder / "content.json")
@@ -526,6 +535,8 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
         exception = "SOURCE_NOT_FOUND"
     else:
         exception = "OK"
+    if booking_validity["classification"] == "BOOKING_PAGE_NOT_FOUND":
+        exception = "BOOKING_PAGE_NOT_FOUND"
 
     duration = clean_text(field(usable, "duration")) or None
     if not duration:
@@ -610,11 +621,13 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
         item.strip() for item in authored.get("removedClaims") or [] if str(item).strip()
     ]
     words = word_count(copy)
-    if exception != "SOURCE_NOT_FOUND" and words < 150:
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 150:
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
-    elif exception != "SOURCE_NOT_FOUND" and price is None:
+    elif exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and price is None:
         exception = "PRICE_NOT_FOUND"
+    elif exception == "BOOKING_PAGE_NOT_FOUND":
+        price = None
 
     rows = price_rows(price) if exception == "OK" else []
     notes = []
@@ -653,9 +666,13 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
         "removedClaims": removed_claims,
         "highlights": highlights if exception != "SOURCE_NOT_FOUND" else [],
         "wordCount": words,
-        "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
-        "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
-        "meetingLocation": clean_text(authored.get("meetingLocation")) or None,
+        "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT", "BOOKING_PAGE_NOT_FOUND"} else None,
+        "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT", "BOOKING_PAGE_NOT_FOUND"} else None,
+        "meetingLocation": (
+            clean_text(authored.get("meetingLocation")) or None
+            if exception != "BOOKING_PAGE_NOT_FOUND"
+            else None
+        ),
         "visiblePriceLabel": visible,
         "priceRows": rows,
         "pricingNotes": notes,
@@ -673,6 +690,7 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
             "price": price,
             "facts": facts,
             "derivativeCrossCheck": derivative_notes(stage_a, facts, price),
+            "bookingPageValidity": booking_validity,
         },
     }
     if stage_a["itemId"] == "694384":
@@ -712,6 +730,8 @@ def markdown_report(records: list[dict]) -> str:
         "",
         "Scope is the 10 Stage A representative products. Runtime pages read the generated module in `src/data/fareharborLeadToGoldProof.generated.ts`. They do not call FareHarbor.",
         "",
+        "Products classified `BOOKING_PAGE_NOT_FOUND` remain in this audit but are excluded from the generated runtime module and every public website surface.",
+        "",
         "Public copy is original editorial prose written from the stored harvest. Provenance labels, HTTP statuses, and fare tables stay in this report and in the pricing block. They are not part of the description.",
         "",
         "Authority is the stored harvest under `data/fareharbor-lead-to-gold/proof-set`. The unmerged derivative on `origin/feat/fareharbor-content-rebuild` is a secondary cross-check and is not page copy.",
@@ -720,11 +740,19 @@ def markdown_report(records: list[dict]) -> str:
         "",
         "Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. This proof restores only `shared-san-andreas-fault-jeep-tour-34849` at the Palm Springs path. Other red-jeep items stay removed.",
         "",
-        "## Proof URLs",
+        "## Active proof URLs",
         "",
     ]
     for record in records:
-        lines.append(f"- `{record['after']['publicPath']}`")
+        if record["after"]["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND":
+            lines.append(f"- `{record['after']['publicPath']}`")
+    lines.extend(["", "## Terminal records retained for audit", ""])
+    for record in records:
+        if record["after"]["exceptionStatus"] == "BOOKING_PAGE_NOT_FOUND":
+            lines.append(
+                f"- `{record['after']['itemId']}` `{record['after']['publicPath']}` "
+                "— `BOOKING_PAGE_NOT_FOUND`; excluded from public output"
+            )
     lines.append("")
     for record in records:
         before = record["before"]
@@ -761,6 +789,11 @@ def markdown_report(records: list[dict]) -> str:
         else:
             lines.append("- Authoritative price: none in the stored price preview")
         lines.append(f"- Rating provenance: {after['ratingProvenance']}")
+        validity = source["bookingPageValidity"]
+        lines.append(
+            f"- Booking-page validity: `{validity['classification']}` "
+            f"(HTTP {validity['httpStatus']} at `{validity['bookingUrl']}`)"
+        )
         if source.get("insuranceConflict"):
             lines.append(f"- Insurance note: {source['insuranceConflict']}")
         cross = source["derivativeCrossCheck"]
@@ -845,6 +878,7 @@ def emit_ts(products: list[dict]) -> str:
         "  engine2Path: string | null;\n"
         "  exceptionStatus:\n"
         "    | \"OK\"\n"
+        "    | \"BOOKING_PAGE_NOT_FOUND\"\n"
         "    | \"SOURCE_NOT_FOUND\"\n"
         "    | \"PRICE_NOT_FOUND\"\n"
         "    | \"INSUFFICIENT_SOURCE_CONTENT\";\n"
@@ -869,6 +903,10 @@ def emit_ts(products: list[dict]) -> str:
 def main() -> None:
     stage_a_products = {item["itemId"]: item for item in load_json(STAGE_A)}
     editorial = load_editorial()
+    booking_validity_records = load_json(BOOKING_VALIDITY)["products"]
+    booking_validity = {
+        item["itemId"]: item for item in booking_validity_records
+    }
     missing = [item_id for item_id in PROOF_ORDER if item_id not in stage_a_products]
     if missing:
         raise SystemExit(f"Stage A sample is missing {missing}")
@@ -876,16 +914,17 @@ def main() -> None:
     runtime_products = []
     for item_id in PROOF_ORDER:
         stage_a = stage_a_products[item_id]
-        product = build_product(stage_a, editorial)
+        product = build_product(stage_a, editorial, booking_validity[item_id])
         if not product["validation"]["ok"]:
             raise SystemExit(
                 f"{item_id} failed validation: {product['validation']['errors']}\n"
                 + "\n".join(product["paragraphs"])
             )
-        runtime_products.append(product)
+        if product["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND":
+            runtime_products.append(product)
         records.append({"before": before_block(stage_a), "after": product})
-    if len(runtime_products) != 10:
-        raise SystemExit("proof set must contain exactly 10 products")
+    if len(records) != 10:
+        raise SystemExit("proof audit must contain exactly 10 products")
     REPORT_JSON.write_text(json.dumps(records, indent=2, ensure_ascii=False) + "\n")
     REPORT_MD.write_text(markdown_report(records))
     GENERATED_TS.write_text(emit_ts(runtime_products))

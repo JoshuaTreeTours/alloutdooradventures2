@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { Router } from "wouter";
@@ -12,7 +13,7 @@ import {
 import { buildSchemaGraph } from "../engine2/schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../engine2/seo/buildEngine2Seo";
 import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
-import { getTourBySlugs } from "./tours";
+import { getTourBySlugs, tours } from "./tours";
 import { getExpandedTourDescription } from "./tourNarratives";
 import {
   buildTourProductStructuredData,
@@ -26,6 +27,9 @@ import {
   getFareHarborProofFromTour,
   getFareHarborProofProducts,
 } from "./fareharborLeadToGoldProof";
+import { isStageBBookingPageNotFound } from "../utils/fareharbor/stageBTerminalBookingPages";
+import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
+import { isRemovedTourSlug } from "../utils/tours/isTourRemoved";
 
 const captured: { nodes: Array<Record<string, unknown>> | null } = {
   nodes: null,
@@ -49,6 +53,8 @@ const PROOF_PATHS = [
   ["/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279", "333279", "80.00"],
   ["/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220", "193220", "40.00"],
 ] as const;
+
+const BOOKING_PAGE_NOT_FOUND_IDS = new Set(["595701", "612500"]);
 
 const MEETING_LOCATIONS: Record<string, string | null> = {
   "145208": "Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424",
@@ -104,18 +110,87 @@ const tripNode = (nodes: Array<Record<string, unknown>> | null) =>
   nodes?.find(node => typeIncludes(node, "TouristTrip"));
 
 describe("FareHarbor Stage B proof set", () => {
-  it("covers exactly the 10 representative products", () => {
+  it("keeps terminal booking pages out of the runtime proof set", () => {
     const products = getFareHarborProofProducts();
     expect(products.map(product => product.publicPath)).toEqual(
-      PROOF_PATHS.map(([path]) => path)
+      PROOF_PATHS.filter(([, itemId]) => !BOOKING_PAGE_NOT_FOUND_IDS.has(itemId))
+        .map(([path]) => path)
     );
     expect(products.every(product => product.aggregateRating === null)).toBe(
       true
     );
   });
 
+  it("removes terminal booking pages from every public inventory surface", () => {
+    const terminalCases = [
+      {
+        itemId: "595701",
+        stateSlug: "wyoming",
+        citySlug: "wilson",
+        tourSlug: "scenic-float-tour-595701",
+        title: "Scenic Float Tour",
+      },
+      {
+        itemId: "612500",
+        stateSlug: "british-columbia",
+        citySlug: "vancouver",
+        tourSlug:
+          "guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
+        title: "(Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott",
+      },
+    ];
+
+    for (const item of terminalCases) {
+      const path = `/destinations/${item.stateSlug}/${item.citySlug}/tours/${item.tourSlug}`;
+      expect(isStageBBookingPageNotFound(item.itemId)).toBe(true);
+      expect(isRemovedTourSlug(item.tourSlug)).toBe(true);
+      expect(
+        isHardDeletedLegacyTour({
+          productId: item.itemId,
+          slug: item.tourSlug,
+          canonicalPath: path,
+        })
+      ).toBe(true);
+      expect(
+        getTourBySlugs(item.stateSlug, item.citySlug, item.tourSlug)
+      ).toBeUndefined();
+      expect(getFareHarborProofByItemId(item.itemId)).toBeNull();
+
+      captured.nodes = null;
+      const html = renderRoute(
+        path,
+        <CityTourDetailRoute
+          params={{
+            stateSlug: item.stateSlug,
+            citySlug: item.citySlug,
+            tourSlug: item.tourSlug,
+          }}
+        />
+      );
+      expect(html).not.toContain(item.title);
+      expect(html).not.toContain("Tour snapshot");
+      expect(captured.nodes).toBeNull();
+    }
+
+    const publicInventories = JSON.stringify([tours, getAllEngine2Tours()]);
+    for (const item of terminalCases) {
+      expect(publicInventories).not.toContain(item.itemId);
+    }
+
+    const sitemap = readFileSync("public/sitemap-tours.xml", "utf8");
+    const merchantFeed = readFileSync("data/merchantFeed.csv", "utf8");
+    for (const item of terminalCases) {
+      expect(sitemap).not.toContain(item.itemId);
+      expect(merchantFeed).not.toContain(item.itemId);
+    }
+  });
+
   it("uses harvested prices and omits offers when the source has none", () => {
     for (const [, itemId, price] of PROOF_PATHS) {
+      if (BOOKING_PAGE_NOT_FOUND_IDS.has(itemId)) {
+        expect(getFareHarborProofByItemId(itemId)).toBeNull();
+        continue;
+      }
       const product = getFareHarborProofByItemId(itemId);
       expect(product).toBeTruthy();
       expect(product?.offer?.price ?? null).toBe(price);
@@ -152,12 +227,8 @@ describe("FareHarbor Stage B proof set", () => {
         expect(product.wordCount).toBeGreaterThanOrEqual(150);
       }
     }
-    expect(getFareHarborProofByItemId("595701")?.exceptionStatus).toBe(
-      "SOURCE_NOT_FOUND"
-    );
-    expect(getFareHarborProofByItemId("612500")?.exceptionStatus).toBe(
-      "SOURCE_NOT_FOUND"
-    );
+    expect(getFareHarborProofByItemId("595701")).toBeNull();
+    expect(getFareHarborProofByItemId("612500")).toBeNull();
     expect(getFareHarborProofByItemId("322210")?.exceptionStatus).toBe(
       "PRICE_NOT_FOUND"
     );
@@ -179,31 +250,12 @@ describe("FareHarbor Stage B proof set", () => {
       },
       {
         stateSlug: "wyoming",
-        citySlug: "wilson",
-        tourSlug: "scenic-float-tour-595701",
-        price: null,
-        schemaPrice: null,
-        fact: "Those details are not added here.",
-        duration: null,
-      },
-      {
-        stateSlug: "wyoming",
         citySlug: "cody",
         tourSlug: "self-guided-adv-motorcycle-rental-klr-650-694384",
         price: null,
         schemaPrice: null,
         fact: "Kawasaki KLR 650",
         duration: "1 day",
-      },
-      {
-        stateSlug: "british-columbia",
-        citySlug: "vancouver",
-        tourSlug:
-          "guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
-        price: null,
-        schemaPrice: null,
-        fact: "Those details are not added here.",
-        duration: null,
       },
       {
         stateSlug: "hawaii",
@@ -329,7 +381,8 @@ describe("FareHarbor Stage B proof set", () => {
       "vancouver",
       "guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500"
     );
-    expect(jeep && bufadora && vancouver).toBeTruthy();
+    expect(jeep && bufadora).toBeTruthy();
+    expect(vancouver).toBeNull();
 
     captured.nodes = null;
     const jeepHtml = renderRoute(
@@ -368,18 +421,6 @@ describe("FareHarbor Stage B proof set", () => {
       "40.00"
     );
 
-    captured.nodes = null;
-    const vancouverHtml = renderRoute(
-      vancouver!.seo.canonicalPath,
-      <Engine2TourPage tour={vancouver!} isFHPilotEnabled={false} />
-    );
-    expect(vancouverHtml).toContain("Those details are not added here.");
-    expect(vancouverHtml).not.toContain("Meeting location");
-    expect(vancouverHtml).not.toContain("HTTP");
-    expect(vancouverHtml).not.toContain("From $129");
-    expect(vancouverHtml).not.toContain("$129");
-    expect(productNode(captured.nodes)?.offers).toBeUndefined();
-    expect(tripNode(captured.nodes)?.offers).toBeUndefined();
   });
 
   it("leaves the synthetic floor in place for FareHarbor products outside the proof set", () => {

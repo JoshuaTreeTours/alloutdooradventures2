@@ -3,6 +3,7 @@ import {
   getInvalidPlaceholderTourPaths,
   getInvalidPlaceholderTourSlugs,
 } from "./invalidPlaceholderTours";
+import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
 
 const HARD_DELETED_PRODUCT_IDS = new Set([
   "16628",
@@ -44,6 +45,13 @@ export const isHardDeletedLegacyTour = ({
   const normalizedProductId = normalize(productId).replace(/^engine2-/, "");
   const normalizedSlug = normalize(slug);
   const normalizedCanonicalPath = normalize(canonicalPath);
+  if (
+    isStageBBookingPageNotFound(normalizedProductId) ||
+    isStageBBookingPageNotFound(normalizedSlug) ||
+    isStageBBookingPageNotFound(normalizedCanonicalPath)
+  ) {
+    return true;
+  }
   if (
     normalizedProductId === "34849" ||
     normalizedSlug === "shared-san-andreas-fault-jeep-tour-34849" ||

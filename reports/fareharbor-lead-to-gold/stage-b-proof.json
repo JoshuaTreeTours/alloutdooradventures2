@@ -158,6 +158,13 @@
             "derivative template opener was not copied",
             "derivative marketing phrasing was not copied"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "145208",
+          "provider": "countryboymine",
+          "bookingUrl": "https://fareharbor.com/embeds/book/countryboymine/items/145208/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -336,6 +343,13 @@
             "derivative template opener was not copied",
             "derivative marketing phrasing was not copied"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "181765",
+          "provider": "mauisunriders",
+          "bookingUrl": "https://fareharbor.com/embeds/book/mauisunriders/items/181765/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -464,6 +478,13 @@
             "derivative marketing phrasing was not copied",
             "derivative excerpt was not used as page copy"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "322210",
+          "provider": "untappednewyork",
+          "bookingUrl": "https://fareharbor.com/embeds/book/untappednewyork/items/322210/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -489,7 +510,7 @@
       "operator": "Wilson Fishing Guides",
       "publicPath": "/destinations/wyoming/wilson/tours/scenic-float-tour-595701",
       "engine2Path": null,
-      "exceptionStatus": "SOURCE_NOT_FOUND",
+      "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
       "paragraphs": [
         "No description, meeting place, or price was available for this Wilson scenic float. Those details are not added here."
       ],
@@ -567,6 +588,14 @@
           "notUsed": [
             "no unmerged derivative excerpt was stored for this route"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "595701",
+          "provider": "wilsonfishingguides",
+          "bookingUrl": "https://fareharbor.com/embeds/book/wilsonfishingguides/items/595701/",
+          "httpStatus": 404,
+          "classification": "BOOKING_PAGE_NOT_FOUND",
+          "evidence": "Authoritative booking destination returned HTTP 404 with a visible Page not found state."
         }
       },
       "validation": {
@@ -711,6 +740,13 @@
             "derivative template opener was not copied",
             "derivative excerpt was not used as page copy"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "694384",
+          "provider": "yellowstoneadvmoto",
+          "bookingUrl": "https://fareharbor.com/embeds/book/yellowstoneadvmoto/items/694384/",
+          "httpStatus": 200,
+          "classification": "VALID"
         },
         "insuranceConflict": "what_is_not_included calls supplemental insurance optional; special_requirements and check-in require MBA insurance at $15 per day and a $1,000 damage hold. The page follows the requirement and keeps both amounts in the pricing notes."
       },
@@ -873,6 +909,13 @@
           "notUsed": [
             "derivative template opener was not copied"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "646999",
+          "provider": "solitudefloattrips",
+          "bookingUrl": "https://fareharbor.com/embeds/book/solitudefloattrips/items/646999/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -898,7 +941,7 @@
       "operator": "Vancouver Hotel e-Bike Rentals",
       "publicPath": "/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
       "engine2Path": "/destinations/world/canada/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
-      "exceptionStatus": "SOURCE_NOT_FOUND",
+      "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
       "paragraphs": [
         "No description, meeting place, or price was available for this Vancouver e-bike tour. Those details are not added here."
       ],
@@ -978,6 +1021,14 @@
             "derivative marketing phrasing was not copied",
             "derivative excerpt was not used as page copy"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "612500",
+          "provider": "hotelebikerentals",
+          "bookingUrl": "https://fareharbor.com/embeds/book/hotelebikerentals/items/612500/",
+          "httpStatus": 404,
+          "classification": "BOOKING_PAGE_NOT_FOUND",
+          "evidence": "Authoritative booking destination returned HTTP 404 with a visible Page not found state."
         }
       },
       "validation": {
@@ -1133,6 +1184,13 @@
           "notUsed": [
             "no unmerged derivative excerpt was stored for this route"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "34849",
+          "provider": "red-jeep",
+          "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -1312,6 +1370,13 @@
             "derivative template opener was not copied",
             "derivative marketing phrasing was not copied"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "333279",
+          "provider": "epicpaddleadventures",
+          "bookingUrl": "https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {
@@ -1496,6 +1561,13 @@
             "derivative template opener was not copied",
             "derivative marketing phrasing was not copied"
           ]
+        },
+        "bookingPageValidity": {
+          "itemId": "193220",
+          "provider": "wineroutebaja",
+          "bookingUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/",
+          "httpStatus": 200,
+          "classification": "VALID"
         }
       },
       "validation": {

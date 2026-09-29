@@ -20,6 +20,7 @@ export type FareHarborProofProduct = {
   engine2Path: string | null;
   exceptionStatus:
     | "OK"
+    | "BOOKING_PAGE_NOT_FOUND"
     | "SOURCE_NOT_FOUND"
     | "PRICE_NOT_FOUND"
     | "INSUFFICIENT_SOURCE_CONTENT";
@@ -162,29 +163,6 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
-    "itemId": "595701",
-    "company": "wilsonfishingguides",
-    "title": "Scenic Float Tour",
-    "publicPath": "/destinations/wyoming/wilson/tours/scenic-float-tour-595701",
-    "engine2Path": null,
-    "exceptionStatus": "SOURCE_NOT_FOUND",
-    "paragraphs": [
-      "No description, meeting place, or price was available for this Wilson scenic float. Those details are not added here."
-    ],
-    "schemaDescription": "No description, meeting place, or price was available for this Wilson scenic float. Those details are not added here.",
-    "highlights": [],
-    "wordCount": 19,
-    "durationLabel": null,
-    "durationIso": null,
-    "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
     "itemId": "694384",
     "company": "yellowstoneadvmoto",
     "title": "Self-Guided ADV Motorcycle Rental – KLR 650",
@@ -252,29 +230,6 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "price": "1200.00",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
-    "itemId": "612500",
-    "company": "hotelebikerentals",
-    "title": "(Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott",
-    "publicPath": "/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
-    "engine2Path": "/destinations/world/canada/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
-    "exceptionStatus": "SOURCE_NOT_FOUND",
-    "paragraphs": [
-      "No description, meeting place, or price was available for this Vancouver e-bike tour. Those details are not added here."
-    ],
-    "schemaDescription": "No description, meeting place, or price was available for this Vancouver e-bike tour. Those details are not added here.",
-    "highlights": [],
-    "wordCount": 20,
-    "durationLabel": null,
-    "durationIso": null,
-    "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },

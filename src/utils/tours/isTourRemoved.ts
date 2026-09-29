@@ -1,4 +1,5 @@
 import { RETIRED_FAREHARBOR_TOUR_IDS } from "../fareharbor/suppressedBookingPages";
+import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
 
 const REMOVED_TOUR_IDS = new Set([
   "34849",
@@ -34,6 +35,9 @@ export const isTourRemoved = ({
   if (tourId) {
     const normalizedTourId = tourId.trim();
     const trailingTourId = getTourIdFromSlug(normalizedTourId);
+    if (isStageBBookingPageNotFound(normalizedTourId)) {
+      return true;
+    }
     // Stage B proof page only. The rest of the red-jeep opt-out stays removed.
     if (normalizedTourId === "34849" || trailingTourId === "34849") {
       return false;

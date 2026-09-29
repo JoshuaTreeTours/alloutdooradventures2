@@ -12,9 +12,7 @@ const SITEMAP = "sitemap-tours.xml";
 const REPORT = path.resolve("reports/product-structured-data-integrity.json");
 const FAREHARBOR_PROOF_WITHOUT_OFFER = new Set([
   "322210",
-  "595701",
   "694384",
-  "612500",
 ]);
 
 const normalizePath = value => {

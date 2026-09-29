@@ -2,6 +2,8 @@
 
 Scope is the 10 Stage A representative products. Runtime pages read the generated module in `src/data/fareharborLeadToGoldProof.generated.ts`. They do not call FareHarbor.
 
+Products classified `BOOKING_PAGE_NOT_FOUND` remain in this audit but are excluded from the generated runtime module and every public website surface.
+
 Public copy is original editorial prose written from the stored harvest. Provenance labels, HTTP statuses, and fare tables stay in this report and in the pricing block. They are not part of the description.
 
 Authority is the stored harvest under `data/fareharbor-lead-to-gold/proof-set`. The unmerged derivative on `origin/feat/fareharbor-content-rebuild` is a secondary cross-check and is not page copy.
@@ -10,18 +12,21 @@ Catalog `quality_score` and `availability_count` are not ratings or review count
 
 Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. This proof restores only `shared-san-andreas-fault-jeep-tour-34849` at the Palm Springs path. Other red-jeep items stay removed.
 
-## Proof URLs
+## Active proof URLs
 
 - `/destinations/colorado/breckenridge/tours/country-boy-gold-mine-tour-145208`
 - `/destinations/hawaii/paia/tours/haleakala-downhill-self-guided-bike-tour-181765`
 - `/destinations/new-york/new-york/tours/nycs-underground-subway-tour---private-tour-322210`
-- `/destinations/wyoming/wilson/tours/scenic-float-tour-595701`
 - `/destinations/wyoming/cody/tours/self-guided-adv-motorcycle-rental-klr-650-694384`
 - `/destinations/wyoming/moose/tours/grand-teton-scenic-float---private-tour-646999`
-- `/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500`
 - `/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849`
 - `/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279`
 - `/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220`
+
+## Terminal records retained for audit
+
+- `595701` `/destinations/wyoming/wilson/tours/scenic-float-tour-595701` — `BOOKING_PAGE_NOT_FOUND`; excluded from public output
+- `612500` `/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500` — `BOOKING_PAGE_NOT_FOUND`; excluded from public output
 
 ## 145208 Country Boy Gold Mine Tour
 
@@ -43,6 +48,7 @@ Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. T
 - price-preview: HTTP 200 sha256 `f246a98eaefe28362660736b15eb904a8c6c2bd065f08ab2a9a7c96ed6168b7f`
 - Authoritative price: $59.95 USD (Adult)
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/countryboymine/items/145208/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['duration 1 hour']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied']
 
 ### AFTER
@@ -93,6 +99,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `0b666c76114d038647318bc73c7539154214a7da5baaaf07d0ca34261d04737d`
 - Authoritative price: $119 USD (Adult)
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/mauisunriders/items/181765/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['unmerged price cache 119.0 USD matches harvest basis']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied']
 
 ### AFTER
@@ -141,6 +148,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd`
 - Authoritative price: none in the stored price preview
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/untappednewyork/items/322210/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied', 'derivative excerpt was not used as page copy']
 
 ### AFTER
@@ -190,11 +198,12 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 400 sha256 `b6cc5f800b1160014c3438b0695fc7260be47ebc27615530c9074e5cd01ab243`
 - Authoritative price: none in the stored price preview
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `BOOKING_PAGE_NOT_FOUND` (HTTP 404 at `https://fareharbor.com/embeds/book/wilsonfishingguides/items/595701/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['no unmerged derivative excerpt was stored for this route']
 
 ### AFTER
 
-- Exception status: `SOURCE_NOT_FOUND`
+- Exception status: `BOOKING_PAGE_NOT_FOUND`
 - Editorial word count: 19
 - Visible price: omitted
 - Duration: omitted
@@ -234,6 +243,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a`
 - Authoritative price: none in the stored price preview
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/yellowstoneadvmoto/items/694384/`)
 - Insurance note: what_is_not_included calls supplemental insurance optional; special_requirements and check-in require MBA insurance at $15 per day and a $1,000 damage hold. The page follows the requirement and keeps both amounts in the pricing notes.
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['derivative template opener was not copied', 'derivative excerpt was not used as page copy']
 
@@ -282,6 +292,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `7745e579dcb49784d2537ae4546efaec1e19311e0545e910580f31f4ae8a3430`
 - Authoritative price: $1,200 USD (Private Raft)
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/solitudefloattrips/items/646999/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['duration 2.5 hours']; not used=['derivative template opener was not copied']
 
 ### AFTER
@@ -330,11 +341,12 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 400 sha256 `b6cc5f800b1160014c3438b0695fc7260be47ebc27615530c9074e5cd01ab243`
 - Authoritative price: none in the stored price preview
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `BOOKING_PAGE_NOT_FOUND` (HTTP 404 at `https://fareharbor.com/embeds/book/hotelebikerentals/items/612500/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied', 'derivative excerpt was not used as page copy']
 
 ### AFTER
 
-- Exception status: `SOURCE_NOT_FOUND`
+- Exception status: `BOOKING_PAGE_NOT_FOUND`
 - Editorial word count: 20
 - Visible price: omitted
 - Duration: omitted
@@ -374,6 +386,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `930a98600b0df1e1b54e8acbe85dedaf29589d6abd5d78ea233118bcc4f965c1`
 - Authoritative price: $183.75 USD (Adult (18 years and up))
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/red-jeep/items/34849/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['no unmerged derivative excerpt was stored for this route']
 
 ### AFTER
@@ -422,6 +435,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `c107b549f9b931c1ac706e2055ad090f0aea4c4459b8c712175f3f8665da1217`
 - Authoritative price: $80 USD (Adult Paddle Board)
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['duration 2 hour experience']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied']
 
 ### AFTER
@@ -469,6 +483,7 @@ Claims removed in the provenance audit:
 - price-preview: HTTP 200 sha256 `a7a1fbd6d94326392c1131420a73190b0b90fc693012c043b2ec9ff1ae1c35af`
 - Authoritative price: $40 USD (Adult)
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Booking-page validity: `VALID` (HTTP 200 at `https://fareharbor.com/embeds/book/wineroutebaja/items/193220/`)
 - Derivative cross-check: usedAsAuthority=false; confirmed=['unmerged price cache 40.0 USD matches harvest basis']; not used=['derivative template opener was not copied', 'derivative marketing phrasing was not copied']
 
 ### AFTER
