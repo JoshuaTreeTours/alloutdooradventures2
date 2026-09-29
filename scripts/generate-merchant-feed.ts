@@ -660,11 +660,24 @@ const main = async () => {
 
   const commercialRefresh = isAutomatedCommercialRefreshCommit()
     ? {
-        // The scheduled workflow already committed the authoritative commercial
-        // values. Preserve those values for existing rows, but keep the freshly
-        // generated row set so newly eligible products are not accidentally
-        // dropped merely because they were absent from the previous CSV.
-        rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
+        // For scheduled refresh deployments, the committed snapshot is
+        // authoritative for rows it contains. Newly eligible rows that are not
+        // yet in that snapshot must use the same schema-resolved commercial
+        // values used to build Product JSON-LD, rather than a later live/cache
+        // value introduced by reconciliation.
+        rows: (rowsForCommercialRefresh as MerchantFeedCsvRow[]).map(row => {
+          const generatedRow = generatedRows.find(
+            candidate => candidate.id.trim().toUpperCase() === row.id.trim().toUpperCase()
+          );
+          if (!generatedRow) return row;
+          return {
+            ...row,
+            price: generatedRow.price,
+            average_rating: generatedRow.average_rating,
+            rating_count: generatedRow.rating_count,
+            review_count: generatedRow.review_count,
+          };
+        }),
       }
     : await applyMerchantFeedCommercialRefresh({
         rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
