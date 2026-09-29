@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import FareHarborProofSnapshot from "../../../../components/FareHarborProofSnapshot";
 import Image from "../../../../components/Image";
 import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
@@ -697,11 +698,10 @@ export default function CityTourDetailRoute({
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
   const proof = getFareHarborProofFromTour(tour);
-  const productDescription = proof
-    ? proof.paragraphs[0]
-    : tour
-      ? getExpandedTourDescription(tour)[0]
-      : undefined;
+  const editorialDescription = proof?.paragraphs.join(" ");
+  const productDescription =
+    editorialDescription ??
+    (tour ? getExpandedTourDescription(tour)[0] : undefined);
   const guideHref =
     state && city && tour
       ? resolveDestinationGuideHref({
@@ -780,7 +780,8 @@ export default function CityTourDetailRoute({
       ? (buildTourSchemaGraph({
           url: canonicalUrl,
           pageName: tour.title,
-          pageDescription: seoDescription ?? productDescription ?? "",
+          pageDescription:
+            editorialDescription ?? seoDescription ?? productDescription ?? "",
           heroImage,
           derivedImages: structuredImages,
           place: {
@@ -795,6 +796,7 @@ export default function CityTourDetailRoute({
             id: productNodeId,
             name: tour.title,
             description:
+              editorialDescription ??
               hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
@@ -805,11 +807,15 @@ export default function CityTourDetailRoute({
             id: `${canonicalUrl}#trip`,
             name: tour.title,
             description:
+              editorialDescription ??
               hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
               "",
-            duration: hardenedTemplate?.durationISO ?? tour.badges.duration,
+            duration:
+              proof?.durationIso ??
+              hardenedTemplate?.durationISO ??
+              tour.badges.duration,
             touristType: resolvedActivityLabel,
             departureLocation: null,
             itinerary: hardenedTemplate
@@ -915,6 +921,7 @@ export default function CityTourDetailRoute({
     tour,
     toursHref,
     proof,
+    editorialDescription,
   ]);
 
   const experienceParagraphs = proof
@@ -961,7 +968,7 @@ export default function CityTourDetailRoute({
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
   if (proof) {
-    seoMeta.description = proof.paragraphs[0];
+    seoMeta.description = proof.paragraphs.join(" ");
   }
   const relatedTours = (
     isFlagstaff
@@ -1141,6 +1148,8 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="space-y-6">
+            {proof ? <FareHarborProofSnapshot proof={proof} /> : null}
+            {proof ? null : (
             <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
               <h3 className="text-base font-semibold text-[#1f2a1f]">
                 {hardenedTemplate ? "What’s included" : "Tour snapshot"}
@@ -1185,10 +1194,11 @@ export default function CityTourDetailRoute({
                   ) : null}
                 </div>
               )}
-              {disclosure ? (
-                <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
-              ) : null}
             </div>
+            )}
+            {disclosure ? (
+              <p className="text-xs text-[#405040]">{disclosure}</p>
+            ) : null}
           </div>
         </div>
         {tour.galleryImages?.length ? (

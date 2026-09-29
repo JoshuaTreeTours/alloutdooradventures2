@@ -17,6 +17,7 @@ STAGE_A = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-a-representative
 REPORT_JSON = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-b-proof.json"
 REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-b-proof.md"
 GENERATED_TS = ROOT / "src" / "data" / "fareharborLeadToGoldProof.generated.ts"
+EDITORIAL = ROOT / "scripts" / "fareharbor-lead-to-gold" / "editorial_copy.json"
 
 PROOF_ORDER = [
     "145208",
@@ -39,6 +40,21 @@ BOILERPLATE = (
     "locally operated experience",
     "from $129",
     "$129",
+)
+
+PROVENANCE = (
+    "the operator lists",
+    "included items listed",
+    "additional facts stated",
+    "the operator description states",
+    "the stored price preview",
+    "stored price preview",
+    "price-preview",
+    "quality_score",
+    "availability_count",
+    "http 403",
+    "http 404",
+    "http 400",
 )
 
 MARKETING = re.compile(
@@ -303,113 +319,62 @@ def field(payloads: list[dict], key: str):
     return None
 
 
-def build_copy(stage_a: dict, facts: dict, price: dict | None, exception: str) -> list[str]:
-    title = stage_a["title"]
-    operator = stage_a["operator"]
-    if exception == "SOURCE_NOT_FOUND":
-        statuses = facts["endpointStatus"]
-        return [
-            (
-                f"Authoritative FareHarbor content and price data were not available "
-                f"for {title}. The stored harvest returned content HTTP {statuses['content']}, "
-                f"structured-description HTTP {statuses['structured-description']}, "
-                f"item HTTP {statuses['item']}, and price-preview HTTP {statuses['price-preview']}. "
-                f"This page does not state a price, review count, duration, meeting point, or inclusions."
+def word_count(paragraphs: list[str]) -> int:
+    return len(re.findall(r"[A-Za-z0-9]+(?:'[A-Za-z]+)?", " ".join(paragraphs)))
+
+
+def shingles(text: str, size: int = 8) -> set[str]:
+    tokens = re.findall(r"[a-z0-9']+", text.lower())
+    if len(tokens) < size:
+        return set()
+    return {" ".join(tokens[index : index + size]) for index in range(len(tokens) - size + 1)}
+
+
+def price_row_label(singular: str) -> str:
+    return re.sub(r"\s*-\s*free\s*$", "", singular, flags=re.I).strip()
+
+
+def price_rows(price: dict | None) -> list[dict]:
+    if not price:
+        return []
+    paid_adult = any(is_adult(entry["singular"]) for entry in price["customerTypes"])
+    rows = []
+    for entry in price["customerTypes"]:
+        rows.append(
+            {
+                "label": price_row_label(entry["singular"]),
+                "note": entry["note"],
+                "amountLabel": format_money(entry["amount"], price["currency"]),
+            }
+        )
+    if paid_adult:
+        for name in price.get("zeroPriceTypes") or []:
+            rows.append(
+                {
+                    "label": price_row_label(name),
+                    "note": "",
+                    "amountLabel": "Free",
+                }
             )
-        ]
+    return rows
 
-    paragraphs = []
-    lead_bits = [f"{title} is booked with {operator}."]
-    if facts.get("duration"):
-        lead_bits.append(f"The operator lists the duration as {facts['duration']}.")
-    if facts.get("meetingAddress"):
-        lead_bits.append(f"The listed meeting address is {facts['meetingAddress']}.")
-    paragraphs.append(" ".join(lead_bits))
 
-    qualifiers = []
-    if facts.get("minAge") is not None:
-        qualifiers.append(f"minimum age {facts['minAge']}")
-    if facts.get("maxAge") is not None:
-        qualifiers.append(f"maximum age {facts['maxAge']}")
-    if facts.get("groupSize"):
-        qualifiers.append(f"group size {facts['groupSize']}")
-    if qualifiers:
-        paragraphs.append(
-            "The operator lists " + ", ".join(qualifiers) + "."
-        )
+def load_editorial() -> dict:
+    payload = load_json(EDITORIAL)
+    missing = [item_id for item_id in PROOF_ORDER if item_id not in payload]
+    if missing:
+        raise SystemExit(f"editorial copy is missing {missing}")
+    return payload
 
-    if facts.get("included"):
-        paragraphs.append(
-            "Included items listed by the operator: "
-            + join_list(facts["included"])
-            + "."
-        )
-    if facts.get("excluded"):
-        paragraphs.append(
-            "Items listed as not included: " + join_list(facts["excluded"]) + "."
-        )
-    if facts.get("itinerary"):
-        paragraphs.append(
-            "Listed itinerary: " + join_list(facts["itinerary"], 6) + "."
-        )
-    if facts.get("restrictions"):
-        paragraphs.append(
-            "Listed restrictions: " + join_list(facts["restrictions"], 4) + "."
-        )
-    if facts.get("bring"):
-        paragraphs.append(
-            "Listed items to bring: " + join_list(facts["bring"], 5) + "."
-        )
-    if facts.get("cancellation"):
-        cancellation = facts["cancellation"].rstrip(".")
-        paragraphs.append(
-            f"Cancellation terms listed by the operator: {cancellation}."
-        )
-    if facts.get("gleanedFacts"):
-        paragraphs.append(
-            "Additional facts stated by the operator: "
-            + join_list(facts["gleanedFacts"])
-            + "."
-        )
-    for sentence in facts.get("factualSentences") or []:
-        paragraphs.append(f"The operator description states: {sentence}")
 
-    if price:
-        basis = price["basis"]
-        note = f" ({basis['note']})" if basis["note"] else ""
-        departure = ""
-        if price.get("departureStartAt"):
-            departure = (
-                f" on the stored departure starting {price['departureStartAt']}"
-            )
-        price_sentence = (
-            f"The stored price preview lists {basis['singular']}{note} at "
-            f"{format_money(basis['amount'], price['currency'])} {price['currency']}"
-            f"{departure}."
-        )
-        others = [
-            entry
-            for entry in price["customerTypes"]
-            if entry["singular"] != basis["singular"] or entry["amount"] != basis["amount"]
-        ]
-        if others:
-            other_bits = [
-                f"{entry['singular']} at {format_money(entry['amount'], price['currency'])}"
-                for entry in others[:4]
-            ]
-            price_sentence += " Other listed prices: " + "; ".join(other_bits) + "."
-        zeros = price.get("zeroPriceTypes") or []
-        if zeros:
-            price_sentence += (
-                " Listed at $0 on that departure: " + ", ".join(zeros) + "."
-            )
-        paragraphs.append(price_sentence)
-    elif exception == "PRICE_NOT_FOUND":
-        paragraphs.append(
-            "The stored price-preview response did not include a bookable price for this item. "
-            "No from-price is shown."
-        )
-    return paragraphs
+def source_blob(folder: Path) -> str:
+    chunks = []
+    for name in ("content.json", "structured-description.json", "item.json"):
+        raw = load_json(folder / name)
+        data = unwrap_content(raw)
+        if isinstance(data, dict) and "error" not in data:
+            chunks.append(json.dumps(data, ensure_ascii=False))
+    return " ".join(chunks)
 
 
 def derivative_notes(stage_a: dict, facts: dict, price: dict | None) -> dict:
@@ -451,33 +416,79 @@ def derivative_notes(stage_a: dict, facts: dict, price: dict | None) -> dict:
     }
 
 
-def validate(product: dict) -> dict:
-    text = " ".join(product["paragraphs"]).lower()
+def validate(product: dict, source_text: str) -> dict:
+    public_bits = product["paragraphs"] + product["highlights"]
+    text = " ".join(public_bits)
+    lowered = text.lower()
     errors = []
     if not product["paragraphs"]:
         errors.append("missing copy")
-    for phrase in BOILERPLATE:
-        if phrase in text:
-            errors.append(f"boilerplate present: {phrase}")
+    for phrase in BOILERPLATE + PROVENANCE:
+        if phrase in lowered:
+            errors.append(f"disallowed phrase: {phrase}")
     if product["aggregateRating"] is not None:
         errors.append("aggregate rating must be omitted")
-    if "quality_score" in text or "availability_count" in text:
-        errors.append("catalog quality fields leaked into copy")
-    offer = product["offer"]
-    if product["exceptionStatus"] in {"SOURCE_NOT_FOUND", "PRICE_NOT_FOUND"}:
-        if offer is not None or product["visiblePriceLabel"] is not None:
-            errors.append("exception product still has a price")
-    else:
-        if offer is None or product["visiblePriceLabel"] is None:
-            errors.append("priced product is missing an offer or visible price")
-        elif offer.get("price") in {"129.00", "129"} or offer.get("lowPrice") in {"129.00", "129"}:
-            errors.append("synthetic 129 offer")
+    if re.search(r"\$\s?\d", text):
+        errors.append("dollar amount leaked into editorial copy")
+    if SECOND_PERSON.search(text):
+        errors.append("second-person wording in editorial copy")
     if MARKETING.search(text):
         errors.append("marketing phrasing remains in copy")
+    overlap = shingles(text) & shingles(source_text)
+    if overlap:
+        sample = sorted(overlap)[:3]
+        errors.append(f"verbatim overlap with source: {sample}")
+    words = product["wordCount"]
+    status = product["exceptionStatus"]
+    if status == "SOURCE_NOT_FOUND":
+        if words >= 150:
+            errors.append("SOURCE_NOT_FOUND copy was padded")
+        if product["offer"] is not None or product["visiblePriceLabel"] is not None:
+            errors.append("missing-source product still has a price")
+        if product["durationLabel"] is not None:
+            errors.append("missing-source product still has a duration")
+    elif words < 150:
+        errors.append(
+            f"editorial copy is {words} words; source-backed pages need 150 substantive words or INSUFFICIENT_SOURCE_CONTENT without padding"
+        )
+    offer = product["offer"]
+    if status in {"PRICE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"}:
+        if offer is not None or product["visiblePriceLabel"] is not None:
+            errors.append("unpriced product still has an offer")
+    elif status == "OK":
+        if offer is None or product["visiblePriceLabel"] is None:
+            errors.append("priced product is missing an offer or visible price")
+        elif offer.get("price") in {"129.00", "129"}:
+            errors.append("synthetic 129 offer")
+        elif offer.get("availability"):
+            errors.append("offer still carries availability")
+        else:
+            visible_numbers = re.findall(r"\d[\d,]*\.?\d*", product["visiblePriceLabel"])
+            visible_value = visible_numbers[-1].replace(",", "") if visible_numbers else ""
+            if f"{float(visible_value):.2f}" != f"{float(offer['price']):.2f}":
+                errors.append("visible price does not equal offer price")
+            basis_label = format_money(float(offer["price"]), offer["priceCurrency"])
+            if not any(row["amountLabel"] == basis_label for row in product["priceRows"]):
+                errors.append("pricing list is missing the offer amount")
+    if status == "OK" and product["itemId"] == "145208":
+        for fact in ("Eureka Creek", "French Gulch", "1,000", "13 and older", "4 to 12", "3 and under"):
+            if fact not in text:
+                errors.append(f"Country Boy copy is missing {fact}")
     return {"ok": not errors, "errors": errors}
 
 
-def build_product(stage_a: dict) -> dict:
+def motorcycle_pricing_notes(source_text: str) -> list[str]:
+    notes = []
+    if re.search(r"\$15(?:\.00)?\s+per day", source_text, re.I):
+        notes.append(
+            "Supplemental insurance through MBA: $15 per day, purchased separately."
+        )
+    if re.search(r"\$1,?000", source_text):
+        notes.append("Damage hold on the card at delivery: $1,000.")
+    return notes
+
+
+def build_product(stage_a: dict, editorial: dict) -> dict:
     folder = HARVEST_ROOT / f"{stage_a['operatorShortname']}-{stage_a['itemId']}"
     meta = load_json(folder / "harvest-meta.json")
     content_raw = load_json(folder / "content.json")
@@ -576,26 +587,29 @@ def build_product(stage_a: dict) -> dict:
         facts["cancellation"] = None
 
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
-    if exception != "SOURCE_NOT_FOUND" and price is None:
-        exception = "PRICE_NOT_FOUND"
-    copy = build_copy(stage_a, facts, price, exception)
-    factual_chars = sum(len(part) for part in copy)
-    if exception == "OK" and factual_chars < 80:
-        exception = "INSUFFICIENT_SOURCE"
+    authored = editorial[stage_a["itemId"]]
+    copy = [paragraph.strip() for paragraph in authored["paragraphs"] if paragraph.strip()]
+    highlights = [item.strip() for item in authored.get("highlights") or [] if item.strip()]
+    words = word_count(copy)
+    if exception != "SOURCE_NOT_FOUND" and words < 150:
+        exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
-        copy = [
-            f"Stored FareHarbor fields for {stage_a['title']} did not contain enough factual detail to rewrite this page. No price or review count is shown."
-        ]
+    elif exception != "SOURCE_NOT_FOUND" and price is None:
+        exception = "PRICE_NOT_FOUND"
+
+    rows = price_rows(price) if exception == "OK" else []
+    notes = []
+    if stage_a["itemId"] == "694384" and exception != "SOURCE_NOT_FOUND":
+        notes = motorcycle_pricing_notes(" ".join(glean_source) + source_blob(folder))
 
     visible = None
     offer = None
     if price and exception == "OK":
-        visible = f"Prices starting at {format_money(price['basis']['amount'], price['currency'])}"
+        visible = f"From {format_money(price['basis']['amount'], price['currency'])}"
         offer = {
             "type": "Offer",
             "price": schema_amount(price["basis"]["amount"]),
             "priceCurrency": price["currency"],
-            "availability": "https://schema.org/InStock",
         }
 
     engine2_path = None
@@ -616,10 +630,13 @@ def build_product(stage_a: dict) -> dict:
         "engine2Path": engine2_path,
         "exceptionStatus": exception,
         "paragraphs": copy,
-        "highlights": facts["included"][:6] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE"} else [],
-        "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE"} else None,
-        "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE"} else None,
+        "highlights": highlights if exception != "SOURCE_NOT_FOUND" else [],
+        "wordCount": words,
+        "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
+        "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
         "visiblePriceLabel": visible,
+        "priceRows": rows,
+        "pricingNotes": notes,
         "offer": offer,
         "aggregateRating": None,
         "ratingProvenance": (
@@ -636,7 +653,22 @@ def build_product(stage_a: dict) -> dict:
             "derivativeCrossCheck": derivative_notes(stage_a, facts, price),
         },
     }
-    product["validation"] = validate(product)
+    if stage_a["itemId"] == "694384":
+        product["source"]["insuranceConflict"] = (
+            "what_is_not_included calls supplemental insurance optional; "
+            "special_requirements and check-in require MBA insurance at $15 per day "
+            "and a $1,000 damage hold. The page follows the requirement and keeps both amounts in the pricing notes."
+        )
+    product["validation"] = validate(product, source_blob(folder))
+    if (
+        stage_a["itemId"] == "694384"
+        and exception != "SOURCE_NOT_FOUND"
+        and len(notes) < 2
+    ):
+        product["validation"]["ok"] = False
+        product["validation"]["errors"].append(
+            "motorcycle insurance and damage-hold notes were not found in the harvest"
+        )
     return product
 
 
@@ -657,6 +689,8 @@ def markdown_report(records: list[dict]) -> str:
         "# Stage B FareHarbor proof set",
         "",
         "Scope is the 10 Stage A representative products. Runtime pages read the generated module in `src/data/fareharborLeadToGoldProof.generated.ts`. They do not call FareHarbor.",
+        "",
+        "Public copy is original editorial prose written from the stored harvest. Provenance labels, HTTP statuses, and fare tables stay in this report and in the pricing block. They are not part of the description.",
         "",
         "Authority is the stored harvest under `data/fareharbor-lead-to-gold/proof-set`. The unmerged derivative on `origin/feat/fareharbor-content-rebuild` is a secondary cross-check and is not page copy.",
         "",
@@ -705,6 +739,8 @@ def markdown_report(records: list[dict]) -> str:
         else:
             lines.append("- Authoritative price: none in the stored price preview")
         lines.append(f"- Rating provenance: {after['ratingProvenance']}")
+        if source.get("insuranceConflict"):
+            lines.append(f"- Insurance note: {source['insuranceConflict']}")
         cross = source["derivativeCrossCheck"]
         lines.append(
             f"- Derivative cross-check: usedAsAuthority={str(cross['usedAsAuthority']).lower()}; confirmed={cross['confirmedByHarvest'] or ['none']}; not used={cross['notUsed'] or ['none']}"
@@ -715,8 +751,12 @@ def markdown_report(records: list[dict]) -> str:
                 "### AFTER",
                 "",
                 f"- Exception status: `{after['exceptionStatus']}`",
+                f"- Editorial word count: {after['wordCount']}",
                 f"- Visible price: {after['visiblePriceLabel'] or 'omitted'}",
+                f"- Duration: {after['durationLabel'] or 'omitted'}",
                 f"- Offer: `{json.dumps(after['offer'], ensure_ascii=False)}`",
+                f"- Pricing rows: `{json.dumps(after['priceRows'], ensure_ascii=False)}`",
+                f"- Pricing notes: `{json.dumps(after['pricingNotes'], ensure_ascii=False)}`",
                 "- AggregateRating: omitted",
                 f"- Validation: {'pass' if after['validation']['ok'] else 'fail ' + '; '.join(after['validation']['errors'])}",
                 "",
@@ -743,9 +783,12 @@ def emit_ts(products: list[dict]) -> str:
                 "exceptionStatus": product["exceptionStatus"],
                 "paragraphs": product["paragraphs"],
                 "highlights": product["highlights"],
+                "wordCount": product["wordCount"],
                 "durationLabel": product["durationLabel"],
                 "durationIso": product["durationIso"],
                 "visiblePriceLabel": product["visiblePriceLabel"],
+                "priceRows": product["priceRows"],
+                "pricingNotes": product["pricingNotes"],
                 "offer": product["offer"],
                 "aggregateRating": None,
                 "ratingProvenance": product["ratingProvenance"],
@@ -759,7 +802,11 @@ def emit_ts(products: list[dict]) -> str:
         "  type: \"Offer\";\n"
         "  price: string;\n"
         "  priceCurrency: string;\n"
-        "  availability: string;\n"
+        "};\n\n"
+        "export type FareHarborProofPriceRow = {\n"
+        "  label: string;\n"
+        "  note: string;\n"
+        "  amountLabel: string;\n"
         "};\n\n"
         "export type FareHarborProofProduct = {\n"
         "  itemId: string;\n"
@@ -771,12 +818,15 @@ def emit_ts(products: list[dict]) -> str:
         "    | \"OK\"\n"
         "    | \"SOURCE_NOT_FOUND\"\n"
         "    | \"PRICE_NOT_FOUND\"\n"
-        "    | \"INSUFFICIENT_SOURCE\";\n"
+        "    | \"INSUFFICIENT_SOURCE_CONTENT\";\n"
         "  paragraphs: string[];\n"
         "  highlights: string[];\n"
+        "  wordCount: number;\n"
         "  durationLabel: string | null;\n"
         "  durationIso: string | null;\n"
         "  visiblePriceLabel: string | null;\n"
+        "  priceRows: FareHarborProofPriceRow[];\n"
+        "  pricingNotes: string[];\n"
         "  offer: FareHarborProofOffer | null;\n"
         "  aggregateRating: null;\n"
         "  ratingProvenance: string;\n"
@@ -787,6 +837,7 @@ def emit_ts(products: list[dict]) -> str:
 
 def main() -> None:
     stage_a_products = {item["itemId"]: item for item in load_json(STAGE_A)}
+    editorial = load_editorial()
     missing = [item_id for item_id in PROOF_ORDER if item_id not in stage_a_products]
     if missing:
         raise SystemExit(f"Stage A sample is missing {missing}")
@@ -794,7 +845,7 @@ def main() -> None:
     runtime_products = []
     for item_id in PROOF_ORDER:
         stage_a = stage_a_products[item_id]
-        product = build_product(stage_a)
+        product = build_product(stage_a, editorial)
         if not product["validation"]["ok"]:
             raise SystemExit(
                 f"{item_id} failed validation: {product['validation']['errors']}\n"

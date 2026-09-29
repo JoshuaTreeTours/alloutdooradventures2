@@ -15,7 +15,12 @@ import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDeta
 import { getTourBySlugs } from "./tours";
 import { getExpandedTourDescription } from "./tourNarratives";
 import {
+  buildTourProductStructuredData,
+  buildTourTripStructuredData,
+} from "../utils/structuredData";
+import {
   applyFareHarborProofSchema,
+  applyFareHarborProofToPrerender,
   getFareHarborProofByItemId,
   getFareHarborProofFromTour,
   getFareHarborProofProducts,
@@ -71,14 +76,23 @@ describe("FareHarbor Stage B proof set", () => {
       const product = getFareHarborProofByItemId(itemId);
       expect(product).toBeTruthy();
       expect(product?.offer?.price ?? null).toBe(price);
+      if (product?.offer) {
+        expect("availability" in product.offer).toBe(false);
+      }
       expect(JSON.stringify(product)).not.toContain("129.00");
-      expect(product?.paragraphs.join(" ")).not.toContain(
-        "keeps the logistics simple"
-      );
-      expect(product?.paragraphs.join(" ")).not.toContain(
-        "more than a quick photo stop"
-      );
+      expect(JSON.stringify(product?.offer)).not.toContain("InStock");
+      const copy = product?.paragraphs.join(" ") ?? "";
+      expect(copy).not.toContain("keeps the logistics simple");
+      expect(copy).not.toContain("The operator lists");
+      expect(copy).not.toContain("Included items listed");
+      expect(copy).not.toContain("The stored price preview");
+      expect(copy).not.toContain("HTTP");
       expect(product?.ratingProvenance).toContain("quality_score");
+      if (product?.exceptionStatus === "SOURCE_NOT_FOUND") {
+        expect(product.wordCount).toBeLessThan(80);
+      } else {
+        expect(product.wordCount).toBeGreaterThanOrEqual(150);
+      }
     }
     expect(getFareHarborProofByItemId("595701")?.exceptionStatus).toBe(
       "SOURCE_NOT_FOUND"
@@ -100,9 +114,10 @@ describe("FareHarbor Stage B proof set", () => {
         stateSlug: "colorado",
         citySlug: "breckenridge",
         tourSlug: "country-boy-gold-mine-tour-145208",
-        price: "Prices starting at $59.95",
+        price: "From $59.95",
         schemaPrice: "59.95",
-        fact: "0542 French Gulch Rd",
+        fact: "Eureka Creek",
+        duration: "1 hour",
       },
       {
         stateSlug: "wyoming",
@@ -110,7 +125,8 @@ describe("FareHarbor Stage B proof set", () => {
         tourSlug: "scenic-float-tour-595701",
         price: null,
         schemaPrice: null,
-        fact: "does not state a price",
+        fact: "Those details are not added here.",
+        duration: null,
       },
       {
         stateSlug: "wyoming",
@@ -119,6 +135,7 @@ describe("FareHarbor Stage B proof set", () => {
         price: null,
         schemaPrice: null,
         fact: "Kawasaki KLR 650",
+        duration: "1 day",
       },
       {
         stateSlug: "british-columbia",
@@ -127,15 +144,17 @@ describe("FareHarbor Stage B proof set", () => {
           "guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
         price: null,
         schemaPrice: null,
-        fact: "content HTTP 403",
+        fact: "Those details are not added here.",
+        duration: null,
       },
       {
         stateSlug: "hawaii",
         citySlug: "paia",
         tourSlug: "haleakala-downhill-self-guided-bike-tour-181765",
-        price: "Prices starting at $119",
+        price: "From $119",
         schemaPrice: "119.00",
-        fact: "71 Baldwin Ave",
+        fact: "71 Baldwin Avenue",
+        duration: "4-5 hours",
       },
       {
         stateSlug: "new-york",
@@ -144,23 +163,26 @@ describe("FareHarbor Stage B proof set", () => {
         price: null,
         schemaPrice: null,
         fact: "200 Broadway",
+        duration: "2 hours",
       },
       {
         stateSlug: "wyoming",
         citySlug: "moose",
         tourSlug: "grand-teton-scenic-float---private-tour-646999",
-        price: "Prices starting at $1,200",
+        price: "From $1,200",
         schemaPrice: "1200.00",
         fact: "1 Teton Park Road",
+        duration: "2.5 hours",
       },
       {
         stateSlug: "florida",
         citySlug: "orlando",
         tourSlug:
           "date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
-        price: "Prices starting at $80",
+        price: "From $80",
         schemaPrice: "80.00",
         fact: "1600 North Orange Avenue",
+        duration: "2 hour experience",
       },
     ];
 
@@ -178,24 +200,52 @@ describe("FareHarbor Stage B proof set", () => {
         />
       );
       expect(html).toContain(item.fact);
-      const main = html.slice(
+      const experienceStart = Math.max(
         html.indexOf("What you’ll experience"),
-        html.indexOf("More tours")
+        html.indexOf("What you'll experience")
       );
-      expect(main).not.toContain("keeps the logistics simple");
-      expect(main).not.toContain("From $129");
-      expect(main).not.toContain("$129");
+      const experienceEnd = html.indexOf("Tour snapshot", experienceStart);
+      const experience =
+        experienceEnd > experienceStart
+          ? html.slice(experienceStart, experienceEnd)
+          : html.slice(experienceStart, html.indexOf("More tours"));
+      expect(experience).not.toContain("keeps the logistics simple");
+      expect(experience).not.toContain("The operator lists");
+      expect(experience).not.toContain("The stored price preview");
+      expect(experience).not.toMatch(/\$\d/);
+      const relatedAt = html.indexOf("More tours");
+      const beforeRelated = relatedAt === -1 ? html : html.slice(0, relatedAt);
+      expect(beforeRelated).not.toContain("From $129");
+      expect(beforeRelated).not.toContain("$129");
+      expect(beforeRelated).not.toContain("HTTP");
       if (item.price) {
-        expect(html).toContain(item.price);
+        expect(beforeRelated).toContain(item.price);
       } else {
-        expect(html).not.toContain("Prices starting at");
+        expect(beforeRelated).not.toContain("From $");
+      }
+      if (item.duration) {
+        const durationHits = beforeRelated.split(item.duration).length - 1;
+        expect(durationHits).toBeGreaterThanOrEqual(2);
+      } else {
+        expect(beforeRelated).not.toContain("Check booking page");
       }
       const product = productNode(captured.nodes);
       const trip = tripNode(captured.nodes);
       expect(product?.aggregateRating).toBeUndefined();
       expect(trip?.aggregateRating).toBeUndefined();
-      const offer = product?.offers as { price?: string } | undefined;
-      expect(offer?.price ?? null).toBe(item.schemaPrice);
+      expect(product?.description).toContain(item.fact);
+      expect(trip?.description).toContain(item.fact);
+      const productOffer = product?.offers as
+        | { price?: string; availability?: string }
+        | undefined;
+      const tripOffer = trip?.offers as
+        | { price?: string; availability?: string }
+        | undefined;
+      expect(productOffer?.price ?? null).toBe(item.schemaPrice);
+      expect(tripOffer?.price ?? null).toBe(item.schemaPrice);
+      expect(productOffer?.availability).toBeUndefined();
+      expect(tripOffer?.availability).toBeUndefined();
+      expect(JSON.stringify(captured.nodes)).not.toContain("InStock");
     }
   });
 
@@ -218,23 +268,31 @@ describe("FareHarbor Stage B proof set", () => {
       jeep!.seo.canonicalPath,
       <Engine2TourPage tour={jeep!} isFHPilotEnabled={false} />
     );
-    expect(jeepHtml).toContain("Prices starting at $183.75");
+    expect(jeepHtml).toContain("From $183.75");
     expect(jeepHtml).toContain("Metate Ranch");
     expect(jeepHtml).not.toContain("more than a quick photo stop");
     expect(jeepHtml).not.toContain("$129");
+    expect(jeepHtml.split("3 hours").length - 1).toBeGreaterThanOrEqual(2);
     expect((productNode(captured.nodes)?.offers as { price?: string }).price).toBe(
       "183.75"
     );
+    expect(
+      (tripNode(captured.nodes)?.offers as { price?: string }).price
+    ).toBe("183.75");
+    expect(JSON.stringify(captured.nodes)).not.toContain("InStock");
 
     captured.nodes = null;
     const bufadoraHtml = renderRoute(
       bufadora!.seo.canonicalPath,
       <Engine2TourPage tour={bufadora!} isFHPilotEnabled={false} />
     );
-    expect(bufadoraHtml).toContain("Prices starting at $40");
+    expect(bufadoraHtml).toContain("From $40");
     expect(bufadoraHtml).toContain("Punta Banda");
     expect(bufadoraHtml).not.toContain("$129");
     expect((productNode(captured.nodes)?.offers as { price?: string }).price).toBe(
+      "40.00"
+    );
+    expect((tripNode(captured.nodes)?.offers as { price?: string }).price).toBe(
       "40.00"
     );
 
@@ -243,10 +301,12 @@ describe("FareHarbor Stage B proof set", () => {
       vancouver!.seo.canonicalPath,
       <Engine2TourPage tour={vancouver!} isFHPilotEnabled={false} />
     );
-    expect(vancouverHtml).toContain("content HTTP 403");
+    expect(vancouverHtml).toContain("Those details are not added here.");
+    expect(vancouverHtml).not.toContain("HTTP");
     expect(vancouverHtml).not.toContain("From $129");
     expect(vancouverHtml).not.toContain("$129");
     expect(productNode(captured.nodes)?.offers).toBeUndefined();
+    expect(tripNode(captured.nodes)?.offers).toBeUndefined();
   });
 
   it("leaves the synthetic floor in place for FareHarbor products outside the proof set", () => {
@@ -295,11 +355,58 @@ describe("FareHarbor Stage B proof set", () => {
       proof!
     );
     expect((productNode(nodes)?.offers as { price: string }).price).toBe("59.95");
+    expect((tripNode(nodes)?.offers as { price: string }).price).toBe("59.95");
+    expect(
+      (productNode(nodes)?.offers as { availability?: string }).availability
+    ).toBeUndefined();
     expect((productNode(nodes)?.offers as { url: string }).url).toBe(
       "https://example.com/book"
     );
+    expect(productNode(nodes)?.description).toBe(proof!.paragraphs.join(" "));
+    expect(tripNode(nodes)?.description).toBe(proof!.paragraphs.join(" "));
     expect(productNode(nodes)?.aggregateRating).toBeUndefined();
     expect(tripNode(nodes)?.aggregateRating).toBeUndefined();
     expect(JSON.stringify(nodes)).not.toContain("129.00");
+    expect(JSON.stringify(nodes)).not.toContain("InStock");
+  });
+
+  it("removes the prerender floor from Product and TouristTrip before HTML is written", () => {
+    const proof = getFareHarborProofByItemId("145208");
+    const tour = getTourBySlugs(
+      "colorado",
+      "breckenridge",
+      "country-boy-gold-mine-tour-145208"
+    );
+    expect(proof && tour).toBeTruthy();
+    const detailUrl = `https://alloutdooradventures.com${proof!.publicPath}`;
+    const graph = {
+      "@context": "https://schema.org",
+      "@graph": [
+        buildTourProductStructuredData({
+          tour: tour!,
+          detailUrl,
+          description: "Enjoy Country Boy.",
+        }),
+        buildTourTripStructuredData({
+          tour: tour!,
+          detailUrl,
+          description: "Enjoy Country Boy.",
+        }),
+      ],
+    };
+    expect(JSON.stringify(graph)).toContain("129.00");
+    const result = applyFareHarborProofToPrerender(
+      { description: "Enjoy Country Boy." },
+      graph,
+      { id: tour!.id, slug: tour!.slug, bookingUrl: tour!.bookingUrl }
+    );
+    expect(result.seo.description).toBe(proof!.paragraphs.join(" "));
+    const product = productNode(result.structuredData["@graph"]);
+    const trip = tripNode(result.structuredData["@graph"]);
+    expect((product?.offers as { price?: string }).price).toBe("59.95");
+    expect((trip?.offers as { price?: string }).price).toBe("59.95");
+    expect(JSON.stringify(result.structuredData)).not.toContain("129.00");
+    expect(JSON.stringify(result.structuredData)).not.toContain("InStock");
+    expect(trip?.duration).toBe("PT1H");
   });
 });

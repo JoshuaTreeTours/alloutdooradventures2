@@ -47,15 +47,17 @@ export const applyFareHarborProofSchema = <T extends Record<string, unknown>>(
     if (type !== "Product" && type !== "TouristTrip" && type !== "WebPage") {
       return node;
     }
-    const next: Record<string, unknown> = { ...node };
-    if (type === "WebPage") {
-      next.description = proof.paragraphs[0];
-      return next as T;
-    }
-    next.description = description;
+    const next: Record<string, unknown> = { ...node, description };
     delete next.aggregateRating;
-    if (type === "TouristTrip" && proof.durationIso) {
-      next.duration = proof.durationIso;
+    if (type === "TouristTrip") {
+      if (proof.durationIso) {
+        next.duration = proof.durationIso;
+      } else {
+        delete next.duration;
+      }
+    }
+    if (type === "WebPage") {
+      return next as T;
     }
     if (!proof.offer) {
       delete next.offers;
@@ -71,8 +73,40 @@ export const applyFareHarborProofSchema = <T extends Record<string, unknown>>(
       ...(typeof url === "string" ? { url } : {}),
       price: proof.offer.price,
       priceCurrency: proof.offer.priceCurrency,
-      availability: proof.offer.availability,
     };
     return next as T;
   });
+};
+
+export const applyFareHarborProofToPrerender = <
+  TSeo extends { description: string },
+  TData extends { "@graph"?: Array<Record<string, unknown>> } | null,
+>(
+  seo: TSeo,
+  structuredData: TData,
+  tour?: {
+    id?: string | null;
+    slug?: string | null;
+    bookingUrl?: string | null;
+  } | null
+): { seo: TSeo; structuredData: TData } => {
+  const proof = getFareHarborProofFromTour(tour);
+  if (!proof) {
+    return { seo, structuredData };
+  }
+  const nextSeo = {
+    ...seo,
+    description: proof.paragraphs.join(" "),
+  };
+  const graph = structuredData?.["@graph"];
+  if (!structuredData || !Array.isArray(graph)) {
+    return { seo: nextSeo, structuredData };
+  }
+  return {
+    seo: nextSeo,
+    structuredData: {
+      ...structuredData,
+      "@graph": applyFareHarborProofSchema(graph, proof),
+    },
+  };
 };

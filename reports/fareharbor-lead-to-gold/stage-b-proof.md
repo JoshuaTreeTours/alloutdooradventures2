@@ -2,6 +2,8 @@
 
 Scope is the 10 Stage A representative products. Runtime pages read the generated module in `src/data/fareharborLeadToGoldProof.generated.ts`. They do not call FareHarbor.
 
+Public copy is original editorial prose written from the stored harvest. Provenance labels, HTTP statuses, and fare tables stay in this report and in the pricing block. They are not part of the description.
+
 Authority is the stored harvest under `data/fareharbor-lead-to-gold/proof-set`. The unmerged derivative on `origin/feat/fareharbor-content-rebuild` is a secondary cross-check and is not page copy.
 
 Catalog `quality_score` and `availability_count` are not ratings or review counts. The synthetic $129 price floor is not used for these 10 products. Other FareHarbor pages still use that floor.
@@ -46,18 +48,20 @@ Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. T
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $59.95
-- Offer: `{"type": "Offer", "price": "59.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 227
+- Visible price: From $59.95
+- Duration: 1 hour
+- Offer: `{"type": "Offer", "price": "59.95", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Adult", "note": "13+", "amountLabel": "$59.95"}, {"label": "Child", "note": "Ages 4-12", "amountLabel": "$39.95"}, {"label": "Mine Tour Child (3-years old and under)", "note": "", "amountLabel": "Free"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Country Boy Gold Mine Tour is booked with Country Boy Mine. The operator lists the duration as 1 hour. The listed meeting address is 0542 French Gulch Rd Breckenridge, CO US 80424.
-- Included items listed by the operator: Country Boy Gold Mine Tour.
-- Additional facts stated by the operator: over 1,000 feet into the mountain, and gold pan in Eureka Creek.
-- The operator description states: Venture over 1,000 feet into the mountain.
-- The stored price preview lists Adult (13+) at $59.95 USD on the stored departure starting 2026-09-30T09:00:00. Other listed prices: Child at $39.95. Listed at $0 on that departure: Mine Tour Child (3-years old and under) - FREE.
+- The Country Boy Gold Mine Tour is a one-hour underground visit in Breckenridge. Departures are combined groups, so guests from different parties share the same trip rather than booking a private mine walk. Everyone meets at 0542 French Gulch Road, Breckenridge, Colorado 80424, then continues more than 1,000 feet into the mountain through the original workings of Country Boy Mine. Photographs and exhibits along the passage cover mining in this part of Colorado from more than a century ago, which gives the walk a specific place in local history instead of treating the tunnel as an empty corridor.
+- Gold panning in Eureka Creek is part of the same visit. It is not a separate add-on. After the underground portion, guests pan in the creek and keep whatever gold they find. The mine stays cold in every season, so warm clothing is the right layer for the tunnel, and waterproof shoes are recommended once the group is standing in the creek. The tour runs year-round on that same pattern: a short underground walk, then time at the creek.
+- Tickets come in three categories. Adults are 13 and older. Children ages 4 to 12 have their own ticket. Children 3 and under are admitted without a charge. The paying child category starts at age 4, which matches the age floor on the combined-group tour.
 
 ## 181765 Haleakala Downhill Self-Guided Bike Tour
 
@@ -84,21 +88,20 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $119
-- Offer: `{"type": "Offer", "price": "119.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 323
+- Visible price: From $119
+- Duration: 4-5 hours
+- Offer: `{"type": "Offer", "price": "119.00", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Adult", "note": "18+", "amountLabel": "$119"}, {"label": "Youth", "note": "15-17", "amountLabel": "$119"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Haleakala Downhill Self-Guided Bike Tour is booked with Maui Sunriders Bike Company. The operator lists the duration as 4-5 hours. The listed meeting address is 71 Baldwin Ave. Suite D3 Paia, HI US 96779.
-- The operator lists minimum age 15.
-- Included items listed by the operator: Front-suspension mountain bike with disc brakes, Downhill Bike full-face helmet (or lightweight helmet option), Rain and wind gear, Bike Gloves, Backpack with lock and map, Narrated van tour to the starting point, and Roadside assistance during the ride.
-- Items listed as not included: Meals and beverages (available for purchase along the route), Personal expenses or shopping, and Tips for guides (optional).
-- Listed itinerary: Check-In at Paia Shop (8:45 AM), Scenic Van Tour to 6,500 Feet, Begin Self-Guided Bike Ride, Van Shuttle Through Kula (Highway Bypass), For safety, Maui County law requires all bike tours to bypass a short stretch of Kula Highway. Riders will be transported in the van past this section before continuing their ride, and Continue Riding Through Makawao.
-- Listed restrictions: Minimum age: 15 years - Maximum weight: 280 lbs - Not suitable for beginner riders - Not suitable for pregnant women - Not suitable for individuals with impaired mobility.
-- Listed items to bring: Light layers (cooler temperatures at higher elevation), Closed-toe shoes, Sunglasses, Sunscreen, and Cash or card for food and shopping.
-- The stored price preview lists Adult (18+) at $119 USD on the stored departure starting 2026-09-29T08:45:00. Other listed prices: Youth at $119.
+- Haleakala Downhill is a self-guided bike ride that begins with a van trip out of Paia. Guests check in at 71 Baldwin Avenue, Suite D3, Paia, Hawaii 96779. On the stored schedule that check-in is 8:45 a.m. Staff fit bikes and helmets, give a safety briefing, and drive the group to 6,500 feet, just outside Haleakala National Park. The van ride is narrated and takes about 45 minutes, with commentary on the mountain and the island's history before anyone starts pedaling.
+- From that pullout the riding is self-guided. Riders set their own pace through upcountry Maui, with time to stop for photos. A short stretch of the Kula Highway is skipped in the van because Maui County law requires bike tours to bypass it. Riders load back into the van for that section, then continue. The route passes through Makawao, the upcountry town on the way toward the coast, before the last stretch into Paia. Bikes are due back at the shop by 1:30 p.m. From check-in to return, the outing runs four to five hours.
+- Each rider is issued a mountain bike with front suspension and disc brakes, a full-face downhill helmet or a lighter helmet, rain and wind gear, gloves, and a backpack that includes a lock and a map. Roadside assistance stays available during the ride. Meals, drinks, shopping, and tips are not included. Riders need to be at least 15 years old and no heavier than 280 pounds. The ride is not set up for beginners, for pregnant guests, or for guests with impaired mobility. Higher up the mountain is cooler than Paia, so the listed kit to bring is a light layer, closed-toe shoes, sunglasses, and sunscreen. Adult tickets are for ages 18 and older. Youth tickets are for ages 15 to 17. Both categories carry the same fare, and that amount is in the pricing list.
 
 ## 322210 NYC's Underground Subway Tour - Private Tour
 
@@ -125,22 +128,20 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `PRICE_NOT_FOUND`
+- Editorial word count: 267
 - Visible price: omitted
+- Duration: 2 hours
 - Offer: `null`
+- Pricing rows: `[]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- NYC's Underground Subway Tour - Private Tour is booked with Untapped New York. The operator lists the duration as 2 hours. The listed meeting address is 200 Broadway New York, NY US 10038.
-- The operator lists group size Any group size - 12 guests per guide recommended, as many guides as needed.
-- Included items listed by the operator: Walking tour in English, led by a local New Yorker, and Ear pieces provided to each guests, ensuring everyone hears the guide perfectly, even from a distance.
-- Items listed as not included: Guests will need one MetroCard swipe, or OMNY tap, to enter the subway.
-- Listed itinerary: City Hall Park, The Municipal Building, Astor Place, and 14th St. Union Square.
-- Listed restrictions: This tour is easy and most people can participate.
-- Listed items to bring: Please bring comfortable shoes.
-- Cancellation terms listed by the operator: Free cancellation up to 72 hours before the tour starts.
-- The stored price-preview response did not include a bookable price for this item. No from-price is shown.
+- Untapped New York's private underground subway tour is a two-hour walking tour led in English. The group meets at 200 Broadway, New York, New York 10038. A local guide leads, and each guest is given an earpiece so the commentary carries on the sidewalk and on the platform. The listing allows any group size, with about 12 guests recommended for each guide, and extra guides added when the party is larger. Because the departure is private, the group is not mixed into a public tour.
+- The walk treats the subway as the subject. Named stops include City Hall Park, the Municipal Building, Astor Place, and 14th Street at Union Square. The guide covers Chambers Street station, once nicknamed the Grand Central of Downtown, and what remains of the older Union Square station, including an art installation that everyday riders walk past. The group then rides the 6 train past stations that are closed to the public, City Hall Station among them. Those rooms are seen from the train. The transit authority does not allow visitors inside them. The historical thread includes Alfred Ely Beach's pneumatic transit, an early subway dug under the street at night, and archival photographs the guide uses to show how the system started.
+- Comfortable shoes are the only item guests are asked to bring. Entering the subway takes one MetroCard swipe or one OMNY tap, and that fare is not included. Most guests can handle the walking. Anyone who needs assistance can contact the operator before the day so the guide can prepare. Cancellation is free until 72 hours before the start.
 
 ## 595701 Scenic Float Tour
 
@@ -167,14 +168,18 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `SOURCE_NOT_FOUND`
+- Editorial word count: 28
 - Visible price: omitted
+- Duration: omitted
 - Offer: `null`
+- Pricing rows: `[]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Authoritative FareHarbor content and price data were not available for Scenic Float Tour. The stored harvest returned content HTTP 403, structured-description HTTP 404, item HTTP 404, and price-preview HTTP 400. This page does not state a price, review count, duration, meeting point, or inclusions.
+- Scenic Float Tour is on the Wilson, Wyoming, listings. Beyond that name, the current listing has no description, meeting place, or price. Those details are not added here.
 
 ## 694384 Self-Guided ADV Motorcycle Rental – KLR 650
 
@@ -196,26 +201,26 @@ Rewritten copy:
 - price-preview: HTTP 200 sha256 `de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a`
 - Authoritative price: none in the stored price preview
 - Rating provenance: No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted.
+- Insurance note: what_is_not_included calls supplemental insurance optional; special_requirements and check-in require MBA insurance at $15 per day and a $1,000 damage hold. The page follows the requirement and keeps both amounts in the pricing notes.
 - Derivative cross-check: usedAsAuthority=false; confirmed=['none']; not used=['derivative template opener was not copied', 'derivative excerpt was not used as page copy']
 
 ### AFTER
 
 - Exception status: `PRICE_NOT_FOUND`
+- Editorial word count: 329
 - Visible price: omitted
+- Duration: 1 day
 - Offer: `null`
+- Pricing rows: `[]`
+- Pricing notes: `["Supplemental insurance through MBA: $15 per day, purchased separately.", "Damage hold on the card at delivery: $1,000."]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Self-Guided ADV Motorcycle Rental – KLR 650 is booked with Yellowstone Adventure Moto. The operator lists the duration as 1 day. The listed meeting address is 1108 14th Street Cody, WY US 82414.
-- The operator lists minimum age 25, maximum age 75, group size Maximum 2 riders per motorcycle rental.
-- Included items listed by the operator: Premium adventure motorcycle rental (Kawasaki KLR 650 / 650S or Yamaha Ténéré 700), Complimentary delivery and pickup within the greater Cody, WY area, Most riding gear included (helmet, jacket, gloves) - limited sizes and quantities available, Riding or hiking boots (ankle-covering footwear required; no street shoes or sneakers), Pre-ride inspection and setup, Local area orientation and riding recommendations, Soft Pannier side bags, and Tools, first aid kit and extra tubes.
-- Items listed as not included: Optional supplemental insurance: $15 per day (through MBA), and Motorcycle boots: limited sizes and quantities available; guests are strongly encouraged to bring their own ankle-covering riding or hiking boots if proper fit cannot be provided.
-- Listed itinerary: Pickup & Orientation - Cody, WY, Meet in Cody for motorcycle delivery, paperwork, and a safety briefing. Bike setup, fit check, and local riding overview included, Recommended Loop Selection, Ride independently with flexibility for stops, photos, meals, and fuel. Routes are designed for experienced riders who want freedom without a rigid schedule, Return & Pickup, and Motorcycle pickup at the agreed location in Cody or surrounding area. Post-ride check and wrap-up.
-- Listed restrictions: This experience is not suitable for beginners or first-time motorcycle riders, Riders must have prior on-road motorcycle experience, Participants must be physically able to safely mount, dismount, balance, and control a mid-to-large displacement adventure motorcycle for extended periods, and Riders must be comfortable riding in changing weather conditions, including cold mornings, wind, rain, and varying road surfaces.
-- Listed items to bring: Full water bottle or hydration pack, Sunglasses, Light jacket or extra layer (weather and elevation can change quickly) Rain Gear is in each Rental Bike, Snacks (energy bars, trail snacks, etc.), and Camera or phone for photos.
-- The stored price-preview response did not include a bookable price for this item. No from-price is shown.
+- This is a one-day, self-guided adventure-motorcycle rental for people who already ride on the road. It is not a guided tour and it is not a first lesson. The motorcycles are a Kawasaki KLR 650 or 650S, or a Yamaha Ténéré 700. Delivery and pickup are included within the greater Cody area. The street address on the listing is 1108 14th Street, Cody, Wyoming 82414. Riders must be between 25 and 75 years old, and each motorcycle is limited to two people.
+- The rental includes the motorcycle, a pre-ride inspection, a short orientation, suggestions for local routes, and an emergency contact. When sizes are in stock, a helmet, jacket, and gloves are included. Soft panniers, tools, a first-aid kit, spare tubes, and a GPS display go out with the bike. Ankle-covering riding or hiking boots are required. Street shoes and sneakers are not accepted. A guide is not included, and neither is fuel. Rain gear is already on each motorcycle. Riders also need a full water bottle, a light extra layer, snacks, sunscreen, and long pants with a long-sleeve shirt if they are not using the provided gear.
+- Two loops are suggested, each laid out as a riding day of more than six hours. One heads toward Yellowstone. The other crosses the Beartooth Highway, where some stretches can include mild dirt or gravel. Elevations on these routes can reach about 8,000 to 11,000 feet, which affects breathing, stamina, and how cold the morning feels. A valid motorcycle endorsement is required. International riders need a passport and a motorcycle license that can be read in English, or an International Driving Permit. The rental is not open to beginners. Pregnant riders are discouraged, and anyone who cannot mount, balance, and control a mid-size adventure bike for a long day should not book. Supplemental insurance is arranged separately at delivery, and the desk places a damage hold on the card.
 
 ## 646999 Grand Teton Scenic Float - Private Tour
 
@@ -242,19 +247,20 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $1,200
-- Offer: `{"type": "Offer", "price": "1200.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 348
+- Visible price: From $1,200
+- Duration: 2.5 hours
+- Offer: `{"type": "Offer", "price": "1200.00", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Private Raft", "note": "Select the number of rafts", "amountLabel": "$1,200"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Grand Teton Scenic Float - Private Tour is booked with Solitude Float Trips. The operator lists the duration as 2.5 hours. The listed meeting address is 1 Teton Park Road, Moose, WY 83012.
-- The operator lists minimum age 5, maximum age 99.
-- Included items listed by the operator: central meeting point, transportation to river put-in, life jacket for each person (USCG certified), professional guide, and small group tour: 12 guests per boat, maximum.
-- Items listed as not included: layered clothing (for warmth), refillable water bottle, soft-soled shoes, sunglasses / hat, sunscreen, and personal items (lip balm, medications like epi, inhaler, etc.).
-- Listed restrictions: This will ensure that they are properly fitted for a personal flotation device (PFD or life jacket), While a scenic float is not necessarily an athletic activity per se, some agility and mobility is required, Please note there is no cover on the raft for shade or solid back support, and The landing area changes depending on the time of year, with there being little room to maneuver when the water is high (typically May - July).
-- The stored price preview lists Private Raft (Select the number of rafts) at $1,200 USD on the stored departure starting 2027-05-15T09:30:00. Listed at $0 on that departure: Adult, Child.
+- Solitude Float Trips sells this as a private scenic float on the Snake River in Grand Teton National Park. The meeting point is 1 Teton Park Road, Moose, Wyoming 83012, and guests should be there 10 to 15 minutes before the stated launch, ready to go. A 15-passenger van then shuttles the group to the put-in, a ride of about 15 to 20 minutes. Time on the water is about two hours. Counting the shuttle, the outing is about two and a half hours. There are no stops and no restroom breaks once the raft is on the river. The Teton Range lines this part of the Snake through Jackson Hole. Moose, elk, and bald eagles are the animals named for the corridor, though a sighting is never promised.
+- A guide rows. The raft holds at most 12 guests. Each person wears a U.S. Coast Guard life jacket fitted before launch. There is no shade cover and no solid backrest; seats are the tubes of the raft. Boarding is physical in a specific way: three steps up onto a trailer used as a dock, about 16 feet of walking on that trailer, then a step down of roughly 18 to 20 inches into the boat. At the take-out, the path is about five yards of uneven riverbank to flat pavement, and the parking area is on the order of 100 yards farther along. When the river is high, typically May through July, the landing has less room to maneuver.
+- A child has to have turned five and weigh 50 pounds or more so a jacket can be fitted. Adult jackets for this stretch generally fit guests from about 90 to 260 pounds, with a chest measurement no greater than 56 inches. Guests need enough mobility to step into the van, climb onto the trailer, and take responsibility for themselves in the water if a self-rescue were ever required. The departure is priced as a private raft, not as separate per-person adult and child tickets. That raft amount is in the pricing list.
 
 ## 612500 (Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott
 
@@ -281,14 +287,18 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `SOURCE_NOT_FOUND`
+- Editorial word count: 33
 - Visible price: omitted
+- Duration: omitted
 - Offer: `null`
+- Pricing rows: `[]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Authoritative FareHarbor content and price data were not available for (Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott. The stored harvest returned content HTTP 403, structured-description HTTP 404, item HTTP 404, and price-preview HTTP 400. This page does not state a price, review count, duration, meeting point, or inclusions.
+- This e-bike tour is on the Vancouver listings under Hotel eBike Rentals. Beyond the tour name, the current listing has no description, meeting place, or price. Those details are not added here.
 
 ## 34849 Shared San Andreas Fault Jeep Tour
 
@@ -315,18 +325,20 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $183.75
-- Offer: `{"type": "Offer", "price": "183.75", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 355
+- Visible price: From $183.75
+- Duration: 3 hours
+- Offer: `{"type": "Offer", "price": "183.75", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Adult (18 years and up)", "note": "Aged 18 and up", "amountLabel": "$183.75"}, {"label": "Child (Aged 17 and under)", "note": "A parent must accompany children. Booster seats are not provided.", "amountLabel": "$149.62"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Shared San Andreas Fault Jeep Tour is booked with Desert Adventures Red Jeep Tours. The operator lists the duration as 3 hours. The listed meeting address is Metate Ranch - 38635 Monroe St, Indio, CA 92203.
-- The operator lists minimum age 5, group size Minimum 2 / Maximum 7 guests per Jeep (Single riders, please call to book).
-- Cancellation terms listed by the operator: Cancel up to 48 hours before departure without penalty. No refund or credit for cancellation within 48 hours.
-- Additional facts stated by the operator: Jeep Scrambler (CJ-8), up to 7 guests per Jeep, admission fees and taxes included, bottled water, granola snacks, and one mile deep into the heart of the San Andreas Fault zone.
-- The stored price preview lists Adult (18 years and up) (Aged 18 and up) at $183.75 USD on the stored departure starting 2026-09-30T08:00:00. Other listed prices: Child (Aged 17 and under) at $149.62.
+- Red Jeep Tours runs this as a shared, naturalist-guided drive into the San Andreas Fault zone near Indio. The headline on the listing is direct about the format: more than one party may share a vehicle. Guests meet at Metate Ranch, 38635 Monroe Street, Indio, California 92203, in the Indio Hills, where the Pacific and North American plates come together. Arrival should be about 10 minutes before departure. If the guide is still missing five minutes before the start, the ranch office number on the listing is (760) 324-5337, extension 1. The tour is scheduled for three hours.
+- The vehicle is an open-air Jeep Scrambler, the CJ-8, with a canvas shade top that can come off. Each Jeep needs at least two guests and holds no more than seven. A single rider is asked to call before booking. The minimum age is five. The drive goes about one mile into the fault zone. The guide talks through the plants, animals, and geology of the cuts and canyons, then leads a walk in a slot canyon. One stop is a California fan palm oasis kept alive by groundwater trapped along the fault. Another is a recreated Cahuilla village with interpretive displays, built on the archaeological site of Paltewet. An optional short hike climbs to a grinding stone on the hillside above that village. Guests able to climb into the Jeep and step back out can ask ahead if someone in the party needs a limited-mobility arrangement.
+- Bottled water, granola snacks, admission, and taxes are included. Guide gratuities are not. Closed-toe shoes with a tread sole are required, and sandals, heels, and slick flats are not allowed. Seat belts stay fastened while the Jeep is moving. Portable toilets are on the property, and the vehicles stop for breaks. Blankets are on the Jeeps for cooler mornings from November through March. Cancellation without a penalty is available until 48 hours before departure. Children on the child fare are 17 and under, a parent has to accompany them, and booster seats are not provided. Adult and child amounts are in the pricing list.
 
 ## 333279 Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando
 
@@ -353,21 +365,20 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $80
-- Offer: `{"type": "Offer", "price": "80.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 306
+- Visible price: From $80
+- Duration: 2 hour experience
+- Offer: `{"type": "Offer", "price": "80.00", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Clear 2-Person Kayak", "note": "HOLDS 2 PEOPLE - Each Guest Must Weigh under 200lbs (<400lbs total)", "amountLabel": "$160"}, {"label": "Clear Single Kayak", "note": "Weight Limit 325 lbs", "amountLabel": "$80"}, {"label": "Adult Paddle Board", "note": "15 years and over, Requires Valid Drivers License or Permit", "amountLabel": "$80"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando is booked with Epic Paddle Adventures. The operator lists the duration as 2 hour experience. The listed meeting address is 1600 North Orange Avenue Orlando, FL US 32804.
-- The operator lists group size 40.
-- Included items listed by the operator: Clear kayak or paddleboard (selected at booking), Neon under-glow lighting setup, Complimentary champagne (21+), USCG-approved life vests, Paddle and safety equipment, Guided experience, and Complimentary photos provided after the tour.
-- Items listed as not included: Additional food or beverages.
-- Listed itinerary: Sunset Launch - Enter the water as evening light fades, Neon Glow Paddle - Relaxed guided paddle with champagne and photo moments, and Return to Shore - Easy paddle back under the city lights.
-- Listed items to bring: Athletic wear, shorts, or light layers, Closed-toe water shoes or sandals with straps, A valid ID (21+ for champagne), and Phone or camera (dry storage recommended).
-- Cancellation terms listed by the operator: Refund or credit available with 24 hour notice.
-- The stored price preview lists Adult Paddle Board (15 years and over, Requires Valid Drivers License or Permit) at $80 USD on the stored departure starting 2026-09-29T20:00:00. Other listed prices: Clear 2-Person Kayak at $160; Clear Single Kayak at $80.
+- This is a two-hour guided night paddle in Orlando on either a clear kayak or a paddleboard, with neon light under the hull. Guests meet at 1600 North Orange Avenue, Orlando, Florida 32804. The listing caps the group at 40. Check-in is a safety briefing and a gear fitting. The group then launches as the daylight fades, paddles with the guide, and returns to the same shore. Previous paddling experience is not required. The pace is set so there is time for photographs on the water.
+- The booking choice is a clear single kayak, a clear two-person kayak, or an adult paddleboard. The neon under-glow, a paddle, safety gear, and a U.S. Coast Guard life vest are included, and photos are sent after the outing. Champagne is included for guests 21 and older, which is why a photo ID belongs in the dry bag. Gratuities, and any food or drinks beyond that champagne, are not included. The clothes to wear are athletic layers or shorts, plus water shoes that cover the toes, or sandals that strap on.
+- The paddle happens after dark. It is a poor match for anyone who does not want to be on the water at night, and it is not suitable when a mobility limitation would make boarding or paddling unsafe. Guests need to get in and out of the craft with little help. Weight limits differ by craft. On the two-person kayak, each person must be under 200 pounds, and the pair must be under 400 pounds combined. The single kayak lists a limit of 325 pounds. The paddleboard is for ages 15 and older and requires a driver's license or a learner's permit. A refund or a credit is available with 24 hours' notice. The fare for each craft is in the pricing list.
 
 ## 193220 La Bufadora Tour in Baja California
 
@@ -394,20 +405,18 @@ Rewritten copy:
 ### AFTER
 
 - Exception status: `OK`
-- Visible price: Prices starting at $40
-- Offer: `{"type": "Offer", "price": "40.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}`
+- Editorial word count: 286
+- Visible price: From $40
+- Duration: 4 hours
+- Offer: `{"type": "Offer", "price": "40.00", "priceCurrency": "USD"}`
+- Pricing rows: `[{"label": "Adult", "note": "Ages 5+", "amountLabel": "$40"}, {"label": "Private Tour", "note": "Ages 5+", "amountLabel": "$55"}, {"label": "Infant", "note": "", "amountLabel": "Free"}]`
+- Pricing notes: `[]`
 - AggregateRating: omitted
 - Validation: pass
 
 Rewritten copy:
 
-- La Bufadora Tour in Baja California is booked with The Wine Route. The operator lists the duration as 4 hours. The listed meeting address is Miguel Aleman Ave | 512 Colonia Ampliacion Moderna Ensenada, Ensenada Municipality MX 22879.
-- The operator lists maximum age 99, group size 50.
-- Included items listed by the operator: Hotel pickup and drop-off, Transport, Local expert English/Spanish guide, Bottled water, and Snacks.
-- Items listed as not included: Food and drinks, and Gratuities.
-- Listed itinerary: Midmorning pickup in Ensenada and scenic 24-mile (39 km) drive to Punta Banda peninsula, Observe La Bufadora as waves force water up through the sea cave every 1-2 minutes, Free time to browse the sidewalk crafts market and visit nearby restaurants (own expense), and Meet the guide at 1:00 pm to return to hotels by 2:00 pm.
-- Listed restrictions: Minimum drinking age is 18 years, Children must be accompanied by an adult, and Tour recommended for all ages.
-- Listed items to bring: Cash (U.S. dollars widely accepted; few ATMs available), Hat or cap, Comfortable walking shoes, Sunscreen in summer, and Sunglasses.
-- Additional facts stated by the operator: Bottled water.
-- The stored price preview lists Adult (Ages 5+) at $40 USD on the stored departure starting 2026-10-01T10:00:00. Other listed prices: Private Tour at $55. Listed at $0 on that departure: Infant.
+- This is a four-hour guided trip from Ensenada out to La Bufadora, the blowhole on the Punta Banda peninsula. Hotel pickup is midmorning, and the street meeting point on the listing is Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Baja California 22879. The drive covers about 24 miles, or 39 kilometers, along the coast. A guide who works in English and Spanish rides with the group. Bottled water and snacks are included. Food, other drinks, and gratuities are not.
+- Once the van reaches Punta Banda, the group walks about three blocks through the crafts market to the blowhole. Waves force water up through a sea cave roughly every one to two minutes. The listing describes spouts that can rise more than 100 feet, and the guide explains how that happens. After the viewing, there is free time to browse the sidewalk market or sit down at the restaurants next to it. Both the shopping and the meals are at each guest's own expense. The guide meets the group again at 1:00 p.m. for the drive back, with hotel drop-off scheduled by 2:00 p.m.
+- On the shared departure, adult tickets start at age 5, and children need an adult with them. Infants under 4 are a separate ticket category. A private-tour option is sold as well. The listing allows a group as large as 50, and the maximum age on the form is 99. The market takes U.S. dollars widely and has few ATMs, so cash is the useful thing to carry, along with a hat, walking shoes, and sunglasses. Sunscreen belongs in the bag in summer. The shared, infant, and private amounts are in the pricing list.
 

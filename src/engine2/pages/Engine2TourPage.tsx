@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import FareHarborProofSnapshot from "../../components/FareHarborProofSnapshot";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -410,6 +411,11 @@ export default function Engine2TourPage({
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+        {proof ? (
+          <div className="mt-8 max-w-md">
+            <FareHarborProofSnapshot proof={proof} />
+          </div>
+        ) : null}
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
