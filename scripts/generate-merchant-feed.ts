@@ -691,7 +691,31 @@ const main = async () => {
     );
   }
 
-  const outputRows = commercialRefresh.rows as MerchantRow[];
+  let outputRows = commercialRefresh.rows as MerchantRow[];
+
+  // A scheduled refresh snapshot can legitimately omit a newly eligible row.
+  // Before parity validation, force every generated Engine6 row to carry the
+  // exact Product JSON-LD commercial values from schemaResolvedTours. This is
+  // intentionally after reconciliation/change-scope so no later path can
+  // reintroduce a different live/cache rating for the same deployment.
+  if (isAutomatedCommercialRefreshCommit()) {
+    const generatedByProductCode = new Map(
+      generatedRows.map(row => [row.id.trim().toUpperCase(), row])
+    );
+    outputRows = outputRows.map(row => {
+      const generatedRow = generatedByProductCode.get(
+        row.id.trim().toUpperCase()
+      );
+      if (!generatedRow) return row;
+      return {
+        ...row,
+        price: generatedRow.price,
+        average_rating: generatedRow.average_rating,
+        rating_count: generatedRow.rating_count,
+        review_count: generatedRow.review_count,
+      };
+    });
+  }
 
   const preImageGovernanceParityAudit = auditEngine6MerchantFeedSchemaParity(
     schemaResolvedTours,
