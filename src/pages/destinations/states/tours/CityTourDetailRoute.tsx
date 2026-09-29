@@ -24,6 +24,10 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
+import {
+  applyFareHarborProofSchema,
+  getFareHarborProofFromTour,
+} from "../../../../data/fareharborLeadToGoldProof";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
@@ -692,9 +696,12 @@ export default function CityTourDetailRoute({
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
-  const productDescription = tour
-    ? getExpandedTourDescription(tour)[0]
-    : undefined;
+  const proof = getFareHarborProofFromTour(tour);
+  const productDescription = proof
+    ? proof.paragraphs[0]
+    : tour
+      ? getExpandedTourDescription(tour)[0]
+      : undefined;
   const guideHref =
     state && city && tour
       ? resolveDestinationGuideHref({
@@ -878,7 +885,7 @@ export default function CityTourDetailRoute({
         }
       : null;
 
-    return [
+    const nodes = [
       ...getSiteStructuredDataNodes(),
       ...tourSchemaNodes,
       ...(faqNode ? [faqNode] : []),
@@ -890,6 +897,7 @@ export default function CityTourDetailRoute({
         { name: tour.title, url: canonicalUrl },
       ]),
     ];
+    return proof ? applyFareHarborProofSchema(nodes, proof) : nodes;
   }, [
     bookingUrl,
     canonicalUrl,
@@ -906,13 +914,16 @@ export default function CityTourDetailRoute({
     viatorFromPrice,
     tour,
     toursHref,
+    proof,
   ]);
 
-  const experienceParagraphs = hardenedTemplate?.overviewParagraphs?.length
-    ? hardenedTemplate.overviewParagraphs
-    : tour
-      ? getExpandedTourDescription(tour)
-      : [];
+  const experienceParagraphs = proof
+    ? proof.paragraphs
+    : hardenedTemplate?.overviewParagraphs?.length
+      ? hardenedTemplate.overviewParagraphs
+      : tour
+        ? getExpandedTourDescription(tour)
+        : [];
 
   useStructuredData(structuredDataNodes);
 
@@ -949,6 +960,9 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
+  if (proof) {
+    seoMeta.description = proof.paragraphs[0];
+  }
   const relatedTours = (
     isFlagstaff
       ? flagstaffTours
@@ -968,10 +982,12 @@ export default function CityTourDetailRoute({
   const disclosure = getAffiliateDisclosure(tour);
   const fareHarborHeroStartingPrice =
     fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
-  const heroStartingPriceLabel = formatStartingPrice(
-    fareHarborHeroStartingPrice ?? tour.startingPrice,
-    tour.currency
-  );
+  const heroStartingPriceLabel = proof
+    ? proof.visiblePriceLabel
+    : formatStartingPrice(
+        fareHarborHeroStartingPrice ?? tour.startingPrice,
+        tour.currency
+      );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -1012,9 +1028,9 @@ export default function CityTourDetailRoute({
               {hardenedTemplate?.heroTitle ?? tour.title}
             </h1>
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
-              {tour.badges.duration ? (
+              {proof?.durationLabel || tour.badges.duration ? (
                 <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
-                  {tour.badges.duration}
+                  {proof?.durationLabel ?? tour.badges.duration}
                 </span>
               ) : null}
               {tour.badges.likelyToSellOut ? (
@@ -1025,7 +1041,9 @@ export default function CityTourDetailRoute({
             </div>
             {heroStartingPriceLabel ? (
               <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-                Prices starting at {heroStartingPriceLabel}
+                {proof
+                  ? heroStartingPriceLabel
+                  : `Prices starting at ${heroStartingPriceLabel}`}
               </p>
             ) : null}
           </div>

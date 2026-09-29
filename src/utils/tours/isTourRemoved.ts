@@ -34,6 +34,10 @@ export const isTourRemoved = ({
   if (tourId) {
     const normalizedTourId = tourId.trim();
     const trailingTourId = getTourIdFromSlug(normalizedTourId);
+    // Stage B proof page only. The rest of the red-jeep opt-out stays removed.
+    if (normalizedTourId === "34849" || trailingTourId === "34849") {
+      return false;
+    }
     if (
       REMOVED_TOUR_IDS.has(normalizedTourId) ||
       RETIRED_FAREHARBOR_TOUR_IDS.has(normalizedTourId) ||

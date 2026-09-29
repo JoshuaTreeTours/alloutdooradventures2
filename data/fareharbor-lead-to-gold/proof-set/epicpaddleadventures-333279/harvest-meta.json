@@ -1,0 +1,31 @@
+{
+  "company": "epicpaddleadventures",
+  "itemId": "333279",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/content/",
+      "status": 200,
+      "bytes": 10732,
+      "sha256": "eca0511cf67204240edbf9698c8367d451c654491006505fd583439680f967e1"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/structured-description/",
+      "status": 200,
+      "bytes": 7181,
+      "sha256": "e2ca3b45f58e2110266d86e61f388b45e088a541878666a6f26f3bb535982a7a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/",
+      "status": 200,
+      "bytes": 19611,
+      "sha256": "56cdbfed42aed76ca1d2d169ff80ad09ae40b13530f7e5ca08d69175c23e04bc"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/epicpaddleadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=333279&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 963,
+      "sha256": "c107b549f9b931c1ac706e2055ad090f0aea4c4459b8c712175f3f8665da1217"
+    }
+  }
+}

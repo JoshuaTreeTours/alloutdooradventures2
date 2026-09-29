@@ -1,0 +1,31 @@
+{
+  "company": "wilsonfishingguides",
+  "itemId": "595701",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/wilsonfishingguides/595701/content/",
+      "status": 403,
+      "bytes": 38,
+      "sha256": "f7ca317a0aef36faf33ed0b0ca1e2889324d5001957e1e6f32347ab0de3ba9d5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/wilsonfishingguides/595701/structured-description/",
+      "status": 404,
+      "bytes": 38,
+      "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/wilsonfishingguides/items/595701/",
+      "status": 404,
+      "bytes": 38,
+      "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/wilsonfishingguides/price-preview/per-item/v2/?asn=fhdn&item_pks=595701&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 40,
+      "sha256": "b6cc5f800b1160014c3438b0695fc7260be47ebc27615530c9074e5cd01ab243"
+    }
+  }
+}

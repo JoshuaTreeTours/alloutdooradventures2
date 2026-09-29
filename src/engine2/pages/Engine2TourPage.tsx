@@ -20,6 +20,10 @@ import {
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
+import {
+  applyFareHarborProofSchema,
+  getFareHarborProofFromTour,
+} from "../../data/fareharborLeadToGoldProof";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -96,20 +100,39 @@ export default function Engine2TourPage({
     };
   }, [tour, isViatorTour]);
 
-  const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const proof = getFareHarborProofFromTour({
+    id: tour.id,
+    slug: tour.slug,
+    bookingUrl: tour.bookingUrl ?? tour.booking?.bookingUrl,
+  });
+  const seo = useMemo(() => {
+    const built = buildEngine2Seo(normalizedTour);
+    if (!proof) {
+      return built;
+    }
+    return {
+      ...built,
+      description: proof.paragraphs.join(" "),
+    };
+  }, [normalizedTour, proof]);
   const isPalmSprings = isPalmSpringsTour(tour);
-  const overrideContent = getPalmSpringsOverrideContent(tour);
+  const overrideContent = proof ? null : getPalmSpringsOverrideContent(tour);
   const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
+    !proof && isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
   const engine1Content = {
     whatYoullExperience: [normalizedTour.content.experienceText],
     highlights: normalizedTour.content.highlights,
   };
-  const content = overrideContent?.enabled
-    ? overrideContent.content
-    : engine1Content;
+  const content = proof
+    ? {
+        whatYoullExperience: proof.paragraphs,
+        highlights: proof.highlights,
+      }
+    : overrideContent?.enabled
+      ? overrideContent.content
+      : engine1Content;
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -138,9 +161,12 @@ export default function Engine2TourPage({
     isViatorTour && tour.pricing?.currency && displayPrice > 0
       ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
       : undefined;
-  const headerPriceLabel =
-    viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
-  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+  const headerPriceLabel = proof
+    ? (proof.visiblePriceLabel ?? undefined)
+    : (viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel);
+  const showFallbackPrice = proof
+    ? false
+    : !overridePriceLabel && !enginePriceLabel;
 
   const viatorRatingValue =
     typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
@@ -175,8 +201,8 @@ export default function Engine2TourPage({
     : undefined;
 
   const structuredDataNodes = useMemo(
-    () =>
-      buildSchemaGraph(
+    () => {
+      const nodes = buildSchemaGraph(
         normalizedTour,
         seo,
         pilotContent,
@@ -185,7 +211,9 @@ export default function Engine2TourPage({
         overrideFaqs,
         overrideContent?.enabled ?? false,
         rewriteV3Content
-      ),
+      );
+      return proof ? applyFareHarborProofSchema(nodes, proof) : nodes;
+    },
     [
       normalizedTour,
       seo,
@@ -195,6 +223,7 @@ export default function Engine2TourPage({
       overrideFaqs,
       overrideContent?.enabled,
       rewriteV3Content,
+      proof,
     ]
   );
 
@@ -271,6 +300,11 @@ export default function Engine2TourPage({
           {isViatorTour && tour.content.duration ? (
             <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
               {tour.content.duration}
+            </p>
+          ) : null}
+          {proof?.durationLabel ? (
+            <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
+              {proof.durationLabel}
             </p>
           ) : null}
           {headerPriceLabel ? (

@@ -1,0 +1,31 @@
+{
+  "company": "wineroutebaja",
+  "itemId": "193220",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/wineroutebaja/193220/content/",
+      "status": 200,
+      "bytes": 16002,
+      "sha256": "b84de4fa48009ea4e7d6e21f9f222731236d91cd0608ca56d0354b644971079a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/wineroutebaja/193220/structured-description/",
+      "status": 200,
+      "bytes": 9684,
+      "sha256": "32eaeac07bd20be4c8d2a234157fbb5dd30012fabbab19084f17433655731533"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/wineroutebaja/items/193220/",
+      "status": 200,
+      "bytes": 22844,
+      "sha256": "5df15c89de2bc3c6af139fbe709a3a7b7ca0a664fdd239fcb93f50483f75d21e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/wineroutebaja/price-preview/per-item/v2/?asn=fhdn&item_pks=193220&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 776,
+      "sha256": "a7a1fbd6d94326392c1131420a73190b0b90fc693012c043b2ec9ff1ae1c35af"
+    }
+  }
+}

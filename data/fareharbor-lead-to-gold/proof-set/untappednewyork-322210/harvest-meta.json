@@ -1,0 +1,31 @@
+{
+  "company": "untappednewyork",
+  "itemId": "322210",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/untappednewyork/322210/content/",
+      "status": 200,
+      "bytes": 5685,
+      "sha256": "06dffc9c5f682361859e5ed820020d8cab09d14dca87bac6c651d0bd7e650783"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/untappednewyork/322210/structured-description/",
+      "status": 200,
+      "bytes": 4263,
+      "sha256": "bc880fcaf8c914f2d5d2a07f923c29e4a482d198e089a984b02c9ca5b71cba9d"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/untappednewyork/items/322210/",
+      "status": 200,
+      "bytes": 25445,
+      "sha256": "70951faa6de3d4dac65e07a837341559c7c5be23161f245fc91e301bc5556dd8"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/untappednewyork/price-preview/per-item/v2/?asn=fhdn&item_pks=322210&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  }
+}
