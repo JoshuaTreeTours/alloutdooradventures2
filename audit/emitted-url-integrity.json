@@ -1,0 +1,1902 @@
+{
+  "generatedAt": "2026-06-07T20:12:12.995Z",
+  "totals": {
+    "emittedUrlsAudited": 15069,
+    "hardUnresolved": 0,
+    "tourSoft404": 36,
+    "emptyActivityCategory": 145,
+    "emptyDestinationCity": 28,
+    "noncanonicalLegacy": 5283,
+    "duplicateUrlFamilies": 5255
+  },
+  "byStatus": {
+    "ok": 9577,
+    "empty-destination-city": 28,
+    "noncanonical-legacy": 5283,
+    "empty-activity-category": 145,
+    "tour-soft-404": 36
+  },
+  "byRouteFamily": {
+    "ok:static-or-dynamic": 2048,
+    "ok:destination-tour": 5275,
+    "ok:state": 28,
+    "ok:city": 254,
+    "ok:city-tours": 254,
+    "ok:state-tours": 56,
+    "empty-destination-city:city": 14,
+    "empty-destination-city:city-tours": 14,
+    "noncanonical-legacy:state-guide-redirect": 28,
+    "noncanonical-legacy:destination-tour": 949,
+    "ok:activity-category": 15,
+    "ok:activity-state": 396,
+    "ok:activity-city": 1251,
+    "empty-activity-category:activity-city": 58,
+    "empty-activity-category:activity-state": 87,
+    "noncanonical-legacy:legacy-tour-detail": 4306,
+    "tour-soft-404:legacy-tour-detail": 36
+  },
+  "examples": {
+    "hardUnresolved": [],
+    "tourSoft404": [
+      {
+        "url": "/tours/boat-tour/us/arizona",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/alaska",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/arizona",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/california",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/connecticut",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/florida",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/georgia",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/hawaii",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/kentucky",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/louisiana",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/maryland",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/massachusetts",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/montana",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/new-hampshire",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/north-carolina",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/ohio",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/south-carolina",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/tennessee",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/vermont",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/west-virginia",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/canoeing/us/wyoming",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/city-tour/us/arizona",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/detours/us/arizona",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/detours/us/california",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      },
+      {
+        "url": "/tours/detours/us/florida",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "tour-soft-404",
+        "routeFamily": "legacy-tour-detail",
+        "reason": "Tour not found"
+      }
+    ],
+    "emptyActivityCategory": [
+      {
+        "url": "/tours/air-tours/alaska/seward",
+        "origins": [
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-city",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/air-tours/switzerland",
+        "origins": [
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/air-tours/switzerland/zurich",
+        "origins": [
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-city",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/minnesota/cannon-falls",
+        "origins": [
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-city",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/alaska",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/arizona",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/california",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/colorado",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/florida",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/georgia",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/hawaii",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/idaho",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/illinois",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/louisiana",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/maine",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/maryland",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/massachusetts",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/michigan",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/montana",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/nevada",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/new-hampshire",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/new-mexico",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/new-york",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/north-carolina",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      },
+      {
+        "url": "/tours/cycling/us/oklahoma",
+        "origins": [
+          "buildSitemap.categoryUrls",
+          "public/sitemap-categories.xml"
+        ],
+        "status": "empty-activity-category",
+        "routeFamily": "activity-state",
+        "reason": "not backed by activity discovery route definition"
+      }
+    ],
+    "emptyDestinationCity": [
+      {
+        "url": "/destinations/arizona/tucson",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/arizona/tucson/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/big-sur",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/big-sur/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/lake-tahoe",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/lake-tahoe/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/yosemite",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/california/yosemite/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/colorado/fort-collins",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/colorado/fort-collins/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/massachusetts/somerville",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/massachusetts/somerville/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/nevada/baker",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/nevada/baker/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/nevada/reno",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/nevada/reno/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/new-york/montauk",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/new-york/montauk/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/oregon/cannon-beach",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/oregon/cannon-beach/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/pennsylvania/bethlehem",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/pennsylvania/bethlehem/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/utah/park-city",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/utah/park-city/tours",
+        "origins": [
+          "buildSitemap.cityUrls",
+          "city tours helper",
+          "public/sitemap-cities.xml"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city-tours",
+        "reason": "zero public tours"
+      },
+      {
+        "url": "/destinations/washington/leavenworth",
+        "origins": [
+          "src/data/destinations.ts states[].cities[]"
+        ],
+        "status": "empty-destination-city",
+        "routeFamily": "city",
+        "reason": "zero public tours"
+      }
+    ],
+    "noncanonicalLegacy": [
+      {
+        "url": "/destinations/states/arizona",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/california",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/colorado",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/connecticut",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/district-of-columbia",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/florida",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/georgia",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/louisiana",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/maine",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/maryland",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/massachusetts",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/minnesota",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/mississippi",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/montana",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/nevada",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/new-hampshire",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/new-jersey",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/new-york",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/north-carolina",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/oregon",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/pennsylvania",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/rhode-island",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/south-carolina",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/tennessee",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      },
+      {
+        "url": "/destinations/states/utah",
+        "origins": [
+          "buildSitemap.destinationUrls",
+          "public/sitemap-destinations.xml"
+        ],
+        "status": "noncanonical-legacy",
+        "routeFamily": "state-guide-redirect",
+        "resolver": "DestinationStateGuideRedirect"
+      }
+    ]
+  },
+  "duplicateFamilies": [
+    {
+      "legacy": "/destinations/united-states/alaska/alaska/tours/air-taxi-drop-offs-for-climbers-and-skiers-465422",
+      "canonical": "/destinations/alaska/alaska/tours/air-taxi-drop-offs-for-climbers-and-skiers-465422",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/8-day-zanzibar-the-spice-island-mangroves-and-stonetown-517094",
+      "canonical": "/destinations/alaska/anchorage/tours/8-day-zanzibar-the-spice-island-mangroves-and-stonetown-517094",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/alaskan-wildlife-discovery-tour-674305",
+      "canonical": "/destinations/alaska/anchorage/tours/alaskan-wildlife-discovery-tour-674305",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-day-matanuska-glacier-hike-from-anchorage-702453",
+      "canonical": "/destinations/alaska/anchorage/tours/all-day-matanuska-glacier-hike-from-anchorage-702453",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-castle-turned-b-and-b-2-night-549894",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-castle-turned-b-and-b-2-night-549894",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-castle-turned-b-and-b-3-night-550028",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-castle-turned-b-and-b-3-night-550028",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-hatcher-pass-glamping-2-night-549897",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-hatcher-pass-glamping-2-night-549897",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-hatcher-pass-glamping-3-night-549891",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-hatcher-pass-glamping-3-night-549891",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-kenai-lake-glamping-2-night-549888",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-kenai-lake-glamping-2-night-549888",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/all-inclusive-kenai-lake-glamping-3-night-549896",
+      "canonical": "/destinations/alaska/anchorage/tours/all-inclusive-kenai-lake-glamping-3-night-549896",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155",
+      "canonical": "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/anchorage-hike-and-bite-549882",
+      "canonical": "/destinations/alaska/anchorage/tours/anchorage-hike-and-bite-549882",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/anchors-and-rappelling-101-women-s-climbing-clinic-547955",
+      "canonical": "/destinations/alaska/anchorage/tours/anchors-and-rappelling-101-women-s-climbing-clinic-547955",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/aurora-live-chase-tour-674310",
+      "canonical": "/destinations/alaska/anchorage/tours/aurora-live-chase-tour-674310",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/beginning-singletrack-mountain-biking-clinic-298930",
+      "canonical": "/destinations/alaska/anchorage/tours/beginning-singletrack-mountain-biking-clinic-298930",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/bike-and-hike-tour-anchorage-110373",
+      "canonical": "/destinations/alaska/anchorage/tours/bike-and-hike-tour-anchorage-110373",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/bike-and-tram-girdwood-110367",
+      "canonical": "/destinations/alaska/anchorage/tours/bike-and-tram-girdwood-110367",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/byron-glacier-walk-and-wildlife-viewing-experience-402209",
+      "canonical": "/destinations/alaska/anchorage/tours/byron-glacier-walk-and-wildlife-viewing-experience-402209",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/chugach-front-range-adventure-3-day-youth-backpacking-trip-402170",
+      "canonical": "/destinations/alaska/anchorage/tours/chugach-front-range-adventure-3-day-youth-backpacking-trip-402170",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/chugach-mountain-bike-tour-110362",
+      "canonical": "/destinations/alaska/anchorage/tours/chugach-mountain-bike-tour-110362",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/chugach-state-park-alpine-hiking-adventure-411854",
+      "canonical": "/destinations/alaska/anchorage/tours/chugach-state-park-alpine-hiking-adventure-411854",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/coastal-cruise-bike-tour-110347",
+      "canonical": "/destinations/alaska/anchorage/tours/coastal-cruise-bike-tour-110347",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/historic-hatcher-pass-549877",
+      "canonical": "/destinations/alaska/anchorage/tours/historic-hatcher-pass-549877",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/kenai-peninsula-mountain-bike-adventure-146716",
+      "canonical": "/destinations/alaska/anchorage/tours/kenai-peninsula-mountain-bike-adventure-146716",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/knik-glacier-off-roading-and-hiking-702520",
+      "canonical": "/destinations/alaska/anchorage/tours/knik-glacier-off-roading-and-hiking-702520",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-summer-edition-425024",
+      "canonical": "/destinations/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-summer-edition-425024",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-winter-edition-418451",
+      "canonical": "/destinations/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-winter-edition-418451",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/moose-hike-and-aurora-live-chase-tours-674316",
+      "canonical": "/destinations/alaska/anchorage/tours/moose-hike-and-aurora-live-chase-tours-674316",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/moose-hike-kincaid-park-tour-674073",
+      "canonical": "/destinations/alaska/anchorage/tours/moose-hike-kincaid-park-tour-674073",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/private-winter-fat-bike-tour-340387",
+      "canonical": "/destinations/alaska/anchorage/tours/private-winter-fat-bike-tour-340387",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/seward-to-anchorage-transfer-with-national-park-hike-and-awcc-702523",
+      "canonical": "/destinations/alaska/anchorage/tours/seward-to-anchorage-transfer-with-national-park-hike-and-awcc-702523",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/singletrack-sampler-private-tour-110365",
+      "canonical": "/destinations/alaska/anchorage/tours/singletrack-sampler-private-tour-110365",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/anchorage/tours/young-women-s-alaskan-outdoor-leadership-wilderness-trip-383839",
+      "canonical": "/destinations/alaska/anchorage/tours/young-women-s-alaskan-outdoor-leadership-wilderness-trip-383839",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/calgary/tours/canada-gold-rush-trail-adventure-418264",
+      "canonical": "/destinations/alaska/calgary/tours/canada-gold-rush-trail-adventure-418264",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/bear-creek-659367",
+      "canonical": "/destinations/alaska/delta-junction/tours/bear-creek-659367",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/black-rapids-day-hike-659401",
+      "canonical": "/destinations/alaska/delta-junction/tours/black-rapids-day-hike-659401",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/black-rapids-glacier-traverse-float-hike-659563",
+      "canonical": "/destinations/alaska/delta-junction/tours/black-rapids-glacier-traverse-float-hike-659563",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/castner-glacier-day-hike-659364",
+      "canonical": "/destinations/alaska/delta-junction/tours/castner-glacier-day-hike-659364",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/castner-glacier-overnight-adventure-659409",
+      "canonical": "/destinations/alaska/delta-junction/tours/castner-glacier-overnight-adventure-659409",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/clearwater-river-packrafting-float-659404",
+      "canonical": "/destinations/alaska/delta-junction/tours/clearwater-river-packrafting-float-659404",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/miller-creek-canwell-glacier-approach-659396",
+      "canonical": "/destinations/alaska/delta-junction/tours/miller-creek-canwell-glacier-approach-659396",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/delta-junction/tours/miller-creek-canwell-glacier-approach-overnight-trip-659413",
+      "canonical": "/destinations/alaska/delta-junction/tours/miller-creek-canwell-glacier-approach-overnight-trip-659413",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/3-day-bike-packing-670525",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/3-day-bike-packing-670525",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/4-day-bike-packing-670527",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/4-day-bike-packing-670527",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/4-hour-jeep-rental-617412",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/4-hour-jeep-rental-617412",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/4-hour-wilderness-wonders-off-trail-tour-450263",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/4-hour-wilderness-wonders-off-trail-tour-450263",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/5-hour-into-the-mountains-hike-450268",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/5-hour-into-the-mountains-hike-450268",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/8-hour-jeep-rental-668158",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/8-hour-jeep-rental-668158",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/backcountry-walking-tour-25335",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/backcountry-walking-tour-25335",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/carlo-mountain-vista-hike-483077",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/carlo-mountain-vista-hike-483077",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/denali-highway-jeep-excursion-589580",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/denali-highway-jeep-excursion-589580",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/full-day-jeep-rental-668160",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/full-day-jeep-rental-668160",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/heli-hiking-adventure-25323",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/heli-hiking-adventure-25323",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/morning-mountain-hike-445154",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/morning-mountain-hike-445154",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/private-hiking-adventure-577765",
+      "canonical": "/destinations/alaska/denali-national-park-and-preserve/tours/private-hiking-adventure-577765",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/angel-rocks-hike-549008",
+      "canonical": "/destinations/alaska/fairbanks/tours/angel-rocks-hike-549008",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/chena-river-nature-trail-walk-551184",
+      "canonical": "/destinations/alaska/fairbanks/tours/chena-river-nature-trail-walk-551184",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/denali-day-trip-549011",
+      "canonical": "/destinations/alaska/fairbanks/tours/denali-day-trip-549011",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/denali-hiking-tour-678814",
+      "canonical": "/destinations/alaska/fairbanks/tours/denali-hiking-tour-678814",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/fairbanks-northern-lights-tour-with-photos-guided-by-maia-hartwigsen-546776",
+      "canonical": "/destinations/alaska/fairbanks/tours/fairbanks-northern-lights-tour-with-photos-guided-by-maia-hartwigsen-546776",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/husky-hike-and-forest-adventure-557139",
+      "canonical": "/destinations/alaska/fairbanks/tours/husky-hike-and-forest-adventure-557139",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/mastodon-trail-hike-551130",
+      "canonical": "/destinations/alaska/fairbanks/tours/mastodon-trail-hike-551130",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/private-fairbanks-northern-lights-tour-with-photos-guided-by-maia-hartwigsen-546779",
+      "canonical": "/destinations/alaska/fairbanks/tours/private-fairbanks-northern-lights-tour-with-photos-guided-by-maia-hartwigsen-546779",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/table-top-mountain-hike-548957",
+      "canonical": "/destinations/alaska/fairbanks/tours/table-top-mountain-hike-548957",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/fairbanks/tours/wickersham-dome-hike-549009",
+      "canonical": "/destinations/alaska/fairbanks/tours/wickersham-dome-hike-549009",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/haines/tours/skagway-s-hidden-gem-656373",
+      "canonical": "/destinations/alaska/haines/tours/skagway-s-hidden-gem-656373",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/homer/tours/full-day-guided-glacier-lake-hike-and-kayak-539616",
+      "canonical": "/destinations/alaska/homer/tours/full-day-guided-glacier-lake-hike-and-kayak-539616",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/homer/tours/glacier-lake-trail-629556",
+      "canonical": "/destinations/alaska/homer/tours/glacier-lake-trail-629556",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/homer/tours/hiking-tour-617682",
+      "canonical": "/destinations/alaska/homer/tours/hiking-tour-617682",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/homer/tours/wildlife-tour-and-dinner-cruise-563487",
+      "canonical": "/destinations/alaska/homer/tours/wildlife-tour-and-dinner-cruise-563487",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/hoonah/tours/guided-passenger-van-wild-life-and-bear-viewing-tour-375702",
+      "canonical": "/destinations/alaska/hoonah/tours/guided-passenger-van-wild-life-and-bear-viewing-tour-375702",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/3-hour-juneau-adventure-618507",
+      "canonical": "/destinations/alaska/juneau/tours/3-hour-juneau-adventure-618507",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/matanuska-glacier-with-guide-from-anchorage-391823",
+      "canonical": "/destinations/alaska/juneau/tours/matanuska-glacier-with-guide-from-anchorage-391823",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/mendenhall-glacier-canoe-paddle-and-hike-195600",
+      "canonical": "/destinations/alaska/juneau/tours/mendenhall-glacier-canoe-paddle-and-hike-195600",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/mendenhall-glacier-guided-hike-195602",
+      "canonical": "/destinations/alaska/juneau/tours/mendenhall-glacier-guided-hike-195602",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/mendenhall-glacier-ice-adventure-tour-23432",
+      "canonical": "/destinations/alaska/juneau/tours/mendenhall-glacier-ice-adventure-tour-23432",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/mendenhall-lake-canoe-tour-116148",
+      "canonical": "/destinations/alaska/juneau/tours/mendenhall-lake-canoe-tour-116148",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/norris-adventure-seaplane-paddle-and-glacier-hike-419403",
+      "canonical": "/destinations/alaska/juneau/tours/norris-adventure-seaplane-paddle-and-glacier-hike-419403",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/private-boat-tour-625699",
+      "canonical": "/destinations/alaska/juneau/tours/private-boat-tour-625699",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/juneau/tours/private-juneau-adventure-647901",
+      "canonical": "/destinations/alaska/juneau/tours/private-juneau-adventure-647901",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/ketchikan/tours/custom-private-tour-698894",
+      "canonical": "/destinations/alaska/ketchikan/tours/custom-private-tour-698894",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/ketchikan/tours/e-bike-and-hike-19891",
+      "canonical": "/destinations/alaska/ketchikan/tours/e-bike-and-hike-19891",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/ketchikan/tours/hovercraft-eco-adventures-280073",
+      "canonical": "/destinations/alaska/ketchikan/tours/hovercraft-eco-adventures-280073",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/ketchikan/tours/rainforest-eco-hiking-tour-698853",
+      "canonical": "/destinations/alaska/ketchikan/tours/rainforest-eco-hiking-tour-698853",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/ketchikan/tours/wilderness-hike-619306",
+      "canonical": "/destinations/alaska/ketchikan/tours/wilderness-hike-619306",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/kodiak/tours/scenic-wildlife-and-historic-waterfront-tour-675363",
+      "canonical": "/destinations/alaska/kodiak/tours/scenic-wildlife-and-historic-waterfront-tour-675363",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/bonanza-mine-hiking-trip-202991",
+      "canonical": "/destinations/alaska/mccarthy/tours/bonanza-mine-hiking-trip-202991",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/erie-mine-hiking-trip-202989",
+      "canonical": "/destinations/alaska/mccarthy/tours/erie-mine-hiking-trip-202989",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/full-day-glacier-hike-202881",
+      "canonical": "/destinations/alaska/mccarthy/tours/full-day-glacier-hike-202881",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/half-day-glacier-hike-202511",
+      "canonical": "/destinations/alaska/mccarthy/tours/half-day-glacier-hike-202511",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/ice-cave-exploration-202981",
+      "canonical": "/destinations/alaska/mccarthy/tours/ice-cave-exploration-202981",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/ice-climbing-202808",
+      "canonical": "/destinations/alaska/mccarthy/tours/ice-climbing-202808",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/jumbo-mine-hiking-trip-202987",
+      "canonical": "/destinations/alaska/mccarthy/tours/jumbo-mine-hiking-trip-202987",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/mccarthy/tours/kennicott-glacier-lake-paddle-202977",
+      "canonical": "/destinations/alaska/mccarthy/tours/kennicott-glacier-lake-paddle-202977",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/moose-pass/tours/grant-lake-guided-hike-and-kayak-tour-399690",
+      "canonical": "/destinations/alaska/moose-pass/tours/grant-lake-guided-hike-and-kayak-tour-399690",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/palmer/tours/glacier-swim-and-hike-493235",
+      "canonical": "/destinations/alaska/palmer/tours/glacier-swim-and-hike-493235",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/palmer/tours/heli-hiking-66474",
+      "canonical": "/destinations/alaska/palmer/tours/heli-hiking-66474",
+      "origins": [
+        "Engine2 seo.canonicalPath"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/palmer/tours/private-hike-and-brew-a-half-day-hike-with-a-brew-stop-425098",
+      "canonical": "/destinations/alaska/palmer/tours/private-hike-and-brew-a-half-day-hike-with-a-brew-stop-425098",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/palmer/tours/private-hike-history-adventure-rocks-rivers-and-glaciers-425080",
+      "canonical": "/destinations/alaska/palmer/tours/private-hike-history-adventure-rocks-rivers-and-glaciers-425080",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    },
+    {
+      "legacy": "/destinations/united-states/alaska/palmer/tours/private-hike-palmer-hidden-waterfall-adventure-425096",
+      "canonical": "/destinations/alaska/palmer/tours/private-hike-palmer-hidden-waterfall-adventure-425096",
+      "origins": [
+        "Engine2 seo.canonicalPath",
+        "buildSitemap.toursUrls",
+        "public/sitemap-tours.xml"
+      ]
+    }
+  ]
+}
