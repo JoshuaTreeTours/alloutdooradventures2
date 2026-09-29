@@ -462,6 +462,12 @@ def validate(product: dict, source_text: str) -> dict:
     if overlap:
         sample = sorted(overlap)[:3]
         errors.append(f"verbatim overlap with source: {sample}")
+    gallery_images = product.get("galleryImages") or []
+    if len(gallery_images) != len(set(gallery_images)):
+        errors.append("duplicate gallery image")
+    for image in gallery_images:
+        if image not in source_text:
+            errors.append(f"gallery image is not present in the stored harvest: {image}")
     words = product["wordCount"]
     status = product["exceptionStatus"]
     if status in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
@@ -620,6 +626,9 @@ def build_product(stage_a: dict, editorial: dict, booking_validity: dict) -> dic
     removed_claims = [
         item.strip() for item in authored.get("removedClaims") or [] if str(item).strip()
     ]
+    gallery_images = [
+        item.strip() for item in authored.get("galleryImages") or [] if str(item).strip()
+    ]
     words = word_count(copy)
     if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 150:
         exception = "INSUFFICIENT_SOURCE_CONTENT"
@@ -665,6 +674,7 @@ def build_product(stage_a: dict, editorial: dict, booking_validity: dict) -> dic
         "schemaDescription": schema_description,
         "removedClaims": removed_claims,
         "highlights": highlights if exception != "SOURCE_NOT_FOUND" else [],
+        "galleryImages": gallery_images if exception != "BOOKING_PAGE_NOT_FOUND" else [],
         "wordCount": words,
         "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT", "BOOKING_PAGE_NOT_FOUND"} else None,
         "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT", "BOOKING_PAGE_NOT_FOUND"} else None,
@@ -731,6 +741,8 @@ def markdown_report(records: list[dict]) -> str:
         "Scope is the 10 Stage A representative products. Runtime pages read the generated module in `src/data/fareharborLeadToGoldProof.generated.ts`. They do not call FareHarbor.",
         "",
         "Products classified `BOOKING_PAGE_NOT_FOUND` remain in this audit but are excluded from the generated runtime module and every public website surface.",
+        "",
+        "For active proof pages, `galleryImages` contains only stored exact-product harvest media selected to replace a repeated hero. An empty list suppresses the repeated gallery image when no alternate is available.",
         "",
         "Public copy is original editorial prose written from the stored harvest. Provenance labels, HTTP statuses, and fare tables stay in this report and in the pricing block. They are not part of the description.",
         "",
@@ -810,6 +822,7 @@ def markdown_report(records: list[dict]) -> str:
                 f"- Visible price: {after['visiblePriceLabel'] or 'omitted'}",
                 f"- Duration: {after['durationLabel'] or 'omitted'}",
                 f"- Meeting location: {after['meetingLocation'] or 'omitted'}",
+                f"- Visible gallery images: `{json.dumps(after['galleryImages'], ensure_ascii=False)}`",
                 f"- Schema and meta description: {after['schemaDescription']}",
                 f"- Offer: `{json.dumps(after['offer'], ensure_ascii=False)}`",
                 f"- Pricing rows: `{json.dumps(after['priceRows'], ensure_ascii=False)}`",
@@ -844,6 +857,7 @@ def emit_ts(products: list[dict]) -> str:
                 "paragraphs": product["paragraphs"],
                 "schemaDescription": product["schemaDescription"],
                 "highlights": product["highlights"],
+                "galleryImages": product["galleryImages"],
                 "wordCount": product["wordCount"],
                 "durationLabel": product["durationLabel"],
                 "durationIso": product["durationIso"],
@@ -885,6 +899,7 @@ def emit_ts(products: list[dict]) -> str:
         "  paragraphs: string[];\n"
         "  schemaDescription: string;\n"
         "  highlights: string[];\n"
+        "  galleryImages: string[];\n"
         "  wordCount: number;\n"
         "  durationLabel: string | null;\n"
         "  durationIso: string | null;\n"

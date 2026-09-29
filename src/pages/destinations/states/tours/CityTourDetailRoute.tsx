@@ -1201,9 +1201,9 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
         </div>
-        {tour.galleryImages?.length ? (
+        {(proof ? proof.galleryImages : tour.galleryImages)?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map(image => (
+            {(proof ? proof.galleryImages : tour.galleryImages ?? []).map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"

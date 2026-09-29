@@ -27,6 +27,7 @@ export type FareHarborProofProduct = {
   paragraphs: string[];
   schemaDescription: string;
   highlights: string[];
+  galleryImages: string[];
   wordCount: number;
   durationLabel: string | null;
   durationIso: string | null;
@@ -57,6 +58,9 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "One-hour combined-group visit",
       "More than 1,000 feet into the original workings",
       "Gold panning in Eureka Creek, and guests keep what they find"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG"
     ],
     "wordCount": 153,
     "durationLabel": "1 hour",
@@ -107,6 +111,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Self-guided downhill with a required Kula Highway van bypass",
       "Bike, helmet, rain gear, gloves, and roadside assistance"
     ],
+    "galleryImages": [],
     "wordCount": 270,
     "durationLabel": "4-5 hours",
     "durationIso": null,
@@ -151,6 +156,9 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "6 train ride past closed stations, seen from the train",
       "Earpieces included; subway fare is not"
     ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4t7ODYY9S6yIHGZPjky8"
+    ],
     "wordCount": 251,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -179,6 +187,9 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Self-guided KLR 650 or Ténéré 700 for experienced riders",
       "Delivery in the greater Cody area",
       "Helmet, jacket, gloves, panniers, tools, and a GPS display"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/J4Y4vvxbTzmcEKMpIVwa"
     ],
     "wordCount": 316,
     "durationLabel": "1 day",
@@ -212,6 +223,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Life jacket, put-in shuttle, and no more than 12 guests",
       "About two hours on the water, two and a half with the shuttle"
     ],
+    "galleryImages": [],
     "wordCount": 308,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
@@ -251,6 +263,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "About one mile into the San Andreas Fault zone",
       "Palm oasis, slot canyon walk, and the Paltewet village site"
     ],
+    "galleryImages": [],
     "wordCount": 312,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -294,6 +307,9 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Two-hour guided night paddle",
       "Clear kayak or paddleboard with neon light underneath",
       "Life vest and photos included; champagne for guests 21 and older"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LkmxXm7tRpSfcUhaPjuz"
     ],
     "wordCount": 275,
     "durationLabel": "2 hour experience",
@@ -344,6 +360,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Walk through the market to the La Bufadora blowhole",
       "Bilingual guide, bottled water, and snacks"
     ],
+    "galleryImages": [],
     "wordCount": 238,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",

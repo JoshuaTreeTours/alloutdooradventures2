@@ -751,9 +751,9 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {normalizedTour.images.gallery.length ? (
+        {(proof ? proof.galleryImages : normalizedTour.images.gallery).length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {normalizedTour.images.gallery.map(image => (
+            {(proof ? proof.galleryImages : normalizedTour.images.gallery).map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"

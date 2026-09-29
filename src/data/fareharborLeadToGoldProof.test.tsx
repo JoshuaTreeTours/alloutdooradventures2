@@ -93,6 +93,44 @@ const RETAINED_NARRATIVE_CONTEXT: Record<string, string> = {
   "193220": "Ensenada",
 };
 
+const PROOF_VISIBLE_IMAGES: Record<
+  string,
+  { hero: string; gallery: string[] }
+> = {
+  "145208": {
+    hero: "https://cdn.filestackcontent.com/ZAorPKGTRJ2GipYchR2a",
+    gallery: ["https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG"],
+  },
+  "181765": {
+    hero: "https://cdn.filestackcontent.com/yKJVfFDYQx2y2o1QxkOc",
+    gallery: [],
+  },
+  "322210": {
+    hero: "https://cdn.filestackcontent.com/H6rPQHbQzSOkvhT38mo3",
+    gallery: ["https://cdn.filestackcontent.com/4t7ODYY9S6yIHGZPjky8"],
+  },
+  "694384": {
+    hero: "https://cdn.filestackcontent.com/snwT49muSizlVxLw1Slg",
+    gallery: ["https://cdn.filestackcontent.com/J4Y4vvxbTzmcEKMpIVwa"],
+  },
+  "646999": {
+    hero: "https://cdn.filestackcontent.com/AKtx67FCRhSR9ISqvgSw",
+    gallery: [],
+  },
+  "34849": {
+    hero: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    gallery: [],
+  },
+  "333279": {
+    hero: "https://cdn.filestackcontent.com/LRpu9FH3Tu2ZCUdGCgaK",
+    gallery: ["https://cdn.filestackcontent.com/LkmxXm7tRpSfcUhaPjuz"],
+  },
+  "193220": {
+    hero: "https://cdn.filestackcontent.com/1TOuejtgTaUS5d5Hus4q",
+    gallery: [],
+  },
+};
+
 const renderRoute = (path: string, node: ReactNode) =>
   renderToStaticMarkup(
     <Router hook={() => [path, () => undefined]}>{node}</Router>
@@ -102,6 +140,9 @@ const typeIncludes = (node: Record<string, unknown>, type: string) => {
   const value = node["@type"];
   return value === type || (Array.isArray(value) && value.includes(type));
 };
+
+const visibleImageSources = (html: string) =>
+  Array.from(html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g), match => match[1]);
 
 const productNode = (nodes: Array<Record<string, unknown>> | null) =>
   nodes?.find(node => typeIncludes(node, "Product"));
@@ -195,6 +236,10 @@ describe("FareHarbor Stage B proof set", () => {
       expect(product).toBeTruthy();
       expect(product?.offer?.price ?? null).toBe(price);
       expect(product?.meetingLocation ?? null).toBe(MEETING_LOCATIONS[itemId]);
+      expect(product?.galleryImages).toEqual(PROOF_VISIBLE_IMAGES[itemId].gallery);
+      expect(new Set(product?.galleryImages).size).toBe(
+        product?.galleryImages.length
+      );
       if (product?.offer) {
         expect("availability" in product.offer).toBe(false);
       }
@@ -325,6 +370,18 @@ describe("FareHarbor Stage B proof set", () => {
       expect(experience).not.toMatch(/\$\d/);
       const relatedAt = html.indexOf("More tours");
       const beforeRelated = relatedAt === -1 ? html : html.slice(0, relatedAt);
+      const itemId = item.tourSlug.match(/(\d+)$/)![1];
+      const images = PROOF_VISIBLE_IMAGES[itemId];
+      const imageSources = visibleImageSources(beforeRelated);
+      expect(new Set(imageSources).size).toBe(imageSources.length);
+      expect(imageSources.filter(source => source === images.hero)).toHaveLength(
+        1
+      );
+      for (const galleryImage of images.gallery) {
+        expect(
+          imageSources.filter(source => source === galleryImage)
+        ).toHaveLength(1);
+      }
       expect(beforeRelated).not.toContain("From $129");
       expect(beforeRelated).not.toContain("$129");
       expect(beforeRelated).not.toContain("HTTP");
@@ -339,7 +396,7 @@ describe("FareHarbor Stage B proof set", () => {
       } else {
         expect(beforeRelated).not.toContain("Check booking page");
       }
-      const meetingLocation = MEETING_LOCATIONS[item.tourSlug.match(/(\d+)$/)![1]];
+      const meetingLocation = MEETING_LOCATIONS[itemId];
       if (meetingLocation) {
         expect(beforeRelated).toContain("Meeting location");
         expect(beforeRelated).toContain(meetingLocation);
@@ -395,6 +452,15 @@ describe("FareHarbor Stage B proof set", () => {
     expect(jeepHtml).toContain(MEETING_LOCATIONS["34849"]);
     expect(jeepHtml).not.toContain("more than a quick photo stop");
     expect(jeepHtml).not.toContain("$129");
+    const jeepImageSources = visibleImageSources(
+      jeepHtml.slice(0, jeepHtml.indexOf("More tours"))
+    );
+    expect(new Set(jeepImageSources).size).toBe(jeepImageSources.length);
+    expect(
+      jeepImageSources.filter(
+        source => source === PROOF_VISIBLE_IMAGES["34849"].hero
+      )
+    ).toHaveLength(1);
     expect(jeepHtml.split("3 hours").length - 1).toBeGreaterThanOrEqual(2);
     expect((productNode(captured.nodes)?.offers as { price?: string }).price).toBe(
       "183.75"
@@ -414,6 +480,17 @@ describe("FareHarbor Stage B proof set", () => {
     expect(bufadoraHtml).toContain("Meeting location");
     expect(bufadoraHtml).toContain(MEETING_LOCATIONS["193220"]);
     expect(bufadoraHtml).not.toContain("$129");
+    const bufadoraImageSources = visibleImageSources(
+      bufadoraHtml.slice(0, bufadoraHtml.indexOf("More tours"))
+    );
+    expect(new Set(bufadoraImageSources).size).toBe(
+      bufadoraImageSources.length
+    );
+    expect(
+      bufadoraImageSources.filter(
+        source => source === PROOF_VISIBLE_IMAGES["193220"].hero
+      )
+    ).toHaveLength(1);
     expect((productNode(captured.nodes)?.offers as { price?: string }).price).toBe(
       "40.00"
     );
