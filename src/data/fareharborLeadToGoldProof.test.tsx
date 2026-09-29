@@ -20,6 +20,7 @@ import {
 } from "../utils/structuredData";
 import {
   applyFareHarborProofSchema,
+  applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
   getFareHarborProofByItemId,
   getFareHarborProofFromTour,
@@ -54,11 +55,16 @@ const renderRoute = (path: string, node: ReactNode) =>
     <Router hook={() => [path, () => undefined]}>{node}</Router>
   );
 
+const typeIncludes = (node: Record<string, unknown>, type: string) => {
+  const value = node["@type"];
+  return value === type || (Array.isArray(value) && value.includes(type));
+};
+
 const productNode = (nodes: Array<Record<string, unknown>> | null) =>
-  nodes?.find(node => node["@type"] === "Product");
+  nodes?.find(node => typeIncludes(node, "Product"));
 
 const tripNode = (nodes: Array<Record<string, unknown>> | null) =>
-  nodes?.find(node => node["@type"] === "TouristTrip");
+  nodes?.find(node => typeIncludes(node, "TouristTrip"));
 
 describe("FareHarbor Stage B proof set", () => {
   it("covers exactly the 10 representative products", () => {
@@ -82,6 +88,15 @@ describe("FareHarbor Stage B proof set", () => {
       expect(JSON.stringify(product)).not.toContain("129.00");
       expect(JSON.stringify(product?.offer)).not.toContain("InStock");
       const copy = product?.paragraphs.join(" ") ?? "";
+      const schema = product?.schemaDescription ?? "";
+      expect(schema.length).toBeGreaterThan(0);
+      expect(schema).not.toMatch(/\$\d/);
+      expect(schema).not.toContain("The operator lists");
+      if (product?.exceptionStatus === "SOURCE_NOT_FOUND") {
+        expect(schema).toBe(copy);
+      } else {
+        expect(schema.length).toBeLessThan(copy.length);
+      }
       expect(copy).not.toContain("keeps the logistics simple");
       expect(copy).not.toContain("The operator lists");
       expect(copy).not.toContain("Included items listed");
@@ -233,6 +248,9 @@ describe("FareHarbor Stage B proof set", () => {
       const trip = tripNode(captured.nodes);
       expect(product?.aggregateRating).toBeUndefined();
       expect(trip?.aggregateRating).toBeUndefined();
+      const proof = getFareHarborProofFromTour({ slug: item.tourSlug });
+      expect(product?.description).toBe(proof?.schemaDescription);
+      expect(trip?.description).toBe(proof?.schemaDescription);
       expect(product?.description).toContain(item.fact);
       expect(trip?.description).toContain(item.fact);
       const productOffer = product?.offers as
@@ -347,9 +365,15 @@ describe("FareHarbor Stage B proof set", () => {
           offers: { "@type": "Offer", price: "129.00", priceCurrency: "USD", url: "https://example.com/book" },
         },
         {
-          "@type": "TouristTrip",
-          offers: { "@type": "Offer", price: "129.00" },
+          "@type": ["TouristTrip", "Thing"],
+          offers: { "@type": "Offer", price: "129.00", availability: "https://schema.org/InStock" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: 3.2 },
+        },
+        {
+          "@type": "Offer",
+          price: "129.00",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
         },
       ],
       proof!
@@ -362,8 +386,9 @@ describe("FareHarbor Stage B proof set", () => {
     expect((productNode(nodes)?.offers as { url: string }).url).toBe(
       "https://example.com/book"
     );
-    expect(productNode(nodes)?.description).toBe(proof!.paragraphs.join(" "));
-    expect(tripNode(nodes)?.description).toBe(proof!.paragraphs.join(" "));
+    expect(productNode(nodes)?.description).toBe(proof!.schemaDescription);
+    expect(tripNode(nodes)?.description).toBe(proof!.schemaDescription);
+    expect(proof!.schemaDescription.length).toBeLessThan(proof!.paragraphs.join(" ").length);
     expect(productNode(nodes)?.aggregateRating).toBeUndefined();
     expect(tripNode(nodes)?.aggregateRating).toBeUndefined();
     expect(JSON.stringify(nodes)).not.toContain("129.00");
@@ -400,7 +425,7 @@ describe("FareHarbor Stage B proof set", () => {
       graph,
       { id: tour!.id, slug: tour!.slug, bookingUrl: tour!.bookingUrl }
     );
-    expect(result.seo.description).toBe(proof!.paragraphs.join(" "));
+    expect(result.seo.description).toBe(proof!.schemaDescription);
     const product = productNode(result.structuredData["@graph"]);
     const trip = tripNode(result.structuredData["@graph"]);
     expect((product?.offers as { price?: string }).price).toBe("59.95");
@@ -408,5 +433,30 @@ describe("FareHarbor Stage B proof set", () => {
     expect(JSON.stringify(result.structuredData)).not.toContain("129.00");
     expect(JSON.stringify(result.structuredData)).not.toContain("InStock");
     expect(trip?.duration).toBe("PT1H");
+  });
+
+  it("rewrites static HTML so Product and TouristTrip stay on the harvested price", () => {
+    const proof = getFareHarborProofByItemId("145208");
+    expect(proof).toBeTruthy();
+    const html = `<!doctype html><html><head>
+<meta name="description" content="Long editorial that should not be the meta description." />
+<meta property="og:description" content="Long editorial that should not be the meta description." />
+<meta name="twitter:description" content="Long editorial that should not be the meta description." />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","description":"Long editorial","offers":{"@type":"Offer","price":"129.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}},{"@type":"TouristTrip","description":"Long editorial","offers":{"@type":"Offer","price":"129.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}]}</script>
+</head><body><p>${proof!.paragraphs[0]}</p></body></html>`;
+    const patched = applyFareHarborProofToHtml(html, proof!);
+    const again = applyFareHarborProofToHtml(patched, proof!);
+    expect(again).toBe(patched);
+    expect(patched).toContain(`content="${proof!.schemaDescription}"`);
+    expect(patched).not.toContain("129.00");
+    expect(patched).not.toContain("InStock");
+    expect(patched).toContain(proof!.paragraphs[0]);
+    const json = patched.match(
+      /<script type="application\/ld\+json">([\s\S]*?)<\/script>/
+    )?.[1];
+    const graph = JSON.parse(json ?? "{}")["@graph"] as Array<Record<string, unknown>>;
+    expect((productNode(graph)?.offers as { price?: string }).price).toBe("59.95");
+    expect((tripNode(graph)?.offers as { price?: string }).price).toBe("59.95");
+    expect(productNode(graph)?.description).toBe(proof!.schemaDescription);
   });
 });

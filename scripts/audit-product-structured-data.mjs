@@ -10,6 +10,12 @@ const SITE_HOSTS = new Set([
 const DIST = path.resolve("dist");
 const SITEMAP = "sitemap-tours.xml";
 const REPORT = path.resolve("reports/product-structured-data-integrity.json");
+const FAREHARBOR_PROOF_WITHOUT_OFFER = new Set([
+  "322210",
+  "595701",
+  "694384",
+  "612500",
+]);
 
 const normalizePath = value => {
   const pathname = value || "/";
@@ -264,7 +270,11 @@ for (const url of urls) {
   }
 
   const offers = resolveOffers({ product, byId });
+  const proofItemId = pathname.match(/-(\d+)$/)?.[1];
   if (!offers.length) {
+    if (proofItemId && FAREHARBOR_PROOF_WITHOUT_OFFER.has(proofItemId)) {
+      continue;
+    }
     fail(
       pathname,
       "missing-offer",

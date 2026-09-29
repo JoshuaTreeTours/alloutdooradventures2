@@ -113,7 +113,7 @@ export default function Engine2TourPage({
     }
     return {
       ...built,
-      description: proof.paragraphs.join(" "),
+      description: proof.schemaDescription,
     };
   }, [normalizedTour, proof]);
   const isPalmSprings = isPalmSpringsTour(tour);

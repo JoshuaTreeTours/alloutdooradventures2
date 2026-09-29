@@ -417,12 +417,27 @@ def derivative_notes(stage_a: dict, facts: dict, price: dict | None) -> dict:
 
 
 def validate(product: dict, source_text: str) -> dict:
-    public_bits = product["paragraphs"] + product["highlights"]
+    schema = product.get("schemaDescription") or ""
+    public_bits = product["paragraphs"] + product["highlights"] + ([schema] if schema else [])
     text = " ".join(public_bits)
     lowered = text.lower()
     errors = []
     if not product["paragraphs"]:
         errors.append("missing copy")
+    if not schema.strip():
+        errors.append("missing schema description")
+    if not product.get("removedClaims"):
+        errors.append("provenance audit is missing removed claims")
+    schema_words = word_count([schema]) if schema else 0
+    if product["exceptionStatus"] == "SOURCE_NOT_FOUND":
+        if schema.strip() != " ".join(product["paragraphs"]).strip():
+            errors.append("missing-source schema description must match the short page copy")
+    elif schema_words >= product["wordCount"]:
+        errors.append("schema description is not shorter than the editorial body")
+    elif schema_words > 80:
+        errors.append(f"schema description is {schema_words} words; keep it concise")
+    elif schema_words < 20:
+        errors.append("schema description is too short")
     for phrase in BOILERPLATE + PROVENANCE:
         if phrase in lowered:
             errors.append(f"disallowed phrase: {phrase}")
@@ -590,6 +605,10 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
     authored = editorial[stage_a["itemId"]]
     copy = [paragraph.strip() for paragraph in authored["paragraphs"] if paragraph.strip()]
     highlights = [item.strip() for item in authored.get("highlights") or [] if item.strip()]
+    schema_description = clean_text(authored.get("schemaDescription") or "")
+    removed_claims = [
+        item.strip() for item in authored.get("removedClaims") or [] if str(item).strip()
+    ]
     words = word_count(copy)
     if exception != "SOURCE_NOT_FOUND" and words < 150:
         exception = "INSUFFICIENT_SOURCE_CONTENT"
@@ -630,6 +649,8 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
         "engine2Path": engine2_path,
         "exceptionStatus": exception,
         "paragraphs": copy,
+        "schemaDescription": schema_description,
+        "removedClaims": removed_claims,
         "highlights": highlights if exception != "SOURCE_NOT_FOUND" else [],
         "wordCount": words,
         "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
@@ -754,6 +775,7 @@ def markdown_report(records: list[dict]) -> str:
                 f"- Editorial word count: {after['wordCount']}",
                 f"- Visible price: {after['visiblePriceLabel'] or 'omitted'}",
                 f"- Duration: {after['durationLabel'] or 'omitted'}",
+                f"- Schema and meta description: {after['schemaDescription']}",
                 f"- Offer: `{json.dumps(after['offer'], ensure_ascii=False)}`",
                 f"- Pricing rows: `{json.dumps(after['priceRows'], ensure_ascii=False)}`",
                 f"- Pricing notes: `{json.dumps(after['pricingNotes'], ensure_ascii=False)}`",
@@ -766,6 +788,9 @@ def markdown_report(records: list[dict]) -> str:
         )
         for paragraph in after["paragraphs"]:
             lines.append(f"- {paragraph}")
+        lines.extend(["", "Claims removed in the provenance audit:", ""])
+        for claim in after["removedClaims"]:
+            lines.append(f"- {claim}")
         lines.append("")
     return "\n".join(lines) + "\n"
 
@@ -782,6 +807,7 @@ def emit_ts(products: list[dict]) -> str:
                 "engine2Path": product["engine2Path"],
                 "exceptionStatus": product["exceptionStatus"],
                 "paragraphs": product["paragraphs"],
+                "schemaDescription": product["schemaDescription"],
                 "highlights": product["highlights"],
                 "wordCount": product["wordCount"],
                 "durationLabel": product["durationLabel"],
@@ -820,6 +846,7 @@ def emit_ts(products: list[dict]) -> str:
         "    | \"PRICE_NOT_FOUND\"\n"
         "    | \"INSUFFICIENT_SOURCE_CONTENT\";\n"
         "  paragraphs: string[];\n"
+        "  schemaDescription: string;\n"
         "  highlights: string[];\n"
         "  wordCount: number;\n"
         "  durationLabel: string | null;\n"

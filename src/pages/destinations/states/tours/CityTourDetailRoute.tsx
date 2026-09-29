@@ -698,9 +698,9 @@ export default function CityTourDetailRoute({
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
   const proof = getFareHarborProofFromTour(tour);
-  const editorialDescription = proof?.paragraphs.join(" ");
+  const proofSchemaDescription = proof?.schemaDescription;
   const productDescription =
-    editorialDescription ??
+    proofSchemaDescription ??
     (tour ? getExpandedTourDescription(tour)[0] : undefined);
   const guideHref =
     state && city && tour
@@ -781,7 +781,7 @@ export default function CityTourDetailRoute({
           url: canonicalUrl,
           pageName: tour.title,
           pageDescription:
-            editorialDescription ?? seoDescription ?? productDescription ?? "",
+            proofSchemaDescription ?? seoDescription ?? productDescription ?? "",
           heroImage,
           derivedImages: structuredImages,
           place: {
@@ -796,7 +796,7 @@ export default function CityTourDetailRoute({
             id: productNodeId,
             name: tour.title,
             description:
-              editorialDescription ??
+              proofSchemaDescription ??
               hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
@@ -807,7 +807,7 @@ export default function CityTourDetailRoute({
             id: `${canonicalUrl}#trip`,
             name: tour.title,
             description:
-              editorialDescription ??
+              proofSchemaDescription ??
               hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
@@ -921,7 +921,7 @@ export default function CityTourDetailRoute({
     tour,
     toursHref,
     proof,
-    editorialDescription,
+    proofSchemaDescription,
   ]);
 
   const experienceParagraphs = proof
@@ -968,7 +968,7 @@ export default function CityTourDetailRoute({
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
   if (proof) {
-    seoMeta.description = proof.paragraphs.join(" ");
+    seoMeta.description = proof.schemaDescription;
   }
   const relatedTours = (
     isFlagstaff

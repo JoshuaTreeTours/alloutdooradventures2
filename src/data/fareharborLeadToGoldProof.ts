@@ -37,46 +37,127 @@ export const getFareHarborProofFromTour = (
   return getFareHarborProofByItemId(fromUrl ?? fromSlug ?? fromId);
 };
 
+const DESCRIPTION_TYPES = new Set(["Product", "TouristTrip", "WebPage"]);
+const OFFER_HOST_TYPES = new Set(["Product", "TouristTrip"]);
+
+const typeNames = (value: unknown): string[] => {
+  if (typeof value === "string") {
+    return [value];
+  }
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string");
+  }
+  return [];
+};
+
+const isSyntheticFloorPrice = (value: unknown): boolean => {
+  if (typeof value === "number") {
+    return value === 129;
+  }
+  if (typeof value !== "string") {
+    return false;
+  }
+  const normalized = value.replace(/[$,\s]/g, "");
+  return normalized === "129" || normalized === "129.00" || normalized === "129.0";
+};
+
+const offerUrl = (existing: unknown): string | undefined => {
+  if (!existing || typeof existing !== "object") {
+    return undefined;
+  }
+  if (Array.isArray(existing)) {
+    for (const item of existing) {
+      const url = offerUrl(item);
+      if (url) {
+        return url;
+      }
+    }
+    return undefined;
+  }
+  const url = (existing as { url?: unknown }).url;
+  return typeof url === "string" ? url : undefined;
+};
+
+const authoritativeOffer = (
+  proof: FareHarborProofProduct,
+  existing: unknown
+): Record<string, unknown> | undefined => {
+  if (!proof.offer) {
+    return undefined;
+  }
+  const url = offerUrl(existing);
+  return {
+    "@type": "Offer",
+    ...(url ? { url } : {}),
+    price: proof.offer.price,
+    priceCurrency: proof.offer.priceCurrency,
+  };
+};
+
+const patchSchemaValue = (
+  value: unknown,
+  proof: FareHarborProofProduct
+): unknown => {
+  if (Array.isArray(value)) {
+    return value.map(item => patchSchemaValue(item, proof));
+  }
+  if (!value || typeof value !== "object") {
+    return value;
+  }
+  const node = value as Record<string, unknown>;
+  const types = typeNames(node["@type"]);
+  const next: Record<string, unknown> = { ...node };
+  const describesProof = types.some(type => DESCRIPTION_TYPES.has(type));
+  const hostsOffer = types.some(type => OFFER_HOST_TYPES.has(type));
+  if (describesProof) {
+    next.description = proof.schemaDescription;
+    delete next.aggregateRating;
+  }
+  if (types.includes("TouristTrip")) {
+    if (proof.durationIso) {
+      next.duration = proof.durationIso;
+    } else {
+      delete next.duration;
+    }
+  }
+  if (hostsOffer) {
+    if (!proof.offer) {
+      delete next.offers;
+    } else {
+      next.offers = authoritativeOffer(proof, node.offers);
+    }
+  } else if (types.includes("Offer") || types.includes("AggregateOffer")) {
+    if (!proof.offer) {
+      delete next.price;
+      delete next.lowPrice;
+      delete next.highPrice;
+      delete next.availability;
+    } else if (
+      isSyntheticFloorPrice(next.price) ||
+      isSyntheticFloorPrice(next.lowPrice) ||
+      isSyntheticFloorPrice(next.highPrice) ||
+      next.price !== proof.offer.price
+    ) {
+      return authoritativeOffer(proof, next);
+    } else {
+      delete next.availability;
+    }
+  }
+  for (const [key, child] of Object.entries(next)) {
+    if (key === "offers" && hostsOffer) {
+      continue;
+    }
+    if (child && typeof child === "object") {
+      next[key] = patchSchemaValue(child, proof);
+    }
+  }
+  return next;
+};
+
 export const applyFareHarborProofSchema = <T extends Record<string, unknown>>(
   nodes: T[],
   proof: FareHarborProofProduct
-): T[] => {
-  const description = proof.paragraphs.join(" ");
-  return nodes.map(node => {
-    const type = node["@type"];
-    if (type !== "Product" && type !== "TouristTrip" && type !== "WebPage") {
-      return node;
-    }
-    const next: Record<string, unknown> = { ...node, description };
-    delete next.aggregateRating;
-    if (type === "TouristTrip") {
-      if (proof.durationIso) {
-        next.duration = proof.durationIso;
-      } else {
-        delete next.duration;
-      }
-    }
-    if (type === "WebPage") {
-      return next as T;
-    }
-    if (!proof.offer) {
-      delete next.offers;
-      return next as T;
-    }
-    const existing = node.offers;
-    const url =
-      existing && typeof existing === "object" && existing !== null && "url" in existing
-        ? (existing as { url?: unknown }).url
-        : undefined;
-    next.offers = {
-      "@type": "Offer",
-      ...(typeof url === "string" ? { url } : {}),
-      price: proof.offer.price,
-      priceCurrency: proof.offer.priceCurrency,
-    };
-    return next as T;
-  });
-};
+): T[] => nodes.map(node => patchSchemaValue(node, proof) as T);
 
 export const applyFareHarborProofToPrerender = <
   TSeo extends { description: string },
@@ -96,7 +177,7 @@ export const applyFareHarborProofToPrerender = <
   }
   const nextSeo = {
     ...seo,
-    description: proof.paragraphs.join(" "),
+    description: proof.schemaDescription,
   };
   const graph = structuredData?.["@graph"];
   if (!structuredData || !Array.isArray(graph)) {
@@ -109,4 +190,64 @@ export const applyFareHarborProofToPrerender = <
       "@graph": applyFareHarborProofSchema(graph, proof),
     },
   };
+};
+
+const escapeAttribute = (value: string) =>
+  value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const replaceMetaContent = (
+  html: string,
+  attrName: string,
+  attrValue: string,
+  value: string
+) => {
+  const pattern = new RegExp(
+    `<meta\\s+[^>]*${attrName}=["']${escapeRegExp(attrValue)}["'][^>]*>`,
+    "i"
+  );
+  return html.replace(pattern, tag => {
+    if (/content=["'][^"']*["']/i.test(tag)) {
+      return tag.replace(/content=["'][^"']*["']/i, `content="${value}"`);
+    }
+    return tag.replace(/\s*\/?\s*>$/, ` content="${value}" />`);
+  });
+};
+
+const patchStructuredDocument = (data: unknown, proof: FareHarborProofProduct) => {
+  if (Array.isArray(data)) {
+    return applyFareHarborProofSchema(data as Array<Record<string, unknown>>, proof);
+  }
+  if (data && typeof data === "object") {
+    return applyFareHarborProofSchema([data as Record<string, unknown>], proof)[0];
+  }
+  return data;
+};
+
+export const applyFareHarborProofToHtml = (
+  html: string,
+  proof: FareHarborProofProduct
+): string => {
+  const description = escapeAttribute(proof.schemaDescription);
+  let next = html.replace(
+    /<script\b([^>]*?)type=["']application\/ld\+json["']([^>]*)>([\s\S]*?)<\/script>/gi,
+    (full, before: string, after: string, body: string) => {
+      const raw = body.trim();
+      if (!raw) {
+        return full;
+      }
+      try {
+        const patched = patchStructuredDocument(JSON.parse(raw), proof);
+        const json = JSON.stringify(patched).replace(/</g, "\\u003c");
+        return `<script${before}type="application/ld+json"${after}>${json}</script>`;
+      } catch {
+        return full;
+      }
+    }
+  );
+  next = replaceMetaContent(next, "name", "description", description);
+  next = replaceMetaContent(next, "property", "og:description", description);
+  next = replaceMetaContent(next, "name", "twitter:description", description);
+  return next;
 };
