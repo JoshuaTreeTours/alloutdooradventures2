@@ -36,6 +36,8 @@ import {
 import {
   buildMerchantFeedCommercialSnapshot,
   MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+  resolveToursWithMerchantFeedCommercialSnapshot,
+  type MerchantFeedCommercialSnapshot,
 } from "../src/engine6/merchantFeedCommercialSnapshot";
 import {
   fetchEngine6LiveCommercialFieldsForSchema,
@@ -60,6 +62,26 @@ const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
   process.cwd(),
   MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
 );
+
+const automatedCommercialRefreshCommitMessages = new Set([
+  "Refresh merchant feed aggregate ratings",
+  "Refresh merchant and website commercial metadata",
+]);
+
+const isAutomatedCommercialRefreshCommit = () =>
+  automatedCommercialRefreshCommitMessages.has(
+    (process.env.VERCEL_GIT_COMMIT_MESSAGE ?? "").trim()
+  );
+
+const readCommittedCommercialSnapshot = async () => {
+  try {
+    return JSON.parse(
+      await readFile(COMMERCIAL_SNAPSHOT_PATH, "utf8")
+    ) as MerchantFeedCommercialSnapshot;
+  } catch {
+    return null;
+  }
+};
 
 const OUTPUT_HEADERS = [
   "id",
@@ -535,9 +557,33 @@ const main = async () => {
     console.log("\nMerchant Feed Baseline: no existing merchantFeed.csv rows.");
   }
 
-  const schemaResolvedTours = await resolveToursForMerchantFeedGeneration(
+  let schemaResolvedTours = await resolveToursForMerchantFeedGeneration(
     merchantFeedEligibleTours
   );
+
+  // The scheduled weekly refresh has already resolved Viator commercial data
+  // and committed the exact CSV + website snapshot that this deployment must
+  // publish. A second live fetch during Vercel can legitimately disagree for a
+  // few minutes (or hit a different upstream cache), which previously caused
+  // the parity guard to reject the very refresh commit it was meant to deploy.
+  // For that one known commit type, make the committed website snapshot the
+  // deployment-time commercial source of truth. All non-commercial and image
+  // guards remain active, and ordinary/manual deployments still use live data.
+  if (isAutomatedCommercialRefreshCommit()) {
+    const committedSnapshot = await readCommittedCommercialSnapshot();
+    if (!committedSnapshot) {
+      throw new Error(
+        "Weekly commercial refresh deployment is missing its committed commercial snapshot."
+      );
+    }
+    schemaResolvedTours = resolveToursWithMerchantFeedCommercialSnapshot(
+      schemaResolvedTours,
+      committedSnapshot
+    );
+    console.log(
+      "[merchant-feed-build] weekly commercial refresh: using committed CSV + website commercial snapshot as deployment-time parity source."
+    );
+  }
 
   const generatedRows: MerchantRow[] = schemaResolvedTours.map(tour =>
     buildMerchantRow(tour)
@@ -848,22 +894,13 @@ const main = async () => {
   // deployment is building, so runtime parity is expected to drift until this
   // deployment goes live. Keep the audit visible, but do not deadlock the
   // deployment on its own pre-deploy production state.
-  const automatedCommercialRefreshCommitMessages = new Set([
-    "Refresh merchant feed aggregate ratings",
-    "Refresh merchant and website commercial metadata",
-  ]);
-  const isAutomatedCommercialRefreshCommit =
-    automatedCommercialRefreshCommitMessages.has(
-      (process.env.VERCEL_GIT_COMMIT_MESSAGE ?? "").trim()
-    );
-
-  if (!runtimeParityAudit.pass && isAutomatedCommercialRefreshCommit) {
+  if (!runtimeParityAudit.pass && isAutomatedCommercialRefreshCommit()) {
     console.warn(
       "[merchant-feed-build] weekly commercial refresh: live-runtime parity drift is expected until this deployment becomes production; preserving all other merchant-feed guards."
     );
   }
 
-  if (!runtimeParityAudit.pass && !isAutomatedCommercialRefreshCommit) {
+  if (!runtimeParityAudit.pass && !isAutomatedCommercialRefreshCommit()) {
     const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
       const tier =
         branchScopedGovernanceByProductCode.get(
