@@ -1,0 +1,34 @@
+{
+  "stage": "A",
+  "idempotent": true,
+  "mutatesProductRecords": false,
+  "fields": [
+    "productIdentifier",
+    "fareHarborKey",
+    "itemId",
+    "sourceRecord",
+    "sourceUrl",
+    "engine",
+    "sourceFound",
+    "sourceLocation",
+    "priceStatus",
+    "ratingStatus",
+    "contentExtractionStatus",
+    "rewriteStatus",
+    "validationStatus",
+    "migrationTimestamp",
+    "population",
+    "error"
+  ],
+  "priceStatusValues": [
+    "PRICE_NOT_FOUND",
+    "PRICE_FOUND_UNMERGED_CACHE"
+  ],
+  "ratingStatusValues": [
+    "RATING_NOT_FOUND"
+  ],
+  "contentExtractionStatusValues": [
+    "SOURCE_NOT_FOUND",
+    "DERIVATIVE_PRESENT_UNMERGED_BRANCH"
+  ]
+}
