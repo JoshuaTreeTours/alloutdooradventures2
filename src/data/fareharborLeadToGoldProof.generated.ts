@@ -47,7 +47,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The Country Boy Gold Mine Tour is a one-hour combined-group visit to Country Boy Mine in Breckenridge. Guests meet at 0542 French Gulch Road, Breckenridge, Colorado 80424. The route then goes more than 1,000 feet into the mountain, through the original workings. Those workings are presented as the setting of a Colorado miner more than 100 years ago. Old photographs and other exhibits are part of the visit.",
+      "The Country Boy Gold Mine Tour is a one-hour combined-group visit to Country Boy Mine in Breckenridge, Colorado. The visit begins at the mine before the route goes more than 1,000 feet into the mountain, through the original workings. Those workings are presented as the setting of a Colorado miner more than 100 years ago. Old photographs and other exhibits are part of the visit.",
       "Gold panning in Eureka Creek is included with the mine tour. After the underground portion, guests pan in the creek and keep what they find. It gets very cold underground, so warm clothing is needed, and waterproof shoes are recommended for the gold panning. The tour is offered year-round.",
       "Tickets are sold in three categories. Adults are 13 and older. Children ages 4 to 12 have their own ticket. Children 3 and under are admitted free. The age floor on the tour is 4."
     ],
@@ -57,7 +57,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "More than 1,000 feet into the original workings",
       "Gold panning in Eureka Creek, and guests keep what they find"
     ],
-    "wordCount": 156,
+    "wordCount": 153,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424",
@@ -96,7 +96,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Haleakala Downhill is a self-guided bike ride that starts with a van trip from Paia. Guests check in at 71 Baldwin Avenue, Suite D3, Paia, Hawaii 96779. The published itinerary puts that check-in at 8:45 a.m. There is a gear fitting and a safety briefing, then a narrated van ride of about 45 minutes to 6,500 feet, just outside Haleakala National Park. On the way up, the narration covers Maui history, volcanic landscapes, and cultural notes.",
+      "Haleakala Downhill is a self-guided bike ride that starts with a van trip from Paia. The published itinerary puts check-in at 8:45 a.m. There is a gear fitting and a safety briefing, then a narrated van ride of about 45 minutes to 6,500 feet, just outside Haleakala National Park. On the way up, the narration covers Maui history, volcanic landscapes, and cultural notes.",
       "The ride from that point is self-guided. Riders set their own pace through upcountry Maui and can stop for photos. A short stretch of the Kula Highway is skipped in the van because Maui County law requires bike tours to bypass it. Riders get back in the van for that section, then continue. The route goes through Makawao before the last stretch into Paia. Bikes are due back at the shop by 1:30 p.m. From check-in to return, the outing runs four to five hours.",
       "Each rider gets a mountain bike with front suspension and disc brakes, a full-face downhill helmet or a lighter helmet, rain and wind gear, gloves, and a backpack with a lock and a map. Roadside assistance is available during the ride. Meals, drinks, shopping, and tips are not included. Riders must be at least 15 and no heavier than 280 pounds. The ride is not for beginners, pregnant guests, or guests with impaired mobility. Temperatures are cooler at the higher elevation, so the items to bring include a light layer, closed-toe shoes, sunglasses, and sunscreen. Adult tickets are for ages 18 and older. Youth tickets are for ages 15 to 17."
     ],
@@ -106,7 +106,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Self-guided downhill with a required Kula Highway van bypass",
       "Bike, helmet, rain gear, gloves, and roadside assistance"
     ],
-    "wordCount": 283,
+    "wordCount": 270,
     "durationLabel": "4-5 hours",
     "durationIso": null,
     "meetingLocation": "Maui Sunriders, 71 Baldwin Avenue, Suite D3, Paia, HI 96779",
@@ -140,7 +140,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a two-hour private walking tour of the New York subway, led in English. The group meets at 200 Broadway, New York, New York 10038. A local guide leads, and each guest gets an earpiece so the guide can be heard from a short distance. Any group size is allowed. About 12 guests are recommended for each guide, and more guides are added when they are needed.",
+      "This is a two-hour private walking tour of the New York subway, led in English. The group starts near City Hall in Lower Manhattan. A local guide leads, and each guest gets an earpiece so the guide can be heard from a short distance. Any group size is allowed. About 12 guests are recommended for each guide, and more guides are added when they are needed.",
       "Named stops include City Hall Park, the Municipal Building, Astor Place, and 14th Street at Union Square. The guide covers Chambers Street station, once nicknamed the Grand Central of Downtown, and what remains of the older Union Square station, including an art installation that everyday riders walk past. The group rides the 6 train past stations that are closed to the public, City Hall Station among them. Those stations are seen from the train, and the MTA does not open them to visitors. The tour also covers the first subway, described as built illegally at night, and Alfred Ely Beach's pneumatic transit, called the subway before the subway. Archival photographs that are not available to the public are used for the early history of the system.",
       "Guests are asked to bring comfortable shoes. Entering the subway takes one MetroCard swipe or one OMNY tap, and that fare is not included. The walking is described as easy, and most people can take part. Guests who need assistance are asked to email the operator before the day. Cancellation is free until 72 hours before the start."
     ],
@@ -150,7 +150,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "6 train ride past closed stations, seen from the train",
       "Earpieces included; subway fare is not"
     ],
-    "wordCount": 253,
+    "wordCount": 251,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "Outside 200 Broadway, at Broadway and Fulton Street, New York, NY 10038",
@@ -192,7 +192,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a one-day self-guided adventure-motorcycle rental for riders who already have on-road experience. It is not a guided tour, and it is not for beginners or first-time riders. The motorcycles are a Kawasaki KLR 650 or 650S, or a Yamaha Ténéré 700. Delivery and pickup are included in the greater Cody area. The location address is 1108 14th Street, Cody, Wyoming 82414. Riders must be 25 to 75 years old, and each motorcycle is limited to two people.",
+      "This is a one-day self-guided adventure-motorcycle rental for riders who already have on-road experience. It is not a guided tour, and it is not for beginners or first-time riders. The motorcycles are a Kawasaki KLR 650 or 650S, or a Yamaha Ténéré 700. Delivery and pickup are included in the greater Cody area. Riders must be 25 to 75 years old, and each motorcycle is limited to two people.",
       "The rental includes the motorcycle, a pre-ride inspection and setup, a basic orientation, route suggestions, and an emergency contact. Helmet, jacket, and gloves are included when sizes are available. Soft panniers, tools, a first-aid kit, spare tubes, and a GPS display go with the bike. Rain gear is on each motorcycle. Ankle-covering riding or hiking boots are required. Street shoes and sneakers are not. A guide is not included, and fuel is not included. Riders should also bring a full water bottle, a light layer, snacks, sunscreen, and long pants with a long-sleeve shirt if they are not wearing the provided gear.",
       "Two self-guided loops are suggested, each set up as a riding day of more than six hours. One goes toward Yellowstone. The other crosses the Beartooth Highway, where some sections can include mild dirt or gravel. Routes may reach about 8,000 to 11,000 feet, which can affect breathing, stamina, hydration, and physical performance. Riders need to be comfortable with cold mornings, wind, rain, and changing road surfaces. A valid motorcycle endorsement is required. International riders need a passport and a motorcycle license that can be read in English, or an International Driving Permit. Pregnant riders are discouraged. Riders must be able to mount, balance, and control a mid-size adventure bike for a long day. Supplemental insurance is purchased separately, and a damage hold is placed on the card at delivery."
     ],
@@ -202,7 +202,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Delivery in the greater Cody area",
       "Helmet, jacket, gloves, panniers, tools, and a GPS display"
     ],
-    "wordCount": 326,
+    "wordCount": 316,
     "durationLabel": "1 day",
     "durationIso": "P1D",
     "meetingLocation": null,
@@ -224,7 +224,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Solitude Float Trips runs this as a private scenic float on the Snake River in Grand Teton National Park. The meeting point is 1 Teton Park Road, Moose, Wyoming 83012. Guests should arrive 10 to 15 minutes before the stated launch and be ready and waiting. A 15-passenger van shuttles the group to the put-in, a ride of about 15 to 20 minutes. Time on the water is about two hours. With the shuttle, the outing is about two and a half hours. There are no stops and no restroom breaks on the river. The float has views of the Teton Range from the Snake in Jackson Hole. Moose, elk, and bald eagles may be seen.",
+      "Solitude Float Trips runs this as a private scenic float on the Snake River in Grand Teton National Park. Guests should arrive 10 to 15 minutes before the stated launch and be ready and waiting. A 15-passenger van shuttles the group to the put-in, a ride of about 15 to 20 minutes. Time on the water is about two hours. With the shuttle, the outing is about two and a half hours. There are no stops and no restroom breaks on the river. The float has views of the Teton Range from the Snake in Jackson Hole. Moose, elk, and bald eagles may be seen.",
       "A guide is at the oars. The raft holds at most 12 guests. Each person wears a U.S. Coast Guard life jacket, which has to be fitted in order to take part. There is no shade cover and no solid back support. Guests sit on the tube of the raft. Boarding means three steps up onto a trailer used as a dock, about 16 feet of walking on that trailer, and a step down of about 18 to 20 inches into the raft. At the take-out, the walk is about five yards up an uneven bank to flat pavement, and the car is about 100 yards farther on. When the water is high, typically May through July, the landing has less room to maneuver.",
       "Children on this float need to be five or older and at least 50 pounds, so a life jacket can be fitted. Adult jackets for this stretch generally fit guests from about 90 to 260 pounds, with a chest measurement no greater than 56 inches. Some mobility is required: stepping into the van, climbing onto the trailer, and being able to self-rescue if that became necessary. The departure is booked as a private raft."
     ],
@@ -234,7 +234,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Life jacket, put-in shuttle, and no more than 12 guests",
       "About two hours on the water, two and a half with the shuttle"
     ],
-    "wordCount": 319,
+    "wordCount": 308,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "1 Teton Park Road, Moose, WY 83012",
@@ -286,7 +286,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Red Jeep Tours runs this as a shared, naturalist-guided drive into the San Andreas Fault zone near Indio. More than one party may share a Jeep. Guests meet at Metate Ranch, 38635 Monroe Street, Indio, California 92203, in the Indio Hills, where the Pacific and North American plates meet. Guests should arrive about 10 minutes before departure. If the guide has not arrived by five minutes before the start, the office number is (760) 324-5337, extension 1. The tour is scheduled for three hours.",
+      "Red Jeep Tours runs this as a shared, naturalist-guided drive into the San Andreas Fault zone near Indio. More than one party may share a Jeep. Guests meet at Metate Ranch in the Indio Hills, where the Pacific and North American plates meet. Guests should arrive about 10 minutes before departure. If the guide has not arrived by five minutes before the start, the office number is (760) 324-5337, extension 1. The tour is scheduled for three hours.",
       "The vehicle is an open-air Jeep Scrambler, the CJ-8, with a removable canvas shade top. Each Jeep takes at least two guests and no more than seven. A single rider is asked to call before booking. The minimum age is five. The drive goes about one mile into the fault zone. The guide covers plants, animals, geology, and seismology in the cuts and canyons, then leads a walk in a slot canyon. One stop is a California fan palm oasis sustained by groundwater captured along the fault. Another is a recreated Cahuilla village with interpretive displays on the archaeological site of Paltewet. An optional short walk climbs to the grinding stone above the village. Guests who are able to enter and leave the Jeep can ask ahead about a limited-mobility arrangement.",
       "Bottled water, granola snacks, admission, and taxes are included. Guide gratuities are not. Shoes need to be closed at the toe and have good traction. Sandals, heels, and shoes without grip are not allowed. Seat belts stay on while the Jeep is moving. Portable toilets are on the property, and the Jeeps stop for breaks. Blankets are on the Jeeps for cooler mornings from November through March. Cancellation without a penalty is available until 48 hours before departure. On the child ticket, children are 17 and under, a parent must accompany them, and booster seats are not provided."
     ],
@@ -296,7 +296,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "About one mile into the San Andreas Fault zone",
       "Palm oasis, slot canyon walk, and the Paltewet village site"
     ],
-    "wordCount": 318,
+    "wordCount": 312,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "Metate Ranch, 38635 Monroe Street, Indio, CA 92203",
@@ -330,7 +330,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour guided night paddle in Orlando on a clear kayak or a paddleboard, with neon light under the hull. Guests meet at 1600 North Orange Avenue, Orlando, Florida 32804. The group size is 40. Check-in is a safety briefing and a gear fitting. The group launches as the evening light fades, paddles with the guide, and returns to shore. No paddling experience is required. The guide keeps an easy pace, with time for photos on the water.",
+      "This is a two-hour guided night paddle in Orlando on a clear kayak or a paddleboard, with neon light under the hull. The group size is 40. Check-in is a safety briefing and a gear fitting. The group launches as the evening light fades, paddles with the guide, and returns to shore. No paddling experience is required. The guide keeps an easy pace, with time for photos on the water.",
       "The booking choice is a clear single kayak, a clear two-person kayak, or an adult paddleboard. Neon under-glow, a paddle, safety equipment, and a U.S. Coast Guard life vest are included. Photos are sent after the outing. Champagne is included for guests 21 and older, and a valid ID is required for it. Dry storage is recommended for a phone or camera. Gratuities and any extra food or drinks are not included. Clothing to wear is athletic wear, shorts, or a light layer, along with water shoes that cover the toes or sandals that have straps.",
       "The paddle takes place at night and may not suit guests who are uncomfortable on the water after dark. It is not suitable when a mobility limitation would prevent safe boarding or paddling. Guests need to get in and out of the craft with little help. On the two-person kayak, each person must weigh under 200 pounds, and the pair must be under 400 pounds combined. The single kayak lists a weight limit of 325 pounds. The paddleboard is for ages 15 and older and requires a driver's license or a permit. A refund or a credit is available with 24 hours' notice."
     ],
@@ -340,7 +340,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Clear kayak or paddleboard with neon light underneath",
       "Life vest and photos included; champagne for guests 21 and older"
     ],
-    "wordCount": 285,
+    "wordCount": 275,
     "durationLabel": "2 hour experience",
     "durationIso": "PT2H",
     "meetingLocation": "Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804",
@@ -379,7 +379,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "engine2Path": "/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220",
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This outing runs for four hours and takes a guided group from Ensenada out to La Bufadora, the blowhole on the Punta Banda peninsula. Pickup from hotels is midmorning. The street meeting point is Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879. The drive is about 24 miles, or 39 kilometers, with coastal scenery on the way. A guide who speaks English and Spanish goes with the group. Bottled water and snacks are included. Food, other drinks, and gratuities are not.",
+      "This outing runs for four hours and takes a guided group from Ensenada out to La Bufadora, the blowhole on the Punta Banda peninsula. Pickup from Ensenada hotels is midmorning. The drive is about 24 miles, or 39 kilometers, with coastal scenery on the way. A guide who speaks English and Spanish goes with the group. Bottled water and snacks are included. Food, other drinks, and gratuities are not.",
       "After the drive, the group walks about three blocks through the crafts market to the blowhole. Waves force water up through a sea cave about every one to two minutes. Spouts can rise more than 100 feet, and the guide explains the phenomenon. There is then free time to browse the sidewalk market or eat at the restaurants next to it, both at the guest's own expense. The guide meets the group again at 1:00 p.m. for the return, with hotel drop-off scheduled by 2:00 p.m.",
       "Adult tickets on the shared tour are for ages 5 and older, and children must be with an adult. Infants under 4 are a separate ticket category. A private tour is also sold. The group size is 50, and the maximum age is 99. U.S. dollars are widely accepted and ATMs are scarce, so the useful things to carry are cash, a hat, walking shoes, and sunglasses. In summer, sunscreen is one of the things to bring."
     ],
@@ -389,7 +389,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Walk through the market to the La Bufadora blowhole",
       "Bilingual guide, bottled water, and snacks"
     ],
-    "wordCount": 252,
+    "wordCount": 238,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",

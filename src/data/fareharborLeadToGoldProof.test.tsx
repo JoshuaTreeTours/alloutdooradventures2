@@ -65,6 +65,28 @@ const MEETING_LOCATIONS: Record<string, string | null> = {
     "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",
 };
 
+const REDUNDANT_EDITORIAL_ADDRESSES: Record<string, string> = {
+  "145208": "0542 French Gulch Road",
+  "181765": "71 Baldwin Avenue",
+  "322210": "200 Broadway",
+  "694384": "1108 14th Street",
+  "646999": "1 Teton Park Road",
+  "34849": "38635 Monroe Street",
+  "333279": "1600 North Orange Avenue",
+  "193220": "Miguel Aleman Avenue 512",
+};
+
+const RETAINED_NARRATIVE_CONTEXT: Record<string, string> = {
+  "145208": "Breckenridge, Colorado",
+  "181765": "Paia",
+  "322210": "Lower Manhattan",
+  "694384": "greater Cody area",
+  "646999": "Grand Teton National Park",
+  "34849": "Indio Hills",
+  "333279": "Orlando",
+  "193220": "Ensenada",
+};
+
 const renderRoute = (path: string, node: ReactNode) =>
   renderToStaticMarkup(
     <Router hook={() => [path, () => undefined]}>{node}</Router>
@@ -105,6 +127,11 @@ describe("FareHarbor Stage B proof set", () => {
       expect(JSON.stringify(product?.offer)).not.toContain("InStock");
       const copy = product?.paragraphs.join(" ") ?? "";
       const schema = product?.schemaDescription ?? "";
+      const redundantAddress = REDUNDANT_EDITORIAL_ADDRESSES[itemId];
+      if (redundantAddress) {
+        expect(copy).not.toContain(redundantAddress);
+        expect(copy).toContain(RETAINED_NARRATIVE_CONTEXT[itemId]);
+      }
       expect(schema.length).toBeGreaterThan(0);
       expect(schema).not.toMatch(/\$\d/);
       expect(schema).not.toContain("The operator lists");
