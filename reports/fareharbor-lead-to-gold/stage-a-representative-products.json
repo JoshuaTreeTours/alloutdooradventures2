@@ -1,6 +1,9 @@
 [
   {
     "selectionReason": "Primary assay sample required by the brief",
+    "activityType": "gold-mine tour",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "countryboymine:145208",
     "productId": "country-boy-mine-145208",
     "itemId": "145208",
     "operatorShortname": "countryboymine",
@@ -10,6 +13,7 @@
     "publicPath": "/destinations/colorado/breckenridge/tours/country-boy-gold-mine-tour-145208",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/colorado/breckenridge/tours/country-boy-gold-mine-tour-145208",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/heartland/colorado.csv",
@@ -48,11 +52,16 @@
     "content": {
       "legacyDescription": "Country Boy Gold Mine Tour is a guided outdoor experience based in Breckenridge, Colorado that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 42,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Present in the unmerged 132-item FareHarbor price cache",
+    "activityType": "self-guided bike",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "mauisunriders:181765",
     "productId": "maui-sunriders-bike-company-181765",
     "itemId": "181765",
     "operatorShortname": "mauisunriders",
@@ -62,6 +71,7 @@
     "publicPath": "/destinations/hawaii/paia/tours/haleakala-downhill-self-guided-bike-tour-181765",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/hawaii/paia/tours/haleakala-downhill-self-guided-bike-tour-181765",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/hawaii.csv",
@@ -109,11 +119,16 @@
     "content": {
       "legacyDescription": "Haleakala Downhill Self-Guided Bike Tour is a guided outdoor experience based in Paia, Hawaii that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 43,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Longest stored derivative description among matched routes",
+    "activityType": "walking / subway",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "untappednewyork:322210",
     "productId": "untapped-new-york-322210",
     "itemId": "322210",
     "operatorShortname": "untappednewyork",
@@ -123,6 +138,7 @@
     "publicPath": "/destinations/new-york/new-york/tours/nycs-underground-subway-tour---private-tour-322210",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/new-york/new-york/tours/nycs-underground-subway-tour---private-tour-322210",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/northeast/new-york.csv",
@@ -161,11 +177,16 @@
     "content": {
       "legacyDescription": "NYC's Underground Subway Tour - Private Tour is a guided outdoor experience based in New York, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 45,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Legacy page with no stored derivative on the unmerged rebuild branch",
+    "activityType": "scenic float",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "wilsonfishingguides:595701",
     "productId": "wyoming-595701",
     "itemId": "595701",
     "operatorShortname": "wilsonfishingguides",
@@ -175,13 +196,14 @@
     "publicPath": "/destinations/wyoming/wilson/tours/scenic-float-tour-595701",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/wyoming/wilson/tours/scenic-float-tour-595701",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
-        "file": "data/canada.csv",
+        "file": "data/wyoming.csv",
         "location": "United States/Wyoming/Wilson",
         "tags": "Fishing",
         "qualityScore": "60",
-        "availabilityCount": "1621",
+        "availabilityCount": "1620",
         "description": null,
         "price": null,
         "bookingLink": "https://fareharbor.com/embeds/book/wilsonfishingguides/items/595701/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no"
@@ -198,17 +220,22 @@
       "visibleCatalogRating": null,
       "visibleCatalogReviewCount": null,
       "derivedFromQualityScore": 3.0,
-      "derivedFromAvailabilityCount": "1621",
+      "derivedFromAvailabilityCount": "1620",
       "productLevelFareHarborRatingOnMain": false
     },
     "content": {
       "legacyDescription": "Scenic Float Tour is a guided outdoor experience based in Wilson, Wyoming that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 40,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Rental-shaped product",
+    "activityType": "motorcycle rental",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "yellowstoneadvmoto:694384",
     "productId": "yellowstone-adventure-moto-694384",
     "itemId": "694384",
     "operatorShortname": "yellowstoneadvmoto",
@@ -218,6 +245,7 @@
     "publicPath": "/destinations/wyoming/cody/tours/self-guided-adv-motorcycle-rental-klr-650-694384",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/wyoming/cody/tours/self-guided-adv-motorcycle-rental-klr-650-694384",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/canada plus northern states.csv",
@@ -256,11 +284,16 @@
     "content": {
       "legacyDescription": "Self-Guided ADV Motorcycle Rental \u2013 KLR 650 is a guided outdoor experience based in Cody, Wyoming that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 44,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Private-format product",
+    "activityType": "private float",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "solitudefloattrips:646999",
     "productId": "wyoming-646999",
     "itemId": "646999",
     "operatorShortname": "solitudefloattrips",
@@ -270,6 +303,7 @@
     "publicPath": "/destinations/wyoming/moose/tours/grand-teton-scenic-float---private-tour-646999",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/wyoming/moose/tours/grand-teton-scenic-float---private-tour-646999",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/wyoming.csv",
@@ -308,11 +342,16 @@
     "content": {
       "legacyDescription": "Grand Teton Scenic Float - Private Tour is a guided outdoor experience based in Moose, Wyoming that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 43,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "International or non-US location string",
+    "activityType": "e-bike",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "hotelebikerentals:612500",
     "productId": "vancouver-hotel-e-bike-rentals-612500",
     "itemId": "612500",
     "operatorShortname": "hotelebikerentals",
@@ -322,6 +361,7 @@
     "publicPath": "/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/canada plus northern states.csv",
@@ -360,11 +400,16 @@
     "content": {
       "legacyDescription": "(Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott is a guided outdoor experience based in Vancouver, British Columbia that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 49,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "California jeep / desert activity",
+    "activityType": "jeep",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "red-jeep:34849",
     "productId": "desert-adventures-red-jeep-tours-34849",
     "itemId": "34849",
     "operatorShortname": "red-jeep",
@@ -374,13 +419,14 @@
     "publicPath": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
-        "file": "data/palm-springs-jeeps.csv",
-        "location": "United States/California/Indio",
+        "file": "data/palm-springs.csv",
+        "location": "United States/California/Palm Springs",
         "tags": "Guided Tour-Jeep-Walking Tour",
-        "qualityScore": "98",
-        "availabilityCount": "539",
+        "qualityScore": "86",
+        "availabilityCount": "180",
         "description": null,
         "price": null,
         "bookingLink": "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no"
@@ -396,18 +442,23 @@
     "rating": {
       "visibleCatalogRating": 4.3,
       "visibleCatalogReviewCount": 180,
-      "derivedFromQualityScore": 4.9,
-      "derivedFromAvailabilityCount": "539",
+      "derivedFromQualityScore": 4.3,
+      "derivedFromAvailabilityCount": "180",
       "productLevelFareHarborRatingOnMain": false
     },
     "content": {
       "legacyDescription": "Shared San Andreas Fault Jeep Tour is a guided outdoor experience based in Palm Springs, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 44,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
       "boilerplate": true
     }
   },
   {
     "selectionReason": "Distinct activity type",
+    "activityType": "kayak",
+    "pathClass": "legacy-catalog",
+    "fareHarborKey": "epicpaddleadventures:333279",
     "productId": "epic-paddle-adventures-333279",
     "itemId": "333279",
     "operatorShortname": "epicpaddleadventures",
@@ -417,6 +468,7 @@
     "publicPath": "/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
     "productionUrl": "https://www.alloutdooradventures.com/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
     "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+    "engine2SourceFile": null,
     "source": {
       "catalogCsv": {
         "file": "data/cycling2.csv",
@@ -455,6 +507,75 @@
     "content": {
       "legacyDescription": "Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando is a guided outdoor experience based in Orlando, Florida that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.",
       "legacyWordCount": 47,
+      "engine2TemplateDescription": null,
+      "engine2TemplateWordCount": null,
+      "boilerplate": true
+    }
+  },
+  {
+    "selectionReason": "Engine 2-only module path with an unmerged price-preview entry and no generated-catalog record",
+    "activityType": "blowhole / sightseeing",
+    "pathClass": "engine2-only",
+    "fareHarborKey": "wineroutebaja:193220",
+    "productId": "engine2-193220",
+    "itemId": "193220",
+    "operatorShortname": "wineroutebaja",
+    "title": "La Bufadora Tour in Baja California",
+    "operator": "The Wine Route",
+    "destination": "Ensenada, California",
+    "publicPath": "/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220",
+    "productionUrl": "https://www.alloutdooradventures.com/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220",
+    "engine": "engine2-only module under src/engine2/data. Absent from tours.generated.ts. Not Engine 3, Engine 4, or Engine 6.",
+    "engine2SourceFile": "src/engine2/data/california.generated.ts",
+    "source": {
+      "catalogCsv": {
+        "file": "data/California.csv",
+        "location": "Mexico/Baja California/Ensenada",
+        "tags": "Attraction",
+        "qualityScore": "65",
+        "availabilityCount": "179",
+        "description": null,
+        "price": null,
+        "bookingLink": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no"
+      },
+      "storedHtmlOnMain": "Only two hand-authored fixtures exist, and only for items 34849 and 459591.",
+      "unmergedDerivative": {
+        "branch": "origin/feat/fareharbor-content-rebuild",
+        "file": "src/data/fareharborRebuild.generated.ts",
+        "route": "/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220",
+        "wordCount": 85,
+        "hasDuration": false,
+        "hasMeetingPoint": true,
+        "hasIncluded": true,
+        "descriptionExcerpt": "La Bufadora Tour in Baja California is a locally operated experience in Ensenada. Four-hour guided trip from Ensenada to La Bufadora to view the blow hole, browse a handicraft market, and enjoy seaside restaurants. This 4-hour guided tour travels from Ensenada to the Punta Banda peninsula to see La Bufadora, North America\u2019s largest sea geyser. The experience includes coastal scenery en route, watch powerful water spouts that can reach more than 100 feet, and learn about the phenomenon from a bilingual guide."
+      }
+    },
+    "price": {
+      "onMain": "NONE",
+      "unmergedCache": {
+        "startingPrice": 40.0,
+        "currency": "USD",
+        "source": "fareharbor-price-preview-v2",
+        "confidence": "high",
+        "basis": "adult",
+        "basisLabel": "Adult",
+        "branch": "origin/feat/fareharbor-commercial-reserve-phase1",
+        "path": "src/data/fareharborPricing.ts"
+      },
+      "csvQualityIsNotPrice": true
+    },
+    "rating": {
+      "visibleCatalogRating": null,
+      "visibleCatalogReviewCount": null,
+      "derivedFromQualityScore": 3.2,
+      "derivedFromAvailabilityCount": "179",
+      "productLevelFareHarborRatingOnMain": false
+    },
+    "content": {
+      "legacyDescription": null,
+      "legacyWordCount": null,
+      "engine2TemplateDescription": "La Bufadora Tour in Baja California with The Wine Route is designed for travelers who want more than a quick photo stop in Ensenada. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Ensenada, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Ensenada is even easier to plan. The Wine Route keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a la bufadora tour in baja california experience with reliable operations and memorable views. It is a polished way to enjoy la bufadora tour in baja california moments while making the most of your time in Ensenada.",
+      "engine2TemplateWordCount": 193,
       "boilerplate": true
     }
   }

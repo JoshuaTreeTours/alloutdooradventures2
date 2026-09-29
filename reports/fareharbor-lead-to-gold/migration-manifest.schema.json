@@ -18,7 +18,8 @@
     "validationStatus",
     "migrationTimestamp",
     "population",
-    "error"
+    "error",
+    "representativeSample"
   ],
   "priceStatusValues": [
     "PRICE_NOT_FOUND",

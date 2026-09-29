@@ -764,27 +764,74 @@ def fetch_live_product(url: str) -> dict:
     }
 
 
-def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog: dict) -> list[dict]:
+def engine2_only_representative(engine2_keys: dict) -> dict | None:
+    """Engine 2 module record that never entered tours.generated.ts."""
+    key = "wineroutebaja:193220"
+    info = engine2_keys.get(key)
+    if not info:
+        return None
+    text = (ROOT / info["file"]).read_text(encoding="utf-8")
+    marker = f'"itemId": "{info["itemId"]}"'
+    index = text.find(marker)
+    if index < 0:
+        return None
+    start = text.rfind("\n  {", 0, index)
+    window = text[start if start >= 0 else max(0, index - 2500) : index + 800]
+    names = re.findall(r'"name": "([^"]*)"', window)
+    experience = re.search(r'"experienceText": "(.*?)"', window)
+    canonical = re.search(r'"canonicalPath": "([^"]*)"', window)
+    city = re.search(r'"city": "([^"]*)"', window)
+    region = re.search(r'"region": "([^"]*)"', window)
+    return {
+        "key": key,
+        "itemId": info["itemId"],
+        "shortname": info["shortname"],
+        "id": f"engine2-{info['itemId']}",
+        "title": names[0] if names else "",
+        "operator": names[1] if len(names) > 1 else info["shortname"],
+        "path": canonical.group(1) if canonical else "",
+        "city": city.group(1) if city else "",
+        "state": region.group(1) if region else "",
+        "rating": None,
+        "reviewCount": None,
+        "longDescription": "",
+        "file": info["file"],
+        "experienceText": experience.group(1) if experience else "",
+    }
+
+
+def choose_representatives(
+    generated: dict,
+    rebuild: dict,
+    prices: dict,
+    catalog: dict,
+    engine2_keys: dict,
+) -> list[dict]:
     keys = generated["fareharborKeys"]
     by_item = {entry["itemId"]: entry for entry in keys.values()}
     forced = ["145208"]
     chosen = []
     used = set()
 
-    def add(item_id: str, reason: str):
+    def add(item_id: str, reason: str, activity: str) -> bool:
         entry = by_item.get(item_id)
         if not entry or item_id in used:
-            return
+            return False
         used.add(item_id)
-        chosen.append((entry, reason))
+        chosen.append((entry, reason, activity, "legacy-catalog"))
+        return True
 
     for item_id in forced:
-        add(item_id, "Primary assay sample required by the brief")
+        add(item_id, "Primary assay sample required by the brief", "gold-mine tour")
 
     for entry in keys.values():
         if entry["itemId"] in prices or f"{entry['shortname']}:{entry['itemId']}" in prices:
-            add(entry["itemId"], "Present in the unmerged 132-item FareHarbor price cache")
-            break
+            if add(
+                entry["itemId"],
+                "Present in the unmerged 132-item FareHarbor price cache",
+                "self-guided bike",
+            ):
+                break
 
     longest = None
     for entry in keys.values():
@@ -792,24 +839,32 @@ def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog
         if route and (longest is None or route["wordCount"] > longest[0]):
             longest = (route["wordCount"], entry["itemId"])
     if longest:
-        add(longest[1], "Longest stored derivative description among matched routes")
+        add(
+            longest[1],
+            "Longest stored derivative description among matched routes",
+            "walking / subway",
+        )
 
     for entry in keys.values():
         if entry["path"] not in rebuild["routes"]:
-            add(entry["itemId"], "Legacy page with no stored derivative on the unmerged rebuild branch")
+            add(
+                entry["itemId"],
+                "Legacy page with no stored derivative on the unmerged rebuild branch",
+                "scenic float",
+            )
             break
 
     for entry in keys.values():
         if re.search(r"\brental\b", entry["title"], re.I):
-            add(entry["itemId"], "Rental-shaped product")
+            add(entry["itemId"], "Rental-shaped product", "motorcycle rental")
             break
     for entry in keys.values():
         if re.search(r"\bprivate\b", entry["title"], re.I):
-            add(entry["itemId"], "Private-format product")
+            add(entry["itemId"], "Private-format product", "private float")
             break
     for entry in keys.values():
         if entry["stateSlug"] in {"hawaii", "alaska", "quebec", "ontario", "british-columbia"}:
-            add(entry["itemId"], "Non-Colorado destination")
+            add(entry["itemId"], "Non-Colorado destination", "scenic tour")
             break
     for entry in keys.values():
         location = ""
@@ -817,19 +872,30 @@ def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog
         if rows:
             location = rows[0]["location"]
         if location.count("/") >= 2 and not location.startswith("United States/"):
-            add(entry["itemId"], "International or non-US location string")
+            add(entry["itemId"], "International or non-US location string", "e-bike")
             break
     for entry in keys.values():
         if entry["stateSlug"] == "california" and "jeep" in entry["title"].lower():
-            add(entry["itemId"], "California jeep / desert activity")
+            add(entry["itemId"], "California jeep / desert activity", "jeep")
             break
     for entry in keys.values():
         if "train" in entry["title"].lower() or "cruise" in entry["title"].lower() or "kayak" in entry["title"].lower():
-            add(entry["itemId"], "Distinct activity type")
+            add(entry["itemId"], "Distinct activity type", "kayak")
             break
 
+    engine2_entry = engine2_only_representative(engine2_keys)
+    if engine2_entry and engine2_entry["itemId"] not in used:
+        chosen.append(
+            (
+                engine2_entry,
+                "Engine 2-only module path with an unmerged price-preview entry and no generated-catalog record",
+                "blowhole / sightseeing",
+                "engine2-only",
+            )
+        )
+
     dossiers = []
-    for entry, reason in chosen:
+    for entry, reason, activity, path_class in chosen:
         csv_rows = catalog["recordsByItemId"].get(entry["itemId"]) or []
         csv_row = next(
             (row for row in csv_rows if row["shortname"] == entry["shortname"]),
@@ -838,9 +904,14 @@ def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog
         route = rebuild["routes"].get(entry["path"])
         price_key = f"{entry['shortname']}:{entry['itemId']}"
         price = prices.get(price_key) or prices.get(entry["itemId"])
+        legacy_description = entry.get("longDescription") or ""
+        experience_text = entry.get("experienceText") or ""
         dossiers.append(
             {
                 "selectionReason": reason,
+                "activityType": activity,
+                "pathClass": path_class,
+                "fareHarborKey": entry.get("key") or price_key,
                 "productId": entry["id"],
                 "itemId": entry["itemId"],
                 "operatorShortname": entry["shortname"],
@@ -848,8 +919,13 @@ def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog
                 "operator": entry["operator"],
                 "destination": f"{entry['city']}, {entry['state']}",
                 "publicPath": entry["path"],
-                "productionUrl": f"https://www.alloutdooradventures.com{entry['path']}",
-                "engine": "untagged legacy catalog (internally engine1). Not Engine 3.",
+                "productionUrl": f"https://www.alloutdooradventures.com{entry['path']}" if entry["path"] else None,
+                "engine": (
+                    "engine2-only module under src/engine2/data. Absent from tours.generated.ts. Not Engine 3, Engine 4, or Engine 6."
+                    if path_class == "engine2-only"
+                    else "untagged legacy catalog (internally engine1). Not Engine 3."
+                ),
+                "engine2SourceFile": entry.get("file"),
                 "source": {
                     "catalogCsv": None
                     if not csv_row
@@ -890,9 +966,15 @@ def choose_representatives(generated: dict, rebuild: dict, prices: dict, catalog
                     "productLevelFareHarborRatingOnMain": False,
                 },
                 "content": {
-                    "legacyDescription": entry["longDescription"],
-                    "legacyWordCount": entry["wordCount"],
-                    "boilerplate": BOILERPLATE_PHRASE in entry["longDescription"],
+                    "legacyDescription": legacy_description or None,
+                    "legacyWordCount": words(legacy_description) if legacy_description else None,
+                    "engine2TemplateDescription": experience_text or None,
+                    "engine2TemplateWordCount": words(experience_text) if experience_text else None,
+                    "boilerplate": (
+                        ENGINE2_BOILERPLATE in experience_text
+                        if path_class == "engine2-only"
+                        else BOILERPLATE_PHRASE in legacy_description
+                    ),
                 },
             }
         )
@@ -1126,11 +1208,17 @@ def markdown_report(summary: dict) -> str:
         "",
         "Full dossiers are in `stage-a-representative-products.json`.",
         "",
+        f"Sample size: **{summary['representativeDiversity']['count']}**. Destinations: {summary['representativeDiversity']['destinationCount']}. Operators: {summary['representativeDiversity']['operatorCount']}. Activity types: {', '.join(summary['representativeDiversity']['activities'])}. Pricing states: {', '.join(summary['representativeDiversity']['pricingStates'])}. Paths: {', '.join(summary['representativeDiversity']['paths'])}.",
+        "",
     ]
     for dossier in summary["representatives"]:
+        legacy_words = dossier["content"]["legacyWordCount"]
+        legacy_label = "n/a" if legacy_words is None else str(legacy_words)
+        price = dossier["price"]["unmergedCache"]
+        price_label = "none" if not price else f"{price['startingPrice']} {price['currency']}"
         lines.append(
-            f"- **{dossier['title']}** (`{dossier['itemId']}`, {dossier['destination']}). {dossier['selectionReason']} Legacy words: {dossier['content']['legacyWordCount']}. Derivative stored: {bool(dossier['source']['unmergedDerivative'])}. Unmerged price: {dossier['price']['unmergedCache']['startingPrice'] if dossier['price']['unmergedCache'] else 'none'} {dossier['price']['unmergedCache']['currency'] if dossier['price']['unmergedCache'] else ''}."
-            )
+            f"- **{dossier['title']}** (`{dossier['itemId']}`, {dossier['destination']}, {dossier['operatorShortname']}). Path: {dossier['pathClass']}. Activity: {dossier['activityType']}. {dossier['selectionReason']} Legacy words: {legacy_label}. Derivative stored: {bool(dossier['source']['unmergedDerivative'])}. Unmerged price: {price_label}."
+        )
     lines.extend(
         [
             "",
@@ -1161,13 +1249,35 @@ def markdown_report(summary: dict) -> str:
             "4. Remove the $129 floor from FareHarbor visible copy and Offer schema only after a price provenance model exists. That code change is Stage B or later, not this discovery commit's behavior change.",
             "5. Engine 6 and Viator files stay untouched.",
             "",
+            "## Recommended Stage B source ingestion",
+            "",
+            "This is a recommendation only. Neither option is implemented in this commit. Stage B stays unauthorized until the architecture is approved.",
+            "",
+            "Prefer a stored re-harvest of authoritative FareHarbor content and price endpoints as the primary source. Keep the unmerged derivative as a secondary factual cross-check, not as page copy.",
+            "",
+            "| Option | What it is | Why it is or is not enough |",
+            "| --- | --- | --- |",
+            "| Re-harvest into stored build artifacts | Fetch item content, structured description, item JSON, and the price-preview response once, and commit or cache those payloads with company, item id, endpoint, fetch time, and a content hash. Page render reads the stored artifact. | These responses are the operator's own fields: description, duration, meeting point, inclusions, restrictions, and adult from-price. The current main branch does not have them. A stored harvest can be re-run without scraping during a request. |",
+            "| Unmerged derivative as a secondary source | `origin/feat/fareharbor-content-rebuild:src/data/fareharborRebuild.generated.ts` (7,447 routes) plus the 131-row price cache on `origin/feat/fareharbor-commercial-reserve-phase1`. | The prose is already wrapped in one template sentence on every route. Matched descriptions average about 69 words, and only 41 matched routes reach 150 words. The file has no price and no rating. Country Boy's derivative is 49 words and includes operator marketing that must not be copied. The price cache misses Country Boy and covers a small slice of the 6,126 active keys. |",
+            "",
+            "Use the derivative only to compare extracted facts and to notice products the re-harvest missed. Do not paste its template opener, quality score, or availability count into ratings. Leave the $129 floor in place until a harvested price has provenance. Products whose harvested facts cannot support a truthful 150-word page stay insufficient-source exceptions.",
+            "",
+            "Endpoints to store, not to call at render time:",
+            "",
+            "- `https://fareharbor.com/api/items/v1/{company}/{item}/content/`",
+            "- `https://fareharbor.com/api/items/v1/{company}/{item}/structured-description/`",
+            "- `https://fareharbor.com/api/v1/companies/{company}/items/{item}/`",
+            "- `https://fareharbor.com/api/embed/{company}/price-preview/per-item/v2/?item_pks={item}`",
+            "",
+            "Full comparison: `reports/fareharbor-lead-to-gold/stage-b-source-ingestion-recommendation.md`.",
+            "",
             "## Files changed",
             "",
             "Discovery artifacts only. No product page, Engine 6, or Viator renderer was modified.",
             "",
             "## Tests",
             "",
-            "The discovery script asserts that Country Boy item 145208 resolves, Engine 3 FareHarbor count is 0, the generated catalog parses, and the boilerplate phrase is present on the majority of generated descriptions. Production build was not run. Page output is unchanged.",
+            "The discovery script asserts that Country Boy item 145208 resolves, Engine 3 FareHarbor count is 0, the generated catalog parses, the boilerplate phrase is present on the majority of generated descriptions, and the representative sample has at least 10 products across legacy and Engine 2-only paths. Production build was not run. Page output is unchanged.",
             "",
             "## Usage and cost",
             "",
@@ -1175,11 +1285,56 @@ def markdown_report(summary: dict) -> str:
             "",
             "## Checkpoint",
             "",
-            "`migration-manifest.jsonl` lists every discovered legacy FareHarbor key with source, price, rating, and content status. `rewriteStatus` and `validationStatus` are `not_started`. `migrationTimestamp` is null. Re-running discovery regenerates the same product statuses from source files.",
+            "`migration-manifest.jsonl` lists every discovered legacy FareHarbor key with source, price, rating, and content status. Rows in the representative sample have `representativeSample: true`. `rewriteStatus` and `validationStatus` are `not_started`. `migrationTimestamp` is null. Re-running discovery regenerates the same product statuses from source files.",
             "",
         ]
     )
     return "\n".join(lines) + "\n"
+
+
+def stage_b_recommendation() -> str:
+    return """# Stage B source-ingestion recommendation
+
+Status: recommendation only. Do not implement until this architecture is approved. Stage B has not started.
+
+## Recommendation
+
+Re-harvest authoritative FareHarbor content and price endpoints into stored build artifacts, and use that harvest as the only source for later page copy and offers. Treat the unmerged derivative as a secondary factual cross-check. Do not copy it into product pages.
+
+## Option A — stored re-harvest
+
+Fetch each active legacy FareHarbor item once and store the raw responses next to the repository, with company shortname, item id, endpoint, fetch time, and a content hash. Rendering code reads those files. It does not call FareHarbor during a page request.
+
+Store these responses:
+
+- `https://fareharbor.com/api/items/v1/{company}/{item}/content/`
+- `https://fareharbor.com/api/items/v1/{company}/{item}/structured-description/`
+- `https://fareharbor.com/api/v1/companies/{company}/items/{item}/`
+- `https://fareharbor.com/api/embed/{company}/price-preview/per-item/v2/?item_pks={item}`
+
+The content and structured-description payloads are the operator's own prose, duration, meeting point, inclusions, and restrictions. The price-preview payload is the same family already used by the unmerged 131-row cache (`fareharbor-price-preview-v2`). A stored harvest can be repeated and diffed. Missing or thin payloads stay insufficient-source exceptions instead of being padded to 150 words.
+
+## Option B — unmerged derivative as a secondary source
+
+`origin/feat/fareharbor-content-rebuild:src/data/fareharborRebuild.generated.ts` has 7,447 route records. They were harvested from the content endpoints above, then wrapped in the sentence "is a locally operated experience in …" on every route. Matched to current generated paths, the average description is about 69 words. Only 41 matched routes reach 150 words. The file has no price and no rating.
+
+The price cache on `origin/feat/fareharbor-commercial-reserve-phase1:src/data/fareharborPricing.ts` has 131 high-confidence USD adult prices. It does not include Country Boy item `145208`. Coverage against the 6,126 active legacy keys is a small minority.
+
+Country Boy's stored derivative is 49 words. It names a one-hour group tour, ages 4+, a walk of more than 1,000 feet, and gold panning. It also carries operator marketing ("award winning", "you might just strike gold") that must not become AOA copy.
+
+Use this derivative to check whether a re-harvest missed a fact, and to list products with no stored description. Do not treat the template opener, `quality_score / 20`, or `availability_count` as authoritative prose or ratings.
+
+## Why Option A is the primary path
+
+Main has no trustworthy from-price, currency, or product rating for this catalog. The visible Country Boy page is boilerplate, while Product and TouristTrip JSON-LD still offer a synthetic $129 floor. A provenance model has to exist before that floor is removed. The derivative cannot supply that price, and most of its text is too short and too templated to support a truthful 150-word rewrite.
+
+## What this recommendation does not authorize
+
+- No FareHarbor calls in this stage.
+- No product-page, schema, price, rating, Engine 6, or Viator edits.
+- No import of the derivative or the price cache onto this branch.
+- No removal of `PRICE_FLOOR_USD`.
+"""
 
 
 def main() -> None:
@@ -1251,7 +1406,12 @@ def main() -> None:
     engine2_text = "\n".join(
         path.read_text(encoding="utf-8", errors="replace") for path in engine2_files()
     )
-    representatives = choose_representatives(generated, rebuild, prices, catalog)
+    representatives = choose_representatives(
+        generated, rebuild, prices, catalog, engine2_keys
+    )
+    representative_keys = {item["fareHarborKey"] for item in representatives}
+    for row in manifest:
+        row["representativeSample"] = row["fareHarborKey"] in representative_keys
     country = next(item for item in representatives if item["itemId"] == "145208")
     live = fetch_live_product(country["productionUrl"])
 
@@ -1376,13 +1536,30 @@ def main() -> None:
         },
         "countryBoyLive": live,
         "representatives": representatives,
+        "representativeDiversity": {
+            "count": len(representatives),
+            "destinationCount": len({item["destination"] for item in representatives}),
+            "operatorCount": len({item["operatorShortname"] for item in representatives}),
+            "activities": [item["activityType"] for item in representatives],
+            "pricingStates": sorted(
+                {
+                    "unmerged-price-cache"
+                    if item["price"]["unmergedCache"]
+                    else "no-stored-price"
+                    for item in representatives
+                }
+            ),
+            "paths": sorted({item["pathClass"] for item in representatives}),
+        },
         "engine6ChangedCount": 0,
         "legitimateViatorChangedCount": 0,
         "usageNote": (
-            "Model: grok-4.7. Agent run: https://cursor.com/agents/bc-6527e378-1e25-4a2a-9595-2b4b1260d6fd. "
+            "Model: grok-4.7. Discovery was first recorded on this branch by "
+            "https://cursor.com/agents/bc-6527e378-1e25-4a2a-9595-2b4b1260d6fd and corrected here by "
+            "https://cursor.com/agents/bc-d789ac6a-38a7-405e-941c-614de4092196. "
             "Token counts and dollar cost are not exposed by run-info, so cost per product is not available for Stage A. "
-            "This pass is a local census plus production HTML fetches of the Country Boy page. "
-            "It did not call FareHarbor."
+            "This pass is a local census plus one production HTML fetch of the Country Boy page. "
+            "It did not call FareHarbor. Stage B was not started."
         ),
     }
 
@@ -1422,6 +1599,7 @@ def main() -> None:
             "migrationTimestamp",
             "population",
             "error",
+            "representativeSample",
         ],
         "priceStatusValues": ["PRICE_NOT_FOUND", "PRICE_FOUND_UNMERGED_CACHE"],
         "ratingStatusValues": ["RATING_NOT_FOUND"],
@@ -1440,6 +1618,35 @@ def main() -> None:
     assert generated["boilerplateLongDescriptions"] > 1000
     assert generated["generatedCount"] > 1000
     assert country["content"]["boilerplate"] is True
+    expected_representatives = {
+        "145208",
+        "181765",
+        "322210",
+        "595701",
+        "694384",
+        "646999",
+        "612500",
+        "34849",
+        "333279",
+        "193220",
+    }
+    assert expected_representatives <= {item["itemId"] for item in representatives}
+    assert len(representatives) >= 10
+    assert any(item["pathClass"] == "engine2-only" for item in representatives)
+    assert any(item["pathClass"] == "legacy-catalog" for item in representatives)
+    assert any(item["price"]["unmergedCache"] for item in representatives)
+    assert any(not item["price"]["unmergedCache"] for item in representatives)
+    assert len({item["operatorShortname"] for item in representatives}) >= 10
+    assert len({item["destination"] for item in representatives}) >= 8
+    assert sum(1 for row in manifest if row["representativeSample"]) == len(representatives)
+    assert any(
+        row["itemId"] == "193220" and row["representativeSample"] and row["engine"] == "engine2"
+        for row in manifest
+    )
+    (OUT_DIR / "stage-b-source-ingestion-recommendation.md").write_text(
+        stage_b_recommendation(),
+        encoding="utf-8",
+    )
     print(json.dumps({
         "activeLegacyFareHarbor": population["activeLegacyFareHarbor"],
         "generatedFareHarbor": population["generatedFareHarbor"],
@@ -1452,6 +1659,8 @@ def main() -> None:
         "countryBoyLiveStatus": live.get("status") or live.get("error"),
         "ratingFormulaMatches": generated["ratingExactQualityScoreFormula"],
         "ratingCompared": generated["ratingRowsComparedToCsv"],
+        "representatives": len(representatives),
+        "representativePaths": sorted({item["pathClass"] for item in representatives}),
     }, indent=2))
 
 

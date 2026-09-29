@@ -2,8 +2,8 @@
 
 Status: STOP. Stage B is not authorized by this report.
 
-Generated: 2026-09-29T16:44:38.235181+00:00
-Base commit: `b3b5cd2727b9ad938d3014afa2462cf6ca16cb0f`
+Generated: 2026-09-29T17:21:02.268123+00:00
+Base commit: `fdc69d340314f13ee844c44cd2cc2724cb128212`
 Branch: `fix/fareharbor-lead-to-gold`
 
 ## Authoritative population
@@ -172,15 +172,18 @@ https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.alloutdooradve
 
 Full dossiers are in `stage-a-representative-products.json`.
 
-- **Country Boy Gold Mine Tour** (`145208`, Breckenridge, Colorado). Primary assay sample required by the brief Legacy words: 42. Derivative stored: True. Unmerged price: none .
-- **Haleakala Downhill Self-Guided Bike Tour** (`181765`, Paia, Hawaii). Present in the unmerged 132-item FareHarbor price cache Legacy words: 43. Derivative stored: True. Unmerged price: 119.0 USD.
-- **NYC's Underground Subway Tour - Private Tour** (`322210`, New York, New York). Longest stored derivative description among matched routes Legacy words: 45. Derivative stored: True. Unmerged price: none .
-- **Scenic Float Tour** (`595701`, Wilson, Wyoming). Legacy page with no stored derivative on the unmerged rebuild branch Legacy words: 40. Derivative stored: False. Unmerged price: none .
-- **Self-Guided ADV Motorcycle Rental – KLR 650** (`694384`, Cody, Wyoming). Rental-shaped product Legacy words: 44. Derivative stored: True. Unmerged price: none .
-- **Grand Teton Scenic Float - Private Tour** (`646999`, Moose, Wyoming). Private-format product Legacy words: 43. Derivative stored: True. Unmerged price: none .
-- **(Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott** (`612500`, Vancouver, British Columbia). International or non-US location string Legacy words: 49. Derivative stored: True. Unmerged price: none .
-- **Shared San Andreas Fault Jeep Tour** (`34849`, Palm Springs, California). California jeep / desert activity Legacy words: 44. Derivative stored: False. Unmerged price: none .
-- **Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando** (`333279`, Orlando, Florida). Distinct activity type Legacy words: 47. Derivative stored: True. Unmerged price: none .
+Sample size: **10**. Destinations: 10. Operators: 10. Activity types: gold-mine tour, self-guided bike, walking / subway, scenic float, motorcycle rental, private float, e-bike, jeep, kayak, blowhole / sightseeing. Pricing states: no-stored-price, unmerged-price-cache. Paths: engine2-only, legacy-catalog.
+
+- **Country Boy Gold Mine Tour** (`145208`, Breckenridge, Colorado, countryboymine). Path: legacy-catalog. Activity: gold-mine tour. Primary assay sample required by the brief Legacy words: 42. Derivative stored: True. Unmerged price: none.
+- **Haleakala Downhill Self-Guided Bike Tour** (`181765`, Paia, Hawaii, mauisunriders). Path: legacy-catalog. Activity: self-guided bike. Present in the unmerged 132-item FareHarbor price cache Legacy words: 43. Derivative stored: True. Unmerged price: 119.0 USD.
+- **NYC's Underground Subway Tour - Private Tour** (`322210`, New York, New York, untappednewyork). Path: legacy-catalog. Activity: walking / subway. Longest stored derivative description among matched routes Legacy words: 45. Derivative stored: True. Unmerged price: none.
+- **Scenic Float Tour** (`595701`, Wilson, Wyoming, wilsonfishingguides). Path: legacy-catalog. Activity: scenic float. Legacy page with no stored derivative on the unmerged rebuild branch Legacy words: 40. Derivative stored: False. Unmerged price: none.
+- **Self-Guided ADV Motorcycle Rental – KLR 650** (`694384`, Cody, Wyoming, yellowstoneadvmoto). Path: legacy-catalog. Activity: motorcycle rental. Rental-shaped product Legacy words: 44. Derivative stored: True. Unmerged price: none.
+- **Grand Teton Scenic Float - Private Tour** (`646999`, Moose, Wyoming, solitudefloattrips). Path: legacy-catalog. Activity: private float. Private-format product Legacy words: 43. Derivative stored: True. Unmerged price: none.
+- **(Guided) 4-Hr E-Bike Tour of Vancouver Seawall - JW Marriott** (`612500`, Vancouver, British Columbia, hotelebikerentals). Path: legacy-catalog. Activity: e-bike. International or non-US location string Legacy words: 49. Derivative stored: True. Unmerged price: none.
+- **Shared San Andreas Fault Jeep Tour** (`34849`, Palm Springs, California, red-jeep). Path: legacy-catalog. Activity: jeep. California jeep / desert activity Legacy words: 44. Derivative stored: False. Unmerged price: none.
+- **Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando** (`333279`, Orlando, Florida, epicpaddleadventures). Path: legacy-catalog. Activity: kayak. Distinct activity type Legacy words: 47. Derivative stored: True. Unmerged price: none.
+- **La Bufadora Tour in Baja California** (`193220`, Ensenada, California, wineroutebaja). Path: engine2-only. Activity: blowhole / sightseeing. Engine 2-only module path with an unmerged price-preview entry and no generated-catalog record Legacy words: n/a. Derivative stored: True. Unmerged price: 40.0 USD.
 
 Country Boy stored derivative on the unmerged branch is 49 words. It does name a one-hour combined group tour, ages 4+, a walk of more than 1,000 feet into the mountain, and gold panning. It also carries operator marketing (“award winning”, “you might just strike gold”) that is not usable as AOA copy. Forty-nine source words cannot support a 150-word factual rewrite. Under the brief, that product is an insufficient-source exception unless a fuller FareHarbor content payload is harvested.
 
@@ -205,19 +208,41 @@ Country Boy stored derivative on the unmerged branch is 49 words. It does name a
 4. Remove the $129 floor from FareHarbor visible copy and Offer schema only after a price provenance model exists. That code change is Stage B or later, not this discovery commit's behavior change.
 5. Engine 6 and Viator files stay untouched.
 
+## Recommended Stage B source ingestion
+
+This is a recommendation only. Neither option is implemented in this commit. Stage B stays unauthorized until the architecture is approved.
+
+Prefer a stored re-harvest of authoritative FareHarbor content and price endpoints as the primary source. Keep the unmerged derivative as a secondary factual cross-check, not as page copy.
+
+| Option | What it is | Why it is or is not enough |
+| --- | --- | --- |
+| Re-harvest into stored build artifacts | Fetch item content, structured description, item JSON, and the price-preview response once, and commit or cache those payloads with company, item id, endpoint, fetch time, and a content hash. Page render reads the stored artifact. | These responses are the operator's own fields: description, duration, meeting point, inclusions, restrictions, and adult from-price. The current main branch does not have them. A stored harvest can be re-run without scraping during a request. |
+| Unmerged derivative as a secondary source | `origin/feat/fareharbor-content-rebuild:src/data/fareharborRebuild.generated.ts` (7,447 routes) plus the 131-row price cache on `origin/feat/fareharbor-commercial-reserve-phase1`. | The prose is already wrapped in one template sentence on every route. Matched descriptions average about 69 words, and only 41 matched routes reach 150 words. The file has no price and no rating. Country Boy's derivative is 49 words and includes operator marketing that must not be copied. The price cache misses Country Boy and covers a small slice of the 6,126 active keys. |
+
+Use the derivative only to compare extracted facts and to notice products the re-harvest missed. Do not paste its template opener, quality score, or availability count into ratings. Leave the $129 floor in place until a harvested price has provenance. Products whose harvested facts cannot support a truthful 150-word page stay insufficient-source exceptions.
+
+Endpoints to store, not to call at render time:
+
+- `https://fareharbor.com/api/items/v1/{company}/{item}/content/`
+- `https://fareharbor.com/api/items/v1/{company}/{item}/structured-description/`
+- `https://fareharbor.com/api/v1/companies/{company}/items/{item}/`
+- `https://fareharbor.com/api/embed/{company}/price-preview/per-item/v2/?item_pks={item}`
+
+Full comparison: `reports/fareharbor-lead-to-gold/stage-b-source-ingestion-recommendation.md`.
+
 ## Files changed
 
 Discovery artifacts only. No product page, Engine 6, or Viator renderer was modified.
 
 ## Tests
 
-The discovery script asserts that Country Boy item 145208 resolves, Engine 3 FareHarbor count is 0, the generated catalog parses, and the boilerplate phrase is present on the majority of generated descriptions. Production build was not run. Page output is unchanged.
+The discovery script asserts that Country Boy item 145208 resolves, Engine 3 FareHarbor count is 0, the generated catalog parses, the boilerplate phrase is present on the majority of generated descriptions, and the representative sample has at least 10 products across legacy and Engine 2-only paths. Production build was not run. Page output is unchanged.
 
 ## Usage and cost
 
-Model: grok-4.7. Agent run: https://cursor.com/agents/bc-6527e378-1e25-4a2a-9595-2b4b1260d6fd. Token counts and dollar cost are not exposed by run-info, so cost per product is not available for Stage A. This pass is a local census plus production HTML fetches of the Country Boy page. It did not call FareHarbor.
+Model: grok-4.7. Discovery was first recorded on this branch by https://cursor.com/agents/bc-6527e378-1e25-4a2a-9595-2b4b1260d6fd and corrected here by https://cursor.com/agents/bc-d789ac6a-38a7-405e-941c-614de4092196. Token counts and dollar cost are not exposed by run-info, so cost per product is not available for Stage A. This pass is a local census plus one production HTML fetch of the Country Boy page. It did not call FareHarbor. Stage B was not started.
 
 ## Checkpoint
 
-`migration-manifest.jsonl` lists every discovered legacy FareHarbor key with source, price, rating, and content status. `rewriteStatus` and `validationStatus` are `not_started`. `migrationTimestamp` is null. Re-running discovery regenerates the same product statuses from source files.
+`migration-manifest.jsonl` lists every discovered legacy FareHarbor key with source, price, rating, and content status. Rows in the representative sample have `representativeSample: true`. `rewriteStatus` and `validationStatus` are `not_started`. `migrationTimestamp` is null. Re-running discovery regenerates the same product statuses from source files.
 
