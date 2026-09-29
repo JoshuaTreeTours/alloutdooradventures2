@@ -1,0 +1,67 @@
+name: Refresh Alaska FareHarbor tour content
+
+on:
+  schedule:
+    - cron: "30 4 * * 1"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/alaska.csv"
+      - "scripts/engine2/refreshAlaskaFareHarborContent.ts"
+      - ".github/workflows/refresh-alaska-fareharbor-content.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-alaska-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Refresh Alaska FareHarbor content snapshot
+        run: npx tsx scripts/engine2/refreshAlaskaFareHarborContent.ts
+
+      - name: Type-check refreshed content
+        run: npm run check
+
+      - name: Check for Alaska content updates
+        id: alaska_content_changes
+        run: |
+          if git diff --quiet -- src/engine2/data/alaskaFareHarborContent.generated.ts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Alaska content refresh PR
+        if: steps.alaska_content_changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Refresh Alaska FareHarbor tour content"
+          title: "Refresh Alaska FareHarbor tour content"
+          body: |
+            Automated refresh of Alaska Engine2 tour detail content from the public FareHarbor product/booking data keyed by FareHarbor item ID.
+
+            Existing records are preserved when a product cannot be fetched or does not expose rich content.
+          branch: "ci/alaska-fareharbor-content"
+          delete-branch: true
+          add-paths: |
+            src/engine2/data/alaskaFareHarborContent.generated.ts

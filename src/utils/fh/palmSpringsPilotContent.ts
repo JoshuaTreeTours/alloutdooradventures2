@@ -1,4 +1,5 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
+import { getAlaskaFareHarborContent } from "./alaskaFareHarborContent";
 import {
   transformFareHarborToAOAContent,
   type AOAEnrichedTourContent,
@@ -90,7 +91,7 @@ const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
   },
   "34891": {
     duration: "4 hours",
-    meetingLocation: "Palm Springs area",
+    meetingLocation: "Palm Springs / Palm Desert",
     pickup: "unknown",
     rawHighlights: [
       "Private Jeep transfer into Indian Canyons trail areas",
@@ -121,6 +122,11 @@ export const isPalmSpringsTour = (tour: Engine2Tour) =>
 export const getPalmSpringsPilotContent = (
   tour: Engine2Tour
 ): AOAEnrichedTourContent | null => {
+  const alaskaContent = getAlaskaFareHarborContent(tour);
+  if (alaskaContent) {
+    return alaskaContent;
+  }
+
   const seed = PALM_SPRINGS_SEEDS[tour.id];
   if (!seed) {
     return null;
