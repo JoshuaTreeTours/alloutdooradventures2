@@ -1,6 +1,7 @@
 {
   "145208": {
     "schemaDescription": "One-hour combined-group tour at Country Boy Mine in Breckenridge. Guests meet at 0542 French Gulch Road, go more than 1,000 feet into the mountain through the original workings, and pan for gold in Eureka Creek. Gold panning is included, and guests keep what they find.",
+    "meetingLocation": "Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424",
     "removedClaims": [
       "Private mine bookings are unavailable.",
       "Photographs and exhibits are located along the underground passage.",
@@ -21,6 +22,7 @@
   },
   "181765": {
     "schemaDescription": "Self-guided downhill bike ride from 6,500 feet on Haleakala back to Paia, lasting four to five hours. Check-in is at 71 Baldwin Avenue, Suite D3. A narrated van ride starts the day, and Maui County law requires a van bypass on part of the Kula Highway.",
+    "meetingLocation": "Maui Sunriders, 71 Baldwin Avenue, Suite D3, Paia, HI 96779",
     "removedClaims": [
       "The 8:45 a.m. check-in was described as a stored schedule rather than the published itinerary time.",
       "The start of the ride was called a pullout.",
@@ -39,6 +41,7 @@
   },
   "322210": {
     "schemaDescription": "Two-hour private walking tour of New York's subway, in English, meeting at 200 Broadway. A local guide uses earpieces. The group rides the 6 train past closed stations, including City Hall Station, which are seen from the train and are not open to visitors.",
+    "meetingLocation": "Outside 200 Broadway, at Broadway and Fulton Street, New York, NY 10038",
     "removedClaims": [
       "Earpieces were described as specifically for the sidewalk and the platform.",
       "A private departure was described as never being mixed into a public tour.",
@@ -85,6 +88,7 @@
   },
   "646999": {
     "schemaDescription": "Private scenic float on the Snake River in Grand Teton National Park with Solitude Float Trips. The meeting point is 1 Teton Park Road in Moose. About two hours are spent on the water, and the outing is about two and a half hours including the shuttle. The departure is booked as a private raft.",
+    "meetingLocation": "1 Teton Park Road, Moose, WY 83012",
     "removedClaims": [
       "The Teton Range was described as lining the river. The source describes views of the range.",
       "Wildlife sightings were described as never promised. The source lists moose, elk, and bald eagles as animals that may be seen.",
@@ -113,6 +117,7 @@
   },
   "34849": {
     "schemaDescription": "Shared three-hour naturalist-guided Jeep ride into the San Andreas Fault zone, meeting at Metate Ranch, 38635 Monroe Street, Indio. The vehicle is an open-air Jeep Scrambler. The drive goes about one mile into the fault zone, with two to seven guests per Jeep.",
+    "meetingLocation": "Metate Ranch, 38635 Monroe Street, Indio, CA 92203",
     "removedClaims": [
       "A sentence about the listing headline being direct was removed as audit commentary.",
       "Groundwater at the palm oasis was described as trapped. The source says captured by the fault.",
@@ -131,6 +136,7 @@
   },
   "333279": {
     "schemaDescription": "Two-hour guided night paddle in Orlando on a clear kayak or paddleboard with neon light underneath. Guests meet at 1600 North Orange Avenue. A life vest is included, champagne is included for guests 21 and older, and photos are sent afterward.",
+    "meetingLocation": "Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804",
     "removedClaims": [
       "The photo ID for champagne was placed in the dry bag. Dry storage is recommended for a phone or camera, not for the ID.",
       "The return was described as the same shore. The itinerary says the group returns to shore."
@@ -148,6 +154,7 @@
   },
   "193220": {
     "schemaDescription": "Guided four-hour outing from Ensenada to the La Bufadora blowhole on Punta Banda, with hotel pickup and an English- and Spanish-speaking guide. The drive is about 24 miles. Bottled water and snacks are included. Food and drinks at the market are extra.",
+    "meetingLocation": "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",
     "removedClaims": [
       "The vehicle was called a van. The source says transport, not a van.",
       "The maximum age was described as a field on a form.",

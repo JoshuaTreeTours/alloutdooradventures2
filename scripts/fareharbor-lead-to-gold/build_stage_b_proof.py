@@ -655,6 +655,7 @@ def build_product(stage_a: dict, editorial: dict) -> dict:
         "wordCount": words,
         "durationLabel": facts["duration"] if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
         "durationIso": duration_iso(facts["duration"]) if exception not in {"SOURCE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else None,
+        "meetingLocation": clean_text(authored.get("meetingLocation")) or None,
         "visiblePriceLabel": visible,
         "priceRows": rows,
         "pricingNotes": notes,
@@ -775,6 +776,7 @@ def markdown_report(records: list[dict]) -> str:
                 f"- Editorial word count: {after['wordCount']}",
                 f"- Visible price: {after['visiblePriceLabel'] or 'omitted'}",
                 f"- Duration: {after['durationLabel'] or 'omitted'}",
+                f"- Meeting location: {after['meetingLocation'] or 'omitted'}",
                 f"- Schema and meta description: {after['schemaDescription']}",
                 f"- Offer: `{json.dumps(after['offer'], ensure_ascii=False)}`",
                 f"- Pricing rows: `{json.dumps(after['priceRows'], ensure_ascii=False)}`",
@@ -812,6 +814,7 @@ def emit_ts(products: list[dict]) -> str:
                 "wordCount": product["wordCount"],
                 "durationLabel": product["durationLabel"],
                 "durationIso": product["durationIso"],
+                "meetingLocation": product["meetingLocation"],
                 "visiblePriceLabel": product["visiblePriceLabel"],
                 "priceRows": product["priceRows"],
                 "pricingNotes": product["pricingNotes"],
@@ -851,6 +854,7 @@ def emit_ts(products: list[dict]) -> str:
         "  wordCount: number;\n"
         "  durationLabel: string | null;\n"
         "  durationIso: string | null;\n"
+        "  meetingLocation: string | null;\n"
         "  visiblePriceLabel: string | null;\n"
         "  priceRows: FareHarborProofPriceRow[];\n"
         "  pricingNotes: string[];\n"

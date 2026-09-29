@@ -9,6 +9,7 @@ export default function FareHarborProofSnapshot({
 }: FareHarborProofSnapshotProps) {
   if (
     !proof.durationLabel &&
+    !proof.meetingLocation &&
     proof.priceRows.length === 0 &&
     proof.pricingNotes.length === 0
   ) {
@@ -26,6 +27,16 @@ export default function FareHarborProofSnapshot({
           <span className="font-semibold text-[#1f2a1f]">
             {proof.durationLabel}
           </span>
+        </div>
+      ) : null}
+      {proof.meetingLocation ? (
+        <div className="mt-4 text-sm text-[#405040]">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+            Meeting location
+          </p>
+          <p className="mt-2 font-semibold text-[#1f2a1f]">
+            {proof.meetingLocation}
+          </p>
         </div>
       ) : null}
       {proof.priceRows.length > 0 || proof.pricingNotes.length > 0 ? (

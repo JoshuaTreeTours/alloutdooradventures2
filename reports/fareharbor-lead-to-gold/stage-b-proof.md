@@ -51,6 +51,7 @@ Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. T
 - Editorial word count: 156
 - Visible price: From $59.95
 - Duration: 1 hour
+- Meeting location: Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424
 - Schema and meta description: One-hour combined-group tour at Country Boy Mine in Breckenridge. Guests meet at 0542 French Gulch Road, go more than 1,000 feet into the mountain through the original workings, and pan for gold in Eureka Creek. Gold panning is included, and guests keep what they find.
 - Offer: `{"type": "Offer", "price": "59.95", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Adult", "note": "13+", "amountLabel": "$59.95"}, {"label": "Child", "note": "Ages 4-12", "amountLabel": "$39.95"}, {"label": "Mine Tour Child (3-years old and under)", "note": "", "amountLabel": "Free"}]`
@@ -100,6 +101,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 283
 - Visible price: From $119
 - Duration: 4-5 hours
+- Meeting location: Maui Sunriders, 71 Baldwin Avenue, Suite D3, Paia, HI 96779
 - Schema and meta description: Self-guided downhill bike ride from 6,500 feet on Haleakala back to Paia, lasting four to five hours. Check-in is at 71 Baldwin Avenue, Suite D3. A narrated van ride starts the day, and Maui County law requires a van bypass on part of the Kula Highway.
 - Offer: `{"type": "Offer", "price": "119.00", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Adult", "note": "18+", "amountLabel": "$119"}, {"label": "Youth", "note": "15-17", "amountLabel": "$119"}]`
@@ -147,6 +149,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 253
 - Visible price: omitted
 - Duration: 2 hours
+- Meeting location: Outside 200 Broadway, at Broadway and Fulton Street, New York, NY 10038
 - Schema and meta description: Two-hour private walking tour of New York's subway, in English, meeting at 200 Broadway. A local guide uses earpieces. The group rides the 6 train past closed stations, including City Hall Station, which are seen from the train and are not open to visitors.
 - Offer: `null`
 - Pricing rows: `[]`
@@ -195,6 +198,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 19
 - Visible price: omitted
 - Duration: omitted
+- Meeting location: omitted
 - Schema and meta description: No description, meeting place, or price was available for this Wilson scenic float. Those details are not added here.
 - Offer: `null`
 - Pricing rows: `[]`
@@ -239,6 +243,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 326
 - Visible price: omitted
 - Duration: 1 day
+- Meeting location: omitted
 - Schema and meta description: One-day self-guided adventure-motorcycle rental in Cody for experienced riders, on a Kawasaki KLR 650 or 650S or a Yamaha Ténéré 700. Delivery is within the greater Cody area. No guide and no fuel are included, and no rental fare was published.
 - Offer: `null`
 - Pricing rows: `[]`
@@ -285,6 +290,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 319
 - Visible price: From $1,200
 - Duration: 2.5 hours
+- Meeting location: 1 Teton Park Road, Moose, WY 83012
 - Schema and meta description: Private scenic float on the Snake River in Grand Teton National Park with Solitude Float Trips. The meeting point is 1 Teton Park Road in Moose. About two hours are spent on the water, and the outing is about two and a half hours including the shuttle. The departure is booked as a private raft.
 - Offer: `{"type": "Offer", "price": "1200.00", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Private Raft", "note": "Select the number of rafts", "amountLabel": "$1,200"}]`
@@ -332,6 +338,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 20
 - Visible price: omitted
 - Duration: omitted
+- Meeting location: omitted
 - Schema and meta description: No description, meeting place, or price was available for this Vancouver e-bike tour. Those details are not added here.
 - Offer: `null`
 - Pricing rows: `[]`
@@ -375,6 +382,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 318
 - Visible price: From $183.75
 - Duration: 3 hours
+- Meeting location: Metate Ranch, 38635 Monroe Street, Indio, CA 92203
 - Schema and meta description: Shared three-hour naturalist-guided Jeep ride into the San Andreas Fault zone, meeting at Metate Ranch, 38635 Monroe Street, Indio. The vehicle is an open-air Jeep Scrambler. The drive goes about one mile into the fault zone, with two to seven guests per Jeep.
 - Offer: `{"type": "Offer", "price": "183.75", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Adult (18 years and up)", "note": "Aged 18 and up", "amountLabel": "$183.75"}, {"label": "Child (Aged 17 and under)", "note": "A parent must accompany children. Booster seats are not provided.", "amountLabel": "$149.62"}]`
@@ -422,6 +430,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 285
 - Visible price: From $80
 - Duration: 2 hour experience
+- Meeting location: Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804
 - Schema and meta description: Two-hour guided night paddle in Orlando on a clear kayak or paddleboard with neon light underneath. Guests meet at 1600 North Orange Avenue. A life vest is included, champagne is included for guests 21 and older, and photos are sent afterward.
 - Offer: `{"type": "Offer", "price": "80.00", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Clear 2-Person Kayak", "note": "HOLDS 2 PEOPLE - Each Guest Must Weigh under 200lbs (<400lbs total)", "amountLabel": "$160"}, {"label": "Clear Single Kayak", "note": "Weight Limit 325 lbs", "amountLabel": "$80"}, {"label": "Adult Paddle Board", "note": "15 years and over, Requires Valid Drivers License or Permit", "amountLabel": "$80"}]`
@@ -468,6 +477,7 @@ Claims removed in the provenance audit:
 - Editorial word count: 252
 - Visible price: From $40
 - Duration: 4 hours
+- Meeting location: Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879
 - Schema and meta description: Guided four-hour outing from Ensenada to the La Bufadora blowhole on Punta Banda, with hotel pickup and an English- and Spanish-speaking guide. The drive is about 24 miles. Bottled water and snacks are included. Food and drinks at the market are extra.
 - Offer: `{"type": "Offer", "price": "40.00", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Adult", "note": "Ages 5+", "amountLabel": "$40"}, {"label": "Private Tour", "note": "Ages 5+", "amountLabel": "$55"}, {"label": "Infant", "note": "", "amountLabel": "Free"}]`

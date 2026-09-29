@@ -50,6 +50,21 @@ const PROOF_PATHS = [
   ["/destinations/california/ensenada/tours/la-bufadora-tour-in-baja-california-193220", "193220", "40.00"],
 ] as const;
 
+const MEETING_LOCATIONS: Record<string, string | null> = {
+  "145208": "Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424",
+  "181765": "Maui Sunriders, 71 Baldwin Avenue, Suite D3, Paia, HI 96779",
+  "322210":
+    "Outside 200 Broadway, at Broadway and Fulton Street, New York, NY 10038",
+  "595701": null,
+  "694384": null,
+  "646999": "1 Teton Park Road, Moose, WY 83012",
+  "612500": null,
+  "34849": "Metate Ranch, 38635 Monroe Street, Indio, CA 92203",
+  "333279": "Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804",
+  "193220":
+    "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",
+};
+
 const renderRoute = (path: string, node: ReactNode) =>
   renderToStaticMarkup(
     <Router hook={() => [path, () => undefined]}>{node}</Router>
@@ -82,6 +97,7 @@ describe("FareHarbor Stage B proof set", () => {
       const product = getFareHarborProofByItemId(itemId);
       expect(product).toBeTruthy();
       expect(product?.offer?.price ?? null).toBe(price);
+      expect(product?.meetingLocation ?? null).toBe(MEETING_LOCATIONS[itemId]);
       if (product?.offer) {
         expect("availability" in product.offer).toBe(false);
       }
@@ -244,6 +260,13 @@ describe("FareHarbor Stage B proof set", () => {
       } else {
         expect(beforeRelated).not.toContain("Check booking page");
       }
+      const meetingLocation = MEETING_LOCATIONS[item.tourSlug.match(/(\d+)$/)![1]];
+      if (meetingLocation) {
+        expect(beforeRelated).toContain("Meeting location");
+        expect(beforeRelated).toContain(meetingLocation);
+      } else {
+        expect(beforeRelated).not.toContain("Meeting location");
+      }
       const product = productNode(captured.nodes);
       const trip = tripNode(captured.nodes);
       expect(product?.aggregateRating).toBeUndefined();
@@ -288,6 +311,8 @@ describe("FareHarbor Stage B proof set", () => {
     );
     expect(jeepHtml).toContain("From $183.75");
     expect(jeepHtml).toContain("Metate Ranch");
+    expect(jeepHtml).toContain("Meeting location");
+    expect(jeepHtml).toContain(MEETING_LOCATIONS["34849"]);
     expect(jeepHtml).not.toContain("more than a quick photo stop");
     expect(jeepHtml).not.toContain("$129");
     expect(jeepHtml.split("3 hours").length - 1).toBeGreaterThanOrEqual(2);
@@ -306,6 +331,8 @@ describe("FareHarbor Stage B proof set", () => {
     );
     expect(bufadoraHtml).toContain("From $40");
     expect(bufadoraHtml).toContain("Punta Banda");
+    expect(bufadoraHtml).toContain("Meeting location");
+    expect(bufadoraHtml).toContain(MEETING_LOCATIONS["193220"]);
     expect(bufadoraHtml).not.toContain("$129");
     expect((productNode(captured.nodes)?.offers as { price?: string }).price).toBe(
       "40.00"
@@ -320,6 +347,7 @@ describe("FareHarbor Stage B proof set", () => {
       <Engine2TourPage tour={vancouver!} isFHPilotEnabled={false} />
     );
     expect(vancouverHtml).toContain("Those details are not added here.");
+    expect(vancouverHtml).not.toContain("Meeting location");
     expect(vancouverHtml).not.toContain("HTTP");
     expect(vancouverHtml).not.toContain("From $129");
     expect(vancouverHtml).not.toContain("$129");

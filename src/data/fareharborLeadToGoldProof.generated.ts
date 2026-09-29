@@ -29,6 +29,7 @@ export type FareHarborProofProduct = {
   wordCount: number;
   durationLabel: string | null;
   durationIso: string | null;
+  meetingLocation: string | null;
   visiblePriceLabel: string | null;
   priceRows: FareHarborProofPriceRow[];
   pricingNotes: string[];
@@ -59,6 +60,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 156,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
+    "meetingLocation": "Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424",
     "visiblePriceLabel": "From $59.95",
     "priceRows": [
       {
@@ -107,6 +109,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 283,
     "durationLabel": "4-5 hours",
     "durationIso": null,
+    "meetingLocation": "Maui Sunriders, 71 Baldwin Avenue, Suite D3, Paia, HI 96779",
     "visiblePriceLabel": "From $119",
     "priceRows": [
       {
@@ -150,6 +153,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 253,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
+    "meetingLocation": "Outside 200 Broadway, at Broadway and Fulton Street, New York, NY 10038",
     "visiblePriceLabel": null,
     "priceRows": [],
     "pricingNotes": [],
@@ -172,6 +176,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 19,
     "durationLabel": null,
     "durationIso": null,
+    "meetingLocation": null,
     "visiblePriceLabel": null,
     "priceRows": [],
     "pricingNotes": [],
@@ -200,6 +205,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 326,
     "durationLabel": "1 day",
     "durationIso": "P1D",
+    "meetingLocation": null,
     "visiblePriceLabel": null,
     "priceRows": [],
     "pricingNotes": [
@@ -231,6 +237,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 319,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
+    "meetingLocation": "1 Teton Park Road, Moose, WY 83012",
     "visiblePriceLabel": "From $1,200",
     "priceRows": [
       {
@@ -263,6 +270,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 20,
     "durationLabel": null,
     "durationIso": null,
+    "meetingLocation": null,
     "visiblePriceLabel": null,
     "priceRows": [],
     "pricingNotes": [],
@@ -291,6 +299,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 318,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
+    "meetingLocation": "Metate Ranch, 38635 Monroe Street, Indio, CA 92203",
     "visiblePriceLabel": "From $183.75",
     "priceRows": [
       {
@@ -334,6 +343,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 285,
     "durationLabel": "2 hour experience",
     "durationIso": "PT2H",
+    "meetingLocation": "Epic Paddle Adventures, 1600 North Orange Avenue, Orlando, FL 32804",
     "visiblePriceLabel": "From $80",
     "priceRows": [
       {
@@ -382,6 +392,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
     "wordCount": 252,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
+    "meetingLocation": "Miguel Aleman Avenue 512, Colonia Ampliacion Moderna, Ensenada, Mexico 22879",
     "visiblePriceLabel": "From $40",
     "priceRows": [
       {
