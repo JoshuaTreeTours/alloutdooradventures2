@@ -660,11 +660,11 @@ const main = async () => {
 
   const commercialRefresh = isAutomatedCommercialRefreshCommit()
     ? {
-        // The scheduled workflow already committed the authoritative refreshed
-        // merchant CSV and matching website commercial snapshot. Do not run a
-        // second live commercial refresh during its Vercel deployment: that can
-        // observe a different Viator/cache moment and break parity again.
-        rows: existingRows as MerchantFeedCsvRow[],
+        // The scheduled workflow already committed the authoritative commercial
+        // values. Preserve those values for existing rows, but keep the freshly
+        // generated row set so newly eligible products are not accidentally
+        // dropped merely because they were absent from the previous CSV.
+        rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
       }
     : await applyMerchantFeedCommercialRefresh({
         rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
