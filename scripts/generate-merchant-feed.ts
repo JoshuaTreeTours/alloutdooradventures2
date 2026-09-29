@@ -63,6 +63,7 @@ const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
   MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
 );
 
+// These exact messages identify the scheduled refresh commit in Vercel.
 const automatedCommercialRefreshCommitMessages = new Set([
   "Refresh merchant feed aggregate ratings",
   "Refresh merchant and website commercial metadata",
