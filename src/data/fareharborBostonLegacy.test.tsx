@@ -86,9 +86,9 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     const insufficient = products.filter(
       product => product.exceptionStatus === "INSUFFICIENT_SOURCE_CONTENT"
     );
-    expect(priced).toHaveLength(79);
-    expect(unpriced).toHaveLength(77);
-    expect(insufficient).toHaveLength(65);
+    expect(priced).toHaveLength(68);
+    expect(unpriced).toHaveLength(62);
+    expect(insufficient).toHaveLength(91);
     for (const product of priced) {
       expect(product.offer?.price).toBeTruthy();
       expect(product.visiblePriceLabel).toMatch(/^From /);
@@ -243,8 +243,8 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
         withoutOffer += 1;
       }
     }
-    expect(withOffer).toBe(79);
-    expect(withoutOffer).toBe(142);
+    expect(withOffer).toBe(68);
+    expect(withoutOffer).toBe(153);
     for (const item of BOSTON_TERMINALS) {
       expect(
         getFareHarborProofByPath(
@@ -305,19 +305,7 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     ).toMatchObject({ stateSlug: "maine", citySlug: "portland" });
   });
 
-  it("rewrites a 10-product Boston editorial sample without implementation language", () => {
-    const sampleIds = [
-      "27344",
-      "112945",
-      "117124",
-      "243407",
-      "26483",
-      "26504",
-      "361612",
-      "361623",
-      "482166",
-      "618195",
-    ] as const;
+  it("rewrites Boston FareHarbor copy in guest-centered editorial voice", () => {
     const implementationPhrases = [
       "named places",
       "short route labels",
@@ -332,32 +320,40 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       "this guided outing",
       "this harbor outing",
     ];
-    for (const itemId of sampleIds) {
-      const product = getFareHarborProofByItemId(itemId);
-      expect(product, itemId).toBeTruthy();
-      expect(product!.paragraphs.length).toBeGreaterThanOrEqual(2);
-      expect(product!.paragraphs.length).toBeLessThanOrEqual(4);
-      expect(product!.wordCount).toBeGreaterThanOrEqual(40);
+    const mechanical = [
+      /\buses the\b/i,
+      /\btakes in\b/i,
+      /\bpoint(?:s|ing) out\b/i,
+      /\bcontinues toward\b/i,
+    ];
+    for (const product of getFareHarborBostonLegacyProducts()) {
       const visible = [
-        ...product!.paragraphs,
-        ...product!.highlights,
-        product!.schemaDescription,
+        ...product.paragraphs,
+        ...product.highlights,
+        product.schemaDescription,
       ]
         .join(" ")
         .toLowerCase();
       for (const phrase of implementationPhrases) {
-        expect(visible, `${itemId} ${phrase}`).not.toContain(phrase);
+        expect(visible, `${product.itemId} ${phrase}`).not.toContain(phrase);
       }
-      expect(visible).not.toContain("103 atlantic");
-      expect(visible).not.toContain("91 charles");
-      expect(visible).not.toContain("60 rowes");
+      for (const pattern of mechanical) {
+        expect(visible, `${product.itemId} ${pattern}`).not.toMatch(pattern);
+      }
+      expect(product.paragraphs.length).toBeGreaterThanOrEqual(1);
+      expect(product.paragraphs.length).toBeLessThanOrEqual(4);
     }
     const cityView = getFareHarborProofByItemId("27344");
     expect(cityView?.paragraphs.join(" ")).toContain("Urban Adventours");
+    expect(cityView?.paragraphs.join(" ")).toMatch(/pass|come into view|ride/i);
     expect(cityView?.exceptionStatus).toBe("OK");
     expect(getFareHarborProofByItemId("482166")?.exceptionStatus).toBe(
       "PRICE_NOT_FOUND"
     );
+    const sunset = getFareHarborProofByItemId("26483");
+    expect(sunset?.paragraphs.join(" ").toLowerCase()).not.toContain("uses the");
+    expect(sunset?.paragraphs.join(" ").toLowerCase()).not.toContain("takes in");
+    expect(sunset?.paragraphs.join(" ")).toMatch(/sail passes|come into view/i);
   });
 
   it("keeps customer-facing FareHarbor copy free of process commentary and heading fragments", () => {

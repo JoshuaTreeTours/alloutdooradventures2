@@ -32,6 +32,7 @@ from build_stage_b_proof import (
 )
 from inventory_boston import inventory
 from editorial_voice import (
+    compose_editorial,
     editorial_voice_errors,
     load_editorial_sample,
 )
@@ -529,8 +530,8 @@ def extract_facts(usable: list[dict], source_text: str, item: dict | None = None
 
 def short_missing_copy(title: str, operator: str | None = None) -> list[str]:
     if operator:
-        return [f"{title} is listed by {operator}."]
-    return [f"{title} is listed without a stored outing description."]
+        return [f"The operator {operator} lists this outing."]
+    return ["The outing is listed."]
 
 
 def schema_from_paragraphs(paragraphs: list[str], facts: dict, title: str, exception: str, geography: dict) -> str:
@@ -655,11 +656,12 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
         highlights = []
+        generated_schema = None
         removed = [
             "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
         ]
     else:
-        paragraphs, highlights, removed = compose_copy(
+        paragraphs, highlights, generated_schema, removed = compose_editorial(
             catalog, facts, source_text, geography
         )
         overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
@@ -668,6 +670,8 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             highlights = list(overlay.get("highlights") or highlights)
             if overlay.get("removedClaims"):
                 removed = list(overlay["removedClaims"])
+            if overlay.get("schemaDescription"):
+                generated_schema = overlay["schemaDescription"]
     words = word_count(paragraphs)
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
     if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 40:
@@ -682,6 +686,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         if words < 8:
             paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
             words = word_count(paragraphs)
+        generated_schema = " ".join(paragraphs).strip()
 
     gallery = []
     if exception != "BOOKING_PAGE_NOT_FOUND":
@@ -708,6 +713,8 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         overlay = None
     if overlay and overlay.get("schemaDescription"):
         schema = overlay["schemaDescription"]
+    elif generated_schema:
+        schema = generated_schema
     else:
         schema = schema_from_paragraphs(
             paragraphs, facts, catalog["title"], exception, geography
@@ -772,7 +779,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     if extra:
         validation["errors"] = list(validation.get("errors") or []) + extra
         validation["ok"] = not validation["errors"]
-    if overlay:
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         voice_errors = editorial_voice_errors(
             product["paragraphs"], product["highlights"], product["schemaDescription"]
         )

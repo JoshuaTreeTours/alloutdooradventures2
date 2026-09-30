@@ -1,13 +1,12 @@
-# Stage C Boston editorial sample — 10 products for review
+# Stage C Boston editorial rewrite
 
-Scope is customer-facing copy only. Geography, pricing, schema-graph, terminal-product, and Merchant-feed logic were not changed. The remaining Boston products still use the template generator and were not rewritten.
+Customer-facing copy only. Geography, pricing authority, schema-graph, terminal-product, and Merchant-feed logic were not redesigned. The approved 10-product voice is now applied to all 221 published Boston migrated products. No other city was processed.
 
-Voice and overlay live in:
+Voice lives in `scripts/fareharbor-lead-to-gold/editorial_voice.py`. The original 10 remain hand-tuned overlays in `boston_editorial_sample.json`. The remaining 211 are generated from harvest facts in the same guest-centered style (sail, pass, see, explore, come into view; no “uses / takes in / points out / continues toward”).
 
-- `scripts/fareharbor-lead-to-gold/editorial_voice.py`
-- `scripts/fareharbor-lead-to-gold/boston_editorial_sample.json`
+Runtime after rewrite: 221 published (68 priced, 62 `PRICE_NOT_FOUND`, 91 `INSUFFICIENT_SOURCE_CONTENT`). Geography still: 1 moved to Portland, 1 Hardwick exclude, 8 terminals.
 
-The builder applies the overlay to these ten item IDs only.
+## Sample of 10 (hand-tuned)
 
 | Item | Title | Status | Path |
 | --- | --- | --- | --- |
@@ -22,7 +21,7 @@ The builder applies the overlay to these ten item IDs only.
 | 482166 | Holiday Harbor Cruise | PRICE_NOT_FOUND | `/destinations/massachusetts/boston/tours/holiday-harbor-cruise-482166` |
 | 618195 | Boston Chocolate Tour | OK | `/destinations/massachusetts/boston/tours/boston-chocolate-tour-618195` |
 
-Do not rewrite the remaining Boston products until this sample is approved.
+The remaining 211 Boston products now use this voice.
 
 ## 27344 — City View Tour
 

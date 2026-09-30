@@ -60,6 +60,10 @@ class EditorialVoiceTest(unittest.TestCase):
             self.assertNotIn("103 atlantic", body)
             self.assertNotIn("91 charles", body)
             self.assertNotIn("60 rowes", body)
+            self.assertNotRegex(body, r"\buses the\b")
+            self.assertNotRegex(body, r"\btakes in\b")
+            self.assertNotRegex(body, r"\bpoint(?:s|ing) out\b")
+            self.assertNotRegex(body, r"\bcontinues toward\b")
             self.assertLessEqual(len(paragraphs), 4)
             self.assertGreaterEqual(len(paragraphs), 2)
 
