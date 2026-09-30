@@ -1,6 +1,8 @@
 import "./enforce-engine6-rating-schema-parity.mjs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { tsImport } from "tsx/esm/api";
 
 const SITE = "https://www.alloutdooradventures.com";
 const SITE_HOSTS = new Set([
@@ -10,10 +12,18 @@ const SITE_HOSTS = new Set([
 const DIST = path.resolve("dist");
 const SITEMAP = "sitemap-tours.xml";
 const REPORT = path.resolve("reports/product-structured-data-integrity.json");
-const FAREHARBOR_PROOF_WITHOUT_OFFER = new Set([
-  "322210",
-  "694384",
-]);
+const proofModule = await tsImport(
+  pathToFileURL(path.resolve("src/data/fareharborLeadToGoldProof.ts")).href,
+  import.meta.url
+);
+const FAREHARBOR_PROOF_WITHOUT_OFFER = new Set(
+  (proofModule.getFareHarborProofProducts() ?? [])
+    .filter(
+      product =>
+        !product.offer || product.exceptionStatus === "PRICE_NOT_FOUND"
+    )
+    .map(product => product.itemId)
+);
 
 const normalizePath = value => {
   const pathname = value || "/";
