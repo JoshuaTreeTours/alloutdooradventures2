@@ -1,0 +1,41 @@
+{
+  "company": "centralscoot",
+  "itemId": "607319",
+  "fetchedAt": "2026-09-30T02:33:37.569745+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/centralscoot/607319/content/",
+      "status": 200,
+      "bytes": 8302,
+      "sha256": "f472c8bd4c27294d2e9d3bded6566989bdcdeab7dcd656623365953601c167e4"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/centralscoot/607319/structured-description/",
+      "status": 200,
+      "bytes": 6164,
+      "sha256": "cb9284e10226e270ca4b59b162f38601e74b9f23af8dfb9dd19340032fbc1028"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/centralscoot/items/607319/",
+      "status": 200,
+      "bytes": 15139,
+      "sha256": "1ad7b002b3ff931374d965af689ac7d65c037cd0c7b110925b0f041b2ea1eb3e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/centralscoot/price-preview/per-item/v2/?asn=fhdn&item_pks=607319&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1462,
+      "sha256": "ec0f299f8108651ea88b43ae43e30a5581dfa34dd234e953cd5d97b0e5267173"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "607319",
+    "provider": "centralscoot",
+    "bookingUrl": "https://fareharbor.com/embeds/book/centralscoot/items/607319/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

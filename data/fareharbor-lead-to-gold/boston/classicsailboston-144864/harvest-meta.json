@@ -1,0 +1,41 @@
+{
+  "company": "classicsailboston",
+  "itemId": "144864",
+  "fetchedAt": "2026-09-30T02:33:38.485045+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/classicsailboston/144864/content/",
+      "status": 200,
+      "bytes": 2324,
+      "sha256": "ca9e3fde4c5d576127a527e1100bca6232902b7e35256e464fa67747abcc6099"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/classicsailboston/144864/structured-description/",
+      "status": 200,
+      "bytes": 1728,
+      "sha256": "1da5ae442e929ec014c9f9b5f068ab2fcfc66b5f441f5eccbf36cde5f401c659"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/classicsailboston/items/144864/",
+      "status": 200,
+      "bytes": 8534,
+      "sha256": "740d050469da8d766f2b59eb5c60ba1b6e57cc1e232c6732e1f88aafd6e8754d"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/classicsailboston/price-preview/per-item/v2/?asn=fhdn&item_pks=144864&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 608,
+      "sha256": "7504a0e05b559e9a0ea59edbf0ce27885b9abb5545018db459cf6950735b4efd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "144864",
+    "provider": "classicsailboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/classicsailboston/items/144864/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

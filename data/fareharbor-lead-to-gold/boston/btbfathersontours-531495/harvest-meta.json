@@ -1,0 +1,41 @@
+{
+  "company": "btbfathersontours",
+  "itemId": "531495",
+  "fetchedAt": "2026-09-30T02:33:36.134502+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/btbfathersontours/531495/content/",
+      "status": 200,
+      "bytes": 1909,
+      "sha256": "5fa391a8f5d0a39631d3444f56608b74624d1f5237dac43c848f0f581786c72a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/btbfathersontours/531495/structured-description/",
+      "status": 200,
+      "bytes": 1587,
+      "sha256": "4ce593ef0e48a129bfe037941a7db33052c06acc90aaaf39f8db69855fefcaeb"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/btbfathersontours/items/531495/",
+      "status": 200,
+      "bytes": 8150,
+      "sha256": "b4fc00b421317430d38d18afa485e0ab8d822d74458dfc8f61f23fb399b39916"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/btbfathersontours/price-preview/per-item/v2/?asn=fhdn&item_pks=531495&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 682,
+      "sha256": "c2b5a9a67cf5c4b19ac3f752cdbb1122021a960189df1b6b53fe825678e98f43"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "531495",
+    "provider": "btbfathersontours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/btbfathersontours/items/531495/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -1,0 +1,41 @@
+{
+  "company": "bostonhiddengems",
+  "itemId": "664802",
+  "fetchedAt": "2026-09-30T02:33:26.736773+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonhiddengems/664802/content/",
+      "status": 200,
+      "bytes": 5226,
+      "sha256": "eac99188f4f6108f5a973e261163cad8271dd9d9aaea6ae812416e6deb2b3a24"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonhiddengems/664802/structured-description/",
+      "status": 200,
+      "bytes": 5030,
+      "sha256": "944abee3d755061d579b41b0f35076e4892ac083fc16869cfda22937e7787d8f"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonhiddengems/items/664802/",
+      "status": 200,
+      "bytes": 9655,
+      "sha256": "05a60234b408a758fb4cfbd964671dda39a567700d66f4f9a1ee5e2659a172bb"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonhiddengems/price-preview/per-item/v2/?asn=fhdn&item_pks=664802&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 759,
+      "sha256": "6f43debddbe4c9af8512abb5fed651a0c8d49f6eca72181ed2e7176549704d78"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "664802",
+    "provider": "bostonhiddengems",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonhiddengems/items/664802/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

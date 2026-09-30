@@ -1,0 +1,42 @@
+{
+  "company": "livelikealocaltoursboston",
+  "itemId": "463302",
+  "fetchedAt": "2026-09-30T02:33:43.021507+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/livelikealocaltoursboston/463302/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/livelikealocaltoursboston/463302/structured-description/",
+      "status": 404,
+      "bytes": 588109,
+      "sha256": "f0e92745698896168ee1f656bb0c3db69027180222d7c15044d9e9d54c5a84e1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/livelikealocaltoursboston/items/463302/",
+      "status": 404,
+      "bytes": 588083,
+      "sha256": "c62b6d13f06476659e0cc41d76cc5702af1974fdd6254b8d84940ec40174b1bf"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/livelikealocaltoursboston/price-preview/per-item/v2/?asn=fhdn&item_pks=463302&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 149,
+      "sha256": "cb2e134b2f74566e8015951c1eb9bcfeb127d87fc3e17199b52fe23773881011"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "463302",
+    "provider": "livelikealocaltoursboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/livelikealocaltoursboston/items/463302/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

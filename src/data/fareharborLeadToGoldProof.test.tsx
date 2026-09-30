@@ -151,16 +151,24 @@ const productNode = (nodes: Array<Record<string, unknown>> | null) =>
 const tripNode = (nodes: Array<Record<string, unknown>> | null) =>
   nodes?.find(node => typeIncludes(node, "TouristTrip"));
 
+const STAGE_B_ITEM_IDS = new Set(PROOF_PATHS.map(([, itemId]) => itemId));
+
 describe("FareHarbor Stage B proof set", () => {
   it("keeps terminal booking pages out of the runtime proof set", () => {
     const products = getFareHarborProofProducts();
-    expect(products.map(product => product.publicPath)).toEqual(
+    const stageB = products.filter(product => STAGE_B_ITEM_IDS.has(product.itemId));
+    expect(stageB.map(product => product.publicPath)).toEqual(
       PROOF_PATHS.filter(([, itemId]) => !BOOKING_PAGE_NOT_FOUND_IDS.has(itemId))
         .map(([path]) => path)
     );
     expect(products.every(product => product.aggregateRating === null)).toBe(
       true
     );
+    expect(
+      products.every(
+        product => product.exceptionStatus !== "BOOKING_PAGE_NOT_FOUND"
+      )
+    ).toBe(true);
   });
 
   it("removes terminal booking pages from every public inventory surface", () => {

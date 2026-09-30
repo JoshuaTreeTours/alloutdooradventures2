@@ -1,0 +1,42 @@
+{
+  "company": "comesailawaynow",
+  "itemId": "379532",
+  "fetchedAt": "2026-09-30T02:33:40.267598+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/comesailawaynow/379532/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/comesailawaynow/379532/structured-description/",
+      "status": 404,
+      "bytes": 588089,
+      "sha256": "79fc88c4fa9d5ba2e3b74e917a100de67c4e767457790e7538ba56e0d19b62a9"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/comesailawaynow/items/379532/",
+      "status": 404,
+      "bytes": 588063,
+      "sha256": "75e54108f71bb34965abfc4bf87a2dea313422ac3f10e020a9781e0efaeab36a"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/comesailawaynow/price-preview/per-item/v2/?asn=fhdn&item_pks=379532&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 139,
+      "sha256": "ca75f9f2a32aa11a39ef956e80c44d5468ed9dadc6ecf75d21e8b8083ccf0d0d"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "379532",
+    "provider": "comesailawaynow",
+    "bookingUrl": "https://fareharbor.com/embeds/book/comesailawaynow/items/379532/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,41 @@
+{
+  "company": "bostontourhub",
+  "itemId": "257506",
+  "fetchedAt": "2026-09-30T02:33:34.050095+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostontourhub/257506/content/",
+      "status": 200,
+      "bytes": 4549,
+      "sha256": "2d5beb0c6c728613a5792b520fdaad7aa233a5e1df16c178b5bff81e7703eba0"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostontourhub/257506/structured-description/",
+      "status": 204,
+      "bytes": 0,
+      "sha256": null
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostontourhub/items/257506/",
+      "status": 200,
+      "bytes": 15072,
+      "sha256": "6fe82235203b2fb99e5077c8e8add8627ddf1e544f3fe71e67afd9afb72a2ee0"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostontourhub/price-preview/per-item/v2/?asn=fhdn&item_pks=257506&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 569,
+      "sha256": "561ec7d23f9f221a4e124e247c776315134c4247f40b8d1a241674ff122d2434"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "257506",
+    "provider": "bostontourhub",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostontourhub/items/257506/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

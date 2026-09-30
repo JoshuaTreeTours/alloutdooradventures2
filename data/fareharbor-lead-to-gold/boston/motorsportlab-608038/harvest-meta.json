@@ -1,0 +1,41 @@
+{
+  "company": "motorsportlab",
+  "itemId": "608038",
+  "fetchedAt": "2026-09-30T02:33:44.765523+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/motorsportlab/608038/content/",
+      "status": 200,
+      "bytes": 5880,
+      "sha256": "16a442a5aa9c7b244cfd5afa64329f7536b3a276d5b81239543605c1f18ba019"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/motorsportlab/608038/structured-description/",
+      "status": 200,
+      "bytes": 5273,
+      "sha256": "5d21ba8c09d0d552a74bce7e54fa337e2c41251cee6d73886e2775d65db92775"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/motorsportlab/items/608038/",
+      "status": 200,
+      "bytes": 10457,
+      "sha256": "1267ec26c4896ca5895a3cd5933e9619bf93bf96d5f6dcdf4893e660f1ef44f6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/motorsportlab/price-preview/per-item/v2/?asn=fhdn&item_pks=608038&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "608038",
+    "provider": "motorsportlab",
+    "bookingUrl": "https://fareharbor.com/embeds/book/motorsportlab/items/608038/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

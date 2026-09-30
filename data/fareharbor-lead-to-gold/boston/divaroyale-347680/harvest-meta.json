@@ -1,0 +1,41 @@
+{
+  "company": "divaroyale",
+  "itemId": "347680",
+  "fetchedAt": "2026-09-30T02:33:40.446424+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/divaroyale/347680/content/",
+      "status": 200,
+      "bytes": 4183,
+      "sha256": "d7f9a9c3bcf28c39b27d47c3d69992d16ec9fbe8d843409e22af0394ebda361c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/divaroyale/347680/structured-description/",
+      "status": 200,
+      "bytes": 3023,
+      "sha256": "1285c443f0e8381327fc571b83bf641c657e075ac958b0b3bfa76c4cda706255"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/divaroyale/items/347680/",
+      "status": 200,
+      "bytes": 12519,
+      "sha256": "5f29f1e39f332ec4992ad2911f0f6348f3325050cd35bbf9433bef97f26319f5"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/divaroyale/price-preview/per-item/v2/?asn=fhdn&item_pks=347680&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 2651,
+      "sha256": "5a95974677160367d9b1a57633445647fadcf0860b9e357bd88438e6d418a9f2"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "347680",
+    "provider": "divaroyale",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divaroyale/items/347680/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

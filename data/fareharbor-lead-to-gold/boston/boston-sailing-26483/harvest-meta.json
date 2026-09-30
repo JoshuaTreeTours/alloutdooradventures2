@@ -1,0 +1,41 @@
+{
+  "company": "boston-sailing",
+  "itemId": "26483",
+  "fetchedAt": "2026-09-30T02:32:14.099828+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/boston-sailing/26483/content/",
+      "status": 200,
+      "bytes": 12772,
+      "sha256": "44d518c8dafcb5afc74d9c6e7e1f311032d1cd274f1c631dcc12734a2f808980"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/boston-sailing/26483/structured-description/",
+      "status": 200,
+      "bytes": 4651,
+      "sha256": "58165c591f3c8259bd1fa8b5809664d5705bb86d4d3e5b04ce769d6edabdb048"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/boston-sailing/items/26483/",
+      "status": 200,
+      "bytes": 23568,
+      "sha256": "6ce3e43e0ea04e359d9707e50ef48c7a56da30120beb86c0ee62c7933d2ba821"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/boston-sailing/price-preview/per-item/v2/?asn=fhdn&item_pks=26483&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 677,
+      "sha256": "a0d99f31d1890f54c8abe70edb1200b677302f52499070d89560390d6800be61"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26483",
+    "provider": "boston-sailing",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boston-sailing/items/26483/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

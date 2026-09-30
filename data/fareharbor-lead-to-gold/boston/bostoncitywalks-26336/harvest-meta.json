@@ -1,0 +1,41 @@
+{
+  "company": "bostoncitywalks",
+  "itemId": "26336",
+  "fetchedAt": "2026-09-30T02:33:14.342146+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostoncitywalks/26336/content/",
+      "status": 200,
+      "bytes": 4868,
+      "sha256": "6da74c5571d98d92f32aab206ffe3404bb2ed0b3c97ce40b566d0a42172fb52e"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostoncitywalks/26336/structured-description/",
+      "status": 200,
+      "bytes": 3141,
+      "sha256": "832042ec6319469b1c81784ba3285942fc85580e5290585c93e8c29d6fae5e1a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26336/",
+      "status": 200,
+      "bytes": 10925,
+      "sha256": "617a40f86e58c8c9a442d168c56c3f70761ffdd5ef358b8d25ebfcd6274367c7"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostoncitywalks/price-preview/per-item/v2/?asn=fhdn&item_pks=26336&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26336",
+    "provider": "bostoncitywalks",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostoncitywalks/items/26336/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

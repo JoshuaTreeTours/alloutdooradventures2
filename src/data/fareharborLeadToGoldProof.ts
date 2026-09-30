@@ -2,15 +2,24 @@ import {
   fareHarborLeadToGoldProofProducts,
   type FareHarborProofProduct,
 } from "./fareharborLeadToGoldProof.generated";
+import { fareHarborBostonLegacyProducts } from "./fareharborBostonLegacy.generated";
+
+const fareHarborMigratedProducts = [
+  ...fareHarborLeadToGoldProofProducts,
+  ...fareHarborBostonLegacyProducts,
+];
 
 const byItemId = new Map(
-  fareHarborLeadToGoldProofProducts.map(product => [product.itemId, product])
+  fareHarborMigratedProducts.map(product => [product.itemId, product])
 );
 
 const ITEM_URL_PATTERN = /\/items\/(\d+)(?:\/|$|\?)/;
 
 export const getFareHarborProofProducts = (): FareHarborProofProduct[] =>
-  fareHarborLeadToGoldProofProducts;
+  fareHarborMigratedProducts;
+
+export const getFareHarborBostonLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborBostonLegacyProducts;
 
 export const getFareHarborProofByItemId = (
   itemId?: string | null

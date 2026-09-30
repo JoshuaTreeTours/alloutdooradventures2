@@ -1,0 +1,41 @@
+{
+  "company": "bostonfoodhistorywalkingtour",
+  "itemId": "682942",
+  "fetchedAt": "2026-09-30T02:33:16.196806+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonfoodhistorywalkingtour/682942/content/",
+      "status": 200,
+      "bytes": 2549,
+      "sha256": "cf43bdd902c407f45ecf0bc65b0bd8de62331ce434a794b4c8545bf28e47f2ce"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonfoodhistorywalkingtour/682942/structured-description/",
+      "status": 200,
+      "bytes": 2209,
+      "sha256": "4614e464506bbcee0db50a975b1eb2d75feee80b8c5c8e7c1ce0eb928fc9b444"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonfoodhistorywalkingtour/items/682942/",
+      "status": 200,
+      "bytes": 7500,
+      "sha256": "f6b72a6e8f4d1cd9badc5efa898542c21bdba8ae8b6f296ffb0c7639004f66a3"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonfoodhistorywalkingtour/price-preview/per-item/v2/?asn=fhdn&item_pks=682942&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "682942",
+    "provider": "bostonfoodhistorywalkingtour",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonfoodhistorywalkingtour/items/682942/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

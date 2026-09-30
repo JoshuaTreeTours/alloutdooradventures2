@@ -1,0 +1,41 @@
+{
+  "company": "bostonprivateguide",
+  "itemId": "540824",
+  "fetchedAt": "2026-09-30T02:33:30.614998+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonprivateguide/540824/content/",
+      "status": 200,
+      "bytes": 4215,
+      "sha256": "fd822fbcfde18f00bd7f8096465df3eea169c0cbe399a1a0df0bf63850653106"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonprivateguide/540824/structured-description/",
+      "status": 200,
+      "bytes": 3203,
+      "sha256": "44abb7fe17c3146b76491871e98d573d2d654ba98ba00ab0bee2da60fa616e85"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonprivateguide/items/540824/",
+      "status": 200,
+      "bytes": 10053,
+      "sha256": "4b9395637cb954e006fa6148482c12f7fef081fb120b824f215b7a4e3af5c278"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonprivateguide/price-preview/per-item/v2/?asn=fhdn&item_pks=540824&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "540824",
+    "provider": "bostonprivateguide",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonprivateguide/items/540824/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

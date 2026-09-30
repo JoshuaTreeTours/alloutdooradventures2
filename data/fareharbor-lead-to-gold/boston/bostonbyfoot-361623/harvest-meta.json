@@ -1,0 +1,41 @@
+{
+  "company": "bostonbyfoot",
+  "itemId": "361623",
+  "fetchedAt": "2026-09-30T02:32:28.530680+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonbyfoot/361623/content/",
+      "status": 200,
+      "bytes": 3922,
+      "sha256": "c3dab2d32cfe20f502e259a2be801bc51f6a7c85742ce8003f2ea93b764353c4"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonbyfoot/361623/structured-description/",
+      "status": 200,
+      "bytes": 2657,
+      "sha256": "bf5b01a2a123ccad0549e2c67829e485b599dd285466e5e0b1adeb6cfbd1b0e7"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361623/",
+      "status": 200,
+      "bytes": 12666,
+      "sha256": "dcc7f0ab820f87a3da19e63ed65558bdab2dde4acf86f8cd4f196ed4db4800c4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonbyfoot/price-preview/per-item/v2/?asn=fhdn&item_pks=361623&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 964,
+      "sha256": "2b7f0223a0a92d0e025fe89e0e06c790dc80084f653af5c63ecc195333f29b13"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "361623",
+    "provider": "bostonbyfoot",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonbyfoot/items/361623/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

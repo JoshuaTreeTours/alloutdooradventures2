@@ -1,0 +1,41 @@
+{
+  "company": "supyoadventures",
+  "itemId": "350210",
+  "fetchedAt": "2026-09-30T02:33:51.719705+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/supyoadventures/350210/content/",
+      "status": 200,
+      "bytes": 5728,
+      "sha256": "769c6cf4d7b37a04f2ad5b5f7d2806f3983cc2ce9740fb5c57ab1e1ad0f11bb5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/supyoadventures/350210/structured-description/",
+      "status": 200,
+      "bytes": 1944,
+      "sha256": "16e2fa74173509e9312ae3b7b43cd3ce12eb30adcd2dd8d08266577216e483bd"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/supyoadventures/items/350210/",
+      "status": 200,
+      "bytes": 13603,
+      "sha256": "555d4928bc3ab692706d50538fe1dfd47fb4d545acf462ee22bd8c29c99e38fd"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/supyoadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=350210&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "350210",
+    "provider": "supyoadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/supyoadventures/items/350210/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,41 @@
+{
+  "company": "bitesofbostonfoodtours",
+  "itemId": "112945",
+  "fetchedAt": "2026-09-30T02:32:12.076388+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bitesofbostonfoodtours/112945/content/",
+      "status": 200,
+      "bytes": 5577,
+      "sha256": "d0328402be686606ffdd7f3cd626d4be5d62807f61846366e28301558c2d1404"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bitesofbostonfoodtours/112945/structured-description/",
+      "status": 200,
+      "bytes": 1303,
+      "sha256": "b4ca25bf2f6fc3d142a3cc9a08cb890661263cf458873c20c18582fba953d21c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/112945/",
+      "status": 200,
+      "bytes": 19041,
+      "sha256": "bf3aba8201fe00e6764ba541d09e630855c1b75e5f54b34c35f9255ab4753d1b"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bitesofbostonfoodtours/price-preview/per-item/v2/?asn=fhdn&item_pks=112945&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 701,
+      "sha256": "e9dbd8ef29bc3b2140b0def6c3c6d365c4793b15c6aafbc79c34975a0ed0ee4f"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "112945",
+    "provider": "bitesofbostonfoodtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bitesofbostonfoodtours/items/112945/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

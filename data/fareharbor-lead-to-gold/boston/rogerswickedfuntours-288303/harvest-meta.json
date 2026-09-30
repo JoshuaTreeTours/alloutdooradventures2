@@ -1,0 +1,42 @@
+{
+  "company": "rogerswickedfuntours",
+  "itemId": "288303",
+  "fetchedAt": "2026-09-30T02:33:49.595433+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/rogerswickedfuntours/288303/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/rogerswickedfuntours/288303/structured-description/",
+      "status": 404,
+      "bytes": 588099,
+      "sha256": "bb43755b8980cedfad22bab1a904ab44b2b7e3a6b8105a3becf34717b536a2f6"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/rogerswickedfuntours/items/288303/",
+      "status": 404,
+      "bytes": 588073,
+      "sha256": "d653cc989c94be738a3efdc76b025ee0d50bf5fc0610475be459adefe8d657f8"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/rogerswickedfuntours/price-preview/per-item/v2/?asn=fhdn&item_pks=288303&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 144,
+      "sha256": "6c550f2504b767b09d81cab1a67e0ba4d1db1ef2c8a5f0ced16e7ff810b6913b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "288303",
+    "provider": "rogerswickedfuntours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rogerswickedfuntours/items/288303/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

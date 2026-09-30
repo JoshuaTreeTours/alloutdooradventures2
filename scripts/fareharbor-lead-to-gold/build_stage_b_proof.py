@@ -438,6 +438,7 @@ def validate(product: dict, source_text: str) -> dict:
     if product["exceptionStatus"] in {
         "SOURCE_NOT_FOUND",
         "BOOKING_PAGE_NOT_FOUND",
+        "INSUFFICIENT_SOURCE_CONTENT",
     }:
         if schema.strip() != " ".join(product["paragraphs"]).strip():
             errors.append("missing-source schema description must match the short page copy")
@@ -470,12 +471,16 @@ def validate(product: dict, source_text: str) -> dict:
             errors.append(f"gallery image is not present in the stored harvest: {image}")
     words = product["wordCount"]
     status = product["exceptionStatus"]
-    if status in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
+    if status in {
+        "SOURCE_NOT_FOUND",
+        "BOOKING_PAGE_NOT_FOUND",
+        "INSUFFICIENT_SOURCE_CONTENT",
+    }:
         if words >= 150:
             errors.append(f"{status} copy was padded")
         if product["offer"] is not None or product["visiblePriceLabel"] is not None:
             errors.append(f"{status} product still has a price")
-        if product["durationLabel"] is not None:
+        if status != "INSUFFICIENT_SOURCE_CONTENT" and product["durationLabel"] is not None:
             errors.append(f"{status} product still has a duration")
     elif words < 150:
         errors.append(

@@ -1,0 +1,41 @@
+{
+  "company": "massbaylines",
+  "itemId": "692147",
+  "fetchedAt": "2026-09-30T02:33:44.194906+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/massbaylines/692147/content/",
+      "status": 200,
+      "bytes": 1991,
+      "sha256": "69ae275bc0a0ab1731f6814abb314b4f1c368b408aaf7bc8e8c7bf2405b35800"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/massbaylines/692147/structured-description/",
+      "status": 200,
+      "bytes": 1432,
+      "sha256": "10ab9f3eefd4708b87809fed09739c92ee73a1411a346466c40cb6ac5d6585a0"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/massbaylines/items/692147/",
+      "status": 200,
+      "bytes": 10045,
+      "sha256": "38d1e0c986e62d6223408ac153a91c07464bf4781258ab791284e9457853617a"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/massbaylines/price-preview/per-item/v2/?asn=fhdn&item_pks=692147&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "692147",
+    "provider": "massbaylines",
+    "bookingUrl": "https://fareharbor.com/embeds/book/massbaylines/items/692147/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

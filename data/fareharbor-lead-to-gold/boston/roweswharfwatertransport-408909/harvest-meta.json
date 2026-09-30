@@ -1,0 +1,41 @@
+{
+  "company": "roweswharfwatertransport",
+  "itemId": "408909",
+  "fetchedAt": "2026-09-30T02:33:49.827322+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/roweswharfwatertransport/408909/content/",
+      "status": 200,
+      "bytes": 6699,
+      "sha256": "d2e22d71f5ea8f8f5c6406cd4d3a0a7afd6c8153d5a55e3e240032f19c46d997"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/roweswharfwatertransport/408909/structured-description/",
+      "status": 200,
+      "bytes": 6229,
+      "sha256": "b2ba8481397fc21455ff7cdb25eedcea1592e9ddfa22d3a7d464a89fc3642c86"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/roweswharfwatertransport/items/408909/",
+      "status": 200,
+      "bytes": 10379,
+      "sha256": "b6a356e0da85c70899c561fcf0c9fdcc4d228871ef86b3ecf05afcb0e6a82ea1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/roweswharfwatertransport/price-preview/per-item/v2/?asn=fhdn&item_pks=408909&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1670,
+      "sha256": "a06d1092df68cc8af7e5c7598ccff5751e879d8d03c02de32cc187ebbe9fdd56"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "408909",
+    "provider": "roweswharfwatertransport",
+    "bookingUrl": "https://fareharbor.com/embeds/book/roweswharfwatertransport/items/408909/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

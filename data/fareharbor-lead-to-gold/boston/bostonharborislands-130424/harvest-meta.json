@@ -1,0 +1,41 @@
+{
+  "company": "bostonharborislands",
+  "itemId": "130424",
+  "fetchedAt": "2026-09-30T02:33:18.637125+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonharborislands/130424/content/",
+      "status": 200,
+      "bytes": 984,
+      "sha256": "4001e12f6f8a3d9076ffefbc29a2152ac98fb6ade2447111579d8e22cb47bf01"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonharborislands/130424/structured-description/",
+      "status": 200,
+      "bytes": 882,
+      "sha256": "6826b5bc6af92e557fb25a695dd9a60a11bad100b5e63068ff9552311ea6afee"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonharborislands/items/130424/",
+      "status": 200,
+      "bytes": 6465,
+      "sha256": "a01a12bd063d475e0d48e3f1a613a05a06a45a25f948d5377fb6b52b257b4af3"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonharborislands/price-preview/per-item/v2/?asn=fhdn&item_pks=130424&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "130424",
+    "provider": "bostonharborislands",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonharborislands/items/130424/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

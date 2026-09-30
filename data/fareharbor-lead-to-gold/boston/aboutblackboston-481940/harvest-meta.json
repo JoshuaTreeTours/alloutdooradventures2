@@ -1,0 +1,42 @@
+{
+  "company": "aboutblackboston",
+  "itemId": "481940",
+  "fetchedAt": "2026-09-30T02:32:10.441356+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/aboutblackboston/481940/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/aboutblackboston/481940/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "149b9abf898d0454420ade889e4d40857c13760322216a4a3eee7edae1a69058"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/aboutblackboston/items/481940/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "96992c90ca4f44d496442655d0b6eb169ab05f55cc62168d8f001874c2a668e1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/aboutblackboston/price-preview/per-item/v2/?asn=fhdn&item_pks=481940&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "ba9cd9d330e10f1d96d3c6229bd223136fcb850f58d834ec05e03787fb2251d2"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "481940",
+    "provider": "aboutblackboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/aboutblackboston/items/481940/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

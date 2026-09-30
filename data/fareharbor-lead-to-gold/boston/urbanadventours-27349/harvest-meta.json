@@ -1,0 +1,41 @@
+{
+  "company": "urbanadventours",
+  "itemId": "27349",
+  "fetchedAt": "2026-09-30T02:33:56.785478+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/urbanadventours/27349/content/",
+      "status": 200,
+      "bytes": 11264,
+      "sha256": "793efff4b99b883a70f264638058134fa7f76a609983f0c2cfe57de1944eebb4"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/urbanadventours/27349/structured-description/",
+      "status": 200,
+      "bytes": 3036,
+      "sha256": "067f065e17fac73e293cafbf43af006a782107504083348a271d0e0af4fb434c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/urbanadventours/items/27349/",
+      "status": 200,
+      "bytes": 21672,
+      "sha256": "36ea1b30df45c7e8b9fb0750303e34c0d1605558417f0ce36741baea300badee"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/urbanadventours/price-preview/per-item/v2/?asn=fhdn&item_pks=27349&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 936,
+      "sha256": "06ba0145466d23b87680e935979d30361e8ab4264a01a9d662cec917fa3a5903"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "27349",
+    "provider": "urbanadventours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/urbanadventours/items/27349/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

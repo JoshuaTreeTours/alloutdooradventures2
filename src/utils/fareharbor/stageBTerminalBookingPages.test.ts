@@ -38,9 +38,12 @@ describe("Stage B FareHarbor terminal booking-page rule", () => {
     );
   });
 
-  it("limits terminal removals to the two affected proof products", () => {
+  it("includes Stage B and Boston terminal booking pages", () => {
     expect(isStageBBookingPageNotFound("595701")).toBe(true);
     expect(isStageBBookingPageNotFound("engine2-612500")).toBe(true);
+    expect(isStageBBookingPageNotFound("677691")).toBe(true);
+    expect(isStageBBookingPageNotFound("361872")).toBe(true);
     expect(isStageBBookingPageNotFound("145208")).toBe(false);
+    expect(isStageBBookingPageNotFound("27344")).toBe(false);
   });
 });

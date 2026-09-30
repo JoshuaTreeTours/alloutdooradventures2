@@ -1,0 +1,41 @@
+{
+  "company": "onlocationtoursboston",
+  "itemId": "26974",
+  "fetchedAt": "2026-09-30T02:33:46.109189+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/onlocationtoursboston/26974/content/",
+      "status": 200,
+      "bytes": 16562,
+      "sha256": "6f1815133313bf04b19a79e65413fec4f951f5061ec400af3d3e067294ee42db"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/onlocationtoursboston/26974/structured-description/",
+      "status": 200,
+      "bytes": 9676,
+      "sha256": "8b60fdf1988fb383a3584678bb155bee8811336d702c3e568cbed342a1751ed6"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/onlocationtoursboston/items/26974/",
+      "status": 200,
+      "bytes": 25820,
+      "sha256": "9d2671e66afd4c4e3662980bc1ec3c71d01c8a5435bb9b9afe8eb7e42643f04d"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/onlocationtoursboston/price-preview/per-item/v2/?asn=fhdn&item_pks=26974&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1016,
+      "sha256": "b9871176c12f9ff946acb4253930af9e3f37b06c99c540c9da159ac4491113ee"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26974",
+    "provider": "onlocationtoursboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/onlocationtoursboston/items/26974/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

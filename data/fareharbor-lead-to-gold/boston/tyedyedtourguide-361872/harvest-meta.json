@@ -1,0 +1,42 @@
+{
+  "company": "tyedyedtourguide",
+  "itemId": "361872",
+  "fetchedAt": "2026-09-30T02:33:54.498317+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/tyedyedtourguide/361872/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/tyedyedtourguide/361872/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "ea837f8d8d47bf1c4fb1cfefd9a574612081b51637ec2b3e1f268e3fd2513a62"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/tyedyedtourguide/items/361872/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "d334a444650e655975e3e1ed36fe922f4fce02fb0153cccfb40b6798ded20153"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/tyedyedtourguide/price-preview/per-item/v2/?asn=fhdn&item_pks=361872&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "08d1ca874d2c8644c244e1569dd883df4dba059e625ea30f6ee8eb02e7cb8013"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "361872",
+    "provider": "tyedyedtourguide",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tyedyedtourguide/items/361872/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

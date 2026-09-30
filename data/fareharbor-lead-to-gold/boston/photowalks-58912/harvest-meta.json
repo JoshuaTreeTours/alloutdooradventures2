@@ -1,0 +1,41 @@
+{
+  "company": "photowalks",
+  "itemId": "58912",
+  "fetchedAt": "2026-09-30T02:33:48.057908+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/photowalks/58912/content/",
+      "status": 200,
+      "bytes": 2279,
+      "sha256": "e8a6ce1f01fd94a89e5c4eee1724ca8545403b5cf5783b127f59e4166807e5e7"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/photowalks/58912/structured-description/",
+      "status": 200,
+      "bytes": 1271,
+      "sha256": "9fb167015d8d72e7974d15d5fb46974629575e5ecc08e6ce3a1e5a478f84ed4c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/photowalks/items/58912/",
+      "status": 200,
+      "bytes": 7936,
+      "sha256": "26cb0cfb317b5f44786e9d4faee833cfe32960e201334692dee1a14f491ae7f6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/photowalks/price-preview/per-item/v2/?asn=fhdn&item_pks=58912&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "58912",
+    "provider": "photowalks",
+    "bookingUrl": "https://fareharbor.com/embeds/book/photowalks/items/58912/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}
