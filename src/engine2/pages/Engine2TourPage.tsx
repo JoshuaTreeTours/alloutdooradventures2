@@ -24,6 +24,7 @@ import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
 import {
   applyFareHarborProofSchema,
   getFareHarborProofFromTour,
+  resolveFareHarborProofCtaLabel,
 } from "../../data/fareharborLeadToGoldProof";
 
 type Engine2TourPageProps = {
@@ -346,7 +347,7 @@ export default function Engine2TourPage({
             ) : bookingPath ? (
               <Link href={bookingPath}>
                 <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                  BOOK
+                  {resolveFareHarborProofCtaLabel(proof, "BOOK")}
                 </a>
               </Link>
             ) : null}

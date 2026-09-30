@@ -7,74 +7,74 @@ type FareHarborProofSnapshotProps = {
 export default function FareHarborProofSnapshot({
   proof,
 }: FareHarborProofSnapshotProps) {
+  const hasPrice = Boolean(proof.visiblePriceLabel);
+  const hasDuration = Boolean(proof.durationLabel);
+  const hasMeetingPoint = Boolean(proof.meetingLocation);
+  const hasAuthoritativeRating = proof.aggregateRating != null;
+  const hasFareDetail =
+    proof.priceRows.length > 0 || proof.pricingNotes.length > 0;
+
   if (
-    !proof.durationLabel &&
-    !proof.meetingLocation &&
-    proof.priceRows.length === 0 &&
-    proof.pricingNotes.length === 0
+    !hasPrice &&
+    !hasDuration &&
+    !hasMeetingPoint &&
+    !hasAuthoritativeRating &&
+    !hasFareDetail
   ) {
     return null;
   }
 
   return (
-    <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-      <h3 className="text-base font-semibold text-[#1f2a1f]">Tour snapshot</h3>
-      {proof.durationLabel ? (
-        <div className="mt-4 flex items-center justify-between text-sm text-[#405040]">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-            Duration
-          </span>
-          <span className="font-semibold text-[#1f2a1f]">
-            {proof.durationLabel}
-          </span>
-        </div>
-      ) : null}
-      {proof.meetingLocation ? (
-        <div className="mt-4 text-sm text-[#405040]">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-            Meeting location
+    <div
+      className="rounded-2xl border border-green-200 bg-green-50 p-5"
+      data-testid="fareharbor-proof-facts"
+    >
+      <div className="space-y-4 text-sm text-green-950">
+        {hasPrice ? (
+          <p>
+            <strong>Price:</strong> {proof.visiblePriceLabel}
           </p>
-          <p className="mt-2 font-semibold text-[#1f2a1f]">
-            {proof.meetingLocation}
+        ) : null}
+        {hasDuration ? (
+          <p>
+            <strong>Duration:</strong> {proof.durationLabel}
           </p>
-        </div>
-      ) : null}
-      {proof.priceRows.length > 0 || proof.pricingNotes.length > 0 ? (
-        <div className="mt-4">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-            Pricing
+        ) : null}
+        {hasMeetingPoint ? (
+          <p>
+            <strong>Meeting point:</strong> {proof.meetingLocation}
           </p>
-          {proof.priceRows.length > 0 ? (
-            <ul className="mt-2 space-y-2 text-sm text-[#405040]">
-              {proof.priceRows.map(row => (
-                <li
-                  key={`${row.label}-${row.amountLabel}`}
-                  className="flex items-start justify-between gap-3"
-                >
-                  <span>
-                    <span className="font-semibold text-[#1f2a1f]">
-                      {row.label}
+        ) : null}
+        {hasFareDetail ? (
+          <div className="space-y-2">
+            {proof.priceRows.length > 0 ? (
+              <ul className="space-y-2">
+                {proof.priceRows.map(row => (
+                  <li
+                    key={`${row.label}-${row.amountLabel}`}
+                    className="flex items-start justify-between gap-3"
+                  >
+                    <span>
+                      <span className="font-semibold">{row.label}</span>
+                      {row.note ? (
+                        <span className="block text-xs text-green-900/80">
+                          {row.note}
+                        </span>
+                      ) : null}
                     </span>
-                    {row.note ? (
-                      <span className="block text-xs text-[#405040]">
-                        {row.note}
-                      </span>
-                    ) : null}
-                  </span>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    {row.amountLabel}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-          {proof.pricingNotes.map(note => (
-            <p key={note} className="mt-2 text-sm text-[#405040]">
-              {note}
-            </p>
-          ))}
-        </div>
-      ) : null}
+                    <span className="font-semibold">{row.amountLabel}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {proof.pricingNotes.map(note => (
+              <p key={note} className="text-green-900/80">
+                {note}
+              </p>
+            ))}
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -23,6 +23,7 @@ import {
   applyFareHarborProofSchema,
   applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
+  FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
   getFareHarborProofByItemId,
   getFareHarborProofFromTour,
   getFareHarborProofProducts,
@@ -210,6 +211,9 @@ describe("FareHarbor Stage B proof set", () => {
       );
       expect(html).not.toContain(item.title);
       expect(html).not.toContain("Tour snapshot");
+      expect(html).not.toContain("Meeting point");
+      expect(html).not.toContain(FAREHARBOR_PROOF_PRIMARY_CTA_LABEL);
+      expect(html).not.toContain("fareharbor-proof-facts");
       expect(captured.nodes).toBeNull();
     }
 
@@ -355,11 +359,19 @@ describe("FareHarbor Stage B proof set", () => {
         />
       );
       expect(html).toContain(item.fact);
+      expect(html).toContain(FAREHARBOR_PROOF_PRIMARY_CTA_LABEL);
+      expect(html).not.toContain(">BOOK<");
+      expect(html).not.toContain("Book This Tour");
+      expect(html).not.toContain("Tour snapshot");
+      expect(html).not.toContain("Meeting location");
       const experienceStart = Math.max(
         html.indexOf("What you’ll experience"),
         html.indexOf("What you'll experience")
       );
-      const experienceEnd = html.indexOf("Tour snapshot", experienceStart);
+      const experienceEnd = html.indexOf(
+        'data-testid="fareharbor-proof-facts"',
+        experienceStart
+      );
       const experience =
         experienceEnd > experienceStart
           ? html.slice(experienceStart, experienceEnd)
@@ -387,8 +399,10 @@ describe("FareHarbor Stage B proof set", () => {
       expect(beforeRelated).not.toContain("HTTP");
       if (item.price) {
         expect(beforeRelated).toContain(item.price);
+        expect(beforeRelated).toContain(`Price:</strong> ${item.price}`);
       } else {
         expect(beforeRelated).not.toContain("From $");
+        expect(beforeRelated).not.toContain("<strong>Price:</strong>");
       }
       if (item.duration) {
         const durationHits = beforeRelated.split(item.duration).length - 1;
@@ -398,11 +412,14 @@ describe("FareHarbor Stage B proof set", () => {
       }
       const meetingLocation = MEETING_LOCATIONS[itemId];
       if (meetingLocation) {
-        expect(beforeRelated).toContain("Meeting location");
+        expect(beforeRelated).toContain("Meeting point");
         expect(beforeRelated).toContain(meetingLocation);
       } else {
-        expect(beforeRelated).not.toContain("Meeting location");
+        expect(beforeRelated).not.toContain("Meeting point");
       }
+      expect(beforeRelated).not.toContain("quality_score");
+      expect(beforeRelated).not.toContain("availability_count");
+      expect(beforeRelated).not.toMatch(/AggregateRating/i);
       const product = productNode(captured.nodes);
       const trip = tripNode(captured.nodes);
       expect(product?.aggregateRating).toBeUndefined();
@@ -447,9 +464,14 @@ describe("FareHarbor Stage B proof set", () => {
       <Engine2TourPage tour={jeep!} isFHPilotEnabled={false} />
     );
     expect(jeepHtml).toContain("From $183.75");
+    expect(jeepHtml).toContain("Price:</strong> From $183.75");
     expect(jeepHtml).toContain("Metate Ranch");
-    expect(jeepHtml).toContain("Meeting location");
+    expect(jeepHtml).toContain("Meeting point");
     expect(jeepHtml).toContain(MEETING_LOCATIONS["34849"]);
+    expect(jeepHtml).toContain(FAREHARBOR_PROOF_PRIMARY_CTA_LABEL);
+    expect(jeepHtml).not.toContain(">BOOK<");
+    expect(jeepHtml).not.toContain("Tour snapshot");
+    expect(jeepHtml).not.toContain("Meeting location");
     expect(jeepHtml).not.toContain("more than a quick photo stop");
     expect(jeepHtml).not.toContain("$129");
     const jeepImageSources = visibleImageSources(
@@ -476,9 +498,14 @@ describe("FareHarbor Stage B proof set", () => {
       <Engine2TourPage tour={bufadora!} isFHPilotEnabled={false} />
     );
     expect(bufadoraHtml).toContain("From $40");
+    expect(bufadoraHtml).toContain("Price:</strong> From $40");
     expect(bufadoraHtml).toContain("Punta Banda");
-    expect(bufadoraHtml).toContain("Meeting location");
+    expect(bufadoraHtml).toContain("Meeting point");
     expect(bufadoraHtml).toContain(MEETING_LOCATIONS["193220"]);
+    expect(bufadoraHtml).toContain(FAREHARBOR_PROOF_PRIMARY_CTA_LABEL);
+    expect(bufadoraHtml).not.toContain(">BOOK<");
+    expect(bufadoraHtml).not.toContain("Tour snapshot");
+    expect(bufadoraHtml).not.toContain("Meeting location");
     expect(bufadoraHtml).not.toContain("$129");
     const bufadoraImageSources = visibleImageSources(
       bufadoraHtml.slice(0, bufadoraHtml.indexOf("More tours"))
@@ -514,6 +541,9 @@ describe("FareHarbor Stage B proof set", () => {
       <Engine2TourPage tour={other!} isFHPilotEnabled={false} />
     );
     expect(html).toContain("From $129 per person");
+    expect(html).toContain("BOOK");
+    expect(html).not.toContain(FAREHARBOR_PROOF_PRIMARY_CTA_LABEL);
+    expect(html).not.toContain("fareharbor-proof-facts");
     const seo = buildEngine2Seo(other!);
     const nodes = buildSchemaGraph(other!, seo, null, true);
     const offer = productNode(nodes)?.offers as { price?: string };

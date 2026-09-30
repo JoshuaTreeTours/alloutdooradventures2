@@ -28,6 +28,7 @@ import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import {
   applyFareHarborProofSchema,
   getFareHarborProofFromTour,
+  resolveFareHarborProofCtaLabel,
 } from "../../../../data/fareharborLeadToGoldProof";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
@@ -1061,7 +1062,10 @@ export default function CityTourDetailRoute({
                   rel="nofollow"
                   className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
                 >
-                  {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
+                  {resolveFareHarborProofCtaLabel(
+                    proof,
+                    hardenedTemplate?.primaryCtaLabel ?? "BOOK"
+                  )}
                 </a>
               </Link>
             </div>
@@ -1225,7 +1229,7 @@ export default function CityTourDetailRoute({
                 rel="nofollow"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                {resolveFareHarborProofCtaLabel(proof, "Book This Tour")}
               </a>
             </Link>
           </div>

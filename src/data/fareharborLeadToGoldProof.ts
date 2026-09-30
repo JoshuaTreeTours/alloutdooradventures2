@@ -37,6 +37,13 @@ export const getFareHarborProofFromTour = (
   return getFareHarborProofByItemId(fromUrl ?? fromSlug ?? fromId);
 };
 
+export const FAREHARBOR_PROOF_PRIMARY_CTA_LABEL = "Check availability";
+
+export const resolveFareHarborProofCtaLabel = (
+  proof: FareHarborProofProduct | null | undefined,
+  fallback: string
+): string => (proof ? FAREHARBOR_PROOF_PRIMARY_CTA_LABEL : fallback);
+
 const DESCRIPTION_TYPES = new Set(["Product", "TouristTrip", "WebPage"]);
 const OFFER_HOST_TYPES = new Set(["Product", "TouristTrip"]);
 
