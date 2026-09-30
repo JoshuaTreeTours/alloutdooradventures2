@@ -36,7 +36,10 @@ import {
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
-import { getFareHarborProofFromTour } from "./fareharborLeadToGoldProof";
+import {
+  applyFareHarborProofDestination,
+  getFareHarborProofFromTour,
+} from "./fareharborLeadToGoldProof";
 import {
   canonicalizeDestinationPath,
   getCanonicalDestinationCitySlug,
@@ -234,14 +237,16 @@ const remapMisclassifiedAfricaByProductId = (
 };
 
 const applyPublicTourTransforms = (tour: Tour): Tour =>
-  remapMisclassifiedAfricaTours(
-    applyTourPricing({
-      ...tour,
-      destination: {
-        ...tour.destination,
-        country: tour.destination.country || "United States",
-      },
-    })
+  applyFareHarborProofDestination(
+    remapMisclassifiedAfricaTours(
+      applyTourPricing({
+        ...tour,
+        destination: {
+          ...tour.destination,
+          country: tour.destination.country || "United States",
+        },
+      })
+    )
   );
 
 const isHardDeletedOrContaminatedTour = (tour: Tour) =>

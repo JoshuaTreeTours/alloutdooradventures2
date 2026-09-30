@@ -31,6 +31,15 @@ from build_stage_b_proof import (
     word_count,
 )
 from inventory_boston import inventory
+from migration_integrity import (
+    assess_geography,
+    collect_place_signals,
+    editorial_errors,
+    is_natural_place_name,
+    normalize_activity_duration,
+    slugify,
+    strip_markdown,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / "boston"
@@ -38,6 +47,7 @@ HARVEST_REPORT = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-
 REPORT_JSON = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-proof.json"
 REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-proof.md"
 GENERATED_TS = ROOT / "src" / "data" / "fareharborBostonLegacy.generated.ts"
+GEOGRAPHY_TS = ROOT / "src" / "utils" / "fareharbor" / "geographyReview.generated.ts"
 TERMINAL_TS = ROOT / "src" / "utils" / "fareharbor" / "stageBTerminalBookingPages.ts"
 
 LANG = {
@@ -221,12 +231,13 @@ def proper_names(text: str) -> list[str]:
         "About",
     }
     names = []
-    for match in PROPER_RE.findall(text or ""):
+    cleaned = strip_markdown(text or "")
+    for match in PROPER_RE.findall(cleaned):
         if MARKETING.search(match) or SECOND_PERSON.search(match):
             continue
         if match in blocked or len(match) < 6:
             continue
-        if re.search(r"\b(Street|Avenue|Road|Blvd|Drive)\b", match):
+        if not is_natural_place_name(match, cleaned):
             continue
         names.append(match)
     return unique(names)[:8]
@@ -295,7 +306,9 @@ def notice_hours(text: str | None) -> str | None:
     return None
 
 
-def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str], list[str], list[str]]:
+def compose_copy(
+    catalog: dict, facts: dict, source_text: str, geography: dict
+) -> tuple[list[str], list[str], list[str]]:
     title = clean_text(catalog["title"])
     operator = clean_text(catalog["operator"])
     activity = activity_phrase(title)
@@ -304,28 +317,53 @@ def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str
     meeting = facts.get("meetingAddress")
     included = short_tokens(facts.get("included") or [], 6)
     excluded = short_tokens(facts.get("excluded") or [], 4)
-    itinerary = short_tokens(facts.get("itinerary") or [], 4)
-    source_highlights = short_tokens(facts.get("highlights") or [], 4)
+    itinerary = [
+        token
+        for token in short_tokens(facts.get("itinerary") or [], 4)
+        if is_natural_place_name(token, source_text)
+    ]
+    source_highlights = [
+        token
+        for token in short_tokens(facts.get("highlights") or [], 4)
+        if is_natural_place_name(token, source_text)
+    ]
     bring = short_tokens(facts.get("bring") or [], 5)
-    names = [name for name in (facts.get("properNames") or []) if len(name.split()) <= 4][:5]
+    names = [
+        name
+        for name in (facts.get("properNames") or [])
+        if len(name.split()) <= 4 and is_natural_place_name(name, source_text)
+    ][:5]
     langs = facts.get("languages") or []
     min_age = facts.get("minAge")
     max_age = facts.get("maxAge")
     access = facts.get("accessibility")
     cancel_hours = notice_hours(facts.get("cancellation"))
-    rain = bool(re.search(r"rain or shine", " ".join(facts.get("restrictions") or []) + " " + (facts.get("cancellation") or ""), re.I))
+    rain = bool(
+        re.search(
+            r"rain or shine",
+            " ".join(facts.get("restrictions") or []) + " " + (facts.get("cancellation") or ""),
+            re.I,
+        )
+    )
+    place = geography.get("place") or {}
+    city = place.get("city") or (
+        geography.get("city") if geography.get("disposition") == "moved" else None
+    )
+    state = place.get("state") or (
+        geography.get("state") if geography.get("disposition") == "moved" else None
+    )
 
     drafts: list[str] = []
-    if duration:
-        drafts.append(
-            f"This {activity} lasts {duration} and takes place in Boston, Massachusetts."
-        )
+    if duration and city and state:
+        drafts.append(f"This {activity} lasts {duration} and takes place in {city}, {state}.")
+    elif city and state:
+        drafts.append(f"This {activity} takes place in {city}, {state}.")
+    elif duration:
+        drafts.append(f"This {activity} lasts {duration}.")
     else:
-        drafts.append(f"This {activity} takes place in Boston, Massachusetts.")
-    drafts.append(f"{operator} is the listed operator for this Boston product.")
-    drafts.append(
-        f"The format is a {activity} rather than a multi-day package, and the description stays limited to published logistics."
-    )
+        drafts.append(f"This {activity} is listed by {operator}." if operator else f"This {activity} is listed.")
+    if operator:
+        drafts.append(f"{operator} is the listed operator.")
     if group:
         drafts.append(f"Published group size for this outing is {group.rstrip('.')}.")
     if langs:
@@ -337,22 +375,10 @@ def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str
         drafts.append(
             f"Named places and short route labels for this outing include {join_and(site_bits[:6])}."
         )
-    else:
-        drafts.append(
-            f"The published focus stays on a Boston {activity} rather than a multi-city itinerary."
-        )
     if included:
         drafts.append(f"Short listed inclusions include {join_and(included)}.")
-    else:
-        drafts.append(
-            "Long promotional inclusion lists are omitted here in favor of the short logistics above."
-        )
     if excluded:
         drafts.append(f"Short listed exclusions include {join_and(excluded)}.")
-    else:
-        drafts.append(
-            "Food, drinks, and gratuities are treated as extra unless a short exclusion list says otherwise."
-        )
     age_bits = []
     if min_age not in (None, ""):
         age_bits.append(f"minimum age {min_age}")
@@ -362,36 +388,14 @@ def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str
         drafts.append(f"Published age limits are {join_and(age_bits)}.")
     if bring:
         drafts.append(f"Short listed items to bring include {join_and(bring)}.")
-    else:
-        drafts.append(
-            "Closed-toe shoes and weather-ready clothing are the usual practical needs for an outdoor Boston outing when a longer packing list is not stored."
-        )
     if rain:
         drafts.append("Published notes say the outing is held in ordinary rain as well as clear weather.")
     if access and len(re.findall(r"[A-Za-z0-9']+", access)) <= 16:
-        drafts.append(f"Accessibility note: {access.rstrip('.')}." )
+        drafts.append(f"Accessibility note: {access.rstrip('.')}.")
     if cancel_hours:
         drafts.append(
             f"The published cancellation note mentions a {cancel_hours}-hour notice window."
         )
-    drafts.append(
-        "Any published fare appears only in the facts panel, and the page stays unpriced when no stable fare exists."
-    )
-    drafts.append(
-        "The meeting and check-in location, when verified, stays in the facts panel so this body does not repeat a street address."
-    )
-    drafts.append(
-        "Guest ratings are omitted on this page because no product-level review figures were published with the listing."
-    )
-    drafts.append(
-        "The description above is limited to logistics, named places, and packing notes rather than promotional claims."
-    )
-    drafts.append(
-        "Departure times and remaining seats are checked on the booking calendar rather than restated as a fixed daily schedule here."
-    )
-    drafts.append(
-        "Boston weather, traffic, and transit connections can change the arrival buffer, so the published check-in window belongs with the meeting details in the facts panel."
-    )
 
     kept = []
     for draft in drafts:
@@ -399,7 +403,6 @@ def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str
         if cleaned:
             kept.append(cleaned)
 
-    # Pack into 3 paragraphs when possible.
     if len(kept) <= 3:
         paragraphs = kept
     else:
@@ -412,21 +415,26 @@ def compose_copy(catalog: dict, facts: dict, source_text: str) -> tuple[list[str
         paragraphs = [part for part in paragraphs if part.strip()]
 
     highlight_rows = []
-    if duration:
-        highlight_rows.append(f"{duration} {activity} in Boston")
+    if duration and city:
+        highlight_rows.append(f"{duration} {activity} in {city}")
+    elif duration:
+        highlight_rows.append(f"{duration} {activity}")
     if names:
         highlight_rows.append(f"Named places include {join_and(names[:2])}")
     if included:
         highlight_rows.append(f"Short inclusions include {included[0]}")
-    if not highlight_rows:
-        highlight_rows.append(f"Boston {activity} with published logistics")
+    if not highlight_rows and city:
+        highlight_rows.append(f"{city} {activity}")
 
     removed = [
         "Catalog quality_score and availability_count were not treated as ratings.",
         "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+        "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
     ]
     if meeting:
-        removed.append("Verified meeting and check-in details were moved into the facts panel.")
+        removed.append("Verified meeting and check-in details stay in the facts panel.")
+    if geography.get("conflictsWithExpected"):
+        removed.append(geography.get("reason") or "Source geography does not match the legacy city bucket.")
     return paragraphs, highlight_rows[:3], removed
 
 
@@ -446,11 +454,11 @@ def normalize_duration(raw: str | None) -> str | None:
     return None
 
 
-def extract_facts(usable: list[dict], source_text: str) -> dict:
-    duration = normalize_duration(clean_text(field(usable, "duration")) or None)
-    if not duration:
-        description = clean_text(field(usable, "description") or "")
-        duration = normalize_duration(description)
+def extract_facts(usable: list[dict], source_text: str, item: dict | None = None) -> dict:
+    item = item or {}
+    structured_duration = clean_text(field(usable, "duration")) or None
+    description = clean_text(field(usable, "description") or "")
+    duration = normalize_activity_duration(structured_duration, description)
     meeting = field(usable, "meeting_point")
     meeting_address = None
     if isinstance(meeting, dict):
@@ -459,6 +467,7 @@ def extract_facts(usable: list[dict], source_text: str) -> dict:
         meeting_address = format_meeting(meeting)
     if not meeting_address:
         meeting_address = format_meeting(field(usable, "location_address"))
+    start = item.get("start_location") if isinstance(item.get("start_location"), dict) else {}
     included = []
     excluded = []
     itinerary = []
@@ -477,7 +486,6 @@ def extract_facts(usable: list[dict], source_text: str) -> dict:
         bring.extend(list_values(payload.get("what_to_bring_items") or payload.get("what_to_bring")))
         glean_source.append(clean_text(payload.get("description") or ""))
         glean_source.append(clean_text(payload.get("what_is_included") or ""))
-    description = clean_text(field(usable, "description") or "")
     cancellation = clean_text(field(usable, "cancellation_summary")) or None
     if cancellation and (MARKETING.search(cancellation) or SECOND_PERSON.search(cancellation)):
         cancellation = None
@@ -487,6 +495,12 @@ def extract_facts(usable: list[dict], source_text: str) -> dict:
     return {
         "duration": duration,
         "meetingAddress": meeting_address,
+        "itemLocation": format_meeting(item.get("location")) if item.get("location") else None,
+        "headline": clean_text(item.get("headline") or field(usable, "headline") or "") or None,
+        "startCity": start.get("city"),
+        "startProvince": start.get("province"),
+        "startLat": start.get("latitude"),
+        "startLng": start.get("longitude"),
         "minAge": field(usable, "min_age"),
         "maxAge": field(usable, "max_age"),
         "groupSize": clean_text(field(usable, "group_size")).strip(" .") or None,
@@ -503,44 +517,83 @@ def extract_facts(usable: list[dict], source_text: str) -> dict:
         "gleanedFacts": unique(glean_facts(" ".join(glean_source)))[:6],
         "properNames": proper_names(description),
         "measures": measures(description + " " + " ".join(included)),
+        "description": description,
     }
 
 
-def short_missing_copy(title: str) -> list[str]:
-    return [
-        f"No description, meeting place, or price was available for {title}. Those details are not added here."
-    ]
+def short_missing_copy(title: str, operator: str | None = None) -> list[str]:
+    if operator:
+        return [f"{title} is listed by {operator}."]
+    return [f"{title} is listed without a stored outing description."]
 
 
-def schema_from_paragraphs(paragraphs: list[str], facts: dict, title: str, exception: str) -> str:
+def schema_from_paragraphs(paragraphs: list[str], facts: dict, title: str, exception: str, geography: dict) -> str:
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"}:
         return " ".join(paragraphs).strip()
     duration = facts.get("duration")
     activity = activity_phrase(title)
-    names = [name for name in (facts.get("properNames") or []) if len(name.split()) <= 4][:3]
-    bits = [f"This {activity} takes place in Boston."]
+    names = [
+        name
+        for name in (facts.get("properNames") or [])
+        if len(name.split()) <= 4
+    ][:3]
+    place = geography.get("place") or {}
+    city = place.get("city") or (
+        geography.get("city") if geography.get("disposition") == "moved" else None
+    )
+    bits = []
+    if city:
+        bits.append(f"This {activity} takes place in {city}.")
+    else:
+        bits.append(f"This {activity} is a published outing.")
     if duration:
         bits.append(f"Published length is {duration}.")
     if names:
         bits.append(f"Named places include {join_and(names)}.")
-    bits.append(
-        "The meeting point, when verified, stays on the facts panel, and a fare is shown only when a stable amount exists."
-    )
     text = " ".join(bits)
     text = strip_addresses(text, facts.get("meetingAddress"))
     text = re.sub(r"\$\s?\d[\d,]*\.?\d*", "", text)
     words = word_count([text])
     if words > 80:
         text = " ".join(text.split()[:75]).rstrip(".,") + "."
-    elif words < 20:
-        text = (
-            f"{text} Logistics, packing notes, and named stops stay in the page description; "
-            "promotional claims are omitted."
-        )
     return clean_text(text)
 
 
-def build_product(catalog: dict, booking: dict) -> dict:
+def empty_facts() -> dict:
+    return {
+        "duration": None,
+        "meetingAddress": None,
+        "itemLocation": None,
+        "headline": None,
+        "startCity": None,
+        "startProvince": None,
+        "startLat": None,
+        "startLng": None,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": None,
+        "accessibility": None,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": None,
+        "maxAge": None,
+        "groupSize": None,
+        "description": "",
+    }
+
+
+def public_path_for(geography: dict, slug: str) -> str:
+    return f"/destinations/{geography['stateSlug']}/{geography['citySlug']}/tours/{slug}"
+
+
+def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> dict:
     folder = HARVEST_ROOT / f"{catalog['company']}-{catalog['itemId']}"
     meta = load_json(folder / "harvest-meta.json")
     content_raw = load_json(folder / "content.json")
@@ -549,6 +602,9 @@ def build_product(catalog: dict, booking: dict) -> dict:
     preview = load_json(folder / "price-preview.json")
     content = unwrap_content(content_raw)
     structured = unwrap_content(structured_raw)
+    item = item_raw.get("item") if isinstance(item_raw, dict) else None
+    if not isinstance(item, dict):
+        item = item_raw if isinstance(item_raw, dict) else {}
     if not isinstance(content, dict) or "error" in content:
         content = {}
     if not isinstance(structured, dict) or "error" in structured:
@@ -567,54 +623,52 @@ def build_product(catalog: dict, booking: dict) -> dict:
     else:
         exception = "OK"
 
-    facts = extract_facts(usable, source_text) if usable else {
-        "duration": None,
-        "meetingAddress": None,
-        "included": [],
-        "excluded": [],
-        "itinerary": [],
-        "highlights": [],
-        "restrictions": [],
-        "bring": [],
-        "cancellation": None,
-        "accessibility": None,
-        "languages": [],
-        "factualSentences": [],
-        "gleanedFacts": [],
-        "properNames": [],
-        "measures": [],
-        "minAge": None,
-        "maxAge": None,
-        "groupSize": None,
-    }
+    facts = extract_facts(usable, source_text, item) if usable else empty_facts()
+    dest = catalog.get("destination") or {}
+    geography = assess_geography(
+        expected={
+            "city": dest.get("city") or "Boston",
+            "state": dest.get("state") or "Massachusetts",
+            "citySlug": dest.get("citySlug") or "boston",
+            "stateSlug": dest.get("stateSlug") or "massachusetts",
+        },
+        catalog_destinations=catalog_destinations,
+        signals=collect_place_signals(
+            meeting=facts.get("meetingAddress"),
+            item_location=facts.get("itemLocation"),
+            headline=facts.get("headline"),
+            title=catalog.get("title"),
+            description=facts.get("description"),
+            start_city=facts.get("startCity"),
+            start_province=facts.get("startProvince"),
+            start_lat=facts.get("startLat"),
+            start_lng=facts.get("startLng"),
+        ),
+    )
+    public_path = public_path_for(geography, catalog["slug"])
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
-        paragraphs = short_missing_copy(catalog["title"])
+        paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
         highlights = []
         removed = [
             "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
         ]
     else:
-        paragraphs, highlights, removed = compose_copy(catalog, facts, source_text)
+        paragraphs, highlights, removed = compose_copy(
+            catalog, facts, source_text, geography
+        )
     words = word_count(paragraphs)
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
-    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 150:
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 40:
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
-        if word_count(paragraphs) >= 150:
-            paragraphs = short_missing_copy(catalog["title"])
-            words = word_count(paragraphs)
     elif exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and price is None:
         exception = "PRICE_NOT_FOUND"
     elif exception == "BOOKING_PAGE_NOT_FOUND":
         price = None
 
     if exception == "INSUFFICIENT_SOURCE_CONTENT":
-        # Keep only harvest-backed short copy; do not pad to 150 words.
-        if words >= 150:
-            paragraphs = paragraphs[:1]
-            words = word_count(paragraphs)
-        if words < 20:
-            paragraphs = short_missing_copy(catalog["title"])
+        if words < 8:
+            paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
             words = word_count(paragraphs)
 
     gallery = []
@@ -637,7 +691,9 @@ def build_product(catalog: dict, booking: dict) -> dict:
         }
         rows = price_rows(price)
 
-    schema = schema_from_paragraphs(paragraphs, facts, catalog["title"], exception)
+    schema = schema_from_paragraphs(
+        paragraphs, facts, catalog["title"], exception, geography
+    )
     meeting = facts.get("meetingAddress") if exception != "BOOKING_PAGE_NOT_FOUND" else None
     omit_facts = exception in {
         "SOURCE_NOT_FOUND",
@@ -649,7 +705,7 @@ def build_product(catalog: dict, booking: dict) -> dict:
         "company": catalog["company"],
         "title": catalog["title"],
         "operator": catalog["operator"],
-        "publicPath": catalog["publicPath"],
+        "publicPath": public_path,
         "engine2Path": None,
         "exceptionStatus": exception,
         "paragraphs": paragraphs,
@@ -671,6 +727,7 @@ def build_product(catalog: dict, booking: dict) -> dict:
             "structured-description, item, or price-preview payloads. Catalog quality_score and "
             "availability_count were not used. AggregateRating is omitted."
         ),
+        "geography": geography,
         "source": {
             "artifacts": f"data/fareharbor-lead-to-gold/boston/{folder.name}",
             "fetchedAt": meta.get("fetchedAt"),
@@ -680,8 +737,57 @@ def build_product(catalog: dict, booking: dict) -> dict:
             "bookingPageValidity": booking,
         },
     }
-    product["validation"] = validate(product, source_text)
+    validation = validate(
+        product,
+        source_text,
+        geography=geography,
+        expected_city=dest.get("city") or "Boston",
+    )
+    extra = []
+    expected_city_slug = dest.get("citySlug") or "boston"
+    if (
+        geography.get("conflictsWithExpected")
+        and geography.get("disposition") != "exclude"
+        and f"/{expected_city_slug}/" in product["publicPath"]
+    ):
+        extra.append("conflicting geography still published under the legacy city route")
+    if extra:
+        validation["errors"] = list(validation.get("errors") or []) + extra
+        validation["ok"] = not validation["errors"]
+    product["validation"] = validation
     return product
+
+
+def catalog_destinations() -> dict[tuple[str, str], dict]:
+    from inventory_boston import load_generated_tours
+
+    dests = {}
+    for tour in load_generated_tours():
+        dest = tour.get("destination") or {}
+        key = (dest.get("stateSlug"), dest.get("citySlug"))
+        if key[0] and key[1]:
+            dests[key] = dest
+    return dests
+
+
+def emit_geography_review_ts(entries: list[dict]) -> str:
+    payload = json.dumps(entries, indent=2, ensure_ascii=False)
+    return (
+        "// Generated by scripts/fareharbor-lead-to-gold/build_boston_legacy.py\n"
+        "// Geography exclusions for FareHarbor migrations. Do not edit by hand.\n"
+        "export type FareHarborGeographyReviewEntry = {\n"
+        "  itemId: string;\n"
+        "  title: string;\n"
+        "  reason: string;\n"
+        "  city: string;\n"
+        "  state: string;\n"
+        "  expectedPath: string;\n"
+        "};\n\n"
+        f"export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] = {payload};\n\n"
+        "export const FAREHARBOR_GEOGRAPHY_REVIEW_IDS = new Set(\n"
+        "  fareHarborGeographyReviewEntries.map(entry => entry.itemId)\n"
+        ");\n"
+    )
 
 
 def emit_ts(products: list[dict]) -> str:
@@ -746,7 +852,7 @@ def update_terminal_ids(terminal_ids: list[str]) -> None:
     TERMINAL_TS.write_text(next_text)
 
 
-def markdown_report(products: list[dict], harvest: dict) -> str:
+def markdown_report(products: list[dict], harvest: dict, review: list[dict], moved: list[dict]) -> str:
     counts = {
         "OK": 0,
         "PRICE_NOT_FOUND": 0,
@@ -755,6 +861,15 @@ def markdown_report(products: list[dict], harvest: dict) -> str:
         "BOOKING_PAGE_NOT_FOUND": 0,
     }
     fail = []
+    published = [
+        product
+        for product in products
+        if product.get("geography", {}).get("disposition") != "exclude"
+        and product["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND"
+    ]
+    boston_published = [
+        product for product in published if "/boston/" in product["publicPath"]
+    ]
     for product in products:
         counts[product["exceptionStatus"]] = counts.get(product["exceptionStatus"], 0) + 1
         if not product["validation"]["ok"]:
@@ -764,14 +879,18 @@ def markdown_report(products: list[dict], harvest: dict) -> str:
         "",
         "Scope is `citySlug === boston` FareHarbor products in `tours.generated.ts`. Engine 6 Viator Boston routes and non-Boston cities were not processed.",
         "",
-        "Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. AggregateRating is omitted.",
+        "Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. AggregateRating is omitted. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.",
         "",
         f"- Total Boston legacy products: {harvest['totalBostonLegacy']}",
         f"- Active booking pages: {harvest['active']}",
         f"- Terminal booking pages: {harvest['terminal']}",
+        f"- Geography conflicts with Boston: {sum(1 for item in products if item.get('geography', {}).get('conflictsWithExpected'))}",
+        f"- Moved to another destination: {len(moved)}",
+        f"- Excluded for uncertain/unmapped geography: {len(review)}",
+        f"- Published Boston routes: {len(boston_published)}",
         f"- Authoritative price-preview fares among active pages: {harvest['authoritativePrice']}",
         f"- Active PRICE_NOT_FOUND before editorial: {harvest['priceNotFound']}",
-        f"- Runtime PASS: {sum(1 for item in products if item['validation']['ok'] and item['exceptionStatus'] != 'BOOKING_PAGE_NOT_FOUND')}",
+        f"- Runtime PASS: {sum(1 for item in published if item['validation']['ok'])}",
         f"- Runtime FAIL: {len(fail)}",
         f"- Terminal removals: {counts['BOOKING_PAGE_NOT_FOUND']}",
         f"- PRICE_NOT_FOUND after editorial: {counts['PRICE_NOT_FOUND']}",
@@ -779,24 +898,41 @@ def markdown_report(products: list[dict], harvest: dict) -> str:
         f"- SOURCE_NOT_FOUND: {counts['SOURCE_NOT_FOUND']}",
         f"- OK priced pages: {counts['OK']}",
         "",
-        "## Terminal records retained for audit",
+        "## Geography conflicts",
         "",
     ]
+    conflicts = [
+        product
+        for product in products
+        if product.get("geography", {}).get("conflictsWithExpected")
+    ]
+    if not conflicts:
+        lines.append("- None.")
+    for product in conflicts:
+        geo = product["geography"]
+        lines.append(
+            f"- `{product['itemId']}` `{product['title']}` — {geo.get('disposition')} — {geo.get('reason')} — `{product['publicPath']}`"
+        )
+    lines.extend(["", "## Terminal records retained for audit", ""])
     for product in products:
         if product["exceptionStatus"] == "BOOKING_PAGE_NOT_FOUND":
             lines.append(
                 f"- `{product['itemId']}` `{product['publicPath']}` — `BOOKING_PAGE_NOT_FOUND`"
             )
     lines.extend(["", "## Manual review", ""])
-    review = [
+    extra_review = [
         product
         for product in products
         if product["exceptionStatus"] in {"INSUFFICIENT_SOURCE_CONTENT", "SOURCE_NOT_FOUND"}
         or not product["validation"]["ok"]
     ]
-    if not review:
+    if not extra_review and not review:
         lines.append("- None.")
     for product in review:
+        lines.append(
+            f"- `{product['itemId']}` geography exclude — {product.get('reason')}"
+        )
+    for product in extra_review:
         errors = "; ".join(product["validation"]["errors"]) or "none"
         lines.append(
             f"- `{product['itemId']}` `{product['exceptionStatus']}` `{product['publicPath']}` — {errors}"
@@ -813,19 +949,42 @@ def main() -> None:
         for item in harvest["products"]
         if item.get("itemId")
     }
+    destinations = catalog_destinations()
     products = []
     runtime = []
     failures = []
     for item_id, entry in sorted(catalog.items(), key=lambda pair: (pair[1]["company"], pair[0])):
-        product = build_product(entry, booking[item_id])
+        product = build_product(entry, booking[item_id], destinations)
         products.append(product)
         if not product["validation"]["ok"]:
             failures.append(product)
-        if product["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND":
+        disposition = product.get("geography", {}).get("disposition")
+        if (
+            product["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND"
+            and disposition != "exclude"
+        ):
             runtime.append(product)
+    review = [
+        {
+            "itemId": product["itemId"],
+            "title": product["title"],
+            "reason": product.get("geography", {}).get("reason"),
+            "city": product.get("geography", {}).get("city"),
+            "state": product.get("geography", {}).get("state"),
+            "expectedPath": catalog[product["itemId"]]["publicPath"],
+        }
+        for product in products
+        if product.get("geography", {}).get("disposition") == "exclude"
+    ]
+    moved = [
+        product
+        for product in products
+        if product.get("geography", {}).get("disposition") == "moved"
+    ]
     REPORT_JSON.write_text(json.dumps(products, indent=2, ensure_ascii=False) + "\n")
-    REPORT_MD.write_text(markdown_report(products, harvest))
+    REPORT_MD.write_text(markdown_report(products, harvest, review, moved))
     GENERATED_TS.write_text(emit_ts(runtime))
+    GEOGRAPHY_TS.write_text(emit_geography_review_ts(review))
     terminal_ids = [
         product["itemId"]
         for product in products
@@ -833,8 +992,13 @@ def main() -> None:
     ]
     update_terminal_ids(terminal_ids)
     print(f"wrote {GENERATED_TS}")
+    print(f"wrote {GEOGRAPHY_TS}")
     print(f"wrote {REPORT_MD}")
-    print(f"runtime={len(runtime)} terminal={len(terminal_ids)} fail={len(failures)}")
+    boston_runtime = [item for item in runtime if "/boston/" in item["publicPath"]]
+    print(
+        f"runtime={len(runtime)} boston={len(boston_runtime)} moved={len(moved)} "
+        f"geo_exclude={len(review)} terminal={len(terminal_ids)} fail={len(failures)}"
+    )
     for product in failures[:25]:
         print(f"FAIL {product['itemId']} {product['exceptionStatus']} {product['validation']['errors']}")
     if failures:

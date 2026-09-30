@@ -90,6 +90,7 @@ def inventory() -> dict:
                 "title": tour.get("title"),
                 "operator": tour.get("operator"),
                 "publicPath": path,
+                "destination": dest,
                 "bookingUrl": booking,
                 "heroImage": tour.get("heroImage"),
                 "galleryImages": tour.get("galleryImages") or [],

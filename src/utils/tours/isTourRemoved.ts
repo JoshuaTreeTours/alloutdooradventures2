@@ -1,5 +1,6 @@
 import { RETIRED_FAREHARBOR_TOUR_IDS } from "../fareharbor/suppressedBookingPages";
 import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
+import { isFareHarborGeographyReview } from "../fareharbor/geographyReview";
 
 const REMOVED_TOUR_IDS = new Set([
   "34849",
@@ -36,6 +37,12 @@ export const isTourRemoved = ({
     const normalizedTourId = tourId.trim();
     const trailingTourId = getTourIdFromSlug(normalizedTourId);
     if (isStageBBookingPageNotFound(normalizedTourId)) {
+      return true;
+    }
+    if (
+      isFareHarborGeographyReview(normalizedTourId) ||
+      isFareHarborGeographyReview(trailingTourId)
+    ) {
       return true;
     }
     // Stage B proof page only. The rest of the red-jeep opt-out stays removed.

@@ -135,6 +135,83 @@ export const isFareHarborMigratedRouteRef = (ref?: {
   return candidates.some(itemId => Boolean(getFareHarborProofByItemId(itemId)));
 };
 
+const titleFromSlug = (slug: string) =>
+  slug
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
+const STATE_NAME_FROM_SLUG: Record<string, string> = {
+  massachusetts: "Massachusetts",
+  maine: "Maine",
+  vermont: "Vermont",
+  "new-hampshire": "New Hampshire",
+  "rhode-island": "Rhode Island",
+  connecticut: "Connecticut",
+  "new-york": "New York",
+};
+
+export const parseFareHarborProofDestination = (
+  publicPath?: string | null
+): {
+  state: string;
+  stateSlug: string;
+  city: string;
+  citySlug: string;
+} | null => {
+  const normalized = normalizeMigratedRoutePath(publicPath);
+  const match = normalized?.match(
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/
+  );
+  if (!match) {
+    return null;
+  }
+  const stateSlug = match[1];
+  const citySlug = match[2];
+  return {
+    stateSlug,
+    citySlug,
+    state: STATE_NAME_FROM_SLUG[stateSlug] ?? titleFromSlug(stateSlug),
+    city: titleFromSlug(citySlug),
+  };
+};
+
+export const applyFareHarborProofDestination = <
+  T extends {
+    destination: {
+      state: string;
+      stateSlug: string;
+      city: string;
+      citySlug: string;
+    };
+    id?: string | null;
+    slug?: string | null;
+    bookingUrl?: string | null;
+  },
+>(
+  tour: T
+): T => {
+  const proof = getFareHarborProofFromTour(tour);
+  const parsed = parseFareHarborProofDestination(proof?.publicPath);
+  if (!parsed) {
+    return tour;
+  }
+  if (
+    parsed.stateSlug === tour.destination.stateSlug &&
+    parsed.citySlug === tour.destination.citySlug
+  ) {
+    return tour;
+  }
+  return {
+    ...tour,
+    destination: {
+      ...tour.destination,
+      ...parsed,
+    },
+  };
+};
+
 export const FAREHARBOR_PROOF_PRIMARY_CTA_LABEL = "Check availability";
 
 export const resolveFareHarborProofCtaLabel = (

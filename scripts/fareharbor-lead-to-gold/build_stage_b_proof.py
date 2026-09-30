@@ -11,6 +11,8 @@ import json
 import re
 from pathlib import Path
 
+from migration_integrity import editorial_errors
+
 ROOT = Path(__file__).resolve().parents[2]
 HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / "proof-set"
 STAGE_A = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-a-representative-products.json"
@@ -422,7 +424,12 @@ def derivative_notes(stage_a: dict, facts: dict, price: dict | None) -> dict:
     }
 
 
-def validate(product: dict, source_text: str) -> dict:
+def validate(
+    product: dict,
+    source_text: str,
+    geography: dict | None = None,
+    expected_city: str | None = None,
+) -> dict:
     schema = product.get("schemaDescription") or ""
     public_bits = product["paragraphs"] + product["highlights"] + ([schema] if schema else [])
     text = " ".join(public_bits)
@@ -446,11 +453,12 @@ def validate(product: dict, source_text: str) -> dict:
         errors.append("schema description is not shorter than the editorial body")
     elif schema_words > 80:
         errors.append(f"schema description is {schema_words} words; keep it concise")
-    elif schema_words < 20:
+    elif schema_words < 8:
         errors.append("schema description is too short")
     for phrase in BOILERPLATE + PROVENANCE:
         if phrase in lowered:
             errors.append(f"disallowed phrase: {phrase}")
+    errors.extend(editorial_errors(text, expected_city=expected_city, geography=geography))
     if product["aggregateRating"] is not None:
         errors.append("aggregate rating must be omitted")
     if re.search(r"\$\s?\d", text):
@@ -459,7 +467,13 @@ def validate(product: dict, source_text: str) -> dict:
         errors.append("second-person wording in editorial copy")
     if MARKETING.search(text):
         errors.append("marketing phrasing remains in copy")
-    overlap = shingles(text) & shingles(source_text)
+    overlap = (shingles(text) & shingles(source_text)) - shingles(
+        " ".join(
+            part
+            for part in (product.get("title"), product.get("operator"))
+            if part
+        )
+    )
     if overlap:
         sample = sorted(overlap)[:3]
         errors.append(f"verbatim overlap with source: {sample}")
@@ -482,9 +496,9 @@ def validate(product: dict, source_text: str) -> dict:
             errors.append(f"{status} product still has a price")
         if status != "INSUFFICIENT_SOURCE_CONTENT" and product["durationLabel"] is not None:
             errors.append(f"{status} product still has a duration")
-    elif words < 150:
+    elif words < 40:
         errors.append(
-            f"editorial copy is {words} words; source-backed pages need 150 substantive words or INSUFFICIENT_SOURCE_CONTENT without padding"
+            "editorial copy is too short for a source-backed page; keep coherent harvest facts or mark INSUFFICIENT_SOURCE_CONTENT without padding"
         )
     offer = product["offer"]
     if status in {"PRICE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"}:

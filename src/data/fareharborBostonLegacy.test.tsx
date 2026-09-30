@@ -8,16 +8,19 @@ import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDeta
 import { getTourBySlugs, tours } from "./tours";
 import {
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
+  applyFareHarborProofDestination,
   buildFareHarborProofSchemaGraph,
   collectFareHarborMigratedRoutePaths,
   getFareHarborBostonLegacyProducts,
   getFareHarborProofByItemId,
   getFareHarborProofByPath,
   getFareHarborProofFromTour,
+  getFareHarborProofProducts,
 } from "./fareharborLeadToGoldProof";
 import { isStageBBookingPageNotFound } from "../utils/fareharbor/stageBTerminalBookingPages";
 import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import { isRemovedTourSlug } from "../utils/tours/isTourRemoved";
+import { isFareHarborGeographyReview } from "../utils/fareharbor/geographyReview";
 import { ENGINE6_BOSTON_3037DUCK_ROUTE } from "../engine6/routes";
 
 vi.mock("../components/StructuredDataProvider", () => ({
@@ -67,7 +70,7 @@ const renderRoute = (path: string, node: ReactNode) =>
 describe("FareHarbor Stage C Boston legacy tranche", () => {
   it("migrates the active Boston set through the shared proof lookup", () => {
     const products = getFareHarborBostonLegacyProducts();
-    expect(products).toHaveLength(222);
+    expect(products).toHaveLength(221);
     expect(
       products.every(product => product.aggregateRating === null)
     ).toBe(true);
@@ -80,14 +83,18 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     const unpriced = products.filter(
       product => product.exceptionStatus === "PRICE_NOT_FOUND"
     );
-    expect(priced).toHaveLength(103);
-    expect(unpriced).toHaveLength(119);
+    const insufficient = products.filter(
+      product => product.exceptionStatus === "INSUFFICIENT_SOURCE_CONTENT"
+    );
+    expect(priced).toHaveLength(79);
+    expect(unpriced).toHaveLength(77);
+    expect(insufficient).toHaveLength(65);
     for (const product of priced) {
       expect(product.offer?.price).toBeTruthy();
       expect(product.visiblePriceLabel).toMatch(/^From /);
       expect(product.offer?.price).not.toBe("129.00");
     }
-    for (const product of unpriced) {
+    for (const product of [...unpriced, ...insufficient]) {
       expect(product.offer).toBeNull();
       expect(product.visiblePriceLabel).toBeNull();
     }
@@ -96,11 +103,15 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     const inventory = new Set(collectFareHarborMigratedRoutePaths());
     for (const product of products) {
       expect(inventory.has(product.publicPath)).toBe(true);
-      const slug = product.publicPath.split("/").filter(Boolean).pop();
+      const parts = product.publicPath.split("/").filter(Boolean);
+      const stateSlug = parts[1];
+      const citySlug = parts[2];
+      const slug = parts[4];
       expect(slug).toBeTruthy();
-      expect(
-        getTourBySlugs("massachusetts", "boston", slug as string)
-      ).toMatchObject({ slug });
+      expect(getTourBySlugs(stateSlug, citySlug, slug)).toMatchObject({
+        slug,
+        destination: { stateSlug, citySlug },
+      });
       expect(sitemap).toContain(product.publicPath);
     }
     expect(
@@ -165,6 +176,9 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     expect(body).toContain("Urban Adventours");
     expect(body).not.toContain("keeps the logistics simple");
     expect(body).not.toContain("103 Atlantic");
+    expect(body).not.toContain("facts panel");
+    expect(body).not.toContain("Guest ratings are omitted");
+    expect(body).not.toContain("promotional inclusion");
     expect(body).not.toMatch(/\$\d/);
   });
 
@@ -209,28 +223,28 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       expect(serialized).not.toContain("129.00");
       expect(serialized).not.toContain("InStock");
       expect(serialized).not.toContain("AggregateRating");
-      if (product.exceptionStatus === "PRICE_NOT_FOUND") {
+      if (product.offer) {
+        expect(product.offer.price).toBeTruthy();
+        expect(productNode?.offers).toMatchObject({
+          "@type": "Offer",
+          price: product.offer.price,
+          priceCurrency: product.offer.priceCurrency,
+        });
+        expect(tripNode?.offers).toMatchObject({
+          "@type": "Offer",
+          price: product.offer.price,
+          priceCurrency: product.offer.priceCurrency,
+        });
+        withOffer += 1;
+      } else {
         expect(product.offer).toBeNull();
         expect(productNode?.offers).toBeUndefined();
         expect(tripNode?.offers).toBeUndefined();
         withoutOffer += 1;
-      } else {
-        expect(product.offer?.price).toBeTruthy();
-        expect(productNode?.offers).toMatchObject({
-          "@type": "Offer",
-          price: product.offer?.price,
-          priceCurrency: product.offer?.priceCurrency,
-        });
-        expect(tripNode?.offers).toMatchObject({
-          "@type": "Offer",
-          price: product.offer?.price,
-          priceCurrency: product.offer?.priceCurrency,
-        });
-        withOffer += 1;
       }
     }
-    expect(withOffer).toBe(103);
-    expect(withoutOffer).toBe(119);
+    expect(withOffer).toBe(79);
+    expect(withoutOffer).toBe(142);
     for (const item of BOSTON_TERMINALS) {
       expect(
         getFareHarborProofByPath(
@@ -243,5 +257,77 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
         "/destinations/massachusetts/boston/tours/boston-duck-tour-3037DUCK"
       )
     ).toBeNull();
+  });
+
+  it("excludes Hardwick Vermont from Boston and moves Portland Maine", () => {
+    expect(getFareHarborProofByItemId("73240")).toBeNull();
+    expect(isFareHarborGeographyReview("73240")).toBe(true);
+    expect(isRemovedTourSlug("wheels-in-the-woods-73240")).toBe(true);
+    expect(
+      getTourBySlugs("massachusetts", "boston", "wheels-in-the-woods-73240")
+    ).toBeUndefined();
+    expect(
+      getTourBySlugs("vermont", "hardwick", "wheels-in-the-woods-73240")
+    ).toBeUndefined();
+
+    const portland = getFareHarborProofByItemId("448094");
+    expect(portland?.publicPath).toBe(
+      "/destinations/maine/portland/tours/portland-maine-highlights-448094"
+    );
+    expect(portland?.paragraphs.join(" ")).toContain("Portland, Maine");
+    expect(portland?.paragraphs.join(" ")).not.toContain("takes place in Boston");
+    expect(
+      getTourBySlugs(
+        "massachusetts",
+        "boston",
+        "portland-maine-highlights-448094"
+      )
+    ).toBeUndefined();
+    expect(
+      getTourBySlugs("maine", "portland", "portland-maine-highlights-448094")
+    ).toMatchObject({
+      slug: "portland-maine-highlights-448094",
+      destination: { stateSlug: "maine", citySlug: "portland" },
+    });
+    expect(
+      applyFareHarborProofDestination({
+        id: "luxury-new-england-tours-448094",
+        slug: "portland-maine-highlights-448094",
+        bookingUrl:
+          "https://fareharbor.com/embeds/book/bostonprivateguide/items/448094/",
+        destination: {
+          state: "Massachusetts",
+          stateSlug: "massachusetts",
+          city: "Boston",
+          citySlug: "boston",
+        },
+      }).destination
+    ).toMatchObject({ stateSlug: "maine", citySlug: "portland" });
+  });
+
+  it("keeps customer-facing FareHarbor copy free of process commentary and heading fragments", () => {
+    const processPhrases = [
+      "facts panel",
+      "guest ratings are omitted",
+      "promotional inclusion lists are omitted",
+      "promotional claims are omitted",
+      "schema/pricing",
+      "source-backed",
+      "migration logic",
+      "about nestled",
+      "for this boston product",
+    ];
+    for (const product of getFareHarborProofProducts()) {
+      const visible = [
+        ...product.paragraphs,
+        ...product.highlights,
+        product.schemaDescription,
+      ]
+        .join(" ")
+        .toLowerCase();
+      for (const phrase of processPhrases) {
+        expect(visible, `${product.itemId} ${phrase}`).not.toContain(phrase);
+      }
+    }
   });
 });
