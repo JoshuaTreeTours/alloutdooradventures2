@@ -8,9 +8,11 @@ import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDeta
 import { getTourBySlugs, tours } from "./tours";
 import {
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
+  buildFareHarborProofSchemaGraph,
   collectFareHarborMigratedRoutePaths,
   getFareHarborBostonLegacyProducts,
   getFareHarborProofByItemId,
+  getFareHarborProofByPath,
   getFareHarborProofFromTour,
 } from "./fareharborLeadToGoldProof";
 import { isStageBBookingPageNotFound } from "../utils/fareharbor/stageBTerminalBookingPages";
@@ -178,5 +180,68 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       tours.some(tour => tour.slug === "boston-duck-tour-3037DUCK")
     ).toBe(true);
     expect(getFareHarborProofByItemId("145208")?.offer?.price).toBe("59.95");
+  });
+
+  it("uses the shared proof record as the Product/TouristTrip schema source", () => {
+    const products = getFareHarborBostonLegacyProducts();
+    let withOffer = 0;
+    let withoutOffer = 0;
+    for (const product of products) {
+      expect(getFareHarborProofByPath(product.publicPath)?.itemId).toBe(
+        product.itemId
+      );
+      const canonicalUrl = `https://www.alloutdooradventures.com${product.publicPath}`;
+      const graph = buildFareHarborProofSchemaGraph(product, { canonicalUrl });
+      const serialized = JSON.stringify(graph);
+      const productNode = graph["@graph"].find(node => node["@type"] === "Product");
+      const tripNode = graph["@graph"].find(
+        node => node["@type"] === "TouristTrip"
+      );
+      expect(productNode).toMatchObject({
+        url: canonicalUrl,
+        name: product.title,
+        description: product.schemaDescription,
+      });
+      expect(tripNode).toMatchObject({
+        name: product.title,
+        description: product.schemaDescription,
+      });
+      expect(serialized).not.toContain("129.00");
+      expect(serialized).not.toContain("InStock");
+      expect(serialized).not.toContain("AggregateRating");
+      if (product.exceptionStatus === "PRICE_NOT_FOUND") {
+        expect(product.offer).toBeNull();
+        expect(productNode?.offers).toBeUndefined();
+        expect(tripNode?.offers).toBeUndefined();
+        withoutOffer += 1;
+      } else {
+        expect(product.offer?.price).toBeTruthy();
+        expect(productNode?.offers).toMatchObject({
+          "@type": "Offer",
+          price: product.offer?.price,
+          priceCurrency: product.offer?.priceCurrency,
+        });
+        expect(tripNode?.offers).toMatchObject({
+          "@type": "Offer",
+          price: product.offer?.price,
+          priceCurrency: product.offer?.priceCurrency,
+        });
+        withOffer += 1;
+      }
+    }
+    expect(withOffer).toBe(103);
+    expect(withoutOffer).toBe(119);
+    for (const item of BOSTON_TERMINALS) {
+      expect(
+        getFareHarborProofByPath(
+          `/destinations/massachusetts/boston/tours/${item.slug}`
+        )
+      ).toBeNull();
+    }
+    expect(
+      getFareHarborProofByPath(
+        "/destinations/massachusetts/boston/tours/boston-duck-tour-3037DUCK"
+      )
+    ).toBeNull();
   });
 });

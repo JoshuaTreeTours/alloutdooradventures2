@@ -23,9 +23,11 @@ import {
   applyFareHarborProofSchema,
   applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
+  buildFareHarborProofSchemaGraph,
   collectFareHarborMigratedRoutePaths,
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
   getFareHarborProofByItemId,
+  getFareHarborProofByPath,
   getFareHarborProofFromTour,
   getFareHarborProofProducts,
 } from "./fareharborLeadToGoldProof";
@@ -683,5 +685,41 @@ describe("FareHarbor Stage B proof set", () => {
     expect((productNode(graph)?.offers as { price?: string }).price).toBe("59.95");
     expect((tripNode(graph)?.offers as { price?: string }).price).toBe("59.95");
     expect(productNode(graph)?.description).toBe(proof!.schemaDescription);
+  });
+
+  it("builds Product and TouristTrip from the proof record, omitting Offer when unpriced", () => {
+    const priced = getFareHarborProofByPath(
+      "/destinations/colorado/breckenridge/tours/country-boy-gold-mine-tour-145208"
+    );
+    const unpriced = getFareHarborProofByPath(
+      "/tours/new-york/new-york/nycs-underground-subway-tour---private-tour-322210"
+    );
+    expect(priced?.itemId).toBe("145208");
+    expect(unpriced?.itemId).toBe("322210");
+    expect(
+      getFareHarborProofByPath(
+        "/destinations/british-columbia/vancouver/tours/guided-4-hr-e-bike-tour-of-vancouver-seawall---jw-marriott-612500"
+      )
+    ).toBeNull();
+
+    const pricedGraph = buildFareHarborProofSchemaGraph(priced!, {
+      canonicalUrl: `https://www.alloutdooradventures.com${priced!.publicPath}`,
+    });
+    expect((productNode(pricedGraph["@graph"])?.offers as { price?: string }).price).toBe(
+      "59.95"
+    );
+    expect((tripNode(pricedGraph["@graph"])?.offers as { price?: string }).price).toBe(
+      "59.95"
+    );
+    expect(JSON.stringify(pricedGraph)).not.toContain("129");
+    expect(JSON.stringify(pricedGraph)).not.toContain("InStock");
+
+    const unpricedGraph = buildFareHarborProofSchemaGraph(unpriced!, {
+      canonicalUrl: `https://www.alloutdooradventures.com${unpriced!.publicPath}`,
+    });
+    expect(productNode(unpricedGraph["@graph"])?.offers).toBeUndefined();
+    expect(tripNode(unpricedGraph["@graph"])?.offers).toBeUndefined();
+    expect(JSON.stringify(unpricedGraph)).not.toContain("Offer");
+    expect(JSON.stringify(unpricedGraph)).not.toContain("129");
   });
 });

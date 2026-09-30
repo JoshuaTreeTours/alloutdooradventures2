@@ -88,8 +88,36 @@ export const collectFareHarborMigratedRoutePaths = (
   return [...paths];
 };
 
-const itemIdFromSlugOrPath = (value?: string | null): string | null =>
-  value?.match(/-(\d+)(?:\/|$)/)?.[1] ?? null;
+const itemIdFromSlugOrPath = (value?: string | null): string | null => {
+  if (!value) {
+    return null;
+  }
+  const matches = [...value.matchAll(/-(\d+)(?=\/|$)/g)];
+  return matches.at(-1)?.[1] ?? null;
+};
+
+const byPublicOrEngine2Path = new Map<string, FareHarborProofProduct>();
+for (const product of fareHarborMigratedProducts) {
+  for (const candidate of [product.publicPath, product.engine2Path]) {
+    const normalized = normalizeMigratedRoutePath(candidate);
+    if (normalized) {
+      byPublicOrEngine2Path.set(normalized, product);
+    }
+  }
+}
+
+export const getFareHarborProofByPath = (
+  pathname?: string | null
+): FareHarborProofProduct | null => {
+  const normalized = normalizeMigratedRoutePath(pathname);
+  if (!normalized) {
+    return null;
+  }
+  return (
+    byPublicOrEngine2Path.get(normalized) ??
+    getFareHarborProofByItemId(itemIdFromSlugOrPath(normalized))
+  );
+};
 
 export const isFareHarborMigratedRouteRef = (ref?: {
   itemId?: string | null;
@@ -235,6 +263,59 @@ export const applyFareHarborProofSchema = <T extends Record<string, unknown>>(
   nodes: T[],
   proof: FareHarborProofProduct
 ): T[] => nodes.map(node => patchSchemaValue(node, proof) as T);
+
+export const applyFareHarborProofToSchemaGraph = <
+  T extends Record<string, unknown>,
+>(
+  graph: T,
+  proof: FareHarborProofProduct
+): T => {
+  const nodes = Array.isArray(graph["@graph"])
+    ? (graph["@graph"] as Array<Record<string, unknown>>)
+    : [graph];
+  const patched = applyFareHarborProofSchema(nodes, proof);
+  if (Array.isArray(graph["@graph"])) {
+    return { ...graph, "@graph": patched };
+  }
+  return (patched[0] ?? graph) as T;
+};
+
+export const buildFareHarborProofSchemaGraph = (
+  proof: FareHarborProofProduct,
+  options: { canonicalUrl: string; image?: string | null }
+): { "@context": string; "@graph": Array<Record<string, unknown>> } => {
+  const canonicalUrl = options.canonicalUrl.replace(/\/$/, "");
+  const image =
+    (typeof options.image === "string" && options.image.trim()) ||
+    proof.galleryImages[0] ||
+    undefined;
+  const offerStub = proof.offer
+    ? { "@type": "Offer", url: canonicalUrl }
+    : undefined;
+  const product: Record<string, unknown> = {
+    "@type": "Product",
+    "@id": `${canonicalUrl}#product`,
+    url: canonicalUrl,
+    name: proof.title,
+    description: proof.schemaDescription,
+    sku: proof.itemId,
+    ...(image ? { image } : {}),
+    ...(offerStub ? { offers: offerStub } : {}),
+  };
+  const trip: Record<string, unknown> = {
+    "@type": "TouristTrip",
+    "@id": `${canonicalUrl}#touristtrip`,
+    name: proof.title,
+    description: proof.schemaDescription,
+    ...(image ? { image } : {}),
+    ...(proof.durationIso ? { duration: proof.durationIso } : {}),
+    ...(offerStub ? { offers: offerStub } : {}),
+  };
+  return {
+    "@context": "https://schema.org",
+    "@graph": applyFareHarborProofSchema([product, trip], proof),
+  };
+};
 
 export const applyFareHarborProofToPrerender = <
   TSeo extends { description: string },

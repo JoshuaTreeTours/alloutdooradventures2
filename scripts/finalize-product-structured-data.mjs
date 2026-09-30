@@ -186,6 +186,7 @@ const [
   flagstaffModule,
   structuredDataModule,
   tourPathsModule,
+  fareHarborProofModule,
 ] = await Promise.all([
   tsImport("../src/engine6/registry.ts", import.meta.url),
   tsImport("../src/engine6/schema/buildEngine6SchemaGraph.ts", import.meta.url),
@@ -200,6 +201,7 @@ const [
   tsImport("../src/data/flagstaffTours.ts", import.meta.url),
   tsImport("../src/utils/structuredData.ts", import.meta.url),
   tsImport("../src/data/tourPaths.ts", import.meta.url),
+  tsImport("../src/data/fareharborLeadToGoldProof.ts", import.meta.url),
 ]);
 
 const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours)
@@ -230,6 +232,46 @@ const getSiteStructuredDataNodes =
   structuredDataModule.getSiteStructuredDataNodes;
 const normalizeStructuredData = structuredDataModule.normalizeStructuredData;
 const getTourBookingPath = tourPathsModule.getTourBookingPath;
+const getFareHarborProofByPath = fareHarborProofModule.getFareHarborProofByPath;
+const applyFareHarborProofToSchemaGraph =
+  fareHarborProofModule.applyFareHarborProofToSchemaGraph;
+const buildFareHarborProofSchemaGraph =
+  fareHarborProofModule.buildFareHarborProofSchemaGraph;
+
+const graphHasCanonicalProduct = (graph, canonicalUrl) =>
+  collectTypedNodes(graph, "Product").some(product =>
+    productMatchesCanonical(product, canonicalUrl)
+  );
+
+const proofGraphForRoute = ({ pathname, canonicalUrl, html, graph }) => {
+  const proof =
+    typeof getFareHarborProofByPath === "function"
+      ? getFareHarborProofByPath(pathname)
+      : null;
+  if (!proof) {
+    return graph ? { source: null, graph } : null;
+  }
+  if (
+    graph &&
+    graphHasCanonicalProduct(graph, canonicalUrl) &&
+    typeof applyFareHarborProofToSchemaGraph === "function"
+  ) {
+    return {
+      source: "fareharbor-proof",
+      graph: applyFareHarborProofToSchemaGraph(graph, proof),
+    };
+  }
+  if (typeof buildFareHarborProofSchemaGraph !== "function") {
+    return graph ? { source: null, graph } : null;
+  }
+  return {
+    source: "fareharbor-proof",
+    graph: buildFareHarborProofSchemaGraph(proof, {
+      canonicalUrl,
+      image: imageFromHtml(html),
+    }),
+  };
+};
 
 const resolveEngine2Tour = pathname => {
   const exact =
@@ -368,25 +410,43 @@ const buildGraphForRoute = ({ pathname, canonicalUrl, html }) => {
     typeof buildEngine2Seo === "function" &&
     typeof buildEngine2Graph === "function"
   ) {
-    const seo = buildEngine2Seo(engine2Tour);
+    const graph = normalizeStructuredData({
+      "@context": "https://schema.org",
+      "@graph": buildEngine2Graph(engine2Tour, buildEngine2Seo(engine2Tour)),
+    });
+    const patched = proofGraphForRoute({
+      pathname,
+      canonicalUrl,
+      html,
+      graph,
+    });
     return {
-      source: "engine2",
-      graph: normalizeStructuredData({
-        "@context": "https://schema.org",
-        "@graph": buildEngine2Graph(engine2Tour, seo),
-      }),
+      source: patched?.source ?? "engine2",
+      graph: patched?.graph ?? graph,
     };
   }
 
   const legacyTour = resolveLegacyTour(pathname);
   if (legacyTour) {
+    const graph = buildLegacyGraph({ tour: legacyTour, canonicalUrl, html });
+    const patched = proofGraphForRoute({
+      pathname,
+      canonicalUrl,
+      html,
+      graph,
+    });
     return {
-      source: "legacy",
-      graph: buildLegacyGraph({ tour: legacyTour, canonicalUrl, html }),
+      source: patched?.source ?? "legacy",
+      graph: patched?.graph ?? graph,
     };
   }
 
-  return null;
+  return proofGraphForRoute({
+    pathname,
+    canonicalUrl,
+    html,
+    graph: null,
+  });
 };
 
 const urls = [
