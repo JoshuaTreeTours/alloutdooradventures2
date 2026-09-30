@@ -36,6 +36,7 @@ import {
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
+import { getFareHarborProofFromTour } from "./fareharborLeadToGoldProof";
 import {
   canonicalizeDestinationPath,
   getCanonicalDestinationCitySlug,
@@ -232,7 +233,26 @@ const remapMisclassifiedAfricaByProductId = (
   };
 };
 
-export const tours: Tour[] = [
+const applyPublicTourTransforms = (tour: Tour): Tour =>
+  remapMisclassifiedAfricaTours(
+    applyTourPricing({
+      ...tour,
+      destination: {
+        ...tour.destination,
+        country: tour.destination.country || "United States",
+      },
+    })
+  );
+
+const isHardDeletedOrContaminatedTour = (tour: Tour) =>
+  isHardDeletedLegacyTour({
+    productId: getEngine1FareHarborItemId(tour),
+    slug: tour.slug,
+    canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
+  }) ||
+  CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour));
+
+const publicCatalogCandidates: Tour[] = [
   ...toursGenerated,
   ...manualTours,
   ...flagstaffTours,
@@ -251,33 +271,19 @@ export const tours: Tour[] = [
         operatorName: tour.operator,
       })
   )
-  .map(tour =>
-    applyTourPricing({
-      ...tour,
-      destination: {
-        ...tour.destination,
-        country: tour.destination.country || "United States",
-      },
-    })
-  )
-  .map(remapMisclassifiedAfricaTours)
-  .filter(
-    tour =>
-      !isHardDeletedLegacyTour({
-        productId: getEngine1FareHarborItemId(tour),
-        slug: tour.slug,
-        canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
-      })
-  )
-  .filter(
-    tour =>
-      !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
-        getEngine1FareHarborItemId(tour)
-      )
-  )
-  .filter(hasValidPublicCardHero);
+  .map(applyPublicTourTransforms)
+  .filter(tour => !isHardDeletedOrContaminatedTour(tour));
 
-const legacyTours: Tour[] = [
+export const tours: Tour[] = publicCatalogCandidates.filter(
+  hasValidPublicCardHero
+);
+
+const fareHarborMigratedRouteTours: Tour[] = publicCatalogCandidates.filter(
+  tour =>
+    !hasValidPublicCardHero(tour) && Boolean(getFareHarborProofFromTour(tour))
+);
+
+const legacyCatalogCandidates: Tour[] = [
   ...toursGenerated,
   ...manualTours,
   ...flagstaffTours,
@@ -292,31 +298,18 @@ const legacyTours: Tour[] = [
         operatorName: tour.operator,
       })
   )
-  .map(tour =>
-    applyTourPricing({
-      ...tour,
-      destination: {
-        ...tour.destination,
-        country: tour.destination.country || "United States",
-      },
-    })
-  )
-  .map(remapMisclassifiedAfricaTours)
-  .filter(
+  .map(applyPublicTourTransforms)
+  .filter(tour => !isHardDeletedOrContaminatedTour(tour));
+
+const legacyTours: Tour[] = legacyCatalogCandidates.filter(
+  hasValidPublicCardHero
+);
+
+const fareHarborMigratedLegacyRouteTours: Tour[] =
+  legacyCatalogCandidates.filter(
     tour =>
-      !isHardDeletedLegacyTour({
-        productId: getEngine1FareHarborItemId(tour),
-        slug: tour.slug,
-        canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
-      })
-  )
-  .filter(
-    tour =>
-      !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
-        getEngine1FareHarborItemId(tour)
-      )
-  )
-  .filter(hasValidPublicCardHero);
+      !hasValidPublicCardHero(tour) && Boolean(getFareHarborProofFromTour(tour))
+  );
 
 export const getLegacyTourBySlugs = (
   stateSlug: string,
@@ -324,6 +317,12 @@ export const getLegacyTourBySlugs = (
   tourSlug: string
 ) =>
   legacyTours.find(
+    tour =>
+      tour.destination.stateSlug === stateSlug &&
+      tour.destination.citySlug === citySlug &&
+      tour.slug === tourSlug
+  ) ??
+  fareHarborMigratedLegacyRouteTours.find(
     tour =>
       tour.destination.stateSlug === stateSlug &&
       tour.destination.citySlug === citySlug &&
@@ -507,11 +506,19 @@ export const getTourBySlugs = (
 ) => {
   const citySlugGroup = getDestinationCitySlugGroup(stateSlug, citySlug);
 
-  return getToursByCity(stateSlug, citySlug).find(
-    tour =>
-      tour.destination.stateSlug === stateSlug &&
-      citySlugGroup.includes(tour.destination.citySlug) &&
-      tour.slug === tourSlug
+  return (
+    getToursByCity(stateSlug, citySlug).find(
+      tour =>
+        tour.destination.stateSlug === stateSlug &&
+        citySlugGroup.includes(tour.destination.citySlug) &&
+        tour.slug === tourSlug
+    ) ??
+    fareHarborMigratedRouteTours.find(
+      tour =>
+        tour.destination.stateSlug === stateSlug &&
+        citySlugGroup.includes(tour.destination.citySlug) &&
+        tour.slug === tourSlug
+    )
   );
 };
 

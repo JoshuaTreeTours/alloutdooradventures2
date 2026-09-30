@@ -884,6 +884,11 @@ const main = async () => {
       urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
     }
   }
+  const migratedProofPaths =
+    fareHarborProofModule.collectFareHarborMigratedRoutePaths?.() ?? [];
+  for (const routePath of migratedProofPaths) {
+    urlsToRender.add(buildCanonicalUrl(routePath));
+  }
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();

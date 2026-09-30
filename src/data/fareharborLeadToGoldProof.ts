@@ -46,6 +46,67 @@ export const getFareHarborProofFromTour = (
   return getFareHarborProofByItemId(fromUrl ?? fromSlug ?? fromId);
 };
 
+const normalizeMigratedRoutePath = (
+  value?: string | null
+): string | null => {
+  if (!value) {
+    return null;
+  }
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
+  }
+  const pathname = /^https?:\/\//i.test(trimmed)
+    ? (() => {
+        try {
+          return new URL(trimmed).pathname;
+        } catch {
+          return null;
+        }
+      })()
+    : trimmed;
+  if (!pathname) {
+    return null;
+  }
+  return `/${pathname.replace(/^\/+|\/+$/g, "")}`;
+};
+
+export const collectFareHarborMigratedRoutePaths = (
+  products: FareHarborProofProduct[] = getFareHarborProofProducts()
+): string[] => {
+  const paths = new Set<string>();
+  for (const product of products) {
+    const publicPath = normalizeMigratedRoutePath(product.publicPath);
+    if (publicPath) {
+      paths.add(publicPath);
+    }
+    const engine2Path = normalizeMigratedRoutePath(product.engine2Path);
+    if (engine2Path) {
+      paths.add(engine2Path);
+    }
+  }
+  return [...paths];
+};
+
+const itemIdFromSlugOrPath = (value?: string | null): string | null =>
+  value?.match(/-(\d+)(?:\/|$)/)?.[1] ?? null;
+
+export const isFareHarborMigratedRouteRef = (ref?: {
+  itemId?: string | null;
+  slug?: string | null;
+  path?: string | null;
+} | null): boolean => {
+  if (!ref) {
+    return false;
+  }
+  const candidates = [
+    ref.itemId,
+    itemIdFromSlugOrPath(ref.slug),
+    itemIdFromSlugOrPath(ref.path),
+  ];
+  return candidates.some(itemId => Boolean(getFareHarborProofByItemId(itemId)));
+};
+
 export const FAREHARBOR_PROOF_PRIMARY_CTA_LABEL = "Check availability";
 
 export const resolveFareHarborProofCtaLabel = (

@@ -23,6 +23,7 @@ import {
   applyFareHarborProofSchema,
   applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
+  collectFareHarborMigratedRoutePaths,
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
   getFareHarborProofByItemId,
   getFareHarborProofFromTour,
@@ -169,6 +170,19 @@ describe("FareHarbor Stage B proof set", () => {
         product => product.exceptionStatus !== "BOOKING_PAGE_NOT_FOUND"
       )
     ).toBe(true);
+    const inventory = collectFareHarborMigratedRoutePaths();
+    expect(inventory).toHaveLength(
+      new Set(
+        products.flatMap(product =>
+          [product.publicPath, product.engine2Path].filter(Boolean)
+        )
+      ).size
+    );
+    expect(
+      inventory.some(routePath =>
+        BOOKING_PAGE_NOT_FOUND_IDS.has(routePath.split("-").pop() ?? "")
+      )
+    ).toBe(false);
   });
 
   it("removes terminal booking pages from every public inventory surface", () => {

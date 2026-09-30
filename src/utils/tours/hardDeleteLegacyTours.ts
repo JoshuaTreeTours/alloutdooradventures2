@@ -4,6 +4,7 @@ import {
   getInvalidPlaceholderTourSlugs,
 } from "./invalidPlaceholderTours";
 import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
+import { isFareHarborMigratedRouteRef } from "../../data/fareharborLeadToGoldProof";
 
 const HARD_DELETED_PRODUCT_IDS = new Set([
   "16628",
@@ -51,6 +52,15 @@ export const isHardDeletedLegacyTour = ({
     isStageBBookingPageNotFound(normalizedCanonicalPath)
   ) {
     return true;
+  }
+  if (
+    isFareHarborMigratedRouteRef({
+      itemId: normalizedProductId,
+      slug: normalizedSlug,
+      path: normalizedCanonicalPath,
+    })
+  ) {
+    return false;
   }
   if (
     normalizedProductId === "34849" ||

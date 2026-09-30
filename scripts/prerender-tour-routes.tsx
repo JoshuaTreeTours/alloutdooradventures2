@@ -8,6 +8,7 @@ import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import { StructuredDataProvider } from "../src/components/StructuredDataProvider";
 import CityTourDetailRoute from "../src/pages/destinations/states/tours/CityTourDetailRoute";
+import { collectFareHarborMigratedRoutePaths } from "../src/data/fareharborLeadToGoldProof";
 
 const distDir = path.resolve("dist");
 const emptyRoot = '<div id="root"></div>';
@@ -54,6 +55,10 @@ for (const file of sitemapFiles) {
     const params = parseTourRoute(pathname);
     if (params) routes.set(pathname, params);
   }
+}
+for (const pathname of collectFareHarborMigratedRoutePaths()) {
+  const params = parseTourRoute(pathname);
+  if (params) routes.set(pathname, params);
 }
 
 let rendered = 0;

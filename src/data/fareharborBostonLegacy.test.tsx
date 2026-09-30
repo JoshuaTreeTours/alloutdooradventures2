@@ -8,6 +8,7 @@ import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDeta
 import { getTourBySlugs, tours } from "./tours";
 import {
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
+  collectFareHarborMigratedRoutePaths,
   getFareHarborBostonLegacyProducts,
   getFareHarborProofByItemId,
   getFareHarborProofFromTour,
@@ -89,6 +90,24 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       expect(product.visiblePriceLabel).toBeNull();
     }
     expect(JSON.stringify(products)).not.toContain("InStock");
+    const sitemap = readFileSync("public/sitemap-tours.xml", "utf8");
+    const inventory = new Set(collectFareHarborMigratedRoutePaths());
+    for (const product of products) {
+      expect(inventory.has(product.publicPath)).toBe(true);
+      const slug = product.publicPath.split("/").filter(Boolean).pop();
+      expect(slug).toBeTruthy();
+      expect(
+        getTourBySlugs("massachusetts", "boston", slug as string)
+      ).toMatchObject({ slug });
+      expect(sitemap).toContain(product.publicPath);
+    }
+    expect(
+      tours.filter(
+        tour =>
+          tour.destination.citySlug === "boston" &&
+          tour.slug === "adventures-at-sea-455620"
+      )
+    ).toHaveLength(0);
   });
 
   it("removes terminal Boston booking pages from public surfaces", () => {
