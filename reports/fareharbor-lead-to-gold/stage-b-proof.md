@@ -60,7 +60,7 @@ Item 34849 had been hard-deleted and covered by the red-jeep operator opt-out. T
 - Visible price: From $59.95
 - Duration: 1 hour
 - Meeting location: Country Boy Mine, 0542 French Gulch Road, Breckenridge, CO 80424
-- Visible gallery images: `["https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG"]`
+- Visible gallery images: `["https://cdn.filestackcontent.com/wv2yejIATRCfMF7m4uiN"]`
 - Schema and meta description: One-hour combined-group tour at Country Boy Mine in Breckenridge. Guests meet at 0542 French Gulch Road, go more than 1,000 feet into the mountain through the original workings, and pan for gold in Eureka Creek. Gold panning is included, and guests keep what they find.
 - Offer: `{"type": "Offer", "price": "59.95", "priceCurrency": "USD"}`
 - Pricing rows: `[{"label": "Adult", "note": "13+", "amountLabel": "$59.95"}, {"label": "Child", "note": "Ages 4-12", "amountLabel": "$39.95"}, {"label": "Mine Tour Child (3-years old and under)", "note": "", "amountLabel": "Free"}]`

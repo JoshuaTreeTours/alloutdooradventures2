@@ -60,7 +60,7 @@ export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = [
       "Gold panning in Eureka Creek, and guests keep what they find"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG"
+      "https://cdn.filestackcontent.com/wv2yejIATRCfMF7m4uiN"
     ],
     "wordCount": 153,
     "durationLabel": "1 hour",

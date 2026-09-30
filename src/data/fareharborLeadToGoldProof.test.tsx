@@ -99,7 +99,7 @@ const PROOF_VISIBLE_IMAGES: Record<
 > = {
   "145208": {
     hero: "https://cdn.filestackcontent.com/ZAorPKGTRJ2GipYchR2a",
-    gallery: ["https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG"],
+    gallery: ["https://cdn.filestackcontent.com/wv2yejIATRCfMF7m4uiN"],
   },
   "181765": {
     hero: "https://cdn.filestackcontent.com/yKJVfFDYQx2y2o1QxkOc",
