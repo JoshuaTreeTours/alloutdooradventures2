@@ -1,3 +1,4 @@
+import { isMerchantFeedExcludedProductCode } from "../../src/data/excludedProductCodes.js";
 import { MERCHANT_FEED_COMMERCIAL_PARITY_FIELDS } from "../../src/engine6/merchantFeedParity.js";
 
 /**
@@ -254,6 +255,14 @@ export const applyMerchantFeedChangeScopePreservingNonCommercial = (
 
   for (const baselineRow of baselineRows) {
     const productCode = normalizeProductCode(baselineRow.id);
+
+    // Merchant-feed-only exclusions are intentional removals, not missing rows.
+    // Keep the website/Engine6 product active while preventing stale baseline
+    // rows from being restored into merchantFeed.csv on later builds.
+    if (isMerchantFeedExcludedProductCode(productCode)) {
+      continue;
+    }
+
     const proposedRow = proposedByProductCode.get(productCode);
 
     if (!proposedRow) {
@@ -331,6 +340,10 @@ export const validateMerchantFeedChangeScope = (
   for (const [productCode, baselineRow] of Array.from(
     baselineByProductCode.entries()
   )) {
+    if (isMerchantFeedExcludedProductCode(productCode)) {
+      continue;
+    }
+
     const proposedRow = proposedByProductCode.get(productCode);
     if (!proposedRow) {
       violations.push({
@@ -452,6 +465,11 @@ export const enforceMerchantFeedChangeScope = (
 
   for (const baselineRow of baselineRows) {
     const productCode = normalizeProductCode(baselineRow.id);
+
+    if (isMerchantFeedExcludedProductCode(productCode)) {
+      continue;
+    }
+
     if (blockedProductCodes.has(productCode)) {
       enforcedRows.push({ ...baselineRow });
       continue;
