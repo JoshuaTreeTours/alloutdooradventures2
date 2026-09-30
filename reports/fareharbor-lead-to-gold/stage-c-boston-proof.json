@@ -452,25 +452,23 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided outing lasts 3 hours and takes place in Boston, Massachusetts.",
-      "Bites of Boston Food Tours is the listed operator.",
-      "Published group size for this outing is 12. Named places and short route labels for this outing include Boston's Chinatown. Published age limits are minimum age 12."
+      "Chinatown's Culture & Cuisine is a three-hour food walk with Bites of Boston Food Tours through Boston's Chinatown. The walk samples traditional and modern Chinese dishes and covers the neighborhood's history.",
+      "Groups are capped at 12, and guests must be at least 12 years old. Strollers are not permitted."
     ],
-    "schemaDescription": "This guided outing takes place in Boston. Published length is 3 hours. Named places include Boston's Chinatown.",
+    "schemaDescription": "A three-hour Bites of Boston food walk in Chinatown sampling traditional and modern Chinese dishes, with groups of 12 and an age floor of 12.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No restaurant names were present in the harvest, so none were added.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "3 hours guided outing in Boston",
-      "Named places include Boston's Chinatown"
+      "Three hours in Boston's Chinatown",
+      "Traditional and modern Chinese dishes",
+      "Groups of 12; age floor 12"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/QGBRfCIT8SanOkXTeppE"
     ],
-    "wordCount": 48,
+    "wordCount": 49,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "9 Tyler Street Boston, MA 02111",
@@ -643,25 +641,23 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided outing lasts 2.5 hours and takes place in Boston, Massachusetts.",
-      "Bites of Boston Food Tours is the listed operator.",
-      "Published group size for this outing is 12. Named places and short route labels for this outing include Local Foods and South End. Published age limits are minimum age 21."
+      "Happy Hour Stroll is a 2.5-hour Friday-evening food walk with Bites of Boston Food Tours in the South End. The walk visits four eateries that South End residents use, and each stop pairs a tasting with an alcoholic drink.",
+      "Groups are capped at 12. Guests must be 21 or older."
     ],
-    "schemaDescription": "This guided outing takes place in Boston. Published length is 2.5 hours. Named places include Local Foods and South End.",
+    "schemaDescription": "A 2.5-hour Friday-evening South End food walk with four stops, each pairing a tasting with an alcoholic drink. Groups are capped at 12, and guests must be 21 or older.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Headline marketing about lots of fun was not used.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "2.5 hours guided outing in Boston",
-      "Named places include Local Foods and South End"
+      "2.5 hours on Friday evenings in the South End",
+      "Four stops, each with food and a drink",
+      "Age floor 21"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/5VM0dz3BQ4PNeXQLWc28"
     ],
-    "wordCount": 52,
+    "wordCount": 53,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "1415 Washington Street Boston, MA 02118",
@@ -1143,25 +1139,23 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided outing lasts 3 hours and takes place in Boston, Massachusetts.",
-      "Bites of Boston Food Tours is the listed operator.",
-      "Published group size for this outing is 16. Named places and short route labels for this outing include South End. Published age limits are minimum age 12."
+      "Local Gems of the South End is a three-hour food walk with Bites of Boston Food Tours. The outing leaves downtown for the South End and visits restaurants, bakeries, and markets, sampling sweet and savory dishes from more than one cuisine.",
+      "Groups are capped at 16, and guests must be at least 12 years old. Strollers are not permitted."
     ],
-    "schemaDescription": "This guided outing takes place in Boston. Published length is 3 hours. Named places include South End.",
+    "schemaDescription": "A three-hour South End food walk visiting restaurants, bakeries, and markets, with groups of 16 and an age floor of 12.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No venue names were present in the harvest, so none were added.",
+      "Promotional wording about escaping downtown was not used as a claim."
     ],
     "highlights": [
-      "3 hours guided outing in Boston",
-      "Named places include South End"
+      "Three hours in the South End",
+      "Restaurants, bakeries, and markets",
+      "Groups of 16; age floor 12"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/cCUzzTdJRBWiriP4wL3L"
     ],
-    "wordCount": 48,
+    "wordCount": 60,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "35 W Newton Street Boston, MA 02118",
@@ -1344,26 +1338,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This harbor outing lasts 2 hours and takes place in Boston, Massachusetts. Classic Harbor Line - Boston is the listed operator.",
-      "Named places and short route labels for this outing include Boston Harbor, Schooners Adirondack III, Notable Sites, World Trade Center, and Harpoon Brewery. Short listed inclusions include 2 hour sail and Light commentary on landmarks.",
-      "Short listed exclusions include Gratuity for the crew. Short listed items to bring include Valid identification and Identification checked for adult beverage access. The published cancellation note mentions a 24-hour notice window."
+      "This two-hour sunset sail on Boston Harbor uses the 80-foot pilot schooners Adirondack III and Adirondack II, built in the style of 1890s pilot schooners, with teak decks and mahogany trim. Light commentary on waterfront landmarks starts after the boat leaves the dock.",
+      "The course first takes in the Seaport District, pointing out the Moakley courthouse on Fan Pier, World Trade Center, and Harpoon Brewery, then continues toward the Inner Harbor islands. Castle Island and Fort Independence come into view, along with the Donald McKay Monument, Spectacle Island, and the light at Long Island Head. The captain and crew answer questions about the harbor.",
+      "Adult beverages require valid identification. Tickets are not refundable; a reschedule or gift-card exchange is available until 24 hours before departure."
     ],
-    "schemaDescription": "This harbor outing takes place in Boston. Published length is 2 hours. Named places include Boston Harbor, Schooners Adirondack III, and Notable Sites.",
+    "schemaDescription": "A two-hour Boston Harbor sunset sail on the 80-foot schooners Adirondack III and Adirondack II, with light landmark commentary past the Seaport and the Inner Harbor islands.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Superlatives such as fastest, most elegant, and unforgettable were not used.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "2 hours harbor outing in Boston",
-      "Named places include Boston Harbor and Schooners Adirondack III",
-      "Short inclusions include 2 hour sail"
+      "Two-hour sunset sail on 80-foot schooners",
+      "Seaport, harbor islands, and Fort Independence",
+      "Light landmark commentary"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/xeus2kdRS6kW4LYJM5Xf"
     ],
-    "wordCount": 88,
+    "wordCount": 128,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "60 Rowes Wharf Boston, MA 02110",
@@ -2526,26 +2518,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This harbor outing lasts 1.5 hours and takes place in Boston, Massachusetts.",
-      "Classic Harbor Line - Boston is the listed operator.",
-      "Named places and short route labels for this outing include Northern Lights, Boston Skyline, Old North Church, USS Cassin Young, and Fort Independence. Short listed inclusions include 1-1.5 hour hour cruise. The published cancellation note mentions a 24-hour notice window."
+      "Northern Lights, a 115-foot motor yacht styled after a 1920s New England steamship, runs a 60- or 90-minute sightseeing cruise on Boston Harbor. The captain offers moderate commentary on the main sights; this is not a fully narrated tour.",
+      "Guests can sit in the main cabin, which is heated or air-conditioned, or move to the open-air covered top deck. Drinks and small bites are sold at the onboard bar.",
+      "Sightlines include the Boston skyline, USS Constitution, USS Cassin Young, and the Old North Church steeple, along with Bunker Hill Monument, Fort Independence, the Seaport District, and Spectacle Island."
     ],
-    "schemaDescription": "This harbor outing takes place in Boston. Published length is 1.5 hours. Named places include Northern Lights, Boston Skyline, and Old North Church.",
+    "schemaDescription": "A 60- or 90-minute Boston Harbor cruise on the motor yacht Northern Lights, with moderate captain commentary, an indoor cabin, a covered top deck, and views of the Old North Church, USS Constitution, and Spectacle Island.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Marketing about an unforgettable cruise was not used.",
+      "A separate December Cocoa and Carols sailing was not treated as this product."
     ],
     "highlights": [
-      "1.5 hours harbor outing in Boston",
-      "Named places include Northern Lights and Boston Skyline",
-      "Short inclusions include 1-1.5 hour hour cruise"
+      "60- or 90-minute harbor cruise",
+      "Heated or cooled cabin and a covered top deck",
+      "Old North Church, USS Constitution, and Spectacle Island"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/z1WTr0IT1GhYWLXFJroG"
     ],
-    "wordCount": 64,
+    "wordCount": 102,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "60 Rowes Wharf Boston, MA 02110",
@@ -4166,24 +4156,22 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This harbor outing lasts 1.5 hours and takes place in Boston, Massachusetts. Classic Harbor Line - Boston is the listed operator.",
-      "Named places and short route labels for this outing include Yacht Manhattan, Notable Sites, Boston Skyline, Old North Church, and USS Cassin Young. Short listed inclusions include 5 hour cruise and Light commentary on landmarks.",
-      "Short listed items to bring include Valid identification. The published cancellation note mentions a 24-hour notice window."
+      "Yacht Manhattan runs a 90-minute sightseeing cruise on Boston Harbor. Guests can sit in the heated main cabin or step onto the open deck. Drinks and small bites are sold at the bar.",
+      "The boat is an 80-foot, 1920s-style yacht with teak decks, mahogany trim, and an all-glass cabin. Sightlines include the Boston skyline, USS Constitution, USS Cassin Young, and the Old North Church steeple, along with Bunker Hill Monument, Fort Independence, the Seaport District, and Spectacle Island.",
+      "Tickets are not refundable; a reschedule or gift-card exchange is available until 24 hours before departure."
     ],
-    "schemaDescription": "This harbor outing takes place in Boston. Published length is 1.5 hours. Named places include Yacht Manhattan, Notable Sites, and Boston Skyline.",
+    "schemaDescription": "A 90-minute Boston Harbor cruise on the 80-foot Yacht Manhattan, with a heated cabin, an open deck, and views of the Old North Church, USS Constitution, and Spectacle Island.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Holiday decorations and private-charter uses described for other events were not added to this sailing.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "1.5 hours harbor outing in Boston",
-      "Named places include Yacht Manhattan and Notable Sites",
-      "Short inclusions include 5 hour cruise"
+      "90 minutes on Yacht Manhattan",
+      "Heated cabin and open deck",
+      "Old North Church, USS Constitution, and Spectacle Island"
     ],
     "galleryImages": [],
-    "wordCount": 74,
+    "wordCount": 99,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -6875,25 +6863,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided outing lasts 1 hour and takes place in Boston, Massachusetts. Boston By Foot is the listed operator.",
-      "Published group size for this outing is Maximum 25 people per guide. Guided-language options listed for this product include Spanish.",
-      "Named places and short route labels for this outing include Old State House. Short listed items to bring include Comfortable shoes and Water bottle."
+      "Boston By Little Feet is a one-hour Freedom Trail walk designed for families with children ages 6 to 12. The outdoor route is about 0.73 miles at a moderate pace, with up to 25 guests per guide.",
+      "Stops include Faneuil Hall and the Old State House. The route also reaches the Old South Meeting House, Boston's first public school site, and its oldest burying ground. Children are asked to take part at each stop. Every child must be with a ticketed adult.",
+      "The outing is held in ordinary rain as well as clear weather. Surfaces are mostly flat, and the walk is stroller and wheelchair accessible. On selected dates the same tour is offered in Spanish. Comfortable shoes, weather-ready clothing, and a water bottle are the packing notes."
     ],
-    "schemaDescription": "This guided outing takes place in Boston. Published length is 1 hour. Named places include Old State House.",
+    "schemaDescription": "A one-hour Boston By Foot Freedom Trail walk for families with children 6 to 12, covering about 0.73 miles past Faneuil Hall, the Old State House, and Old South Meeting House. Children must be with a ticketed adult.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Second-person and marketing wording from the operator description was not used.",
+      "The meeting point stays in the facts panel."
     ],
     "highlights": [
-      "1 hour guided outing in Boston",
-      "Named places include Old State House"
+      "One-hour Freedom Trail walk for ages 6 to 12",
+      "Faneuil Hall, Old State House, and Old South Meeting House",
+      "Held rain or shine; stroller and wheelchair accessible"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/2NyueZMWQx2Lw4rblChe"
     ],
-    "wordCount": 64,
+    "wordCount": 131,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Samuel Adams Statue in front of Faneuil Hall Boston, MA 02109",
@@ -7083,25 +7070,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This walking tour lasts 1 hour and takes place in Boston, Massachusetts.",
-      "Boston By Foot is the listed operator.",
-      "Published group size for this outing is Maximum 25 people per guide. Named places and short route labels for this outing include Freedom Trail and Old State House. Short listed items to bring include Comfortable shoes and Water bottle."
+      "Heart of the Freedom Trail is a one-hour walking introduction to Boston's Revolutionary history with Boston By Foot. The outdoor route is about half a mile at a moderate pace, with up to 25 guests per guide.",
+      "The walk visits the Old State House, Faneuil Hall, King's Chapel, and the Old South Meeting House, with stories about the people and events tied to those buildings.",
+      "The outing is held in ordinary rain as well as clear weather. Surfaces are mostly flat, and the walk is stroller and wheelchair accessible. Comfortable shoes, weather-ready clothing, and a water bottle are the packing notes."
     ],
-    "schemaDescription": "This walking tour takes place in Boston. Published length is 1 hour. Named places include Boston's Revolutionary, Freedom Trail, and Old State House.",
+    "schemaDescription": "A one-hour Boston By Foot walk of about half a mile visiting the Old State House, Faneuil Hall, King's Chapel, and the Old South Meeting House.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Phrases such as world-famous and perfect introduction were not used as claims.",
+      "The meeting point stays in the facts panel."
     ],
     "highlights": [
-      "1 hour walking tour in Boston",
-      "Named places include Freedom Trail and Old State House"
+      "One-hour Freedom Trail introduction",
+      "Old State House, Faneuil Hall, King's Chapel, and Old South Meeting House",
+      "Held rain or shine; about half a mile"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/CImkQk4fTqqTdf3xDFmn"
     ],
-    "wordCount": 58,
+    "wordCount": 103,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Samuel Adams Statue in front of Faneuil Hall Boston, MA 02109",
@@ -33116,25 +33102,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This food walk lasts 2 hours and takes place in Boston, Massachusetts. Off the Beaten Path Food Tours is the listed operator.",
-      "Published group size for this outing is Maximum 12 guests. Named places and short route labels for this outing include Beacon Hill, Boston Common, and Boston Public Market.",
-      "Short listed exclusions include Beverages not included. Accessibility note: Stroller and wheelchair accessible. The published cancellation note mentions a 48-hour notice window."
+      "This two-hour chocolate walk covers about 1.5 miles, starting in Beacon Hill and continuing across Boston Common, then along Park Street to the Boston Public Market. Groups stay at a maximum of 12 guests.",
+      "Five stops serve samples from mostly female-owned small businesses, including bean-to-bar chocolate, a Belgian tasting, truffles, Boston Cream Pie, and chocolate tea. Substitutions for dietary restrictions or allergies are confirmed by email. After the walk, guests receive a digital Boston guide.",
+      "The outing is stroller and wheelchair accessible. Comfortable shoes, weather-ready clothing, and a water bottle are the packing notes. A full refund is available with at least 48 hours' notice."
     ],
-    "schemaDescription": "This food walk takes place in Boston. Published length is 2 hours. Named places include Beacon Hill, Boston Common, and Boston Public Market.",
+    "schemaDescription": "A two-hour chocolate walk of about 1.5 miles from Beacon Hill to Boston Public Market, with five tasting stops from mostly female-owned small businesses.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Suggested gratuity amounts were omitted because dollar figures do not belong in the body.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "2 hours food walk in Boston",
-      "Named places include Beacon Hill and Boston Common"
+      "Two hours and about 1.5 miles",
+      "Five chocolate stops in Beacon Hill and downtown",
+      "Mostly female-owned small businesses"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/meF4Nj5FT2edZI4LTFz2"
     ],
-    "wordCount": 73,
+    "wordCount": 111,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "91 Charles Street Boston, MA 02114",
@@ -36535,26 +36520,24 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This guided outing lasts 2.5-3 Hours and takes place in Boston, Massachusetts. Urban Adventours is the listed operator.",
-      "Guided-language options listed for this product include English. Named places and short route labels for this outing include Charles River.",
-      "Short listed inclusions include This tour is in English. Short listed exclusions include Gratuities."
+      "The City View Tour is a 2.5- to 3-hour bicycle outing with Urban Adventours, covering about 10 to 12 miles and six Boston neighborhoods. Each guest rides an individually fitted bike. A helmet and water are included, and the guide leads in English.",
+      "The ride starts in the North End, Boston's oldest residential neighborhood, with Charlestown across the water, then follows the Charles River Esplanade toward Cambridge and MIT. From there it continues past Boston University and Kenmore Square to Fenway Park, then to the Christian Science Center and Copley Square, where the John Hancock Building and the Boston Marathon finish line stand. The last stretch moves through Back Bay and South End brownstones, Boston Common, the Rose Kennedy Greenway, and Long Wharf, looking toward South Boston and East Boston.",
+      "Departures are daily at 10 a.m. and 2 p.m. Guests are asked to reserve by 6 p.m. the day before. The ride continues in ordinary rain. Children must be at least 12 months old, and helmets are required."
     ],
-    "schemaDescription": "This guided outing takes place in Boston. Published length is 2.5-3 Hours. Named places include Charles River.",
+    "schemaDescription": "A 2.5- to 3-hour Urban Adventours bicycle outing covering about 10 to 12 miles and six Boston neighborhoods, including the North End, the Charles River Esplanade, Fenway Park, and Copley Square. Bike, helmet, and water are included.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "Operator marketing such as flagship and Best of Boston was not used.",
+      "The meeting street address stays in the facts panel."
     ],
     "highlights": [
-      "2.5-3 Hours guided outing in Boston",
-      "Named places include Charles River",
-      "Short inclusions include This tour is in English"
+      "2.5 to 3 hours and 10 to 12 miles by bike",
+      "Six neighborhoods, from the North End to Fenway Park and Copley Square",
+      "Bike, helmet, water, and an English-speaking guide"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/OqJSGsyPREmTAVfAX2sd"
     ],
-    "wordCount": 55,
+    "wordCount": 173,
     "durationLabel": "2.5-3 Hours",
     "durationIso": null,
     "meetingLocation": "103 Atlantic Avenue Boston, MA 02110",

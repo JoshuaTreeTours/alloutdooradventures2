@@ -305,6 +305,61 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     ).toMatchObject({ stateSlug: "maine", citySlug: "portland" });
   });
 
+  it("rewrites a 10-product Boston editorial sample without implementation language", () => {
+    const sampleIds = [
+      "27344",
+      "112945",
+      "117124",
+      "243407",
+      "26483",
+      "26504",
+      "361612",
+      "361623",
+      "482166",
+      "618195",
+    ] as const;
+    const implementationPhrases = [
+      "named places",
+      "short route labels",
+      "short listed inclusions",
+      "published cancellation note",
+      "source-backed",
+      "facts panel",
+      "product-level",
+      "price not found",
+      "listed operator",
+      "takes place in",
+      "this guided outing",
+      "this harbor outing",
+    ];
+    for (const itemId of sampleIds) {
+      const product = getFareHarborProofByItemId(itemId);
+      expect(product, itemId).toBeTruthy();
+      expect(product!.paragraphs.length).toBeGreaterThanOrEqual(2);
+      expect(product!.paragraphs.length).toBeLessThanOrEqual(4);
+      expect(product!.wordCount).toBeGreaterThanOrEqual(40);
+      const visible = [
+        ...product!.paragraphs,
+        ...product!.highlights,
+        product!.schemaDescription,
+      ]
+        .join(" ")
+        .toLowerCase();
+      for (const phrase of implementationPhrases) {
+        expect(visible, `${itemId} ${phrase}`).not.toContain(phrase);
+      }
+      expect(visible).not.toContain("103 atlantic");
+      expect(visible).not.toContain("91 charles");
+      expect(visible).not.toContain("60 rowes");
+    }
+    const cityView = getFareHarborProofByItemId("27344");
+    expect(cityView?.paragraphs.join(" ")).toContain("Urban Adventours");
+    expect(cityView?.exceptionStatus).toBe("OK");
+    expect(getFareHarborProofByItemId("482166")?.exceptionStatus).toBe(
+      "PRICE_NOT_FOUND"
+    );
+  });
+
   it("keeps customer-facing FareHarbor copy free of process commentary and heading fragments", () => {
     const processPhrases = [
       "facts panel",

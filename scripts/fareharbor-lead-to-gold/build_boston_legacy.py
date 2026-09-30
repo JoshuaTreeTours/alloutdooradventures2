@@ -31,6 +31,10 @@ from build_stage_b_proof import (
     word_count,
 )
 from inventory_boston import inventory
+from editorial_voice import (
+    editorial_voice_errors,
+    load_editorial_sample,
+)
 from migration_integrity import (
     assess_geography,
     collect_place_signals,
@@ -49,6 +53,7 @@ REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-proof
 GENERATED_TS = ROOT / "src" / "data" / "fareharborBostonLegacy.generated.ts"
 GEOGRAPHY_TS = ROOT / "src" / "utils" / "fareharbor" / "geographyReview.generated.ts"
 TERMINAL_TS = ROOT / "src" / "utils" / "fareharbor" / "stageBTerminalBookingPages.ts"
+EDITORIAL_SAMPLE = ROOT / "scripts" / "fareharbor-lead-to-gold" / "boston_editorial_sample.json"
 
 LANG = {
     "en": "English",
@@ -76,6 +81,7 @@ MEASURE_RE = re.compile(
     re.I,
 )
 FILESTACK_RE = re.compile(r"https://cdn\.filestackcontent\.com/([A-Za-z0-9]+)")
+EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE)
 
 
 def load_json(path: Path):
@@ -656,6 +662,12 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         paragraphs, highlights, removed = compose_copy(
             catalog, facts, source_text, geography
         )
+        overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
+        if overlay:
+            paragraphs = list(overlay.get("paragraphs") or paragraphs)
+            highlights = list(overlay.get("highlights") or highlights)
+            if overlay.get("removedClaims"):
+                removed = list(overlay["removedClaims"])
     words = word_count(paragraphs)
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
     if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 40:
@@ -691,9 +703,15 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         }
         rows = price_rows(price)
 
-    schema = schema_from_paragraphs(
-        paragraphs, facts, catalog["title"], exception, geography
-    )
+    overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
+    if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
+        overlay = None
+    if overlay and overlay.get("schemaDescription"):
+        schema = overlay["schemaDescription"]
+    else:
+        schema = schema_from_paragraphs(
+            paragraphs, facts, catalog["title"], exception, geography
+        )
     meeting = facts.get("meetingAddress") if exception != "BOOKING_PAGE_NOT_FOUND" else None
     omit_facts = exception in {
         "SOURCE_NOT_FOUND",
@@ -754,6 +772,13 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     if extra:
         validation["errors"] = list(validation.get("errors") or []) + extra
         validation["ok"] = not validation["errors"]
+    if overlay:
+        voice_errors = editorial_voice_errors(
+            product["paragraphs"], product["highlights"], product["schemaDescription"]
+        )
+        if voice_errors:
+            validation["errors"] = list(validation.get("errors") or []) + voice_errors
+            validation["ok"] = not validation["errors"]
     product["validation"] = validation
     return product
 
