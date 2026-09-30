@@ -218,6 +218,7 @@ const buildEngine2Graph = engine2SchemaModule.buildSchemaGraph;
 const legacyTours = Array.isArray(toursDataModule.tours)
   ? toursDataModule.tours
   : [];
+const getTourBySlugs = toursDataModule.getTourBySlugs;
 const getFlagstaffTourBySlug = flagstaffModule.getFlagstaffTourBySlug;
 const buildWebPageStructuredData =
   structuredDataModule.buildWebPageStructuredData;
@@ -261,19 +262,24 @@ const resolveEngine2Tour = pathname => {
   return null;
 };
 
+const findLegacyTourBySlugs = (stateSlug, citySlug, tourSlug) =>
+  (typeof getTourBySlugs === "function"
+    ? getTourBySlugs(stateSlug, citySlug, tourSlug)
+    : null) ??
+  legacyTours.find(
+    tour =>
+      tour?.destination?.stateSlug === stateSlug &&
+      tour?.destination?.citySlug === citySlug &&
+      tour?.slug === tourSlug
+  ) ??
+  null;
+
 const resolveLegacyTour = pathname => {
   let match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
     pathname
   );
   if (match) {
-    return (
-      legacyTours.find(
-        tour =>
-          tour?.destination?.stateSlug === match[1] &&
-          tour?.destination?.citySlug === match[2] &&
-          tour?.slug === match[3]
-      ) ?? null
-    );
+    return findLegacyTourBySlugs(match[1], match[2], match[3]);
   }
 
   match =
@@ -281,26 +287,12 @@ const resolveLegacyTour = pathname => {
       pathname
     );
   if (match) {
-    return (
-      legacyTours.find(
-        tour =>
-          tour?.destination?.stateSlug === match[1] &&
-          tour?.destination?.citySlug === match[2] &&
-          tour?.slug === match[3]
-      ) ?? null
-    );
+    return findLegacyTourBySlugs(match[1], match[2], match[3]);
   }
 
   match = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (match) {
-    return (
-      legacyTours.find(
-        tour =>
-          tour?.destination?.stateSlug === match[1] &&
-          tour?.destination?.citySlug === match[2] &&
-          tour?.slug === match[3]
-      ) ?? null
-    );
+    return findLegacyTourBySlugs(match[1], match[2], match[3]);
   }
 
   match = /^\/tours\/([^/]+)$/.exec(pathname);
