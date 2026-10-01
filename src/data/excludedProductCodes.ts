@@ -13,7 +13,11 @@ export const EXCLUDED_PRODUCT_CODES = [
 ] as const;
 
 /** Active tour pages may remain published; these codes must not ship in merchantFeed.csv. */
-export const MERCHANT_FEED_EXCLUDED_PRODUCT_CODES = [] as const;
+export const MERCHANT_FEED_EXCLUDED_PRODUCT_CODES = [
+  "5257BOAT",
+  "76258P6",
+  "87912P1",
+] as const;
 
 const EXCLUDED_PRODUCT_CODE_SET = new Set<string>(
   EXCLUDED_PRODUCT_CODES.map(productCode => productCode.toUpperCase())

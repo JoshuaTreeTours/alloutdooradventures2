@@ -388,6 +388,38 @@ describe("merchant feed change-scope governance", () => {
     expect(merchantFeedCsvRowsByteIdentical(enforced[2]!, appended)).toBe(true);
   });
 
+  it("does not restore explicitly Merchant-feed-excluded baseline rows", () => {
+    const excludedCodes = ["5257BOAT", "76258P6", "87912P1"];
+    const baseline = [
+      sampleRow({ id: "5257BOAT" }),
+      sampleRow({ id: "76258P6" }),
+      sampleRow({ id: "87912P1" }),
+      sampleRow({ id: "191303P1" }),
+    ];
+    const proposed = [sampleRow({ id: "191303P1" })];
+
+    const preserved = applyMerchantFeedChangeScopePreservingNonCommercial(
+      baseline,
+      proposed,
+      { branchModifiedProductCodes: new Set() }
+    );
+    expect(preserved.rows.map(row => row.id)).toEqual(["191303P1"]);
+
+    const validation = validateMerchantFeedChangeScope(baseline, proposed, {
+      branchModifiedProductCodes: new Set(),
+    });
+    expect(validation.pass).toBe(true);
+    expect(validation.violations).toEqual([]);
+
+    const enforced = enforceMerchantFeedChangeScope(baseline, proposed, {
+      branchModifiedProductCodes: new Set(),
+    });
+    expect(enforced.map(row => row.id)).toEqual(["191303P1"]);
+    for (const code of excludedCodes) {
+      expect(enforced.some(row => row.id === code)).toBe(false);
+    }
+  });
+
   it("compares merchant feed rows using canonical CSV serialization", () => {
     const row = sampleRow({
       description: 'Tour with "quotes", commas, and newlines preserved.',
