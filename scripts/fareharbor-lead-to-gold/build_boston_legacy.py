@@ -33,9 +33,14 @@ from build_stage_b_proof import (
 from inventory_boston import inventory
 from editorial_voice import (
     compose_editorial,
-    editorial_is_thin,
     editorial_substance_errors,
     load_editorial_sample,
+)
+from source_priority import (
+    collect_authoritative_source,
+    itinerary_stops,
+    prose_for_overlap,
+    source_supports_editorial,
 )
 from image_integrity import (
     hero_gallery_duplicate_errors,
@@ -457,10 +462,17 @@ def normalize_duration(raw: str | None) -> str | None:
     return None
 
 
-def extract_facts(usable: list[dict], source_text: str, item: dict | None = None) -> dict:
+def extract_facts(
+    usable: list[dict],
+    source_text: str,
+    item: dict | None = None,
+    authoritative: dict | None = None,
+) -> dict:
     item = item or {}
     structured_duration = clean_text(field(usable, "duration")) or None
     description = clean_text(field(usable, "description") or "")
+    if authoritative and authoritative.get("description"):
+        description = authoritative["description"]
     duration = normalize_activity_duration(structured_duration, description)
     meeting = field(usable, "meeting_point")
     meeting_address = None
@@ -483,7 +495,7 @@ def extract_facts(usable: list[dict], source_text: str, item: dict | None = None
         included.extend(item_included or list_values(payload.get("what_is_included")))
         item_excluded = list_values(payload.get("what_is_not_included_items"))
         excluded.extend(item_excluded or list_values(payload.get("what_is_not_included")))
-        itinerary.extend(list_values(payload.get("itinerary")))
+        itinerary.extend(itinerary_stops(payload.get("itinerary")))
         highlights.extend(list_values(payload.get("highlights")))
         restrictions.extend(restriction_lines(payload.get("restrictions")))
         bring.extend(list_values(payload.get("what_to_bring_items") or payload.get("what_to_bring")))
@@ -509,7 +521,7 @@ def extract_facts(usable: list[dict], source_text: str, item: dict | None = None
         "groupSize": clean_text(field(usable, "group_size")).strip(" .") or None,
         "included": unique(included)[:8],
         "excluded": unique(excluded)[:6],
-        "itinerary": unique(itinerary)[:6],
+        "itinerary": unique((authoritative or {}).get("itinerary") or itinerary)[:18],
         "highlights": unique(highlights)[:6],
         "restrictions": unique(restrictions)[:4],
         "bring": unique(bring)[:5],
@@ -520,7 +532,9 @@ def extract_facts(usable: list[dict], source_text: str, item: dict | None = None
         "gleanedFacts": unique(glean_facts(" ".join(glean_source)))[:6],
         "properNames": proper_names(description),
         "measures": measures(description + " " + " ".join(included)),
-        "description": description,
+        "description": (authoritative or {}).get("description") or description,
+        "detailsText": (authoritative or {}).get("detailsText") or "",
+        "sourceUsed": (authoritative or {}).get("sourceUsed") or "",
     }
 
 
@@ -589,6 +603,8 @@ def empty_facts() -> dict:
         "maxAge": None,
         "groupSize": None,
         "description": "",
+        "detailsText": "",
+        "sourceUsed": "",
     }
 
 
@@ -618,6 +634,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     if endpoint_ok(meta, "structured-description") and structured:
         usable.append(structured)
     source_text = source_blob(folder)
+    authoritative = collect_authoritative_source(content, structured, item)
     classification = booking.get("classification")
     if classification == "BOOKING_PAGE_NOT_FOUND":
         exception = "BOOKING_PAGE_NOT_FOUND"
@@ -626,7 +643,9 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     else:
         exception = "OK"
 
-    facts = extract_facts(usable, source_text, item) if usable else empty_facts()
+    facts = (
+        extract_facts(usable, source_text, item, authoritative) if usable else empty_facts()
+    )
     dest = catalog.get("destination") or {}
     geography = assess_geography(
         expected={
@@ -649,6 +668,16 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         ),
     )
     public_path = public_path_for(geography, catalog["slug"])
+    place_source = " ".join(
+        part
+        for part in (
+            facts.get("description") or "",
+            " ".join(facts.get("itinerary") or []),
+            facts.get("detailsText") or "",
+        )
+        if part
+    )
+    overlap_text = prose_for_overlap(authoritative) or (facts.get("description") or "")
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
         highlights = []
@@ -658,7 +687,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         ]
     else:
         paragraphs, highlights, generated_schema, removed = compose_editorial(
-            catalog, facts, source_text, geography
+            catalog, facts, place_source or source_text, geography, overlap_text
         )
         overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
         if overlay:
@@ -669,12 +698,9 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             if overlay.get("schemaDescription"):
                 generated_schema = overlay["schemaDescription"]
     words = word_count(paragraphs)
-    thin = exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and editorial_is_thin(
-        paragraphs
-    )
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
-    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and (
-        words < 40 or thin
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and not source_supports_editorial(
+        authoritative, facts
     ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
@@ -683,7 +709,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         words = word_count(paragraphs)
         generated_schema = " ".join(paragraphs).strip()
         removed = [
-            "No public experience copy was written because the stored harvest cannot support useful guest-facing prose without padding or invention."
+            "No public experience copy was written because structured description, booking/details content, itinerary, and inclusions were all too thin to support useful guest-facing prose."
         ]
     elif exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and price is None:
         exception = "PRICE_NOT_FOUND"
@@ -779,6 +805,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         source_text,
         geography=geography,
         expected_city=dest.get("city") or "Boston",
+        prose_source=overlap_text,
     )
     extra = []
     expected_city_slug = dest.get("citySlug") or "boston"

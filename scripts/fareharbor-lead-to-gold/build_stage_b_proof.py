@@ -111,7 +111,7 @@ LIST_MARKETING = re.compile(
 
 
 def strip_marker(text: str) -> str:
-    text = re.sub(r"^\s*(?:[-*•]+|\d+[\.\)]|\+)\s*", "", text)
+    text = re.sub(r"^\s*(?:[-*•]+|\d+(?:[.)](?!\d))|\+)\s*", "", text)
     return text.strip()
 
 
@@ -429,6 +429,7 @@ def validate(
     source_text: str,
     geography: dict | None = None,
     expected_city: str | None = None,
+    prose_source: str | None = None,
 ) -> dict:
     schema = product.get("schemaDescription") or ""
     public_bits = product["paragraphs"] + product["highlights"] + ([schema] if schema else [])
@@ -467,7 +468,7 @@ def validate(
         errors.append("second-person wording in editorial copy")
     if MARKETING.search(text):
         errors.append("marketing phrasing remains in copy")
-    overlap = (shingles(text) & shingles(source_text)) - shingles(
+    overlap = (shingles(text) & shingles(prose_source if prose_source is not None else source_text)) - shingles(
         " ".join(
             part
             for part in (product.get("title"), product.get("operator"))

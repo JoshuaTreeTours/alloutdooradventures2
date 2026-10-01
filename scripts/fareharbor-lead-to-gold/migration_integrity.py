@@ -556,6 +556,14 @@ def normalize_activity_duration(raw: str | None, description: str | None = None)
     text = normalize_space(raw)
     if text and TRAVEL_TIME_RE.search(text):
         text = ""
+    compact = re.fullmatch(r"(\d+(?:\.\d+)?)h", text or "", re.I)
+    if compact:
+        text = f"{compact.group(1)} hours"
+    compact_range = re.fullmatch(
+        r"(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)h", text or "", re.I
+    )
+    if compact_range:
+        text = f"{compact_range.group(1)}-{compact_range.group(2)} hours"
     if text:
         match = re.search(
             r"\d+(?:\.\d+)?(?:\s*-\s*\d+(?:\.\d+)?)?\s*(?:hours?|minutes?)",

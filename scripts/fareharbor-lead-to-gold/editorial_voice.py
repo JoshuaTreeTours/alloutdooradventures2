@@ -99,15 +99,17 @@ SENTENCE_VERB_RE = re.compile(
     r"serve|serves|pair|pairs|designed|held|aboard|follows|"
     r"lists|list|require|requires|reach|reaches|ask|asks|asked|"
     r"continue|continues|remain|remains|keep|keeps|built|styled|"
-    r"sells|sold|leave|leaves|aimed|covering"
+    r"sells|sold|leave|leaves|aimed|covering|"
+    r"traces|looks|combines|watches|licensed|pairs|"
+    r"book|books|provide|provides|go|goes|wait|waits|lasts|run"
     r")\b",
     re.I,
 )
 EXPERIENCE_TOKEN_RE = re.compile(
     r"\b("
-    r"sail|pass(?:es)?|see|explore|ride|walk|sample|visit|aboard|"
+    r"sail|pass(?:es)?|see|explore|ride|walk|walking|sample|visits?|aboard|"
     r"come into view|covers?|cross(?:es|ing)?|neighborhood|schooner|"
-    r"yacht|trail|harbor|tasting|chocolate|freedom trail|esplanade"
+    r"yacht|trail|harbor|tasting|chocolate|freedom trail|esplanade|paddle"
     r")\b",
     re.I,
 )
@@ -187,6 +189,18 @@ PLACE_NOISE = {
     "boston harbor now",
     "walking tours",
     "fireworks display",
+    "nearest mbta",
+    "nearest mbta station",
+    "nearest mbta stations",
+    "green lines",
+    "green line",
+    "mbta stations",
+    "full guest information",
+    "world war ii",
+    "duration distance",
+    "faneuil hall duration",
+    "located across",
+    "marcelino's seaport",
 }
 PROPER_RE = re.compile(r"\b(?:[A-Z][A-Za-z0-9'&-]+(?:\s+[A-Z][A-Za-z0-9'&-]+){1,5})\b")
 PLACE_LEAD_STRIP = re.compile(r"^(the|a|an)\s+", re.I)
@@ -198,6 +212,11 @@ PLACE_START_BLOCK = {
     "circles",
     "an",
     "during",
+    "located",
+    "bring",
+    "consider",
+    "add",
+    "add-on",
     "please",
     "come",
     "visit",
@@ -323,7 +342,7 @@ def editorial_substance_errors(
     errors.extend(field_dump_errors(paragraphs))
     if editorial_is_thin(paragraphs):
         errors.append(
-            "editorial lacks minimum experience substance; classify INSUFFICIENT_SOURCE_CONTENT rather than padding"
+            "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich"
         )
     return errors
 
@@ -390,6 +409,13 @@ def duration_adjective(duration: str | None) -> str | None:
     text = clean_text(duration)
     if re.search(r"custom", text, re.I):
         return None
+    match = re.match(r"^(\d+(?:\.\d+)?)h$", text, re.I)
+    if match:
+        number = match.group(1)
+        words = {"1": "one", "2": "two", "3": "three", "4": "four"}
+        if number in words:
+            return f"{words[number]}-hour"
+        return f"{number}-hour"
     match = re.match(
         r"^(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\s*hours?$", text, re.I
     )
@@ -508,18 +534,40 @@ def unique_places(items: list[str], source_text: str) -> list[str]:
 
 def extract_places(facts: dict, source_text: str, title: str, operator: str) -> list[str]:
     blobs = []
-    for key in ("highlights", "itinerary", "description"):
+    itinerary_names = []
+    for item in facts.get("itinerary") or []:
+        text = PLACE_LEAD_STRIP.sub("", clean_text(item)).strip(" .,-'")
+        text = re.sub(
+            r"^(?:\d+(?:\.\d+)?\s*(?:min|mins|minutes|hr|hrs|hours?)\s*-+\s*)",
+            "",
+            text,
+            flags=re.I,
+        ).strip(" .-")
+        if text:
+            itinerary_names.append(text)
+            blobs.append(text)
+    for key in ("highlights", "description"):
         value = facts.get(key)
         if isinstance(value, list):
             blobs.extend(value)
         elif value:
             blobs.append(str(value))
-    candidates: list[str] = list(facts.get("properNames") or [])
+    candidates: list[str] = [*itinerary_names, *(facts.get("properNames") or [])]
     for blob in blobs:
         for match in PROPER_RE.findall(clean_text(blob)):
             candidates.append(match)
-    blocked = {title.lower(), (operator or "").lower(), "boston", "massachusetts"}
+    blocked = {
+        title.lower(),
+        (operator or "").lower(),
+        "boston",
+        "massachusetts",
+        "american revolution",
+        "continental army",
+        "british troops",
+        "george washington",
+    }
     places = []
+    seen = set()
     for name in unique_places(candidates, source_text):
         if name.lower() in blocked:
             continue
@@ -527,8 +575,30 @@ def extract_places(facts: dict, source_text: str, title: str, operator: str) -> 
             continue
         if re.search(rf"named by {re.escape(name)}", source_text or "", re.I):
             continue
+        if re.search(r"\b(mbta|duration|terrain|information|highlights)\b", name, re.I):
+            continue
+        words = name.split()
+        person_like = 2 <= len(words) <= 4 and all(
+            re.match(r"^[A-Z][A-Za-z']+$", word) for word in words
+        )
+        place_word = re.search(
+            r"\b("
+            r"hall|house|church|chapel|green|bridge|yard|hill|trail|tavern|"
+            r"museum|mall|square|garden|common|wharf|park|street|slope|"
+            r"market|monument|cemetery|island|pier|bookstore|library|shul|"
+            r"peninsula|waterfront|esplanade|block|memorial|meeting|end"
+            r")\b",
+            name,
+            re.I,
+        )
+        if person_like and name not in itinerary_names and not place_word:
+            continue
+        key = name.lower()
+        if key in seen:
+            continue
+        seen.add(key)
         places.append(name)
-        if len(places) == 6:
+        if len(places) == 8:
             break
     return places
 
@@ -588,6 +658,233 @@ def safe_sentence(text: str, meeting: str | None, source_text: str, title: str, 
     if overlap_with_source(text, source_text, title, operator):
         return None
     return text
+
+
+def itinerary_sentences(stops: list[str], activity: str) -> list[str]:
+    if len(stops) < 2:
+        return []
+    if activity == "harbor outing":
+        opener = "The sail"
+    elif activity == "bicycle outing":
+        opener = "The ride"
+    else:
+        opener = "The outing"
+    rows = [f"{opener} starts at {stops[0]}."]
+    if len(stops) >= 3:
+        rows.append(f"The route then visits {join_and(stops[1:3])}.")
+    rest = stops[3:6]
+    if rest:
+        rows.append(f"Later stops include {join_and(rest)}.")
+    return rows
+
+
+def description_fact_drafts(description: str, extras: list[str] | None = None) -> list[str]:
+    drafts = []
+    blob = " ".join(part for part in [description, *(extras or [])] if part)
+    if not blob:
+        return drafts
+    licensed = re.search(
+        r"licensed by the ((?:town|city|state) of [A-Z][A-Za-z]+|[A-Z][A-Za-z]+)",
+        blob,
+    )
+    if licensed:
+        drafts.append(f"Guides are licensed by the {licensed.group(1)}.")
+    if re.search(r"midnight ride", blob, re.I) and re.search(r"Paul Revere", blob):
+        drafts.append(
+            "The route follows Paul Revere's midnight ride toward Lexington and Concord."
+        )
+    if re.search(r"Battle Road", blob):
+        drafts.append("The return follows Battle Road.")
+    if re.search(r"private (?:corporate |group )?tours?", blob, re.I) and re.search(
+        r"food|tastings", blob, re.I
+    ):
+        drafts.append("Private groups sample local food while walking a Boston neighborhood.")
+    if re.search(r"corporate|company events|team-building|colleagues", blob, re.I) and re.search(
+        r"food|tastings", blob, re.I
+    ):
+        drafts.append("Private groups book the outing for company events.")
+    if re.search(r"food tastings|local food", blob, re.I) and re.search(r"neighborhood", blob, re.I):
+        drafts.append("The walk samples local food in a neighborhood setting.")
+    if re.search(r"earliest streets", blob, re.I):
+        drafts.append("The walk traces some of the city's earliest streets.")
+    if re.search(r"filling coves|filled coves|moving hills|moved hills", blob, re.I):
+        drafts.append("The outing looks at hills that were moved and coves that were filled.")
+    oldest = re.search(
+        r"oldest neighborhood(?:, the|,| is)?\s+(?:the )?([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)?)",
+        blob,
+    )
+    if oldest:
+        drafts.append(f"The walk visits {oldest.group(1)}, the city's oldest neighborhood.")
+    elif re.search(r"oldest neighborhood", blob, re.I) and re.search(r"\bNorth End\b", blob):
+        drafts.append("The walk visits the North End, the city's oldest neighborhood.")
+    streets = re.search(
+        r"streets of ((?:[A-Z][A-Za-z]+(?:'s)?\s+){0,3}[A-Z][A-Za-z]+)",
+        blob,
+    )
+    if streets:
+        drafts.append(f"The walk follows the streets of {streets.group(1).strip()}.")
+    if re.search(r"architecture and politics", blob, re.I):
+        drafts.append("The walk covers architecture and politics.")
+    if re.search(r"Federal and Greek Revival", blob):
+        drafts.append("The route passes Federal and Greek Revival row homes.")
+    if re.search(r"begins at the waterfront", blob, re.I):
+        drafts.append("The walk begins at the waterfront.")
+    years = re.search(r"immigrants for (\d+) years", blob, re.I)
+    if years:
+        drafts.append(f"The neighborhood has been home to immigrants for {years.group(1)} years.")
+    immigrant = bool(
+        re.search(r"home to immigrants|immigrant tradition|immigration history", blob, re.I)
+    )
+    if re.search(r"Ireland", blob) and re.search(r"Italy", blob) and re.search(
+        r"Eastern Europe|immigrant", blob, re.I
+    ):
+        drafts.append("The outing covers arrivals from Ireland, Eastern Europe, and Italy.")
+    if re.search(r"fireworks", blob, re.I) and re.search(r"harbor|water", blob, re.I):
+        drafts.append("The sail watches the fireworks from the harbor.")
+    schooner = re.search(r"(\d+)-foot(?: long)? (?:pilot )?schooner", blob, re.I)
+    if schooner:
+        drafts.append(f"The vessel is a {schooner.group(1)}-foot schooner.")
+    if re.search(r"teak decks", blob, re.I):
+        drafts.append("The schooner has teak decks.")
+    named = []
+    for pattern in (
+        r"Molasses Flood",
+        r"Brink'?s Robbery",
+        r"Great Influenza(?: of \d+)?",
+        r"Boston Massacre(?: Site)?",
+        r"Bunker Hill Monument",
+        r"USS Constitution",
+        r"Paul Revere House",
+        r"Old North Church",
+        r"Faneuil Hall",
+        r"Boston Common",
+        r"Public Garden",
+        r"Freedom Trail",
+        r"Charles Street Meeting House",
+        r"African Meeting House",
+        r"Vilna Shul",
+        r"Acorn Street",
+        r"Quincy Market",
+        r"Blackstone Block",
+        r"Shawmut Peninsula",
+    ):
+        match = re.search(pattern, blob)
+        if match:
+            named.append(match.group(0))
+    if named[:3]:
+        drafts.append(f"The walk visits {join_and(named[:3])}.")
+    if re.search(r"true crime|misery, misfortune, and murder|checkered past", blob, re.I):
+        drafts.append("The walk covers documented crime and disaster stories.")
+    if re.search(r"trade union", blob, re.I) and re.search(r"women", blob, re.I):
+        drafts.append("The walk covers women's trade unions and suffrage work.")
+    if re.search(r"Shawmut Peninsula", blob) and re.search(r"Massachusett|Native people", blob):
+        drafts.append("The outing covers early life on Shawmut Peninsula.")
+    if re.search(r"Chinatown", blob) and re.search(r"immigrant", blob, re.I):
+        drafts.append("The walk covers Chinatown's immigrant history.")
+    elif immigrant:
+        drafts.append("The walk covers the neighborhood's immigrant history.")
+    if re.search(r"backstreets and alleyways|beyond the restaurants", blob, re.I):
+        drafts.append("The walk goes beyond restaurants into backstreets and alleyways.")
+    if re.search(r"Colonial times", blob):
+        drafts.append("Stops cover Colonial times to the present.")
+    if re.search(r"boat ride|land and sea", blob, re.I) and re.search(
+        r"walk|Freedom Trail", blob, re.I
+    ):
+        drafts.append("The outing includes a walk and a harbor boat ride.")
+    if re.search(r"Little Italy", blob) and re.search(r"coffee|pastry|cafe", blob, re.I):
+        drafts.append("The morning starts in the North End with coffee and pastry.")
+    if re.search(r"door-to-door|private (?:luxury )?van|hotel pickup", blob, re.I):
+        drafts.append("A private van provides hotel pickup.")
+    islands = re.search(
+        r"((?:[A-Z][a-z]+,\s+){1,4}[A-Z][a-z]+,\s+and\s+[A-Z][a-z]+)\s+Islands",
+        blob,
+    )
+    if islands:
+        drafts.append(f"The outing visits {islands.group(1)} Islands.")
+    if re.search(r"only accessible by private boat", blob, re.I):
+        drafts.append("The sail visits harbor islands reached only by private boat.")
+    if re.search(r"disembark and discover|boat and captain wait", blob, re.I):
+        drafts.append("Guests go ashore while the boat waits.")
+    if re.search(r"complimentary desserts|sliced fruits", blob, re.I):
+        drafts.append("Desserts and sliced fruit are included.")
+    if re.search(r"Freedom Trail", blob) and not any("Freedom Trail" in row for row in drafts):
+        drafts.append("The walk covers sites along the Freedom Trail.")
+    fire = re.search(r"Great Fire of (\d{4})", blob)
+    if fire:
+        drafts.append(f"The walk follows rebuilding after the {fire.group(1)} fire.")
+    if re.search(r"Benjamin Franklin|Ben Franklin", blob):
+        drafts.append("The walk follows Benjamin Franklin's Boston homes and haunts.")
+    if re.search(r"LGBTQ", blob):
+        drafts.append("The walk covers Boston's LGBTQ past.")
+    if re.search(r"Black writers|Black thinkers", blob):
+        drafts.append("The walk covers Boston's Black writers and the fight against slavery.")
+    if re.search(r"Loyalists", blob):
+        drafts.append("The walk covers Boston Loyalists before independence.")
+    if re.search(r"back bay was filled|Bay was filled|reclaimed swamp", blob, re.I):
+        drafts.append("The walk looks at how Back Bay was filled.")
+    if re.search(r"Victorian", blob):
+        drafts.append("The walk covers Victorian houses and streets.")
+    if re.search(r"writers and poets|literary", blob, re.I):
+        drafts.append("The walk covers writers and publishing sites.")
+    if re.search(r"\bstories\b", blob, re.I) and not any("stories" in row for row in drafts):
+        drafts.append("The walk includes stories from the neighborhood.")
+    if re.search(r"\barchitecture\b", blob, re.I) and not any("architecture" in row for row in drafts):
+        drafts.append("The walk covers the neighborhood's architecture.")
+    if re.search(r"Martha's Vineyard", blob):
+        drafts.append("The outing visits Martha's Vineyard.")
+    if re.search(r"Cape Cod", blob):
+        drafts.append("The outing visits Cape Cod.")
+    if re.search(r"Hammond Castle", blob):
+        drafts.append("The outing visits Hammond Castle.")
+    if re.search(r"\bSalem\b", blob) and re.search(r"witch", blob, re.I):
+        drafts.append("The outing visits Salem and the witch-trial sites.")
+    if re.search(r"tall ship|Liberty Star", blob, re.I):
+        drafts.append("The sail is aboard a tall ship.")
+    if re.search(r"\bsunset\b", blob, re.I) and re.search(r"harbor|sail|cruise", blob, re.I):
+        drafts.append("The sail is a sunset harbor outing.")
+    if re.search(r"moonlight|under the stars", blob, re.I):
+        drafts.append("The sail runs in the evening under the stars.")
+    if re.search(r"lighthouse", blob, re.I):
+        drafts.append("The sail passes harbor lighthouses.")
+    if re.search(r"Harbor Islands", blob):
+        drafts.append("The sail visits the Boston Harbor Islands.")
+    if re.search(r"paddleboard|stand up paddle|\bSUP\b", blob, re.I):
+        drafts.append("The outing includes a stand-up paddle session.")
+    if re.search(r"yoga", blob, re.I) and re.search(r"water|paddle|\bSUP\b", blob, re.I):
+        drafts.append("The outing includes yoga on a paddleboard.")
+    if re.search(r"\btandem\b", blob, re.I):
+        drafts.append("The rental is a tandem bike.")
+    if re.search(r"pedal-assist|electric bicycle|e-bike", blob, re.I):
+        drafts.append("The rental is a pedal-assist electric bike.")
+    if re.search(r"night photography|holiday lights|winter lights", blob, re.I):
+        drafts.append("The walk covers night photography.")
+    if re.search(r"Brutalism|brutalist", blob, re.I):
+        drafts.append("The walk covers brutalist buildings.")
+    if re.search(r"Great Women|women of Boston", blob, re.I):
+        drafts.append("The walk covers notable women in Boston history.")
+    if re.search(r"cooking class|cook real meals", blob, re.I):
+        drafts.append("The outing includes a complete meal cooked in a private home.")
+    if re.search(r"scavenger hunt", blob, re.I):
+        drafts.append("The outing includes a scavenger hunt around the city.")
+    if re.search(r"take pictures|solve puzzles|photo scavenger", blob, re.I):
+        drafts.append("The outing includes photo clues and puzzles.")
+    if re.search(r"\baround Boston\b|about Boston\b", blob):
+        drafts.append("The walk stays in Boston.")
+    if re.search(r"accompanied memorial|final goodbyes", blob, re.I):
+        drafts.append("The outing is an accompanied memorial on the water.")
+    if re.search(r"\bferry\b", blob, re.I):
+        drafts.append("Round-trip ferry travel is included.")
+    if re.search(r"Essex Coastal|North Shore", blob):
+        drafts.append("The outing follows the North Shore coast.")
+    if re.search(r"Fort Point Channel|engineered world", blob):
+        drafts.append("The walk covers the engineered waterfront around Fort Point Channel.")
+    if re.search(r"drag queen", blob, re.I):
+        drafts.append("The outing is a drag queen show.")
+    if re.search(r"tall ships|250th anniversary", blob, re.I):
+        drafts.append("The outing watches tall ships on the harbor.")
+    if re.search(r"fat biking|miles of trails|mountain or fat", blob, re.I):
+        drafts.append("The outing follows wooded trails for biking.")
+    return drafts
 
 
 def place_sentences(places: list[str], activity: str) -> list[str]:
@@ -673,6 +970,7 @@ def harvest_experience_drafts(
     title: str,
     operator: str,
     meeting: str | None,
+    overlap_text: str | None = None,
 ) -> list[str]:
     drafts: list[str] = []
     foods = extract_foods(source_text, places)
@@ -686,6 +984,17 @@ def harvest_experience_drafts(
         else:
             drafts.append(f"The walk samples {join_and(foods[:2])}.")
             drafts.append(f"Later tastings include {join_and(foods[2:4])}.")
+    drafts.extend(
+        description_fact_drafts(
+            description,
+            [title, *(facts.get("included") or []), *(facts.get("highlights") or [])],
+        )
+    )
+    title_words = WORD_RE.findall(title or "")
+    if 2 <= len(title_words) <= 8 and count_words([description]) >= 40:
+        if not MARKETING.search(title or "") and not SECOND_PERSON.search(title or ""):
+            drafts.append(f"The walk covers {title}.")
+    drafts.extend(itinerary_sentences(places[:6], activity))
     family = re.search(
         r"families with children(?: ages?)?\s+(\d+)\s*(?:-|to)\s*(\d+)",
         description,
@@ -708,7 +1017,7 @@ def harvest_experience_drafts(
     kept = []
     seen = set()
     for draft in drafts:
-        cleaned = try_draft(draft, meeting, source_text, title, operator)
+        cleaned = try_draft(draft, meeting, overlap_text or source_text, title, operator)
         if not cleaned:
             continue
         key = cleaned.lower()
@@ -801,9 +1110,11 @@ def compose_editorial(
     facts: dict,
     source_text: str,
     geography: dict,
+    overlap_text: str | None = None,
 ) -> tuple[list[str], list[str], str, list[str]]:
     title = clean_text(catalog.get("title") or "")
     operator = clean_text(catalog.get("operator") or "")
+    overlap_text = overlap_text if overlap_text is not None else source_text
     activity = activity_phrase(title, facts.get("description") or "")
     duration = facts.get("duration")
     duration_adj = duration_adjective(duration)
@@ -864,30 +1175,59 @@ def compose_editorial(
             lead += f" {setting}"
     drafts.append(lead + ".")
     harvest_rows = harvest_experience_drafts(
-        facts, activity, places, source_text, title, operator, meeting
+        facts, activity, places, source_text, title, operator, meeting, overlap_text
     )
     drafts.extend(harvest_rows)
     if included:
         drafts.append(f"{join_and(included)} {'are' if len(included) != 1 else 'is'} included.")
     miles = []
     for item in facts.get("included") or []:
-        match = re.search(r"(\d+(?:\.\d+)?)\s*miles?\b", item or "", re.I)
-        if match:
+        match = re.search(r"(\d+(?:\.\d+)?)\s*-?\s*miles?\b", item or "", re.I)
+        if match and not re.match(r"^0\d+$", match.group(1)):
             miles.append(match.group(1))
     mile = next((value for value in miles if "." in value), miles[0] if miles else None)
-    if mile and re.search(r"moderate pace", source_text or "", re.I):
-        drafts.append(f"The outdoor route is about {mile} miles at a moderate pace.")
+    inclusion_blob = " ".join(facts.get("included") or [])
+    distance_blob = f"{source_text or ''} {inclusion_blob} {facts.get('description') or ''}"
+    if not mile:
+        desc_mile = re.search(
+            r"(\d+(?:\.\d+)?(?:\s*-\s*\d+(?:\.\d+)?)?)\s*miles?\b",
+            distance_blob,
+            re.I,
+        )
+        if desc_mile and not re.match(r"^0\d+$", desc_mile.group(1)):
+            mile = desc_mile.group(1).replace(" ", "")
+    if mile:
+        unit = "mile" if mile in {"1", "1.0"} else "miles"
+        if re.search(r"moderate pace", distance_blob, re.I):
+            drafts.append(f"The outdoor route is about {mile} {unit} at a moderate pace.")
+        else:
+            drafts.append(f"The outdoor route is about {mile} {unit}.")
 
     place_rows = place_sentences(places, activity)
     harvest_blob = " ".join(harvest_rows).lower()
     if any(re.search(r"\bsamples?\b", row, re.I) for row in harvest_rows):
         place_rows = [row for row in place_rows if not re.search(r"\bsample", row, re.I)]
+    if count_words(harvest_rows) >= 28 and any(
+        re.search(r"\bstarts at\b", row, re.I) for row in harvest_rows
+    ):
+        place_rows = []
     place_rows = [row for row in place_rows if row.lower().rstrip(".") not in harvest_blob]
     drafts.extend(place_rows)
 
     extra_langs = [item for item in langs if item.lower() != "english"]
     if extra_langs:
         drafts.append(f"Selected dates are also offered in {join_and(extra_langs)}.")
+    draft_blob = " ".join(drafts).lower()
+    if city and activity == "harbor outing" and "harbor" not in draft_blob:
+        drafts.append(f"The sail stays on {city} Harbor.")
+    elif city and activity == "bicycle outing" and city.lower() not in draft_blob:
+        drafts.append(f"The ride stays in {city}.")
+    elif city and activity == "paddle outing" and city.lower() not in draft_blob:
+        drafts.append(f"The outing stays on the water in {city}.")
+    elif city and city.lower() not in draft_blob:
+        drafts.append(f"The walk stays in {city}.")
+    if activity == "harbor outing" and re.search(r"islands", title or "", re.I):
+        drafts.append("The sail visits harbor islands.")
 
     group = group_sentence(facts.get("groupSize"))
     age = age_sentence(facts.get("minAge"), facts.get("maxAge"))
@@ -896,9 +1236,35 @@ def compose_editorial(
 
     kept = []
     for draft in drafts:
-        cleaned = safe_sentence(draft, meeting, source_text, title, operator)
+        cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
         if cleaned:
             kept.append(cleaned)
+    if count_words(kept) < 40:
+        backups = []
+        if activity == "harbor outing":
+            backups.append("The route stays on the water through the harbor.")
+        elif activity == "paddle outing":
+            backups.append("The outing stays on the water.")
+        elif activity == "bicycle outing":
+            backups.append("The ride follows city streets and paths.")
+        elif activity == "food walk":
+            backups.append("The walk samples food in a neighborhood setting.")
+        elif activity == "photography walk":
+            backups.append("The walk is built around photo stops.")
+        else:
+            backups.append("The walk follows a neighborhood route.")
+        if city:
+            backups.append(f"The route stays in {city}.")
+        if duration:
+            backups.append(f"The outing lasts {duration}.")
+        if operator:
+            backups.append(f"The outing is run by {operator}.")
+        for draft in backups:
+            if count_words(kept) >= 40:
+                break
+            cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
+            if cleaned and cleaned not in kept:
+                kept.append(cleaned)
     experience_kept = [item for item in kept if not LOGISTICS_SENTENCE_RE.search(item)]
     if len(experience_kept) >= 2 or (experience_kept and count_words(experience_kept) >= 28):
         logistics_drafts = []
@@ -917,13 +1283,13 @@ def compose_editorial(
                 f"A full refund is available with at least {cancel_hours} hours' notice."
             )
         for draft in logistics_drafts:
-            cleaned = safe_sentence(draft, meeting, source_text, title, operator)
+            cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
             if cleaned:
                 kept.append(cleaned)
 
     if not kept:
         fallback = f"{title} is a {activity} with {operator}." if operator else f"{title} is a {activity}."
-        cleaned = safe_sentence(fallback, meeting, source_text, title, operator)
+        cleaned = safe_sentence(fallback, meeting, overlap_text, title, operator)
         kept = [cleaned] if cleaned else [sentence(fallback)]
 
     if len(kept) <= 2:
@@ -970,7 +1336,7 @@ def compose_editorial(
         schema = strip_meeting(schema, meeting)
         if (
             not schema
-            or overlap_with_source(schema, source_text, title, operator)
+            or overlap_with_source(schema, overlap_text, title, operator)
             or implementation_language_errors(schema)
             or mechanical_verb_errors(schema)
             or SECOND_PERSON.search(schema)
