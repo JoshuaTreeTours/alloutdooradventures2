@@ -86,9 +86,9 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     const insufficient = products.filter(
       product => product.exceptionStatus === "INSUFFICIENT_SOURCE_CONTENT"
     );
-    expect(priced).toHaveLength(102);
-    expect(unpriced).toHaveLength(115);
-    expect(insufficient).toHaveLength(4);
+    expect(priced).toHaveLength(83);
+    expect(unpriced).toHaveLength(102);
+    expect(insufficient).toHaveLength(36);
     for (const product of priced) {
       expect(product.offer?.price).toBeTruthy();
       expect(product.visiblePriceLabel).toMatch(/^From /);
@@ -243,8 +243,8 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
         withoutOffer += 1;
       }
     }
-    expect(withOffer).toBe(102);
-    expect(withoutOffer).toBe(119);
+    expect(withOffer).toBe(83);
+    expect(withoutOffer).toBe(138);
     for (const item of BOSTON_TERMINALS) {
       expect(
         getFareHarborProofByPath(

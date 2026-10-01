@@ -56,7 +56,19 @@ ITINERARY_LOGISTICS_RE = re.compile(
 )
 
 MIN_DESCRIPTION_WORDS = 40
+MIN_FULL_EDITORIAL_WORDS = 100
 MIN_ITINERARY_STOPS = 3
+_LOGISTICS_SOURCE_RE = re.compile(
+    r"\b("
+    r"please|what to bring|meet your guide|meeting place|gratuity|tip|"
+    r"driver's license|passport|check-?in|hours early|full refund|"
+    r"nearest mbta|finding your guide|comfortable shoes|dress for|"
+    r"filestackcontent|thank you for booking|description of image|"
+    r"parking|metal detector|security wand|not included|stroller|"
+    r"recording will be emailed|virtual experience|feel free|bring a"
+    r")\b|@|https?://",
+    re.I,
+)
 
 
 def count_words(parts: list[str] | str) -> int:
@@ -168,6 +180,64 @@ def prose_for_overlap(source: dict) -> str:
         )
         if part
     )
+
+
+def _source_sentences(text: str) -> list[str]:
+    parts = re.split(r"(?<=[.!])\s+(?=[A-Z])", clean_text(text or ""))
+    return [part.strip() for part in parts if part.strip()]
+
+
+def _is_logistics_source(sentence: str) -> bool:
+    if not _LOGISTICS_SOURCE_RE.search(sentence or ""):
+        return False
+    if count_words([sentence]) >= 30 and re.search(
+        r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3}\b", sentence
+    ):
+        return False
+    return True
+
+
+def experience_source_words(source: dict, facts: dict | None = None) -> int:
+    """Words of experience prose, stops, and inclusions available to rewrite.
+
+    Logistics, meeting instructions, and private booking notes do not count.
+    """
+    facts = facts or {}
+    seen = set()
+    chunks: list[str] = []
+    for blob in (
+        source.get("description"),
+        facts.get("description"),
+    ):
+        for sentence in _source_sentences(blob or ""):
+            key = sentence.lower()
+            if key in seen or _is_logistics_source(sentence):
+                continue
+            if count_words([sentence]) < 6:
+                continue
+            seen.add(key)
+            chunks.append(sentence)
+    for stop in source.get("itinerary") or facts.get("itinerary") or []:
+        text = clean_text(stop)
+        key = text.lower()
+        if text and key not in seen:
+            seen.add(key)
+            chunks.append(text)
+    for item in list(facts.get("included") or []) + list(facts.get("highlights") or []):
+        text = clean_text(item)
+        key = text.lower()
+        if not text or key in seen or _is_logistics_source(text):
+            continue
+        if count_words([text]) < 2:
+            continue
+        seen.add(key)
+        chunks.append(text)
+    return count_words(chunks)
+
+
+def source_can_support_full_editorial(source: dict, facts: dict | None = None) -> bool:
+    """True when authoritative FareHarbor material can support 100 words of prose."""
+    return experience_source_words(source, facts) >= MIN_FULL_EDITORIAL_WORDS
 
 
 def source_supports_editorial(source: dict, facts: dict | None = None) -> bool:

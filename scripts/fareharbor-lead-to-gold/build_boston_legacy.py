@@ -40,7 +40,7 @@ from source_priority import (
     collect_authoritative_source,
     itinerary_stops,
     prose_for_overlap,
-    source_supports_editorial,
+    source_can_support_full_editorial,
 )
 from image_integrity import (
     hero_gallery_duplicate_errors,
@@ -690,7 +690,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             catalog, facts, place_source or source_text, geography, overlap_text
         )
         overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
-        if overlay:
+        if overlay and word_count(overlay.get("paragraphs") or []) >= 100:
             paragraphs = list(overlay.get("paragraphs") or paragraphs)
             highlights = list(overlay.get("highlights") or highlights)
             if overlay.get("removedClaims"):
@@ -699,8 +699,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 generated_schema = overlay["schemaDescription"]
     words = word_count(paragraphs)
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
-    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and not source_supports_editorial(
-        authoritative, facts
+    source_supports_full = source_can_support_full_editorial(authoritative, facts)
+    if (
+        exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
+        and words < 100
+        and not source_supports_full
     ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
@@ -709,7 +712,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         words = word_count(paragraphs)
         generated_schema = " ".join(paragraphs).strip()
         removed = [
-            "No public experience copy was written because structured description, booking/details content, itinerary, and inclusions were all too thin to support useful guest-facing prose."
+            "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
         ]
     elif exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and price is None:
         exception = "PRICE_NOT_FOUND"
@@ -966,7 +969,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         f"- Authoritative price-preview fares among active pages: {harvest['authoritativePrice']}",
         f"- Active PRICE_NOT_FOUND before editorial: {harvest['priceNotFound']}",
         f"- Runtime PASS: {sum(1 for item in published if item['validation']['ok'])}",
-        f"- Runtime FAIL: {len(fail)}",
+        f"- Runtime FAIL: {sum(1 for item in published if not item['validation']['ok'])}",
         f"- Terminal removals: {counts['BOOKING_PAGE_NOT_FOUND']}",
         f"- PRICE_NOT_FOUND after editorial: {counts['PRICE_NOT_FOUND']}",
         f"- INSUFFICIENT_SOURCE_CONTENT: {counts['INSUFFICIENT_SOURCE_CONTENT']}",
@@ -1051,7 +1054,10 @@ def main() -> None:
     for item_id, entry in sorted(catalog.items(), key=lambda pair: (pair[1]["company"], pair[0])):
         product = build_product(entry, booking[item_id], destinations)
         products.append(product)
-        if not product["validation"]["ok"]:
+        if (
+            not product["validation"]["ok"]
+            and product.get("geography", {}).get("disposition") != "exclude"
+        ):
             failures.append(product)
         disposition = product.get("geography", {}).get("disposition")
         if (

@@ -497,9 +497,9 @@ def validate(
             errors.append(f"{status} product still has a price")
         if status != "INSUFFICIENT_SOURCE_CONTENT" and product["durationLabel"] is not None:
             errors.append(f"{status} product still has a duration")
-    elif words < 40:
+    elif words < 100:
         errors.append(
-            "editorial copy is too short for a source-backed page; keep coherent harvest facts or mark INSUFFICIENT_SOURCE_CONTENT without padding"
+            "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that"
         )
     offer = product["offer"]
     if status in {"PRICE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"}:

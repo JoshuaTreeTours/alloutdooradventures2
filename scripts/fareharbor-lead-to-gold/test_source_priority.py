@@ -150,7 +150,7 @@ class SourcePriorityTest(unittest.TestCase):
         )
         body = " ".join(paragraphs)
         self.assertFalse(editorial_is_thin(paragraphs), body)
-        self.assertGreaterEqual(len(body.split()), 40)
+        self.assertGreaterEqual(len(body.split()), 100)
         self.assertNotIn("lists this outing", body.lower())
         self.assertRegex(body, r"Old North Church|Lexington|Concord|Bunker Hill|Harvard")
         self.assertNotIn("you", body.lower().replace("youth", ""))
@@ -163,8 +163,12 @@ class SourcePriorityTest(unittest.TestCase):
             "Explore the connection between architecture and politics in this tour "
             "along the charming streets of Beacon Hill's South Slope. Learn how "
             "Boston's elite created an exclusive neighborhood next to the site of "
-            "the state capital. Walk through this historic collection of Federal "
-            "and Greek Revival row homes on the shaded streets of Beacon Hill."
+            "the state capital. Experience Beacon Hill's past as you hear stories of "
+            "independent female investor Hepzibah Swan; the fight for social justice "
+            "at the Charles Street Meeting House; and the early American architecture "
+            "of Charles Bulfinch. Walk through this historic collection of Federal "
+            "and Greek Revival row homes on the shaded streets of Beacon Hill. "
+            "After the tour, enjoy dinner or lunch at a charming restaurant along Charles Street."
         )
         facts = {
             "duration": "90 minutes",
@@ -179,7 +183,7 @@ class SourcePriorityTest(unittest.TestCase):
             "minAge": None,
             "maxAge": None,
             "meetingAddress": None,
-            "languages": [],
+            "languages": ["English", "Russian", "Italian"],
             "restrictions": [],
             "bring": [],
             "cancellation": None,
@@ -195,7 +199,7 @@ class SourcePriorityTest(unittest.TestCase):
         )
         body = " ".join(paragraphs)
         self.assertFalse(editorial_is_thin(paragraphs), body)
-        self.assertGreaterEqual(len(body.split()), 40)
+        self.assertGreaterEqual(len(body.split()), 100)
         self.assertRegex(body, r"architecture|South Slope|Federal|Greek Revival")
         self.assertNotIn("lists this outing", body.lower())
 

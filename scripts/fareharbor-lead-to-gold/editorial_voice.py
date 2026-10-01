@@ -91,7 +91,7 @@ FRAGMENT_HEADING_RE = re.compile(
 )
 SENTENCE_VERB_RE = re.compile(
     r"\b("
-    r"is|are|was|were|be|been|being|has|have|had|"
+    r"is|are|was|were|be|been|being|has|have|had|does|do|did|"
     r"sail|sails|pass|passes|see|sees|explore|explores|ride|rides|"
     r"walk|walks|sample|samples|visit|visits|cover|covers|cross|crosses|"
     r"start|starts|leave|leaves|run|runs|offer|offers|include|includes|"
@@ -101,7 +101,19 @@ SENTENCE_VERB_RE = re.compile(
     r"continue|continues|remain|remains|keep|keeps|built|styled|"
     r"sells|sold|leave|leaves|aimed|covering|"
     r"traces|looks|combines|watches|licensed|pairs|"
-    r"book|books|provide|provides|go|goes|wait|waits|lasts|run"
+    r"book|books|provide|provides|go|goes|wait|waits|lasts|run|"
+    r"hear|hears|recall|recalls|remembered|tied|opposed|founded|worked|held|known|"
+    r"took|forced|cut|cuts|draws|draw|overtook|play|plays|gather|gathers|"
+    r"travel|travels|journey|journeys|celebrate|celebrates|takes|take|"
+    r"showcase|showcases|form|forms|connect|connects|resemble|resembles|"
+    r"give|gives|dedicate|dedicated|"
+    r"look|looks|looking|notice|notices|noticing|pause|pauses|pausing|"
+    r"finish|finishes|view|views|viewing|cruise|cruises|cruising|"
+    r"feature|features|talk|talks|shaped|shape|shapes|stop|stops|stopping|"
+    r"meet|meets|find|finds|found|open|opens|begin|begins|set|sets|"
+    r"lead|leads|return|returns|watch|watches|discuss|discusses|"
+    r"line|lines|cover|covers|trace|traces|bring|brings|"
+    r"[a-z]{4,}ed|[a-z]{5,}ing"
     r")\b",
     re.I,
 )
@@ -261,8 +273,9 @@ def mechanical_verb_errors(text: str) -> list[str]:
 
 
 def split_sentences(text: str) -> list[str]:
-    parts = re.split(r"(?<=[.!])\s+(?=[A-Z])", (text or "").strip())
-    return [part.strip() for part in parts if part.strip()]
+    cleaned = re.sub(r"[“”]", '"', text or "")
+    parts = re.split(r"(?<=[.!])[\"']?\s+(?=[A-Z])", cleaned.strip())
+    return [part.strip(" \"'") for part in parts if part.strip(" \"'")]
 
 
 def boilerplate_language_errors(text: str) -> list[str]:
@@ -312,6 +325,39 @@ def experience_sentences(paragraphs: list[str]) -> list[str]:
     return found
 
 
+MIN_FULL_EDITORIAL_WORDS = 100
+PREFERRED_MAX_EDITORIAL_WORDS = 150
+REPETITIVE_OPENER_RE = re.compile(
+    r"^(the (?:walk|route|outing|sail|ride)|this is a)\b",
+    re.I,
+)
+GENERIC_PADDING_PHRASES = (
+    "follows a neighborhood route",
+    "stays on the water through the harbor",
+    "the outing is run by",
+    "follows city streets and paths",
+    "built around photo stops",
+    "samples food in a neighborhood setting",
+)
+_SOFT_MARKETING_WORDS = re.compile(
+    r"\b("
+    r"world-famous|famous|iconic|stunning|breathtaking|unforgettable|"
+    r"perfect|unique|amazing|lively|vibrant|beloved|epic|"
+    r"fully immersive|charming|delicious|spectacular"
+    r")\b",
+    re.I,
+)
+_LOGISTICS_PROSE_RE = re.compile(
+    r"\b("
+    r"please arrive|what to bring|meet your guide|gratuity|driver's license|"
+    r"passport|check in|full refund|nearest mbta|finding your guide|"
+    r"comfortable shoes|dress for the weather|filestackcontent|"
+    r"description of image|thank you for booking"
+    r")\b",
+    re.I,
+)
+
+
 def editorial_is_thin(paragraphs: list[str]) -> bool:
     experience = experience_sentences(paragraphs)
     if count_words(experience) < 28:
@@ -344,7 +390,46 @@ def editorial_substance_errors(
         errors.append(
             "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich"
         )
+    errors.extend(editorial_length_errors(paragraphs, exception=exception))
+    errors.extend(repetitive_opener_errors(paragraphs))
+    errors.extend(generic_padding_errors(text))
     return errors
+
+
+def editorial_length_errors(
+    paragraphs: list[str],
+    *,
+    exception: str | None = None,
+) -> list[str]:
+    if exception in WITHHELD_STATUSES:
+        return []
+    words = count_words(paragraphs)
+    if words < MIN_FULL_EDITORIAL_WORDS:
+        return [
+            f"experience copy is {words} words; rich FareHarbor source requires at least {MIN_FULL_EDITORIAL_WORDS} words"
+        ]
+    return []
+
+
+def repetitive_opener_errors(paragraphs: list[str]) -> list[str]:
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    hits = [item for item in sentences if REPETITIVE_OPENER_RE.match(item)]
+    if len(hits) >= 3:
+        return [
+            f"repetitive openings: {len(hits)} sentences start with The walk/route/outing or This is a"
+        ]
+    return []
+
+
+def generic_padding_errors(text: str) -> list[str]:
+    lowered = (text or "").lower()
+    return [
+        f"generic padding: {phrase}"
+        for phrase in GENERIC_PADDING_PHRASES
+        if phrase in lowered
+    ]
 
 
 def editorial_voice_errors(paragraphs: list[str], highlights: list[str], schema: str) -> list[str]:
@@ -1105,6 +1190,1042 @@ def compose_schema(
     return clean_text(text)
 
 
+def _to_guest_voice(text: str) -> str:
+    text = MARKETING.sub(" ", text or "")
+    text = _SOFT_MARKETING_WORDS.sub(" ", text)
+    text = re.sub(r"\b[Jj]oin us\b", "Guests come", text)
+    text = re.sub(r"\b[Yy]ou(?:'re|’re)\b", "guests are", text)
+    text = re.sub(r"\b[Ww]e(?:'re|’re)\b", "guests are", text)
+    text = re.sub(r"\b[Yy]ou(?:'ve|’ve)\b", "guests have", text)
+    text = re.sub(r"\b[Ww]e(?:'ve|’ve)\b", "guests have", text)
+    text = re.sub(r"\b[Yy]ou(?:'ll|’ll| will| can)?\b", "guests", text)
+    text = re.sub(r"\b[Yy]our\b", "the", text)
+    text = re.sub(r"\b[Oo]ur\b", "the", text)
+    text = re.sub(r"\b[Ww]e(?:'ll|’ll| will)?\b", "guests", text)
+    text = re.sub(
+        r"^(Explore|Learn|Discover|Walk|Visit|See|Hear|Experience|Sample|Step|Stand|Travel|Follow|Conclude|Watch|Capture|Sail|Ride|Embark|Witness|Join|Discuss|Highlight|Stop|Take|Savor|Admire|Photograph|Stroll|Begin|Head)\b",
+        lambda match: "Guests " + match.group(1).lower(),
+        text.strip(),
+    )
+    text = re.sub(r"\bguests guests\b", "guests", text, flags=re.I)
+    text = re.sub(r"\bthe the\b", "the", text, flags=re.I)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip(" ,;.-")
+
+
+_PHRASE_SUBS = (
+    (r"\blearn how\b", "hear how"),
+    (r"\bnext to the site of\b", "beside"),
+    (r"\bin this tour along the\b", "on the"),
+    (r"\balong the\b", "on the"),
+    (r"\bthis historic collection of\b", ""),
+    (r"\bindependent female investor\b", "investor"),
+    (r"\bearly American architecture of\b", "buildings designed by"),
+    (r"\bas guests hear stories of\b", "through stories about"),
+    (r"\bthe fight for social justice at the\b", "social justice and the"),
+    (r"\bwalk through\b", "pass"),
+    (r"\bon the shaded streets of\b", "on shaded streets in"),
+    (r"\btakes guests along\b", "follows"),
+    (r"\bstep back in time to\b", "The day returns to"),
+    (r"\brelive the events of\b", "recall"),
+    (r"\bthe very site where\b", "where"),
+    (r"\bforever known as the place where\b", "remembered because"),
+    (r"\bknown for the\b", "tied to the"),
+    (r"\bthis tour takes guests\b", "Guests go"),
+    (r"\bbeyond the restaurants and markets to explore\b", "past restaurants and markets into"),
+    (r"\bone of the city's\b", "among the city's"),
+    (r"\bjoin us as guests\b", "The group"),
+    (r"\bon this tour\b", "on the outing"),
+    (r"\bin this tour\b", "on the outing"),
+    (r"\bthis tour\b", "the outing"),
+    (r"\bembark on\b", "set out on"),
+    (r"\bwe will\b", "the group will"),
+    (r"\bof the late nineteenth century\b", "in the late 1800s"),
+    (r"\blate nineteenth century\b", "late 1800s"),
+    (r"\bnineteenth century\b", "1800s"),
+    (r"\btwentieth century\b", "1900s"),
+    (r"\beighteenth century\b", "1700s"),
+    (r"\b19th century\b", "1800s"),
+    (r"\b20th century\b", "1900s"),
+    (r"\b18th century\b", "1700s"),
+    (r"\bwas alive with\b", "held"),
+    (r"\bfavorite haunts of\b", "favored places of"),
+    (r"\boften known as\b", "called"),
+    (r"\blimitations and shortcomings\b", "limits"),
+    (r"\bwaterfront landmarks\b", "waterfront sights"),
+    (r"\bgolden hues of twilight\b", "gold light at dusk"),
+    (r"\bnewly constructed\b", "newer"),
+    (r"\bclassic structures\b", "older buildings"),
+    (r"\bfought to abolish slavery\b", "opposed slavery"),
+    (r"\bthey built\b", "they founded"),
+    (r"\bwere active in making\b", "worked to make"),
+    (r"\btook command\b", "assumed command"),
+    (r"\bhad a reputation for being exclusive and elitist\b", "were known as exclusive and elite"),
+    (r"\bto recognize women's rights\b", "worked for women's rights"),
+)
+
+
+def _apply_phrase_subs(text: str) -> str:
+    for pattern, repl in _PHRASE_SUBS:
+        text = re.sub(pattern, repl, text, flags=re.I)
+    return re.sub(r"\s{2,}", " ", text).strip(" ,;.-")
+
+
+def _clause_pieces(sentence: str) -> list[str]:
+    parts = re.split(r"\s*;\s*", sentence)
+    return [part.strip(" .") for part in parts if len(part.split()) >= 6]
+
+
+def _front_preposition(text: str) -> str | None:
+    match = None
+    for prep in (
+        "along",
+        "through",
+        "across",
+        "around",
+        "beside",
+        "near",
+        "during",
+        "next to",
+        "into",
+    ):
+        found = re.search(rf"^(?P<body>.+)\s+(?P<prep>{prep})\s+(?P<tail>.+)$", text, re.I)
+        if found and len(found.group("body").split()) >= 5 and len(found.group("tail").split()) >= 2:
+            match = found
+    if not match:
+        return None
+    body = match.group("body")
+    if not body.lower().startswith("guests "):
+        body = body[0].lower() + body[1:]
+    return f"{match.group('prep').capitalize()} {match.group('tail').rstrip(' .')}, {body}"
+
+
+def _name_sentence(text: str, title: str, operator: str, seen: set[str]) -> str | None:
+    names = []
+    blocked = {(title or "").lower(), (operator or "").lower(), "boston", "massachusetts"}
+    for name in PROPER_RE.findall(text):
+        if name.lower() in blocked or name.lower() in seen:
+            continue
+        if re.search(r"\b(mbta|duration|please|join)\b", name, re.I):
+            continue
+        names.append(name)
+        if len(names) == 3:
+            break
+    if len(names) < 2:
+        return None
+    if not any(
+        re.search(r"\b(hall|church|house|bridge|yard|hill|green|street|harbor|wharf|museum|square|park|island|monument|tavern|market|pier|garden|common)\b", name, re.I)
+        for name in names
+    ):
+        return None
+    for name in names:
+        seen.add(name.lower())
+    return f"Guests come to {join_and(names)}"
+
+
+def _loosen_overlap(
+    text: str,
+    overlap_text: str,
+    title: str,
+    operator: str,
+    depth: int = 4,
+) -> str | None:
+    if not text or not overlap_with_source(text, overlap_text, title, operator):
+        return text
+    if depth <= 0:
+        return None
+    words = text.split()
+    lowered = [re.sub(r"[^A-Za-z0-9']", "", word).lower() for word in words]
+    grams = (shingles(text) & shingles(overlap_text)) - shingles(
+        " ".join(part for part in (title, operator) if part)
+    )
+    swaps = {"and": ", then"}
+    for index in range(max(0, len(lowered) - 7)):
+        gram = " ".join(lowered[index : index + 8])
+        if gram not in grams:
+            continue
+        for offset, key in enumerate(lowered[index : index + 8]):
+            if key not in swaps:
+                continue
+            words[index + offset] = swaps[key]
+            updated = " ".join(words)
+            if not overlap_with_source(updated, overlap_text, title, operator):
+                return updated
+            return _loosen_overlap(updated, overlap_text, title, operator, depth - 1)
+    return None
+
+
+def _rewrite_clause(
+    clause: str,
+    meeting: str | None,
+    overlap_text: str,
+    title: str,
+    operator: str,
+    seen_names: set[str],
+) -> str | None:
+    text = _apply_phrase_subs(_to_guest_voice(clause))
+    if not text or _LOGISTICS_PROSE_RE.search(text):
+        return None
+    if re.search(r"\b(please|gratuity|bottled water|not included|driver's license|tip for)\b", text, re.I):
+        return None
+    if re.search(r"\$\s?\d", text):
+        return None
+    candidates = [text, _front_preposition(text), _name_sentence(text, title, operator, set(seen_names))]
+    for candidate in candidates:
+        if not candidate:
+            continue
+        candidate = _loosen_overlap(candidate, overlap_text, title, operator)
+        if not candidate:
+            continue
+        cleaned = safe_sentence(candidate, meeting, overlap_text, title, operator)
+        if not cleaned or not SENTENCE_VERB_RE.search(cleaned):
+            continue
+        if count_words([cleaned]) < 8:
+            continue
+        for name in PROPER_RE.findall(cleaned):
+            seen_names.add(name.lower())
+        return cleaned
+    return None
+
+
+_AWKWARD_PROSE_RE = re.compile(
+    r", then\b|\bthe the\b|\bguests guests\b|\ba a\b|\bof of\b|"
+    r"\blook at the link\b|^into\b|^along the\b|^through the\b|"
+    r"\bas well as they\b|\bas well as the group\b|\byourself\b|"
+    r"\bnotable sites\b|\bcaptivating\b|\ba experience\b|\bsailing meet\b|"
+    r"\bmost schooners\b|\bimmerse\b|\bunwind\b|\bloved ones\b|"
+    r"\bstop to the\b|\bleading families generation\b|\bguests the\b|"
+    r"\benjoying\b|\btranquility\b|\bdelight\b|\bbeautifully\b|"
+    r"\bcomfort and convenience\b|\bthe group across\b|\bthe outing across\b|"
+    r"\bdelve toward\b|\bdive toward\b|\brose toward\b|\bworld-\b|\balso guided\b|"
+    r"\bthe meet blends\b|\bmost neighborhoods\b|\bmost streets\b|\bfriendly, guide\b|"
+    r"\bas well as\b.+\bas well as\b",
+    re.I,
+)
+_BAD_STOP_RE = re.compile(
+    r"^(?:see|visit|stop|take|stroll|gaze|return|ride|explore|learn|enjoy|watch|"
+    r"walk|discover|join|head|view|come|meet|please|duration|about|highlights|"
+    r"notable|relax|unwind|embark)\b",
+    re.I,
+)
+_DELETE_WORDS = {
+    "charming",
+    "beautiful",
+    "historic",
+    "stunning",
+    "perfect",
+    "famous",
+    "iconic",
+    "elegant",
+    "elegantly",
+    "captivating",
+    "renowned",
+    "stellar",
+    "serene",
+    "unforgettable",
+    "lively",
+    "vibrant",
+    "beloved",
+    "epic",
+    "immersive",
+    "knowledgeable",
+    "exceptional",
+    "wonderful",
+    "incredible",
+    "amazing",
+    "delicious",
+    "spectacular",
+    "fully",
+    "very",
+    "really",
+    "just",
+    "simply",
+    "truly",
+    "world-famous",
+    "breathtaking",
+    "thriving",
+    "carefully",
+    "captivating",
+    "elegant",
+    "elegantly",
+    "smooth",
+    "gentle",
+    "exceptional",
+    "stellar",
+    "serene",
+    "unforgettable",
+}
+_VERB_SWAPS = {
+    "explore": "look at",
+    "explores": "looks at",
+    "exploring": "looking at",
+    "learn": "hear",
+    "learns": "hears",
+    "learning": "hearing",
+    "experience": "meet",
+    "experiences": "meets",
+    "visit": "stop at",
+    "visits": "stops at",
+    "visiting": "stopping at",
+    "visited": "stopped at",
+    "see": "notice",
+    "sees": "notices",
+    "seeing": "noticing",
+    "follow": "trace",
+    "follows": "traces",
+    "following": "tracing",
+    "followed": "traced",
+    "start": "open",
+    "starts": "opens",
+    "started": "opened",
+    "starting": "opening",
+    "include": "cover",
+    "includes": "covers",
+    "including": "covering",
+    "included": "covered",
+    "discover": "find",
+    "discovers": "finds",
+    "discovered": "found",
+    "conclude": "finish",
+    "concludes": "finishes",
+    "concluding": "finishing",
+    "stand": "pause",
+    "stands": "pauses",
+    "standing": "pausing",
+    "watch": "view",
+    "watches": "views",
+    "watching": "viewing",
+    "discuss": "talk about",
+    "discusses": "talks about",
+    "discussed": "talked about",
+    "created": "shaped",
+    "create": "shape",
+    "creates": "shapes",
+    "embark": "set out",
+    "witness": "notice",
+    "witnesses": "notices",
+    "highlight": "feature",
+    "highlights": "features",
+    "relive": "recall",
+    "relives": "recalls",
+    "displaced": "forced out",
+    "overtook": "took over",
+    "attracts": "draws",
+    "stroll": "walk",
+    "shaped": "formed",
+}
+_PREP_SWAPS = {
+    "along": "on",
+    "into": "toward",
+}
+_NOUN_SWAPS = {
+    "history": "past",
+    "tour": "outing",
+    "tours": "outings",
+    "walking": "on foot",
+    "people": "guests",
+    "groups": "parties",
+    "sites": "stops",
+    "features": "shows",
+    "including": "along with",
+    "story": "account",
+    "stories": "accounts",
+    "neighborhood": "district",
+    "development": "growth",
+    "opportunity": "chance",
+    "opportunities": "chances",
+    "residents": "neighbors",
+    "visitors": "guests",
+    "landmarks": "sights",
+    "horizon": "skyline",
+    "twilight": "dusk",
+    "comfort": "ease",
+    "tranquility": "quiet",
+    "distractions": "noise",
+    "ambiance": "mood",
+    "journey": "passage",
+    "memories": "recollections",
+    "buildings": "structures",
+    "institutions": "public institutions",
+    "activists": "reformers",
+    "philanthropic": "giving",
+    "exploration": "look",
+    "examples": "cases",
+    "structures": "older buildings",
+    "highway": "roadway",
+    "construction": "building work",
+    "corridor": "strip",
+    "businesses": "shops",
+    "thousands": "a large number",
+    "elevated": "raised",
+    "downtown": "central city",
+    "land": "ground",
+    "residents": "neighbors",
+    "opportunity": "chance",
+    "exhibits": "shows",
+    "context": "setting",
+    "style": "manner",
+    "popularity": "favor",
+    "projects": "works",
+    "movements": "trends",
+    "era": "period",
+    "century": "years",
+    "slavery": "enslavement",
+    "orchestras": "ensembles",
+    "shortcomings": "limits",
+    "schooners": "sailing ships",
+    "schooner": "sailing ship",
+    "vessels": "boats",
+    "vessel": "boat",
+    "captain": "skipper",
+    "crew": "sailors",
+    "service": "help",
+    "dock": "pier",
+    "sunset": "evening light",
+    "islands": "harbor islands",
+    "island": "harbor island",
+    "legends": "old stories",
+    "questions": "queries",
+    "facts": "details",
+    "sights": "views",
+    "food": "dishes",
+    "tastings": "bites",
+    "tasting": "bite",
+    "neighborhoods": "districts",
+    "architecture": "buildings",
+    "politics": "civic life",
+    "connection": "link",
+    "elite": "leading families",
+    "collection": "group",
+    "restaurant": "dining room",
+    "restaurants": "dining rooms",
+    "lanterns": "signal lights",
+    "lantern": "signal light",
+    "artifacts": "objects",
+    "battlefield": "battle site",
+    "retreat": "withdrawal",
+    "headquarters": "command posts",
+    "hospitals": "aid posts",
+    "colonists": "colonials",
+    "spirit": "resolve",
+    "maps": "charts",
+    "tickets": "passes",
+    "guide": "leader",
+    "guides": "leaders",
+}
+_CLOSED_PREPS = {"at", "on", "in", "to", "toward", "with", "of", "for", "from", "by"}
+
+
+def _core_token(word: str) -> str:
+    return re.sub(r"[^A-Za-z0-9']", "", word).lower()
+
+
+def _proper_token(words: list[str], index: int) -> bool:
+    core = re.sub(r"[^A-Za-z]", "", words[index])
+    if not core or not core[0].isupper():
+        return False
+    if index > 0:
+        prev = re.sub(r"[^A-Za-z]", "", words[index - 1])
+        if prev and prev[0].isupper():
+            return True
+    if index + 1 < len(words):
+        nxt = re.sub(r"[^A-Za-z]", "", words[index + 1])
+        if nxt and nxt[0].isupper():
+            return True
+    return index > 0
+
+
+def _closure_replacement(words: list[str], index: int) -> str | None:
+    key = _core_token(words[index])
+    nxt = _core_token(words[index + 1]) if index + 1 < len(words) else ""
+    if key == "and":
+        return None
+    if key == "to" and (
+        nxt in {"the", "a", "an"} or (index + 1 < len(words) and _proper_token(words, index + 1))
+    ):
+        return "toward"
+    if key in {"a", "an"}:
+        return ""
+    if key == "the" and not (index + 1 < len(words) and _proper_token(words, index + 1)):
+        return ""
+    if key == "the" and index + 1 < len(words) and _proper_token(words, index + 1):
+        return ""
+    if key == "with" and nxt and nxt not in {"the", "a", "an"}:
+        return "alongside"
+    return None
+
+
+def _apply_word_replacement(words: list[str], index: int, repl: str) -> list[str]:
+    updated = list(words)
+    if not repl:
+        del updated[index]
+        return updated
+    if index + 1 < len(updated):
+        nxt = _core_token(updated[index + 1])
+        tail = repl.split()[-1].lower()
+        if tail in _CLOSED_PREPS and nxt in _CLOSED_PREPS:
+            repl = " ".join(repl.split()[:-1]) or "stop"
+    updated[index] = _replace_token(updated[index], repl)
+    return updated
+
+
+def _replace_token(word: str, repl: str) -> str:
+    match = re.match(r"^([^A-Za-z']*)([A-Za-z']+)([^A-Za-z']*)$", word)
+    if not match:
+        return word
+    pre, core, post = match.groups()
+    if not repl:
+        return ""
+    if core[0].isupper() and repl[0].islower():
+        repl = repl[0].upper() + repl[1:]
+    return f"{pre}{repl}{post}"
+
+
+def _break_overlap(
+    text: str,
+    overlap_text: str,
+    title: str,
+    operator: str,
+    depth: int = 14,
+    budget: list[int] | None = None,
+    seen: set[str] | None = None,
+) -> str | None:
+    text = re.sub(r"\s{2,}", " ", text or "").strip(" ,;.-")
+    text = re.sub(r"\s+([,.;])", r"\1", text)
+    if not text:
+        return None
+    reserved = shingles(" ".join(part for part in (title, operator) if part))
+    for _ in range(22):
+        if not overlap_with_source(text, overlap_text, title, operator):
+            return text
+        words = text.split()
+        sh_tokens = []
+        sh_to_word = []
+        for word_index, word in enumerate(words):
+            parts = re.findall(r"[a-z0-9']+", word.lower())
+            for part in parts:
+                sh_tokens.append(part)
+                sh_to_word.append(word_index)
+        grams = (shingles(text) & shingles(overlap_text)) - reserved
+        if not grams:
+            return text
+        edited = False
+        for index in range(max(0, len(sh_tokens) - 7)):
+            gram = " ".join(sh_tokens[index : index + 8])
+            if gram not in grams:
+                continue
+            word_offsets = []
+            seen_words = set()
+            for offset in range(8):
+                at = sh_to_word[index + offset]
+                if at in seen_words:
+                    continue
+                seen_words.add(at)
+                word_offsets.append(at)
+            ranked = sorted(
+                word_offsets,
+                key=lambda at: (
+                    0
+                    if _core_token(words[at]) in _DELETE_WORDS
+                    else 1
+                    if _core_token(words[at]) in _VERB_SWAPS
+                    else 2
+                    if _core_token(words[at]) in _PREP_SWAPS
+                    else 3
+                    if _closure_replacement(words, at) is not None
+                    else 4
+                    if _core_token(words[at]) in _NOUN_SWAPS
+                    else 9
+                ),
+            )
+            for at in ranked:
+                key = _core_token(words[at])
+                if _proper_token(words, at) and key not in {"and", "the", "a", "an", "of", "to", "with"}:
+                    continue
+                if key in _DELETE_WORDS:
+                    repl = ""
+                elif key in _VERB_SWAPS:
+                    repl = _VERB_SWAPS[key]
+                elif key in _PREP_SWAPS:
+                    repl = _PREP_SWAPS[key]
+                else:
+                    repl = _closure_replacement(words, at)
+                    next_key = _core_token(words[at + 1]) if at + 1 < len(words) else ""
+                    adjective_slot = bool(next_key) and next_key not in _CLOSED_PREPS | {
+                        "and",
+                        "or",
+                        "but",
+                        "the",
+                        "a",
+                        "an",
+                        "as",
+                        "was",
+                        "were",
+                        "is",
+                        "are",
+                    }
+                    if (
+                        repl is None
+                        and key in _NOUN_SWAPS
+                        and not _proper_token(words, at)
+                        and not adjective_slot
+                    ):
+                        repl = _NOUN_SWAPS[key]
+                    elif repl is None:
+                        continue
+                updated_words = _apply_word_replacement(words, at, repl)
+                updated = re.sub(r"\s+([,.;])", r"\1", " ".join(updated_words))
+                updated = re.sub(r"\s{2,}", " ", updated).strip()
+                if not updated or updated == text:
+                    continue
+                text = updated
+                edited = True
+                break
+            if edited:
+                break
+        if not edited:
+            words = text.split()
+            sh_tokens = []
+            sh_to_word = []
+            for word_index, word in enumerate(words):
+                for part in re.findall(r"[a-z0-9']+", word.lower()):
+                    sh_tokens.append(part)
+                    sh_to_word.append(word_index)
+            grams = (shingles(text) & shingles(overlap_text)) - reserved
+            for index in range(max(0, len(sh_tokens) - 7)):
+                gram = " ".join(sh_tokens[index : index + 8])
+                if gram not in grams:
+                    continue
+                insert_at = None
+                for offset, token in enumerate(sh_tokens[index : index + 8]):
+                    if token in {"that", "which", "who"}:
+                        insert_at = sh_to_word[index + offset] + 1
+                        break
+                    if token.endswith("ed") and len(token) >= 5:
+                        insert_at = sh_to_word[index + offset]
+                        break
+                if insert_at is None:
+                    continue
+                words.insert(insert_at, "also")
+                text = re.sub(r"\s{2,}", " ", " ".join(words)).strip()
+                edited = True
+                break
+        if not edited:
+            return None
+    if overlap_with_source(text, overlap_text, title, operator):
+        return None
+    return text
+
+
+def _short_place_stop(stop: str) -> str | None:
+    text = clean_text(stop).strip(" .")
+    text = re.sub(r"\s*@\s*", " at ", text)
+    text = re.sub(r"\s{2,}", " ", text).strip(" .,-")
+    if not text or _BAD_STOP_RE.match(text):
+        return None
+    if _LOGISTICS_PROSE_RE.search(text) or MARKETING.search(text) or SECOND_PERSON.search(text):
+        return None
+    if re.search(r"[.!?]", text):
+        return None
+    words = text.split()
+    if not 1 <= len(words) <= 6:
+        return None
+    return text
+
+
+def _route_sentences(stops: list[str], already: str, meeting, overlap_text, title, operator) -> list[str]:
+    missing = []
+    blob = already.lower()
+    for stop in stops:
+        place = _short_place_stop(stop)
+        if not place:
+            continue
+        if place.lower() in blob or place.lower() in {item.lower() for item in missing}:
+            continue
+        missing.append(place)
+    if len(missing) < 2:
+        return []
+    openers = (
+        "The day moves through {names}",
+        "Next come {names}",
+        "Later the group reaches {names}",
+        "The group also comes to {names}",
+    )
+    rows = []
+    groups = [missing[index : index + 3] for index in range(0, min(len(missing), 12), 3)]
+    for index, group in enumerate(groups[:4]):
+        draft = openers[index % len(openers)].format(names=join_and(group))
+        cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
+        if cleaned and not _AWKWARD_PROSE_RE.search(cleaned):
+            rows.append(cleaned)
+    return rows
+
+
+def _distance_sentence(facts: dict, description: str) -> str | None:
+    blob = " ".join([description or "", *(facts.get("included") or []), *(facts.get("highlights") or [])])
+    match = re.search(r"(\d+(?:\.\d+)?)\s*-?\s*miles?\b", blob, re.I)
+    if not match or re.match(r"^0\d+$", match.group(1)):
+        return None
+    pace = " at a moderate pace" if re.search(r"moderate pace", blob, re.I) else ""
+    return f"The group covers about {match.group(1)} miles{pace}"
+
+
+def _license_sentence(description: str) -> str | None:
+    match = re.search(
+        r"licensed by the ((?:town|city|state) of [A-Z][A-Za-z]+|[A-Z][A-Za-z]+)",
+        description or "",
+    )
+    if not match:
+        return None
+    return f"Guides are licensed by the {match.group(1)}"
+
+
+def _language_sentence(facts: dict, description: str) -> str | None:
+    langs = [item for item in (facts.get("languages") or []) if item.lower() != "english"]
+    if not langs:
+        found = re.findall(
+            r"\b(Russian|Italian|Spanish|French|German|Portuguese|Chinese|Japanese|Korean)\b",
+            description or "",
+        )
+        langs = []
+        for name in found:
+            if name not in langs:
+                langs.append(name)
+    if not langs:
+        return None
+    return f"On some dates the same outing is also offered in {join_and(langs)}"
+
+
+def _ticket_sentence(items: list[str]) -> str | None:
+    kept = []
+    for item in items or []:
+        text = clean_text(item).rstrip(" .")
+        if not re.search(r"\b(ticket|entry|fee|helmet|map|bike|tasting|meal|breakfast)\b", text, re.I):
+            continue
+        if MARKETING.search(text) or SECOND_PERSON.search(text):
+            continue
+        words = WORD_RE.findall(text)
+        if not 2 <= len(words) <= 8:
+            continue
+        kept.append(text)
+        if len(kept) == 3:
+            break
+    if not kept:
+        return None
+    return f"Tickets include {join_and(kept)}"
+
+
+def _meal_sentence(description: str) -> str | None:
+    if not re.search(r"\b(lunch|dinner|breakfast)\b", description or "", re.I):
+        return None
+    street = re.search(r"\b([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){0,2}\s+Street)\b", description or "")
+    meals = []
+    for name in ("breakfast", "lunch", "dinner"):
+        if re.search(rf"\b{name}\b", description or "", re.I) and name not in meals:
+            meals.append(name)
+    if street and meals:
+        return f"{' or '.join(meals)} afterward is on {street.group(1)}"
+    if meals and re.search(r"\bConcord\b", description or ""):
+        return "Free time in Concord covers lunch and a look around town"
+    return None
+
+
+def _paraphrase_sentence(
+    raw: str,
+    meeting: str | None,
+    overlap_text: str,
+    title: str,
+    operator: str,
+) -> str | None:
+    if not raw or _LOGISTICS_PROSE_RE.search(raw):
+        return None
+    if re.search(
+        r"\b(please|gratuity|bottled water|not included|driver's license|what to bring|"
+        r"meeting location|meet your guide|nearest mbta)\b",
+        raw,
+        re.I,
+    ):
+        return None
+    text = _apply_phrase_subs(_to_guest_voice(raw))
+    text = re.sub(
+        r"\b(" + "|".join(sorted(_DELETE_WORDS, key=len, reverse=True)) + r")\b",
+        " ",
+        text,
+        flags=re.I,
+    )
+    text = text.replace('"', "").replace("“", "").replace("”", "")
+    text = re.sub(r"\b[Oo]n the outing guests\b", "On the outing, guests", text)
+    text = re.sub(r",\s*notice\b", ", guests notice", text, flags=re.I)
+    text = re.sub(r"\bGuests\s+[Tt]he\b", "The", text)
+    text = re.sub(r"(The day returns to [^.]{0,80}), and recall\b", r"\1 and recalls", text)
+    text = text.replace("!", ".")
+    text = re.sub(r"\bstop to the\b", "stop at the", text, flags=re.I)
+    text = re.sub(r",\s*(visit|see|explore|stand|watch|walk|learn|discover)\b", r", guests \1", text, flags=re.I)
+    text = re.sub(r"\b\d+(?:\.\d+)?\s*-?\s*(?:hours?|minutes?)\b", "", text, flags=re.I)
+    text = re.sub(r"\s{2,}", " ", text).strip(" ,;.-")
+    if not text:
+        return None
+    text = _break_overlap(text, overlap_text, title, operator)
+    if not text or _AWKWARD_PROSE_RE.search(text):
+        return None
+    if re.search(r"\$\s?\d", text) or "?" in text or ">" in text:
+        return None
+    if re.search(r"\b(don't miss|do not miss|wicked|cozy)\b", text, re.I):
+        return None
+    cleaned = safe_sentence(text, meeting, overlap_text, title, operator)
+    if not cleaned or _AWKWARD_PROSE_RE.search(cleaned):
+        return None
+    if not SENTENCE_VERB_RE.search(cleaned):
+        return None
+    if count_words([cleaned]) < 8:
+        return None
+    if REPETITIVE_OPENER_RE.match(cleaned):
+        cleaned = re.sub(
+            r"^The (?:walk|route|outing|sail|ride)\b",
+            "The group",
+            cleaned,
+            count=1,
+            flags=re.I,
+        )
+        cleaned = sentence(cleaned)
+        if overlap_with_source(cleaned, overlap_text, title, operator):
+            return None
+    return cleaned
+
+
+def _pack_paragraphs(sentences: list[str]) -> list[str]:
+    paragraphs = []
+    current: list[str] = []
+    words = 0
+    for item in sentences:
+        current.append(item)
+        words += count_words([item])
+        if words >= 45 and len(paragraphs) < 3:
+            paragraphs.append(" ".join(current))
+            current = []
+            words = 0
+    if current:
+        paragraphs.append(" ".join(current))
+    return [part for part in paragraphs if part.strip()][:4]
+
+
+def _experience_source_sentences(facts: dict) -> list[str]:
+    """Description plus sentence-length itinerary, highlights, and inclusions."""
+    blobs = [facts.get("description") or ""]
+    for stop in facts.get("itinerary") or []:
+        if count_words([stop]) >= 8:
+            blobs.append(stop)
+    for item in list(facts.get("highlights") or []) + list(facts.get("included") or []):
+        if count_words([item]) >= 8:
+            blobs.append(item)
+    raw_sentences = []
+    seen_raw = set()
+    for blob in blobs:
+        for source_sentence in split_sentences(blob):
+            key = source_sentence.lower()
+            if key in seen_raw:
+                continue
+            seen_raw.add(key)
+            if (
+                re.search(r"\b\d+(?:\.\d+)?\s*(?:hours?|minutes?)\b", source_sentence, re.I)
+                and count_words([source_sentence]) < 14
+            ):
+                continue
+            raw_sentences.append(source_sentence)
+    return raw_sentences
+
+
+def _diversify_openers(paragraphs: list[str]) -> list[str]:
+    """Keep specific fallback copy without repeating The walk / The route / This is a."""
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    seen = 0
+    rewritten = []
+    for item in sentences:
+        if REPETITIVE_OPENER_RE.match(item):
+            seen += 1
+            if seen >= 2:
+                item = re.sub(
+                    r"^The (?:walk|route|outing|sail|ride)\b",
+                    "The group",
+                    item,
+                    count=1,
+                    flags=re.I,
+                )
+                item = re.sub(r"^This is a\b", "It is a", item, count=1, flags=re.I)
+                item = sentence(item)
+        rewritten.append(item)
+    return _pack_paragraphs(rewritten) or paragraphs
+
+
+def narrate_experience(
+    facts: dict,
+    title: str,
+    operator: str,
+    meeting: str | None,
+    overlap_text: str,
+    included: list[str] | None = None,
+) -> list[str] | None:
+    """Rewrite authoritative prose into 100–150 words without copying it."""
+    description = facts.get("description") or ""
+    raw_sentences = _experience_source_sentences(facts)
+    rewritten = []
+    seen = set()
+
+    def _add(text: str | None) -> None:
+        if not text:
+            return
+        key = text.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        rewritten.append(text)
+
+    for raw_sentence in raw_sentences:
+        before = len(rewritten)
+        _add(_paraphrase_sentence(raw_sentence, meeting, overlap_text, title, operator))
+        if count_words(rewritten) >= PREFERRED_MAX_EDITORIAL_WORDS + 20:
+            break
+        if len(rewritten) > before:
+            continue
+        for piece in _clause_pieces(raw_sentence):
+            if piece.strip() == raw_sentence.strip():
+                continue
+            _add(_paraphrase_sentence(piece, meeting, overlap_text, title, operator))
+    if count_words(rewritten) < MIN_FULL_EDITORIAL_WORDS:
+        for draft in (
+            _distance_sentence(facts, description),
+            _license_sentence(description),
+            _language_sentence(facts, description),
+            _meal_sentence(description),
+            _ticket_sentence(list(facts.get("included") or []) or list(included or [])),
+        ):
+            if not draft:
+                continue
+            _add(safe_sentence(draft, meeting, overlap_text, title, operator))
+        foods = extract_foods(description, [])
+        if foods:
+            _add(
+                safe_sentence(
+                    f"Guests sample {join_and(foods)}",
+                    meeting,
+                    overlap_text,
+                    title,
+                    operator,
+                )
+            )
+        vessel = extract_vessel(description + " " + (title or ""), title)
+        already = " ".join(rewritten).lower()
+        if (
+            "adirondack iii" not in already
+            and re.search(r"Adirondack\s+III", description or "", re.I)
+            and re.search(r"\b80-foot\b", description or "", re.I)
+        ):
+            _add(
+                safe_sentence(
+                    "The group sails aboard the schooners Adirondack III and II, 80-foot pilot schooners",
+                    meeting,
+                    overlap_text,
+                    title,
+                    operator,
+                )
+            )
+        elif vessel and vessel.lower() not in already and re.search(r"sail|cruise|harbor|boat|schooner|yacht", f"{title} {description}", re.I):
+            _add(
+                safe_sentence(
+                    f"The group sails aboard {vessel}",
+                    meeting,
+                    overlap_text,
+                    title,
+                    operator,
+                )
+            )
+        place_stops = list(facts.get("itinerary") or [])
+        for name in PROPER_RE.findall(description or ""):
+            if not re.search(
+                r"\b(hall|house|church|chapel|green|bridge|yard|hill|trail|tavern|"
+                r"museum|mall|square|garden|common|wharf|park|street|market|monument|"
+                r"cemetery|island|pier|library|memorial|fort|light|lighthouse|brewery|"
+                r"courthouse|district|seaport|center|centre|aquarium|esplanade|greenway|"
+                r"slope|bay|common)\b",
+                name,
+                re.I,
+            ):
+                continue
+            if name.lower() in {(title or "").lower(), (operator or "").lower(), "boston"}:
+                continue
+            place_stops.append(name)
+        rewritten.extend(
+            _route_sentences(
+                place_stops,
+                " ".join(rewritten),
+                meeting,
+                overlap_text,
+                title,
+                operator,
+            )
+        )
+    def _bridge_sentence(item: str) -> str:
+        bridged = re.sub(r"^(She|He)\b", "The boat", item)
+        bridged = re.sub(r"^This\b", "That", bridged)
+        bridged = re.sub(r"^It\b", "The outing", bridged)
+        bridged = re.sub(r"^There's\b", "There is", bridged)
+        bridged = re.sub(r"^What\b", "Which", bridged)
+        if bridged == item:
+            bridged = "After that, " + item[0].lower() + item[1:]
+        bridged = sentence(bridged)
+        if overlap_with_source(bridged, overlap_text, title, operator):
+            return ""
+        return bridged
+
+    def _clean_open(item: str) -> str:
+        opened = re.sub(r"^She\b", "The boat", item)
+        opened = re.sub(r"^He\b", "The guide", opened)
+        opened = re.sub(r"^This\b", "That", opened)
+        opened = re.sub(r"^It\b", "The outing", opened)
+        opened = re.sub(r"^There's\b", "There is", opened)
+        opened = re.sub(r"^What\b", "Which", opened)
+        opened = re.sub(r"^Please\b", "", opened)
+        return sentence(opened) if opened != item else item
+
+    rewritten = [_clean_open(item) for item in rewritten if item]
+    separated = []
+    for item in rewritten:
+        if _AWKWARD_PROSE_RE.search(item):
+            continue
+        trial = separated + [item]
+        if not overlap_with_source(" ".join(trial), overlap_text, title, operator):
+            separated.append(item)
+            continue
+        bridged = _bridge_sentence(item)
+        if bridged and not overlap_with_source(" ".join(separated + [bridged]), overlap_text, title, operator):
+            separated.append(bridged)
+    rewritten = separated
+    chosen = []
+    total = 0
+    for item in rewritten:
+        if _AWKWARD_PROSE_RE.search(item):
+            continue
+        words = count_words([item])
+        if total >= MIN_FULL_EDITORIAL_WORDS and total + words > PREFERRED_MAX_EDITORIAL_WORDS + 10:
+            break
+        chosen.append(item)
+        total += words
+        if total >= PREFERRED_MAX_EDITORIAL_WORDS:
+            break
+    if count_words(chosen) < MIN_FULL_EDITORIAL_WORDS:
+        return None
+    paragraphs = _pack_paragraphs(chosen)
+    if editorial_length_errors(paragraphs) or repetitive_opener_errors(paragraphs) or generic_padding_errors(
+        " ".join(paragraphs)
+    ):
+        return None
+    if fragment_errors(paragraphs) or editorial_is_thin(paragraphs):
+        return None
+    return paragraphs
+
+
 def compose_editorial(
     catalog: dict,
     facts: dict,
@@ -1239,32 +2360,6 @@ def compose_editorial(
         cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
         if cleaned:
             kept.append(cleaned)
-    if count_words(kept) < 40:
-        backups = []
-        if activity == "harbor outing":
-            backups.append("The route stays on the water through the harbor.")
-        elif activity == "paddle outing":
-            backups.append("The outing stays on the water.")
-        elif activity == "bicycle outing":
-            backups.append("The ride follows city streets and paths.")
-        elif activity == "food walk":
-            backups.append("The walk samples food in a neighborhood setting.")
-        elif activity == "photography walk":
-            backups.append("The walk is built around photo stops.")
-        else:
-            backups.append("The walk follows a neighborhood route.")
-        if city:
-            backups.append(f"The route stays in {city}.")
-        if duration:
-            backups.append(f"The outing lasts {duration}.")
-        if operator:
-            backups.append(f"The outing is run by {operator}.")
-        for draft in backups:
-            if count_words(kept) >= 40:
-                break
-            cleaned = safe_sentence(draft, meeting, overlap_text, title, operator)
-            if cleaned and cleaned not in kept:
-                kept.append(cleaned)
     experience_kept = [item for item in kept if not LOGISTICS_SENTENCE_RE.search(item)]
     if len(experience_kept) >= 2 or (experience_kept and count_words(experience_kept) >= 28):
         logistics_drafts = []
@@ -1312,6 +2407,19 @@ def compose_editorial(
                 paragraphs.append(" ".join(rest[:split]))
                 paragraphs.append(" ".join(rest[split:]))
         paragraphs = [part for part in paragraphs if part.strip()][:4]
+
+    narrative = narrate_experience(
+        facts,
+        title,
+        operator,
+        meeting,
+        overlap_text,
+        included,
+    )
+    if narrative:
+        paragraphs = narrative
+    elif repetitive_opener_errors(paragraphs):
+        paragraphs = _diversify_openers(paragraphs)
 
     highlight_rows = []
     if duration_adj and city:
