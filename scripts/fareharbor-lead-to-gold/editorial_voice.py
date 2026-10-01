@@ -49,6 +49,90 @@ MECHANICAL_PHRASES = (
     r"\bcontinues toward\b",
 )
 
+BOILERPLATE_COPY_PHRASES = (
+    "the guide leads in",
+    "are the packing notes",
+    "the packing notes",
+    "the published maximum age",
+)
+
+FIELD_DUMP_SENTENCE_RE = re.compile(
+    r"^(?:"
+    r"the guide leads in [^.]+|"
+    r"groups are capped at \d+|"
+    r"guests must be (?:at least )?\d+ years old|"
+    r"guests must be 21 or older|"
+    r".{0,90} are the packing notes|"
+    r"valid identification is required|"
+    r"a full refund is available with at least \d+ hours' notice|"
+    r"the published maximum age is .+"
+    r")\.?$",
+    re.I,
+)
+LOGISTICS_SENTENCE_RE = re.compile(
+    r"\b("
+    r"groups (?:are capped at|stay at)|"
+    r"guests must be|"
+    r"guide leads in|"
+    r"packing notes|"
+    r"full refund is available|"
+    r"valid identification is required|"
+    r"held in ordinary rain|"
+    r"stroller and wheelchair accessible|"
+    r"published maximum age|"
+    r"tickets are not refundable"
+    r")\b",
+    re.I,
+)
+FRAGMENT_HEADING_RE = re.compile(
+    r"^(?:includes?|duration|highlights|about|meeting place|what to bring|"
+    r"important details|overview|please note)\b",
+    re.I,
+)
+SENTENCE_VERB_RE = re.compile(
+    r"\b("
+    r"is|are|was|were|be|been|being|has|have|had|"
+    r"sail|sails|pass|passes|see|sees|explore|explores|ride|rides|"
+    r"walk|walks|sample|samples|visit|visits|cover|covers|cross|crosses|"
+    r"start|starts|leave|leaves|run|runs|offer|offers|include|includes|"
+    r"come|comes|move|moves|stay|stays|sit|sits|answer|answers|"
+    r"serve|serves|pair|pairs|designed|held|aboard|follows|"
+    r"lists|list|require|requires|reach|reaches|ask|asks|asked|"
+    r"continue|continues|remain|remains|keep|keeps|built|styled|"
+    r"sells|sold|leave|leaves|aimed|covering"
+    r")\b",
+    re.I,
+)
+EXPERIENCE_TOKEN_RE = re.compile(
+    r"\b("
+    r"sail|pass(?:es)?|see|explore|ride|walk|sample|visit|aboard|"
+    r"come into view|covers?|cross(?:es|ing)?|neighborhood|schooner|"
+    r"yacht|trail|harbor|tasting|chocolate|freedom trail|esplanade"
+    r")\b",
+    re.I,
+)
+FOOD_RE = re.compile(
+    r"\b("
+    r"lobster rolls?|clam chowder|baked beans|boston cream pie|"
+    r"cannoli|truffles?|dumplings?|dim sum|chowder|oysters?|"
+    r"bean-to-bar chocolate|chocolate tea|belgian tasting"
+    r")\b",
+    re.I,
+)
+VESSEL_RE = re.compile(
+    r"\b("
+    r"Adirondack(?:\s+(?:II|III|IV))?|Northern Lights|Yacht Manhattan|"
+    r"Liberty|"
+    r"(?:80|115)-foot (?:pilot )?schooners?|"
+    r"(?:80|115)-foot motor yacht"
+    r")\b",
+)
+WITHHELD_STATUSES = {
+    "SOURCE_NOT_FOUND",
+    "BOOKING_PAGE_NOT_FOUND",
+    "INSUFFICIENT_SOURCE_CONTENT",
+}
+
 EDITORIAL_PROMPT = """
 Write customer-facing travel editorial for one FareHarbor product.
 
@@ -157,10 +241,98 @@ def mechanical_verb_errors(text: str) -> list[str]:
     return found
 
 
+def split_sentences(text: str) -> list[str]:
+    parts = re.split(r"(?<=[.!])\s+(?=[A-Z])", (text or "").strip())
+    return [part.strip() for part in parts if part.strip()]
+
+
+def boilerplate_language_errors(text: str) -> list[str]:
+    lowered = (text or "").lower()
+    return [
+        f"boilerplate language: {phrase}"
+        for phrase in BOILERPLATE_COPY_PHRASES
+        if phrase in lowered
+    ]
+
+
+def field_dump_errors(paragraphs: list[str]) -> list[str]:
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    if not sentences:
+        return []
+    dumped = [item for item in sentences if FIELD_DUMP_SENTENCE_RE.match(item)]
+    if dumped and len(dumped) == len(sentences):
+        return ["field-dump style copy: every sentence restates a form field"]
+    errors = []
+    for item in dumped:
+        if re.search(r"guide leads in|packing notes|published maximum age", item, re.I):
+            errors.append(f"field-dump sentence: {item}")
+    return errors
+
+
+def fragment_errors(paragraphs: list[str]) -> list[str]:
+    errors = []
+    for paragraph in paragraphs or []:
+        for item in split_sentences(paragraph):
+            if FRAGMENT_HEADING_RE.search(item) and len(WORD_RE.findall(item)) <= 6:
+                errors.append(f"heading fragment: {item}")
+                continue
+            words = WORD_RE.findall(item)
+            if len(words) >= 4 and not SENTENCE_VERB_RE.search(item):
+                errors.append(f"sentence fragment: {item}")
+    return errors
+
+
+def experience_sentences(paragraphs: list[str]) -> list[str]:
+    found = []
+    for paragraph in paragraphs or []:
+        for item in split_sentences(paragraph):
+            if not LOGISTICS_SENTENCE_RE.search(item):
+                found.append(item)
+    return found
+
+
+def editorial_is_thin(paragraphs: list[str]) -> bool:
+    experience = experience_sentences(paragraphs)
+    if count_words(experience) < 28:
+        return True
+    blob = " ".join(experience)
+    if not EXPERIENCE_TOKEN_RE.search(blob) and not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
+        return True
+    if not re.search(r"\b[A-Z][A-Za-z0-9'&.-]{2,}(?:\s+[A-Z][A-Za-z0-9'&.-]{2,})+\b", blob):
+        if not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
+            return True
+    return False
+
+
+def editorial_substance_errors(
+    paragraphs: list[str],
+    highlights: list[str],
+    schema: str,
+    *,
+    exception: str | None = None,
+) -> list[str]:
+    errors = editorial_voice_errors(paragraphs, highlights, schema)
+    text = " ".join([*(paragraphs or []), *(highlights or []), schema or ""])
+    errors.extend(boilerplate_language_errors(text))
+    if exception not in WITHHELD_STATUSES:
+        errors.extend(fragment_errors(paragraphs))
+    if exception in WITHHELD_STATUSES:
+        return errors
+    errors.extend(field_dump_errors(paragraphs))
+    if editorial_is_thin(paragraphs):
+        errors.append(
+            "editorial lacks minimum experience substance; classify INSUFFICIENT_SOURCE_CONTENT rather than padding"
+        )
+    return errors
+
+
 def editorial_voice_errors(paragraphs: list[str], highlights: list[str], schema: str) -> list[str]:
     text = " ".join([*(paragraphs or []), *(highlights or []), schema or ""])
     errors = implementation_language_errors(text)
     errors.extend(mechanical_verb_errors(text))
+    errors.extend(boilerplate_language_errors(text))
     count = len([part for part in (paragraphs or []) if part.strip()])
     if count > 4:
         errors.append(f"editorial has {count} paragraphs; keep 2-4 or fewer")
@@ -254,7 +426,7 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "bicycle outing"
     if re.search(r"kayak|paddle|canoe", text):
         return "paddle outing"
-    if re.search(r"sail|yacht|cruise|harbor|boat|ferry", text):
+    if re.search(r"sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack", text):
         return "harbor outing"
     if re.search(r"food|taste|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
         r"lobster roll|clam chowder|dim sum|food tour|food walk|tastings", desc
@@ -365,13 +537,19 @@ def guest_inclusions(items: list[str]) -> list[str]:
     kept = []
     skip = re.compile(
         r"guided|exploring|outdoor tour|offered in|head out|located on|"
-        r"join |come |please|gratuities|this tour is in english|urban landscape",
+        r"join |come |please|gratuities|this tour is in english|urban landscape|"
+        r"tour in english|dazzling|fully private|full catering|"
+        r"commentary on main sights|fully narrated|licensed guide|"
+        r"one way ticket|round trip|surcharges|air-conditioned|"
+        r"60-minute experience|free photos|all transportation",
         re.I,
     )
     for item in items or []:
         text = clean_text(item).rstrip(" .")
         words = WORD_RE.findall(text)
         if not words or len(words) > 6:
+            continue
+        if "!" in text or re.search(r"[\u2600-\u27BF\U0001F300-\U0001FAFF]", text):
             continue
         if MARKETING.search(text) or SECOND_PERSON.search(text) or skip.search(text):
             continue
@@ -430,10 +608,10 @@ def place_sentences(places: list[str], activity: str) -> list[str]:
         closer_kind = "view"
     elif activity == "food walk" or foodish:
         opener = "The walk samples" if foodish else "The walk visits"
-        closer_kind = "see"
+        closer_kind = "visit"
     else:
         opener = "The walk passes"
-        closer_kind = "see"
+        closer_kind = "reach"
     if len(places) <= 2:
         return [f"{opener} {join_and(places)}."]
     first, rest = places[:2], places[2:5]
@@ -443,9 +621,102 @@ def place_sentences(places: list[str], activity: str) -> list[str]:
             rows.append(f"{rest[0]} comes into view.")
         else:
             rows.append(f"{join_and(rest)} come into view.")
+    elif rest and closer_kind == "visit":
+        rows.append(f"Later stops sample {join_and(rest)}." if foodish else f"Later stops visit {join_and(rest)}.")
     elif rest:
-        rows.append(f"Guests see {join_and(rest)}.")
+        rows.append(f"The route also reaches {join_and(rest)}.")
     return rows
+
+
+def extract_foods(source_text: str, places: list[str]) -> list[str]:
+    found = []
+    seen = set()
+    for match in FOOD_RE.finditer(source_text or ""):
+        name = match.group(0)
+        key = name.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        found.append(name.lower() if name.islower() or name.istitle() else name)
+    for name in places:
+        if FOOD_RE.search(name):
+            key = name.lower()
+            if key not in seen:
+                seen.add(key)
+                found.append(name)
+    return found[:4]
+
+
+def extract_vessel(source_text: str, title: str) -> str | None:
+    for blob in (title, source_text):
+        match = VESSEL_RE.search(blob or "")
+        if match:
+            return match.group(0)
+    return None
+
+
+def try_draft(
+    text: str,
+    meeting: str | None,
+    source_text: str,
+    title: str,
+    operator: str,
+) -> str | None:
+    return safe_sentence(text, meeting, source_text, title, operator)
+
+
+def harvest_experience_drafts(
+    facts: dict,
+    activity: str,
+    places: list[str],
+    source_text: str,
+    title: str,
+    operator: str,
+    meeting: str | None,
+) -> list[str]:
+    drafts: list[str] = []
+    foods = extract_foods(source_text, places)
+    vessel = extract_vessel(source_text, title)
+    description = facts.get("description") or ""
+    if vessel and activity == "harbor outing":
+        drafts.append(f"The outing is aboard {vessel}.")
+    if foods and (activity == "food walk" or foods):
+        if len(foods) <= 2:
+            drafts.append(f"The walk samples {join_and(foods)}.")
+        else:
+            drafts.append(f"The walk samples {join_and(foods[:2])}.")
+            drafts.append(f"Later tastings include {join_and(foods[2:4])}.")
+    family = re.search(
+        r"families with children(?: ages?)?\s+(\d+)\s*(?:-|to)\s*(\d+)",
+        description,
+        re.I,
+    )
+    if family:
+        drafts.append(
+            f"The walk is aimed at families with children ages {family.group(1)} to {family.group(2)}."
+        )
+    elif re.search(r"family-friendly|families with young children", description, re.I):
+        drafts.append("The outing is aimed at families, including guests who prefer an easier pace.")
+    if re.search(r"bike paths along the Charles River", description, re.I):
+        drafts.append("The ride stays on bike paths along the Charles River.")
+    if re.search(r"does not include travel into Downtown Boston", description, re.I):
+        drafts.append("The route stays out of downtown neighborhoods.")
+    if re.search(r"not a fully narrated", description, re.I):
+        drafts.append("Commentary stays moderate rather than a fully narrated tour.")
+    if re.search(r"individually(?:-|\s+)fitted bike", description, re.I):
+        drafts.append("Each guest rides an individually fitted bike.")
+    kept = []
+    seen = set()
+    for draft in drafts:
+        cleaned = try_draft(draft, meeting, source_text, title, operator)
+        if not cleaned:
+            continue
+        key = cleaned.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        kept.append(cleaned)
+    return kept
 
 
 def group_sentence(group: str | None) -> str | None:
@@ -592,9 +863,10 @@ def compose_editorial(
         if setting:
             lead += f" {setting}"
     drafts.append(lead + ".")
-
-    if langs:
-        drafts.append(f"The guide leads in {join_and(langs)}.")
+    harvest_rows = harvest_experience_drafts(
+        facts, activity, places, source_text, title, operator, meeting
+    )
+    drafts.extend(harvest_rows)
     if included:
         drafts.append(f"{join_and(included)} {'are' if len(included) != 1 else 'is'} included.")
     miles = []
@@ -606,31 +878,48 @@ def compose_editorial(
     if mile and re.search(r"moderate pace", source_text or "", re.I):
         drafts.append(f"The outdoor route is about {mile} miles at a moderate pace.")
 
-    drafts.extend(place_sentences(places, activity))
+    place_rows = place_sentences(places, activity)
+    harvest_blob = " ".join(harvest_rows).lower()
+    if any(re.search(r"\bsamples?\b", row, re.I) for row in harvest_rows):
+        place_rows = [row for row in place_rows if not re.search(r"\bsample", row, re.I)]
+    place_rows = [row for row in place_rows if row.lower().rstrip(".") not in harvest_blob]
+    drafts.extend(place_rows)
+
+    extra_langs = [item for item in langs if item.lower() != "english"]
+    if extra_langs:
+        drafts.append(f"Selected dates are also offered in {join_and(extra_langs)}.")
 
     group = group_sentence(facts.get("groupSize"))
-    if group:
-        drafts.append(group)
     age = age_sentence(facts.get("minAge"), facts.get("maxAge"))
-    if age:
-        drafts.append(age)
-    if rain:
-        drafts.append("The outing is held in ordinary rain as well as clear weather.")
-    if access and re.search(r"stroller|wheelchair", access, re.I) and not SECOND_PERSON.search(access):
-        drafts.append("The walk is stroller and wheelchair accessible.")
-    if bring:
-        if all(re.search(r"shoe|water|weather|clothing", item, re.I) for item in bring):
-            drafts.append(f"{join_and(bring)} are the packing notes.")
-        elif any(re.search(r"identification", item, re.I) for item in bring):
-            drafts.append("Valid identification is required.")
-    if cancel_hours:
-        drafts.append(f"A full refund is available with at least {cancel_hours} hours' notice.")
+    if age and "published maximum age" in age.lower():
+        age = None
 
     kept = []
     for draft in drafts:
         cleaned = safe_sentence(draft, meeting, source_text, title, operator)
         if cleaned:
             kept.append(cleaned)
+    experience_kept = [item for item in kept if not LOGISTICS_SENTENCE_RE.search(item)]
+    if len(experience_kept) >= 2 or (experience_kept and count_words(experience_kept) >= 28):
+        logistics_drafts = []
+        if group:
+            logistics_drafts.append(group)
+        if age:
+            logistics_drafts.append(age)
+        if rain:
+            logistics_drafts.append("The outing is held in ordinary rain as well as clear weather.")
+        if access and re.search(r"stroller|wheelchair", access, re.I) and not SECOND_PERSON.search(access):
+            logistics_drafts.append("The walk is stroller and wheelchair accessible.")
+        if any(re.search(r"identification", item, re.I) for item in bring):
+            logistics_drafts.append("Adult beverages require valid identification.")
+        if cancel_hours:
+            logistics_drafts.append(
+                f"A full refund is available with at least {cancel_hours} hours' notice."
+            )
+        for draft in logistics_drafts:
+            cleaned = safe_sentence(draft, meeting, source_text, title, operator)
+            if cleaned:
+                kept.append(cleaned)
 
     if not kept:
         fallback = f"{title} is a {activity} with {operator}." if operator else f"{title} is a {activity}."
@@ -642,12 +931,10 @@ def compose_editorial(
     else:
         experience = [kept[0]]
         idx = 1
-        while idx < len(kept) and re.search(
-            r"\b(passes|visits|see|come into view)\b", kept[idx], re.I
-        ):
+        while idx < len(kept) and not LOGISTICS_SENTENCE_RE.search(kept[idx]):
             experience.append(kept[idx])
             idx += 1
-            if len(experience) == 2:
+            if len(experience) == 3:
                 break
         rest = kept[len(experience) :]
         paragraphs = [" ".join(experience)]

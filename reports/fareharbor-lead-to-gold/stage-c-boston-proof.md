@@ -17,9 +17,9 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - Runtime FAIL: 0
 - Terminal removals: 8
 - PRICE_NOT_FOUND after editorial: 62
-- INSUFFICIENT_SOURCE_CONTENT: 92
+- INSUFFICIENT_SOURCE_CONTENT: 98
 - SOURCE_NOT_FOUND: 0
-- OK priced pages: 68
+- OK priced pages: 62
 
 ## Geography conflicts
 
@@ -42,11 +42,15 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - `73240` geography exclude — Hardwick, Vermont from meeting_point does not belong to Boston, and no matching public destination exists
 - `191688` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/request-a-private-corporate-tour-experience-191688` — none
 - `26493` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/labor-day-weekend-harbor-fireworks-cruise-aboard-adirondack-26493` — none
+- `361701` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/reinventing-boston-361701` — none
 - `361708` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/literary-beacon-hill-the-20th-century-361708` — none
 - `362214` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/the-flat-of-beacon-hill-362214` — none
+- `371156` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/before-boston-shawmut-peninsula-through-1630-371156` — none
+- `389570` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/working-women-boston-women-find-their-voice-389570` — none
 - `393817` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-tour-the-dark-side-of-boston-393817` — none
 - `393819` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-tour-the-north-end-bostons-immigration-gateway-393819` — none
 - `401790` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/bulfinch-triangle-401790` — none
+- `430743` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-tour-reinventing-boston-430743` — none
 - `438147` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boisterous-bostonians-riots-and-protests-438147` — none
 - `438151` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/uphams-corner-438151` — none
 - `438152` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/fort-point-channel-438152` — none
@@ -57,10 +61,9 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - `455625` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/bay-village-455625` — none
 - `455626` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-by-bulfinch-455626` — none
 - `455627` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-common-and-the-public-garden-455627` — none
-- `455634` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/the-custom-house-historic-district-455634` — none
+- `455629` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/bostons-chinatown-455629` — none
 - `455635` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/dams-bridges-and-locks-455635` — none
 - `455639` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/the-esplanade-455639` — none
-- `455640` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/finding-aesops-fables-in-copley-square-455640` — none
 - `455643` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/historic-waterfront-455643` — none
 - `455645` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/jewish-north-end-455645` — none
 - `455650` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/the-making-of-mit-455650` — none
@@ -69,8 +72,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - `455656` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/rethinking-boston-brutalism-455656` — none
 - `455660` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/taverns-to-tea-houses-455660` — none
 - `508151` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/virtual-program-508151` — none
+- `523785` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-common-past-lives-and-hidden-stories-523785` — none
 - `630528` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/community-event-630528` — none
-- `26333` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/downtown-to-back-bay-via-beacon-hill-walking-tour-26333` — none
 - `26335` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/back-bay-to-downtown-freedom-trail-via-beacon-hill-walking-tour-26335` — none
 - `26336` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-group-walking-tour-26336` — none
 - `26337` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-jewish-cultural-walking-tour-26337` — none
@@ -83,16 +86,17 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - `306974` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/north-end-neighborhood-tour---public-tour-306974` — none
 - `130424` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-lighthouse-sunset-cruise-130424` — none
 - `130441` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-lighthouse-sunset-cruise-130441` — none
+- `425924` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/the-best-of-boston-in-a-day-425924` — none
 - `426001` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/freedom-trail-and-little-italy---private-walking-tour-426001` — none
 - `518093` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-tour-of-lexington-concord-and-boston-518093` — none
 - `518095` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/half-day-driving-tour-of-boston-and-cambridge-518095` — none
+- `606802` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/one-if-by-land-two-if-by-sea-walking-and-boat-revolutionary-small-group-tour-606802` — none
 - `617316` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/april-19-1775-a-revolution-begins-semi-private-tour-617316` — none
 - `448091` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/marthas-vineyard-daytrip-from-boston-with-round-trip-ferry-and-island-tour-448091` — none
 - `448093` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/explore-cape-cod-in-a-day-448093` — none
 - `464912` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/highlights-of-boston---public-walking-tour-464912` — none
 - `556936` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/north-shore-coast-excursion---day-trip-from-boston-556936` — none
 - `609024` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/hidden-boston-tales-tidbits-and-treasures-609024` — none
-- `641580` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/highlights-of-boston---public-walking-tour-spanish-641580` — none
 - `451242` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/full-day-sailing-and-island-experience-451242` — none
 - `257506` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/private-north-shore-and-salem-tour-257506` — none
 - `333848` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/stories-from-the-freedom-trail-333848` — none
@@ -110,6 +114,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - `512328` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-harbor-sunset-cruise-512328` — none
 - `512335` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-harbor-moonlight-cruise-512335` — none
 - `692147` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-250-692147` — none
+- `26971` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-tv-and-movie-sites-26971` — none
+- `26974` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-movie-mile-walking-tour-26974` — none
 - `194038` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-cityscapes-night-photography-tour-194038` — none
 - `347869` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/boston-common-winter-lights-night-tour-347869` — none
 - `58904` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/massachusetts/boston/tours/highlights-of-boston-photo-tour-58904` — none

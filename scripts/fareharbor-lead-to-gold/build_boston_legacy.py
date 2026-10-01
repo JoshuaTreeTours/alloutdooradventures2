@@ -33,8 +33,14 @@ from build_stage_b_proof import (
 from inventory_boston import inventory
 from editorial_voice import (
     compose_editorial,
-    editorial_voice_errors,
+    editorial_is_thin,
+    editorial_substance_errors,
     load_editorial_sample,
+)
+from image_integrity import (
+    hero_gallery_duplicate_errors,
+    prefetch,
+    select_visible_gallery,
 )
 from migration_integrity import (
     assess_geography,
@@ -210,16 +216,6 @@ def harvest_images(folder: Path, content: dict, structured: dict, item_raw: dict
             elif isinstance(image, dict):
                 urls.append(str(image.get("url") or image.get("image") or ""))
     return unique([url for url in urls if FILESTACK_RE.search(url)])
-
-
-def select_gallery(hero: str | None, harvest_urls: list[str]) -> list[str]:
-    hero_handle = FILESTACK_RE.search(hero or "")
-    hero_id = hero_handle.group(1) if hero_handle else None
-    for url in harvest_urls:
-        match = FILESTACK_RE.search(url)
-        if match and match.group(1) != hero_id:
-            return [url]
-    return []
 
 
 def proper_names(text: str) -> list[str]:
@@ -673,28 +669,43 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             if overlay.get("schemaDescription"):
                 generated_schema = overlay["schemaDescription"]
     words = word_count(paragraphs)
+    thin = exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and editorial_is_thin(
+        paragraphs
+    )
     price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
-    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and words < 40:
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and (
+        words < 40 or thin
+    ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
+        paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
+        highlights = []
+        words = word_count(paragraphs)
+        generated_schema = " ".join(paragraphs).strip()
+        removed = [
+            "No public experience copy was written because the stored harvest cannot support useful guest-facing prose without padding or invention."
+        ]
     elif exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} and price is None:
         exception = "PRICE_NOT_FOUND"
     elif exception == "BOOKING_PAGE_NOT_FOUND":
         price = None
 
-    if exception == "INSUFFICIENT_SOURCE_CONTENT":
-        if words < 8:
-            paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
-            words = word_count(paragraphs)
+    if exception == "INSUFFICIENT_SOURCE_CONTENT" and generated_schema != " ".join(paragraphs).strip():
         generated_schema = " ".join(paragraphs).strip()
 
+    harvest_urls = harvest_images(folder, content, structured, item_raw)
+    harvest_urls = [url for url in harvest_urls if url in source_text]
     gallery = []
+    image_audit = {
+        "hero": catalog.get("heroImage"),
+        "selected": None,
+        "action": "none",
+        "reason": "terminal booking page",
+        "rejected": [],
+        "candidates": [],
+    }
     if exception != "BOOKING_PAGE_NOT_FOUND":
-        gallery = select_gallery(
-            catalog.get("heroImage"),
-            harvest_images(folder, content, structured, item_raw),
-        )
-        gallery = [url for url in gallery if url in source_text]
+        gallery, image_audit = select_visible_gallery(catalog.get("heroImage"), harvest_urls)
 
     visible = None
     offer = None
@@ -709,7 +720,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         rows = price_rows(price)
 
     overlay = EDITORIAL_BY_ID.get(catalog["itemId"])
-    if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
+    if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"}:
         overlay = None
     if overlay and overlay.get("schemaDescription"):
         schema = overlay["schemaDescription"]
@@ -736,7 +747,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         "paragraphs": paragraphs,
         "schemaDescription": schema,
         "removedClaims": removed,
-        "highlights": highlights if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"} else [],
+        "highlights": highlights if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else [],
         "galleryImages": gallery,
         "wordCount": words,
         "durationLabel": None if omit_facts else facts.get("duration"),
@@ -753,6 +764,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             "availability_count were not used. AggregateRating is omitted."
         ),
         "geography": geography,
+        "imageAudit": image_audit,
         "source": {
             "artifacts": f"data/fareharbor-lead-to-gold/boston/{folder.name}",
             "fetchedAt": meta.get("fetchedAt"),
@@ -776,16 +788,20 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         and f"/{expected_city_slug}/" in product["publicPath"]
     ):
         extra.append("conflicting geography still published under the legacy city route")
+    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
+        voice_errors = editorial_substance_errors(
+            product["paragraphs"],
+            product["highlights"],
+            product["schemaDescription"],
+            exception=exception,
+        )
+        extra.extend(voice_errors)
+        extra.extend(
+            hero_gallery_duplicate_errors(catalog.get("heroImage"), gallery)
+        )
     if extra:
         validation["errors"] = list(validation.get("errors") or []) + extra
         validation["ok"] = not validation["errors"]
-    if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
-        voice_errors = editorial_voice_errors(
-            product["paragraphs"], product["highlights"], product["schemaDescription"]
-        )
-        if voice_errors:
-            validation["errors"] = list(validation.get("errors") or []) + voice_errors
-            validation["ok"] = not validation["errors"]
     product["validation"] = validation
     return product
 
@@ -982,6 +998,26 @@ def main() -> None:
         if item.get("itemId")
     }
     destinations = catalog_destinations()
+    image_urls = []
+    for entry in catalog.values():
+        if entry.get("heroImage"):
+            image_urls.append(entry["heroImage"])
+        folder = HARVEST_ROOT / f"{entry['company']}-{entry['itemId']}"
+        if not (folder / "content.json").exists():
+            continue
+        content_raw = load_json(folder / "content.json")
+        structured_raw = load_json(folder / "structured-description.json")
+        item_raw = load_json(folder / "item.json")
+        content = unwrap_content(content_raw)
+        structured = unwrap_content(structured_raw)
+        if not isinstance(content, dict) or "error" in content:
+            content = {}
+        if not isinstance(structured, dict) or "error" in structured:
+            structured = {}
+        image_urls.extend(harvest_images(folder, content, structured, item_raw))
+    unique_images = list(dict.fromkeys(image_urls))
+    print(f"prefetching {len(unique_images)} product images")
+    prefetch(unique_images, workers=12)
     products = []
     runtime = []
     failures = []

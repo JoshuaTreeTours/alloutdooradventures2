@@ -86,9 +86,9 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     const insufficient = products.filter(
       product => product.exceptionStatus === "INSUFFICIENT_SOURCE_CONTENT"
     );
-    expect(priced).toHaveLength(68);
+    expect(priced).toHaveLength(62);
     expect(unpriced).toHaveLength(62);
-    expect(insufficient).toHaveLength(91);
+    expect(insufficient).toHaveLength(97);
     for (const product of priced) {
       expect(product.offer?.price).toBeTruthy();
       expect(product.visiblePriceLabel).toMatch(/^From /);
@@ -243,8 +243,8 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
         withoutOffer += 1;
       }
     }
-    expect(withOffer).toBe(68);
-    expect(withoutOffer).toBe(153);
+    expect(withOffer).toBe(62);
+    expect(withoutOffer).toBe(159);
     for (const item of BOSTON_TERMINALS) {
       expect(
         getFareHarborProofByPath(
@@ -319,6 +319,8 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       "takes place in",
       "this guided outing",
       "this harbor outing",
+      "the guide leads in",
+      "packing notes",
     ];
     const mechanical = [
       /\buses the\b/i,

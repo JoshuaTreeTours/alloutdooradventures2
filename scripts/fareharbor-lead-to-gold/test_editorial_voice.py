@@ -9,7 +9,13 @@ from pathlib import Path
 from editorial_voice import (
     EDITORIAL_PROMPT,
     apply_editorial_overlay,
+    boilerplate_language_errors,
+    compose_editorial,
+    editorial_is_thin,
+    editorial_substance_errors,
     editorial_voice_errors,
+    field_dump_errors,
+    fragment_errors,
     implementation_language_errors,
     load_editorial_sample,
 )
@@ -80,6 +86,70 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertNotIn("takes place in", text)
         self.assertNotIn("named places", text)
         self.assertGreater(updated["wordCount"], 40)
+
+
+    def test_boilerplate_and_field_dump_are_rejected(self):
+        text = "The guide leads in English. Comfortable shoes are the packing notes."
+        self.assertTrue(boilerplate_language_errors(text))
+        errors = field_dump_errors(
+            ["The guide leads in English.", "Groups are capped at 12."]
+        )
+        self.assertTrue(errors)
+        self.assertTrue(
+            fragment_errors(["Duration 3 hours.", "Lobster Rolls and Boston Baked Beans."])
+        )
+
+    def test_substance_requires_experience_not_logistics_padding(self):
+        thin = [
+            "Classic Downtown Boston is a three-hour food walk with Bites of Boston Food Tours.",
+            "The guide leads in English. Groups are capped at 12.",
+        ]
+        self.assertTrue(editorial_is_thin(thin))
+        errors = editorial_substance_errors(thin, [], thin[0], exception="OK")
+        self.assertTrue(any("boilerplate" in item or "substance" in item for item in errors))
+        overlay = load_editorial_sample(SAMPLE)["27344"]
+        self.assertFalse(editorial_is_thin(overlay["paragraphs"]))
+        self.assertEqual(
+            editorial_substance_errors(
+                overlay["paragraphs"],
+                overlay["highlights"],
+                overlay["schemaDescription"],
+                exception="OK",
+            ),
+            [],
+        )
+
+    def test_composer_does_not_emit_language_or_packing_filler(self):
+        catalog = {
+            "title": "Classic Downtown Boston",
+            "operator": "Bites of Boston Food Tours",
+        }
+        facts = {
+            "duration": "3 hours",
+            "description": "Stops include lobster rolls, New England clam chowder, Boston baked beans, and Boston cream pie in downtown Boston.",
+            "languages": ["English"],
+            "included": [],
+            "bring": ["Comfortable shoes", "Water bottle"],
+            "groupSize": "12",
+            "minAge": 12,
+            "maxAge": None,
+            "meetingAddress": "100 Tremont st. Boston, MA 02108",
+            "highlights": [],
+            "itinerary": [],
+            "restrictions": [],
+            "cancellation": None,
+            "accessibility": None,
+            "properNames": ["Lobster Rolls", "Boston Baked Beans", "Boston Cream Pie"],
+        }
+        source = facts["description"]
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            catalog, facts, source, {"disposition": "keep", "place": {"city": "Boston", "state": "Massachusetts"}}
+        )
+        body = " ".join(paragraphs).lower()
+        self.assertNotIn("the guide leads in", body)
+        self.assertNotIn("packing notes", body)
+        self.assertRegex(body, r"sample|lobster|chowder|baked beans|cream pie")
+        self.assertFalse(editorial_is_thin(paragraphs) or len(body.split()) < 28)
 
 
 if __name__ == "__main__":
