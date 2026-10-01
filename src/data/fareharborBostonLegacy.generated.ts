@@ -89,15 +89,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Request A Private Corporate Tour Experience is a food walk with Bites of Boston Food Tours in Boston. Private groups sample local food while walking a Boston neighborhood. Private groups book the outing for company events.",
-      "The walk samples local food in a neighborhood setting. The walk covers Request A Private Corporate Tour Experience."
+      "Private groups book the tasting for colleagues, combining neighborhood streets with local food. The tasting also stops near Company Events. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
+      "Guests come to Company Events, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A food walk with Bites of Boston Food Tours in Boston.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/k43HJGpbSCaHiYK39v0H"
     ],
-    "wordCount": 54,
+    "wordCount": 105,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Boston, MA",
@@ -189,15 +189,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 1.5-hour harbor outing with Classic Harbor Line - Boston in Boston. The group is aboard Adirondack. The group watches the fireworks from the harbor. The vessel is a 88-foot schooner. The group covers Labor Day Weekend Harbor Fireworks Cruise Aboard Adirondack.",
-      "A full refund is available with at least 24 hours' notice."
+      "The cruise is out on the harbor for the fireworks. Guests go aboard Adirondack IV, an 88-foot schooner. The hull follows the lines of pilot boats built in the 1890s. From the water, guests see Schooner Adirondack and Boston Harbor Now. Adirondack IV come into view as the boat moves.",
+      "The landmarks are seen from the harbor, with the boat doing the traveling. People are on the water so they can watch the display away from the crowded shore. Among the places guests actually encounter are Schooner Adirondack, Boston Harbor Now, and Adirondack IV. The hull is a pilot schooner in the style of boats from the 1890s, with room on deck to watch."
     ],
     "schemaDescription": "A 1.5-hour harbor outing with Classic Harbor Line - Boston on Boston Harbor.",
     "highlights": [
       "1.5-hour harbor outing in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 57,
+    "wordCount": 115,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -216,8 +216,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "PRIVATE CHARTER on Adirondack III is a harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The outing is aboard Adirondack III. The schooner has teak decks. The group covers PRIVATE CHARTER on Adirondack III. The group starts at Rowes Wharf.",
-      "The group passes Rowes Wharf and Classic Harbor Line Classic Harbor Line. A full refund is available with at least 24 hours' notice."
+      "Teak decks and wood trim are part of the boat. From the water, guests see Boston Harbor and Rowes Wharf. Scarano Boat Building come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. Persecution, resistance, and celebration are all part of what the guide covers.",
+      "Among the places guests actually encounter are Boston Harbor, Rowes Wharf, and Scarano Boat Building. The deck bar sells drinks and small plates while the boat is underway. There is no walking route. The boat is how guests move, and the harbor is the viewpoint."
     ],
     "schemaDescription": "A harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The sail passes Rowes Wharf and Classic Harbor Line Classic Harbor Line.",
     "highlights": [
@@ -225,7 +225,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Rowes Wharf and Classic Harbor Line Classic Harbor Line"
     ],
     "galleryImages": [],
-    "wordCount": 68,
+    "wordCount": 100,
     "durationLabel": "Custom durations",
     "durationIso": null,
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -491,8 +491,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Northern Lights Sunset Cruise is a two-hour harbor outing with Classic Harbor Line - Boston on Boston Harbor. The outing is aboard Northern Lights. The group is a sunset harbor outing. The group covers Northern Lights Sunset Cruise. Commentary stays moderate rather than a fully narrated tour.",
-      "The group passes Castle Island. A full refund is available with at least 24 hours' notice."
+      "Commentary on monuments, forts, and historic ships stays light rather than continuous. Drinks and appetizers are sold from the deck bar. The skyline is the main view as the boat moves through the harbor. From the water, guests see Boston Harbor and Carols Cruise. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "The changing skyline is the view, with the boat moving while guests watch from the deck. Music plays during the cruise, and the landmark commentary is kept light. In December that sunset hour is given to cocoa and carols. The deck bar sells drinks and small plates while the boat is underway."
     ],
     "schemaDescription": "A two-hour harbor outing with Classic Harbor Line - Boston on Boston Harbor. The sail passes Castle Island.",
     "highlights": [
@@ -502,7 +502,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/BHZLNIR7QZWGnD18Ex7w"
     ],
-    "wordCount": 63,
+    "wordCount": 109,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -561,8 +561,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "PRIVATE CHARTER on Northern Lights is a harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The outing is aboard Northern Lights. The group covers PRIVATE CHARTER on Northern Lights. The group starts at Rowes Wharf. The group passes Rowes Wharf and Classic Harbor Line The Motor Yacht.",
-      "A full refund is available with at least 24 hours' notice."
+      "From the water, guests see Boston Harbor and Rowes Wharf. The landmarks are seen from the harbor, with the boat doing the traveling. The deck bar sells drinks and small plates while the boat is underway. There is no walking route. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to Boston Harbor and Rowes Wharf, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The sail passes Rowes Wharf and Classic Harbor Line The Motor Yacht.",
     "highlights": [
@@ -570,7 +570,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Rowes Wharf and Classic Harbor Line The Motor Yacht"
     ],
     "galleryImages": [],
-    "wordCount": 63,
+    "wordCount": 104,
     "durationLabel": "Custom durations",
     "durationIso": null,
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -879,8 +879,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "PRIVATE CHARTER on Adirondack II is a harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The outing is aboard Adirondack II. The schooner has teak decks. The group covers PRIVATE CHARTER on Adirondack II. The group starts at Rowes Wharf.",
-      "The group passes Rowes Wharf and Classic Harbor Line Classic Harbor Line. A full refund is available with at least 24 hours' notice."
+      "Teak decks and wood trim are part of the boat. From the water, guests see Schooner Adirondack and Boston Harbor. Rowes Wharf and Scarano Boat Building come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "Persecution, resistance, and celebration are all part of what the guide covers. Among the places guests actually encounter are Schooner Adirondack, Boston Harbor, and Rowes Wharf. The deck bar sells drinks and small plates while the boat is underway. There is no walking route. The boat is how guests move, and the harbor is the viewpoint."
     ],
     "schemaDescription": "A harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The sail passes Rowes Wharf and Classic Harbor Line Classic Harbor Line.",
     "highlights": [
@@ -888,7 +888,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Rowes Wharf and Classic Harbor Line Classic Harbor Line"
     ],
     "galleryImages": [],
-    "wordCount": 68,
+    "wordCount": 102,
     "durationLabel": "Custom durations",
     "durationIso": null,
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -1107,9 +1107,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "That is one of best kept secrets of Boston. Guests take to the water and meet Boston Harbor at Golden Hour aboard yacht Patriot. After that, there is no better way to end day than on classic yacht at sunset in Boston Harbor. Whether guests are stopping at town or are native local, Boston Harbor Cruise will offer a way of viewing the Boston skyline.",
-      "The comfortable lounge seating along with the favorite drink in hand as guests cruise past all of the sites this city has to offer. After that, special bonus: take in maritime tradition and view the sun dip beyond the horizon as guests meet USS Constitution cannon fire at evening light in Boston Harbor.",
-      "That sunset cruise is aboard Yacht Patriot - Patriot is modern reproduction of a 1920's commuter yacht. After that, the Yacht Patriot is the most intimate boat in the Boston fleet."
+      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Golden Hour and Boston Harbor Cruise. Key Points and Boston Harbor Sunset Cruise come into view as the boat moves. The cruise also passes Yacht Patriot and Cruise Boston Harbor.",
+      "Looking back toward shore, the group can see Fort Independence and Boston's Seaport District. Attention also goes to Old North Church and Paul Revere's Ride, with the guide attaching a story to each stop. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "Among the places guests actually encounter are Golden Hour, Boston Harbor Cruise, and Key Points."
     ],
     "schemaDescription": "A 1.5-hour harbor outing with Classic Harbor Line - Boston on Boston Harbor. The sail passes Old North Church, Bunker Hill Monument, and Bunker Hill.",
     "highlights": [
@@ -1119,7 +1119,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/c8pLuuZDR6S2R4FrhXLU"
     ],
-    "wordCount": 148,
+    "wordCount": 110,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "60 Rowes Wharf Boston, MA 02110",
@@ -1178,8 +1178,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "PRIVATE CHARTER on Patriot is a harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The outing is aboard Northern Lights. The group covers PRIVATE CHARTER on Patriot. The group starts at Rowes Wharf. The group passes Rowes Wharf and Classic Harbor Line The Motor Yacht.",
-      "A full refund is available with at least 24 hours' notice."
+      "From the water, guests see Northern Lights and Boston Harbor. Rowes Wharf come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. Among the places guests actually encounter are Northern Lights, Boston Harbor, and Rowes Wharf.",
+      "The deck bar sells drinks and small plates while the boat is underway. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
     "schemaDescription": "A harbor outing lasting Custom durations with Classic Harbor Line - Boston on Boston Harbor. The sail passes Rowes Wharf and Classic Harbor Line The Motor Yacht.",
     "highlights": [
@@ -1187,7 +1187,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Rowes Wharf and Classic Harbor Line The Motor Yacht"
     ],
     "galleryImages": [],
-    "wordCount": 61,
+    "wordCount": 109,
     "durationLabel": "Custom durations",
     "durationIso": null,
     "meetingLocation": "60 Rowes Wharf, Boston, MA 02110",
@@ -1358,7 +1358,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests explore the connection between architecture and politics on the streets of Beacon Hill's South Slope. Guests hear how Boston's elite created an exclusive neighborhood beside the state capital. Guests experience Beacon Hill's past through stories about investor Hepzibah Swan; social justice and the Charles Street Meeting House; and the buildings designed by Charles Bulfinch.",
       "Guests pass Federal and Greek Revival row homes on shaded streets in Beacon Hill. Guided outdoor tour exploring the south slope of Boston's Beacon Hill neighborhood. 0.7 mile tour at a moderate pace, stopping at various sites on the tour. On select dates the outing is offered in Russian and Italian."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes Beacon Hill's South Slope, Charles Street Meeting House, and Charles Street.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes Beacon Hill's South Slope, Charles Street Meeting House, and Charles Street.",
     "highlights": [
       "90 minutes guided outing",
       "Beacon Hill's South Slope and Charles Street Meeting House",
@@ -1468,8 +1468,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Heart of the Freedom Trail is a one-hour walking tour with Boston By Foot in Boston. The walk visits Faneuil Hall and Freedom Trail. The group includes stories from the neighborhood. The group covers Heart of the Freedom Trail. The group starts at Freedom Trail.",
-      "The group then visits Old State House and King's Chapel. Later stops include Faneuil Hall and Old South Meeting House. The outdoor route is about 0.5 miles at a moderate pace. Groups stay at up to 25 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests follow part of the Freedom Trail and hear how the Revolution began. Stories cover events at the Old State House and at Faneuil Hall. Colonial Bostonians are described as ordinary people who took up the cause of their time. Guests cover about 0.5 miles at a moderate pace.",
+      "Guests hear about Old State House and Faneuil Hall. The guide's account includes King's Chapel and Old South Meeting House. Guests stay on foot the whole time, pausing while the guide talks at each site. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened."
     ],
     "schemaDescription": "A one-hour Boston By Foot walk of about half a mile visiting the Old State House and Faneuil Hall, then King's Chapel plus Old South Meeting House.",
     "highlights": [
@@ -1480,7 +1480,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/CImkQk4fTqqTdf3xDFmn"
     ],
-    "wordCount": 94,
+    "wordCount": 105,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Samuel Adams Statue in front of Faneuil Hall Boston, MA 02109",
@@ -1524,10 +1524,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group visits North End, the city's oldest neighborhood. The group begins at the waterfront. The group covers arrivals from Ireland, Eastern Europe, and Italy. The group covers the neighborhood's immigrant history. The group covers The North End: Boston's Immigration Gateway.",
-      "The outdoor route is about 0.88 miles at a moderate pace. The group passes North End. Selected dates are also offered in Italian. Groups stay at up to 15 guests per guide."
+      "Guests cover about 0.88 miles at a moderate pace. The North End is treated as a gateway neighborhood, with arrivals from several countries. Attention also goes to Eastern Europe, and the guide explains why it is on the route. Immigration is the thread, following who arrived and how the neighborhood changed around them.",
+      "The streets are treated as the oldest part of the city, and the stories are told there. Guests come to Eastern Europe, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes North End.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes North End.",
     "highlights": [
       "90-minute guided outing in Boston",
       "North End",
@@ -1536,7 +1536,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/3z0iaIlvTeasPBz3IfIH"
     ],
-    "wordCount": 85,
+    "wordCount": 101,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Richmond St. and Atlantic Ave entrance to Christopher Columbus Waterfront Park Boston, MA 02110",
@@ -1584,7 +1584,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests notice King's Chapel, Old North Church, Old State House, site of Boston Massacre, Paul Revere House and more. After that, ideal for history lovers and those also interested in the nation's Revolutionary past. The guides will gladly take guests down Road to Revolution on this fascinating tour.",
       "1.27 mile tour at a moderate pace, stopping at various sites on the tour. On select dates the outing is offered in French and Mandarin."
     ],
-    "schemaDescription": "A two-hour guided outing with Boston By Foot. The walk passes Freedom Trail, King's Chapel, and Old North Church.",
+    "schemaDescription": "A two-hour guided outing with Boston By Foot. The outing passes Freedom Trail, King's Chapel, and Old North Church.",
     "highlights": [
       "2 hour guided outing",
       "Freedom Trail and King's Chapel",
@@ -1637,17 +1637,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Notable Women of Beacon Hill is a 90-minute guided outing with Boston By Foot. The walk visits Vilna Shul. The group covers Notable Women of Beacon Hill. The group starts at Beacon Hill. The group then visits Vilna Shul and Boston Women's Heritage Trail.",
-      "The outdoor route is about 1.5 miles at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.5 miles at a moderate pace. Slavery and the fight against it are the subject, tied to the Boston places where that fight was carried on. Guests hear about Elizabeth Palmer Peabody and Rebecca Lee Crumpler. The guide's account includes Vilna Shul and Anne Whitney.",
+      "Stories along the way cover Samuel Adams and Leif Erikson. Boston Women's Heritage Trail come up in the commentary. Among the places guests actually encounter are Elizabeth Palmer Peabody, Rebecca Lee Crumpler, and Vilna Shul. Later the guide turns to Anne Whitney and Samuel Adams, explaining what happened there.",
+      "Guests come to Elizabeth Palmer Peabody and Rebecca Lee Crumpler, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes Beacon Hill, Vilna Shul, and Boston Women's Heritage Trail.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes Beacon Hill, Vilna Shul, and Boston Women's Heritage Trail.",
     "highlights": [
       "90 minutes guided outing",
       "Beacon Hill and Vilna Shul",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 66,
+    "wordCount": 118,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "in front of the Massachusetts State House steps on Beacon Street, Boston",
@@ -1666,17 +1667,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The Hub of Literary America is a 90-minute guided outing with Boston By Foot. The walk covers Victorian houses and streets. The group covers writers and publishing sites. The group covers The Hub of Literary America. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Old Corner Bookstore. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. Local publishers and the visit of Charles Dickens are part of the same story. The guide also explains why Edgar Allan Poe refused Boston as a home. Stops include the Old Corner Bookstore and the Athenaeum.",
+      "The route also reaches Charles Dickens and Edgar Allan Poe. Old Corner Bookstore and Louisa May Alcott's home are part of the same outing. Attention also goes to Ralph Waldo Emerson and Henry David Thoreau, with the guide attaching a story to each stop. Writers and the rooms where they worked are the subject, more than a checklist of facades."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes Old Corner Bookstore.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes Old Corner Bookstore.",
     "highlights": [
       "90 minutes guided outing",
       "Old Corner Bookstore",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 63,
+    "wordCount": 105,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "plaza at School and Washington Streets, between Walgreens and the Irish Famine Memorial.",
@@ -1720,8 +1721,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Reinventing Boston is a 90-minute walking tour with Boston By Foot. The walk traces some of the city's earliest streets. The group looks at hills that were moved and coves that were filled. The group covers Reinventing Boston. The outdoor route is about 1.3 miles at a moderate pace.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.3 miles at a moderate pace. Guests walk some of the city's earliest streets. Hills were moved and coves were filled, and guests look at that made ground. Water management, and the ways people were carried through the growing city, are part of the account.",
+      "The theme is how Boston has been built, altered, and rebuilt. Some clues to that history sit overhead, and others are still underfoot. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot.",
     "highlights": [
@@ -1729,7 +1730,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 60,
+    "wordCount": 106,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "One Boston Place on the corner of Washington & Court Streets, across Washington Street from the Old State House.",
@@ -1773,7 +1774,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 1.5-hour walking tour with Boston By Foot. The group covers writers and publishing sites. The group includes stories from the neighborhood. The group covers Literary Beacon Hill: The 20th Century. The group starts at Beacon Hill. The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches Robert Lowell and Beacon Streets. Government Center and Green Lines are part of the same outing. Later the group comes to Park Street and Red Lines. Attention also goes to Robert Frost and Sylvia Plath, with the guide attaching a story to each stop.",
+      "Writers and the rooms where they worked are the subject, more than a checklist of facades. Among the places guests actually encounter are Robert Frost, Sylvia Plath, and Robert Lowell. Later the guide turns to Beacon Streets and Government Center, explaining what happened there."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot. The walk passes Beacon Hill and Park Street.",
     "highlights": [
@@ -1781,7 +1783,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and Park Street"
     ],
     "galleryImages": [],
-    "wordCount": 52,
+    "wordCount": 101,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -1829,17 +1831,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Louisa May Alcott's Boston is a 90-minute guided outing with Boston By Foot. The walk covers writers and publishing sites. The group includes stories from the neighborhood. The group covers Louisa May Alcott's Boston. The outdoor route is about 0.9 miles at a moderate pace.",
-      "The group passes Louisa May Alcott's Little Women. Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.9 miles at a moderate pace. Guests hear where Ralph Waldo Emerson, Louisa May Alcott, and Henry David Thoreau met to trade ideas. Guests hear about Jo March and Little Women. Attention also goes to Concord, and the guide explains why it is on the route.",
+      "Writers and the rooms where they worked are the subject, more than a checklist of facades. Among the places guests actually encounter are Jo March, Little Women, and Concord. Guests come to Jo March and Little Women, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes Louisa May Alcott's Little Women.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes Louisa May Alcott's Little Women.",
     "highlights": [
       "90 minutes guided outing",
       "Louisa May Alcott's Little Women",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 64,
+    "wordCount": 113,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "plaza at School and Washington Streets, between Walgreens and the Irish Famine Memorial.",
@@ -1858,10 +1861,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The Dark Side of Boston is a 90-minute guided outing with Boston By Foot. The walk visits the North End, the city's oldest neighborhood. The group visits Molasses Flood, Brink's Robbery, and Great Influenza of 1918. The group covers documented crime and disaster stories.",
-      "The group covers The Dark Side of Boston. The outdoor route is about 1.04 miles at a moderate pace. The group passes North End. Selected dates are also offered in Spanish. Groups stay at up to 25 guests per guide."
+      "Guests cover about 1.04 miles at a moderate pace. On the North End's streets, guests hear accounts of misery, misfortune, and murder drawn from documented events. The account includes the 1918 influenza, smallpox outbreaks, the Molasses Flood, and the Brink's Robbery. Guests hear about North End and Great Influenza.",
+      "The guide's account includes Molasses Flood and Brink's Robbery. Among the places guests actually encounter are North End, Great Influenza, and Molasses Flood. The streets are treated as the oldest part of the city, and the stories are told there. Guests come to North End and Great Influenza, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes North End.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes North End.",
     "highlights": [
       "90 minutes guided outing",
       "North End",
@@ -1870,7 +1873,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/nHRBOnW8Qzyh3ruVfm9n"
     ],
-    "wordCount": 86,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "At the corner of Hanover & Cross Streets, Boston (the statue of boxer Tony DeMarco across from the Greenway).",
@@ -1914,8 +1917,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The Flat of Beacon Hill is a 1.5-hour walking tour with Boston By Foot in Boston. The walk visits Charles Street Meeting House. The group covers the neighborhood's architecture. The group covers The Flat of Beacon Hill. The group starts at Beacon Hill.",
-      "The outdoor route is about 1 mile at a moderate pace. The group passes Beacon Hill and Charles Street Meeting House."
+      "Guests cover about 1 mile at a moderate pace. Guests look at how Back Bay was filled in to make new streets. The guide treats that fill as a major piece of nineteenth-century engineering, including the Victorian houses and the people who staffed them.",
+      "Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. The route also reaches Charles River and Back Bay. Charles Street Meeting House and Sunflower Castle are part of the same outing. Later the group comes to Red Line.",
+      "Attention also goes to Sam Mayday Malone and Fox Terrier, with the guide attaching a story to each stop."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Beacon Hill and Charles Street Meeting House.",
     "highlights": [
@@ -1923,7 +1927,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and Charles Street Meeting House"
     ],
     "galleryImages": [],
-    "wordCount": 66,
+    "wordCount": 111,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -1967,10 +1971,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Jewish Beacon Hill is a 90-minute guided outing with Boston By Foot in Boston. The walk visits Vilna Shul. The group covers Jewish Beacon Hill. The group starts at Beacon Hill's North Slope. The group then visits Boston's Jewish West End and Vilna Shul Join.",
-      "Later stops include Vilna Shul. The outdoor route is about 0.75 miles at a moderate pace. Selected dates are also offered in Russian. Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.75 miles at a moderate pace. Guests hear about Beacon Hill's North Slope and Eastern Europe. The guide's account includes Boston's Jewish West End and Vilna Shul. Stories along the way cover Jewish History. Immigration is the thread, following who arrived and how the neighborhood changed around them.",
+      "Among the places guests actually encounter are Beacon Hill's North Slope, Eastern Europe, and Boston's Jewish West End. Later the guide turns to Vilna Shul and Jewish History, explaining what happened there. Guests come to Beacon Hill's North Slope and Eastern Europe, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Beacon Hill's North Slope, Boston's Jewish West End, and Vilna Shul Join.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Beacon Hill's North Slope, Boston's Jewish West End, and Vilna Shul Join.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Beacon Hill's North Slope and Boston's Jewish West End",
@@ -1979,7 +1983,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/sraoE2xRquU9VdQ5ZBO3"
     ],
-    "wordCount": 79,
+    "wordCount": 104,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "18 Phillips Street Boston, MA 02114",
@@ -2023,17 +2027,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group visits Boston Common and Shawmut Peninsula. The group covers early life on Shawmut Peninsula. The group includes stories from the neighborhood. The group stays in Boston. The group covers Before Boston: Shawmut Peninsula Through 1630.",
-      "The group starts at Shawmut Peninsula. The outdoor route is about 1 mile at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. The account starts with Shawmut, the peninsula that became Boston. Attention also goes to Boston Common, and the guide explains why it is on the route. Guests come to Boston Common, and they hear why it is on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Shawmut Peninsula and Boston Common.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Shawmut Peninsula and Boston Common.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Shawmut Peninsula and Boston Common",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 74,
+    "wordCount": 100,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "outside Park Street MBTA Station on Boston Common at corner of Tremont Street and Park Street.",
@@ -2101,8 +2105,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot in Boston. The group covers Boston's Black writers and the fight against slavery. The group covers writers and publishing sites. The group includes stories from the neighborhood. The group covers Black Voices: Writers for a 19th Century Revolution.",
-      "The outdoor route is about 0.79 miles at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.79 miles at a moderate pace. Slavery and the fight against it are the subject, tied to the Boston places where that fight was carried on. Guests hear about Boston's Black and David Walker. The guide's account includes Colored Citizens and Pauline Elizabeth Hopkins.",
+      "Stories along the way cover Dorothy West and Beacon Hill. Writers and the rooms where they worked are the subject, more than a checklist of facades. Among the places guests actually encounter are Boston's Black, David Walker, and Colored Citizens. Later the guide turns to Pauline Elizabeth Hopkins and Dorothy West, explaining what happened there."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -2110,7 +2114,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 70,
+    "wordCount": 103,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "at Joy Street at Smith Court, GPS - 46 Joy Street, the Museum of African American History's Abiel Smith School.",
@@ -2157,7 +2161,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "On the Boo. tour, guests hear stories that shed new light on this quiet residential neighborhood. If guests have not seen Beacon Hill on Halloween, guests are missing out. The Boo. tour features Hill's dark legacy of mystery and murder. Guests visit the home of the infamous Dr.",
       "After that, george Parkman and hear what happened to his dismembered body. Guests hear names and accounts of Boston women hung for witchcraft. The guides will take guests through dark alleys and show guests Beacon Hill as guests have never experienced it before. 0.94 mile tour at a moderate pace, stopping at various sites on the tour."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Beacon Hill.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Beacon Hill.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Beacon Hill",
@@ -2200,8 +2204,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Footloose on the Freedom Trail is a three-hour walking tour with Boston By Foot in Boston. The walk visits USS Constitution and Freedom Trail. The group covers Footloose on the Freedom Trail. The group starts at Freedom Trail. The group then visits Massachusetts State House and USS Constitution Museum.",
-      "Later stops include Charlestown Navy Yard. The outdoor route is about 2.5 miles at a moderate pace. Groups stay at up to 25 guests per guide."
+      "Guests follow part of the Freedom Trail and hear how the Revolution began. Guests cover about 2.5 miles at a moderate pace. Guests hear about Massachusetts State House and Independence Day. The guide's account includes Charlestown Navy Yard and Boston's Freedom Trail. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "Among the places guests actually encounter are Massachusetts State House, Independence Day, and Charlestown Navy Yard. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace."
     ],
     "schemaDescription": "A three-hour walking tour with Boston By Foot in Boston. The walk passes Freedom Trail, Massachusetts State House, and USS Constitution Museum.",
     "highlights": [
@@ -2212,7 +2216,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/wSxVIBkoQ0WrRWSU10q9"
     ],
-    "wordCount": 77,
+    "wordCount": 106,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "steps in front of the Massachusetts State House on Beacon Street, Boston.",
@@ -2231,7 +2235,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Boston's LGBTQ Past is a 90-minute walking tour with Boston By Foot. The walk covers Boston's LGBTQ past. The group includes stories from the neighborhood. The group stays in Boston. The outdoor route is about 1 mile at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. The outing follows queer life in Boston from the 18th century into the Gay Liberation years. Boston's first Pride march, court cases, and local leaders are part of the commentary. Guests hear about Bostonians who challenged gender norms, and about bars and clubs that sheltered the community.",
+      "Guests hear about Gay Liberation Movement and Pride March. Guests stay on foot the whole time, pausing while the guide talks at each site. Writers and the rooms where they worked are the subject, more than a checklist of facades. Persecution, resistance, and celebration are all part of what the guide covers."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston.",
     "highlights": [
@@ -2241,7 +2246,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/VTwSiPqZSa61uBXZP6mg"
     ],
-    "wordCount": 51,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Massachusetts State House steps on Beacon Street, across from Boston Common.",
@@ -2285,17 +2290,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Fort Point and Seaport is a 90-minute guided outing with Boston By Foot in Boston. The walk covers Fort Point and Seaport. The group starts at Seaport. The outdoor route is about 1 mile at a moderate pace. The group passes Seaport and Summer Street.",
-      "Groups stay at up to 15 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. Fort Point and the Seaport have a waterfront past in common. One side is older loft blocks, and the other is glass towers on former marsh. Guests hear about Summer Street and Innovation District. Guests come to Summer Street and Innovation District, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Seaport and Summer Street.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Seaport and Summer Street.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Seaport and Summer Street",
       "Groups stay at up to 15 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 55,
+    "wordCount": 112,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Corner of Dorchester Ave and Summer St, before the Summer Street Bridge (the small plaza adjoining 245 Summer St)",
@@ -2312,21 +2317,50 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston Reborn: After the Great Fire of 1872",
     "publicPath": "/destinations/massachusetts/boston/tours/boston-reborn-after-the-great-fire-of-1872-378552",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Boston By Foot lists this outing."
+      "Guests cover about 2 miles at a moderate pace. Attention also goes to Chicago Fire, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
     ],
-    "schemaDescription": "The operator Boston By Foot lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston.",
+    "highlights": [
+      "90-minute walking tour in Boston",
+      "Groups stay at up to 20 guests per guide"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 106,
+    "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "One Winthrop Square, Boston.",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $19",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$19"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 6-12",
+        "amountLabel": "$10.60"
+      },
+      {
+        "label": "Member",
+        "note": "",
+        "amountLabel": "Free"
+      },
+      {
+        "label": "Child under 6",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -2341,7 +2375,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "In 1950s, construction of Central Artery, 6-lane elevated highway through downtown Boston, took over a 30-acre corridor of land that forced out a large number of businesses and residents and cut off city's North End and waterfront. After that, forty years later, Big Dig moved highway underground, creating rare chance to recover this land and transform it toward a new civic space for all to - the Rose Fitzgerald Kennedy Greenway.",
       "Guests come in walking 1.5-mile Greenway, people's park that annually draws over million residents and visitors to gather, play, walk its gardens and meet ever-changing contemporary art exhibits. 1.2 mile tour at a moderate pace, stopping at various sites on the tour."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes North End.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes North End.",
     "highlights": [
       "90-minute guided outing in Boston",
       "North End",
@@ -2367,8 +2401,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Becoming Back Bay is a 90-minute guided outing with Boston By Foot in Boston. The walk looks at how Back Bay was filled. The group covers Victorian houses and streets. The group covers Becoming Back Bay. The outdoor route is about 0.9 miles at a moderate pace.",
-      "Groups stay at up to 20 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests cover about 0.9 miles at a moderate pace. Guests look at how Back Bay was filled in to make new streets. The guide treats that fill as a major piece of nineteenth-century engineering, including the Victorian houses and the people who staffed them.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later.",
+      "Guests stay with that subject for the length of the outing."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -2376,7 +2411,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 65,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "in the Public Garden in front of the George Washington statue facing Arlington Street",
@@ -2420,17 +2455,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Leather District is a 90-minute guided outing with Boston By Foot in Boston. The walk follows rebuilding after the 1872 fire. The group covers Leather District. The outdoor route is about 0.7 miles at a moderate pace. The group passes South Street Diner.",
-      "Groups stay at up to 20 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests cover about 0.7 miles at a moderate pace. The route also reaches South Cove and Boston's Great Fire. America's Community Health Center and South Street Diner are part of the same outing. Attention also goes to Boston's Leather District and South Station, with the guide attaching a story to each stop.",
+      "Among the places guests actually encounter are Boston's Leather District, South Station, and South Cove. Later the guide turns to Boston's Great Fire and America's Community Health Center, explaining what happened there. Guests come to Boston's Leather District and South Station, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes South Street Diner.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes South Street Diner.",
     "highlights": [
       "90-minute guided outing in Boston",
       "South Street Diner",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 61,
+    "wordCount": 104,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Meet your guide outside of South Station at corner of Atlantic Ave. and Essex Street.",
@@ -2449,17 +2484,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot in Boston. The group covers Art Introspective: Copley Square to the South End. The group starts at South End. The outdoor route is about 1.2 miles at a moderate pace. The group passes South End and Copley Square.",
-      "Groups stay at up to 20 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests cover about 1.2 miles at a moderate pace. Pablo Eduardo are part of the same outing. Attention also goes to Nashville Wings and Kelsey Montague, with the guide attaching a story to each stop. Later the guide turns to Betances Mural and Pablo Eduardo, explaining what happened there.",
+      "Guests come to Nashville Wings and Kelsey Montague, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes South End and Copley Square.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes South End and Copley Square.",
     "highlights": [
       "90-minute guided outing in Boston",
       "South End and Copley Square",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 66,
+    "wordCount": 104,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "at the Johnson Entrance to the Boston Public Library on Boylston Street.",
@@ -2476,15 +2511,20 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Back Bay By Little Feet",
     "publicPath": "/destinations/massachusetts/boston/tours/back-bay-by-little-feet-378557",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Boston By Foot lists this outing."
+      "Guests cover about 0.5 miles at a moderate pace. Guests hear about Victorian Gilded Age. Guests come to Victorian Gilded Age, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing.",
+      "Nothing is staged indoors, because the block itself is the room."
     ],
-    "schemaDescription": "The operator Boston By Foot lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 60-minute guided outing with Boston By Foot in Boston.",
+    "highlights": [
+      "60-minute guided outing in Boston",
+      "Groups stay at up to 20 guests per guide"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 104,
+    "durationLabel": "60 minutes",
     "durationIso": null,
     "meetingLocation": "the Boston Women's Memorial on the Commonwealth Avenue Mall near the intersection of Commonwealth Ave and Fairfield Street.",
     "visiblePriceLabel": null,
@@ -2502,17 +2542,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Beacon Hill From Both Sides is a 90-minute guided outing with Boston By Foot in Boston. The walk covers Beacon Hill From Both Sides. The outdoor route is about 1.5 miles at a moderate pace.",
-      "The walk passes Beacon Hill. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.5 miles at a moderate pace. Guests hear about South Slopes and Native Massachusett. Immigration is the thread, following who arrived and how the neighborhood changed around them. Guests come to South Slopes and Native Massachusett, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Beacon Hill.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Beacon Hill.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Beacon Hill",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 51,
+    "wordCount": 101,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "plaza outside the Park Street MBTA station, corner of Tremont and Park Streets",
@@ -2531,17 +2571,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Slavery and Abolition in Massachusetts is a 90-minute guided outing with Boston By Foot in Boston. The walk visits Shawmut Peninsula. The group covers early life on Shawmut Peninsula. The group covers Slavery and Abolition in Massachusetts. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Shawmut Peninsula. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. The account starts with Shawmut, the peninsula that became Boston. Slavery and the fight against it are the subject, tied to the Boston places where that fight was carried on. Guests hear about Shawmut Peninsula and African Americans.",
+      "Guests come to Shawmut Peninsula and African Americans, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Shawmut Peninsula.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Shawmut Peninsula.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Shawmut Peninsula",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 63,
+    "wordCount": 101,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "53 State Street, corner of State and Congress Streets",
@@ -2585,8 +2625,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Art, Architecture and Gardens is a 1.5-hour walking tour with Boston By Foot in Boston. The walk includes stories from the neighborhood. The group covers the neighborhood's architecture. The group covers Art, Architecture and Gardens. The group starts at Forsyth Park. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Forsyth Park and Fenway. Selected dates are also offered in French."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Emerald Necklace and Fredrick Law Olmsted. The guide's account includes Back Bay Fens and Forsyth Park. Stories along the way cover Fine Arts and Green Line. Immigration is the thread, following who arrived and how the neighborhood changed around them.",
+      "Among the places guests actually encounter are Emerald Necklace, Fredrick Law Olmsted, and Back Bay Fens. Later the guide turns to Forsyth Park and Fine Arts, explaining what happened there. Guests come to Emerald Necklace and Fredrick Law Olmsted, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Forsyth Park and Fenway.",
     "highlights": [
@@ -2594,7 +2634,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Forsyth Park and Fenway"
     ],
     "galleryImages": [],
-    "wordCount": 68,
+    "wordCount": 101,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -2613,17 +2653,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston's Loyalists is a 90-minute walking tour with Boston By Foot. The walk covers Boston Loyalists before independence. The group covers Boston's Loyalists. The group starts at King's Chapel. The group then visits Old South Meeting House and Marshall Street. The outdoor route is about 1.5 miles at a moderate pace.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.5 miles at a moderate pace. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about American War and Granary Burying Ground. The guide's account includes King's Chapel and Old South Meeting House.",
+      "Stories along the way cover Marshall Street and John Singleton Copley. Governor Thomas Hutchinson and Elizabeth Murray come up in the commentary. The same narrative reaches Mather Byles and Revolutionary War. Attention also goes to Old Town, and the guide explains why it is on the route.",
+      "Guests stay on foot the whole time, pausing while the guide talks at each site."
     ],
-    "schemaDescription": "Boston's Loyalists is a 90-minute walking tour with Boston By Foot. The walk covers Boston Loyalists before independence. The group covers Boston's Loyalists. The group starts at King's Chapel. The group then visits Old South Meeting House and Marshall Street. The outdoor route is about 1.5 miles at a moderate pace.",
+    "schemaDescription": "Guests cover about 1.5 miles at a moderate pace. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about American War and Granary Burying Ground. The guide's account includes King's Chapel and Old South Meeting House.",
     "highlights": [
       "90-minute walking tour in Boston",
       "King's Chapel and Old South Meeting House",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 62,
+    "wordCount": 112,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "outside of the Park Street MBTA Station, near the head-houses at the corner of Park and Tremont Streets on Boston Common",
@@ -2640,21 +2681,51 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Back Bay's Victorian Architecture",
     "publicPath": "/destinations/massachusetts/boston/tours/back-bays-victorian-architecture-384549",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Boston By Foot lists this outing."
+      "Guests cover about 0.65 miles at a moderate pace. Guests look at how Back Bay was filled in to make new streets. The guide treats that fill as a major piece of nineteenth-century engineering, including the Victorian houses and the people who staffed them.",
+      "The route also reaches Old South Church. Attention also goes to Trinity Church and Boston Public Library, with the guide attaching a story to each stop. Among the places guests actually encounter are Trinity Church, Boston Public Library, and Old South Church. Guests come to Trinity Church and Boston Public Library, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "The operator Boston By Foot lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston. The walk passes Trinity Church, Boston Public Library, and Old South Church.",
+    "highlights": [
+      "90-minute walking tour in Boston",
+      "Trinity Church and Boston Public Library",
+      "Groups stay at up to 20 guests per guide"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 107,
+    "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Copley Square, on the steps of Trinity Church that face Dartmouth Street.",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $19",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$19"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 6-12",
+        "amountLabel": "$10.60"
+      },
+      {
+        "label": "Member",
+        "note": "",
+        "amountLabel": "Free"
+      },
+      {
+        "label": "Child under 6",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -2690,10 +2761,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group covers women's trade unions and suffrage work. The group covers Working Women: Boston Women Find Their Voice. The outdoor route is about 1.1 miles at a moderate pace. The group passes Denison House.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.1 miles at a moderate pace. Guests hear about Women's Trade Union League and Mary Kenney O'Sullivan. The guide's account includes Denison House and Women's Education. Stories along the way cover Industrial Union. Among the places guests actually encounter are Women's Trade Union League, Mary Kenney O'Sullivan, and Denison House.",
+      "Later the guide turns to Women's Education and Industrial Union, explaining what happened there. Guests come to Women's Trade Union League and Mary Kenney O'Sullivan, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Denison House.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Denison House.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Denison House",
@@ -2702,7 +2773,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/swqbsVRQKkE0VuX3Fvaw"
     ],
-    "wordCount": 56,
+    "wordCount": 105,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Brewer Fountain in Boston Common, along Tremont Street.",
@@ -2725,7 +2796,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests notice Faneuil Hall, Old State House and Old South Meeting House. Mary Abigail Dodge and her book, A Battle of the Books. After that, the tour also covers site of first public school in America and oldest burying ground in Boston. Private outings are bookable online for parties of up to 20 people alongside at least 1 week's notice.",
       "To request private outing for parties of more than 20 people use Private Tour Request form. Guided outdoor tour exploring Boston's revolutionary history and development over 300 years."
     ],
-    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The walk passes Old State House, Boston's Freedom Trail, and Faneuil Hall.",
+    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The outing passes Old State House, Boston's Freedom Trail, and Faneuil Hall.",
     "highlights": [
       "one-hour guided outing in Boston",
       "Old State House and Boston's Freedom Trail"
@@ -2752,8 +2823,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a one-hour walking tour with Boston By Foot in Boston. The group visits Faneuil Hall and Freedom Trail. The group includes stories from the neighborhood. The group covers Private Tour: Heart of the Freedom Trail. The group starts at Freedom Trail. The group then visits Old State House and King's Chapel.",
-      "Later stops include Faneuil Hall and Old South Meeting House. The outdoor route is about 0.5 miles at a moderate pace. The group is stroller and wheelchair accessible."
+      "The guide talks about Boston's past, including the American Revolution. Guests follow part of the Freedom Trail and hear how the Revolution began. Stories cover events at the Old State House and at Faneuil Hall. Colonial Bostonians are described as ordinary people who took up the cause of their time.",
+      "Guests cover about 0.5 miles at a moderate pace. Guests hear about Old State House and Faneuil Hall. The guide's account includes King's Chapel and Old South Meeting House. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "The Revolution is the thread that ties the stops together, from the people involved to the places where events happened."
     ],
     "schemaDescription": "A one-hour walking tour with Boston By Foot in Boston. The walk passes Freedom Trail, Old State House, and King's Chapel.",
     "highlights": [
@@ -2763,7 +2835,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/Erw5oqAScKvNNMYHtZ4y"
     ],
-    "wordCount": 83,
+    "wordCount": 115,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Samuel Adams Statue in front of Faneuil Hall Boston, MA 02109",
@@ -2786,7 +2858,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests notice King's Chapel, Old North Church, Old State House, site of Boston Massacre, Paul Revere House and more. After that, ideal for history lovers and those also interested in the nation's Revolutionary past. The guides will gladly take guests down Road to Revolution on this fascinating tour.",
       "After that, private outings are bookable online for parties of up to 20 people alongside at least 1 week's notice. To request private outing for parties of more than 20 people use Private Tour Request form."
     ],
-    "schemaDescription": "A two-hour guided outing with Boston By Foot. The walk passes Freedom Trail, King's Chapel, and Old North Church.",
+    "schemaDescription": "A two-hour guided outing with Boston By Foot. The outing passes Freedom Trail, King's Chapel, and Old North Church.",
     "highlights": [
       "2 hours guided outing",
       "Freedom Trail and King's Chapel"
@@ -2817,7 +2889,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Private outings are bookable online for parties of up to 20 people alongside at least 1 week's notice. To request private outing for parties of more than 20 people use Private Tour Request form. Guided outdoor tour of tales of misery, misfortune and murder in North End.",
       "The group covers about 1 miles at a moderate pace."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes North End.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes North End.",
     "highlights": [
       "90 minutes guided outing",
       "North End"
@@ -2848,7 +2920,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests pass Federal and Greek Revival row homes on shaded streets in Beacon Hill. Private outings are bookable online for parties of up to 20 people alongside at least 1 week's notice. To request private outing for parties of more than 20 people use Private Tour Request form.",
       "Guided outdoor tour exploring the history and architecture of the South Slope of the Beacon Hill neighborhood."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes Beacon Hill's South Slope, Charles Street Meeting House, and Beacon Hill.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes Beacon Hill's South Slope, Charles Street Meeting House, and Beacon Hill.",
     "highlights": [
       "90 minutes guided outing",
       "Beacon Hill's South Slope and Charles Street Meeting House"
@@ -2875,10 +2947,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group visits North End, the city's oldest neighborhood. The group begins at the waterfront. The group covers arrivals from Ireland, Eastern Europe, and Italy. The group covers the neighborhood's immigrant history. The group covers Private Tour: The North End: Boston's Immigration Gateway.",
-      "The outdoor route is about 0.88 miles at a moderate pace. The group passes North End."
+      "Guests cover about 0.88 miles at a moderate pace. The North End is treated as a gateway neighborhood, with arrivals from several countries. Attention also goes to Eastern Europe, and the guide explains why it is on the route. Immigration is the thread, following who arrived and how the neighborhood changed around them.",
+      "The streets are treated as the oldest part of the city, and the stories are told there. Guests come to Eastern Europe, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The walk passes North End.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot. The outing passes North End.",
     "highlights": [
       "90 minutes guided outing",
       "North End"
@@ -2886,7 +2958,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/vvjup27kTgySohSQebAH"
     ],
-    "wordCount": 71,
+    "wordCount": 101,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Intersection of Richmond St and Atlantic Ave in Christopher Columbus Park",
@@ -2905,7 +2977,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Bulfinch Triangle is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers the neighborhood's architecture. The group covers Bulfinch Triangle. The group starts at Portal Park. The outdoor route is about 1-2 miles at a moderate pace. The group passes Portal Park and Causeway Street."
+      "Guests cover about 2 miles at a moderate pace. The route also reaches Causeway Street and North Station. Orange Lines are part of the same outing. Attention also goes to Mill Pond and Portal Park, with the guide attaching a story to each stop. Among the places guests actually encounter are Mill Pond, Portal Park, and Causeway Street.",
+      "Later the guide turns to North Station and Orange Lines, explaining what happened there. The changing skyline is the view, with the boat moving while guests watch from the deck. Guests come to Mill Pond and Portal Park, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Portal Park and Causeway Street.",
     "highlights": [
@@ -2915,7 +2988,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/xoHI9pzKQFqWMcVdhrrJ"
     ],
-    "wordCount": 52,
+    "wordCount": 106,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -2938,7 +3011,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "After that, from April to mid-November, Private outings are bookable online for parties of up to 20 people alongside at least 2 weeks notice. To request private outing for parties of more than 20 people, or in fall/winter, use Private Tour Request form.",
       "The group covers about 1 miles at a moderate pace."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Old Corner Bookstore.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Old Corner Bookstore.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Old Corner Bookstore"
@@ -2963,8 +3036,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Private Tour: Reinventing Boston is a 90-minute guided outing with Boston By Foot. The walk traces some of the city's earliest streets. The group looks at hills that were moved and coves that were filled. The group covers Private Tour: Reinventing Boston. The outdoor route is about 1.3 miles at a moderate pace.",
-      "The group is stroller and wheelchair accessible."
+      "Guests cover about 1.3 miles at a moderate pace. Guests walk some of the city's earliest streets. Hills were moved and coves were filled, and guests look at that made ground. Water management, and the ways people were carried through the growing city, are part of the account.",
+      "The theme is how Boston has been built, altered, and rebuilt. Some clues to that history sit overhead, and others are still underfoot. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
+      "History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -2973,7 +3047,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/81fMxpJMRz6dpsU1hb0x"
     ],
-    "wordCount": 62,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "One Boston Place on the corner of Washington & Court Streets, across from the Old State House.",
@@ -3053,15 +3127,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boisterous Bostonians: Riots & Protests is a 1.5-hour walking tour with Boston By Foot. The walk follows the streets of Boston. The walk covers Boisterous Bostonians: Riots & Protests.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Stamp Act and Boston Tea Party. The guide's account includes Atlantic Ave and Seaport Blvd. Stories along the way cover South Station. Among the places guests actually encounter are Stamp Act, Boston Tea Party, and Atlantic Ave.",
+      "Later the guide turns to Seaport Blvd and South Station, explaining what happened there. Guests come to Stamp Act and Boston Tea Party, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston.",
     "highlights": [
       "1.5-hour walking tour in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 40,
+    "wordCount": 106,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3080,17 +3155,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Road to the Vote is a 90-minute guided outing with Boston By Foot in Boston. The walk covers Road to the Vote. The group starts at Boston Women's Heritage Trail. The outdoor route is about 0.9 miles at a moderate pace. The group passes Boston Women's Heritage Trail and Road.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.9 miles at a moderate pace. Guests hear about Seneca Falls and Boston Women's Heritage Trail. Guests come to Seneca Falls and Boston Women's Heritage Trail, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Boston Women's Heritage Trail and Road.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Boston Women's Heritage Trail and Road.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Boston Women's Heritage Trail and Road",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 61,
+    "wordCount": 102,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "in front of Faneuil Hall at the Samuel Adams statue",
@@ -3134,17 +3209,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "South Boston's Broadway is a 90-minute guided outing with Boston By Foot. The walk covers South Boston's Broadway. The group starts at Vietnam Memorial. The outdoor route is about 1 mile at a moderate pace. The group passes Vietnam Memorial and Street Park. Groups stay at up to 20 guests per guide.",
-      "The group is stroller and wheelchair accessible."
+      "The guide talks about Boston's past, including the American Revolution. Guests cover about 1 mile at a moderate pace. Guests hear about Blinstrub's Village and Dorchester Heights. The guide's account includes Street Park and Vietnam Memorial. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.",
+      "Immigration is the thread, following who arrived and how the neighborhood changed around them. Among the places guests actually encounter are Blinstrub's Village, Dorchester Heights, and Street Park. Guests come to Blinstrub's Village and Dorchester Heights, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in South Boston. The walk passes Vietnam Memorial and Street Park.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in South Boston. The outing passes Vietnam Memorial and Street Park.",
     "highlights": [
       "90-minute guided outing in South Boston",
       "Vietnam Memorial and Street Park",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 60,
+    "wordCount": 102,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "corner of West Broadway and D Street (next to TD Bank).",
@@ -3163,17 +3238,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group covers East Boston: Maverick Square and Beyond. The group starts at Noddle's Island. The group then visits Maverick Square and Bremen Street Park. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Noddle's Island and Maverick Square. The group also reaches Bremen Street Park. Groups stay at up to 20 guests per guide."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Noddle's Island and East Boston Company. The guide's account includes Bremen Street Park and Boston Preservation Alliance. Immigration is the thread, following who arrived and how the neighborhood changed around them. Among the places guests actually encounter are Noddle's Island, East Boston Company, and Bremen Street Park.",
+      "Guests come to Noddle's Island and East Boston Company, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in East Boston. The walk passes Noddle's Island, Maverick Square, and Bremen Street Park.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in East Boston. The outing passes Noddle's Island, Maverick Square, and Bremen Street Park.",
     "highlights": [
       "90-minute guided outing in East Boston",
       "Noddle's Island and Maverick Square",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 71,
+    "wordCount": 102,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "the Lewis Mall exit of the Maverick MBTA Station, Blue Line, East Boston, in front of Cafe Iterum, 11 Father Jacobbe Road.",
@@ -3192,8 +3267,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Upham's Corner is a one-hour walking tour with Boston By Foot in Dorchester. The walk covers Upham's Corner. The group starts at Upham's Corner Main Street. The group then visits Stoughton Street and Stoughton Street What. The outdoor route is about 0.44 miles at a moderate pace.",
-      "The group passes Upham's Corner Main Street and Stoughton Street. The group also reaches Stoughton Street What."
+      "Guests cover about 0.44 miles at a moderate pace. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about Emerald Necklace and Amos Upham. The guide's account includes Upham's Corner Main Street and Dorchester North Burying Ground.",
+      "Stories along the way cover Columbia Road and Stoughton Street. Commuter Rail and Fairmount Line come up in the commentary. The same narrative reaches Foxboro Line and Red Line. Among the places guests actually encounter are Emerald Necklace, Amos Upham, and Upham's Corner Main Street.",
+      "Later the guide turns to Dorchester North Burying Ground and Columbia Road, explaining what happened there."
     ],
     "schemaDescription": "A one-hour walking tour with Boston By Foot in Dorchester. The walk passes Upham's Corner Main Street, Stoughton Street, and Stoughton Street What.",
     "highlights": [
@@ -3201,7 +3277,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Upham's Corner Main Street and Stoughton Street"
     ],
     "galleryImages": [],
-    "wordCount": 66,
+    "wordCount": 112,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": null,
@@ -3220,7 +3296,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Fort Point Channel is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers the engineered waterfront around Fort Point Channel. The group covers Fort Point Channel. The outdoor route is about 1 mile. The group passes Boston Wharf Company."
+      "Fort Point and the Seaport have a waterfront past in common. One side is older loft blocks, and the other is glass towers on former marsh. Guests hear about Boston Wharf Company and South Station. The guide's account includes Central Artery and Tunnel Project. Stories along the way cover Atlantic Ave and Seaport Blvd.",
+      "James Hook and Blue Line come up in the commentary. The same narrative reaches Silver Lines. Among the places guests actually encounter are Boston Wharf Company, South Station, and Central Artery. Later the guide turns to Tunnel Project and Atlantic Ave, explaining what happened there.",
+      "Guests come to Boston Wharf Company and South Station, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Boston Wharf Company.",
     "highlights": [
@@ -3228,7 +3306,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Boston Wharf Company"
     ],
     "galleryImages": [],
-    "wordCount": 45,
+    "wordCount": 118,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3245,15 +3323,20 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Commonwealth Ave.",
     "publicPath": "/destinations/massachusetts/boston/tours/commonwealth-ave-438153",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Boston By Foot lists this outing."
+      "Guests cover about 1.5 miles at a moderate pace. Guests hear about Commonwealth Avenue and Back Bay. The guide's account includes Arlington Street. Among the places guests actually encounter are Commonwealth Avenue, Back Bay, and Arlington Street. Guests come to Commonwealth Avenue and Back Bay, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "The operator Boston By Foot lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Arlington Street.",
+    "highlights": [
+      "90-minute guided outing in Boston",
+      "Arlington Street",
+      "Groups stay at up to 20 guests per guide"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 107,
+    "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "George Washington statue in the Public Garden, at the corner of Arlington Street & Commonwealth Avenue",
     "visiblePriceLabel": null,
@@ -3324,14 +3407,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 1.5-hour walking tour with Boston By Foot. The group covers notable women in Boston history. The group covers Fierce and Feminine: Great Women of Boston. The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches Green Lines. Attention also goes to Court Streets and Government Center, with the guide attaching a story to each stop. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "Among the places guests actually encounter are Court Streets, Government Center, and Green Lines. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
+      "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston.",
     "highlights": [
       "1.5-hour walking tour in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 41,
+    "wordCount": 113,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3350,8 +3435,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Remarkable Women of Jamaica Plain is a 1.5-hour walking tour with Boston By Foot. The walk covers Remarkable Women of Jamaica Plain. The group starts at Loring-Greenough House. The group then visits Boston Women's Heritage Trail and Green St. Later stops include Green Street.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Slavery and the fight against it are the subject, tied to the Boston places where that fight was carried on. Guests hear about Nobel Peace Prize and Loring-Greenough House. The guide's account includes Boston Women's Heritage Trail and Orange Line.",
+      "Stories along the way cover Jamaica Plain MA and Green Street. Writers and the rooms where they worked are the subject, more than a checklist of facades. Among the places guests actually encounter are Nobel Peace Prize, Loring-Greenough House, and Boston Women's Heritage Trail.",
+      "Later the guide turns to Orange Line and Jamaica Plain MA, explaining what happened there."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Jamaica Plain. The walk passes Loring-Greenough House, Boston Women's Heritage Trail, and Green St.",
     "highlights": [
@@ -3359,7 +3445,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Loring-Greenough House and Boston Women's Heritage Trail"
     ],
     "galleryImages": [],
-    "wordCount": 58,
+    "wordCount": 110,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3378,17 +3464,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Adams Family in Boston is a two-hour guided outing with Boston By Foot. The walk covers Adams Family in Boston. The group starts at Old State House. The outdoor route is about 1.9 miles at a moderate pace. The group passes Old State House and Beacon Hill.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 1.9 miles at a moderate pace. Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. Guests hear about My Eyes and Chimney Sweeps. The guide's account includes Rattle Gabble and John Adams.",
+      "Stories along the way cover Old State House and Beacon Hill. Back Bay come up in the commentary. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Writers and the rooms where they worked are the subject, more than a checklist of facades.",
+      "Among the places guests actually encounter are My Eyes, Chimney Sweeps, and Rattle Gabble."
     ],
-    "schemaDescription": "A two-hour guided outing with Boston By Foot in Boston. The walk passes Old State House and Beacon Hill.",
+    "schemaDescription": "A two-hour guided outing with Boston By Foot in Boston. The outing passes Old State House and Beacon Hill.",
     "highlights": [
       "two-hour guided outing in Boston",
       "Old State House and Beacon Hill",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 58,
+    "wordCount": 113,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "at the Boston Massacre Marker, in front of the Old State House.",
@@ -3407,15 +3494,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Adventures at Sea is a 1.5-hour walking tour with Boston By Foot in Boston. The walk includes stories from the neighborhood. The walk covers Adventures at Sea.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Town Cove and Congress Streets. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Guests come to Town Cove and Congress Streets, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston.",
     "highlights": [
       "1.5-hour walking tour in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 40,
+    "wordCount": 106,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3434,8 +3521,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot. The group covers the neighborhood's architecture. The group covers Art Deco in Boston's Financial District. The outdoor route is about 1 mile at a moderate pace. Groups stay at up to 20 guests per guide.",
-      "The group is stroller and wheelchair accessible."
+      "Guests cover about 1 mile at a moderate pace. Art Deco buildings in the financial district are what guests are taken to see. Attention also goes to New York and American Art Deco, with the guide attaching a story to each stop. Guests come to New York and American Art Deco, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -3443,7 +3530,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 53,
+    "wordCount": 112,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Angell Memorial Column opposite 10 Post Office Square.",
@@ -3487,7 +3574,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 90-minute guided outing with Boston By Foot in Boston. The group covers Art Deco in the Back Bay. The outdoor route is about 1 mile at a moderate pace. Groups stay at up to 20 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests cover about 1 mile at a moderate pace. Art Deco buildings in the financial district are what guests are taken to see. The route also reaches New England Power. Attention also goes to Boston Art Deco and John Hancock, with the guide attaching a story to each stop.",
+      "Among the places guests actually encounter are Boston Art Deco, John Hancock, and New England Power. Guests come to Boston Art Deco and John Hancock, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -3495,7 +3583,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 49,
+    "wordCount": 100,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "the fountain in Statler Park on Columbus Ave. and Stuart Street.",
@@ -3514,8 +3602,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Avenue of the Arts is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers Avenue of the Arts. The group starts at Guy Lowell's Museum. The group then visits White's Symphony Hall and Horticultural Hall. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Guy Lowell's Museum and White's Symphony Hall. The group also reaches Horticultural Hall."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches Guy Lowell's Museum and Fine Arts. Horticultural Hall are part of the same outing. Attention also goes to Along Huntington Avenue and White's Symphony Hall, with the guide attaching a story to each stop.",
+      "Among the places guests actually encounter are Along Huntington Avenue, White's Symphony Hall, and Guy Lowell's Museum. Later the guide turns to Fine Arts and Horticultural Hall, explaining what happened there. Guests come to Along Huntington Avenue and White's Symphony Hall, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Guy Lowell's Museum, White's Symphony Hall, and Horticultural Hall.",
     "highlights": [
@@ -3523,7 +3612,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guy Lowell's Museum and White's Symphony Hall"
     ],
     "galleryImages": [],
-    "wordCount": 68,
+    "wordCount": 114,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3570,8 +3659,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston By Bulfinch is a 1.5-hour walking tour with Boston By Foot. The walk covers the neighborhood's architecture. The group covers Boston By Bulfinch. The group starts at Massachusetts State House. The group then visits Beacon Hill and Cardinal Cushing Park. Later stops include Bowdoin Square and Cambridge Street.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Charles Bulfinch and Bulfinch Triangle. The guide's account includes Massachusetts State House and Beacon Hill. Stories along the way cover Tontine Crescent and Cardinal Cushing Park. Bowdoin Square and New Chardon come up in the commentary.",
+      "The same narrative reaches Cambridge Street and Blue Line. Among the places guests actually encounter are Charles Bulfinch, Bulfinch Triangle, and Massachusetts State House. Later the guide turns to Beacon Hill and Tontine Crescent, explaining what happened there. Guests come to Charles Bulfinch and Bulfinch Triangle, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Massachusetts State House, Beacon Hill, and Cardinal Cushing Park.",
     "highlights": [
@@ -3579,7 +3668,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Massachusetts State House and Beacon Hill"
     ],
     "galleryImages": [],
-    "wordCount": 62,
+    "wordCount": 104,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3598,8 +3687,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 1.5-hour walking tour with Boston By Foot. The group visits Boston Common and Public Garden. The group covers Boston Common and the Public Garden. The group starts at Boston Common. The group then visits Massachusetts State House and Public Garden.",
-      "Later stops include Park Street. The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests hear about Back Bay and Massachusetts State House. The guide's account includes Park Street. Among the places guests actually encounter are Back Bay, Massachusetts State House, and Park Street. Guests come to Back Bay and Massachusetts State House, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Boston Common, Massachusetts State House, and Public Garden.",
     "highlights": [
@@ -3607,7 +3696,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Boston Common and Massachusetts State House"
     ],
     "galleryImages": [],
-    "wordCount": 61,
+    "wordCount": 109,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3626,8 +3715,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Boston's Chinatown is a 90-minute guided outing with Boston By Foot. The walk covers Chinatown's immigrant history. The group goes beyond restaurants into backstreets and alleyways. Stops cover Colonial times to the present. The group covers Boston's Chinatown. The outdoor route is about 1.05 miles at a moderate pace.",
-      "Groups stay at up to 15 guests per guide."
+      "Guests cover about 1.05 miles at a moderate pace. Chinatown is presented as a small immigrant neighborhood that survived, with time in the back streets as well as at the markets. Immigration is the thread, following who arrived and how the neighborhood changed around them.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later.",
+      "Guests stay with that subject for the length of the outing."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -3635,7 +3725,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 15 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 60,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Chinatown Gate at the corner of Beach and Hudson Street.",
@@ -3679,8 +3769,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Change and Response: Boston's Architecture is a 90-minute walking tour with Boston By Foot. The walk covers the neighborhood's architecture. The group covers Change and Response: Boston's Architecture. The outdoor route is about 0.75 miles at a moderate pace. Groups stay at up to 20 guests per guide.",
-      "The group is stroller and wheelchair accessible."
+      "Guests cover about 0.75 miles at a moderate pace. Attention also goes to Robert Campbell and Boston Globe, with the guide attaching a story to each stop. Guests come to Robert Campbell and Boston Globe, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later.",
+      "Guests stay with that subject for the length of the outing."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston.",
     "highlights": [
@@ -3688,7 +3779,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 57,
+    "wordCount": 108,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Custom House steps (corner of India and State Streets opposite 1 India Street).",
@@ -3707,8 +3798,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The Custom House Historic District is a 1.5-hour walking tour with Boston By Foot in Boston. The walk visits Faneuil Hall. The group covers The Custom House Historic District. The group starts at Custom House. The group then visits Custom House Tower and Custom House Historic District.",
-      "Later stops include Faneuil Hall. The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Art Deco buildings in the financial district are what guests are taken to see. Guests spend time at Urban Renewal and Art Deco Batterymarch Building. The route also reaches Faneuil Hall and India Streets. Custom House Tower are part of the same outing.",
+      "Guests stay on foot the whole time, pausing while the guide talks at each site. Among the places guests actually encounter are Urban Renewal, Art Deco Batterymarch Building, and Faneuil Hall. Later the guide turns to India Streets and Custom House Tower, explaining what happened there.",
+      "Guests do not travel by bus or by boat. They stand at the sites while the explanation is given."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Custom House, Custom House Tower, and Custom House Historic District.",
     "highlights": [
@@ -3716,7 +3808,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Custom House and Custom House Tower"
     ],
     "galleryImages": [],
-    "wordCount": 65,
+    "wordCount": 117,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3764,8 +3856,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The Esplanade is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers The Esplanade. The group starts at James Jackson Storrow Memorial Drive. The group then visits Teddy Ebersol's Red Sox Fields and Hatch Memorial Shell. Later stops include Teddy Ebersol's Red Sox Fields Finding.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. The drive passes Back Bay and Charles Eliot. Farther along, the van goes by Frederick Law Olmsted's Charlesbank and Charles River Reservation. Arthur Schurcliff and Hatch Memorial Shell are on the same circuit. Also visible from the van are Boston Pops Fourth and July Celebration.",
+      "The point of the outing is the succession of landmarks seen from the van, not a march between them. The locations are chosen because a film or television scene was shot there. Among the places guests actually encounter are Back Bay, Charles Eliot, and Frederick Law Olmsted's Charlesbank."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes James Jackson Storrow Memorial Drive, Teddy Ebersol's Red Sox Fields, and Hatch Memorial Shell.",
     "highlights": [
@@ -3773,7 +3865,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "James Jackson Storrow Memorial Drive and Teddy Ebersol's Red Sox Fields"
     ],
     "galleryImages": [],
-    "wordCount": 62,
+    "wordCount": 102,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3792,8 +3884,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 1.5-hour walking tour with Boston By Foot in Boston. The group includes stories from the neighborhood. The group covers Finding Aesop's Fables in Copley Square. The group starts at Copley Square. The group is aimed at families, including guests who prefer an easier pace.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Aesop's fables are the lens, and guests look for those stories in the sculpture and buildings around Copley Square. Guests spend time at Dartmouth Street and Green Line. Guests come to Dartmouth Street and Green Line, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Copley Square and Dartmouth Street.",
     "highlights": [
@@ -3801,7 +3893,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Copley Square and Dartmouth Street"
     ],
     "galleryImages": [],
-    "wordCount": 60,
+    "wordCount": 106,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3820,17 +3912,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Grave Undertakings: Boston's Burying Grounds is a 90-minute guided outing with Boston By Foot. The walk covers Grave Undertakings: Boston's Burying Grounds. The outdoor route is about 0.6 miles at a moderate pace. The group passes King's Chapel Burying Ground. Groups stay at up to 15 guests per guide.",
-      "The group is stroller and wheelchair accessible."
+      "Guests cover about 0.6 miles at a moderate pace. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about Puritan New England and King's Chapel Burying Ground. Guests come to Puritan New England and King's Chapel Burying Ground, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes King's Chapel Burying Ground.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes King's Chapel Burying Ground.",
     "highlights": [
       "90-minute guided outing in Boston",
       "King's Chapel Burying Ground",
       "Groups stay at up to 15 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 58,
+    "wordCount": 113,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Corner of Tremont and Beacon Streets, in the plaza across the street from King's Chapel.",
@@ -3874,8 +3966,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Historic Waterfront is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers Historic Waterfront. The group starts at Long Wharf. The group then visits Commercial Wharf and Lewis Wharf. Later stops include Union Wharf, Rowes Wharf, and Battery Wharf.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches China Trade and Commercial Wharf. Lewis Wharf and Union Wharf are part of the same outing. Later the group comes to Battery Wharf and North End. There is time to look at Boston Harbor and Rowes Wharf Arch.",
+      "Attention also goes to Long Wharf and Financial District, with the guide attaching a story to each stop. Among the places guests actually encounter are Long Wharf, Financial District, and China Trade. Later the guide turns to Commercial Wharf and Lewis Wharf, explaining what happened there.",
+      "Guests come to Long Wharf and Financial District, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Long Wharf, Commercial Wharf, and Lewis Wharf.",
     "highlights": [
@@ -3883,7 +3976,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Long Wharf and Commercial Wharf"
     ],
     "galleryImages": [],
-    "wordCount": 56,
+    "wordCount": 115,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3902,8 +3995,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "That walk traces the first President on his six-day stop toward Boston as part of his post-inaugural outing of New England in October 1789. Boston in 1789 was still town, not a city. After that, charles Bulfinch had yet to shape his many churches and civic landmarks, and hills of Shawmut Peninsula were not yet also plundered for their gravel and landfill.",
-      "After that, in part, guests walk route of civic parade organized for Washington's arrival. After that, stop by many of sites where he stopped at, worshipped, and - yes - slept. 0.75 mile tour at a moderate pace, stopping at various sites on the tour."
+      "Guests cover about 0.75 miles at a moderate pace. The account starts with Shawmut, the peninsula that became Boston. Guests hear about Charles Bulfinch and Shawmut Peninsula. The guide's account includes Governor Hancock and President Washington. Among the places guests actually encounter are Charles Bulfinch, Shawmut Peninsula, and Governor Hancock.",
+      "Guests come to Charles Bulfinch and Shawmut Peninsula, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston. The walk passes Shawmut Peninsula.",
     "highlights": [
@@ -3912,7 +4005,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 108,
+    "wordCount": 105,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "corner of Washington and Court Streets (201 Washington Street, opposite the Old State House).",
@@ -3956,8 +4049,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Jewish North End is a 1.5-hour walking tour with Boston By Foot in Boston. The walk includes stories from the neighborhood. The group covers Jewish North End. The group starts at North End. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes North End and Christopher Columbus Park."
+      "Guests cover about 1 mile at a moderate pace. The North End is treated as a gateway neighborhood, with arrivals from several countries. Guests hear about Few Jews and Eastern Europe. The guide's account includes Jewish Bostonians and Boston's Jewish. Stories along the way cover Christopher Columbus Park and Atlantic Ave.",
+      "Immigration is the thread, following who arrived and how the neighborhood changed around them. Among the places guests actually encounter are Few Jews, Eastern Europe, and Jewish Bostonians. Later the guide turns to Boston's Jewish and Christopher Columbus Park, explaining what happened there. Guests come to Few Jews and Eastern Europe, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes North End and Christopher Columbus Park.",
     "highlights": [
@@ -3965,7 +4058,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "North End and Christopher Columbus Park"
     ],
     "galleryImages": [],
-    "wordCount": 55,
+    "wordCount": 112,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -3984,17 +4077,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Johnny Tremain's Boston is a 90-minute guided outing with Boston By Foot. The walk visits Old North Church and Freedom Trail. The group covers Johnny Tremain's Boston. The group starts at North End. The group then visits Freedom Trail and Old State House. The outdoor route is about 1 mile at a moderate pace.",
-      "Groups stay at up to 20 guests per guide."
+      "The guide talks about Boston's past, including the American Revolution. Guests cover about 1 mile at a moderate pace. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about Esther Forbes and North End.",
+      "The guide's account includes Freedom Trail and Old State House. Stories along the way cover Copp's Hill Burying Ground and Paul Revere's House. Old North Church and Joseph Warren come up in the commentary. The same narrative reaches John Hancock and William Dawes. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes North End, Freedom Trail, and Old State House.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes North End, Freedom Trail, and Old State House.",
     "highlights": [
       "90-minute guided outing in Boston",
       "North End and Freedom Trail",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 64,
+    "wordCount": 110,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "the corner of State and Congress Streets, at the entrance to 60 State Street.",
@@ -4017,7 +4110,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "On the way, guests explore gems like the Temple Place District, arts venues such as Paramount Theatre and the Orpheum, and buildings covering Masonic Temple and the Parker House Hotel. Guests come for engaging journey through a neighborhood that's not a part of Boston's past, but a reflection of its ever-evolving spirit.",
       "1.1 mile tour at a moderate pace, stopping at various sites on the tour."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes School Street and Parker House Hotel.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes School Street and Parker House Hotel.",
     "highlights": [
       "90-minute guided outing in Boston",
       "School Street and Parker House Hotel",
@@ -4045,8 +4138,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The Making of M.I.T. is a 1.5-hour walking tour with Boston By Foot in Boston. The walk covers The Making of M.I.T. The outdoor route is about 1 mile at a moderate pace.",
-      "The walk passes Berkeley Street."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches Charles River and Berkeley Street. Restoration Hardware and Cambridge are part of the same outing. Attention also goes to Back Bay and Boston Tech, with the guide attaching a story to each stop.",
+      "Among the places guests actually encounter are Back Bay, Boston Tech, and Charles River. Later the guide turns to Berkeley Street and Restoration Hardware, explaining what happened there. Guests come to Back Bay and Boston Tech, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Berkeley Street.",
     "highlights": [
@@ -4054,7 +4148,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Berkeley Street"
     ],
     "galleryImages": [],
-    "wordCount": 44,
+    "wordCount": 108,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -4102,17 +4196,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "North End By Little Feet is a one-hour guided outing with Boston By Foot in Boston. The walk visits the North End, the city's oldest neighborhood. The group visits Old North Church and Freedom Trail. The group covers North End By Little Feet. The group starts at Freedom Trail.",
-      "The group then visits North End and Paul Revere's House. Later stops include Old North Church. The outdoor route is about 0.7 miles at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.7 miles at a moderate pace. The route also reaches Old North Church. Attention also goes to Freedom Trail and Paul Revere's House, with the guide attaching a story to each stop. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.",
+      "Among the places guests actually encounter are Freedom Trail, Paul Revere's House, and Old North Church. The streets are treated as the oldest part of the city, and the stories are told there. Guests come to Freedom Trail and Paul Revere's House, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The walk passes Freedom Trail, North End, and Paul Revere's House.",
+    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The outing passes Freedom Trail, North End, and Paul Revere's House.",
     "highlights": [
       "one-hour guided outing in Boston",
       "Freedom Trail and North End",
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 87,
+    "wordCount": 108,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "in front of Faneuil Hall at the Samuel Adams Statue, Boston.",
@@ -4160,15 +4254,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Rethinking Boston Brutalism is a 1.5-hour walking tour with Boston By Foot. The walk covers brutalist buildings. The walk covers Rethinking Boston Brutalism.",
-      "The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests see brutalist concrete up close, and the guide explains the look. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
+      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
+      "Seeing the place and hearing the reason for it are the whole visit."
     ],
-    "schemaDescription": "Rethinking Boston Brutalism is a 1.5-hour walking tour with Boston By Foot. The walk covers brutalist buildings. The walk covers Rethinking Boston Brutalism. The outdoor route is about 1 mile at a moderate pace.",
+    "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston.",
     "highlights": [
       "1.5-hour walking tour in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 36,
+    "wordCount": 107,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -4190,7 +4285,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "The outing is based on English plan, alongside lovely parks and squares also framed by rows of houses. Layout and early South End homes were also inspired by Charles Bulfinch, great architect of the Massachusetts State House. South End was envisioned to be finest of districts and its grandeur can still be experienced.",
       "After Back Bay provided newer and more fashionable place to live, South End evolved toward area occupied by many different immigrant groups. After that, major institutions, like Cathedral of Holy Cross and Boston City Hospital, came toward South End to serve these new populations. 1 mile tour at a moderate pace, stopping at various sites on the tour."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Massachusetts State House.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Massachusetts State House.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Massachusetts State House",
@@ -4218,8 +4313,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Taverns to Tea Houses is a 1.5-hour walking tour with Boston By Foot in Boston. The walk samples oyster and Union Oyster House Restaurant. The group covers Taverns to Tea Houses. The group starts at Union Street Park. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Union Street Park and Union Oyster House Restaurant."
+      "Guests cover about 1 mile at a moderate pace. Attention also goes to Union Street Park, and the guide explains why it is on the route. Guests come to Union Street Park, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Union Street Park and Union Oyster House Restaurant.",
     "highlights": [
@@ -4227,7 +4322,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Union Street Park and Union Oyster House Restaurant"
     ],
     "galleryImages": [],
-    "wordCount": 62,
+    "wordCount": 103,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -4246,15 +4341,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Is a 45- to 60-minute guided outing with Boston By Foot. The walk covers. The group starts at Amisi Nazaire-Hicks. The group then visits Rise and Boston's Burying Grounds BBF Members. Later stops include Omni Parker House Kitchens."
+      "The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about Virtual Experiences and Boston By Foot Turns. The guide's account includes Amisi Nazaire-Hicks and Interpreting Democracy. Stories along the way cover Plant Shoe Factory and Jamaica Plain.",
+      "Marilynn Johnson and Community Showing come up in the commentary. The same narrative reaches Redline Narratives and Lost Cultural Hubs. Attention also goes to Marlon Solomon and Historic Bridges, with the guide attaching a story to each stop. Among the places guests actually encounter are Virtual Experiences, Boston By Foot Turns, and Amisi Nazaire-Hicks."
     ],
-    "schemaDescription": "A 45- to 60-minute guided outing with Boston By Foot. The walk passes Amisi Nazaire-Hicks, Rise, and Boston's Burying Grounds BBF Members.",
+    "schemaDescription": "A 45- to 60-minute guided outing with Boston By Foot. The outing passes Amisi Nazaire-Hicks, Rise, and Boston's Burying Grounds BBF Members.",
     "highlights": [
       "45-60 minutes guided outing",
       "Amisi Nazaire-Hicks and Rise"
     ],
     "galleryImages": [],
-    "wordCount": 40,
+    "wordCount": 106,
     "durationLabel": "45-60 minutes",
     "durationIso": null,
     "meetingLocation": "Virtual Program",
@@ -4273,10 +4369,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a one-hour guided outing with Boston By Foot. The group covers Sam Adams' Boston: Toast to a Patriot. The outdoor route is about 0.65 miles at a moderate pace. The group passes Sam Adams Downtown Boston Taproom. Groups stay at up to 25 guests per guide.",
-      "The group is stroller and wheelchair accessible."
+      "Guests cover about 0.65 miles at a moderate pace. The tasting also stops near Samuel Adams and Boston Beer Company. Food is the thread: each stop is there for what guests taste, with the street as the setting. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.",
+      "The stops exist for the food. Streets and storefronts are the setting, and tasting is the point. Guests come to Samuel Adams and Boston Beer Company, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The walk passes Sam Adams Downtown Boston Taproom.",
+    "schemaDescription": "A one-hour guided outing with Boston By Foot in Boston. The outing passes Sam Adams Downtown Boston Taproom.",
     "highlights": [
       "one-hour guided outing in Boston",
       "Sam Adams Downtown Boston Taproom",
@@ -4285,7 +4381,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/LBIdm5IFQYCp5zHne6KH"
     ],
-    "wordCount": 57,
+    "wordCount": 111,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "Samuel Adams Statue in front of Faneuil Hall Boston, MA 02109",
@@ -4304,17 +4400,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston City Hall is a 60-minute guided outing with Boston By Foot. The walk covers the neighborhood's architecture. The group covers brutalist buildings. The group covers Boston City Hall. The outdoor route is about 0.5 miles at a moderate pace. The group passes City Hall.",
-      "Groups stay at up to 16 guests per guide. The group is stroller and wheelchair accessible."
+      "Guests cover about 0.5 miles at a moderate pace. Guests see brutalist concrete up close, and the guide explains the look. Boston City Hall is the building under discussion, including its design and its civic history. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing.",
+      "Nothing is staged indoors, because the block itself is the room."
     ],
-    "schemaDescription": "A 60-minute guided outing with Boston By Foot in Boston. The walk passes City Hall.",
+    "schemaDescription": "A 60-minute guided outing with Boston By Foot in Boston. The outing passes City Hall.",
     "highlights": [
       "60-minute guided outing in Boston",
       "City Hall",
       "Groups stay at up to 16 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 63,
+    "wordCount": 110,
     "durationLabel": "60 minutes",
     "durationIso": null,
     "meetingLocation": "inside the Government Center MBTA Station at the entrance/exit facing City Hall.",
@@ -4336,7 +4433,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests look at Boston Common and many ways people have used this public green space. Guests look at how area evolved from native land, toward colonial town commons, toward the multi-faceted park it is today. Looking at area's history as site of revolution and freedom, guests also consider how open and free space it was for different parties at different times.",
       "Guests come as guests find many lives of Boston Common and its guests. 1.1 mile tour at a moderate pace, stopping at various sites on the tour. The group covers about 1.1 miles at a moderate pace."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Boston Common.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Boston Common.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Boston Common",
@@ -4389,8 +4486,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Theater District is a two-hour walking tour with Boston By Foot in Boston. The walk includes stories from the neighborhood. The group covers Theater District. The group starts at Historic Boch Center Wang Theatre. The group then visits Opera House and Folk Americana Roots Hall.",
-      "The outdoor route is about 0.6 miles at a moderate pace. Groups stay at up to 20 guests per guide. The group is stroller and wheelchair accessible."
+      "A few optional stops leave time to step out for photographs and a closer look. Guests cover about 0.6 miles at a moderate pace. Guests hear about Theater History and Folk Americana Roots Hall. The guide's account includes Boch Center Wang Theatre and Boston's Theater District.",
+      "Stories along the way cover Opera House and Mikhail Baryshnikov. Elton John and Lady Gaga come up in the commentary. The same narrative reaches Liza Minnelli and Music Hall. Attention also goes to Neil Young and Bruce Springsteen, with the guide attaching a story to each stop.",
+      "Guests stay on foot the whole time, pausing while the guide talks at each site."
     ],
     "schemaDescription": "A two-hour walking tour with Boston By Foot in Boston. The walk passes Historic Boch Center Wang Theatre, Opera House, and Folk Americana Roots Hall.",
     "highlights": [
@@ -4401,7 +4499,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/5pDVDH1SPy7BWCVMfKcA"
     ],
-    "wordCount": 74,
+    "wordCount": 109,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "In front of the Citizens Bank Opera House, 539 Washington Street, Boston",
@@ -4465,7 +4563,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Private Tour: Boston's LGBTQ Past is a 90-minute walking tour with Boston By Foot. The walk covers Boston's LGBTQ past. The group stays in Boston. The group covers Private Tour: Boston's LGBTQ Past. The outdoor route is about 1 mile at a moderate pace."
+      "Guests cover about 1 mile at a moderate pace. Guests hear where Ralph Waldo Emerson, Louisa May Alcott, and Henry David Thoreau met to trade ideas. The outing follows queer life in Boston from the 18th century into the Gay Liberation years. Guests hear about Ralph Waldo Emerson and Walt Whitman.",
+      "The guide's account includes Charlotte Cushman and World War II. Stories along the way cover History Project. Guests stay on foot the whole time, pausing while the guide talks at each site. Persecution, resistance, and celebration are all part of what the guide covers. Among the places guests actually encounter are Ralph Waldo Emerson, Walt Whitman, and Charlotte Cushman."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston.",
     "highlights": [
@@ -4474,7 +4573,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/71DVSoIhR7eaUgYncrkw"
     ],
-    "wordCount": 45,
+    "wordCount": 110,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Massachusetts State House steps on Beacon Street",
@@ -4493,16 +4592,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Churches of the Back Bay is a 90-minute guided outing with Boston By Foot in Boston. The walk covers Churches of the Back Bay. The group starts at Trinity Church. The group then visits Arlington Street Church and Brattle Square Church. The outdoor route is about 1 mile at a moderate pace.",
-      "The group passes Trinity Church and Arlington Street Church. The group also reaches Brattle Square Church. The group is stroller and wheelchair accessible."
+      "Guests cover about 1 mile at a moderate pace. The route also reaches Arlington Street Church and Brattle Square Church. Attention also goes to Boston's Back Bay and Trinity Church, with the guide attaching a story to each stop. Among the places guests actually encounter are Boston's Back Bay, Trinity Church, and Arlington Street Church.",
+      "The changing skyline is the view, with the boat moving while guests watch from the deck. Guests come to Boston's Back Bay and Trinity Church, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The walk passes Trinity Church, Arlington Street Church, and Brattle Square Church.",
+    "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston. The outing passes Trinity Church, Arlington Street Church, and Brattle Square Church.",
     "highlights": [
       "90-minute guided outing in Boston",
       "Trinity Church and Arlington Street Church"
     ],
     "galleryImages": [],
-    "wordCount": 76,
+    "wordCount": 106,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Outside Arlington Street Church at intersection of Arlington & Boylston Streets",
@@ -4521,8 +4620,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Jewish Roxbury is a 90-minute walking tour with Boston By Foot in Boston. The walk includes stories from the neighborhood. The group covers Jewish Roxbury. The group starts at Elm Hill. The outdoor route is about 0.9 miles at a moderate pace. The group passes Elm Hill and Grove Hall.",
-      "Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.9 miles at a moderate pace. Guests hear about Boston's Jewish and Grove Hall. The guide's account includes Elm Hill. Guests stay on foot the whole time, pausing while the guide talks at each site. Among the places guests actually encounter are Boston's Jewish, Grove Hall, and Elm Hill.",
+      "Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given."
     ],
     "schemaDescription": "A 90-minute walking tour with Boston By Foot in Boston. The walk passes Elm Hill and Grove Hall.",
     "highlights": [
@@ -4533,7 +4632,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/g3NiRhwgSqiwPDYHlZ62"
     ],
-    "wordCount": 61,
+    "wordCount": 104,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Corner of Elm Hill Ave and Seaver St, across the street from Franklin Park",
@@ -4576,8 +4675,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Toward a More Perfect Union is a 90-minute guided outing with Boston By Foot in Boston. The walk includes stories from the neighborhood. The walk covers Toward a More Perfect Union.",
-      "The outdoor route is about 0.6 miles at a moderate pace. Groups stay at up to 20 guests per guide."
+      "Guests cover about 0.6 miles at a moderate pace. Attention also goes to Boston's Jewish, and the guide explains why it is on the route. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.",
+      "Guests come to Boston's Jewish, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
+      "The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A 90-minute guided outing with Boston By Foot in Boston.",
     "highlights": [
@@ -4585,7 +4685,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at up to 20 guests per guide"
     ],
     "galleryImages": [],
-    "wordCount": 53,
+    "wordCount": 111,
     "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "Faneuil Hall in front of the Samuel Adams Statue",
@@ -4629,8 +4729,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour walking tour with Boston City Walks in Boston. The group follows the streets of Downtown Boston Historic Beacon. The group visits Faneuil Hall, Boston Common, and Public Garden. The group covers sites along the Freedom Trail. The group covers the neighborhood's architecture.",
-      "The group starts at Beacon Hill. Guests must be at least 5 years old."
+      "Guests follow part of the Freedom Trail and hear how the Revolution began. Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. Guests hear about Swan Boats and Public Garden. The guide's account includes Freedom Trail and Revolutionary War.",
+      "Stories along the way cover Faneuil Hall and Boston Common. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Among the places guests actually encounter are Swan Boats, Public Garden, and Freedom Trail. Later the guide turns to Revolutionary War and Faneuil Hall, explaining what happened there."
     ],
     "schemaDescription": "A two-hour walking tour with Boston City Walks in Boston. The walk passes Beacon Hill and Public Garden.",
     "highlights": [
@@ -4638,7 +4738,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and Public Garden"
     ],
     "galleryImages": [],
-    "wordCount": 61,
+    "wordCount": 106,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "The NW corner of State & Congress Streets outside 28 State Street (The Citizens Bank Building in Downtown Boston, MA)",
@@ -4670,21 +4770,40 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Downtown Freedom Trail Walk - History/Architecture",
     "publicPath": "/destinations/massachusetts/boston/tours/downtown-freedom-trail-walk---historyarchitecture-26334",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Boston City Walks lists this outing."
+      "Guests follow part of the Freedom Trail and hear how the Revolution began. Guests hear about Faneuil Hall and Boston Common. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
     ],
-    "schemaDescription": "The operator Boston City Walks lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 1.2-hour walking tour with Boston City Walks. The walk passes Freedom Trail, Faneuil Hall, and Boston Common.",
+    "highlights": [
+      "1.2 Hours walking tour",
+      "Freedom Trail and Faneuil Hall"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 102,
+    "durationLabel": "1.2 Hours",
+    "durationIso": "PT1H12M",
     "meetingLocation": "The NW corner of State & Congress Streets outside 28 State Street (The Citizens Bank Building)",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $31.80",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 17+",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Child",
+        "note": "5-16 years old",
+        "amountLabel": "$15.90"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "31.80",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -4767,8 +4886,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Jewish Cultural Walking Tour is a two-hour walking tour with Boston City Walks. The walk visits the North End, the city's oldest neighborhood. The group visits Vilna Shul. The morning starts in the North End with coffee and pastry. The group covers Boston Jewish Cultural Walking Tour.",
-      "The group starts at Beacon Hill. The group then visits Boston's Historic Vilna Shul and Puffer House Cigar-Rolling Factory. Later stops include Milk Street, Famine Memorial, and Jewish."
+      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. The route also reaches Kosher Oasis and Famine Memorial. Jewish Advocate and Beacon Hill are part of the same outing. Later the group comes to Boston's Historic Vilna Shul and West End House.",
+      "There is time to look at Puffer House Cigar-Rolling Factory and Holocaust Memorial. Attention also goes to Back Side and Milk Street, with the guide attaching a story to each stop. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "Immigration is the thread, following who arrived and how the neighborhood changed around them."
     ],
     "schemaDescription": "A two-hour walking tour with Boston City Walks. The walk passes Beacon Hill, Boston's Historic Vilna Shul, and Puffer House Cigar-Rolling Factory.",
     "highlights": [
@@ -4776,7 +4896,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and Boston's Historic Vilna Shul"
     ],
     "galleryImages": [],
-    "wordCount": 78,
+    "wordCount": 111,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -4823,15 +4943,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a two-hour guided outing with Boston City Walks. The group visits Boston Common. The group covers Harvard Square Evening Excursion through Cambridge. The group starts at Boston Common. The group then visits Harvard Yard and Radcliff Yard. Later stops include John Harvard's Brew House, Harvard Square, and Brattle Street."
+      "The evening ride runs from Boston Common toward Harvard Square, across the Charles River. The route also reaches Harvard Square Excursion Highlights and Harvard Yard. Radcliff Yard and Brattle Street are part of the same outing. Later the group comes to Tory Row and Old Burial Place.",
+      "There is time to look at Longfellow's Mansion and Red Line Subway. Attention also goes to Cambridge's Old Burial Ground and Park Street, with the guide attaching a story to each stop. Among the places guests actually encounter are Boston Common, Charles River, and Harvard Square Excursion Highlights.",
+      "Later the guide turns to Harvard Yard and Radcliff Yard, explaining what happened there."
     ],
-    "schemaDescription": "A two-hour guided outing with Boston City Walks. The walk passes Boston Common, Harvard Yard, and Radcliff Yard.",
+    "schemaDescription": "A two-hour guided outing with Boston City Walks. The outing passes Boston Common, Harvard Yard, and Radcliff Yard.",
     "highlights": [
       "2 hours guided outing",
       "Boston Common and Harvard Yard"
     ],
     "galleryImages": [],
-    "wordCount": 52,
+    "wordCount": 109,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -4850,8 +4972,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Public Tour is a three-hour walking tour with Boston Food History Walking Tour in Boston. The walk visits Freedom Trail. The group covers Public Tour. The group starts at American Revolution-it. Multiple food stops: Chinese bao, Clam chowder, and Oysters are included. The group passes American Revolution-it and Freedom Trail.",
-      "Groups stay at a maximum of 12 guests."
+      "The guide talks about Boston's past, including the American Revolution. Guests follow part of the Freedom Trail and hear how the Revolution began. Guests hear about American Revolution-it and Colonial Native Americans. The guide's account includes Freedom Trail. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Immigration is the thread, following who arrived and how the neighborhood changed around them. Among the places guests actually encounter are American Revolution-it, Colonial Native Americans, and Freedom Trail."
     ],
     "schemaDescription": "A three-hour walking tour with Boston Food History Walking Tour in Boston. The walk passes American Revolution-it and Freedom Trail.",
     "highlights": [
@@ -4862,7 +4984,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/rIdpXbESkazcB6MVc6og"
     ],
-    "wordCount": 61,
+    "wordCount": 104,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "Salada Tea Doors, 330 Stuart St, Boston, MA 02116",
@@ -4891,8 +5013,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Private Tour is a 2.5-hour walking tour with Boston Food History Walking Tour in Boston. Private groups sample local food while walking a Boston neighborhood. The walk visits Freedom Trail. The group covers Private Tour. The group starts at American Revolution-it. Chinese bao, Clam chowder, and Oysters are included.",
-      "The group passes American Revolution-it and Freedom Trail. Groups stay at a maximum of 12 guests. Guests must be at least 10 years old."
+      "The guide talks about Boston's past, including the American Revolution. Guests follow part of the Freedom Trail and hear how the Revolution began. Guests hear about American Revolution-it and Colonial Native Americans. The guide's account includes Freedom Trail. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Immigration is the thread, following who arrived and how the neighborhood changed around them. Among the places guests actually encounter are American Revolution-it, Colonial Native Americans, and Freedom Trail."
     ],
     "schemaDescription": "A 2.5-hour walking tour with Boston Food History Walking Tour in Boston. The walk passes American Revolution-it and Freedom Trail.",
     "highlights": [
@@ -4901,7 +5023,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Chinese bao"
     ],
     "galleryImages": [],
-    "wordCount": 77,
+    "wordCount": 104,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "Salada Tea Doors, 330 Stuart St, Boston, MA 02116",
@@ -4948,7 +5070,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests get to indulge in the flavors of these acclaimed eateries, setting tone for the rest of the tour. While it's closed on Sundays, remainder of the week, guests also stop at the favorite old-school coffee shop, where guests their house-made lemon slush during warmer months, or cup of the best espresso the guests say they've ever tasted.",
       "After that, before heading to the next destination, guests stop at long line for Best of Boston Sandwich, mouth-watering Italian sub that will leave lasting impression."
     ],
-    "schemaDescription": "A 3.5-hour food walk with Boston Foodie Tours. The walk visits North End and Paul Revere's House.",
+    "schemaDescription": "A 3.5-hour food walk with Boston Foodie Tours. Guests sample food near North End and Paul Revere's House.",
     "highlights": [
       "3.5 Hours food walk",
       "North End and Paul Revere's House"
@@ -5005,16 +5127,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a two-hour food walk with Boston Foodie Tours. The group samples cannoli and clam chowder. Private groups sample local food while walking a Boston neighborhood. The morning starts in the North End with coffee and pastry. The group includes stories from the neighborhood.",
-      "The group covers North End & Market District Tour - Private Tour. The group starts at Boston's Public Market. The group then visits North End and Boston Public Market. Later stops include Haymarket Market."
+      "The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe. The tasting also stops near Boston's Public Market and Little Italy. Guests keep eating as they reach James Beard Award and TripAdvisor Certificate. Boston Public Market and Old World are part of the same food route.",
+      "Another pause is at Food Network and Best Thing. Attention also goes to Ever Ate and Haymarket Market, with the guide attaching a story to each stop. Food is the thread: each stop is there for what guests taste, with the street as the setting.",
+      "Among the places guests actually encounter are Boston's Public Market, Little Italy, and James Beard Award."
     ],
-    "schemaDescription": "A two-hour food walk with Boston Foodie Tours. The walk visits Boston's Public Market, North End, and Boston Public Market.",
+    "schemaDescription": "A two-hour food walk with Boston Foodie Tours. Guests sample food near Boston's Public Market, North End, and Boston Public Market.",
     "highlights": [
       "2 Hours food walk",
       "Boston's Public Market and North End"
     ],
     "galleryImages": [],
-    "wordCount": 78,
+    "wordCount": 114,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "North End, Boston",
@@ -5062,7 +5185,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "After that, tastings of top-selling chocolate truffles at multiple Best of Boston Chocolatiers follows. Sightseeing portion of the tour will bring the guests toward Acorn Street, described as most photographed street in Boston, and sometimes country. The tour route will intersect with Black Heritage Trail, where guests find significant part of Beacon Hill's history, covering Museum of African American History, the oldest pausing Black church building in the country.",
       "A lovely walk through Boston Public Garden, oldest botanical garden in country, will lead toward the tour finale: two courses at French restaurant, Bistro du Midi."
     ],
-    "schemaDescription": "A four-hour food walk with Boston Foodie Tours. The walk visits Beacon Hill, Black Heritage Trail, and Acorn Street.",
+    "schemaDescription": "A four-hour food walk with Boston Foodie Tours. Guests sample food near Beacon Hill, Black Heritage Trail, and Acorn Street.",
     "highlights": [
       "4 hours food walk",
       "Beacon Hill and Black Heritage Trail"
@@ -5093,7 +5216,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests get to indulge in the flavors of these acclaimed eateries, setting tone for the rest of the tour. While it's closed on Sundays, remainder of the week, guests also stop at the favorite old-school coffee shop, where guests their house-made lemon slush during warmer months, or cup of the best espresso the guests say they've ever tasted.",
       "After that, before heading to the next destination, guests stop at long line for Best of Boston Sandwich, mouth-watering Italian sub that will leave lasting impression."
     ],
-    "schemaDescription": "A 3.5-hour food walk with Boston Foodie Tours. The walk visits North End and Paul Revere's House.",
+    "schemaDescription": "A 3.5-hour food walk with Boston Foodie Tours. Guests sample food near North End and Paul Revere's House.",
     "highlights": [
       "3.5 Hours food walk",
       "North End and Paul Revere's House"
@@ -5178,8 +5301,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Harbor Lighthouse Cruise is a 2.25-hour harbor outing with Boston Harbor Islands. The sail passes harbor lighthouses. The group watches tall ships on the harbor. The group covers Boston Harbor Lighthouse Cruise. The group starts at Long Island Light. The group then visits Long Island Head Light and National Park Service.",
-      "The group is stroller and wheelchair accessible. A full refund is available with at least 12 hours' notice."
+      "From the water, guests see Long Island Light and Graves Light. Boston Light and National Park Service come into view as the boat moves. The cruise also passes United States Coast Guard and Saturday Lighthouse Cruises. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+      "Guests come to Long Island Light and Graves Light, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 2.25-hour harbor outing with Boston Harbor Islands on Boston Harbor. The sail passes Long Island Light, Long Island Head Light, and National Park Service.",
     "highlights": [
@@ -5189,7 +5313,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/6tmU6dItSikfpv88c87w"
     ],
-    "wordCount": 72,
+    "wordCount": 118,
     "durationLabel": "2.25 hours",
     "durationIso": "PT2H15M",
     "meetingLocation": "191 W Atlantic Ave, Boston, MA 02110",
@@ -5212,7 +5336,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests see the obelisk and learn about one of the first major battles of the American Revolution. Guests take a break for lunch at a local artisanal market, with plenty of choices. Guests hear stories about the Pine Tree Riots, the founding of Boston, and the country's first football club.",
       "In America's first botanical garden, guests learn about the (contested) discovery of anaesthesia, and Boston's infamous 4-time non-consecutive mayor."
     ],
-    "schemaDescription": "A 5.5-hour guided outing with Boston Hidden Gems. The walk passes Caffe Vittoria, Paul Revere House, and North Square.",
+    "schemaDescription": "A 5.5-hour guided outing with Boston Hidden Gems. The outing passes Caffe Vittoria, Paul Revere House, and North Square.",
     "highlights": [
       "5.5 hours guided outing",
       "Caffe Vittoria and Paul Revere House",
@@ -5255,8 +5379,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 4.5-hour walking tour with Boston Hidden Gems in Boston. The group visits Bunker Hill Monument, USS Constitution, and Paul Revere House. The group covers sites along the Freedom Trail. The group includes stories from the neighborhood. The group covers Freedom Trail & Little Italy - Private Walking Tour.",
-      "The group starts at Boston Common Visitor Center. The group then visits Freedom Trail and Paul Revere House. Later stops include Copp's Hill Burying Ground, Old North Church, and Boston Common."
+      "A few optional stops leave time to step out for photographs and a closer look. Guests follow part of the Freedom Trail and hear how the Revolution began. The morning starts in the North End with coffee and a pastry at the neighborhood's oldest cafe.",
+      "The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about Boston Common Visitor Center and Tremont St. The guide's account includes Paul Revere House and Copp's Hill Burying Ground. Stories along the way cover Old North Church and Old South Meeting House.",
+      "Old State House and Bunker Hill Monument come up in the commentary."
     ],
     "schemaDescription": "A 4.5-hour walking tour with Boston Hidden Gems in Boston. The walk passes Boston Common Visitor Center, Freedom Trail, and Paul Revere House.",
     "highlights": [
@@ -5266,7 +5391,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/l5HSmT7QQyqUmf9H5CbM"
     ],
-    "wordCount": 82,
+    "wordCount": 112,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "Parkman Plaza - 139 Tremont St Boston, MA 02111",
@@ -5299,7 +5424,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Tour the Salem Maritime National Site to hear about the maritime history of the area. After that, pass Harvard University and MIT on way to Salem. Guests pass Salem's downtown, listening to ghost stories, maritime tales, and learn about Salem's witch-hunting past. Guests stop by one of the only remaining buildings directly associated with the witch hysteria.",
       "Guests see the mansion featured in the film Hocus Pocus and learn about the two ghosts still residing there today. Guests visit one of Salem's most prominent dance halls, home of America's first red carpet. Gaze at the multi-million dollar mansions built during Salem's gilded age."
     ],
-    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems in Boston. The walk passes Witch House, Ropes Mansion & Garden, and Hamilton Hall.",
+    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems in Boston. The outing passes Witch House, Ropes Mansion & Garden, and Hamilton Hall.",
     "highlights": [
       "7-hour guided outing in Boston",
       "Witch House and Ropes Mansion & Garden",
@@ -5342,10 +5467,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a four-hour guided outing with Boston Hidden Gems. The group visits Bunker Hill Monument, USS Constitution, and Old North Church. The group includes a scavenger hunt around the city. The group covers Boston Tour for Families & Kids. The group starts at Old North Church.",
-      "The group then visits Public Garden and Castle Island. Later stops include Bunker Hill Monument. Groups stay at a maximum of 9 guests."
+      "A few optional stops leave time to step out for photographs and a closer look. Guests hear about Old North Church and Public Garden. The guide's account includes Make Way and Bunker Hill Monument. Stories along the way cover Fort Independence and Castle Island. The same narrative reaches Comfortable Clothes and Shoes Money.",
+      "Among the places guests actually encounter are Old North Church, Public Garden, and Make Way. Later the guide turns to Bunker Hill Monument and Fort Independence, explaining what happened there. Guests come to Old North Church and Public Garden, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A four-hour guided outing with Boston Hidden Gems. The walk passes Old North Church, Public Garden, and Castle Island.",
+    "schemaDescription": "A four-hour guided outing with Boston Hidden Gems. The outing passes Old North Church, Public Garden, and Castle Island.",
     "highlights": [
       "4 hours guided outing",
       "Old North Church and Public Garden",
@@ -5354,7 +5479,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/mEmMU4h7QRgdB5yO2b3e"
     ],
-    "wordCount": 70,
+    "wordCount": 102,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "Various",
@@ -5388,11 +5513,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests stop at real locations where the American Revolution began. Guests stop at Concord's Old North Bridge, where Minutemen routed Redcoats on their march back to Boston. Guests explore Lexington Battle Green, the place where the first shots of the American Revolution were fired on April 19th, 1775.",
-      "Guests see the belfry building, used to sound the alarm when the British were marching on Lexington & Concord. Pass by Buckman Tavern, which served as a gathering spot for colonists while awaiting the arrival of the Redcoats on April 19, 1775. Guests see the Old Bay Road, the actual path taken by the British on their way to and from Concord during the American Revolution.",
-      "Guests take in the idyllic setting of times gone by. Guests see the house Ralph Waldo Emerson grew up. Guests visit the Sleep Hollow Cemetery and the author's ridge, where many of Concord's Literary Circle are buried, including Thoreau, Emerson, Alcott, and Hawthorne."
+      "The guide talks about Boston's past, including the American Revolution. Guests hear about Lexington Battle Green and Battle Road Trail. The guide's account includes Concord's Old North Bridge and Freedom Trail. Stories along the way cover Paul Revere House and Old North Church. Old Ironside and Bunker Hill Monument come up in the commentary.",
+      "The same narrative reaches Old State House and Boston Common. Attention also goes to Hollow Cemetery Return and Boston Return, with the guide attaching a story to each stop. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened."
     ],
-    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems. The walk passes Lexington Battle Green, Lexington Belfry, and Buckman Tavern.",
+    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems. The outing passes Lexington Battle Green, Lexington Belfry, and Buckman Tavern.",
     "highlights": [
       "7 hours guided outing",
       "Lexington Battle Green and Lexington Belfry"
@@ -5400,7 +5524,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/7jC88OlQTA2LlRCR291G"
     ],
-    "wordCount": 156,
+    "wordCount": 103,
     "durationLabel": "7 hours",
     "durationIso": "PT7H",
     "meetingLocation": "Pickup at location of your choice",
@@ -5434,17 +5558,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Half Day Driving Tour of Boston & Cambridge is a guided outing with Boston Hidden Gems. The walk visits Bunker Hill Monument, USS Constitution, and Old North Church. The group includes stories from the neighborhood. The group stays in Boston. The group covers Half Day Driving Tour of Boston & Cambridge.",
-      "The group starts at Old North Church. The group then visits Boston Common and Beacon Hill. Later stops include Boston Public Library, Faneuil Hall, and Bunker Hill Monument."
+      "Guests travel by minivan rather than covering the sights on foot. The vehicle has heat and air conditioning. Most of the time is spent in the vehicle, with only short stops outside. A few optional stops leave time to step out for photographs and a closer look.",
+      "Those pauses run about five to ten minutes each. Pickup can be at a hotel, at Logan Airport, or at the cruise terminal. The guide talks about Boston's past, including the American Revolution. The commentary also takes up the uneasy mix of religious morals and corruption.",
+      "The drive passes Old North Church and Faneuil Hall. Farther along, the van goes by Boston Common and Beacon Hill. Bunker Hill Monument and Copley Square are on the same circuit. Also visible from the van are Boston Public Library and Paul Revere's house. The later stretch includes Harvard and Cambridge."
     ],
-    "schemaDescription": "A guided outing with Boston Hidden Gems in Boston. The walk passes Old North Church, Boston Common, and Beacon Hill.",
+    "schemaDescription": "A driving tour with Boston Hidden Gems in Boston. The drive passes Old North Church, Boston Common, and Beacon Hill.",
     "highlights": [
       "Old North Church and Boston Common"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ezqkug6GQa669eEQb2XC"
     ],
-    "wordCount": 77,
+    "wordCount": 144,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Boston, Cambridge",
@@ -5525,9 +5650,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests explore Boston's Revolutionary sites on an land and sea tour. After that, the tour starts with a walk on Freedom Trail sites that tell story of events leading up to the open of the American Revolution. Halfway through tour, take short break at the Old North Church.",
-      "After that, go inside the church (admission covered in price of tour), browse for souvenirs, grab a snack. Second half of tour takes guests on boat ride in Boston Harbor to continue tracing the story of the American Revolution. Guests hear about events of Bunker Hill from spot where British ships crossed harbor to attack Charlestown.",
-      "Guests notice USS Constitution up close and personal from water. Guests sail through same route that also Paul Revere took when he also rowed out of Boston to open his Midnight Ride. After that, throw a tea chest into the water, like the colonists did."
+      "The guide talks about Boston's past, including the American Revolution. Stories cover events at the Old State House and at Faneuil Hall. Entry to the Paul Revere House is included, along with time at the Old North Church. Guests hear about Freedom Trail and Boston Massacre Site.",
+      "The guide's account includes Faneuil Hall and Quincy Market. Stories along the way cover Blackstone Block and Paul Revere House. North End and Old North Church come up in the commentary. The same narrative reaches Boston Harbor and Midnight Ride. Attention also goes to Long Wharf and Block Rose Kennedy Greenway, with the guide attaching a story to each stop."
     ],
     "schemaDescription": "A three-hour harbor outing with Boston Hidden Gems on Boston Harbor. The sail passes Old State House & Boston Massacre Site, Faneuil Hall, and Blackstone Block.",
     "highlights": [
@@ -5538,7 +5662,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/wZvYQAhQ0aKbhQkkbztw"
     ],
-    "wordCount": 149,
+    "wordCount": 107,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "201 Washington Street Boston, MA 02108",
@@ -5581,7 +5705,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests stand on the North Bridge, remembered because shot heard 'round the world was fired. Guests notice actual lantern which was hung in Old North Church and real artifacts also collected in Concord during Revolution. Free time for lunch, souvenirs, and look in Concord. Guests travel back to Boston on the Battle Road Trail, tracing actual path of British retreat from Concord.",
       "Guests notice many original buildings which were used as command posts and field hospitals by the British. Guests pause on the bloodiest battlefield of the day. Guests stop at Harvard Yard and notice where George Washington lived and assumed command of the Continental Army."
     ],
-    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems in Boston. The walk passes Paul Revere Mall, Old North Church, and Hancock-Clarke House.",
+    "schemaDescription": "A 7-hour guided outing with Boston Hidden Gems in Boston. The outing passes Paul Revere Mall, Old North Church, and Hancock-Clarke House.",
     "highlights": [
       "7-hour guided outing in Boston",
       "Paul Revere Mall and Old North Church",
@@ -5627,23 +5751,47 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Castles & Curses: Hammond Castle & Salem Semi-Private Day Trip",
     "publicPath": "/destinations/massachusetts/boston/tours/castles-and-curses-hammond-castle-and-salem-semi-private-day-trip-627552",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Boston Hidden Gems lists this outing."
+      "Guests visit Salem to see the witch trials memorial and hear about the China Trade years. Guests hear about Witch Trials and Salem. Guests come to Witch Trials and Salem, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing."
     ],
-    "schemaDescription": "The operator Boston Hidden Gems lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 7- to 8-hour guided outing with Boston Hidden Gems.",
+    "highlights": [
+      "7-8 hours guided outing",
+      "Bottled Water"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/sPD5U3sQRwW7QqVpzQaU"
     ],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 102,
+    "durationLabel": "7-8 hours",
     "durationIso": null,
     "meetingLocation": "Various",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $222.60",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18+ (Direct Bookings)",
+        "amountLabel": "$222.60"
+      },
+      {
+        "label": "Youth",
+        "note": "Ages 13-17 (Direct Bookings)",
+        "amountLabel": "$206.70"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 12 and under (Direct Bookings)",
+        "amountLabel": "$190.80"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "222.60",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -5655,9 +5803,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests explore Boston's Revolutionary sites on an land and sea tour. After that, the tour starts with a walk on Freedom Trail sites that tell story of events leading up to the open of the American Revolution. Halfway through tour, take short break at the Old North Church.",
-      "After that, go inside the church (admission covered in price of tour), browse for souvenirs, grab a snack. Second half of tour takes guests on boat ride in Boston Harbor to continue tracing the story of the American Revolution. Guests hear about events of Bunker Hill from spot where British ships crossed harbor to attack Charlestown.",
-      "Guests notice USS Constitution up close and personal from water. Guests sail through same route that also Paul Revere took when he also rowed out of Boston to open his Midnight Ride. After that, throw a tea chest into the water, like the colonists did."
+      "The guide talks about Boston's past, including the American Revolution. Stories cover events at the Old State House and at Faneuil Hall. Entry to the Paul Revere House is included, along with time at the Old North Church. Guests hear about Freedom Trail and Boston Massacre Site.",
+      "The guide's account includes Faneuil Hall and Quincy Market. Stories along the way cover Blackstone Block and Paul Revere House. North End and Old North Church come up in the commentary. The same narrative reaches Boston Harbor and Midnight Ride. Attention also goes to Long Wharf and Block Rose Kennedy Greenway, with the guide attaching a story to each stop."
     ],
     "schemaDescription": "A three-hour harbor outing with Boston Hidden Gems on Boston Harbor. The sail passes Old State House & Boston Massacre Site, Faneuil Hall, and Blackstone Block.",
     "highlights": [
@@ -5668,7 +5815,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/08jrWiX9SHmcSiPYunpt"
     ],
-    "wordCount": 149,
+    "wordCount": 107,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "201 Washington Street Boston, MA 02108",
@@ -5701,7 +5848,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests stand on the North Bridge, remembered because shot heard 'round the world was fired. Guests notice actual lantern which was hung in Old North Church and real artifacts also collected in Concord during Revolution. Free time for lunch, souvenirs, and look in Concord. Guests travel back to Boston on the Battle Road Trail, tracing actual path of British retreat from Concord.",
       "Guests notice many original buildings which were used as command posts and field hospitals by the British. Guests pause on the bloodiest battlefield of the day. Guests stop at Harvard Yard and notice where George Washington lived and assumed command of the Continental Army."
     ],
-    "schemaDescription": "A guided outing lasting 7h 30m with Boston Hidden Gems. The walk passes Old North Church, Hancock-Clarke House, and Lexington Battle Green.",
+    "schemaDescription": "A guided outing lasting 7h 30m with Boston Hidden Gems. The outing passes Old North Church, Hancock-Clarke House, and Lexington Battle Green.",
     "highlights": [
       "7h 30m guided outing",
       "Old North Church and Hancock-Clarke House",
@@ -5746,7 +5893,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Afterward, continue exploring Salem's landmarks and cultural treasures before the private ride returns guests to the door at the end of the day. At the Salem Common, stop by the Roger Conant Statue. Across the street, view the Salem Witch Museum as the Salem Witch Trials are introduced.",
       "Guests see the oldest cemetery in Salem, where some of its earliest settlers are buried. Guests see this Colonial Revival, built in the 1800s by one of Salem's merchants. Guests hear how a fire at the studio helped put Salem on the map."
     ],
-    "schemaDescription": "A 8-hour guided outing with Boston Hidden Gems in Boston. The walk passes East India Square, Salem Common, and Witch Trials Memorial.",
+    "schemaDescription": "A 8-hour guided outing with Boston Hidden Gems in Boston. The outing passes East India Square, Salem Common, and Witch Trials Memorial.",
     "highlights": [
       "8-hour guided outing in Boston",
       "East India Square and Salem Common",
@@ -5787,18 +5934,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "That semiprivate tour from Boston takes guests north to Salem, for the 1692 witch trials. Guests stop at the Witch Trials Memorial and look at the city's Puritan past. Beyond the hysteria, guests find Salem's prosperity during Old China Trade, which also made it one of wealthiest towns in young U.S., as highlighted at Salem Maritime National Site.",
-      "Guests ride to Salem in comfort with wifi on board. At the Salem Common, stop by the Roger Conant Statue. Across the street, view the Salem Witch Museum as the Salem Witch Trials are introduced. Guests see the oldest cemetery in Salem, where some of its earliest settlers are buried.",
-      "Guests see this Colonial Revival, built in the 1800s by one of Salem's merchants. Guests hear how a fire at the studio helped put Salem on the map. Go inside the Witch House, built in 1642. Guests see the, 1700s-era mansion used in the filming of Hocus Pocus."
+      "Guests visit Salem to see the witch trials memorial and hear about the China Trade years. The route also reaches Water All and Witch House Entry. Charter St Cemetery and Salem are part of the same outing. Attention also goes to Old China Trade, and the guide explains why it is on the route.",
+      "Among the places guests actually encounter are Witch Trials Memorial, Old China Trade, and Water All. Later the route reaches Witch House Entry and Charter St Cemetery. Guests come to Witch Trials Memorial and Old China Trade, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 8-hour guided outing with Boston Hidden Gems. The walk passes East India Square, Salem Common, and Witch Trials Memorial.",
+    "schemaDescription": "A 8-hour guided outing with Boston Hidden Gems. The outing passes East India Square, Salem Common, and Witch Trials Memorial.",
     "highlights": [
       "8 hours guided outing",
       "East India Square and Salem Common",
       "Bottled Water"
     ],
     "galleryImages": [],
-    "wordCount": 158,
+    "wordCount": 101,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": "Various",
@@ -5841,7 +5987,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests notice Paul Revere House, Old North Church, and Bunker Hill Monument, all must-see stops for history lovers. Guests find attractions not seen by most tourists like Church of Covenant, a house of worship that has stained-glass windows made by Tiffany. Or stop at North End, home toward Little Italy alongside numerous Italian restaurants, pastry shops, and delis.",
       "That area has some of oldest buildings in the city. Architecture of Copley Square is also popular tourist site. Styles in this square range from Gothic Revival of Old South Church toward modern Hancock Tower, glass skyscraper office building."
     ],
-    "schemaDescription": "A three-hour guided outing with Luxury New England Tours. The walk passes Boston Common, Old North Church, and North End.",
+    "schemaDescription": "A three-hour guided outing with Luxury New England Tours. The outing passes Boston Common, Old North Church, and North End.",
     "highlights": [
       "3 Hours guided outing",
       "Boston Common and Old North Church"
@@ -5890,7 +6036,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "For lovers of architecture, Chester Street District showcases residences of wealthy merchants of 17th and 18th centuries. While guests walk the streets, guests view many of architecturally significant houses also designed and built by Samuel McIntire. After that, chestnut Street District is part of the McIntire District, named in his honor.",
       "There are many reasons to stop at Salem and Marblehead."
     ],
-    "schemaDescription": "A 7-hour guided outing with Luxury New England Tours. The walk passes Salem Witch Museum, Derby Wharf, and Friendship.",
+    "schemaDescription": "A 7-hour guided outing with Luxury New England Tours. The outing passes Salem Witch Museum, Derby Wharf, and Friendship.",
     "highlights": [
       "7 Hours guided outing",
       "Salem Witch Museum and Derby Wharf"
@@ -5953,7 +6099,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Orleans is art lovers' paradise and has over dozen art galleries. Provincetown has bohemian town alongside art galleries lining Commercial Street. In Truro, guests hear about and sample wines at Truro Vineyards. After that, wellfleet is well-known for its shellfish, covering the Wellfleet oysters.",
       "After that, cape Cod offers so much in day- quaint streets, whale viewing, sandy beaches, picturesque lighthouses, foods, and whimsical small shops."
     ],
-    "schemaDescription": "A 9-hour guided outing with Luxury New England Tours. The walk passes Commercial Street.",
+    "schemaDescription": "A 9-hour guided outing with Luxury New England Tours. The outing passes Commercial Street.",
     "highlights": [
       "9 Hours guided outing",
       "Commercial Street"
@@ -5988,15 +6134,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Portland, Maine Highlights is a 9-hour guided outing with Luxury New England Tours in Portland, Maine. The sail passes harbor lighthouses. The group covers Portland, Maine Highlights. The group starts at Portland Museum. The group passes Portland Museum and Fort Williams Park. Selected dates are also offered in Spanish."
+      "The drive passes Old Port and Arts District. Farther along, the van goes by Portland Museum and Eastern Promenade. Portland Head Light and Fort Williams Park are on the same circuit. The point of the outing is the succession of landmarks seen from the van, not a march between them. The outing is in Portland, Maine.",
+      "Among the places guests actually encounter are Old Port, Arts District, and Portland Museum. Later the guide turns to Eastern Promenade and Portland Head Light, explaining what happened there. There is no set walking route. The van is how guests move, and most landmarks are seen through the windows.",
+      "Guests come to Old Port and Arts District, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 9-hour guided outing with Luxury New England Tours in Portland. The walk passes Portland Museum and Fort Williams Park.",
+    "schemaDescription": "A 9-hour guided outing with Luxury New England Tours in Portland. The outing passes Portland Museum and Fort Williams Park.",
     "highlights": [
       "9-hour guided outing in Portland",
       "Portland Museum and Fort Williams Park"
     ],
     "galleryImages": [],
-    "wordCount": 50,
+    "wordCount": 123,
     "durationLabel": "9 Hours",
     "durationIso": "PT9H",
     "meetingLocation": null,
@@ -6015,16 +6163,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Languages available: English, Spanish, Turkish Highlights of Boston Public Walking Tour is guided tour that takes visitors on an journey through some of Boston's landmarks. The group is an excellent way for visitors to meet the best of Boston's history and culture. Additionally, outing is entirely on foot, allowing guests to get up close and personal with city's landmarks and neighborhoods.",
-      "Whether guests are a history buff, an architecture enthusiast, or looking for fun and educational way to spend day in Boston, Highlights of Boston - Public Walking Tour is must-have experience. On some dates the same outing is also offered in Spanish. The day moves through, Boston Public Garden, and Trinity Church.",
-      "Next come Boston Public Library, Boston Common, and Faneuil Hall. Later the group reaches Paul Revere House."
+      "The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests hear about and Boston Public Garden. The guide's account includes Trinity Church and Boston Public Library. Stories along the way cover Granary Burial Ground and Boston Common.",
+      "Faneuil Hall and Paul Revere House come up in the commentary. Attention also goes to, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Among the places guests actually encounter are, Boston Public Garden, and Trinity Church."
     ],
     "schemaDescription": "A walking tour with Luxury New England Tours. The walk passes Boston Public Garden, Trinity Church, and Boston Common.",
     "highlights": [
       "Boston Public Garden and Trinity Church"
     ],
     "galleryImages": [],
-    "wordCount": 130,
+    "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Ether Monument",
@@ -6067,7 +6214,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "As guests travel north through the Notch, guests explore the Flume Gorge. That attraction is a natural gorge that guests access via 2-mile loop trail that also winds past also covered bridges, glacial erratics, and Avalanche Falls, 45' waterfall. Guests then look at the Basin, the granite pothole shaped by the glaciers 15, 000 years ago.",
       "Later in the day, guests take scenic tour on route 302 toward Mount Washington Hotel, making quick stop here for pictures of hotel with views of Mountain Washington. Guests drive to New Hampshire and open exploring New Hampshire's and White Mountains. The White Mountains is world- for its annual display of fall foliage."
     ],
-    "schemaDescription": "A guided outing with Luxury New England Tours. The walk passes Memorial Plaza and Franconia Notch State Park.",
+    "schemaDescription": "A guided outing with Luxury New England Tours. The outing passes Memorial Plaza and Franconia Notch State Park.",
     "highlights": [
       "Memorial Plaza and Franconia Notch State Park"
     ],
@@ -6091,16 +6238,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "North Shore Coast Excursion - Day Trip From Boston is a guided outing with Luxury New England Tours. The outing follows the North Shore coast. The group covers North Shore Coast Excursion - Day Trip From Boston. The group passes Halibut Point State Park."
+      "Guests hear about Essex Coastal Scenic Byway and Rocky Neck. The guide's account includes Cape Ann and Bearskin Neck. Stories along the way cover In Rockport and Halibut Point State Park. Among the places guests actually encounter are Essex Coastal Scenic Byway, Rocky Neck, and Cape Ann.",
+      "Later the guide turns to Bearskin Neck and In Rockport, explaining what happened there. Guests come to Essex Coastal Scenic Byway and Rocky Neck, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop."
     ],
-    "schemaDescription": "A guided outing with Luxury New England Tours. The walk passes Halibut Point State Park.",
+    "schemaDescription": "A guided outing with Luxury New England Tours. The outing passes Halibut Point State Park.",
     "highlights": [
       "Halibut Point State Park"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/7tiq6fgNT6SFplqcLALy"
     ],
-    "wordCount": 42,
+    "wordCount": 105,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Beverly, Manchester-by-the-Sea, Gloucester, and Rockport.",
@@ -6119,7 +6268,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 30-hour walking tour with Luxury New England Tours. The group includes stories from the neighborhood. The group covers Hidden Boston: Tales, Tidbits, and Treasures. Groups stay at a maximum of 20 guests. Guests must be 21 or older."
+      "Guests stay on foot the whole time, pausing while the guide talks at each site. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
     ],
     "schemaDescription": "A 30-hour walking tour with Luxury New England Tours in Boston.",
     "highlights": [
@@ -6129,7 +6279,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/LwOVfzJRLuDmadzBVbhQ"
     ],
-    "wordCount": 42,
+    "wordCount": 101,
     "durationLabel": "30 hours",
     "durationIso": "PT30H",
     "meetingLocation": "Ether Monument Boston, MA 02116",
@@ -6228,8 +6378,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "2-Hour Day/Sunset/Night Sail is a two-hour harbor outing with Boston Sailing Tours on Boston Harbor. The walk visits USS Constitution. The group is a sunset harbor outing. The group covers 2-Hour Day/Sunset/Night Sail. The group starts at North End.",
-      "USS Constitution, North End, and Seaport District are included. The group passes North End and Castle Island."
+      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Courthouse Docks and Northern Ave. Boston Harbor and North End come into view as the boat moves. The cruise also passes Seaport District and Castle Island. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "Among the places guests actually encounter are Courthouse Docks, Northern Ave, and Boston Harbor. Later the route reaches North End and Seaport District. The changing skyline is the view, with the boat moving while guests watch from the deck. Music plays during the cruise, and the landmark commentary is kept light."
     ],
     "schemaDescription": "A two-hour harbor outing with Boston Sailing Tours on Boston Harbor. The sail passes North End and Castle Island.",
     "highlights": [
@@ -6238,7 +6388,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "USS Constitution"
     ],
     "galleryImages": [],
-    "wordCount": 63,
+    "wordCount": 108,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "2 Northern Avenue Boston, MA 02210",
@@ -6304,14 +6454,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Half-Day Sail Around The Islands is a four-hour harbor outing with Boston Sailing Tours on Boston Harbor. The walk covers Half-Day Sail Around The Islands. The sail visits harbor islands."
+      "From the water, guests see Courthouse Docks and Northern Ave. The landmarks are seen from the harbor, with the boat doing the traveling. Music plays during the cruise, and the landmark commentary is kept light. The deck bar sells drinks and small plates while the boat is underway.",
+      "There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see.",
+      "Guests come to Courthouse Docks and Northern Ave, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "Half-Day Sail Around The Islands is a four-hour harbor outing with Boston Sailing Tours on Boston Harbor. The walk covers Half-Day Sail Around The Islands. The sail visits harbor islands.",
+    "schemaDescription": "A four-hour harbor outing with Boston Sailing Tours on Boston Harbor.",
     "highlights": [
       "four-hour harbor outing in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 33,
+    "wordCount": 116,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "2 Northern Avenue Boston, MA 02210",
@@ -6343,7 +6495,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests find real stories behind Salem's most infamous event, Salem Witch Trials, at sites where they occurred. The Salem tour can also cover stop at Salem cemetery where several notable residents, covering notorious judge who presided over Salem Witch Trials, are buried. After that, other possible things to notice in Salem cover House of Seven Gables, Salem Witch Museum, and Essex Street, Salem's downtown district.",
       "Visiting these sites will transport guests to colonial New England during time of hysteria and superstition that also led to one of most well-known tragedies in American history. Forget Cape Cod - these are true hidden gems of Massachusetts' shoreline."
     ],
-    "schemaDescription": "A guided outing with WeVenture Boston. The walk passes Local English-Speaking Guide, Salem Witch Museum, and House.",
+    "schemaDescription": "A guided outing with WeVenture Boston. The outing passes Local English-Speaking Guide, Salem Witch Museum, and House.",
     "highlights": [
       "Local English-Speaking Guide and Salem Witch Museum"
     ],
@@ -6409,17 +6561,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Step on Guide Service is a guided outing with WeVenture Boston. The route follows Paul Revere's midnight ride toward Lexington and Concord. The group visits Freedom Trail and Quincy Market. The group includes stories from the neighborhood. The group covers Boston Step on Guide Service.",
-      "The group starts at Beacon Hill Tailored. The group then visits Freedom Trail and Quincy Market. Later stops include Beacon Hill and Fenway Park."
+      "Guests hear about Fenway Park and Beacon Hill Tailored. The guide's account includes Local Guide Services Exclusions and Summary Embark. Stories along the way cover Freedom Trail and Quincy Market. Paul Revere come up in the commentary. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.",
+      "Among the places guests actually encounter are Fenway Park, Beacon Hill Tailored, and Local Guide Services Exclusions. Later the guide turns to Summary Embark and Freedom Trail, explaining what happened there. Guests come to Fenway Park and Beacon Hill Tailored, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A guided outing with WeVenture Boston. The walk passes Beacon Hill Tailored, Freedom Trail, and Quincy Market.",
+    "schemaDescription": "A guided outing with WeVenture Boston. The outing passes Beacon Hill Tailored, Freedom Trail, and Quincy Market.",
     "highlights": [
       "Beacon Hill Tailored and Freedom Trail"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/BMF5pQXKRbSIQDIg8hlk"
     ],
-    "wordCount": 70,
+    "wordCount": 107,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -6442,7 +6594,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Drive through along parts of the Freedom Trail and venture past must-see stops in Boston. Guests stop at Faneuil Hall and notice where first cries for Revolution rang out. Guests hear about some of events that led toward American Revolution - like tea party and a Boston Massacre.",
       "That driving tour will give guests overall past of Boston as well as showing guests how modern city is intimately connected toward the past. Stop with must-see stops of the Highlights Tour, guests also visit other neighborhoods and landmarks throughout the city."
     ],
-    "schemaDescription": "A food walk with WeVenture Boston. The walk visits Freedom Trail, Old State House, and Quincy Market.",
+    "schemaDescription": "A food walk with WeVenture Boston. Guests sample food near Freedom Trail, Old State House, and Quincy Market.",
     "highlights": [
       "Freedom Trail and Old State House"
     ],
@@ -6466,21 +6618,40 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Walking Tour",
     "publicPath": "/destinations/massachusetts/boston/tours/walking-tour-531495",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator A Father and Son Tour of Boston lists this outing."
+      "Guests hear about Nick Bessa and Copp's Hill Terrace. The guide's account includes Boston's North End and Bunker Hill Monument. The Revolution is the thread that ties the stops together, from the people involved to the places where events happened. Among the places guests actually encounter are Nick Bessa, Copp's Hill Terrace, and Boston's North End.",
+      "The walk starts at Copp's Hill Terrace and continues through the North End. From that ground, guests look toward the USS Constitution and the Bunker Hill Monument. The streets are treated as the oldest part of the city, and the stories are told there."
     ],
-    "schemaDescription": "The operator A Father and Son Tour of Boston lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A two-hour walking tour with A Father and Son Tour of Boston. The walk passes Copp's Hill Terrace, Boston's North End, and Bunker Hill Monument.",
+    "highlights": [
+      "2 Hours walking tour",
+      "Copp's Hill Terrace and Boston's North End"
+    ],
     "galleryImages": [],
-    "wordCount": 12,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 100,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
     "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $28.54",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 12+",
+        "amountLabel": "$28.54"
+      },
+      {
+        "label": "Paying Child Ticket",
+        "note": "Ages 11 and under",
+        "amountLabel": "$28.54"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "28.54",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -6496,7 +6667,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "On the way, guests visit locations that have formed the city's past and present. After that, scoot past Faneuil Hall, bustling marketplace known as Cradle of Liberty, and see the Old North Church, key site in the American Revolution. Guests hear about engineering marvel of the Big Dig, and waterfront views as guests cruise along Compass Point.",
       "The group is fun, fast-paced, and full of sights, making it the way to experience the city in an hour. Guests ride through Boston's streets and modern cityscapes, stopping at key landmarks on the way."
     ],
-    "schemaDescription": "A one-hour bicycle outing with . The walk passes Check-in & Training, Boston Harbor & Long Wharf, and Rose Kennedy Greenway.",
+    "schemaDescription": "A one-hour bicycle outing with . The outing passes Check-in & Training, Boston Harbor & Long Wharf, and Rose Kennedy Greenway.",
     "highlights": [
       "1 Hour bicycle outing",
       "Check-in & Training and Boston Harbor & Long Wharf",
@@ -6526,7 +6697,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Guests ride on Boston Common and Public Garden, oldest public park in country, and take in scenic beauty of the Charles River Esplanade. The group is fast-paced,, and packed with sights, giving guests twice the adventure of the tour. Guests ride through Boston's streets and scenic waterfront, stopping at key landmarks on the way.",
       "Faneuil Hall & Quincy Market - Ride past this marketplace, a cornerstone of Boston's revolutionary past. Old North Church - The site of Paul Revere's midnight ride. The Big Dig - Learn about the massive project that reshaped the city."
     ],
-    "schemaDescription": "A two-hour bicycle outing with . The walk passes Check-in & Training, Return to Base & Wrap-Up, and Take a group photo to capture the moment.",
+    "schemaDescription": "A two-hour bicycle outing with . The outing passes Check-in & Training, Return to Base & Wrap-Up, and Take a group photo to capture the moment.",
     "highlights": [
       "2 Hours bicycle outing",
       "Check-in & Training and Return to Base & Wrap-Up",
@@ -6552,10 +6723,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Hourly Scooter Rentals - Boston is a one-hour bicycle outing with Central Scoot. The walk visits Faneuil Hall and Boston Common. The group stays in Boston. The group covers Hourly Scooter Rentals - Boston. The group starts at Boston Common. The group then visits Charles River Esplanade and Faneuil Hall.",
-      "Guests must be at least 8 years old."
+      "The ride passes Flexible Rental Periods and Top Speed. Cyclists also come to Long Battery Life and Faneuil Hall. Boston Common and Charles River Esplanade are on the same loop. Later the route reaches Solo Riders. Guests cover the sights by bike, stopping where the guide has something to say.",
+      "Among the places guests actually encounter are Flexible Rental Periods, Top Speed, and Long Battery Life. Later the route reaches Faneuil Hall and Boston Common. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Flexible Rental Periods and Top Speed, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A one-hour bicycle outing with Central Scoot in Boston. The walk passes Boston Common, Charles River Esplanade, and Faneuil Hall.",
+    "schemaDescription": "A one-hour bicycle outing with Central Scoot in Boston. The outing passes Boston Common, Charles River Esplanade, and Faneuil Hall.",
     "highlights": [
       "one-hour bicycle outing in Boston",
       "Boston Common and Charles River Esplanade"
@@ -6563,7 +6734,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/pxvPpVX2RRW0B99AFo12"
     ],
-    "wordCount": 57,
+    "wordCount": 113,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "199 State Street Boston, MA 02109",
@@ -6627,16 +6798,16 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Daily Scooter Rentals - Boston is a bicycle outing lasting 1 Day - 30 Days with Central Scoot. The walk visits Faneuil Hall and Boston Common. The group stays in Boston. The group covers Daily Scooter Rentals - Boston. The group starts at Boston Common. The group then visits Charles River Esplanade and Faneuil Hall.",
-      "Guests must be at least 8 years old."
+      "The ride passes Flexible Rental Periods and Top Speed. Cyclists also come to Long Battery Life and Faneuil Hall. Boston Common and Charles River Esplanade are on the same loop. Later the route reaches Helmets Included and Unlimited Riding. Attention also goes to Solo Riders, and the guide explains why it is on the route.",
+      "Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Flexible Rental Periods, Top Speed, and Long Battery Life. Later the route reaches Faneuil Hall and Boston Common. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear."
     ],
-    "schemaDescription": "A bicycle outing lasting 1 Day - 30 Days with Central Scoot. The walk passes Boston Common, Charles River Esplanade, and Faneuil Hall.",
+    "schemaDescription": "A bicycle outing lasting 1 Day - 30 Days with Central Scoot. The outing passes Boston Common, Charles River Esplanade, and Faneuil Hall.",
     "highlights": [
       "1 Day - 30 Days bicycle outing",
       "Boston Common and Charles River Esplanade"
     ],
     "galleryImages": [],
-    "wordCount": 60,
+    "wordCount": 113,
     "durationLabel": "1 Day - 30 Days",
     "durationIso": null,
     "meetingLocation": "199 State Street Boston MA 02109",
@@ -6655,8 +6826,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Two Hour Private Sail Charter is a two-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston. The walk covers Two Hour Private Sail Charter. The group starts at Castle Island. The group then visits Spectacle Island and North End. The group passes Castle Island and Spectacle Island.",
-      "North End comes into view."
+      "From the water, guests see Boston Harbor and Sailing Charter. Castle Island and Spectacle Island come into view as the boat moves. The cruise also passes North End. The landmarks are seen from the harbor, with the boat doing the traveling. Among the places guests actually encounter are Boston Harbor, Sailing Charter, and Castle Island.",
+      "Later the guide turns to Spectacle Island and North End, explaining what happened there. Music plays during the cruise, and the landmark commentary is kept light. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks."
     ],
     "schemaDescription": "A two-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston. The sail passes Castle Island, Spectacle Island, and North End.",
     "highlights": [
@@ -6664,7 +6835,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Castle Island and Spectacle Island"
     ],
     "galleryImages": [],
-    "wordCount": 57,
+    "wordCount": 111,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -6691,21 +6862,34 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Private Half Day Sail Charter",
     "publicPath": "/destinations/massachusetts/boston/tours/private-half-day-sail-charter-144869",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Polaris Maritime LLC - D.B.A Classic Sail Boston lists this outing."
+      "From the water, guests see Boston Harbor Islands and Sailing Charter. The landmarks are seen from the harbor, with the boat doing the traveling. The sail goes out to the Boston Harbor Islands and later turns back toward the inner harbor. There is no walking route. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to Boston Harbor Islands and Sailing Charter, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "The operator Polaris Maritime LLC - D.B.A Classic Sail Boston lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A four-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston.",
+    "highlights": [
+      "4 hours harbor outing"
+    ],
     "galleryImages": [],
-    "wordCount": 14,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 110,
+    "durationLabel": "4 hours",
+    "durationIso": "PT4H",
     "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $1,054.70",
+    "priceRows": [
+      {
+        "label": "Private Sailing Charter",
+        "note": "All Ages welcome | Price includes up to 6 people",
+        "amountLabel": "$1,054.70"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "1054.70",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -6717,14 +6901,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Private Full Day Sail Charter is a 6-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston. The sail passes harbor lighthouses. The group stays in Boston. The group covers Private Full Day Sail Charter."
+      "From the water, guests see Boston Harbor and Sailing Charter. The landmarks are seen from the harbor, with the boat doing the traveling. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks.",
+      "The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to Boston Harbor and Sailing Charter, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "Private Full Day Sail Charter is a 6-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston. The sail passes harbor lighthouses. The group stays in Boston. The group covers Private Full Day Sail Charter.",
+    "schemaDescription": "A 6-hour harbor outing with Polaris Maritime LLC - D.B.A Classic Sail Boston.",
     "highlights": [
       "6 hours harbor outing"
     ],
     "galleryImages": [],
-    "wordCount": 39,
+    "wordCount": 107,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -6777,16 +6962,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a one-hour guided outing with Diva Royale Show. The group is a drag queen show. The group covers Diva Royale - Drag Queen Show Boston."
+      "Guests see a drag dinner show, with impersonations and a seated meal. Guests spend time at Including Taxes and Course Meal. The route also reaches People Group and Add-on For. Hot Seat and Admission Ticket are part of the same outing. Later the group comes to Upgrade General Admission and Dolly Parton.",
+      "There is time to look at Celine Dion and Liza Minnelli. Attention also goes to Nicki Minaj and Whitney Houston, with the guide attaching a story to each stop. Among the places guests actually encounter are Including Taxes, Course Meal, and People Group. Later the route reaches Add-on For and Hot Seat."
     ],
-    "schemaDescription": "This is a one-hour guided outing with Diva Royale Show. The group is a drag queen show. The group covers Diva Royale - Drag Queen Show Boston.",
+    "schemaDescription": "A one-hour guided outing with Diva Royale Show in Boston.",
     "highlights": [
       "one-hour guided outing in Boston"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/bFi7dmeThi48dxm5DoNH"
     ],
-    "wordCount": 27,
+    "wordCount": 106,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "25 Union Street Boston, MA 02108",
@@ -6865,17 +7051,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a 2.5-hour guided outing with Gilded Age Tour. The group covers the neighborhood's architecture. The group starts at Beacon Hill. The group then visits Trinity Church and Newbury Street. Later stops include Copley Square. Guide francophone pour la visite is included.",
-      "The group passes Beacon Hill and Trinity Church. The group also reaches Newbury Street and Copley Square. Selected dates are also offered in French. Groups stay at a maximum of 15 guests."
+      "Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. Guests spend time at Gilded Age and Newbury Street. The route also reaches Commonwealth Avenue and Trinity Church. John Hancock and Prudential Center are part of the same outing.",
+      "Later the group comes to Copley Square. Among the places guests actually encounter are Gilded Age, Newbury Street, and Commonwealth Avenue. Later the guide turns to Trinity Church and John Hancock, explaining what happened there. Guests come to Gilded Age and Newbury Street, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 2.5-hour guided outing with Gilded Age Tour. The walk passes Beacon Hill, Trinity Church, and Newbury Street.",
+    "schemaDescription": "A 2.5-hour guided outing with Gilded Age Tour. The outing passes Beacon Hill, Trinity Church, and Newbury Street.",
     "highlights": [
       "2.5 Hours guided outing",
       "Beacon Hill and Trinity Church",
       "guide francophone pour la visite"
     ],
     "galleryImages": [],
-    "wordCount": 77,
+    "wordCount": 100,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
     "meetingLocation": "Boston Foundation Monument",
@@ -6909,14 +7095,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Harborfest Fireworks Cruise is a harbor outing with Liberty Fleet of Tall Ships. The outing is aboard Liberty. The group watches the fireworks from the harbor. The group is aboard a tall ship. The group covers Boston Harborfest Fireworks Cruise."
+      "The cruise is out on the harbor for the fireworks. From the water, guests see Celebrate Harborfest and Liberty Star. Boston Harbor and Apple Pay come into view as the boat moves. The cruise also passes Fine Print. The landmarks are seen from the harbor, with the boat doing the traveling.",
+      "People are on the water so they can watch the display away from the crowded shore. Among the places guests actually encounter are Celebrate Harborfest, Liberty Star, and Boston Harbor. Later the route reaches Apple Pay and Fine Print. The deck bar sells drinks and small plates while the boat is underway."
     ],
     "schemaDescription": "A harbor outing with Liberty Fleet of Tall Ships.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/fvW2LWcR7SpjSnNV7ihA"
     ],
-    "wordCount": 41,
+    "wordCount": 103,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -6933,18 +7120,21 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston Harbor Day Sail",
     "publicPath": "/destinations/massachusetts/boston/tours/boston-harbor-day-sail-80573",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Liberty Fleet of Tall Ships lists this outing."
+      "From the water, guests see Liberty Star. The landmarks are seen from the harbor, with the boat doing the traveling. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks.",
+      "The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to Liberty Star, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "The operator Liberty Fleet of Tall Ships lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 1.5-hour harbor outing with Liberty Fleet of Tall Ships.",
+    "highlights": [
+      "1.5 Hours harbor outing"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/E5DUB3jQG6TzmJj8n7ug"
     ],
-    "wordCount": 10,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 100,
+    "durationLabel": "1.5 Hours",
+    "durationIso": "PT1H30M",
     "meetingLocation": "Liberty Fleet of Tall Ships (Boston)",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -6961,7 +7151,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Harbor Sunset Sail is a two-hour harbor outing with Liberty Fleet of Tall Ships. The sail is aboard a tall ship. The group is a sunset harbor outing. The group covers Boston Harbor Sunset Sail. The group starts at Fan Pier Marina."
+      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Fan Pier Marina. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck.",
+      "There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
     "schemaDescription": "A two-hour harbor outing with Liberty Fleet of Tall Ships. The sail passes Fan Pier Marina and Star.",
     "highlights": [
@@ -6971,7 +7162,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/8sJkOK6Q3cj48IYnFqhw"
     ],
-    "wordCount": 44,
+    "wordCount": 100,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Liberty Fleet of Tall Ships (Boston)",
@@ -6990,16 +7181,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Sunset Cruise is a 1.5-hour harbor outing with Massachusetts Bay Lines. The walk visits USS Constitution. The group is a sunset harbor outing. The group covers Sunset Cruise."
+      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Mass Bay Lines. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck.",
+      "The deck bar sells drinks and small plates while the boat is underway. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "Sunset Cruise is a 1.5-hour harbor outing with Massachusetts Bay Lines. The walk visits USS Constitution. The group is a sunset harbor outing. The group covers Sunset Cruise.",
+    "schemaDescription": "A 1.5-hour harbor outing with Massachusetts Bay Lines.",
     "highlights": [
       "1.5 hours harbor outing"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/XCEJUiQTTriNgK5f48Fc"
     ],
-    "wordCount": 30,
+    "wordCount": 113,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "Boston Harbor",
@@ -7051,23 +7243,61 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston Harbor Moonlight Cruise",
     "publicPath": "/destinations/massachusetts/boston/tours/boston-harbor-moonlight-cruise-512335",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Massachusetts Bay Lines lists this outing."
+      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Mass Bay Lines. The landmarks are seen from the harbor, with the boat doing the traveling. The changing skyline is the view, with the boat moving while guests watch from the deck.",
+      "There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "The operator Massachusetts Bay Lines lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 1.5-hour harbor outing with Massachusetts Bay Lines.",
+    "highlights": [
+      "1.5 hours harbor outing"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/NDYpJ3mUTHCql86q65F4"
     ],
-    "wordCount": 8,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 100,
+    "durationLabel": "1.5 hours",
+    "durationIso": "PT1H30M",
     "meetingLocation": "Boston Harbor",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $31.80",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18-59",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 6-12",
+        "amountLabel": "$15.90"
+      },
+      {
+        "label": "Toddler",
+        "note": "Ages 5 & Under",
+        "amountLabel": "$12.19"
+      },
+      {
+        "label": "Student",
+        "note": "Ages 13-17 • With Valid ID",
+        "amountLabel": "$27.56"
+      },
+      {
+        "label": "Senior",
+        "note": "Ages 60+",
+        "amountLabel": "$28.62"
+      },
+      {
+        "label": "Military",
+        "note": "With Valid ID",
+        "amountLabel": "$28.62"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "31.80",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -7077,17 +7307,21 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston 250",
     "publicPath": "/destinations/massachusetts/boston/tours/boston-250-692147",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Massachusetts Bay Lines lists this outing."
+      "Guests spend time at Watch Boston Harbor. Guests come to Watch Boston Harbor, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
+      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
+      "Seeing the place and hearing the reason for it are the whole visit."
     ],
-    "schemaDescription": "The operator Massachusetts Bay Lines lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 90-minute guided outing with Massachusetts Bay Lines in Boston.",
+    "highlights": [
+      "90-minute guided outing in Boston"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/JDL5jl4RBqeVpUcfV5qG"
     ],
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 108,
+    "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "60 Rowes Wharf, Boston Ma 02110 Boston, MA 02110",
     "visiblePriceLabel": null,
@@ -7105,19 +7339,19 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 60-minute guided outing with The Motorsport Lab. The group follows the streets of Boston. The group covers Boston - Supercar Street Track Driving Experience. (F360 Modena, Lamborghini Huracan, Lamborghini Urus) is included. The outdoor route is about 2.25 miles. The group passes Indy Car Street Track.",
-      "Groups are capped at 1. Guests must be at least 25 years old."
+      "The drive passes Indy Car Street Track and Lamborghini Supercar. Farther along, the van goes by Boston's Seaport District and Boston Harbor. Street Track Lap and Photo Time are on the same circuit. Also visible from the van are Lamborghini Huracan and Lamborghini Urus. The later stretch includes Boston IndyCar Street Circuit and Pure Adrenaline.",
+      "Attention also goes to Premium Motorsport Lab Hat, and the guide explains why it is on the route. The point of the outing is the succession of landmarks seen from the van, not a march between them. Among the places guests actually encounter are Indy Car Street Track, Lamborghini Supercar, and Boston's Seaport District."
     ],
-    "schemaDescription": "A 60-minute guided outing with The Motorsport Lab in Boston. The walk passes Indy Car Street Track.",
+    "schemaDescription": "A 60-minute driving tour with The Motorsport Lab in Boston. The drive passes Indy Car Street Track.",
     "highlights": [
-      "60-minute guided outing in Boston",
+      "60-minute driving tour in Boston",
       "Indy Car Street Track",
       "(F360 Modena, Lamborghini Huracan, Lamborghini Urus)"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/kv9DxEyxTzu72nF1EwK1"
     ],
-    "wordCount": 63,
+    "wordCount": 109,
     "durationLabel": "60 Minutes",
     "durationIso": null,
     "meetingLocation": "22 Boston Wharf Road Boston, MA 02210",
@@ -7177,15 +7411,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Boston TV and Movie Sites is a guided outing with On Location Tours Boston. Private groups sample local food while walking a Boston neighborhood. The walk visits Boston Common. The group includes photo clues and puzzles. The group stays in Boston. The group covers Boston TV and Movie Sites.",
-      "The group starts at On Location Tours' Boston TV. The group then visits Town and Street Tavern. Later stops include Heat."
+      "A few optional stops leave time to step out for photographs and a closer look. Local actors lead the group by coach bus and talk through film locations. One stop is the L Street Tavern, known from Good Will Hunting. The bus also passes a chase location from the film The Town.",
+      "The bus passes Street Tavern and Good Will Hunting. Also on the film route are Boston Legal and Ally McBeal. Legally Blonde and Fever Pitch are part of the same ride. Attention also goes to American Hustle and Mystic River, with the guide attaching a story to each stop."
     ],
-    "schemaDescription": "A guided outing with On Location Tours Boston. The walk passes On Location Tours' Boston TV, Town, and Street Tavern.",
+    "schemaDescription": "A guided outing with On Location Tours Boston. The outing passes On Location Tours' Boston TV, Town, and Street Tavern.",
     "highlights": [
       "On Location Tours' Boston TV and Town"
     ],
     "galleryImages": [],
-    "wordCount": 70,
+    "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -7214,9 +7448,9 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests find magic of Boston's most filmed area with the Boston Movie Mile Walking Tour. From classic movie scenes to TV shows, the interactive walking tour showcases best of Boston's cinematic history. After that, get ready to walk in footsteps of the favorite characters and uncover secrets of the silver screen.",
-      "However, one of tour's most memorable stops is bench immortalized in Good Will Hunting, offering guests a chance to step toward the footsteps of cinematic history. As guests traverse the streets, guests encounter numerous filming locations and hidden gems, covering the Acorn Street - as the most photographed street in Boston.",
-      "The tour culminates at one of Boston's landmarks - Cheers bar, also known as Bull and Finch Pub. Guests come as guests unravel cinematic treasures hidden within streets of Boston's Beacon Hill. Lastly, steal a glimpse of one of Boston's most homes, as showcased in The Thomas Crown Affair, weaving together a narrative of elegance and intrigue."
+      "A few optional stops leave time to step out for photographs and a closer look. Stops include the Old Corner Bookstore and the Athenaeum. One stop is the L Street Tavern, known from Good Will Hunting. Later the group hears stories on Boston Common and photographs Acorn Street on Beacon Hill.",
+      "The Public Garden, the country's first botanical garden, is on the same day. The bus passes Boston TV and Boston Common Area Embark. Also on the film route are Boston Public Garden and Massachusetts State House. Sailors Monument and Ally McBeal are part of the same ride.",
+      "Attention also goes to Brewer Fountain and Park Street Station, with the guide attaching a story to each stop."
     ],
     "schemaDescription": "A 1.5-hour walking tour with On Location Tours Boston in Boston. The walk passes Boston Common, Beacon Hill, and Boston Common Area Embark.",
     "highlights": [
@@ -7224,7 +7458,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Boston Common and Beacon Hill"
     ],
     "galleryImages": [],
-    "wordCount": 157,
+    "wordCount": 117,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "139 Tremont St Boston, MA 02111",
@@ -7316,23 +7550,43 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Highlights of Boston Photo Tour",
     "publicPath": "/destinations/massachusetts/boston/tours/highlights-of-boston-photo-tour-58904",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator PhotoWalks Tours lists this outing."
+      "Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. Guests hear about Beacon Hill and Public Garden. The guide's account includes Back Bay. Guests stay on foot the whole time, pausing while the guide talks at each site.",
+      "Among the places guests actually encounter are Beacon Hill, Public Garden, and Back Bay. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
+      "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given."
     ],
-    "schemaDescription": "The operator PhotoWalks Tours lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A two-hour photography walk with PhotoWalks Tours. The walk passes Beacon Hill and Public Garden.",
+    "highlights": [
+      "2 Hours photography walk",
+      "Beacon Hill and Public Garden"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ewfB4hIcRQagoTmXVLw1"
     ],
-    "wordCount": 7,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 112,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
     "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $58.30",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18+",
+        "amountLabel": "$58.30"
+      },
+      {
+        "label": "Youth",
+        "note": "Ages 10-17",
+        "amountLabel": "$26.50"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "58.30",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -7366,23 +7620,43 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston's Architectural Landmarks + Scenic Photo Tour",
     "publicPath": "/destinations/massachusetts/boston/tours/bostons-architectural-landmarks-scenic-photo-tour-89865",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator PhotoWalks Tours lists this outing."
+      "Guests walk Beacon Hill's brick streets and the wider avenues of Back Bay, hearing the history of each. The route also reaches Boston Public Garden Engaging. Guests stay on foot the whole time, pausing while the guide talks at each site. Among the places guests actually encounter are Back Bay, Beacon Hill, and Boston Public Garden Engaging.",
+      "Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given."
     ],
-    "schemaDescription": "The operator PhotoWalks Tours lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A two-hour photography walk with PhotoWalks Tours. The walk passes Public Garden, Beacon Hill, and Boston Public Library.",
+    "highlights": [
+      "2 Hours photography walk",
+      "Public Garden and Beacon Hill",
+      "Engaging historical commentary + A photo tips"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/szJiPZ8XTrecomlzfE6A"
     ],
-    "wordCount": 7,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 108,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
     "meetingLocation": "Boston Public Library on DARTMOUTH St.--NOT Boylston St. Stand by the bronze statue holding a ball.",
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $58.30",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "",
+        "amountLabel": "$58.30"
+      },
+      {
+        "label": "Youth",
+        "note": "Ages 10-17",
+        "amountLabel": "$26.50"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "58.30",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -7394,7 +7668,8 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Dog Photography Class is a photography walk with PhotoWalks Tours. The outing includes photo clues and puzzles. The group covers Boston Dog Photography Class. The group starts at Boston Dog Photography Class Capture. The group then visits Beacon Hill and Charles River Esplanade. Later stops include Meeting Point and Beacon Hill Hotel."
+      "The route also reaches Meeting Point and Chestnut St. Attention also goes to Beacon Hill and Charles River Esplanade, with the guide attaching a story to each stop. Among the places guests actually encounter are Beacon Hill, Charles River Esplanade, and Meeting Point. Guests come to Beacon Hill and Charles River Esplanade, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A photography walk with PhotoWalks Tours. The walk passes Boston Dog Photography Class Capture, Beacon Hill, and Charles River Esplanade.",
     "highlights": [
@@ -7403,7 +7678,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/YvykGWRBQAygBimWU3dD"
     ],
-    "wordCount": 53,
+    "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -7422,10 +7697,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "East Boston Pickup is a 10- to 20-minute guided outing with Rowes Wharf Water Transport. The sail is aboard a tall ship. The group covers East Boston Pickup. The group starts at Reel House. The group then visits Lewis Mall and AT THE BEGINNING OF THE WINDOW.",
-      "Later stops include PASSENGERS AND ARE UNABLE TO WAIT. Harbor Experience Ticket and Drinks available for purchase on board are included."
+      "Guests see the pickup boat at the Tall Ship, Lewis Mall, or Reel House in East Boston. The route also reaches Smoke Shop and Reel House. Rowes Wharf and Water Taxi Drinks are part of the same outing. Among the places guests actually encounter are Tall Ship, Lewis Mall, and Smoke Shop.",
+      "Later the route reaches Reel House and Rowes Wharf. Guests come to Tall Ship and Lewis Mall, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop."
     ],
-    "schemaDescription": "A 10- to 20-minute guided outing with Rowes Wharf Water Transport. The walk passes Reel House, Lewis Mall, and AT THE BEGINNING OF THE WINDOW.",
+    "schemaDescription": "A 10- to 20-minute guided outing with Rowes Wharf Water Transport. The outing passes Reel House, Lewis Mall, and AT THE BEGINNING OF THE WINDOW.",
     "highlights": [
       "10-20 minutes guided outing",
       "Reel House and Lewis Mall",
@@ -7434,7 +7709,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/hjAQMDySRIWG34KZMlUJ"
     ],
-    "wordCount": 69,
+    "wordCount": 103,
     "durationLabel": "10-20 minutes",
     "durationIso": null,
     "meetingLocation": "East Boston (See \"Additional information\")",
@@ -7534,16 +7809,18 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 75-minute guided outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group covers Rise & Shine SUP Yoga • Boston, MA."
+      "The paddle passes Boston Harbor Paddle and Whats Included. From the water the group comes to Stand Up Paddleboard and Life Vest. Bathing Suit are on the same stretch. Among the places guests actually encounter are Boston Harbor Paddle, Whats Included, and Stand Up Paddleboard.",
+      "Later the route reaches Life Vest and Bathing Suit. Guests come to Boston Harbor Paddle and Whats Included, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
+      "History stays attached to the places, which is why the route exists."
     ],
-    "schemaDescription": "This is a 75-minute guided outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group covers Rise & Shine SUP Yoga • Boston, MA.",
+    "schemaDescription": "A 75-minute guided outing with SUP YO in Boston.",
     "highlights": [
       "75-minute guided outing in Boston"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/DMTGhJLpT0uaNnM5R9ZZ"
     ],
-    "wordCount": 34,
+    "wordCount": 109,
     "durationLabel": "75 Minutes",
     "durationIso": null,
     "meetingLocation": "1 Binford Street, Boston, MA",
@@ -7562,16 +7839,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a 75-minute guided outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group covers Sunset SUP Yoga • Boston, MA."
+      "The paddle passes Whats Included and Stand Up Paddleboard. From the water the group comes to Life Vest and Bathing Suit. Among the places guests actually encounter are Whats Included, Stand Up Paddleboard, and Life Vest. Guests come to Whats Included and Stand Up Paddleboard, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "This is a 75-minute guided outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group covers Sunset SUP Yoga • Boston, MA.",
+    "schemaDescription": "A 75-minute guided outing with SUP YO in Boston.",
     "highlights": [
       "75-minute guided outing in Boston"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/92DW0WmcT5uRP2u2u0Jy"
     ],
-    "wordCount": 33,
+    "wordCount": 106,
     "durationLabel": "75 Minutes",
     "durationIso": null,
     "meetingLocation": "1 Binford Street, Boston, MA",
@@ -7590,14 +7868,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Boston Harbor Paddle • Boston, MA is a paddle outing with SUP YO. The outing includes a stand-up paddle session. The group includes yoga on a paddleboard. The group stays in Boston. The group covers Boston Harbor Paddle • Boston, MA. The group starts at Boston Tea Party Museum."
+      "The paddle passes Channelside Dock and Fort Point Pier. From the water the group comes to Boston Tea Party Museum and Stand Up Paddleboard. Life Vest and Bathing Suit are on the same stretch. Among the places guests actually encounter are Channelside Dock, Fort Point Pier, and Boston Tea Party Museum.",
+      "Later the guide turns to Stand Up Paddleboard and Life Vest, explaining what happened there. The changing skyline is the view, with the boat moving while guests watch from the deck. Guests come to Channelside Dock and Fort Point Pier, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A paddle outing with SUP YO in Boston. The walk passes Boston Tea Party Museum and Fort Point Pier.",
+    "schemaDescription": "A paddle outing with SUP YO in Boston. The outing passes Boston Tea Party Museum and Fort Point Pier.",
     "highlights": [
       "Boston Tea Party Museum and Fort Point Pier"
     ],
     "galleryImages": [],
-    "wordCount": 48,
+    "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1 Binford Street, Boston, MA",
@@ -7616,14 +7895,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "This is a two-hour paddle outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group stays on the water in Boston."
+      "The paddle passes Whats Included and Stand Up Paddleboard. From the water the group comes to Life Vest and Bathing Suit. Among the places guests actually encounter are Whats Included, Stand Up Paddleboard, and Life Vest. Guests come to Whats Included and Stand Up Paddleboard, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "This is a two-hour paddle outing with SUP YO. The group includes a stand-up paddle session. The group includes yoga on a paddleboard. The group stays on the water in Boston.",
+    "schemaDescription": "A two-hour paddle outing with SUP YO in Boston.",
     "highlights": [
       "two-hour paddle outing in Boston"
     ],
     "galleryImages": [],
-    "wordCount": 33,
+    "wordCount": 106,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1 Binford Street, Boston, MA",
@@ -7642,15 +7922,17 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Boston, Massachusetts is a two-hour guided outing with Teraloom. The outing is an accompanied memorial on the water. The group covers Boston, Massachusetts. The group passes Accompanied Memorial Service."
+      "Guests go aboard for a private memorial, with prayers, music, and a ceremony the family chooses. Guests spend time at Accompanied Memorial Service and Personalized Ceremony. Guests come to Accompanied Memorial Service and Personalized Ceremony, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later.",
+      "Guests stay with that subject for the length of the outing."
     ],
-    "schemaDescription": "Boston, Massachusetts is a two-hour guided outing with Teraloom. The outing is an accompanied memorial on the water. The group covers Boston, Massachusetts. The group passes Accompanied Memorial Service.",
+    "schemaDescription": "A two-hour guided outing with Teraloom in Boston. The outing passes Accompanied Memorial Service.",
     "highlights": [
       "two-hour guided outing in Boston",
       "Accompanied Memorial Service"
     ],
     "galleryImages": [],
-    "wordCount": 30,
+    "wordCount": 107,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -7708,16 +7990,21 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Charlie's Queer Boston- An Evening With The History Project",
     "publicPath": "/destinations/massachusetts/boston/tours/charlies-queer-boston--an-evening-with-the-history-project-639737",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator The Gibson House lists this outing."
+      "The outing follows queer life in Boston from the 18th century into the Gay Liberation years. Attention also goes to Pride Month, and the guide explains why it is on the route. Persecution, resistance, and celebration are all part of what the guide covers. Guests come to Pride Month, and they hear why it is on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
-    "schemaDescription": "The operator The Gibson House lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A two-hour walking tour with The Gibson House in Boston. The walk passes History Project Join Boston's LGBTQ.",
+    "highlights": [
+      "two-hour walking tour in Boston",
+      "History Project Join Boston's LGBTQ",
+      "Tours of the Gibson House Museum"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 109,
+    "durationLabel": "2 hours",
+    "durationIso": "PT2H",
     "meetingLocation": "137 Beacon St Boston, MA 02116",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -7732,21 +8019,45 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "Boston Night Tour",
     "publicPath": "/destinations/massachusetts/boston/tours/boston-night-tour-605912",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "OK",
     "paragraphs": [
-      "The operator Tour of The Freedom Trail lists this outing."
+      "Guests hear about Let's Adventure and Boston Strangler. The guide's account includes Boston Massacre Site and Freedom Trail. Stories along the way cover Bean Town and More Information. Paranormal Investigators and History Buffs come up in the commentary. Among the places guests actually encounter are Let's Adventure, Boston Strangler, and Boston Massacre Site.",
+      "Later the guide turns to Freedom Trail and Bean Town, explaining what happened there. Guests come to Let's Adventure and Boston Strangler, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "The operator Tour of The Freedom Trail lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 90-minute guided outing with Tour of The Freedom Trail. The outing passes Freedom Trail.",
+    "highlights": [
+      "90 Minutes guided outing",
+      "Freedom Trail"
+    ],
     "galleryImages": [],
-    "wordCount": 10,
-    "durationLabel": null,
+    "wordCount": 101,
+    "durationLabel": "90 Minutes",
     "durationIso": null,
     "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
+    "visiblePriceLabel": "From $31.80",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Senior/Student",
+        "note": "Proof of ID will be required during check in",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 12 and under",
+        "amountLabel": "$21.20"
+      }
+    ],
     "pricingNotes": [],
-    "offer": null,
+    "offer": {
+      "type": "Offer",
+      "price": "31.80",
+      "priceCurrency": "USD"
+    },
     "aggregateRating": null,
     "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
@@ -7756,18 +8067,23 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "title": "The Untold History of Boston Walking Tour",
     "publicPath": "/destinations/massachusetts/boston/tours/the-untold-history-of-boston-walking-tour-562574",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator The Untold History of Boston lists this outing."
+      "Guests follow part of the Freedom Trail and hear how the Revolution began. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to.",
+      "Guests come to Freedom Trail, and they hear why it is on the trip."
     ],
-    "schemaDescription": "The operator The Untold History of Boston lists this outing.",
-    "highlights": [],
+    "schemaDescription": "A 2.5-hour walking tour with The Untold History of Boston. The walk passes Hours About The Untold History and Freedom Trail.",
+    "highlights": [
+      "2.5 Hours walking tour",
+      "Hours About The Untold History and Freedom Trail"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/31gjzx5QkmIYlYISY0Bg"
     ],
-    "wordCount": 10,
-    "durationLabel": null,
-    "durationIso": null,
+    "wordCount": 108,
+    "durationLabel": "2.5 Hours",
+    "durationIso": "PT2H30M",
     "meetingLocation": null,
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -7836,10 +8152,10 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Tour de Boston is a 2- to 2.5-hour guided outing with Urban Adventours. The walk visits USS Constitution. The group covers Tour de Boston. The group is aimed at families, including guests who prefer an easier pace. The group stays on bike paths along the Charles River.",
-      "The group stays out of downtown neighborhoods. Each guest rides an individually fitted bike. Gorgeous views of Boston and Cambridge, The Zakim Bridge, and Old Ironsides - the USS Constitution are included. The outdoor route is about 10 miles. The group passes Charlestown Navy Yard."
+      "The ride passes Charles River and City View. Cyclists also come to Charlestown Navy Yard and Cambridge. Zakim Bridge Old Ironsides are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Charles River, City View, and Charlestown Navy Yard.",
+      "Later the guide turns to Cambridge and Zakim Bridge Old Ironsides, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Charles River and City View, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A 2- to 2.5-hour guided outing with Urban Adventours in Boston. The walk passes Charlestown Navy Yard.",
+    "schemaDescription": "A 2- to 2.5-hour guided outing with Urban Adventours in Boston. The outing passes Charlestown Navy Yard.",
     "highlights": [
       "2- to 2.5-hour guided outing in Boston",
       "Charlestown Navy Yard",
@@ -7848,7 +8164,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/d7jwQ9qpSkil08sQBe3w"
     ],
-    "wordCount": 93,
+    "wordCount": 107,
     "durationLabel": "2-2.5 Hours",
     "durationIso": null,
     "meetingLocation": "103 Atlantic Ave, Boston MA",
@@ -7887,9 +8203,11 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Tour de Cambridge is a 2.5- to 3-hour guided outing with Urban Adventours in Boston. The walk covers Tour de Cambridge. The group starts at Harvard Square. The group passes Harvard Square and Longfellow Bridge."
+      "The ride passes Charles River and Boston's Left Bank. Cyclists also come to Harvard University and Massachusetts Institute. Cambridge are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Charles River, Boston's Left Bank, and Harvard University.",
+      "Later the route reaches Massachusetts Institute and Cambridge. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Charles River and Boston's Left Bank, and they hear why those places are on the trip.",
+      "Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "Tour de Cambridge is a 2.5- to 3-hour guided outing with Urban Adventours in Boston. The walk covers Tour de Cambridge. The group starts at Harvard Square. The group passes Harvard Square and Longfellow Bridge.",
+    "schemaDescription": "A 2.5- to 3-hour guided outing with Urban Adventours in Boston. The outing passes Harvard Square and Longfellow Bridge.",
     "highlights": [
       "2.5- to 3-hour guided outing in Boston",
       "Harvard Square and Longfellow Bridge"
@@ -7897,7 +8215,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/81Z8g0DVTBGzLAf8ayD6"
     ],
-    "wordCount": 37,
+    "wordCount": 115,
     "durationLabel": "2.5-3 Hours",
     "durationIso": null,
     "meetingLocation": "103 Atlantic Avenue Boston, MA 02110",
@@ -7930,7 +8248,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "From shaded boulevard on Commonwealth Avenue toward popular shores of Jamaica Pond toward winding paths of the Arnold Arboretum, come route that's favorite among locals and best way to notice the green side of Boston. Additional Information the outing is not also recommended for inexperienced or young riders.",
       "The group may be scheduled as private tour any time of the year."
     ],
-    "schemaDescription": "A 3.5- to 4-hour guided outing with Urban Adventours in Boston. The walk passes Public Garden, Charles River Esplanade, and Isabella Stewart Gardner Museum.",
+    "schemaDescription": "A 3.5- to 4-hour guided outing with Urban Adventours in Boston. The outing passes Public Garden, Charles River Esplanade, and Isabella Stewart Gardner Museum.",
     "highlights": [
       "3.5- to 4-hour guided outing in Boston",
       "Public Garden and Charles River Esplanade"
@@ -7977,14 +8295,15 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "City Bike Rental is a bicycle outing with Urban Adventours in Boston. The walk stays in Boston. The group covers City Bike Rental. The group starts at Beacon Hill. The group passes Beacon Hill and Holiday About The Kona Dew Boston."
+      "The bike is a Kona Dew, geared for hills such as Beacon Hill, and the fenders are bright green. The ride passes Beacon Hill and More Information. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
+      "Guests come to Beacon Hill and More Information, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop."
     ],
-    "schemaDescription": "A bicycle outing with Urban Adventours in Boston. The walk passes Beacon Hill and Holiday About The Kona Dew Boston.",
+    "schemaDescription": "A bicycle outing with Urban Adventours in Boston. The outing passes Beacon Hill and Holiday About The Kona Dew Boston.",
     "highlights": [
       "Beacon Hill and Holiday About The Kona Dew Boston"
     ],
     "galleryImages": [],
-    "wordCount": 41,
+    "wordCount": 102,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "103 Atlantic Ave, Boston MA",

@@ -824,6 +824,12 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             product["highlights"],
             product["schemaDescription"],
             exception=exception,
+            title=catalog.get("title") or "",
+            description=(facts.get("description") or "") if exception not in {
+                "SOURCE_NOT_FOUND",
+                "BOOKING_PAGE_NOT_FOUND",
+                "INSUFFICIENT_SOURCE_CONTENT",
+            } else "",
         )
         extra.extend(voice_errors)
         extra.extend(

@@ -18,6 +18,7 @@ from editorial_voice import (
     fragment_errors,
     implementation_language_errors,
     load_editorial_sample,
+    prose_quality_errors,
 )
 
 
@@ -150,6 +151,43 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertNotIn("packing notes", body)
         self.assertRegex(body, r"sample|lobster|chowder|baked beans|cream pie")
         self.assertFalse(editorial_is_thin(paragraphs) or len(body.split()) < 28)
+
+    def test_driving_tour_is_not_described_as_a_walk(self):
+        title = "Half Day Driving Tour of Boston & Cambridge"
+        description = (
+            "This half-day driving tour takes guests through Boston and Cambridge in a heated "
+            "and air-conditioned modern minivan. The drive includes the Old North Church, "
+            "Paul Revere's house, Faneuil Hall, Boston Common, Beacon Hill, the Bunker Hill Monument, "
+            "USS Constitution, Harvard, MIT, Copley Square, and the Boston Public Library. "
+            "The tour is mainly driving, with a few optional stops of 5-10 minutes to step out "
+            "for photographs. Guests hear stories about Boston's past, the American Revolution, "
+            "and the mix of religious morals and corruption. Pickup can be at a hotel, Logan Airport, "
+            "or the cruise terminal. The van seats 6 people."
+        )
+        paragraphs, _highlights, _schema, _removed = compose_editorial(
+            {"title": title, "operator": "Boston Hidden Gems"},
+            {
+                "description": description,
+                "duration": "4 hours",
+                "included": [],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "Boston", "state": "Massachusetts"}},
+        )
+        body = " ".join(paragraphs)
+        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertNotIn("the walk", body.lower())
+        self.assertNotIn(title.lower(), body.lower())
+        self.assertNotRegex(body.lower(), r"the (group|walk|outing) covers")
+        self.assertEqual(prose_quality_errors(paragraphs, title, description), [])
 
 
 if __name__ == "__main__":

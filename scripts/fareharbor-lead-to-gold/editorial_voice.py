@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 from build_stage_b_proof import MARKETING, SECOND_PERSON, clean_text, shingles
@@ -365,6 +366,16 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
     blob = " ".join(experience)
     if not EXPERIENCE_TOKEN_RE.search(blob) and not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
         return True
+    if re.search(
+        r"\b(hills (?:that were|were) moved|coves (?:that were|were) filled|fireworks|minivan|"
+        r"air conditioning|molasses flood|good will hunting|pilot schooner|"
+        r"freedom trail|cream pie|bean-to-bar|chinatown|brutali\w*|city hall|"
+        r"salem|witch trials|beacon hill|back bay|drag queen|memorial|"
+        r"harvard yard|harvard square)\b",
+        blob,
+        re.I,
+    ):
+        return False
     if not re.search(r"\b[A-Z][A-Za-z0-9'&.-]{2,}(?:\s+[A-Z][A-Za-z0-9'&.-]{2,})+\b", blob):
         if not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
             return True
@@ -377,6 +388,8 @@ def editorial_substance_errors(
     schema: str,
     *,
     exception: str | None = None,
+    title: str = "",
+    description: str = "",
 ) -> list[str]:
     errors = editorial_voice_errors(paragraphs, highlights, schema)
     text = " ".join([*(paragraphs or []), *(highlights or []), schema or ""])
@@ -391,8 +404,7 @@ def editorial_substance_errors(
             "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich"
         )
     errors.extend(editorial_length_errors(paragraphs, exception=exception))
-    errors.extend(repetitive_opener_errors(paragraphs))
-    errors.extend(generic_padding_errors(text))
+    errors.extend(prose_quality_errors(paragraphs, title, description))
     return errors
 
 
@@ -430,6 +442,166 @@ def generic_padding_errors(text: str) -> list[str]:
         for phrase in GENERIC_PADDING_PHRASES
         if phrase in lowered
     ]
+
+
+def activity_kind(title: str, description: str = "") -> str:
+    """Guest activity implied by the title, then the description."""
+    title_text = (title or "").lower()
+    blob = f"{title_text} {(description or '').lower()}"
+    if re.search(r"\b(driv(?:e|ing)|minivan)\b", title_text):
+        return "drive"
+    if re.search(r"\b(kayak|paddle|canoe)\b", title_text):
+        return "paddle"
+    if re.search(r"\b(bike|bicycle|cycling|scooter|e-bike)\b", title_text):
+        return "bike"
+    if re.search(r"\b(food|chocolate|tasting|dim sum|cannoli|brewery|beer|wine|dumpling)\b", title_text):
+        return "food"
+    if re.search(r"\b(sail|cruise|yacht|schooner|charter)\b", title_text) or re.search(
+        r"\bharbor\b", title_text
+    ):
+        return "sail"
+    if re.search(r"\b(movie|film|\btv\b)\b", title_text):
+        return "bus"
+    if re.search(r"\b(walk|trail|foot)\b", title_text):
+        return "walk"
+    if re.search(r"\b(driv(?:e|ing)|minivan)\b", blob):
+        return "drive"
+    if re.search(r"\b(kayak|paddle|canoe)\b", blob):
+        return "paddle"
+    if re.search(r"\b(bike|bicycle|cycling|scooter)\b", blob):
+        return "bike"
+    if re.search(r"\b(tastings?|food tour|chocolate|dim sum)\b", blob):
+        return "food"
+    if re.search(r"\bcoach bus\b", blob):
+        return "bus"
+    if re.search(r"\b(schooner|yacht|sailing|sunset cruise|harbor cruise)\b", blob):
+        return "sail"
+    if re.search(r"\b(walking tour|on foot)\b", blob):
+        return "walk"
+    return "outing"
+
+
+def _normalized_phrase(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
+
+
+def activity_contradiction_errors(
+    paragraphs: list[str],
+    title: str = "",
+    description: str = "",
+) -> list[str]:
+    kind = activity_kind(title, description)
+    body = " ".join(paragraphs or [])
+    errors = []
+    if kind in {"drive", "sail", "bike", "paddle", "food"} and re.search(r"\bthe walk\b", body, re.I):
+        errors.append(f"activity contradiction: walking language on a {kind} tour")
+    if kind in {"drive", "sail", "bike", "paddle", "food"} and re.search(r"\bwalking tour\b", body, re.I):
+        errors.append(f"activity contradiction: called a walking tour but the activity is {kind}")
+    if kind in {"drive", "walk", "bike", "food", "paddle"} and re.search(r"\bthe sail\b", body, re.I):
+        errors.append(f"activity contradiction: sailing language on a {kind} tour")
+    if kind == "sail" and re.search(r"\bthe ride\b", body, re.I):
+        errors.append("activity contradiction: ride language on a sailing tour")
+    if kind == "walk" and re.search(r"\bthe sail\b|\bthe drive\b", body, re.I):
+        errors.append("activity contradiction: drive or sail language on a walking tour")
+    return errors
+
+
+def title_repetition_errors(paragraphs: list[str], title: str = "") -> list[str]:
+    words = _normalized_phrase(title).split()
+    if len(words) < 5:
+        return []
+    body = _normalized_phrase(" ".join(paragraphs or []))
+    phrase = " ".join(words)
+    if phrase and phrase in body:
+        return ["full product title is repeated in the description"]
+    return []
+
+
+def repetitive_construction_errors(paragraphs: list[str]) -> list[str]:
+    errors = repetitive_opener_errors(paragraphs)
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    openings = []
+    group_hits = 0
+    for item in sentences:
+        words = WORD_RE.findall(item.lower())
+        if len(words) >= 2:
+            openings.append(" ".join(words[:2]))
+        if item.lower().startswith("the group"):
+            group_hits += 1
+    repeated = [key for key, count in Counter(openings).items() if count >= 3]
+    if repeated:
+        errors.append(
+            "repetitive sentence openings: " + ", ".join(sorted(repeated)[:3])
+        )
+    if group_hits >= 3:
+        errors.append(f"repetitive construction: {group_hits} sentences start with The group")
+    return errors
+
+
+def filler_errors(paragraphs: list[str], title: str = "") -> list[str]:
+    body = " ".join(paragraphs or [])
+    errors = []
+    if re.search(
+        r"\bthe (?:group|walk|outing|route|sail|ride) covers (?!about\b)",
+        body,
+        re.I,
+    ):
+        errors.append("meaningless filler: the description says the group covers a title or label")
+    if re.search(r"includes stories from the neighborhood", body, re.I):
+        errors.append("meaningless filler: generic neighborhood-stories line")
+    if re.search(r"\bthe (?:group|walk|outing) stays in boston\b", body, re.I):
+        errors.append("meaningless filler: the outing stays in Boston")
+    phrase = _normalized_phrase(title)
+    if phrase and re.search(r"\bcovers " + re.escape(phrase) + r"\b", _normalized_phrase(body)):
+        errors.append("meaningless filler: covers the product title")
+    return errors
+
+
+def itinerary_list_errors(paragraphs: list[str]) -> list[str]:
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    if len(sentences) < 2:
+        return []
+    list_only = 0
+    explained = 0
+    list_re = re.compile(
+        r"\b(visits|passes|stops include|comes to|reaches|moves through|goes by|are on the same)\b",
+        re.I,
+    )
+    explain_re = re.compile(
+        r"\b(hear|hears|heard|hearing|walk|walks|explain|explains|explaining|"
+        r"story|stories|account|accounts|sample|taste|tastes|tasting|"
+        r"photograph|photographs|step|steps|board|boards|watch|watches|tells|talks|"
+        r"commentary|built|modeled|fireworks|revolution|minivan|schooner|yacht|boat|harbor|pace|"
+        r"air conditioning|heated|bus|coves|hills)\b",
+        re.I,
+    )
+    for item in sentences:
+        if explain_re.search(item) or count_words([item]) > 18:
+            explained += 1
+        elif list_re.search(item):
+            list_only += 1
+    if list_only >= 2 and explained == 0:
+        return ["description only concatenates stops and does not explain the experience"]
+    return []
+
+
+def prose_quality_errors(
+    paragraphs: list[str],
+    title: str = "",
+    description: str = "",
+) -> list[str]:
+    errors = []
+    errors.extend(activity_contradiction_errors(paragraphs, title, description))
+    errors.extend(title_repetition_errors(paragraphs, title))
+    errors.extend(repetitive_construction_errors(paragraphs))
+    errors.extend(filler_errors(paragraphs, title))
+    errors.extend(itinerary_list_errors(paragraphs))
+    errors.extend(generic_padding_errors(" ".join(paragraphs or [])))
+    return errors
 
 
 def editorial_voice_errors(paragraphs: list[str], highlights: list[str], schema: str) -> list[str]:
@@ -537,6 +709,8 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "bicycle outing"
     if re.search(r"kayak|paddle|canoe", text):
         return "paddle outing"
+    if re.search(r"\bdriv", text):
+        return "driving tour"
     if re.search(r"sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack", text):
         return "harbor outing"
     if re.search(r"food|taste|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
@@ -1176,10 +1350,14 @@ def compose_schema(
     if places[:3]:
         if activity == "harbor outing":
             bits.append(sentence(f"The sail passes {join_and(places[:3])}"))
+        elif activity == "driving tour":
+            bits.append(sentence(f"The drive passes {join_and(places[:3])}"))
         elif activity == "food walk":
-            bits.append(sentence(f"The walk visits {join_and(places[:3])}"))
-        else:
+            bits.append(sentence(f"Guests sample food near {join_and(places[:3])}"))
+        elif "walk" in activity:
             bits.append(sentence(f"The walk passes {join_and(places[:3])}"))
+        else:
+            bits.append(sentence(f"The outing passes {join_and(places[:3])}"))
     text = " ".join(part for part in bits if part)
     words = count_words([text])
     if words >= body_words or words > 80:
@@ -2345,7 +2523,9 @@ def compose_editorial(
         drafts.append(f"The ride stays in {city}.")
     elif city and activity == "paddle outing" and city.lower() not in draft_blob:
         drafts.append(f"The outing stays on the water in {city}.")
-    elif city and city.lower() not in draft_blob:
+    elif city and activity == "driving tour" and city.lower() not in draft_blob:
+        drafts.append(f"The drive stays in {city}.")
+    elif city and activity not in {"harbor outing", "bicycle outing", "paddle outing", "driving tour"} and city.lower() not in draft_blob and "walk" in activity:
         drafts.append(f"The walk stays in {city}.")
     if activity == "harbor outing" and re.search(r"islands", title or "", re.I):
         drafts.append("The sail visits harbor islands.")
@@ -2416,10 +2596,27 @@ def compose_editorial(
         overlap_text,
         included,
     )
-    if narrative:
+    from editorial_finish import finish_experience
+
+    description = facts.get("description") or ""
+    if narrative and not prose_quality_errors(narrative, title, description):
         paragraphs = narrative
-    elif repetitive_opener_errors(paragraphs):
-        paragraphs = _diversify_openers(paragraphs)
+    else:
+        finished = finish_experience(facts, title, operator, meeting, overlap_text)
+        if finished:
+            paragraphs = finished
+        elif narrative and not prose_quality_errors(narrative, title, description):
+            paragraphs = narrative
+        elif repetitive_opener_errors(paragraphs):
+            paragraphs = _diversify_openers(paragraphs)
+    if (
+        geography.get("disposition") == "moved"
+        and city
+        and state
+        and f"{city}, {state}".lower() not in " ".join(paragraphs).lower()
+    ):
+        where = f"The outing is in {city}, {state}."
+        paragraphs = [f"{paragraphs[0]} {where}".strip(), *paragraphs[1:]]
 
     highlight_rows = []
     if duration_adj and city:
