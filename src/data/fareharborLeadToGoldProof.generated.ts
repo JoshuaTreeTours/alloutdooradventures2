@@ -12,6 +12,11 @@ export type FareHarborProofPriceRow = {
   amountLabel: string;
 };
 
+export type FareHarborProofAggregateRating = {
+  ratingValue: number;
+  reviewCount: number;
+};
+
 export type FareHarborProofProduct = {
   itemId: string;
   company: string;
@@ -36,7 +41,7 @@ export type FareHarborProofProduct = {
   priceRows: FareHarborProofPriceRow[];
   pricingNotes: string[];
   offer: FareHarborProofOffer | null;
-  aggregateRating: null;
+  aggregateRating: FareHarborProofAggregateRating | null;
   ratingProvenance: string;
 };
 

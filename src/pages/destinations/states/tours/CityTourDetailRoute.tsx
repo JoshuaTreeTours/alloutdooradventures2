@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import FareHarborProductSummary from "../../../../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../../../../components/FareHarborProofSnapshot";
 import Image from "../../../../components/Image";
 import Seo from "../../../../components/Seo";
@@ -30,6 +31,7 @@ import {
   getFareHarborProofFromTour,
   resolveFareHarborProofCtaLabel,
 } from "../../../../data/fareharborLeadToGoldProof";
+import { fareHarborShortDescriptionRepeatsExperience } from "../../../../data/fareharborPresentation";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
@@ -1035,6 +1037,15 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {hardenedTemplate?.heroTitle ?? tour.title}
             </h1>
+            {proof ? (
+              <FareHarborProductSummary
+                proof={proof}
+                tone="hero"
+                showShortDescription={
+                  !fareHarborShortDescriptionRepeatsExperience(proof)
+                }
+              />
+            ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
               {proof?.durationLabel || tour.badges.duration ? (
                 <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
@@ -1047,11 +1058,9 @@ export default function CityTourDetailRoute({
                 </span>
               ) : null}
             </div>
-            {heroStartingPriceLabel ? (
+            {!proof && heroStartingPriceLabel ? (
               <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-                {proof
-                  ? heroStartingPriceLabel
-                  : `Prices starting at ${heroStartingPriceLabel}`}
+                Prices starting at {heroStartingPriceLabel}
               </p>
             ) : null}
           </div>

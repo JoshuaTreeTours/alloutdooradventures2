@@ -460,8 +460,25 @@ def validate(
         if phrase in lowered:
             errors.append(f"disallowed phrase: {phrase}")
     errors.extend(editorial_errors(text, expected_city=expected_city, geography=geography))
-    if product["aggregateRating"] is not None:
-        errors.append("aggregate rating must be omitted")
+    rating = product.get("aggregateRating")
+    if rating is not None:
+        if not isinstance(rating, dict):
+            errors.append("aggregate rating must be an object or null")
+        else:
+            value = rating.get("ratingValue")
+            count = rating.get("reviewCount")
+            if (
+                isinstance(value, bool)
+                or not isinstance(value, (int, float))
+                or not 0 < float(value) <= 5
+            ):
+                errors.append(
+                    "aggregate rating value is not a positive FareHarbor rating up to 5"
+                )
+            if isinstance(count, bool) or not isinstance(count, int) or count <= 0:
+                errors.append(
+                    "aggregate rating review count must be a positive integer"
+                )
     if re.search(r"\$\s?\d", text):
         errors.append("dollar amount leaked into editorial copy")
     if SECOND_PERSON.search(text):
@@ -904,6 +921,10 @@ def emit_ts(products: list[dict]) -> str:
         "  note: string;\n"
         "  amountLabel: string;\n"
         "};\n\n"
+        "export type FareHarborProofAggregateRating = {\n"
+        "  ratingValue: number;\n"
+        "  reviewCount: number;\n"
+        "};\n\n"
         "export type FareHarborProofProduct = {\n"
         "  itemId: string;\n"
         "  company: string;\n"
@@ -928,7 +949,7 @@ def emit_ts(products: list[dict]) -> str:
         "  priceRows: FareHarborProofPriceRow[];\n"
         "  pricingNotes: string[];\n"
         "  offer: FareHarborProofOffer | null;\n"
-        "  aggregateRating: null;\n"
+        "  aggregateRating: FareHarborProofAggregateRating | null;\n"
         "  ratingProvenance: string;\n"
         "};\n\n"
         f"export const fareHarborLeadToGoldProofProducts: FareHarborProofProduct[] = {payload};\n"

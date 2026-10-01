@@ -10,17 +10,10 @@ export default function FareHarborProofSnapshot({
   const hasPrice = Boolean(proof.visiblePriceLabel);
   const hasDuration = Boolean(proof.durationLabel);
   const hasMeetingPoint = Boolean(proof.meetingLocation);
-  const hasAuthoritativeRating = proof.aggregateRating != null;
   const hasFareDetail =
     proof.priceRows.length > 0 || proof.pricingNotes.length > 0;
 
-  if (
-    !hasPrice &&
-    !hasDuration &&
-    !hasMeetingPoint &&
-    !hasAuthoritativeRating &&
-    !hasFareDetail
-  ) {
+  if (!hasPrice && !hasDuration && !hasMeetingPoint && !hasFareDetail) {
     return null;
   }
 

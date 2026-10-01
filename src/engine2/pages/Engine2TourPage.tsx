@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import FareHarborProductSummary from "../../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../../components/FareHarborProofSnapshot";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
@@ -26,6 +27,7 @@ import {
   getFareHarborProofFromTour,
   resolveFareHarborProofCtaLabel,
 } from "../../data/fareharborLeadToGoldProof";
+import { fareHarborShortDescriptionRepeatsExperience } from "../../data/fareharborPresentation";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -287,6 +289,15 @@ export default function Engine2TourPage({
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.name}
           </h1>
+          {proof ? (
+            <FareHarborProductSummary
+              proof={proof}
+              tone="hero"
+              showShortDescription={
+                !fareHarborShortDescriptionRepeatsExperience(proof)
+              }
+            />
+          ) : null}
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
@@ -309,12 +320,12 @@ export default function Engine2TourPage({
               {proof.durationLabel}
             </p>
           ) : null}
-          {headerPriceLabel ? (
+          {!proof && headerPriceLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               {headerPriceLabel}
             </p>
           ) : null}
-          {showFallbackPrice ? (
+          {!proof && showFallbackPrice ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               From $129 per person
             </p>

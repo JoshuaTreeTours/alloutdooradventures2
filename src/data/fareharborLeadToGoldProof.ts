@@ -3,6 +3,7 @@ import {
   type FareHarborProofProduct,
 } from "./fareharborLeadToGoldProof.generated";
 import { fareHarborBostonLegacyProducts } from "./fareharborBostonLegacy.generated";
+import { fareHarborAggregateRatingSchema } from "./fareharborPresentation";
 
 const fareHarborMigratedProducts = [
   ...fareHarborLeadToGoldProofProducts,
@@ -293,7 +294,14 @@ const patchSchemaValue = (
   const hostsOffer = types.some(type => OFFER_HOST_TYPES.has(type));
   if (describesProof) {
     next.description = proof.schemaDescription;
-    delete next.aggregateRating;
+    const aggregateRating = types.includes("Product")
+      ? fareHarborAggregateRatingSchema(proof)
+      : undefined;
+    if (aggregateRating) {
+      next.aggregateRating = aggregateRating;
+    } else {
+      delete next.aggregateRating;
+    }
   }
   if (types.includes("TouristTrip")) {
     if (proof.durationIso) {

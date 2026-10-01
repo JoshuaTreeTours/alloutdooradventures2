@@ -4,8 +4,16 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { Router } from "wouter";
 
+import FareHarborProductSummary from "../components/FareHarborProductSummary";
+import TourCard from "../components/TourCard";
 import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
 import { getTourBySlugs, tours } from "./tours";
+import {
+  fareHarborPriceLabel,
+  fareHarborRatingParityErrors,
+  fareHarborShortDescription,
+  fareHarborShortDescriptionRepeatsExperience,
+} from "./fareharborPresentation";
 import {
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
   applyFareHarborProofDestination,
@@ -223,6 +231,19 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       expect(serialized).not.toContain("129.00");
       expect(serialized).not.toContain("InStock");
       expect(serialized).not.toContain("AggregateRating");
+      expect(
+        fareHarborRatingParityErrors({
+          proof: product,
+          surfaces: [
+            {
+              name: "schema",
+              aggregateRating: productNode?.aggregateRating,
+            },
+          ],
+        }),
+        product.itemId
+      ).toEqual([]);
+      expect(tripNode?.aggregateRating).toBeUndefined();
       if (product.offer) {
         expect(product.offer.price).toBeTruthy();
         expect(productNode?.offers).toMatchObject({
@@ -357,6 +378,148 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     expect(sunset?.paragraphs.join(" ").toLowerCase()).not.toContain("takes in");
     expect(sunset?.paragraphs.join(" ")).toMatch(/sail passes|come into view/i);
   });
+
+  it("presents Boston price and FareHarbor ratings consistently on cards and product pages", () => {
+    const decode = (html: string) =>
+      html
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#x27;/g, "'")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
+    const products = getFareHarborBostonLegacyProducts();
+    let withPrice = 0;
+    let withoutPrice = 0;
+    let withRating = 0;
+    for (const product of products) {
+      const parts = product.publicPath.split("/").filter(Boolean);
+      const tour = getTourBySlugs(parts[1], parts[2], parts[4]);
+      expect(tour, product.itemId).toBeTruthy();
+      const cardHtml = renderRoute(
+        product.publicPath,
+        <TourCard tour={tour!} href={product.publicPath} />
+      );
+      const summaryHtml = renderToStaticMarkup(
+        <FareHarborProductSummary
+          proof={product}
+          tone="hero"
+          showShortDescription={
+            !fareHarborShortDescriptionRepeatsExperience(product)
+          }
+        />
+      );
+      const graph = buildFareHarborProofSchemaGraph(product, {
+        canonicalUrl: `https://www.alloutdooradventures.com${product.publicPath}`,
+      });
+      const productNode = graph["@graph"].find(
+        node => node["@type"] === "Product"
+      );
+      expect(
+        fareHarborRatingParityErrors({
+          proof: product,
+          surfaces: [
+            { name: "card", html: cardHtml },
+            { name: "product page", html: summaryHtml },
+            { name: "schema", aggregateRating: productNode?.aggregateRating },
+          ],
+        }),
+        product.itemId
+      ).toEqual([]);
+      const cardText = decode(cardHtml);
+      const shortDescription = fareHarborShortDescription(product);
+      expect(shortDescription.length, product.itemId).toBeGreaterThan(0);
+      expect(shortDescription.toLowerCase(), product.itemId).not.toBe(
+        product.title.trim().toLowerCase()
+      );
+      expect(shortDescription.endsWith("…"), product.itemId).toBe(false);
+      expect(cardText, product.itemId).toContain(product.title);
+      expect(cardText, product.itemId).toContain(shortDescription);
+      expect(cardText, product.itemId).toContain(
+        `${tour!.destination.city}, ${tour!.destination.state}`
+      );
+      expect(cardHtml, product.itemId).toMatch(/View (?:Tour|Rental)/);
+      expect(cardHtml, product.itemId).toContain(
+        'data-testid="tour-card-category"'
+      );
+      expect(cardHtml, product.itemId).toContain("data-card-image-src=");
+      if (tour!.heroImage) {
+        expect(cardHtml, product.itemId).toContain(tour!.heroImage);
+      }
+      expect(cardHtml, product.itemId).not.toContain("keeps the logistics simple");
+      expect(cardHtml, product.itemId).not.toContain(
+        `${tour!.badges.reviewCount} reviews`
+      );
+      expect(cardHtml, product.itemId).not.toContain("★");
+      const price = fareHarborPriceLabel(product);
+      if (price) {
+        withPrice += 1;
+        expect(cardHtml, product.itemId).toContain(price);
+        expect(cardHtml, product.itemId).not.toContain(`From ${price}`);
+      } else {
+        withoutPrice += 1;
+        expect(cardHtml, product.itemId).not.toContain(
+          'data-testid="fareharbor-price"'
+        );
+        expect(cardText, product.itemId).not.toMatch(/From \$/);
+      }
+      if (product.aggregateRating) {
+        withRating += 1;
+      }
+    }
+    expect(withPrice).toBe(93);
+    expect(withoutPrice).toBe(128);
+    expect(withRating).toBe(0);
+
+    const priced = getFareHarborProofByItemId("518095");
+    const unpriced = getFareHarborProofByItemId("482166");
+    expect(priced?.visiblePriceLabel).toBe("From $620.10");
+    expect(unpriced?.visiblePriceLabel).toBeNull();
+    const pricedPage = renderRoute(
+      priced!.publicPath,
+      <CityTourDetailRoute
+        params={{
+          stateSlug: "massachusetts",
+          citySlug: "boston",
+          tourSlug: "half-day-driving-tour-of-boston-and-cambridge-518095",
+        }}
+      />
+    );
+    const pricedHeader = pricedPage.slice(
+      0,
+      pricedPage.indexOf("What you’ll experience")
+    );
+    expect(decode(pricedHeader)).toContain(fareHarborShortDescription(priced!));
+    expect(pricedHeader).toContain("From $620.10");
+    expect(pricedHeader).not.toContain("fareharbor-rating");
+    expect(pricedHeader).not.toContain("★");
+    expect(pricedHeader).not.toContain("1,080");
+    expect(decode(pricedPage)).toContain(priced!.paragraphs[2]);
+    expect(fareHarborShortDescription(priced!)).not.toBe(
+      priced!.paragraphs.join(" ")
+    );
+
+    const unpricedPage = renderRoute(
+      unpriced!.publicPath,
+      <CityTourDetailRoute
+        params={{
+          stateSlug: "massachusetts",
+          citySlug: "boston",
+          tourSlug: "holiday-harbor-cruise-482166",
+        }}
+      />
+    );
+    const unpricedHeader = unpricedPage.slice(
+      0,
+      unpricedPage.indexOf("What you’ll experience")
+    );
+    expect(decode(unpricedHeader)).toContain(
+      fareHarborShortDescription(unpriced!)
+    );
+    expect(unpricedHeader).not.toContain('data-testid="fareharbor-price"');
+    expect(unpricedHeader).not.toContain("From $");
+    expect(unpricedHeader).not.toContain("★");
+    expect(decode(unpricedPage)).toContain(unpriced!.paragraphs[0]);
+  }, 120000);
 
   it("keeps customer-facing FareHarbor copy free of process commentary and heading fragments", () => {
     const processPhrases = [
