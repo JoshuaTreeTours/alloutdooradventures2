@@ -20,6 +20,10 @@ import {
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
+import {
+  applyFareHarborRebuildToEngine2Tour,
+  hasVerifiedEngine2Price,
+} from "../../data/fareharborRebuild";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -47,9 +51,13 @@ const normalizeStringArray = (value: unknown) => {
 };
 
 export default function Engine2TourPage({
-  tour,
+  tour: sourceTour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const tour = useMemo(
+    () => applyFareHarborRebuildToEngine2Tour(sourceTour),
+    [sourceTour],
+  );
   const isViatorTour = (() => {
     if (tour.bookingProvider === "viator") {
       return true;
@@ -127,10 +135,15 @@ export default function Engine2TourPage({
   });
   const basePrice = parsePrice(tour.pricing?.price ?? null);
   const displayPrice = applyPriceFloor(basePrice);
+  const hasVerifiedPrice = hasVerifiedEngine2Price(tour);
+  const unresolvedFareHarborPrice = !isViatorTour && !hasVerifiedPrice;
   const enginePriceLabel =
-    basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD
+    !hasVerifiedPrice ||
+    basePrice === null ||
+    basePrice <= 0 ||
+    basePrice < PRICE_MIN_THRESHOLD_USD
       ? undefined
-      : `From $${displayPrice.toFixed(2)} per person`;
+      : `From ${displayPrice.toFixed(2)} per person`;
   const overridePriceLabel = overrideContent?.enabled
     ? overrideContent.content.heroPriceText
     : undefined;
@@ -140,7 +153,8 @@ export default function Engine2TourPage({
       : undefined;
   const headerPriceLabel =
     viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
-  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+  const showFallbackPrice =
+    isViatorTour && !overridePriceLabel && !enginePriceLabel;
 
   const viatorRatingValue =
     typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
@@ -301,12 +315,21 @@ export default function Engine2TourPage({
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
               <a
-                href={tour.bookingUrl ?? tour.booking.bookingUrl}
+                href={tour.bookingUrl ?? tour.booking.bookingUrl ?? "#"}
                 target="_blank"
                 rel={EXTERNAL_CTA_REL}
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
                 Book This Tour
+              </a>
+            ) : unresolvedFareHarborPrice ? (
+              <a
+                href={tour.bookingUrl ?? tour.booking.bookingUrl}
+                target="_blank"
+                rel={EXTERNAL_CTA_REL}
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
+                Learn More
               </a>
             ) : bookingPath ? (
               <Link href={bookingPath}>

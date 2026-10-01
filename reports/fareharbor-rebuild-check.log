@@ -1,0 +1,890 @@
+
+> all-outdoor-adventures@1.0.0 check
+> tsc --noEmit && tsx scripts/engine2/test-fh-url-generator.ts
+
+api/engine6/viator-product.ts(730,9): error TS2322: Type '{ diagnostics: { reviewCountFieldPath: string | null; ratingFieldPath: string | null; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; ... 51 more ...; classificationFieldPath: string | null; }; extracted: { ...; } | { ...; }; heroCandidates: Engine6HeroCandidate[]; product: ...' is not assignable to type '{ extracted: Engine6Extracted; diagnostics: Engine6DiagnosticsPaths; heroCandidates: Engine6HeroCandidate[]; product: null; } | { extracted: { ...; }; diagnostics: Engine6DiagnosticsPaths; heroCandidates: Engine6HeroCandidate[]; product: RecordLike; }'.
+  Types of property 'extracted' are incompatible.
+    Type '{ priceAmount: number | null; priceFormatted: string | null; priceCurrency: string | null | undefined; title: string | null; seoTitle: string | null; seoDescription: string | null; ... 18 more ...; activityCategories: { ...; }[]; } | { ...; }' is not assignable to type '{ title: string | null; seoTitle: string | null; seoDescription: string | null; city: string | null; state: string | null; heroImageUrl: string | null; productUrl: string | null; ... 17 more ...; activityCategories: TourActivityCategory[]; }'.
+      Type '{ priceAmount: number | null; priceFormatted: string | null; priceCurrency: string | null | undefined; title: string | null; seoTitle: string | null; seoDescription: string | null; ... 18 more ...; activityCategories: Array<{ slug: string; label: string; }>; }' is not assignable to type '{ title: string | null; seoTitle: string | null; seoDescription: string | null; city: string | null; state: string | null; heroImageUrl: string | null; productUrl: string | null; ... 17 more ...; activityCategories: TourActivityCategory[]; }'.
+        Types of property 'priceCurrency' are incompatible.
+          Type 'string | null | undefined' is not assignable to type 'string | null'.
+            Type 'undefined' is not assignable to type 'string | null'.
+api/engine6/viatorExtractors.ts(1306,33): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+scripts/audit-city-content.ts(150,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/audit-city-content.ts(151,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/audit-city-content.ts(223,7): error TS2322: Type '(string | undefined)[]' is not assignable to type 'string[]'.
+  Type 'string | undefined' is not assignable to type 'string'.
+    Type 'undefined' is not assignable to type 'string'.
+scripts/audit-key-west-listing-heroes.ts(12,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/audit-naples-listing-heroes.ts(12,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/discover-fort-lauderdale-viator-catalog.ts(99,36): error TS2339: Property 'rejectReason' does not exist on type 'ViatorPublicAvailabilityAssessment'.
+scripts/engine2/smokeTestCanadaRoutes.ts(66,21): error TS2554: Expected 2 arguments, but got 1.
+scripts/engine2/smokeTestCanadaRoutes.ts(71,54): error TS2345: Argument of type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: never[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; }' is not assignable to parameter of type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: Tour[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; mexicoTours: Engine2Tour[]; }'.
+  Property 'mexicoTours' is missing in type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: never[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; }' but required in type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: Tour[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; mexicoTours: Engine2Tour[]; }'.
+scripts/engine2/smokeTestCanadaRoutes.ts(81,69): error TS2345: Argument of type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: never[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; }' is not assignable to parameter of type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: Tour[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; mexicoTours: Engine2Tour[]; }'.
+  Property 'mexicoTours' is missing in type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: never[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; }' but required in type '{ selectedCountry: string; selectedCanadaProvinceSlug: string; internationalTours: Tour[]; canadaProvinces: Engine2CanadaProvinceIndexEntry[]; mexicoTours: Engine2Tour[]; }'.
+scripts/enrich-honolulu-viator-ratings-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/enrich-moab-browser-ratings.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/enrich-orlando-missing-products.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-aspen-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-fort-lauderdale-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-fort-lauderdale-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-honolulu-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-honolulu-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-key-west-additional-products.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-key-west-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-key-west-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-maui-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-mexico-city-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-moab-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-naples-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-naples-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-orlando-catalog-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/extract-orlando-products-browser.ts(7,26): error TS2307: Cannot find module 'playwright' or its corresponding type declarations.
+scripts/fareharborClient.ts(111,3): error TS2322: Type '({ availabilityId: string; startDate: string | undefined; startTime: string | undefined; endTime: string | undefined; isAvailable: boolean; raw: Record<string, unknown>; } | null)[]' is not assignable to type 'FareharborAvailability[]'.
+  Type '{ availabilityId: string; startDate: string | undefined; startTime: string | undefined; endTime: string | undefined; isAvailable: boolean; raw: Record<string, unknown>; } | null' is not assignable to type 'FareharborAvailability'.
+    Type 'null' is not assignable to type 'FareharborAvailability'.
+scripts/fareharborClient.ts(140,31): error TS2677: A type predicate's type must be assignable to its parameter's type.
+  Type 'FareharborAvailability' is not assignable to type '{ availabilityId: string; startDate: string | undefined; startTime: string | undefined; endTime: string | undefined; isAvailable: boolean; raw: Record<string, unknown>; }'.
+    Property 'startDate' is optional in type 'FareharborAvailability' but required in type '{ availabilityId: string; startDate: string | undefined; startTime: string | undefined; endTime: string | undefined; isAvailable: boolean; raw: Record<string, unknown>; }'.
+scripts/generate-amsterdam-engine6-fixtures.ts(144,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-amsterdam-engine6-fixtures.ts(144,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-amsterdam-engine6-fixtures.ts(145,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-amsterdam-engine6-fixtures.ts(162,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-arches-national-park-engine6-fixtures.ts(188,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-arches-national-park-engine6-fixtures.ts(188,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-arches-national-park-engine6-fixtures.ts(189,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-bryce-canyon-national-park-engine6-fixtures.ts(184,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-bryce-canyon-national-park-engine6-fixtures.ts(184,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-bryce-canyon-national-park-engine6-fixtures.ts(185,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cabo-san-lucas-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cabo-san-lucas-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cabo-san-lucas-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cabo-san-lucas-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-cancun-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cancun-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cancun-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cancun-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-canyonlands-national-park-engine6-fixtures.ts(188,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-canyonlands-national-park-engine6-fixtures.ts(188,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-canyonlands-national-park-engine6-fixtures.ts(189,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cusco-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cusco-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cusco-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-cusco-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-dublin-engine6-fixtures.ts(144,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-dublin-engine6-fixtures.ts(144,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-dublin-engine6-fixtures.ts(145,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-dublin-engine6-fixtures.ts(162,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-edinburgh-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-edinburgh-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-edinburgh-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-edinburgh-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-fareharbor-content-rebuild.ts(58,22): error TS2551: Property 'operatorName' does not exist on type 'Tour'. Did you mean 'operator'?
+scripts/generate-great-smoky-mountains-engine6-fixtures.ts(604,47): error TS2339: Property 'has' does not exist on type '{ readonly "3454P41": { readonly sourceUrl: "https://www.viator.com/tours/Yosemite-National-Park/Best-of-Yosemite-Tour-Giant-Sequoias-and-Glacier-Point/d5265-3454P41"; readonly title: "Best of Yosemite Small Group Tour: Giant Sequoias & Glacier Point"; }; ... 9 more ...; readonly "118744P4": { ...; }; }'.
+scripts/generate-great-smoky-mountains-engine6-fixtures.ts(614,5): error TS2353: Object literal may only specify known properties, and 'destinationLabel' does not exist in type 'ViatorPublicAvailabilityInput[]'.
+scripts/generate-london-engine6-fixtures.ts(200,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-london-engine6-fixtures.ts(200,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-london-engine6-fixtures.ts(201,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-mexico-city-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-mexico-city-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-mexico-city-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-mexico-city-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-paris-engine6-fixtures.ts(202,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-paris-engine6-fixtures.ts(202,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-paris-engine6-fixtures.ts(203,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-paris-engine6-fixtures.ts(220,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-puerto-vallarta-engine6-fixtures.ts(218,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-puerto-vallarta-engine6-fixtures.ts(218,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-puerto-vallarta-engine6-fixtures.ts(219,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-puerto-vallarta-engine6-fixtures.ts(236,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-rome-engine6-fixtures.ts(213,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-rome-engine6-fixtures.ts(213,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-rome-engine6-fixtures.ts(214,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-rome-engine6-fixtures.ts(231,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/generate-venice-engine6-fixtures.ts(213,10): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-venice-engine6-fixtures.ts(213,29): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-venice-engine6-fixtures.ts(214,14): error TS2339: Property 'highlights' does not exist on type 'LiveProduct'.
+scripts/generate-venice-engine6-fixtures.ts(231,7): error TS7006: Parameter 'value' implicitly has an 'any' type.
+scripts/lib/runEngine6ParagonFixtureGeneration.ts(22,3): error TS2300: Duplicate identifier 'stateSlug'.
+scripts/lib/runEngine6ParagonFixtureGeneration.ts(23,3): error TS2300: Duplicate identifier 'citySlug'.
+scripts/lib/runEngine6ParagonFixtureGeneration.ts(29,3): error TS2300: Duplicate identifier 'stateSlug'.
+scripts/lib/runEngine6ParagonFixtureGeneration.ts(30,3): error TS2300: Duplicate identifier 'citySlug'.
+scripts/rank-city-guide-quality.ts(179,28): error TS2339: Property 'sections' does not exist on type '{ sourceUrl?: string | undefined; wikiSummaryText?: string | undefined; wikiExtractText?: string | undefined; factsCard?: { title: string; bullets: { label: string; value: string; }[]; } | undefined; }'.
+scripts/rank-city-guide-quality.ts(179,52): error TS7006: Parameter 'section' implicitly has an 'any' type.
+scripts/rank-phase3-engine6-guide-priority.ts(175,26): error TS2339: Property 'sections' does not exist on type '{ sourceUrl?: string | undefined; wikiSummaryText?: string | undefined; wikiExtractText?: string | undefined; factsCard?: { title: string; bullets: { label: string; value: string; }[]; } | undefined; }'.
+scripts/rank-phase3-engine6-guide-priority.ts(175,50): error TS7006: Parameter 'section' implicitly has an 'any' type.
+scripts/report-sedona-creation-failures.ts(29,39): error TS2345: Argument of type '{ source: "live-api"; rawProductCode: string; rawProduct: RecordLike | null; diagnostics: Engine6DiagnosticsPaths; extracted: Engine6Extracted | { ...; }; }' is not assignable to parameter of type 'Engine6ApiResponse'.
+  Types of property 'diagnostics' are incompatible.
+    Type 'Engine6DiagnosticsPaths' is not assignable to type 'Engine6ApiDiagnostics'.
+      Type 'Engine6DiagnosticsPaths' is missing the following properties from type 'Engine6TourDiagnostics': source, bookingUrlSource, fieldLevelFallbackUsed, fallbackFieldNames
+scripts/rewrite-small-town-guides-from-wiki.ts(152,26): error TS2345: Argument of type '{ slug: string; tier?: "tier1" | "tier2"; city?: string; state?: string; hero?: { image?: string; }; thingsToDo?: Thing[]; }' is not assignable to parameter of type 'GuideLike'.
+  Type '{ slug: string; tier?: "tier1" | "tier2"; city?: string; state?: string; hero?: { image?: string; }; thingsToDo?: Thing[]; }' is not assignable to type 'Partial<GuidePageData>'.
+    Types of property 'hero' are incompatible.
+      Type '{ image?: string | undefined; } | undefined' is not assignable to type '{ image: string; alt: string; headline: string; subheadline: string; } | undefined'.
+        Type '{ image?: string | undefined; }' is missing the following properties from type '{ image: string; alt: string; headline: string; subheadline: string; }': alt, headline, subheadline
+scripts/validate-engine6-legacy-viator-repair.ts(41,59): error TS2345: Argument of type '"44152P18" | "5559561P1" | "5765P7" | "5396BOEING" | "6021MBA" | "118744P4" | "191303P1" | "9345P1"' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+  Type '"44152P18"' is not assignable to type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'. Did you mean '"44152P1"'?
+scripts/validate-engine6-legacy-viator-repair.ts(55,61): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+scripts/validate-engine6-legacy-viator-repair.ts(70,61): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+scripts/validate-sedona-creation-contract.ts(23,39): error TS2345: Argument of type '{ source: "live-api"; rawProductCode: string; rawProduct: RecordLike | null; diagnostics: Engine6DiagnosticsPaths; extracted: Engine6Extracted | { ...; }; }' is not assignable to parameter of type 'Engine6ApiResponse'.
+  Types of property 'diagnostics' are incompatible.
+    Type 'Engine6DiagnosticsPaths' is not assignable to type 'Engine6ApiDiagnostics'.
+      Type 'Engine6DiagnosticsPaths' is missing the following properties from type 'Engine6TourDiagnostics': source, bookingUrlSource, fieldLevelFallbackUsed, fallbackFieldNames
+scripts/validate-sedona-deploy-scoped-live-viator.ts(64,5): error TS2345: Argument of type '{ mode: string; governanceMode: string; passed: boolean; blockingPassed: boolean; skipped: boolean; skipReason: null; credentialsRequired: boolean; credentialsAvailable: boolean; scopedProductCodes: string[]; ... 5 more ...; formattedReport: string; }' is not assignable to parameter of type 'Engine6LiveViatorProductionValidationReport'.
+  Types of property 'mode' are incompatible.
+    Type 'string' is not assignable to type 'Engine6LiveViatorValidationMode'.
+scripts/verify-hawaii-volcanoes-render-parity.tsx(53,10): error TS2551: Property 'heroImage' does not exist on type 'Engine6Tour'. Did you mean 'heroImageUrl'?
+scripts/verify-hawaii-volcanoes-render-parity.tsx(71,28): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/verify-kona-render.tsx(67,46): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/verify-kona-render.tsx(70,38): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+scripts/verify-palm-springs-34849.ts(32,5): error TS18047: 'engine2Tour' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(34,66): error TS18047: 'engine2Tour' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(39,5): error TS18048: 'listingTourItem' is possibly 'undefined'.
+scripts/verify-palm-springs-34849.ts(39,40): error TS18047: 'engine2Tour' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(45,29): error TS2345: Argument of type 'Engine2Tour | null' is not assignable to parameter of type 'Engine2Tour'.
+  Type 'null' is not assignable to type 'Engine2Tour'.
+scripts/verify-palm-springs-34849.ts(46,22): error TS18047: 'engine2Tour' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(48,42): error TS18047: 'engine2Tour' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(52,48): error TS2345: Argument of type 'Engine2Tour | null' is not assignable to parameter of type 'Engine2Tour'.
+  Type 'null' is not assignable to type 'Engine2Tour'.
+scripts/verify-palm-springs-34849.ts(57,14): error TS18047: 'override' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(64,22): error TS18047: 'override' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(72,3): error TS2345: Argument of type 'Engine2Tour | null' is not assignable to parameter of type 'Engine2Tour'.
+  Type 'null' is not assignable to type 'Engine2Tour'.
+scripts/verify-palm-springs-34849.ts(76,3): error TS18047: 'override' is possibly 'null'.
+scripts/verify-palm-springs-34849.ts(85,37): error TS18048: 'faqPage' is possibly 'undefined'.
+scripts/verify-palm-springs-34849.ts(86,5): error TS18048: 'faqPage' is possibly 'undefined'.
+scripts/verify-palm-springs-34849.ts(102,36): error TS2345: Argument of type 'Engine2Tour | undefined' is not assignable to parameter of type 'Engine2Tour'.
+  Type 'undefined' is not assignable to type 'Engine2Tour'.
+scripts/verify-palm-springs-34849.ts(103,40): error TS2345: Argument of type 'Engine2Tour | undefined' is not assignable to parameter of type 'Engine2Tour'.
+  Type 'undefined' is not assignable to type 'Engine2Tour'.
+scripts/verify-sedona-bleed-and-contract.ts(15,39): error TS2307: Cannot find module '../../api/engine6/viatorExtractors' or its corresponding type declarations.
+src/components/GuideInternalLinks.tsx(349,60): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/components/GuideInternalLinks.tsx(358,26): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/maps/LeafletMap.tsx(2,15): error TS7016: Could not find a declaration file for module 'leaflet'. '/home/runner/work/alloutdooradventures2/alloutdooradventures2/node_modules/leaflet/dist/leaflet-src.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/leaflet` if it exists or add a new declaration (.d.ts) file containing `declare module 'leaflet';`
+src/components/maps/LeafletMap.tsx(42,9): error TS2322: Type '{ children: (Element | Element[])[]; center: [number, number]; zoom: number; scrollWheelZoom: boolean; className: string; }' is not assignable to type 'IntrinsicAttributes & MapContainerProps & RefAttributes<LeafletMap>'.
+  Property 'center' does not exist on type 'IntrinsicAttributes & MapContainerProps & RefAttributes<LeafletMap>'.
+src/components/maps/LeafletMap.tsx(48,11): error TS2322: Type '{ attribution: string; url: string; }' is not assignable to type 'IntrinsicAttributes & TileLayerProps & RefAttributes<LeafletTileLayer>'.
+  Property 'attribution' does not exist on type 'IntrinsicAttributes & TileLayerProps & RefAttributes<LeafletTileLayer>'.
+src/components/maps/LeafletMap.tsx(53,22): error TS2322: Type '{ children: string; direction: string; offset: number[]; opacity: number; }' is not assignable to type 'IntrinsicAttributes & TooltipProps & RefAttributes<LeafletTooltip>'.
+  Property 'direction' does not exist on type 'IntrinsicAttributes & TooltipProps & RefAttributes<LeafletTooltip>'.
+src/data/cityGuideContent.ts(255,9): error TS2322: Type '(string | undefined)[]' is not assignable to type 'string[]'.
+  Type 'string | undefined' is not assignable to type 'string'.
+    Type 'undefined' is not assignable to type 'string'.
+src/data/cityGuideContent.ts(563,20): error TS18048: 'item' is possibly 'undefined'.
+src/data/cityTopThings.ts(1435,38): error TS2552: Cannot find name 'DestinationMatch'. Did you mean 'DestinationTrait'?
+src/data/deepSouth.generated.ts(378,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(379,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(580,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(581,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(647,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(648,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(713,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(714,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1117,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1118,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1249,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1250,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1316,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1317,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1381,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1382,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1717,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1718,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1985,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(1986,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(2118,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(2119,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3049,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3050,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3115,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3116,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3180,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3181,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3649,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3650,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3845,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3846,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3975,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(3976,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4040,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4041,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4106,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4107,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4172,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4173,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4371,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4372,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4436,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4437,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4503,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4504,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4570,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4571,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4637,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4638,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4834,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4835,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4899,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4900,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4964,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(4965,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5160,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5161,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5225,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5226,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5316,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5317,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5383,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5384,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5514,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5515,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5653,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5654,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5722,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5723,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5926,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5927,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5994,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(5995,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6061,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6062,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6130,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6131,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6195,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6196,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6262,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6263,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6329,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6330,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6395,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6396,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6461,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6462,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6526,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6527,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6591,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6592,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6682,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6683,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6747,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6748,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6812,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(6813,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7173,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7174,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7305,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7306,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7370,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7371,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7506,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7507,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7799,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(7800,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8028,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8029,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8095,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8096,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8227,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8228,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8293,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8294,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8358,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8359,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8423,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8424,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8490,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/deepSouth.generated.ts(8491,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/destinations.ts(875,7): error TS2739: Type '{ name: string; slug: string; stateSlug: string; region: string; lat: number; lng: number; shortDescription: string; intro: string; heroImages: string[]; activityTags: string[]; whereItIs: string[]; experiences: { ...; }; thingsToDo: string[]; toursCopy: string[]; faq: { ...; }[]; }' is missing the following properties from type 'City': weekendItinerary, gettingThere
+src/data/destinations.ts(3772,11): error TS2353: Object literal may only specify known properties, and 'q' does not exist in type 'CityFaq'.
+src/data/excludedProductCodes.ts(24,17): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
+src/data/northeast.generated.ts(302,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(303,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(371,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(372,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(437,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(438,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(504,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(505,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(571,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(572,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(638,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(639,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(768,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(769,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(835,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(836,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(902,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(903,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(967,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(968,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1034,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1035,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1237,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1238,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1302,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1303,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1369,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1370,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1436,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1437,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1503,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1504,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1568,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1569,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1659,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1660,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1751,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1752,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1886,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1887,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1951,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(1952,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2212,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2213,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2303,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2304,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2368,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2369,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2498,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2499,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2563,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2564,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2628,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2629,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2758,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2759,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2824,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2825,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2889,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(2890,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3113,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3114,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3266,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3267,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3396,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3397,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3618,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3619,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3817,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3818,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3887,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3888,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3952,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(3953,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4019,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4020,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4085,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4086,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4150,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4151,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4444,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4445,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4511,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4512,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4578,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4579,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4711,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4712,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4780,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4781,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4845,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4846,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4938,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(4939,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5200,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5201,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5395,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5396,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5462,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5463,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5529,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(5530,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(6250,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(6251,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(6517,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/northeast.generated.ts(6518,9): error TS2322: Type 'null' is not assignable to type 'number'.
+src/data/tours.generated.ts(4,39): error TS2590: Expression produces a union type that is too complex to represent.
+src/data/tours.ts(195,34): error TS2538: Type 'null' cannot be used as an index type.
+src/data/tours.ts(201,5): error TS2353: Object literal may only specify known properties, and 'activityType' does not exist in type 'Tour'.
+src/data/tours.ts(275,9): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/data/tours.ts(316,9): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/engine2/pages/Engine2TourPage.tsx(366,15): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/engine2/pages/Engine2TourPage.tsx(367,15): error TS2322: Type 'string | null' is not assignable to type 'string | undefined'.
+  Type 'null' is not assignable to type 'string | undefined'.
+src/engine2/schema/buildSchemaGraph.ts(69,29): error TS2677: A type predicate's type must be assignable to its parameter's type.
+  Type 'Record<string, unknown>' is missing the following properties from type '{ description?: string | undefined; "@type": string; position: number; name: string; }': "@type", position, name
+src/engine2/schema/buildSchemaGraph.ts(278,16): error TS2339: Property 'aggregateRating' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; } | StructuredDataNode'.
+  Property 'aggregateRating' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; }'.
+src/engine2/schema/buildSchemaGraph.ts(284,16): error TS2339: Property 'itinerary' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; } | StructuredDataNode'.
+  Property 'itinerary' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; }'.
+src/engine2/schema/buildSchemaGraph.ts(286,23): error TS2339: Property 'itinerary' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; } | StructuredDataNode'.
+  Property 'itinerary' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; }'.
+src/engine2/schema/buildSchemaGraph.ts(290,16): error TS2339: Property 'aggregateRating' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; } | StructuredDataNode'.
+  Property 'aggregateRating' does not exist on type '{ primaryImageOfPage?: { url: string; "@id"?: string | undefined; "@type": string; } | undefined; image?: string | undefined; about?: { "@id": string; } | undefined; mainEntity?: { "@id": string; } | undefined; ... 6 more ...; publisher: { ...; }; }'.
+src/engine3/viator/getViatorProductData.ts(176,31): error TS2677: A type predicate's type must be assignable to its parameter's type.
+  Type 'Engine3ItineraryItem' is not assignable to type '{ title: string | undefined; description: string | undefined; duration: string | undefined; order: number; }'.
+    Property 'title' is optional in type 'Engine3ItineraryItem' but required in type '{ title: string | undefined; description: string | undefined; duration: string | undefined; order: number; }'.
+src/engine3/viator/getViatorProductData.ts(178,3): error TS2322: Type '({ title: string | undefined; description: string | undefined; duration: string | undefined; order: number; } | null)[] | undefined' is not assignable to type 'Engine3ItineraryItem[] | undefined'.
+  Type '({ title: string | undefined; description: string | undefined; duration: string | undefined; order: number; } | null)[]' is not assignable to type 'Engine3ItineraryItem[]'.
+    Type '{ title: string | undefined; description: string | undefined; duration: string | undefined; order: number; } | null' is not assignable to type 'Engine3ItineraryItem'.
+      Type 'null' is not assignable to type 'Engine3ItineraryItem'.
+src/engine3/viator/getViatorProductData.ts(301,9): error TS2322: Type 'Record<string, unknown> | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'Record<string, unknown>' is not assignable to type 'string | number | undefined'.
+src/engine3/viator/getViatorProductData.ts(353,9): error TS2322: Type 'any[] | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'any[]' is not assignable to type 'string | number | undefined'.
+src/engine3/viator/getViatorProductData.ts(358,9): error TS2322: Type 'any[] | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'any[]' is not assignable to type 'string | number | undefined'.
+src/engine3/viator/getViatorProductData.ts(363,9): error TS2322: Type 'any[] | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'any[]' is not assignable to type 'string | number | undefined'.
+src/engine3/viator/getViatorProductData.ts(368,9): error TS2322: Type 'any[] | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'any[]' is not assignable to type 'string | number | undefined'.
+src/engine3/viator/getViatorProductData.ts(373,9): error TS2322: Type 'any[] | undefined' is not assignable to type 'string | number | undefined'.
+  Type 'any[]' is not assignable to type 'string | number | undefined'.
+src/engine4/components/Engine4TourPage.test.tsx(9,7): error TS2741: Property 'primaryImage' is missing in type '{ tourId: string; engine: "engine4"; bookingProvider: "viator"; productCode: string; slug: string; title: string; canonicalPath: string; bookingUrl: string; destination: { country: string; state: string; stateSlug: string; city: string; citySlug: string; }; heroImage: string; galleryImages: never[]; facts: { ...; };...' but required in type 'Engine4TourViewModel'.
+src/engine4/data/viatorTours.ts(333,9): error TS2353: Object literal may only specify known properties, and 'url' does not exist in type '{ isCover: boolean; variants: { url: string; width?: number | undefined; height?: number | undefined; }[]; }'.
+src/engine4/data/viatorTours.ts(385,9): error TS2353: Object literal may only specify known properties, and 'url' does not exist in type '{ isCover: boolean; variants: { url: string; width?: number | undefined; height?: number | undefined; }[]; }'.
+src/engine4/routing.listing.test.tsx(131,12): error TS18048: 'routed.content.meetingPoint' is possibly 'undefined'.
+src/engine4/routing.listing.test.tsx(234,12): error TS18048: 'routed.content.meetingPoint' is possibly 'undefined'.
+src/engine4/routing.listing.test.tsx(262,12): error TS18048: 'routed.content.meetingPoint' is possibly 'undefined'.
+src/engine4/routing.ts(54,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine4/viator/viatorApi.ts(86,18): error TS2677: A type predicate's type must be assignable to its parameter's type.
+  Type '{ title: string; description?: string | undefined; duration?: string | undefined; }' is not assignable to type '{ title: string; description: string | undefined; duration: string | undefined; }'.
+    Property 'description' is optional in type '{ title: string; description?: string | undefined; duration?: string | undefined; }' but required in type '{ title: string; description: string | undefined; duration: string | undefined; }'.
+src/engine4/viator/viatorApi.ts(302,7): error TS2322: Type '({ title: string; description: string | undefined; duration: string | undefined; } | undefined)[] | undefined' is not assignable to type '{ title: string; description?: string | undefined; duration?: string | undefined; }[] | undefined'.
+  Type '({ title: string; description: string | undefined; duration: string | undefined; } | undefined)[]' is not assignable to type '{ title: string; description?: string | undefined; duration?: string | undefined; }[]'.
+    Type '{ title: string; description: string | undefined; duration: string | undefined; } | undefined' is not assignable to type '{ title: string; description?: string | undefined; duration?: string | undefined; }'.
+      Type 'undefined' is not assignable to type '{ title: string; description?: string | undefined; duration?: string | undefined; }'.
+src/engine5/viator/getEngine5ViatorTourData.ts(154,5): error TS2367: This comparison appears to be unintentional because the types '"api-images-payload"' and '"missing"' have no overlap.
+src/engine5/viator/mapViatorToEngine5Tour.ts(80,5): error TS2322: Type 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+src/engine5/viator/mapViatorToEngine5Tour.ts(81,5): error TS2322: Type 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+src/engine5/viator/mapViatorToEngine5Tour.ts(100,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/acadiaNationalParkCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/acadiaNationalParkRatingParity.test.tsx(57,63): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/acadiaNationalParkRatingParity.test.tsx(140,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/acadiaNationalParkRatingParity.test.tsx(223,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/amsterdamCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/amsterdamRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/amsterdamRatingParity.test.tsx(224,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/archesNationalParkCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/archesNationalParkRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/archesNationalParkRatingParity.test.tsx(144,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/archesNationalParkRatingParity.test.tsx(229,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/aspenCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/aspenRatingParity.test.tsx(56,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/aspenRatingParity.test.tsx(125,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/austinCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/austinRatingParity.test.tsx(56,49): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/austinRatingParity.test.tsx(124,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/baliCommercialPricing.test.tsx(65,62): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/baliCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/baliRatingParity.test.tsx(64,47): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/baliRatingParity.test.tsx(274,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/bangkokCommercialPricing.test.tsx(65,65): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/bangkokCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/bangkokRatingParity.test.tsx(64,50): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/bangkokRatingParity.test.tsx(274,54): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/barcelonaCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/barcelonaRatingParity.test.tsx(57,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/barcelonaRatingParity.test.tsx(137,56): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/barcelonaRatingParity.test.tsx(210,56): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/boulderCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/boulderRatingParity.test.tsx(56,50): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/boulderRatingParity.test.tsx(124,54): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/bryceCanyonNationalParkCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/bryceCanyonNationalParkRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/bryceCanyonNationalParkRatingParity.test.tsx(144,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/bryceCanyonNationalParkRatingParity.test.tsx(229,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/caboSanLucasCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/caboSanLucasRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/caboSanLucasRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/cairnsCommercialPricing.test.tsx(66,64): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/cairnsCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/cairnsRatingParity.test.tsx(64,49): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/cairnsRatingParity.test.tsx(274,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/cancunCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/cancunRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/cancunRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/canyonlandsNationalParkCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/canyonlandsNationalParkRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/canyonlandsNationalParkRatingParity.test.tsx(144,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/canyonlandsNationalParkRatingParity.test.tsx(229,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/creationValidation.tsx(153,5): error TS2352: Conversion of type 'typeof globalThis' to type '{ window?: { location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'window' are incompatible.
+    Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined'.
+      Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; }'.
+        The types of 'history.pushState' are incompatible between these types.
+          Type '(data: any, unused: string, url?: string | URL | null | undefined) => void' is not comparable to type '() => void'.
+            Target signature provides too few arguments. Expected 2 or more, but got 0.
+src/engine6/cuscoCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/cuscoRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/cuscoRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/denverCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/denverRatingParity.test.tsx(56,49): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/denverRatingParity.test.tsx(124,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/dublinCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/dublinRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/dublinRatingParity.test.tsx(224,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/edinburghCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/edinburghRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/edinburghRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/engine6.test.tsx(869,13): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+src/engine6/engine6.test.tsx(1036,41): error TS2345: Argument of type '{ source: "live-api"; diagnostics: { source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }; rawProductCode: string; rawProduct: { ...; }; ...' is not assignable to parameter of type 'Engine6ApiResponse'.
+  Types of property 'diagnostics' are incompatible.
+    Type '{ source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }' is not assignable to type 'Engine6ApiDiagnostics'.
+      Type '{ source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }' is missing the following properties from type 'Engine6TourDiagnostics': heroCandidateCountBeforeFiltering, heroCandidateCountAfterFiltering, heroSourceProductCode, heroSourceProductUrl, and 2 more.
+src/engine6/engine6.test.tsx(1210,41): error TS2345: Argument of type '{ source: "live-api"; diagnostics: { source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }; rawProductCode: string; rawProduct: { ...; }; ...' is not assignable to parameter of type 'Engine6ApiResponse'.
+  Types of property 'diagnostics' are incompatible.
+    Type '{ source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }' is not assignable to type 'Engine6ApiDiagnostics'.
+      Type '{ source: "live-api"; hasViatorApiKey: boolean; attemptedLiveFetch: boolean; upstreamStatus: number; upstreamContentType: string; upstreamOk: boolean; usedBundledFallbackBecause: string; ... 37 more ...; fallbackFieldNames: never[]; }' is missing the following properties from type 'Engine6TourDiagnostics': heroCandidateCountBeforeFiltering, heroCandidateCountAfterFiltering, heroSourceProductCode, heroSourceProductUrl, and 2 more.
+src/engine6/engine6.test.tsx(2078,38): error TS2339: Property 'slug' does not exist on type 'Engine6Tour'.
+src/engine6/engine6.test.tsx(2166,7): error TS2352: Conversion of type 'typeof globalThis' to type '{ window?: { location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'window' are incompatible.
+    Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined'.
+      Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; }'.
+        The types of 'history.pushState' are incompatible between these types.
+          Type '(data: any, unused: string, url?: string | URL | null | undefined) => void' is not comparable to type '() => void'.
+            Target signature provides too few arguments. Expected 2 or more, but got 0.
+src/engine6/engine6.test.tsx(2212,25): error TS2531: Object is possibly 'null'.
+src/engine6/engine6.test.tsx(2237,7): error TS2352: Conversion of type 'typeof globalThis' to type '{ window?: { location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'window' are incompatible.
+    Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined'.
+      Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; }'.
+        The types of 'history.pushState' are incompatible between these types.
+          Type '(data: any, unused: string, url?: string | URL | null | undefined) => void' is not comparable to type '() => void'.
+            Target signature provides too few arguments. Expected 2 or more, but got 0.
+src/engine6/engine6.test.tsx(2283,25): error TS2531: Object is possibly 'null'.
+src/engine6/engine6.test.tsx(2669,27): error TS18047: 'tour.heroImageUrl' is possibly 'null'.
+src/engine6/engine6.test.tsx(2732,7): error TS2352: Conversion of type 'typeof globalThis' to type '{ window?: { location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'window' are incompatible.
+    Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined'.
+      Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; }'.
+        The types of 'history.pushState' are incompatible between these types.
+          Type '(data: any, unused: string, url?: string | URL | null | undefined) => void' is not comparable to type '() => void'.
+            Target signature provides too few arguments. Expected 2 or more, but got 0.
+src/engine6/engine6.test.tsx(2930,27): error TS18047: 'expectedHero' is possibly 'null'.
+src/engine6/engine6.test.tsx(2959,9): error TS2352: Conversion of type 'typeof globalThis' to type '{ window?: { location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'window' are incompatible.
+    Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; } | undefined'.
+      Type 'Window & typeof globalThis' is not comparable to type '{ location: { pathname: string; search: string; }; history: { pushState: () => void; }; }'.
+        The types of 'history.pushState' are incompatible between these types.
+          Type '(data: any, unused: string, url?: string | URL | null | undefined) => void' is not comparable to type '() => void'.
+            Target signature provides too few arguments. Expected 2 or more, but got 0.
+src/engine6/engine6.test.tsx(3041,9): error TS2322: Type '{ readonly id: "engine6-legacy-test"; readonly engine: "engine6"; readonly productCode: "LEGACY"; readonly slug: "legacy-image-override-test"; readonly title: "Legacy Override Test"; ... 9 more ...; readonly longDescription: "Legacy override guardrail test"; }' is not assignable to type 'Tour'.
+  Types of property 'galleryImages' are incompatible.
+    The type 'readonly ["https://cdn.example.com/gallery-first.jpg"]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+src/engine6/engine6.test.tsx(3080,9): error TS2322: Type '{ readonly id: "engine6-placeholder-test"; readonly engine: "engine6"; readonly productCode: "NOPIC"; readonly slug: "engine6-placeholder-test"; readonly title: "Placeholder Fallback Test"; ... 6 more ...; readonly longDescription: "Placeholder-only fallback test"; }' is not assignable to type 'Tour'.
+  Types of property 'activitySlugs' are incompatible.
+    The type 'readonly ["hiking"]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+src/engine6/engine6.test.tsx(3118,11): error TS2322: Type '{ heroImage: string; id: "engine6-invalid-image-test"; engine: "engine6"; productCode: "BADIMG"; slug: "engine6-invalid-image-test"; title: "Invalid Hero Guardrail"; destination: { readonly country: "United States"; readonly state: "Alaska"; readonly stateSlug: "alaska"; readonly city: "Anchorage"; readonly citySlug...' is not assignable to type 'Tour'.
+  Types of property 'activitySlugs' are incompatible.
+    The type 'readonly ["wildlife"]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+src/engine6/engine6.validation.test.tsx(151,17): error TS18047: 'tour.heroImageUrl' is possibly 'null'.
+src/engine6/engine6JsonLdRegression.test.tsx(31,36): error TS18047: 'tour.heroImageUrl' is possibly 'null'.
+src/engine6/engine6ParagonBuildScopeGovernance.ts(496,46): error TS2367: This comparison appears to be unintentional because the types '"blocking"' and '"warning"' have no overlap.
+src/engine6/engine6ProductSelectionGovernance.ts(867,61): error TS2345: Argument of type '{ mode: Engine6LiveViatorValidationMode; passed: boolean; blockingPassed: boolean; scopedProductCodes: string[]; validatedAt: string; results: Engine6LiveViatorValidationResult[]; failures: Engine6LiveViatorValidationResult[]; blockingFailures: Engine6LiveViatorValidationResult[]; legacyFailures: Engine6LiveViatorVa...' is not assignable to parameter of type 'Engine6LiveViatorProductionValidationReport'.
+  Type '{ mode: Engine6LiveViatorValidationMode; passed: boolean; blockingPassed: boolean; scopedProductCodes: string[]; validatedAt: string; results: Engine6LiveViatorValidationResult[]; failures: Engine6LiveViatorValidationResult[]; blockingFailures: Engine6LiveViatorValidationResult[]; legacyFailures: Engine6LiveViatorVa...' is missing the following properties from type 'Engine6LiveViatorProductionValidationReport': governanceMode, skipped, skipReason, credentialsRequired, credentialsAvailable
+src/engine6/engine6Stage2GovernanceAudit.ts(495,51): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+src/engine6/engine6Stage2GovernanceAudit.ts(654,51): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+src/engine6/engine6Stage2GovernanceAudit.ts(1215,5): error TS2561: Object literal may only specify known properties, but 'baselineMerchantFeedCsv' does not exist in type '{ changedFiles: readonly Engine6GitChangedFile[]; branchScopedProductCodes: ReadonlySet<string>; baselineMerchantFeedRows?: MerchantFeedCsvRow[] | undefined; ... 10 more ...; generatedAt?: string | undefined; }'. Did you mean to write 'baselineMerchantFeedRows'?
+src/engine6/fortLauderdaleRatingParity.test.tsx(58,58): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/fortLauderdaleRatingParity.test.tsx(176,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/fortLauderdaleRatingParity.test.tsx(285,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/hawaiiVolcanoesCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/hawaiiVolcanoesRatingParity.test.tsx(56,59): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/hawaiiVolcanoesRatingParity.test.tsx(129,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/honoluluRatingParity.test.tsx(57,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/honoluluRatingParity.test.tsx(125,55): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/houstonCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/houstonRatingParity.test.tsx(56,50): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/houstonRatingParity.test.tsx(124,54): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/jacksonHoleRatingParity.test.tsx(57,55): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/jacksonHoleRatingParity.test.tsx(137,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/kauaiCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/kauaiRatingParity.test.tsx(56,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/kauaiRatingParity.test.tsx(124,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/keyWestRatingParity.test.tsx(57,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/keyWestRatingParity.test.tsx(131,55): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/konaCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/konaRatingParity.test.tsx(56,47): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/konaRatingParity.test.tsx(124,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/kyotoCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/kyotoRatingParity.test.tsx(65,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/kyotoRatingParity.test.tsx(291,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/legacyFh/mapLegacyFhRecordToEngine6Tour.ts(127,5): error TS2740: Type '{ source: "legacy-fh-migrated"; commercialConfidenceReason: CommercialConfidenceReason; viatorCommercialFieldsUsed: boolean; commercialSourceWinner: "fareharbor" | "viator"; ... 38 more ...; fallbackFieldNames: never[]; }' is missing the following properties from type 'Engine6TourDiagnostics': heroCandidateCountBeforeFiltering, heroCandidateCountAfterFiltering, heroSourceProductCode, heroSourceProductUrl, and 2 more.
+src/engine6/limaCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/limaRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/limaRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/londonCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/londonRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/londonRatingParity.test.tsx(144,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/londonRatingParity.test.tsx(229,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/mauiCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/mauiRatingParity.test.tsx(56,47): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/mauiRatingParity.test.tsx(124,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/melbourneCommercialPricing.test.tsx(67,49): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/melbourneCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/melbourneRatingParity.test.tsx(64,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/melbourneRatingParity.test.tsx(282,56): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/mexicoCityCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/mexicoCityRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/mexicoCityRatingParity.test.tsx(230,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/moabRatingParity.test.tsx(57,47): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/moabRatingParity.test.tsx(131,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/naplesRatingParity.test.tsx(58,49): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/naplesRatingParity.test.tsx(223,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/orlandoRatingParity.test.tsx(57,50): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/orlandoRatingParity.test.tsx(131,54): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/osakaCommercialPricing.test.tsx(66,63): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/osakaCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/osakaRatingParity.test.tsx(64,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/osakaRatingParity.test.tsx(282,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/parisCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/parisRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/parisRatingParity.test.tsx(224,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/puertoVallartaCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/puertoVallartaRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/puertoVallartaRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/queenstownCommercialPricing.test.tsx(67,50): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/queenstownCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/queenstownRatingParity.test.tsx(64,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/queenstownRatingParity.test.tsx(282,57): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/rioDeJaneiroCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/rioDeJaneiroRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/rioDeJaneiroRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/rockyMountainNationalParkRatingParity.test.tsx(59,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/rockyMountainNationalParkRatingParity.test.tsx(144,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/romeCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/romeRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/romeRatingParity.test.tsx(224,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/seoulCommercialPricing.test.tsx(65,63): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/seoulCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/seoulRatingParity.test.tsx(64,48): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/seoulRatingParity.test.tsx(274,52): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/singaporeCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/singaporeRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/singaporeRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/sydneyCommercialPricing.test.tsx(66,64): error TS2538: Type 'undefined' cannot be used as an index type.
+src/engine6/sydneyCreationContract.test.tsx(27,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/sydneyRatingParity.test.tsx(64,49): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/sydneyRatingParity.test.tsx(274,53): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/tokyoCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/tokyoRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/tokyoRatingParity.test.tsx(243,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/validationFixtures.ts(1170,60): error TS2345: Argument of type 'string' is not assignable to parameter of type '"2335P1" | "53254P8" | "173135P2" | "434555P1" | "3351P15" | "74828P3" | "74828P5" | "74828P4" | "63657P1" | "41410P10" | "36001P1" | "335698P13" | "237571P2" | "6740P7" | "12389P8" | ... 1122 more ... | "335817P10"'.
+src/engine6/veniceCreationContract.test.tsx(29,5): error TS2322: Type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' is not assignable to type 'Engine6ApiDiagnostics'.
+  Property 'fallbackFieldNames' is missing in type '{ bookingUrlSource: string; fieldLevelFallbackUsed: false; commercialPriceFieldPath: string | null; commercialPriceRawValue: string | number | null; priceSourceUsed: "live-price" | "fallback"; ... 59 more ...; usedBundledFallbackBecause: string; }' but required in type 'Engine6TourDiagnostics'.
+src/engine6/veniceRatingParity.test.tsx(58,7): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/engine6/veniceRatingParity.test.tsx(224,11): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/guidesWorldUsExclusion.test.tsx(9,30): error TS7016: Could not find a declaration file for module '../scripts/generate-sitemap.mjs'. '/home/runner/work/alloutdooradventures2/alloutdooradventures2/scripts/generate-sitemap.mjs' implicitly has an 'any' type.
+src/lib/fallbackSeoEmitter.ts(58,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/lib/fallbackSeoEmitter.ts(181,37): error TS2345: Argument of type 'Record<string, unknown>' is not assignable to parameter of type 'Tour & Record<string, unknown>'.
+  Type 'Record<string, unknown>' is missing the following properties from type 'Tour': slug, destination
+src/pages/Home.tsx(543,23): error TS2322: Type '"h4"' is not assignable to type '"h2" | "h3" | undefined'.
+src/pages/Home.tsx(571,23): error TS2322: Type '"h4"' is not assignable to type '"h2" | "h3" | undefined'.
+src/pages/destinations/europe/EuropeCountryRoute.tsx(85,18): error TS2345: Argument of type '{ "@type": string; itemListElement: { image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]; }' is not assignable to parameter of type '{ "@type": string; itemListElement: { "@type": string; position: number; name: string; item: string; }[]; }'.
+  Types of property 'itemListElement' are incompatible.
+    Type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]' is not assignable to type '{ "@type": string; position: number; name: string; item: string; }[]'.
+      Property 'item' is missing in type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }' but required in type '{ "@type": string; position: number; name: string; item: string; }'.
+src/pages/destinations/states/tours/CityTourBookingRoute.tsx(297,11): error TS2367: This comparison appears to be unintentional because the types '"loading" | "failed" | "idle"' and '"loaded"' have no overlap.
+src/pages/destinations/states/tours/CityTourDetailRoute.tsx(492,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/pages/destinations/states/tours/CityTourDetailRoute.tsx(511,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/pages/destinations/states/tours/CityTourDetailRoute.tsx(512,7): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/pages/destinations/states/tours/CityTourDetailRoute.tsx(565,11): error TS2322: Type 'Engine4BridgeRuntimeSource | undefined' is not assignable to type '"live-api" | "bundled-fallback" | undefined'.
+  Type '"cached-engine4-fallback"' is not assignable to type '"live-api" | "bundled-fallback" | undefined'.
+src/pages/destinations/states/tours/CityToursIndexRoute.tsx(98,60): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/destinations/states/tours/CityToursIndexRoute.tsx(107,26): error TS2538: Type 'undefined' cannot be used as an index type.
+src/pages/destinations/states/tours/CityToursIndexRoute.tsx(198,18): error TS2345: Argument of type '{ "@type": string; itemListElement: { image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]; }' is not assignable to parameter of type '{ "@type": string; itemListElement: { "@type": string; position: number; name: string; item: string; }[]; }'.
+  Types of property 'itemListElement' are incompatible.
+    Type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]' is not assignable to type '{ "@type": string; position: number; name: string; item: string; }[]'.
+      Property 'item' is missing in type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }' but required in type '{ "@type": string; position: number; name: string; item: string; }'.
+src/pages/destinations/world/WorldCountryRoute.tsx(97,18): error TS2345: Argument of type '{ "@type": string; itemListElement: { image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]; }' is not assignable to parameter of type '{ "@type": string; itemListElement: { "@type": string; position: number; name: string; item: string; }[]; }'.
+  Types of property 'itemListElement' are incompatible.
+    Type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]' is not assignable to type '{ "@type": string; position: number; name: string; item: string; }[]'.
+      Property 'item' is missing in type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }' but required in type '{ "@type": string; position: number; name: string; item: string; }'.
+src/pages/engine6/Engine6SpecimenRoute.tsx(132,44): error TS2339: Property 'source' does not exist on type 'Engine6Tour'.
+src/pages/tours/FlagstaffTourBookingRoute.tsx(260,11): error TS2367: This comparison appears to be unintentional because the types '"loading" | "failed" | "idle"' and '"loaded"' have no overlap.
+src/pages/tours/ToursLanding.tsx(394,11): error TS2322: Type '{ tour: { id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; activitySlugs: string[]; destination: { ...; }; bookingUrl: string; operator: string; source: string; }; href: string; }[]' is not assignable to type '{ tour: Tour; href: string; }[]'.
+  Type '{ tour: { id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; activitySlugs: string[]; destination: { ...; }; bookingUrl: string; operator: string; source: string; }; href: string; }' is not assignable to type '{ tour: Tour; href: string; }'.
+    Types of property 'tour' are incompatible.
+      Type '{ id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; activitySlugs: string[]; destination: { ...; }; bookingUrl: string; operator: string; source: string; }' is missing the following properties from type 'Tour': heroImage, badges, bookingProvider, longDescription
+src/pages/tours/ToursLanding.tsx(488,9): error TS2322: Type '({ tour: Tour; href: string; } | { tour: { id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; ... 4 more ...; source: string; }; href: string; })[]' is not assignable to type '{ tour: Tour; href: string; }[]'.
+  Type '{ tour: Tour; href: string; } | { tour: { id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; ... 4 more ...; source: string; }; href: string; }' is not assignable to type '{ tour: Tour; href: string; }'.
+    Type '{ tour: { id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; activitySlugs: string[]; destination: { ...; }; bookingUrl: string; operator: string; source: string; }; href: string; }' is not assignable to type '{ tour: Tour; href: string; }'.
+      Types of property 'tour' are incompatible.
+        Type '{ id: string; slug: string; title: string; description: string; image: string; price: string | undefined; duration: string; difficulty: string; activityType: string; activitySlugs: string[]; destination: { ...; }; bookingUrl: string; operator: string; source: string; }' is missing the following properties from type 'Tour': heroImage, badges, bookingProvider, longDescription
+src/templates/DestinationLandingTemplate.tsx(73,18): error TS2345: Argument of type '{ "@type": string; itemListElement: { image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]; }' is not assignable to parameter of type '{ "@type": string; itemListElement: { "@type": string; position: number; name: string; item: string; }[]; }'.
+  Types of property 'itemListElement' are incompatible.
+    Type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]' is not assignable to type '{ "@type": string; position: number; name: string; item: string; }[]'.
+      Property 'item' is missing in type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }' but required in type '{ "@type": string; position: number; name: string; item: string; }'.
+src/templates/GuideTemplate.tsx(265,26): error TS2322: Type 'GuideImage | { src: string | undefined; alt: string; category: "scenic"; }' is not assignable to type 'GuideImage'.
+  Type '{ src: string | undefined; alt: string; category: "scenic"; }' is not assignable to type 'GuideImage'.
+    Types of property 'src' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+src/templates/StateToursTemplate.tsx(53,18): error TS2345: Argument of type '{ "@type": string; itemListElement: { image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]; }' is not assignable to parameter of type '{ "@type": string; itemListElement: { "@type": string; position: number; name: string; item: string; }[]; }'.
+  Types of property 'itemListElement' are incompatible.
+    Type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }[]' is not assignable to type '{ "@type": string; position: number; name: string; item: string; }[]'.
+      Property 'item' is missing in type '{ image?: string[] | undefined; "@type": string; position: number; name: string; url: string; }' but required in type '{ "@type": string; position: number; name: string; item: string; }'.

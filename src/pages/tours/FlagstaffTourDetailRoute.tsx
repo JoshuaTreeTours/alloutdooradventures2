@@ -21,6 +21,10 @@ import {
 import { formatStartingPrice } from "../../lib/pricing";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
+import {
+  applyFareHarborRebuildToTour,
+  hasVerifiedTourPrice,
+} from "../../data/fareharborRebuild";
 import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
@@ -65,7 +69,8 @@ export default function FlagstaffTourDetailRoute({
     );
   }
 
-  const tour = getFlagstaffTourBySlug(params.tourSlug);
+  const rawTour = getFlagstaffTourBySlug(params.tourSlug);
+  const tour = rawTour ? applyFareHarborRebuildToTour(rawTour) : null;
   const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
   const heroImage =
     resolveHeroImageForRoute({
@@ -123,7 +128,11 @@ export default function FlagstaffTourDetailRoute({
           },
           offers: {
             url: bookingUrl,
-            price: applyPriceFloor(tour.startingPrice ?? null),
+            price:
+              tour.bookingProvider === "fareharbor" &&
+              !hasVerifiedTourPrice(tour)
+                ? undefined
+                : applyPriceFloor(tour.startingPrice ?? null),
             priceCurrency: tour.currency ?? "USD",
           },
           brandOrgIds: {
@@ -220,6 +229,8 @@ export default function FlagstaffTourDetailRoute({
     tour.startingPrice === null ||
     !Number.isFinite(tour.startingPrice) ||
     tour.startingPrice < PRICE_MIN_THRESHOLD_USD;
+  const unresolvedFareHarborPrice =
+    tour.bookingProvider === "fareharbor" && !hasVerifiedTourPrice(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -274,21 +285,34 @@ export default function FlagstaffTourDetailRoute({
                 {tour.badges.tagline}
               </p>
             ) : null}
-            <p className="mt-3 text-sm font-semibold text-white/90">
-              {isPriceFallbackApplied
-                ? "From $129 per person"
-                : `From ${startingPriceLabel} per person`}
-            </p>
+            {!unresolvedFareHarborPrice ? (
+              <p className="mt-3 text-sm font-semibold text-white/90">
+                {isPriceFallbackApplied
+                  ? "From $129 per person"
+                  : `From ${startingPriceLabel} per person`}
+              </p>
+            ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href={bookingUrl}>
+            {unresolvedFareHarborPrice ? (
               <a
-                rel="nofollow"
+                href={tour.bookingUrl}
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book Now
+                Learn More
               </a>
-            </Link>
+            ) : (
+              <Link href={bookingUrl}>
+                <a
+                  rel="nofollow"
+                  className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                >
+                  Book Now
+                </a>
+              </Link>
+            )}
             <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
@@ -368,14 +392,25 @@ export default function FlagstaffTourDetailRoute({
         ) : null}
         {bookingUrl ? (
           <div className="mt-12 text-center">
-            <Link href={bookingUrl}>
+            {unresolvedFareHarborPrice ? (
               <a
-                rel="nofollow"
+                href={tour.bookingUrl}
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               >
-                Book This Tour
+                Learn More
               </a>
-            </Link>
+            ) : (
+              <Link href={bookingUrl}>
+                <a
+                  rel="nofollow"
+                  className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                >
+                  Book This Tour
+                </a>
+              </Link>
+            )}
           </div>
         ) : null}
       </section>
