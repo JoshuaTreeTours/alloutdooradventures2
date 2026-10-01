@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 2651,
       "sha256": "5a95974677160367d9b1a57633445647fadcf0860b9e357bd88438e6d418a9f2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/divaroyale/items/347680/ratings/",
+      "status": 200,
+      "bytes": 516,
+      "sha256": "3990295f621926007e1207638048b063d5cd89856bc8bca6ea41d552ef0a5d57"
     }
   },
   "bookingPageValidity": {

@@ -31,6 +31,7 @@ from build_stage_b_proof import (
     word_count,
 )
 from inventory_boston import inventory
+from tripadvisor_ratings import parse_tripadvisor_rating
 from editorial_voice import (
     compose_editorial,
     editorial_substance_errors,
@@ -608,6 +609,34 @@ def empty_facts() -> dict:
     }
 
 
+def tripadvisor_rating(folder: Path, meta: dict, company: str, item_id: str) -> tuple[dict | None, str]:
+    endpoint = (
+        f"https://fareharbor.com/api/v1/companies/{company}/items/{item_id}/ratings/"
+    )
+    record = (meta.get("endpoints") or {}).get("ratings") or {}
+    path = folder / "ratings.json"
+    absent = (
+        f"The FareHarbor ratings endpoint {endpoint} did not include a TripAdvisor "
+        "rating and review count in ratings.tripadvisor.rating and "
+        "ratings.tripadvisor.num_reviews. rating_image_url was not used. Google "
+        "reviews were not substituted. Catalog quality_score and availability_count "
+        "were not used. AggregateRating is omitted."
+    )
+    if record.get("status") != 200 or not path.exists():
+        return None, absent
+    parsed = parse_tripadvisor_rating(load_json(path))
+    if not parsed:
+        return None, absent
+    provenance = (
+        f"TripAdvisor rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
+        f"on GET {endpoint} fields ratings.tripadvisor.rating and "
+        "ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. "
+        "Google reviews were not substituted. Catalog quality_score and availability_count "
+        "were not used."
+    )
+    return parsed, provenance
+
+
 def public_path_for(geography: dict, slug: str) -> str:
     return f"/destinations/{geography['stateSlug']}/{geography['citySlug']}/tours/{slug}"
 
@@ -787,11 +816,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         "pricingNotes": [],
         "offer": offer,
         "aggregateRating": None,
-        "ratingProvenance": (
-            "No numeric rating or review count is present in the stored FareHarbor content, "
-            "structured-description, item, or price-preview payloads. Catalog quality_score and "
-            "availability_count were not used. AggregateRating is omitted."
-        ),
+        "ratingProvenance": "",
         "geography": geography,
         "imageAudit": image_audit,
         "source": {
@@ -803,6 +828,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             "bookingPageValidity": booking,
         },
     }
+    rating, rating_provenance = tripadvisor_rating(
+        folder, meta, catalog["company"], catalog["itemId"]
+    )
+    product["aggregateRating"] = rating
+    product["ratingProvenance"] = rating_provenance
     validation = validate(
         product,
         source_text,
@@ -897,7 +927,7 @@ def emit_ts(products: list[dict]) -> str:
                 "priceRows": product["priceRows"],
                 "pricingNotes": product["pricingNotes"],
                 "offer": product["offer"],
-                "aggregateRating": None,
+                "aggregateRating": product["aggregateRating"],
                 "ratingProvenance": product["ratingProvenance"],
             }
         )
@@ -963,7 +993,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         "",
         "Scope is `citySlug === boston` FareHarbor products in `tours.generated.ts`. Engine 6 Viator Boston routes and non-Boston cities were not processed.",
         "",
-        "Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. AggregateRating is omitted. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.",
+        "Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.",
         "",
         f"- Total Boston legacy products: {harvest['totalBostonLegacy']}",
         f"- Active booking pages: {harvest['active']}",
@@ -981,10 +1011,39 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         f"- INSUFFICIENT_SOURCE_CONTENT: {counts['INSUFFICIENT_SOURCE_CONTENT']}",
         f"- SOURCE_NOT_FOUND: {counts['SOURCE_NOT_FOUND']}",
         f"- OK priced pages: {counts['OK']}",
+        f"- Runtime pages with a TripAdvisor rating: {sum(1 for item in published if item.get('aggregateRating'))}",
+        f"- Runtime pages without a TripAdvisor rating: {sum(1 for item in published if not item.get('aggregateRating'))}",
+        "",
+        "## TripAdvisor ratings",
+        "",
+    ]
+    rated = [item for item in published if item.get("aggregateRating")]
+    rated.sort(
+        key=lambda item: (
+            item["itemId"] != "657142",
+            -(item["aggregateRating"]["reviewCount"]),
+        )
+    )
+    if not rated:
+        lines.append("- None. The ratings endpoint did not return a TripAdvisor pair for any published page.")
+    else:
+        lines.append(
+            "Source: `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews` "
+            "on the FareHarbor item ratings endpoint. Provider is TripAdvisor."
+        )
+        for product in rated[:8]:
+            rating = product["aggregateRating"]
+            lines.append(
+                f"- `{product['itemId']}` `{product['title']}` — "
+                f"{rating['ratingValue']} / {rating['reviewCount']} {rating['provider']}"
+            )
+        if len(rated) > 8:
+            lines.append(f"- {len(rated) - 8} more published pages carry the same TripAdvisor pair.")
+    lines.extend([
         "",
         "## Geography conflicts",
         "",
-    ]
+    ])
     conflicts = [
         product
         for product in products
@@ -1102,9 +1161,23 @@ def main() -> None:
     print(f"wrote {GEOGRAPHY_TS}")
     print(f"wrote {REPORT_MD}")
     boston_runtime = [item for item in runtime if "/boston/" in item["publicPath"]]
+    ratings_report = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-ratings.json"
+    if ratings_report.exists():
+        coverage = load_json(ratings_report)
+        coverage["runtimePublished"] = len(runtime)
+        coverage["runtimeWithTripadvisor"] = sum(
+            1 for item in runtime if item.get("aggregateRating")
+        )
+        coverage["runtimeWithoutTripadvisor"] = sum(
+            1 for item in runtime if not item.get("aggregateRating")
+        )
+        ratings_report.write_text(
+            json.dumps(coverage, indent=2, ensure_ascii=False) + "\n"
+        )
     print(
         f"runtime={len(runtime)} boston={len(boston_runtime)} moved={len(moved)} "
-        f"geo_exclude={len(review)} terminal={len(terminal_ids)} fail={len(failures)}"
+        f"geo_exclude={len(review)} terminal={len(terminal_ids)} fail={len(failures)} "
+        f"tripadvisor={sum(1 for item in runtime if item.get('aggregateRating'))}"
     )
     for product in failures[:25]:
         print(f"FAIL {product['itemId']} {product['exceptionStatus']} {product['validation']['errors']}")

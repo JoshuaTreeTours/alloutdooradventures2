@@ -27,7 +27,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/112945/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "117124",
@@ -53,7 +53,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/117124/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "151824",
@@ -79,7 +79,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/151824/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "191688",
@@ -106,7 +106,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/191688/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "243407",
@@ -132,7 +132,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/243407/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26483",
@@ -178,8 +178,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "72.08",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26483/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26493",
@@ -205,8 +209,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26493/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26497",
@@ -233,8 +241,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26497/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26498",
@@ -299,8 +311,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "171.72",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26498/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26501",
@@ -356,8 +372,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "167.48",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26501/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26502",
@@ -413,8 +433,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "284.08",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26502/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26504",
@@ -480,8 +504,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "44.52",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26504/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26505",
@@ -550,8 +578,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "47.70",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26505/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26508",
@@ -578,8 +610,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26508/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26510",
@@ -608,8 +644,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26510/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26514",
@@ -669,8 +709,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "284.08",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26514/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26515",
@@ -730,8 +774,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "103.88",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/26515/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "35720",
@@ -776,8 +824,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "238.50",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/35720/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "47278",
@@ -807,8 +859,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/47278/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "482166",
@@ -837,8 +893,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/482166/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "510795",
@@ -868,8 +928,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/510795/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "527475",
@@ -896,8 +960,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/527475/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "537382",
@@ -927,8 +995,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/537382/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "617713",
@@ -994,8 +1066,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "40.28",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/617713/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "64770",
@@ -1025,8 +1101,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/64770/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "657142",
@@ -1096,8 +1176,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "40.28",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/657142/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "657144",
@@ -1167,8 +1251,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "59.36",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/657144/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "659558",
@@ -1195,8 +1283,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/659558/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "664825",
@@ -1224,8 +1316,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/664825/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "664847",
@@ -1254,8 +1350,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/664847/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "691661",
@@ -1283,8 +1383,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/691661/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "693346",
@@ -1313,8 +1417,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/693346/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "693687",
@@ -1344,8 +1452,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.7,
+      "reviewCount": 1645,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.7 from 1645 reviews on GET https://fareharbor.com/api/v1/companies/boston-sailing/items/693687/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "361591",
@@ -1401,7 +1513,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361591/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361612",
@@ -1458,7 +1570,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361612/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361623",
@@ -1514,7 +1626,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361623/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361628",
@@ -1570,7 +1682,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361628/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361677",
@@ -1627,7 +1739,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361677/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361682",
@@ -1657,7 +1769,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361682/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361693",
@@ -1711,7 +1823,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361693/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361701",
@@ -1764,7 +1876,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361701/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361708",
@@ -1792,7 +1904,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361708/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361712",
@@ -1821,7 +1933,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361712/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "361714",
@@ -1851,7 +1963,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361714/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "362213",
@@ -1907,7 +2019,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/362213/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "362214",
@@ -1961,7 +2073,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/362214/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "362215",
@@ -2017,7 +2129,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/362215/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371156",
@@ -2071,7 +2183,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371156/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371157",
@@ -2095,7 +2207,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371157/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371158",
@@ -2148,7 +2260,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371158/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371159",
@@ -2194,7 +2306,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371159/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371160",
@@ -2225,7 +2337,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371160/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "371161",
@@ -2280,7 +2392,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/371161/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378550",
@@ -2309,7 +2421,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378550/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378552",
@@ -2362,7 +2474,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378552/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378553",
@@ -2391,7 +2503,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378553/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378554",
@@ -2445,7 +2557,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378554/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378555",
@@ -2474,7 +2586,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378555/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378556",
@@ -2503,7 +2615,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378556/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "378557",
@@ -2532,7 +2644,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/378557/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "383436",
@@ -2561,7 +2673,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/383436/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "383672",
@@ -2615,7 +2727,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/383672/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "384054",
@@ -2643,7 +2755,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/384054/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "384057",
@@ -2673,7 +2785,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/384057/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "384549",
@@ -2727,7 +2839,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/384549/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "387481",
@@ -2751,7 +2863,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/387481/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "389570",
@@ -2782,7 +2894,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/389570/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393802",
@@ -2813,7 +2925,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393802/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393810",
@@ -2844,7 +2956,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393810/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393814",
@@ -2875,7 +2987,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393814/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393817",
@@ -2906,7 +3018,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393817/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393818",
@@ -2937,7 +3049,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393818/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "393819",
@@ -2967,7 +3079,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/393819/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "401790",
@@ -2997,7 +3109,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/401790/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "430742",
@@ -3026,7 +3138,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/430742/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "430743",
@@ -3056,7 +3168,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/430743/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438140",
@@ -3087,7 +3199,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438140/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438143",
@@ -3117,7 +3229,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438143/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438147",
@@ -3145,7 +3257,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438147/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438148",
@@ -3199,7 +3311,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438148/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438149",
@@ -3228,7 +3340,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438149/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438150",
@@ -3257,7 +3369,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438150/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438151",
@@ -3286,7 +3398,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438151/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438152",
@@ -3315,7 +3427,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438152/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "438153",
@@ -3344,7 +3456,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/438153/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "441227",
@@ -3397,7 +3509,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/441227/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "452880",
@@ -3425,7 +3537,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/452880/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "453628",
@@ -3454,7 +3566,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/453628/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455619",
@@ -3484,7 +3596,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455619/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455620",
@@ -3511,7 +3623,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455620/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455622",
@@ -3564,7 +3676,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455622/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455623",
@@ -3592,7 +3704,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455623/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455624",
@@ -3621,7 +3733,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455624/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455625",
@@ -3649,7 +3761,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455625/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455626",
@@ -3677,7 +3789,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455626/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455627",
@@ -3705,7 +3817,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455627/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455629",
@@ -3759,7 +3871,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455629/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455633",
@@ -3788,7 +3900,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455633/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455634",
@@ -3817,7 +3929,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455634/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455635",
@@ -3846,7 +3958,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455635/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455639",
@@ -3874,7 +3986,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455639/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455640",
@@ -3902,7 +4014,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455640/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455641",
@@ -3956,7 +4068,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455641/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455643",
@@ -3985,7 +4097,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455643/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455644",
@@ -4039,7 +4151,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455644/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455645",
@@ -4067,7 +4179,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455645/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455646",
@@ -4096,7 +4208,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455646/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455648",
@@ -4128,7 +4240,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455648/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455650",
@@ -4157,7 +4269,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455650/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455652",
@@ -4186,7 +4298,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455652/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455653",
@@ -4215,7 +4327,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455653/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455654",
@@ -4244,7 +4356,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455654/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455656",
@@ -4272,7 +4384,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455656/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455658",
@@ -4303,7 +4415,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455658/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "455660",
@@ -4331,7 +4443,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/455660/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "508151",
@@ -4359,7 +4471,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/508151/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "523516",
@@ -4390,7 +4502,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/523516/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "523525",
@@ -4420,7 +4532,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/523525/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "523785",
@@ -4476,7 +4588,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/523785/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "566969",
@@ -4523,7 +4635,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/566969/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "576798",
@@ -4553,7 +4665,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/576798/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "576799",
@@ -4582,7 +4694,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/576799/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "586596",
@@ -4610,7 +4722,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/586596/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "604666",
@@ -4641,7 +4753,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/604666/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "630528",
@@ -4665,7 +4777,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/630528/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "665573",
@@ -4719,7 +4831,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonbyfoot/items/665573/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26333",
@@ -4762,7 +4874,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26333/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26334",
@@ -4805,7 +4917,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26334/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26335",
@@ -4848,7 +4960,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26335/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26336",
@@ -4876,7 +4988,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26336/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26337",
@@ -4905,7 +5017,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26337/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26338",
@@ -4933,7 +5045,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26338/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26339",
@@ -4962,7 +5074,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26339/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "682930",
@@ -5003,7 +5115,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonfoodhistorywalkingtour/items/682930/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "682942",
@@ -5032,7 +5144,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonfoodhistorywalkingtour/items/682942/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "685351",
@@ -5056,7 +5168,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonfoodhistorywalkingtour/items/685351/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "259002",
@@ -5116,8 +5228,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "159.00",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 506,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 506 reviews on GET https://fareharbor.com/api/v1/companies/bostonfoodietours/items/259002/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "259011",
@@ -5170,8 +5286,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "159.00",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 506,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 506 reviews on GET https://fareharbor.com/api/v1/companies/bostonfoodietours/items/259011/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "259015",
@@ -5201,8 +5321,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 506,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 506 reviews on GET https://fareharbor.com/api/v1/companies/bostonfoodietours/items/259015/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "306974",
@@ -5242,8 +5366,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "104.94",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 506,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 506 reviews on GET https://fareharbor.com/api/v1/companies/bostonfoodietours/items/306974/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "130424",
@@ -5267,7 +5395,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonharborislands/items/130424/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "130441",
@@ -5291,7 +5419,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonharborislands/items/130441/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "20599",
@@ -5322,7 +5450,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonharborislands/items/20599/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "425924",
@@ -5369,7 +5497,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/425924/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "426001",
@@ -5410,7 +5538,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/426001/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "426011",
@@ -5457,7 +5585,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/426011/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "492720",
@@ -5503,7 +5631,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/492720/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "518093",
@@ -5548,7 +5676,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/518093/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "518095",
@@ -5593,7 +5721,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/518095/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "580179",
@@ -5640,7 +5768,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/580179/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "606802",
@@ -5691,7 +5819,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/606802/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "617316",
@@ -5743,7 +5871,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/617316/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "627552",
@@ -5793,7 +5921,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/627552/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "633324",
@@ -5834,7 +5962,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/633324/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "637407",
@@ -5879,7 +6007,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/637407/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "664802",
@@ -5924,7 +6052,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/664802/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "670923",
@@ -5973,7 +6101,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonhiddengems/items/670923/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "448075",
@@ -6022,7 +6150,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448075/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "448083",
@@ -6061,7 +6189,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448083/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "448091",
@@ -6085,7 +6213,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448091/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "448093",
@@ -6124,7 +6252,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448093/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "448094",
@@ -6153,7 +6281,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448094/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "464912",
@@ -6200,7 +6328,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/464912/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "540824",
@@ -6228,7 +6356,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/540824/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "556936",
@@ -6258,7 +6386,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/556936/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "609024",
@@ -6298,7 +6426,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/609024/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "641580",
@@ -6342,7 +6470,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonprivateguide/items/641580/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "653308",
@@ -6368,7 +6496,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonrhythmriders/items/653308/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "451229",
@@ -6407,7 +6535,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/451229/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "451242",
@@ -6444,7 +6572,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/451242/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "542321",
@@ -6482,7 +6610,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/542321/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "257506",
@@ -6521,7 +6649,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostontourhub/items/257506/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "333848",
@@ -6551,7 +6679,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostontourhub/items/333848/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "522022",
@@ -6580,7 +6708,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostontourhub/items/522022/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "540129",
@@ -6610,7 +6738,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/bostontourhub/items/540129/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "531495",
@@ -6653,7 +6781,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/btbfathersontours/items/531495/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "606245",
@@ -6683,7 +6811,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/centralscoot/items/606245/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "606254",
@@ -6713,7 +6841,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/centralscoot/items/606254/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "607319",
@@ -6788,7 +6916,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/centralscoot/items/607319/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "607330",
@@ -6816,7 +6944,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/centralscoot/items/607330/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "144864",
@@ -6854,7 +6982,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/classicsailboston/items/144864/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "144869",
@@ -6891,7 +7019,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/classicsailboston/items/144869/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "144871",
@@ -6928,7 +7056,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/classicsailboston/items/144871/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "525191",
@@ -6952,7 +7080,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/classicsailboston/items/525191/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "347680",
@@ -7041,7 +7169,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/divaroyale/items/347680/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "629482",
@@ -7085,7 +7213,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/gildedage-tour/items/629482/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "130702",
@@ -7112,7 +7240,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/libertyfleet/items/130702/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "80573",
@@ -7141,7 +7269,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/libertyfleet/items/80573/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "80585",
@@ -7171,7 +7299,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/libertyfleet/items/80585/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "512328",
@@ -7235,7 +7363,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/massbaylines/items/512328/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "512335",
@@ -7299,7 +7427,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/massbaylines/items/512335/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "692147",
@@ -7329,7 +7457,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/massbaylines/items/692147/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "608038",
@@ -7360,7 +7488,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/motorsportlab/items/608038/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "618195",
@@ -7400,8 +7528,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "68.90",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 64,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 64 reviews on GET https://fareharbor.com/api/v1/companies/offthebeatenpathfoodtours/items/618195/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "26971",
@@ -7438,7 +7570,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/onlocationtoursboston/items/26971/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "26974",
@@ -7492,7 +7624,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/onlocationtoursboston/items/26974/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "194038",
@@ -7515,8 +7647,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/194038/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "347869",
@@ -7541,8 +7677,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/347869/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "58904",
@@ -7587,8 +7727,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "58.30",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/58904/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "58912",
@@ -7611,8 +7755,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/58912/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "89865",
@@ -7657,8 +7805,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "58.30",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/89865/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "94381",
@@ -7686,8 +7838,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 471,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.9 from 471 reviews on GET https://fareharbor.com/api/v1/companies/photowalks/items/94381/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "408909",
@@ -7758,7 +7914,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/roweswharfwatertransport/items/408909/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "454073",
@@ -7799,7 +7955,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/soundscape-tours/items/454073/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "348848",
@@ -7829,7 +7985,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/supyoadventures/items/348848/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "348849",
@@ -7858,7 +8014,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/supyoadventures/items/348849/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "350210",
@@ -7885,7 +8041,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/supyoadventures/items/350210/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "350211",
@@ -7912,7 +8068,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/supyoadventures/items/350211/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "367212",
@@ -7956,7 +8112,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/teraloom/items/367212/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "306874",
@@ -7982,7 +8138,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/thegibsonhouse/items/306874/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "639737",
@@ -8011,7 +8167,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/thegibsonhouse/items/639737/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "605912",
@@ -8059,7 +8215,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "priceCurrency": "USD"
     },
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/tourofthefreedomtrail/items/605912/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "562574",
@@ -8090,7 +8246,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/untoldhistoryofboston/items/562574/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "27344",
@@ -8141,8 +8297,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "74.90",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27344/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "27346",
@@ -8192,8 +8352,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "74.90",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27346/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "27347",
@@ -8233,8 +8397,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "428.00",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27347/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "27349",
@@ -8284,8 +8452,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "85.60",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27349/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "27352",
@@ -8346,8 +8518,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "price": "53.50",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27352/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "27367",
@@ -8370,8 +8546,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/27367/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "39486",
@@ -8396,8 +8576,12 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/39486/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "417626",
@@ -8420,7 +8604,11 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "priceRows": [],
     "pricingNotes": [],
     "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "No numeric rating or review count is present in the stored FareHarbor content, structured-description, item, or price-preview payloads. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 1374,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.8 from 1374 reviews on GET https://fareharbor.com/api/v1/companies/urbanadventours/items/417626/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   }
 ];

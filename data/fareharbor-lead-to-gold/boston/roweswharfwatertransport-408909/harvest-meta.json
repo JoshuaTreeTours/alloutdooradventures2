@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 1670,
       "sha256": "a06d1092df68cc8af7e5c7598ccff5751e879d8d03c02de32cc187ebbe9fdd56"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/roweswharfwatertransport/items/408909/ratings/",
+      "status": 200,
+      "bytes": 551,
+      "sha256": "c9b1e7e7ce6fdb3e2a0351e60fd849aae97eafb50e042eb9bdfce38ffefd3629"
     }
   },
   "bookingPageValidity": {

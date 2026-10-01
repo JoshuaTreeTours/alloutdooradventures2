@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 682,
       "sha256": "c2b5a9a67cf5c4b19ac3f752cdbb1122021a960189df1b6b53fe825678e98f43"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/btbfathersontours/items/531495/ratings/",
+      "status": 200,
+      "bytes": 433,
+      "sha256": "6397b3c4e327e7ab791dba76cf2197f412a3c3fa8437b0c5120e32eb1cd4a005"
     }
   },
   "bookingPageValidity": {

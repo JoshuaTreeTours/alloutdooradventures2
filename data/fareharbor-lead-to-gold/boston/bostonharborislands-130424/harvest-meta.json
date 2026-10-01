@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 227,
       "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonharborislands/items/130424/ratings/",
+      "status": 200,
+      "bytes": 446,
+      "sha256": "cbc75524de67fd194a7ca79f2c3065638a04b72205c3726215b9723b09bfb7cd"
     }
   },
   "bookingPageValidity": {

@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 532,
       "sha256": "07beb767f4adb883b20ed9dfeed41987204b9cfc71817ade5299d97a5cfa50d0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonfoodietours/items/306974/ratings/",
+      "status": 200,
+      "bytes": 639,
+      "sha256": "f40e3c6189a838a819fa358937ce97fd7ab41e9a44d7cf047c3d6b42e7fd7d6c"
     }
   },
   "bookingPageValidity": {

@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 227,
       "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostontourhub/items/522022/ratings/",
+      "status": 200,
+      "bytes": 421,
+      "sha256": "16ed0f4a07faac2fa81cd5e14c81ea67bf59ecd3b3aabded31f3c66c2017e841"
     }
   },
   "bookingPageValidity": {

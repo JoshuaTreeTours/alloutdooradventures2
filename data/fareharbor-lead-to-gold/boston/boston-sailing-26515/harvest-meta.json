@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 1069,
       "sha256": "e6ca4dbf1ebfeb30403a8faa5e5721b019d18e6ffb0ab826bb4db76578401841"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/boston-sailing/items/26515/ratings/",
+      "status": 200,
+      "bytes": 646,
+      "sha256": "aff3c73a06f10facd5c9715a193ca11df374aa38ddf2567b1b25f6aac8d9cc70"
     }
   },
   "bookingPageValidity": {

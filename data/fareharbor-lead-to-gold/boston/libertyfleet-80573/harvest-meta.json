@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 228,
       "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/libertyfleet/items/80573/ratings/",
+      "status": 200,
+      "bytes": 518,
+      "sha256": "7bcc0edc38913ea3abb5ac2077891c3feed5bf788377a6f08715bf607d09b017"
     }
   },
   "bookingPageValidity": {

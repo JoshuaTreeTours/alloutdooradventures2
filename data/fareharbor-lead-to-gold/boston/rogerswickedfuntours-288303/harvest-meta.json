@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 144,
       "sha256": "6c550f2504b767b09d81cab1a67e0ba4d1db1ef2c8a5f0ced16e7ff810b6913b"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/rogerswickedfuntours/items/288303/ratings/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "ed963b58e9de547aa0af1928d7657ebcaca869376711168bf7117adfb7d0ed42"
     }
   },
   "bookingPageValidity": {

@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 145,
       "sha256": "56e4e8679fb7cfcb9373c83c24944a9a01e0984fc53759c5f29cf0fdd8c11885"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/backstorytravelboston/items/677692/ratings/",
+      "status": 404,
+      "bytes": 588093,
+      "sha256": "8e3aca561e1e32ab9a3f10492b5920dab2e1b1955e8bd521c35373e7f8ffe857"
     }
   },
   "bookingPageValidity": {

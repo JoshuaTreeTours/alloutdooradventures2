@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 964,
       "sha256": "cb565cac4604479f6e4a5a6e518a20750f81a9657e8d14ee39ad0a519b7de9de"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonbyfoot/items/361628/ratings/",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "b1d7498c2be73fc8766a3b9b0348f5d9b7f469a0f7d612e159541a0b49b80152"
     }
   },
   "bookingPageValidity": {

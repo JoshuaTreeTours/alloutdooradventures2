@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 149,
       "sha256": "cb2e134b2f74566e8015951c1eb9bcfeb127d87fc3e17199b52fe23773881011"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/livelikealocaltoursboston/items/463302/ratings/",
+      "status": 404,
+      "bytes": 588101,
+      "sha256": "2b067082d3fc98c612566fe2475fb1242750ff607ce35bdd62ecb0d93a8bc123"
     }
   },
   "bookingPageValidity": {

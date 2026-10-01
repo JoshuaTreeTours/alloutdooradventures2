@@ -13,6 +13,7 @@ import {
   fareHarborRatingParityErrors,
   fareHarborShortDescription,
   fareHarborShortDescriptionRepeatsExperience,
+  formatFareHarborRating,
 } from "./fareharborPresentation";
 import {
   FAREHARBOR_PROOF_PRIMARY_CTA_LABEL,
@@ -79,9 +80,34 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
   it("migrates the active Boston set through the shared proof lookup", () => {
     const products = getFareHarborBostonLegacyProducts();
     expect(products).toHaveLength(221);
-    expect(
-      products.every(product => product.aggregateRating === null)
-    ).toBe(true);
+    const patriot = products.find(product => product.itemId === "657142");
+    expect(patriot?.aggregateRating).toEqual({
+      ratingValue: 4.7,
+      reviewCount: 1645,
+      provider: "TripAdvisor",
+    });
+    for (const product of products) {
+      if (!product.aggregateRating) {
+        continue;
+      }
+      expect(product.aggregateRating.provider, product.itemId).toBe(
+        "TripAdvisor"
+      );
+      expect(product.aggregateRating.ratingValue, product.itemId).toBeGreaterThan(
+        0
+      );
+      expect(
+        product.aggregateRating.ratingValue,
+        product.itemId
+      ).toBeLessThanOrEqual(5);
+      expect(
+        Number.isInteger(product.aggregateRating.reviewCount),
+        product.itemId
+      ).toBe(true);
+      expect(product.aggregateRating.reviewCount, product.itemId).toBeGreaterThan(
+        0
+      );
+    }
     expect(
       products.every(
         product => product.exceptionStatus !== "BOOKING_PAGE_NOT_FOUND"
@@ -230,7 +256,16 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
       });
       expect(serialized).not.toContain("129.00");
       expect(serialized).not.toContain("InStock");
-      expect(serialized).not.toContain("AggregateRating");
+      if (!product.aggregateRating) {
+        expect(serialized, product.itemId).not.toContain("AggregateRating");
+      } else {
+        expect(productNode?.aggregateRating, product.itemId).toMatchObject({
+          "@type": "AggregateRating",
+          ratingValue: product.aggregateRating.ratingValue,
+          reviewCount: product.aggregateRating.reviewCount,
+          author: { "@type": "Organization", name: "TripAdvisor" },
+        });
+      }
       expect(
         fareHarborRatingParityErrors({
           proof: product,
@@ -446,10 +481,20 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
         expect(cardHtml, product.itemId).toContain(tour!.heroImage);
       }
       expect(cardHtml, product.itemId).not.toContain("keeps the logistics simple");
-      expect(cardHtml, product.itemId).not.toContain(
-        `${tour!.badges.reviewCount} reviews`
-      );
-      expect(cardHtml, product.itemId).not.toContain("★");
+      if (
+        !product.aggregateRating ||
+        product.aggregateRating.reviewCount !== tour!.badges.reviewCount
+      ) {
+        expect(cardHtml, product.itemId).not.toContain(
+          `${tour!.badges.reviewCount.toLocaleString("en-US")} reviews`
+        );
+      }
+      if (product.aggregateRating) {
+        expect(cardHtml, product.itemId).toContain("· TripAdvisor");
+      } else {
+        expect(cardHtml, product.itemId).not.toContain("★");
+        expect(cardHtml, product.itemId).not.toContain("TripAdvisor");
+      }
       const price = fareHarborPriceLabel(product);
       if (price) {
         withPrice += 1;
@@ -468,7 +513,7 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     }
     expect(withPrice).toBe(93);
     expect(withoutPrice).toBe(128);
-    expect(withRating).toBe(0);
+    expect(withRating).toBe(47);
 
     const priced = getFareHarborProofByItemId("518095");
     const unpriced = getFareHarborProofByItemId("482166");
@@ -490,9 +535,17 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     );
     expect(decode(pricedHeader)).toContain(fareHarborShortDescription(priced!));
     expect(pricedHeader).toContain("From $620.10");
-    expect(pricedHeader).not.toContain("fareharbor-rating");
-    expect(pricedHeader).not.toContain("★");
-    expect(pricedHeader).not.toContain("1,080");
+    if (priced?.aggregateRating) {
+      expect(pricedHeader).toContain("· TripAdvisor");
+      expect(pricedHeader).toContain(
+        `(${priced.aggregateRating.reviewCount.toLocaleString("en-US")} reviews)`
+      );
+    } else {
+      expect(pricedHeader).not.toContain("fareharbor-rating");
+      expect(pricedHeader).not.toContain("★");
+    }
+    expect(pricedHeader).not.toContain("(1,080 reviews)");
+    expect(pricedHeader).not.toContain("★ 4.3");
     expect(decode(pricedPage)).toContain(priced!.paragraphs[2]);
     expect(fareHarborShortDescription(priced!)).not.toBe(
       priced!.paragraphs.join(" ")
@@ -517,9 +570,68 @@ describe("FareHarbor Stage C Boston legacy tranche", () => {
     );
     expect(unpricedHeader).not.toContain('data-testid="fareharbor-price"');
     expect(unpricedHeader).not.toContain("From $");
-    expect(unpricedHeader).not.toContain("★");
+    if (unpriced?.aggregateRating) {
+      expect(unpricedHeader).toContain("· TripAdvisor");
+    } else {
+      expect(unpricedHeader).not.toContain("★");
+    }
     expect(decode(unpricedPage)).toContain(unpriced!.paragraphs[0]);
   }, 120000);
+
+  it("shows the FareHarbor TripAdvisor rating for the Yacht Patriot tour and not the catalog badge", () => {
+    const product = getFareHarborProofByItemId("657142");
+    expect(product?.aggregateRating).toEqual({
+      ratingValue: 4.7,
+      reviewCount: 1645,
+      provider: "TripAdvisor",
+    });
+    const tour = tours.find(
+      entry =>
+        entry.slug === "boston-history-harbor-tour-aboard-yacht-patriot-657142"
+    );
+    expect(tour?.badges.rating).toBe(3);
+    expect(tour?.badges.reviewCount).toBe(42);
+    const card = renderRoute(
+      product!.publicPath,
+      <TourCard tour={tour!} href={product!.publicPath} />
+    );
+    const page = renderRoute(
+      product!.publicPath,
+      <CityTourDetailRoute
+        params={{
+          stateSlug: "massachusetts",
+          citySlug: "boston",
+          tourSlug: "boston-history-harbor-tour-aboard-yacht-patriot-657142",
+        }}
+      />
+    );
+    const header = page.slice(0, page.indexOf("What you’ll experience"));
+    const formatted = formatFareHarborRating(product!.aggregateRating!);
+    expect(card).toContain(formatted);
+    expect(header).toContain(formatted);
+    expect(card).not.toContain("(42 reviews)");
+    expect(header).not.toContain("(42 reviews)");
+    expect(card).not.toContain("★ 3.0");
+    expect(header).not.toContain("★ 3.0");
+    const graph = buildFareHarborProofSchemaGraph(product!, {
+      canonicalUrl: `https://www.alloutdooradventures.com${product!.publicPath}`,
+    });
+    const productNode = graph["@graph"].find(node => node["@type"] === "Product");
+    const tripNode = graph["@graph"].find(
+      node => node["@type"] === "TouristTrip"
+    );
+    expect(productNode?.aggregateRating).toEqual({
+      "@type": "AggregateRating",
+      ratingValue: 4.7,
+      reviewCount: 1645,
+      bestRating: 5,
+      worstRating: 1,
+      author: { "@type": "Organization", name: "TripAdvisor" },
+    });
+    expect(tripNode?.aggregateRating).toBeUndefined();
+    expect(JSON.stringify(graph)).not.toContain('"reviewCount":42');
+    expect(JSON.stringify(graph)).not.toContain('"ratingValue":3');
+  });
 
   it("keeps customer-facing FareHarbor copy free of process commentary and heading fragments", () => {
     const processPhrases = [

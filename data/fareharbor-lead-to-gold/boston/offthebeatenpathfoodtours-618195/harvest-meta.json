@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 563,
       "sha256": "9f36572ad5f29bcc3fe82866410b5f06f02500067f4a57756da2545fcf289289"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/offthebeatenpathfoodtours/items/618195/ratings/",
+      "status": 200,
+      "bytes": 653,
+      "sha256": "868ec9b688e667f556b42e474705f2409f57849650b1d0f1143b125ad1d72f8e"
     }
   },
   "bookingPageValidity": {

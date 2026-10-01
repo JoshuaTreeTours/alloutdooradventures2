@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 1648,
       "sha256": "ed5a33638bdc683ca039e91b15aa35f4a9b77fabaa90d250d932579fe28347de"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/urbanadventours/items/39486/ratings/",
+      "status": 200,
+      "bytes": 614,
+      "sha256": "5da8644cb7cf1ce30f874f195b36df0f46c846fda6683ab55cdf812d7bb884a3"
     }
   },
   "bookingPageValidity": {

@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 1150,
       "sha256": "46ecf3e8396d5712fb8d31319bf9a127566b2eba44f0625d8fec89357772d6df"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/massbaylines/items/512328/ratings/",
+      "status": 200,
+      "bytes": 521,
+      "sha256": "3232fe91265e304cdeb650027c7e27112a98eaf1845860a6078ae032612878c6"
     }
   },
   "bookingPageValidity": {

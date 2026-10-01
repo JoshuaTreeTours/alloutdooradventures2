@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 556,
       "sha256": "5c5527d5cb40703ae52a9cdf64e8576dfa8322dbf67fd1c3373dc87a70c9e0cf"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/onlocationtoursboston/items/26971/ratings/",
+      "status": 200,
+      "bytes": 545,
+      "sha256": "fead64c3f0d6fde17cacae66b1244855e761fdd7a5c4dbd277eb01b91b5b5539"
     }
   },
   "bookingPageValidity": {

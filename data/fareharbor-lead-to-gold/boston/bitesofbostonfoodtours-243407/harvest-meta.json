@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 701,
       "sha256": "0543286afe487aaf9a5ade16cbbcdc5cbbf8c73e356a0f972ac95e704b3bc608"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/243407/ratings/",
+      "status": 200,
+      "bytes": 459,
+      "sha256": "ef6383cc11e5ff5240e19ad0ac2d489ad0bc8e801fd5681d2f2d340c63e9db30"
     }
   },
   "bookingPageValidity": {

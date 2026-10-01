@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 821,
       "sha256": "442373b3c78cd9bc27cfd83294a14baa00902c2a5ef7eaf9ee9c0afcab3f4d60"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tourofthefreedomtrail/items/605912/ratings/",
+      "status": 200,
+      "bytes": 498,
+      "sha256": "7dbaf0d4dec88f777ef4f045557cc1eb80c9afe2743f344b7f3d16609dba3540"
     }
   },
   "bookingPageValidity": {

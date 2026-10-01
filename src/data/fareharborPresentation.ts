@@ -3,6 +3,7 @@ import type { FareHarborProofProduct } from "./fareharborLeadToGoldProof.generat
 export type FareHarborRatingValue = {
   ratingValue: number;
   reviewCount: number;
+  provider: "TripAdvisor";
 };
 
 export type FareHarborRatingSurface = {
@@ -73,11 +74,15 @@ export const fareHarborPriceLabel = (
   return label || null;
 };
 
-export const fareHarborRating = (
-  proof: Pick<FareHarborProofProduct, "aggregateRating">
-): FareHarborRatingValue | null => {
+export const fareHarborRating = (proof: {
+  aggregateRating: {
+    ratingValue: number;
+    reviewCount: number;
+    provider?: string;
+  } | null;
+}): FareHarborRatingValue | null => {
   const rating = proof.aggregateRating;
-  if (!rating) {
+  if (!rating || rating.provider !== "TripAdvisor") {
     return null;
   }
   const { ratingValue, reviewCount } = rating;
@@ -96,12 +101,12 @@ export const fareHarborRating = (
   ) {
     return null;
   }
-  return { ratingValue, reviewCount };
+  return { ratingValue, reviewCount, provider: "TripAdvisor" };
 };
 
 export const formatFareHarborRating = (rating: FareHarborRatingValue) => {
   const reviews = rating.reviewCount === 1 ? "review" : "reviews";
-  return `★ ${rating.ratingValue.toFixed(1)} (${rating.reviewCount.toLocaleString("en-US")} ${reviews})`;
+  return `★ ${rating.ratingValue.toFixed(1)} (${rating.reviewCount.toLocaleString("en-US")} ${reviews}) · TripAdvisor`;
 };
 
 export const fareHarborAggregateRatingSchema = (
@@ -115,6 +120,12 @@ export const fareHarborAggregateRatingSchema = (
     "@type": "AggregateRating" as const,
     ratingValue: rating.ratingValue,
     reviewCount: rating.reviewCount,
+    bestRating: 5,
+    worstRating: 1,
+    author: {
+      "@type": "Organization" as const,
+      name: "TripAdvisor" as const,
+    },
   };
 };
 
@@ -150,7 +161,11 @@ const readTaggedRatings = (html: string) => {
       errors.push(`malformed FareHarbor rating tag: ${tag}`);
       continue;
     }
-    ratings.push({ ratingValue, reviewCount });
+    const provider = tag.match(/data-rating-provider="([^"]*)"/)?.[1] ?? "";
+    if (provider !== "TripAdvisor") {
+      errors.push(`rating tag is not attributed to TripAdvisor: ${tag}`);
+    }
+    ratings.push({ ratingValue, reviewCount, provider: "TripAdvisor" });
   }
   return { ratings, errors };
 };
@@ -159,6 +174,7 @@ const readVisibleRatings = (html: string): FareHarborRatingValue[] =>
   [...html.matchAll(VISIBLE_RATING)].map(match => ({
     ratingValue: Number(match[1]),
     reviewCount: Number(match[2].replace(/,/g, "")),
+    provider: "TripAdvisor" as const,
   }));
 
 const readSchemaRating = (
@@ -188,7 +204,9 @@ const readSchemaRating = (
   ) {
     return { rating: null, error: "schema rating values are not numeric" };
   }
-  return { rating: { ratingValue, reviewCount } };
+  return {
+    rating: { ratingValue, reviewCount, provider: "TripAdvisor" },
+  };
 };
 
 export const fareHarborRatingParityErrors = (input: {
@@ -245,6 +263,21 @@ export const fareHarborRatingParityErrors = (input: {
         errors.push(
           `${surface.name} schema rating ${actual} disagrees with FareHarbor ${wanted}`
         );
+      } else if (expected && schema.rating && surface.aggregateRating && typeof surface.aggregateRating === "object") {
+        const author = (
+          surface.aggregateRating as {
+            author?: { "@type"?: unknown; name?: unknown };
+          }
+        ).author;
+        if (
+          !author ||
+          author["@type"] !== "Organization" ||
+          author.name !== "TripAdvisor"
+        ) {
+          errors.push(
+            `${surface.name} schema rating is not attributed to TripAdvisor`
+          );
+        }
       }
     }
   }

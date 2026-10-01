@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 759,
       "sha256": "71201146123cc2c3ceee57318e429d3cfba11f8bb26bcfffc3d9dac47baaed80"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonhiddengems/items/426011/ratings/",
+      "status": 200,
+      "bytes": 526,
+      "sha256": "ab4811ff3aad354da56ca18bd6e0a579636d4981869cca88eb7334b486c0b8ff"
     }
   },
   "bookingPageValidity": {

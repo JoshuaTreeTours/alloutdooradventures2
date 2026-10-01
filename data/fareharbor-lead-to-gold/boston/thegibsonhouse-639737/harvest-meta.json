@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 226,
       "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/thegibsonhouse/items/639737/ratings/",
+      "status": 200,
+      "bytes": 455,
+      "sha256": "4a19f6e8217daf6967f344090c715bbdb6206be21ade6456e6d281d248636e87"
     }
   },
   "bookingPageValidity": {

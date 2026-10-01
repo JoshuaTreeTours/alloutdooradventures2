@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 642,
       "sha256": "8513e0118236cd75cfd0dcc66d0f4fe99f1ca55f03ecad789237440d3c4a3fb2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/photowalks/items/58904/ratings/",
+      "status": 200,
+      "bytes": 604,
+      "sha256": "e49cb0bc2cfd8f08b37ad1a311ad078eb207eb08a9576d9150d658b9c4cb6235"
     }
   },
   "bookingPageValidity": {

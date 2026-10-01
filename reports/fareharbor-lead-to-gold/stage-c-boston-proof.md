@@ -2,7 +2,7 @@
 
 Scope is `citySlug === boston` FareHarbor products in `tours.generated.ts`. Engine 6 Viator Boston routes and non-Boston cities were not processed.
 
-Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. AggregateRating is omitted. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.
+Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.
 
 - Total Boston legacy products: 230
 - Active booking pages: 222
@@ -20,6 +20,21 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Vis
 - INSUFFICIENT_SOURCE_CONTENT: 20
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 93
+- Runtime pages with a TripAdvisor rating: 47
+- Runtime pages without a TripAdvisor rating: 174
+
+## TripAdvisor ratings
+
+Source: `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews` on the FareHarbor item ratings endpoint. Provider is TripAdvisor.
+- `657142` `Boston History Harbor Tour aboard Yacht Patriot` — 4.7 / 1645 TripAdvisor
+- `26483` `Adirondack Sunset Sail` — 4.7 / 1645 TripAdvisor
+- `26493` `Labor Day Weekend Harbor Fireworks Cruise Aboard Adirondack` — 4.7 / 1645 TripAdvisor
+- `26497` `PRIVATE CHARTER on Adirondack III` — 4.7 / 1645 TripAdvisor
+- `26498` `U.S.S. Constitution Turnaround Sail on Adirondack` — 4.7 / 1645 TripAdvisor
+- `26501` `Harborfest Fireworks Cruise aboard Adirondack` — 4.7 / 1645 TripAdvisor
+- `26502` `Winthrop Fireworks Cruise on Adirondack` — 4.7 / 1645 TripAdvisor
+- `26504` `Boston Harbor Cruise on Northern Lights` — 4.7 / 1645 TripAdvisor
+- 39 more published pages carry the same TripAdvisor pair.
 
 ## Geography conflicts
 

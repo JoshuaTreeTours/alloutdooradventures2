@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 1462,
       "sha256": "ec0f299f8108651ea88b43ae43e30a5581dfa34dd234e953cd5d97b0e5267173"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/centralscoot/items/607319/ratings/",
+      "status": 200,
+      "bytes": 413,
+      "sha256": "37c7fc467f39325afb3ef48cf5ae01f7278f43d8f1ac664b3e92937e13e881ba"
     }
   },
   "bookingPageValidity": {

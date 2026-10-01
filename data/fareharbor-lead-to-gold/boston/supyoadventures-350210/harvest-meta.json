@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 227,
       "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/supyoadventures/items/350210/ratings/",
+      "status": 200,
+      "bytes": 485,
+      "sha256": "516afbc3a326dbd4674a1f9969e3eb8bcc985aec0cc87c965a7345201a1bf6f4"
     }
   },
   "bookingPageValidity": {

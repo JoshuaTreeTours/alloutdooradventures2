@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 608,
       "sha256": "7504a0e05b559e9a0ea59edbf0ce27885b9abb5545018db459cf6950735b4efd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/classicsailboston/items/144864/ratings/",
+      "status": 200,
+      "bytes": 466,
+      "sha256": "f7d3a4bc8126c2d976c1af88630f5d91c75788de265d7b9adf99564c0fcae9ee"
     }
   },
   "bookingPageValidity": {

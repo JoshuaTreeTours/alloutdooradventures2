@@ -52,6 +52,7 @@ export default function FareHarborProductSummary({
           data-testid="fareharbor-rating"
           data-rating-value={rating.ratingValue}
           data-review-count={rating.reviewCount}
+          data-rating-provider={rating.provider}
         >
           {formatFareHarborRating(rating)}
         </p>

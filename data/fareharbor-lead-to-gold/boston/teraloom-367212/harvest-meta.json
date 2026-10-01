@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 760,
       "sha256": "101d9d70c61d52c6bca2007bbfccecfb34590a98a44f51453f9b2117c17d9b4f"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/teraloom/items/367212/ratings/",
+      "status": 200,
+      "bytes": 391,
+      "sha256": "80d3776e889d84313d18de8762d6e5689774ad6b12791ae9d0a56f6bd48101bd"
     }
   },
   "bookingPageValidity": {

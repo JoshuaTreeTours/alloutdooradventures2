@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 531,
       "sha256": "55b2ed7986e1cf5c91cbc77632e74206114ca3bf3ff5bc22617251662bd965cc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/soundscape-tours/items/454073/ratings/",
+      "status": 200,
+      "bytes": 456,
+      "sha256": "3fd55d9463bd68b507de4b2f7421680ac68defc6ae011fcf5a2a0ce87f84bacc"
     }
   },
   "bookingPageValidity": {

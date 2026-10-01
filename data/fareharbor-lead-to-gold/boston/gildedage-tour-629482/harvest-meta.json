@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 646,
       "sha256": "a6d56a6b98e2fa5f7187a97fad3545a8837668f091f17f929007cac1a7112f4a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gildedage-tour/items/629482/ratings/",
+      "status": 200,
+      "bytes": 488,
+      "sha256": "5b418a07d849d6f93547d4b3a1a9f4ad8180481f92aa07e810450c3ddeb88275"
     }
   },
   "bookingPageValidity": {

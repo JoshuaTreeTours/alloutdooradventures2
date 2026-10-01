@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 547,
       "sha256": "e2649201b6e421bc9191661cf05cfae6c499c6b3f51e8fb8db60343a9b4fe8ae"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/451229/ratings/",
+      "status": 200,
+      "bytes": 451,
+      "sha256": "2ab1dc9ca94cab904bbee431915711a06ffd3c61c5ce332a987fd17693ec3c15"
     }
   },
   "bookingPageValidity": {

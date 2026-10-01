@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 226,
       "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonrhythmriders/items/653308/ratings/",
+      "status": 200,
+      "bytes": 459,
+      "sha256": "6a5f233c442789fc9a6b493f4ab74260b45cd1fc60744b0274e2dc90bf7cfed9"
     }
   },
   "bookingPageValidity": {

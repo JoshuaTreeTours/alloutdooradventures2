@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 226,
       "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonfoodhistorywalkingtour/items/685351/ratings/",
+      "status": 200,
+      "bytes": 466,
+      "sha256": "f3ff76e24a10b78d8dda7ee87ce35545cb0e410d65def5fae09fb2f35d2dc571"
     }
   },
   "bookingPageValidity": {

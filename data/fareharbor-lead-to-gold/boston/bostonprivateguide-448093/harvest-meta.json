@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 553,
       "sha256": "20548842cca6a82dfd5b2ae6bd0cb312e7c9fa31897290eaea6da1178525a9de"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonprivateguide/items/448093/ratings/",
+      "status": 200,
+      "bytes": 441,
+      "sha256": "0c52e3ee3e56e7c371e74182deab989adb830b3da88b049785da98c8db3472d3"
     }
   },
   "bookingPageValidity": {

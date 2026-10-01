@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 139,
       "sha256": "ca75f9f2a32aa11a39ef956e80c44d5468ed9dadc6ecf75d21e8b8083ccf0d0d"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/comesailawaynow/items/379532/ratings/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "ab52c3c85d08a5fb60b7a21faa5138a2c395be25a6d4bc330647f898d6e77605"
     }
   },
   "bookingPageValidity": {

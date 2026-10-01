@@ -26,6 +26,12 @@
       "status": 200,
       "bytes": 649,
       "sha256": "0f3842cc9d77598442871273709b9a735455c01eb0f91e3c1965189e82f03830"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26333/ratings/",
+      "status": 200,
+      "bytes": 446,
+      "sha256": "f6de357777be7f74b74997a93a97e9b5eaafc04fae2f29e4da3ef813ba9d4091"
     }
   },
   "bookingPageValidity": {

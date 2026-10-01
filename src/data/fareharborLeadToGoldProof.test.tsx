@@ -164,7 +164,7 @@ describe("FareHarbor Stage B proof set", () => {
       PROOF_PATHS.filter(([, itemId]) => !BOOKING_PAGE_NOT_FOUND_IDS.has(itemId))
         .map(([path]) => path)
     );
-    expect(products.every(product => product.aggregateRating === null)).toBe(
+    expect(stageB.every(product => product.aggregateRating === null)).toBe(
       true
     );
     expect(

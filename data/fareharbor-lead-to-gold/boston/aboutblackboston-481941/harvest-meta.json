@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 140,
       "sha256": "ba9cd9d330e10f1d96d3c6229bd223136fcb850f58d834ec05e03787fb2251d2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/aboutblackboston/items/481941/ratings/",
+      "status": 404,
+      "bytes": 588083,
+      "sha256": "8d41e620e8e08cd2d51f0246d901c07b19d216c55711e571941c886407a02245"
     }
   },
   "bookingPageValidity": {

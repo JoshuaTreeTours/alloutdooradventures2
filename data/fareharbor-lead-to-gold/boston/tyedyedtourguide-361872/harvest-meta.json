@@ -26,6 +26,12 @@
       "status": 400,
       "bytes": 140,
       "sha256": "08d1ca874d2c8644c244e1569dd883df4dba059e625ea30f6ee8eb02e7cb8013"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tyedyedtourguide/items/361872/ratings/",
+      "status": 404,
+      "bytes": 588083,
+      "sha256": "694356c59d745d94634f70436fa8615e001383fe5f5ee25a624e264ff6731820"
     }
   },
   "bookingPageValidity": {
