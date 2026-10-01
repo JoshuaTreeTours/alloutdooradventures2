@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-09-30T00:36:00Z",
+  "itemId": "145208",
+  "method": {
+    "decoder": "ffmpeg",
+    "normalizedFrame": "128x128 center-cropped RGB",
+    "perceptualHash": "16x16 difference hash",
+    "hashBitCount": 256
+  },
+  "hero": {
+    "url": "https://cdn.filestackcontent.com/ZAorPKGTRJ2GipYchR2a",
+    "normalizedPixelSha256": "647384c3ccb0289b1ab73e802241c0df1fc0cbb078e258cea01a11739bae13f3"
+  },
+  "rejectedGalleryImage": {
+    "url": "https://cdn.filestackcontent.com/fVlImPJR6mt47yx26VRG",
+    "normalizedPixelSha256": "02b219034050fd1d4b5cafaebb436e2ec32ffaf7e5953b7dbd2bce02171ded44",
+    "differenceHashDistanceFromHero": 1,
+    "normalizedPixelMeanAbsoluteErrorFromHero": 0.01167,
+    "classification": "NEAR_DUPLICATE"
+  },
+  "selectedGalleryImage": {
+    "url": "https://cdn.filestackcontent.com/wv2yejIATRCfMF7m4uiN",
+    "normalizedPixelSha256": "bfb661f304a65c629936da77d87fbee22cfb3641f1cb474dee42f047499bbebc",
+    "differenceHashDistanceFromHero": 115,
+    "normalizedPixelMeanAbsoluteErrorFromHero": 0.30401,
+    "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+  }
+}

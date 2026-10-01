@@ -1,0 +1,31 @@
+{
+  "company": "solitudefloattrips",
+  "itemId": "646999",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/solitudefloattrips/646999/content/",
+      "status": 200,
+      "bytes": 9739,
+      "sha256": "c1f265cfca0d302be1ba5f51c732c0b1fb7187e2d8f559d81ead0b96daa6b470"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/solitudefloattrips/646999/structured-description/",
+      "status": 200,
+      "bytes": 6536,
+      "sha256": "a96e46478d4065f363d0893c73265980516537a247095f133ae951e4970359b2"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/solitudefloattrips/items/646999/",
+      "status": 200,
+      "bytes": 12150,
+      "sha256": "d454ac6fe3e73bb7be75a825ec83fe86e1f70c01e33f35810f51d9ca3233ca1c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/solitudefloattrips/price-preview/per-item/v2/?asn=fhdn&item_pks=646999&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 799,
+      "sha256": "7745e579dcb49784d2537ae4546efaec1e19311e0545e910580f31f4ae8a3430"
+    }
+  }
+}

@@ -1,4 +1,12 @@
-import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
+import {
+  copyFile,
+  mkdir,
+  readdir,
+  readFile,
+  stat,
+  unlink,
+  writeFile,
+} from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { tsImport } from "tsx/esm/api";
@@ -1011,6 +1019,23 @@ export const buildSitemap = async () => {
     addUrl(toursUrls, tourPath);
   });
 
+  // Active migrated FareHarbor products are public routes even when they fail
+  // card-hero listing filters. Terminals are already omitted from this set.
+  try {
+    const fareHarborProofModule = await tsImport(
+      "../src/data/fareharborLeadToGoldProof.ts",
+      import.meta.url
+    );
+    const migratedPaths =
+      fareHarborProofModule.collectFareHarborMigratedRoutePaths?.() ?? [];
+    migratedPaths.forEach(routePath => addUrl(toursUrls, routePath));
+  } catch (error) {
+    console.warn(
+      "Unable to import FareHarbor migrated route inventory for sitemap; continuing without those URLs.",
+      error?.message || error
+    );
+  }
+
   if (!engine2Tours.length) {
     const [mexicoFallbackTours, hawaiiFallbackTours, amsterdamFallbackTours] =
       await Promise.all([
@@ -1374,6 +1399,26 @@ const run = async () => {
   const sitemapIndexXml = buildSitemapIndexXml(sitemapFiles);
   if (shouldWrite) {
     await writeFile(sitemapIndexPath, sitemapIndexXml, "utf8");
+    const distDir = path.resolve(__dirname, "../dist");
+    try {
+      const distStat = await stat(distDir);
+      if (distStat.isDirectory()) {
+        const publicFiles = await readdir(outputDir);
+        await Promise.all(
+          publicFiles
+            .filter(
+              file =>
+                file === "sitemap.xml" ||
+                (file.startsWith("sitemap-") && file.endsWith(".xml"))
+            )
+            .map(file =>
+              copyFile(path.join(outputDir, file), path.join(distDir, file))
+            )
+        );
+      }
+    } catch {
+      // dist is created by vite; skip the copy when generating sitemap first.
+    }
   }
 
   if (sitemapIndexXml.includes("sitemap-booking.xml")) {

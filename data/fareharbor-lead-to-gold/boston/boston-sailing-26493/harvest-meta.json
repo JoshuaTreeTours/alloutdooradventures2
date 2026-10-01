@@ -1,0 +1,47 @@
+{
+  "company": "boston-sailing",
+  "itemId": "26493",
+  "fetchedAt": "2026-09-30T02:32:14.133126+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/boston-sailing/26493/content/",
+      "status": 200,
+      "bytes": 12863,
+      "sha256": "db80d78a4837aa1f21492d46af7fda234f6ecd33d052e7005f9ce1013be22b44"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/boston-sailing/26493/structured-description/",
+      "status": 200,
+      "bytes": 5073,
+      "sha256": "bf24f18525cb9b33db318538b77372fe48ca5e7937b7909b4fa0408cc769c159"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/boston-sailing/items/26493/",
+      "status": 200,
+      "bytes": 21457,
+      "sha256": "e189d4c7646ce97b96f96b33dfbd0990b8fcfcf1743fec7a423af9db3f6e6147"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/boston-sailing/price-preview/per-item/v2/?asn=fhdn&item_pks=26493&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/boston-sailing/items/26493/ratings/",
+      "status": 200,
+      "bytes": 655,
+      "sha256": "cafa8c9adbb2596ce03c480a4c39ad1b8e5b7f7c1c158bcd39061277fe2ba2b1"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26493",
+    "provider": "boston-sailing",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boston-sailing/items/26493/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

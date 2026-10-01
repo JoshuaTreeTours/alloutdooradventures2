@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { getTourBySlugs } from "./data/tours";
+import { collectFareHarborMigratedRoutePaths } from "./data/fareharborLeadToGoldProof";
 import { getFlagstaffTourBySlug } from "./data/flagstaffTours";
 import { isExcludedProductCode } from "./data/excludedProductCodes";
 import { getEngine2TourBySlug } from "./engine2/data/loadEngine2";
@@ -119,6 +120,15 @@ describe("sitemap URL integrity", () => {
     ).toEqual([]);
     expect(
       [...sitemap.toursUrls].filter(url => !resolvesToTourTemplate(url))
+    ).toEqual([]);
+  }, 60_000);
+
+  it("includes every active migrated FareHarbor route in the tour sitemap", async () => {
+    const sitemap = await getBuiltSitemap();
+    expect(
+      collectFareHarborMigratedRoutePaths().filter(
+        routePath => !sitemap.toursUrls.has(routePath)
+      )
     ).toEqual([]);
   }, 60_000);
   it("suppresses duplicate country-qualified US tour detail sitemap URLs", async () => {

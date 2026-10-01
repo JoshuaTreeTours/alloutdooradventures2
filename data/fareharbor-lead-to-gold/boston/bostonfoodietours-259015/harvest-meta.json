@@ -1,0 +1,47 @@
+{
+  "company": "bostonfoodietours",
+  "itemId": "259015",
+  "fetchedAt": "2026-09-30T02:33:18.188062+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonfoodietours/259015/content/",
+      "status": 200,
+      "bytes": 5734,
+      "sha256": "03e76a40a27e2c7179f285da5ac4eb3294d7df925003bdab6232940a45b1d6a4"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonfoodietours/259015/structured-description/",
+      "status": 200,
+      "bytes": 3590,
+      "sha256": "bf0352f3e374dc47ffc99d3371f27180a46d1eecf19c5d4b36d9dcab990d88ad"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonfoodietours/items/259015/",
+      "status": 200,
+      "bytes": 19097,
+      "sha256": "3a2a7d2c4ffb9b0f6870ae95ccaaadbcf5561f609d8c270601fda44f848745f8"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonfoodietours/price-preview/per-item/v2/?asn=fhdn&item_pks=259015&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonfoodietours/items/259015/ratings/",
+      "status": 200,
+      "bytes": 643,
+      "sha256": "061877334655a340ef021aa80aa8916781109b2ab2d1059829d694f753d99175"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "259015",
+    "provider": "bostonfoodietours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonfoodietours/items/259015/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

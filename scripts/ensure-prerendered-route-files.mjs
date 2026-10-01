@@ -189,6 +189,14 @@ for (const pathname of Array.from(paths)) {
     paths.add(`/destinations/${legacyTourMatch[1]}/${legacyTourMatch[2]}/tours/${legacyTourMatch[3]}`);
   }
 }
+const fareHarborProofModule = await tsImport(
+  '../src/data/fareharborLeadToGoldProof.ts',
+  import.meta.url
+);
+for (const routePath of fareHarborProofModule.collectFareHarborMigratedRoutePaths?.() ?? []) {
+  paths.add(routePath);
+}
+
 for (const tour of engine6Tours) {
   paths.add(tour.canonicalPath);
   const legacyTourMatch = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(tour.canonicalPath);

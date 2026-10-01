@@ -1,0 +1,47 @@
+{
+  "company": "bostonprivateguide",
+  "itemId": "609024",
+  "fetchedAt": "2026-09-30T02:33:31.781209+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonprivateguide/609024/content/",
+      "status": 200,
+      "bytes": 3089,
+      "sha256": "2d0212eb648270e7755736e73edf6983ceb4f7d3ecc923f490c7d5fd23d73faa"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonprivateguide/609024/structured-description/",
+      "status": 200,
+      "bytes": 2400,
+      "sha256": "e9a1438f9f498790149f293e3633b6778d7166808fed401de2bb12abab5018f5"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonprivateguide/items/609024/",
+      "status": 200,
+      "bytes": 8894,
+      "sha256": "2f6f8bd9915be90478b8533f401913c3f688149df1d2abc7741f376fbb6f882e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonprivateguide/price-preview/per-item/v2/?asn=fhdn&item_pks=609024&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 523,
+      "sha256": "39a378dfe4aab582d0a92f12c4f5863be9b1f1e499637e145645268ddf2effd5"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonprivateguide/items/609024/ratings/",
+      "status": 200,
+      "bytes": 460,
+      "sha256": "f3bf30c5344073bc44c639b91bc41d1bb75c2b3127425f88be68380a861a2781"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "609024",
+    "provider": "bostonprivateguide",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonprivateguide/items/609024/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

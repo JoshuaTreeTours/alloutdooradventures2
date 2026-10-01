@@ -1,0 +1,47 @@
+{
+  "company": "bostoncitywalks",
+  "itemId": "26337",
+  "fetchedAt": "2026-09-30T02:33:14.425133+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostoncitywalks/26337/content/",
+      "status": 200,
+      "bytes": 5169,
+      "sha256": "10549ed6fbcf472a3660eed399af82c21b7e0256f77f16bffc1e19c6c75b42c6"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostoncitywalks/26337/structured-description/",
+      "status": 200,
+      "bytes": 2502,
+      "sha256": "74c4cfa8a488116a4570517ce18c1010c47f32869b41668d1400095acf4346ca"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26337/",
+      "status": 200,
+      "bytes": 12190,
+      "sha256": "50e7ea88ca6bbd8d506b5bf717a5704e997bfb857864cb73aad5e1aca4df9b7c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostoncitywalks/price-preview/per-item/v2/?asn=fhdn&item_pks=26337&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostoncitywalks/items/26337/ratings/",
+      "status": 200,
+      "bytes": 432,
+      "sha256": "c54c6d1c95396689e0d0210c0617cdf12c5099cf03339f4628dcac125dacfe45"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "26337",
+    "provider": "bostoncitywalks",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostoncitywalks/items/26337/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

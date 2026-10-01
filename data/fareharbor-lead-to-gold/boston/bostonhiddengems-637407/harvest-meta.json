@@ -1,0 +1,47 @@
+{
+  "company": "bostonhiddengems",
+  "itemId": "637407",
+  "fetchedAt": "2026-09-30T02:33:26.073559+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonhiddengems/637407/content/",
+      "status": 200,
+      "bytes": 4244,
+      "sha256": "bccc8e4a20d48c13c1f08987cc72b9cc1b51e9734faabddd2e420f017f6f2944"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonhiddengems/637407/structured-description/",
+      "status": 200,
+      "bytes": 4110,
+      "sha256": "b85dae84a26862cd8d6b618fae5c4a74a764dfc366efcaf07dc6d1ead9009f3a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonhiddengems/items/637407/",
+      "status": 200,
+      "bytes": 7781,
+      "sha256": "6257d34c61b16f142d00a3b36a1237530be7da78da925ccb12f6c5284bfac295"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonhiddengems/price-preview/per-item/v2/?asn=fhdn&item_pks=637407&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 759,
+      "sha256": "043b68590dd16ab332ba633348261b122b53d6f013c2cf3498e165224578d203"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonhiddengems/items/637407/ratings/",
+      "status": 200,
+      "bytes": 532,
+      "sha256": "65b7ee42ac9f18c994e8c768dbe063788af7034ed7734250829f4084a282a9bb"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "637407",
+    "provider": "bostonhiddengems",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonhiddengems/items/637407/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

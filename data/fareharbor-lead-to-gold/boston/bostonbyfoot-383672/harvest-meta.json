@@ -1,0 +1,47 @@
+{
+  "company": "bostonbyfoot",
+  "itemId": "383672",
+  "fetchedAt": "2026-09-30T02:32:42.557347+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonbyfoot/383672/content/",
+      "status": 200,
+      "bytes": 3519,
+      "sha256": "762ed9bcbfcb9addd99a4771990e25f82a09c8ca1a8fd3b1d9e452902528c8e7"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonbyfoot/383672/structured-description/",
+      "status": 200,
+      "bytes": 2515,
+      "sha256": "1bd88b887af90a251e37a0b8b1e40e9a7109c8952093669cf51e4595c4c2d6a2"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonbyfoot/items/383672/",
+      "status": 200,
+      "bytes": 10626,
+      "sha256": "8e755cab1733a727040238f16f0770f795f00ea1a52a7a1502d0bcf39124bafb"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonbyfoot/price-preview/per-item/v2/?asn=fhdn&item_pks=383672&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 962,
+      "sha256": "aac7ab4c3238687c31c4cf81f1bd7d5989caecebf92debd9715338f88eead93f"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonbyfoot/items/383672/ratings/",
+      "status": 200,
+      "bytes": 485,
+      "sha256": "00cf7b074be5c70c9c15ea419e037d4a2d7dbe2700fd40d65f47addc981671c1"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "383672",
+    "provider": "bostonbyfoot",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonbyfoot/items/383672/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

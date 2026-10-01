@@ -1,0 +1,31 @@
+{
+  "company": "red-jeep",
+  "itemId": "34849",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/red-jeep/34849/content/",
+      "status": 200,
+      "bytes": 22083,
+      "sha256": "9295f826074aedf2b890e44362412cd916c68ad4374bf32082b22bbf533619ea"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/red-jeep/34849/structured-description/",
+      "status": 200,
+      "bytes": 16039,
+      "sha256": "edec8feb5f5bf915e0f28b4ab4438c811ed79cfd3db1dcfd7dbc23721dfa7c2a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/red-jeep/items/34849/",
+      "status": 200,
+      "bytes": 36969,
+      "sha256": "170f71bb40cfcb670a157322b1f167c72c6cc1e905a84d65512d3a386ebc4a43"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/red-jeep/price-preview/per-item/v2/?asn=fhdn&item_pks=34849&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 786,
+      "sha256": "930a98600b0df1e1b54e8acbe85dedaf29589d6abd5d78ea233118bcc4f965c1"
+    }
+  }
+}

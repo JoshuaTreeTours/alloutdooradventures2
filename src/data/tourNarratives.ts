@@ -1,3 +1,4 @@
+import { getFareHarborProofFromTour } from "./fareharborLeadToGoldProof";
 import type { Tour } from "./tours.types";
 import { getActivityLabels, getActivityLabelFromSlug } from "./activityLabels";
 import { stripReviewMentions } from "../utils/text";
@@ -31,6 +32,11 @@ export const getSkillLevelLabel = (tour: Tour) => {
 };
 
 export const getExpandedTourDescription = (tour: Tour) => {
+  const proof = getFareHarborProofFromTour(tour);
+  if (proof) {
+    return proof.paragraphs;
+  }
+
   if (isRentalTour(tour)) {
     return [
       buildRentalDescription({

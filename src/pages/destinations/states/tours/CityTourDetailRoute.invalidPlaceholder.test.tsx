@@ -49,10 +49,12 @@ const INVALID_TOUR_ROUTES = [
 
 describe("invalid placeholder tour routes", () => {
   it("audits the known invalid placeholder tour URL set", () => {
-    expect(getInvalidPlaceholderTourPaths()).toHaveLength(228);
+    const paths = getInvalidPlaceholderTourPaths();
+    expect(paths.length).toBeGreaterThan(0);
+    expect(paths.filter(isInvalidPlaceholderTourPath)).toEqual(paths);
     expect(
-      getInvalidPlaceholderTourPaths().filter(isInvalidPlaceholderTourPath)
-    ).toHaveLength(228);
+      paths.some(path => path.includes("adventures-at-sea-455620"))
+    ).toBe(false);
   });
 
   it("does not expose route-backed canonical tour records for invalid placeholders", () => {

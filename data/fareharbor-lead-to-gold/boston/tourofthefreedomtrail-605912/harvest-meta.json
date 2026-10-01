@@ -1,0 +1,47 @@
+{
+  "company": "tourofthefreedomtrail",
+  "itemId": "605912",
+  "fetchedAt": "2026-09-30T02:33:53.664237+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/tourofthefreedomtrail/605912/content/",
+      "status": 200,
+      "bytes": 1627,
+      "sha256": "eebf8bdc4ba18ee2c99d857176ca0b3d944014533c86418b21f466dc7e5e6052"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/tourofthefreedomtrail/605912/structured-description/",
+      "status": 200,
+      "bytes": 1388,
+      "sha256": "26c8f3f5def087e31eb8eb8138b863dfede51a361fe718768f39e7c28011221b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/tourofthefreedomtrail/items/605912/",
+      "status": 200,
+      "bytes": 8049,
+      "sha256": "34806e5a556cfb4e503df68e65ee5d0610559259181c68c66128d4620116ef78"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/tourofthefreedomtrail/price-preview/per-item/v2/?asn=fhdn&item_pks=605912&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 821,
+      "sha256": "442373b3c78cd9bc27cfd83294a14baa00902c2a5ef7eaf9ee9c0afcab3f4d60"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tourofthefreedomtrail/items/605912/ratings/",
+      "status": 200,
+      "bytes": 498,
+      "sha256": "7dbaf0d4dec88f777ef4f045557cc1eb80c9afe2743f344b7f3d16609dba3540"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "605912",
+    "provider": "tourofthefreedomtrail",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tourofthefreedomtrail/items/605912/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

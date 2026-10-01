@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import FareHarborProductSummary from "../../components/FareHarborProductSummary";
+import FareHarborProofSnapshot from "../../components/FareHarborProofSnapshot";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -20,6 +22,12 @@ import {
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
+import {
+  applyFareHarborProofSchema,
+  getFareHarborProofFromTour,
+  resolveFareHarborProofCtaLabel,
+} from "../../data/fareharborLeadToGoldProof";
+import { fareHarborShortDescriptionRepeatsExperience } from "../../data/fareharborPresentation";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -96,20 +104,39 @@ export default function Engine2TourPage({
     };
   }, [tour, isViatorTour]);
 
-  const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const proof = getFareHarborProofFromTour({
+    id: tour.id,
+    slug: tour.slug,
+    bookingUrl: tour.bookingUrl ?? tour.booking?.bookingUrl,
+  });
+  const seo = useMemo(() => {
+    const built = buildEngine2Seo(normalizedTour);
+    if (!proof) {
+      return built;
+    }
+    return {
+      ...built,
+      description: proof.schemaDescription,
+    };
+  }, [normalizedTour, proof]);
   const isPalmSprings = isPalmSpringsTour(tour);
-  const overrideContent = getPalmSpringsOverrideContent(tour);
+  const overrideContent = proof ? null : getPalmSpringsOverrideContent(tour);
   const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
+    !proof && isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
   const engine1Content = {
     whatYoullExperience: [normalizedTour.content.experienceText],
     highlights: normalizedTour.content.highlights,
   };
-  const content = overrideContent?.enabled
-    ? overrideContent.content
-    : engine1Content;
+  const content = proof
+    ? {
+        whatYoullExperience: proof.paragraphs,
+        highlights: proof.highlights,
+      }
+    : overrideContent?.enabled
+      ? overrideContent.content
+      : engine1Content;
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -138,9 +165,12 @@ export default function Engine2TourPage({
     isViatorTour && tour.pricing?.currency && displayPrice > 0
       ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
       : undefined;
-  const headerPriceLabel =
-    viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
-  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+  const headerPriceLabel = proof
+    ? (proof.visiblePriceLabel ?? undefined)
+    : (viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel);
+  const showFallbackPrice = proof
+    ? false
+    : !overridePriceLabel && !enginePriceLabel;
 
   const viatorRatingValue =
     typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
@@ -175,8 +205,8 @@ export default function Engine2TourPage({
     : undefined;
 
   const structuredDataNodes = useMemo(
-    () =>
-      buildSchemaGraph(
+    () => {
+      const nodes = buildSchemaGraph(
         normalizedTour,
         seo,
         pilotContent,
@@ -185,7 +215,9 @@ export default function Engine2TourPage({
         overrideFaqs,
         overrideContent?.enabled ?? false,
         rewriteV3Content
-      ),
+      );
+      return proof ? applyFareHarborProofSchema(nodes, proof) : nodes;
+    },
     [
       normalizedTour,
       seo,
@@ -195,6 +227,7 @@ export default function Engine2TourPage({
       overrideFaqs,
       overrideContent?.enabled,
       rewriteV3Content,
+      proof,
     ]
   );
 
@@ -256,6 +289,15 @@ export default function Engine2TourPage({
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.name}
           </h1>
+          {proof ? (
+            <FareHarborProductSummary
+              proof={proof}
+              tone="hero"
+              showShortDescription={
+                !fareHarborShortDescriptionRepeatsExperience(proof)
+              }
+            />
+          ) : null}
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
@@ -273,12 +315,17 @@ export default function Engine2TourPage({
               {tour.content.duration}
             </p>
           ) : null}
-          {headerPriceLabel ? (
+          {proof?.durationLabel ? (
+            <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
+              {proof.durationLabel}
+            </p>
+          ) : null}
+          {!proof && headerPriceLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               {headerPriceLabel}
             </p>
           ) : null}
-          {showFallbackPrice ? (
+          {!proof && showFallbackPrice ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               From $129 per person
             </p>
@@ -311,7 +358,7 @@ export default function Engine2TourPage({
             ) : bookingPath ? (
               <Link href={bookingPath}>
                 <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                  BOOK
+                  {resolveFareHarborProofCtaLabel(proof, "BOOK")}
                 </a>
               </Link>
             ) : null}
@@ -376,6 +423,11 @@ export default function Engine2TourPage({
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+        {proof ? (
+          <div className="mt-8 max-w-md">
+            <FareHarborProofSnapshot proof={proof} />
+          </div>
+        ) : null}
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
@@ -711,9 +763,9 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {normalizedTour.images.gallery.length ? (
+        {(proof ? proof.galleryImages : normalizedTour.images.gallery).length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {normalizedTour.images.gallery.map(image => (
+            {(proof ? proof.galleryImages : normalizedTour.images.gallery).map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"

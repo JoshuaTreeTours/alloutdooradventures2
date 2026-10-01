@@ -711,6 +711,7 @@ const main = async () => {
     destinationsModule,
     tourDescriptionModule,
     hardDeleteLegacyToursModule,
+    fareHarborProofModule,
   ] = await Promise.all([
     tsImport("../src/data/tours.generated.ts", import.meta.url),
     tsImport("../src/data/flagstaffTours.ts", import.meta.url),
@@ -720,6 +721,7 @@ const main = async () => {
     tsImport("../src/data/destinations.ts", import.meta.url),
     tsImport("../src/utils/tourDescription.ts", import.meta.url),
     tsImport("../src/utils/tours/hardDeleteLegacyTours.ts", import.meta.url),
+    tsImport("../src/data/fareharborLeadToGoldProof.ts", import.meta.url),
   ]);
   const [
     structuredDataModule,
@@ -845,6 +847,8 @@ const main = async () => {
   const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
   const buildTourMeta = tourSeoModule?.buildTourMeta ?? null;
   const buildBookingMeta = tourSeoModule?.buildBookingMeta ?? null;
+  const applyFareHarborProofToPrerender =
+    fareHarborProofModule.applyFareHarborProofToPrerender;
 
   resetMissingGeoFallbackReport?.();
 
@@ -879,6 +883,11 @@ const main = async () => {
     if (tour?.canonicalPath) {
       urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
     }
+  }
+  const migratedProofPaths =
+    fareHarborProofModule.collectFareHarborMigratedRoutePaths?.() ?? [];
+  for (const routePath of migratedProofPaths) {
+    urlsToRender.add(buildCanonicalUrl(routePath));
   }
 
   if (!urlsToRender.size) {
@@ -1355,6 +1364,29 @@ const main = async () => {
           "@context": "https://schema.org",
           "@graph": [...baseStructuredDataNodes, ...structuredDataNodes],
         });
+      }
+
+      const proofTarget = {
+        id: engine2Tour?.id ?? tourForSeo?.id ?? null,
+        slug:
+          engine2Tour?.slug ??
+          tourForSeo?.slug ??
+          segments[segments.length - 1] ??
+          null,
+        bookingUrl:
+          engine2Tour?.bookingUrl ??
+          engine2Tour?.booking?.bookingUrl ??
+          tourForSeo?.bookingUrl ??
+          null,
+      };
+      if (!isBookingRoute) {
+        const proofResult = applyFareHarborProofToPrerender(
+          seo,
+          structuredData,
+          proofTarget
+        );
+        seo.description = proofResult.seo.description;
+        structuredData = proofResult.structuredData;
       }
 
       const { outputPath, shouldWrite } = buildOutputPath(pathname);

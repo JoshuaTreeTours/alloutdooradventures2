@@ -3,6 +3,8 @@ import {
   getInvalidPlaceholderTourPaths,
   getInvalidPlaceholderTourSlugs,
 } from "./invalidPlaceholderTours";
+import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
+import { isFareHarborMigratedRouteRef } from "../../data/fareharborLeadToGoldProof";
 
 const HARD_DELETED_PRODUCT_IDS = new Set([
   "16628",
@@ -42,6 +44,32 @@ export const isHardDeletedLegacyTour = ({
   canonicalPath?: string | null;
 }) => {
   const normalizedProductId = normalize(productId).replace(/^engine2-/, "");
+  const normalizedSlug = normalize(slug);
+  const normalizedCanonicalPath = normalize(canonicalPath);
+  if (
+    isStageBBookingPageNotFound(normalizedProductId) ||
+    isStageBBookingPageNotFound(normalizedSlug) ||
+    isStageBBookingPageNotFound(normalizedCanonicalPath)
+  ) {
+    return true;
+  }
+  if (
+    isFareHarborMigratedRouteRef({
+      itemId: normalizedProductId,
+      slug: normalizedSlug,
+      path: normalizedCanonicalPath,
+    })
+  ) {
+    return false;
+  }
+  if (
+    normalizedProductId === "34849" ||
+    normalizedSlug === "shared-san-andreas-fault-jeep-tour-34849" ||
+    normalizedCanonicalPath ===
+      "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849"
+  ) {
+    return false;
+  }
   if (
     normalizedProductId &&
     HARD_DELETED_PRODUCT_IDS.has(normalizedProductId)
@@ -49,12 +77,10 @@ export const isHardDeletedLegacyTour = ({
     return true;
   }
 
-  const normalizedSlug = normalize(slug);
   if (normalizedSlug && HARD_DELETED_SLUGS.has(normalizedSlug)) {
     return true;
   }
 
-  const normalizedCanonicalPath = normalize(canonicalPath);
   if (
     normalizedCanonicalPath &&
     HARD_DELETED_CANONICAL_PATHS.has(normalizedCanonicalPath)

@@ -1,0 +1,47 @@
+{
+  "company": "bostonsailingcharters",
+  "itemId": "542321",
+  "fetchedAt": "2026-09-30T02:33:33.993162+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bostonsailingcharters/542321/content/",
+      "status": 200,
+      "bytes": 6544,
+      "sha256": "cb9df2383a7c5eb1f0a0d84ef16d0300b701ac29576fd02deb50a14f38206f26"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bostonsailingcharters/542321/structured-description/",
+      "status": 200,
+      "bytes": 2542,
+      "sha256": "1b72b4a4a039ca32b07595433d1a50b45834d154cae37eb6181c6dd3ef8b55ff"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/542321/",
+      "status": 200,
+      "bytes": 14285,
+      "sha256": "e028e89775295907b2dfce00d4cad6fa7141e8f567c186b10d44119995fb5890"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bostonsailingcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=542321&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 548,
+      "sha256": "501aa6b229f7711b4c88cb4e6aa506c3e08dc7984a4d9c3291e98c257c587c95"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bostonsailingcharters/items/542321/ratings/",
+      "status": 200,
+      "bytes": 453,
+      "sha256": "83aafd22114a70f72d7f685f6ba4a1d340bea7a17391ffdb1197de7d0bd20e86"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "542321",
+    "provider": "bostonsailingcharters",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bostonsailingcharters/items/542321/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

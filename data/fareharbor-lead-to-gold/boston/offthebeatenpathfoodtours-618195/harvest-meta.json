@@ -1,0 +1,47 @@
+{
+  "company": "offthebeatenpathfoodtours",
+  "itemId": "618195",
+  "fetchedAt": "2026-09-30T02:33:45.133761+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/offthebeatenpathfoodtours/618195/content/",
+      "status": 200,
+      "bytes": 8550,
+      "sha256": "40dd24aa6f4d4076f8db87a808a72f5d12f48252defd3eef43f6f0b631a401ac"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/offthebeatenpathfoodtours/618195/structured-description/",
+      "status": 200,
+      "bytes": 6284,
+      "sha256": "f92cc07f3c43f1c98021f69a38e9607203a2c1f89b767ca57341d759f1b6d83b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/offthebeatenpathfoodtours/items/618195/",
+      "status": 200,
+      "bytes": 14012,
+      "sha256": "9af8cfce34afe46e07f3753f5ef7e385b8e983190d4f92deae5ca9452277d60e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/offthebeatenpathfoodtours/price-preview/per-item/v2/?asn=fhdn&item_pks=618195&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 563,
+      "sha256": "9f36572ad5f29bcc3fe82866410b5f06f02500067f4a57756da2545fcf289289"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/offthebeatenpathfoodtours/items/618195/ratings/",
+      "status": 200,
+      "bytes": 653,
+      "sha256": "868ec9b688e667f556b42e474705f2409f57849650b1d0f1143b125ad1d72f8e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "618195",
+    "provider": "offthebeatenpathfoodtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/offthebeatenpathfoodtours/items/618195/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

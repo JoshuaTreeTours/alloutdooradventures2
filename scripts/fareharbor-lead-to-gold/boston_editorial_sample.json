@@ -1,0 +1,195 @@
+{
+  "scope": "Boston FareHarbor editorial. Ten products are hand-tuned overlays; remaining Boston products use compose_editorial in the same voice.",
+  "voice": "scripts/fareharbor-lead-to-gold/editorial_voice.py",
+  "itemIds": [
+    "27344",
+    "112945",
+    "117124",
+    "243407",
+    "26483",
+    "26504",
+    "361612",
+    "361623",
+    "482166",
+    "618195"
+  ],
+  "products": {
+    "27344": {
+      "title": "City View Tour",
+      "paragraphs": [
+        "The City View Tour is a 2.5- to 3-hour bicycle outing with Urban Adventours, covering about 10 to 12 miles and six Boston neighborhoods. Each guest rides an individually fitted bike. A helmet and water are included.",
+        "The ride starts in the North End, Boston's oldest residential neighborhood, with Charlestown across the water. Cambridge and MIT come into view from the Charles River Esplanade. The ride then passes Boston University and Kenmore Square to Fenway Park, then the Christian Science Center and Copley Square, where the John Hancock Building and the Boston Marathon finish line stand. The last stretch moves through Back Bay and South End brownstones, Boston Common, the Rose Kennedy Greenway, and Long Wharf. South Boston and East Boston come into view.",
+        "Departures are daily at 10 a.m. and 2 p.m. Guests are asked to reserve by 6 p.m. the day before. Ordinary rain does not cancel the outing. Children must be at least 12 months old, and helmets are required."
+      ],
+      "highlights": [
+        "2.5 to 3 hours and 10 to 12 miles by bike",
+        "Six neighborhoods, from the North End to Fenway Park and Copley Square",
+        "Bike, helmet, and water"
+      ],
+      "schemaDescription": "A 2.5- to 3-hour Urban Adventours bicycle outing covering about 10 to 12 miles and six Boston neighborhoods, including the North End, the Charles River Esplanade, Fenway Park, and Copley Square. Bike, helmet, and water are included.",
+      "removedClaims": [
+        "Operator marketing such as flagship and Best of Boston was not used.",
+        "The meeting street address stays in the facts panel."
+      ]
+    },
+    "112945": {
+      "title": "Chinatown's Culture & Cuisine",
+      "paragraphs": [
+        "Chinatown's Culture & Cuisine is a three-hour food walk with Bites of Boston Food Tours through Boston's Chinatown. The walk samples traditional and modern Chinese dishes and covers the neighborhood's history.",
+        "Groups are capped at 12, and guests must be at least 12 years old. Strollers are not permitted."
+      ],
+      "highlights": [
+        "Three hours in Boston's Chinatown",
+        "Traditional and modern Chinese dishes",
+        "Groups of 12; age floor 12"
+      ],
+      "schemaDescription": "A three-hour Bites of Boston food walk in Chinatown sampling traditional and modern Chinese dishes, with groups of 12 and an age floor of 12.",
+      "removedClaims": [
+        "No restaurant names were present in the harvest, so none were added.",
+        "The meeting street address stays in the facts panel."
+      ]
+    },
+    "117124": {
+      "title": "Happy Hour Stroll",
+      "paragraphs": [
+        "Happy Hour Stroll is a 2.5-hour Friday-evening food walk with Bites of Boston Food Tours in the South End. The walk visits four South End eateries, and each stop pairs a tasting with an alcoholic drink.",
+        "Groups are capped at 12. Guests must be 21 or older."
+      ],
+      "highlights": [
+        "2.5 hours on Friday evenings in the South End",
+        "Four stops, each with food and a drink",
+        "Age floor 21"
+      ],
+      "schemaDescription": "A 2.5-hour Friday-evening South End food walk with four stops, each pairing a tasting with an alcoholic drink. Groups are capped at 12, and guests must be 21 or older.",
+      "removedClaims": [
+        "Headline marketing about lots of fun was not used.",
+        "The meeting street address stays in the facts panel."
+      ]
+    },
+    "243407": {
+      "title": "Local Gems of the South End",
+      "paragraphs": [
+        "Local Gems of the South End is a three-hour food walk with Bites of Boston Food Tours. The outing leaves downtown for the South End and visits restaurants, bakeries, and markets, sampling sweet and savory dishes from more than one cuisine.",
+        "Groups are capped at 16, and guests must be at least 12 years old. Strollers are not permitted."
+      ],
+      "highlights": [
+        "Three hours in the South End",
+        "Restaurants, bakeries, and markets",
+        "Groups of 16; age floor 12"
+      ],
+      "schemaDescription": "A three-hour South End food walk visiting restaurants, bakeries, and markets, with groups of 16 and an age floor of 12.",
+      "removedClaims": [
+        "No venue names were present in the harvest, so none were added.",
+        "Promotional wording about escaping downtown was not used as a claim."
+      ]
+    },
+    "26483": {
+      "title": "Adirondack Sunset Sail",
+      "paragraphs": [
+        "This two-hour sunset sail on Boston Harbor is aboard the 80-foot pilot schooners Adirondack III and Adirondack II, built in the style of 1890s pilot schooners, with teak decks and mahogany trim. Light commentary on waterfront landmarks starts after the boat leaves the dock.",
+        "The sail passes the Seaport District, the Moakley courthouse on Fan Pier, World Trade Center, and Harpoon Brewery. The Inner Harbor islands come into view, including Castle Island and Fort Independence, along with the Donald McKay Monument, Spectacle Island, and the light at Long Island Head. The captain and crew answer questions about the harbor.",
+        "Adult beverages require valid identification. Tickets are not refundable; a reschedule or gift-card exchange is available until 24 hours before departure."
+      ],
+      "highlights": [
+        "Two-hour sunset sail on 80-foot schooners",
+        "Seaport, harbor islands, and Fort Independence",
+        "Light landmark commentary"
+      ],
+      "schemaDescription": "A two-hour Boston Harbor sunset sail on the 80-foot schooners Adirondack III and Adirondack II, with light landmark commentary past the Seaport and the Inner Harbor islands.",
+      "removedClaims": [
+        "Superlatives such as fastest, most elegant, and unforgettable were not used.",
+        "The meeting street address stays in the facts panel."
+      ]
+    },
+    "26504": {
+      "title": "Boston Harbor Cruise on Northern Lights",
+      "paragraphs": [
+        "Northern Lights, a 115-foot motor yacht styled after a 1920s New England steamship, runs a 60- or 90-minute sightseeing cruise on Boston Harbor. The captain offers moderate commentary on the main sights; this is not a fully narrated tour.",
+        "Guests can sit in the main cabin, which is heated or air-conditioned, or move to the open-air covered top deck. Drinks and small bites are sold at the onboard bar.",
+        "Guests see the Boston skyline, USS Constitution, USS Cassin Young, and the Old North Church steeple. Bunker Hill Monument, Fort Independence, the Seaport District, and Spectacle Island also come into view."
+      ],
+      "highlights": [
+        "60- or 90-minute harbor cruise",
+        "Heated or cooled cabin and a covered top deck",
+        "Old North Church, USS Constitution, and Spectacle Island"
+      ],
+      "schemaDescription": "A 60- or 90-minute Boston Harbor cruise on the motor yacht Northern Lights, with moderate captain commentary, an indoor cabin, a covered top deck, and views of the Old North Church, USS Constitution, and Spectacle Island.",
+      "removedClaims": [
+        "Marketing about an unforgettable cruise was not used.",
+        "A separate December Cocoa and Carols sailing was not treated as this product."
+      ]
+    },
+    "361612": {
+      "title": "Boston By Little Feet",
+      "paragraphs": [
+        "Boston By Little Feet is a one-hour Freedom Trail walk designed for families with children ages 6 to 12. The outdoor route is about 0.73 miles at a moderate pace, with up to 25 guests per guide.",
+        "The walk passes Faneuil Hall and the Old State House. Guests also see the Old South Meeting House, Boston's first public school site, and its oldest burying ground. Children are asked to take part at each stop. Every child must be with a ticketed adult.",
+        "The outing is held in ordinary rain as well as clear weather. Surfaces are mostly flat, and the walk is stroller and wheelchair accessible. On selected dates the same tour is offered in Spanish."
+      ],
+      "highlights": [
+        "One-hour Freedom Trail walk for ages 6 to 12",
+        "Faneuil Hall, Old State House, and Old South Meeting House",
+        "Held rain or shine; stroller and wheelchair accessible"
+      ],
+      "schemaDescription": "A one-hour Boston By Foot Freedom Trail walk for families with children 6 to 12, covering about 0.73 miles past Faneuil Hall, the Old State House, and Old South Meeting House. Children must be with a ticketed adult.",
+      "removedClaims": [
+        "Second-person and marketing wording from the operator description was not used.",
+        "The meeting point stays in the facts panel."
+      ]
+    },
+    "361623": {
+      "title": "Heart of the Freedom Trail",
+      "paragraphs": [
+        "Heart of the Freedom Trail is a one-hour walking introduction to Boston's Revolutionary history with Boston By Foot. The outdoor route is about half a mile at a moderate pace, with up to 25 guests per guide.",
+        "The walk visits the Old State House and Faneuil Hall, then King's Chapel plus Old South Meeting House, with stories about the people and events tied to those buildings.",
+        "The outing is held in ordinary rain as well as clear weather. Surfaces are mostly flat, and the walk is stroller and wheelchair accessible."
+      ],
+      "highlights": [
+        "One-hour Freedom Trail introduction",
+        "Old State House and Faneuil Hall, then King's Chapel",
+        "Held rain or shine; about half a mile"
+      ],
+      "schemaDescription": "A one-hour Boston By Foot walk of about half a mile visiting the Old State House and Faneuil Hall, then King's Chapel plus Old South Meeting House.",
+      "removedClaims": [
+        "Phrases such as world-famous and perfect introduction were not used as claims.",
+        "The meeting point stays in the facts panel."
+      ]
+    },
+    "482166": {
+      "title": "Holiday Harbor Cruise",
+      "paragraphs": [
+        "Yacht Manhattan runs a 90-minute sightseeing cruise on Boston Harbor. Guests can sit in the heated main cabin or step onto the open deck. Drinks and small bites are sold at the bar.",
+        "The boat is an 80-foot, 1920s-style yacht with teak decks, mahogany trim, and an all-glass cabin. Guests see the Boston skyline, USS Constitution, USS Cassin Young, and the Old North Church steeple. Bunker Hill Monument, Fort Independence, the Seaport District, and Spectacle Island also come into view.",
+        "Tickets are not refundable; a reschedule or gift-card exchange is available until 24 hours before departure."
+      ],
+      "highlights": [
+        "90 minutes on Yacht Manhattan",
+        "Heated cabin and open deck",
+        "Old North Church, USS Constitution, and Spectacle Island"
+      ],
+      "schemaDescription": "A 90-minute Boston Harbor cruise on the 80-foot Yacht Manhattan, with a heated cabin, an open deck, and views of the Old North Church, USS Constitution, and Spectacle Island.",
+      "removedClaims": [
+        "Holiday decorations and private-charter uses described for other events were not added to this sailing.",
+        "The meeting street address stays in the facts panel."
+      ]
+    },
+    "618195": {
+      "title": "Boston Chocolate Tour",
+      "paragraphs": [
+        "This two-hour chocolate walk covers about 1.5 miles, starting in Beacon Hill, crossing Boston Common, then following Park Street to the Boston Public Market. Groups stay at a maximum of 12 guests.",
+        "Five stops serve samples from mostly female-owned small businesses, including bean-to-bar chocolate, a Belgian tasting, truffles, Boston Cream Pie, and chocolate tea. Substitutions for dietary restrictions or allergies are confirmed by email. After the walk, guests receive a digital Boston guide.",
+        "The outing is stroller and wheelchair accessible. A full refund is available with at least 48 hours' notice."
+      ],
+      "highlights": [
+        "Two hours and about 1.5 miles",
+        "Five chocolate stops in Beacon Hill and downtown",
+        "Mostly female-owned small businesses"
+      ],
+      "schemaDescription": "A two-hour chocolate walk of about 1.5 miles from Beacon Hill to Boston Public Market, with five tasting stops from mostly female-owned small businesses.",
+      "removedClaims": [
+        "Suggested gratuity amounts were omitted because dollar figures do not belong in the body.",
+        "The meeting street address stays in the facts panel."
+      ]
+    }
+  }
+}

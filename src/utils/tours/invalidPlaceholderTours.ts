@@ -1,3 +1,5 @@
+import { isFareHarborMigratedRouteRef } from "../../data/fareharborLeadToGoldProof";
+
 const CONFIRMED_SOFT_404_TOUR_PATHS = [
   "/destinations/wyoming/jackson/tours/full-day-tours-650824",
   "/destinations/california/coronado/tours/bike-661652",
@@ -425,17 +427,31 @@ const normalizePath = (value?: string | null) => {
 };
 
 export const getInvalidPlaceholderTourIds = () =>
-  Array.from(INVALID_PLACEHOLDER_TOUR_PRODUCT_IDS);
+  Array.from(INVALID_PLACEHOLDER_TOUR_PRODUCT_IDS).filter(
+    itemId => !isFareHarborMigratedRouteRef({ itemId })
+  );
 
 export const getInvalidPlaceholderTourSlugs = () =>
-  Array.from(INVALID_PLACEHOLDER_TOUR_SLUGS);
+  Array.from(INVALID_PLACEHOLDER_TOUR_SLUGS).filter(
+    slug => !isFareHarborMigratedRouteRef({ slug })
+  );
 
 export const getInvalidPlaceholderTourPaths = () =>
-  Array.from(INVALID_PLACEHOLDER_TOUR_PATHS);
+  Array.from(INVALID_PLACEHOLDER_TOUR_PATHS).filter(
+    path => !isFareHarborMigratedRouteRef({ path })
+  );
 
 export const isInvalidPlaceholderTourSlug = (slug?: string | null) => {
   const normalizedSlug = normalize(slug);
   if (!normalizedSlug) {
+    return false;
+  }
+
+  if (isFareHarborMigratedRouteRef({ slug: normalizedSlug })) {
+    return false;
+  }
+
+  if (normalizedSlug === "shared-san-andreas-fault-jeep-tour-34849") {
     return false;
   }
 
@@ -460,6 +476,10 @@ export const isInvalidPlaceholderTourSlug = (slug?: string | null) => {
 export const isInvalidPlaceholderTourPath = (path?: string | null) => {
   const normalizedPath = normalizePath(path);
   if (!normalizedPath) {
+    return false;
+  }
+
+  if (isFareHarborMigratedRouteRef({ path: normalizedPath })) {
     return false;
   }
 

@@ -1,0 +1,48 @@
+{
+  "company": "aboutblackboston",
+  "itemId": "481941",
+  "fetchedAt": "2026-09-30T02:32:10.440698+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/aboutblackboston/481941/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/aboutblackboston/481941/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "1f520f5e7abc391fc3adf9edd7c94ef9bd1b79cc16506220ea2c12b68921e4f4"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/aboutblackboston/items/481941/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "14e2315a14a554c642c56dd1de6ff7a49ae797087c37c412cda1329f4398e881"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/aboutblackboston/price-preview/per-item/v2/?asn=fhdn&item_pks=481941&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "ba9cd9d330e10f1d96d3c6229bd223136fcb850f58d834ec05e03787fb2251d2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/aboutblackboston/items/481941/ratings/",
+      "status": 404,
+      "bytes": 588083,
+      "sha256": "8d41e620e8e08cd2d51f0246d901c07b19d216c55711e571941c886407a02245"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "481941",
+    "provider": "aboutblackboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/aboutblackboston/items/481941/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,31 @@
+{
+  "company": "yellowstoneadvmoto",
+  "itemId": "694384",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/yellowstoneadvmoto/694384/content/",
+      "status": 403,
+      "bytes": 38,
+      "sha256": "f7ca317a0aef36faf33ed0b0ca1e2889324d5001957e1e6f32347ab0de3ba9d5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/yellowstoneadvmoto/694384/structured-description/",
+      "status": 200,
+      "bytes": 11086,
+      "sha256": "fb9eb77e6c752199ee5cd95fed87b583450e6c7e9aea90b2aecb87f86a7e2459"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/yellowstoneadvmoto/items/694384/",
+      "status": 200,
+      "bytes": 12913,
+      "sha256": "3ad5d427e78a0ac3c4372e28ef25aafdc267be5ffe6b4710396a37e0f6fc3e86"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/yellowstoneadvmoto/price-preview/per-item/v2/?asn=fhdn&item_pks=694384&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    }
+  }
+}

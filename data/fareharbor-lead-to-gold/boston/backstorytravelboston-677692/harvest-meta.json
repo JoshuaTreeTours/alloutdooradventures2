@@ -1,0 +1,48 @@
+{
+  "company": "backstorytravelboston",
+  "itemId": "677692",
+  "fetchedAt": "2026-09-30T02:32:10.443313+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/backstorytravelboston/677692/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/backstorytravelboston/677692/structured-description/",
+      "status": 404,
+      "bytes": 588101,
+      "sha256": "427e74dfcc21938e955d928507d2c5a5a8acd2a72006697878ec12713890f22a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/backstorytravelboston/items/677692/",
+      "status": 404,
+      "bytes": 588075,
+      "sha256": "3ee62f8cf387b46881b0957f30002eeb7bec79259be3b41952482a131652507a"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/backstorytravelboston/price-preview/per-item/v2/?asn=fhdn&item_pks=677692&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 145,
+      "sha256": "56e4e8679fb7cfcb9373c83c24944a9a01e0984fc53759c5f29cf0fdd8c11885"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/backstorytravelboston/items/677692/ratings/",
+      "status": 404,
+      "bytes": 588093,
+      "sha256": "8e3aca561e1e32ab9a3f10492b5920dab2e1b1955e8bd521c35373e7f8ffe857"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "677692",
+    "provider": "backstorytravelboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/backstorytravelboston/items/677692/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

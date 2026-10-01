@@ -1,0 +1,31 @@
+{
+  "company": "countryboymine",
+  "itemId": "145208",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/countryboymine/145208/content/",
+      "status": 200,
+      "bytes": 2731,
+      "sha256": "54cf0b994eb9b4f60655e622cc39063142a6d0cafdc968029122cb0f58661a7f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/countryboymine/145208/structured-description/",
+      "status": 200,
+      "bytes": 1780,
+      "sha256": "0a0e1b56ded0819303dcea95496932d646e0c0ecf3cd9d5f9d18e91a247c927d"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/countryboymine/items/145208/",
+      "status": 200,
+      "bytes": 12363,
+      "sha256": "266f46a1da0536b676d74587814e4c326b9fc95d05701edf863eb7680913c5e6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/countryboymine/price-preview/per-item/v2/?asn=fhdn&item_pks=145208&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 843,
+      "sha256": "f246a98eaefe28362660736b15eb904a8c6c2bd065f08ab2a9a7c96ed6168b7f"
+    }
+  }
+}

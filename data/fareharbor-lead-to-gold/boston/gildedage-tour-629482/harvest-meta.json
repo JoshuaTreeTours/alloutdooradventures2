@@ -1,0 +1,47 @@
+{
+  "company": "gildedage-tour",
+  "itemId": "629482",
+  "fetchedAt": "2026-09-30T02:33:41.282065+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gildedage-tour/629482/content/",
+      "status": 200,
+      "bytes": 4750,
+      "sha256": "6f127545d122b8b89e54b48ced0a80720cda92ca291bb9985f9623047e6042cb"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gildedage-tour/629482/structured-description/",
+      "status": 200,
+      "bytes": 3194,
+      "sha256": "888c8d5397365f7023731e51e024ac85ea99c4c61e8a38f040c63aaa27d47090"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gildedage-tour/items/629482/",
+      "status": 200,
+      "bytes": 9035,
+      "sha256": "52b9ac1225bf58bc7b14e564c60360a18225c788853b3fe7b0a6835e9575b0cf"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gildedage-tour/price-preview/per-item/v2/?asn=fhdn&item_pks=629482&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 646,
+      "sha256": "a6d56a6b98e2fa5f7187a97fad3545a8837668f091f17f929007cac1a7112f4a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gildedage-tour/items/629482/ratings/",
+      "status": 200,
+      "bytes": 488,
+      "sha256": "5b418a07d849d6f93547d4b3a1a9f4ad8180481f92aa07e810450c3ddeb88275"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "629482",
+    "provider": "gildedage-tour",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gildedage-tour/items/629482/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor ne s'est pas chargé correctement. Veuillez essayer de rafraîchir la page. Si vous continuez à voir ce message, veuillez nous contacter . Code d'erreur : no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Sécurisé Vos informations seront transférées en toute sécurité sur une connexion cryptée de 2048 bits. Santé et sécu"
+  },
+  "hasAuthoritativePrice": true
+}

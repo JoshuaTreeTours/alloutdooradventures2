@@ -1,0 +1,47 @@
+{
+  "company": "photowalks",
+  "itemId": "194038",
+  "fetchedAt": "2026-09-30T02:33:46.451754+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/photowalks/194038/content/",
+      "status": 200,
+      "bytes": 2392,
+      "sha256": "3ffd003ec8edd3ebc5d483acfe1ffdb84111a10877927124b370480daeb7e538"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/photowalks/194038/structured-description/",
+      "status": 200,
+      "bytes": 1503,
+      "sha256": "eed0db2ab230d1410f15e6ac44ffb4c4a6a1963f46f1ba7594782602ccf9893e"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/photowalks/items/194038/",
+      "status": 200,
+      "bytes": 8679,
+      "sha256": "02fc8d44aa26aab70884a12f75455f139af0e07b77d1e0171d6db16353142798"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/photowalks/price-preview/per-item/v2/?asn=fhdn&item_pks=194038&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/photowalks/items/194038/ratings/",
+      "status": 200,
+      "bytes": 614,
+      "sha256": "e9db01adbd04a7206f8f34a244fd66f00585c4ae1ee12f4d9b4d4704d8d14a4c"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "194038",
+    "provider": "photowalks",
+    "bookingUrl": "https://fareharbor.com/embeds/book/photowalks/items/194038/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

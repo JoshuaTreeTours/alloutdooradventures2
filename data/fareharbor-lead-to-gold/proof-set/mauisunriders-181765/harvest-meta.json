@@ -1,0 +1,31 @@
+{
+  "company": "mauisunriders",
+  "itemId": "181765",
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/mauisunriders/181765/content/",
+      "status": 200,
+      "bytes": 11524,
+      "sha256": "074e5a176a0d74401373f6dd2a6839c5a550aa6a41f93b295d22ad8e5e376588"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/mauisunriders/181765/structured-description/",
+      "status": 200,
+      "bytes": 5674,
+      "sha256": "7ffa9c01d5a54c1619b639eb726329060977a84f4fc25b7c75a8bca6ed3717b7"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/mauisunriders/items/181765/",
+      "status": 200,
+      "bytes": 20439,
+      "sha256": "424b3244a75efe1c039cccc69330745fe16e3e50f12d99f6df428e370ebeba4e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/mauisunriders/price-preview/per-item/v2/?asn=fhdn&item_pks=181765&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 641,
+      "sha256": "0b666c76114d038647318bc73c7539154214a7da5baaaf07d0ca34261d04737d"
+    }
+  }
+}

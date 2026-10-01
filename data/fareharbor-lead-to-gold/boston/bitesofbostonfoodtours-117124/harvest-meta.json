@@ -1,0 +1,47 @@
+{
+  "company": "bitesofbostonfoodtours",
+  "itemId": "117124",
+  "fetchedAt": "2026-09-30T02:32:12.104475+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bitesofbostonfoodtours/117124/content/",
+      "status": 200,
+      "bytes": 6328,
+      "sha256": "6655ddd996c99703e318c1d91d528d74fda4402f8015d1c55bfbf4bcfa38841d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bitesofbostonfoodtours/117124/structured-description/",
+      "status": 200,
+      "bytes": 1270,
+      "sha256": "049908fd3cab2d1418419defd0597e587d58b7a7be7d20b6a95d3abc01fc9033"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/117124/",
+      "status": 200,
+      "bytes": 19571,
+      "sha256": "04cfd112d190b5870c0fcc1e72d76a4eeb58cbc0ecf22e59adb068c2e4050a75"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bitesofbostonfoodtours/price-preview/per-item/v2/?asn=fhdn&item_pks=117124&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 701,
+      "sha256": "5f62b5be6b03bfb4bda0702c76221f8cfde37f8e7b4d5ad06d82e4f95f8d7458"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bitesofbostonfoodtours/items/117124/ratings/",
+      "status": 200,
+      "bytes": 451,
+      "sha256": "3dc35a5316f5544f8a7a14c423b8c4413b3c52daa95b7c5230cb1de538d0a429"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "117124",
+    "provider": "bitesofbostonfoodtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bitesofbostonfoodtours/items/117124/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

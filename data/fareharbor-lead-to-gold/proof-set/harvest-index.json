@@ -1,0 +1,315 @@
+{
+  "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+  "products": [
+    {
+      "company": "countryboymine",
+      "itemId": "145208",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/countryboymine/145208/content/",
+          "status": 200,
+          "bytes": 2731,
+          "sha256": "54cf0b994eb9b4f60655e622cc39063142a6d0cafdc968029122cb0f58661a7f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/countryboymine/145208/structured-description/",
+          "status": 200,
+          "bytes": 1780,
+          "sha256": "0a0e1b56ded0819303dcea95496932d646e0c0ecf3cd9d5f9d18e91a247c927d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/countryboymine/items/145208/",
+          "status": 200,
+          "bytes": 12363,
+          "sha256": "266f46a1da0536b676d74587814e4c326b9fc95d05701edf863eb7680913c5e6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/countryboymine/price-preview/per-item/v2/?asn=fhdn&item_pks=145208&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 843,
+          "sha256": "f246a98eaefe28362660736b15eb904a8c6c2bd065f08ab2a9a7c96ed6168b7f"
+        }
+      }
+    },
+    {
+      "company": "mauisunriders",
+      "itemId": "181765",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mauisunriders/181765/content/",
+          "status": 200,
+          "bytes": 11524,
+          "sha256": "074e5a176a0d74401373f6dd2a6839c5a550aa6a41f93b295d22ad8e5e376588"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mauisunriders/181765/structured-description/",
+          "status": 200,
+          "bytes": 5674,
+          "sha256": "7ffa9c01d5a54c1619b639eb726329060977a84f4fc25b7c75a8bca6ed3717b7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mauisunriders/items/181765/",
+          "status": 200,
+          "bytes": 20439,
+          "sha256": "424b3244a75efe1c039cccc69330745fe16e3e50f12d99f6df428e370ebeba4e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mauisunriders/price-preview/per-item/v2/?asn=fhdn&item_pks=181765&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 641,
+          "sha256": "0b666c76114d038647318bc73c7539154214a7da5baaaf07d0ca34261d04737d"
+        }
+      }
+    },
+    {
+      "company": "untappednewyork",
+      "itemId": "322210",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/untappednewyork/322210/content/",
+          "status": 200,
+          "bytes": 5685,
+          "sha256": "06dffc9c5f682361859e5ed820020d8cab09d14dca87bac6c651d0bd7e650783"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/untappednewyork/322210/structured-description/",
+          "status": 200,
+          "bytes": 4263,
+          "sha256": "bc880fcaf8c914f2d5d2a07f923c29e4a482d198e089a984b02c9ca5b71cba9d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/untappednewyork/items/322210/",
+          "status": 200,
+          "bytes": 25445,
+          "sha256": "70951faa6de3d4dac65e07a837341559c7c5be23161f245fc91e301bc5556dd8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/untappednewyork/price-preview/per-item/v2/?asn=fhdn&item_pks=322210&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        }
+      }
+    },
+    {
+      "company": "wilsonfishingguides",
+      "itemId": "595701",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/wilsonfishingguides/595701/content/",
+          "status": 403,
+          "bytes": 38,
+          "sha256": "f7ca317a0aef36faf33ed0b0ca1e2889324d5001957e1e6f32347ab0de3ba9d5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/wilsonfishingguides/595701/structured-description/",
+          "status": 404,
+          "bytes": 38,
+          "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/wilsonfishingguides/items/595701/",
+          "status": 404,
+          "bytes": 38,
+          "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/wilsonfishingguides/price-preview/per-item/v2/?asn=fhdn&item_pks=595701&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 40,
+          "sha256": "b6cc5f800b1160014c3438b0695fc7260be47ebc27615530c9074e5cd01ab243"
+        }
+      }
+    },
+    {
+      "company": "yellowstoneadvmoto",
+      "itemId": "694384",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/yellowstoneadvmoto/694384/content/",
+          "status": 403,
+          "bytes": 38,
+          "sha256": "f7ca317a0aef36faf33ed0b0ca1e2889324d5001957e1e6f32347ab0de3ba9d5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/yellowstoneadvmoto/694384/structured-description/",
+          "status": 200,
+          "bytes": 11086,
+          "sha256": "fb9eb77e6c752199ee5cd95fed87b583450e6c7e9aea90b2aecb87f86a7e2459"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/yellowstoneadvmoto/items/694384/",
+          "status": 200,
+          "bytes": 12913,
+          "sha256": "3ad5d427e78a0ac3c4372e28ef25aafdc267be5ffe6b4710396a37e0f6fc3e86"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/yellowstoneadvmoto/price-preview/per-item/v2/?asn=fhdn&item_pks=694384&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        }
+      }
+    },
+    {
+      "company": "solitudefloattrips",
+      "itemId": "646999",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/solitudefloattrips/646999/content/",
+          "status": 200,
+          "bytes": 9739,
+          "sha256": "c1f265cfca0d302be1ba5f51c732c0b1fb7187e2d8f559d81ead0b96daa6b470"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/solitudefloattrips/646999/structured-description/",
+          "status": 200,
+          "bytes": 6536,
+          "sha256": "a96e46478d4065f363d0893c73265980516537a247095f133ae951e4970359b2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/solitudefloattrips/items/646999/",
+          "status": 200,
+          "bytes": 12150,
+          "sha256": "d454ac6fe3e73bb7be75a825ec83fe86e1f70c01e33f35810f51d9ca3233ca1c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/solitudefloattrips/price-preview/per-item/v2/?asn=fhdn&item_pks=646999&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 799,
+          "sha256": "7745e579dcb49784d2537ae4546efaec1e19311e0545e910580f31f4ae8a3430"
+        }
+      }
+    },
+    {
+      "company": "hotelebikerentals",
+      "itemId": "612500",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hotelebikerentals/612500/content/",
+          "status": 403,
+          "bytes": 38,
+          "sha256": "f7ca317a0aef36faf33ed0b0ca1e2889324d5001957e1e6f32347ab0de3ba9d5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hotelebikerentals/612500/structured-description/",
+          "status": 404,
+          "bytes": 38,
+          "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hotelebikerentals/items/612500/",
+          "status": 404,
+          "bytes": 38,
+          "sha256": "53fc17db856bcb25c64252a41956d1ac37cdfc1558e46363d92699fe2013bd2b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hotelebikerentals/price-preview/per-item/v2/?asn=fhdn&item_pks=612500&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 40,
+          "sha256": "b6cc5f800b1160014c3438b0695fc7260be47ebc27615530c9074e5cd01ab243"
+        }
+      }
+    },
+    {
+      "company": "red-jeep",
+      "itemId": "34849",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/red-jeep/34849/content/",
+          "status": 200,
+          "bytes": 22083,
+          "sha256": "9295f826074aedf2b890e44362412cd916c68ad4374bf32082b22bbf533619ea"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/red-jeep/34849/structured-description/",
+          "status": 200,
+          "bytes": 16039,
+          "sha256": "edec8feb5f5bf915e0f28b4ab4438c811ed79cfd3db1dcfd7dbc23721dfa7c2a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/red-jeep/items/34849/",
+          "status": 200,
+          "bytes": 36969,
+          "sha256": "170f71bb40cfcb670a157322b1f167c72c6cc1e905a84d65512d3a386ebc4a43"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/red-jeep/price-preview/per-item/v2/?asn=fhdn&item_pks=34849&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 786,
+          "sha256": "930a98600b0df1e1b54e8acbe85dedaf29589d6abd5d78ea233118bcc4f965c1"
+        }
+      }
+    },
+    {
+      "company": "epicpaddleadventures",
+      "itemId": "333279",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/content/",
+          "status": 200,
+          "bytes": 10732,
+          "sha256": "eca0511cf67204240edbf9698c8367d451c654491006505fd583439680f967e1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/structured-description/",
+          "status": 200,
+          "bytes": 7181,
+          "sha256": "e2ca3b45f58e2110266d86e61f388b45e088a541878666a6f26f3bb535982a7a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/",
+          "status": 200,
+          "bytes": 19611,
+          "sha256": "56cdbfed42aed76ca1d2d169ff80ad09ae40b13530f7e5ca08d69175c23e04bc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/epicpaddleadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=333279&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 963,
+          "sha256": "c107b549f9b931c1ac706e2055ad090f0aea4c4459b8c712175f3f8665da1217"
+        }
+      }
+    },
+    {
+      "company": "wineroutebaja",
+      "itemId": "193220",
+      "fetchedAt": "2026-09-29T17:24:06.494452+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/wineroutebaja/193220/content/",
+          "status": 200,
+          "bytes": 16002,
+          "sha256": "b84de4fa48009ea4e7d6e21f9f222731236d91cd0608ca56d0354b644971079a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/wineroutebaja/193220/structured-description/",
+          "status": 200,
+          "bytes": 9684,
+          "sha256": "32eaeac07bd20be4c8d2a234157fbb5dd30012fabbab19084f17433655731533"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/wineroutebaja/items/193220/",
+          "status": 200,
+          "bytes": 22844,
+          "sha256": "5df15c89de2bc3c6af139fbe709a3a7b7ca0a664fdd239fcb93f50483f75d21e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/wineroutebaja/price-preview/per-item/v2/?asn=fhdn&item_pks=193220&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 776,
+          "sha256": "a7a1fbd6d94326392c1131420a73190b0b90fc693012c043b2ec9ff1ae1c35af"
+        }
+      }
+    }
+  ]
+}

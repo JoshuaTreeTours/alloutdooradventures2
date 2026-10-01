@@ -3,8 +3,10 @@ import { Link } from "wouter";
 
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
+import { getFareHarborProofFromTour } from "../data/fareharborLeadToGoldProof";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
+import FareHarborProductSummary from "./FareHarborProductSummary";
 import { buildRentalDescription } from "../templates/rentalDescription";
 import {
   ENGINE6_GLOBAL_FALLBACK_HERO_URL,
@@ -163,7 +165,12 @@ export default function TourCard({
     return null;
   }
   const isRental = isRentalTour(tour);
-  const blurb = getCardBlurb(tour);
+  const proof = getFareHarborProofFromTour({
+    id: tour.id,
+    slug: tour.slug,
+    bookingUrl: tour.bookingUrl,
+  });
+  const blurb = proof ? "" : getCardBlurb(tour);
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
   const fallbackCategoryLabel =
@@ -176,14 +183,14 @@ export default function TourCard({
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
-  const startingPriceLabel = formatStartingPrice(
-    tour.startingPrice,
-    tour.currency
-  );
+  const startingPriceLabel = proof
+    ? null
+    : formatStartingPrice(tour.startingPrice, tour.currency);
   const isEngine6Tour = tour.engine === "engine6";
   const rating = tour.badges.rating;
   const reviewCount = tour.badges.reviewCount;
   const hasRating =
+    !proof &&
     isEngine6Tour &&
     !tour.suppressReviews &&
     typeof rating === "number" &&
@@ -256,9 +263,12 @@ export default function TourCard({
         )}
         {renderedTagPills.length ? (
           <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
-            {renderedTagPills.map(tag => (
+            {renderedTagPills.map((tag, index) => (
               <span
                 key={tag}
+                data-testid={
+                  proof && index === 0 ? "tour-card-category" : undefined
+                }
                 className="rounded-full bg-white/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]"
               >
                 {tag}
@@ -272,10 +282,20 @@ export default function TourCard({
           <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
             {locationLabel}
           </p>
+          {proof && !renderedTagPills.length && categoryLabel ? (
+            <p
+              className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#2f4a2f]"
+              data-testid="tour-card-category"
+            >
+              {categoryLabel}
+            </p>
+          ) : null}
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}
           </h3>
-          {blurb ? (
+          {proof ? (
+            <FareHarborProductSummary proof={proof} tone="card" />
+          ) : blurb ? (
             <p className="mt-2 overflow-hidden text-sm text-[#405040] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] md:[-webkit-line-clamp:3]">
               {blurb}
             </p>

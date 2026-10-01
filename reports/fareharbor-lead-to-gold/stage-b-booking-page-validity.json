@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-09-29T22:06:00Z",
+  "scope": "Stage B 10-product proof set only",
+  "terminalRule": "BOOKING_PAGE_NOT_FOUND requires an authoritative FareHarbor booking destination to return a clear permanent 404, Page not found, deleted-product state, or equivalent terminal response. Timeouts, temporary network failures, rate limits, and 5xx responses are not terminal.",
+  "products": [
+    {
+      "itemId": "145208",
+      "provider": "countryboymine",
+      "bookingUrl": "https://fareharbor.com/embeds/book/countryboymine/items/145208/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "181765",
+      "provider": "mauisunriders",
+      "bookingUrl": "https://fareharbor.com/embeds/book/mauisunriders/items/181765/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "322210",
+      "provider": "untappednewyork",
+      "bookingUrl": "https://fareharbor.com/embeds/book/untappednewyork/items/322210/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "595701",
+      "provider": "wilsonfishingguides",
+      "bookingUrl": "https://fareharbor.com/embeds/book/wilsonfishingguides/items/595701/",
+      "httpStatus": 404,
+      "classification": "BOOKING_PAGE_NOT_FOUND",
+      "evidence": "Authoritative booking destination returned HTTP 404 with a visible Page not found state."
+    },
+    {
+      "itemId": "694384",
+      "provider": "yellowstoneadvmoto",
+      "bookingUrl": "https://fareharbor.com/embeds/book/yellowstoneadvmoto/items/694384/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "646999",
+      "provider": "solitudefloattrips",
+      "bookingUrl": "https://fareharbor.com/embeds/book/solitudefloattrips/items/646999/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "612500",
+      "provider": "hotelebikerentals",
+      "bookingUrl": "https://fareharbor.com/embeds/book/hotelebikerentals/items/612500/",
+      "httpStatus": 404,
+      "classification": "BOOKING_PAGE_NOT_FOUND",
+      "evidence": "Authoritative booking destination returned HTTP 404 with a visible Page not found state."
+    },
+    {
+      "itemId": "34849",
+      "provider": "red-jeep",
+      "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "333279",
+      "provider": "epicpaddleadventures",
+      "bookingUrl": "https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    },
+    {
+      "itemId": "193220",
+      "provider": "wineroutebaja",
+      "bookingUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/",
+      "httpStatus": 200,
+      "classification": "VALID"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "company": "classicsailboston",
+  "itemId": "525191",
+  "fetchedAt": "2026-09-30T02:33:39.681759+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/classicsailboston/525191/content/",
+      "status": 200,
+      "bytes": 1757,
+      "sha256": "9c4ebd4e5feb36f3947f52538ded2f555b02095c4d37e7be1f1f72e848b0a6e0"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/classicsailboston/525191/structured-description/",
+      "status": 200,
+      "bytes": 882,
+      "sha256": "d59a96e2948c2b11d520ed7edf4a24f84fc156f2eb2a3a682a49ae1a228ec8dd"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/classicsailboston/items/525191/",
+      "status": 200,
+      "bytes": 7340,
+      "sha256": "1b4d924d93f13416dc9ba472d10ab2bdbf0c7b5f6d00f0835309583e8f0f3790"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/classicsailboston/price-preview/per-item/v2/?asn=fhdn&item_pks=525191&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/classicsailboston/items/525191/ratings/",
+      "status": 200,
+      "bytes": 444,
+      "sha256": "895001b0941d14ef4db7432ba043a2c3f6cee3f4f096a55d5ec34133378f43f8"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "525191",
+    "provider": "classicsailboston",
+    "bookingUrl": "https://fareharbor.com/embeds/book/classicsailboston/items/525191/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}
