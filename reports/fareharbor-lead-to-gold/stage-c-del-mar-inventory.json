@@ -1,0 +1,222 @@
+{
+  "citySlug": "del-mar",
+  "total": 11,
+  "active": 11,
+  "terminal": 0,
+  "priceAvailable": 5,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 11,
+  "inSitemap": 5,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "439580",
+      "slug": "interactive-animal-encounter-439580",
+      "publicPath": "/destinations/california/del-mar/tours/interactive-animal-encounter-439580",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5292,
+        "structuredStatus": 200,
+        "structuredBytes": 3777
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "439587",
+      "slug": "girl-scouts-badges-439587",
+      "publicPath": "/destinations/california/del-mar/tours/girl-scouts-badges-439587",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4436,
+        "structuredStatus": 200,
+        "structuredBytes": 3366
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "446272",
+      "slug": "custom-scout-trip-446272",
+      "publicPath": "/destinations/california/del-mar/tours/custom-scout-trip-446272",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6706,
+        "structuredStatus": 200,
+        "structuredBytes": 5637
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "461127",
+      "slug": "outreaches-461127",
+      "publicPath": "/destinations/california/del-mar/tours/outreaches-461127",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10061,
+        "structuredStatus": 200,
+        "structuredBytes": 7011
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "481283",
+      "slug": "howloween-harvest-family-festival-481283",
+      "publicPath": "/destinations/california/del-mar/tours/howloween-harvest-family-festival-481283",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9788,
+        "structuredStatus": 200,
+        "structuredBytes": 4965
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "483273",
+      "slug": "onsite-field-trips-483273",
+      "publicPath": "/destinations/california/del-mar/tours/onsite-field-trips-483273",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8656,
+        "structuredStatus": 200,
+        "structuredBytes": 6793
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "502768",
+      "slug": "zookeeper-camp-502768",
+      "publicPath": "/destinations/california/del-mar/tours/zookeeper-camp-502768",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 19594,
+        "structuredStatus": 200,
+        "structuredBytes": 12928
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "502778",
+      "slug": "veterinarian-camp---half-day-502778",
+      "publicPath": "/destinations/california/del-mar/tours/veterinarian-camp---half-day-502778",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 16967,
+        "structuredStatus": 200,
+        "structuredBytes": 10943
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "502784",
+      "slug": "veterinarian-camp---full-day-502784",
+      "publicPath": "/destinations/california/del-mar/tours/veterinarian-camp---full-day-502784",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 19248,
+        "structuredStatus": 200,
+        "structuredBytes": 12808
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "509720",
+      "slug": "spring-buddies-family-festival-509720",
+      "publicPath": "/destinations/california/del-mar/tours/spring-buddies-family-festival-509720",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5751,
+        "structuredStatus": 200,
+        "structuredBytes": 4688
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "animalcenter",
+      "operator": "Helen Woodward Animal Center",
+      "itemId": "575652",
+      "slug": "spring-adventure-575652",
+      "publicPath": "/destinations/california/del-mar/tours/spring-adventure-575652",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8337,
+        "structuredStatus": 200,
+        "structuredBytes": 6609
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

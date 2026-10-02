@@ -142,15 +142,34 @@ FILESTACK_RE = re.compile(r"https://cdn\.filestackcontent\.com/([A-Za-z0-9]+)")
 EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE) if EDITORIAL_SAMPLE else {}
 
 
+def synthesized_city_profile(city_slug: str) -> dict:
+    """Build a data-only profile from the catalog destination. No city-specific prose."""
+    payload = inventory(city_slug)
+    products = payload.get("products") or []
+    if not products:
+        known = ", ".join(sorted(CITY_PROFILES))
+        raise SystemExit(
+            f"unsupported FareHarbor city {city_slug}; no catalog products. known profiles: {known}"
+        )
+    destination = products[0].get("destination") or {}
+    parts = "".join(part.capitalize() for part in city_slug.split("-") if part)
+    return {
+        "city": destination.get("city") or city_slug,
+        "state": destination.get("state") or "",
+        "stateSlug": destination.get("stateSlug") or "",
+        "exportName": f"fareHarbor{parts}LegacyProducts",
+        "generatedName": f"fareharbor{parts}Legacy.generated.ts",
+        "editorialSample": None,
+        "publishUnpriced": False,
+    }
+
+
 def configure_city(city_slug: str) -> None:
     """Point the shared builder at one city. Boston remains the default."""
     global CITY_SLUG, CITY_NAME, STATE_NAME, STATE_SLUG, EXPORT_NAME
     global HARVEST_ROOT, HARVEST_REPORT, REPORT_JSON, REPORT_MD, GENERATED_TS
     global EDITORIAL_SAMPLE, EDITORIAL_BY_ID, PUBLISH_UNPRICED
-    profile = CITY_PROFILES.get(city_slug)
-    if not profile:
-        known = ", ".join(sorted(CITY_PROFILES))
-        raise SystemExit(f"unsupported FareHarbor city {city_slug}; known: {known}")
+    profile = CITY_PROFILES.get(city_slug) or synthesized_city_profile(city_slug)
     CITY_SLUG = city_slug
     CITY_NAME = profile["city"]
     STATE_NAME = profile["state"]

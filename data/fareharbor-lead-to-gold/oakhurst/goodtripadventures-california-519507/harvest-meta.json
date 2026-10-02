@@ -1,0 +1,47 @@
+{
+  "company": "goodtripadventures-california",
+  "itemId": "519507",
+  "fetchedAt": "2026-10-02T22:43:37.826908+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519507/content/",
+      "status": 200,
+      "bytes": 5700,
+      "sha256": "85cfe2787c9ccec2ea3561c8aeb4ffa24e9b048fceb85747f993bbf02cabe886"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519507/structured-description/",
+      "status": 200,
+      "bytes": 5387,
+      "sha256": "907ae08fd378181279912cd8231de149207b3d1a9142331914b5a22a460cc351"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519507/",
+      "status": 200,
+      "bytes": 13346,
+      "sha256": "6b9348f7538044f3073e62d99c710c1c0fb61f43d83beb434635d0df00ab95c8"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/goodtripadventures-california/price-preview/per-item/v2/?asn=fhdn&item_pks=519507&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 595,
+      "sha256": "e794e3a5755e693f20bd1df0ecede305f44a49c601888d2265321c5ab56bf59f"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519507/ratings/",
+      "status": 200,
+      "bytes": 512,
+      "sha256": "eb6fd9e17c4e997878299500fa8b2787419b2cc39c371ad7e00df146345796e4"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "519507",
+    "provider": "goodtripadventures-california",
+    "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -1,0 +1,47 @@
+{
+  "company": "unlimitedbiking",
+  "itemId": "202161",
+  "fetchedAt": "2026-10-02T22:43:17.212773+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/202161/content/",
+      "status": 200,
+      "bytes": 4833,
+      "sha256": "4216fda39a3ea7e98f9143581f819f01d6705a070e2ec53bd682994481b5c517"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/202161/structured-description/",
+      "status": 200,
+      "bytes": 2772,
+      "sha256": "e1a25c9a327f185d49136a2e8c4a89d3c02fc7d151505dac074055375741fa58"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/202161/",
+      "status": 200,
+      "bytes": 14760,
+      "sha256": "7935283db103ebfe57bccac051dc948a4ba84113d59263c2612280c63a8fe5d6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=202161&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 582,
+      "sha256": "ab36e17fdde50a2486d049b09beb25d0d05f38386b9fdc912000368ae7304da5"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/202161/ratings/",
+      "status": 200,
+      "bytes": 629,
+      "sha256": "9e6cc34d240a790b658e213bcc0cee323168b8358cbc4e2068440d8e8c89ab91"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "202161",
+    "provider": "unlimitedbiking",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/202161/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

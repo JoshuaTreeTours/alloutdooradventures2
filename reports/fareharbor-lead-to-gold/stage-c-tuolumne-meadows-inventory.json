@@ -1,0 +1,146 @@
+{
+  "citySlug": "tuolumne-meadows",
+  "total": 7,
+  "active": 7,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 7,
+  "inSitemap": 7,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619647",
+      "slug": "tenaya-lake-family-swimming-and-beach-day-619647",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/tenaya-lake-family-swimming-and-beach-day-619647",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2344,
+        "structuredStatus": 200,
+        "structuredBytes": 1219
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619652",
+      "slug": "family-hike-to-a-hidden-lake-and-swim-619652",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/family-hike-to-a-hidden-lake-and-swim-619652",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2393,
+        "structuredStatus": 200,
+        "structuredBytes": 1272
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619653",
+      "slug": "yosemite-valley-walking-tour-619653",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/yosemite-valley-walking-tour-619653",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2208,
+        "structuredStatus": 200,
+        "structuredBytes": 1255
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619655",
+      "slug": "mist-trail-vernal-and-nevada-falls-619655",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/mist-trail-vernal-and-nevada-falls-619655",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2340,
+        "structuredStatus": 200,
+        "structuredBytes": 1279
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619659",
+      "slug": "backcountry-hike-to-cathedral-lakes-619659",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/backcountry-hike-to-cathedral-lakes-619659",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2243,
+        "structuredStatus": 200,
+        "structuredBytes": 1254
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619663",
+      "slug": "hike-to-upper-yosemite-falls-619663",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/hike-to-upper-yosemite-falls-619663",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2213,
+        "structuredStatus": 200,
+        "structuredBytes": 1278
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619664",
+      "slug": "summit-half-dome-in-a-day-619664",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/summit-half-dome-in-a-day-619664",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3033,
+        "structuredStatus": 200,
+        "structuredBytes": 1480
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

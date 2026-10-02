@@ -1,0 +1,51 @@
+{
+  "citySlug": "santee",
+  "total": 2,
+  "active": 2,
+  "terminal": 0,
+  "priceAvailable": 2,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 2,
+  "inSitemap": 2,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "zovargo",
+      "operator": "Zovargo",
+      "itemId": "231271",
+      "slug": "zoo-animal-party-1-15-attendees-231271",
+      "publicPath": "/destinations/california/santee/tours/zoo-animal-party-1-15-attendees-231271",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6417,
+        "structuredStatus": 200,
+        "structuredBytes": 3551
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "zovargo",
+      "operator": "Zovargo",
+      "itemId": "359106",
+      "slug": "zoo-animal-party-16-35-attendees-359106",
+      "publicPath": "/destinations/california/santee/tours/zoo-animal-party-16-35-attendees-359106",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6642,
+        "structuredStatus": 200,
+        "structuredBytes": 3544
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

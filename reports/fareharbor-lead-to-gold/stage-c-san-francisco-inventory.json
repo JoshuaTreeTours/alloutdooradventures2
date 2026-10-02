@@ -1,0 +1,412 @@
+{
+  "citySlug": "san-francisco",
+  "total": 21,
+  "active": 17,
+  "terminal": 4,
+  "priceAvailable": 14,
+  "tripadvisorRatingAvailable": 15,
+  "imageAvailable": 21,
+  "inSitemap": 14,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "10199",
+      "slug": "golden-gate-bridge-to-sausalito-bike-tour-10199",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-bridge-to-sausalito-bike-tour-10199",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11922,
+        "structuredStatus": 200,
+        "structuredBytes": 7263
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "10201",
+      "slug": "california-sunset-tour-10201",
+      "publicPath": "/destinations/california/san-francisco/tours/california-sunset-tour-10201",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7964,
+        "structuredStatus": 200,
+        "structuredBytes": 5146
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "15779",
+      "slug": "alcatraz-and-streets-of-san-francisco-tour-15779",
+      "publicPath": "/destinations/california/san-francisco/tours/alcatraz-and-streets-of-san-francisco-tour-15779",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14981,
+        "structuredStatus": 200,
+        "structuredBytes": 10107
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "165139",
+      "slug": "bike-the-bridge-and-muir-woods-tour-combo-165139",
+      "publicPath": "/destinations/california/san-francisco/tours/bike-the-bridge-and-muir-woods-tour-combo-165139",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 17034,
+        "structuredStatus": 200,
+        "structuredBytes": 9781
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "280403",
+      "slug": "alcatraz-and-full-day-electric-bike-rental-280403",
+      "publicPath": "/destinations/california/san-francisco/tours/alcatraz-and-full-day-electric-bike-rental-280403",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12994,
+        "structuredStatus": 200,
+        "structuredBytes": 8642
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "333235",
+      "slug": "private-golden-gate-bridge-to-sausalito-333235",
+      "publicPath": "/destinations/california/san-francisco/tours/private-golden-gate-bridge-to-sausalito-333235",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13127,
+        "structuredStatus": 200,
+        "structuredBytes": 8000
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitybike",
+      "operator": "Bay City Bike",
+      "itemId": "81664",
+      "slug": "alcatraz-and-the-golden-gate-bridge-to-sausalito-tour-81664",
+      "publicPath": "/destinations/california/san-francisco/tours/alcatraz-and-the-golden-gate-bridge-to-sausalito-tour-81664",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12890,
+        "structuredStatus": 200,
+        "structuredBytes": 8772
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baycitykayak",
+      "operator": "Bay City Kayak Tours",
+      "itemId": "901001",
+      "slug": "golden-gate-kayak-adventure-901001",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-kayak-adventure-901001",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588083
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "baynightadventures",
+      "operator": "Bay Night Adventures",
+      "itemId": "901003",
+      "slug": "san-francisco-sunset-cruise-901003",
+      "publicPath": "/destinations/california/san-francisco/tours/san-francisco-sunset-cruise-901003",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588095
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikeandroll",
+      "operator": "Bike & Roll San Francisco",
+      "itemId": "638088",
+      "slug": "golden-gate-bridge-bike-tour-638088",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-638088",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2736,
+        "structuredStatus": 200,
+        "structuredBytes": 1938
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikeandroll",
+      "operator": "Bike & Roll San Francisco",
+      "itemId": "638096",
+      "slug": "golden-gate-park-electric-bike-tour-638096",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-park-electric-bike-tour-638096",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2928,
+        "structuredStatus": 200,
+        "structuredBytes": 2127
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fogcitybiketours",
+      "operator": "Fog City Bike Tours",
+      "itemId": "901002",
+      "slug": "golden-gate-bridge-electric-bike-tour-901002",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-bridge-electric-bike-tour-901002",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sanfranciscotoursandactivities",
+      "operator": "San Francisco Tours and Activities",
+      "itemId": "315553",
+      "slug": "alcatraz-tour-package-315553",
+      "publicPath": "/destinations/california/san-francisco/tours/alcatraz-tour-package-315553",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4185,
+        "structuredStatus": 200,
+        "structuredBytes": 3314
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sanfranciscotoursandactivities",
+      "operator": "San Francisco Tours and Activities",
+      "itemId": "85853",
+      "slug": "san-francisco-3-in-1-woods-wine-tour-sausalito-85853",
+      "publicPath": "/destinations/california/san-francisco/tours/san-francisco-3-in-1-woods-wine-tour-sausalito-85853",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3015,
+        "structuredStatus": 200,
+        "structuredBytes": 2352
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "spinoutfitness",
+      "operator": "Spin Outside, LLC",
+      "itemId": "423384",
+      "slug": "go-with-the-flow---south-423384",
+      "publicPath": "/destinations/california/san-francisco/tours/go-with-the-flow---south-423384",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588087
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "138644",
+      "slug": "the-golden-gate-bridge-bike-tour-138644",
+      "publicPath": "/destinations/california/san-francisco/tours/the-golden-gate-bridge-bike-tour-138644",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4487,
+        "structuredStatus": 200,
+        "structuredBytes": 2186
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "201053",
+      "slug": "best-of-san-francisco-electric-bike-tour-201053",
+      "publicPath": "/destinations/california/san-francisco/tours/best-of-san-francisco-electric-bike-tour-201053",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4875,
+        "structuredStatus": 200,
+        "structuredBytes": 2824
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "201055",
+      "slug": "highlights-of-golden-gate-park-bike-tour-201055",
+      "publicPath": "/destinations/california/san-francisco/tours/highlights-of-golden-gate-park-bike-tour-201055",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4327,
+        "structuredStatus": 200,
+        "structuredBytes": 2256
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "202161",
+      "slug": "the-highlights-of-san-francisco-bike-tour-202161",
+      "publicPath": "/destinations/california/san-francisco/tours/the-highlights-of-san-francisco-bike-tour-202161",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4833,
+        "structuredStatus": 200,
+        "structuredBytes": 2772
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "313936",
+      "slug": "golden-gate-park-electric-bike-tour-313936",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-park-electric-bike-tour-313936",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4252,
+        "structuredStatus": 200,
+        "structuredBytes": 2122
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "315246",
+      "slug": "golden-gate-park-ebike-rentals-315246",
+      "publicPath": "/destinations/california/san-francisco/tours/golden-gate-park-ebike-rentals-315246",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4162,
+        "structuredStatus": 200,
+        "structuredBytes": 2147
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

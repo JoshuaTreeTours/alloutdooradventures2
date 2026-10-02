@@ -1,0 +1,925 @@
+{
+  "citySlug": "coronado",
+  "total": 48,
+  "active": 48,
+  "terminal": 0,
+  "priceAvailable": 9,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 47,
+  "inSitemap": 6,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "coronadogolfcars",
+      "operator": "Coronado Golf Cars",
+      "itemId": "339050",
+      "slug": "delivery---4-passenger-multi-day-339050",
+      "publicPath": "/destinations/california/coronado/tours/delivery---4-passenger-multi-day-339050",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2794,
+        "structuredStatus": 200,
+        "structuredBytes": 1626
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hoteldelcoronado",
+      "operator": "Hotel Del Coronado",
+      "itemId": "580033",
+      "slug": "skating-by-the-sea-580033",
+      "publicPath": "/destinations/california/coronado/tours/skating-by-the-sea-580033",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7561,
+        "structuredStatus": 200,
+        "structuredBytes": 5841
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "454816",
+      "slug": "private-surf-lesson-454816",
+      "publicPath": "/destinations/california/coronado/tours/private-surf-lesson-454816",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12513,
+        "structuredStatus": 200,
+        "structuredBytes": 10810
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "454824",
+      "slug": "ohana-surf-lesson-454824",
+      "publicPath": "/destinations/california/coronado/tours/ohana-surf-lesson-454824",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11562,
+        "structuredStatus": 200,
+        "structuredBytes": 9874
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "454829",
+      "slug": "group-surf-lesson-454829",
+      "publicPath": "/destinations/california/coronado/tours/group-surf-lesson-454829",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11863,
+        "structuredStatus": 200,
+        "structuredBytes": 9871
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "644836",
+      "slug": "group-coronado-island-e-bike-tour-644836",
+      "publicPath": "/destinations/california/coronado/tours/group-coronado-island-e-bike-tour-644836",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5718,
+        "structuredStatus": 200,
+        "structuredBytes": 4759
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "648512",
+      "slug": "del-club-members-daily-group-surf-lesson-648512",
+      "publicPath": "/destinations/california/coronado/tours/del-club-members-daily-group-surf-lesson-648512",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11476,
+        "structuredStatus": 200,
+        "structuredBytes": 9500
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "jobsurfexperience-sd",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "itemId": "654219",
+      "slug": "private-coronado-island-e-bike-tour-654219",
+      "publicPath": "/destinations/california/coronado/tours/private-coronado-island-e-bike-tour-654219",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7140,
+        "structuredStatus": 200,
+        "structuredBytes": 6088
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisetriketours",
+      "operator": "Paradise Trike Tours",
+      "itemId": "437843",
+      "slug": "coronado-electric-bike-tour-437843",
+      "publicPath": "/destinations/california/coronado/tours/coronado-electric-bike-tour-437843",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2327,
+        "structuredStatus": 200,
+        "structuredBytes": 1724
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiego-jetskirentals",
+      "operator": "San Diego Jet Ski Rentals",
+      "itemId": "471073",
+      "slug": "jet-ski-rentals-471073",
+      "publicPath": "/destinations/california/coronado/tours/jet-ski-rentals-471073",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2913,
+        "structuredStatus": 200,
+        "structuredBytes": 1905
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiego-jetskirentals",
+      "operator": "San Diego Jet Ski Rentals",
+      "itemId": "527560",
+      "slug": "speed-boat-rental-527560",
+      "publicPath": "/destinations/california/coronado/tours/speed-boat-rental-527560",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2782,
+        "structuredStatus": 200,
+        "structuredBytes": 1814
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiego-jetskirentals",
+      "operator": "San Diego Jet Ski Rentals",
+      "itemId": "528464",
+      "slug": "pontoon-boat-rental-528464",
+      "publicPath": "/destinations/california/coronado/tours/pontoon-boat-rental-528464",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 1807
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418569",
+      "slug": "sylvan-18---coronado-rental-418569",
+      "publicPath": "/destinations/california/coronado/tours/sylvan-18---coronado-rental-418569",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2094,
+        "structuredStatus": 200,
+        "structuredBytes": 1544
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418666",
+      "slug": "bayliner-19---coronado-rental-418666",
+      "publicPath": "/destinations/california/coronado/tours/bayliner-19---coronado-rental-418666",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2410,
+        "structuredStatus": 200,
+        "structuredBytes": 2174
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418688",
+      "slug": "hurricane-20---coronado-rental-418688",
+      "publicPath": "/destinations/california/coronado/tours/hurricane-20---coronado-rental-418688",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2291,
+        "structuredStatus": 200,
+        "structuredBytes": 1741
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418874",
+      "slug": "catalina-250---coronado-rental-418874",
+      "publicPath": "/destinations/california/coronado/tours/catalina-250---coronado-rental-418874",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2401,
+        "structuredStatus": 200,
+        "structuredBytes": 2072
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418883",
+      "slug": "tritoon-25---coronado-rental-418883",
+      "publicPath": "/destinations/california/coronado/tours/tritoon-25---coronado-rental-418883",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2428,
+        "structuredStatus": 200,
+        "structuredBytes": 2234
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419256",
+      "slug": "capri-22---coronado-rental-419256",
+      "publicPath": "/destinations/california/coronado/tours/capri-22---coronado-rental-419256",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2401,
+        "structuredStatus": 200,
+        "structuredBytes": 2051
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419398",
+      "slug": "catalina-320---coronado-bareboat-rental-419398",
+      "publicPath": "/destinations/california/coronado/tours/catalina-320---coronado-bareboat-rental-419398",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2707,
+        "structuredStatus": 200,
+        "structuredBytes": 1783
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419404",
+      "slug": "catalina-320---coronado-captain-charter-419404",
+      "publicPath": "/destinations/california/coronado/tours/catalina-320---coronado-captain-charter-419404",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2364,
+        "structuredStatus": 200,
+        "structuredBytes": 1679
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419502",
+      "slug": "catalina-270---coronado-captain-charter-419502",
+      "publicPath": "/destinations/california/coronado/tours/catalina-270---coronado-captain-charter-419502",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2283,
+        "structuredStatus": 200,
+        "structuredBytes": 1574
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419503",
+      "slug": "catalina-270---coronado-bareboat-rental-419503",
+      "publicPath": "/destinations/california/coronado/tours/catalina-270---coronado-bareboat-rental-419503",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2653,
+        "structuredStatus": 200,
+        "structuredBytes": 1728
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419627",
+      "slug": "beneteau-40---coronado-captain-charter-419627",
+      "publicPath": "/destinations/california/coronado/tours/beneteau-40---coronado-captain-charter-419627",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2490,
+        "structuredStatus": 200,
+        "structuredBytes": 1665
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419629",
+      "slug": "beneteau-40---coronado-bareboat-rental-419629",
+      "publicPath": "/destinations/california/coronado/tours/beneteau-40---coronado-bareboat-rental-419629",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2735,
+        "structuredStatus": 200,
+        "structuredBytes": 1808
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419639",
+      "slug": "lagoon-380---coronado-bareboat-rental-419639",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380---coronado-bareboat-rental-419639",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2610,
+        "structuredStatus": 200,
+        "structuredBytes": 1687
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419640",
+      "slug": "lagoon-380---coronado-captain-charter-419640",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380---coronado-captain-charter-419640",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2374,
+        "structuredStatus": 200,
+        "structuredBytes": 1556
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419658",
+      "slug": "nautitech-40-erasmus---coronado-captain-charter-419658",
+      "publicPath": "/destinations/california/coronado/tours/nautitech-40-erasmus---coronado-captain-charter-419658",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2437,
+        "structuredStatus": 200,
+        "structuredBytes": 1782
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419707",
+      "slug": "nautitech-40-paradise---coronado-captain-charter-419707",
+      "publicPath": "/destinations/california/coronado/tours/nautitech-40-paradise---coronado-captain-charter-419707",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2911,
+        "structuredStatus": 200,
+        "structuredBytes": 2012
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "419951",
+      "slug": "aquila-44-catastic---coronado-captain-charter-419951",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-catastic---coronado-captain-charter-419951",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2614,
+        "structuredStatus": 200,
+        "structuredBytes": 1927
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "420173",
+      "slug": "sunset-sail---coronado-420173",
+      "publicPath": "/destinations/california/coronado/tours/sunset-sail---coronado-420173",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2160,
+        "structuredStatus": 200,
+        "structuredBytes": 1513
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "423717",
+      "slug": "100-dock---coronado---pick-up-or-one-way-423717",
+      "publicPath": "/destinations/california/coronado/tours/100-dock---coronado---pick-up-or-one-way-423717",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2277,
+        "structuredStatus": 200,
+        "structuredBytes": 1822
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "424572",
+      "slug": "sup---coronado-424572",
+      "publicPath": "/destinations/california/coronado/tours/sup---coronado-424572",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1634,
+        "structuredStatus": 200,
+        "structuredBytes": 1115
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "424591",
+      "slug": "tandem-kayak---coronado-424591",
+      "publicPath": "/destinations/california/coronado/tours/tandem-kayak---coronado-424591",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1815,
+        "structuredStatus": 200,
+        "structuredBytes": 1221
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "424599",
+      "slug": "single-kayak---coronado-rental-424599",
+      "publicPath": "/destinations/california/coronado/tours/single-kayak---coronado-rental-424599",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1877,
+        "structuredStatus": 200,
+        "structuredBytes": 1276
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "425335",
+      "slug": "bay-skiff---coronado-425335",
+      "publicPath": "/destinations/california/coronado/tours/bay-skiff---coronado-425335",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2111,
+        "structuredStatus": 200,
+        "structuredBytes": 1446
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "426233",
+      "slug": "seachaser-18---coronado-426233",
+      "publicPath": "/destinations/california/coronado/tours/seachaser-18---coronado-426233",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2216,
+        "structuredStatus": 200,
+        "structuredBytes": 1668
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "466554",
+      "slug": "monterey-21---coronado-466554",
+      "publicPath": "/destinations/california/coronado/tours/monterey-21---coronado-466554",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2590,
+        "structuredStatus": 200,
+        "structuredBytes": 1990
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "528181",
+      "slug": "blue-bridge-kayak-tour-528181",
+      "publicPath": "/destinations/california/coronado/tours/blue-bridge-kayak-tour-528181",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4170,
+        "structuredStatus": 200,
+        "structuredBytes": 1553
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "529512",
+      "slug": "above-board-stand-up-paddle-tours-sup-529512",
+      "publicPath": "/destinations/california/coronado/tours/above-board-stand-up-paddle-tours-sup-529512",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1783,
+        "structuredStatus": 200,
+        "structuredBytes": 1330
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "607180",
+      "slug": "marquis-70-607180",
+      "publicPath": "/destinations/california/coronado/tours/marquis-70-607180",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 1469
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "638904",
+      "slug": "trophy-18---coronado-638904",
+      "publicPath": "/destinations/california/coronado/tours/trophy-18---coronado-638904",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2118,
+        "structuredStatus": 200,
+        "structuredBytes": 1620
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "639205",
+      "slug": "limo-boat---coronado-639205",
+      "publicPath": "/destinations/california/coronado/tours/limo-boat---coronado-639205",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1902,
+        "structuredStatus": 200,
+        "structuredBytes": 1252
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "665947",
+      "slug": "60-luxury-sailing-catamaran-665947",
+      "publicPath": "/destinations/california/coronado/tours/60-luxury-sailing-catamaran-665947",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3105,
+        "structuredStatus": 200,
+        "structuredBytes": 882
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": false,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "667594",
+      "slug": "100-dock---coronado---drop-off-667594",
+      "publicPath": "/destinations/california/coronado/tours/100-dock---coronado---drop-off-667594",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2265,
+        "structuredStatus": 200,
+        "structuredBytes": 1823
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "671123",
+      "slug": "lagoon-380-coronado---multi-day-charter-671123",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380-coronado---multi-day-charter-671123",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3935,
+        "structuredStatus": 200,
+        "structuredBytes": 1753
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "679820",
+      "slug": "marquis-70-coronado---multi-day-charter-679820",
+      "publicPath": "/destinations/california/coronado/tours/marquis-70-coronado---multi-day-charter-679820",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3870,
+        "structuredStatus": 200,
+        "structuredBytes": 1689
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "690094",
+      "slug": "aquila-44-coronado---multi-day-charter-690094",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-coronado---multi-day-charter-690094",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4377,
+        "structuredStatus": 200,
+        "structuredBytes": 1796
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "690112",
+      "slug": "aquila-44-catitude---coronado-captain-charter-690112",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-catitude---coronado-captain-charter-690112",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3113,
+        "structuredStatus": 200,
+        "structuredBytes": 2074
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

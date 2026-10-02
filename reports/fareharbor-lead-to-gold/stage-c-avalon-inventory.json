@@ -1,0 +1,32 @@
+{
+  "citySlug": "avalon",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "bikecatalina",
+      "operator": "Bike Catalina",
+      "itemId": "560457",
+      "slug": "daily-bike-rental-from-avalon-560457",
+      "publicPath": "/destinations/california/avalon/tours/daily-bike-rental-from-avalon-560457",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2376,
+        "structuredStatus": 200,
+        "structuredBytes": 1184
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

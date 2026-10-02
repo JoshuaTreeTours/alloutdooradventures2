@@ -1,0 +1,127 @@
+{
+  "citySlug": "calistoga",
+  "total": 6,
+  "active": 6,
+  "terminal": 0,
+  "priceAvailable": 6,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 6,
+  "inSitemap": 6,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "calistogabikeshop2",
+      "operator": "Calistoga Bikeshop",
+      "itemId": "542597",
+      "slug": "road-bike-tours-542597",
+      "publicPath": "/destinations/california/calistoga/tours/road-bike-tours-542597",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2998,
+        "structuredStatus": 200,
+        "structuredBytes": 1848
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "calistogabikeshop2",
+      "operator": "Calistoga Bikeshop",
+      "itemId": "542598",
+      "slug": "e-mountain-bike-tours-542598",
+      "publicPath": "/destinations/california/calistoga/tours/e-mountain-bike-tours-542598",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3422,
+        "structuredStatus": 200,
+        "structuredBytes": 2266
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "calistogabikeshop2",
+      "operator": "Calistoga Bikeshop",
+      "itemId": "542601",
+      "slug": "cool-wine-tour---1-tasting-542601",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---1-tasting-542601",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4285,
+        "structuredStatus": 200,
+        "structuredBytes": 3126
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "calistogabikeshop2",
+      "operator": "Calistoga Bikeshop",
+      "itemId": "542603",
+      "slug": "cool-wine-tour---2-tastings-542603",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---2-tastings-542603",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4293,
+        "structuredStatus": 200,
+        "structuredBytes": 3133
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "calistogabikeshop2",
+      "operator": "Calistoga Bikeshop",
+      "itemId": "542604",
+      "slug": "cool-wine-tour---3-tastings-542604",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---3-tastings-542604",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4296,
+        "structuredStatus": 200,
+        "structuredBytes": 3135
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "getawayadventures",
+      "operator": "Getaway Adventures",
+      "itemId": "29207",
+      "slug": "calistoga-sip-n-cycle-29207",
+      "publicPath": "/destinations/california/calistoga/tours/calistoga-sip-n-cycle-29207",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3532,
+        "structuredStatus": 200,
+        "structuredBytes": 2216
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

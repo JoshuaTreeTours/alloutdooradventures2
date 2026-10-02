@@ -1,0 +1,47 @@
+{
+  "company": "actionsportrentals-paradisepointresort",
+  "itemId": "453696",
+  "fetchedAt": "2026-10-02T22:40:36.930729+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/actionsportrentals-paradisepointresort/453696/content/",
+      "status": 200,
+      "bytes": 4038,
+      "sha256": "37a156387f39ecd0a9c92b0d4d45138aaf6bfd1cfff8066394fc02afdb8ec372"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/actionsportrentals-paradisepointresort/453696/structured-description/",
+      "status": 200,
+      "bytes": 3788,
+      "sha256": "9945e303aae918bbf46e8b7aae7dc05e8fc600f97ec2e082ede32085230a5354"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/actionsportrentals-paradisepointresort/items/453696/",
+      "status": 200,
+      "bytes": 9131,
+      "sha256": "e69dc59f0988a17e62e9fe1b86516b1c744ed8ea15cd5e447b693bed290cddbd"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/actionsportrentals-paradisepointresort/price-preview/per-item/v2/?asn=fhdn&item_pks=453696&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 671,
+      "sha256": "87a61f5d325ecbd86185cf9ff381e8f1b0a72601f9c435257bde491b7c7980c1"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/actionsportrentals-paradisepointresort/items/453696/ratings/",
+      "status": 200,
+      "bytes": 605,
+      "sha256": "5354d4a103ac9c454dd7e5d53b4419c56e5b2983bac5c651f6e590a5cbadb95d"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "453696",
+    "provider": "actionsportrentals-paradisepointresort",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453696/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

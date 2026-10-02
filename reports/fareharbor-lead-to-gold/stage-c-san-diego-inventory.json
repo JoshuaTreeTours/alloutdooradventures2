@@ -1,0 +1,3870 @@
+{
+  "citySlug": "san-diego",
+  "total": 203,
+  "active": 185,
+  "terminal": 18,
+  "priceAvailable": 101,
+  "tripadvisorRatingAvailable": 30,
+  "imageAvailable": 203,
+  "inSitemap": 74,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453576",
+      "slug": "21-hurricane-powerboat-453576",
+      "publicPath": "/destinations/california/san-diego/tours/21-hurricane-powerboat-453576",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4006,
+        "structuredStatus": 200,
+        "structuredBytes": 3698
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453615",
+      "slug": "pontoon-boat-453615",
+      "publicPath": "/destinations/california/san-diego/tours/pontoon-boat-453615",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4023,
+        "structuredStatus": 200,
+        "structuredBytes": 3426
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453644",
+      "slug": "20-hurricane-powerboat-453644",
+      "publicPath": "/destinations/california/san-diego/tours/20-hurricane-powerboat-453644",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3998,
+        "structuredStatus": 200,
+        "structuredBytes": 3629
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453676",
+      "slug": "18-hurricane-powerboat-453676",
+      "publicPath": "/destinations/california/san-diego/tours/18-hurricane-powerboat-453676",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4038,
+        "structuredStatus": 200,
+        "structuredBytes": 3670
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453696",
+      "slug": "21-duffy-453696",
+      "publicPath": "/destinations/california/san-diego/tours/21-duffy-453696",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4038,
+        "structuredStatus": 200,
+        "structuredBytes": 3788
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453703",
+      "slug": "21-duffy-wsundeck-453703",
+      "publicPath": "/destinations/california/san-diego/tours/21-duffy-wsundeck-453703",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4165,
+        "structuredStatus": 200,
+        "structuredBytes": 3848
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453715",
+      "slug": "yamaha-waverunner-453715",
+      "publicPath": "/destinations/california/san-diego/tours/yamaha-waverunner-453715",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3820,
+        "structuredStatus": 200,
+        "structuredBytes": 3526
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453863",
+      "slug": "18-capri-sailboat-453863",
+      "publicPath": "/destinations/california/san-diego/tours/18-capri-sailboat-453863",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3589,
+        "structuredStatus": 200,
+        "structuredBytes": 3188
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453882",
+      "slug": "22-capri-sailboat-453882",
+      "publicPath": "/destinations/california/san-diego/tours/22-capri-sailboat-453882",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3551,
+        "structuredStatus": 200,
+        "structuredBytes": 3163
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453896",
+      "slug": "stand-up-paddle-sup-board-453896",
+      "publicPath": "/destinations/california/san-diego/tours/stand-up-paddle-sup-board-453896",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3043,
+        "structuredStatus": 200,
+        "structuredBytes": 2781
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453906",
+      "slug": "single-kayaks-453906",
+      "publicPath": "/destinations/california/san-diego/tours/single-kayaks-453906",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3209,
+        "structuredStatus": 200,
+        "structuredBytes": 2916
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453921",
+      "slug": "tandem-kayak-453921",
+      "publicPath": "/destinations/california/san-diego/tours/tandem-kayak-453921",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3126,
+        "structuredStatus": 200,
+        "structuredBytes": 2891
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "453941",
+      "slug": "funcat-electric-catamaran-lounge-chair-453941",
+      "publicPath": "/destinations/california/san-diego/tours/funcat-electric-catamaran-lounge-chair-453941",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2983,
+        "structuredStatus": 200,
+        "structuredBytes": 2721
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "614180",
+      "slug": "25-catalina-sailboat-614180",
+      "publicPath": "/destinations/california/san-diego/tours/25-catalina-sailboat-614180",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2286,
+        "structuredStatus": 200,
+        "structuredBytes": 1895
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "actionsportrentals-paradisepointresort",
+      "operator": "Action Sport Rentals - Paradise Point Resort",
+      "itemId": "633989",
+      "slug": "bare-boat-rental---speed-boat-tour-633989",
+      "publicPath": "/destinations/california/san-diego/tours/bare-boat-rental---speed-boat-tour-633989",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3917,
+        "structuredStatus": 200,
+        "structuredBytes": 3016
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "adventuresscatamaran",
+      "operator": "Adventuress Luxury Catamaran",
+      "itemId": "615826",
+      "slug": "private-custom-yacht-charters-615826",
+      "publicPath": "/destinations/california/san-diego/tours/private-custom-yacht-charters-615826",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3656,
+        "structuredStatus": 200,
+        "structuredBytes": 2524
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bigbluephotoexpeditions",
+      "operator": "Big Blue Photo Expeditions",
+      "itemId": "565843",
+      "slug": "snorkel-safari-565843",
+      "publicPath": "/destinations/california/san-diego/tours/snorkel-safari-565843",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2339,
+        "structuredStatus": 200,
+        "structuredBytes": 1575
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bigbluephotoexpeditions",
+      "operator": "Big Blue Photo Expeditions",
+      "itemId": "567520",
+      "slug": "half-day-whale-watch-567520",
+      "publicPath": "/destinations/california/san-diego/tours/half-day-whale-watch-567520",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4093,
+        "structuredStatus": 200,
+        "structuredBytes": 3538
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bowtiecharters",
+      "operator": "Bow Tie Adventures LLC",
+      "itemId": "473205",
+      "slug": "2hr-sunset-cruise-473205",
+      "publicPath": "/destinations/california/san-diego/tours/2hr-sunset-cruise-473205",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2268,
+        "structuredStatus": 200,
+        "structuredBytes": 2288
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bowtiecharters",
+      "operator": "Bow Tie Adventures LLC",
+      "itemId": "473211",
+      "slug": "3hr-yacht-rental-473211",
+      "publicPath": "/destinations/california/san-diego/tours/3hr-yacht-rental-473211",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2655,
+        "structuredStatus": 200,
+        "structuredBytes": 2555
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bowtiecharters",
+      "operator": "Bow Tie Adventures LLC",
+      "itemId": "473212",
+      "slug": "6hr-yacht-rental-473212",
+      "publicPath": "/destinations/california/san-diego/tours/6hr-yacht-rental-473212",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2675,
+        "structuredStatus": 200,
+        "structuredBytes": 2527
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "colettasportfishing",
+      "operator": "Coletta Sport Fishing",
+      "itemId": "54148",
+      "slug": "coletta-sport-fishing---12-day-local-charter-54148",
+      "publicPath": "/destinations/california/san-diego/tours/coletta-sport-fishing---12-day-local-charter-54148",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9544,
+        "structuredStatus": 200,
+        "structuredBytes": 4972
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "colettasportfishing",
+      "operator": "Coletta Sport Fishing",
+      "itemId": "54150",
+      "slug": "coletta-sport-fishing---34-day-local-charter-54150",
+      "publicPath": "/destinations/california/san-diego/tours/coletta-sport-fishing---34-day-local-charter-54150",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9277,
+        "structuredStatus": 200,
+        "structuredBytes": 4768
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "colettasportfishing",
+      "operator": "Coletta Sport Fishing",
+      "itemId": "54164",
+      "slug": "coletta-sport-fishing-full-day-offshore-fishing-charter-54164",
+      "publicPath": "/destinations/california/san-diego/tours/coletta-sport-fishing-full-day-offshore-fishing-charter-54164",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8398,
+        "structuredStatus": 200,
+        "structuredBytes": 3847
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "colettasportfishing",
+      "operator": "Coletta Sport Fishing",
+      "itemId": "644556",
+      "slug": "private-coastal-catch-and-cruise-644556",
+      "publicPath": "/destinations/california/san-diego/tours/private-coastal-catch-and-cruise-644556",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9472,
+        "structuredStatus": 200,
+        "structuredBytes": 4977
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "colettasportfishing",
+      "operator": "Coletta Sport Fishing",
+      "itemId": "672364",
+      "slug": "san-diego-lobster-charter-hoop-netting-adventure-672364",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-lobster-charter-hoop-netting-adventure-672364",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7202,
+        "structuredStatus": 200,
+        "structuredBytes": 2999
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divecalifornia",
+      "operator": "Dive California",
+      "itemId": "107835",
+      "slug": "padi-freediver-course-107835",
+      "publicPath": "/destinations/california/san-diego/tours/padi-freediver-course-107835",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12008,
+        "structuredStatus": 200,
+        "structuredBytes": 5773
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divecalifornia",
+      "operator": "Dive California",
+      "itemId": "109487",
+      "slug": "padi-advanced-freediver-course-109487",
+      "publicPath": "/destinations/california/san-diego/tours/padi-advanced-freediver-course-109487",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10878,
+        "structuredStatus": 200,
+        "structuredBytes": 6933
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divecalifornia",
+      "operator": "Dive California",
+      "itemId": "110584",
+      "slug": "padi-master-freediver-course-110584",
+      "publicPath": "/destinations/california/san-diego/tours/padi-master-freediver-course-110584",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12913,
+        "structuredStatus": 200,
+        "structuredBytes": 7554
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divecalifornia",
+      "operator": "Dive California",
+      "itemId": "226915",
+      "slug": "basicintro-to-freedive-course-226915",
+      "publicPath": "/destinations/california/san-diego/tours/basicintro-to-freedive-course-226915",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9845,
+        "structuredStatus": 200,
+        "structuredBytes": 5059
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "641358",
+      "slug": "san-diego-tours-torrey-pines-hiking-picnic-experience-private-641358",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tours-torrey-pines-hiking-picnic-experience-private-641358",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4485,
+        "structuredStatus": 200,
+        "structuredBytes": 2649
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "644000",
+      "slug": "san-diego-tourschasing-sunsets-tour---private-experience-644000",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tourschasing-sunsets-tour---private-experience-644000",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9043,
+        "structuredStatus": 200,
+        "structuredBytes": 5945
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "644008",
+      "slug": "san-diego-tourshighligths-tour-private-644008",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tourshighligths-tour-private-644008",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3766,
+        "structuredStatus": 200,
+        "structuredBytes": 2542
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "644671",
+      "slug": "san-diego-tours-tijuana-culture-and-culinary-tour-private-644671",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tours-tijuana-culture-and-culinary-tour-private-644671",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4314,
+        "structuredStatus": 200,
+        "structuredBytes": 2641
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "644674",
+      "slug": "san-diego-toursbaja-lobster-art-and-vibes-tour-from-san-diego-private-644674",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-toursbaja-lobster-art-and-vibes-tour-from-san-diego-private-644674",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4689,
+        "structuredStatus": 200,
+        "structuredBytes": 3022
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "644680",
+      "slug": "san-diego-toursensenada-pacific-coastline-tour-from-san-diego-private-644680",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-toursensenada-pacific-coastline-tour-from-san-diego-private-644680",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4358,
+        "structuredStatus": 200,
+        "structuredBytes": 3058
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "646978",
+      "slug": "san-diego-tours-highlights-tour-daily-646978",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tours-highlights-tour-daily-646978",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3723,
+        "structuredStatus": 200,
+        "structuredBytes": 2557
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "647015",
+      "slug": "san-diego-tours-tijuana-culture-and-culinary-tour-daily-647015",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-tours-tijuana-culture-and-culinary-tour-daily-647015",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4354,
+        "structuredStatus": 200,
+        "structuredBytes": 2683
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "680237",
+      "slug": "hollywood-dreams-and-los-angeles-highlights-tour-public-680237",
+      "publicPath": "/destinations/california/san-diego/tours/hollywood-dreams-and-los-angeles-highlights-tour-public-680237",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9184,
+        "structuredStatus": 200,
+        "structuredBytes": 6869
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "681715",
+      "slug": "hollywood-dreams-and-los-angeles-highlights-tour-private-681715",
+      "publicPath": "/destinations/california/san-diego/tours/hollywood-dreams-and-los-angeles-highlights-tour-private-681715",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9170,
+        "structuredStatus": 200,
+        "structuredBytes": 6854
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "fivestartours",
+      "operator": "Five Star Tours",
+      "itemId": "681731",
+      "slug": "holiday-lights-and-coastal-tour-san-diegos-best-christmas-experience-private-681731",
+      "publicPath": "/destinations/california/san-diego/tours/holiday-lights-and-coastal-tour-san-diegos-best-christmas-experience-private-681731",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8548,
+        "structuredStatus": 200,
+        "structuredBytes": 6082
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "flagshipsd",
+      "operator": "Flagship Cruises & Events",
+      "itemId": "192837",
+      "slug": "ferry-tickets-192837",
+      "publicPath": "/destinations/california/san-diego/tours/ferry-tickets-192837",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3242,
+        "structuredStatus": 200,
+        "structuredBytes": 2094
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "flagshipsd",
+      "operator": "Flagship Cruises & Events",
+      "itemId": "60603",
+      "slug": "san-diego-whale-watching-cruise-60603",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-60603",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5438,
+        "structuredStatus": 200,
+        "structuredBytes": 3582
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "flagshipsd",
+      "operator": "Flagship Cruises & Events",
+      "itemId": "60605",
+      "slug": "patriot-jet-boat-thrill-ride-60605",
+      "publicPath": "/destinations/california/san-diego/tours/patriot-jet-boat-thrill-ride-60605",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5016,
+        "structuredStatus": 200,
+        "structuredBytes": 2641
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "flagshipsd",
+      "operator": "Flagship Cruises & Events",
+      "itemId": "60627",
+      "slug": "full-bay-tour-2-hours-60627",
+      "publicPath": "/destinations/california/san-diego/tours/full-bay-tour-2-hours-60627",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3385,
+        "structuredStatus": 200,
+        "structuredBytes": 1952
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "frequencytours",
+      "operator": "Frequency Tours",
+      "itemId": "575320",
+      "slug": "meditation-and-mountain-hike-tour-800-am-575320",
+      "publicPath": "/destinations/california/san-diego/tours/meditation-and-mountain-hike-tour-800-am-575320",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3446,
+        "structuredStatus": 200,
+        "structuredBytes": 2468
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "frequencytours",
+      "operator": "Frequency Tours",
+      "itemId": "608893",
+      "slug": "mountain-hike-tour-meditation-optional-1030-am-608893",
+      "publicPath": "/destinations/california/san-diego/tours/mountain-hike-tour-meditation-optional-1030-am-608893",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3022,
+        "structuredStatus": 200,
+        "structuredBytes": 2421
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "globalescapesd",
+      "operator": "Global Escape SD",
+      "itemId": "581360",
+      "slug": "police-room-581360",
+      "publicPath": "/destinations/california/san-diego/tours/police-room-581360",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1226,
+        "structuredStatus": 200,
+        "structuredBytes": 1158
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "globalescapesd",
+      "operator": "Global Escape SD",
+      "itemId": "581364",
+      "slug": "wizard-school-room-581364",
+      "publicPath": "/destinations/california/san-diego/tours/wizard-school-room-581364",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1131,
+        "structuredStatus": 200,
+        "structuredBytes": 1056
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116839",
+      "slug": "1-hr-gocar-harbor-and-gaslamp-quarter-tour-116839",
+      "publicPath": "/destinations/california/san-diego/tours/1-hr-gocar-harbor-and-gaslamp-quarter-tour-116839",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3925,
+        "structuredStatus": 200,
+        "structuredBytes": 2500
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116897",
+      "slug": "2-hr-the-ultimate-san-diego-adventure-gaslamp-old-town-and-balboa-park-gocar-tour-116897",
+      "publicPath": "/destinations/california/san-diego/tours/2-hr-the-ultimate-san-diego-adventure-gaslamp-old-town-and-balboa-park-gocar-tour-116897",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5172,
+        "structuredStatus": 200,
+        "structuredBytes": 2817
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116903",
+      "slug": "2-hr-gocar-old-meets-new-downtown-old-town-tour-116903",
+      "publicPath": "/destinations/california/san-diego/tours/2-hr-gocar-old-meets-new-downtown-old-town-tour-116903",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4292,
+        "structuredStatus": 200,
+        "structuredBytes": 2921
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116908",
+      "slug": "3-hr-gocar-sunset-cliffs-and-beaches-adventure-tour-116908",
+      "publicPath": "/destinations/california/san-diego/tours/3-hr-gocar-sunset-cliffs-and-beaches-adventure-tour-116908",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4637,
+        "structuredStatus": 200,
+        "structuredBytes": 3284
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116920",
+      "slug": "wake-early-save-big-early-bird-tour-116920",
+      "publicPath": "/destinations/california/san-diego/tours/wake-early-save-big-early-bird-tour-116920",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4540,
+        "structuredStatus": 200,
+        "structuredBytes": 3059
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "116929",
+      "slug": "land-and-sea-gocar-tour-speedboat-adventure-116929",
+      "publicPath": "/destinations/california/san-diego/tours/land-and-sea-gocar-tour-speedboat-adventure-116929",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4441,
+        "structuredStatus": 200,
+        "structuredBytes": 2939
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "117043",
+      "slug": "gocar-san-diego-full-day-tour-117043",
+      "publicPath": "/destinations/california/san-diego/tours/gocar-san-diego-full-day-tour-117043",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4480,
+        "structuredStatus": 200,
+        "structuredBytes": 3120
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "118469",
+      "slug": "iride-scooter-rentals-118469",
+      "publicPath": "/destinations/california/san-diego/tours/iride-scooter-rentals-118469",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4125,
+        "structuredStatus": 200,
+        "structuredBytes": 2755
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "239039",
+      "slug": "e-bike-rentals-239039",
+      "publicPath": "/destinations/california/san-diego/tours/e-bike-rentals-239039",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3905,
+        "structuredStatus": 200,
+        "structuredBytes": 2792
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "349050",
+      "slug": "2-hr-coronado-gocar-tour-for-two-349050",
+      "publicPath": "/destinations/california/san-diego/tours/2-hr-coronado-gocar-tour-for-two-349050",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3689,
+        "structuredStatus": 200,
+        "structuredBytes": 2407
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "369140",
+      "slug": "2-hr-gocar-coronado-tour-369140",
+      "publicPath": "/destinations/california/san-diego/tours/2-hr-gocar-coronado-tour-369140",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3458,
+        "structuredStatus": 200,
+        "structuredBytes": 2009
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "372044",
+      "slug": "gocar-after-dark---2-hr-gaslamp-and-balboa-park-tour-372044",
+      "publicPath": "/destinations/california/san-diego/tours/gocar-after-dark---2-hr-gaslamp-and-balboa-park-tour-372044",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3187,
+        "structuredStatus": 200,
+        "structuredBytes": 1560
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "372115",
+      "slug": "gocar-after-dark---2hr-coronado-tour-372115",
+      "publicPath": "/destinations/california/san-diego/tours/gocar-after-dark---2hr-coronado-tour-372115",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3693,
+        "structuredStatus": 200,
+        "structuredBytes": 2181
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "393427",
+      "slug": "1-hour-gaslamp-and-embarcadero-tour-393427",
+      "publicPath": "/destinations/california/san-diego/tours/1-hour-gaslamp-and-embarcadero-tour-393427",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4156,
+        "structuredStatus": 200,
+        "structuredBytes": 2697
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "393428",
+      "slug": "gocar-after-dark---1hr-gaslamp-and-embarcadero-tour-393428",
+      "publicPath": "/destinations/california/san-diego/tours/gocar-after-dark---1hr-gaslamp-and-embarcadero-tour-393428",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4316,
+        "structuredStatus": 200,
+        "structuredBytes": 2721
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "400254",
+      "slug": "night-owl-special-save-big-400254",
+      "publicPath": "/destinations/california/san-diego/tours/night-owl-special-save-big-400254",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4787,
+        "structuredStatus": 200,
+        "structuredBytes": 3283
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gocartours-sandiego",
+      "operator": "GoCar Tours San Diego",
+      "itemId": "510020",
+      "slug": "gocar-after-dark---2hr-holiday-lights-tour-510020",
+      "publicPath": "/destinations/california/san-diego/tours/gocar-after-dark---2hr-holiday-lights-tour-510020",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3266,
+        "structuredStatus": 200,
+        "structuredBytes": 1753
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gonewhalewatching",
+      "operator": "Gone Whale Watching",
+      "itemId": "173008",
+      "slug": "6-passenger-capacity-premium-5-hour-whale-watch-targeting-10-species-of-cetaceans-173008",
+      "publicPath": "/destinations/california/san-diego/tours/6-passenger-capacity-premium-5-hour-whale-watch-targeting-10-species-of-cetaceans-173008",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3589,
+        "structuredStatus": 200,
+        "structuredBytes": 2579
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gonewhalewatching",
+      "operator": "Gone Whale Watching",
+      "itemId": "262420",
+      "slug": "signature-dolphin-and-whale-watching-trip-aboard-hana-hou-25hrs-approx-262420",
+      "publicPath": "/destinations/california/san-diego/tours/signature-dolphin-and-whale-watching-trip-aboard-hana-hou-25hrs-approx-262420",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3965,
+        "structuredStatus": 200,
+        "structuredBytes": 2922
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gonewhalewatching",
+      "operator": "Gone Whale Watching",
+      "itemId": "664169",
+      "slug": "6-passenger-capacity-signature-dolphin-and-whale-watching-trip-25hrs-approx-664169",
+      "publicPath": "/destinations/california/san-diego/tours/6-passenger-capacity-signature-dolphin-and-whale-watching-trip-25hrs-approx-664169",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3730,
+        "structuredStatus": 200,
+        "structuredBytes": 2706
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "422717",
+      "slug": "beginner-spearfishing-course-422717",
+      "publicPath": "/destinations/california/san-diego/tours/beginner-spearfishing-course-422717",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9767,
+        "structuredStatus": 200,
+        "structuredBytes": 4651
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "443620",
+      "slug": "15-day-spearfishing-charter-443620",
+      "publicPath": "/destinations/california/san-diego/tours/15-day-spearfishing-charter-443620",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7530,
+        "structuredStatus": 200,
+        "structuredBytes": 3511
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "483473",
+      "slug": "discover-freediving-tour-483473",
+      "publicPath": "/destinations/california/san-diego/tours/discover-freediving-tour-483473",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6285,
+        "structuredStatus": 200,
+        "structuredBytes": 2632
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "556020",
+      "slug": "spearfishing-shore-tour-556020",
+      "publicPath": "/destinations/california/san-diego/tours/spearfishing-shore-tour-556020",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5441,
+        "structuredStatus": 200,
+        "structuredBytes": 2108
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "594390",
+      "slug": "25-day-offshore-spearfishing-charter-594390",
+      "publicPath": "/destinations/california/san-diego/tours/25-day-offshore-spearfishing-charter-594390",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8556,
+        "structuredStatus": 200,
+        "structuredBytes": 4605
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "601167",
+      "slug": "dominica-sperm-whales-freedivingandyoga-retreat-601167",
+      "publicPath": "/destinations/california/san-diego/tours/dominica-sperm-whales-freedivingandyoga-retreat-601167",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 1878
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "626043",
+      "slug": "freedive-yogaandbreathwork-workshop-626043",
+      "publicPath": "/destinations/california/san-diego/tours/freedive-yogaandbreathwork-workshop-626043",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3072,
+        "structuredStatus": 200,
+        "structuredBytes": 2109
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "justgetwet",
+      "operator": "Just Get Wet",
+      "itemId": "665636",
+      "slug": "25-day-san-clemente-island-charter-665636",
+      "publicPath": "/destinations/california/san-diego/tours/25-day-san-clemente-island-charter-665636",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9440,
+        "structuredStatus": 200,
+        "structuredBytes": 5498
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "keeneradventures",
+      "operator": "Keener Adventures LLC.",
+      "itemId": "451232",
+      "slug": "mission-bay---private-sunset-cruise-451232",
+      "publicPath": "/destinations/california/san-diego/tours/mission-bay---private-sunset-cruise-451232",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12179,
+        "structuredStatus": 200,
+        "structuredBytes": 5867
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "keeneradventures",
+      "operator": "Keener Adventures LLC.",
+      "itemId": "463661",
+      "slug": "north-san-diego-bay---private-sunset-cruise-463661",
+      "publicPath": "/destinations/california/san-diego/tours/north-san-diego-bay---private-sunset-cruise-463661",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 3991
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "keeneradventures",
+      "operator": "Keener Adventures LLC.",
+      "itemId": "481723",
+      "slug": "north-san-diego-bay---sea-lion-photo-and-information-cruise-481723",
+      "publicPath": "/destinations/california/san-diego/tours/north-san-diego-bay---sea-lion-photo-and-information-cruise-481723",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 15106,
+        "structuredStatus": 200,
+        "structuredBytes": 10354
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "keeneradventures",
+      "operator": "Keener Adventures LLC.",
+      "itemId": "489736",
+      "slug": "la-playa-cove---private-duffy-cruise-489736",
+      "publicPath": "/destinations/california/san-diego/tours/la-playa-cove---private-duffy-cruise-489736",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "legacycruisessd",
+      "operator": "Legacy Cruises and Events",
+      "itemId": "324726",
+      "slug": "private-yacht-charter-on-the-sirara-324726",
+      "publicPath": "/destinations/california/san-diego/tours/private-yacht-charter-on-the-sirara-324726",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mattarellocooking",
+      "operator": "Mattarello Cooking",
+      "itemId": "631718",
+      "slug": "pasta-class-631718",
+      "publicPath": "/destinations/california/san-diego/tours/pasta-class-631718",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2736,
+        "structuredStatus": 200,
+        "structuredBytes": 2167
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mattarellocooking",
+      "operator": "Mattarello Cooking",
+      "itemId": "632518",
+      "slug": "night-cooking-class---make-your-own-pasta-632518",
+      "publicPath": "/destinations/california/san-diego/tours/night-cooking-class---make-your-own-pasta-632518",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2656,
+        "structuredStatus": 200,
+        "structuredBytes": 2020
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mattarellocooking",
+      "operator": "Mattarello Cooking",
+      "itemId": "632541",
+      "slug": "italian-bread-making-632541",
+      "publicPath": "/destinations/california/san-diego/tours/italian-bread-making-632541",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2223,
+        "structuredStatus": 200,
+        "structuredBytes": 1621
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mattarellocooking",
+      "operator": "Mattarello Cooking",
+      "itemId": "632548",
+      "slug": "italian-lasagna-632548",
+      "publicPath": "/destinations/california/san-diego/tours/italian-lasagna-632548",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2109,
+        "structuredStatus": 200,
+        "structuredBytes": 1526
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "murdernmayhem",
+      "operator": "Murder n' Mayhem",
+      "itemId": "313747",
+      "slug": "san-diego-gaslamp-quarter-ghost-tour-313747",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-gaslamp-quarter-ghost-tour-313747",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2608,
+        "structuredStatus": 200,
+        "structuredBytes": 1509
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "murdernmayhem",
+      "operator": "Murder n' Mayhem",
+      "itemId": "315509",
+      "slug": "san-diego-embarcadero-waterfront-ghost-tour-315509",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-embarcadero-waterfront-ghost-tour-315509",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2591,
+        "structuredStatus": 200,
+        "structuredBytes": 1537
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "murdernmayhem",
+      "operator": "Murder n' Mayhem",
+      "itemId": "329091",
+      "slug": "san-diego-lgbtq-history-tour-329091",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-lgbtq-history-tour-329091",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2698,
+        "structuredStatus": 200,
+        "structuredBytes": 1296
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "murdernmayhem",
+      "operator": "Murder n' Mayhem",
+      "itemId": "497509",
+      "slug": "tarot-reading-497509",
+      "publicPath": "/destinations/california/san-diego/tours/tarot-reading-497509",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1979,
+        "structuredStatus": 200,
+        "structuredBytes": 1249
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "netzeroexpeditions",
+      "operator": "Net Zero Expeditions",
+      "itemId": "264188",
+      "slug": "blue-and-mako-shark-snorkeling-expedition-6hrs-264188",
+      "publicPath": "/destinations/california/san-diego/tours/blue-and-mako-shark-snorkeling-expedition-6hrs-264188",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 4529
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "netzeroexpeditions",
+      "operator": "Net Zero Expeditions",
+      "itemId": "264194",
+      "slug": "pelagic-wildlife-expedition-6-hrs-264194",
+      "publicPath": "/destinations/california/san-diego/tours/pelagic-wildlife-expedition-6-hrs-264194",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3763,
+        "structuredStatus": 200,
+        "structuredBytes": 2813
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "netzeroexpeditions",
+      "operator": "Net Zero Expeditions",
+      "itemId": "518959",
+      "slug": "blue-whale-expedition-2025-518959",
+      "publicPath": "/destinations/california/san-diego/tours/blue-whale-expedition-2025-518959",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4354,
+        "structuredStatus": 200,
+        "structuredBytes": 3083
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681632",
+      "slug": "public-dolphin-seal-sailing-cruise-2-hours-681632",
+      "publicPath": "/destinations/california/san-diego/tours/public-dolphin-seal-sailing-cruise-2-hours-681632",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681635",
+      "slug": "public-sight-seeing-sailing-cruise-2-hours-681635",
+      "publicPath": "/destinations/california/san-diego/tours/public-sight-seeing-sailing-cruise-2-hours-681635",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681637",
+      "slug": "private-sunset-sailing-cruise-2-hours-681637",
+      "publicPath": "/destinations/california/san-diego/tours/private-sunset-sailing-cruise-2-hours-681637",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681639",
+      "slug": "ranger-race-yacht-sailing-cruise-2-hours-681639",
+      "publicPath": "/destinations/california/san-diego/tours/ranger-race-yacht-sailing-cruise-2-hours-681639",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681677",
+      "slug": "private-catamaran-sightseeing-charter-2-hours-681677",
+      "publicPath": "/destinations/california/san-diego/tours/private-catamaran-sightseeing-charter-2-hours-681677",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681678",
+      "slug": "private-duffy-coronado-bay-bridge-city-skyline-aircraft-carrier-tour-2-hours-681678",
+      "publicPath": "/destinations/california/san-diego/tours/private-duffy-coronado-bay-bridge-city-skyline-aircraft-carrier-tour-2-hours-681678",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681679",
+      "slug": "private-duffy-sub-base-sea-lion-colony-point-loma-lighthouse-bay-tour-3-hours-681679",
+      "publicPath": "/destinations/california/san-diego/tours/private-duffy-sub-base-sea-lion-colony-point-loma-lighthouse-bay-tour-3-hours-681679",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681680",
+      "slug": "private-group-charter-large-wooden-sailboat-65-stephens-brothers-yawl-2-hours-681680",
+      "publicPath": "/destinations/california/san-diego/tours/private-group-charter-large-wooden-sailboat-65-stephens-brothers-yawl-2-hours-681680",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681687",
+      "slug": "private-group-charter-large-wooden-sailboat-55-twin-masted-ketch-2-hours-681687",
+      "publicPath": "/destinations/california/san-diego/tours/private-group-charter-large-wooden-sailboat-55-twin-masted-ketch-2-hours-681687",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681690",
+      "slug": "private-group-charter-luxury-power-yacht-2-hours-681690",
+      "publicPath": "/destinations/california/san-diego/tours/private-group-charter-luxury-power-yacht-2-hours-681690",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681691",
+      "slug": "private-party-yacht-2-hours-681691",
+      "publicPath": "/destinations/california/san-diego/tours/private-party-yacht-2-hours-681691",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681695",
+      "slug": "private-group-large-catamaran-charter-2-hours-681695",
+      "publicPath": "/destinations/california/san-diego/tours/private-group-large-catamaran-charter-2-hours-681695",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681702",
+      "slug": "70-luxury-power-yacht-with-hot-tub-2-hours-681702",
+      "publicPath": "/destinations/california/san-diego/tours/70-luxury-power-yacht-with-hot-tub-2-hours-681702",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681706",
+      "slug": "luxury-vip-party-yacht-3-hours-681706",
+      "publicPath": "/destinations/california/san-diego/tours/luxury-vip-party-yacht-3-hours-681706",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681714",
+      "slug": "private-sailing-lesson-2-hours-681714",
+      "publicPath": "/destinations/california/san-diego/tours/private-sailing-lesson-2-hours-681714",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681717",
+      "slug": "memorial-ash-spreading-2-hours-681717",
+      "publicPath": "/destinations/california/san-diego/tours/memorial-ash-spreading-2-hours-681717",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificasailingcharters",
+      "operator": "Pacifica Sailing Charters",
+      "itemId": "681718",
+      "slug": "private-whale-watching-tour-3-hours-681718",
+      "publicPath": "/destinations/california/san-diego/tours/private-whale-watching-tour-3-hours-681718",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588105
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pacificpaddleco",
+      "operator": "Pacific Paddle Co",
+      "itemId": "901101",
+      "slug": "mission-bay-guided-paddleboard-tour-901101",
+      "publicPath": "/destinations/california/san-diego/tours/mission-bay-guided-paddleboard-tour-901101",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588089
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "130626",
+      "slug": "island-yoga-130626",
+      "publicPath": "/destinations/california/san-diego/tours/island-yoga-130626",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2969,
+        "structuredStatus": 200,
+        "structuredBytes": 2292
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "148858",
+      "slug": "rock-painting-at-tidal-beach-148858",
+      "publicPath": "/destinations/california/san-diego/tours/rock-painting-at-tidal-beach-148858",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2094,
+        "structuredStatus": 200,
+        "structuredBytes": 1293
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "155330",
+      "slug": "build-a-buddy-155330",
+      "publicPath": "/destinations/california/san-diego/tours/build-a-buddy-155330",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1471,
+        "structuredStatus": 200,
+        "structuredBytes": 1427
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "182052",
+      "slug": "signature-bonfire-experience-182052",
+      "publicPath": "/destinations/california/san-diego/tours/signature-bonfire-experience-182052",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3824,
+        "structuredStatus": 200,
+        "structuredBytes": 3054
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "236967",
+      "slug": "corn-hole-reservation-236967",
+      "publicPath": "/destinations/california/san-diego/tours/corn-hole-reservation-236967",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2086,
+        "structuredStatus": 200,
+        "structuredBytes": 1366
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "236977",
+      "slug": "ping-pong-reservation-236977",
+      "publicPath": "/destinations/california/san-diego/tours/ping-pong-reservation-236977",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2015,
+        "structuredStatus": 200,
+        "structuredBytes": 1295
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "236981",
+      "slug": "putt-putt-golf-236981",
+      "publicPath": "/destinations/california/san-diego/tours/putt-putt-golf-236981",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1976,
+        "structuredStatus": 200,
+        "structuredBytes": 1263
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "236983",
+      "slug": "basketball-reservation-236983",
+      "publicPath": "/destinations/california/san-diego/tours/basketball-reservation-236983",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2412,
+        "structuredStatus": 200,
+        "structuredBytes": 1714
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "237011",
+      "slug": "tie-dye-fun-237011",
+      "publicPath": "/destinations/california/san-diego/tours/tie-dye-fun-237011",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2116,
+        "structuredStatus": 200,
+        "structuredBytes": 1538
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "237048",
+      "slug": "mission-bay-bike-tour-237048",
+      "publicPath": "/destinations/california/san-diego/tours/mission-bay-bike-tour-237048",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2508,
+        "structuredStatus": 200,
+        "structuredBytes": 1714
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "240386",
+      "slug": "tennis-rentals-240386",
+      "publicPath": "/destinations/california/san-diego/tours/tennis-rentals-240386",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2154,
+        "structuredStatus": 200,
+        "structuredBytes": 1441
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "240433",
+      "slug": "sea-shell-painting-at-tidal-beach-240433",
+      "publicPath": "/destinations/california/san-diego/tours/sea-shell-painting-at-tidal-beach-240433",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2169,
+        "structuredStatus": 200,
+        "structuredBytes": 1468
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "286894",
+      "slug": "football-on-the-beach-286894",
+      "publicPath": "/destinations/california/san-diego/tours/football-on-the-beach-286894",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2053,
+        "structuredStatus": 200,
+        "structuredBytes": 1333
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "322965",
+      "slug": "island-yoga-with-meditation-322965",
+      "publicPath": "/destinations/california/san-diego/tours/island-yoga-with-meditation-322965",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3362,
+        "structuredStatus": 200,
+        "structuredBytes": 2690
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "372237",
+      "slug": "spikeball-reservations-372237",
+      "publicPath": "/destinations/california/san-diego/tours/spikeball-reservations-372237",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2071,
+        "structuredStatus": 200,
+        "structuredBytes": 1350
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "484334",
+      "slug": "pickleball-reservation-484334",
+      "publicPath": "/destinations/california/san-diego/tours/pickleball-reservation-484334",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2161,
+        "structuredStatus": 200,
+        "structuredBytes": 1440
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "523537",
+      "slug": "trivialicious-523537",
+      "publicPath": "/destinations/california/san-diego/tours/trivialicious-523537",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2022,
+        "structuredStatus": 200,
+        "structuredBytes": 1349
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "552110",
+      "slug": "sound-bath-and-meditation-552110",
+      "publicPath": "/destinations/california/san-diego/tours/sound-bath-and-meditation-552110",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3705,
+        "structuredStatus": 200,
+        "structuredBytes": 2979
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "paradisepointsandiego",
+      "operator": "Paradise Point Resort & Spa - San Diego",
+      "itemId": "556647",
+      "slug": "basketball-pick-up-game-556647",
+      "publicPath": "/destinations/california/san-diego/tours/basketball-pick-up-game-556647",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2007,
+        "structuredStatus": 200,
+        "structuredBytes": 1319
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "rays-rentals-missionbeach",
+      "operator": "Ray’s Rental - Mission Beach",
+      "itemId": "115475",
+      "slug": "foam-surfboard-115475",
+      "publicPath": "/destinations/california/san-diego/tours/foam-surfboard-115475",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1564,
+        "structuredStatus": 200,
+        "structuredBytes": 918
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailliberty",
+      "operator": "Sail Liberty",
+      "itemId": "451927",
+      "slug": "san-diego-bay-private-sail-aboard-a-classic-yacht-451927",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-bay-private-sail-aboard-a-classic-yacht-451927",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7024,
+        "structuredStatus": 200,
+        "structuredBytes": 6324
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503294",
+      "slug": "ticketed-morning-sail-503294",
+      "publicPath": "/destinations/california/san-diego/tours/ticketed-morning-sail-503294",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6375,
+        "structuredStatus": 200,
+        "structuredBytes": 2888
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503300",
+      "slug": "ticketed-midday-sail-503300",
+      "publicPath": "/destinations/california/san-diego/tours/ticketed-midday-sail-503300",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5018,
+        "structuredStatus": 200,
+        "structuredBytes": 1618
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503302",
+      "slug": "ticketed-sunset-sail-503302",
+      "publicPath": "/destinations/california/san-diego/tours/ticketed-sunset-sail-503302",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4980,
+        "structuredStatus": 200,
+        "structuredBytes": 1535
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503305",
+      "slug": "private-morning-sail-503305",
+      "publicPath": "/destinations/california/san-diego/tours/private-morning-sail-503305",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5088,
+        "structuredStatus": 200,
+        "structuredBytes": 1788
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503336",
+      "slug": "private-midday-sail-503336",
+      "publicPath": "/destinations/california/san-diego/tours/private-midday-sail-503336",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5433,
+        "structuredStatus": 200,
+        "structuredBytes": 1791
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "503348",
+      "slug": "private-sunset-sail-503348",
+      "publicPath": "/destinations/california/san-diego/tours/private-sunset-sail-503348",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5718,
+        "structuredStatus": 200,
+        "structuredBytes": 2036
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "506946",
+      "slug": "private-all-day-sail-506946",
+      "publicPath": "/destinations/california/san-diego/tours/private-all-day-sail-506946",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5533,
+        "structuredStatus": 200,
+        "structuredBytes": 2247
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "516807",
+      "slug": "bachelorette-sail-516807",
+      "publicPath": "/destinations/california/san-diego/tours/bachelorette-sail-516807",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5423,
+        "structuredStatus": 200,
+        "structuredBytes": 1870
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "516845",
+      "slug": "private-sailing-lessons-516845",
+      "publicPath": "/destinations/california/san-diego/tours/private-sailing-lessons-516845",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4412,
+        "structuredStatus": 200,
+        "structuredBytes": 1466
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "561192",
+      "slug": "romance-on-the-bay-561192",
+      "publicPath": "/destinations/california/san-diego/tours/romance-on-the-bay-561192",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5644,
+        "structuredStatus": 200,
+        "structuredBytes": 1851
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "600215",
+      "slug": "valentines-day-sail-600215",
+      "publicPath": "/destinations/california/san-diego/tours/valentines-day-sail-600215",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3278,
+        "structuredStatus": 200,
+        "structuredBytes": 2492
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "616356",
+      "slug": "private-sailing-yacht-1-14-guests-616356",
+      "publicPath": "/destinations/california/san-diego/tours/private-sailing-yacht-1-14-guests-616356",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5484,
+        "structuredStatus": 200,
+        "structuredBytes": 2259
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "626368",
+      "slug": "bachelor-sail-626368",
+      "publicPath": "/destinations/california/san-diego/tours/bachelor-sail-626368",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5466,
+        "structuredStatus": 200,
+        "structuredBytes": 2045
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "627352",
+      "slug": "birthday-sail-627352",
+      "publicPath": "/destinations/california/san-diego/tours/birthday-sail-627352",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4963,
+        "structuredStatus": 200,
+        "structuredBytes": 1485
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "630910",
+      "slug": "private-sailing-yacht-15-22-guests-630910",
+      "publicPath": "/destinations/california/san-diego/tours/private-sailing-yacht-15-22-guests-630910",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5559,
+        "structuredStatus": 200,
+        "structuredBytes": 2254
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "655952",
+      "slug": "the-mimosa-club-655952",
+      "publicPath": "/destinations/california/san-diego/tours/the-mimosa-club-655952",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2692,
+        "structuredStatus": 200,
+        "structuredBytes": 1629
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sailsandiego",
+      "operator": "Sail San Diego",
+      "itemId": "687225",
+      "slug": "san-diego-parade-of-lights-687225",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-parade-of-lights-687225",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3138,
+        "structuredStatus": 200,
+        "structuredBytes": 2233
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiegofishing-sundance",
+      "operator": "San Diego Fishing Company - Little G",
+      "itemId": "167386",
+      "slug": "little-g-private-six-pack-charter---sdtf-167386",
+      "publicPath": "/destinations/california/san-diego/tours/little-g-private-six-pack-charter---sdtf-167386",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4961,
+        "structuredStatus": 200,
+        "structuredBytes": 3274
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiegospeedboatadventures",
+      "operator": "San Diego Speed Boat Adventures",
+      "itemId": "106781",
+      "slug": "gps-guided-scooter-speedboat-adventure-combo-tour-106781",
+      "publicPath": "/destinations/california/san-diego/tours/gps-guided-scooter-speedboat-adventure-combo-tour-106781",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14721,
+        "structuredStatus": 200,
+        "structuredBytes": 13364
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sandiegospeedboatadventures",
+      "operator": "San Diego Speed Boat Adventures",
+      "itemId": "2710",
+      "slug": "speed-boat-adventure-tour-2710",
+      "publicPath": "/destinations/california/san-diego/tours/speed-boat-adventure-tour-2710",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 12838,
+        "structuredStatus": 200,
+        "structuredBytes": 10178
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sdbeerwinetours",
+      "operator": "San Diego Beer, Wine & Spirits Tours",
+      "itemId": "143288",
+      "slug": "chauffeured-vineyards-adventure-143288",
+      "publicPath": "/destinations/california/san-diego/tours/chauffeured-vineyards-adventure-143288",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7611,
+        "structuredStatus": 200,
+        "structuredBytes": 2542
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sdfunrunners",
+      "operator": "SD Funrunners",
+      "itemId": "667283",
+      "slug": "cruise-san-diego-bay-667283",
+      "publicPath": "/destinations/california/san-diego/tours/cruise-san-diego-bay-667283",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3233,
+        "structuredStatus": 200,
+        "structuredBytes": 2527
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sdwhalewatch",
+      "operator": "San Diego Whale Watch",
+      "itemId": "294524",
+      "slug": "live-beach-cleanup-294524",
+      "publicPath": "/destinations/california/san-diego/tours/live-beach-cleanup-294524",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7264,
+        "structuredStatus": 200,
+        "structuredBytes": 3946
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "417996",
+      "slug": "capri-22---mission-bay-rental-417996",
+      "publicPath": "/destinations/california/san-diego/tours/capri-22---mission-bay-rental-417996",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2368,
+        "structuredStatus": 200,
+        "structuredBytes": 2041
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418823",
+      "slug": "pontoon-25---mission-bay-rental-418823",
+      "publicPath": "/destinations/california/san-diego/tours/pontoon-25---mission-bay-rental-418823",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2587,
+        "structuredStatus": 200,
+        "structuredBytes": 2348
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "418943",
+      "slug": "duffy---mission-bay-rental-418943",
+      "publicPath": "/destinations/california/san-diego/tours/duffy---mission-bay-rental-418943",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2554,
+        "structuredStatus": 200,
+        "structuredBytes": 2096
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "424602",
+      "slug": "single-kayak---mission-bay-rental-424602",
+      "publicPath": "/destinations/california/san-diego/tours/single-kayak---mission-bay-rental-424602",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1708,
+        "structuredStatus": 200,
+        "structuredBytes": 1173
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "426219",
+      "slug": "pontoon-16---mission-bay-rental-426219",
+      "publicPath": "/destinations/california/san-diego/tours/pontoon-16---mission-bay-rental-426219",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2336,
+        "structuredStatus": 200,
+        "structuredBytes": 1978
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "437545",
+      "slug": "pretty-pink-boat---seaforth-boat-rental-437545",
+      "publicPath": "/destinations/california/san-diego/tours/pretty-pink-boat---seaforth-boat-rental-437545",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3789,
+        "structuredStatus": 200,
+        "structuredBytes": 2904
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "452617",
+      "slug": "pau-hana-2025-452617",
+      "publicPath": "/destinations/california/san-diego/tours/pau-hana-2025-452617",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3412,
+        "structuredStatus": 200,
+        "structuredBytes": 2578
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "486330",
+      "slug": "pretty-pink-duffy---seaforth-boat-rental-486330",
+      "publicPath": "/destinations/california/san-diego/tours/pretty-pink-duffy---seaforth-boat-rental-486330",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2693,
+        "structuredStatus": 200,
+        "structuredBytes": 2293
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "507393",
+      "slug": "whale-watching-excursion-507393",
+      "publicPath": "/destinations/california/san-diego/tours/whale-watching-excursion-507393",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1712,
+        "structuredStatus": 200,
+        "structuredBytes": 1268
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "587560",
+      "slug": "private-asa-request-587560",
+      "publicPath": "/destinations/california/san-diego/tours/private-asa-request-587560",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6832,
+        "structuredStatus": 200,
+        "structuredBytes": 3926
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "624568",
+      "slug": "burial-at-sea-624568",
+      "publicPath": "/destinations/california/san-diego/tours/burial-at-sea-624568",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2074,
+        "structuredStatus": 200,
+        "structuredBytes": 1679
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seaforthboatrental",
+      "operator": "Seaforth Boat Rentals",
+      "itemId": "639100",
+      "slug": "evening-bay-cruise-639100",
+      "publicPath": "/destinations/california/san-diego/tours/evening-bay-cruise-639100",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2208,
+        "structuredStatus": 200,
+        "structuredBytes": 1518
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seamonkeyadventures",
+      "operator": "Sea Monkey Adventures",
+      "itemId": "598263",
+      "slug": "private-sunset-sail-598263",
+      "publicPath": "/destinations/california/san-diego/tours/private-sunset-sail-598263",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5639,
+        "structuredStatus": 200,
+        "structuredBytes": 3337
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seamonkeyadventures",
+      "operator": "Sea Monkey Adventures",
+      "itemId": "598267",
+      "slug": "private-day-sail-598267",
+      "publicPath": "/destinations/california/san-diego/tours/private-day-sail-598267",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6302,
+        "structuredStatus": 200,
+        "structuredBytes": 3999
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seamonkeyadventures",
+      "operator": "Sea Monkey Adventures",
+      "itemId": "598268",
+      "slug": "private-morning-sail-598268",
+      "publicPath": "/destinations/california/san-diego/tours/private-morning-sail-598268",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5912,
+        "structuredStatus": 200,
+        "structuredBytes": 3863
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seamonkeyadventures",
+      "operator": "Sea Monkey Adventures",
+      "itemId": "598280",
+      "slug": "4-hour-sail-and-swim-598280",
+      "publicPath": "/destinations/california/san-diego/tours/4-hour-sail-and-swim-598280",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5502,
+        "structuredStatus": 200,
+        "structuredBytes": 3338
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "seamonkeyadventures",
+      "operator": "Sea Monkey Adventures",
+      "itemId": "598281",
+      "slug": "all-day-sail-598281",
+      "publicPath": "/destinations/california/san-diego/tours/all-day-sail-598281",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6270,
+        "structuredStatus": 200,
+        "structuredBytes": 3804
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sodiego",
+      "operator": "So Diego Tours",
+      "itemId": "651385",
+      "slug": "art-of-balboa-park-walking-tour-651385",
+      "publicPath": "/destinations/california/san-diego/tours/art-of-balboa-park-walking-tour-651385",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2918,
+        "structuredStatus": 200,
+        "structuredBytes": 2149
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sterlingsails",
+      "operator": "Sterling Sails",
+      "itemId": "633918",
+      "slug": "that-special-someone-633918",
+      "publicPath": "/destinations/california/san-diego/tours/that-special-someone-633918",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3471,
+        "structuredStatus": 200,
+        "structuredBytes": 3098
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "superhuman",
+      "operator": "Superhuman",
+      "itemId": "501774",
+      "slug": "urban-road-bike-e-bike-rental-501774",
+      "publicPath": "/destinations/california/san-diego/tours/urban-road-bike-e-bike-rental-501774",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2159,
+        "structuredStatus": 200,
+        "structuredBytes": 1530
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "suppupsusa",
+      "operator": "SUP Pups",
+      "itemId": "304583",
+      "slug": "adopt-me-donation-paddle-with-rescue-pup-304583",
+      "publicPath": "/destinations/california/san-diego/tours/adopt-me-donation-paddle-with-rescue-pup-304583",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4873,
+        "structuredStatus": 200,
+        "structuredBytes": 1587
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tikiboatmdr",
+      "operator": "Tiki Boat MDR LLC",
+      "itemId": "423092",
+      "slug": "62ft-island-boat-sd-san-diego-sunset-duo-423092",
+      "publicPath": "/destinations/california/san-diego/tours/62ft-island-boat-sd-san-diego-sunset-duo-423092",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11370,
+        "structuredStatus": 200,
+        "structuredBytes": 3579
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tikitimebaytours",
+      "operator": "Tiki Time Bay Tours",
+      "itemId": "588376",
+      "slug": "private-charter-for-14-30-people-588376",
+      "publicPath": "/destinations/california/san-diego/tours/private-charter-for-14-30-people-588376",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5662,
+        "structuredStatus": 200,
+        "structuredBytes": 4396
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tikitimebaytours",
+      "operator": "Tiki Time Bay Tours",
+      "itemId": "588758",
+      "slug": "private-charter-for-up-to-13-people-588758",
+      "publicPath": "/destinations/california/san-diego/tours/private-charter-for-up-to-13-people-588758",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4869,
+        "structuredStatus": 200,
+        "structuredBytes": 4196
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tikitimebaytours",
+      "operator": "Tiki Time Bay Tours",
+      "itemId": "602816",
+      "slug": "valentines-day-on-the-bay-602816",
+      "publicPath": "/destinations/california/san-diego/tours/valentines-day-on-the-bay-602816",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 3327
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "257108",
+      "slug": "25-hour-harbor-cruise-257108",
+      "publicPath": "/destinations/california/san-diego/tours/25-hour-harbor-cruise-257108",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7385,
+        "structuredStatus": 200,
+        "structuredBytes": 3031
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "320731",
+      "slug": "yo-ho-yo-ho-its-tritons-halloween-party-for-me-320731",
+      "publicPath": "/destinations/california/san-diego/tours/yo-ho-yo-ho-its-tritons-halloween-party-for-me-320731",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4656,
+        "structuredStatus": 200,
+        "structuredBytes": 2008
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "320733",
+      "slug": "san-diego-bay-parade-of-lights-on-triton-charters-320733",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-bay-parade-of-lights-on-triton-charters-320733",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5542,
+        "structuredStatus": 200,
+        "structuredBytes": 2512
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "353912",
+      "slug": "valentines-day-sunset-charter-353912",
+      "publicPath": "/destinations/california/san-diego/tours/valentines-day-sunset-charter-353912",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5720,
+        "structuredStatus": 200,
+        "structuredBytes": 1759
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "467066",
+      "slug": "aquata-charters-luxury-and-speed-467066",
+      "publicPath": "/destinations/california/san-diego/tours/aquata-charters-luxury-and-speed-467066",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7761,
+        "structuredStatus": 200,
+        "structuredBytes": 3742
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "604734",
+      "slug": "tritons-love-boat-sunset-charter-604734",
+      "publicPath": "/destinations/california/san-diego/tours/tritons-love-boat-sunset-charter-604734",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5397,
+        "structuredStatus": 200,
+        "structuredBytes": 2023
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "656686",
+      "slug": "two-hour-private-charter-656686",
+      "publicPath": "/destinations/california/san-diego/tours/two-hour-private-charter-656686",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6260,
+        "structuredStatus": 200,
+        "structuredBytes": 1551
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "658230",
+      "slug": "three-hour-private-charter-658230",
+      "publicPath": "/destinations/california/san-diego/tours/three-hour-private-charter-658230",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6262,
+        "structuredStatus": 200,
+        "structuredBytes": 1551
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "658231",
+      "slug": "four-hour-private-charter-658231",
+      "publicPath": "/destinations/california/san-diego/tours/four-hour-private-charter-658231",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6261,
+        "structuredStatus": 200,
+        "structuredBytes": 1551
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "673429",
+      "slug": "aquata---2-hour-charter-673429",
+      "publicPath": "/destinations/california/san-diego/tours/aquata---2-hour-charter-673429",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8389,
+        "structuredStatus": 200,
+        "structuredBytes": 3739
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "673432",
+      "slug": "aquata---3-hour-charter-673432",
+      "publicPath": "/destinations/california/san-diego/tours/aquata---3-hour-charter-673432",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8389,
+        "structuredStatus": 200,
+        "structuredBytes": 3739
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "673433",
+      "slug": "aquata---4-hour-charter-673433",
+      "publicPath": "/destinations/california/san-diego/tours/aquata---4-hour-charter-673433",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8389,
+        "structuredStatus": 200,
+        "structuredBytes": 3739
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "673434",
+      "slug": "aquata---6-hour-charter-673434",
+      "publicPath": "/destinations/california/san-diego/tours/aquata---6-hour-charter-673434",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8389,
+        "structuredStatus": 200,
+        "structuredBytes": 3739
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "triton-charters",
+      "operator": "Triton Charters",
+      "itemId": "673435",
+      "slug": "aquata---8-hour-charter-673435",
+      "publicPath": "/destinations/california/san-diego/tours/aquata---8-hour-charter-673435",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8389,
+        "structuredStatus": 200,
+        "structuredBytes": 3739
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "394598",
+      "slug": "san-diego-bike-rentals-394598",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-bike-rentals-394598",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4573,
+        "structuredStatus": 200,
+        "structuredBytes": 1900
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "395134",
+      "slug": "san-diego-road-bike-rentals-395134",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-road-bike-rentals-395134",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4547,
+        "structuredStatus": 200,
+        "structuredBytes": 2217
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "439302",
+      "slug": "best-of-san-diego-ebike-tour-439302",
+      "publicPath": "/destinations/california/san-diego/tours/best-of-san-diego-ebike-tour-439302",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4248,
+        "structuredStatus": 200,
+        "structuredBytes": 1978
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "439314",
+      "slug": "private-san-diego-electric-bike-tour-439314",
+      "publicPath": "/destinations/california/san-diego/tours/private-san-diego-electric-bike-tour-439314",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2753,
+        "structuredStatus": 200,
+        "structuredBytes": 1224
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "469706",
+      "slug": "tour-en-bicicleta-elctrica-por-lo-mejor-de-san-diego-espaol-469706",
+      "publicPath": "/destinations/california/san-diego/tours/tour-en-bicicleta-elctrica-por-lo-mejor-de-san-diego-espaol-469706",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4323,
+        "structuredStatus": 200,
+        "structuredBytes": 2008
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "vitapurayoga",
+      "operator": "Vita Pura Yoga",
+      "itemId": "509885",
+      "slug": "san-diego-beach-yoga-hiking-tour-509885",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-hiking-tour-509885",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10143,
+        "structuredStatus": 200,
+        "structuredBytes": 5177
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "vitapurayoga",
+      "operator": "Vita Pura Yoga",
+      "itemId": "647361",
+      "slug": "san-diego-beach-yoga-private-class-647361",
+      "publicPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-private-class-647361",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8825,
+        "structuredStatus": 200,
+        "structuredBytes": 4530
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "wildpacificwhalewatch",
+      "operator": "Wild Pacific Whale Watch",
+      "itemId": "639191",
+      "slug": "whale-watch-639191",
+      "publicPath": "/destinations/california/san-diego/tours/whale-watch-639191",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5228,
+        "structuredStatus": 200,
+        "structuredBytes": 2579
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "yachtamerica",
+      "operator": "Next Level Sailing",
+      "itemId": "34415",
+      "slug": "whale-watching-34415",
+      "publicPath": "/destinations/california/san-diego/tours/whale-watching-34415",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8509,
+        "structuredStatus": 200,
+        "structuredBytes": 3239
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "fetchedAt": "2026-10-02T22:43:47.282987+00:00",
+  "citySlug": "tuolumne-meadows",
+  "totalBostonLegacy": 7,
+  "total": 7,
+  "active": 7,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 1,
+  "priceNotFound": 6,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [
+    "619647",
+    "619652",
+    "619653",
+    "619655",
+    "619659",
+    "619663"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "619647",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619647",
+      "slug": "tenaya-lake-family-swimming-and-beach-day-619647",
+      "title": "Tenaya Lake: Family Swimming & Beach Day",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/tenaya-lake-family-swimming-and-beach-day-619647",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619647/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/AyYJuj3TgKl1PEFdPzCQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/AyYJuj3TgKl1PEFdPzCQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:43.123557+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619647/content/",
+          "status": 200,
+          "bytes": 2344,
+          "sha256": "6dfbb146bb0acd1c6965fb278dbfff60de16e4681a23f754dba50ec54c41cb53"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619647/structured-description/",
+          "status": 200,
+          "bytes": 1219,
+          "sha256": "794c035325a3434fb7af7af32dbcc5892632a9c89800228b96780e3db5d62c23"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619647/",
+          "status": 200,
+          "bytes": 14971,
+          "sha256": "3f2b0b210c4458b313c85a6a8e6b7220d9ab98ddf796fc965c991b15ee244b37"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619647&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619647/ratings/",
+          "status": 200,
+          "bytes": 610,
+          "sha256": "5f14a3bdc170a28b7293b48a8b9a4f0f9162e6e05ea44e1d8397cdec895b1f6a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619647",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619647/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619652",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619652",
+      "slug": "family-hike-to-a-hidden-lake-and-swim-619652",
+      "title": "Family Hike to a Hidden Lake & Swim",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/family-hike-to-a-hidden-lake-and-swim-619652",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619652/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/UdU3Yl9bSm6w2WQLL7pI",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/UdU3Yl9bSm6w2WQLL7pI"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:43.124797+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619652/content/",
+          "status": 200,
+          "bytes": 2393,
+          "sha256": "0f9da81c706cb19e2d959a3412ecf4fbfb28925b1fd911781f1c56610fb4df0e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619652/structured-description/",
+          "status": 200,
+          "bytes": 1272,
+          "sha256": "7536774eb30b8a52847924a6835f7da22b4cfc81a41d8bb44a4e942af7915926"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619652/",
+          "status": 200,
+          "bytes": 15632,
+          "sha256": "55d63fb6c7c8ce68886c23cae8f86c61276c244f01bb005fd7ff1f5693720942"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619652&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "4dd39e32ad1e0a095d73d2d10c45ad0b16c50a3195b0e71e9298fd7b677c7961"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619652/ratings/",
+          "status": 200,
+          "bytes": 605,
+          "sha256": "b0f5c7c7a1b999b6ce5ab5677b525c07a0a489cb0b7e3a9c03670fb92d143aa1"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619652",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619652/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619653",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619653",
+      "slug": "yosemite-valley-walking-tour-619653",
+      "title": "Yosemite Valley Walking Tour",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/yosemite-valley-walking-tour-619653",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619653/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/dlan1L3ISbeZiWicvh6g",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/dlan1L3ISbeZiWicvh6g"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:43.125659+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619653/content/",
+          "status": 200,
+          "bytes": 2208,
+          "sha256": "94f3226cb8fdd6d72b39af8c6856aec1eaa727f9448fd22589a91e8333441288"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619653/structured-description/",
+          "status": 200,
+          "bytes": 1255,
+          "sha256": "8f64b7ae518f467e5eb2e19b73bc05d832fa0112666e485a43377832e5415073"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619653/",
+          "status": 200,
+          "bytes": 13539,
+          "sha256": "6a20cfac810812f3cf44de7a71cc83923822d0ce4ecc2d98f7d0e524f501b7df"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619653&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "33f14b2904e48933f8fc4eea661a59320ac0a0843ed54892428bbd9aa37d7639"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619653/ratings/",
+          "status": 200,
+          "bytes": 593,
+          "sha256": "1124c677ef074cce46998380d90e70464a53182fe8da47a4d152ab2619fbb321"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619653",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619653/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619655",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619655",
+      "slug": "mist-trail-vernal-and-nevada-falls-619655",
+      "title": "Mist Trail: Vernal and Nevada Falls",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/mist-trail-vernal-and-nevada-falls-619655",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Z59q3GcfT1KpBhqMxUYc",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Z59q3GcfT1KpBhqMxUYc"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:43.128896+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619655/content/",
+          "status": 200,
+          "bytes": 2340,
+          "sha256": "89f06d932ca600e750794c3eed96692e5c47ff1bbd1dc23e8a917ae8add34fad"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619655/structured-description/",
+          "status": 200,
+          "bytes": 1279,
+          "sha256": "f0b1fc6e563cc5d8b8de9521f621cd624498aeeb2592e0bb7ab6c699e9eaf4fd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619655/",
+          "status": 200,
+          "bytes": 16352,
+          "sha256": "470ef00180bfb940aab631bba4302372bc83dc3e3d655e3e0c8ecbddf811419d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619655&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "10eb1356532687b56341e095a6e74e3ac53733a1aaf1f26c2b6d73704bab4e3a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619655/ratings/",
+          "status": 200,
+          "bytes": 599,
+          "sha256": "2d1afc68bf9a1124d476063441c853473002a6d1f6b2d67fc02f662cd4453736"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619655",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619655/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619659",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619659",
+      "slug": "backcountry-hike-to-cathedral-lakes-619659",
+      "title": "Backcountry Hike To Cathedral Lakes",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/backcountry-hike-to-cathedral-lakes-619659",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619659/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/XT3sUjYjSxSxPO4wajDQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/XT3sUjYjSxSxPO4wajDQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:44.973409+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619659/content/",
+          "status": 200,
+          "bytes": 2243,
+          "sha256": "04d0bc8349b53602e78f0392d7c9afdd499a2e1c9d3baf09e306f5dd4edd9bdd"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619659/structured-description/",
+          "status": 200,
+          "bytes": 1254,
+          "sha256": "54f9a2c5c3694e78e2342f04c9d493eb74c717c51b8794f451d3f0c3d3efd3bd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619659/",
+          "status": 200,
+          "bytes": 14884,
+          "sha256": "51ca3bc9741576134d4fa12ebf81683a504f4f37c00fbb8dfaf3051e6486044e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619659&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "6d9fc57fb7e48c235afee31d0e310ae153811941f3f3d6ac2af1a42b34f0117a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619659/ratings/",
+          "status": 200,
+          "bytes": 599,
+          "sha256": "8061605653ab7995979775f1dc27e06d3e80b9ed686a18ea30e7146cac5ac5d7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619659",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619659/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619663",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619663",
+      "slug": "hike-to-upper-yosemite-falls-619663",
+      "title": "Hike to Upper Yosemite Falls",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/hike-to-upper-yosemite-falls-619663",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619663/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/esAmf4WQqfyqkHRgTglo",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/esAmf4WQqfyqkHRgTglo"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:45.093960+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/content/",
+          "status": 200,
+          "bytes": 2213,
+          "sha256": "ceb159b725255d28de8a45545ed9918dc753a6f7d9823bc541fa2761eb449cf7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/structured-description/",
+          "status": 200,
+          "bytes": 1278,
+          "sha256": "8fa7fe433af6cba4dfd021e163a15110dbfc06d1e0eda5176493f141db84fa54"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/",
+          "status": 200,
+          "bytes": 14883,
+          "sha256": "e1303c090f35c2bbf549fb37669eafe355fe5cdb0768df06fe19c4c780c07dea"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619663&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "e75322e35d44a9af499f6883842840810ef18960644a514f0379ac150c504b17"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/ratings/",
+          "status": 200,
+          "bytes": 592,
+          "sha256": "3380143d62d1bf468de3a4c163d79894e80fb6c501d26e3f66c36b143d446cfc"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619663",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619663/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "619664",
+      "company": "lamplightersadventuringsociety",
+      "catalogId": "the-lamplighters-adventuring-society-llc-619664",
+      "slug": "summit-half-dome-in-a-day-619664",
+      "title": "Summit Half Dome in a Day",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "publicPath": "/destinations/california/tuolumne-meadows/tours/summit-half-dome-in-a-day-619664",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "TUOLUMNE MEADOWS",
+        "citySlug": "tuolumne-meadows",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/zdS8WMZ1Q1iQQ3qp2kBg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/zdS8WMZ1Q1iQQ3qp2kBg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:45.329174+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619664/content/",
+          "status": 200,
+          "bytes": 3033,
+          "sha256": "035347928f57799fbfe7858db02b1182e28285be77d1d26131e6ab444cfbca6d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619664/structured-description/",
+          "status": 200,
+          "bytes": 1480,
+          "sha256": "0dd96b81588f06157d112ee23c24f9bd8e3ff1d6d85aa9e2781b384278d72045"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619664/",
+          "status": 200,
+          "bytes": 18133,
+          "sha256": "328e46c079280abd7dc7303482a79828e5b30ee1b58a25d67f35e0dfbc7262bb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619664&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 539,
+          "sha256": "04203cc46a9f523b3d340376bec7c0f9811d1ef55df0e3b36d15910d920950a6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619664/ratings/",
+          "status": 200,
+          "bytes": 589,
+          "sha256": "1fda45adceaf92c05d9fb5709a07ef38f212c666e5f177c8ac3122c5bd28b63d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "619664",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619664/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 515.0,
+        "currency": "USD",
+        "singular": "Adventurer"
+      }
+    }
+  ]
+}

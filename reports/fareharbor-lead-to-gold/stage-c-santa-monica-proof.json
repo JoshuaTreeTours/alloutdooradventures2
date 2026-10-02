@@ -1,0 +1,1193 @@
+[
+  {
+    "itemId": "49179",
+    "company": "pedalornot",
+    "title": "Small Group Tour",
+    "operator": "Pedal or Not",
+    "publicPath": "/destinations/california/santa-monica/tours/small-group-tour-49179",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Pedal or Not lists this outing."
+    ],
+    "schemaDescription": "The operator Pedal or Not lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalornot/items/49179/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/MxZVZt9GQk62utdMZq2I",
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/pedalornot-49179",
+      "fetchedAt": "2026-10-02T22:43:53.635602+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49179/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49179/structured-description/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "f11653abf319ee71fc7eccdfd30a1fe98ec7dde8b6c363e42468e01592a46ac1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49179/",
+          "status": 404,
+          "bytes": 588051,
+          "sha256": "4813a9a95f29fed5bad1c67dddcbb980a7744f44d8175b953871fb7d9805d008"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalornot/price-preview/per-item/v2/?asn=fhdn&item_pks=49179&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 134,
+          "sha256": "7085c58a4302fa098d6f9b1b89e6fe38c7ef57e24c8d6ca1d3ad62729d9d0480"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49179/ratings/",
+          "status": 404,
+          "bytes": 588067,
+          "sha256": "e5e4766383544e517d31af5bae604b1898114c02dc1fa6f022a46ad5f879e4df"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "49179",
+        "provider": "pedalornot",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49179/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "49189",
+    "company": "pedalornot",
+    "title": "The Best Private Tour in Town",
+    "operator": "Pedal or Not",
+    "publicPath": "/destinations/california/santa-monica/tours/the-best-private-tour-in-town-49189",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Pedal or Not lists this outing."
+    ],
+    "schemaDescription": "The operator Pedal or Not lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalornot/items/49189/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/aK878S5dT8G9k92N6s6y",
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/pedalornot-49189",
+      "fetchedAt": "2026-10-02T22:43:53.636237+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/structured-description/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "1a65c11ee5f2d46913b3e69642a0e89c81a2d0a89dca803535481cb1cb66607a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/",
+          "status": 404,
+          "bytes": 588051,
+          "sha256": "ad4a4cbcb7f72d2f64de9e59d52c8846bb5ec21b67c34f45fe2e069618d7c567"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalornot/price-preview/per-item/v2/?asn=fhdn&item_pks=49189&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 134,
+          "sha256": "7085c58a4302fa098d6f9b1b89e6fe38c7ef57e24c8d6ca1d3ad62729d9d0480"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/ratings/",
+          "status": 404,
+          "bytes": 588067,
+          "sha256": "bd27ffb6724f6f98c11a702578bc61536362e3b2ba79282251347722ca69daa5"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "49189",
+        "provider": "pedalornot",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49189/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "394572",
+    "company": "unlimitedbiking",
+    "title": "Santa Monica & Venice Beach eBike Tour",
+    "operator": "Unlimited Biking",
+    "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-ebike-tour-394572",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes rather than touring the sights on foot. The bikes are pedal-assist, so the motor helps on the hills. The booking runs about 3 hours. The ride starts near the Santa Monica Pier.",
+      "Riders continue on to the Venice Canals. The same route also passes through Marina del Rey. Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside.",
+      "Some guests ride pedal-assist bikes, and others ride ordinary bikes. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+    ],
+    "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Santa Monica Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM"
+    ],
+    "wordCount": 132,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+    "visiblePriceLabel": "From $85",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$85"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "85.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.5,
+      "reviewCount": 2375,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.5 from 2375 reviews on GET https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394572/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "Santa Monica, California belongs to the Santa Monica area via meeting_point",
+      "place": {
+        "city": "Santa Monica",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "santa-monica",
+        "stateSlug": "california",
+        "raw": "Ocean Ave Santa Monica, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Santa Monica, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 34.013477,
+          "lng": -118.496758
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
+      "heroHandle": "yB81A1USTWy88t1OtaEb",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM",
+          "handle": "KrOFAf0zSgWSZWZkGoaM",
+          "pixelSha256": "d3c3838753992bcc562da66d065afbe5e9972fb72b0488c7fc7d47701c5a28b8",
+          "differenceHashDistanceFromHero": 133,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.29574,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
+          "handle": "yB81A1USTWy88t1OtaEb",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/unlimitedbiking-394572",
+      "fetchedAt": "2026-10-02T22:43:53.637941+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394572/content/",
+          "status": 200,
+          "bytes": 4084,
+          "sha256": "a7e9b9df338074e1d91b6b5c034cb73f6d55a46952353e195690b1a20362afd2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394572/structured-description/",
+          "status": 200,
+          "bytes": 1812,
+          "sha256": "48329afbc24f858a6927fc814f783ed8750ee95bedc131b8faed027e15b14c88"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394572/",
+          "status": 200,
+          "bytes": 12473,
+          "sha256": "f46628583582bc2d0c4e399c884b4aee0454523b9ae52447ca99e8b722a93194"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394572&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "3244ef7f69ffc831a107cda657ea30b9ef43051857468529f7e8ec3a55c189ba"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394572/ratings/",
+          "status": 200,
+          "bytes": 632,
+          "sha256": "80c1d7833038c204c371c703b0f6c6104e8b11664394b37309778a8263acbee3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13+",
+          "amount": 85.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13+",
+            "amount": 85.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "1431 Ocean Ave Santa Monica, CA 90401",
+        "itemLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+        "headline": "Enjoy the best of Los Angeles with this two hour guided eBike tour that begins in Santa Monica near",
+        "startCity": "Santa Monica",
+        "startProvince": "CA",
+        "startLat": 34.013477,
+        "startLng": -118.496758,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Guests must be 16+ to ride an eBike!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Los Angeles",
+          "Santa Monica",
+          "Venice Canals",
+          "Art Walls"
+        ],
+        "measures": [
+          "3 hours"
+        ],
+        "description": "Enjoy the best of Los Angeles with this two hour guided eBike tour that begins in Santa Monica near the famous Santa Monica Pier! You must be at least 16 to ride our pedal assist ebikes. There will be guests riding standard, non-electric bikes on this tour. Take in the ocean breezes, visit the historic Venice Canals, ride through Marina del Rey, take pictures with the Art Walls, and explore Muscle Beach. You'll be able to visit all of the main highlights that the area has to offer, while learning fun facts, seeing beautiful views, and more! This guided tour takes about 3 hours, including various stops near essential attractions while our guides provide in-depth narration and stop for photo opportunities at famous sights and hidden gems throughout the tour. For safety reasons, we are unable to attach tag-a-longs and trailers to ebikes. Guests must be 16+ to ride an eBike!",
+        "detailsText": "Enjoy the best of Los Angeles with this two hour guided eBike tour that begins in Santa Monica near Enjoy the best of Los Angeles with this two hour guided eBike tour that begins in Santa Monica near",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "394572",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394572/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "394573",
+    "company": "unlimitedbiking",
+    "title": "Santa Monica & Venice Beach Bike Tour",
+    "operator": "Unlimited Biking",
+    "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-bike-tour-394573",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes rather than touring the sights on foot. The bikes are pedal-assist, so the motor helps on the hills. The booking runs about 3 hours. The ride starts near the Santa Monica Pier. Riders continue on to the Venice Canals. The same route also passes through Marina del Rey.",
+      "Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+    ],
+    "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Santa Monica Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ"
+    ],
+    "wordCount": 106,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13+",
+        "amountLabel": "$65"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 12 and under",
+        "amountLabel": "$55"
+      },
+      {
+        "label": "Adult - eBike Option",
+        "note": "16+ in NY/DC/FL or 13+ in CA",
+        "amountLabel": "$85"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.5,
+      "reviewCount": 2375,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.5 from 2375 reviews on GET https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394573/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "Santa Monica, California belongs to the Santa Monica area via meeting_point",
+      "place": {
+        "city": "Santa Monica",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "santa-monica",
+        "stateSlug": "california",
+        "raw": "Ocean Ave Santa Monica, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Santa Monica, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 34.013477,
+          "lng": -118.496758
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
+      "heroHandle": "HfGFL3BVQtOKjYPLZJfg",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ",
+          "handle": "qnI3CEYBRiGSGGMnAZXZ",
+          "pixelSha256": "a7b17975b719f6d09c84185e8eb0e81a8917aa211e9cf46338ec69e36762e640",
+          "differenceHashDistanceFromHero": 138,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.29549,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
+          "handle": "HfGFL3BVQtOKjYPLZJfg",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/unlimitedbiking-394573",
+      "fetchedAt": "2026-10-02T22:43:53.641024+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394573/content/",
+          "status": 200,
+          "bytes": 3890,
+          "sha256": "b9091f8a859fdd7777ec1ec06546fd6bc84f2949579f5512b97f126895688466"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394573/structured-description/",
+          "status": 200,
+          "bytes": 1764,
+          "sha256": "550b5d759fdd7ecc0986a3f809a37944080944a5b0d1e8f1a87b6986c171d3c2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394573/",
+          "status": 200,
+          "bytes": 12277,
+          "sha256": "023ca1c5036ee9ef8a1d982aa588190dc706e336bd4548a84a10a9021bd8f67a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394573&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 817,
+          "sha256": "041ef07fb71a75205f734e9c13cbfdd02a73894db022a556c4b314670a4ac717"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394573/ratings/",
+          "status": 200,
+          "bytes": 631,
+          "sha256": "a61a2fd4835a55c1250618cea578a36560afd10ee5f754fb3d0d8c08a04460a0"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13+",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13+",
+            "amount": 65.0
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 12 and under",
+            "amount": 55.0
+          },
+          {
+            "singular": "Adult - eBike Option",
+            "note": "16+ in NY/DC/FL or 13+ in CA",
+            "amount": 85.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "1431 Ocean Ave Santa Monica, CA 90401",
+        "itemLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+        "headline": null,
+        "startCity": "Santa Monica",
+        "startProvince": "CA",
+        "startLat": 34.013477,
+        "startLng": -118.496758,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "This guided tour takes about 3 hours and is perfect for families, friend groups, couples, and solo riders!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Los Angeles",
+          "Santa Monica",
+          "Venice Canals",
+          "Art Walls"
+        ],
+        "measures": [
+          "3 hours"
+        ],
+        "description": "Enjoy the best of Los Angeles with this two hour guided bike tour that begins in Santa Monica near the famous Santa Monica Pier! Take in the ocean breezes, visit the historic Venice Canals, ride through Marina del Rey, take pictures with the Art Walls, and explore Muscle Beach. The sunny California weather makes this tour a fun and beautiful experience for culture enthusiasts and history buffs. Our guides will provide you with fun facts, surprising secrets, and photo opportunities while you soak in the beauty of Santa Monica and Venice Beach. Upgrade your tour to an electric bike for an easier ride! This guided tour takes about 3 hours and is perfect for families, friend groups, couples, and solo riders! Get the local feel while you learn on this relaxed ride! Attachments like tag-a-longs and trailers are not permitted on this tour.",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "394573",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394573/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "394581",
+    "company": "unlimitedbiking",
+    "title": "Santa Monica eBike Rentals",
+    "operator": "Unlimited Biking",
+    "publicPath": "/destinations/california/santa-monica/tours/santa-monica-ebike-rentals-394581",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests ride bikes rather than touring the sights on foot. The bikes are pedal-assist, so the motor helps on the hills. The city bike portion is self-guided after the shuttle returns. The ride starts near the Santa Monica Pier. Riders continue on to the Venice Canals.",
+      "The same route also passes through Marina del Rey. Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way.",
+      "People stay with the bikes for the riding portion of the booking."
+    ],
+    "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Santa Monica Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FsO3FuKSIaZbpLrS6d4U"
+    ],
+    "wordCount": 111,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.5,
+      "reviewCount": 2375,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.5 from 2375 reviews on GET https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394581/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "Santa Monica, California belongs to the Santa Monica area via meeting_point",
+      "place": {
+        "city": "Santa Monica",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "santa-monica",
+        "stateSlug": "california",
+        "raw": "Ocean Ave Santa Monica, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi",
+      "heroHandle": "RDHucASly96tdZqO8bgi",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/FsO3FuKSIaZbpLrS6d4U",
+          "handle": "FsO3FuKSIaZbpLrS6d4U",
+          "pixelSha256": "bedac5e5f117f5dccdc765f3b0387afbe95a23df9f8aa273e42f71b51af0b3c4",
+          "differenceHashDistanceFromHero": 126,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30742,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi",
+          "handle": "RDHucASly96tdZqO8bgi",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/FsO3FuKSIaZbpLrS6d4U",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/unlimitedbiking-394581",
+      "fetchedAt": "2026-10-02T22:43:55.701615+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394581/content/",
+          "status": 200,
+          "bytes": 4295,
+          "sha256": "7d0e840f68c76ae5eb63b012e2e8c4da29f818dcc7183558a93aa28543b3b0b5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394581/structured-description/",
+          "status": 200,
+          "bytes": 1641,
+          "sha256": "fa9653a839ab5602660eee26dfe6ba4fc6ea3b7e0e23ab86ba1263026b26acad"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394581/",
+          "status": 200,
+          "bytes": 12670,
+          "sha256": "f2c217adc2a08f54da640bef04d34594b70e8801eba2252a03a71aad90213c6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394581&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394581/ratings/",
+          "status": 200,
+          "bytes": 615,
+          "sha256": "3f4a0c926dec1f1b64ad66675c29212d695515b46c0696ec97fdeb340e349d6c"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "1431 Ocean Ave Santa Monica, CA 90401",
+        "itemLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Guests must be 16+ to ride an electric bike!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "West Los Angeles",
+          "Santa Monica",
+          "Cannondale Electric",
+          "Muscle Beach",
+          "Venice Canals"
+        ],
+        "measures": [],
+        "description": "Enjoy the best of West Los Angeles with this self-guided electric bike ride that begins in Santa Monica near the famous Santa Monica Pier! Our pedal assist, Cannondale Electric bikes are perfect for riders looking for an extra boost. Feel the ocean breeze as you zip through Marina del Rey, take a photo opportunity at Muscle Beach and the Venice Canals, and experience the famous Art Walls. Santa Monica has a rich cultural history and stunning scenery. Guests must be 16+ to ride an electric bike! For safety reasons, we are unable to attach trailers or tag-a-longs to ebikes. Please be aware of our Store Hours , as bikes must be returned by closing time: November - March: 9AM - 5PM April - October: 9AM - 7PM",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "394581",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394581/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "395126",
+    "company": "unlimitedbiking",
+    "title": "Santa Monica Private Bike Tour",
+    "operator": "Unlimited Biking",
+    "publicPath": "/destinations/california/santa-monica/tours/santa-monica-private-bike-tour-395126",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes rather than touring the sights on foot. The booking runs about 4 hours. The ride starts near the Santa Monica Pier. Riders continue on to the Venice Canals. The same route also passes through Marina del Rey. Muscle Beach is one of the places the group stops.",
+      "The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. People stay with the bikes for the riding portion of the booking. The ride passes Hour Options and Los Angeles. Cyclists also come to Santa Monica Pier and Venice Canals.",
+      "Art Walls and Muscle Beach are on the same loop."
+    ],
+    "schemaDescription": "A 2- to 4-hour bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 4-hour bicycle outing in Santa Monica",
+      "Santa Monica Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf"
+    ],
+    "wordCount": 111,
+    "durationLabel": "2-4 Hour",
+    "durationIso": null,
+    "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+    "visiblePriceLabel": "From $300",
+    "priceRows": [
+      {
+        "label": "Two Hours Private Bike Tour",
+        "note": "",
+        "amountLabel": "$300"
+      },
+      {
+        "label": "Three Hours Private Bike Tour",
+        "note": "",
+        "amountLabel": "$400"
+      },
+      {
+        "label": "Four Hours Private Bike Tour",
+        "note": "",
+        "amountLabel": "$500"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "300.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.4,
+      "reviewCount": 148,
+      "provider": "TripAdvisor"
+    },
+    "ratingProvenance": "TripAdvisor rating 4.4 from 148 reviews on GET https://fareharbor.com/api/v1/companies/unlimitedbiking/items/395126/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santa Monica",
+      "state": "California",
+      "citySlug": "santa-monica",
+      "stateSlug": "california",
+      "reason": "Santa Monica, California belongs to the Santa Monica area via meeting_point",
+      "place": {
+        "city": "Santa Monica",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "santa-monica",
+        "stateSlug": "california",
+        "raw": "Ocean Ave Santa Monica, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Ocean Ave Santa Monica, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Santa Monica",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "santa-monica",
+          "stateSlug": "california",
+          "raw": "Santa Monica, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 34.013477,
+          "lng": -118.496758
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
+      "heroHandle": "e0A0PLgiRpabLDScjFDu",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf",
+          "handle": "WuL2b88BTsew7XiMGXsf",
+          "pixelSha256": "c7730f1d2143dd4f64760b81215ec230dcf78cfff2d01dd023001629052890b8",
+          "differenceHashDistanceFromHero": 143,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.37644,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
+          "handle": "e0A0PLgiRpabLDScjFDu",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santa-monica/unlimitedbiking-395126",
+      "fetchedAt": "2026-10-02T22:43:55.956231+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/395126/content/",
+          "status": 200,
+          "bytes": 3014,
+          "sha256": "24ff11ee7a50de47c44b0b2ea1c4eb26f2dccf848b3b4bcfbf03251307431ad6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/395126/structured-description/",
+          "status": 200,
+          "bytes": 1818,
+          "sha256": "aa1f9e82af0c57def6a549d42ee8d95457cd040cfd45e722b3449012cf3b1e61"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/395126/",
+          "status": 200,
+          "bytes": 12219,
+          "sha256": "4167588b93763059a9246da64ee4dec11af6a26e31d873248427d523dae2a106"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=395126&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 874,
+          "sha256": "06c7e88b55330df16e4c9af62dfd24fe8959ff02dfd77a2e2d0ded25e469037d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/395126/ratings/",
+          "status": 200,
+          "bytes": 619,
+          "sha256": "18023ef84c2a11a36b07e6efe7e20c08a064d70699ba2ab9e2de80fbb18b01b8"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Two Hours Private Bike Tour",
+          "note": "",
+          "amount": 300.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Two Hours Private Bike Tour",
+            "note": "",
+            "amount": 300.0
+          },
+          {
+            "singular": "Three Hours Private Bike Tour",
+            "note": "",
+            "amount": 400.0
+          },
+          {
+            "singular": "Four Hours Private Bike Tour",
+            "note": "",
+            "amount": 500.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2-4 Hour",
+        "meetingAddress": "1431 Ocean Ave Santa Monica, CA 90401",
+        "itemLocation": "1431 Ocean Ave Santa Monica, CA 90401",
+        "headline": "All Ages • 2-4 Hour Options!",
+        "startCity": "Santa Monica",
+        "startProvince": "CA",
+        "startLat": 34.013477,
+        "startLng": -118.496758,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Duration 2-4 Hour Options!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Hour Options",
+          "Santa Monica's",
+          "Los Angeles",
+          "Santa Monica",
+          "Venice Canals",
+          "Art Walls"
+        ],
+        "measures": [
+          "4 Hour",
+          "2 Hours",
+          "3 Hours",
+          "4 Hours"
+        ],
+        "description": "Duration 2-4 Hour Options! About Enjoy one of our regularly scheduled bike tours in a more intimate setting or work with us to customize your own tour. This is a perfect choice for families, VIPs, or anyone looking for a more personal experience on Santa Monica's top rated bike tour! Enjoy the best of Los Angeles with this two hour guided bike tour that begins in Santa Monica near the famous Santa Monica Pier! Take in the ocean breezes, visit the historic Venice Canals, ride through Marina del Rey, take pictures with the Art Walls, and explore Muscle Beach. The sunny California weather makes this tour a fun and beautiful experience for culture enthusiasts and history buffs. Choose between 2 Hours, 3 Hours, and 4 Hours four your private ride, as well as the time that you would like to go. Tips: Dress appropriately for the weather and don't forget your camera!",
+        "detailsText": "PICK UP LOCATION : Please look closely at the location that you picked in the booking. 1431 Ocean Ave Santa Monica, CA 90401 Please plan to arrive 15 minutes early as the tour does leave on time. Let our team know if you are running late. Our Store Hours are: November-March: 9AM - 5PM April - October: 9AM - 7PM Your outfit should be seasonally suitable; we also suggest that you dress in something comfy, not too loose, and closed-toe shoes. Don't forget a valid ID, credit card, and your camera! All Ages • 2-4 Hour Options! All Ages • 2-4 Hour Options!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "395126",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/395126/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

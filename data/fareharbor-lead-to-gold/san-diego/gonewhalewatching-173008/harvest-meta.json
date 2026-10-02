@@ -1,0 +1,47 @@
+{
+  "company": "gonewhalewatching",
+  "itemId": "173008",
+  "fetchedAt": "2026-10-02T22:41:11.233603+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gonewhalewatching/173008/content/",
+      "status": 200,
+      "bytes": 3589,
+      "sha256": "b8e7d56877169550398a108b35c2cb221e77034e8b993bfed3669a5c426d4256"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gonewhalewatching/173008/structured-description/",
+      "status": 200,
+      "bytes": 2579,
+      "sha256": "812f7fcfff7c5f8e2dd1a6a517fbb125c55d2c4a5ee37ea90f318063d7804d98"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gonewhalewatching/items/173008/",
+      "status": 200,
+      "bytes": 11344,
+      "sha256": "ba6c842ef9839caa9f991b2e668f548e436a576570f28d6c68da4032e4a14e8c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gonewhalewatching/price-preview/per-item/v2/?asn=fhdn&item_pks=173008&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 533,
+      "sha256": "4dc02bcf2f4ccdcc59d54e4177396124fa7ed8b5f20f669a5c93bc1168c7ead3"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gonewhalewatching/items/173008/ratings/",
+      "status": 200,
+      "bytes": 588,
+      "sha256": "e17711581490e2872ef82c56e521ae58265b799891c95f85769a654c3b2fb3d8"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "173008",
+    "provider": "gonewhalewatching",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/173008/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

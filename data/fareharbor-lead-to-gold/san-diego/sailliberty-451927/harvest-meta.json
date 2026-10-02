@@ -1,0 +1,47 @@
+{
+  "company": "sailliberty",
+  "itemId": "451927",
+  "fetchedAt": "2026-10-02T22:41:44.764100+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sailliberty/451927/content/",
+      "status": 200,
+      "bytes": 7024,
+      "sha256": "259de3ac04efd820fbead73eef78bd50c83d93093034480e8bff829377597213"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sailliberty/451927/structured-description/",
+      "status": 200,
+      "bytes": 6324,
+      "sha256": "4c7ae2965c37b13a0bb850488b7041a8406e5c479c616c967e5d200eefb28698"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sailliberty/items/451927/",
+      "status": 200,
+      "bytes": 12134,
+      "sha256": "2442dcce1cf5b5d428dbec25cff7db06b713e40c5dd35872cd412aaf322c8342"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sailliberty/price-preview/per-item/v2/?asn=fhdn&item_pks=451927&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 544,
+      "sha256": "4e8d0d8f1f815bedfe906faa52ad6c1906a7c9688bbd6e036f1c8e23c0ec7229"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sailliberty/items/451927/ratings/",
+      "status": 200,
+      "bytes": 432,
+      "sha256": "d94b9c2937d238e122205cd3377283db3dfd017ad9a57a664be0263e75edf06a"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "451927",
+    "provider": "sailliberty",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailliberty/items/451927/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

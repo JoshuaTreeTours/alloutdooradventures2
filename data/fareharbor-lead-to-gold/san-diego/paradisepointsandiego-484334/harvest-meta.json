@@ -1,0 +1,47 @@
+{
+  "company": "paradisepointsandiego",
+  "itemId": "484334",
+  "fetchedAt": "2026-10-02T22:41:41.795970+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/paradisepointsandiego/484334/content/",
+      "status": 200,
+      "bytes": 2161,
+      "sha256": "39b9a8dee9841a1dc3f91f2b4fb11eac5a7ee8a4237f49df0b40022ccfbed9e5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/paradisepointsandiego/484334/structured-description/",
+      "status": 200,
+      "bytes": 1440,
+      "sha256": "5a2ce53f5d908da7d9695f470b4fa59fe598d2d5d75422dd74acd2add2f6d755"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/paradisepointsandiego/items/484334/",
+      "status": 200,
+      "bytes": 8308,
+      "sha256": "f198d6fbb2f05380bbfbef06afea4b8a296897e2db6cb7b3b7a5d34c4bec2601"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/paradisepointsandiego/price-preview/per-item/v2/?asn=fhdn&item_pks=484334&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 539,
+      "sha256": "999e959f9ad2ee63266b1a88fef38d1081ba32943e1e631e6b250a29ec678957"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/paradisepointsandiego/items/484334/ratings/",
+      "status": 200,
+      "bytes": 659,
+      "sha256": "4caf498d5865d42ecfeff7dc0efebc1467d1dc1bfdd2b2dba582571fea217186"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "484334",
+    "provider": "paradisepointsandiego",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/484334/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

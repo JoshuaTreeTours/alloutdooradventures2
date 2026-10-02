@@ -1,0 +1,53 @@
+{
+  "fetchedAt": "2026-10-02T22:44:26.911473+00:00",
+  "total": 1,
+  "products": [
+    {
+      "company": "burneyfallsmarina",
+      "itemId": "644915",
+      "fetchedAt": "2026-10-02T22:44:24.896280+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/burneyfallsmarina/644915/content/",
+          "status": 200,
+          "bytes": 1710,
+          "sha256": "71bf6e9e98db37ad0896667654d2b6b1094582d21d326bc447c865fcc1622cd5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/burneyfallsmarina/644915/structured-description/",
+          "status": 200,
+          "bytes": 1401,
+          "sha256": "16f31e486d10061008c0b9efced2d14870d946e25ec045109ff84a22ff114846"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/burneyfallsmarina/items/644915/",
+          "status": 200,
+          "bytes": 7375,
+          "sha256": "4d84ce85e0574414fcd92ede642125d921dce465000007783196b7ae3b87490b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/burneyfallsmarina/price-preview/per-item/v2/?asn=fhdn&item_pks=644915&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 225,
+          "sha256": "1e1968419677b7e669b6a687d905a9bc39eda163922683f1caada711e2494734"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/burneyfallsmarina/items/644915/ratings/",
+          "status": 200,
+          "bytes": 422,
+          "sha256": "c97b9767e0cfc1ef6be11bc5e569f0cb06f4a2bfa7b2a2ab2eb50f2397bc1472"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "644915",
+        "provider": "burneyfallsmarina",
+        "bookingUrl": "https://fareharbor.com/embeds/book/burneyfallsmarina/items/644915/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    }
+  ]
+}

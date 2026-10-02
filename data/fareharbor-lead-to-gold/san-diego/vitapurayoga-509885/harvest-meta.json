@@ -1,0 +1,47 @@
+{
+  "company": "vitapurayoga",
+  "itemId": "509885",
+  "fetchedAt": "2026-10-02T22:42:22.037467+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/vitapurayoga/509885/content/",
+      "status": 200,
+      "bytes": 10143,
+      "sha256": "419cae96c8627cf95e055366d26709b5b1b6c67a35f90f6d841baf8f15f098c8"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/vitapurayoga/509885/structured-description/",
+      "status": 200,
+      "bytes": 5177,
+      "sha256": "5b396e7ec0707b2c82224c2628e2b9d1d2de6975b348d7b8f7fdf82071f61e2f"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/vitapurayoga/items/509885/",
+      "status": 200,
+      "bytes": 19779,
+      "sha256": "e293a8e8bf87ec27fa23488036101557d1cb578164fc8349674816412fc1fcb5"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/vitapurayoga/price-preview/per-item/v2/?asn=fhdn&item_pks=509885&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 774,
+      "sha256": "a3d1fedc7d7485c0943a7ce7db1f0a6f002dbebeb339801e53b1698bf0798b82"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/vitapurayoga/items/509885/ratings/",
+      "status": 200,
+      "bytes": 611,
+      "sha256": "d4c5e0bd38692ee6136a7222ad538ff3bdc1b5b9e527c929e2f79cda273db66d"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "509885",
+    "provider": "vitapurayoga",
+    "bookingUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/509885/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

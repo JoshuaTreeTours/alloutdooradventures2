@@ -1,0 +1,318 @@
+[
+  {
+    "itemId": "231271",
+    "company": "zovargo",
+    "title": "Zoo Animal Party (1-15 Attendees)",
+    "operator": "Zovargo",
+    "publicPath": "/destinations/california/santee/tours/zoo-animal-party-1-15-attendees-231271",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Zovargo lists this outing."
+    ],
+    "schemaDescription": "The operator Zovargo lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/S67RvTJrSOqAHaMB9jp5"
+    ],
+    "wordCount": 6,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "We bring the Zoo to You!",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/zovargo/items/231271/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santee",
+      "state": "California",
+      "citySlug": "santee",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/HEJvpgMhT3qY2Q3shLPI",
+      "heroHandle": "HEJvpgMhT3qY2Q3shLPI",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/S67RvTJrSOqAHaMB9jp5",
+          "handle": "S67RvTJrSOqAHaMB9jp5",
+          "pixelSha256": "0969d31f0552e382724015ce29b0f4c865110aa2af68ee3ca06e666bb2ea2fa4",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30001,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/HEJvpgMhT3qY2Q3shLPI",
+          "handle": "HEJvpgMhT3qY2Q3shLPI",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/S67RvTJrSOqAHaMB9jp5",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santee/zovargo-231271",
+      "fetchedAt": "2026-10-02T22:44:10.013418+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/zovargo/231271/content/",
+          "status": 200,
+          "bytes": 6417,
+          "sha256": "3bd86593d031e4f93f3a2cb6f2d734b5f3987418fae59be9752b8949c1bf577d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/zovargo/231271/structured-description/",
+          "status": 200,
+          "bytes": 3551,
+          "sha256": "e3c8bc4450f768ba5e5adf3cca4f5f4d7b5f5df9b2621ddcc90e19f92e301f34"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/zovargo/items/231271/",
+          "status": 200,
+          "bytes": 15348,
+          "sha256": "9e50ded42cb779ed826362c9eb1708230a09a339e27b6e5cb71af9aac017a1f7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/zovargo/price-preview/per-item/v2/?asn=fhdn&item_pks=231271&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 599,
+          "sha256": "b57906e35daf09272b4bc537f51a85563940888ae8c9d2b1ec98c6d26d81293d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/zovargo/items/231271/ratings/",
+          "status": 200,
+          "bytes": 399,
+          "sha256": "648e42045492b2e937599b419d193feb0aa69d7040f066b1d5dfb42508a2ce5c"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1 Hour",
+        "meetingAddress": "We bring the Zoo to You!",
+        "itemLocation": null,
+        "headline": "1 Hour • Up to 15 Children or Adults • Celebrations • Special Events",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "1-15",
+        "included": [
+          "5-6 Zoo Animals",
+          "60 Minutes",
+          "Thematic music enhances the experience",
+          "Interactive opportunities for guests to be part of the program",
+          "2-10 professional animal handlers/educators",
+          "Unique experience that is unmatched",
+          "Memories for a lifetime!"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [
+          "🔥 In the event of high temps (>85°F) we appreciate an indoor, air conditioned location or access to power so we can bring our own fans for cooling (some zoo animals are sensitive to heat)"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "San Diego"
+        ],
+        "measures": [
+          "60 Minutes"
+        ],
+        "description": "Make your next celebration in San Diego, California extra special by inviting Zovargo to bring some of our amazing animals! You should select a party size that is for the number of people (children or adults) interacting with animals. Our animal parties are full of fun and excitement for all ages.",
+        "detailsText": "1 Hour • Up to 15 Children or Adults • Celebrations • Special Events 1 Hour • Up to 15 Children or Adults • Celebrations • Special Events",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "231271",
+        "provider": "zovargo",
+        "bookingUrl": "https://fareharbor.com/embeds/book/zovargo/items/231271/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "359106",
+    "company": "zovargo",
+    "title": "Zoo Animal Party (16-35 Attendees)",
+    "operator": "Zovargo",
+    "publicPath": "/destinations/california/santee/tours/zoo-animal-party-16-35-attendees-359106",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Zovargo lists this outing."
+    ],
+    "schemaDescription": "The operator Zovargo lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mmwCsZRQmnqQyIYMmkgA"
+    ],
+    "wordCount": 6,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "We bring the Zoo to You!",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/zovargo/items/359106/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Santee",
+      "state": "California",
+      "citySlug": "santee",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Mc1r5VPISk1M6wJSNHYQ",
+      "heroHandle": "Mc1r5VPISk1M6wJSNHYQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/mmwCsZRQmnqQyIYMmkgA",
+          "handle": "mmwCsZRQmnqQyIYMmkgA",
+          "pixelSha256": "d66de0fa68315c724d81fa24de3fa9310bdf8f542f9b7d6e3ff63ca3f8f12811",
+          "differenceHashDistanceFromHero": 106,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25605,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/Mc1r5VPISk1M6wJSNHYQ",
+          "handle": "Mc1r5VPISk1M6wJSNHYQ",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/mmwCsZRQmnqQyIYMmkgA",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/santee/zovargo-359106",
+      "fetchedAt": "2026-10-02T22:44:10.014203+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/zovargo/359106/content/",
+          "status": 200,
+          "bytes": 6642,
+          "sha256": "9e45e107b0e61c10cf6bf31979e1b3bc450a3f595a36d3f455af0bb317592416"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/zovargo/359106/structured-description/",
+          "status": 200,
+          "bytes": 3544,
+          "sha256": "fc8116ebae9b5e1f21958896e07bad8878c44e94b26f83608e0382a19c31ee55"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/zovargo/items/359106/",
+          "status": 200,
+          "bytes": 14827,
+          "sha256": "8c66a1734a283c3325c839cd0311824f54ab37c3b971dbf4afa7618977591d2f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/zovargo/price-preview/per-item/v2/?asn=fhdn&item_pks=359106&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 594,
+          "sha256": "be5601450e9e6e38e71a315bf32a8c0d4b7c6558a0539d8a91c9a1a946b91272"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/zovargo/items/359106/ratings/",
+          "status": 200,
+          "bytes": 400,
+          "sha256": "e1b4a90ad7e1d75fd74f69a915532ac1f6dffbf2e08d5122983ac97e3bd0b265"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1 Hour",
+        "meetingAddress": "We bring the Zoo to You!",
+        "itemLocation": null,
+        "headline": "1 Hour • 16 - 35 Children or Adults • Celebrations • Special Events",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 1,
+        "maxAge": 100,
+        "groupSize": "16-35",
+        "included": [
+          "5 Zoo Animals",
+          "60 Minutes",
+          "Thematic music enhances the experience",
+          "Interactive opportunities for guests to be part of the program",
+          "2-10 professional animal handlers/educators",
+          "Unique experience that is unmatched",
+          "Memories for a lifetime!"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [
+          "🔥 In the event of high temps (>85°F) we appreciate an indoor, air conditioned location or access to power so we can bring our own fans for cooling (some zoo animals are sensitive to heat)"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "San Diego"
+        ],
+        "measures": [
+          "60 Minutes"
+        ],
+        "description": "Make your next celebration in San Diego, California extra special by inviting Zovargo to bring some of our amazing animals! You should select a party size that is for the number of people (children or adults) interacting with animals. Our animal parties are full of fun and excitement for all ages.",
+        "detailsText": "1 Hour • 16 - 35 Children or Adults • Celebrations • Special Events 1 Hour • 16 - 35 Children or Adults • Celebrations • Special Events",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "359106",
+        "provider": "zovargo",
+        "bookingUrl": "https://fareharbor.com/embeds/book/zovargo/items/359106/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

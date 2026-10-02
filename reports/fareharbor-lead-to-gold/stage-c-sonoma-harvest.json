@@ -1,0 +1,88 @@
+{
+  "fetchedAt": "2026-10-02T22:44:21.778691+00:00",
+  "citySlug": "sonoma",
+  "totalBostonLegacy": 1,
+  "total": 1,
+  "active": 0,
+  "terminal": 1,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 0,
+  "priceNotFound": 0,
+  "alreadyRetired": 1,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "579429"
+  ],
+  "priceNotFoundIds": [],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "579429",
+      "company": "pushpakmotors",
+      "catalogId": "pushpak-motors-579429",
+      "slug": "sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429",
+      "title": "Sonoma by Sunset - Guided Electric Trike Tour - 3 hours",
+      "operator": "PushPak Motors",
+      "publicPath": "/destinations/california/sonoma/tours/sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Sonoma",
+        "citySlug": "sonoma",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/pushpakmotors/items/579429/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/7AgIQ4CIQUCtrydLlUP4",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/7AgIQ4CIQUCtrydLlUP4"
+      ],
+      "alreadyRetired": true,
+      "fetchedAt": "2026-10-02T22:44:19.907669+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pushpakmotors/579429/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pushpakmotors/579429/structured-description/",
+          "status": 404,
+          "bytes": 588085,
+          "sha256": "95abe10e76c020fb4fbf325c76d9fe00c7a72be787dc4ebbe736e596cbda780f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pushpakmotors/items/579429/",
+          "status": 404,
+          "bytes": 588059,
+          "sha256": "f9f1c995f816ce1afbde1332715089df39c0743b7d0dc64291cf1e5f43a2674a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pushpakmotors/price-preview/per-item/v2/?asn=fhdn&item_pks=579429&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 137,
+          "sha256": "0a92efafaee0ec4fc63373e91c9e2995a6e5fcecbd0420e71debbec412bb2caf"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pushpakmotors/items/579429/ratings/",
+          "status": 404,
+          "bytes": 588075,
+          "sha256": "7674b25d9608746f4335039b6d9d32cbc38d9f5385ab4f83dde824fff3f7db37"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "579429",
+        "provider": "pushpakmotors",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pushpakmotors/items/579429/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

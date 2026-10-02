@@ -1,0 +1,47 @@
+{
+  "company": "tikitimebaytours",
+  "itemId": "588376",
+  "fetchedAt": "2026-10-02T22:42:09.854818+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/tikitimebaytours/588376/content/",
+      "status": 200,
+      "bytes": 5662,
+      "sha256": "735566bafec6515631cac6f0f128c29b5543c14a527d49e6dc6542059526a7d4"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/tikitimebaytours/588376/structured-description/",
+      "status": 200,
+      "bytes": 4396,
+      "sha256": "de934f9d5e0871c73d6745643faa5c332d8496d82c9ee64ded9aa20f91bd8889"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/tikitimebaytours/items/588376/",
+      "status": 200,
+      "bytes": 9470,
+      "sha256": "0e055cf5133b33df9de03fefa482b73c83b814d67c741032759d4a51a3082ab3"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/tikitimebaytours/price-preview/per-item/v2/?asn=fhdn&item_pks=588376&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 708,
+      "sha256": "f3b97225655b79123c9706796e7f30569eb6363c4fc785f689502f0a22a1d9e2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tikitimebaytours/items/588376/ratings/",
+      "status": 200,
+      "bytes": 534,
+      "sha256": "40853fd71f0e574813cf3cf2e542b761eb717e2ca9523f3d7168538baa9ffe60"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "588376",
+    "provider": "tikitimebaytours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/588376/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

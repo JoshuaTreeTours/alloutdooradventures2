@@ -1,0 +1,450 @@
+{
+  "citySlug": "joshua-tree",
+  "total": 23,
+  "active": 22,
+  "terminal": 1,
+  "priceAvailable": 17,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 23,
+  "inSitemap": 11,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "459544",
+      "slug": "sightseeing-tour-459544",
+      "publicPath": "/destinations/california/joshua-tree/tours/sightseeing-tour-459544",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5768,
+        "structuredStatus": 200,
+        "structuredBytes": 1854
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "459584",
+      "slug": "private-stargazing-with-an-astronomer-459584",
+      "publicPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5401,
+        "structuredStatus": 200,
+        "structuredBytes": 1469
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "459589",
+      "slug": "private-morning-hike-459589",
+      "publicPath": "/destinations/california/joshua-tree/tours/private-morning-hike-459589",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6588,
+        "structuredStatus": 200,
+        "structuredBytes": 2673
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "459590",
+      "slug": "private-sunset-hike-459590",
+      "publicPath": "/destinations/california/joshua-tree/tours/private-sunset-hike-459590",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6475,
+        "structuredStatus": 200,
+        "structuredBytes": 2561
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "459591",
+      "slug": "hike-and-climb-459591",
+      "publicPath": "/destinations/california/joshua-tree/tours/hike-and-climb-459591",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6943,
+        "structuredStatus": 200,
+        "structuredBytes": 3035
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "512102",
+      "slug": "custom-groups-512102",
+      "publicPath": "/destinations/california/joshua-tree/tours/custom-groups-512102",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4822,
+        "structuredStatus": 200,
+        "structuredBytes": 936
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "joshuatreeexcursions",
+      "operator": "Joshua Tree Excursions",
+      "itemId": "528426",
+      "slug": "photography-hike-528426",
+      "publicPath": "/destinations/california/joshua-tree/tours/photography-hike-528426",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5283,
+        "structuredStatus": 200,
+        "structuredBytes": 1247
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "365796",
+      "slug": "equine-therapy-365796",
+      "publicPath": "/destinations/california/joshua-tree/tours/equine-therapy-365796",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1984,
+        "structuredStatus": 200,
+        "structuredBytes": 1550
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "402194",
+      "slug": "sunset-trail-ride-402194",
+      "publicPath": "/destinations/california/joshua-tree/tours/sunset-trail-ride-402194",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2079,
+        "structuredStatus": 200,
+        "structuredBytes": 1283
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "404983",
+      "slug": "1-hour-visitor-pass-404983",
+      "publicPath": "/destinations/california/joshua-tree/tours/1-hour-visitor-pass-404983",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1800,
+        "structuredStatus": 200,
+        "structuredBytes": 1389
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "444127",
+      "slug": "interactive-equine-visitor-pass-444127",
+      "publicPath": "/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2027,
+        "structuredStatus": 200,
+        "structuredBytes": 1472
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "475058",
+      "slug": "pony-ride-475058",
+      "publicPath": "/destinations/california/joshua-tree/tours/pony-ride-475058",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3314,
+        "structuredStatus": 200,
+        "structuredBytes": 2242
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "475064",
+      "slug": "natural-horsemanship-and-basic-riding-lessons-475064",
+      "publicPath": "/destinations/california/joshua-tree/tours/natural-horsemanship-and-basic-riding-lessons-475064",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2589,
+        "structuredStatus": 200,
+        "structuredBytes": 1559
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "476256",
+      "slug": "photoshoot-476256",
+      "publicPath": "/destinations/california/joshua-tree/tours/photoshoot-476256",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2090,
+        "structuredStatus": 200,
+        "structuredBytes": 1857
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "513079",
+      "slug": "el-dorado-513079",
+      "publicPath": "/destinations/california/joshua-tree/tours/el-dorado-513079",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2141,
+        "structuredStatus": 200,
+        "structuredBytes": 1587
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "514091",
+      "slug": "la-luna-514091",
+      "publicPath": "/destinations/california/joshua-tree/tours/la-luna-514091",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2650,
+        "structuredStatus": 200,
+        "structuredBytes": 2082
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "514094",
+      "slug": "durango-514094",
+      "publicPath": "/destinations/california/joshua-tree/tours/durango-514094",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2408,
+        "structuredStatus": 200,
+        "structuredBytes": 1858
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "515026",
+      "slug": "campsite-6-515026",
+      "publicPath": "/destinations/california/joshua-tree/tours/campsite-6-515026",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2552,
+        "structuredStatus": 200,
+        "structuredBytes": 1688
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "520036",
+      "slug": "campsite-7-520036",
+      "publicPath": "/destinations/california/joshua-tree/tours/campsite-7-520036",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2495,
+        "structuredStatus": 200,
+        "structuredBytes": 1688
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "587300",
+      "slug": "in-the-company-of-horses-and-wine-587300",
+      "publicPath": "/destinations/california/joshua-tree/tours/in-the-company-of-horses-and-wine-587300",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4313,
+        "structuredStatus": 200,
+        "structuredBytes": 2763
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "598562",
+      "slug": "morning-trail-ride-598562",
+      "publicPath": "/destinations/california/joshua-tree/tours/morning-trail-ride-598562",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2112,
+        "structuredStatus": 200,
+        "structuredBytes": 1376
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "mustangsanctuary",
+      "operator": "Cascade Trails Mustang Sanctuary",
+      "itemId": "646142",
+      "slug": "sunset-sound-bath-with-wild-horses-646142",
+      "publicPath": "/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3041,
+        "structuredStatus": 200,
+        "structuredBytes": 1641
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "stargazejoshua",
+      "operator": "Stargaze Joshua",
+      "itemId": "901301",
+      "slug": "joshua-tree-stargazing-night-walk-901301",
+      "publicPath": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588087
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

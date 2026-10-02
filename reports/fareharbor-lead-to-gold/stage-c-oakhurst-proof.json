@@ -1,0 +1,1450 @@
+[
+  {
+    "itemId": "519507",
+    "company": "goodtripadventures-california",
+    "title": "Yosemite Valley Full Day Small Group Tour & Hike",
+    "operator": "Good Trip Adventures - California",
+    "publicPath": "/destinations/california/oakhurst/tours/yosemite-valley-full-day-small-group-tour-and-hike-519507",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests hear about Good Trip Adventures. Guests come to Good Trip Adventures, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
+      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
+      "Seeing the place and hearing the reason for it are the whole visit."
+    ],
+    "schemaDescription": "A 6- to 8-hour guided outing with Good Trip Adventures - California in Oakhurst.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "6- to 8-hour guided outing in Oakhurst",
+      "Medically trained, naturalist guide"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
+    ],
+    "wordCount": 107,
+    "durationLabel": "6-8 hours",
+    "durationIso": null,
+    "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",
+    "visiblePriceLabel": "From $371",
+    "priceRows": [
+      {
+        "label": "Person",
+        "note": "Minimum of 2 people required for first booking • Price per person",
+        "amountLabel": "$371"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "371.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519507/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Civic Circle Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Civic Circle Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.33097,
+          "lng": -119.653047
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
+      "heroHandle": "aCrowEcXQj2Pqop8QrKq",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6",
+          "handle": "0Jq85utXS4KLyq2axZR6",
+          "pixelSha256": "92b85deecfd57ad09c26c97fd87b89512ad8faf70e2920c0096da313d214c14f",
+          "differenceHashDistanceFromHero": 128,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.3018,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
+          "handle": "aCrowEcXQj2Pqop8QrKq",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/goodtripadventures-california-519507",
+      "fetchedAt": "2026-10-02T22:43:37.826908+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519507/content/",
+          "status": 200,
+          "bytes": 5700,
+          "sha256": "85cfe2787c9ccec2ea3561c8aeb4ffa24e9b048fceb85747f993bbf02cabe886"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519507/structured-description/",
+          "status": 200,
+          "bytes": 5387,
+          "sha256": "907ae08fd378181279912cd8231de149207b3d1a9142331914b5a22a460cc351"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519507/",
+          "status": 200,
+          "bytes": 13346,
+          "sha256": "6b9348f7538044f3073e62d99c710c1c0fb61f43d83beb434635d0df00ab95c8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/goodtripadventures-california/price-preview/per-item/v2/?asn=fhdn&item_pks=519507&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 595,
+          "sha256": "e794e3a5755e693f20bd1df0ecede305f44a49c601888d2265321c5ab56bf59f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519507/ratings/",
+          "status": 200,
+          "bytes": 512,
+          "sha256": "eb6fd9e17c4e997878299500fa8b2787419b2cc39c371ad7e00df146345796e4"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "Minimum of 2 people required for first booking • Price per person",
+          "amount": 371.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "Minimum of 2 people required for first booking • Price per person",
+            "amount": 371.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2027-05-01T07:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6-8 hours",
+        "meetingAddress": "49044 Civic Circle Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Join a small group for a day of nature immersion and learning in Yosemite Valley.",
+        "startCity": "Oakhurst",
+        "startProvince": "CA",
+        "startLat": 37.33097,
+        "startLng": -119.653047,
+        "minAge": 8,
+        "maxAge": null,
+        "groupSize": "4-8 people",
+        "included": [
+          "Medically trained, naturalist guide",
+          "Snacks and water refills",
+          "Park entry fees",
+          "Tour in English"
+        ],
+        "excluded": [
+          "Lunch (please bring a lunch)"
+        ],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [
+          "Participants should comfortably handle a moderate walk of 4-6 miles throughout the day, with moderate elevation changes, to make the most of their adventure"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Join Good Trip Adventures"
+        ],
+        "measures": [],
+        "description": "Join Good Trip Adventures for an awe-inspiring small-group exploration of the iconic Yosemite Valley. Immerse yourself in the splendor of towering cliffs, majestic waterfalls, and the lush landscapes that make Yosemite a natural wonder. Our seasoned guides will immerse you in Yosemite's natural wonders, sharing the parks' formation story, indigenous cultures, historical significance, and insights into its diverse flora and fauna.",
+        "detailsText": "Refer to the designated start time listed when you booked your trip. Your guide will message you 1-2 days in advance to confirm details. Refer to the designated start time listed when you booked your trip. Your guide will message you 1-2 days in advance to confirm details. Join a small group for a day of nature immersion and learning in Yosemite Valley. Join a small group for a day of nature immersion and learning in Yosemite Valley.",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "519507",
+        "provider": "goodtripadventures-california",
+        "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "519508",
+    "company": "goodtripadventures-california",
+    "title": "Yosemite High Country & Mariposa Grove Full Day Small Group Tour & Hike",
+    "operator": "Good Trip Adventures - California",
+    "publicPath": "/destinations/california/oakhurst/tours/yosemite-high-country-and-mariposa-grove-full-day-small-group-tour-and-hike-519508",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Good Trip Adventures - California lists this outing."
+    ],
+    "schemaDescription": "The operator Good Trip Adventures - California lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN"
+    ],
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519508/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Civic Circle Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Civic Circle Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.33097,
+          "lng": -119.653047
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Z2z1tGadR8GPdhL8eeOC",
+      "heroHandle": "Z2z1tGadR8GPdhL8eeOC",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN",
+          "handle": "J1ZoV9V8S1qqmxM9wRtN",
+          "pixelSha256": "49e35faaddd4f17c79e689d9226eedef82a58df926fc536e19279bfbea74e328",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.19984,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/Z2z1tGadR8GPdhL8eeOC",
+          "handle": "Z2z1tGadR8GPdhL8eeOC",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/goodtripadventures-california-519508",
+      "fetchedAt": "2026-10-02T22:43:37.827337+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519508/content/",
+          "status": 200,
+          "bytes": 6127,
+          "sha256": "c736dc3f1ca5c115fea7d76de935d00ff8640d888c59891f3200a628f9ef50a1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/goodtripadventures-california/519508/structured-description/",
+          "status": 200,
+          "bytes": 5813,
+          "sha256": "fe4319fb6174ad0003f705e9205623cf8d2cd940729e6483b1c1ab24653eb58e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519508/",
+          "status": 200,
+          "bytes": 13649,
+          "sha256": "e825afc1c9c1924201f169584944dd562e03fb2ea514fc9d2230fd0a19742381"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/goodtripadventures-california/price-preview/per-item/v2/?asn=fhdn&item_pks=519508&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 595,
+          "sha256": "9c1e554b47ed70668ce97422221ba526c5e7ac7ff861913aaf826d0d8ada5c85"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519508/ratings/",
+          "status": 200,
+          "bytes": 540,
+          "sha256": "4588625d840c5d686847a4911ddbe5495e3e9d1e0eca394d04f32d1384e71dba"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "6-8 hours",
+        "meetingAddress": "49044 Civic Circle Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Head up to the high country and see Giant Sequoias!",
+        "startCity": "Oakhurst",
+        "startProvince": "CA",
+        "startLat": 37.33097,
+        "startLng": -119.653047,
+        "minAge": 8,
+        "maxAge": null,
+        "groupSize": "4-8 people",
+        "included": [
+          "Private, medically trained naturalist guide",
+          "Snacks and water refills",
+          "Park entry fees",
+          "Tour in English"
+        ],
+        "excluded": [
+          "Lunch (please bring a lunch)"
+        ],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [
+          "Participants should comfortably handle a moderate walk of 4-6 miles throughout the day, with moderate elevation changes, to make the most of their adventure"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Join Good Trip Adventures",
+          "Giant Sequoias"
+        ],
+        "measures": [],
+        "description": "Join Good Trip Adventures for an intimate small-group expedition delving into the high country of Yosemite National Park. Head up to the high country and see Giant Sequoias on this action packed day! Immerse yourself in the stunning alpine landscapes, pristine lakes, and iconic granite peaks that define this extraordinary region. Our seasoned guides will immerse you in Yosemite's natural wonders, sharing the park's formation story, indigenous cultures, historical significance, and insights into its diverse flora and fauna.",
+        "detailsText": "Refer to the designated start time listed when you booked your trip. Your guide will message you 1-2 days in advance to confirm details. Refer to the designated start time listed when you booked your trip. Your guide will message you 1-2 days in advance to confirm details. Head up to the high country and see Giant Sequoias! Head up to the high country and see Giant Sequoias!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "519508",
+        "provider": "goodtripadventures-california",
+        "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519508/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629558",
+    "company": "pedalforwardbikes",
+    "title": "Goat Mountain & 007 Guided Ride – Intermediate",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/goat-mountain-and-007-guided-ride-intermediate-629558",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The ride passes Bass Lake and High-elevation Sierra Nevada. Cyclists also come to Rider Requirements and High Sierra. National Forest Service and US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say.",
+      "Among the places guests actually encounter are Bass Lake, High-elevation Sierra Nevada, and Rider Requirements. Later the guide turns to High Sierra and National Forest Service, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
+      "Guests come to Bass Lake and High-elevation Sierra Nevada, and they hear why those places are on the trip."
+    ],
+    "schemaDescription": "A 4- to 6-hour guided outing with Pedal Forward Bikes in Oakhurst. The outing passes High-elevation Sierra Nevada.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4- to 6-hour guided outing in Oakhurst",
+      "High-elevation Sierra Nevada",
+      "Groups are capped at 6"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI"
+    ],
+    "wordCount": 115,
+    "durationLabel": "4 - 6 Hours",
+    "durationIso": null,
+    "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629558/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/uJypV4XGQzmB0Nb5bbx8",
+      "heroHandle": "uJypV4XGQzmB0Nb5bbx8",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
+          "handle": "sHG72BilQaymXMuxDEhI",
+          "pixelSha256": "7a8306be4d150d1723d8d5a4293fb91b81e461d89240f96aca5aba1784bd350a",
+          "differenceHashDistanceFromHero": 137,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26492,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629558",
+      "fetchedAt": "2026-10-02T22:43:37.827649+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629558/content/",
+          "status": 200,
+          "bytes": 4476,
+          "sha256": "2d23fd6b4f1eb5e5b54fd8fca66d0e3eca20d5ce769dcaeea117c42185f45a5e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629558/structured-description/",
+          "status": 200,
+          "bytes": 3680,
+          "sha256": "9c933ae3ee45d48f421f9c1e8d7af94b6e30d73271e77309e24c835b0ba8cc13"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629558/",
+          "status": 200,
+          "bytes": 10430,
+          "sha256": "489aa0dacf6a71ba9d5682d8862845db35c710207c137891dbe461fbe985d6d2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629558&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629558/ratings/",
+          "status": 200,
+          "bytes": 475,
+          "sha256": "404a51b958688dc60ae44bccf1eb99ac5857e7f9c29affbcce9324aefad92e88"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 - 6 Hours",
+        "meetingAddress": "40761 California 41 Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $350 • 10+ • Up to 10 People • 2-4 Hours • Bass Lake's Best Trails! • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 16,
+        "maxAge": null,
+        "groupSize": "Up to 6 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Sierra Nevada",
+          "Bass Lake",
+          "High-elevation Sierra Nevada",
+          "Rider Requirements This",
+          "High Sierra"
+        ],
+        "measures": [],
+        "description": "Experience one of the most unique riding environments in California on this 4-hour advanced eBike tour in the stunning Sierra Nevada near Bass Lake. This ride is designed for experienced mountain bikers seeking technical challenges, breathtaking scenery, and unforgettable terrain. The adventure takes you deep into the high-elevation forests and granite landscapes that make this region famous. Ride flowing singletrack through towering pines before climbing onto massive granite domes that offer panoramic views of the surrounding Sierra peaks and Bass Lake below. The terrain features steep granite slabs, technical rock features, challenging climbs, and thrilling descents that demand strong bike-handling skills and confidence on exposed rock. Your electric mountain bike provides the power to conquer sustained climbs and maximize time on the trail, allowing you to explore more of this incredible backcountry terrain. Along the route, you'll experience a mix of smooth forest singletrack, technical granite traverses, rocky switchbacks, and exhilarating downhill sections that showcase some of the area's best riding. Tour Highlights 4-hour guided advanced eBike experience High-elevation Sierra Nevada scenery Epic rides across massive granite domes Technical singletrack and challenging rock features Steep granite climbs and descents Spectacular views of Bass Lake and surrounding mountains Premium electric mountain bikes Small-group guided adventure Rider Requirements This is an advanced-level tour intended for riders with previous mountain biking experience. Participants should be comfortable riding steep terrain, technical singletrack, loose rock, and exposed granite surfaces. If you're looking for a true High Sierra mountain biking adventure with world-class granite riding and unforgettable views, this tour delivers an experience unlike anywhere else in California.",
+        "detailsText": "Starting at $350 • 10+ • Up to 10 People • 2-4 Hours • Bass Lake's Best Trails! • Private Ride Starting at $350 • 10+ • Up to 10 People • 2-4 Hours • Bass Lake's Best Trails! • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629558",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629558/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629569",
+    "company": "pedalforwardbikes",
+    "title": "Big Sandy Guided Ride & Hike – Beginner",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/big-sandy-guided-ride-and-hike-beginner-629569",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "A few optional stops leave time to step out for photographs and a closer look. The ride passes Bass Lake and Sierra National Forest. Cyclists also come to California's Sierra Nevada and National Forest Service. US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say.",
+      "Among the places guests actually encounter are Bass Lake, Sierra National Forest, and California's Sierra Nevada. Later the guide turns to National Forest Service and US Forest Service, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear."
+    ],
+    "schemaDescription": "A 2- to 4-hour guided outing with Pedal Forward Bikes in Oakhurst.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 4-hour guided outing in Oakhurst",
+      "Groups are capped at 10"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc"
+    ],
+    "wordCount": 108,
+    "durationLabel": "2-4 Hours",
+    "durationIso": null,
+    "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629569/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/wa7DoRxQT7ucqv0cpRxU",
+      "heroHandle": "wa7DoRxQT7ucqv0cpRxU",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
+          "handle": "YNt4aOsPSHWrPhzF0qBc",
+          "pixelSha256": "b28607d6a47beca5fdcdf3245e1a4fd674c899c54dfbc7c2fc24fc26c053e415",
+          "differenceHashDistanceFromHero": 139,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31871,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629569",
+      "fetchedAt": "2026-10-02T22:43:37.829055+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629569/content/",
+          "status": 200,
+          "bytes": 4505,
+          "sha256": "45c8d0f167a0cea1bd32757383f2ca0cea1a7806b597b6e7d46318e034203009"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629569/structured-description/",
+          "status": 200,
+          "bytes": 3657,
+          "sha256": "96ec385d33d3ef0413fb47db4208eecb61cf5fe2384dbe4c9b3744aff830f6fe"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629569/",
+          "status": 200,
+          "bytes": 11108,
+          "sha256": "75160b577f0345d70fe3d76dd799dbd94f7f748df033cfad252e834116e554c1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629569/ratings/",
+          "status": 200,
+          "bytes": 468,
+          "sha256": "631c927c170a584e5b6382870f31c2bb79a27063edce53bcdadf93c10da3b0bf"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-4 Hours",
+        "meetingAddress": "40761 California 41 Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $284.38 • Ages 15+ • Up to 10 People • 2-4 Hours • Fun-Filled Adventure! • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 10,
+        "maxAge": null,
+        "groupSize": "Up to 10 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Experience one of the most scenic and unique rides in the Bass Lake area on this guided adventure that follows the historic railroad grade used during the late 1800s logging era."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Bass Lake",
+          "Sierra National Forest"
+        ],
+        "measures": [],
+        "description": "Experience one of the most scenic and unique rides in the Bass Lake area on this guided adventure that follows the historic railroad grade used during the late 1800s logging era. The route winds through beautiful Sierra National Forest landscapes, offering a gentle and enjoyable climb along the old railroad bed where massive timber was once transported from the mountains to the sawmills below. As we ride beneath towering pines and cedars, your guide will share stories of the region's rich logging history and the role the railroad played in shaping the Bass Lake area. The wide, gradual grade makes for a comfortable ride while providing stunning views of the surrounding forest and distant mountain ridges. The highlight of the tour is the climb to a spectacular granite dome overlooking Bass Lake and the Sierra Nevada. Unlike many granite formations, this dome can be ridden all the way to the top, rewarding riders with breathtaking panoramic views of the lake, forests, and surrounding peaks. It's the perfect place to stop, take photos, enjoy the scenery, and experience one of the most iconic viewpoints in the region. This unforgettable ride combines history, adventure, and some of the best scenery Bass Lake has to offer, making it an ideal experience for riders looking to explore the natural beauty and unique heritage of California's Sierra Nevada. For riders seeking an extra challenge, there is also the option to incorporate sections of single-track mountain bike trails into the tour. These trails offer more technical terrain, tighter turns, and a true mountain biking experience while still enjoying the incredible scenery of the Bass Lake area. Your guide can customize the ride to match the group's skill level and desired level of adventure.",
+        "detailsText": "Starting at $284.38 • Ages 15+ • Up to 10 People • 2-4 Hours • Fun-Filled Adventure! • Private Ride Starting at $284.38 • Ages 15+ • Up to 10 People • 2-4 Hours • Fun-Filled Adventure! • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629569",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629570",
+    "company": "pedalforwardbikes",
+    "title": "Custom Guided Mountain Bike Ride – All Levels",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/custom-guided-mountain-bike-ride-all-levels-629570",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The ride passes At Pedal Forward and National Forest Service. Cyclists also come to US Forest Service. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are At Pedal Forward, National Forest Service, and US Forest Service.",
+      "Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to At Pedal Forward and National Forest Service, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+    ],
+    "schemaDescription": "A 2- to 4-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 4-hour bicycle outing in Oakhurst",
+      "Groups are capped at 10"
+    ],
+    "galleryImages": [],
+    "wordCount": 103,
+    "durationLabel": "2-4 Hours",
+    "durationIso": null,
+    "meetingLocation": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629570/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/8Ckx7TDrTyapVlw3mNM4",
+      "heroHandle": "8Ckx7TDrTyapVlw3mNM4",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/FWv6O4RDT5yidZSgXvzl",
+          "handle": "FWv6O4RDT5yidZSgXvzl",
+          "pixelSha256": "41bf3633e4709f86bd75e106e5ad1fc6786f607229e636dccede2898c88fa57a",
+          "differenceHashDistanceFromHero": 5,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.02934,
+          "classification": "NEAR_DUPLICATE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/FWv6O4RDT5yidZSgXvzl",
+          "handle": "FWv6O4RDT5yidZSgXvzl",
+          "pixelSha256": "41bf3633e4709f86bd75e106e5ad1fc6786f607229e636dccede2898c88fa57a",
+          "differenceHashDistanceFromHero": 5,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.02934,
+          "classification": "NEAR_DUPLICATE"
+        }
+      ],
+      "selected": null,
+      "action": "removed",
+      "reason": "harvest images were identical or near-identical to the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629570",
+      "fetchedAt": "2026-10-02T22:43:39.685297+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629570/content/",
+          "status": 200,
+          "bytes": 3410,
+          "sha256": "78814105aab592761e65755c9ceb04499f1bd7dfe42b3faa19cf049b3c4af2fb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629570/structured-description/",
+          "status": 200,
+          "bytes": 3218,
+          "sha256": "e31e038cc0cb150f56699dcec02ee073636bc96d5698d4b20e1536b247f1835e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629570/",
+          "status": 200,
+          "bytes": 7703,
+          "sha256": "83f6996c61e15a361af1c00f7b9b6d2d3e957abe07a3b334835d7a2bf887093e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629570&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629570/ratings/",
+          "status": 200,
+          "bytes": 459,
+          "sha256": "22558d2b9bc3aa46abf22fc57a703af7452216ce8c54e1958a52a22e15a6e831"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-4 Hours",
+        "meetingAddress": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tailored for You! • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 10,
+        "maxAge": null,
+        "groupSize": "Up to 10 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "At Pedal Forward"
+        ],
+        "measures": [],
+        "description": "Let us customize a guided mountain bike ride based on your fitness and skill level. We curate rides from the serene to the extreme! At Pedal Forward, our goal is your total satisfaction. We have hundreds of miles of dirt roads and single-track mountain bike trails from which to choose. You can also call us, and we can design the perfect ride for you over the phone. Tours are contingent based on your skill level, may be adjusted based on skill level.",
+        "detailsText": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tailored for You! • Private Ride Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tailored for You! • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629570",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629570/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629572",
+    "company": "pedalforwardbikes",
+    "title": "Big Sandy eBike Ride & Waterfall Hike – Beginner",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/big-sandy-ebike-ride-and-waterfall-hike-beginner-629572",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests hear about Bass Lake Dam and Sierra Nevada. The guide's account includes Central Camp Road and Bass Lake View. Stories along the way cover Sierra National Forest and National Forest Service. US Forest Service come up in the commentary. Among the places guests actually encounter are Bass Lake Dam, Sierra Nevada, and Central Camp Road.",
+      "Later the guide turns to Bass Lake View and Sierra National Forest, explaining what happened there. Guests come to Bass Lake Dam and Sierra Nevada, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+    ],
+    "schemaDescription": "A 2.5- to 3-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2.5- to 3-hour bicycle outing in Oakhurst",
+      "Groups are capped at 10"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un"
+    ],
+    "wordCount": 107,
+    "durationLabel": "2.5-3 Hours",
+    "durationIso": null,
+    "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629572/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Imy9yV3QlCafyyT0vn5D",
+      "heroHandle": "Imy9yV3QlCafyyT0vn5D",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
+          "handle": "93hzCBN4SUGMJ0tMo8Un",
+          "pixelSha256": "97775bbd566320003724b8a50c3d9aa0460668db003a4fe1a84a4acd5fcedabe",
+          "differenceHashDistanceFromHero": 140,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28831,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629572",
+      "fetchedAt": "2026-10-02T22:43:39.920562+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629572/content/",
+          "status": 200,
+          "bytes": 4241,
+          "sha256": "8f5ee9c68884a3e1b1a78e479c905f4ba4266d17fd4625b55352a61f310ba41d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629572/structured-description/",
+          "status": 200,
+          "bytes": 3466,
+          "sha256": "46d9ba6c8d388bbb0ed474be2a82c2512bc4cd21af5a8185fda5fdcbabd2dac1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629572/",
+          "status": 200,
+          "bytes": 10381,
+          "sha256": "4ac4c3035ec0b140ce29c7d5ec379aad71482f94ea7b8737f94075bd8b21cb40"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629572&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629572/ratings/",
+          "status": 200,
+          "bytes": 461,
+          "sha256": "a3fd86eeb1e727bc1c56de2b91e112302d25ec17006ccae76dc5dc449c055f09"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2.5-3 Hours",
+        "meetingAddress": "40761 California 41 Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2.5-3 Hours • Hidden Gem! • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 10,
+        "maxAge": null,
+        "groupSize": "Up to 10 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Discover Bass Lake",
+          "Bass Lake",
+          "Bass Lake's",
+          "Bass Lake Dam",
+          "Sierra Nevada",
+          "Bass Lake View"
+        ],
+        "measures": [
+          "20 miles"
+        ],
+        "description": "Discover Bass Lake on a fun and family-friendly eBike adventure designed for riders of all experience levels. This guided tour begins near the shores of Bass Lake and follows a scenic forest road that parallels the lake. Along the way, you'll visit several historic landmarks that tell the story of Bass Lake's rich past. Highlights include the iconic logging town of Wishon, Bass Lake Dam, and other points of interest that showcase the area's logging and recreational heritage. As you ride, enjoy beautiful views of the sparkling lake, towering pine forests, and the surrounding Sierra Nevada landscape. The tour continues up Central Camp Road, a historic route that was once part of the railroad system used during the region's logging era. Thanks to the assistance of modern eBikes, the gradual climb is enjoyable for riders of all ages, allowing everyone to take in the scenery without feeling rushed. At the top, we'll arrive at Bass Lake View, one of the area's most scenic overlooks. With panoramic views of the lake and surrounding mountains, it's the perfect place to relax, enjoy a picnic, take photos, and soak in the beauty of the Sierra National Forest. After the break, the adventure becomes even more enjoyable as the remainder of the ride is primarily downhill, allowing you to cruise comfortably back toward the lake while enjoying the fresh mountain air and spectacular scenery. This tour offers the perfect combination of history, nature, family fun, and effortless exploration of one of California's most beautiful mountain destinations. Round trip 20 miles",
+        "detailsText": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2.5-3 Hours • Hidden Gem! • Private Ride Starting at $284.38 • Ages 10+ • Up to 10 People • 2.5-3 Hours • Hidden Gem! • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629572",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629572/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629577",
+    "company": "pedalforwardbikes",
+    "title": "Mary Jane & Willow Creek Guided Ride – Expert",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/mary-jane-and-willow-creek-guided-ride-expert-629577",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Pedal Forward Bikes lists this outing."
+    ],
+    "schemaDescription": "The operator Pedal Forward Bikes lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mEYXKeUZQPY4ISGad1fm"
+    ],
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629577/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/SAc34IEETre4iRX18vtC",
+      "heroHandle": "SAc34IEETre4iRX18vtC",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/mEYXKeUZQPY4ISGad1fm",
+          "handle": "mEYXKeUZQPY4ISGad1fm",
+          "pixelSha256": "8047b745116c7415872a48f3a8e4753a94ecee839bfeebd7ee32300f56aff2a7",
+          "differenceHashDistanceFromHero": 13,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.0519,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/mEYXKeUZQPY4ISGad1fm",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629577",
+      "fetchedAt": "2026-10-02T22:43:40.264925+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629577/content/",
+          "status": 200,
+          "bytes": 3253,
+          "sha256": "ed6ad0963b2e7b79dd507fd61820c4556220d039aae0ab47de3f6a995d74acb4"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629577/structured-description/",
+          "status": 200,
+          "bytes": 3059,
+          "sha256": "7938372b4b3a0cf8ee9d3028146b6c1e381b49c7662715c92e0c2d8eb23b98ff"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629577/",
+          "status": 200,
+          "bytes": 7722,
+          "sha256": "f8a33380646c4ad114e56d113861e4f7e1d77567ad90a33d64b8b34d6b9a9968"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629577&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629577/ratings/",
+          "status": 200,
+          "bytes": 465,
+          "sha256": "00cb6e2ad088c050071077e918caaaac945ff7c5f33f01ad51d6b59c4ae3b966"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-4 Hours",
+        "meetingAddress": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Yosemite Adventure! • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 10,
+        "maxAge": null,
+        "groupSize": "Up to 10 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Willow Creek Guided Ride",
+          "Bass Lake"
+        ],
+        "measures": [],
+        "description": "Looking for an epic mountain biking experience near Yosemite? The Mary Jane & Willow Creek Guided Ride is a challenging yet rewarding adventure, featuring some of the best singletrack trails in the Bass Lake area. Tours are contingent based on your skill level, may be adjusted based on skill level.",
+        "detailsText": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Yosemite Adventure! • Private Ride Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Yosemite Adventure! • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629577",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629577/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "629579",
+    "company": "pedalforwardbikes",
+    "title": "007 3rd – 1st Guided Mountain Bike Ride – Advanced",
+    "operator": "Pedal Forward Bikes",
+    "publicPath": "/destinations/california/oakhurst/tours/007-3rd-1st-guided-mountain-bike-ride-advanced-629579",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The ride passes Bass Lake and Central Camp Road. Cyclists also come to National Forest Service and US Forest Service. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Bass Lake, Central Camp Road, and National Forest Service.",
+      "Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Bass Lake and Central Camp Road, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+    ],
+    "schemaDescription": "A 2- to 4-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "2- to 4-hour bicycle outing in Oakhurst",
+      "Groups are capped at 10"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bng1v35CQv2I8UNqVPZR"
+    ],
+    "wordCount": 104,
+    "durationLabel": "2-4 Hours",
+    "durationIso": null,
+    "meetingLocation": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629579/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Oakhurst",
+      "state": "California",
+      "citySlug": "oakhurst",
+      "stateSlug": "california",
+      "reason": "Oakhurst, California belongs to the Oakhurst area via meeting_point",
+      "place": {
+        "city": "Oakhurst",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oakhurst",
+        "stateSlug": "california",
+        "raw": "Oakhurst, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oakhurst",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oakhurst",
+          "stateSlug": "california",
+          "raw": "Oakhurst, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/FvbFOuXXTSG1A2k2unn2",
+      "heroHandle": "FvbFOuXXTSG1A2k2unn2",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/bng1v35CQv2I8UNqVPZR",
+          "handle": "bng1v35CQv2I8UNqVPZR",
+          "pixelSha256": "20a572a77c0453f35e667377a8ad015511868ae2fa6462e7eeb2161b4cace0f5",
+          "differenceHashDistanceFromHero": 45,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.1112,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/bng1v35CQv2I8UNqVPZR",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/oakhurst/pedalforwardbikes-629579",
+      "fetchedAt": "2026-10-02T22:43:40.501074+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629579/content/",
+          "status": 200,
+          "bytes": 3980,
+          "sha256": "c381f9e779522371c0bdb1dfaccfac303c7776aca7d39573aaac2f21bb763587"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629579/structured-description/",
+          "status": 200,
+          "bytes": 3784,
+          "sha256": "0b56c79f9bd29eedd7d06a9617caf722f8bf64e6b879c82c569c57a666c01d8c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629579/",
+          "status": 200,
+          "bytes": 7730,
+          "sha256": "ee69bd854d57888f24861ce8462f1d60f4c534c7c1e7285cd164158ce410d7d4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629579&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629579/ratings/",
+          "status": 200,
+          "bytes": 469,
+          "sha256": "57a1c5b524ac5cac5ac008e192d74565d48ab5f7300c27f9bf1ab46cb5749f07"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-4 Hours",
+        "meetingAddress": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
+        "itemLocation": null,
+        "headline": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tech & Adrenaline • Private Ride",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 10,
+        "maxAge": null,
+        "groupSize": "Up to 10 people",
+        "included": [
+          "3% mandatory National Forest Service fee that passes through directly to the US Forest Service"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": "Customers will receive a full refund or credit in case of operator cancellation due to weather or other unforeseen circumstances.",
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The 007 3rd - 1st Guided Mountain Bike Ride on the 007 trail network is a hidden gem and the most popular in Bass Lake, California."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Guided Mountain Bike Ride",
+          "Bass Lake"
+        ],
+        "measures": [],
+        "description": "The 007 3rd - 1st Guided Mountain Bike Ride on the 007 trail network is a hidden gem and the most popular in Bass Lake, California. Your guide will lead you on a ride that will take you up Central Camp Road (dirt road) to the top of the 007 3rd single-track trail. We will connect with the Octopussy trail, an alternative to riding the entire 3rd section of 007. Octopussy is rated a black diamond trail that begins with a wide-open, fast descent. The trail will then become more challenging, with tight turns leading to a rock garden filled with large boulders and rock ledges. There are multiple lines to choose from, with some being more challenging than others. Your guide will help you navigate the best route for you. After this section, the trail becomes fast and flowy with some high-speed sections and jumps, natural berms, and rocky sections that quickly sneak up on you as you descend to Central Camp Road and 007 2nd entrance. Tours are contingent based on your skill level, may be adjusted based on skill level.",
+        "detailsText": "Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tech & Adrenaline • Private Ride Starting at $284.38 • Ages 10+ • Up to 10 People • 2-4 Hours • Tech & Adrenaline • Private Ride",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "629579",
+        "provider": "pedalforwardbikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629579/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

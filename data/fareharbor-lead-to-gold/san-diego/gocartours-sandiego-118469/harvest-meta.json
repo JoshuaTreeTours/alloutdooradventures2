@@ -1,0 +1,47 @@
+{
+  "company": "gocartours-sandiego",
+  "itemId": "118469",
+  "fetchedAt": "2026-10-02T22:41:05.622385+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gocartours-sandiego/118469/content/",
+      "status": 200,
+      "bytes": 4125,
+      "sha256": "7e22af19383f9a4f63d36e6a6c5574bf046da56c80b1d5787419804b561e2e8d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gocartours-sandiego/118469/structured-description/",
+      "status": 200,
+      "bytes": 2755,
+      "sha256": "9dc3d17350ec878e410930aadd7f0ce3bec530c474e4c2880677fe88dba44488"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gocartours-sandiego/items/118469/",
+      "status": 200,
+      "bytes": 13722,
+      "sha256": "a18f12bf743f965ab2f8547cf8f80c2181d61e00861a4cb2e1c96bacf77032d7"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gocartours-sandiego/price-preview/per-item/v2/?asn=fhdn&item_pks=118469&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1263,
+      "sha256": "7649e82a8b64e933412aa728f898e00452767963d3e75de0409654465defd8f2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gocartours-sandiego/items/118469/ratings/",
+      "status": 200,
+      "bytes": 437,
+      "sha256": "c1dd20636c79dcb91fb3a09b47f89a89e5762303f32fdb530948a865f0318720"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "118469",
+    "provider": "gocartours-sandiego",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/118469/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

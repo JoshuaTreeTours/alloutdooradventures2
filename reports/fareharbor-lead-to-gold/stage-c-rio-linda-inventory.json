@@ -1,0 +1,32 @@
+{
+  "citySlug": "rio-linda",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "eldoradowatersports",
+      "operator": "El Dorado Watersport Rentals",
+      "itemId": "609949",
+      "slug": "jet-ski-florida-special-609949",
+      "publicPath": "/destinations/california/rio-linda/tours/jet-ski-florida-special-609949",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 1399
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

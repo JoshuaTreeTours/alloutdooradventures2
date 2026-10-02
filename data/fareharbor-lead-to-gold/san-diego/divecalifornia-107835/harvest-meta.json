@@ -1,0 +1,47 @@
+{
+  "company": "divecalifornia",
+  "itemId": "107835",
+  "fetchedAt": "2026-10-02T22:40:48.872382+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/divecalifornia/107835/content/",
+      "status": 200,
+      "bytes": 12008,
+      "sha256": "708583d95483b4b1f34248365a3a7bd8b2ee1aaaeae61881b79ac0a406f16886"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/divecalifornia/107835/structured-description/",
+      "status": 200,
+      "bytes": 5773,
+      "sha256": "ae1617d26a65c8fff7f74841a25cb24fbb737d46e845125a72130afb0872b8e0"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/divecalifornia/items/107835/",
+      "status": 200,
+      "bytes": 21292,
+      "sha256": "b483192b2d5a16f0c19c6f0fd448694171a93d05a1bf20abff60f9b8e33c9078"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/divecalifornia/price-preview/per-item/v2/?asn=fhdn&item_pks=107835&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/divecalifornia/items/107835/ratings/",
+      "status": 200,
+      "bytes": 474,
+      "sha256": "2cfc19219dfa61c6dbb25441c90ed8e90970e557501705b8a00f98079721c6d5"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "107835",
+    "provider": "divecalifornia",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

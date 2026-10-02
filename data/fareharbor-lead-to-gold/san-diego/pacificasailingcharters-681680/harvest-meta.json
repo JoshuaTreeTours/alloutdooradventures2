@@ -1,0 +1,48 @@
+{
+  "company": "pacificasailingcharters",
+  "itemId": "681680",
+  "fetchedAt": "2026-10-02T22:41:28.358809+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/pacificasailingcharters/681680/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/pacificasailingcharters/681680/structured-description/",
+      "status": 404,
+      "bytes": 588105,
+      "sha256": "0fe739578cf6b84ec7fe554f58b3d0de8650c14eb2dc4c379b6081ad230c3eeb"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/pacificasailingcharters/items/681680/",
+      "status": 404,
+      "bytes": 588079,
+      "sha256": "c3d2448aea85eae5be39f9b8804c459d9fa1ba0f8e86f40c101b6812258c295b"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/pacificasailingcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=681680&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 147,
+      "sha256": "41c386bf09ec6cc478021b981a25325e18d26aa7f7a8a2b67f0f3c1a93b4ffec"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/pacificasailingcharters/items/681680/ratings/",
+      "status": 404,
+      "bytes": 588095,
+      "sha256": "6b16a9afa196caafd4e4375fdf80a3aa10425087ef50c372399da5f25a53358a"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "681680",
+    "provider": "pacificasailingcharters",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681680/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

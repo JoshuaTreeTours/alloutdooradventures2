@@ -1,0 +1,47 @@
+{
+  "company": "pedalforwardbikes",
+  "itemId": "629572",
+  "fetchedAt": "2026-10-02T22:43:39.920562+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629572/content/",
+      "status": 200,
+      "bytes": 4241,
+      "sha256": "8f5ee9c68884a3e1b1a78e479c905f4ba4266d17fd4625b55352a61f310ba41d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/pedalforwardbikes/629572/structured-description/",
+      "status": 200,
+      "bytes": 3466,
+      "sha256": "46d9ba6c8d388bbb0ed474be2a82c2512bc4cd21af5a8185fda5fdcbabd2dac1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629572/",
+      "status": 200,
+      "bytes": 10381,
+      "sha256": "4ac4c3035ec0b140ce29c7d5ec379aad71482f94ea7b8737f94075bd8b21cb40"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/pedalforwardbikes/price-preview/per-item/v2/?asn=fhdn&item_pks=629572&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/pedalforwardbikes/items/629572/ratings/",
+      "status": 200,
+      "bytes": 461,
+      "sha256": "a3fd86eeb1e727bc1c56de2b91e112302d25ec17006ccae76dc5dc449c055f09"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "629572",
+    "provider": "pedalforwardbikes",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pedalforwardbikes/items/629572/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

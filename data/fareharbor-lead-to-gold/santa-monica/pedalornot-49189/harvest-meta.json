@@ -1,0 +1,48 @@
+{
+  "company": "pedalornot",
+  "itemId": "49189",
+  "fetchedAt": "2026-10-02T22:43:53.636237+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/structured-description/",
+      "status": 404,
+      "bytes": 588077,
+      "sha256": "1a65c11ee5f2d46913b3e69642a0e89c81a2d0a89dca803535481cb1cb66607a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/",
+      "status": 404,
+      "bytes": 588051,
+      "sha256": "ad4a4cbcb7f72d2f64de9e59d52c8846bb5ec21b67c34f45fe2e069618d7c567"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/pedalornot/price-preview/per-item/v2/?asn=fhdn&item_pks=49189&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 134,
+      "sha256": "7085c58a4302fa098d6f9b1b89e6fe38c7ef57e24c8d6ca1d3ad62729d9d0480"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/ratings/",
+      "status": 404,
+      "bytes": 588067,
+      "sha256": "bd27ffb6724f6f98c11a702578bc61536362e3b2ba79282251347722ca69daa5"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "49189",
+    "provider": "pedalornot",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49189/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

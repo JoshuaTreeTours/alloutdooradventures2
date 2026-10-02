@@ -1,0 +1,1276 @@
+[
+  {
+    "itemId": "619647",
+    "company": "lamplightersadventuringsociety",
+    "title": "Tenaya Lake: Family Swimming & Beach Day",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/tenaya-lake-family-swimming-and-beach-day-619647",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/42h1vHTd2hW1LCF00OgS"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Tenaya Lake Picnic Area, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619647/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.837963,
+          "lng": -119.451885
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/AyYJuj3TgKl1PEFdPzCQ",
+      "heroHandle": "AyYJuj3TgKl1PEFdPzCQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/42h1vHTd2hW1LCF00OgS",
+          "handle": "42h1vHTd2hW1LCF00OgS",
+          "pixelSha256": "e38d9375e7a5e68f4b2f9a51cb36e80bb3403264255b23121a5edc6cd8594055",
+          "differenceHashDistanceFromHero": 125,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.2773,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/AyYJuj3TgKl1PEFdPzCQ",
+          "handle": "AyYJuj3TgKl1PEFdPzCQ",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/42h1vHTd2hW1LCF00OgS",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619647",
+      "fetchedAt": "2026-10-02T22:43:43.123557+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619647/content/",
+          "status": 200,
+          "bytes": 2344,
+          "sha256": "6dfbb146bb0acd1c6965fb278dbfff60de16e4681a23f754dba50ec54c41cb53"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619647/structured-description/",
+          "status": 200,
+          "bytes": 1219,
+          "sha256": "794c035325a3434fb7af7af32dbcc5892632a9c89800228b96780e3db5d62c23"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619647/",
+          "status": 200,
+          "bytes": 14971,
+          "sha256": "3f2b0b210c4458b313c85a6a8e6b7220d9ab98ddf796fc965c991b15ee244b37"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619647&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619647/ratings/",
+          "status": 200,
+          "bytes": 610,
+          "sha256": "5f14a3bdc170a28b7293b48a8b9a4f0f9162e6e05ea44e1d8397cdec895b1f6a"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "5 Hours",
+        "meetingAddress": "Tenaya Lake Picnic Area, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.837963,
+        "startLng": -119.451885,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Tenaya Lake"
+        ],
+        "measures": [],
+        "description": "Bring your family, kids, and even grandparents to a sandy beach at Tenaya Lake in Yosemite. Your guide has everything ready, like chairs, towels, beach blankets, games, drinks, and lunch. You can just show up and have fun!",
+        "detailsText": "Client Packing List: • Sun Hat • Sunglasses • Sunscreen • Bug Spray • Swimsuit • Sandals • Raincoat • Warm Layer We will provide towels and everything else you may need! Optional: • We provide water and soda, you can bring anything else you'd like to add to the cooler • Child Life Jacket • Cash, to tip your guide!",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "619647",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619647/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619652",
+    "company": "lamplightersadventuringsociety",
+    "title": "Family Hike to a Hidden Lake & Swim",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/tuolumne-meadows/tours/family-hike-to-a-hidden-lake-and-swim-619652",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KIye3XQqqDjEIOsm2pwk"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Murphy Creek Trailhead, TUOLUMNE MEADOWS, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619652/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "TUOLUMNE MEADOWS",
+      "state": "California",
+      "citySlug": "tuolumne-meadows",
+      "stateSlug": "california",
+      "reason": "TUOLUMNE MEADOWS, California belongs to the TUOLUMNE MEADOWS area via meeting_point",
+      "place": {
+        "city": "TUOLUMNE MEADOWS",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "tuolumne-meadows",
+        "stateSlug": "california",
+        "raw": "TUOLUMNE MEADOWS, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "TUOLUMNE MEADOWS",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "tuolumne-meadows",
+          "stateSlug": "california",
+          "raw": "TUOLUMNE MEADOWS, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "TUOLUMNE MEADOWS",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "tuolumne-meadows",
+          "stateSlug": "california",
+          "raw": "TUOLUMNE MEADOWS, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.834032,
+          "lng": -119.463022
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UdU3Yl9bSm6w2WQLL7pI",
+      "heroHandle": "UdU3Yl9bSm6w2WQLL7pI",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/KIye3XQqqDjEIOsm2pwk",
+          "handle": "KIye3XQqqDjEIOsm2pwk",
+          "pixelSha256": "77bfb56fddd8d00a6f5958c87b818c014979f8aecbc92e05ae349aff72790983",
+          "differenceHashDistanceFromHero": 128,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23909,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/UdU3Yl9bSm6w2WQLL7pI",
+          "handle": "UdU3Yl9bSm6w2WQLL7pI",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/KIye3XQqqDjEIOsm2pwk",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619652",
+      "fetchedAt": "2026-10-02T22:43:43.124797+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619652/content/",
+          "status": 200,
+          "bytes": 2393,
+          "sha256": "0f9da81c706cb19e2d959a3412ecf4fbfb28925b1fd911781f1c56610fb4df0e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619652/structured-description/",
+          "status": 200,
+          "bytes": 1272,
+          "sha256": "7536774eb30b8a52847924a6835f7da22b4cfc81a41d8bb44a4e942af7915926"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619652/",
+          "status": 200,
+          "bytes": 15632,
+          "sha256": "55d63fb6c7c8ce68886c23cae8f86c61276c244f01bb005fd7ff1f5693720942"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619652&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "4dd39e32ad1e0a095d73d2d10c45ad0b16c50a3195b0e71e9298fd7b677c7961"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619652/ratings/",
+          "status": 200,
+          "bytes": 605,
+          "sha256": "b0f5c7c7a1b999b6ce5ab5677b525c07a0a489cb0b7e3a9c03670fb92d143aa1"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "6 Hours",
+        "meetingAddress": "Murphy Creek Trailhead, TUOLUMNE MEADOWS, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "TUOLUMNE MEADOWS",
+        "startProvince": "CA",
+        "startLat": 37.834032,
+        "startLng": -119.463022,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Polly Dome Lake"
+        ],
+        "measures": [],
+        "description": "A guided hike for families and anyone seeking a unique adventure. We'll take you off the beaten path to secluded Polly Dome Lake for swimming and a picnic. This lake is so hidden, it's not on any trails! Explore a side of Yosemite that few tourists ever see.",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottle (1L per person) • Sunscreen • Bug spray • Swimsuit • Small Towel • Raincoat & Warm Layer Optional: • Sandals, to wear at the lake, not for hiking • Child Life Jacket • Cash, to tip your guide! We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "619652",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619652/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619653",
+    "company": "lamplightersadventuringsociety",
+    "title": "Yosemite Valley Walking Tour",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/yosemite-valley-walking-tour-619653",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/b8sChMavRD2vVathskVk"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Kiosk at Yosemite Falls Parking Lot, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619653/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.741524,
+          "lng": -119.601157
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/dlan1L3ISbeZiWicvh6g",
+      "heroHandle": "dlan1L3ISbeZiWicvh6g",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/b8sChMavRD2vVathskVk",
+          "handle": "b8sChMavRD2vVathskVk",
+          "pixelSha256": "05b53b36b9b8e27978d00ab7ec6951ed6b61d1164e6625c737cf83c75a967847",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22988,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/dlan1L3ISbeZiWicvh6g",
+          "handle": "dlan1L3ISbeZiWicvh6g",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/b8sChMavRD2vVathskVk",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619653",
+      "fetchedAt": "2026-10-02T22:43:43.125659+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619653/content/",
+          "status": 200,
+          "bytes": 2208,
+          "sha256": "94f3226cb8fdd6d72b39af8c6856aec1eaa727f9448fd22589a91e8333441288"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619653/structured-description/",
+          "status": 200,
+          "bytes": 1255,
+          "sha256": "8f64b7ae518f467e5eb2e19b73bc05d832fa0112666e485a43377832e5415073"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619653/",
+          "status": 200,
+          "bytes": 13539,
+          "sha256": "6a20cfac810812f3cf44de7a71cc83923822d0ce4ecc2d98f7d0e524f501b7df"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619653&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "33f14b2904e48933f8fc4eea661a59320ac0a0843ed54892428bbd9aa37d7639"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619653/ratings/",
+          "status": 200,
+          "bytes": 593,
+          "sha256": "1124c677ef074cce46998380d90e70464a53182fe8da47a4d152ab2619fbb321"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "6 Hours",
+        "meetingAddress": "Kiosk at Yosemite Falls Parking Lot, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.741524,
+        "startLng": -119.601157,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Yosemite Falls",
+          "Half Dome",
+          "Merced River"
+        ],
+        "measures": [],
+        "description": "This private, guided walk combines a little hiking, some photography, and a dash of history. You'll visit all the highlights of the valley, like Yosemite Falls, Half Dome, spot rock climbers with binoculars, and wade in the Merced River!",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottles (1L) • Sunscreen • Bug Spray • Raincoat • Warm Layer • Swimsuit • Small towel Optional: • Cash, to tip your guide! • Sandals, for wading in the river We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "619653",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619653/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619655",
+    "company": "lamplightersadventuringsociety",
+    "title": "Mist Trail: Vernal and Nevada Falls",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/mist-trail-vernal-and-nevada-falls-619655",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The route also reaches John Muir Trail. Attention also goes to Yosemite's Mist Trail and Nevada Fall, with the guide attaching a story to each stop. Among the places guests actually encounter are Yosemite's Mist Trail, Nevada Fall, and John Muir Trail. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
+    ],
+    "schemaDescription": "A 8-hour walking tour with The Lamplighters Adventuring Society LLC in Yosemite. The walk passes John Muir Trail and Yosemite's Mist Trail.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel.",
+      "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists"
+    ],
+    "highlights": [
+      "8-hour walking tour in Yosemite",
+      "John Muir Trail and Yosemite's Mist Trail"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tne0IUASSdyy4srQgtVy"
+    ],
+    "wordCount": 108,
+    "durationLabel": "8 Hours",
+    "durationIso": "PT8H",
+    "meetingLocation": "Curry Village Shuttle Stop 14, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619655/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.738536,
+          "lng": -119.570389
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Z59q3GcfT1KpBhqMxUYc",
+      "heroHandle": "Z59q3GcfT1KpBhqMxUYc",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/tne0IUASSdyy4srQgtVy",
+          "handle": "tne0IUASSdyy4srQgtVy",
+          "pixelSha256": "aed126233c3d113cee3359264e61ff946a8974a6206976f7c5582d1f6a0fec03",
+          "differenceHashDistanceFromHero": 125,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22984,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/tne0IUASSdyy4srQgtVy",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619655",
+      "fetchedAt": "2026-10-02T22:43:43.128896+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619655/content/",
+          "status": 200,
+          "bytes": 2340,
+          "sha256": "89f06d932ca600e750794c3eed96692e5c47ff1bbd1dc23e8a917ae8add34fad"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619655/structured-description/",
+          "status": 200,
+          "bytes": 1279,
+          "sha256": "f0b1fc6e563cc5d8b8de9521f621cd624498aeeb2592e0bb7ab6c699e9eaf4fd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619655/",
+          "status": 200,
+          "bytes": 16352,
+          "sha256": "470ef00180bfb940aab631bba4302372bc83dc3e3d655e3e0c8ecbddf811419d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619655&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "10eb1356532687b56341e095a6e74e3ac53733a1aaf1f26c2b6d73704bab4e3a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619655/ratings/",
+          "status": 200,
+          "bytes": 599,
+          "sha256": "2d1afc68bf9a1124d476063441c853473002a6d1f6b2d67fc02f662cd4453736"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "8 Hours",
+        "meetingAddress": "Curry Village Shuttle Stop 14, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.738536,
+        "startLng": -119.570389,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Nevada Falls",
+          "Nevada Fall",
+          "John Muir Trail",
+          "Half Dome"
+        ],
+        "measures": [],
+        "description": "A private, guided hike on Yosemite's Mist Trail. Visit thundering Vernal and Nevada Falls, possibly getting soaked by the spray! At the top of Nevada Fall, peek down over the edge. Then, descend on the John Muir Trail, with panoramic views of Half Dome.",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottle (2L per person) • Sunscreen • Bug spray • Raincoat • Warm Layer Optional: • Cash, to tip your guide! We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "619655",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619655/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619659",
+    "company": "lamplightersadventuringsociety",
+    "title": "Backcountry Hike To Cathedral Lakes",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/backcountry-hike-to-cathedral-lakes-619659",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jMTNhTBlRJylV5OmxcQN"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Cathedral Lakes Trailhead, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619659/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.873205,
+          "lng": -119.382649
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/XT3sUjYjSxSxPO4wajDQ",
+      "heroHandle": "XT3sUjYjSxSxPO4wajDQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/jMTNhTBlRJylV5OmxcQN",
+          "handle": "jMTNhTBlRJylV5OmxcQN",
+          "pixelSha256": "4b5d76513ec18319256632de9b0f2f1667e8bd10ad7a15d920cc9a9b09ed930f",
+          "differenceHashDistanceFromHero": 131,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24538,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/jMTNhTBlRJylV5OmxcQN",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619659",
+      "fetchedAt": "2026-10-02T22:43:44.973409+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619659/content/",
+          "status": 200,
+          "bytes": 2243,
+          "sha256": "04d0bc8349b53602e78f0392d7c9afdd499a2e1c9d3baf09e306f5dd4edd9bdd"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619659/structured-description/",
+          "status": 200,
+          "bytes": 1254,
+          "sha256": "54f9a2c5c3694e78e2342f04c9d493eb74c717c51b8794f451d3f0c3d3efd3bd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619659/",
+          "status": 200,
+          "bytes": 14884,
+          "sha256": "51ca3bc9741576134d4fa12ebf81683a504f4f37c00fbb8dfaf3051e6486044e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619659&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "6d9fc57fb7e48c235afee31d0e310ae153811941f3f3d6ac2af1a42b34f0117a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619659/ratings/",
+          "status": 200,
+          "bytes": 599,
+          "sha256": "8061605653ab7995979775f1dc27e06d3e80b9ed686a18ea30e7146cac5ac5d7"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "8 Hours",
+        "meetingAddress": "Cathedral Lakes Trailhead, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.873205,
+        "startLng": -119.382649,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Ditch the crowds and head into Yosemite's serene backcountry. This private, guided day hike is your gateway to alpine lakes, granite peaks, and a secret viewpoint perched on the edge of a cliff. Explore an untouched wilderness few tourists ever see!",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottle (2L per person) • Sunscreen • Bug spray • Raincoat • Warm Layer Optional: • Swimsuit • Small Towel • Cash, to tip your guide! We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "619659",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619659/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619663",
+    "company": "lamplightersadventuringsociety",
+    "title": "Hike to Upper Yosemite Falls",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/hike-to-upper-yosemite-falls-619663",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dNxdOQtMQ5aOAi6rPz5p"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Kiosk at Yosemite Falls Parking Lot, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.741524,
+          "lng": -119.601157
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/esAmf4WQqfyqkHRgTglo",
+      "heroHandle": "esAmf4WQqfyqkHRgTglo",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/dNxdOQtMQ5aOAi6rPz5p",
+          "handle": "dNxdOQtMQ5aOAi6rPz5p",
+          "pixelSha256": "730bd4fcb731c184746424a33a76731ddfbbbcbde9b1b3d2d256a65042cf5b32",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23282,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/esAmf4WQqfyqkHRgTglo",
+          "handle": "esAmf4WQqfyqkHRgTglo",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/dNxdOQtMQ5aOAi6rPz5p",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619663",
+      "fetchedAt": "2026-10-02T22:43:45.093960+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/content/",
+          "status": 200,
+          "bytes": 2213,
+          "sha256": "ceb159b725255d28de8a45545ed9918dc753a6f7d9823bc541fa2761eb449cf7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/structured-description/",
+          "status": 200,
+          "bytes": 1278,
+          "sha256": "8fa7fe433af6cba4dfd021e163a15110dbfc06d1e0eda5176493f141db84fa54"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/",
+          "status": 200,
+          "bytes": 14883,
+          "sha256": "e1303c090f35c2bbf549fb37669eafe355fe5cdb0768df06fe19c4c780c07dea"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619663&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "e75322e35d44a9af499f6883842840810ef18960644a514f0379ac150c504b17"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/ratings/",
+          "status": 200,
+          "bytes": 592,
+          "sha256": "3380143d62d1bf468de3a4c163d79894e80fb6c501d26e3f66c36b143d446cfc"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "8 Hours",
+        "meetingAddress": "Kiosk at Yosemite Falls Parking Lot, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.741524,
+        "startLng": -119.601157,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Yosemite Falls",
+          "North America's"
+        ],
+        "measures": [],
+        "description": "On this private, guided hike to Yosemite Falls, you'll climb from the valley floor to the top of North America's tallest waterfall! This hike blends adventure, beauty, and the thrill of accomplishment in reaching one of Yosemite's most stunning views.",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottle (2L per person) • Sunscreen • Bug spray • Raincoat & Warm Layer Optional: • Cash, to tip your guide! We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "619663",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619663/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "619664",
+    "company": "lamplightersadventuringsociety",
+    "title": "Summit Half Dome in a Day",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/summit-half-dome-in-a-day-619664",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/edQATHFRdirATd6UnDPg"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Shuttle Stop 14, Curry Village, Yosemite, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619664/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": null,
+          "lng": null
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/zdS8WMZ1Q1iQQ3qp2kBg",
+      "heroHandle": "zdS8WMZ1Q1iQQ3qp2kBg",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/edQATHFRdirATd6UnDPg",
+          "handle": "edQATHFRdirATd6UnDPg",
+          "pixelSha256": "471535afb4d83daf1fc86e11f40e52e155a243be6f6d1fb60c328139ddee2904",
+          "differenceHashDistanceFromHero": 132,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30563,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/zdS8WMZ1Q1iQQ3qp2kBg",
+          "handle": "zdS8WMZ1Q1iQQ3qp2kBg",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/edQATHFRdirATd6UnDPg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/tuolumne-meadows/lamplightersadventuringsociety-619664",
+      "fetchedAt": "2026-10-02T22:43:45.329174+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619664/content/",
+          "status": 200,
+          "bytes": 3033,
+          "sha256": "035347928f57799fbfe7858db02b1182e28285be77d1d26131e6ab444cfbca6d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619664/structured-description/",
+          "status": 200,
+          "bytes": 1480,
+          "sha256": "0dd96b81588f06157d112ee23c24f9bd8e3ff1d6d85aa9e2781b384278d72045"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619664/",
+          "status": 200,
+          "bytes": 18133,
+          "sha256": "328e46c079280abd7dc7303482a79828e5b30ee1b58a25d67f35e0dfbc7262bb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619664&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 539,
+          "sha256": "04203cc46a9f523b3d340376bec7c0f9811d1ef55df0e3b36d15910d920950a6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619664/ratings/",
+          "status": 200,
+          "bytes": 589,
+          "sha256": "1fda45adceaf92c05d9fb5709a07ef38f212c666e5f177c8ac3122c5bd28b63d"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "12-15 Hours",
+        "meetingAddress": "Shuttle Stop 14, Curry Village, Yosemite, CA",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Half Dome"
+        ],
+        "measures": [],
+        "description": "On this guided hike, you'll conquer the heart-pounding Half Dome cables and earn breathtaking views at the summit. This is a bucket-list achievement!",
+        "detailsText": "Packing List: • Lunch • Snacks & Electrolytes • Sun Hat • Sunglasses • Water Bottle (3L per person, but you can start the hike with just one full) • Sunscreen • Bug spray • Raincoat & Warm Layer • Headlamp (We will start before sunrise) For the Half Dome Cables • Gloves: Any kind of work, gardening or climbing gloves to help you grip the cable. • Boots or Trail Running Shoes: The cable climb is very steep and slippery. Your shoes must have great traction. No sneakers. Optional: • Cash, to tip your guide We will provide backpacks, trekking poles, water filter, & first aid kit",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "619664",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619664/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "company": "netzeroexpeditions",
+  "itemId": "264188",
+  "fetchedAt": "2026-10-02T22:41:23.445246+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/netzeroexpeditions/264188/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/netzeroexpeditions/264188/structured-description/",
+      "status": 200,
+      "bytes": 4529,
+      "sha256": "4b66ee7a8e614c2d9fded3fe1d34f59abb59d861c468a339820c913315143cfa"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/netzeroexpeditions/items/264188/",
+      "status": 200,
+      "bytes": 15071,
+      "sha256": "3326ebaa154f5727bb8c9f7ed9a9befa1bd8e21865c7c24374127023717e1da8"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/netzeroexpeditions/price-preview/per-item/v2/?asn=fhdn&item_pks=264188&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/netzeroexpeditions/items/264188/ratings/",
+      "status": 200,
+      "bytes": 516,
+      "sha256": "aa6c557b09f17833f0a6e998502df21f76563545f791bb1bfc038149e0c95991"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "264188",
+    "provider": "netzeroexpeditions",
+    "bookingUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/264188/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

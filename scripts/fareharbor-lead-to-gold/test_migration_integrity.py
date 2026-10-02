@@ -89,6 +89,23 @@ class GeographyRulesTest(unittest.TestCase):
         self.assertEqual(result["citySlug"], "chicago")
         self.assertEqual(result["stateSlug"], "illinois")
 
+    def test_marina_del_rey_address_keeps_the_full_city_name(self):
+        expected = {
+            "city": "Marina del Rey",
+            "state": "California",
+            "citySlug": "marina-del-rey",
+            "stateSlug": "california",
+        }
+        signals = collect_place_signals(
+            meeting="13717 Fiji Way Marina del Rey, CA 90292",
+        )
+        result = assess_geography(
+            expected=expected, catalog_destinations=CATALOG, signals=signals
+        )
+        self.assertEqual(result["disposition"], "keep")
+        self.assertEqual(result["citySlug"], "marina-del-rey")
+        self.assertFalse(result["conflictsWithExpected"])
+
     def test_miami_beach_meeting_point_moves_off_chicago_bucket(self):
         chicago = {
             "city": "Chicago",

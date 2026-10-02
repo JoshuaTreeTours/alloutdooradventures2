@@ -1,0 +1,32 @@
+{
+  "citySlug": "burney",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "burneyfallsmarina",
+      "operator": "Burney Falls Marina",
+      "itemId": "644915",
+      "slug": "canoe-rentals-644915",
+      "publicPath": "/destinations/california/burney/tours/canoe-rentals-644915",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1710,
+        "structuredStatus": 200,
+        "structuredBytes": 1401
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

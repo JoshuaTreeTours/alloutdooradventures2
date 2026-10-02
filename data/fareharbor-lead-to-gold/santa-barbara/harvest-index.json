@@ -1,0 +1,147 @@
+{
+  "fetchedAt": "2026-10-02T22:44:06.914436+00:00",
+  "total": 3,
+  "products": [
+    {
+      "company": "maddogsenglishmen",
+      "itemId": "464867",
+      "fetchedAt": "2026-10-02T22:44:04.388067+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/maddogsenglishmen/464867/content/",
+          "status": 200,
+          "bytes": 4156,
+          "sha256": "65d5df71331ecd896966008c801bd92f5c9bdfc34acf94129e414678734a4ee7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/maddogsenglishmen/464867/structured-description/",
+          "status": 200,
+          "bytes": 1547,
+          "sha256": "1beb54339f0fbba4c2458c070af2d7f060add20bd5d78c771247507efcd6c42d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/maddogsenglishmen/items/464867/",
+          "status": 200,
+          "bytes": 23175,
+          "sha256": "ccf8d6902a673a6279b77400ffd49c2f77bb08d69464a206800e2134dd32eefb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/maddogsenglishmen/price-preview/per-item/v2/?asn=fhdn&item_pks=464867&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/maddogsenglishmen/items/464867/ratings/",
+          "status": 200,
+          "bytes": 676,
+          "sha256": "3f0a9a76d28d6d9c60b8114513317eaa1ed8b0627176fe72ecd0e9eb8e9070f5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "464867",
+        "provider": "maddogsenglishmen",
+        "bookingUrl": "https://fareharbor.com/embeds/book/maddogsenglishmen/items/464867/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "rootedvinetours",
+      "itemId": "5525",
+      "fetchedAt": "2026-10-02T22:44:04.388816+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/rootedvinetours/5525/content/",
+          "status": 200,
+          "bytes": 1332,
+          "sha256": "5c91b12366e418e7c812c14736f23f50f8681420996848f307cd289c47cc8b9b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/rootedvinetours/5525/structured-description/",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "cd499b6b28194eb182771533226c6abe5e2d62033995bd458bb0832cbbfdf57c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/rootedvinetours/items/5525/",
+          "status": 200,
+          "bytes": 8060,
+          "sha256": "f480fe5215ab089131d92c273f2cca62ec76e65c1c0f7c8c2ff0f5b2f7e72d7e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/rootedvinetours/price-preview/per-item/v2/?asn=fhdn&item_pks=5525&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 704,
+          "sha256": "7bc90f34663a6a86affb8fd8edc497f855ba041b9072d7191c0f7ab65e466905"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/rootedvinetours/items/5525/ratings/",
+          "status": 200,
+          "bytes": 546,
+          "sha256": "fb154b014fda4d07212ae35602c665c7caa7b29e16e88441ed1585b1db74fd69"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "5525",
+        "provider": "rootedvinetours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/5525/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "tastesantabarbarafoodtours",
+      "itemId": "284350",
+      "fetchedAt": "2026-10-02T22:44:04.389389+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/tastesantabarbarafoodtours/284350/content/",
+          "status": 200,
+          "bytes": 1966,
+          "sha256": "37481294b8583019f5242541be96fdf531207486994c22e54ee8a4cfe1d6c683"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/tastesantabarbarafoodtours/284350/structured-description/",
+          "status": 200,
+          "bytes": 1221,
+          "sha256": "e65deb53e373074d836d753223871b3eeb832800dba905bc7658c82841337c31"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/tastesantabarbarafoodtours/items/284350/",
+          "status": 200,
+          "bytes": 12825,
+          "sha256": "84ceb6f2536cb3fe01dcd7560fe0bd34bda3e25ecef266a7c614bb1e60495fef"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/tastesantabarbarafoodtours/price-preview/per-item/v2/?asn=fhdn&item_pks=284350&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/tastesantabarbarafoodtours/items/284350/ratings/",
+          "status": 200,
+          "bytes": 674,
+          "sha256": "aaa4370d366fe21d7d0a19f2414c70b1eccdc8742eda24d3bf536dc521453e18"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "284350",
+        "provider": "tastesantabarbarafoodtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/284350/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "citySlug": "sonoma",
+  "total": 1,
+  "active": 0,
+  "terminal": 1,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 0,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "pushpakmotors",
+      "operator": "PushPak Motors",
+      "itemId": "579429",
+      "slug": "sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429",
+      "publicPath": "/destinations/california/sonoma/tours/sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588085
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

@@ -1,0 +1,3308 @@
+{
+  "fetchedAt": "2026-10-02T22:42:55.112135+00:00",
+  "citySlug": "coronado",
+  "totalBostonLegacy": 48,
+  "total": 48,
+  "active": 48,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 9,
+  "priceNotFound": 39,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [
+    "339050",
+    "437843",
+    "528464",
+    "418569",
+    "418666",
+    "418688",
+    "418874",
+    "418883",
+    "419256",
+    "419398",
+    "419404",
+    "419502",
+    "419503",
+    "419627",
+    "419629",
+    "419639",
+    "419640",
+    "419658",
+    "419707",
+    "419951",
+    "420173",
+    "423717",
+    "424572",
+    "424591",
+    "424599",
+    "425335",
+    "426233",
+    "466554",
+    "528181",
+    "529512",
+    "607180",
+    "638904",
+    "639205",
+    "665947",
+    "667594",
+    "671123",
+    "679820",
+    "690094",
+    "690112"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "339050",
+      "company": "coronadogolfcars",
+      "catalogId": "coronado-golf-cars-339050",
+      "slug": "delivery---4-passenger-multi-day-339050",
+      "title": "DELIVERY - 4 Passenger (multi-day)",
+      "operator": "Coronado Golf Cars",
+      "publicPath": "/destinations/california/coronado/tours/delivery---4-passenger-multi-day-339050",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/339050/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:26.880586+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/coronadogolfcars/339050/content/",
+          "status": 200,
+          "bytes": 2794,
+          "sha256": "44ecadc9dd10f6b03e982c4715ba9d94926d0cb9538ce512c1be55974912b12f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/coronadogolfcars/339050/structured-description/",
+          "status": 200,
+          "bytes": 1626,
+          "sha256": "5ed2b59f9de6d39d3fd17529d0a158c9f6ddab19a8ef128ce13ea69d6a00b58b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/coronadogolfcars/items/339050/",
+          "status": 200,
+          "bytes": 8770,
+          "sha256": "9769cf188a3cfc65c294e34bbc438331a183efe04c7040ac169b52d0957bac86"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/coronadogolfcars/price-preview/per-item/v2/?asn=fhdn&item_pks=339050&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/coronadogolfcars/items/339050/ratings/",
+          "status": 200,
+          "bytes": 534,
+          "sha256": "f41747249165473abe8d6201574134313140537b32957435fe4148e7beb2338e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "339050",
+        "provider": "coronadogolfcars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/339050/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "580033",
+      "company": "hoteldelcoronado",
+      "catalogId": "hotel-del-coronado-580033",
+      "slug": "skating-by-the-sea-580033",
+      "title": "Skating by the Sea",
+      "operator": "Hotel Del Coronado",
+      "publicPath": "/destinations/california/coronado/tours/skating-by-the-sea-580033",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hoteldelcoronado/items/580033/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:26.881514+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hoteldelcoronado/580033/content/",
+          "status": 200,
+          "bytes": 7561,
+          "sha256": "61165f905d5706f63cc185d6b53bc55f2689a9f6170abd9630fec47df76b813f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hoteldelcoronado/580033/structured-description/",
+          "status": 200,
+          "bytes": 5841,
+          "sha256": "10e8233fb1e7274c99341b1af35000fd53e5e17f9baa8e4371e922bd819522c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hoteldelcoronado/items/580033/",
+          "status": 200,
+          "bytes": 12579,
+          "sha256": "34e41f635a0b9a878eab885999f656d4dc4214457ea72714590c05c0257803bf"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hoteldelcoronado/price-preview/per-item/v2/?asn=fhdn&item_pks=580033&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 587,
+          "sha256": "e9e2829e14c6c3079869dbb10b63ad8fb12cd5d8956ad5124db55fdaf041bda1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hoteldelcoronado/items/580033/ratings/",
+          "status": 200,
+          "bytes": 480,
+          "sha256": "09e6206b73e02fac069e6c6a435700e260e13726b3286927a7d365d78e4f7ca0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "580033",
+        "provider": "hoteldelcoronado",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hoteldelcoronado/items/580033/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 37.1,
+        "currency": "USD",
+        "singular": "Ice Skating Ticket"
+      }
+    },
+    {
+      "itemId": "454816",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-454816",
+      "slug": "private-surf-lesson-454816",
+      "title": "Private Surf Lesson",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/private-surf-lesson-454816",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454816/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:26.881939+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454816/content/",
+          "status": 200,
+          "bytes": 12513,
+          "sha256": "7b2b0dddbf255f81d1e6f4a507880d39a4df9d0d07d78b51e4ab4d1b29c0b5e9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454816/structured-description/",
+          "status": 200,
+          "bytes": 10810,
+          "sha256": "541fea732d167bb75f9c34de4787add276dfd063f223424a5bbc52908c3b2271"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454816/",
+          "status": 200,
+          "bytes": 11592,
+          "sha256": "d34ca01aac93756d5a97b2d0313119e9aa4b3b2bcd37f7848a688c0d5e69a816"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=454816&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 638,
+          "sha256": "b1fb598eff20bb97717891d4af3233a31be50ce2444b4d85e6299f7feff9c508"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454816/ratings/",
+          "status": 200,
+          "bytes": 463,
+          "sha256": "ec4a417cf429eb7db7410c68d7e5f97dd9b9643c1bf7c0b5bc79b5241e51019b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "454816",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454816/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 295.74,
+        "currency": "USD",
+        "singular": "Children"
+      }
+    },
+    {
+      "itemId": "454824",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-454824",
+      "slug": "ohana-surf-lesson-454824",
+      "title": "Ohana Surf Lesson",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/ohana-surf-lesson-454824",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454824/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:26.882459+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454824/content/",
+          "status": 200,
+          "bytes": 11562,
+          "sha256": "3c53d0db5adebbca737afacdfd0812dd2c44430f81776d6d18d6109fc6c52e48"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454824/structured-description/",
+          "status": 200,
+          "bytes": 9874,
+          "sha256": "78cfbf84e3f9044ae3efb16ad87ff728ed99bc4d64a51f6534e78feb8298bba9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454824/",
+          "status": 200,
+          "bytes": 11505,
+          "sha256": "e8a71b67ff271838e08d6d965b245ec67c870d78bad146bc8483c13cc0e51da7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=454824&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 822,
+          "sha256": "03f8a4054d7393d994f3f5751c48bbd042794894d1876c2b358c61f172bec92c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454824/ratings/",
+          "status": 200,
+          "bytes": 461,
+          "sha256": "8cb306e2ed598b6455dd5e0fab844cf87110748d7183d5b6176fa28e0cba9a9d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "454824",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454824/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 189.74,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "454829",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-454829",
+      "slug": "group-surf-lesson-454829",
+      "title": "Group Surf Lesson",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/group-surf-lesson-454829",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454829/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:28.826115+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454829/content/",
+          "status": 200,
+          "bytes": 11863,
+          "sha256": "e9022b654745384ed76562426982534295b62c05f159fd009d7b459e7a64e2b3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/454829/structured-description/",
+          "status": 200,
+          "bytes": 9871,
+          "sha256": "f5edf419e0e895e9f5eaf9976087f18be1e6c9886229b82c24feaf9300e434f7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454829/",
+          "status": 200,
+          "bytes": 11790,
+          "sha256": "b814433d38df0da5357ecea058654377ec079202cd5a7ce336cc349286c960a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=454829&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "441f7fb4e80c0cb7e6a3111a3c1dd1084818c2d0aa2e932e2717223e8c3777ff"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/454829/ratings/",
+          "status": 200,
+          "bytes": 462,
+          "sha256": "98e49c16c087958fb762996868e492d97a470767facc1b735502ba9fbe13e522"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "454829",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454829/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 157.94,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "644836",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-644836",
+      "slug": "group-coronado-island-e-bike-tour-644836",
+      "title": "Group Coronado Island E-Bike Tour",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/group-coronado-island-e-bike-tour-644836",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/644836/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:28.996391+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/644836/content/",
+          "status": 200,
+          "bytes": 5718,
+          "sha256": "8bca32b6573fab5a8e15fbbf6436d7b46a21440c426004b910a5f00237229bcf"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/644836/structured-description/",
+          "status": 200,
+          "bytes": 4759,
+          "sha256": "c9aa483cd1c6fedab03b13be5f1683fa4294ccf03e23e338148a8e4fc8b1e2f1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/644836/",
+          "status": 200,
+          "bytes": 11171,
+          "sha256": "c344a0c0fbbdb66dc1510fda774bac2cb2dcda7d828f8d852bf5d1faad6341d7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=644836&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "7421a76e0ee7ea51fe32190c9e3530127fbd19dac7a2e9fe87fd1fa398cdca8f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/644836/ratings/",
+          "status": 200,
+          "bytes": 477,
+          "sha256": "ccfcbd48717483825b9c533c5352edccbb8824cef3ea682130fe6fb7689f4472"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "644836",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/644836/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 126.14,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "648512",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-648512",
+      "slug": "del-club-members-daily-group-surf-lesson-648512",
+      "title": "Del Club Members Daily Group Surf Lesson",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/del-club-members-daily-group-surf-lesson-648512",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/648512/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:29.052833+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/648512/content/",
+          "status": 200,
+          "bytes": 11476,
+          "sha256": "e47d41a353c7e51a136b9461160ce63825a1cd03401c9bcd3549bc1631de5500"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/648512/structured-description/",
+          "status": 200,
+          "bytes": 9500,
+          "sha256": "c0a8a8d28017cd16136900b4904fc443c551e477ece14f5c50a886a53fc769e9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/648512/",
+          "status": 200,
+          "bytes": 11597,
+          "sha256": "40dd516a116f7d5a32948351617f5b9b064297f1ace7fc13aa79ae0bda9671c9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=648512&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 638,
+          "sha256": "ae3b6933363fe581a22c0f6694e1363a2aa174749b87044b60dfab3943fdeaf8"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/648512/ratings/",
+          "status": 200,
+          "bytes": 484,
+          "sha256": "5d5edfe203be90a9a3272cb81364f2167659ec5c90348bb6cdec8c312c684af3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "648512",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/648512/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 132.5,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "654219",
+      "company": "jobsurfexperience-sd",
+      "catalogId": "jamie-obrien-surf-experience---san-diego-654219",
+      "slug": "private-coronado-island-e-bike-tour-654219",
+      "title": "Private Coronado Island E-Bike Tour",
+      "operator": "Jamie O’Brien Surf Experience - San Diego",
+      "publicPath": "/destinations/california/coronado/tours/private-coronado-island-e-bike-tour-654219",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/654219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:29.153246+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/654219/content/",
+          "status": 200,
+          "bytes": 7140,
+          "sha256": "362a282fe06f3c47e65349251e80debbb51a6cffcfef7dba5bc4c31aea687501"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/654219/structured-description/",
+          "status": 200,
+          "bytes": 6088,
+          "sha256": "5e6592356c9662e8b16023f4cdaa05f5a5d70a66a863b23d1d77a4469cab4c18"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/654219/",
+          "status": 200,
+          "bytes": 11269,
+          "sha256": "fc8199142c9930888c17194e69ea0c7bf4facf5f177b97ec8484842f33a9b20e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=654219&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "65f11c4e7c76f6cbe5afea7999145bc3f448dc636e59d68d12571ef20a883c5c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/654219/ratings/",
+          "status": 200,
+          "bytes": 479,
+          "sha256": "aba3fb17350da8a21c84b488b0b3c667eaef47a8313c80382e1634d2c52db9f8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "654219",
+        "provider": "jobsurfexperience-sd",
+        "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/654219/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 179.14,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "437843",
+      "company": "paradisetriketours",
+      "catalogId": "paradise-trike-tours-437843",
+      "slug": "coronado-electric-bike-tour-437843",
+      "title": "Coronado Electric Bike Tour",
+      "operator": "Paradise Trike Tours",
+      "publicPath": "/destinations/california/coronado/tours/coronado-electric-bike-tour-437843",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/437843/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:31.092026+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/paradisetriketours/437843/content/",
+          "status": 200,
+          "bytes": 2327,
+          "sha256": "474bbef15aca432b376f8d95ba801f6204fae438ab52d768c4d35e860baeb983"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/paradisetriketours/437843/structured-description/",
+          "status": 200,
+          "bytes": 1724,
+          "sha256": "9d3034786633d83746b1b18e88b7315acce583be3cc34e68c7377ebd9ef20f3f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/paradisetriketours/items/437843/",
+          "status": 200,
+          "bytes": 10888,
+          "sha256": "c83efa1cb70e2788e822cdf4c9044b520ffbd5694550c6f08041614e0687b2ab"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/paradisetriketours/price-preview/per-item/v2/?asn=fhdn&item_pks=437843&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/paradisetriketours/items/437843/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "f8f5169607204a6e6acf96878ea681f65981b41234042456b3b52a880065c20d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "437843",
+        "provider": "paradisetriketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/437843/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "471073",
+      "company": "sandiego-jetskirentals",
+      "catalogId": "san-diego-jet-ski-rentals-471073",
+      "slug": "jet-ski-rentals-471073",
+      "title": "Jet Ski Rentals",
+      "operator": "San Diego Jet Ski Rentals",
+      "publicPath": "/destinations/california/coronado/tours/jet-ski-rentals-471073",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/471073/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/RCHpN1muTHaQFchZfvs6",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/RCHpN1muTHaQFchZfvs6"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:31.277769+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/471073/content/",
+          "status": 200,
+          "bytes": 2913,
+          "sha256": "7ac4b3a6f66e3d2a993be54e5d29536e3e861e124ed69e04c57e5b84b6172893"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/471073/structured-description/",
+          "status": 200,
+          "bytes": 1905,
+          "sha256": "c823938f63018425acba6b559694e75309ab166b71166bd08973581dc886cddc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/471073/",
+          "status": 200,
+          "bytes": 13268,
+          "sha256": "28869da06bfd5332d58a4ae3a92814956332df56a0484050ad327daaa3cc4ba7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sandiego-jetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=471073&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 545,
+          "sha256": "18247668d67210858486f7fb45387866eef2dcb3934319013fdd8573eaf6779b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/471073/ratings/",
+          "status": 200,
+          "bytes": 540,
+          "sha256": "8d48a7212577593255e5e336f1844ae80123ddde98a44d2664efbc5fe462dce4"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "471073",
+        "provider": "sandiego-jetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/471073/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 134.62,
+        "currency": "USD",
+        "singular": "One Hour Rental"
+      }
+    },
+    {
+      "itemId": "527560",
+      "company": "sandiego-jetskirentals",
+      "catalogId": "san-diego-jet-ski-rentals-527560",
+      "slug": "speed-boat-rental-527560",
+      "title": "Speed Boat Rental",
+      "operator": "San Diego Jet Ski Rentals",
+      "publicPath": "/destinations/california/coronado/tours/speed-boat-rental-527560",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/527560/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/wjKZQvjS9OD7SG3BQNQX",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/wjKZQvjS9OD7SG3BQNQX"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:31.331221+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/527560/content/",
+          "status": 200,
+          "bytes": 2782,
+          "sha256": "750d7f44e0d74948b8f6b4aa1b988dea2d1392f8985d86e6676a03f498948c8d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/527560/structured-description/",
+          "status": 200,
+          "bytes": 1814,
+          "sha256": "312e9a77b57246661105460509af0934bc04b98ffb0a1343f8eed6489af621f3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/527560/",
+          "status": 200,
+          "bytes": 11908,
+          "sha256": "ca1122d94c9cedfb3e9299fdbe9535cc2ddd3bbe5b19abbe394dcb65b68e6ea4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sandiego-jetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=527560&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 545,
+          "sha256": "239b8c1ba4f82199fe28055844aa6518374093d8ac3d4a735c8fb87e86f289dd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/527560/ratings/",
+          "status": 200,
+          "bytes": 542,
+          "sha256": "434ed1697dfe88062f270355fdfaf5ae0e1ba60ab478274e55dba5393f1d1ce9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "527560",
+        "provider": "sandiego-jetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/527560/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 243.8,
+        "currency": "USD",
+        "singular": "One Hour Rental"
+      }
+    },
+    {
+      "itemId": "528464",
+      "company": "sandiego-jetskirentals",
+      "catalogId": "san-diego-jet-ski-rentals-528464",
+      "slug": "pontoon-boat-rental-528464",
+      "title": "Pontoon Boat Rental",
+      "operator": "San Diego Jet Ski Rentals",
+      "publicPath": "/destinations/california/coronado/tours/pontoon-boat-rental-528464",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/528464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/4E1YU1GqSK4mSyKy9uY0",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/4E1YU1GqSK4mSyKy9uY0"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:31.524856+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/528464/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/528464/structured-description/",
+          "status": 200,
+          "bytes": 1807,
+          "sha256": "763ed30c79037ce0ba5a445bf8bf4134eec940aa8b757fe347c2f2cc492498a1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/528464/",
+          "status": 200,
+          "bytes": 8252,
+          "sha256": "3bd21e4bc76db4f716dc57ad84f17ee3fc3c265d54a99fe84ecc35880ecdf8e6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sandiego-jetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=528464&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/528464/ratings/",
+          "status": 200,
+          "bytes": 543,
+          "sha256": "ce2d6436a3a421c9bd9905a0532deb4786532e5271c5f3a81dae948f5b1fdf03"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "528464",
+        "provider": "sandiego-jetskirentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/528464/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "418569",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-418569",
+      "slug": "sylvan-18---coronado-rental-418569",
+      "title": "Sylvan 18 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/sylvan-18---coronado-rental-418569",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418569/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:32.872408+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418569/content/",
+          "status": 200,
+          "bytes": 2094,
+          "sha256": "72686e81b873095e4ad41840ed646ceb04d258c35d8c0bb2eebc55b48de8aded"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418569/structured-description/",
+          "status": 200,
+          "bytes": 1544,
+          "sha256": "74764b771f11d4817821c35b9f11d2817b4d956842c18dcfc372e058daa3350e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418569/",
+          "status": 200,
+          "bytes": 11050,
+          "sha256": "d79c5c286359c565fc5fe426813b6b4cb473b74b360c92c36dcd732194d9ae39"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=418569&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418569/ratings/",
+          "status": 200,
+          "bytes": 498,
+          "sha256": "7012653920fd5df25237d0926e4b73f1d4d0827ac6ae40f0e3108a42f2aae41e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "418569",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418569/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "418666",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-418666",
+      "slug": "bayliner-19---coronado-rental-418666",
+      "title": "Bayliner 19 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/bayliner-19---coronado-rental-418666",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418666/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:33.300591+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418666/content/",
+          "status": 200,
+          "bytes": 2410,
+          "sha256": "c8828b19cb864a16b014227ddf9299c1d3b6aeae1c58977f696b1883f5303997"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418666/structured-description/",
+          "status": 200,
+          "bytes": 2174,
+          "sha256": "3e7754f1583bc56007a85805b36b5f7716406ba3e047ce120e44c38033f621cf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418666/",
+          "status": 200,
+          "bytes": 11117,
+          "sha256": "fb606542c67cd571cb51fbad36c8c832c5aea1cfd05532035351099b5bbec5e4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=418666&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418666/ratings/",
+          "status": 200,
+          "bytes": 500,
+          "sha256": "0a4fa95b77692a3647e71dc770af69c3b6676d321b7cef3587d7d8c66afe8d63"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "418666",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418666/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "418688",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-418688",
+      "slug": "hurricane-20---coronado-rental-418688",
+      "title": "Hurricane 20 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/hurricane-20---coronado-rental-418688",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418688/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:33.355101+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418688/content/",
+          "status": 200,
+          "bytes": 2291,
+          "sha256": "c662fc4dc08c0d94e097ff47b89009595987a3c713c2fd0f10e750058efedde4"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418688/structured-description/",
+          "status": 200,
+          "bytes": 1741,
+          "sha256": "76cd2f80e56476e4b21da94467b891df88eea008cbe7dad20ac426757a10ec02"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418688/",
+          "status": 200,
+          "bytes": 11324,
+          "sha256": "73e76525c29ceb4552e484c0ee1b1cba117e47493d1d3ab64252307e256f5288"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=418688&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418688/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "feb1323a9307150288786829e785fabfbbae742d485d4d318b542e338d5e7146"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "418688",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418688/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "418874",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-418874",
+      "slug": "catalina-250---coronado-rental-418874",
+      "title": "Catalina 250 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/catalina-250---coronado-rental-418874",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418874/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:33.409966+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418874/content/",
+          "status": 200,
+          "bytes": 2401,
+          "sha256": "536e315bb915bbd767ab3d43aab8dd3148ea1701d1e3354922ac5321579fb7fb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418874/structured-description/",
+          "status": 200,
+          "bytes": 2072,
+          "sha256": "4e0abf4d7da0181a3e3378c2b350e2c7df98b6946c42a446f06143ec4c6552e0"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418874/",
+          "status": 200,
+          "bytes": 11068,
+          "sha256": "28d91a0e2155ad6d90e6aee35fc7fc83b505d6581eb66a68ec5a92759ea9132b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=418874&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418874/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "bb85713bf5832ba00c3468674c230cf5f2a7f6523d0aa8edd9a226f50e8d5794"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "418874",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418874/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "418883",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-418883",
+      "slug": "tritoon-25---coronado-rental-418883",
+      "title": "Tritoon 25 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/tritoon-25---coronado-rental-418883",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418883/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:35.435389+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418883/content/",
+          "status": 200,
+          "bytes": 2428,
+          "sha256": "7f39ebf07519f0b36b307b13cd7937d40f676b7cb14d350fc9bb3ec1e53c171a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/418883/structured-description/",
+          "status": 200,
+          "bytes": 2234,
+          "sha256": "b706cee4d66104041dbf5352dfc1e5c8ec491bcd53162e15dfa3a0649542ec0f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418883/",
+          "status": 200,
+          "bytes": 11073,
+          "sha256": "824a117ce2be8e5121937b4d8ceedb5b8b00dc734adab3eec8596f25b0cf7ead"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=418883&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/418883/ratings/",
+          "status": 200,
+          "bytes": 499,
+          "sha256": "76a4a80e5b3266f95bc5603b0163ad858a1f7cf5f8981fe46c40af80152bfa4e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "418883",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418883/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419256",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419256",
+      "slug": "capri-22---coronado-rental-419256",
+      "title": "Capri 22 - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/capri-22---coronado-rental-419256",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419256/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:35.491280+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419256/content/",
+          "status": 200,
+          "bytes": 2401,
+          "sha256": "253bee0bdf6ee6cad78fbb54a5ffee047f49879aa12d0712837f7aafe860c0f3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419256/structured-description/",
+          "status": 200,
+          "bytes": 2051,
+          "sha256": "215f9c2b889837b87b930674092b1a211716169a911989081933913abdbbe941"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419256/",
+          "status": 200,
+          "bytes": 11073,
+          "sha256": "8d5b3a028ef01c4e9c31dda6f17d3cb3545e3c4bcc8829b72e4aa52c4bb7862f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419256&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419256/ratings/",
+          "status": 200,
+          "bytes": 497,
+          "sha256": "c1ddbf8d366af15268282eb1576c6964787d343018c7bb0e34c976dc9c05e952"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419256",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419256/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419398",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419398",
+      "slug": "catalina-320---coronado-bareboat-rental-419398",
+      "title": "Catalina 320 - Coronado Bareboat Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/catalina-320---coronado-bareboat-rental-419398",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:35.560703+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419398/content/",
+          "status": 200,
+          "bytes": 2707,
+          "sha256": "27c04644155a5b455d6d65b59798793b39d54f7b3a1fcf99074b9940de8c2b4a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419398/structured-description/",
+          "status": 200,
+          "bytes": 1783,
+          "sha256": "f9f974e5d15923a5e91297128b7bc9195d6fa1b2767539943dc354efa0e414f7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419398/",
+          "status": 200,
+          "bytes": 11442,
+          "sha256": "c5078e2b13bb61d69662ee57ff037a25df04460f42563a12076241f1e3cd1e80"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419398&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419398/ratings/",
+          "status": 200,
+          "bytes": 511,
+          "sha256": "d0d60a9a309046474bce0df0bb2a0b966c398adb765beb6f89e1eafc1cad12dd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419398",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419398/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419404",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419404",
+      "slug": "catalina-320---coronado-captain-charter-419404",
+      "title": "Catalina 320 - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/catalina-320---coronado-captain-charter-419404",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:35.614813+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419404/content/",
+          "status": 200,
+          "bytes": 2364,
+          "sha256": "ea71f2083dece5776026c36297dc41fe4186406b4c0dc3941ff7328b2b346988"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419404/structured-description/",
+          "status": 200,
+          "bytes": 1679,
+          "sha256": "51512edb22b519062d8f810c6a80b913f1cdfc2e7135c545787cbf784ff2292f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419404/",
+          "status": 200,
+          "bytes": 11523,
+          "sha256": "6ead875fc9a705d6d8410f1389135147a4c19ab7a2443090fee3aead16e962e8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419404&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419404/ratings/",
+          "status": 200,
+          "bytes": 511,
+          "sha256": "ef18a0c49f320b2f15dcbff8fb961c0a886ac7768ceed1557f501a30ea73a69e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419404",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419404/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419502",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419502",
+      "slug": "catalina-270---coronado-captain-charter-419502",
+      "title": "Catalina 270 - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/catalina-270---coronado-captain-charter-419502",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/zRohrQFiS6uLxiDL37fI",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/zRohrQFiS6uLxiDL37fI"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:37.589105+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419502/content/",
+          "status": 200,
+          "bytes": 2283,
+          "sha256": "bd45ddb997b5076280afbd14059780b17d0b81ad73d87c6ba8f6a5dddd623913"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419502/structured-description/",
+          "status": 200,
+          "bytes": 1574,
+          "sha256": "991a4fc4567b88d0cda28d60934f4c64f85e119b7c7d38aef529e8d5875e816b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419502/",
+          "status": 200,
+          "bytes": 11579,
+          "sha256": "e7904ca5ae01d5923d0f56469cdad96d1d5bd65d9643a6f3ff9ada69edd28c91"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419502&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419502/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "b2a76ce6d08e97479b707e0e460ee77ce75e7794c532989180579571102825d7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419502",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419502/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419503",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419503",
+      "slug": "catalina-270---coronado-bareboat-rental-419503",
+      "title": "Catalina 270 - Coronado Bareboat Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/catalina-270---coronado-bareboat-rental-419503",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:37.637202+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419503/content/",
+          "status": 200,
+          "bytes": 2653,
+          "sha256": "2923749f25bd96d58410b5c4dea529714ac023710a23636fa4964c71525ce071"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419503/structured-description/",
+          "status": 200,
+          "bytes": 1728,
+          "sha256": "24426e401357182c795e786a87877fc30c7ed8f7e2d652f9aa7532dc161e1275"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419503/",
+          "status": 200,
+          "bytes": 11436,
+          "sha256": "5b0bf973fea006376ac0c8bf7b68e694bdff5694d35c6a18f0bcda68578afff1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419503&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419503/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "8e262e260d8c3004d3ab90af4bbcec6013cd1753e069bccb0c49a6e6913af338"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419503",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419503/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419627",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419627",
+      "slug": "beneteau-40---coronado-captain-charter-419627",
+      "title": "Beneteau 40 - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/beneteau-40---coronado-captain-charter-419627",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419627/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:37.718466+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419627/content/",
+          "status": 200,
+          "bytes": 2490,
+          "sha256": "9d7908d965a6b06c4e26b10a7b19d9c20d339a78acfc1a8a1d411d5e047f87ff"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419627/structured-description/",
+          "status": 200,
+          "bytes": 1665,
+          "sha256": "f6162a8feab96509fd1557b4b24d0396f6cefff0a4f12de4b3a2fce3e5247d2d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419627/",
+          "status": 200,
+          "bytes": 11561,
+          "sha256": "93c6fefb60cc46d35062f3320840a5a432cc54031a130fd3c42f75687c69a04d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419627&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419627/ratings/",
+          "status": 200,
+          "bytes": 513,
+          "sha256": "470b920a4fac6789c7d8e2e1225554995b3b01bad67f8b1387c29125c5e2503f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419627",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419627/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419629",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419629",
+      "slug": "beneteau-40---coronado-bareboat-rental-419629",
+      "title": "Beneteau 40 - Coronado Bareboat Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/beneteau-40---coronado-bareboat-rental-419629",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419629/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:37.770942+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419629/content/",
+          "status": 200,
+          "bytes": 2735,
+          "sha256": "09ada0991889295b7bf6ca61010c217c57ea71de905f891e06d583f16df17fc8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419629/structured-description/",
+          "status": 200,
+          "bytes": 1808,
+          "sha256": "9adcef34277a796127b78be67ddb270f59f348a0150f920a01000a6832770696"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419629/",
+          "status": 200,
+          "bytes": 11455,
+          "sha256": "7db02c663df40c5ce2eff7c6295f46d08defe916b7a9b192ab60709c3404ce12"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419629&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419629/ratings/",
+          "status": 200,
+          "bytes": 512,
+          "sha256": "12a8ff5c8d2a561112c206175ccf51f88604eb14ede42cc827a47eaa10e438ad"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419629",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419629/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419639",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419639",
+      "slug": "lagoon-380---coronado-bareboat-rental-419639",
+      "title": "Lagoon 380 - Coronado Bareboat Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380---coronado-bareboat-rental-419639",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419639/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:39.764080+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419639/content/",
+          "status": 200,
+          "bytes": 2610,
+          "sha256": "743eeeac76b87e9ba8f38d52dce38f2be77bbf0d2cc027bc8ecf1caab7047688"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419639/structured-description/",
+          "status": 200,
+          "bytes": 1687,
+          "sha256": "047fb634856a09ad1d3b39a9290df37f17e9c81d3214a3181e406628a9dbc27c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419639/",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "5d6e50b24a0f11a90124e7654384eba2b713adeaf05be0c60598999678c4a4ab"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419639&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419639/ratings/",
+          "status": 200,
+          "bytes": 508,
+          "sha256": "604e7d160214e8bdb54e165ffb08cccc9d7b4a3f4f5bf8afdcc9bc3cb5dc3159"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419639",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419639/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419640",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419640",
+      "slug": "lagoon-380---coronado-captain-charter-419640",
+      "title": "Lagoon 380 - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380---coronado-captain-charter-419640",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419640/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:39.820823+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419640/content/",
+          "status": 200,
+          "bytes": 2374,
+          "sha256": "c60b0fe7f6c421ec0bb7a8bdcf0f20dbde2407da11d0dcc1f5ea14eba1eb3e2d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419640/structured-description/",
+          "status": 200,
+          "bytes": 1556,
+          "sha256": "8845c1f3706e992f714497b35950dc68aa9b3903d587dd659f43abd6fa88dd9f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419640/",
+          "status": 200,
+          "bytes": 11531,
+          "sha256": "9b2cff6435e9acb556fb2d71c5649f442a451c596ed792d16daa53743cbe70be"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419640&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419640/ratings/",
+          "status": 200,
+          "bytes": 509,
+          "sha256": "360aa4a64c5eaa55ec2f82a7817e7b44a36751fd27dfd178086a85e547f09026"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419640",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419640/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419658",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419658",
+      "slug": "nautitech-40-erasmus---coronado-captain-charter-419658",
+      "title": "Nautitech 40 \"Erasmus\" - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/nautitech-40-erasmus---coronado-captain-charter-419658",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:39.876468+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419658/content/",
+          "status": 200,
+          "bytes": 2437,
+          "sha256": "82fb7c6f7acb13a9ab0eff04d8dcb0f96faaa8dfbfb2bdb97540abcc34e732db"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419658/structured-description/",
+          "status": 200,
+          "bytes": 1782,
+          "sha256": "80229ca8dbc18f257dcc950f38aa8a41f564aebd626510a99be647dc96593448"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419658/",
+          "status": 200,
+          "bytes": 11631,
+          "sha256": "a23294217c4290dd4fe21b417e059ca35574775e116c42dc3164ca7e46112e09"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419658&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419658/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "42e4ab11bd17ec7f4c0da3d967e61066b80bd71f0a477b7565625c55d8b03100"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419658",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419658/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419707",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419707",
+      "slug": "nautitech-40-paradise---coronado-captain-charter-419707",
+      "title": "Nautitech 40 \"Paradise\" - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/nautitech-40-paradise---coronado-captain-charter-419707",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419707/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/J89AB3oRvO7bf13HCTnA",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/J89AB3oRvO7bf13HCTnA"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:39.933672+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419707/content/",
+          "status": 200,
+          "bytes": 2911,
+          "sha256": "be670d5e29cfb699434b30f4b773ac718a4cbf4e7f663e1ba3a7a9f340cef833"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419707/structured-description/",
+          "status": 200,
+          "bytes": 2012,
+          "sha256": "83fa9e0d0b579c833184848db45da758c29f2d46b13627dc4efc5f53b070e256"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419707/",
+          "status": 200,
+          "bytes": 13400,
+          "sha256": "8d4f7d40553384dca0867f148b56e478fccdcfe4933ec34d883caf161b9ac183"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419707&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419707/ratings/",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "70a12e36dc1f169ca292c8ab72b248de38a00a765153d41fbc659db999413a32"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419707",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419707/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "419951",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-419951",
+      "slug": "aquila-44-catastic---coronado-captain-charter-419951",
+      "title": "Aquila 44 \"Catastic\" - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-catastic---coronado-captain-charter-419951",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:41.773513+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419951/content/",
+          "status": 200,
+          "bytes": 2614,
+          "sha256": "e7360475e9a484b9508248bae5dc4a45ccd4e46f32f78b04d9a55f3b883b1556"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/419951/structured-description/",
+          "status": 200,
+          "bytes": 1927,
+          "sha256": "fbfb4afe901bc8806ff7778d247b99b47e97c96bc2a21af9dc0e51d036ae66d7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419951/",
+          "status": 200,
+          "bytes": 11804,
+          "sha256": "d77ec33953db4a52847f0fce75afd197f5185b7582fab813f72dc3c802d83905"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=419951&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/419951/ratings/",
+          "status": 200,
+          "bytes": 520,
+          "sha256": "93df5bf4e4508df70cadc5a128b70f0785f76e414a97e056ded62a9d80b06db9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "419951",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419951/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "420173",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-420173",
+      "slug": "sunset-sail---coronado-420173",
+      "title": "Sunset Sail - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/sunset-sail---coronado-420173",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420173/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:41.830134+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/420173/content/",
+          "status": 200,
+          "bytes": 2160,
+          "sha256": "05608704b0cf7772f1092ab3cbdd1d8b9dc05ba9fa4e4fce3c0f920b99be320f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/420173/structured-description/",
+          "status": 200,
+          "bytes": 1513,
+          "sha256": "37501dd0ade9a462e677a49ed40746e2d43cfe6ee4dc6228ab8cb6bceb3bbe08"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/420173/",
+          "status": 200,
+          "bytes": 11363,
+          "sha256": "d89e9ed1be42d5da148da6abfc3d3c84c753741bf38052292cf0202c82a25cda"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=420173&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/420173/ratings/",
+          "status": 200,
+          "bytes": 493,
+          "sha256": "db840159ba779ebd06958095e830cc5da1093e45bea333fee49bf8fb923b75a8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "420173",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420173/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "423717",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-423717",
+      "slug": "100-dock---coronado---pick-up-or-one-way-423717",
+      "title": "100' Dock - Coronado - Pick Up (or one way)",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/100-dock---coronado---pick-up-or-one-way-423717",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/423717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:41.884109+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/423717/content/",
+          "status": 200,
+          "bytes": 2277,
+          "sha256": "09ba27c0dcd990be9fd50760c070572e3c2b01d026122904abda05be943a855a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/423717/structured-description/",
+          "status": 200,
+          "bytes": 1822,
+          "sha256": "6e5494c5fbeff1593d851a132f10df5ac546f250fe71577e3d8bbd284f807a83"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/423717/",
+          "status": 200,
+          "bytes": 10617,
+          "sha256": "7c54623478aceffe47fc98afe07346316433191fa46e5a08facd18227ab4eb3e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=423717&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/423717/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "ecf5b0276c80ad42a8372f6d19d1bc0afca55d7cbbad0a19841d412b899f2bbf"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "423717",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/423717/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "424572",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-424572",
+      "slug": "sup---coronado-424572",
+      "title": "SUP - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/sup---coronado-424572",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424572/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:42.041762+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424572/content/",
+          "status": 200,
+          "bytes": 1634,
+          "sha256": "05af3188e790518180599bf7e6327de0e184082a24e76972ec2b5ae70be194c0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424572/structured-description/",
+          "status": 200,
+          "bytes": 1115,
+          "sha256": "d630b8402b3465d320049a5fb36fe53fb5c4b754e907bd61caa01168b1f87258"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424572/",
+          "status": 200,
+          "bytes": 9970,
+          "sha256": "dec7d6698c93b7e074d83529d85e6a08cecfafcc75f0d58ade5399cc69ec8197"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=424572&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424572/ratings/",
+          "status": 200,
+          "bytes": 486,
+          "sha256": "5702a9ff810def878068735598049bd7cf14de47f0a0bfdb3af2361a945d2073"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "424572",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424572/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "424591",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-424591",
+      "slug": "tandem-kayak---coronado-424591",
+      "title": "Tandem Kayak - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/tandem-kayak---coronado-424591",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424591/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:43.707882+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424591/content/",
+          "status": 200,
+          "bytes": 1815,
+          "sha256": "787449789c3fb0f0dc91c0a620a8b9f309f176e1fb315609df6e67d8c90ac8d8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424591/structured-description/",
+          "status": 200,
+          "bytes": 1221,
+          "sha256": "a21bf67b9c447bf76b79d015f697e3c99332bb8e4c20a6f01d1615c977f7d65f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424591/",
+          "status": 200,
+          "bytes": 10078,
+          "sha256": "6e949c4a9eba1d980bc623ea30e118e2e98be83c0a6cafc8dc798037ad1ecdee"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=424591&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424591/ratings/",
+          "status": 200,
+          "bytes": 494,
+          "sha256": "3248d7caa509ab99c9f33b8c47477ed18ffc74a5ddad4f8492c941ab5be81578"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "424591",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424591/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "424599",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-424599",
+      "slug": "single-kayak---coronado-rental-424599",
+      "title": "Single Kayak - Coronado Rental",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/single-kayak---coronado-rental-424599",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424599/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:43.869698+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424599/content/",
+          "status": 200,
+          "bytes": 1877,
+          "sha256": "5f8210bf322941676003a182c9ea1023505eb22d07fc307583aa5e046b50a646"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/424599/structured-description/",
+          "status": 200,
+          "bytes": 1276,
+          "sha256": "2d3cf723e15a5788c92855d72a6edaf785e9744eb5102170a4386512536e74a3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424599/",
+          "status": 200,
+          "bytes": 10191,
+          "sha256": "436810a39d86edf6eb377dfbd1b833da5b38f9aca5b113fe9316cf2aaa3706f3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=424599&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/424599/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "012ca7a4532ba8e9e11b74eece04c3da781a47aec54fce4d7fe3392ea54a0486"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "424599",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424599/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "425335",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-425335",
+      "slug": "bay-skiff---coronado-425335",
+      "title": "Bay Skiff - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/bay-skiff---coronado-425335",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425335/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:44.149693+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/425335/content/",
+          "status": 200,
+          "bytes": 2111,
+          "sha256": "b301c559aff3c77caf353cd3ca9a7dfd97f025f6c6f56b565b85600fdcbef150"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/425335/structured-description/",
+          "status": 200,
+          "bytes": 1446,
+          "sha256": "5734729e62375b76cc9cacb7fac5195ec0d6aef4d24b3211d9c469d41b5fcc65"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/425335/",
+          "status": 200,
+          "bytes": 10510,
+          "sha256": "a8f25f3cb949f70e830fe2121030ae563b0b664d0bad0d67381d5e4ae74278bb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=425335&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/425335/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "77cd1d7c0000eccb1bd7f6915efa8003b4c31f339b90ef5dbab86cf249f39695"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "425335",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425335/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "426233",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-426233",
+      "slug": "seachaser-18---coronado-426233",
+      "title": "Seachaser 18 - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/seachaser-18---coronado-426233",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:44.204532+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/426233/content/",
+          "status": 200,
+          "bytes": 2216,
+          "sha256": "b2d0301dc7ccfcd047a24224ba866457e18a3d35f244a62b1e71cced2b518adf"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/426233/structured-description/",
+          "status": 200,
+          "bytes": 1668,
+          "sha256": "9bb66e99cf943ee0602c6e45896a2c071e45288bb7ff40cfb50c6cfd9eeafac8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/426233/",
+          "status": 200,
+          "bytes": 11859,
+          "sha256": "5a8ce05f145fbbb554727f69abe51a2ca08fe918e35bf54ad3693f0fb26c3af3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=426233&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/426233/ratings/",
+          "status": 200,
+          "bytes": 494,
+          "sha256": "b25d3c09804cabb01a1379a5af02790ad77bc94fcb4cd6df7a69eda4ce1b5047"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "426233",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426233/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "466554",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-466554",
+      "slug": "monterey-21---coronado-466554",
+      "title": "Monterey 21 - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/monterey-21---coronado-466554",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/466554/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Tw8rOh9TTGY6c72pUOBt",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Tw8rOh9TTGY6c72pUOBt"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:45.782871+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/466554/content/",
+          "status": 200,
+          "bytes": 2590,
+          "sha256": "d284189394d9602f7a300f61e7c3bb34c5d6ae53fa009a42c03463602787e040"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/466554/structured-description/",
+          "status": 200,
+          "bytes": 1990,
+          "sha256": "fee8050df6cb523d50469adaf2cc0f01cd60bfea253cc7b42356a50a62e8ff24"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/466554/",
+          "status": 200,
+          "bytes": 12634,
+          "sha256": "1ad3664efe63d689d84d1a0a0b8c6f31cd556f6728da3a0d1cdf630dcb461fdd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=466554&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/466554/ratings/",
+          "status": 200,
+          "bytes": 500,
+          "sha256": "840e1ac2020bd81c75a4324566511a688b000a6113dd145bd92432e0b8d1bbb0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "466554",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/466554/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "528181",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-528181",
+      "slug": "blue-bridge-kayak-tour-528181",
+      "title": "Blue Bridge Kayak Tour",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/blue-bridge-kayak-tour-528181",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/528181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:46.094214+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/528181/content/",
+          "status": 200,
+          "bytes": 4170,
+          "sha256": "8ba3dfa92c38c9c262dbd4d5d1c9ac3bc3bc11a5230d4cc52ebd652e4ec7740c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/528181/structured-description/",
+          "status": 200,
+          "bytes": 1553,
+          "sha256": "01467d464f12831f7285d356aa4e9076d6cdabd285998bd89412abba6082461b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/528181/",
+          "status": 200,
+          "bytes": 11369,
+          "sha256": "0598c85ac785e0f281e4762bc99e002892d5f073f1979223314129524cd7da76"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=528181&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/528181/ratings/",
+          "status": 200,
+          "bytes": 493,
+          "sha256": "2c709ec79918f887b0e8df356b4eaeb53f2a305d60994a4021bd0f2732c8d3d2"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "528181",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/528181/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "529512",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-529512",
+      "slug": "above-board-stand-up-paddle-tours-sup-529512",
+      "title": "Above Board Stand Up Paddle Tours \"SUP\"",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/above-board-stand-up-paddle-tours-sup-529512",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/529512/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:46.168194+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/529512/content/",
+          "status": 200,
+          "bytes": 1783,
+          "sha256": "72303406a30e2925036576b73e9e0227b9baf38cfd5654bf5ac664b2cbaddef6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/529512/structured-description/",
+          "status": 200,
+          "bytes": 1330,
+          "sha256": "09241961ec4eb23a8329d6a3f6fefc0e7f8dba81f60037884d70de283d801fd5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/529512/",
+          "status": 200,
+          "bytes": 8504,
+          "sha256": "180df6041447a66124143875c22f8177c74dc070d2604ae7298ce35a0ee3db89"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=529512&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/529512/ratings/",
+          "status": 200,
+          "bytes": 512,
+          "sha256": "0059f4e7f0b137a1b461943b3f46d866c610711ef9e6dc4e377962a834931185"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "529512",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/529512/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "607180",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-607180",
+      "slug": "marquis-70-607180",
+      "title": "Marquis 70",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/marquis-70-607180",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/607180/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/WT22JKYWRmeYsSVkOVYk",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/WT22JKYWRmeYsSVkOVYk"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:46.535590+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/607180/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/607180/structured-description/",
+          "status": 200,
+          "bytes": 1469,
+          "sha256": "3f21be3127d8c0d810f6d947c06a1d676c499f6738411760f767b1a5c48d417c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/607180/",
+          "status": 200,
+          "bytes": 8177,
+          "sha256": "a3f490cce02b6d76ec53fc35b23d15f3791e0343d9af39c5cf72993e5ff1639a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=607180&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/607180/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "3b2c0d152fa28b5e468c842db202dd64e76e93dfdf7c67f9ad2839c97825f3d5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "607180",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/607180/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "638904",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-638904",
+      "slug": "trophy-18---coronado-638904",
+      "title": "Trophy 18 - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/trophy-18---coronado-638904",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638904/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:48.050833+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/638904/content/",
+          "status": 200,
+          "bytes": 2118,
+          "sha256": "57b2ac1433227a73390e4e5e10ef5b70f5ad9c22e5a7d098daf7317000ad91e0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/638904/structured-description/",
+          "status": 200,
+          "bytes": 1620,
+          "sha256": "3a343e7622e82834feecd9fc0b171fd5f07578659cdcec85193e3b85a6f1ea13"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/638904/",
+          "status": 200,
+          "bytes": 11853,
+          "sha256": "e60c35e6a7e9962f3f3f58792ccc6b871cf7065f0b8844fa0f2e7a5a2a7f3fb7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=638904&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/638904/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "55b43400a6202e27c6daebeb5056a77d5252eb0ef97d337c979fbd8be532b837"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638904",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638904/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "639205",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-639205",
+      "slug": "limo-boat---coronado-639205",
+      "title": "Limo Boat - Coronado",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/limo-boat---coronado-639205",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:48.219029+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/639205/content/",
+          "status": 200,
+          "bytes": 1902,
+          "sha256": "3ff27e9988b0be3c23ffb8ae61fc9ebe7e8b7e7b123abdd44bf358fbb2723754"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/639205/structured-description/",
+          "status": 200,
+          "bytes": 1252,
+          "sha256": "c204c04540c4db012bba2a975752847d33bbbd2ab0ecf00f7319a81aa179eac3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/639205/",
+          "status": 200,
+          "bytes": 11273,
+          "sha256": "a768842d174a440dd40d57358768e79a5eb5e98ac01802b2dd721fb786695d21"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=639205&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/639205/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "171623b218c9497ddac7b26ca5847caa4ae5aa1c950d9898b4dead7c633900ae"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "639205",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639205/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "665947",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-665947",
+      "slug": "60-luxury-sailing-catamaran-665947",
+      "title": "60' Luxury Sailing Catamaran",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/60-luxury-sailing-catamaran-665947",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/665947/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "",
+      "galleryImages": [],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:48.273091+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/665947/content/",
+          "status": 200,
+          "bytes": 3105,
+          "sha256": "ece3d04466fb4c7452502a694d4ea4e80f480c76621ad6dfb9b046843cb5f3b0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/665947/structured-description/",
+          "status": 200,
+          "bytes": 882,
+          "sha256": "af340627082bb55b685c9b192f52cdbdf57eab68031bef4fe486408e3e70dc4d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/665947/",
+          "status": 200,
+          "bytes": 9962,
+          "sha256": "e1204d06afa6295b032604b2ae64b0aea3b6ab47bdf8ff724cd2137c5a8dc783"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=665947&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/665947/ratings/",
+          "status": 200,
+          "bytes": 499,
+          "sha256": "db59ccac1125b8dd8bb698418e8be175b9df2a8200d5f0c39c3662f48a0149f4"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "665947",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/665947/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "667594",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-667594",
+      "slug": "100-dock---coronado---drop-off-667594",
+      "title": "100' Dock - Coronado - Drop Off",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/100-dock---coronado---drop-off-667594",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/667594/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:48.471906+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/667594/content/",
+          "status": 200,
+          "bytes": 2265,
+          "sha256": "1f2c84cfd3efcc22b60915ffba896f8afc5f15dcc34f6814daf971307c5b30e6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/667594/structured-description/",
+          "status": 200,
+          "bytes": 1823,
+          "sha256": "218d12c1ea0ea5cd3ca712b8728eeb8428d62ebc4399ce5a5d2b79b9aee300cb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/667594/",
+          "status": 200,
+          "bytes": 10541,
+          "sha256": "4bd5e3bdd327c0feafc8017c3ce01da1c0f844a67c3196e729d6a9b8477fccd8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=667594&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/667594/ratings/",
+          "status": 200,
+          "bytes": 502,
+          "sha256": "312830652ef94ffa02f908c2efdd39952d8b0df2ad7e7e562d720cc62790cdad"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "667594",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/667594/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "671123",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-671123",
+      "slug": "lagoon-380-coronado---multi-day-charter-671123",
+      "title": "Lagoon 380 Coronado - Multi Day Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/lagoon-380-coronado---multi-day-charter-671123",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:50.190461+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/671123/content/",
+          "status": 200,
+          "bytes": 3935,
+          "sha256": "9df96d47623ad06a48c5a2c8367d23388e9cc9498bb1b377d1d70c95c7fac2ee"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/671123/structured-description/",
+          "status": 200,
+          "bytes": 1753,
+          "sha256": "88b48f2191868389ae8c6198902a53a16fd10f1bfad102edde7dc1521bc59261"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/671123/",
+          "status": 200,
+          "bytes": 13859,
+          "sha256": "b48fbb0e6b2947f0a8bcec35993e236595410dc4deb074cb72fa3906924c3b81"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=671123&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/671123/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "37acb58a4d0d8e5e275e55355d890acfbfd330ab581549c109a4c660946fcd1a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "671123",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671123/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "679820",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-679820",
+      "slug": "marquis-70-coronado---multi-day-charter-679820",
+      "title": "Marquis 70 Coronado - Multi Day Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/marquis-70-coronado---multi-day-charter-679820",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:50.347257+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/679820/content/",
+          "status": 200,
+          "bytes": 3870,
+          "sha256": "9a3ee8006596fce08d103a629104d391cc8480e55754621a80cce0de52f387ac"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/679820/structured-description/",
+          "status": 200,
+          "bytes": 1689,
+          "sha256": "7c2230be68f57844bf3ddd5fb4e543274bc4c78c4f14345ee4d378f5e2eede66"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/679820/",
+          "status": 200,
+          "bytes": 13859,
+          "sha256": "38035c99d629123f01c242c1e157d484c5f2deb6fa11fef367caab71b4b28e21"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=679820&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/679820/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "9042480b69547324f7706e28fe645022358aa9aae654fb2cf466ddc28a2f0327"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "679820",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679820/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "690094",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-690094",
+      "slug": "aquila-44-coronado---multi-day-charter-690094",
+      "title": "Aquila 44 Coronado - Multi Day Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-coronado---multi-day-charter-690094",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690094/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:50.717748+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/690094/content/",
+          "status": 200,
+          "bytes": 4377,
+          "sha256": "052788624c6010b14eb72ced15c86e4c012c478caec8e6f9d16425e47309b8de"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/690094/structured-description/",
+          "status": 200,
+          "bytes": 1796,
+          "sha256": "b3795dbe16aa624e1aaa0475a6b5bdda1f49ffedacb568a2c29443efcddc97b9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/690094/",
+          "status": 200,
+          "bytes": 18755,
+          "sha256": "6f16049393a769bd03985bcbc31f26943265a0313f6530f8056e9113ff91c071"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=690094&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/690094/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "183c0a2d860df2b687548a9d479d4e14de4194662b5b156a8ffd5eab7ab46258"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "690094",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690094/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "690112",
+      "company": "seaforthboatrental",
+      "catalogId": "seaforth-boat-rentals-690112",
+      "slug": "aquila-44-catitude---coronado-captain-charter-690112",
+      "title": "Aquila 44 \"Catitude\" - Coronado Captain Charter",
+      "operator": "Seaforth Boat Rentals",
+      "publicPath": "/destinations/california/coronado/tours/aquila-44-catitude---coronado-captain-charter-690112",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Coronado",
+        "citySlug": "coronado",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690112/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:42:50.828832+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/690112/content/",
+          "status": 200,
+          "bytes": 3113,
+          "sha256": "d5ff8fd7946dccbd4be63b1a9381a3d21cdc4d1f82fc68be31a432a461fdd948"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/690112/structured-description/",
+          "status": 200,
+          "bytes": 2074,
+          "sha256": "f2beaf12b68faffc642543823ebd84d778510cd6ad66ae79951214c44b1de5eb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/690112/",
+          "status": 200,
+          "bytes": 16004,
+          "sha256": "065f4200a16f29298ef3cd79b39b2ba2b5ebb9e29c9965a182ab0240daec24f7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=690112&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/690112/ratings/",
+          "status": 200,
+          "bytes": 518,
+          "sha256": "6ee89b2372cf254507773e909b15a903935ade3be7a50942edcdfb08e54048ad"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "690112",
+        "provider": "seaforthboatrental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690112/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

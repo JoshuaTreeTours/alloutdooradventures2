@@ -1,0 +1,32 @@
+{
+  "citySlug": "napa",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "getawayadventures",
+      "operator": "Getaway Adventures",
+      "itemId": "29265",
+      "slug": "carneros-sip-n-cycle-29265",
+      "publicPath": "/destinations/california/napa/tours/carneros-sip-n-cycle-29265",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3390,
+        "structuredStatus": 200,
+        "structuredBytes": 1974
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

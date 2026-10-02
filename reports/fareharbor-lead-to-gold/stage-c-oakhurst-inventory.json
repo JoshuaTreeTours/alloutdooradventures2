@@ -1,0 +1,165 @@
+{
+  "citySlug": "oakhurst",
+  "total": 8,
+  "active": 8,
+  "terminal": 0,
+  "priceAvailable": 2,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 8,
+  "inSitemap": 8,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "goodtripadventures-california",
+      "operator": "Good Trip Adventures - California",
+      "itemId": "519507",
+      "slug": "yosemite-valley-full-day-small-group-tour-and-hike-519507",
+      "publicPath": "/destinations/california/oakhurst/tours/yosemite-valley-full-day-small-group-tour-and-hike-519507",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5700,
+        "structuredStatus": 200,
+        "structuredBytes": 5387
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "goodtripadventures-california",
+      "operator": "Good Trip Adventures - California",
+      "itemId": "519508",
+      "slug": "yosemite-high-country-and-mariposa-grove-full-day-small-group-tour-and-hike-519508",
+      "publicPath": "/destinations/california/oakhurst/tours/yosemite-high-country-and-mariposa-grove-full-day-small-group-tour-and-hike-519508",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6127,
+        "structuredStatus": 200,
+        "structuredBytes": 5813
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629558",
+      "slug": "goat-mountain-and-007-guided-ride-intermediate-629558",
+      "publicPath": "/destinations/california/oakhurst/tours/goat-mountain-and-007-guided-ride-intermediate-629558",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4476,
+        "structuredStatus": 200,
+        "structuredBytes": 3680
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629569",
+      "slug": "big-sandy-guided-ride-and-hike-beginner-629569",
+      "publicPath": "/destinations/california/oakhurst/tours/big-sandy-guided-ride-and-hike-beginner-629569",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4505,
+        "structuredStatus": 200,
+        "structuredBytes": 3657
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629570",
+      "slug": "custom-guided-mountain-bike-ride-all-levels-629570",
+      "publicPath": "/destinations/california/oakhurst/tours/custom-guided-mountain-bike-ride-all-levels-629570",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3410,
+        "structuredStatus": 200,
+        "structuredBytes": 3218
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629572",
+      "slug": "big-sandy-ebike-ride-and-waterfall-hike-beginner-629572",
+      "publicPath": "/destinations/california/oakhurst/tours/big-sandy-ebike-ride-and-waterfall-hike-beginner-629572",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4241,
+        "structuredStatus": 200,
+        "structuredBytes": 3466
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629577",
+      "slug": "mary-jane-and-willow-creek-guided-ride-expert-629577",
+      "publicPath": "/destinations/california/oakhurst/tours/mary-jane-and-willow-creek-guided-ride-expert-629577",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3253,
+        "structuredStatus": 200,
+        "structuredBytes": 3059
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalforwardbikes",
+      "operator": "Pedal Forward Bikes",
+      "itemId": "629579",
+      "slug": "007-3rd-1st-guided-mountain-bike-ride-advanced-629579",
+      "publicPath": "/destinations/california/oakhurst/tours/007-3rd-1st-guided-mountain-bike-ride-advanced-629579",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3980,
+        "structuredStatus": 200,
+        "structuredBytes": 3784
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

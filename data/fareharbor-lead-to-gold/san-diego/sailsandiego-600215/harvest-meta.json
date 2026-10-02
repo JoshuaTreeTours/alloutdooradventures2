@@ -1,0 +1,47 @@
+{
+  "company": "sailsandiego",
+  "itemId": "600215",
+  "fetchedAt": "2026-10-02T22:41:50.379095+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sailsandiego/600215/content/",
+      "status": 200,
+      "bytes": 3278,
+      "sha256": "eba9f34a58153d857d31b8120fc4edd43aa259444399f7a517a09a88e2628efd"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sailsandiego/600215/structured-description/",
+      "status": 200,
+      "bytes": 2492,
+      "sha256": "4a387c121c767e0794089c863e98b5f344eb81ece368b55d894480720f606734"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sailsandiego/items/600215/",
+      "status": 200,
+      "bytes": 10104,
+      "sha256": "0534e7d0f0d3cdff02b915e4bb84f05a708f0403d0f0b25ab000cf1d4e205ea0"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sailsandiego/price-preview/per-item/v2/?asn=fhdn&item_pks=600215&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sailsandiego/items/600215/ratings/",
+      "status": 200,
+      "bytes": 506,
+      "sha256": "269bbf6f49e480d2f048a539daff1cc9f55143b3a6d226da35dbfbb0ff1a4a7e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "600215",
+    "provider": "sailsandiego",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/600215/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

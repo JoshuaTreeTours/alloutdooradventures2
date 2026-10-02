@@ -52,6 +52,7 @@ describe("FareHarbor Phase C template", () => {
   it("keeps city and pilot-product constants out of the reusable template", () => {
     for (const file of REUSABLE_TEMPLATE_FILES) {
       const source = readFileSync(file, "utf8");
+      expect(source, file).not.toMatch(/citySlug\s*===?\s*["']/);
       expect(source, file).not.toMatch(/citySlug\s*===?\s*["']boston["']/);
       expect(source, file).not.toMatch(/citySlug\s*===?\s*["']chicago["']/);
       expect(source, file).not.toMatch(/citySlug\s*===?\s*["']los-angeles["']/);

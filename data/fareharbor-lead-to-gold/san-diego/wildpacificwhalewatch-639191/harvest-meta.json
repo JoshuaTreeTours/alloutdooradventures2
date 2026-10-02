@@ -1,0 +1,47 @@
+{
+  "company": "wildpacificwhalewatch",
+  "itemId": "639191",
+  "fetchedAt": "2026-10-02T22:42:23.244982+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/wildpacificwhalewatch/639191/content/",
+      "status": 200,
+      "bytes": 5228,
+      "sha256": "ba2bf69debf6a9d58ddb7a29d96ba62206fb6c040ce69153d5ec76fd8a9cc698"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/wildpacificwhalewatch/639191/structured-description/",
+      "status": 200,
+      "bytes": 2579,
+      "sha256": "efbf59c86c7ab0ebf8cb8db1aee6b4903da54bcdf2d84daa6f4c27a672bbf982"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/wildpacificwhalewatch/items/639191/",
+      "status": 200,
+      "bytes": 12229,
+      "sha256": "c56099d987a49a1ac28e90a19cfdb4c1f3dd6970f89797c21a9978f63954bee1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/wildpacificwhalewatch/price-preview/per-item/v2/?asn=fhdn&item_pks=639191&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1032,
+      "sha256": "c11ce59a8a1b35cfda23afc2044e3252431157b4ab67b3322536fcfae49c0229"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/wildpacificwhalewatch/items/639191/ratings/",
+      "status": 200,
+      "bytes": 533,
+      "sha256": "0580a07edf899f71cc04a8733e0f42a4365cc332d8cb0df11f3820f4b8767bc2"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "639191",
+    "provider": "wildpacificwhalewatch",
+    "bookingUrl": "https://fareharbor.com/embeds/book/wildpacificwhalewatch/items/639191/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

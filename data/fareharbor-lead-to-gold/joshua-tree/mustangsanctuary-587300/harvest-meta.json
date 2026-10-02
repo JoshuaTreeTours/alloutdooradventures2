@@ -1,0 +1,47 @@
+{
+  "company": "mustangsanctuary",
+  "itemId": "587300",
+  "fetchedAt": "2026-10-02T22:43:04.471190+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/587300/content/",
+      "status": 200,
+      "bytes": 4313,
+      "sha256": "92dc978e32b62a6ac88685092e93bbdb1f83761559367ce2c1d111cf88866eed"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/587300/structured-description/",
+      "status": 200,
+      "bytes": 2763,
+      "sha256": "12938d5e2005bdbc3d24ce50129c604a914b7b58a94c32c9864732f1f70fc85a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/587300/",
+      "status": 200,
+      "bytes": 10214,
+      "sha256": "77dd26b60427c6d539fd47df0b1c4d2c71afd672cfe2b47a6ec5c567160f3362"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=587300&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 532,
+      "sha256": "446c95352ebecc94844c4ad6e98c17f6241ec7087a91e52c9250df67a1e14914"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/587300/ratings/",
+      "status": 200,
+      "bytes": 550,
+      "sha256": "06040856bacb263292ce66f78916c872b8e2ca99e08f9ca5ab5367f92b1ebd6a"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "587300",
+    "provider": "mustangsanctuary",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

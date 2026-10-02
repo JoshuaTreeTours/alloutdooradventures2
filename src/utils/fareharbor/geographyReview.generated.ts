@@ -25,6 +25,118 @@ export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] 
     "city": "Venice",
     "state": "California",
     "expectedPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071"
+  },
+  {
+    "itemId": "109487",
+    "title": "PADI Advanced Freediver Course",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/padi-advanced-freediver-course-109487"
+  },
+  {
+    "itemId": "110584",
+    "title": "PADI Master Freediver Course",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/padi-master-freediver-course-110584"
+  },
+  {
+    "itemId": "443620",
+    "title": "1.5 Day Spearfishing Charter",
+    "reason": "Mission Bay, California from item_location does not belong to San Diego, and no matching public destination exists",
+    "city": "Mission Bay",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/15-day-spearfishing-charter-443620"
+  },
+  {
+    "itemId": "509885",
+    "title": "San Diego Beach Yoga Hiking Tour",
+    "reason": "Jolla, California from company_start_location does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-hiking-tour-509885"
+  },
+  {
+    "itemId": "647361",
+    "title": "San Diego Beach Yoga (Private Class)",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-private-class-647361"
+  },
+  {
+    "itemId": "459584",
+    "title": "Private Stargazing with an Astronomer",
+    "reason": "Twentynine Palms, California from company_start_location does not belong to Joshua Tree, and no matching public destination exists",
+    "city": "Twentynine Palms",
+    "state": "California",
+    "expectedPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584"
+  },
+  {
+    "itemId": "619647",
+    "title": "Tenaya Lake: Family Swimming & Beach Day",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/tenaya-lake-family-swimming-and-beach-day-619647"
+  },
+  {
+    "itemId": "619653",
+    "title": "Yosemite Valley Walking Tour",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/yosemite-valley-walking-tour-619653"
+  },
+  {
+    "itemId": "619655",
+    "title": "Mist Trail: Vernal and Nevada Falls",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/mist-trail-vernal-and-nevada-falls-619655"
+  },
+  {
+    "itemId": "619659",
+    "title": "Backcountry Hike To Cathedral Lakes",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/backcountry-hike-to-cathedral-lakes-619659"
+  },
+  {
+    "itemId": "619663",
+    "title": "Hike to Upper Yosemite Falls",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/hike-to-upper-yosemite-falls-619663"
+  },
+  {
+    "itemId": "619664",
+    "title": "Summit Half Dome in a Day",
+    "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/tuolumne-meadows/tours/summit-half-dome-in-a-day-619664"
+  },
+  {
+    "itemId": "71811",
+    "title": "Trail Rides",
+    "reason": "Oro. Poway, California from meeting_point does not belong to Poway, and no matching public destination exists",
+    "city": "Oro. Poway",
+    "state": "California",
+    "expectedPath": "/destinations/california/poway/tours/trail-rides-71811"
+  },
+  {
+    "itemId": "619660",
+    "title": "Summit Clouds Rest",
+    "reason": "Yosemite, California from company_start_location does not belong to Lee Vining, and no matching public destination exists",
+    "city": "Yosemite",
+    "state": "California",
+    "expectedPath": "/destinations/california/lee-vining/tours/summit-clouds-rest-619660"
   }
 ];
 

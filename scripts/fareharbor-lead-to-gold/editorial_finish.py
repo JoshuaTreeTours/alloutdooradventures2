@@ -125,6 +125,35 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             return
         if ev.is_junk_place_label(name):
             return
+        if re.search(r"\b(whales|sharks|dolphins|cetaceans|species)$", key):
+            return
+        if key.startswith("vessel "):
+            return
+        calendar = {
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday",
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december",
+        }
+        if name.split() and all(part.lower() in calendar or part.isdigit() for part in name.split()):
+            return
+        if re.search(r"\b(combo|waiver|adventure|package)\b", key) or key.endswith(" special"):
+            return
         if any(part.isupper() and len(part) > 2 for part in name.split()):
             return
         # Itinerary step labels and supply lists are not places.
@@ -254,6 +283,42 @@ def _accept(
             return None
     used_openers.append(opener)
     return safe
+
+
+def _outing_hours(blob: str) -> str | None:
+    """Trip length, not a booking cutoff such as 'until 1 hour'."""
+    words = {
+        "one": "1",
+        "two": "2",
+        "three": "3",
+        "four": "4",
+        "five": "5",
+        "six": "6",
+        "seven": "7",
+        "eight": "8",
+        "nine": "9",
+        "ten": "10",
+        "twelve": "12",
+    }
+    found: list[int] = []
+    for match in re.finditer(
+        r"\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|twelve)\s*-?\s*hours?\b",
+        blob or "",
+        re.I,
+    ):
+        prefix = (blob or "")[max(0, match.start() - 48) : match.start()].lower()
+        if re.search(
+            r"\b(until|within|least|notice|before|cancellation|refund|book|advance)\b",
+            prefix,
+        ):
+            continue
+        raw = match.group(1).lower()
+        number = words.get(raw, raw)
+        if number.isdigit():
+            found.append(int(number))
+    if not found:
+        return None
+    return str(max(found))
 
 
 def _cue_sentences(kind: str, description: str) -> list[str]:
@@ -450,6 +515,403 @@ def _cue_sentences(kind: str, description: str) -> list[str]:
         rows.append("The same open-air ride is how every sight on the outing is viewed.")
         if re.search(r"\bLos Angeles\b", blob):
             rows.append("The ride stays in Los Angeles.")
+    if re.search(r"\bwhales?\b|\bwhale watch\b", blob, re.I) and re.search(
+        r"\b(boat|aboard|vessel|on board|on the water|whale watch)\b", blob, re.I
+    ):
+        rows.append("Guests go out on the water to look for whales.")
+        if re.search(r"dolphin", blob, re.I):
+            rows.append("Dolphins are also part of what the outing goes out to see.")
+        species = [
+            label
+            for label, pattern in (
+                ("humpback whales", r"humpback"),
+                ("fin whales", r"\bfin whales\b"),
+                ("minke whales", r"minke"),
+                ("Bryde's whales", r"bryde"),
+                ("orcas", r"\borcas\b"),
+            )
+            if re.search(pattern, blob, re.I)
+        ]
+        if species:
+            rows.append(f"Animals the trip watches for include {ev.join_and(species[:4])}.")
+        if re.search(r"\borcas\b", blob, re.I) and not any("orca" in item for item in species[:4]):
+            rows.append("Orcas are among the rarer animals the trip also watches for.")
+        elif re.search(r"\borcas\b", blob, re.I) and len(species) > 4:
+            rows.append("Orcas are among the rarer animals the trip also watches for.")
+        foot = re.search(r"(\d+)\s*-?\s*foot", blob, re.I)
+        if foot:
+            rows.append(f"Length of the boat is about {foot.group(1)} feet.")
+        named = re.search(r"\baboor?d the ([A-Z][A-Za-z]+)\b", blob)
+        if named:
+            rows.append(f"Guests spend the trip aboard {named.group(1)}.")
+        if re.search(r"mission bay", blob, re.I):
+            rows.append("The waters for this trip are off Mission Bay.")
+        if re.search(r"seaforth", blob, re.I):
+            rows.append("The boat returns to Seaforth Marina at the end.")
+        if re.search(r"marine biologist", blob, re.I):
+            rows.append("A marine biologist is aboard to answer questions about the animals.")
+        if re.search(r"shade", blob, re.I) and re.search(r"seat", blob, re.I):
+            rows.append("Shade and seating are available while guests watch the water.")
+        if re.search(r"quiet", blob, re.I) and re.search(r"engine", blob, re.I):
+            rows.append("Quiet engines let the boat approach wildlife with less disturbance.")
+        if re.search(r"restroom|bathroom", blob, re.I):
+            rows.append("A restroom is available on board during the trip.")
+        cap = re.search(r"(\d+)\s*passenger", blob, re.I)
+        if cap:
+            rows.append(f"Capacity on the vessel is {cap.group(1)} passengers.")
+        if re.search(r"great white", blob, re.I):
+            rows.append("When conditions allow, the same trip also searches for great white sharks.")
+        if re.search(r"great white shark park", blob, re.I):
+            rows.append("That search uses a spot the operator calls Great White Shark Park.")
+        if re.search(r"san diego", blob, re.I):
+            rows.append("Departure for these trips is offshore from San Diego.")
+        if re.search(r"calm|calmer|end of the year|october", blob, re.I):
+            rows.append("The operator runs these trips in the calmer months near the end of the year.")
+        hours = _outing_hours(blob)
+        if hours:
+            unit = "hour" if hours == "1" else "hours"
+            rows.append(f"Time on the water is about {hours} {unit}.")
+        if re.search(r"whale sightings|see whales|look for whales|extended time", blob, re.I):
+            rows.append("The longer window on the water is there to look for whales.")
+        rows.append("People stay aboard, and the animals are what the trip goes out to find.")
+        rows.append("Travel stays on the boat, so there is no walking route.")
+    if re.search(r"\b(whaler|outboard|center console|powerboat|power boat)\b", blob, re.I) and not re.search(
+        r"\bwhales?\b", blob, re.I
+    ):
+        rows.append("Guests take out a small powerboat and stay aboard for the rental.")
+        if re.search(r"center console|montauk", blob, re.I):
+            rows.append("The rental is a center-console hull, with the helm in the middle of the boat.")
+        if re.search(r"boston whaler", blob, re.I):
+            rows.append("The hull is a Boston Whaler, built as an open powerboat.")
+        hp = re.search(r"(\d+)\s*-?\s*hp\b", blob, re.I)
+        if hp:
+            rows.append(f"An outboard of about {hp.group(1)} horsepower is fitted on the stern.")
+        if re.search(r"fourstroke|four-stroke|four stroke", blob, re.I):
+            rows.append("The motor is a four-stroke, and it is meant to run quietly.")
+        if re.search(r"planing|dry ride", blob, re.I):
+            rows.append("The hull is shaped to get on plane and to throw less spray.")
+        if re.search(r"bluetooth", blob, re.I):
+            rows.append("A Bluetooth sound system is installed on the boat.")
+        if re.search(r"fishing", blob, re.I) and not re.search(r"no fishing", blob, re.I):
+            rows.append("Fishing is one of the uses the operator describes for this boat.")
+        elif re.search(r"no fishing", blob, re.I):
+            rows.append("Fishing is not allowed on this smaller boat.")
+        people = re.search(r"(\d+)\s*persons?", blob, re.I)
+        if people:
+            rows.append(f"The posted capacity is {people.group(1)} people.")
+        if re.search(r"fuel included|fuel is included", blob, re.I):
+            rows.append("Fuel for the rental period is included in the booking.")
+        if re.search(r"harbor", blob, re.I) and re.search(r"only allowed inside", blob, re.I):
+            rows.append("This smaller boat is limited to the harbor and does not go outside it.")
+        if re.search(r"bimini", blob, re.I):
+            rows.append("A bimini top provides shade over the seats.")
+        if re.search(r"swivel", blob, re.I):
+            rows.append("The seats swivel, which is part of how the boat is set up for new drivers.")
+        if re.search(r"novice|first time", blob, re.I):
+            rows.append("The operator describes the boat as manageable for a first-time driver.")
+        speed = re.search(r"(\d+)\s*mph", blob, re.I)
+        if speed:
+            rows.append(f"Top speed is about {speed.group(1)} miles per hour.")
+        rows.append("People remain on the boat for the rental, and there is no walking route.")
+    if re.search(r"\bgocar\b|\bgo\s*car\b", blob, re.I):
+        rows.append("Guests drive a small GPS-guided car rather than riding a tour bus.")
+        if re.search(r"speedboat", blob, re.I):
+            rows.append("The same booking also includes time in a speedboat that guests drive on the bay.")
+        if re.search(r"story", blob, re.I):
+            rows.append("The car plays a recorded story while guests drive the route.")
+        if re.search(r"coronado", blob, re.I):
+            rows.append("The drive goes out to Coronado and then returns.")
+        if re.search(r"\bbridge\b", blob, re.I):
+            if re.search(r"night|after dark|city lights", blob, re.I):
+                rows.append("The drive crosses the bridge after dark, with the city lights in view.")
+            else:
+                rows.append("The drive crosses the bridge as part of the same route.")
+        if re.search(r"gaslamp", blob, re.I):
+            rows.append("The route comes back through the Gaslamp quarter.")
+        hours = re.search(r"(\d+)\s*hours?", blob, re.I)
+        if hours:
+            unit = "hour" if hours.group(1) == "1" else "hours"
+            rows.append(f"The driving portion runs about {hours.group(1)} {unit}.")
+        rows.append("Guests steer the car themselves, with the GPS setting the turns.")
+        rows.append("The outing is a drive, not a walk between the sights.")
+    if re.search(r"bonfire|s'mores|smores", blob, re.I) or (
+        re.search(r"firepit|fire pit", blob, re.I) and re.search(r"attendant", blob, re.I)
+    ):
+        rows.append("Guests gather at a firepit rather than walking a neighborhood route.")
+        if re.search(r"s'mores|smores|marshmallow", blob, re.I):
+            rows.append("The group toasts marshmallows and makes s'mores at the fire.")
+        if re.search(r"attendant", blob, re.I):
+            rows.append("A bonfire attendant stays with the group for the evening.")
+        people = re.search(r"(?:up to|for)\s+(\d+)", blob, re.I)
+        if people:
+            rows.append(f"Seating at the fire is for up to {people.group(1)} guests.")
+        if re.search(r"\bbay\b|sunset|sun sets", blob, re.I):
+            rows.append("The fire looks out over the bay as the evening comes on.")
+        if re.search(r"palm", blob, re.I):
+            rows.append("Palms are part of the setting around the firepit.")
+        if re.search(r"attendant", blob, re.I):
+            rows.append("The visit stays at the fire, with the attendant handling the bonfire.")
+        else:
+            rows.append("The visit stays at the fire rather than touring the streets.")
+        rows.append("People sit together for the length of the booking instead of touring the streets.")
+    if re.search(r"\bhike", blob, re.I) and re.search(r"mountain", blob, re.I):
+        rows.append("Guests hike a mountain trail rather than touring by vehicle.")
+        if re.search(r"cowles", blob, re.I):
+            rows.append("The hike goes up Cowles Mountain.")
+        if re.search(r"mission trails", blob, re.I):
+            rows.append("The approach follows trails in Mission Trails.")
+        if re.search(r"photo|picture", blob, re.I):
+            rows.append("The guide pauses so guests can take pictures from the viewpoints.")
+        if re.search(r"sage", blob, re.I):
+            rows.append("Sage grows along the trail the group walks.")
+        if re.search(r"easy", blob, re.I):
+            rows.append("The operator describes the hike as an easier walk, with time to stop and look.")
+        rows.append("Guests stay on foot for the outing, and the mountain is the destination.")
+        rows.append("The views are from the trail itself, not from a vehicle window.")
+    if re.search(r"christmas|holiday lights", blob, re.I) and re.search(
+        r"neighborhood", blob, re.I
+    ):
+        rows.append("Guests ride through neighborhoods to see holiday light displays.")
+        places = re.findall(
+            r"((?:Christmas|Holiday)\s+[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){0,3})",
+            blob,
+        )
+        cleaned = []
+        for place in places:
+            place = place.strip()
+            if place.lower() in {"christmas lights", "holiday lights"}:
+                continue
+            if place not in cleaned:
+                cleaned.append(place)
+        if len(cleaned) >= 2:
+            rows.append(f"The displays include {ev.join_and(cleaned[:3])}.")
+        elif cleaned:
+            rows.append(f"One stop is the display at {cleaned[0]}.")
+        if re.search(r"music", blob, re.I):
+            rows.append("Music plays during the ride between the light displays.")
+        if re.search(r"photo", blob, re.I):
+            rows.append("There is time to get out for photographs at the displays.")
+        if re.search(r"family", blob, re.I):
+            rows.append("Families ride together to see the lights.")
+        rows.append("The outing is a ride past the decorations, not a daytime sightseeing walk.")
+        rows.append("Guests stay with the vehicle except where the route stops for the displays.")
+    if re.search(r"\b(geodesic dome|bell tent|glamping|dry campsite|campsite)\b", blob, re.I):
+        if re.search(r"geodesic dome|\bdome\b", blob, re.I):
+            rows.append("Overnight guests sleep in a geodesic dome instead of taking a guided walk.")
+        elif re.search(r"bell tent", blob, re.I):
+            rows.append("Overnight guests sleep in a bell tent instead of taking a guided walk.")
+        else:
+            rows.append("Guests camp on a dry site and bring a tent, a camper, or a trailer.")
+        people = re.search(r"(?:up to|sleeps)\s+(\d+)", blob, re.I)
+        if people:
+            rows.append(f"The site sleeps up to {people.group(1)} guests.")
+        elif re.search(r"sleeps two|sleep two|for two", blob, re.I):
+            rows.append("The tent sleeps two guests for the night.")
+        if re.search(r"queen", blob, re.I):
+            rows.append("Sleeping is on a queen bed, and linens are provided.")
+        if re.search(r"couch|folding mattress", blob, re.I):
+            rows.append("A couch and a folding mattress give more room to sleep.")
+        if re.search(r"firepit|fire pit", blob, re.I):
+            rows.append("A firepit on the site is there for the evening.")
+        if re.search(r"grill", blob, re.I):
+            rows.append("A propane grill is on hand for cooking outdoors.")
+        if re.search(r"picnic", blob, re.I):
+            rows.append("Outdoor seating includes a picnic table for meals on the site.")
+        if re.search(r"solar", blob, re.I):
+            rows.append("Solar lights are inside for the evening hours.")
+        if re.search(r"outdoor shower|\bshower\b", blob, re.I):
+            rows.append("An outdoor shower and a sink are part of this site.")
+        if re.search(r"private portable toilet", blob, re.I):
+            rows.append("A private portable toilet is assigned to this site.")
+        elif re.search(r"portable toilet", blob, re.I):
+            rows.append("Shared portable toilets are a short walk from the site.")
+        if re.search(r"generator", blob, re.I):
+            rows.append("A generator powers the lights, the water pump, and small devices.")
+        if re.search(r"heater", blob, re.I):
+            rows.append("A heater is available when the night turns cold.")
+        if re.search(r"not insulated", blob, re.I):
+            rows.append("The dome is not insulated, so summers run hot and winters run cold.")
+        if re.search(r"drinking water", blob, re.I):
+            rows.append("Guests bring their own drinking water for the stay.")
+        if re.search(r"30\s*ft|30ft", blob, re.I):
+            rows.append("Trailers parked on the site are limited to about 30 feet.")
+        if re.search(r"dry camp", blob, re.I):
+            rows.append("The site has no hookups, so guests bring what they need for the night.")
+        if re.search(r"joshua tree", blob, re.I):
+            rows.append("The overnight stay is in Joshua Tree.")
+        rows.append("This booking is an overnight stay, not a sightseeing route through town.")
+        if re.search(r"firepit|fire pit", blob, re.I):
+            rows.append("Guests spend the night on the site, and the firepit is the evening gathering place.")
+        else:
+            rows.append("Guests spend the night on the site rather than touring the town.")
+    if re.search(r"\bbike\b|\bbiking\b|\bebike\b|\be-bike\b", blob, re.I) and re.search(
+        r"muir woods|golden gate|sausalito|santa monica|venice|pier|canal", blob, re.I
+    ):
+        if re.search(r"shuttle", blob, re.I):
+            rows.append("The day pairs a shuttle ride with time on a bike.")
+        else:
+            rows.append("Guests ride bikes rather than touring the sights on foot.")
+        if re.search(r"pedal[\s-]?assist|electric", blob, re.I):
+            rows.append("The bikes are pedal-assist, so the motor helps on the hills.")
+        if re.search(r"muir woods", blob, re.I):
+            rows.append("The shuttle runs out to Muir Woods National Monument.")
+            rows.append("Guests walk among the coastal redwoods while they are there.")
+        if re.search(r"golden gate bridge", blob, re.I):
+            rows.append("Riders cross the Golden Gate Bridge and watch the bay from the span.")
+        elif re.search(r"golden gate park", blob, re.I):
+            rows.append("The ride stays in Golden Gate Park, on the park's bike paths.")
+        if re.search(r"golden gate bridge", blob, re.I) and re.search(r"\bpark\b", blob, re.I):
+            rows.append("The same ride can take in both the park paths and the bridge.")
+        if re.search(r"sausalito", blob, re.I):
+            rows.append("The route continues toward Sausalito after the bridge.")
+        if re.search(r"waterfront|water views", blob, re.I):
+            rows.append("Much of the riding is along the waterfront, with the bay alongside.")
+        if re.search(r"ghirardelli|beach street", blob, re.I):
+            rows.append("The ride meets by Ghirardelli Square on Beach Street.")
+        if re.search(r"hippie hill", blob, re.I):
+            rows.append("Hippie Hill is one of the places riders pass inside the park.")
+        if re.search(r"fisherman", blob, re.I):
+            rows.append("The shuttle portion starts at Fisherman's Wharf.")
+        if re.search(r"sausalito", blob, re.I) and re.search(r"free time", blob, re.I):
+            rows.append("There is free time in Sausalito before the shuttle turns back.")
+        if re.search(r"bay trail", blob, re.I):
+            rows.append("Once the shuttle is done, the bike portion follows the Bay Trail.")
+        if re.search(r"helmet", blob, re.I):
+            rows.append("A helmet is included, and the shop fits the bike before departure.")
+        if re.search(r"\bguide\b", blob, re.I):
+            rows.append("A guide rides with the group and sets the pace.")
+        if re.search(r"beginner", blob, re.I):
+            rows.append("The operator presents the ride as suitable for beginners.")
+        if re.search(r"ferry", blob, re.I):
+            rows.append("A round-trip ferry is part of getting riders back.")
+        hours = _outing_hours(blob)
+        if hours:
+            unit = "hour" if hours == "1" else "hours"
+            rows.append(f"The booking runs about {hours} {unit}.")
+        if re.search(r"90 minutes|ninety minutes", blob, re.I):
+            rows.append("About 90 minutes are set aside inside the redwood grove.")
+        if re.search(r"self-guided", blob, re.I):
+            rows.append("The city bike portion is self-guided after the shuttle returns.")
+        if re.search(r"redwood", blob, re.I):
+            rows.append("The redwoods are why the shuttle goes out, and the bridge is the riding highlight.")
+        if re.search(r"santa monica pier", blob, re.I):
+            rows.append("The ride starts near the Santa Monica Pier.")
+        if re.search(r"venice canal", blob, re.I):
+            rows.append("Riders continue on to the Venice Canals.")
+        if re.search(r"marina del rey", blob, re.I):
+            rows.append("The same route also passes through Marina del Rey.")
+        if re.search(r"muscle beach", blob, re.I):
+            rows.append("Muscle Beach is one of the places the group stops.")
+        if re.search(r"art wall", blob, re.I):
+            rows.append("The Art Walls are a stop where riders take photographs.")
+        if re.search(r"ocean", blob, re.I):
+            rows.append("Much of the riding follows the shore, with the ocean alongside.")
+        if re.search(r"non-electric|standard", blob, re.I) and re.search(r"pedal", blob, re.I):
+            rows.append("Some guests ride pedal-assist bikes, and others ride ordinary bikes.")
+        if re.search(r"photo", blob, re.I):
+            rows.append("The guide stops so riders can take photographs along the way.")
+        rows.append("People stay with the bikes for the riding portion of the booking.")
+    if re.search(
+        r"\b(animal ambassadors?|zookeep\w*|veterinar\w*|pumpkin patch|humane education|animal husbandry)\b",
+        blob,
+        re.I,
+    ):
+        if re.search(r"pumpkin|halloween|howl", blob, re.I):
+            rows.append("Families meet animal ambassadors and move between activity stations.")
+            if re.search(r"trick-or-treat|trick or treat", blob, re.I):
+                rows.append("Trick-or-treat stops are set around the activity areas.")
+            if re.search(r"face painting", blob, re.I):
+                rows.append("Face painting is offered along with the animal visits.")
+            if re.search(r"pumpkin", blob, re.I):
+                rows.append("A small pumpkin patch is on site, and each child may take one pumpkin.")
+            if re.search(r"haunted", blob, re.I):
+                rows.append("A few rooms are arranged as a mild haunt for young children.")
+            if re.search(r"music", blob, re.I):
+                rows.append("Music plays while the stations stay open.")
+        if re.search(r"zookeeper|zookeep|husbandry|diet preparation", blob, re.I):
+            rows.append("The camp day is built around animal-care tasks with the staff.")
+            if re.search(r"diet", blob, re.I):
+                rows.append("Preparing animal diets is one of those tasks.")
+            if re.search(r"enrichment", blob, re.I):
+                rows.append("The group also sets up enrichment for the animals.")
+            if re.search(r"groom|exercis", blob, re.I):
+                rows.append("Grooming and exercise are part of the same camp day.")
+            if re.search(r"reptile|mammal|bird", blob, re.I):
+                rows.append("Mammals, reptiles, and birds are among the animals campers work with.")
+            if re.search(r"habitat", blob, re.I):
+                rows.append("Cleaning animal habitats is one of the camp tasks.")
+            if re.search(r"training", blob, re.I):
+                rows.append("Training sessions with the animals are part of the day.")
+            if re.search(r"limited", blob, re.I):
+                rows.append("The camp keeps the group small so each camper can work close to the animals.")
+        if re.search(r"veterinar", blob, re.I):
+            rows.append("Campers meet a veterinarian and practice simple clinical skills.")
+            if re.search(r"banana", blob, re.I):
+                rows.append("Suture practice uses a banana rather than a live animal.")
+            if re.search(r"microscope", blob, re.I):
+                rows.append("A microscope is set out so campers can look at cells.")
+            if re.search(r"\bcpr\b", blob, re.I):
+                rows.append("Canine CPR is practiced on a training dummy.")
+            if re.search(r"hospital", blob, re.I):
+                rows.append("The day includes a walk through a companion-animal hospital.")
+        if re.search(r"butterfly|life cycle", blob, re.I) and re.search(r"animal", blob, re.I):
+            rows.append("Children meet live animals and hear how life cycles work.")
+            if re.search(r"butterfly", blob, re.I):
+                rows.append("One station covers butterfly conservation.")
+            species = [
+                label
+                for label, pattern in (
+                    ("a mini horse", r"mini horse"),
+                    ("a chicken", r"\bchicken\b"),
+                    ("a frog", r"\bfrog\b"),
+                    ("a guinea pig", r"guinea pig"),
+                    ("a dove", r"\bdove\b"),
+                )
+                if re.search(pattern, blob, re.I)
+            ]
+            if species:
+                rows.append(f"Animals that may be brought out include {ev.join_and(species[:4])}.")
+        rows.append("Staff stay with the group while the animals are part of the program.")
+        rows.append("This booking is an animal program, not a sightseeing loop through town.")
+    if re.search(r"\bsurf", blob, re.I) and re.search(r"\b(lesson|surfboard|waves?)\b", blob, re.I):
+        rows.append(
+            "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board."
+        )
+        rows.append("After that land lesson, the group goes into the ocean to catch waves.")
+        if re.search(r"ocean safety", blob, re.I):
+            rows.append("Ocean safety is covered before anyone takes a board into the water.")
+        if re.search(r"wave selection", blob, re.I):
+            rows.append("Choosing which wave to catch is part of the same instruction.")
+        if re.search(r"wetsuit", blob, re.I) and re.search(r"surfboard", blob, re.I):
+            rows.append("A wetsuit and a surfboard are provided for the time in the water.")
+        elif re.search(r"surfboard", blob, re.I):
+            rows.append("A surfboard is provided for the time in the water.")
+        if re.search(r"rash guard", blob, re.I):
+            rows.append("A rash guard, fins, a leash, and reef shoes are also set out with the gear.")
+        if re.search(r"\benglish\b", blob, re.I):
+            rows.append("The lesson itself is given in English.")
+        ratio = re.search(r"(\d+)\s*:\s*1", blob)
+        if ratio and ratio.group(1) != "1":
+            rows.append(
+                f"Instructors stay with the group at about {ratio.group(1)} guests per instructor."
+            )
+        if re.search(r"one-on-one|\b1\s*:\s*1\b", blob, re.I):
+            rows.append("A private booking keeps one instructor with one guest.")
+        elif re.search(r"\bprivate\b", blob, re.I):
+            rows.append("The booking is private, so the instructor works with that party alone.")
+        if re.search(r"family|friends|ohana", blob, re.I):
+            rows.append("Family or friends share the lesson and take the same waves together.")
+        if re.search(r"beginner|first time", blob, re.I):
+            rows.append("The lesson is aimed at first-time and beginner surfers.")
+        if re.search(r"30 minutes", blob, re.I) and re.search(r"stand", blob, re.I):
+            rows.append("The operator aims to have beginners standing on the board within about 30 minutes.")
+        cap = re.search(r"(?:maximum|max(?:imum)? group size of|group size of)\s+(\d+)", blob, re.I)
+        if not cap:
+            cap = re.search(r"maximum group size of (\d+)", blob, re.I)
+        if cap:
+            rows.append(f"The lesson takes groups of up to {cap.group(1)} guests.")
+        rows.append("People are in the water on surfboards rather than walking a neighborhood route.")
+        rows.append("The instructor stays in the surf with the group for the length of the lesson.")
     if re.search(r"\bprivate\b", blob, re.I) and re.search(
         r"you decide what to see|hidden gems", blob, re.I
     ):
@@ -608,11 +1070,12 @@ def _cue_sentences(kind: str, description: str) -> list[str]:
 
 def _name_sentences(kind: str, names: list[str], description: str) -> list[str]:
     if kind == "drive":
+        vehicle = "car" if re.search(r"\bgocar\b|\bgo\s*car\b", description or "", re.I) else "van"
         frames = [
             "The drive passes {pair}.",
-            "Farther along, the van goes by {pair}.",
+            f"Farther along, the {vehicle} goes by {{pair}}.",
             "{pair} are on the same circuit.",
-            "Also visible from the van are {pair}.",
+            f"Also visible from the {vehicle} are {{pair}}.",
             "The later stretch includes {pair}.",
         ]
     elif kind == "sail":
@@ -692,7 +1155,10 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
     if kind == "walk" and re.search(r"\bwalk", blob, re.I):
         rows.append("Guests stay on foot the whole time, pausing while the guide talks at each site.")
     if kind == "drive":
-        rows.append("The point of the outing is the succession of landmarks seen from the van, not a march between them.")
+        vehicle = "car" if re.search(r"\bgocar\b|\bgo\s*car\b", blob, re.I) else "van"
+        rows.append(
+            f"The point of the outing is the succession of landmarks seen from the {vehicle}, not a march between them."
+        )
     if kind == "sail":
         rows.append("The landmarks are seen from the harbor, with the boat doing the traveling.")
     if kind == "food":
@@ -738,7 +1204,7 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("From that ground, guests look toward the USS Constitution and the Bunker Hill Monument.")
     if re.search(r"oldest neighborhood", blob, re.I):
         rows.append("The streets are treated as the oldest part of the city, and the stories are told there.")
-    if re.search(r"skyline", blob, re.I):
+    if re.search(r"skyline", blob, re.I) and kind == "sail":
         rows.append("The changing skyline is the view, with the boat moving while guests watch from the deck.")
     if re.search(r"music", blob, re.I) and kind == "sail":
         rows.append("Music plays during the cruise, and the landmark commentary is kept light.")
@@ -754,7 +1220,10 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given.")
         rows.append("Each pause is there so guests can look at the place the story belongs to.")
     elif kind == "drive":
-        rows.append("There is no set walking route. The van is how guests move, and most landmarks are seen through the windows.")
+        vehicle = "car" if re.search(r"\bgocar\b|\bgo\s*car\b", blob, re.I) else "van"
+        rows.append(
+            f"There is no set walking route. The {vehicle} is how guests move, and most landmarks are seen through the windows."
+        )
     elif kind == "sail":
         rows.append("There is no walking route. The boat is how guests move, and the harbor is the viewpoint.")
         rows.append("People stay aboard, watching the shore go by rather than touring the sidewalks.")
@@ -772,7 +1241,9 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
     elif names:
         rows.append(f"Guests come to {names[0]}, and they hear why it is on the trip.")
     indoor = re.search(
-        r"\b(workshop|studio|canvas|revue|blacklight|spray paint)\b", blob, re.I
+        r"\b(workshop|studio|revue|blacklight|spray paint)\b", blob, re.I
+    ) or (
+        re.search(r"\bcanvas\b", blob, re.I) and not re.search(r"blank canvas", blob, re.I)
     )
     if indoor and re.search(r"revue|strip", blob, re.I):
         rows.append("People are seated for a show. The dancers and the hosts are the event, not a neighborhood route.")
@@ -827,8 +1298,8 @@ def finish_experience(
         return None
     kind = ev.activity_kind(title, blob)
     names = _names(blob, title, operator)
-    drafts = _cue_sentences(kind, blob)
-    drafts.extend(_name_sentences(kind, names, blob))
+    cue_drafts = _cue_sentences(kind, blob)
+    name_drafts = _name_sentences(kind, names, blob)
     used: list[str] = []
     kept: list[str] = []
     seen = set()
@@ -845,10 +1316,15 @@ def finish_experience(
         seen.add(key)
         kept.append(cleaned)
 
-    for draft in drafts:
+    for draft in cue_drafts:
         _take(draft)
         if ev.count_words(kept) >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
             break
+    if ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
+        for draft in name_drafts:
+            _take(draft)
+            if ev.count_words(kept) >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
+                break
     if ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
         for draft in _stretch(kind, names, blob, " ".join(kept)):
             _take(draft)

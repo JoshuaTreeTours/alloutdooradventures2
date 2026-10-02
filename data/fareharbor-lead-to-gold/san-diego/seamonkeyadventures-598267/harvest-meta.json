@@ -1,0 +1,47 @@
+{
+  "company": "seamonkeyadventures",
+  "itemId": "598267",
+  "fetchedAt": "2026-10-02T22:42:04.417006+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/seamonkeyadventures/598267/content/",
+      "status": 200,
+      "bytes": 6302,
+      "sha256": "121bea9875210462e834887bbb8a46f64d68a898510aca37ca6789a7478d5471"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/seamonkeyadventures/598267/structured-description/",
+      "status": 200,
+      "bytes": 3999,
+      "sha256": "9eed5c2380be00cee566a8a19d64d6096e5a9d4e624666b6d24cdf87f6c18497"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/seamonkeyadventures/items/598267/",
+      "status": 200,
+      "bytes": 15543,
+      "sha256": "40b7e53d079e8490efd191ec22f70a0eab437831d39641199e0b4e67531e8fd1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/seamonkeyadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=598267&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 987,
+      "sha256": "4e237506d22d16a6518a2e80e5a385143fb82309f3f91e7a0fd3e1e8f46e9ad7"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/seamonkeyadventures/items/598267/ratings/",
+      "status": 200,
+      "bytes": 432,
+      "sha256": "70be5b27a88261d7ad34d29e49c35c14ebff4e7ede0417e4681ab0f066c4d371"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "598267",
+    "provider": "seamonkeyadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598267/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

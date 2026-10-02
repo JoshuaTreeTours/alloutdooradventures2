@@ -1,0 +1,88 @@
+{
+  "fetchedAt": "2026-10-02T22:44:32.890601+00:00",
+  "citySlug": "newport-beach",
+  "totalBostonLegacy": 1,
+  "total": 1,
+  "active": 0,
+  "terminal": 1,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 0,
+  "priceNotFound": 0,
+  "alreadyRetired": 1,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "86650"
+  ],
+  "priceNotFoundIds": [],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "86650",
+      "company": "newportbeachboatrentals",
+      "catalogId": "newport-beach-boat-rentals-86650",
+      "slug": "boston-whaler-86650",
+      "title": "Boston Whaler",
+      "operator": "Newport Beach Boat Rentals",
+      "publicPath": "/destinations/california/newport-beach/tours/boston-whaler-86650",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Newport Beach",
+        "citySlug": "newport-beach",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/newportbeachboatrentals/items/86650/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC"
+      ],
+      "alreadyRetired": true,
+      "fetchedAt": "2026-10-02T22:44:30.602454+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/newportbeachboatrentals/86650/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/newportbeachboatrentals/86650/structured-description/",
+          "status": 404,
+          "bytes": 588103,
+          "sha256": "da748fe0c08628014a5ace0795eb2141e6a2515a0e1f93c8a2570d93a16ce039"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/newportbeachboatrentals/items/86650/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "250c37ef6e22a95df691072f865e783896297e42b0e9c16f363acb7c01fd4de4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/newportbeachboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=86650&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 147,
+          "sha256": "b90d417c8c19d6dec55d53c9afb8427e37ec9956658fe8a354047326c92dd559"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/newportbeachboatrentals/items/86650/ratings/",
+          "status": 404,
+          "bytes": 588093,
+          "sha256": "6f14fa51dbe31de1afbc10786f0681cd5f68bcee76324eb934b5651b29563753"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "86650",
+        "provider": "newportbeachboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/newportbeachboatrentals/items/86650/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

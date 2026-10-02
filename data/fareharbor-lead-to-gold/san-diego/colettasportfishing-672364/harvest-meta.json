@@ -1,0 +1,47 @@
+{
+  "company": "colettasportfishing",
+  "itemId": "672364",
+  "fetchedAt": "2026-10-02T22:40:48.485342+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/colettasportfishing/672364/content/",
+      "status": 200,
+      "bytes": 7202,
+      "sha256": "695d419cc50f3f365ae373afd10aa87610b72b86cec5bbeddeb3855391ff42d3"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/colettasportfishing/672364/structured-description/",
+      "status": 200,
+      "bytes": 2999,
+      "sha256": "01ebb8f07140a50e8d198c41da8cef4743d0d31591c56e10cd8114d5c2fbdcb0"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/colettasportfishing/items/672364/",
+      "status": 200,
+      "bytes": 13232,
+      "sha256": "b4bcc589c147042c7fbb40d4355899a3a90c44e92321c1b815e71e63472dbe76"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/colettasportfishing/price-preview/per-item/v2/?asn=fhdn&item_pks=672364&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 582,
+      "sha256": "d322940cad4ff4bab47ff426670bab19b28b8180b7001e365d78b936ac7a6dd0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/colettasportfishing/items/672364/ratings/",
+      "status": 200,
+      "bytes": 522,
+      "sha256": "d9ffaf7157cff73fc78335c93dd8e416890aa867aaa4ea42ebe75bb8b6ce1475"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "672364",
+    "provider": "colettasportfishing",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/672364/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

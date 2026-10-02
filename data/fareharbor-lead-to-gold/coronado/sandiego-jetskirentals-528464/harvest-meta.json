@@ -1,0 +1,47 @@
+{
+  "company": "sandiego-jetskirentals",
+  "itemId": "528464",
+  "fetchedAt": "2026-10-02T22:42:31.524856+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/528464/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sandiego-jetskirentals/528464/structured-description/",
+      "status": 200,
+      "bytes": 1807,
+      "sha256": "763ed30c79037ce0ba5a445bf8bf4134eec940aa8b757fe347c2f2cc492498a1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/528464/",
+      "status": 200,
+      "bytes": 8252,
+      "sha256": "3bd21e4bc76db4f716dc57ad84f17ee3fc3c265d54a99fe84ecc35880ecdf8e6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sandiego-jetskirentals/price-preview/per-item/v2/?asn=fhdn&item_pks=528464&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sandiego-jetskirentals/items/528464/ratings/",
+      "status": 200,
+      "bytes": 543,
+      "sha256": "ce2d6436a3a421c9bd9905a0532deb4786532e5271c5f3a81dae948f5b1fdf03"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "528464",
+    "provider": "sandiego-jetskirentals",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/528464/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

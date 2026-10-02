@@ -1,0 +1,47 @@
+{
+  "company": "legacycruisessd",
+  "itemId": "324726",
+  "fetchedAt": "2026-10-02T22:41:19.011959+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/legacycruisessd/324726/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/legacycruisessd/324726/structured-description/",
+      "status": 204,
+      "bytes": 0,
+      "sha256": null
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/legacycruisessd/items/324726/",
+      "status": 200,
+      "bytes": 21173,
+      "sha256": "d78f6a00098d340d8ba68b6d3238cbde051cbfec5c906e4a543909635207ce1f"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/legacycruisessd/price-preview/per-item/v2/?asn=fhdn&item_pks=324726&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/legacycruisessd/items/324726/ratings/",
+      "status": 200,
+      "bytes": 538,
+      "sha256": "b542c46c43b6c90bafc1f494feadf86e5e6c3171080d04b62a43ea0e86ae9602"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "324726",
+    "provider": "legacycruisessd",
+    "bookingUrl": "https://fareharbor.com/embeds/book/legacycruisessd/items/324726/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

@@ -364,6 +364,16 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
     if count_words(experience) < 28:
         return True
     blob = " ".join(experience)
+    if re.search(
+        r"\b(animal ambassadors?|zookeeper|zookeep|veterinar|animal-care|live animals)\b",
+        blob,
+        re.I,
+    ) and re.search(r"\b(camp|pumpkin|habitat|microscope|suture|butterfly|animals?)\b", blob, re.I):
+        return False
+    if re.search(r"\b(geodesic dome|bell tent|campsite|firepit|fire pit)\b", blob, re.I) and re.search(
+        r"\b(bed|sleeps?|tent|campfire|grill|heater)\b", blob, re.I
+    ):
+        return False
     if not EXPERIENCE_TOKEN_RE.search(blob) and not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
         return True
     if re.search(
@@ -374,6 +384,10 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
         r"harvard yard|harvard square)\b",
         blob,
         re.I,
+    ):
+        return False
+    if re.search(r"\b(surfboard|wetsuit|paddling)\b", blob, re.I) and re.search(
+        r"\b(ocean|waves?)\b", blob, re.I
     ):
         return False
     if not re.search(r"\b[A-Z][A-Za-z0-9'&.-]{2,}(?:\s+[A-Z][A-Za-z0-9'&.-]{2,})+\b", blob):
@@ -464,6 +478,8 @@ def activity_kind(title: str, description: str = "") -> str:
         return "bus"
     if re.search(r"\b(walk|trail|foot)\b", title_text):
         return "walk"
+    if re.search(r"\bsurf", title_text):
+        return "surf"
     if re.search(r"\b(driving tour|minivan|by van|in a van)\b", blob):
         return "drive"
     if re.search(r"\b(kayak|paddle|canoe)\b", blob):
@@ -478,6 +494,16 @@ def activity_kind(title: str, description: str = "") -> str:
         return "sail"
     if re.search(r"\b(walking tour|on foot)\b", blob):
         return "walk"
+    if re.search(r"\bwhale watch\b", blob):
+        return "sail"
+    if re.search(r"\b(whale|dolphin)s?\b", blob) and re.search(
+        r"\b(boat|aboard|vessel|on board|on the water)\b", blob
+    ):
+        return "sail"
+    if re.search(r"\bgocar\b|\bgo car\b", blob):
+        return "drive"
+    if re.search(r"\bsurfboard\b|\bsurf lesson\b|\bsurfing\b", blob):
+        return "surf"
     return "outing"
 
 
@@ -493,9 +519,9 @@ def activity_contradiction_errors(
     kind = activity_kind(title, description)
     body = " ".join(paragraphs or [])
     errors = []
-    if kind in {"drive", "sail", "bike", "paddle", "food"} and re.search(r"\bthe walk\b", body, re.I):
+    if kind in {"drive", "sail", "bike", "paddle", "food", "surf"} and re.search(r"\bthe walk\b", body, re.I):
         errors.append(f"activity contradiction: walking language on a {kind} tour")
-    if kind in {"drive", "sail", "bike", "paddle", "food"} and re.search(r"\bwalking tour\b", body, re.I):
+    if kind in {"drive", "sail", "bike", "paddle", "food", "surf"} and re.search(r"\bwalking tour\b", body, re.I):
         errors.append(f"activity contradiction: called a walking tour but the activity is {kind}")
     if kind in {"drive", "walk", "bike", "food", "paddle"} and re.search(r"\bthe sail\b", body, re.I):
         errors.append(f"activity contradiction: sailing language on a {kind} tour")
@@ -807,7 +833,7 @@ def is_junk_place_label(name: str) -> bool:
         r"special feature|water slide|tiki|fusion sound|happy place|"
         r"all fun|entrance fee|group size|semi-private|professional tour|"
         r"about me|paid separately|must be paid|best way|open air|what to bring|"
-        r"restroom|coffee break|bathroom)\b",
+        r"restroom|coffee break|bathroom|waiver|mother nature)\b",
         key,
     ):
         return True
@@ -837,6 +863,12 @@ def extract_places(facts: dict, source_text: str, title: str, operator: str) -> 
             text,
             flags=re.I,
         ).strip(" .-")
+        if re.search(
+            r"\b(check[\s-]?in|departs?|arrives?|free time|sharp|est\.)\b|\d{1,2}:\d{2}",
+            text,
+            re.I,
+        ):
+            continue
         if text and not re.fullmatch(
             r"(?:check[\s-]?in|demo\s*\d*|paint|dry|wrap|open paint|first demo|"
             r"second demo|final touches|bag piece|arrive(?:/check in)?)",
@@ -1141,9 +1173,13 @@ def description_fact_drafts(description: str, extras: list[str] | None = None) -
         drafts.append("The sail is aboard a tall ship.")
     if re.search(r"\bsunset\b", blob, re.I) and re.search(r"harbor|sail|cruise", blob, re.I):
         drafts.append("The sail is a sunset harbor outing.")
-    if re.search(r"moonlight|under the stars", blob, re.I):
+    if re.search(r"moonlight|under the stars", blob, re.I) and re.search(
+        r"\b(sail|cruise|harbor|schooner|yacht|boat)\b", blob, re.I
+    ):
         drafts.append("The sail runs in the evening under the stars.")
-    if re.search(r"lighthouse", blob, re.I):
+    if re.search(r"lighthouse", blob, re.I) and re.search(
+        r"\b(sail|cruise|harbor|schooner|yacht|boat)\b", blob, re.I
+    ):
         drafts.append("The sail passes harbor lighthouses.")
     if re.search(r"Harbor Islands", blob):
         drafts.append("The sail visits the Boston Harbor Islands.")
@@ -1290,9 +1326,15 @@ def harvest_experience_drafts(
         )
     )
     title_words = WORD_RE.findall(title or "")
-    if 2 <= len(title_words) <= 8 and count_words([description]) >= 40:
-        if not MARKETING.search(title or "") and not SECOND_PERSON.search(title or ""):
-            drafts.append(f"The walk covers {title}.")
+    if (
+        activity == "walking tour"
+        and 2 <= len(title_words) <= 8
+        and count_words([description]) >= 40
+        and not MARKETING.search(title or "")
+        and not SECOND_PERSON.search(title or "")
+        and not re.search(r"\b(tour|experience|adventure|package)\b", title or "", re.I)
+    ):
+        drafts.append("The walk follows the route named in the booking.")
     drafts.extend(itinerary_sentences(places[:6], activity))
     family = re.search(
         r"families with children(?: ages?)?\s+(\d+)\s*(?:-|to)\s*(\d+)",
@@ -1608,6 +1650,7 @@ def _rewrite_clause(
 
 _AWKWARD_PROSE_RE = re.compile(
     r", then\b|\bthe the\b|\bguests guests\b|\ba a\b|\bof of\b|"
+    r"\bat,\s*where\b|\bmajestic\b|"
     r"\blook at the link\b|^into\b|^along the\b|^through the\b|"
     r"\bas well as they\b|\bas well as the group\b|\byourself\b|"
     r"\bnotable sites\b|\bcaptivating\b|\ba experience\b|\bsailing meet\b|"
@@ -2639,16 +2682,23 @@ def compose_editorial(
     from editorial_finish import finish_experience
 
     description = facts.get("description") or ""
-    if narrative and not prose_quality_errors(narrative, title, description):
+    narrative_overlaps = bool(
+        narrative
+        and overlap_with_source(
+            " ".join(narrative), overlap_text or description, title, operator
+        )
+    )
+    finished = finish_experience(facts, title, operator, meeting, overlap_text)
+    if finished:
+        paragraphs = finished
+    elif (
+        narrative
+        and not narrative_overlaps
+        and not prose_quality_errors(narrative, title, description)
+    ):
         paragraphs = narrative
-    else:
-        finished = finish_experience(facts, title, operator, meeting, overlap_text)
-        if finished:
-            paragraphs = finished
-        elif narrative and not prose_quality_errors(narrative, title, description):
-            paragraphs = narrative
-        elif repetitive_opener_errors(paragraphs):
-            paragraphs = _diversify_openers(paragraphs)
+    elif repetitive_opener_errors(paragraphs):
+        paragraphs = _diversify_openers(paragraphs)
     if (
         geography.get("disposition") == "moved"
         and city
