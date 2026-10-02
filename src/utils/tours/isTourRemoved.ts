@@ -1,6 +1,7 @@
 import { RETIRED_FAREHARBOR_TOUR_IDS } from "../fareharbor/suppressedBookingPages";
 import { isStageBBookingPageNotFound } from "../fareharbor/stageBTerminalBookingPages";
 import { isFareHarborGeographyReview } from "../fareharbor/geographyReview";
+import { isUnpublishedUnpricedFareHarborProduct } from "../fareharbor/unpublishedUnpricedProducts.generated";
 
 const REMOVED_TOUR_IDS = new Set([
   "34849",
@@ -37,6 +38,12 @@ export const isTourRemoved = ({
     const normalizedTourId = tourId.trim();
     const trailingTourId = getTourIdFromSlug(normalizedTourId);
     if (isStageBBookingPageNotFound(normalizedTourId)) {
+      return true;
+    }
+    if (
+      isUnpublishedUnpricedFareHarborProduct(normalizedTourId) ||
+      isUnpublishedUnpricedFareHarborProduct(trailingTourId)
+    ) {
       return true;
     }
     if (

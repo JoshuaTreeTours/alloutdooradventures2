@@ -22,6 +22,7 @@ import {
 } from "./fareharborLeadToGoldProof";
 import { isStageBBookingPageNotFound } from "../utils/fareharbor/stageBTerminalBookingPages";
 import { isFareHarborGeographyReview } from "../utils/fareharbor/geographyReview";
+import { isUnpublishedUnpricedFareHarborProduct } from "../utils/fareharbor/unpublishedUnpricedProducts.generated";
 
 vi.mock("../components/StructuredDataProvider", () => ({
   useStructuredData: () => undefined,
@@ -44,8 +45,9 @@ describe("FareHarbor Chicago legacy rollout", () => {
     expect(boston).toHaveLength(221);
     expect(boston.filter(product => product.aggregateRating)).toHaveLength(47);
     expect(boston.filter(product => product.offer)).toHaveLength(93);
-    expect(chicago).toHaveLength(28);
-    expect(chicago.filter(product => product.publicPath.includes("/chicago/"))).toHaveLength(27);
+    expect(chicago).toHaveLength(17);
+    expect(chicago.filter(product => product.publicPath.includes("/chicago/"))).toHaveLength(17);
+    expect(chicago.every(product => product.offer && product.visiblePriceLabel)).toBe(true);
     expect(new Set(ids).size).toBe(ids.length);
     expect(products.filter(product => product.itemId === "73240")).toHaveLength(0);
     expect(isFareHarborGeographyReview("73240")).toBe(true);
@@ -90,26 +92,6 @@ describe("FareHarbor Chicago legacy rollout", () => {
         citySlug: "chicago",
         slug: "private-luxury-yacht-rental-12-person-max-148284",
         priced: true,
-        rated: false,
-        stateName: "Illinois",
-        cityName: "Chicago",
-      },
-      {
-        itemId: "296848",
-        stateSlug: "illinois",
-        citySlug: "chicago",
-        slug: "art-institute-of-chicago-skip-the-line-tour-private-296848",
-        priced: false,
-        rated: true,
-        stateName: "Illinois",
-        cityName: "Chicago",
-      },
-      {
-        itemId: "687115",
-        stateSlug: "illinois",
-        citySlug: "chicago",
-        slug: "37ft-sea-ray-sundancer--4-hours-test-687115",
-        priced: false,
         rated: false,
         stateName: "Illinois",
         cityName: "Chicago",
@@ -195,28 +177,36 @@ describe("FareHarbor Chicago legacy rollout", () => {
     }
   });
 
-  it("moves the Miami Beach bike tour off the Chicago route", () => {
-    const product = getFareHarborProofByItemId("584698");
-    expect(product?.publicPath).toBe(
-      "/destinations/florida/miami-beach/tours/miami-beach-ultimate-city-bike-tour-584698"
-    );
-    expect(
-      getTourBySlugs(
-        "illinois",
-        "chicago",
-        "miami-beach-ultimate-city-bike-tour-584698"
-      )
-    ).toBeUndefined();
-    const tour = getTourBySlugs(
-      "florida",
-      "miami-beach",
-      "miami-beach-ultimate-city-bike-tour-584698"
-    );
-    expect(tour?.destination).toMatchObject({
-      stateSlug: "florida",
-      citySlug: "miami-beach",
-      state: "Florida",
-      city: "Miami Beach",
-    });
+  it("drops products with no authoritative price from the public catalog", () => {
+    const sitemap = readFileSync("public/sitemap-tours.xml", "utf8");
+    const withheld = [
+      {
+        itemId: "296848",
+        slug: "art-institute-of-chicago-skip-the-line-tour-private-296848",
+        stateSlug: "illinois",
+        citySlug: "chicago",
+      },
+      {
+        itemId: "687115",
+        slug: "37ft-sea-ray-sundancer--4-hours-test-687115",
+        stateSlug: "illinois",
+        citySlug: "chicago",
+      },
+      {
+        itemId: "584698",
+        slug: "miami-beach-ultimate-city-bike-tour-584698",
+        stateSlug: "florida",
+        citySlug: "miami-beach",
+      },
+    ] as const;
+
+    for (const sample of withheld) {
+      expect(isUnpublishedUnpricedFareHarborProduct(sample.itemId)).toBe(true);
+      expect(getFareHarborProofByItemId(sample.itemId)).toBeNull();
+      expect(
+        getTourBySlugs(sample.stateSlug, sample.citySlug, sample.slug)
+      ).toBeUndefined();
+      expect(sitemap).not.toContain(sample.slug);
+    }
   });
 });

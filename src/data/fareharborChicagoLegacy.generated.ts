@@ -59,38 +59,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "TripAdvisor rating 5 from 431 reviews on GET https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296843/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
-    "itemId": "296848",
-    "company": "babylontours-chicago",
-    "title": "Art Institute of Chicago Skip-the-Line Tour (Private)",
-    "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-skip-the-line-tour-private-296848",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Guests hear about La Grande Jatte and Grant Wood. The guide's account includes Chagall's America Windows and Georges Seurat. Stories along the way cover Great Depression Edward Hopper. Among the places guests actually encounter are La Grande Jatte, Grant Wood, and Chagall's America Windows. Later the guide turns to Georges Seurat and Great Depression Edward Hopper, explaining what happened there.",
-      "Guests come to La Grande Jatte and Grant Wood, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop."
-    ],
-    "schemaDescription": "A 2.5-hour guided outing with Babylon Tours Chicago in Chicago.",
-    "highlights": [
-      "2.5-hour guided outing in Chicago",
-      "PROFESSIONAL TOUR GUIDE"
-    ],
-    "galleryImages": [],
-    "wordCount": 103,
-    "durationLabel": "2.5 hours",
-    "durationIso": "PT2H30M",
-    "meetingLocation": "111 S Michigan Ave Chicago, IL 60603",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 431,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 431 reviews on GET https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296848/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "490305",
     "company": "babylontours-chicago",
     "title": "The Art of a City, Downtown Chicago Guided Walking Tour (Semi-Private)",
@@ -146,39 +114,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "TripAdvisor rating 5 from 431 reviews on GET https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490305/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
-    "itemId": "490685",
-    "company": "babylontours-chicago",
-    "title": "The Art of a City, Downtown Chicago Guided Walking Tour (Private)",
-    "publicPath": "/destinations/illinois/chicago/tours/the-art-of-a-city-downtown-chicago-guided-walking-tour-private-490685",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Guests hear about Great Fire and Big Shoulders. The guide's account includes Cloud Gate-Anish Kapoor and Frank Lloyd Wright-designed. Stories along the way cover Willis Tower and Art Institute. Chicago Cultural Center and Picasso's Untitled Sculpture Miro come up in the commentary. The same narrative reaches One Star and Four Seasons.",
-      "Attention also goes to Sears Tower and Exterior View Monadnock Building, with the guide attaching a story to each stop. Guests stay on foot the whole time, pausing while the guide talks at each site. The locations are chosen because a film or television scene was shot there."
-    ],
-    "schemaDescription": "A 2.5-hour walking tour with Babylon Tours Chicago in Chicago. The walk passes Chicago Cultural Center & Tiffany Glass Dome, Chicago Theatre & Nederlander Theatre Marquees, and Daley Plaza & Picasso's Untitled Sculpture.",
-    "highlights": [
-      "2.5-hour walking tour in Chicago",
-      "Chicago Cultural Center & Tiffany Glass Dome and Chicago Theatre & Nederlander Theatre Marquees",
-      "PRIVATE WALKING TOUR"
-    ],
-    "galleryImages": [],
-    "wordCount": 101,
-    "durationLabel": "2.5 hours",
-    "durationIso": "PT2H30M",
-    "meetingLocation": "111 S Michigan Ave Chicago, IL 60603",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 431,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 431 reviews on GET https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490685/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "34311",
     "company": "bobbysbikehike",
     "title": "Bikes, Bites & Brews: Chicago's Signature Dishes Bike Tour",
@@ -222,42 +157,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
       "provider": "TripAdvisor"
     },
     "ratingProvenance": "TripAdvisor rating 4.9 from 5765 reviews on GET https://fareharbor.com/api/v1/companies/bobbysbikehike/items/34311/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
-    "itemId": "584698",
-    "company": "bobbysbikehike",
-    "title": "Miami Beach Ultimate City Bike Tour",
-    "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-ultimate-city-bike-tour-584698",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. The ride passes Art Deco and Ocean Drive. Cyclists also come to Star Island and Bikes Helmets Guide. Guests cover the sights by bike, stopping where the guide has something to say. The outing is in Miami Beach, Florida.",
-      "Among the places guests actually encounter are Art Deco, Ocean Drive, and Star Island. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Art Deco and Ocean Drive, and they hear why those places are on the trip.",
-      "Outdoors is where the account is given, with the site itself in front of the group."
-    ],
-    "schemaDescription": "A three-hour bicycle outing with Bobby's Bike Hike in Miami Beach. The outing passes Star Island.",
-    "highlights": [
-      "three-hour bicycle outing in Miami Beach",
-      "Star Island",
-      "Bikes"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/xaSz95GSRgm0KQi2CcQL"
-    ],
-    "wordCount": 120,
-    "durationLabel": "3 hours",
-    "durationIso": "PT3H",
-    "meetingLocation": "Caffe Umbria, 959 West Ave Suite 1, Miami Beach, FL 33139",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 4.9,
-      "reviewCount": 398,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 4.9 from 398 reviews on GET https://fareharbor.com/api/v1/companies/bobbysbikehike/items/584698/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "148284",
@@ -547,39 +446,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/176320/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
-    "itemId": "184447",
-    "company": "insidechicagowalkingtours",
-    "title": "Book a Private Tour for Your Group!",
-    "publicPath": "/destinations/illinois/chicago/tours/book-a-private-tour-for-your-group-184447",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "A private group picks the subject, and the guide walks them through downtown sites that fit it. Architecture, jazz history, gangster-era history, and Route 66 stories are examples of themes the operator will build a route around. Couples can take a long day on foot, and a conference party can take a shorter walk between sessions.",
-      "Corporate outings and family groups use the same idea: public-route material is adapted for that party. Inside Chicago Walking Tours leads the walk, and the plan changes with the group's size and interests. Guests stay on foot the whole time, pausing while the guide talks at each site."
-    ],
-    "schemaDescription": "A walking tour lasting A couple hours with Inside Chicago Walking Tours.",
-    "highlights": [
-      "A couple hours walking tour"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/uYULfcraTpWdK7n2w4m6"
-    ],
-    "wordCount": 106,
-    "durationLabel": "A couple hours",
-    "durationIso": null,
-    "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 3264,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/184447/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "185962",
     "company": "insidechicagowalkingtours",
     "title": "The Christmas Tree Crawl: The Magic of Chicago at the Holidays",
@@ -632,74 +498,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
       "provider": "TripAdvisor"
     },
     "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/185962/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
-    "itemId": "215562",
-    "company": "insidechicagowalkingtours",
-    "title": "The World Within (Part Two): Secret Interiors of the Riverfront",
-    "publicPath": "/destinations/illinois/chicago/tours/the-world-within-part-two-secret-interiors-of-the-riverfront-215562",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. Guests hear about Chicago River and Old Post Office. The guide's account includes Van Buren St and Great-Gatsby-esque Art Deco. Guests stay on foot the whole time, pausing while the guide talks at each site.",
-      "Among the places guests actually encounter are Chicago River, Old Post Office, and Van Buren St. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
-      "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given."
-    ],
-    "schemaDescription": "A two-hour walking tour with Inside Chicago Walking Tours in Chicago.",
-    "highlights": [
-      "two-hour walking tour in Chicago"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/K588kPHWQICsBLOa1b7H"
-    ],
-    "wordCount": 118,
-    "durationLabel": "2 Hours",
-    "durationIso": "PT2H",
-    "meetingLocation": "433 W Van Buren St. Chicago, IL 60607",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 3264,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/215562/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
-    "itemId": "335819",
-    "company": "insidechicagowalkingtours",
-    "title": "Chicago in the Roaring '20s: Art Deco, Flappers, Gangsters, & Prohibition",
-    "publicPath": "/destinations/illinois/chicago/tours/chicago-in-the-roaring-20s-art-deco-flappers-gangsters-and-prohibition-335819",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Guests find Chicago of Roaring '20s through its buildings & stories. Flappers, gangsters, jazz, speakeasies - guests pepper those throughout the larger look of Chicago's magnificent Art Deco structures in order to set the context for guests. Inside Chicago Walking Tours brings guests back in time on this much-anticipated outing.",
-      "Guests walk in footsteps of those high on potential of future, before the infamous Crash of ‘29. Let Inside Chicago Walking Tours take guests back in time, and these interior spaces that also evoke thoughts of Metropolis, Great Gatsby, and even Gotham City (guests explain that one…).",
-      "Staying almost entirely within downtown Loop neighborhood, and ending across the river in River North, guests look at elegance of this fascinating period in Chicago's past. Gleaming marble, brushed metal, and other materials that celebrate the potential of the future."
-    ],
-    "schemaDescription": "A two-hour walking tour with Inside Chicago Walking Tours in Chicago.",
-    "highlights": [
-      "two-hour walking tour in Chicago"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/sSxbHsiQQZ606234txkw"
-    ],
-    "wordCount": 136,
-    "durationLabel": "2 Hours",
-    "durationIso": "PT2H",
-    "meetingLocation": "2 North LaSalle Street Chicago, IL",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 3264,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/335819/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "468913",
@@ -809,39 +607,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/474795/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
   },
   {
-    "itemId": "565800",
-    "company": "insidechicagowalkingtours",
-    "title": "Marvels & Masterpieces: An Engineer's Guide to Chicago Architecture",
-    "publicPath": "/destinations/illinois/chicago/tours/marvels-and-masterpieces-an-engineers-guide-to-chicago-architecture-565800",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "Guests hear about Chicago's Architectural Marvels and Gustav Eiffel. The guide's account includes Eiffel Tower and Roosevelt University. Stories along the way cover Michigan Ave. Among the places guests actually encounter are Chicago's Architectural Marvels, Gustav Eiffel, and Eiffel Tower. Later the guide turns to Roosevelt University and Michigan Ave, explaining what happened there.",
-      "Guests come to Chicago's Architectural Marvels and Gustav Eiffel, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
-    ],
-    "schemaDescription": "A two-hour walking tour with Inside Chicago Walking Tours in Chicago.",
-    "highlights": [
-      "two-hour walking tour in Chicago"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/FnLFaZj5TB6JeyAWNuMR"
-    ],
-    "wordCount": 109,
-    "durationLabel": "2 Hours",
-    "durationIso": "PT2H",
-    "meetingLocation": "430 S. Michigan Ave. Chicago, IL 60605",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": {
-      "ratingValue": 5,
-      "reviewCount": 3264,
-      "provider": "TripAdvisor"
-    },
-    "ratingProvenance": "TripAdvisor rating 5 from 3264 reviews on GET https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/565800/ratings/ fields ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. Google reviews were not substituted. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "508729",
     "company": "islandpartyboat",
     "title": "Grand Luau (18-36 people)",
@@ -926,107 +691,6 @@ export const fareHarborChicagoLegacyProducts: FareHarborProofProduct[] = [
     },
     "aggregateRating": null,
     "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/620845/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
-    "itemId": "622350",
-    "company": "knotmyboatcharters",
-    "title": "Captain Trooper Moores",
-    "publicPath": "/destinations/illinois/chicago/tours/captain-trooper-moores-622350",
-    "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
-    "paragraphs": [
-      "The skyline is the main view as the boat moves through the harbor. From the water, guests see Chicago River Cruise and Soak Up. Safe Ride and Epic Skyline Views come into view as the boat moves. The cruise also passes Smooth Sailing and Route Customization.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. Among the places guests actually encounter are Chicago River Cruise, Soak Up, and Safe Ride. Later the guide turns to Epic Skyline Views and Smooth Sailing, explaining what happened there. The changing skyline is the view, with the boat moving while guests watch from the deck."
-    ],
-    "schemaDescription": "A 3- to 4-hour guided outing with Knot My Boat Charters.",
-    "highlights": [
-      "3-4 Hours guided outing"
-    ],
-    "galleryImages": [],
-    "wordCount": 105,
-    "durationLabel": "3-4 Hours",
-    "durationIso": null,
-    "meetingLocation": "31st Street Harbor on J Dock",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/622350/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
-    "itemId": "644345",
-    "company": "knotmyboatcharters",
-    "title": "Captain Pat Erwin",
-    "publicPath": "/destinations/illinois/chicago/tours/captain-pat-erwin-644345",
-    "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
-    "paragraphs": [
-      "The operator Knot My Boat Charters lists this outing."
-    ],
-    "schemaDescription": "The operator Knot My Boat Charters lists this outing.",
-    "highlights": [],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/9LZZWDqHTMeGUloQ0Rt9"
-    ],
-    "wordCount": 9,
-    "durationLabel": null,
-    "durationIso": null,
-    "meetingLocation": "31st Street Harbor on J Dock",
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/644345/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
-    "itemId": "687115",
-    "company": "knotmyboatcharters",
-    "title": "37ft. Sea Ray Sundancer- 4 Hours TEST",
-    "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--4-hours-test-687115",
-    "engine2Path": null,
-    "exceptionStatus": "SOURCE_NOT_FOUND",
-    "paragraphs": [
-      "The operator Knot My Boat Charters lists this outing."
-    ],
-    "schemaDescription": "The operator Knot My Boat Charters lists this outing.",
-    "highlights": [],
-    "galleryImages": [],
-    "wordCount": 9,
-    "durationLabel": null,
-    "durationIso": null,
-    "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687115/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
-  },
-  {
-    "itemId": "687119",
-    "company": "knotmyboatcharters",
-    "title": "37ft. Sea Ray Sundancer- 3 Hours TEST",
-    "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--3-hours-test-687119",
-    "engine2Path": null,
-    "exceptionStatus": "SOURCE_NOT_FOUND",
-    "paragraphs": [
-      "The operator Knot My Boat Charters lists this outing."
-    ],
-    "schemaDescription": "The operator Knot My Boat Charters lists this outing.",
-    "highlights": [],
-    "galleryImages": [],
-    "wordCount": 9,
-    "durationLabel": null,
-    "durationIso": null,
-    "meetingLocation": null,
-    "visiblePriceLabel": null,
-    "priceRows": [],
-    "pricingNotes": [],
-    "offer": null,
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687119/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
   },
   {
     "itemId": "275149",

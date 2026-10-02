@@ -10,18 +10,19 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/chicago`. Vi
 - Geography conflicts with Chicago: 1
 - Moved to another destination: 1
 - Excluded for uncertain/unmapped geography: 0
-- Published Chicago routes: 27
+- Published Chicago routes: 17
+- Withheld for no authoritative price: 11
 - Authoritative price-preview fares among active pages: 17
 - Active PRICE_NOT_FOUND before editorial: 11
-- Runtime PASS: 28
+- Runtime PASS: 17
 - Runtime FAIL: 0
 - Terminal removals: 11
 - PRICE_NOT_FOUND after editorial: 8
 - INSUFFICIENT_SOURCE_CONTENT: 1
 - SOURCE_NOT_FOUND: 2
 - OK priced pages: 17
-- Runtime pages with a TripAdvisor rating: 16
-- Runtime pages without a TripAdvisor rating: 12
+- Runtime pages with a TripAdvisor rating: 9
+- Runtime pages without a TripAdvisor rating: 8
 
 ## TripAdvisor ratings
 
@@ -29,12 +30,12 @@ Source: `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews` on th
 - `34311` `Bikes, Bites & Brews: Chicago's Signature Dishes Bike Tour` — 4.9 / 5765 TripAdvisor
 - `153711` `The World Within (Part One): Dazzling Interiors™ of the Loop` — 5 / 3264 TripAdvisor
 - `176320` `Open Your Eyes: Chicago's Underground Pedway & Other Secrets of the Loop` — 5 / 3264 TripAdvisor
-- `184447` `Book a Private Tour for Your Group!` — 5 / 3264 TripAdvisor
 - `185962` `The Christmas Tree Crawl: The Magic of Chicago at the Holidays` — 5 / 3264 TripAdvisor
-- `215562` `The World Within (Part Two): Secret Interiors of the Riverfront` — 5 / 3264 TripAdvisor
-- `335819` `Chicago in the Roaring '20s: Art Deco, Flappers, Gangsters, & Prohibition` — 5 / 3264 TripAdvisor
 - `468913` `All That Glam: Chicago’s Art Deco Masterpieces` — 5 / 3264 TripAdvisor
-- 8 more published pages carry the same TripAdvisor pair.
+- `474795` `Haunted by Our Dark Side: Chicago Ghosts, Gangsters, and True Crime Tour` — 5 / 3264 TripAdvisor
+- `520236` `Art Institute of Chicago Tour with Skip-the-Line Tickets (Semi Private)` — 5 / 674 TripAdvisor
+- `296843` `Art Institute of Chicago Skip-the-Line Tour (Semi-Private)` — 5 / 431 TripAdvisor
+- 1 more published pages carry the same TripAdvisor pair.
 
 ## Geography conflicts
 
