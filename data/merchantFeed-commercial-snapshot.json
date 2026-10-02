@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T23:25:07.522Z",
+  "generatedAt": "2026-10-02T00:10:51.791Z",
   "source": "merchant feed generation using shared Engine6 commercial resolver snapshot",
   "rows": [
     {
@@ -1280,8 +1280,8 @@
       "productCode": "2535P4",
       "price": "104.94 USD",
       "averageRating": "4.6",
-      "ratingCount": "938",
-      "reviewCount": "938"
+      "ratingCount": "943",
+      "reviewCount": "943"
     },
     {
       "productCode": "271742P1",
@@ -7937,8 +7937,8 @@
       "productCode": "6740JTREE",
       "price": "179 USD",
       "averageRating": "4.8",
-      "ratingCount": "453",
-      "reviewCount": "453"
+      "ratingCount": "468",
+      "reviewCount": "468"
     }
   ]
 }
