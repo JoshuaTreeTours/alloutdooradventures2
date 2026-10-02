@@ -3,6 +3,7 @@ import {
   type FareHarborProofProduct,
 } from "./fareharborLeadToGoldProof.generated";
 import { fareHarborBostonLegacyProducts } from "./fareharborBostonLegacy.generated";
+import { fareHarborChicagoLegacyProducts } from "./fareharborChicagoLegacy.generated";
 
 /**
  * Canonical FareHarbor city batches.
@@ -12,10 +13,17 @@ import { fareHarborBostonLegacyProducts } from "./fareharborBostonLegacy.generat
  * added by generating a proof array and appending it here.
  */
 export const fareHarborCityBatches: readonly (readonly FareHarborProofProduct[])[] =
-  [fareHarborLeadToGoldProofProducts, fareHarborBostonLegacyProducts];
+  [
+    fareHarborLeadToGoldProofProducts,
+    fareHarborBostonLegacyProducts,
+    fareHarborChicagoLegacyProducts,
+  ];
 
 export const fareHarborMigratedProducts: FareHarborProofProduct[] =
   fareHarborCityBatches.flat();
 
 export const getFareHarborBostonLegacyProducts = (): FareHarborProofProduct[] =>
   fareHarborBostonLegacyProducts;
+
+export const getFareHarborChicagoLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborChicagoLegacyProducts;

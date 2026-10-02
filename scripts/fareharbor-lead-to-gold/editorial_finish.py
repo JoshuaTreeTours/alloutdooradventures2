@@ -123,7 +123,19 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             return
         if any(part.lower() in _NAME_STOP for part in name.split()):
             return
+        if ev.is_junk_place_label(name):
+            return
         if any(part.isupper() and len(part) > 2 for part in name.split()):
+            return
+        # Itinerary step labels and supply lists are not places.
+        if re.search(
+            r"\b(check|demo|paint|wrap|dry|arrive|final|touches|supplies|canvas|"
+            r"upgrade|apron|glove|shoe|bottle|opener|cups?|teaching|hands|live)\b",
+            key,
+        ) and not re.search(
+            r"\b(hall|house|museum|park|street|square|harbor|bridge|church|market)\b",
+            key,
+        ):
             return
         if re.search(
             r"\b(tour|tours|experience|package|guests|website|what|airport|hotel|terminal|luggage|"
@@ -156,6 +168,17 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             "american",
             "national",
             "boston",
+            "style",
+            "show",
+            "workshop",
+            "one",
+            "two",
+            "only",
+            "designed",
+            "limit",
+            "brief",
+            "highlights",
+            "vibes",
         }:
             return
         # Skip a name that is mostly the product title.
@@ -396,6 +419,118 @@ def _cue_sentences(kind: str, description: str) -> list[str]:
         r"food|tasting", blob, re.I
     ):
         rows.append("Private groups book the tasting for colleagues, combining neighborhood streets with local food.")
+    if re.search(r"customizable|tailored", blob, re.I) and re.search(r"private", blob, re.I) and re.search(
+        r"walk", blob, re.I
+    ):
+        rows.append(
+            "A private group picks the subject, and the guide walks them through downtown sites that fit it."
+        )
+        theme_bits = []
+        if re.search(r"architecture", blob, re.I):
+            theme_bits.append("architecture")
+        if re.search(r"jazz", blob, re.I):
+            theme_bits.append("jazz history")
+        if re.search(r"gangster", blob, re.I):
+            theme_bits.append("gangster-era history")
+        if re.search(r"route 66", blob, re.I):
+            theme_bits.append("Route 66 stories")
+        if theme_bits:
+            rows.append(
+                f"{ev.join_and([bit[0].upper() + bit[1:] if i == 0 else bit for i, bit in enumerate(theme_bits)])} are examples of themes the operator will build a route around."
+            )
+        rows.append(
+            "Couples can take a long day on foot, and a conference party can take a shorter walk between sessions."
+            if re.search(r"conference|couples", blob, re.I)
+            else "The length of the walk changes with what the group asks to see."
+        )
+        if re.search(r"corporate|family", blob, re.I):
+            rows.append(
+                "Corporate outings and family groups use the same idea: public-route material is adapted for that party."
+            )
+        leader = re.search(
+            r"\b([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){1,4})\b",
+            blob,
+        )
+        if leader:
+            rows.append(
+                f"{leader.group(1)} leads the walk, and the plan changes with the group's size and interests."
+            )
+        else:
+            rows.append("The operator leads the walk, and the plan changes with the group's size and interests.")
+    if re.search(r"\bwalk", blob, re.I) and (
+        re.search(r"street art", blob, re.I)
+        or len(re.findall(r"\bmurals?\b", blob, re.I)) >= 2
+    ):
+        if re.search(r"b-line", blob, re.I):
+            rows.append("Guests walk the B-Line corridor and look at outdoor murals along the way.")
+        else:
+            rows.append("Guests walk the corridor and look at outdoor murals along the way.")
+        if re.search(r"1970", blob):
+            rows.append("The guide explains how that public-art route grew from the 1970s into the present.")
+        else:
+            rows.append("The guide explains how that public-art route and its artists developed.")
+        rows.append("Artists, neighborhood change, and the works on the walls are what the commentary covers.")
+        rows.append("People stay on foot, and the art is viewed outside rather than inside a museum.")
+        if re.search(r"west town", blob, re.I):
+            rows.append("West Town is the setting, and the guide attaches a story to the murals the group stops to see.")
+        else:
+            rows.append("The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see.")
+    if re.search(r"spray paint|stencil", blob, re.I) and re.search(r"canvas|workshop", blob, re.I):
+        technique_bits = [
+            label
+            for label, pattern in (
+                ("spray-paint handling", r"spray paint"),
+                ("stencils", r"stencil"),
+                ("lettering", r"lettering"),
+                ("texture", r"texture"),
+            )
+            if re.search(pattern, blob, re.I)
+        ]
+        if technique_bits:
+            rows.append(
+                f"Guests practice {ev.join_and(technique_bits)} in a studio session."
+            )
+        else:
+            rows.append("Guests practice street-art methods in a studio session.")
+        if re.search(r"canvas", blob, re.I):
+            rows.append("Each person finishes an original canvas and takes that piece home.")
+        if re.search(r"studio w\.?i\.?p", blob, re.I):
+            rows.append(
+                "Studio W.I.P. artists lead the instruction for newcomers and for people who have painted before."
+            )
+        else:
+            rows.append("Artists lead the instruction for newcomers and for people who have painted before.")
+        rows.append("The session stays indoors, with hands-on teaching rather than a walk past outdoor walls.")
+        rows.append("A canvas and staff instruction are what the studio sets out for the group.")
+    if re.search(r"neon|blacklight|ultraviolet", blob, re.I) and re.search(
+        r"canvas|workshop|paint", blob, re.I
+    ):
+        rows.append("Guests paint with neon colors under blacklight and watch the canvas glow in the dark.")
+        rows.append("Street-art instructors demonstrate a method, then people paint their own piece.")
+        if re.search(r"studio w\.?i\.?p", blob, re.I):
+            rows.append("The finished work is a canvas made during the session at Studio W.I.P.")
+        else:
+            rows.append("The finished work is a canvas made during the session.")
+        rows.append("Lighting in the room is part of the setup, and the paint is what guests came to use.")
+        rows.append(
+            "The outing stays inside the studio, and the glow comes from the pigments under ultraviolet light."
+        )
+    if re.search(r"male revue|male strip", blob, re.I):
+        rows.append(
+            "The evening is a male revue, with choreographed dancers and a host who draws the crowd in."
+        )
+        if re.search(r"las vegas", blob, re.I):
+            rows.append(
+                "Audience participation is part of the show, and the operator describes the staging as Las Vegas Style."
+            )
+        elif re.search(r"audience participation", blob, re.I):
+            rows.append("Audience participation is part of the show rather than a seated lecture.")
+        if re.search(r"bachelorette|birthday", blob, re.I):
+            rows.append("Groups book the night for a bachelorette party, a birthday, or a night out with friends.")
+        rows.append("The performance stays in a club setting rather than on a walking route through the city.")
+        rows.append(
+            "Dancers, humor from the hosts, and direct involvement of the audience are what the booking details describe."
+        )
     return rows
 
 
@@ -492,7 +627,7 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("Food is the thread: each stop is there for what guests taste, with the street as the setting.")
     if kind == "bike":
         rows.append("Guests cover the sights by bike, stopping where the guide has something to say.")
-    if re.search(r"revolution", blob, re.I):
+    if re.search(r"\b(?:american revolution|the revolution)\b", blob, re.I):
         rows.append("The Revolution is the thread that ties the stops together, from the people involved to the places where events happened.")
     if re.search(r"immigrant|immigration", blob, re.I):
         rows.append("Immigration is the thread, following who arrived and how the neighborhood changed around them.")
@@ -564,15 +699,25 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         )
     elif names:
         rows.append(f"Guests come to {names[0]}, and they hear why it is on the trip.")
-    rows.append("Outdoors is where the account is given, with the site itself in front of the group.")
-    rows.append("Talking and looking are paired at every stop.")
-    rows.append("History stays attached to the places, which is why the route exists.")
-    rows.append("The hour is spent at those sites, hearing the account rather than reading it later.")
-    rows.append("Guests stay with that subject for the length of the outing.")
-    rows.append("Nothing is staged indoors, because the block itself is the room.")
-    rows.append("Seeing the place and hearing the reason for it are the whole visit.")
-    rows.append("The visit is guided and the places are specific. Guests hear the explanation while they are standing at those places, not afterward from a brochure.")
-    rows.append("A brochure is not a substitute for being at the site.")
+    indoor = re.search(
+        r"\b(workshop|studio|canvas|revue|blacklight|spray paint)\b", blob, re.I
+    )
+    if indoor and re.search(r"revue|strip", blob, re.I):
+        rows.append("People are seated for a show. The dancers and the hosts are the event, not a neighborhood route.")
+        rows.append("The night stays indoors, and the performance is what guests came to watch.")
+    elif indoor:
+        rows.append("People stay in the studio for the session. The canvas in front of them is the work, not a sidewalk stop.")
+        rows.append("Instruction and practice happen in the same room, and guests leave with the piece they made.")
+    else:
+        rows.append("Outdoors is where the account is given, with the site itself in front of the group.")
+        rows.append("Talking and looking are paired at every stop.")
+        rows.append("History stays attached to the places, which is why the route exists.")
+        rows.append("The hour is spent at those sites, hearing the account rather than reading it later.")
+        rows.append("Guests stay with that subject for the length of the outing.")
+        rows.append("Nothing is staged indoors, because the block itself is the room.")
+        rows.append("Seeing the place and hearing the reason for it are the whole visit.")
+        rows.append("The visit is guided and the places are specific. Guests hear the explanation while they are standing at those places, not afterward from a brochure.")
+        rows.append("A brochure is not a substitute for being at the site.")
     return rows
 
 

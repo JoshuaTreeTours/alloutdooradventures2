@@ -1,0 +1,47 @@
+{
+  "company": "bobbysbikehike",
+  "itemId": "34311",
+  "fetchedAt": "2026-10-02T16:31:13.404174+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/34311/content/",
+      "status": 200,
+      "bytes": 7403,
+      "sha256": "54ea15e4adcfb432a1b7e27e15ce6d63bc9dcd087643376c614398cedbb0ac7b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/34311/structured-description/",
+      "status": 200,
+      "bytes": 1872,
+      "sha256": "67fc931b783ae8e5b6b081f15389b80e840ca980e4ab19a752d891345e46d6ed"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/34311/",
+      "status": 200,
+      "bytes": 20558,
+      "sha256": "a2863aee704cf7afc0d1b7f28c806391a8fa065e3f29a381e83e8381e3a530b5"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bobbysbikehike/price-preview/per-item/v2/?asn=fhdn&item_pks=34311&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 531,
+      "sha256": "c9b0f30eaea83e173d2f0dbdf743c223bcdce53e69b08e5a0dee6d914b0d15ee"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/34311/ratings/",
+      "status": 200,
+      "bytes": 668,
+      "sha256": "de27b7eca315431c96923eb1c6c8f7366484cdb380156081494e124055963908"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "34311",
+    "provider": "bobbysbikehike",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/34311/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

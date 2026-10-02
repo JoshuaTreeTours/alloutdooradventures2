@@ -59,14 +59,44 @@ from migration_integrity import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / "boston"
-HARVEST_REPORT = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-harvest.json"
-REPORT_JSON = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-proof.json"
-REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-proof.md"
-GENERATED_TS = ROOT / "src" / "data" / "fareharborBostonLegacy.generated.ts"
+CITY_PROFILES = {
+    "boston": {
+        "city": "Boston",
+        "state": "Massachusetts",
+        "stateSlug": "massachusetts",
+        "exportName": "fareHarborBostonLegacyProducts",
+        "generatedName": "fareharborBostonLegacy.generated.ts",
+        "editorialSample": ROOT
+        / "scripts"
+        / "fareharbor-lead-to-gold"
+        / "boston_editorial_sample.json",
+    },
+    "chicago": {
+        "city": "Chicago",
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "exportName": "fareHarborChicagoLegacyProducts",
+        "generatedName": "fareharborChicagoLegacy.generated.ts",
+        "editorialSample": None,
+    },
+}
+CITY_SLUG = "boston"
+CITY_NAME = CITY_PROFILES[CITY_SLUG]["city"]
+STATE_NAME = CITY_PROFILES[CITY_SLUG]["state"]
+STATE_SLUG = CITY_PROFILES[CITY_SLUG]["stateSlug"]
+EXPORT_NAME = CITY_PROFILES[CITY_SLUG]["exportName"]
+HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / CITY_SLUG
+HARVEST_REPORT = (
+    ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-harvest.json"
+)
+REPORT_JSON = (
+    ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-proof.json"
+)
+REPORT_MD = ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-proof.md"
+GENERATED_TS = ROOT / "src" / "data" / CITY_PROFILES[CITY_SLUG]["generatedName"]
 GEOGRAPHY_TS = ROOT / "src" / "utils" / "fareharbor" / "geographyReview.generated.ts"
 TERMINAL_TS = ROOT / "src" / "utils" / "fareharbor" / "stageBTerminalBookingPages.ts"
-EDITORIAL_SAMPLE = ROOT / "scripts" / "fareharbor-lead-to-gold" / "boston_editorial_sample.json"
+EDITORIAL_SAMPLE = CITY_PROFILES[CITY_SLUG]["editorialSample"]
 
 LANG = {
     "en": "English",
@@ -94,7 +124,36 @@ MEASURE_RE = re.compile(
     re.I,
 )
 FILESTACK_RE = re.compile(r"https://cdn\.filestackcontent\.com/([A-Za-z0-9]+)")
-EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE)
+EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE) if EDITORIAL_SAMPLE else {}
+
+
+def configure_city(city_slug: str) -> None:
+    """Point the shared builder at one city. Boston remains the default."""
+    global CITY_SLUG, CITY_NAME, STATE_NAME, STATE_SLUG, EXPORT_NAME
+    global HARVEST_ROOT, HARVEST_REPORT, REPORT_JSON, REPORT_MD, GENERATED_TS
+    global EDITORIAL_SAMPLE, EDITORIAL_BY_ID
+    profile = CITY_PROFILES.get(city_slug)
+    if not profile:
+        known = ", ".join(sorted(CITY_PROFILES))
+        raise SystemExit(f"unsupported FareHarbor city {city_slug}; known: {known}")
+    CITY_SLUG = city_slug
+    CITY_NAME = profile["city"]
+    STATE_NAME = profile["state"]
+    STATE_SLUG = profile["stateSlug"]
+    EXPORT_NAME = profile["exportName"]
+    HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / city_slug
+    HARVEST_REPORT = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{city_slug}-harvest.json"
+    )
+    REPORT_JSON = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{city_slug}-proof.json"
+    )
+    REPORT_MD = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{city_slug}-proof.md"
+    )
+    GENERATED_TS = ROOT / "src" / "data" / profile["generatedName"]
+    EDITORIAL_SAMPLE = profile["editorialSample"]
+    EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE) if EDITORIAL_SAMPLE else {}
 
 
 def load_json(path: Path):
@@ -678,10 +737,10 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     dest = catalog.get("destination") or {}
     geography = assess_geography(
         expected={
-            "city": dest.get("city") or "Boston",
-            "state": dest.get("state") or "Massachusetts",
-            "citySlug": dest.get("citySlug") or "boston",
-            "stateSlug": dest.get("stateSlug") or "massachusetts",
+            "city": dest.get("city") or CITY_NAME,
+            "state": dest.get("state") or STATE_NAME,
+            "citySlug": dest.get("citySlug") or CITY_SLUG,
+            "stateSlug": dest.get("stateSlug") or STATE_SLUG,
         },
         catalog_destinations=catalog_destinations,
         signals=collect_place_signals(
@@ -820,7 +879,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         "geography": geography,
         "imageAudit": image_audit,
         "source": {
-            "artifacts": f"data/fareharbor-lead-to-gold/boston/{folder.name}",
+            "artifacts": f"data/fareharbor-lead-to-gold/{CITY_SLUG}/{folder.name}",
             "fetchedAt": meta.get("fetchedAt"),
             "endpoints": meta.get("endpoints"),
             "price": price,
@@ -837,11 +896,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         product,
         source_text,
         geography=geography,
-        expected_city=dest.get("city") or "Boston",
+        expected_city=dest.get("city") or CITY_NAME,
         prose_source=overlap_text,
     )
     extra = []
-    expected_city_slug = dest.get("citySlug") or "boston"
+    expected_city_slug = dest.get("citySlug") or CITY_SLUG
     if (
         geography.get("conflictsWithExpected")
         and geography.get("disposition") != "exclude"
@@ -936,20 +995,55 @@ def emit_ts(products: list[dict]) -> str:
         "// Generated by scripts/fareharbor-lead-to-gold/build_boston_legacy.py\n"
         "// Stored FareHarbor harvest only. Do not edit by hand.\n"
         "import type { FareHarborProofProduct } from \"./fareharborLeadToGoldProof.generated\";\n\n"
-        f"export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = {payload};\n"
+        f"export const {EXPORT_NAME}: FareHarborProofProduct[] = {payload};\n"
     )
+
+
+def load_existing_geography_entries() -> list[dict]:
+    if not GEOGRAPHY_TS.exists():
+        return []
+    text = GEOGRAPHY_TS.read_text()
+    match = re.search(
+        r"export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry\[\] = (\[[\s\S]*?\n\]);",
+        text,
+    )
+    if not match:
+        raise SystemExit("failed to read existing geography review entries")
+    return json.loads(match.group(1))
+
+
+def merge_geography_entries(review: list[dict]) -> list[dict]:
+    """Keep other cities' exclusions and replace only this city's review rows."""
+    marker = f"/{CITY_SLUG}/"
+    kept = [
+        entry
+        for entry in load_existing_geography_entries()
+        if marker not in (entry.get("expectedPath") or "")
+    ]
+    seen = {entry["itemId"] for entry in kept}
+    merged = list(kept)
+    for entry in review:
+        if entry["itemId"] in seen:
+            continue
+        merged.append(entry)
+        seen.add(entry["itemId"])
+    return merged
 
 
 def update_terminal_ids(terminal_ids: list[str]) -> None:
-    wanted = ["595701", "612500", *terminal_ids]
+    """Union this city's terminal ids into the shared set. Never drop another city."""
     text = TERMINAL_TS.read_text()
-    current = re.findall(
-        r'"(\d+)"',
-        re.search(
-            r"export const STAGE_B_BOOKING_PAGE_NOT_FOUND_IDS = new Set\(\[([\s\S]*?)\]\);",
-            text,
-        ).group(1),
+    match = re.search(
+        r"export const STAGE_B_BOOKING_PAGE_NOT_FOUND_IDS = new Set\(\[([\s\S]*?)\]\);",
+        text,
     )
+    if not match:
+        raise SystemExit("failed to read terminal booking-page ids")
+    current = re.findall(r'"(\d+)"', match.group(1))
+    wanted = list(current)
+    for item_id in ("595701", "612500", *terminal_ids):
+        if item_id not in wanted:
+            wanted.append(item_id)
     if current == wanted:
         return
     block = ",\n  ".join(f'"{item_id}"' for item_id in wanted)
@@ -982,26 +1076,26 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         and product["exceptionStatus"] != "BOOKING_PAGE_NOT_FOUND"
     ]
     boston_published = [
-        product for product in published if "/boston/" in product["publicPath"]
+        product for product in published if f"/{CITY_SLUG}/" in product["publicPath"]
     ]
     for product in products:
         counts[product["exceptionStatus"]] = counts.get(product["exceptionStatus"], 0) + 1
         if not product["validation"]["ok"]:
             fail.append(product)
     lines = [
-        "# Stage C Boston legacy FareHarbor tranche",
+        f"# Stage C {CITY_NAME} legacy FareHarbor tranche",
         "",
-        "Scope is `citySlug === boston` FareHarbor products in `tours.generated.ts`. Engine 6 Viator Boston routes and non-Boston cities were not processed.",
+        f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in `tours.generated.ts`. Engine 6 Viator routes and other cities were not processed.",
         "",
-        "Authority is the stored harvest under `data/fareharbor-lead-to-gold/boston`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the Boston bucket.",
+        f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
         "",
-        f"- Total Boston legacy products: {harvest['totalBostonLegacy']}",
+        f"- Total {CITY_NAME} legacy products: {harvest.get('total', harvest.get('totalBostonLegacy'))}",
         f"- Active booking pages: {harvest['active']}",
         f"- Terminal booking pages: {harvest['terminal']}",
-        f"- Geography conflicts with Boston: {sum(1 for item in products if item.get('geography', {}).get('conflictsWithExpected'))}",
+        f"- Geography conflicts with {CITY_NAME}: {sum(1 for item in products if item.get('geography', {}).get('conflictsWithExpected'))}",
         f"- Moved to another destination: {len(moved)}",
         f"- Excluded for uncertain/unmapped geography: {len(review)}",
-        f"- Published Boston routes: {len(boston_published)}",
+        f"- Published {CITY_NAME} routes: {len(boston_published)}",
         f"- Authoritative price-preview fares among active pages: {harvest['authoritativePrice']}",
         f"- Active PRICE_NOT_FOUND before editorial: {harvest['priceNotFound']}",
         f"- Runtime PASS: {sum(1 for item in published if item['validation']['ok'])}",
@@ -1084,14 +1178,89 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
     return "\n".join(lines)
 
 
+def write_discovery(harvest: dict) -> None:
+    sitemap_path = ROOT / "public" / "sitemap-tours.xml"
+    sitemap = (
+        sitemap_path.read_text(encoding="utf-8", errors="ignore")
+        if sitemap_path.exists()
+        else ""
+    )
+    merchant = (ROOT / "data" / "merchantFeed.csv").read_text(
+        encoding="utf-8", errors="ignore"
+    )
+    rows = []
+    for item in harvest.get("products") or []:
+        item_id = str(item.get("itemId") or "")
+        folder = HARVEST_ROOT / f"{item.get('company')}-{item_id}"
+        rating = None
+        ratings_path = folder / "ratings.json"
+        if ratings_path.exists():
+            rating = parse_tripadvisor_rating(load_json(ratings_path))
+        content = (item.get("endpoints") or {}).get("content") or {}
+        structured = (item.get("endpoints") or {}).get("structured-description") or {}
+        public_path = item.get("publicPath") or ""
+        rows.append(
+            {
+                "company": item.get("company"),
+                "operator": item.get("operator"),
+                "itemId": item_id,
+                "slug": item.get("slug"),
+                "publicPath": public_path,
+                "status": (item.get("bookingPageValidity") or {}).get("classification"),
+                "sourceContent": {
+                    "contentStatus": content.get("status"),
+                    "contentBytes": content.get("bytes"),
+                    "structuredStatus": structured.get("status"),
+                    "structuredBytes": structured.get("bytes"),
+                },
+                "priceAvailable": bool(item.get("hasAuthoritativePrice")),
+                "tripadvisorRatingAvailable": rating is not None,
+                "imageAvailable": bool(item.get("heroImage") or item.get("galleryImages")),
+                "inSitemap": bool(public_path) and public_path in sitemap,
+                "inMerchantFeed": bool(
+                    item_id
+                    and re.search(rf"(?<![0-9]){re.escape(item_id)}(?![0-9])", merchant)
+                ),
+            }
+        )
+    payload = {
+        "citySlug": CITY_SLUG,
+        "total": len(rows),
+        "active": sum(1 for row in rows if row["status"] == "VALID"),
+        "terminal": sum(1 for row in rows if row["status"] == "BOOKING_PAGE_NOT_FOUND"),
+        "priceAvailable": sum(1 for row in rows if row["priceAvailable"]),
+        "tripadvisorRatingAvailable": sum(
+            1 for row in rows if row["tripadvisorRatingAvailable"]
+        ),
+        "imageAvailable": sum(1 for row in rows if row["imageAvailable"]),
+        "inSitemap": sum(1 for row in rows if row["inSitemap"]),
+        "inMerchantFeed": sum(1 for row in rows if row["inMerchantFeed"]),
+        "products": rows,
+    }
+    out = (
+        ROOT
+        / "reports"
+        / "fareharbor-lead-to-gold"
+        / f"stage-c-{CITY_SLUG}-inventory.json"
+    )
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    print(f"wrote {out}")
+
+
 def main() -> None:
-    catalog = {item["itemId"]: item for item in inventory()["products"]}
+    import sys
+
+    if "--city" in sys.argv:
+        configure_city(sys.argv[sys.argv.index("--city") + 1])
+    catalog = {item["itemId"]: item for item in inventory(CITY_SLUG)["products"]}
     harvest = load_json(HARVEST_REPORT)
     booking = {
         item["itemId"]: item["bookingPageValidity"]
         for item in harvest["products"]
         if item.get("itemId")
     }
+    write_discovery(harvest)
     destinations = catalog_destinations()
     image_urls = []
     for entry in catalog.values():
@@ -1150,7 +1319,7 @@ def main() -> None:
     REPORT_JSON.write_text(json.dumps(products, indent=2, ensure_ascii=False) + "\n")
     REPORT_MD.write_text(markdown_report(products, harvest, review, moved))
     GENERATED_TS.write_text(emit_ts(runtime))
-    GEOGRAPHY_TS.write_text(emit_geography_review_ts(review))
+    GEOGRAPHY_TS.write_text(emit_geography_review_ts(merge_geography_entries(review)))
     terminal_ids = [
         product["itemId"]
         for product in products
@@ -1160,8 +1329,10 @@ def main() -> None:
     print(f"wrote {GENERATED_TS}")
     print(f"wrote {GEOGRAPHY_TS}")
     print(f"wrote {REPORT_MD}")
-    boston_runtime = [item for item in runtime if "/boston/" in item["publicPath"]]
-    ratings_report = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-ratings.json"
+    boston_runtime = [item for item in runtime if f"/{CITY_SLUG}/" in item["publicPath"]]
+    ratings_report = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-ratings.json"
+    )
     if ratings_report.exists():
         coverage = load_json(ratings_report)
         coverage["runtimePublished"] = len(runtime)
@@ -1175,14 +1346,14 @@ def main() -> None:
             json.dumps(coverage, indent=2, ensure_ascii=False) + "\n"
         )
     print(
-        f"runtime={len(runtime)} boston={len(boston_runtime)} moved={len(moved)} "
+        f"runtime={len(runtime)} {CITY_SLUG}={len(boston_runtime)} moved={len(moved)} "
         f"geo_exclude={len(review)} terminal={len(terminal_ids)} fail={len(failures)} "
         f"tripadvisor={sum(1 for item in runtime if item.get('aggregateRating'))}"
     )
     for product in failures[:25]:
         print(f"FAIL {product['itemId']} {product['exceptionStatus']} {product['validation']['errors']}")
     if failures:
-        raise SystemExit(f"{len(failures)} Boston products failed validation")
+        raise SystemExit(f"{len(failures)} {CITY_NAME} products failed validation")
 
 
 if __name__ == "__main__":

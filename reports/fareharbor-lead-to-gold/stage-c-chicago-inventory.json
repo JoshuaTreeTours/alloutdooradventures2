@@ -1,0 +1,754 @@
+{
+  "citySlug": "chicago",
+  "total": 39,
+  "active": 28,
+  "terminal": 11,
+  "priceAvailable": 17,
+  "tripadvisorRatingAvailable": 16,
+  "imageAvailable": 37,
+  "inSitemap": 27,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "babylontours-chicago",
+      "operator": "Babylon Tours Chicago",
+      "itemId": "296843",
+      "slug": "art-institute-of-chicago-skip-the-line-tour-semi-private-296843",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-skip-the-line-tour-semi-private-296843",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11746,
+        "structuredStatus": 200,
+        "structuredBytes": 9880
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "babylontours-chicago",
+      "operator": "Babylon Tours Chicago",
+      "itemId": "296848",
+      "slug": "art-institute-of-chicago-skip-the-line-tour-private-296848",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-skip-the-line-tour-private-296848",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10761,
+        "structuredStatus": 200,
+        "structuredBytes": 9471
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "babylontours-chicago",
+      "operator": "Babylon Tours Chicago",
+      "itemId": "490305",
+      "slug": "the-art-of-a-city-downtown-chicago-guided-walking-tour-semi-private-490305",
+      "publicPath": "/destinations/illinois/chicago/tours/the-art-of-a-city-downtown-chicago-guided-walking-tour-semi-private-490305",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13975,
+        "structuredStatus": 200,
+        "structuredBytes": 12401
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "babylontours-chicago",
+      "operator": "Babylon Tours Chicago",
+      "itemId": "490685",
+      "slug": "the-art-of-a-city-downtown-chicago-guided-walking-tour-private-490685",
+      "publicPath": "/destinations/illinois/chicago/tours/the-art-of-a-city-downtown-chicago-guided-walking-tour-private-490685",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13295,
+        "structuredStatus": 200,
+        "structuredBytes": 11983
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bobbysbikehike",
+      "operator": "Bobby's Bike Hike",
+      "itemId": "34311",
+      "slug": "bikes-bites-and-brews-chicagos-signature-dishes-bike-tour-34311",
+      "publicPath": "/destinations/illinois/chicago/tours/bikes-bites-and-brews-chicagos-signature-dishes-bike-tour-34311",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7403,
+        "structuredStatus": 200,
+        "structuredBytes": 1872
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bobbysbikehike",
+      "operator": "Bobby's Bike Hike",
+      "itemId": "584698",
+      "slug": "miami-beach-ultimate-city-bike-tour-584698",
+      "publicPath": "/destinations/illinois/chicago/tours/miami-beach-ultimate-city-bike-tour-584698",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6014,
+        "structuredStatus": 200,
+        "structuredBytes": 1499
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "chicagoboatrentals",
+      "operator": "Chicago Boat Rentals",
+      "itemId": "148284",
+      "slug": "private-luxury-yacht-rental-12-person-max-148284",
+      "publicPath": "/destinations/illinois/chicago/tours/private-luxury-yacht-rental-12-person-max-148284",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3695,
+        "structuredStatus": 200,
+        "structuredBytes": 2361
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "chicagomuseumtours",
+      "operator": "Chicago Museum Tours LLC",
+      "itemId": "520236",
+      "slug": "art-institute-of-chicago-tour-with-skip-the-line-tickets-semi-private-520236",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-tour-with-skip-the-line-tickets-semi-private-520236",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4019,
+        "structuredStatus": 200,
+        "structuredBytes": 3615
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divaroyale",
+      "operator": "Diva Royale Show",
+      "itemId": "346958",
+      "slug": "diva-royale---drag-queen-show-chicago-346958",
+      "publicPath": "/destinations/illinois/chicago/tours/diva-royale---drag-queen-show-chicago-346958",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4158,
+        "structuredStatus": 200,
+        "structuredBytes": 3055
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "153711",
+      "slug": "the-world-within-part-one-dazzling-interiors-of-the-loop-153711",
+      "publicPath": "/destinations/illinois/chicago/tours/the-world-within-part-one-dazzling-interiors-of-the-loop-153711",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3984,
+        "structuredStatus": 200,
+        "structuredBytes": 2773
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "176320",
+      "slug": "open-your-eyes-chicagos-underground-pedway-and-other-secrets-of-the-loop-176320",
+      "publicPath": "/destinations/illinois/chicago/tours/open-your-eyes-chicagos-underground-pedway-and-other-secrets-of-the-loop-176320",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4322,
+        "structuredStatus": 200,
+        "structuredBytes": 3106
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "184447",
+      "slug": "book-a-private-tour-for-your-group-184447",
+      "publicPath": "/destinations/illinois/chicago/tours/book-a-private-tour-for-your-group-184447",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3340,
+        "structuredStatus": 200,
+        "structuredBytes": 2401
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "185962",
+      "slug": "the-christmas-tree-crawl-the-magic-of-chicago-at-the-holidays-185962",
+      "publicPath": "/destinations/illinois/chicago/tours/the-christmas-tree-crawl-the-magic-of-chicago-at-the-holidays-185962",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4144,
+        "structuredStatus": 200,
+        "structuredBytes": 2947
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "215562",
+      "slug": "the-world-within-part-two-secret-interiors-of-the-riverfront-215562",
+      "publicPath": "/destinations/illinois/chicago/tours/the-world-within-part-two-secret-interiors-of-the-riverfront-215562",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4326,
+        "structuredStatus": 200,
+        "structuredBytes": 3004
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "335819",
+      "slug": "chicago-in-the-roaring-20s-art-deco-flappers-gangsters-and-prohibition-335819",
+      "publicPath": "/destinations/illinois/chicago/tours/chicago-in-the-roaring-20s-art-deco-flappers-gangsters-and-prohibition-335819",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4336,
+        "structuredStatus": 200,
+        "structuredBytes": 3136
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "468913",
+      "slug": "all-that-glam-chicagos-art-deco-masterpieces-468913",
+      "publicPath": "/destinations/illinois/chicago/tours/all-that-glam-chicagos-art-deco-masterpieces-468913",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4629,
+        "structuredStatus": 200,
+        "structuredBytes": 3229
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "474795",
+      "slug": "haunted-by-our-dark-side-chicago-ghosts-gangsters-and-true-crime-tour-474795",
+      "publicPath": "/destinations/illinois/chicago/tours/haunted-by-our-dark-side-chicago-ghosts-gangsters-and-true-crime-tour-474795",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4496,
+        "structuredStatus": 200,
+        "structuredBytes": 3096
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "insidechicagowalkingtours",
+      "operator": "Inside Chicago Walking Tours",
+      "itemId": "565800",
+      "slug": "marvels-and-masterpieces-an-engineers-guide-to-chicago-architecture-565800",
+      "publicPath": "/destinations/illinois/chicago/tours/marvels-and-masterpieces-an-engineers-guide-to-chicago-architecture-565800",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4924,
+        "structuredStatus": 200,
+        "structuredBytes": 3523
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "islandpartyboat",
+      "operator": "Island Party Boat",
+      "itemId": "508729",
+      "slug": "grand-luau-18-36-people-508729",
+      "publicPath": "/destinations/illinois/chicago/tours/grand-luau-18-36-people-508729",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3403,
+        "structuredStatus": 200,
+        "structuredBytes": 1860
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "knotmyboatcharters",
+      "operator": "Knot My Boat Charters",
+      "itemId": "620845",
+      "slug": "captain-nick-bieker-620845",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-nick-bieker-620845",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5705,
+        "structuredStatus": 200,
+        "structuredBytes": 4024
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "knotmyboatcharters",
+      "operator": "Knot My Boat Charters",
+      "itemId": "622350",
+      "slug": "captain-trooper-moores-622350",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-trooper-moores-622350",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 8881
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "knotmyboatcharters",
+      "operator": "Knot My Boat Charters",
+      "itemId": "644345",
+      "slug": "captain-pat-erwin-644345",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-pat-erwin-644345",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2243,
+        "structuredStatus": 200,
+        "structuredBytes": 1178
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "knotmyboatcharters",
+      "operator": "Knot My Boat Charters",
+      "itemId": "687115",
+      "slug": "37ft-sea-ray-sundancer--4-hours-test-687115",
+      "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--4-hours-test-687115",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588097
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": false,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "knotmyboatcharters",
+      "operator": "Knot My Boat Charters",
+      "itemId": "687119",
+      "slug": "37ft-sea-ray-sundancer--3-hours-test-687119",
+      "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--3-hours-test-687119",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588097
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": false,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "656890",
+      "slug": "hamilton-in-chicago-656890",
+      "publicPath": "/destinations/illinois/chicago/tours/hamilton-in-chicago-656890",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "657634",
+      "slug": "2027-mlb-all-star-game-657634",
+      "publicPath": "/destinations/illinois/chicago/tours/2027-mlb-all-star-game-657634",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "674133",
+      "slug": "yankees-vs-cubs-at-wrigley-field-674133",
+      "publicPath": "/destinations/illinois/chicago/tours/yankees-vs-cubs-at-wrigley-field-674133",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681784",
+      "slug": "yankees-vs-cubs-at-wrigley-field-681784",
+      "publicPath": "/destinations/illinois/chicago/tours/yankees-vs-cubs-at-wrigley-field-681784",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681789",
+      "slug": "giants-vs-cubs-at-wrigley-field-681789",
+      "publicPath": "/destinations/illinois/chicago/tours/giants-vs-cubs-at-wrigley-field-681789",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681790",
+      "slug": "giants-vs-cubs-at-wrigley-field-681790",
+      "publicPath": "/destinations/illinois/chicago/tours/giants-vs-cubs-at-wrigley-field-681790",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681949",
+      "slug": "white-sox-vs-cubs-at-wrigley-field-681949",
+      "publicPath": "/destinations/illinois/chicago/tours/white-sox-vs-cubs-at-wrigley-field-681949",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681950",
+      "slug": "white-sox-vs-cubs-at-wrigley-field-681950",
+      "publicPath": "/destinations/illinois/chicago/tours/white-sox-vs-cubs-at-wrigley-field-681950",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681955",
+      "slug": "brewers-vs-cubs-at-wrigley-field-681955",
+      "publicPath": "/destinations/illinois/chicago/tours/brewers-vs-cubs-at-wrigley-field-681955",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "681956",
+      "slug": "brewers-vs-cubs-at-wrigley-field-681956",
+      "publicPath": "/destinations/illinois/chicago/tours/brewers-vs-cubs-at-wrigley-field-681956",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "midwestbustrips",
+      "operator": "Midwest Bus Trips",
+      "itemId": "692705",
+      "slug": "the-great-gatsby----in-chicago-692705",
+      "publicPath": "/destinations/illinois/chicago/tours/the-great-gatsby----in-chicago-692705",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "native312events",
+      "operator": "Native 312 Events",
+      "itemId": "275149",
+      "slug": "west-town-guided-instagram-street-art-tour-275149",
+      "publicPath": "/destinations/illinois/chicago/tours/west-town-guided-instagram-street-art-tour-275149",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3497,
+        "structuredStatus": 200,
+        "structuredBytes": 2021
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "native312events",
+      "operator": "Native 312 Events",
+      "itemId": "275158",
+      "slug": "spray-paint-n-sip--chicago-275158",
+      "publicPath": "/destinations/illinois/chicago/tours/spray-paint-n-sip--chicago-275158",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5348,
+        "structuredStatus": 200,
+        "structuredBytes": 3549
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "native312events",
+      "operator": "Native 312 Events",
+      "itemId": "680525",
+      "slug": "glow--a-neon-street-art-workshop-680525",
+      "publicPath": "/destinations/illinois/chicago/tours/glow--a-neon-street-art-workshop-680525",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4309,
+        "structuredStatus": 200,
+        "structuredBytes": 2684
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "newageproductions-hom",
+      "operator": "New Age Productions - HOM",
+      "itemId": "353450",
+      "slug": "hunk-o-mania-male-revue-show---chicago-353450",
+      "publicPath": "/destinations/illinois/chicago/tours/hunk-o-mania-male-revue-show---chicago-353450",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4668,
+        "structuredStatus": 200,
+        "structuredBytes": 3806
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

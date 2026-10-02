@@ -1,0 +1,47 @@
+{
+  "company": "insidechicagowalkingtours",
+  "itemId": "335819",
+  "fetchedAt": "2026-10-02T16:31:18.230758+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/335819/content/",
+      "status": 200,
+      "bytes": 4336,
+      "sha256": "f9f187423c5f974dc06b13cf25323c3a6896e7083c069179d1b8acaf3db56854"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/335819/structured-description/",
+      "status": 200,
+      "bytes": 3136,
+      "sha256": "e4b7d934050b81efad92821931cc89dff54fb27d7c15d4ba87494d9d439d64b2"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/335819/",
+      "status": 200,
+      "bytes": 16796,
+      "sha256": "26eadcad56f8b885792fd11ae7efcd2498826c89c0161091ece88c917dbbaf0c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=335819&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/335819/ratings/",
+      "status": 200,
+      "bytes": 711,
+      "sha256": "6cf22f19636a2ccacbf98dc8ade3f8c44d7af6192196425ff05430449c7bcdd0"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "335819",
+    "provider": "insidechicagowalkingtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/335819/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

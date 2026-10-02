@@ -2,10 +2,11 @@ import { type FareHarborProofProduct } from "./fareharborLeadToGoldProof.generat
 import {
   fareHarborMigratedProducts,
   getFareHarborBostonLegacyProducts,
+  getFareHarborChicagoLegacyProducts,
 } from "./fareharborCityBatches";
 import { fareHarborAggregateRatingSchema } from "./fareharborPresentation";
 
-export { getFareHarborBostonLegacyProducts };
+export { getFareHarborBostonLegacyProducts, getFareHarborChicagoLegacyProducts };
 
 const byItemId = new Map(
   fareHarborMigratedProducts.map(product => [product.itemId, product])

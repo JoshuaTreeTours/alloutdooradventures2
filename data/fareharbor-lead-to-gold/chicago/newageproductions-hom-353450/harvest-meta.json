@@ -1,0 +1,47 @@
+{
+  "company": "newageproductions-hom",
+  "itemId": "353450",
+  "fetchedAt": "2026-10-02T16:31:30.806162+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/newageproductions-hom/353450/content/",
+      "status": 200,
+      "bytes": 4668,
+      "sha256": "36600fa98f7aaa17d7d9f1c9af8d38a554fc4203171416f429fc6d4d0834d01e"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/newageproductions-hom/353450/structured-description/",
+      "status": 200,
+      "bytes": 3806,
+      "sha256": "731a27ed20893196bd50f76bfb0e5414b3698a0eb895ec6f2e71b792cef55e4a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/newageproductions-hom/items/353450/",
+      "status": 200,
+      "bytes": 12641,
+      "sha256": "3ee9f60ab13cd1c0d5be47ca571b9bcb57416e378c721471a6b4fda7f8a51c62"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/newageproductions-hom/price-preview/per-item/v2/?asn=fhdn&item_pks=353450&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 2878,
+      "sha256": "8947660129ff40818ce2f664f0a2c5ae4a61829d4604cec290a5b0284d5eade3"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/newageproductions-hom/items/353450/ratings/",
+      "status": 200,
+      "bytes": 522,
+      "sha256": "c83e8aa96175e49c1ad0fb7120c9f4b99d68e222a4e1d10f5f8cc4e9c9155008"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "353450",
+    "provider": "newageproductions-hom",
+    "bookingUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353450/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

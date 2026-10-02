@@ -18,7 +18,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from build_stage_b_proof import extract_price
-from inventory_boston import inventory
+from inventory_boston import inventory as inventory_for_city
 from tripadvisor_ratings import (
     google_review_pair,
     parse_tripadvisor_rating,
@@ -26,10 +26,11 @@ from tripadvisor_ratings import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / "boston"
-REPORT = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-harvest.json"
+CITY_SLUG = "boston"
+HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / CITY_SLUG
+REPORT = ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-harvest.json"
 RATINGS_REPORT = (
-    ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-ratings.json"
+    ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{CITY_SLUG}-ratings.json"
 )
 
 USER_AGENT = (
@@ -280,7 +281,7 @@ def harvest_ratings_one(product: dict) -> dict:
 
 def harvest_ratings(products: list[dict]) -> None:
     results = []
-    print(f"harvesting TripAdvisor ratings for {len(products)} Boston products")
+    print(f"harvesting TripAdvisor ratings for {len(products)} {CITY_SLUG} products")
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         futures = {
             pool.submit(harvest_ratings_one, product): product["itemId"]
@@ -442,9 +443,27 @@ def harvest_ratings(products: list[dict]) -> None:
     )
 
 
+def configure_city(city_slug: str) -> None:
+    global CITY_SLUG, HARVEST_ROOT, REPORT, RATINGS_REPORT
+    CITY_SLUG = city_slug
+    HARVEST_ROOT = ROOT / "data" / "fareharbor-lead-to-gold" / city_slug
+    REPORT = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{city_slug}-harvest.json"
+    )
+    RATINGS_REPORT = (
+        ROOT / "reports" / "fareharbor-lead-to-gold" / f"stage-c-{city_slug}-ratings.json"
+    )
+
+
+def inventory():
+    return inventory_for_city(CITY_SLUG)
+
+
 def main() -> None:
     import sys
 
+    if "--city" in sys.argv:
+        configure_city(sys.argv[sys.argv.index("--city") + 1])
     catalog = inventory()
     if "--ratings-only" in sys.argv:
         harvest_ratings(catalog["products"])
@@ -452,7 +471,7 @@ def main() -> None:
     HARVEST_ROOT.mkdir(parents=True, exist_ok=True)
     products = catalog["products"]
     results = []
-    print(f"harvesting {len(products)} Boston FareHarbor products")
+    print(f"harvesting {len(products)} {CITY_SLUG} FareHarbor products")
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         futures = {pool.submit(harvest_one, product): product["itemId"] for product in products}
         for index, future in enumerate(as_completed(futures), start=1):
@@ -495,7 +514,9 @@ def main() -> None:
     price_not_found = [item for item in active if not item.get("hasAuthoritativePrice")]
     report = {
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "citySlug": CITY_SLUG,
         "totalBostonLegacy": len(results),
+        "total": len(results),
         "active": len(active),
         "terminal": len(terminal),
         "transientOrIndeterminate": len(transient),

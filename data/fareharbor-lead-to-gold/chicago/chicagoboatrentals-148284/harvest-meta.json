@@ -1,0 +1,47 @@
+{
+  "company": "chicagoboatrentals",
+  "itemId": "148284",
+  "fetchedAt": "2026-10-02T16:31:13.955080+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/chicagoboatrentals/148284/content/",
+      "status": 200,
+      "bytes": 3695,
+      "sha256": "768b3b4097bf1b0b1be4485cd9902d0a9e5138e60358bd5d4b2d95ba0aa792ef"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/chicagoboatrentals/148284/structured-description/",
+      "status": 200,
+      "bytes": 2361,
+      "sha256": "d6d1000632bde4a61878095c04a7c94c9794486219d994e737e254007bca17c1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/chicagoboatrentals/items/148284/",
+      "status": 200,
+      "bytes": 18847,
+      "sha256": "0a622d54729438a5849f5bce850a71f26d7a98211c6e69892889fcbd410805b6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/chicagoboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=148284&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 544,
+      "sha256": "4ce406f8a46f8b4f022433fda3844a4507910cb0133794025e4de0516a723c1b"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/chicagoboatrentals/items/148284/ratings/",
+      "status": 200,
+      "bytes": 513,
+      "sha256": "0c9ad47a6c0b53adb69bc0596eaf862fbdc81d54862c82d49629481729a2ec14"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "148284",
+    "provider": "chicagoboatrentals",
+    "bookingUrl": "https://fareharbor.com/embeds/book/chicagoboatrentals/items/148284/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -1,0 +1,48 @@
+{
+  "company": "midwestbustrips",
+  "itemId": "681784",
+  "fetchedAt": "2026-10-02T16:31:26.002630+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681784/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681784/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "0594482cff52198cdb1648efd4337b38c9e51dbe52a1458b3ddc4d9886aeee26"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681784/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "11848e547121cffed2c1c400aadb98a3f0783c681a643c366688ec88e7cd0ad6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681784&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 139,
+      "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681784/ratings/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "4e78cdf2b9537e7b206fde2ca20332733f68c5c3a445ce09e12555fae368e9ab"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "681784",
+    "provider": "midwestbustrips",
+    "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681784/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

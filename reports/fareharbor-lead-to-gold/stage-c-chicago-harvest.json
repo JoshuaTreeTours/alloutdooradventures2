@@ -1,0 +1,2730 @@
+{
+  "fetchedAt": "2026-10-02T16:31:32.983586+00:00",
+  "citySlug": "chicago",
+  "totalBostonLegacy": 39,
+  "total": 39,
+  "active": 28,
+  "terminal": 11,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 17,
+  "priceNotFound": 11,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "656890",
+    "657634",
+    "674133",
+    "681784",
+    "681789",
+    "681790",
+    "681949",
+    "681950",
+    "681955",
+    "681956",
+    "692705"
+  ],
+  "priceNotFoundIds": [
+    "296848",
+    "490685",
+    "584698",
+    "184447",
+    "215562",
+    "335819",
+    "565800",
+    "622350",
+    "644345",
+    "687115",
+    "687119"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "296843",
+      "company": "babylontours-chicago",
+      "catalogId": "babylon-tours-chicago-296843",
+      "slug": "art-institute-of-chicago-skip-the-line-tour-semi-private-296843",
+      "title": "Art Institute of Chicago Skip-the-Line Tour (Semi-Private)",
+      "operator": "Babylon Tours Chicago",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-skip-the-line-tour-semi-private-296843",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/296843/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/X5od0MtzS3ODFyr7sc7c",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/X5od0MtzS3ODFyr7sc7c"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:11.282145+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/296843/content/",
+          "status": 200,
+          "bytes": 11746,
+          "sha256": "06eb92b0822360450cd8d720a83c4dc99efb34bbbacd09ac2323fdb59c0f0b5f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/296843/structured-description/",
+          "status": 200,
+          "bytes": 9880,
+          "sha256": "7ffc8e7e6be3f53c72110ff1f09427ca657a066943c38bc61ae91f11dcd7c832"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296843/",
+          "status": 200,
+          "bytes": 17223,
+          "sha256": "106e044fe4759d5e7dc314faab01d6a27ab13aca755f71438b6aa857eeba73d2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/babylontours-chicago/price-preview/per-item/v2/?asn=fhdn&item_pks=296843&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 772,
+          "sha256": "6ca33f9595fe444a85a3ca12e2572fb7ccaf8938b508fd78a59568e426508046"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296843/ratings/",
+          "status": 200,
+          "bytes": 668,
+          "sha256": "58034165e155a1ad36a19f61219c5db9830a86ede9e58d535fec759e39df50ff"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "296843",
+        "provider": "babylontours-chicago",
+        "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/296843/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 85.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "296848",
+      "company": "babylontours-chicago",
+      "catalogId": "babylon-tours-chicago-296848",
+      "slug": "art-institute-of-chicago-skip-the-line-tour-private-296848",
+      "title": "Art Institute of Chicago Skip-the-Line Tour (Private)",
+      "operator": "Babylon Tours Chicago",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-skip-the-line-tour-private-296848",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/296848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/L6mQVitpQnGtVY5hijUi",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/L6mQVitpQnGtVY5hijUi"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:11.283049+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/296848/content/",
+          "status": 200,
+          "bytes": 10761,
+          "sha256": "ef25d5d45460a565dabac86f954c40eed0c08524a14d8ea835b410c7d9d7eaea"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/296848/structured-description/",
+          "status": 200,
+          "bytes": 9471,
+          "sha256": "fd5b9d7107a53f965f7e871589b3338223641f07afa750cab04ee0b1c45b8acb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296848/",
+          "status": 200,
+          "bytes": 11141,
+          "sha256": "fcc851f9835b5129dfcf373771fd3a4eb98c801cf2ff6df099dac89b0ae899db"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/babylontours-chicago/price-preview/per-item/v2/?asn=fhdn&item_pks=296848&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 581,
+          "sha256": "095bbfe21f8aa79a4e7d27fd7967a14f1fb3deee299363d5ef5adc124c6a0698"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/296848/ratings/",
+          "status": 200,
+          "bytes": 662,
+          "sha256": "02fe21726ef05c3a799134059f0379ecde089c0471c7b5eecc9d37625e7b73de"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "296848",
+        "provider": "babylontours-chicago",
+        "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/296848/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "490305",
+      "company": "babylontours-chicago",
+      "catalogId": "babylon-tours-chicago-490305",
+      "slug": "the-art-of-a-city-downtown-chicago-guided-walking-tour-semi-private-490305",
+      "title": "The Art of a City, Downtown Chicago Guided Walking Tour (Semi-Private)",
+      "operator": "Babylon Tours Chicago",
+      "publicPath": "/destinations/illinois/chicago/tours/the-art-of-a-city-downtown-chicago-guided-walking-tour-semi-private-490305",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.629798,
+        "lng": 41.878114
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/490305/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/24yYUJ6xRTChaiHOTbPH",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/24yYUJ6xRTChaiHOTbPH"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:11.283509+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490305/content/",
+          "status": 200,
+          "bytes": 13975,
+          "sha256": "6e4001af8fda0d1c1cdcc0bef4d93d7f345a448059064bcbafae07e1e1fbd029"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490305/structured-description/",
+          "status": 200,
+          "bytes": 12401,
+          "sha256": "d68139d7c10cc741481b6c95d0180bd669a3787d5ea4ce0b339f7ee56c3e2034"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490305/",
+          "status": 200,
+          "bytes": 16035,
+          "sha256": "26bac275fccaa41f6d26756a38a088bf08673cbb6599f02a186f57c0819abbfa"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/babylontours-chicago/price-preview/per-item/v2/?asn=fhdn&item_pks=490305&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 772,
+          "sha256": "4b63529ae4329d8e4d0c566a7d81d2405862a6c3f9ce2d1592002603065af5e3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490305/ratings/",
+          "status": 200,
+          "bytes": 679,
+          "sha256": "fabf2822326992bc8861dd8ab2a360199ff7dedeae551c6c9f205173197c1e3d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "490305",
+        "provider": "babylontours-chicago",
+        "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/490305/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 51.89,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "490685",
+      "company": "babylontours-chicago",
+      "catalogId": "babylon-tours-chicago-490685",
+      "slug": "the-art-of-a-city-downtown-chicago-guided-walking-tour-private-490685",
+      "title": "The Art of a City, Downtown Chicago Guided Walking Tour (Private)",
+      "operator": "Babylon Tours Chicago",
+      "publicPath": "/destinations/illinois/chicago/tours/the-art-of-a-city-downtown-chicago-guided-walking-tour-private-490685",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.629798,
+        "lng": 41.878114
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/490685/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/pZxaNv2TR2C2PxwAZEo6",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/pZxaNv2TR2C2PxwAZEo6"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:11.284205+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490685/content/",
+          "status": 200,
+          "bytes": 13295,
+          "sha256": "1f1b17b9d2e174af85c09aa73078f264c2014f8b9a007d08aaa61f14b54b718c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490685/structured-description/",
+          "status": 200,
+          "bytes": 11983,
+          "sha256": "be231254415fba4ff3bcb442594adbcfaafa4fe86ba6c470a8dce57ad828103a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490685/",
+          "status": 200,
+          "bytes": 11497,
+          "sha256": "4dd8abfe771e7fa01355625541c78ab2a3e494a16c747ddb3d507e1550f2a1d2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/babylontours-chicago/price-preview/per-item/v2/?asn=fhdn&item_pks=490685&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 581,
+          "sha256": "43b3e5a14f325b432063c5d6b65c2b37fdf6bd13862442285def65f0b18c38f1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490685/ratings/",
+          "status": 200,
+          "bytes": 674,
+          "sha256": "8b9fb42e9ede4b1e8a1da64fb86907d5aaafe86a802a2e16d2b3d35fd67ef95a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "490685",
+        "provider": "babylontours-chicago",
+        "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/490685/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "34311",
+      "company": "bobbysbikehike",
+      "catalogId": "bobbys-bike-hike-34311",
+      "slug": "bikes-bites-and-brews-chicagos-signature-dishes-bike-tour-34311",
+      "title": "Bikes, Bites & Brews: Chicago's Signature Dishes Bike Tour",
+      "operator": "Bobby's Bike Hike",
+      "publicPath": "/destinations/illinois/chicago/tours/bikes-bites-and-brews-chicagos-signature-dishes-bike-tour-34311",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/34311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/iTGbUqW1SB1gY9AFLQ1g",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/iTGbUqW1SB1gY9AFLQ1g"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:13.404174+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/34311/content/",
+          "status": 200,
+          "bytes": 7403,
+          "sha256": "54ea15e4adcfb432a1b7e27e15ce6d63bc9dcd087643376c614398cedbb0ac7b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/34311/structured-description/",
+          "status": 200,
+          "bytes": 1872,
+          "sha256": "67fc931b783ae8e5b6b081f15389b80e840ca980e4ab19a752d891345e46d6ed"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/34311/",
+          "status": 200,
+          "bytes": 20558,
+          "sha256": "a2863aee704cf7afc0d1b7f28c806391a8fa065e3f29a381e83e8381e3a530b5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bobbysbikehike/price-preview/per-item/v2/?asn=fhdn&item_pks=34311&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "c9b0f30eaea83e173d2f0dbdf743c223bcdce53e69b08e5a0dee6d914b0d15ee"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/34311/ratings/",
+          "status": 200,
+          "bytes": 668,
+          "sha256": "de27b7eca315431c96923eb1c6c8f7366484cdb380156081494e124055963908"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "34311",
+        "provider": "bobbysbikehike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/34311/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 84.99,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "584698",
+      "company": "bobbysbikehike",
+      "catalogId": "bobbys-bike-hike-584698",
+      "slug": "miami-beach-ultimate-city-bike-tour-584698",
+      "title": "Miami Beach Ultimate City Bike Tour",
+      "operator": "Bobby's Bike Hike",
+      "publicPath": "/destinations/illinois/chicago/tours/miami-beach-ultimate-city-bike-tour-584698",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/584698/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/PTF0qCV5QUVQWhulq69L",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/PTF0qCV5QUVQWhulq69L"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:13.479393+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/584698/content/",
+          "status": 200,
+          "bytes": 6014,
+          "sha256": "e65de135038431f7adfafec0fc2c61fc15fd46a93a729fdeb4b10a8751b9c332"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bobbysbikehike/584698/structured-description/",
+          "status": 200,
+          "bytes": 1499,
+          "sha256": "32711be480d09516884d3b11e31a444fa88cb7c2367dd43bff3212b27c9729f6"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/584698/",
+          "status": 200,
+          "bytes": 17060,
+          "sha256": "70b71f83ba2243812099f513fd0acc5b32fcc83905b095479cfa968f88f75692"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bobbysbikehike/price-preview/per-item/v2/?asn=fhdn&item_pks=584698&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bobbysbikehike/items/584698/ratings/",
+          "status": 200,
+          "bytes": 621,
+          "sha256": "4ba25a06f49e83ac32efe2357ac9c3925e4e17175e2cfd5df973d7b53303501d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "584698",
+        "provider": "bobbysbikehike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bobbysbikehike/items/584698/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "148284",
+      "company": "chicagoboatrentals",
+      "catalogId": "chicago-boat-rentals-148284",
+      "slug": "private-luxury-yacht-rental-12-person-max-148284",
+      "title": "Private Luxury Yacht Rental (12 Person Max)",
+      "operator": "Chicago Boat Rentals",
+      "publicPath": "/destinations/illinois/chicago/tours/private-luxury-yacht-rental-12-person-max-148284",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/chicagoboatrentals/items/148284/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/zO7pvfyqQpeZApCddiBF",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/zO7pvfyqQpeZApCddiBF"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:13.955080+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/chicagoboatrentals/148284/content/",
+          "status": 200,
+          "bytes": 3695,
+          "sha256": "768b3b4097bf1b0b1be4485cd9902d0a9e5138e60358bd5d4b2d95ba0aa792ef"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/chicagoboatrentals/148284/structured-description/",
+          "status": 200,
+          "bytes": 2361,
+          "sha256": "d6d1000632bde4a61878095c04a7c94c9794486219d994e737e254007bca17c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/chicagoboatrentals/items/148284/",
+          "status": 200,
+          "bytes": 18847,
+          "sha256": "0a622d54729438a5849f5bce850a71f26d7a98211c6e69892889fcbd410805b6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/chicagoboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=148284&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 544,
+          "sha256": "4ce406f8a46f8b4f022433fda3844a4507910cb0133794025e4de0516a723c1b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/chicagoboatrentals/items/148284/ratings/",
+          "status": 200,
+          "bytes": 513,
+          "sha256": "0c9ad47a6c0b53adb69bc0596eaf862fbdc81d54862c82d49629481729a2ec14"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "148284",
+        "provider": "chicagoboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/chicagoboatrentals/items/148284/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 1200.0,
+        "currency": "USD",
+        "singular": "Private Boat"
+      }
+    },
+    {
+      "itemId": "520236",
+      "company": "chicagomuseumtours",
+      "catalogId": "chicago-museum-tours-llc-520236",
+      "slug": "art-institute-of-chicago-tour-with-skip-the-line-tickets-semi-private-520236",
+      "title": "Art Institute of Chicago Tour with Skip-the-Line Tickets (Semi Private)",
+      "operator": "Chicago Museum Tours LLC",
+      "publicPath": "/destinations/illinois/chicago/tours/art-institute-of-chicago-tour-with-skip-the-line-tickets-semi-private-520236",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/chicagomuseumtours/items/520236/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/kdJ5VSQJCqtxu3uIHnwH",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/kdJ5VSQJCqtxu3uIHnwH"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:14.365619+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/chicagomuseumtours/520236/content/",
+          "status": 200,
+          "bytes": 4019,
+          "sha256": "8395a34ba0f04a57c638b8006e3313463b91d45fc06c56ce2ca00f85d3b80e2c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/chicagomuseumtours/520236/structured-description/",
+          "status": 200,
+          "bytes": 3615,
+          "sha256": "ee0b45d74477e46e20177a7219130ca1306804076cf3145e7338353d686444e7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/chicagomuseumtours/items/520236/",
+          "status": 200,
+          "bytes": 12882,
+          "sha256": "c0bed1425986fc4b8bbf90fff833e03b382d6ad8265e9d07a97c24e93ea95fa1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/chicagomuseumtours/price-preview/per-item/v2/?asn=fhdn&item_pks=520236&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 768,
+          "sha256": "89375224659dd7968987a2bcf3086250aec9e4bed60913afcd516a98d80ac5e9"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/chicagomuseumtours/items/520236/ratings/",
+          "status": 200,
+          "bytes": 678,
+          "sha256": "55aad6a97d45542e28b0948f5b3825b06a555aeb3fb084ffbb25b08f047a3b65"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "520236",
+        "provider": "chicagomuseumtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/chicagomuseumtours/items/520236/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 84.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "346958",
+      "company": "divaroyale",
+      "catalogId": "diva-royale-show-346958",
+      "slug": "diva-royale---drag-queen-show-chicago-346958",
+      "title": "Diva Royale - Drag Queen Show Chicago",
+      "operator": "Diva Royale Show",
+      "publicPath": "/destinations/illinois/chicago/tours/diva-royale---drag-queen-show-chicago-346958",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.629004,
+        "lng": 41.903756
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/divaroyale/items/346958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/5Oy6JiPvTryjylWCaL2h",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/5Oy6JiPvTryjylWCaL2h"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:15.758778+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/divaroyale/346958/content/",
+          "status": 200,
+          "bytes": 4158,
+          "sha256": "faec84cab7c372f55a097303fa0295b4264653c8c955c261bd4986f9f258010a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/divaroyale/346958/structured-description/",
+          "status": 200,
+          "bytes": 3055,
+          "sha256": "572cf3fcc6f05d8c15740b0589d8cab8e5aaeb6364ac4a575aecf7e8722f6893"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/divaroyale/items/346958/",
+          "status": 200,
+          "bytes": 12393,
+          "sha256": "f313cb314461a15c641ed39a8670820b1e0cf7065f363862d6881754f8b62f3e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/divaroyale/price-preview/per-item/v2/?asn=fhdn&item_pks=346958&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 2535,
+          "sha256": "547687e4bf3e508f7003aa1eeb0daf882204782284b1bf29d2c75829d0a5b9ce"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/divaroyale/items/346958/ratings/",
+          "status": 200,
+          "bytes": 517,
+          "sha256": "8b8ba31dae747a6e76625cd46a0353304aeb52a9b35ef35f7999b5e740e29ccd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "346958",
+        "provider": "divaroyale",
+        "bookingUrl": "https://fareharbor.com/embeds/book/divaroyale/items/346958/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 25.0,
+        "currency": "USD",
+        "singular": "Upgrade General Admission to VIP Admission (Add-On)"
+      }
+    },
+    {
+      "itemId": "153711",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-153711",
+      "slug": "the-world-within-part-one-dazzling-interiors-of-the-loop-153711",
+      "title": "The World Within (Part One): Dazzling Interiors™ of the Loop",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/the-world-within-part-one-dazzling-interiors-of-the-loop-153711",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/153711/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/nK7GkJj0SlKkEHSxeBHz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/nK7GkJj0SlKkEHSxeBHz"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:15.792690+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/153711/content/",
+          "status": 200,
+          "bytes": 3984,
+          "sha256": "1137e931503e13f7eeeb7b4bc8f155456e0a89bc8fd855d0db4b4fd738da656b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/153711/structured-description/",
+          "status": 200,
+          "bytes": 2773,
+          "sha256": "55a2698a0633b51a6dc9bbafeb9a33fcb9f162a684527ea9f5f2d6a4424d9623"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/153711/",
+          "status": 200,
+          "bytes": 14538,
+          "sha256": "d390aa21fb325769c6ce6d1558429e2cc18b2932eedd9fa0ff1e45abe1a4c676"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=153711&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "9402e5d4a88a85de750701017d78ffe7f8e26c12c36fd622524d86c293c14125"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/153711/ratings/",
+          "status": 200,
+          "bytes": 697,
+          "sha256": "2fcab43c93e26e032fda4c8a78823c399a451d5cd974d88f70a7e3d88f611d3f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "153711",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/153711/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "176320",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-176320",
+      "slug": "open-your-eyes-chicagos-underground-pedway-and-other-secrets-of-the-loop-176320",
+      "title": "Open Your Eyes: Chicago's Underground Pedway & Other Secrets of the Loop",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/open-your-eyes-chicagos-underground-pedway-and-other-secrets-of-the-loop-176320",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/176320/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/83VtkNR5uQh1tECR5Diw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/83VtkNR5uQh1tECR5Diw"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:16.155038+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/176320/content/",
+          "status": 200,
+          "bytes": 4322,
+          "sha256": "5540747964ff0bd0f6aa49ccaf3db422803663b3783a1b1299a46ec620eef796"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/176320/structured-description/",
+          "status": 200,
+          "bytes": 3106,
+          "sha256": "63042a1af3c765015c187373b19046e0d22f0917f36612a60418005c71dba09c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/176320/",
+          "status": 200,
+          "bytes": 15923,
+          "sha256": "4dae0af28824dcad4165b2be84a820661cb920c2dd74fad35155d87ff5492a3a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=176320&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "afb4e7d3469a579b8efaeae5853bd3776e430282ec5e2ea62d4aa5274e4f6ee4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/176320/ratings/",
+          "status": 200,
+          "bytes": 709,
+          "sha256": "617c3aac37a2f1d55548915a3b67c40907ca0624cc6dd6ea0316bd4d738fa3d4"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "176320",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/176320/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "184447",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-184447",
+      "slug": "book-a-private-tour-for-your-group-184447",
+      "title": "Book a Private Tour for Your Group!",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/book-a-private-tour-for-your-group-184447",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.629798,
+        "lng": 41.878114
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/184447/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9zmTFsVSUCM8wklVnU3l",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9zmTFsVSUCM8wklVnU3l"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:16.825253+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/184447/content/",
+          "status": 200,
+          "bytes": 3340,
+          "sha256": "60e594f9e7be5bf0790b294f69ac9467b95197d3e1b35a3d25cffb9e1328b870"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/184447/structured-description/",
+          "status": 200,
+          "bytes": 2401,
+          "sha256": "3e5b60e06425cc205472623bfb70bd11a16e84229edd4adbd803ff3016427709"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/184447/",
+          "status": 200,
+          "bytes": 13216,
+          "sha256": "62d181585f7aeb39db414c1a2478a74fbab65b00b8107d6d3572a9a51e651f49"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=184447&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/184447/ratings/",
+          "status": 200,
+          "bytes": 667,
+          "sha256": "546d75451c678c167f7ef4c8bface4c23dd4e9bc6475aba4fb7f9194381ed7e6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "184447",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/184447/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "185962",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-185962",
+      "slug": "the-christmas-tree-crawl-the-magic-of-chicago-at-the-holidays-185962",
+      "title": "The Christmas Tree Crawl: The Magic of Chicago at the Holidays",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/the-christmas-tree-crawl-the-magic-of-chicago-at-the-holidays-185962",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/185962/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/AD8L23HdTnmbXJJ7ny49",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/AD8L23HdTnmbXJJ7ny49"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:17.773519+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/185962/content/",
+          "status": 200,
+          "bytes": 4144,
+          "sha256": "29c8cfe0ec32914147a0612f15d2c67ee34eaaa5449dd8f8718c8242389e22b5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/185962/structured-description/",
+          "status": 200,
+          "bytes": 2947,
+          "sha256": "70c7f68853de5e63339f4835e951278dc31a5642e826f208d8a679f6e7236362"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/185962/",
+          "status": 200,
+          "bytes": 15906,
+          "sha256": "ab0c962d45ecc6de0d127b17f7a3146fa2d8b2d824d37d0776b1948736b384cc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=185962&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 787,
+          "sha256": "aa9416da29a2134c6d638552e8424c6860bc574bd42d70a62de93babb3e5f9a2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/185962/ratings/",
+          "status": 200,
+          "bytes": 694,
+          "sha256": "2e8bd72cbd978ca898c29dc8109740952495087e7f909d9ae4188d20bf83c796"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "185962",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/185962/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "215562",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-215562",
+      "slug": "the-world-within-part-two-secret-interiors-of-the-riverfront-215562",
+      "title": "The World Within (Part Two): Secret Interiors of the Riverfront",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/the-world-within-part-two-secret-interiors-of-the-riverfront-215562",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/215562/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Eews55NoT66vwGKIKJKk",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Eews55NoT66vwGKIKJKk"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:18.175845+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/215562/content/",
+          "status": 200,
+          "bytes": 4326,
+          "sha256": "c664058d716b65e32c963503c3b9953d755ee1d45b2424c62beb773191347492"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/215562/structured-description/",
+          "status": 200,
+          "bytes": 3004,
+          "sha256": "2b1f7c6692699cf5c4f71c0fa3cc12d465b0faf009afe8b82d9d04167577e5ad"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/215562/",
+          "status": 200,
+          "bytes": 15174,
+          "sha256": "4257454e476eb466062afc05b89d929f8b7064e63eee68decbbf1cfd6c3af888"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=215562&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/215562/ratings/",
+          "status": 200,
+          "bytes": 695,
+          "sha256": "7fedf91c5dbdd115d2747b203a45b0ae752e205bd20a4bcd1feecf9727d9bd37"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "215562",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/215562/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "335819",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-335819",
+      "slug": "chicago-in-the-roaring-20s-art-deco-flappers-gangsters-and-prohibition-335819",
+      "title": "Chicago in the Roaring '20s: Art Deco, Flappers, Gangsters, & Prohibition",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/chicago-in-the-roaring-20s-art-deco-flappers-gangsters-and-prohibition-335819",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/335819/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/mn9Wbis4QQlf0tVoHXDL",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/mn9Wbis4QQlf0tVoHXDL"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:18.230758+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/335819/content/",
+          "status": 200,
+          "bytes": 4336,
+          "sha256": "f9f187423c5f974dc06b13cf25323c3a6896e7083c069179d1b8acaf3db56854"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/335819/structured-description/",
+          "status": 200,
+          "bytes": 3136,
+          "sha256": "e4b7d934050b81efad92821931cc89dff54fb27d7c15d4ba87494d9d439d64b2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/335819/",
+          "status": 200,
+          "bytes": 16796,
+          "sha256": "26eadcad56f8b885792fd11ae7efcd2498826c89c0161091ece88c917dbbaf0c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=335819&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/335819/ratings/",
+          "status": 200,
+          "bytes": 711,
+          "sha256": "6cf22f19636a2ccacbf98dc8ade3f8c44d7af6192196425ff05430449c7bcdd0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "335819",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/335819/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "468913",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-468913",
+      "slug": "all-that-glam-chicagos-art-deco-masterpieces-468913",
+      "title": "All That Glam: Chicago’s Art Deco Masterpieces",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/all-that-glam-chicagos-art-deco-masterpieces-468913",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/468913/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/JtLRjV2RXKJFJ1yk12KQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/JtLRjV2RXKJFJ1yk12KQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:19.206602+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/468913/content/",
+          "status": 200,
+          "bytes": 4629,
+          "sha256": "5585992a47e0bf56134a521a0b2c0fadd628f41322d98d33112ef88d5931bb35"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/468913/structured-description/",
+          "status": 200,
+          "bytes": 3229,
+          "sha256": "0fbd2fb6c6dd02e81d1373b43eca08e746b1d0c5469148a7119202cc13e5c66d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/468913/",
+          "status": 200,
+          "bytes": 16309,
+          "sha256": "459bc82dac41681b453e3ec21376c104361d76c344436a363807bb4e116c9069"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=468913&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "fbe6bdd1df9f42881cee84bd72b8e0994e4a1ab707015ac470308166da1f4a35"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/468913/ratings/",
+          "status": 200,
+          "bytes": 683,
+          "sha256": "7d5236d6d1843cba6443e445fd7ae99c58fae515047fe1c55af8dcc50a0e49fc"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "468913",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/468913/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "474795",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-474795",
+      "slug": "haunted-by-our-dark-side-chicago-ghosts-gangsters-and-true-crime-tour-474795",
+      "title": "Haunted by Our Dark Side: Chicago Ghosts, Gangsters, and True Crime Tour",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/haunted-by-our-dark-side-chicago-ghosts-gangsters-and-true-crime-tour-474795",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/474795/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/kf44BhJWQoaBZFTbb6iF",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/kf44BhJWQoaBZFTbb6iF"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:20.127321+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/474795/content/",
+          "status": 200,
+          "bytes": 4496,
+          "sha256": "f87937a9f32add0f22ea20a5997703a44594d000d26b3d6ce2783358e9030fa8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/474795/structured-description/",
+          "status": 200,
+          "bytes": 3096,
+          "sha256": "a1d7ce7b28d458c199f177dfb2ad9ad6ff329093651bb47c51607905688bb842"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/474795/",
+          "status": 200,
+          "bytes": 16243,
+          "sha256": "07b1a1ffe1c3e4305ef0acc0ff112bb1827e3f3b60fb01d1b38855a988b9d8c3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=474795&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "1e58ff7fed56a530a9ea75d6517b96c093b4361b856f044ff5ce6c8f57e9ccf1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/474795/ratings/",
+          "status": 200,
+          "bytes": 704,
+          "sha256": "e81e8e41c2d5db04b8ab33a2fad70ab1d990bd74d44f410bcc9566affc30bb48"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "474795",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/474795/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "565800",
+      "company": "insidechicagowalkingtours",
+      "catalogId": "inside-chicago-walking-tours-565800",
+      "slug": "marvels-and-masterpieces-an-engineers-guide-to-chicago-architecture-565800",
+      "title": "Marvels & Masterpieces: An Engineer's Guide to Chicago Architecture",
+      "operator": "Inside Chicago Walking Tours",
+      "publicPath": "/destinations/illinois/chicago/tours/marvels-and-masterpieces-an-engineers-guide-to-chicago-architecture-565800",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/565800/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/sxTtpAdUTs2oBUcdEQh4",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/sxTtpAdUTs2oBUcdEQh4"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:20.214289+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/565800/content/",
+          "status": 200,
+          "bytes": 4924,
+          "sha256": "61dc114554ad64b42756f0abbe1b03abcf2049f4e02c55e7c56e08deeebf52ee"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/insidechicagowalkingtours/565800/structured-description/",
+          "status": 200,
+          "bytes": 3523,
+          "sha256": "7bd3169cc4626140fbe130bbe1ff9dca8b4a86511c653c5419eb5acc46a0636e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/565800/",
+          "status": 200,
+          "bytes": 16578,
+          "sha256": "a31cd32e241306d9df5d7698f8ee28f3574189c430b2898054f3a73746d20c90"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/insidechicagowalkingtours/price-preview/per-item/v2/?asn=fhdn&item_pks=565800&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/insidechicagowalkingtours/items/565800/ratings/",
+          "status": 200,
+          "bytes": 705,
+          "sha256": "5daaf8b5246e9666c9b9a08d9ed3553b6f66255a342831b6d346172790510f5f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "565800",
+        "provider": "insidechicagowalkingtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/insidechicagowalkingtours/items/565800/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "508729",
+      "company": "islandpartyboat",
+      "catalogId": "island-party-boat-508729",
+      "slug": "grand-luau-18-36-people-508729",
+      "title": "Grand Luau (18-36 people)",
+      "operator": "Island Party Boat",
+      "publicPath": "/destinations/illinois/chicago/tours/grand-luau-18-36-people-508729",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.614545,
+        "lng": 41.883599
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/islandpartyboat/items/508729/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/qTSTl3MwQKOq0z2lvbCI",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/qTSTl3MwQKOq0z2lvbCI"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:20.267807+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/islandpartyboat/508729/content/",
+          "status": 200,
+          "bytes": 3403,
+          "sha256": "5c08b499ed919fea5bd1e6d6a301baa644e8f52f163ac9f90136a98640620602"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/islandpartyboat/508729/structured-description/",
+          "status": 200,
+          "bytes": 1860,
+          "sha256": "32022a578d9a34c3ff176dc66a4399cead377882294ba9874328e9cc1cf4fd32"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/islandpartyboat/items/508729/",
+          "status": 200,
+          "bytes": 12680,
+          "sha256": "75be437b72ca8ad38b108cd4db46c89d4157f68259d83431c812fe27d95e4e34"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/islandpartyboat/price-preview/per-item/v2/?asn=fhdn&item_pks=508729&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 543,
+          "sha256": "c06dc498cb26a03974bd75f38cce4a8047f9ebfdb92c0893c96a3c28f64931dc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/islandpartyboat/items/508729/ratings/",
+          "status": 200,
+          "bytes": 427,
+          "sha256": "8d0ddcabe58b993d0465706e76b6ab8f0be9849118e5b8343e091667ad9f48db"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "508729",
+        "provider": "islandpartyboat",
+        "bookingUrl": "https://fareharbor.com/embeds/book/islandpartyboat/items/508729/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 110.0,
+        "currency": "USD",
+        "singular": "Passenger"
+      }
+    },
+    {
+      "itemId": "620845",
+      "company": "knotmyboatcharters",
+      "catalogId": "knot-my-boat-charters-620845",
+      "slug": "captain-nick-bieker-620845",
+      "title": "Captain Nick Bieker",
+      "operator": "Knot My Boat Charters",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-nick-bieker-620845",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/620845/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/kVCLyM9SmGQQGbRr37rg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/kVCLyM9SmGQQGbRr37rg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:21.136728+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/620845/content/",
+          "status": 200,
+          "bytes": 5705,
+          "sha256": "af0c5d1fcb53e8dcf9bb888362fcd0bc24af8e23680146757563fc138735ffee"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/620845/structured-description/",
+          "status": 200,
+          "bytes": 4024,
+          "sha256": "df071c554c5fa559ce6b7701e0787e76ad6695322b10e3353f416f3fb3a16c31"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/620845/",
+          "status": 200,
+          "bytes": 17040,
+          "sha256": "e19d536921eff58ab26b5624f44c2e8b2a2ac6c6bc5a47d999592d17f5ee8984"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/knotmyboatcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=620845&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 862,
+          "sha256": "2a8a978468bf2567a7d4c561e407ed931eb0d57d06465f4b0b077feecc4e2433"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/620845/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "1f817b1ac8a7104c4abc6947f30f75e1f6eb77b8b6986f257cd81b7b0c90c29c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "620845",
+        "provider": "knotmyboatcharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/620845/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 300.0,
+        "currency": "USD",
+        "singular": "Captain for Hire - Three Hours (Paid for Directly)"
+      }
+    },
+    {
+      "itemId": "622350",
+      "company": "knotmyboatcharters",
+      "catalogId": "knot-my-boat-charters-622350",
+      "slug": "captain-trooper-moores-622350",
+      "title": "Captain Trooper Moores",
+      "operator": "Knot My Boat Charters",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-trooper-moores-622350",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/622350/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/LsK092ZTRCMWLFKZO528",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/LsK092ZTRCMWLFKZO528"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:22.005998+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/622350/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/622350/structured-description/",
+          "status": 200,
+          "bytes": 8881,
+          "sha256": "340e1b72c60796d058f5a46ace18c5a5647a06c6675aabf3e7ab3585548938c9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/622350/",
+          "status": 200,
+          "bytes": 14694,
+          "sha256": "3f5bf140ca9f4b2c0d53971b5bc0aa75159b2688194ce87910d03265625d2e7a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/knotmyboatcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=622350&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/622350/ratings/",
+          "status": 200,
+          "bytes": 492,
+          "sha256": "08a53c21dfa4a29ecbf93c6fc7d571d98475b690fea4a68ec1ffc9148e880678"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "622350",
+        "provider": "knotmyboatcharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/622350/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "644345",
+      "company": "knotmyboatcharters",
+      "catalogId": "knot-my-boat-charters-644345",
+      "slug": "captain-pat-erwin-644345",
+      "title": "Captain Pat Erwin",
+      "operator": "Knot My Boat Charters",
+      "publicPath": "/destinations/illinois/chicago/tours/captain-pat-erwin-644345",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/644345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/4iRvlwl3TTG7qePjZHeU",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/4iRvlwl3TTG7qePjZHeU"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:22.108557+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/644345/content/",
+          "status": 200,
+          "bytes": 2243,
+          "sha256": "d83099ed13ba5f35b00f095e1c5af782154e4ef232e037b1c4ea791b1333ab39"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/644345/structured-description/",
+          "status": 200,
+          "bytes": 1178,
+          "sha256": "cf22a427028a1d810417ff2b63fa4eb7d50e72d3aca8cd34a6b991358a5b4ece"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/644345/",
+          "status": 200,
+          "bytes": 9249,
+          "sha256": "7b2d9a016210c88bb3caf9722bbe0bd18bb66ae1574f12eb93c32cf570b7f218"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/knotmyboatcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=644345&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/644345/ratings/",
+          "status": 200,
+          "bytes": 489,
+          "sha256": "04c0e0d17ea1ebce455cb55a62b3e0ec09cc558a594458256e879453c3c2d57e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "644345",
+        "provider": "knotmyboatcharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/644345/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "687115",
+      "company": "knotmyboatcharters",
+      "catalogId": "knot-my-boat-charters-687115",
+      "slug": "37ft-sea-ray-sundancer--4-hours-test-687115",
+      "title": "37ft. Sea Ray Sundancer- 4 Hours TEST",
+      "operator": "Knot My Boat Charters",
+      "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--4-hours-test-687115",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/687115/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "",
+      "galleryImages": [],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:22.263444+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/687115/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/687115/structured-description/",
+          "status": 404,
+          "bytes": 588097,
+          "sha256": "298ba1bd63ebdfcda2aa80d43c85e76f543db92a2123128f710d1f92de7c8b50"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687115/",
+          "status": 404,
+          "bytes": 588071,
+          "sha256": "5112c6c14e1f73a3e52caa1b7ffb854cf28a60efd2739e6ff7bfcdf460b460a3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/knotmyboatcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=687115&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687115/ratings/",
+          "status": 404,
+          "bytes": 588087,
+          "sha256": "1e011a3e5005ea423728f1e09d902da2a05835acb724afee7ae2458cf7081dde"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "687115",
+        "provider": "knotmyboatcharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/687115/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "687119",
+      "company": "knotmyboatcharters",
+      "catalogId": "knot-my-boat-charters-687119",
+      "slug": "37ft-sea-ray-sundancer--3-hours-test-687119",
+      "title": "37ft. Sea Ray Sundancer- 3 Hours TEST",
+      "operator": "Knot My Boat Charters",
+      "publicPath": "/destinations/illinois/chicago/tours/37ft-sea-ray-sundancer--3-hours-test-687119",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/687119/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "",
+      "galleryImages": [],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:24.014979+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/687119/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/knotmyboatcharters/687119/structured-description/",
+          "status": 404,
+          "bytes": 588097,
+          "sha256": "33908943fff50dd117890797110222c3ff850004ddb4d41f924d01b842f0737e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687119/",
+          "status": 404,
+          "bytes": 588071,
+          "sha256": "eae8c3a7be3ca621dd9fd6716922f709bddbb9b867e2b3b2bb5e7baa6f800eab"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/knotmyboatcharters/price-preview/per-item/v2/?asn=fhdn&item_pks=687119&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/knotmyboatcharters/items/687119/ratings/",
+          "status": 404,
+          "bytes": 588087,
+          "sha256": "553bae06a7869199807a56c270d7ee5dc84fd8c62b0b25a09979e73e8e7c5bf9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "687119",
+        "provider": "knotmyboatcharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/knotmyboatcharters/items/687119/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "656890",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-656890",
+      "slug": "hamilton-in-chicago-656890",
+      "title": "HAMILTON in Chicago",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/hamilton-in-chicago-656890",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.628498,
+        "lng": 41.880837
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/656890/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9TMMn4LcQTaEnCWyi8SD",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9TMMn4LcQTaEnCWyi8SD"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:24.070611+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/656890/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/656890/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "3c2fef5c49ce40855c3e1aa3620851b09e483a616fe1cf0320d37b36b4d2607a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/656890/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "7de97ea980d5620bb5798025db98111b30c534aa530756dfa4e9eeabb7e7aa04"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=656890&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/656890/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "1c45dd1c25303d76ef300321deef0a6de86708835ace64d66ab1100409e9c31a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "656890",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/656890/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "657634",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-657634",
+      "slug": "2027-mlb-all-star-game-657634",
+      "title": "2027 MLB All-Star Game",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/2027-mlb-all-star-game-657634",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/657634/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Mtrq4K2URiuCGx2HLwcQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Mtrq4K2URiuCGx2HLwcQ"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:24.331075+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/657634/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/657634/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "cd5aae1a8e89b455477fa47462ec8239cadef8601d65ed556a98138c7011e335"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/657634/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "3b9672f997187f0330f58938441d3640bb8d0b438b546740daf59d220cb40937"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=657634&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/657634/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "74c748879dad958bb6862c27b7dcda33fea6610030c33cc0f67993ae7b2132e3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "657634",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/657634/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "674133",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-674133",
+      "slug": "yankees-vs-cubs-at-wrigley-field-674133",
+      "title": "Yankees vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/yankees-vs-cubs-at-wrigley-field-674133",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/674133/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/BqpVoytOTW5Ack4Z0p46",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/BqpVoytOTW5Ack4Z0p46"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:24.385435+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/674133/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/674133/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "00e09d49ad956835ff0b9e5b9fffdb2969452f43328dccae270238abd603a110"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/674133/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "f57c44f14fd51db53e6ef6adecb7e60141dbc7ac035d7817c1d56cc1412b1fbf"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=674133&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/674133/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "bd298618b4842e3f7a2bea37e3ec577966215263ba52bfccd41fcdecd806cb0d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "674133",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/674133/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681784",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681784",
+      "slug": "yankees-vs-cubs-at-wrigley-field-681784",
+      "title": "Yankees vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/yankees-vs-cubs-at-wrigley-field-681784",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/88TnYjdSSVmxDd4nlnwU",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/88TnYjdSSVmxDd4nlnwU"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:26.002630+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681784/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681784/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "0594482cff52198cdb1648efd4337b38c9e51dbe52a1458b3ddc4d9886aeee26"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681784/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "11848e547121cffed2c1c400aadb98a3f0783c681a643c366688ec88e7cd0ad6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681784&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681784/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "4e78cdf2b9537e7b206fde2ca20332733f68c5c3a445ce09e12555fae368e9ab"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681784",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681784/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681789",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681789",
+      "slug": "giants-vs-cubs-at-wrigley-field-681789",
+      "title": "Giants vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/giants-vs-cubs-at-wrigley-field-681789",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681789/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9kTLm2NkTkfAdSoJvpxt",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9kTLm2NkTkfAdSoJvpxt"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:26.304157+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681789/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681789/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "d6722e34b2a66662681bf4904ffe8ad45bdd2cb3c76b27511a4e9f10f45935fb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681789/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "e9a5f279dd4501d7922c93bc5fa621bf7925ba2eb39a40babd65eb527db80936"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681789&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681789/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "47e999ac3f7acefacd570b5440322b5fc1934fea5531795d3a62c175ae229813"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681789",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681789/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681790",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681790",
+      "slug": "giants-vs-cubs-at-wrigley-field-681790",
+      "title": "Giants vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/giants-vs-cubs-at-wrigley-field-681790",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681790/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/a486VPQASui45wqcUozP",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/a486VPQASui45wqcUozP"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:26.438268+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681790/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681790/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "0352f31da6496fbc063c6f14804a64e236c84fe33fe2a9fcd5274229f4b363a7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681790/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "09dd0af447a7916e30e719121fc3ca295f8f9d58e6dae7576bf68651968c324d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681790&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681790/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "d32f063e8d7ebba7caac9dedce3e74810714e9e15baa23263dcfdf141c69396c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681790",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681790/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681949",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681949",
+      "slug": "white-sox-vs-cubs-at-wrigley-field-681949",
+      "title": "White Sox vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/white-sox-vs-cubs-at-wrigley-field-681949",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681949/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/ynCD7SLCTj2PhW2n6X2v",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/ynCD7SLCTj2PhW2n6X2v"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:26.545302+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681949/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681949/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "9f85a370d77f8c773a8197d03879108372ce67ac9ef706175da922ff4ff6bb39"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681949/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "aaa2b84785ddebb2b0d9640e3fdbc36045e6b9c0465c9079ae63d552b1e6ba32"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681949&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681949/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "2365df7caee48f090b26f1b28b5b3eaf76c58585bea866e215979242b2fcc073"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681949",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681949/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681950",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681950",
+      "slug": "white-sox-vs-cubs-at-wrigley-field-681950",
+      "title": "White Sox vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/white-sox-vs-cubs-at-wrigley-field-681950",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681950/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/utjaB1ZT3G5kaN9J8vSA",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/utjaB1ZT3G5kaN9J8vSA"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:27.903855+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681950/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681950/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "9de36720739735f78b175fe1b9d6fd0208650302b7e432e1ebc835ed8f21a2d3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681950/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "927d0ed8c9abcc680aef05aac087606f6a8cc2a6dccb60c67f926ed4ebd45299"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681950&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681950/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "2c9ec461988f15bdf255ed5497be3b35cfcd00e97dd5fb76fa903909264eebfa"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681950",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681950/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681955",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681955",
+      "slug": "brewers-vs-cubs-at-wrigley-field-681955",
+      "title": "Brewers vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/brewers-vs-cubs-at-wrigley-field-681955",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681955/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/2XRoC16DSjfD9HC4uli9",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/2XRoC16DSjfD9HC4uli9"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:28.418947+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681955/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681955/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "c5b03798bfa77e86424f83d3b5e2ae2595ecf200f4b09574f44baf71df533d02"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681955/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "f28f4465ad6ea2d0007f6419a8f8553047f18441c42ec5a05d28c1240f89e503"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681955&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681955/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "4e3e3f52dc24bae7133deb35e84c99aa6dbb577b97936c00232bab5b1121feba"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681955",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681955/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "681956",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-681956",
+      "slug": "brewers-vs-cubs-at-wrigley-field-681956",
+      "title": "Brewers vs Cubs at Wrigley Field",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/brewers-vs-cubs-at-wrigley-field-681956",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656189,
+        "lng": 41.947647
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681956/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9Uul6o4dTHaRXs3CHGr9",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9Uul6o4dTHaRXs3CHGr9"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:28.425999+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681956/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/681956/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "cd5f3099bc7b66c5d8996b1aeec975399236bf923854e3944826290989ac75f2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681956/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "6f74ff6e50f2e1d29c508a6389c492a0ff2978c91fd73a4e837cba1af6835c58"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=681956&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/681956/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "cd1fb0b3ed34b92c5a7fdf40debbd201717329fcd41661a0bdc3f972d56a589f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "681956",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/681956/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "692705",
+      "company": "midwestbustrips",
+      "catalogId": "midwest-bus-trips-692705",
+      "slug": "the-great-gatsby----in-chicago-692705",
+      "title": "The Great Gatsby -- In Chicago",
+      "operator": "Midwest Bus Trips",
+      "publicPath": "/destinations/illinois/chicago/tours/the-great-gatsby----in-chicago-692705",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.632999,
+        "lng": 41.88429
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/692705/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Dopod4aPTfmfVRCMbvdX",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Dopod4aPTfmfVRCMbvdX"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:28.696614+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/692705/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/midwestbustrips/692705/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "363f7f55ad55e52d09aab1169393b827b1e2b9ee6ceb5023adb46f04c78f1d44"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/692705/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "84776fd533687c051ff17802635c910170d04759669ca7a32082e9a978f603b8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/midwestbustrips/price-preview/per-item/v2/?asn=fhdn&item_pks=692705&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 139,
+          "sha256": "7a9cb34e2c3a0663eef0ff392d8aa3c1074bdd256c2d8c3e0ed1c15451f61fef"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/midwestbustrips/items/692705/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "ff177e211e36c8733f931fca27265a9bafda1e6f257f00c98d4c13b0ccdc24dd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "692705",
+        "provider": "midwestbustrips",
+        "bookingUrl": "https://fareharbor.com/embeds/book/midwestbustrips/items/692705/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "275149",
+      "company": "native312events",
+      "catalogId": "native-312-events-275149",
+      "slug": "west-town-guided-instagram-street-art-tour-275149",
+      "title": "West Town Guided Instagram Street Art Tour",
+      "operator": "Native 312 Events",
+      "publicPath": "/destinations/illinois/chicago/tours/west-town-guided-instagram-street-art-tour-275149",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.656584,
+        "lng": 41.968912
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/275149/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/m5r4zuXQtei6O90H7LMs",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/m5r4zuXQtei6O90H7LMs"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:30.255343+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/275149/content/",
+          "status": 200,
+          "bytes": 3497,
+          "sha256": "26bcfdfd52c19bde17596f83c693b348a379ae8ba7d9d11287dd8e99b833bdb2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/275149/structured-description/",
+          "status": 200,
+          "bytes": 2021,
+          "sha256": "1476450b61575bfdb02f31f2ceb6efb8380c6401a3927b000ee2feccf8e9a81b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/275149/",
+          "status": 200,
+          "bytes": 9847,
+          "sha256": "04fa41ff6cfd5aa032b7ca4edb3fb76d4fec253dcb8a75939266a1a88c9cf8a0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/native312events/price-preview/per-item/v2/?asn=fhdn&item_pks=275149&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 809,
+          "sha256": "156a8d315c613466c966e7f8846b988f5359f18e2df5f3ae11e9a71817307c52"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/275149/ratings/",
+          "status": 200,
+          "bytes": 500,
+          "sha256": "b916933b1cd2436f1633cd15ebea5f5ee0cbe250c263c9d8df7a18b025273c09"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "275149",
+        "provider": "native312events",
+        "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/275149/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 25.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "275158",
+      "company": "native312events",
+      "catalogId": "native-312-events-275158",
+      "slug": "spray-paint-n-sip--chicago-275158",
+      "title": "Spray Paint 'n' Sip- Chicago",
+      "operator": "Native 312 Events",
+      "publicPath": "/destinations/illinois/chicago/tours/spray-paint-n-sip--chicago-275158",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/275158/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/qROkBWVbRAWer3sfFKaA",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/qROkBWVbRAWer3sfFKaA"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:30.491623+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/275158/content/",
+          "status": 200,
+          "bytes": 5348,
+          "sha256": "791402ad6a5d7803fa79627a2553c1e226caf7c617faea52e825fcce60cc718b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/275158/structured-description/",
+          "status": 200,
+          "bytes": 3549,
+          "sha256": "994d03ce25f646ecc1fdb7edc50ba57d1aae67eac58f971ebed57b505396fd4c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/275158/",
+          "status": 200,
+          "bytes": 12835,
+          "sha256": "ce3c1aee8c72f5db293a5bd0b4b3f3a09daa085fe606e32c68c236ad6bd2ea21"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/native312events/price-preview/per-item/v2/?asn=fhdn&item_pks=275158&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "2473eac928fe39eeadcc0efe70ef75566679ba94df20993073b48c6009b63100"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/275158/ratings/",
+          "status": 200,
+          "bytes": 486,
+          "sha256": "309d2ffcca27dc1110dec2149ca87606c317a981f442c22fc95c8f7b0668babd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "275158",
+        "provider": "native312events",
+        "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/275158/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 40.0,
+        "currency": "USD",
+        "singular": "Base Ticket"
+      }
+    },
+    {
+      "itemId": "680525",
+      "company": "native312events",
+      "catalogId": "native-312-events-680525",
+      "slug": "glow--a-neon-street-art-workshop-680525",
+      "title": "Glow- A Neon Street Art Workshop",
+      "operator": "Native 312 Events",
+      "publicPath": "/destinations/illinois/chicago/tours/glow--a-neon-street-art-workshop-680525",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/680525/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/NfWASLBZRxOFxmpAZFio",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/NfWASLBZRxOFxmpAZFio"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:30.720460+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/680525/content/",
+          "status": 200,
+          "bytes": 4309,
+          "sha256": "e405dc735556822a3afb5a95d41f8c21e72d0629630410110bb3da731550de23"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/native312events/680525/structured-description/",
+          "status": 200,
+          "bytes": 2684,
+          "sha256": "d6a1a732b64ba4c62dd72b486df8d2e3ac0a1a659834dde41b82f4796e534e1d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/680525/",
+          "status": 200,
+          "bytes": 9112,
+          "sha256": "476fe27e8a57eeb35e6a433a1c429ee8c8c21dc2a883ffa60ef3c5f1d55bc499"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/native312events/price-preview/per-item/v2/?asn=fhdn&item_pks=680525&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 657,
+          "sha256": "ecac22d9bfa46d8d25d07208ed904ecde2c08cafb0436720d7275f62b9d36200"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/native312events/items/680525/ratings/",
+          "status": 200,
+          "bytes": 490,
+          "sha256": "a0b6ab7741e4f0edab0f432c1dca4cd014bae2a7292cf5f5d8bb8232f720cfb8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "680525",
+        "provider": "native312events",
+        "bookingUrl": "https://fareharbor.com/embeds/book/native312events/items/680525/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 40.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "353450",
+      "company": "newageproductions-hom",
+      "catalogId": "new-age-productions---hom-353450",
+      "slug": "hunk-o-mania-male-revue-show---chicago-353450",
+      "title": "Hunk-O-Mania Male Revue Show - Chicago",
+      "operator": "New Age Productions - HOM",
+      "publicPath": "/destinations/illinois/chicago/tours/hunk-o-mania-male-revue-show---chicago-353450",
+      "destination": {
+        "state": "Illinois",
+        "stateSlug": "illinois",
+        "city": "Chicago",
+        "citySlug": "chicago",
+        "lat": -87.635241,
+        "lng": 41.893294
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353450/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/BRjZWrMMSiGufWqKCqO2",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/BRjZWrMMSiGufWqKCqO2"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T16:31:30.806162+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/newageproductions-hom/353450/content/",
+          "status": 200,
+          "bytes": 4668,
+          "sha256": "36600fa98f7aaa17d7d9f1c9af8d38a554fc4203171416f429fc6d4d0834d01e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/newageproductions-hom/353450/structured-description/",
+          "status": 200,
+          "bytes": 3806,
+          "sha256": "731a27ed20893196bd50f76bfb0e5414b3698a0eb895ec6f2e71b792cef55e4a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/newageproductions-hom/items/353450/",
+          "status": 200,
+          "bytes": 12641,
+          "sha256": "3ee9f60ab13cd1c0d5be47ca571b9bcb57416e378c721471a6b4fda7f8a51c62"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/newageproductions-hom/price-preview/per-item/v2/?asn=fhdn&item_pks=353450&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 2878,
+          "sha256": "8947660129ff40818ce2f664f0a2c5ae4a61829d4604cec290a5b0284d5eade3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/newageproductions-hom/items/353450/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "c83e8aa96175e49c1ad0fb7120c9f4b99d68e222a4e1d10f5f8cc4e9c9155008"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "353450",
+        "provider": "newageproductions-hom",
+        "bookingUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353450/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 35.0,
+        "currency": "USD",
+        "singular": "General Admission"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "company": "chicagomuseumtours",
+  "itemId": "520236",
+  "fetchedAt": "2026-10-02T16:31:14.365619+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/chicagomuseumtours/520236/content/",
+      "status": 200,
+      "bytes": 4019,
+      "sha256": "8395a34ba0f04a57c638b8006e3313463b91d45fc06c56ce2ca00f85d3b80e2c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/chicagomuseumtours/520236/structured-description/",
+      "status": 200,
+      "bytes": 3615,
+      "sha256": "ee0b45d74477e46e20177a7219130ca1306804076cf3145e7338353d686444e7"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/chicagomuseumtours/items/520236/",
+      "status": 200,
+      "bytes": 12882,
+      "sha256": "c0bed1425986fc4b8bbf90fff833e03b382d6ad8265e9d07a97c24e93ea95fa1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/chicagomuseumtours/price-preview/per-item/v2/?asn=fhdn&item_pks=520236&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 768,
+      "sha256": "89375224659dd7968987a2bcf3086250aec9e4bed60913afcd516a98d80ac5e9"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/chicagomuseumtours/items/520236/ratings/",
+      "status": 200,
+      "bytes": 678,
+      "sha256": "55aad6a97d45542e28b0948f5b3825b06a555aeb3fb084ffbb25b08f047a3b65"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "520236",
+    "provider": "chicagomuseumtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/chicagomuseumtours/items/520236/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}
