@@ -31,7 +31,7 @@ from build_stage_b_proof import (
     word_count,
 )
 from inventory_boston import inventory
-from tripadvisor_ratings import parse_tripadvisor_rating
+from tripadvisor_ratings import google_review_pair, parse_tripadvisor_rating
 from editorial_voice import (
     compose_editorial,
     editorial_substance_errors,
@@ -699,17 +699,29 @@ def tripadvisor_rating(folder: Path, meta: dict, company: str, item_id: str) -> 
     )
     if record.get("status") != 200 or not path.exists():
         return None, absent
-    parsed = parse_tripadvisor_rating(load_json(path))
-    if not parsed:
-        return None, absent
-    provenance = (
-        f"TripAdvisor rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
-        f"on GET {endpoint} fields ratings.tripadvisor.rating and "
-        "ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. "
-        "Google reviews were not substituted. Catalog quality_score and availability_count "
-        "were not used."
-    )
-    return parsed, provenance
+    payload = load_json(path)
+    parsed = parse_tripadvisor_rating(payload)
+    if parsed:
+        provenance = (
+            f"TripAdvisor rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
+            f"on GET {endpoint} fields ratings.tripadvisor.rating and "
+            "ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. "
+            "Google reviews were not substituted. Catalog quality_score and availability_count "
+            "were not used."
+        )
+        return parsed, provenance
+    google = google_review_pair(payload)
+    if google:
+        parsed = {**google, "provider": "Google"}
+        provenance = (
+            f"Google rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
+            f"on GET {endpoint} fields ratings.google_reviews.rating and "
+            "ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this "
+            "pair stays attributed to Google. rating_image_url was not used. Catalog "
+            "quality_score and availability_count were not used."
+        )
+        return parsed, provenance
+    return None, absent
 
 
 def public_path_for(geography: dict, slug: str) -> str:
@@ -1205,7 +1217,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         "",
         f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in the legacy catalog (generated tours and manual tours). Engine 6 Viator routes and other cities were not processed.",
         "",
-        f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
+        f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. When that pair is absent, `ratings.google_reviews.rating` and `ratings.google_reviews.user_ratings_total` are used and attributed to Google. The bubble image, catalog quality_score, and availability_count are not used. AggregateRating is omitted when neither pair is present. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
         "",
         f"- Total {CITY_NAME} legacy products: {harvest.get('total', harvest.get('totalBostonLegacy'))}",
         f"- Active booking pages: {harvest['active']}",
@@ -1224,10 +1236,10 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         f"- INSUFFICIENT_SOURCE_CONTENT: {counts['INSUFFICIENT_SOURCE_CONTENT']}",
         f"- SOURCE_NOT_FOUND: {counts['SOURCE_NOT_FOUND']}",
         f"- OK priced pages: {counts['OK']}",
-        f"- Runtime pages with a TripAdvisor rating: {sum(1 for item in published if item.get('aggregateRating'))}",
-        f"- Runtime pages without a TripAdvisor rating: {sum(1 for item in published if not item.get('aggregateRating'))}",
+        f"- Runtime pages with a FareHarbor rating: {sum(1 for item in published if item.get('aggregateRating'))}",
+        f"- Runtime pages without a FareHarbor rating: {sum(1 for item in published if not item.get('aggregateRating'))}",
         "",
-        "## TripAdvisor ratings",
+        "## Ratings",
         "",
     ]
     rated = [item for item in published if item.get("aggregateRating")]
@@ -1238,11 +1250,11 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         )
     )
     if not rated:
-        lines.append("- None. The ratings endpoint did not return a TripAdvisor pair for any published page.")
+        lines.append("- None. The ratings endpoint did not return a TripAdvisor or Google pair for any published page.")
     else:
         lines.append(
-            "Source: `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews` "
-            "on the FareHarbor item ratings endpoint. Provider is TripAdvisor."
+            "TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present. "
+            "Otherwise Google reviews on the same endpoint are shown as Google."
         )
         for product in rated[:8]:
             rating = product["aggregateRating"]
@@ -1251,7 +1263,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
                 f"{rating['ratingValue']} / {rating['reviewCount']} {rating['provider']}"
             )
         if len(rated) > 8:
-            lines.append(f"- {len(rated) - 8} more published pages carry the same TripAdvisor pair.")
+            lines.append(f"- {len(rated) - 8} more published pages carry a FareHarbor rating.")
     lines.extend([
         "",
         "## Geography conflicts",

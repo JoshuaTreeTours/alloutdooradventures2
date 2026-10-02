@@ -71,7 +71,11 @@ describe("FareHarbor presentation parity", () => {
           provider: "Google",
         },
       })
-    ).toBeNull();
+    ).toEqual({
+      ratingValue: 4.9,
+      reviewCount: 80,
+      provider: "Google",
+    });
 
     const proof = {
       ...getFareHarborProofByItemId("518095")!,

@@ -15,7 +15,7 @@ export type FareHarborProofPriceRow = {
 export type FareHarborProofAggregateRating = {
   ratingValue: number;
   reviewCount: number;
-  provider: "TripAdvisor";
+  provider: "TripAdvisor" | "Google";
 };
 
 export type FareHarborProofProduct = {

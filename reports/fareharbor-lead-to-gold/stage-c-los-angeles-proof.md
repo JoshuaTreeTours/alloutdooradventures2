@@ -1,8 +1,8 @@
 # Stage C Los Angeles legacy FareHarbor tranche
 
-Scope is `citySlug === los-angeles` FareHarbor products in `tours.generated.ts`. Engine 6 Viator routes and other cities were not processed.
+Scope is `citySlug === los-angeles` FareHarbor products in the legacy catalog (generated tours and manual tours). Engine 6 Viator routes and other cities were not processed.
 
-Authority is the stored harvest under `data/fareharbor-lead-to-gold/los-angeles`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the Los Angeles bucket.
+Authority is the stored harvest under `data/fareharbor-lead-to-gold/los-angeles`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. When that pair is absent, `ratings.google_reviews.rating` and `ratings.google_reviews.user_ratings_total` are used and attributed to Google. The bubble image, catalog quality_score, and availability_count are not used. AggregateRating is omitted when neither pair is present. Geography is taken from meeting point, item location, and source copy, not from the Los Angeles bucket.
 
 - Total Los Angeles legacy products: 15
 - Active booking pages: 12
@@ -21,12 +21,15 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/los-angeles`
 - INSUFFICIENT_SOURCE_CONTENT: 2
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 6
-- Runtime pages with a TripAdvisor rating: 0
-- Runtime pages without a TripAdvisor rating: 6
+- Runtime pages with a FareHarbor rating: 3
+- Runtime pages without a FareHarbor rating: 3
 
-## TripAdvisor ratings
+## Ratings
 
-- None. The ratings endpoint did not return a TripAdvisor pair for any published page.
+TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present. Otherwise Google reviews on the same endpoint are shown as Google.
+- `333382` `A Taste of LA: Half Day Tour of the BEST of Los Angeles` — 4.9 / 9992 Google
+- `168579` `LA Essential Star Homes Tour` — 4.9 / 1335 Google
+- `518084` `Private Los Angeles Tour (Beverly Hills)` — 4.9 / 1335 Google
 
 ## Geography conflicts
 

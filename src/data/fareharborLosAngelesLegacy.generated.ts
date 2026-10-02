@@ -43,8 +43,12 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "price": "51.94",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/alldayla/items/168579/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 1335,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 1335 reviews on GET https://fareharbor.com/api/v1/companies/alldayla/items/168579/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "518084",
@@ -81,8 +85,12 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "price": "470.83",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/alldayla/items/518084/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 1335,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 1335 reviews on GET https://fareharbor.com/api/v1/companies/alldayla/items/518084/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
   },
   {
     "itemId": "680527",
@@ -264,7 +272,11 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "price": "83.74",
       "priceCurrency": "USD"
     },
-    "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted."
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 9992,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 9992 reviews on GET https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
   }
 ];

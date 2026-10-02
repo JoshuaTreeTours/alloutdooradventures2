@@ -479,8 +479,8 @@ def validate(
                 errors.append(
                     "aggregate rating review count must be a positive integer"
                 )
-            if rating.get("provider") != "TripAdvisor":
-                errors.append("aggregate rating provider must be TripAdvisor")
+            if rating.get("provider") not in {"TripAdvisor", "Google"}:
+                errors.append("aggregate rating provider must be TripAdvisor or Google")
     if re.search(r"\$\s?\d", text):
         errors.append("dollar amount leaked into editorial copy")
     if SECOND_PERSON.search(text):
@@ -926,7 +926,7 @@ def emit_ts(products: list[dict]) -> str:
         "export type FareHarborProofAggregateRating = {\n"
         "  ratingValue: number;\n"
         "  reviewCount: number;\n"
-        "  provider: \"TripAdvisor\";\n"
+        "  provider: \"TripAdvisor\" | \"Google\";\n"
         "};\n\n"
         "export type FareHarborProofProduct = {\n"
         "  itemId: string;\n"

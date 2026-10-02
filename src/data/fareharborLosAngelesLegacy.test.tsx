@@ -54,7 +54,12 @@ describe("FareHarbor Los Angeles legacy rollout", () => {
       losAngeles.filter(product => product.publicPath.includes("/los-angeles/"))
     ).toHaveLength(6);
     expect(losAngeles.every(product => product.offer && product.visiblePriceLabel)).toBe(true);
-    expect(losAngeles.every(product => product.aggregateRating === null)).toBe(true);
+    expect(losAngeles.filter(product => product.aggregateRating)).toHaveLength(3);
+    expect(
+      losAngeles
+        .filter(product => product.aggregateRating)
+        .every(product => product.aggregateRating?.provider === "Google")
+    ).toBe(true);
     expect(new Set(ids).size).toBe(ids.length);
     expect(products.filter(product => product.itemId === "73240")).toHaveLength(0);
     expect(isFareHarborGeographyReview("73240")).toBe(true);
@@ -81,19 +86,31 @@ describe("FareHarbor Los Angeles legacy rollout", () => {
     );
   });
 
-  it("renders priced pages with no TripAdvisor rating through the shared template", () => {
+  it("renders Google ratings on priced pages and cards, and omits them when FareHarbor has none", () => {
     const cases = [
       {
         itemId: "333382",
         slug: "a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+        ratingValue: 4.9,
+        reviewCount: 9992,
       },
       {
         itemId: "168579",
         slug: "la-essential-star-homes-tour-168579",
+        ratingValue: 4.9,
+        reviewCount: 1335,
       },
       {
         itemId: "518084",
         slug: "private-los-angeles-tour-beverly-hills-518084",
+        ratingValue: 4.9,
+        reviewCount: 1335,
+      },
+      {
+        itemId: "680527",
+        slug: "manson-family-murders-funeral-limo-tour-of-la-680527",
+        ratingValue: null,
+        reviewCount: null,
       },
     ] as const;
 
@@ -126,10 +143,23 @@ describe("FareHarbor Los Angeles legacy rollout", () => {
       expect(price, sample.itemId).toBe(product.visiblePriceLabel);
       expect(card, sample.itemId).toContain(price!);
       expect(header, sample.itemId).toContain(price!);
-      expect(product.aggregateRating, sample.itemId).toBeNull();
-      expect(card, sample.itemId).not.toContain("fareharbor-rating");
-      expect(header, sample.itemId).not.toContain("fareharbor-rating");
-      expect(formatFareHarborRating).toBeTypeOf("function");
+      if (sample.ratingValue !== null && sample.reviewCount !== null) {
+        expect(product.aggregateRating, sample.itemId).toEqual({
+          ratingValue: sample.ratingValue,
+          reviewCount: sample.reviewCount,
+          provider: "Google",
+        });
+        const formatted = formatFareHarborRating(product.aggregateRating!);
+        expect(formatted, sample.itemId).toContain("· Google");
+        expect(formatted, sample.itemId).not.toContain("TripAdvisor");
+        expect(card, sample.itemId).toContain(formatted);
+        expect(header, sample.itemId).toContain(formatted);
+        expect(card, sample.itemId).toContain('data-rating-provider="Google"');
+      } else {
+        expect(product.aggregateRating, sample.itemId).toBeNull();
+        expect(card, sample.itemId).not.toContain("fareharbor-rating");
+        expect(header, sample.itemId).not.toContain("fareharbor-rating");
+      }
       expect(header, sample.itemId).toContain("California");
       expect(header, sample.itemId).toContain("Los Angeles");
       expect(page, sample.itemId).toContain(product.publicPath);
@@ -143,11 +173,12 @@ describe("FareHarbor Los Angeles legacy rollout", () => {
         typeNames(node["@type"]).includes("Product")
       );
       expect(productNodes, sample.itemId).toHaveLength(1);
-      expect(productNodes[0].aggregateRating, sample.itemId).toBeUndefined();
       expect(
         fareHarborRatingParityErrors({
           proof: product,
           surfaces: [
+            { name: "card", html: card },
+            { name: "page", html: header },
             { name: "schema", aggregateRating: productNodes[0].aggregateRating },
           ],
         }),
