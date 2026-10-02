@@ -7,7 +7,10 @@ import {
 import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
-import { formatMerchantPrice } from "../utils/merchantPricing";
+import {
+  canonicalMerchantPriceLabel,
+  formatMerchantPrice,
+} from "../utils/merchantPricing";
 import { ENGINE6_COMMERCIAL_SOURCE_LABEL } from "./commercialResolver";
 
 export const MERCHANT_FEED_PRODUCT_SCHEMA_PARITY_FIELDS = [
@@ -177,10 +180,13 @@ export const auditEngine6CommercialFieldParity = (
   }
 
   for (const field of MERCHANT_FEED_COMMERCIAL_PARITY_FIELDS) {
-    const merchantValue = row[field]?.trim() ?? "";
+    const merchantValue =
+      field === "price"
+        ? canonicalMerchantPriceLabel(row[field] ?? "")
+        : row[field]?.trim() ?? "";
     const expected =
       field === "price"
-        ? schemaPrice
+        ? canonicalMerchantPriceLabel(schemaPrice)
         : field === "average_rating"
           ? schemaRating
           : schemaReviewCount;
@@ -307,8 +313,12 @@ export const compareMerchantFeedRowToProductSchema = (
   for (const field of MERCHANT_FEED_PRODUCT_SCHEMA_PARITY_FIELDS) {
     const actual = row[field]?.trim() ?? "";
     const expected = snapshotValueForMerchantField(snapshot, field);
+    const comparableActual =
+      field === "price" ? canonicalMerchantPriceLabel(actual) : actual;
+    const comparableExpected =
+      field === "price" ? canonicalMerchantPriceLabel(expected) : expected;
 
-    if (actual !== expected) {
+    if (comparableActual !== comparableExpected) {
       mismatches.push(
         `${tour.productCode}.${field}: expected "${expected}", got "${actual}"`
       );

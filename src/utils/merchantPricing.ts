@@ -64,3 +64,19 @@ export const formatMerchantPrice = (
   const normalizedCurrency = currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
   return `${formatCleanMerchantAmount(amount)} ${normalizedCurrency}`;
 };
+
+/**
+ * One commercial price label for the merchant feed, the website snapshot, and
+ * Product JSON-LD parity. `189.5 USD` and `189.50 USD` are the same amount;
+ * writers that stringify a JS number drop the trailing zero, while
+ * formatMerchantPrice keeps cent precision.
+ */
+export const canonicalMerchantPriceLabel = (value: string): string => {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return "";
+  }
+
+  const currency = parseMerchantPriceCurrency(trimmed) ?? DEFAULT_CURRENCY;
+  return formatMerchantPrice(parsePrice(trimmed), currency);
+};

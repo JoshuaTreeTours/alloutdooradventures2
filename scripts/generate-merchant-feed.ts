@@ -694,10 +694,12 @@ const main = async () => {
   let outputRows = commercialRefresh.rows as MerchantRow[];
 
   // Product JSON-LD and the merchant feed are two representations of the same
-  // commercial facts. Always align feed commercial fields to the exact
+  // product. Always align feed title and commercial fields to the exact
   // schema-resolved values used by Product JSON-LD before parity validation.
-  // This prevents ordinary deployments from failing merely because a volatile
-  // rating/review count changed between two live/cache reads during one build.
+  // Change-scope preservation keeps descriptions, links, and images stable,
+  // but a preserved title from an older catalog name fails title parity once
+  // the shared product title moves. Price labels are likewise taken from
+  // formatMerchantPrice so `189.5 USD` and `189.50 USD` cannot diverge.
   const generatedByProductCode = new Map(
     generatedRows.map(row => [row.id.trim().toUpperCase(), row])
   );
@@ -708,6 +710,7 @@ const main = async () => {
     if (!generatedRow) return row;
     return {
       ...row,
+      title: generatedRow.title,
       price: generatedRow.price,
       average_rating: generatedRow.average_rating,
       rating_count: generatedRow.rating_count,

@@ -16,7 +16,7 @@ import {
   MERCHANT_COMMERCIAL_REFRESH_METADATA_PATH,
   type MerchantCommercialRefreshMetadata,
 } from "../src/engine6/merchantCommercialRefreshMetadata";
-import { engine6ResolvedTours } from "../src/engine6/registry";
+import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
 import { validateMerchantFeedRows } from "./generate-merchant-feed";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
@@ -145,7 +145,7 @@ const main = async () => {
 
   const commercialSnapshot = await readCommercialSnapshot();
   const schemaResolvedTours = resolveToursWithMerchantFeedCommercialSnapshot(
-    engine6ResolvedTours,
+    merchantFeedEligibleTours,
     commercialSnapshot
   );
   const audit = auditEngine6MerchantFeedCommercialParity(

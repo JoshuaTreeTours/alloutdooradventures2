@@ -5,6 +5,7 @@ import {
   buildMerchantFeedCommercialSnapshot,
   MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
 } from "../src/engine6/merchantFeedCommercialSnapshot";
+import { formatMerchantPrice } from "../src/utils/merchantPricing";
 
 const FEED_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
 const REPORT_PATH = path.resolve(process.cwd(), "merchant-rating-refresh-report.json");
@@ -76,10 +77,8 @@ type AoaCommercialResult = {
   attempt: number;
 };
 
-const formatMerchantUsdPrice = (amount: number) => {
-  const rounded = Math.round(amount * 100) / 100;
-  return `${rounded} USD`;
-};
+const formatMerchantUsdPrice = (amount: number) =>
+  formatMerchantPrice(amount, "USD");
 
 const fetchFromAoa = async (productCode: string): Promise<AoaCommercialResult> => {
   let lastProblem = "unknown failure";
