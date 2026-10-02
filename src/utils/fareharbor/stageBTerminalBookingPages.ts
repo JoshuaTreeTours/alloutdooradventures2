@@ -9,6 +9,17 @@ export const STAGE_B_BOOKING_PAGE_NOT_FOUND_IDS = new Set([
   "463302",
   "288303",
   "361872",
+  "656890",
+  "657634",
+  "674133",
+  "681784",
+  "681789",
+  "681790",
+  "681949",
+  "681950",
+  "681955",
+  "681956",
+  "692705",
 ]);
 
 export type FareHarborBookingPageValidity =

@@ -1,0 +1,47 @@
+{
+  "company": "babylontours-chicago",
+  "itemId": "490685",
+  "fetchedAt": "2026-10-02T16:31:11.284205+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490685/content/",
+      "status": 200,
+      "bytes": 13295,
+      "sha256": "1f1b17b9d2e174af85c09aa73078f264c2014f8b9a007d08aaa61f14b54b718c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/babylontours-chicago/490685/structured-description/",
+      "status": 200,
+      "bytes": 11983,
+      "sha256": "be231254415fba4ff3bcb442594adbcfaafa4fe86ba6c470a8dce57ad828103a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490685/",
+      "status": 200,
+      "bytes": 11497,
+      "sha256": "4dd8abfe771e7fa01355625541c78ab2a3e494a16c747ddb3d507e1550f2a1d2"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/babylontours-chicago/price-preview/per-item/v2/?asn=fhdn&item_pks=490685&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 581,
+      "sha256": "43b3e5a14f325b432063c5d6b65c2b37fdf6bd13862442285def65f0b18c38f1"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/babylontours-chicago/items/490685/ratings/",
+      "status": 200,
+      "bytes": 674,
+      "sha256": "8b9fb42e9ede4b1e8a1da64fb86907d5aaafe86a802a2e16d2b3d35fd67ef95a"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "490685",
+    "provider": "babylontours-chicago",
+    "bookingUrl": "https://fareharbor.com/embeds/book/babylontours-chicago/items/490685/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

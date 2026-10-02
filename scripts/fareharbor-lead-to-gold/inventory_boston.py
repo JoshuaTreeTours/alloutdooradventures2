@@ -11,7 +11,13 @@ ROOT = Path(__file__).resolve().parents[2]
 GENERATED = ROOT / "src" / "data" / "tours.generated.ts"
 ENGINE6_ROUTES = ROOT / "src" / "engine6" / "routes.ts"
 SUPPRESSED = ROOT / "src" / "utils" / "fareharbor" / "suppressedBookingPages.ts"
-OUT = ROOT / "reports" / "fareharbor-lead-to-gold" / "stage-c-boston-inventory.json"
+def inventory_report_path(city_slug: str = "boston") -> Path:
+    return (
+        ROOT
+        / "reports"
+        / "fareharbor-lead-to-gold"
+        / f"stage-c-{city_slug}-inventory.json"
+    )
 
 FH_URL = re.compile(
     r"https://fareharbor\.com/embeds/(?:book|calendar)/([^/\"'?]+)/items/(\d+)",
@@ -45,7 +51,7 @@ def public_path(tour: dict) -> str:
     )
 
 
-def inventory() -> dict:
+def inventory(city_slug: str = "boston") -> dict:
     tours = load_generated_tours()
     e6 = engine6_routes()
     retired = retired_ids()
@@ -54,7 +60,7 @@ def inventory() -> dict:
     seen = set()
     for tour in tours:
         dest = tour.get("destination") or {}
-        if dest.get("citySlug") != "boston":
+        if dest.get("citySlug") != city_slug:
             continue
         booking = tour.get("bookingUrl") or tour.get("bookingWidgetUrl") or ""
         if VIATOR_URL.search(booking):
@@ -103,15 +109,25 @@ def inventory() -> dict:
         "alreadyRetired": sum(1 for item in products if item["alreadyRetired"]),
         "engine6Collisions": sum(1 for item in skipped if item["reason"] == "ENGINE6_CANONICAL_PATH"),
         "skipped": skipped,
+        "citySlug": city_slug,
         "products": products,
     }
 
 
 def main() -> None:
-    payload = inventory()
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-    print(f"total={payload['total']} alreadyRetired={payload['alreadyRetired']} engine6={payload['engine6Collisions']}")
+    import sys
+
+    city_slug = "boston"
+    if "--city" in sys.argv:
+        city_slug = sys.argv[sys.argv.index("--city") + 1]
+    payload = inventory(city_slug)
+    out = inventory_report_path(city_slug)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    print(
+        f"city={city_slug} total={payload['total']} "
+        f"alreadyRetired={payload['alreadyRetired']} engine6={payload['engine6Collisions']}"
+    )
 
 
 if __name__ == "__main__":

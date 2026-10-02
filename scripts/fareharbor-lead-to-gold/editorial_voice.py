@@ -464,7 +464,7 @@ def activity_kind(title: str, description: str = "") -> str:
         return "bus"
     if re.search(r"\b(walk|trail|foot)\b", title_text):
         return "walk"
-    if re.search(r"\b(driv(?:e|ing)|minivan)\b", blob):
+    if re.search(r"\b(driving tour|minivan|by van|in a van)\b", blob):
         return "drive"
     if re.search(r"\b(kayak|paddle|canoe)\b", blob):
         return "paddle"
@@ -791,6 +791,36 @@ def unique_places(items: list[str], source_text: str) -> list[str]:
     return result
 
 
+def is_junk_place_label(name: str) -> bool:
+    """Headings, fares, and calls to action are not places or artworks."""
+    key = (name or "").lower().strip()
+    if not key:
+        return True
+    if re.search(
+        r"\b(included|tickets?|admission|taxes|fees|explore|meeting location|"
+        r"illegal|drugs|hello|playpen|reserved entry|masterpieces|duration|"
+        r"why book|zero stress|hot seat|course meal|general admission|"
+        r"special feature|water slide|tiki|fusion sound|happy place|"
+        r"all fun|entrance fee|group size|semi-private|professional tour|"
+        r"about me|paid separately|must be paid)\b",
+        key,
+    ):
+        return True
+    first = key.split()[0]
+    return first in {
+        "encounter",
+        "admire",
+        "marvel",
+        "featuring",
+        "did",
+        "why",
+        "how",
+        "including",
+        "lets",
+        "let's",
+    }
+
+
 def extract_places(facts: dict, source_text: str, title: str, operator: str) -> list[str]:
     blobs = []
     itinerary_names = []
@@ -802,7 +832,12 @@ def extract_places(facts: dict, source_text: str, title: str, operator: str) -> 
             text,
             flags=re.I,
         ).strip(" .-")
-        if text:
+        if text and not re.fullmatch(
+            r"(?:check[\s-]?in|demo\s*\d*|paint|dry|wrap|open paint|first demo|"
+            r"second demo|final touches|bag piece|arrive(?:/check in)?)",
+            text,
+            flags=re.I,
+        ):
             itinerary_names.append(text)
             blobs.append(text)
     for key in ("highlights", "description"):
@@ -828,7 +863,7 @@ def extract_places(facts: dict, source_text: str, title: str, operator: str) -> 
     places = []
     seen = set()
     for name in unique_places(candidates, source_text):
-        if name.lower() in blocked:
+        if name.lower() in blocked or is_junk_place_label(name):
             continue
         if operator and operator.lower() in name.lower():
             continue
@@ -957,7 +992,7 @@ def description_fact_drafts(description: str, extras: list[str] | None = None) -
     if re.search(r"private (?:corporate |group )?tours?", blob, re.I) and re.search(
         r"food|tastings", blob, re.I
     ):
-        drafts.append("Private groups sample local food while walking a Boston neighborhood.")
+        drafts.append("Private groups sample local food while walking the neighborhood.")
     if re.search(r"corporate|company events|team-building|colleagues", blob, re.I) and re.search(
         r"food|tastings", blob, re.I
     ):

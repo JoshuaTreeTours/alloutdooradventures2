@@ -189,6 +189,69 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertNotRegex(body.lower(), r"the (group|walk|outing) covers")
         self.assertEqual(prose_quality_errors(paragraphs, title, description), [])
 
+    def test_studio_and_revue_sources_are_not_rewritten_as_outdoor_walks(self):
+        workshop = (
+            "Unleash your inner street artist in a workshop led by Studio W.I.P. artists. "
+            "Over the session you'll learn spray paint handling, stencil application, lettering and textures "
+            "while creating your own original canvas to take home."
+        )
+        paragraphs, _highlights, _schema, _removed = compose_editorial(
+            {"title": "Spray Paint Workshop", "operator": "Studio Artists"},
+            {
+                "description": workshop,
+                "duration": "90 minutes",
+                "included": ["One canvas", "Staff instruction"],
+                "highlights": [],
+                "itinerary": ["Check in", "Paint", "Wrap"],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            workshop,
+            {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
+        )
+        body = " ".join(paragraphs)
+        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertIn("canvas", body.lower())
+        self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotRegex(body.lower(), r"the (group|walk|outing) covers")
+        self.assertEqual(prose_quality_errors(paragraphs, "Spray Paint Workshop", workshop), [])
+
+        revue = (
+            "Our male revue features male strippers and exotic dancers in an intimate setting. "
+            "The Las Vegas Style show includes audience participation, and hosts encourage the crowd. "
+            "Guests book it for a bachelorette or birthday party."
+        )
+        paragraphs, _highlights, schema, _removed = compose_editorial(
+            {"title": "Male Revue Night", "operator": "Stage Productions"},
+            {
+                "description": revue,
+                "duration": "2 hours",
+                "included": ["Male revue show with exotic dancers", "Audience participation"],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+                "minAge": 21,
+            },
+            revue,
+            {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
+        )
+        body = " ".join(paragraphs)
+        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertIn("revue", body.lower())
+        self.assertNotIn("Las Vegas Style, and they hear why", body)
+        self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotRegex(schema, r"passes Paint")
+        self.assertEqual(prose_quality_errors(paragraphs, "Male Revue Night", revue), [])
+
 
 if __name__ == "__main__":
     unittest.main()

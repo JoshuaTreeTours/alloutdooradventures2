@@ -224,8 +224,8 @@ CITY_STATE_RE = re.compile(
     r"\b([A-Z][A-Za-z.'-]{2,}(?:\s+[A-Z][A-Za-z.'-]{2,}){0,3}),\s*"
     r"(Vermont|Maine|Massachusetts|New Hampshire|Rhode Island|Connecticut|"
     r"New York|New Jersey|Pennsylvania|Maryland|Virginia|California|Oregon|"
-    r"Colorado|Florida|Hawaii|Texas|Washington|"
-    r"VT|ME|MA|NH|RI|CT|NY|NJ|PA|MD|VA|CA|OR|CO|FL|HI|TX|WA)\b"
+    r"Colorado|Florida|Hawaii|Texas|Washington|Illinois|"
+    r"VT|ME|MA|NH|RI|CT|NY|NJ|PA|MD|VA|CA|OR|CO|FL|HI|TX|WA|IL)\b"
 )
 IN_PLACE_RE = re.compile(
     r"\b(?:in|at|near|outside|located(?:\s+in)?|takes place in|based in|nestled in(?: the woods of)?)\s+"
@@ -572,7 +572,9 @@ def normalize_activity_duration(raw: str | None, description: str | None = None)
         )
         if match:
             return match.group(0)
-        if len(re.findall(r"[A-Za-z0-9']+", text)) <= 4:
+        if len(re.findall(r"[A-Za-z0-9']+", text)) <= 4 and re.search(
+            r"\d|\b(?:hour|minute|day)s?\b", text, re.I
+        ):
             return text
     desc = strip_markdown(description or "")
     desc = TRAVEL_TIME_RE.sub(" ", desc)

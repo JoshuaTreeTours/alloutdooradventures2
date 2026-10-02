@@ -70,6 +70,53 @@ class GeographyRulesTest(unittest.TestCase):
         self.assertEqual(result["citySlug"], "portland")
         self.assertEqual(result["stateSlug"], "maine")
 
+    def test_chicago_street_address_stays_chicago(self):
+        chicago = {
+            "city": "Chicago",
+            "state": "Illinois",
+            "citySlug": "chicago",
+            "stateSlug": "illinois",
+        }
+        signals = collect_place_signals(
+            meeting="111 S Michigan Ave Chicago, IL US 60603",
+            title="Art Institute of Chicago Skip-the-Line Tour",
+        )
+        result = assess_geography(
+            expected=chicago, catalog_destinations=CATALOG, signals=signals
+        )
+        self.assertFalse(result["conflictsWithExpected"])
+        self.assertEqual(result["disposition"], "keep")
+        self.assertEqual(result["citySlug"], "chicago")
+        self.assertEqual(result["stateSlug"], "illinois")
+
+    def test_miami_beach_meeting_point_moves_off_chicago_bucket(self):
+        chicago = {
+            "city": "Chicago",
+            "state": "Illinois",
+            "citySlug": "chicago",
+            "stateSlug": "illinois",
+        }
+        catalog = {
+            **CATALOG,
+            ("florida", "miami-beach"): {
+                "city": "Miami Beach",
+                "state": "Florida",
+                "citySlug": "miami-beach",
+                "stateSlug": "florida",
+            },
+        }
+        signals = collect_place_signals(
+            meeting="Caffe Umbria, 959 West Ave Suite 1, Miami Beach, FL 33139",
+            title="Miami Beach Ultimate City Bike Tour",
+        )
+        result = assess_geography(
+            expected=chicago, catalog_destinations=catalog, signals=signals
+        )
+        self.assertTrue(result["conflictsWithExpected"])
+        self.assertEqual(result["disposition"], "moved")
+        self.assertEqual(result["citySlug"], "miami-beach")
+        self.assertEqual(result["stateSlug"], "florida")
+
     def test_street_address_in_boston_stays_boston(self):
         for meeting in (
             "103 Atlantic Avenue, Boston, MA",
@@ -153,6 +200,7 @@ class EditorialRulesTest(unittest.TestCase):
             )
         )
         self.assertEqual(normalize_activity_duration("3 hours", None), "3 hours")
+        self.assertIsNone(normalize_activity_duration("Varies", None))
 
 
 if __name__ == "__main__":
