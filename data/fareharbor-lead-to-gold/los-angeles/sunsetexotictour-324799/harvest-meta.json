@@ -1,0 +1,48 @@
+{
+  "company": "sunsetexotictour",
+  "itemId": "324799",
+  "fetchedAt": "2026-10-02T19:39:58.549793+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/324799/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/324799/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "fd95da66bf67db4ce94446162c76210233727e9f42e7b23c77a10804445097c8"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/324799/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "5db1c9379428c28a8ee9e22eda7c4d5aa378e5c4c537390aac8a3d0fab0f33d0"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sunsetexotictour/price-preview/per-item/v2/?asn=fhdn&item_pks=324799&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "33ece9fc220f6a26ae9922a212b197315df27d0e238962c32e0a0e2545918d90"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/324799/ratings/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "5c07d0e8021cb64d68e3d6dca2f9f8fd4b6f1b03d4b2c38e12e39def1deb6915"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "324799",
+    "provider": "sunsetexotictour",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

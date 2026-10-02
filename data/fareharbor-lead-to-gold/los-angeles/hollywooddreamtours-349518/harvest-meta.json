@@ -1,0 +1,47 @@
+{
+  "company": "hollywooddreamtours",
+  "itemId": "349518",
+  "fetchedAt": "2026-10-02T19:39:55.903945+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hollywooddreamtours/349518/content/",
+      "status": 200,
+      "bytes": 1336,
+      "sha256": "d56f9a1b81a1dcffd0309e610e6cc06a814e20210e556659554b12498d39c93c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hollywooddreamtours/349518/structured-description/",
+      "status": 204,
+      "bytes": 0,
+      "sha256": null
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywooddreamtours/items/349518/",
+      "status": 200,
+      "bytes": 7299,
+      "sha256": "c7d6ad4cfb815fe2f879d846b676cbe9fa73f3d2979d612c577c4eddc583a2fb"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hollywooddreamtours/price-preview/per-item/v2/?asn=fhdn&item_pks=349518&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywooddreamtours/items/349518/ratings/",
+      "status": 200,
+      "bytes": 440,
+      "sha256": "19baecec144fefe9c7984b2b13b17424afdfb9cab334ecff248c6d3eb379b991"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "349518",
+    "provider": "hollywooddreamtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hollywooddreamtours/items/349518/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

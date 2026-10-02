@@ -419,6 +419,78 @@ def _cue_sentences(kind: str, description: str) -> list[str]:
         r"food|tasting", blob, re.I
     ):
         rows.append("Private groups book the tasting for colleagues, combining neighborhood streets with local food.")
+    if re.search(r"open[- ]air", blob, re.I) and re.search(
+        r"does not include any stops|\bno stops\b", blob, re.I
+    ):
+        rows.append("Guests ride in an open-air vehicle rather than walking between sights.")
+        rows.append("The outing does not include stops, so the sights are seen from the vehicle.")
+        if re.search(r"\btraffic\b", blob, re.I):
+            hours = re.search(r"up to\s+(\d+)\s*hours?", blob, re.I)
+            if hours:
+                unit = "hour" if hours.group(1) == "1" else "hours"
+                rows.append(
+                    f"The length runs up to about {hours.group(1)} {unit} and changes with traffic."
+                )
+            else:
+                rows.append("The running time changes with traffic conditions.")
+        if re.search(r"\bneighborhood", blob, re.I):
+            rows.append("The vehicle passes through city neighborhoods on the same drive.")
+        if re.search(r"moviemaking|\bmovies?\b", blob, re.I):
+            rows.append("Moviemaking landmarks are among the sights seen from the vehicle.")
+        if re.search(r"residential", blob, re.I):
+            rows.append("Residential neighborhoods are part of the same ride.")
+        if re.search(r"architect", blob, re.I):
+            rows.append("Architectural buildings are visible from the open-air vehicle.")
+        if re.search(r"historic", blob, re.I):
+            rows.append("Historic sites are also on the drive and are seen without a stop.")
+        if re.search(r"\bcamera\b", blob, re.I):
+            rows.append("Guests are asked to bring a camera for the ride.")
+        rows.append("People stay aboard the vehicle for the length of the outing.")
+        rows.append("There is no walking portion, because the operator does not schedule stops.")
+        rows.append("The same open-air ride is how every sight on the outing is viewed.")
+        if re.search(r"\bLos Angeles\b", blob):
+            rows.append("The ride stays in Los Angeles.")
+    if re.search(r"\bprivate\b", blob, re.I) and re.search(
+        r"you decide what to see|hidden gems", blob, re.I
+    ):
+        rows.append(
+            "A private group sets the sights, the departure time, and the length of the outing."
+        )
+        rows.append(
+            "The pace stays with the guests instead of following a fixed public timetable."
+        )
+        if re.search(r"travel guides", blob, re.I):
+            rows.append(
+                "Stops include well-known sights and places left out of ordinary travel guides."
+            )
+        people = re.search(r"up to (\d+) people", blob, re.I)
+        if people:
+            rows.append(f"The private booking is limited to {people.group(1)} guests.")
+        pickup = re.search(
+            r"free pick\s*up in ([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)?)",
+            blob,
+            re.I,
+        )
+        if pickup:
+            rows.append(f"Free pickup is available in {pickup.group(1)}.")
+        if re.search(r"\bcamera\b", blob, re.I):
+            rows.append("Guests are asked to bring a camera for the outing.")
+        hours = re.search(r"\b(\d+)\s*hours?\b", blob, re.I)
+        if hours:
+            unit = "hour" if hours.group(1) == "1" else "hours"
+            rows.append(f"The outing runs for about {hours.group(1)} {unit}.")
+        rows.append("There is no set walking route, and the group sets the stops.")
+        if re.search(r"small groups", blob, re.I):
+            rows.append(
+                "Small groups book the same private outing, and the plan is built around that party."
+            )
+        rows.append(
+            "The operator leads the outing, and the plan changes with the group's size and interests."
+        )
+        if re.search(r"sights", blob, re.I):
+            rows.append(
+                "Guests visit both the better-known sights and the places the travel guides skip."
+            )
     if re.search(r"customizable|tailored", blob, re.I) and re.search(r"private", blob, re.I) and re.search(
         r"walk", blob, re.I
     ):
@@ -635,7 +707,7 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("Writers and the rooms where they worked are the subject, more than a checklist of facades.")
     if re.search(r"lgbtq|queer|pride", blob, re.I):
         rows.append("Persecution, resistance, and celebration are all part of what the guide covers.")
-    if re.search(r"film|movie|cinematic", blob, re.I):
+    if re.search(r"\b(?:film|movie|cinematic|television)\b", blob, re.I):
         rows.append("The locations are chosen because a film or television scene was shot there.")
     if re.search(r"fireworks", blob, re.I):
         rows.append("People are on the water so they can watch the display away from the crowded shore.")

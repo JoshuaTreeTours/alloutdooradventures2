@@ -3,10 +3,15 @@ import {
   fareHarborMigratedProducts,
   getFareHarborBostonLegacyProducts,
   getFareHarborChicagoLegacyProducts,
+  getFareHarborLosAngelesLegacyProducts,
 } from "./fareharborCityBatches";
 import { fareHarborAggregateRatingSchema } from "./fareharborPresentation";
 
-export { getFareHarborBostonLegacyProducts, getFareHarborChicagoLegacyProducts };
+export {
+  getFareHarborBostonLegacyProducts,
+  getFareHarborChicagoLegacyProducts,
+  getFareHarborLosAngelesLegacyProducts,
+};
 
 const byItemId = new Map(
   fareHarborMigratedProducts.map(product => [product.itemId, product])

@@ -1,0 +1,45 @@
+# Stage C Los Angeles legacy FareHarbor tranche
+
+Scope is `citySlug === los-angeles` FareHarbor products in `tours.generated.ts`. Engine 6 Viator routes and other cities were not processed.
+
+Authority is the stored harvest under `data/fareharbor-lead-to-gold/los-angeles`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{company}/items/{itemId}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the Los Angeles bucket.
+
+- Total Los Angeles legacy products: 15
+- Active booking pages: 12
+- Terminal booking pages: 3
+- Geography conflicts with Los Angeles: 1
+- Moved to another destination: 0
+- Excluded for uncertain/unmapped geography: 1
+- Published Los Angeles routes: 6
+- Withheld for no authoritative price: 5
+- Authoritative price-preview fares among active pages: 7
+- Active PRICE_NOT_FOUND before editorial: 5
+- Runtime PASS: 6
+- Runtime FAIL: 0
+- Terminal removals: 3
+- PRICE_NOT_FOUND after editorial: 4
+- INSUFFICIENT_SOURCE_CONTENT: 2
+- SOURCE_NOT_FOUND: 0
+- OK priced pages: 6
+- Runtime pages with a TripAdvisor rating: 0
+- Runtime pages without a TripAdvisor rating: 6
+
+## TripAdvisor ratings
+
+- None. The ratings endpoint did not return a TripAdvisor pair for any published page.
+
+## Geography conflicts
+
+- `629071` `Venice’s Finest: A Daytime Experience` — exclude — Venice, California from meeting_point does not belong to Los Angeles, and no matching public destination exists — `/destinations/california/venice/tours/venices-finest-a-daytime-experience-629071`
+
+## Terminal records retained for audit
+
+- `324799` `/destinations/california/los-angeles/tours/beverly-hills-tour-1h15-minutes-324799` — `BOOKING_PAGE_NOT_FOUND`
+- `382848` `/destinations/california/los-angeles/tours/the-beach-tour-4-hours-382848` — `BOOKING_PAGE_NOT_FOUND`
+- `547525` `/destinations/california/los-angeles/tours/1-hour-walk-of-fame-guided-tour-547525` — `BOOKING_PAGE_NOT_FOUND`
+
+## Manual review
+
+- `629071` geography exclude — Venice, California from meeting_point does not belong to Los Angeles, and no matching public destination exists
+- `205984` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/los-angeles/tours/1-hr---real-hollywood-sign-tour-205984` — none
+- `349518` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/los-angeles/tours/sightseeing-hollywood-tours-349518` — none

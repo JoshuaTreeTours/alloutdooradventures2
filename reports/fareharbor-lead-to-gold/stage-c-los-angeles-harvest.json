@@ -1,0 +1,1046 @@
+{
+  "fetchedAt": "2026-10-02T19:40:02.329770+00:00",
+  "citySlug": "los-angeles",
+  "totalBostonLegacy": 15,
+  "total": 15,
+  "active": 12,
+  "terminal": 3,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 7,
+  "priceNotFound": 5,
+  "alreadyRetired": 1,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "324799",
+    "382848",
+    "547525"
+  ],
+  "priceNotFoundIds": [
+    "349518",
+    "471721",
+    "471726",
+    "495929",
+    "629071"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "168579",
+      "company": "alldayla",
+      "catalogId": "alldayla-168579",
+      "slug": "la-essential-star-homes-tour-168579",
+      "title": "LA Essential Star Homes Tour",
+      "operator": "Golden Ticket LA",
+      "publicPath": "/destinations/california/los-angeles/tours/la-essential-star-homes-tour-168579",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.339056,
+        "lng": 34.101413
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/168579/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/JwJyljguTkKDCCITcTMe",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/JwJyljguTkKDCCITcTMe"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:53.364427+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/168579/content/",
+          "status": 200,
+          "bytes": 1957,
+          "sha256": "e028c586d9221343f1913f69501d6d2870c74aff1b48cb9df7edf30e4ad30da0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/168579/structured-description/",
+          "status": 200,
+          "bytes": 1528,
+          "sha256": "4f404c0c86c1c40481608b862c8dc0d3c1247f59e2623f1c4333f88b508547a4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/168579/",
+          "status": 200,
+          "bytes": 9141,
+          "sha256": "d87161d223dee94c959e39441f4c268da4601f29b3204d593ad1e09c3a002371"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/alldayla/price-preview/per-item/v2/?asn=fhdn&item_pks=168579&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 655,
+          "sha256": "acb80520d67d3d9ba55f96b73fdefe89db79737c0748bb390d22d565db68fb64"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/168579/ratings/",
+          "status": 200,
+          "bytes": 503,
+          "sha256": "4b6a3456cb9f2124103c9dcdefcc702759600e6c27c5efc4f50a2b0e424ee4e3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "168579",
+        "provider": "alldayla",
+        "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/168579/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 51.94,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "205984",
+      "company": "alldayla",
+      "catalogId": "alldayla-205984",
+      "slug": "1-hr---real-hollywood-sign-tour-205984",
+      "title": "1 Hr - Real Hollywood Sign Tour",
+      "operator": "Golden Ticket LA",
+      "publicPath": "/destinations/california/los-angeles/tours/1-hr---real-hollywood-sign-tour-205984",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.339056,
+        "lng": 34.101413
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/205984/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:53.366040+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/205984/content/",
+          "status": 200,
+          "bytes": 2397,
+          "sha256": "0f4ec85d97c02aaff6a750c89266f767c7e95f83bc60201a7f7667aca100a642"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/205984/structured-description/",
+          "status": 200,
+          "bytes": 1532,
+          "sha256": "9875f6a468dabfbd12edba5f09b680d73bb8cedb1f98efdf2177ce03fc085f73"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/205984/",
+          "status": 200,
+          "bytes": 13742,
+          "sha256": "4fa2346868e118e5cfe515d4cfc473b45e4378f8bdf6d5a49902698c99f88c42"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/alldayla/price-preview/per-item/v2/?asn=fhdn&item_pks=205984&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 524,
+          "sha256": "661fb9473db230e8675cdf1a8a3f982ed86751628395c8c47e4f02cb9a653913"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/205984/ratings/",
+          "status": 200,
+          "bytes": 506,
+          "sha256": "e589f2173506d7a822008ed80b90ddc512ed35411ffca4df6eb78fc4b2e0b3b5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "205984",
+        "provider": "alldayla",
+        "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/205984/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 26.5,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "518084",
+      "company": "alldayla",
+      "catalogId": "alldayla-518084",
+      "slug": "private-los-angeles-tour-beverly-hills-518084",
+      "title": "Private Los Angeles Tour (Beverly Hills)",
+      "operator": "Golden Ticket LA",
+      "publicPath": "/destinations/california/los-angeles/tours/private-los-angeles-tour-beverly-hills-518084",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.339056,
+        "lng": 34.101413
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/518084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:53.365494+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/518084/content/",
+          "status": 200,
+          "bytes": 2262,
+          "sha256": "9546340a97707ef275ae8e3c0914e97c4731c1ac95a3e26f9faae35e878f1c4d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/alldayla/518084/structured-description/",
+          "status": 200,
+          "bytes": 1591,
+          "sha256": "6dcff8747efeec036f2f64dbf97c3aa54dc51f233f06c873061061dcde459af4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/518084/",
+          "status": 200,
+          "bytes": 8747,
+          "sha256": "ebaa65d0ebce21c5f2a7452e44a85127482a56e3b80fab4e78b0cc50fbed2c48"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/alldayla/price-preview/per-item/v2/?asn=fhdn&item_pks=518084&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 556,
+          "sha256": "6752f445515c05a031b9904efec958c444f68489ea70b267c2cc28e5d2995a52"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/alldayla/items/518084/ratings/",
+          "status": 200,
+          "bytes": 516,
+          "sha256": "ec06fb1bb87e0486f6d7d16791c568256525b1660460ae45509c5812cbe88c35"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "518084",
+        "provider": "alldayla",
+        "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/518084/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 470.83,
+        "currency": "USD",
+        "singular": "Private Group"
+      }
+    },
+    {
+      "itemId": "680527",
+      "company": "graveline",
+      "catalogId": "graveline-680527",
+      "slug": "manson-family-murders-funeral-limo-tour-of-la-680527",
+      "title": "Manson Family Murders Funeral Limo Tour of LA",
+      "operator": "Grave Line Tours",
+      "publicPath": "/destinations/california/los-angeles/tours/manson-family-murders-funeral-limo-tour-of-la-680527",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:53.366848+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680527/content/",
+          "status": 200,
+          "bytes": 9358,
+          "sha256": "c4e0eea4101019830987690858b6e0d095f618e97bdd8f07472f84e985dd27ea"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680527/structured-description/",
+          "status": 200,
+          "bytes": 5119,
+          "sha256": "4e03c407b682939639abdd2d1f86e67adc7828f879e431dee1391fb9ead1db81"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680527/",
+          "status": 200,
+          "bytes": 18667,
+          "sha256": "a485f2647a4b19d29412b3f7dc63811ac7d4645f2060df2f065a137f1d537eff"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/graveline/price-preview/per-item/v2/?asn=fhdn&item_pks=680527&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "e094a58e9a11af0ba103b74b6cbed4409a84c46e565d5a4eb32b0221c58a8c69"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680527/ratings/",
+          "status": 200,
+          "bytes": 427,
+          "sha256": "159beb945e7d39e5a69573b2b1bfdec3d51c9394499615657b00e97d4b637635"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "680527",
+        "provider": "graveline",
+        "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680527/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 98.18,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "680528",
+      "company": "graveline",
+      "catalogId": "graveline-680528",
+      "slug": "death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+      "title": "Death Becomes Her Funeral Limo Tour of Los Angeles",
+      "operator": "Grave Line Tours",
+      "publicPath": "/destinations/california/los-angeles/tours/death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:55.724525+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680528/content/",
+          "status": 200,
+          "bytes": 9342,
+          "sha256": "64367915c32f2d0dc3d392f4b962a0ae8711a81f2d63f62be57fea36afbf3ea2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680528/structured-description/",
+          "status": 200,
+          "bytes": 5065,
+          "sha256": "c5894443196686fb1554fec0061c19f740e96e3dc975774a01b280377ac82145"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680528/",
+          "status": 200,
+          "bytes": 17071,
+          "sha256": "faf4afa9372cd119d631fab70e2e653b74ab1c80410cc2e6d0473bee86fe5e41"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/graveline/price-preview/per-item/v2/?asn=fhdn&item_pks=680528&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "cbd9a23f8f77f0edc894d5ffb45262da1a85deb647a5e314cf494fe5daff2ab6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680528/ratings/",
+          "status": 200,
+          "bytes": 432,
+          "sha256": "783bbe16d6dd1c1a8ef24381a450af8ec5bbaabb2286b07ce6e57d8485f9805c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "680528",
+        "provider": "graveline",
+        "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680528/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 75.08,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "680529",
+      "company": "graveline",
+      "catalogId": "graveline-680529",
+      "slug": "hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+      "title": "Hollywood Horror Story: The Black Dahlia Funeral Limo Tour",
+      "operator": "Grave Line Tours",
+      "publicPath": "/destinations/california/los-angeles/tours/hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680529/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:55.789681+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680529/content/",
+          "status": 200,
+          "bytes": 9845,
+          "sha256": "30bbe871d1f30a90d3fd0893e11ea6a308238387fb68832e0eb66ed611b71db9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/graveline/680529/structured-description/",
+          "status": 200,
+          "bytes": 5822,
+          "sha256": "7769a5b4bd9b52f9520afe967244a674ec686c6031d1fcf37cbd1d4cbcb47c10"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680529/",
+          "status": 200,
+          "bytes": 16112,
+          "sha256": "ab287a906ca956e276a7365e65aa86c0f28b9a9602b0bdb82b3ba8d9d9ac0f9e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/graveline/price-preview/per-item/v2/?asn=fhdn&item_pks=680529&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "fe7be62cd2f2939255a285558c078cf49cb2587b525d0f377f4dcc80d3d52cd6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/graveline/items/680529/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "20f14ca52f1806b040fcbf2370a8406b1ac4a49119a539f30f0b67d3f6c3cc61"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "680529",
+        "provider": "graveline",
+        "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680529/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 98.18,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "333382",
+      "company": "hollywoodbustoursla",
+      "catalogId": "hollywoodbustoursla-333382",
+      "slug": "a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+      "title": "A Taste of LA: Half Day Tour of the BEST of Los Angeles",
+      "operator": "Hollywood Bus Tours, LLC",
+      "publicPath": "/destinations/california/los-angeles/tours/a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:55.846286+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodbustoursla/333382/content/",
+          "status": 200,
+          "bytes": 8513,
+          "sha256": "2b1d39c138cd79b1641ca53d5229967ea4a5a7b53f51b6b960c4b05bfafacc2b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodbustoursla/333382/structured-description/",
+          "status": 200,
+          "bytes": 4811,
+          "sha256": "5dc5e0c8c698af18819a0f53090f4e24936ab7882b861d47915a585a80f2131a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/",
+          "status": 200,
+          "bytes": 29977,
+          "sha256": "3d48deed95f54d29b35e7c40c2250eb795b2dd95f3e6875c4efdf350c94b605f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hollywoodbustoursla/price-preview/per-item/v2/?asn=fhdn&item_pks=333382&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 898,
+          "sha256": "4b9cc06277c22037b2556b65fb84378f93a8d46878494155d0ca65de9abae049"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/ratings/",
+          "status": 200,
+          "bytes": 571,
+          "sha256": "cdc78489b72478c743727f6876f9c26751c8444018705413010616df5a0b1d66"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "333382",
+        "provider": "hollywoodbustoursla",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 83.74,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "349518",
+      "company": "hollywooddreamtours",
+      "catalogId": "hollywooddreamtours-349518",
+      "slug": "sightseeing-hollywood-tours-349518",
+      "title": "Sightseeing Hollywood Tours",
+      "operator": "Hollywood LA Tours",
+      "publicPath": "/destinations/california/los-angeles/tours/sightseeing-hollywood-tours-349518",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.242643,
+        "lng": 34.054908
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hollywooddreamtours/items/349518/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "",
+      "galleryImages": [],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:55.903945+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hollywooddreamtours/349518/content/",
+          "status": 200,
+          "bytes": 1336,
+          "sha256": "d56f9a1b81a1dcffd0309e610e6cc06a814e20210e556659554b12498d39c93c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hollywooddreamtours/349518/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywooddreamtours/items/349518/",
+          "status": 200,
+          "bytes": 7299,
+          "sha256": "c7d6ad4cfb815fe2f879d846b676cbe9fa73f3d2979d612c577c4eddc583a2fb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hollywooddreamtours/price-preview/per-item/v2/?asn=fhdn&item_pks=349518&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywooddreamtours/items/349518/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "19baecec144fefe9c7984b2b13b17424afdfb9cab334ecff248c6d3eb379b991"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "349518",
+        "provider": "hollywooddreamtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hollywooddreamtours/items/349518/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "471721",
+      "company": "hollywoodhikes",
+      "catalogId": "hollywoodhikes-471721",
+      "slug": "the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
+      "title": "The Official Hollywood Sign Walking Tour in Los Angeles-Free Waters!",
+      "operator": "Hollywood Hikes, LLC",
+      "publicPath": "/destinations/california/los-angeles/tours/the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.327127,
+        "lng": 34.130221
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodhikes/items/471721/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:57.673140+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471721/content/",
+          "status": 200,
+          "bytes": 1944,
+          "sha256": "567f77e02547481405d094b232a75adaccaa4b79d7fc051d60f201462c646237"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471721/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471721/",
+          "status": 200,
+          "bytes": 9583,
+          "sha256": "2e7d6477095ffb789ddd31127c0ef5b88b3bcc20fd1f7b22658b41f4932958cd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hollywoodhikes/price-preview/per-item/v2/?asn=fhdn&item_pks=471721&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471721/ratings/",
+          "status": 200,
+          "bytes": 468,
+          "sha256": "8a599a1dd6ca3cb66a186494660d597253c8c59802c914ff03cddceacbf0f83a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "471721",
+        "provider": "hollywoodhikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodhikes/items/471721/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "471726",
+      "company": "hollywoodhikes",
+      "catalogId": "hollywoodhikes-471726",
+      "slug": "the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
+      "title": "The Official Hollywood Sign Express Walking Tour in Los Angeles-Free Waters!",
+      "operator": "Hollywood Hikes, LLC",
+      "publicPath": "/destinations/california/los-angeles/tours/the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.327127,
+        "lng": 34.130221
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodhikes/items/471726/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:57.872763+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471726/content/",
+          "status": 200,
+          "bytes": 1607,
+          "sha256": "b027126d3f7e27112034ce5f0f3d68fbcaeb98dd7be7d3f9a26903fb3ae1abed"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471726/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471726/",
+          "status": 200,
+          "bytes": 9104,
+          "sha256": "79decaf3a2e9e41b720e4625ace67fa6807874a4ec47ccc55444e16c36c266dc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hollywoodhikes/price-preview/per-item/v2/?asn=fhdn&item_pks=471726&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471726/ratings/",
+          "status": 200,
+          "bytes": 476,
+          "sha256": "458824c43435a2cbb0db5d6287d6f43012c81065c9f3f7684914d46462a858d6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "471726",
+        "provider": "hollywoodhikes",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodhikes/items/471726/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "495929",
+      "company": "parlorcartours",
+      "catalogId": "parlorcartours-495929",
+      "slug": "hollywood-sightseeing-trolley-tour-495929",
+      "title": "Hollywood Sightseeing Trolley Tour",
+      "operator": "Parlor Car Tours",
+      "publicPath": "/destinations/california/los-angeles/tours/hollywood-sightseeing-trolley-tour-495929",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles",
+        "lat": -118.329989,
+        "lng": 34.102766
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/parlorcartours/items/495929/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:58.081616+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/parlorcartours/495929/content/",
+          "status": 200,
+          "bytes": 4828,
+          "sha256": "6085795e9692baa3bd30245fba501642221dfbf601f8378bd7a9e4ac7ffb75ca"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/parlorcartours/495929/structured-description/",
+          "status": 200,
+          "bytes": 3422,
+          "sha256": "7540652669f20791f1c78f2cba7079a54916661b43eab3e765a076eebe2bae23"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/parlorcartours/items/495929/",
+          "status": 200,
+          "bytes": 25586,
+          "sha256": "0bbb925d054700f093afcde5bab90d2f1102311afd5fbbeddf6f50c1981e906a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/parlorcartours/price-preview/per-item/v2/?asn=fhdn&item_pks=495929&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/parlorcartours/items/495929/ratings/",
+          "status": 200,
+          "bytes": 431,
+          "sha256": "f4d5933818d8707f1dec20cc01300cd82be87f1ec08d0bba3fd48cde66a946b6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "495929",
+        "provider": "parlorcartours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/parlorcartours/items/495929/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "324799",
+      "company": "sunsetexotictour",
+      "catalogId": "sunsetexotictour-324799",
+      "slug": "beverly-hills-tour-1h15-minutes-324799",
+      "title": "Beverly Hills Tour 1h15 minutes",
+      "operator": "Sunset Exotic Tour",
+      "publicPath": "/destinations/california/los-angeles/tours/beverly-hills-tour-1h15-minutes-324799",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:58.549793+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/324799/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/324799/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "fd95da66bf67db4ce94446162c76210233727e9f42e7b23c77a10804445097c8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/324799/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "5db1c9379428c28a8ee9e22eda7c4d5aa378e5c4c537390aac8a3d0fab0f33d0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sunsetexotictour/price-preview/per-item/v2/?asn=fhdn&item_pks=324799&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 140,
+          "sha256": "33ece9fc220f6a26ae9922a212b197315df27d0e238962c32e0a0e2545918d90"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/324799/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "5c07d0e8021cb64d68e3d6dca2f9f8fd4b6f1b03d4b2c38e12e39def1deb6915"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "324799",
+        "provider": "sunsetexotictour",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "382848",
+      "company": "sunsetexotictour",
+      "catalogId": "sunsetexotictour-382848",
+      "slug": "the-beach-tour-4-hours-382848",
+      "title": "The Beach Tour 4 Hours",
+      "operator": "Sunset Exotic Tour",
+      "publicPath": "/destinations/california/los-angeles/tours/the-beach-tour-4-hours-382848",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:59.856690+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/382848/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sunsetexotictour/382848/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "54a80a3c0bf9396f0963c86581e8e0896255dc30e27816765bc7acee18614b6e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/382848/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "8a3c0af16e35b7bc197d47812e17281be46966175aea32ec68000d251b74bd64"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sunsetexotictour/price-preview/per-item/v2/?asn=fhdn&item_pks=382848&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 140,
+          "sha256": "33ece9fc220f6a26ae9922a212b197315df27d0e238962c32e0a0e2545918d90"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sunsetexotictour/items/382848/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "2624f3e1a65a623a22f24b0ae143a03694e8d4eea139b2cb2b13560d28d11a99"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "382848",
+        "provider": "sunsetexotictour",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "629071",
+      "company": "takemeoutla",
+      "catalogId": "takemeoutla-629071",
+      "slug": "venices-finest-a-daytime-experience-629071",
+      "title": "Venice’s Finest: A Daytime Experience",
+      "operator": "Take Me Out LA",
+      "publicPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/takemeoutla/items/629071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T19:39:59.915493+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/takemeoutla/629071/content/",
+          "status": 200,
+          "bytes": 2323,
+          "sha256": "771297ea580361a5a91ec2e570cb5158deebebf505aa08f95b69e3492b55c378"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/takemeoutla/629071/structured-description/",
+          "status": 200,
+          "bytes": 1956,
+          "sha256": "131cc505a00ddf68a74d1c68bb118426d659a5bbd83aed6f0df95388b7d221a0"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/takemeoutla/items/629071/",
+          "status": 200,
+          "bytes": 7424,
+          "sha256": "c58916935e6e088a2f6672a8a2c06a0011a1de7b1540a745e21ad621ab0fcc34"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/takemeoutla/price-preview/per-item/v2/?asn=fhdn&item_pks=629071&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/takemeoutla/items/629071/ratings/",
+          "status": 200,
+          "bytes": 428,
+          "sha256": "6ab85962c78296d4332bf83d4e158e5ea4b6d4d5fcda35e7333051a952e9501f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "629071",
+        "provider": "takemeoutla",
+        "bookingUrl": "https://fareharbor.com/embeds/book/takemeoutla/items/629071/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "547525",
+      "company": "walkandridetours",
+      "catalogId": "walkandridetours-547525",
+      "slug": "1-hour-walk-of-fame-guided-tour-547525",
+      "title": "1-Hour Walk of Fame Guided Tour",
+      "operator": "Walk and Ride Hollywood",
+      "publicPath": "/destinations/california/los-angeles/tours/1-hour-walk-of-fame-guided-tour-547525",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Los Angeles",
+        "citySlug": "los-angeles"
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/walkandridetours/items/547525/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/nOED5MVjRYhdCqre6IVt",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/nOED5MVjRYhdCqre6IVt"
+      ],
+      "alreadyRetired": true,
+      "fetchedAt": "2026-10-02T19:40:00.092493+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/walkandridetours/547525/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/walkandridetours/547525/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "010882312abcfc3fe37c80f85cb2c7b6251b73a3417303d8b3e353a7dc548b98"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/walkandridetours/items/547525/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "ff4ecce491b671b2dba1b6e5f59faed11d19d8965c24628f3f72e6ca2eef1542"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/walkandridetours/price-preview/per-item/v2/?asn=fhdn&item_pks=547525&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 140,
+          "sha256": "0da6e8e17347dd958b7df25083a244babf2184b220696b5629709989b63a5ce2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/walkandridetours/items/547525/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "173a3a674111d0f7f3d55e40c8a684e725803f749779789f0a72b184eb8a8182"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "547525",
+        "provider": "walkandridetours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/walkandridetours/items/547525/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

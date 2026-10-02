@@ -1,0 +1,47 @@
+{
+  "company": "takemeoutla",
+  "itemId": "629071",
+  "fetchedAt": "2026-10-02T19:39:59.915493+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/takemeoutla/629071/content/",
+      "status": 200,
+      "bytes": 2323,
+      "sha256": "771297ea580361a5a91ec2e570cb5158deebebf505aa08f95b69e3492b55c378"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/takemeoutla/629071/structured-description/",
+      "status": 200,
+      "bytes": 1956,
+      "sha256": "131cc505a00ddf68a74d1c68bb118426d659a5bbd83aed6f0df95388b7d221a0"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/takemeoutla/items/629071/",
+      "status": 200,
+      "bytes": 7424,
+      "sha256": "c58916935e6e088a2f6672a8a2c06a0011a1de7b1540a745e21ad621ab0fcc34"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/takemeoutla/price-preview/per-item/v2/?asn=fhdn&item_pks=629071&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/takemeoutla/items/629071/ratings/",
+      "status": 200,
+      "bytes": 428,
+      "sha256": "6ab85962c78296d4332bf83d4e158e5ea4b6d4d5fcda35e7333051a952e9501f"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "629071",
+    "provider": "takemeoutla",
+    "bookingUrl": "https://fareharbor.com/embeds/book/takemeoutla/items/629071/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

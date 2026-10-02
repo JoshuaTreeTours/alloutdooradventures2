@@ -19,6 +19,11 @@ export const UNPUBLISHED_UNPRICED_FAREHARBOR_IDS = new Set<string>([
   "644345",
   "687115",
   "687119",
+  "205984",
+  "349518",
+  "471721",
+  "471726",
+  "495929",
 ]);
 
 export const isUnpublishedUnpricedFareHarborProduct = (

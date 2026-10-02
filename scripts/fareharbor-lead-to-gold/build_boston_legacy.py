@@ -81,6 +81,15 @@ CITY_PROFILES = {
         "editorialSample": None,
         "publishUnpriced": False,
     },
+    "los-angeles": {
+        "city": "Los Angeles",
+        "state": "California",
+        "stateSlug": "california",
+        "exportName": "fareHarborLosAngelesLegacyProducts",
+        "generatedName": "fareharborLosAngelesLegacy.generated.ts",
+        "editorialSample": None,
+        "publishUnpriced": False,
+    },
 }
 CITY_SLUG = "boston"
 CITY_NAME = CITY_PROFILES[CITY_SLUG]["city"]
@@ -1041,7 +1050,26 @@ def has_authoritative_price(product: dict) -> bool:
     return bool(product.get("offer") and product.get("visiblePriceLabel"))
 
 
+def placeholder_product_ids() -> set[str]:
+    path = ROOT / "src" / "utils" / "tours" / "invalidPlaceholderTours.ts"
+    if not path.exists():
+        return set()
+    text = path.read_text()
+    match = re.search(
+        r"const INVALID_PLACEHOLDER_TOUR_PRODUCT_IDS = new Set\(\[([\s\S]*?)\]\);",
+        text,
+    )
+    if not match:
+        return set()
+    return set(re.findall(r'"(\d+)"', match.group(1)))
+
+
+PLACEHOLDER_PRODUCT_IDS = placeholder_product_ids()
+
+
 def is_public_product(product: dict) -> bool:
+    if product["itemId"] in PLACEHOLDER_PRODUCT_IDS:
+        return False
     if product.get("geography", {}).get("disposition") == "exclude":
         return False
     if product["exceptionStatus"] == "BOOKING_PAGE_NOT_FOUND":
@@ -1086,6 +1114,25 @@ def update_unpublished_unpriced_ids(item_ids: list[str]) -> None:
         ]
     )
     UNPRICED_TS.write_text(body)
+
+
+def ensure_sitemap_paths(paths: list[str]) -> None:
+    sitemap_path = ROOT / "public" / "sitemap-tours.xml"
+    if not sitemap_path.exists():
+        return
+    text = sitemap_path.read_text()
+    missing = [path for path in paths if path and path not in text]
+    if not missing:
+        return
+    block = "".join(
+        "  <url><loc>https://www.alloutdooradventures.com"
+        f"{path}</loc><priority>0.8</priority></url>\n"
+        for path in missing
+    )
+    if "</urlset>" not in text:
+        raise SystemExit("sitemap-tours.xml is missing </urlset>")
+    sitemap_path.write_text(text.replace("</urlset>", f"{block}</urlset>", 1))
+    print(f"added {len(missing)} published sitemap urls")
 
 
 def remove_sitemap_paths(paths: list[str]) -> None:
@@ -1156,7 +1203,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
     lines = [
         f"# Stage C {CITY_NAME} legacy FareHarbor tranche",
         "",
-        f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in `tours.generated.ts`. Engine 6 Viator routes and other cities were not processed.",
+        f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in the legacy catalog (generated tours and manual tours). Engine 6 Viator routes and other cities were not processed.",
         "",
         f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
         "",
@@ -1405,13 +1452,16 @@ def main() -> None:
     if not PUBLISH_UNPRICED:
         update_unpublished_unpriced_ids(unpublished_unpriced)
     published_paths = {product["publicPath"] for product in runtime}
-    remove_sitemap_paths(
-        [
-            product["publicPath"]
-            for product in products
-            if product.get("publicPath") and product["publicPath"] not in published_paths
-        ]
-    )
+    drop_paths = []
+    for product in products:
+        original = catalog[product["itemId"]]["publicPath"]
+        current = product.get("publicPath") or ""
+        if current not in published_paths:
+            drop_paths.extend([current, original])
+        elif original != current:
+            drop_paths.append(original)
+    remove_sitemap_paths(drop_paths)
+    ensure_sitemap_paths(sorted(published_paths))
     print(f"wrote {GENERATED_TS}")
     print(f"wrote {GEOGRAPHY_TS}")
     print(f"wrote {REPORT_MD}")

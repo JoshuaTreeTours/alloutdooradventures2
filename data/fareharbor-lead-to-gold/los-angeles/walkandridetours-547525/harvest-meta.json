@@ -1,0 +1,48 @@
+{
+  "company": "walkandridetours",
+  "itemId": "547525",
+  "fetchedAt": "2026-10-02T19:40:00.092493+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/walkandridetours/547525/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/walkandridetours/547525/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "010882312abcfc3fe37c80f85cb2c7b6251b73a3417303d8b3e353a7dc548b98"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/walkandridetours/items/547525/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "ff4ecce491b671b2dba1b6e5f59faed11d19d8965c24628f3f72e6ca2eef1542"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/walkandridetours/price-preview/per-item/v2/?asn=fhdn&item_pks=547525&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "0da6e8e17347dd958b7df25083a244babf2184b220696b5629709989b63a5ce2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/walkandridetours/items/547525/ratings/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "173a3a674111d0f7f3d55e40c8a684e725803f749779789f0a72b184eb8a8182"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "547525",
+    "provider": "walkandridetours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/walkandridetours/items/547525/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

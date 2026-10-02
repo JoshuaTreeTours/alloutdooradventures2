@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 GENERATED = ROOT / "src" / "data" / "tours.generated.ts"
+MANUAL = ROOT / "src" / "data" / "tours.manual.ts"
 ENGINE6_ROUTES = ROOT / "src" / "engine6" / "routes.ts"
 SUPPRESSED = ROOT / "src" / "utils" / "fareharbor" / "suppressedBookingPages.ts"
 def inventory_report_path(city_slug: str = "boston") -> Path:
@@ -36,6 +37,29 @@ def load_generated_tours() -> list[dict]:
     return json.loads(text[start : end + 1])
 
 
+def load_manual_tours() -> list[dict]:
+    """Manual catalog tours use the same public shape as generated tours."""
+    if not MANUAL.exists():
+        return []
+    import subprocess
+
+    result = subprocess.run(
+        [
+            "npx",
+            "tsx",
+            "-e",
+            "import { manualTours } from './src/data/tours.manual.ts';"
+            "process.stdout.write(JSON.stringify(manualTours));",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(result.stdout)
+    return payload if isinstance(payload, list) else []
+
+
 def engine6_routes() -> set[str]:
     return set(ROUTE_RE.findall(ENGINE6_ROUTES.read_text(encoding="utf-8")))
 
@@ -52,7 +76,7 @@ def public_path(tour: dict) -> str:
 
 
 def inventory(city_slug: str = "boston") -> dict:
-    tours = load_generated_tours()
+    tours = [*load_generated_tours(), *load_manual_tours()]
     e6 = engine6_routes()
     retired = retired_ids()
     products = []

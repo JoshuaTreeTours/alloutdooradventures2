@@ -17,6 +17,14 @@ export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] 
     "city": "Hardwick",
     "state": "Vermont",
     "expectedPath": "/destinations/massachusetts/boston/tours/wheels-in-the-woods-73240"
+  },
+  {
+    "itemId": "629071",
+    "title": "Venice’s Finest: A Daytime Experience",
+    "reason": "Venice, California from meeting_point does not belong to Los Angeles, and no matching public destination exists",
+    "city": "Venice",
+    "state": "California",
+    "expectedPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071"
   }
 ];
 

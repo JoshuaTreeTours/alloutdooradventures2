@@ -713,10 +713,14 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "driving tour"
     if re.search(r"sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack", text):
         return "harbor outing"
-    if re.search(r"food|taste|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
+    if re.search(r"food|tasting|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
         r"lobster roll|clam chowder|dim sum|food tour|food walk|tastings", desc
     ):
         return "food walk"
+    if re.search(r"mini-coach|\bmini coach\b", desc) and not re.search(
+        r"\b(walk|trail|foot)\b", text
+    ):
+        return "guided outing"
     if re.search(r"photo", text):
         return "photography walk"
     if re.search(r"ghost|haunt", text):
@@ -802,7 +806,8 @@ def is_junk_place_label(name: str) -> bool:
         r"why book|zero stress|hot seat|course meal|general admission|"
         r"special feature|water slide|tiki|fusion sound|happy place|"
         r"all fun|entrance fee|group size|semi-private|professional tour|"
-        r"about me|paid separately|must be paid)\b",
+        r"about me|paid separately|must be paid|best way|open air|what to bring|"
+        r"restroom|coffee break|bathroom)\b",
         key,
     ):
         return True

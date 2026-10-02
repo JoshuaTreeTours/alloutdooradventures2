@@ -54,8 +54,10 @@ describe("FareHarbor Phase C template", () => {
       const source = readFileSync(file, "utf8");
       expect(source, file).not.toMatch(/citySlug\s*===?\s*["']boston["']/);
       expect(source, file).not.toMatch(/citySlug\s*===?\s*["']chicago["']/);
+      expect(source, file).not.toMatch(/citySlug\s*===?\s*["']los-angeles["']/);
       expect(source, file).not.toMatch(/Boston,\s*Massachusetts/);
       expect(source, file).not.toMatch(/Chicago,\s*Illinois/);
+      expect(source, file).not.toMatch(/Los Angeles,\s*California/);
       for (const itemId of PILOT_ITEM_IDS) {
         expect(source, `${file} ${itemId}`).not.toContain(itemId);
       }
