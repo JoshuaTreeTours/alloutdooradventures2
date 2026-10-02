@@ -4,11 +4,14 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { Router } from "wouter";
 
+import FareHarborMobileStickyBookingBar, {
+  FAREHARBOR_MOBILE_STICKY_PAGE_PADDING,
+} from "../components/FareHarborMobileStickyBookingBar";
 import FareHarborProductSummary from "../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../components/FareHarborProofSnapshot";
 import TourCard from "../components/TourCard";
 import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
-import { tours } from "./tours";
+import { getTourBookingPath, tours } from "./tours";
 import {
   applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
@@ -18,6 +21,7 @@ import {
   getFareHarborProofProducts,
 } from "./fareharborLeadToGoldProof";
 import {
+  fareHarborMobileStickyBooking,
   fareHarborPriceLabel,
   fareHarborRatingParityErrors,
   formatFareHarborRating,
@@ -28,6 +32,7 @@ vi.mock("../components/StructuredDataProvider", () => ({
 }));
 
 const REUSABLE_TEMPLATE_FILES = [
+  "src/components/FareHarborMobileStickyBookingBar.tsx",
   "src/components/FareHarborProductSummary.tsx",
   "src/components/FareHarborProofSnapshot.tsx",
   "src/components/TourCard.tsx",
@@ -309,4 +314,120 @@ describe("FareHarbor Phase C template", () => {
     expect(card).not.toContain("data-rating-provider");
     expect(card).not.toContain("fareharbor-product-summary");
   });
+
+  it("shows one mobile sticky booking bar only for priced FareHarbor pages", () => {
+    expect(fareHarborMobileStickyBooking(null, "/book")).toBeNull();
+    expect(
+      fareHarborMobileStickyBooking(
+        { visiblePriceLabel: "From $40", offer: null },
+        "/book"
+      )
+    ).toBeNull();
+    expect(
+      fareHarborMobileStickyBooking(
+        {
+          visiblePriceLabel: null,
+          offer: { type: "Offer", price: "40", priceCurrency: "USD" },
+        },
+        "/book"
+      )
+    ).toBeNull();
+    expect(
+      fareHarborMobileStickyBooking(
+        {
+          visiblePriceLabel: "From $40",
+          offer: { type: "Offer", price: "40", priceCurrency: "USD" },
+        },
+        "  "
+      )
+    ).toBeNull();
+
+    const prefixes = [
+      "/destinations/massachusetts/boston/",
+      "/destinations/illinois/chicago/",
+      "/destinations/california/los-angeles/",
+      "/destinations/california/san-diego/",
+      "/destinations/california/san-francisco/",
+      "/destinations/california/joshua-tree/",
+    ];
+    const products = getFareHarborProofProducts();
+    for (const prefix of prefixes) {
+      const product = products.find(
+        entry =>
+          entry.publicPath.startsWith(prefix) &&
+          entry.exceptionStatus === "OK" &&
+          entry.offer &&
+          entry.visiblePriceLabel
+      );
+      expect(product, prefix).toBeTruthy();
+      const [, , stateSlug, citySlug, , tourSlug] = product!.publicPath.split("/");
+      const tour = tours.find(entry => entry.slug === tourSlug);
+      expect(tour, product!.itemId).toBeTruthy();
+      const page = renderRoute(
+        product!.publicPath,
+        <CityTourDetailRoute
+          params={{ stateSlug, citySlug, tourSlug }}
+        />
+      );
+      const bars = page.match(/data-testid="fareharbor-mobile-sticky-booking"/g);
+      expect(bars, product!.itemId).toHaveLength(1);
+      const bar = page.match(
+        /<div[^>]*data-testid="fareharbor-mobile-sticky-booking"[^>]*>[\s\S]*?<\/div>\s*<\/div>/
+      )?.[0];
+      expect(bar, product!.itemId).toBeTruthy();
+      expect(bar, product!.itemId).toContain("md:hidden");
+      expect(bar, product!.itemId).toContain("safe-area-inset-bottom");
+      expect(bar, product!.itemId).toContain("min-h-12");
+      expect(bar, product!.itemId).toContain("Check availability");
+      expect(bar, product!.itemId).toContain(product!.visiblePriceLabel!);
+      expect(bar, product!.itemId).toContain(
+        `href="${getTourBookingPath(tour!)}"`
+      );
+      expect(page, product!.itemId).toContain(
+        FAREHARBOR_MOBILE_STICKY_PAGE_PADDING
+      );
+      const facts = page.match(
+        /<div[^>]*data-testid="fareharbor-proof-facts"[\s\S]*?<\/div>\s*<\/div>/
+      )?.[0];
+      expect(facts, product!.itemId).toBeTruthy();
+      expect(facts, product!.itemId).not.toContain(
+        "fareharbor-mobile-sticky-booking"
+      );
+      expect(facts, product!.itemId).toContain(product!.visiblePriceLabel!);
+      const graph = buildFareHarborProofSchemaGraph(product!, {
+        canonicalUrl: `https://www.alloutdooradventures.com${product!.publicPath}`,
+      });
+      const productNode = graph["@graph"].find(node =>
+        typeNames(node["@type"]).includes("Product")
+      );
+      expect(productNode?.offers, product!.itemId).toMatchObject({
+        "@type": "Offer",
+        price: product!.offer!.price,
+        priceCurrency: product!.offer!.priceCurrency,
+      });
+    }
+
+    const unpriced = getFareHarborBostonLegacyProducts().find(
+      entry => entry.exceptionStatus === "PRICE_NOT_FOUND"
+    );
+    expect(unpriced?.offer).toBeNull();
+    expect(unpriced?.visiblePriceLabel).toBeNull();
+    const [, , stateSlug, citySlug, , tourSlug] = unpriced!.publicPath.split("/");
+    const unpricedPage = renderRoute(
+      unpriced!.publicPath,
+      <CityTourDetailRoute params={{ stateSlug, citySlug, tourSlug }} />
+    );
+    expect(unpricedPage).not.toContain("fareharbor-mobile-sticky-booking");
+    expect(unpricedPage).not.toContain(FAREHARBOR_MOBILE_STICKY_PAGE_PADDING);
+
+    const barOnly = renderToStaticMarkup(
+      <Router hook={() => ["/", () => undefined]}>
+        <FareHarborMobileStickyBookingBar href="/book" priceLabel="From $40" />
+      </Router>
+    );
+    expect(barOnly.match(/data-testid="fareharbor-mobile-sticky-booking"/g)).toHaveLength(
+      1
+    );
+    expect(barOnly).toContain("md:hidden");
+  }, 120000);
 });

@@ -79,6 +79,24 @@ export const fareHarborPriceLabel = (
   return label || null;
 };
 
+export const fareHarborMobileStickyBooking = (
+  proof:
+    | Pick<FareHarborProofProduct, "visiblePriceLabel" | "offer">
+    | null
+    | undefined,
+  bookingHref: string
+): { href: string; priceLabel: string } | null => {
+  const href = bookingHref.trim();
+  if (!proof?.offer || !href) {
+    return null;
+  }
+  const priceLabel = fareHarborPriceLabel(proof);
+  if (!priceLabel) {
+    return null;
+  }
+  return { href, priceLabel };
+};
+
 export const fareHarborRating = (proof: {
   aggregateRating: {
     ratingValue: number;

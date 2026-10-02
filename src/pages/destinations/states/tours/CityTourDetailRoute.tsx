@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import FareHarborMobileStickyBookingBar from "../../../../components/FareHarborMobileStickyBookingBar";
 import FareHarborProductSummary from "../../../../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../../../../components/FareHarborProofSnapshot";
 import Image from "../../../../components/Image";
@@ -31,7 +32,10 @@ import {
   getFareHarborProofFromTour,
   resolveFareHarborProofCtaLabel,
 } from "../../../../data/fareharborLeadToGoldProof";
-import { fareHarborShortDescriptionRepeatsExperience } from "../../../../data/fareharborPresentation";
+import {
+  fareHarborMobileStickyBooking,
+  fareHarborShortDescriptionRepeatsExperience,
+} from "../../../../data/fareharborPresentation";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
@@ -998,6 +1002,7 @@ export default function CityTourDetailRoute({
         fareHarborHeroStartingPrice ?? tour.startingPrice,
         tour.currency
       );
+  const stickyBooking = fareHarborMobileStickyBooking(proof, bookingUrl);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -1268,6 +1273,12 @@ export default function CityTourDetailRoute({
           </div>
         </section>
       )}
+      {stickyBooking ? (
+        <FareHarborMobileStickyBookingBar
+          href={stickyBooking.href}
+          priceLabel={stickyBooking.priceLabel}
+        />
+      ) : null}
     </main>
   );
 }
