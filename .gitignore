@@ -110,3 +110,6 @@ reports/engine6-destination-build-failure.md
 src/data/generated/
 public/data/generated/
 *.tmp
+
+__pycache__/
+*.pyc
