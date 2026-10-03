@@ -17,8 +17,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/joshua-tree`
 - Runtime PASS: 12
 - Runtime FAIL: 0
 - Terminal removals: 1
-- PRICE_NOT_FOUND after editorial: 2
-- INSUFFICIENT_SOURCE_CONTENT: 8
+- PRICE_NOT_FOUND after editorial: 4
+- INSUFFICIENT_SOURCE_CONTENT: 6
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 12
 - Runtime pages with a FareHarbor rating: 8
@@ -50,10 +50,8 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `459584` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/twentynine-palms/tours/private-stargazing-with-an-astronomer-459584` — none
 - `512102` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/custom-groups-512102` — none
 - `528426` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/photography-hike-528426` — none
-- `365796` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/equine-therapy-365796` — none
 - `404983` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/1-hour-visitor-pass-404983` — none
 - `444127` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127` — none
 - `475058` `PRICE_NOT_FOUND` `/destinations/california/joshua-tree/tours/pony-ride-475058` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 13 words; rich FareHarbor source requires at least 100 words
 - `475064` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/natural-horsemanship-and-basic-riding-lessons-475064` — none
 - `476256` `PRICE_NOT_FOUND` `/destinations/california/joshua-tree/tours/photoshoot-476256` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 18 words; rich FareHarbor source requires at least 100 words
-- `646142` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142` — none

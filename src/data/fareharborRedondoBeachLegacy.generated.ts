@@ -21,6 +21,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
     "wordCount": 102,
     "durationLabel": null,
     "durationIso": null,
@@ -65,6 +66,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh"
     ],
+    "productImage": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -109,6 +111,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/R1wAT0UsTLi7bM69t0Z8",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -153,6 +156,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Q52GuMkDSeC5gxy28b1A",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
@@ -198,6 +202,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP"
     ],
+    "productImage": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
     "wordCount": 104,
     "durationLabel": "48 Hours",
     "durationIso": "PT48H",
@@ -243,6 +248,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8"
     ],
+    "productImage": "https://cdn.filestackcontent.com/jh5FuMKhQEW99iZwTIkf",
     "wordCount": 104,
     "durationLabel": "72 Hours",
     "durationIso": "PT72H",
@@ -288,6 +294,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN"
     ],
+    "productImage": "https://cdn.filestackcontent.com/fq6swO0JT5ePBXYSB9mZ",
     "wordCount": 104,
     "durationLabel": "96 Hours",
     "durationIso": "PT96H",
@@ -333,6 +340,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/PTfS7XYLRNOdOoUUaoHx",
     "wordCount": 104,
     "durationLabel": "168 Hours",
     "durationIso": "PT168H",

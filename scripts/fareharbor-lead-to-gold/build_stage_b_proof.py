@@ -90,16 +90,46 @@ def endpoint_ok(meta: dict, name: str) -> bool:
     return meta.get("endpoints", {}).get(name, {}).get("status") == 200
 
 
+_SECTION_HEADING_RE = re.compile(
+    r"(?im)(?:^|\n)[ \t]*#{1,6}[ \t]*("
+    r"duration|about|overview|details|highlights?|information|description|"
+    r"itinerary|included|what(?:'s| is) included|what(?:'s| is) not included|"
+    r"not included|meeting(?:[ \t]+(?:point|place))?|location|pricing|price|"
+    r"schedule|important details|see you soon|what to bring|what to expect|"
+    r"additional information|cancellation(?:[ \t]+policy)?|restrictions|faqs?|"
+    r"special requirements|extras|disclaimers|accessibility"
+    r")[ \t]*(?=\n|$)"
+)
+_BARE_SECTION_LABEL_RE = re.compile(
+    r"(?im)(?:^|\n)[ \t]*(duration|about|overview|details|highlights|information)[ \t]*(?=\n)"
+)
+_GLUED_SECTION_LABEL_RE = re.compile(
+    r"\bDuration\s+(?:\d+(?:\.\d+)?(?:\s*-\s*\d+(?:\.\d+)?)?\s*hours?\s+)?About\s+(?!\d)",
+    re.I,
+)
+
+
 def clean_text(value) -> str:
     if value is None:
         return ""
     if isinstance(value, dict):
         value = value.get("address") or value.get("raw") or ""
     text = str(value)
-    text = re.sub(r"[#*`]+", " ", text)
     text = text.replace("\u2019", "'").replace("\u2013", "-").replace("\u2014", "-")
-    text = re.sub(r"\s+", " ", text).strip(" -")
-    return text
+    text = _SECTION_HEADING_RE.sub("\n", text)
+    text = _BARE_SECTION_LABEL_RE.sub("\n", text)
+    text = re.sub(r"[#*`]+", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    text = _GLUED_SECTION_LABEL_RE.sub("", text)
+    text = re.sub(
+        r"^(?:Duration|Distance|Terrain|Overview|Details|Highlights|Information)"
+        r"(?:\s*,\s*(?:Duration|Distance|Terrain|Overview|Details|Highlights|Information))*\s+",
+        "",
+        text,
+    )
+    text = re.sub(r"\s+About\s+(?=[A-Z])", ". ", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip(" -")
 
 
 LIST_MARKETING = re.compile(
@@ -250,10 +280,14 @@ def duration_iso(label: str | None) -> str | None:
     return None
 
 
-def extract_price(preview: dict) -> dict | None:
+def extract_price(preview: dict, item_id: str | None = None) -> dict | None:
     items = preview.get("items") if isinstance(preview, dict) else None
     if not items:
         return None
+    if item_id:
+        items = [entry for entry in items if str(entry.get("id")) == str(item_id)]
+        if not items:
+            return None
     details = preview.get("details") or {}
     currency = (details.get("currency") or "").upper()
     places = int(details.get("currency_decimal_places") or 2)
@@ -944,6 +978,7 @@ def emit_ts(products: list[dict]) -> str:
         "  schemaDescription: string;\n"
         "  highlights: string[];\n"
         "  galleryImages: string[];\n"
+        "  productImage?: string | null;\n"
         "  wordCount: number;\n"
         "  durationLabel: string | null;\n"
         "  durationIso: string | null;\n"

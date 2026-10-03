@@ -19,62 +19,6 @@ export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] 
     "expectedPath": "/destinations/massachusetts/boston/tours/wheels-in-the-woods-73240"
   },
   {
-    "itemId": "629071",
-    "title": "Venice’s Finest: A Daytime Experience",
-    "reason": "Venice, California from meeting_point does not belong to Los Angeles, and no matching public destination exists",
-    "city": "Venice",
-    "state": "California",
-    "expectedPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071"
-  },
-  {
-    "itemId": "109487",
-    "title": "PADI Advanced Freediver Course",
-    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
-    "city": "Jolla",
-    "state": "California",
-    "expectedPath": "/destinations/california/san-diego/tours/padi-advanced-freediver-course-109487"
-  },
-  {
-    "itemId": "110584",
-    "title": "PADI Master Freediver Course",
-    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
-    "city": "Jolla",
-    "state": "California",
-    "expectedPath": "/destinations/california/san-diego/tours/padi-master-freediver-course-110584"
-  },
-  {
-    "itemId": "443620",
-    "title": "1.5 Day Spearfishing Charter",
-    "reason": "Mission Bay, California from item_location does not belong to San Diego, and no matching public destination exists",
-    "city": "Mission Bay",
-    "state": "California",
-    "expectedPath": "/destinations/california/san-diego/tours/15-day-spearfishing-charter-443620"
-  },
-  {
-    "itemId": "509885",
-    "title": "San Diego Beach Yoga Hiking Tour",
-    "reason": "Jolla, California from company_start_location does not belong to San Diego, and no matching public destination exists",
-    "city": "Jolla",
-    "state": "California",
-    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-hiking-tour-509885"
-  },
-  {
-    "itemId": "647361",
-    "title": "San Diego Beach Yoga (Private Class)",
-    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
-    "city": "Jolla",
-    "state": "California",
-    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-private-class-647361"
-  },
-  {
-    "itemId": "459584",
-    "title": "Private Stargazing with an Astronomer",
-    "reason": "Twentynine Palms, California from company_start_location does not belong to Joshua Tree, and no matching public destination exists",
-    "city": "Twentynine Palms",
-    "state": "California",
-    "expectedPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584"
-  },
-  {
     "itemId": "619647",
     "title": "Tenaya Lake: Family Swimming & Beach Day",
     "reason": "Yosemite, California from meeting_point does not belong to TUOLUMNE MEADOWS, and no matching public destination exists",
@@ -137,6 +81,62 @@ export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] 
     "city": "Yosemite",
     "state": "California",
     "expectedPath": "/destinations/california/lee-vining/tours/summit-clouds-rest-619660"
+  },
+  {
+    "itemId": "459584",
+    "title": "Private Stargazing with an Astronomer",
+    "reason": "Twentynine Palms, California from company_start_location does not belong to Joshua Tree, and no matching public destination exists",
+    "city": "Twentynine Palms",
+    "state": "California",
+    "expectedPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584"
+  },
+  {
+    "itemId": "629071",
+    "title": "Venice’s Finest: A Daytime Experience",
+    "reason": "Venice, California from meeting_point does not belong to Los Angeles, and no matching public destination exists",
+    "city": "Venice",
+    "state": "California",
+    "expectedPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071"
+  },
+  {
+    "itemId": "109487",
+    "title": "PADI Advanced Freediver Course",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/padi-advanced-freediver-course-109487"
+  },
+  {
+    "itemId": "110584",
+    "title": "PADI Master Freediver Course",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/padi-master-freediver-course-110584"
+  },
+  {
+    "itemId": "443620",
+    "title": "1.5 Day Spearfishing Charter",
+    "reason": "Mission Bay, California from item_location does not belong to San Diego, and no matching public destination exists",
+    "city": "Mission Bay",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/15-day-spearfishing-charter-443620"
+  },
+  {
+    "itemId": "509885",
+    "title": "San Diego Beach Yoga Hiking Tour",
+    "reason": "Jolla, California from company_start_location does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-hiking-tour-509885"
+  },
+  {
+    "itemId": "647361",
+    "title": "San Diego Beach Yoga (Private Class)",
+    "reason": "Jolla, California from meeting_point does not belong to San Diego, and no matching public destination exists",
+    "city": "Jolla",
+    "state": "California",
+    "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-private-class-647361"
   }
 ];
 

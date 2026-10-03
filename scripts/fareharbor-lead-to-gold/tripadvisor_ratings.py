@@ -87,6 +87,17 @@ def google_review_pair(payload) -> dict | None:
     return {"ratingValue": rating_value, "reviewCount": review_count}
 
 
+def ratings_payload_item_id(payload) -> str | None:
+    """Item pk bound on the ratings payload, when the endpoint includes one."""
+    ratings = _ratings_object(payload)
+    if ratings is None:
+        return None
+    item = ratings.get("item")
+    if not isinstance(item, dict) or item.get("pk") is None:
+        return None
+    return str(item.get("pk"))
+
+
 def ratings_provider_keys(payload) -> list[str]:
     ratings = _ratings_object(payload)
     if ratings is None:

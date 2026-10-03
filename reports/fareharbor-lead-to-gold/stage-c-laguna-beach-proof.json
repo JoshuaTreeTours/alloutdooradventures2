@@ -6,27 +6,22 @@
     "operator": "La Vida Laguna",
     "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "The ride passes Full Day Rental and Coast Highway. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Full Day Rental and Coast Highway, and they hear why those places are on the trip.",
-      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
+      "The operator La Vida Laguna lists this outing."
     ],
-    "schemaDescription": "A four-hour bicycle outing with La Vida Laguna in Laguna Beach.",
+    "schemaDescription": "The operator La Vida Laguna lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "four-hour bicycle outing in Laguna Beach"
-    ],
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/B3s1MabSfa3YNaIpwO5F"
     ],
-    "wordCount": 112,
-    "durationLabel": "4 hours",
-    "durationIso": "PT4H",
+    "productImage": "https://cdn.filestackcontent.com/5DblDrT3Rqm8oZLbXOeQ",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
     "meetingLocation": "Laguna Beach, CA",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -100,13 +95,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/5DblDrT3Rqm8oZLbXOeQ",
-          "handle": "5DblDrT3Rqm8oZLbXOeQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/B3s1MabSfa3YNaIpwO5F",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -148,7 +137,7 @@
       },
       "price": null,
       "facts": {
-        "duration": "4 hours",
+        "duration": null,
         "meetingAddress": "Laguna Beach, CA",
         "itemLocation": "Laguna Beach, CA",
         "headline": "4 or 8 hour Rentals • Ages 16+",
@@ -177,7 +166,7 @@
           "4 hours",
           "8 hours"
         ],
-        "description": "Electric Bike Rentals Duration Half Day Rental: 4 hours Full Day Rental: 8 hours About Come experience the thrill of pedal-assisted biking, and see Laguna as you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, and some of the most beautiful neighborhoods and architecture in the world. Directions, parking, and what to bring are contained in the reservation confirmation email.",
+        "description": "Electric Bike Rentals Half Day Rental: 4 hours Full Day Rental: 8 hours Come experience the thrill of pedal-assisted biking, and see Laguna as you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, and some of the most beautiful neighborhoods and architecture in the world. Directions, parking, and what to bring are contained in the reservation confirmation email.",
         "detailsText": "4 or 8 hour Rentals • Ages 16+ 4 or 8 hour Rentals • Ages 16+",
         "sourceUsed": "structured_description"
       },
@@ -203,28 +192,22 @@
     "operator": "La Vida Laguna",
     "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "Attention also goes to Coast Highway, and the guide explains why it is on the route. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
-      "Guests come to Coast Highway, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "The operator La Vida Laguna lists this outing."
     ],
-    "schemaDescription": "A 8-hour bicycle outing with La Vida Laguna in Laguna Beach.",
+    "schemaDescription": "The operator La Vida Laguna lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "8-hour bicycle outing in Laguna Beach"
-    ],
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ALCMEXHQFWuT3Iufe3lK"
     ],
-    "wordCount": 114,
-    "durationLabel": "8 hours",
-    "durationIso": "PT8H",
+    "productImage": "https://cdn.filestackcontent.com/Qe3TZU9SaSJIUdWuiGFQ",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
     "meetingLocation": "Laguna Beach, CA",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -298,13 +281,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Qe3TZU9SaSJIUdWuiGFQ",
-          "handle": "Qe3TZU9SaSJIUdWuiGFQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/ALCMEXHQFWuT3Iufe3lK",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -346,7 +323,7 @@
       },
       "price": null,
       "facts": {
-        "duration": "8 hours",
+        "duration": null,
         "meetingAddress": "Laguna Beach, CA",
         "itemLocation": "Laguna Beach, CA",
         "headline": "Full Day Rentals • Ages 16+",
@@ -368,11 +345,13 @@
         "languages": [],
         "factualSentences": [],
         "gleanedFacts": [],
-        "properNames": [],
+        "properNames": [
+          "Electric Bike Rentals Full Day"
+        ],
         "measures": [
           "8 hours"
         ],
-        "description": "Electric Bike Rentals Duration Full Day - 8 hours About Come experience the thrill of pedal-assisted biking, and see Laguna like you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, points of interest, and some of the most beautiful neighborhoods and architecture in the world. More information will be provided in the confirmation email.",
+        "description": "Electric Bike Rentals Full Day - 8 hours Come experience the thrill of pedal-assisted biking, and see Laguna like you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, points of interest, and some of the most beautiful neighborhoods and architecture in the world. More information will be provided in the confirmation email.",
         "detailsText": "Full Day Rentals • Ages 16+ Full Day Rentals • Ages 16+",
         "sourceUsed": "structured_description"
       },
@@ -418,6 +397,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
     "wordCount": 112,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -492,13 +472,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
-          "handle": "UrwqlOveRG21COCHeNuc",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"

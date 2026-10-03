@@ -24,6 +24,7 @@
       "Model: 170 Montauk (Center Console)"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
     "wordCount": 123,
     "durationLabel": "1-8 Hours",
     "durationIso": null,
@@ -104,16 +105,10 @@
       "hero": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
       "heroHandle": "KeS9GrNLQga52eXs5d1L",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
-          "handle": "KeS9GrNLQga52eXs5d1L",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/marina-del-rey/marinadelreyboatrentals-656842",
@@ -276,6 +271,7 @@
       "Model Name: 130 Super Sport"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
     "wordCount": 110,
     "durationLabel": "1-8 Hours",
     "durationIso": null,
@@ -361,16 +357,10 @@
       "hero": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
       "heroHandle": "AbWLMKlHTvWLTPo4oywf",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
-          "handle": "AbWLMKlHTvWLTPo4oywf",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/marina-del-rey/marinadelreyboatrentals-656850",

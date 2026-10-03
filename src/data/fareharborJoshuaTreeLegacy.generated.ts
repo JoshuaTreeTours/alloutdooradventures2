@@ -20,6 +20,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Cholla Garden and Cholla Cactus Garden"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
     "wordCount": 108,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
@@ -58,6 +59,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Joshua Tree National Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
     "wordCount": 143,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -95,6 +97,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "6 hours guided outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
     "wordCount": 143,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -124,17 +127,16 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Duration About After meeting at the office, the guide will then take guests on a drive through the most parts of the park. On the way, guests receive detailed narration on park, its history, and interesting geology to Joshua Tree. Once at the trailhead, the guide will lead guests on mostly off-trail adventure through Joshua Tree wilderness.",
-      "The climbing experience includes professional instruction from the certified rock guide, and all necessary equipment. After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
-      "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
+      "The day combines a guided hike with time on the rock, after a drive to the trailhead. Most of the hiking leaves the maintained trail and crosses open ground. On the drive, the guide explains the park's geology and how the landscape formed. The climbing block includes a rappel on the formations.",
+      "A certified guide gives the climbing instruction before anyone leaves the ground. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Joshua Tree National Park. Guests come to Joshua Tree National Park, and they hear why it is on the trip."
     ],
-    "schemaDescription": "A 8-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "schemaDescription": "A guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
     "highlights": [
-      "8 hours guided outing",
       "Joshua Tree National Park"
     ],
     "galleryImages": [],
-    "wordCount": 153,
+    "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+    "wordCount": 102,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": null,
@@ -163,16 +165,17 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
-      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to.",
-      "Guests come to Joshua Tree, and they hear why it is on the trip."
+      "The session is at the ranch, with the desert landscape around the grounds. Guests walk with the horses from the ranch rather than touring town on their own. This ride is the sunset departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop.",
+      "The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route.",
+      "Guests are with the horses for this booking, not on a walk through town."
     ],
-    "schemaDescription": "A one-hour walking tour with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [
-      "one-hour walking tour in Joshua Tree"
+      "one-hour horse outing in Joshua Tree"
     ],
     "galleryImages": [],
-    "wordCount": 111,
+    "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
+    "wordCount": 112,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -216,6 +219,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
@@ -256,6 +260,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
     "wordCount": 131,
     "durationLabel": null,
     "durationIso": null,
@@ -301,6 +306,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -352,6 +358,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
     ],
+    "productImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
     "wordCount": 103,
     "durationLabel": null,
     "durationIso": null,
@@ -406,6 +413,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
     "wordCount": 103,
     "durationLabel": null,
     "durationIso": null,
@@ -454,19 +462,20 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Northern California and Phineas Fittipaldi. Guests keep eating as they reach Cascade Trails Personalized and Curated Wine Tasting. Wiley Wines Guided are part of the same food route. Food is the thread: each stop is there for what guests taste, with the street as the setting.",
-      "Among the places guests actually encounter are Northern California, Phineas Fittipaldi, and Cascade Trails Personalized. Later the guide turns to Curated Wine Tasting and Wiley Wines Guided, explaining what happened there. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Northern California and Phineas Fittipaldi, and they hear why those places are on the trip."
+      "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
+      "Guests stay beside the horses instead of being led around a town route."
     ],
-    "schemaDescription": "A 1.5-hour food walk with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [
-      "1.5-hour food walk in Joshua Tree",
+      "1.5-hour horse outing in Joshua Tree",
       "Interactive Equine Experience"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg"
+      "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
-    "wordCount": 117,
+    "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+    "wordCount": 120,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -499,16 +508,16 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
-      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to.",
-      "Guests come to Joshua Tree, and they hear why it is on the trip."
+      "Guests walk with the horses from the ranch rather than touring town on their own. This ride is the morning departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
+      "Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests are with the horses for this booking, not on a walk through town. Guests come to Joshua Tree, and they hear why it is on the trip."
     ],
-    "schemaDescription": "A one-hour walking tour with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [
-      "one-hour walking tour in Joshua Tree"
+      "one-hour horse outing in Joshua Tree"
     ],
     "galleryImages": [],
-    "wordCount": 111,
+    "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+    "wordCount": 113,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",

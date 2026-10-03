@@ -21,6 +21,7 @@ export const fareHarborMarinaDelReyLegacyProducts: FareHarborProofProduct[] = [
       "Model: 170 Montauk (Center Console)"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
     "wordCount": 123,
     "durationLabel": "1-8 Hours",
     "durationIso": null,
@@ -85,6 +86,7 @@ export const fareHarborMarinaDelReyLegacyProducts: FareHarborProofProduct[] = [
       "Model Name: 130 Super Sport"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
     "wordCount": 110,
     "durationLabel": "1-8 Hours",
     "durationIso": null,

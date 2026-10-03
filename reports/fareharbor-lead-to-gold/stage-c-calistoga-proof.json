@@ -22,6 +22,7 @@
       "4 hours bicycle outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2",
     "wordCount": 114,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -87,16 +88,10 @@
       "hero": "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2",
       "heroHandle": "uXsZMOpBSeysfdYNFUU2",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2",
-          "handle": "uXsZMOpBSeysfdYNFUU2",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/calistoga/calistogabikeshop2-542597",
@@ -208,7 +203,7 @@
         "measures": [
           "4 hours"
         ],
-        "description": "Duration 4 hours About Whether it is just you and your friend, your better half, or your small or large group, we are excited to get out on a ride with you and personally guide you around the beautiful roads of Northern California. Popular rides have taken people to our stunning coastline, or stay inland and tackle some of the more grueling climbs in the pine covered mountains. And even if the goal is to stay on as flat terrain as possible, we can find a route that works best for you. As we like to customize any day or multi-day ride to your liking, we look forward to working with you directly to set up your trip. Package overview - Your bike or ours! Although it is common for visitors to bring their own bikes along, we have a fleet of full-carbon and aluminum bikes available for you to ride if needed. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group.",
+        "description": "4 hours Whether it is just you and your friend, your better half, or your small or large group, we are excited to get out on a ride with you and personally guide you around the beautiful roads of Northern California. Popular rides have taken people to our stunning coastline, or stay inland and tackle some of the more grueling climbs in the pine covered mountains. And even if the goal is to stay on as flat terrain as possible, we can find a route that works best for you. As we like to customize any day or multi-day ride to your liking, we look forward to working with you directly to set up your trip. Package overview - Your bike or ours! Although it is common for visitors to bring their own bikes along, we have a fleet of full-carbon and aluminum bikes available for you to ride if needed. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group.",
         "detailsText": "For all ages • 4 hours For all ages • 4 hours",
         "sourceUsed": "structured_description"
       },
@@ -250,6 +245,7 @@
       "Oat Hill Mine Trail"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
     "wordCount": 114,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -300,16 +296,10 @@
       "hero": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
       "heroHandle": "eYyXNK3GQI6Xjo9xRPzO",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
-          "handle": "eYyXNK3GQI6Xjo9xRPzO",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/calistoga/calistogabikeshop2-542598",
@@ -412,7 +402,7 @@
           "4 hours",
           "40 minutes"
         ],
-        "description": "Duration 4 hours About Our staff here is made up of talented, passionate riders. Whether you are interested in going on a casual trail ride, challenging yourself on a technical ride, or even interested in where to find some downhill adventure, we are your connection. Our two go-to destinations are our local Oat Hill Mine Trail, located less than a mile from our shop. With beautiful views and medium technical sections of trail (there are some challenging side features, too), this trail can take you miles above Calistoga into the Palisades that tower above town. This trail is a challenge - it is 4+ miles of climbing right out of the gate, followed by additional rolling terrain if desired, and fun single-track options on the way back down. Each group we cater to has particular requests and questions - please give us a call to help you set up a unique adventure, whether for a corporate outing or a small group outing. Package overview - Your bike or ours! We rent full-suspension, carbon fiber Santa Cruz and Specialized mountain bikes for our guests to enjoy. - Trail networks - We are within 40 minutes driving distance of 6 different riding parks in the region which present a broad spectrum of trails. - Trouble-free - Your guide carries most of the tools needed to make trailside repairs. - Additional time can be added and is billed by the hour.",
+        "description": "4 hours Our staff here is made up of talented, passionate riders. Whether you are interested in going on a casual trail ride, challenging yourself on a technical ride, or even interested in where to find some downhill adventure, we are your connection. Our two go-to destinations are our local Oat Hill Mine Trail, located less than a mile from our shop. With beautiful views and medium technical sections of trail (there are some challenging side features, too), this trail can take you miles above Calistoga into the Palisades that tower above town. This trail is a challenge - it is 4+ miles of climbing right out of the gate, followed by additional rolling terrain if desired, and fun single-track options on the way back down. Each group we cater to has particular requests and questions - please give us a call to help you set up a unique adventure, whether for a corporate outing or a small group outing. Package overview - Your bike or ours! We rent full-suspension, carbon fiber Santa Cruz and Specialized mountain bikes for our guests to enjoy. - Trail networks - We are within 40 minutes driving distance of 6 different riding parks in the region which present a broad spectrum of trails. - Trouble-free - Your guide carries most of the tools needed to make trailside repairs. - Additional time can be added and is billed by the hour.",
         "detailsText": "For all ages • 4 hours For all ages • 4 hours",
         "sourceUsed": "structured_description"
       },
@@ -440,21 +430,19 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery."
     ],
-    "schemaDescription": "A 2- to 3-hour food walk with Calistoga Bikeshop.",
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
       "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
     ],
-    "highlights": [
-      "2-3 hours food walk"
-    ],
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
+    "wordCount": 100,
     "durationLabel": "2-3 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -544,16 +532,10 @@
       "hero": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
       "heroHandle": "SwR4Y3RQQGBRO96VyY2t",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
-          "handle": "SwR4Y3RQQGBRO96VyY2t",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/calistoga/calistogabikeshop2-542601",
@@ -686,7 +668,7 @@
         "languages": [],
         "factualSentences": [
           "Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery).",
-          "Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
+          "- 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
         ],
         "gleanedFacts": [],
         "properNames": [
@@ -696,7 +678,7 @@
         "measures": [
           "3 hours"
         ],
-        "description": "Duration 2-3 hours About We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop What to bring - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
+        "description": "2-3 hours We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
         "detailsText": "Ages 21+ • 2-3 hours Ages 21+ • 2-3 hours",
         "sourceUsed": "structured_description"
       },
@@ -724,21 +706,19 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery."
     ],
-    "schemaDescription": "A 3- to 5-hour food walk with Calistoga Bikeshop.",
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
       "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
     ],
-    "highlights": [
-      "3-5 hours food walk"
-    ],
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
+    "wordCount": 101,
     "durationLabel": "3-5 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -828,16 +808,10 @@
       "hero": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
       "heroHandle": "zix0oCeRLWOZBaJNZcxl",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
-          "handle": "zix0oCeRLWOZBaJNZcxl",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/calistoga/calistogabikeshop2-542603",
@@ -970,7 +944,7 @@
         "languages": [],
         "factualSentences": [
           "Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery).",
-          "Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
+          "- 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
         ],
         "gleanedFacts": [],
         "properNames": [
@@ -980,7 +954,7 @@
         "measures": [
           "5 hours"
         ],
-        "description": "Duration 3-5 hours About We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable hybrid bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop What to bring - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
+        "description": "3-5 hours We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable hybrid bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
         "detailsText": "Ages 21+ • 3-5 hours Ages 21+ • 3-5 hours",
         "sourceUsed": "structured_description"
       },
@@ -1008,11 +982,11 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery.",
+      "Guests cover the sights by bike, stopping where the guide has something to say."
     ],
-    "schemaDescription": "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -1020,7 +994,8 @@
     ],
     "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
+    "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -1090,16 +1065,10 @@
       "hero": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
       "heroHandle": "VrZxRqihRfOgP1AUC8cq",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
-          "handle": "VrZxRqihRfOgP1AUC8cq",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/calistoga/calistogabikeshop2-542604",
@@ -1212,7 +1181,7 @@
         "languages": [],
         "factualSentences": [
           "Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery).",
-          "Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
+          "- 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch."
         ],
         "gleanedFacts": [],
         "properNames": [
@@ -1220,7 +1189,7 @@
           "Palisades Eatery"
         ],
         "measures": [],
-        "description": "Duration 3-5+ hours About We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable hybrid bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. Itinerary - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop What to bring - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
+        "description": "3-5+ hours We'll work with you to determine an arrival time between 10:30 and 3:00. You can let us know which wineries you are keyed in on, or leave it to us to select spots that appeal to your voiced preferences. You can plan on between $25 and $45 for most basic tastings. We'll get your lunch preference so we can build in to your itinerary the correct location and time for you to enjoy your lunch (some choose a picnic at one of the wineries, but there are a couple yummy restaurants along the way as well - see below for more info). Upon check-in on the day of your adventure, we will spend ample time setting you up on bikes and we will cover a detailed map with your party. As for lunch, we recommend a picnic in order to enjoy the flexibility that offers in terms of time, as well as the beauty of sitting at a winery for your meal. Calmart, Bella Bakery, and Palisades Eatery are all nearby and have great picnic options. However, if you'd rather have a sit-down meal, there are also a few restaurants along the route to enjoy a bite, and we allot more time in your schedule for a sit down meal. Pricing: only $94.99 + tax including bike/helmet/full itinerary planning/booked tasting reservations/wine pick up of your purchases. (upgrade to the most popular electric assist bike option for just $50 add'l pp - you're sure to come back with a smile on your face with them). Please note that wineries typically charge more for groups larger than 6 (plan on about $50+pp per winery). Please note that tasting fees are not included in the pricing. Package Overview - Comfortable hybrid bike with helmet, bottle cage, and rack bag large enough for personal items. - Knowledgeable and fun tour guide to lead, educate and carry all your stuff. - Unique and beautiful route for each couple/group. - Wine pickup of any purchases made throughout your day. - 10:00am - Arrive - 10:30am - Start biking - 10:30 to 3 - 2 tastings and lunch. - 3-4pm - Finish at the shop - 5pm - wine (if bought) can be picked up at the shop - Comfortable clothes - Light jacket for AM - Money for tasting fees and wine purchases - Sunglasses - Sunscreen",
         "detailsText": "Ages 21+ • 3-5+ hours Ages 21+ • 3-5+ hours",
         "sourceUsed": "structured_description"
       },
@@ -1265,6 +1234,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/WqgkaZtSoOgHUOcZQBgU"
     ],
+    "productImage": "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw",
     "wordCount": 118,
     "durationLabel": null,
     "durationIso": null,
@@ -1478,7 +1448,7 @@
         "measures": [
           "12 miles"
         ],
-        "description": "Our most popular Sip ‘N Cycle takes you through the quiet and scenic northern Napa Valley. Rates • Adult $250 Ages 16 and up • Child/Teen $200 Ages <15 Time 10:30AM - 3:00PM About Cycle along famous vineyards and try world-renowned Napa wines while enjoying stunning valley views. Our most popular tour! This takes in the best of the best in the Napa Valley. We bike to 2 wineries, all unique in their own way, along the quiet back roads of Calistoga. We'll stop in and get a “Grapes 101” along the way, pop in and taste wines and learn a lot about how to sip, swirl, and taste all the wines. Your guides act as a chef, wine educator, concierge, confidant and Sherpa all wrapped up in one. We then prepare a delicious wine country picnic lunch at one of the wineries. All in all we'll travel 12 miles along mostly flat roads. Meeting Location • Logvy Community Park [1745 Washington st, Calistoga] Includes • Use of Town bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Chateau Montelena, Bennett Lane , Envy, Summers, Lava Vine, August Briggs, Tedeschi, Twomey, T Vine and Clos Pegase, among others.",
+        "description": "Our most popular Sip ‘N Cycle takes you through the quiet and scenic northern Napa Valley. Rates • Adult $250 Ages 16 and up • Child/Teen $200 Ages <15 Time 10:30AM - 3:00PM Cycle along famous vineyards and try world-renowned Napa wines while enjoying stunning valley views. Our most popular tour! This takes in the best of the best in the Napa Valley. We bike to 2 wineries, all unique in their own way, along the quiet back roads of Calistoga. We'll stop in and get a “Grapes 101” along the way, pop in and taste wines and learn a lot about how to sip, swirl, and taste all the wines. Your guides act as a chef, wine educator, concierge, confidant and Sherpa all wrapped up in one. We then prepare a delicious wine country picnic lunch at one of the wineries. All in all we'll travel 12 miles along mostly flat roads. Meeting Location • Logvy Community Park [1745 Washington st, Calistoga] Includes • Use of Town bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Chateau Montelena, Bennett Lane , Envy, Summers, Lava Vine, August Briggs, Tedeschi, Twomey, T Vine and Clos Pegase, among others.",
         "detailsText": "From $250 • 4.5 Hours • Cycle along famous vineyards and try world-renowned Napa wines • All ages! From $250 • 4.5 Hours • Cycle along famous vineyards and try world-renowned Napa wines • All ages!",
         "sourceUsed": "structured_description"
       },

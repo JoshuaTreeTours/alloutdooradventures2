@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getFareHarborProofFromTour } from "../data/fareharborLeadToGoldProof";
+import { fareHarborProductImage } from "../data/fareharborPresentation";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import FareHarborProductSummary from "./FareHarborProductSummary";
@@ -195,7 +196,7 @@ export default function TourCard({
     !tour.suppressReviews &&
     typeof rating === "number" &&
     typeof reviewCount === "number";
-  const cardImage =
+  const catalogCardImage =
     tour.engine === "engine6"
       ? resolveEngine6DisplayHero({
           productCode: tour.productCode,
@@ -207,6 +208,10 @@ export default function TourCard({
           citySlug: tour.destination.citySlug,
         })
       : (resolveTourHeroImage(tour) ?? "");
+  const cardImage =
+    tour.engine === "engine6"
+      ? catalogCardImage
+      : (fareHarborProductImage(proof, catalogCardImage) ?? "");
   const engine6CityHero =
     tour.engine === "engine6"
       ? resolveEngine6CanonicalCityHero(

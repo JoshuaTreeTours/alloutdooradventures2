@@ -6,7 +6,7 @@
   "priceAvailable": 17,
   "tripadvisorRatingAvailable": 0,
   "imageAvailable": 23,
-  "inSitemap": 11,
+  "inSitemap": 12,
   "inMerchantFeed": 0,
   "products": [
     {
@@ -291,7 +291,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": false,
+      "inSitemap": true,
       "inMerchantFeed": false
     },
     {

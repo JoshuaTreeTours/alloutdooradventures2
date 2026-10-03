@@ -23,6 +23,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
     "wordCount": 102,
     "durationLabel": null,
     "durationIso": null,
@@ -157,7 +158,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "About The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach.",
+          "The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach.",
           "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
         ],
         "gleanedFacts": [],
@@ -174,7 +175,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "About The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach. Hop right on the bike path from our shop and hop off at various locations along the beach. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach. Hop right on the bike path from our shop and hop off at various locations along the beach. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "2 Hour E-Bike Rental 2 Hour E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -217,6 +218,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh"
     ],
+    "productImage": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -266,13 +268,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
-          "handle": "HFTBR3qsSu6mzf5ei1zy",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -373,7 +369,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "About The 4 hour ride allows you to get to Santa Monica and all the places in between with a few short stops. Hop right on the bike path from our shop and hop off at various locations along the beach. We'll tell you all the sights to see. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "The 4 hour ride allows you to get to Santa Monica and all the places in between with a few short stops. Hop right on the bike path from our shop and hop off at various locations along the beach. We'll tell you all the sights to see. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "4 Hour E-Bike Rental 4 Hour E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -416,6 +412,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/R1wAT0UsTLi7bM69t0Z8",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -609,6 +606,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Q52GuMkDSeC5gxy28b1A",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
@@ -761,7 +759,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "Delivery available upon request. About The 1 Day E-Bike Rental option is an excellent value to enjoy a leisurely day at the beach, the golden hour at sunset and the quiet beach hours in the early morning. Explore the full length of the 22 mile Marvin Braude Bike Trail or simply enjoy the convenience of experiencing the beach towns on an e-bike. Make sure to have a safe, covered location to lock up your e-bike rental safely with your included bike lock. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - Battery charger is included with the overnight and multi-day option. - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "Delivery available upon request. The 1 Day E-Bike Rental option is an excellent value to enjoy a leisurely day at the beach, the golden hour at sunset and the quiet beach hours in the early morning. Explore the full length of the 22 mile Marvin Braude Bike Trail or simply enjoy the convenience of experiencing the beach towns on an e-bike. Make sure to have a safe, covered location to lock up your e-bike rental safely with your included bike lock. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - Battery charger is included with the overnight and multi-day option. - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "24-Hour E-Bike Rental 24-Hour E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -805,6 +803,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP"
     ],
+    "productImage": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
     "wordCount": 104,
     "durationLabel": "48 Hours",
     "durationIso": "PT48H",
@@ -854,13 +853,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
-          "handle": "gbBSlaCsQYOA1wI7Wgg9",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -945,7 +938,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration - 48 Hours About - It's just so much fun!",
+          "- 48 Hours - It's just so much fun!",
           "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
         ],
         "gleanedFacts": [],
@@ -962,7 +955,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "Delivery available upon request. Helmet, Lock and Charger included with overnight rentals. Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Duration - 48 Hours About - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "Delivery available upon request. Helmet, Lock and Charger included with overnight rentals. Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. - 48 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "2-Day E-Bike Rental 2-Day E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -1006,6 +999,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8"
     ],
+    "productImage": "https://cdn.filestackcontent.com/jh5FuMKhQEW99iZwTIkf",
     "wordCount": 104,
     "durationLabel": "72 Hours",
     "durationIso": "PT72H",
@@ -1140,7 +1134,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration - 72 Hours About - It's just so much fun!",
+          "- 72 Hours - It's just so much fun!",
           "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
         ],
         "gleanedFacts": [],
@@ -1157,7 +1151,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. Duration - 72 Hours About - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 72 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "3-Day E-Bike Rental 3-Day E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -1201,6 +1195,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN"
     ],
+    "productImage": "https://cdn.filestackcontent.com/fq6swO0JT5ePBXYSB9mZ",
     "wordCount": 104,
     "durationLabel": "96 Hours",
     "durationIso": "PT96H",
@@ -1335,7 +1330,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration - 96 Hours About - It's just so much fun!",
+          "- 96 Hours - It's just so much fun!",
           "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
         ],
         "gleanedFacts": [],
@@ -1352,7 +1347,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. Duration - 96 Hours About - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 96 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "4-Day E-Bike Rental 4-Day E-Bike Rental",
         "sourceUsed": "structured_description"
       },
@@ -1396,6 +1391,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/PTfS7XYLRNOdOoUUaoHx",
     "wordCount": 104,
     "durationLabel": "168 Hours",
     "durationIso": "PT168H",
@@ -1530,7 +1526,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration - 168 Hours About - It's just so much fun!",
+          "- 168 Hours - It's just so much fun!",
           "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
         ],
         "gleanedFacts": [],
@@ -1547,7 +1543,7 @@
           "24 hour",
           "50 mile"
         ],
-        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermosa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. Duration - 168 Hours About - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermosa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 168 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
         "detailsText": "7-Day E-Bike Rental 7-Day E-Bike Rental",
         "sourceUsed": "structured_description"
       },

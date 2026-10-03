@@ -23,6 +23,7 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
     "wordCount": 112,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",

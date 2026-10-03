@@ -19,6 +19,7 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71"
     ],
+    "productImage": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
     "wordCount": 112,
     "durationLabel": null,
     "durationIso": null,

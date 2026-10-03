@@ -23,6 +23,7 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
     "wordCount": 107,
     "durationLabel": "6-8 hours",
     "durationIso": null,

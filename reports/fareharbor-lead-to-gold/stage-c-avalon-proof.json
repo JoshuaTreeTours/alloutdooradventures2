@@ -22,6 +22,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71"
     ],
+    "productImage": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
     "wordCount": 112,
     "durationLabel": null,
     "durationIso": null,
@@ -90,13 +91,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
-          "handle": "7UZlabVyQ6JGgc5Cxq8G",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"

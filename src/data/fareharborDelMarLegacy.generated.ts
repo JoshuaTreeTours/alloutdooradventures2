@@ -23,6 +23,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
     "wordCount": 109,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -69,6 +70,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
+    "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
     "wordCount": 109,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -110,6 +112,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
     "wordCount": 105,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
@@ -151,6 +154,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
     "wordCount": 114,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -188,8 +192,9 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "Onsite: mini horse, chicken, frog"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek"
+      "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
     "wordCount": 108,
     "durationLabel": null,
     "durationIso": null,

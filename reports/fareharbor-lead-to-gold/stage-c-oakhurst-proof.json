@@ -26,6 +26,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
     "wordCount": 107,
     "durationLabel": "6-8 hours",
     "durationIso": null,
@@ -102,13 +103,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
-          "handle": "aCrowEcXQj2Pqop8QrKq",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -242,6 +237,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Z2z1tGadR8GPdhL8eeOC",
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -308,13 +304,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Z2z1tGadR8GPdhL8eeOC",
-          "handle": "Z2z1tGadR8GPdhL8eeOC",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -439,8 +429,9 @@
       "Groups are capped at 6"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI"
+      "https://cdn.filestackcontent.com/naUfFASzToyAoKfEzLbl"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
     "wordCount": 115,
     "durationLabel": "4 - 6 Hours",
     "durationIso": null,
@@ -483,20 +474,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/uJypV4XGQzmB0Nb5bbx8",
-      "heroHandle": "uJypV4XGQzmB0Nb5bbx8",
+      "hero": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
+      "heroHandle": "sHG72BilQaymXMuxDEhI",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
-          "handle": "sHG72BilQaymXMuxDEhI",
-          "pixelSha256": "7a8306be4d150d1723d8d5a4293fb91b81e461d89240f96aca5aba1784bd350a",
-          "differenceHashDistanceFromHero": 137,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26492,
+          "url": "https://cdn.filestackcontent.com/naUfFASzToyAoKfEzLbl",
+          "handle": "naUfFASzToyAoKfEzLbl",
+          "pixelSha256": "16046a155615552850afac6439b9d6bd3211e6f69db2cabacd5427b00a03a1cf",
+          "differenceHashDistanceFromHero": 143,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25503,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
+      "selected": "https://cdn.filestackcontent.com/naUfFASzToyAoKfEzLbl",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -597,8 +588,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The ride passes Bass Lake and Sierra National Forest. Cyclists also come to California's Sierra Nevada and National Forest Service. US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say.",
-      "Among the places guests actually encounter are Bass Lake, Sierra National Forest, and California's Sierra Nevada. Later the guide turns to National Forest Service and US Forest Service, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear."
+      "A few optional stops leave time to step out for photographs and a closer look. The day combines a guided hike with time on the rock, after a drive to the trailhead. Rock formations, canyons, and the long views are what the hike is there to reach.",
+      "The ride passes Bass Lake and Sierra National Forest. Cyclists also come to California's Sierra Nevada and National Forest Service. US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Bass Lake, Sierra National Forest, and California's Sierra Nevada."
     ],
     "schemaDescription": "A 2- to 4-hour guided outing with Pedal Forward Bikes in Oakhurst.",
     "removedClaims": [
@@ -612,9 +603,10 @@
       "Groups are capped at 10"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc"
+      "https://cdn.filestackcontent.com/Ysuvg301Qyu9pieq0BDj"
     ],
-    "wordCount": 108,
+    "productImage": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
+    "wordCount": 105,
     "durationLabel": "2-4 Hours",
     "durationIso": null,
     "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
@@ -656,20 +648,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/wa7DoRxQT7ucqv0cpRxU",
-      "heroHandle": "wa7DoRxQT7ucqv0cpRxU",
+      "hero": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
+      "heroHandle": "YNt4aOsPSHWrPhzF0qBc",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
-          "handle": "YNt4aOsPSHWrPhzF0qBc",
-          "pixelSha256": "b28607d6a47beca5fdcdf3245e1a4fd674c899c54dfbc7c2fc24fc26c053e415",
-          "differenceHashDistanceFromHero": 139,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31871,
+          "url": "https://cdn.filestackcontent.com/Ysuvg301Qyu9pieq0BDj",
+          "handle": "Ysuvg301Qyu9pieq0BDj",
+          "pixelSha256": "1eb674af051c36ddf3d9d396232c304750f8025f3048c3bbcc6eb7c89cc41689",
+          "differenceHashDistanceFromHero": 127,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.2572,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
+      "selected": "https://cdn.filestackcontent.com/Ysuvg301Qyu9pieq0BDj",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -767,25 +759,19 @@
     "operator": "Pedal Forward Bikes",
     "publicPath": "/destinations/california/oakhurst/tours/custom-guided-mountain-bike-ride-all-levels-629570",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "The ride passes At Pedal Forward and National Forest Service. Cyclists also come to US Forest Service. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are At Pedal Forward, National Forest Service, and US Forest Service.",
-      "Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to At Pedal Forward and National Forest Service, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "The operator Pedal Forward Bikes lists this outing."
     ],
-    "schemaDescription": "A 2- to 4-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
+    "schemaDescription": "The operator Pedal Forward Bikes lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "2- to 4-hour bicycle outing in Oakhurst",
-      "Groups are capped at 10"
-    ],
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 103,
-    "durationLabel": "2-4 Hours",
+    "productImage": "https://cdn.filestackcontent.com/8Ckx7TDrTyapVlw3mNM4",
+    "wordCount": 8,
+    "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "40761 CA-41 Suite 4, Oakhurst, CA 93644",
     "visiblePriceLabel": null,
@@ -945,8 +931,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Guests hear about Bass Lake Dam and Sierra Nevada. The guide's account includes Central Camp Road and Bass Lake View. Stories along the way cover Sierra National Forest and National Forest Service. US Forest Service come up in the commentary. Among the places guests actually encounter are Bass Lake Dam, Sierra Nevada, and Central Camp Road.",
-      "Later the guide turns to Bass Lake View and Sierra National Forest, explaining what happened there. Guests come to Bass Lake Dam and Sierra Nevada, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "The day combines a guided hike with time on the rock, after a drive to the trailhead. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Bass Lake Dam and Sierra Nevada. The guide's account includes Central Camp Road and Bass Lake View.",
+      "Stories along the way cover Sierra National Forest and National Forest Service. US Forest Service come up in the commentary. Among the places guests actually encounter are Bass Lake Dam, Sierra Nevada, and Central Camp Road. Later the guide turns to Bass Lake View and Sierra National Forest, explaining what happened there."
     ],
     "schemaDescription": "A 2.5- to 3-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
     "removedClaims": [
@@ -960,9 +946,10 @@
       "Groups are capped at 10"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un"
+      "https://cdn.filestackcontent.com/MYMjh7d6S3urhDsNkcQO"
     ],
-    "wordCount": 107,
+    "productImage": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
+    "wordCount": 104,
     "durationLabel": "2.5-3 Hours",
     "durationIso": null,
     "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
@@ -1004,20 +991,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/Imy9yV3QlCafyyT0vn5D",
-      "heroHandle": "Imy9yV3QlCafyyT0vn5D",
+      "hero": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
+      "heroHandle": "93hzCBN4SUGMJ0tMo8Un",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
-          "handle": "93hzCBN4SUGMJ0tMo8Un",
-          "pixelSha256": "97775bbd566320003724b8a50c3d9aa0460668db003a4fe1a84a4acd5fcedabe",
-          "differenceHashDistanceFromHero": 140,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28831,
+          "url": "https://cdn.filestackcontent.com/MYMjh7d6S3urhDsNkcQO",
+          "handle": "MYMjh7d6S3urhDsNkcQO",
+          "pixelSha256": "5903805ec15e87acbc0456dc9bf99abbb4cb08391438300bb34b82b8ecaaf36f",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22561,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
+      "selected": "https://cdn.filestackcontent.com/MYMjh7d6S3urhDsNkcQO",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -1131,6 +1118,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/mEYXKeUZQPY4ISGad1fm"
     ],
+    "productImage": "https://cdn.filestackcontent.com/SAc34IEETre4iRX18vtC",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -1284,8 +1272,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The ride passes Bass Lake and Central Camp Road. Cyclists also come to National Forest Service and US Forest Service. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Bass Lake, Central Camp Road, and National Forest Service.",
-      "Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Bass Lake and Central Camp Road, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "The guide will lead guests on a ride that will take guests up Central Camp Road (dirt road) toward top of 007 3rd single-track trail. Guests connect with Octopussy trail, alternative to riding entire 3rd section of 007. After that, octopussy is rated black diamond trail that begins with wide-open, fast descent.",
+      "Trail will then become more challenging, alongside tight turns leading toward rock garden filled alongside large boulders and rock ledges. After that, there are multiple lines to choose from, alongside some being more challenging than others. Tours are contingent based on the skill level, may be also adjusted based on skill level.",
+      "3% mandatory National Forest Service fee that passes through directly to the US Forest Service."
     ],
     "schemaDescription": "A 2- to 4-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
     "removedClaims": [
@@ -1301,7 +1290,8 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/bng1v35CQv2I8UNqVPZR"
     ],
-    "wordCount": 104,
+    "productImage": "https://cdn.filestackcontent.com/FvbFOuXXTSG1A2k2unn2",
+    "wordCount": 121,
     "durationLabel": "2-4 Hours",
     "durationIso": null,
     "meetingLocation": "40761 CA-41 Suite 4, Oakhurst, CA 93644",

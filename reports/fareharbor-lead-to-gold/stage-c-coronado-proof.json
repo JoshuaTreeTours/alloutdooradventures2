@@ -20,6 +20,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
     "wordCount": 21,
     "durationLabel": null,
     "durationIso": null,
@@ -49,16 +50,10 @@
       "hero": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
       "heroHandle": "Yz1tMgwR7uspImEsf7Je",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
-          "handle": "Yz1tMgwR7uspImEsf7Je",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/coronadogolfcars-339050",
@@ -129,7 +124,7 @@
           "30 miles",
           "4 passenger"
         ],
-        "description": "Golf Cart Rentals Delivered to You Rentals for events, weddings, commerical use, and much more. 3 day minimum for all rental deliveries About - All our vehicles are lithium powered & have a range of 20-30 miles - 110V outlet required for charging vehicle overnight - 4 passenger: 2 seats facing forward and 2 seats facing backward - Carts are street legal and must stay on street roads at all times unless on private property. - All carts go up to 25 mph Please note: No children under 2 years of age are allowed on golf carts. Requirements - All drivers must have a valid drivers license - Rental contract must be signed prior to delivery - 50% deposit taken at time of booking",
+        "description": "Golf Cart Rentals Delivered to You Rentals for events, weddings, commerical use, and much more. 3 day minimum for all rental deliveries - All our vehicles are lithium powered & have a range of 20-30 miles - 110V outlet required for charging vehicle overnight - 4 passenger: 2 seats facing forward and 2 seats facing backward - Carts are street legal and must stay on street roads at all times unless on private property. - All carts go up to 25 mph Please note: No children under 2 years of age are allowed on golf carts. Requirements - All drivers must have a valid drivers license - Rental contract must be signed prior to delivery - 50% deposit taken at time of booking",
         "detailsText": "YOUR BOOKING WILL BE CANCELLED IF WE DO NOT RECEIVE A SIGNED WAIVER. TO CONFIRM YOUR BOOKING, SIGN YOUR WAIVER ASAP. ABSOLUTELY NO DELIVERY WILL BE MADE WITHOUT THE SIGNED WAIVER IN ADVANCE Important things to know about our Golf Cart Rentals: - All drivers must be 18 years old or older, have a valid drivers license and insurance. - All drivers must sign a rental waiver. - Golf carts are driven on street roads, all same laws as cars apply. - If keeping the cart overnight or multiple nights, a 110V outlet is required to charge the cart. (No children under the age of 2 allowed) 4 Seats • 2-7 Day Rental Options • Must have a valid drivers license 4 Seats • 2-7 Day Rental Options • Must have a valid drivers license",
         "sourceUsed": "structured_description"
       },
@@ -173,6 +168,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/zjatli5SSeuCTCX6aFTb"
     ],
+    "productImage": "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -207,13 +203,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a",
-          "handle": "wxUQ41z5SkG2viG2Ur0a",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/zjatli5SSeuCTCX6aFTb",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -290,7 +280,7 @@
           "90 minutes"
         ],
         "description": "Take a spin around Hotel del Coronado's iconic beachfront ice rink, where sparkling holiday memories meet breathtaking Pacific views. Skating by the Sea® is a one-of-a-kind winter tradition that brings the magic of the season to Southern California's coast. A portion of the proceeds benefits Make-A-Wish® San Diego.",
-        "detailsText": "![Description of image](https://cdn.filestackcontent.com/awAHgeYRgufUgtFpOZvA) Important: Waivers - Waivers must be signed prior to arrival. Please remember to have each member of your group sign their waiver before arriving at the rink. - Each member of your party must have a waiver signed to skate. --------- Arrival Instructions - We recommend arriving 15 minutes ahead of your scheduled skate time. - Check-in will be allowed up to 20 minutes after the scheduled check-in time. Weather Disclaimer: - Important! Weather conditions, like wind or strong UV exposure, can affect ice conditions. We continue to skate in light rain or drizzle. If there is heavy rain or severe storm conditions are expected, resulting in a venue closure, relevant tickets will be rescheduled or refunded. FAQs [Click here](https://hoteldel.com/events/skating-by-the-sea/) to view our full list of FAQs. --------- Reserve a Frostbite Rink-side Lounge - [Reserve](https://www.hoteldel.com/experiences/ !/collection/2a554636-a89f-4011-bb7a-ce465463aa3f?date=2025-11-21&duration=PT1H30M) your own rink-side lounge with a cozy fire pit and food and drink service for up to 12 people. - Make the most of the season with even more festive experiences - from holiday movies on the beach to dazzling light displays and seasonal dining. Discover all the ways to celebrate [A Holiday in Oz](https://www.hoteldel.com/experience/holidays/). The Del's World-Famous Beachfront Ice Rink All Ages • 90 Minutes • Nov 20 - Jan 3 • Tickets must be purchased in advance",
+        "detailsText": "![Description of image](https://cdn.filestackcontent.com/awAHgeYRgufUgtFpOZvA) Important: Waivers - Waivers must be signed prior to arrival. Please remember to have each member of your group sign their waiver before arriving at the rink. - Each member of your party must have a waiver signed to skate. --------- Arrival Instructions - We recommend arriving 15 minutes ahead of your scheduled skate time. - Check-in will be allowed up to 20 minutes after the scheduled check-in time. Weather Disclaimer: - Important! Weather conditions, like wind or strong UV exposure, can affect ice conditions. We continue to skate in light rain or drizzle. If there is heavy rain or severe storm conditions are expected, resulting in a venue closure, relevant tickets will be rescheduled or refunded. [Click here](https://hoteldel.com/events/skating-by-the-sea/) to view our full list of FAQs. --------- Reserve a Frostbite Rink-side Lounge - [Reserve](https://www.hoteldel.com/experiences/ !/collection/2a554636-a89f-4011-bb7a-ce465463aa3f?date=2025-11-21&duration=PT1H30M) your own rink-side lounge with a cozy fire pit and food and drink service for up to 12 people. - Make the most of the season with even more festive experiences - from holiday movies on the beach to dazzling light displays and seasonal dining. Discover all the ways to celebrate [A Holiday in Oz](https://www.hoteldel.com/experience/holidays/). The Del's World-Famous Beachfront Ice Rink All Ages • 90 Minutes • Nov 20 - Jan 3 • Tickets must be purchased in advance",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -335,6 +325,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/QAfxoxEdS5GzAkWnDKFr"
     ],
+    "productImage": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
     "wordCount": 131,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -416,13 +407,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
-          "handle": "XYQxKFyOQCWnHJgZKhJQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/QAfxoxEdS5GzAkWnDKFr",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -570,6 +555,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/1p8VFaKrQJes66ImcxqI"
     ],
+    "productImage": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
     "wordCount": 147,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -651,13 +637,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
-          "handle": "EAHoqb1QbyG0jAyHYuiQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/1p8VFaKrQJes66ImcxqI",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -806,6 +786,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/SF4LKtBJSd27B19BFWAe"
     ],
+    "productImage": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
     "wordCount": 121,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -882,13 +863,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
-          "handle": "qbl5LDsRrAgLl7vDQtQI",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/SF4LKtBJSd27B19BFWAe",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1027,6 +1002,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/Ql0ffiTOQlOy0GNLK5kN"
     ],
+    "productImage": "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg",
     "wordCount": 111,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -1103,13 +1079,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg",
-          "handle": "dQLDfHRSCc4jpLHWoZEg",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/Ql0ffiTOQlOy0GNLK5kN",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1260,6 +1230,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/PD17XlwrRTOcffMzq1Os"
     ],
+    "productImage": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
     "wordCount": 131,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -1341,13 +1312,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
-          "handle": "V9NEqkYSGtLVUL982Uyg",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/PD17XlwrRTOcffMzq1Os",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1500,6 +1465,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/FngF3uI1SpaUjYpw2NpA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj",
     "wordCount": 108,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -1576,13 +1542,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj",
-          "handle": "DiwKjcwGQei2Is1sDISj",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/FngF3uI1SpaUjYpw2NpA",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1712,25 +1672,25 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Duration About This is the same tour as the original but using electric bikes instead. The guided Coronado Tour begins at Coronado Island Marriott Resort and Spa where guests roll on the harbor with a view of the San Diego skyline on the side. Here guests have time to explore this landmark as well as 1 rated beach in America.",
-      "Guests hear some history and secret about upcoming New Top Gun Movie that also is sure to impress the friends and family. Also, guests view some of the public art works and find the many things to do on Coronado."
+      "The ride passes Coronado Island Marriott Resort and San Diego. Cyclists also come to New Top Gun Movie. Guests cover the sights by bike, stopping where the guide has something to say. The locations are chosen because a film or television scene was shot there.",
+      "Among the places guests actually encounter are Coronado Island Marriott Resort, San Diego, and New Top Gun Movie. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Coronado Island Marriott Resort and San Diego, and they hear why those places are on the trip."
     ],
-    "schemaDescription": "A two-hour bicycle outing with Paradise Trike Tours. The outing passes Coronado Island Marriott Resort.",
+    "schemaDescription": "A bicycle outing with Paradise Trike Tours. The outing passes Coronado Island Marriott Resort.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
       "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
     ],
     "highlights": [
-      "2 Hours bicycle outing",
       "Coronado Island Marriott Resort"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/lnIxxmLESoSk1v8mws4b"
     ],
-    "wordCount": 100,
-    "durationLabel": "2 Hours",
-    "durationIso": "PT2H",
+    "productImage": "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5",
+    "wordCount": 102,
+    "durationLabel": null,
+    "durationIso": null,
     "meetingLocation": null,
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -1762,13 +1722,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5",
-          "handle": "OQxZEuOMSJCL4Lio1Ys5",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/lnIxxmLESoSk1v8mws4b",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1810,7 +1764,7 @@
       },
       "price": null,
       "facts": {
-        "duration": "2 Hours",
+        "duration": null,
         "meetingAddress": null,
         "itemLocation": null,
         "headline": "2 Hours",
@@ -1841,7 +1795,7 @@
         "measures": [
           "2 Hours"
         ],
-        "description": "Join us! Duration 2 Hours About This is the same tour as our original but using electric bikes instead. Our guided Coronado Tour begins at the Coronado Island Marriott Resort and Spa where we roll along the harbor with a beautiful view of the San Diego skyline on our side. Our tour continues as we make our way through the tree lined roads of this slice of heaven, past some of the most architecturally distinct homes, including \"Hansel & Gretel\" and \"Wizard of Oz\" to the historic Hotel Del Coronado. Here you'll have time to explore this famous landmark as well as the 1 rated beach in America. Learn some history and a secret about the upcoming New Top Gun Movie that is sure to impress your friends and family. Also, you will view some of our amazing public art works and discover the many things to do on Coronado.",
+        "description": "Join us! 2 Hours This is the same tour as our original but using electric bikes instead. Our guided Coronado Tour begins at the Coronado Island Marriott Resort and Spa where we roll along the harbor with a beautiful view of the San Diego skyline on our side. Our tour continues as we make our way through the tree lined roads of this slice of heaven, past some of the most architecturally distinct homes, including \"Hansel & Gretel\" and \"Wizard of Oz\" to the historic Hotel Del Coronado. Here you'll have time to explore this famous landmark as well as the 1 rated beach in America. Learn some history and a secret about the upcoming New Top Gun Movie that is sure to impress your friends and family. Also, you will view some of our amazing public art works and discover the many things to do on Coronado.",
         "detailsText": "Street Parking is on Glorietta Blvd or 2nd Street in front of the Coronado Island Marriott Resort.",
         "sourceUsed": "structured_description"
       },
@@ -1877,8 +1831,9 @@
     ],
     "highlights": [],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/19cYqMr2SKST8FcaG7UU"
+      "https://cdn.filestackcontent.com/EiQ0bc7R2GiOeUS9FCzg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/19cYqMr2SKST8FcaG7UU",
     "wordCount": 10,
     "durationLabel": null,
     "durationIso": null,
@@ -1925,20 +1880,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/RCHpN1muTHaQFchZfvs6",
-      "heroHandle": "RCHpN1muTHaQFchZfvs6",
+      "hero": "https://cdn.filestackcontent.com/19cYqMr2SKST8FcaG7UU",
+      "heroHandle": "19cYqMr2SKST8FcaG7UU",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/19cYqMr2SKST8FcaG7UU",
-          "handle": "19cYqMr2SKST8FcaG7UU",
-          "pixelSha256": "86c91a73fe615c43f3a19e4018bcd9e19ca01036fb513898a284b9f0b44e67c5",
-          "differenceHashDistanceFromHero": 138,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.34883,
+          "url": "https://cdn.filestackcontent.com/EiQ0bc7R2GiOeUS9FCzg",
+          "handle": "EiQ0bc7R2GiOeUS9FCzg",
+          "pixelSha256": "f41a0d54c47576e1e516eb617d5429a09cef34a58a345060120f4972818efe4c",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.1667,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/19cYqMr2SKST8FcaG7UU",
+      "selected": "https://cdn.filestackcontent.com/EiQ0bc7R2GiOeUS9FCzg",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -2046,6 +2001,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/yFelLpbQR7urtCkWVLms"
     ],
+    "productImage": "https://cdn.filestackcontent.com/wjKZQvjS9OD7SG3BQNQX",
     "wordCount": 10,
     "durationLabel": null,
     "durationIso": null,
@@ -2219,6 +2175,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4E1YU1GqSK4mSyKy9uY0",
     "wordCount": 10,
     "durationLabel": null,
     "durationIso": null,
@@ -2383,6 +2340,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -2408,16 +2366,10 @@
       "hero": "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng",
       "heroHandle": "nq0L48GScS0b8h1WYOng",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng",
-          "handle": "nq0L48GScS0b8h1WYOng",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-418569",
@@ -2493,7 +2445,7 @@
           "8 passengers"
         ],
         "description": "Fast and fun! A great day on the water! The Sylvan is a fast & fun, 115 horsepower runabout for your group of up to 8 passengers. Additional fuel charge applies.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -2520,9 +2472,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. An outboard of about 150 horsepower is fitted on the stern. A bimini top provides shade over the seats. People remain on the boat for the rental, and there is no walking route.",
       "Guests spend time at Pets Allowed Life. Guests come to Pets Allowed Life, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
-      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
-      "Seeing the place and hearing the reason for it are the whole visit."
+      "History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A 2- to 4-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
@@ -2536,7 +2488,8 @@
       "115hp Mercury outboard engine"
     ],
     "galleryImages": [],
-    "wordCount": 108,
+    "productImage": "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf",
+    "wordCount": 103,
     "durationLabel": "2-4 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -2561,16 +2514,10 @@
       "hero": "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf",
       "heroHandle": "0VgQg1jmRCq257wH8SOf",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf",
-          "handle": "0VgQg1jmRCq257wH8SOf",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-418666",
@@ -2647,7 +2594,7 @@
           "10 passengers"
         ],
         "description": "Fast and fun! A great day on the water! With extended deck and plenty of space, the 150hp Bayliner 19' offers a smooth ride with enough room for you and all your friends to spend the day cruising.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -2672,18 +2619,27 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/hurricane-20---coronado-rental-418688",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Seaforth Boat Rentals lists this outing."
+      "Guests take out a small powerboat and stay aboard for the rental. An outboard of about 150 horsepower is fitted on the stern. A bimini top provides shade over the seats. People remain on the boat for the rental, and there is no walking route.",
+      "Guests spend time at Hurricane Sundeck and Pets Allowed Life. Guests come to Hurricane Sundeck and Pets Allowed Life, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
-    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
+    "schemaDescription": "A 2- to 4-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
-    "highlights": [],
+    "highlights": [
+      "2-4 hours guided outing",
+      "150hp Mercury outboard engine"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
+    "productImage": "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq",
+    "wordCount": 110,
+    "durationLabel": "2-4 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
     "visiblePriceLabel": null,
@@ -2707,16 +2663,10 @@
       "hero": "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq",
       "heroHandle": "Dp5T2EhxQWWWIkdZzwuq",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq",
-          "handle": "Dp5T2EhxQWWWIkdZzwuq",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-418688",
@@ -2794,7 +2744,7 @@
           "10 passengers"
         ],
         "description": "The ultimate deck boat! What makes the Hurricane Sundeck the ultimate deck boat is the overall package. For entertaining, every square inch is designed with well-thought-out storage, comfortable seating arrangements and functional features. This boat is powered by a 150 hp Mercury outboard engine and is perfect for your group up to 10 passengers.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2, 3 and 4 Hour Rentals Available 2, 3 and 4 Hour Rentals Available",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2, 3 and 4 Hour Rentals Available 2, 3 and 4 Hour Rentals Available",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -2819,25 +2769,19 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/catalina-250---coronado-rental-418874",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "From the water, guests see Sailing Quiz and Pets Allowed Life. The landmarks are seen from the harbor, with the boat doing the traveling. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks.",
-      "The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to Sailing Quiz and Pets Allowed Life, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "The operator Seaforth Boat Rentals lists this outing."
     ],
-    "schemaDescription": "A 2- to 4-hour guided outing with Seaforth Boat Rentals.",
+    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "2-4 hours guided outing",
-      "Max of 6 passengers including children"
-    ],
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 109,
-    "durationLabel": "2-4 hours",
+    "productImage": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
+    "wordCount": 8,
+    "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
     "visiblePriceLabel": null,
@@ -2861,16 +2805,10 @@
       "hero": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
       "heroHandle": "art6pHCRQaYIxbZkUg43",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
-          "handle": "art6pHCRQaYIxbZkUg43",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-418874",
@@ -2946,7 +2884,7 @@
           "6 passengers"
         ],
         "description": "Experience modern sailing comfort! Our largest tiller-steer sailboat, the Catalina 250 is the perfect ocean or bay day-sailor. These fun, easily rigged sloops let you experience modern sailing comfort and excitement for up to 6 people. Equipped with walk through cabin and full head.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2 and 4 Hour Rentals Available 2 and 4 Hour Rentals Available",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2 and 4 Hour Rentals Available 2 and 4 Hour Rentals Available",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -2981,6 +2919,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3006,16 +2945,10 @@
       "hero": "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn",
       "heroHandle": "cK8tzkUmQZOG6JXE4KVn",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn",
-          "handle": "cK8tzkUmQZOG6JXE4KVn",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-418883",
@@ -3093,7 +3026,7 @@
           "12 passengers"
         ],
         "description": "Fast and fun! A great day on the water! 25 foot Tritoon available from our Coronado location",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -3120,9 +3053,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "From the water, guests see San Diego and Sailing Quiz. Pets Allowed Life come into view as the boat moves. The landmarks are seen from the harbor, with the boat doing the traveling. Among the places guests actually encounter are San Diego, Sailing Quiz, and Pets Allowed Life.",
-      "There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks. The course is on the water for the whole outing, and the shore is what guests are there to see.",
-      "Guests come to San Diego and Sailing Quiz, and they hear why those places are on the trip."
+      "Guests take out a small powerboat and stay aboard for the rental. People remain on the boat for the rental, and there is no walking route. From the water, guests see San Diego and Sailing Quiz. Pets Allowed Life come into view as the boat moves.",
+      "The landmarks are seen from the harbor, with the boat doing the traveling. Among the places guests actually encounter are San Diego, Sailing Quiz, and Pets Allowed Life. There is no walking route. The boat is how guests move, and the harbor is the viewpoint.",
+      "People stay aboard, watching the shore go by rather than touring the sidewalks."
     ],
     "schemaDescription": "A 2- to 4-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
@@ -3136,7 +3069,8 @@
       "Pets Allowed"
     ],
     "galleryImages": [],
-    "wordCount": 116,
+    "productImage": "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF",
+    "wordCount": 104,
     "durationLabel": "2-4 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -3161,16 +3095,10 @@
       "hero": "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF",
       "heroHandle": "Eg1eF1xjQfupVMJPQDiF",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF",
-          "handle": "Eg1eF1xjQfupVMJPQDiF",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419256",
@@ -3246,7 +3174,7 @@
           "6 passengers"
         ],
         "description": "Our most popular boat rental! Our most popular boat with more than 20 in our fleet - the Capri 22 is THE standard for sailing on San Diego's bays. Our ASA 101 classes are taught on this tiller boat and with an outboard motor.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2 - 4 hour options 2 - 4 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2 - 4 hour options 2 - 4 hour options",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -3281,6 +3209,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3326,16 +3255,10 @@
       "hero": "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl",
       "heroHandle": "Vew4gR0PTiKS1HfVa0gl",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl",
-          "handle": "Vew4gR0PTiKS1HfVa0gl",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419398",
@@ -3405,7 +3328,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience! A step up from our 270, the Catalina 320 continues the ultimate in sailing comfort and modern amenities, with a larger passenger capacity.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -3440,6 +3363,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3465,16 +3389,10 @@
       "hero": "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday",
       "heroHandle": "drkQPtVsQ1moczlQiday",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday",
-          "handle": "drkQPtVsQ1moczlQiday",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419404",
@@ -3542,7 +3460,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience! A step up from our 270, the Catalina 320 continues the ultimate in sailing comfort and modern amenities, with a larger passenger capacity.",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -3577,6 +3495,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/zRohrQFiS6uLxiDL37fI",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3689,7 +3608,7 @@
         "properNames": [],
         "measures": [],
         "description": "These sailboats provide the ultimate sailing experience in an eight-person vessel.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -3724,6 +3643,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3769,16 +3689,10 @@
       "hero": "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW",
       "heroHandle": "4JmOhcM2T9WSPSDHpJkW",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW",
-          "handle": "4JmOhcM2T9WSPSDHpJkW",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419503",
@@ -3846,7 +3760,7 @@
         "properNames": [],
         "measures": [],
         "description": "These sailboats provide the ultimate sailing experience in an eight-person vessel.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -3881,6 +3795,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3906,16 +3821,10 @@
       "hero": "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8",
       "heroHandle": "bkSuBlENTERitPqjdNh8",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8",
-          "handle": "bkSuBlENTERitPqjdNh8",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419627",
@@ -3981,7 +3890,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -4016,6 +3925,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4061,16 +3971,10 @@
       "hero": "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm",
       "heroHandle": "xeVT6giaRFOQY0D0OkRm",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm",
-          "handle": "xeVT6giaRFOQY0D0OkRm",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419629",
@@ -4138,7 +4042,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -4173,6 +4077,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4218,16 +4123,10 @@
       "hero": "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC",
       "heroHandle": "Pptxj3IQkCmX9LORAujC",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC",
-          "handle": "Pptxj3IQkCmX9LORAujC",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419639",
@@ -4295,7 +4194,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. Sailing Resume If you have not rented with Seaforth before, please be sure to complete the following sailing resume as soon as possible, no later than 72 hours prior to your reservation. Resumes not received 3 days prior to the reservation date are subject to cancellation. [Seaforth Sailing Resume](https://waiver.smartwaiver.com/w/bd2zthntebaxcxvlrqdeqd/web/)",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -4330,6 +4229,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4355,16 +4255,10 @@
       "hero": "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy",
       "heroHandle": "BUIQVkTZTG6e8CUx28fy",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy",
-          "handle": "BUIQVkTZTG6e8CUx28fy",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419640",
@@ -4430,7 +4324,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $50/hour, plus gratuity, paid in cash directly to your captain. 3 or 6 hour options 3 or 6 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -4465,6 +4359,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4510,16 +4405,10 @@
       "hero": "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955",
       "heroHandle": "4gizDVaoSRWPjonTM955",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955",
-          "handle": "4gizDVaoSRWPjonTM955",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419658",
@@ -4585,7 +4474,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $75/hour, plus gratuity, paid in cash directly to your captain.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captains who are available for hire charge $75/hour, plus gratuity, paid in cash directly to your captain.",
         "sourceUsed": ""
       },
       "bookingPageValidity": {
@@ -4620,8 +4509,9 @@
     ],
     "highlights": [],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/oe4ixtxOQsiKkDptoKEd"
+      "https://cdn.filestackcontent.com/XmEKHDP8QDGDdybx0vmq"
     ],
+    "productImage": "https://cdn.filestackcontent.com/oe4ixtxOQsiKkDptoKEd",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4664,20 +4554,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/J89AB3oRvO7bf13HCTnA",
-      "heroHandle": "J89AB3oRvO7bf13HCTnA",
+      "hero": "https://cdn.filestackcontent.com/oe4ixtxOQsiKkDptoKEd",
+      "heroHandle": "oe4ixtxOQsiKkDptoKEd",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/oe4ixtxOQsiKkDptoKEd",
-          "handle": "oe4ixtxOQsiKkDptoKEd",
-          "pixelSha256": "5f95eb9f1da3eb7e926abe9a4e5185b3a0a1b1375b2f7c2504b7d46fe5093ae9",
-          "differenceHashDistanceFromHero": 137,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.32581,
+          "url": "https://cdn.filestackcontent.com/XmEKHDP8QDGDdybx0vmq",
+          "handle": "XmEKHDP8QDGDdybx0vmq",
+          "pixelSha256": "cf80c51d95a2ffe1026ff608bea303b41132e75e461c2c2af51917be78772571",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.32374,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/oe4ixtxOQsiKkDptoKEd",
+      "selected": "https://cdn.filestackcontent.com/XmEKHDP8QDGDdybx0vmq",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -4745,7 +4635,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. ' You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $75/hour, plus gratuity, paid in cash directly to your captain.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. ' You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor. If you are hiring a captain -- captains who are available for hire charge $75/hour, plus gratuity, paid in cash directly to your captain.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -4780,6 +4670,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4805,16 +4696,10 @@
       "hero": "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx",
       "heroHandle": "JVmYKt0IRp6pu4Da5fYx",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx",
-          "handle": "JVmYKt0IRp6pu4Da5fYx",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-419951",
@@ -4882,8 +4767,8 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captain & crew who are available for hire charge $100/hour, plus gratuity, paid in cash directly to your captain.",
-        "sourceUsed": "booking_details_content"
+        "detailsText": "Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captain & crew who are available for hire charge $100/hour, plus gratuity, paid in cash directly to your captain.",
+        "sourceUsed": ""
       },
       "bookingPageValidity": {
         "itemId": "419951",
@@ -4917,6 +4802,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -4942,16 +4828,10 @@
       "hero": "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg",
       "heroHandle": "iNGdUkTQR0OvXZBJungg",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg",
-          "handle": "iNGdUkTQR0OvXZBJungg",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-420173",
@@ -5017,7 +4897,7 @@
         "properNames": [],
         "measures": [],
         "description": "Bucket list experience! Captain required.",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. You are welcome to bring food & beverages onboard! We do ask that you please avoid red wine, glass bottles and hard liquor.",
         "sourceUsed": ""
       },
       "bookingPageValidity": {
@@ -5052,6 +4932,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5077,16 +4958,10 @@
       "hero": "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj",
       "heroHandle": "K79iquH8Syy1Y2Z4tAbj",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj",
-          "handle": "K79iquH8Syy1Y2Z4tAbj",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-423717",
@@ -5199,6 +5074,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5224,16 +5100,10 @@
       "hero": "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx",
       "heroHandle": "WtLh0RjtRBS1DcmcwxJx",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx",
-          "handle": "WtLh0RjtRBS1DcmcwxJx",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-424572",
@@ -5297,7 +5167,7 @@
         "properNames": [],
         "measures": [],
         "description": "Rent with us!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. 1 or 2 hours 1 or 2 hours",
+        "detailsText": "Photo ID and credit card used for payment required for check in. 1 or 2 hours 1 or 2 hours",
         "sourceUsed": ""
       },
       "bookingPageValidity": {
@@ -5332,6 +5202,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5357,16 +5228,10 @@
       "hero": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
       "heroHandle": "RtpiSqQRbymF9gSYiCuQ",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
-          "handle": "RtpiSqQRbymF9gSYiCuQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-424591",
@@ -5437,7 +5302,7 @@
           "2 hour"
         ],
         "description": "Have fun on the water with one of our kayaks or SUP rentals!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. 1 or 2 hours. Limited to 3 kayak rentals per group/time slot. For 4 or more kayaks, call to book. 1 or 2 hours. Limited to 3 kayak rentals per group/time slot. For 4 or more kayaks, call to book.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. 1 or 2 hours. Limited to 3 kayak rentals per group/time slot. For 4 or more kayaks, call to book. 1 or 2 hours. Limited to 3 kayak rentals per group/time slot. For 4 or more kayaks, call to book.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -5472,6 +5337,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5497,16 +5363,10 @@
       "hero": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
       "heroHandle": "7ajgLh9oT3WFNgt9miw8",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
-          "handle": "7ajgLh9oT3WFNgt9miw8",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-424599",
@@ -5577,7 +5437,7 @@
         "properNames": [],
         "measures": [],
         "description": "Have fun on the water with one of our kayaks or SUP rentals!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. 1 or 2 hours. Limited to 4 kayak rentals per group/time slot. For 5 or more kayaks, call to book. 1 or 2 hours. Limited to 4 kayak rentals per group/time slot. For 5 or more kayaks, call to book.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. 1 or 2 hours. Limited to 4 kayak rentals per group/time slot. For 5 or more kayaks, call to book. 1 or 2 hours. Limited to 4 kayak rentals per group/time slot. For 5 or more kayaks, call to book.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -5612,6 +5472,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5657,16 +5518,10 @@
       "hero": "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO",
       "heroHandle": "MAyrk85TKylSYDTOiGgO",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO",
-          "handle": "MAyrk85TKylSYDTOiGgO",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-425335",
@@ -5757,19 +5612,26 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/seachaser-18---coronado-426233",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Seaforth Boat Rentals lists this outing."
+      "Guests take out a small powerboat and stay aboard for the rental. The rental is a center-console hull, with the helm in the middle of the boat. An outboard of about 90 horsepower is fitted on the stern. People remain on the boat for the rental, and there is no walking route.",
+      "Attention also goes to Carolina Skiff and San Diego Bay, with the guide attaching a story to each stop. Guests come to Carolina Skiff and San Diego Bay, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
-    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
+    "schemaDescription": "A 8-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
-    "highlights": [],
+    "highlights": [
+      "8 hour guided outing"
+    ],
     "galleryImages": [],
-    "wordCount": 8,
-    "durationLabel": null,
-    "durationIso": null,
+    "productImage": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
+    "wordCount": 107,
+    "durationLabel": "8 hour",
+    "durationIso": "PT8H",
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -5792,16 +5654,10 @@
       "hero": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
       "heroHandle": "k1rOmDgvTIm5HjnjAcI3",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
-          "handle": "k1rOmDgvTIm5HjnjAcI3",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-426233",
@@ -5874,7 +5730,7 @@
           "3 passengers"
         ],
         "description": "Made by Carolina Skiff, the 18' SeaChaser has a 90hp Mercury outboard to get you to your favorite fishing spots in San Diego Bay! Accommodates up to 3 passengers. The center console design provides a relaxing and stable cruise. The vessel includes rod holders and a live bait well for optional use.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 4 & 8 hour options 4 & 8 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 4 & 8 hour options 4 & 8 hour options",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -5909,8 +5765,9 @@
     ],
     "highlights": [],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/BOuE8v6HREmu1Y3g0nMx"
+      "https://cdn.filestackcontent.com/tAxxf2weQFS1MysNGJFe"
     ],
+    "productImage": "https://cdn.filestackcontent.com/BOuE8v6HREmu1Y3g0nMx",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -5953,20 +5810,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/Tw8rOh9TTGY6c72pUOBt",
-      "heroHandle": "Tw8rOh9TTGY6c72pUOBt",
+      "hero": "https://cdn.filestackcontent.com/BOuE8v6HREmu1Y3g0nMx",
+      "heroHandle": "BOuE8v6HREmu1Y3g0nMx",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/BOuE8v6HREmu1Y3g0nMx",
-          "handle": "BOuE8v6HREmu1Y3g0nMx",
-          "pixelSha256": "2da840cfb775c1111a09fc2160fad921bc529a397079feab0f7bb55d01079a44",
-          "differenceHashDistanceFromHero": 122,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28427,
+          "url": "https://cdn.filestackcontent.com/tAxxf2weQFS1MysNGJFe",
+          "handle": "tAxxf2weQFS1MysNGJFe",
+          "pixelSha256": "ab6ec14e4e8bdfbfd583454f7d00a4b05b16ae4590bde4da972706400d88a2e3",
+          "differenceHashDistanceFromHero": 113,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23761,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/BOuE8v6HREmu1Y3g0nMx",
+      "selected": "https://cdn.filestackcontent.com/tAxxf2weQFS1MysNGJFe",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -6044,7 +5901,7 @@
           "10 passengers"
         ],
         "description": "Features luxurious seating appointments and offers room for the entire crew. Equipped with an ergonomically-designed helm station featuring a fiberglass dash with upholstered visor, medallion digital instruments, Bluetooth stereo, and power assisted tilt steering; this boat is a captain's delight!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 2-4 hour options 2-4 hour options",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -6079,6 +5936,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6104,16 +5962,10 @@
       "hero": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
       "heroHandle": "6ws5WBATOWR6yzrbzd44",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
-          "handle": "6ws5WBATOWR6yzrbzd44",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-528181",
@@ -6215,6 +6067,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6240,16 +6093,10 @@
       "hero": "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT",
       "heroHandle": "ZuJGIFUnQJyiDGhZbhgT",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT",
-          "handle": "ZuJGIFUnQJyiDGhZbhgT",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-529512",
@@ -6350,6 +6197,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/WT22JKYWRmeYsSVkOVYk",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6499,6 +6347,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6544,16 +6393,10 @@
       "hero": "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y",
       "heroHandle": "cBR0Vm18TNOd9nQEf00y",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y",
-          "handle": "cBR0Vm18TNOd9nQEf00y",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-638904",
@@ -6623,7 +6466,7 @@
           "4 passengers"
         ],
         "description": "Accommodates up to 4 passengers. The center console design provides a relaxing and stable cruise. The vessel includes rod holders, a live bait well, a bimini shade top, and Bluetooth stereo!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. 4 & 8 hour options 4 & 8 hour options",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. 4 & 8 hour options 4 & 8 hour options",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -6658,6 +6501,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6703,16 +6547,10 @@
       "hero": "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh",
       "heroHandle": "np5K2nyTNSOAZ1nurQNh",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh",
-          "handle": "np5K2nyTNSOAZ1nurQNh",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-639205",
@@ -6780,7 +6618,7 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. Gratuity for the captain & crew is recommended.",
+        "detailsText": "Photo ID and credit card used for payment required for check in. Gratuity for the captain & crew is recommended.",
         "sourceUsed": ""
       },
       "bookingPageValidity": {
@@ -6815,6 +6653,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/xOBiANBRWe7ePRUIA1Ah",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6837,8 +6676,8 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "",
-      "heroHandle": null,
+      "hero": "https://cdn.filestackcontent.com/xOBiANBRWe7ePRUIA1Ah",
+      "heroHandle": "xOBiANBRWe7ePRUIA1Ah",
       "candidates": [],
       "rejected": [],
       "selected": null,
@@ -6942,6 +6781,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -6967,16 +6807,10 @@
       "hero": "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe",
       "heroHandle": "KhVoKgm0QRaF9stJ7PCe",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe",
-          "handle": "KhVoKgm0QRaF9stJ7PCe",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-667594",
@@ -7089,6 +6923,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -7134,16 +6969,10 @@
       "hero": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
       "heroHandle": "l4ArMo6pR7y0K9YuBoVM",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
-          "handle": "l4ArMo6pR7y0K9YuBoVM",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-671123",
@@ -7212,7 +7041,7 @@
         "properNames": [],
         "measures": [],
         "description": "The Lagoon 380 is the perfect vessel for ultimate relaxation. With 4 cabins, interior tables & seating & the trampoline (netted) deck it's a great option for a family gathering or friend group to spend the day on the water!",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -7247,6 +7076,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -7292,16 +7122,10 @@
       "hero": "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V",
       "heroHandle": "kz3Zxu9rT4yOjYAlyo5V",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V",
-          "handle": "kz3Zxu9rT4yOjYAlyo5V",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/coronado/seaforthboatrental-679820",
@@ -7369,7 +7193,7 @@
         "properNames": [],
         "measures": [],
         "description": "Experience the ultimate in luxury and sophistication aboard the Marquis 70, a stunning motor yacht designed for comfort, style, and unforgettable moments on the water. With its sleek lines, spacious interiors, and top-tier amenities, this yacht offers a premium cruising experience for private gatherings, corporate events, or celebratory occasions.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -7406,6 +7230,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/dEd9vwwpSs2SqdGQtOLc"
     ],
+    "productImage": "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -7460,13 +7285,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz",
-          "handle": "uMFTZjxxSlubGKGIdVoz",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/dEd9vwwpSs2SqdGQtOLc",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -7538,7 +7357,7 @@
         "properNames": [],
         "measures": [],
         "description": "The Aquila 44 is a pure bred power catamaran with a fresh evolution of classic boating traditions. Efficiency in design and performance compliment her luxurious living. She features 3 cabins, 3 heads, spacious salon and galley and extensive flybridge.",
-        "detailsText": "What to bring Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
+        "detailsText": "Photo ID for all drivers and credit card used for payment required for check in. MULTI-DAY POLICIES: Float Plan A float plan must be completed and submitted at the time of booking. Please refer to the confirmation email for the link to your float plan template. While we require a float plan upon booking, you are able to make alterations to your plan. Finalized plans must be submitted at least 72 hours prior to your reservation. Fuel Fuel is not included in your rental. The fuel tank will be full at the beginning of your rental, and is required to be refilled before your rental's return. Failure to do so will result in both fuel and labor costs to be charged to the card on file. Cancellation Policy Cancellation policy: Any changes or cancellations must be made at least 14 DAYS (336 hours) prior to your reservation start for a full refund. Once you are within the 14 day window prior to your reservation, no changes or cancellations are permitted. Failure to show for reservation still incurs full rental rate and is not eligible for a refund or reschedule. As the renter, you are responsible for checking the weather forecast and making any desired changes at least 14 days (336 hours) in advance. 11AM - Charter Begins Your charter begins at 11AM on the first day of your scheduled reservation. You will not have access to the boat prior to this. If you require time for provisioning or would like to get an early morning start, please consider scheduling your reservation accordingly. 9AM - Charter Ends Your charter will end at 9AM, the morning after the last day that you have booked. You will need to have the boat refueled, pumped out, and entirely cleared of all of your belongings by 9AM on this day. For example, if you book a 3 days/3 nights charter that starts on 1/1, you would need to be cleared off the boat by 9AM on 1/4.",
         "sourceUsed": "booking_details_content"
       },
       "bookingPageValidity": {
@@ -7575,6 +7394,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/T4l8cwlTGmZq837mXycW"
     ],
+    "productImage": "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -7629,13 +7449,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S",
-          "handle": "ecAfCh5yTnW3BBQh6L0S",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/T4l8cwlTGmZq837mXycW",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -7708,8 +7522,8 @@
         "properNames": [],
         "measures": [],
         "description": "The ultimate small group sailing experience!",
-        "detailsText": "What to bring Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captain & crew who are available for hire charge $100/hour, plus gratuity, paid in cash directly to your captain.",
-        "sourceUsed": "booking_details_content"
+        "detailsText": "Photo ID and credit card used for payment required for check in. If you are hiring a captain -- captain & crew who are available for hire charge $100/hour, plus gratuity, paid in cash directly to your captain.",
+        "sourceUsed": ""
       },
       "bookingPageValidity": {
         "itemId": "690112",

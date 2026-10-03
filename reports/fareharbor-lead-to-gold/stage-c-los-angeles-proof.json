@@ -22,6 +22,7 @@
       "2 hours guided outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
     "wordCount": 141,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -63,31 +64,13 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/JwJyljguTkKDCCITcTMe",
-      "heroHandle": "JwJyljguTkKDCCITcTMe",
-      "candidates": [
-        {
-          "url": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-          "handle": "LIGvdjqQuGtmU4AubLWb",
-          "pixelSha256": "27868acefa1ed486058223204df0a9df322f9f9fbe4797b6b9c1fa725ed56667",
-          "differenceHashDistanceFromHero": 5,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00628,
-          "classification": "NEAR_DUPLICATE"
-        }
-      ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-          "handle": "LIGvdjqQuGtmU4AubLWb",
-          "pixelSha256": "27868acefa1ed486058223204df0a9df322f9f9fbe4797b6b9c1fa725ed56667",
-          "differenceHashDistanceFromHero": 5,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00628,
-          "classification": "NEAR_DUPLICATE"
-        }
-      ],
+      "hero": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
+      "heroHandle": "LIGvdjqQuGtmU4AubLWb",
+      "candidates": [],
+      "rejected": [],
       "selected": null,
-      "action": "removed",
-      "reason": "harvest images were identical or near-identical to the hero"
+      "action": "none",
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/alldayla-168579",
@@ -179,7 +162,7 @@
         "measures": [
           "2 hours"
         ],
-        "description": "The Best Way To See L.A.! Rates Adult (Ages 12+) - $39 Child (Ages 11 and under) - $29 Duration Up to 2 hours (depending on traffic conditions) About Have you got limited time to spend in Los Angeles? Our two hour LA Tour whisks you through exclusive neighborhoods in the city. This trip showcasing everything from moviemaking landmarks and opulent residential neighborhoods to architectural masterworks and historic treasures. Enjoy the most complete Los Angeles sightseeing experience on the market in an Open Air vehicle. This tour does not include any stops. What to Bring Please bring a camera!",
+        "description": "The Best Way To See L.A.! Rates Adult (Ages 12+) - $39 Child (Ages 11 and under) - $29 Up to 2 hours (depending on traffic conditions) Have you got limited time to spend in Los Angeles? Our two hour LA Tour whisks you through exclusive neighborhoods in the city. This trip showcasing everything from moviemaking landmarks and opulent residential neighborhoods to architectural masterworks and historic treasures. Enjoy the most complete Los Angeles sightseeing experience on the market in an Open Air vehicle. This tour does not include any stops. Please bring a camera!",
         "detailsText": "What to wear: - Comfortable clothing - Comfortable shoes - Please bring a camera! Top Sights! • 2 Hours! • Up to 13 People! Top Sights! • 2 Hours! • Up to 13 People!",
         "sourceUsed": "structured_description"
       },
@@ -217,6 +200,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/Sm6dlVnmRF2pqg3tbYLp"
     ],
+    "productImage": "https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -285,13 +269,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4",
-          "handle": "s4urjGMMSEObSWnyZ5E4",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/Sm6dlVnmRF2pqg3tbYLp",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -354,7 +332,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Rates Person - $29 This tour is for up to 7 people Duration 1hr About There is no need to hike the entire day for just one picture!"
+          "Rates Person - $29 This tour is for up to 7 people 1hr There is no need to hike the entire day for just one picture!"
         ],
         "gleanedFacts": [],
         "properNames": [
@@ -365,7 +343,7 @@
         "measures": [
           "7 people"
         ],
-        "description": "We'll get you up-close with our secret location! Rates Person - $29 This tour is for up to 7 people Duration 1hr About There is no need to hike the entire day for just one picture! By using small mini-vans, we will get you to the very TOP of Hollywood Hills for the best photos with The HOLLYWOOD Sign. Our secret location is a hidden hiking trail in a residential neighborhood, where you would be able to get your shots without noisy tourists in the back. This spot is only used by GOLDENTICKETLA Tours; please beware of other tour companies who OVERPROMISE and UNDERDELIVER !!!",
+        "description": "We'll get you up-close with our secret location! Rates Person - $29 This tour is for up to 7 people 1hr There is no need to hike the entire day for just one picture! By using small mini-vans, we will get you to the very TOP of Hollywood Hills for the best photos with The HOLLYWOOD Sign. Our secret location is a hidden hiking trail in a residential neighborhood, where you would be able to get your shots without noisy tourists in the back. This spot is only used by GOLDENTICKETLA Tours; please beware of other tour companies who OVERPROMISE and UNDERDELIVER !!!",
         "detailsText": "What to wear: - Comfortable clothing - Comfortable shoes - Please bring a camera! Best photo spot! • 1hr • Up to 7 people! Best photo spot! • 1hr • Up to 7 people!",
         "sourceUsed": "structured_description"
       },
@@ -408,6 +386,7 @@
       "three-hour guided outing in Los Angeles"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
     "wordCount": 129,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -477,16 +456,10 @@
       "hero": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
       "heroHandle": "8b9pyGF6QB0UiK7Yoc2y",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
-          "handle": "8b9pyGF6QB0UiK7Yoc2y",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/alldayla-518084",
@@ -573,8 +546,8 @@
           "7 people",
           "3 hours"
         ],
-        "description": "Perfect for small groups! Rates Private Group - 599 This tour is for up to 7 people Duration 3 hours About Choosing the private tour with GoldenTicketLA gives you the control of your tours, as you decide what to see, when to take the tour and how long to stay. Choose a pace that suits you! Our services allow you to visit the most famous sights and hidden gems that are not in the travel guides. So you get to see the real side of LA! It is perfect for groups up to 7 people who want something really special for themselves while visiting the City of Angeles! Free Pick up in Beverly Hills What to Bring Please bring a camera!",
-        "detailsText": "Traveler pickup is offered We Pick Up From anywhere within a 1 mile radius of starting location. for FREE. For any other Pick-Ups, please Contact Us. Duration 3h Return Details 1. 6808 Hollywood Blvd, Los Angeles, CA, 90028 2. Beverly Hills Sign, Beverly Hills, CA 90210 Photo Friendly • 3 hours! • Up To 7 People! Photo Friendly • 3 hours! • Up To 7 People!",
+        "description": "Perfect for small groups! Rates Private Group - 599 This tour is for up to 7 people 3 hours Choosing the private tour with GoldenTicketLA gives you the control of your tours, as you decide what to see, when to take the tour and how long to stay. Choose a pace that suits you! Our services allow you to visit the most famous sights and hidden gems that are not in the travel guides. So you get to see the real side of LA! It is perfect for groups up to 7 people who want something really special for themselves while visiting the City of Angeles! Free Pick up in Beverly Hills Please bring a camera!",
+        "detailsText": "Traveler pickup is offered We Pick Up From anywhere within a 1 mile radius of starting location. for FREE. For any other Pick-Ups, please Contact Us. 3h Return Details 1. 6808 Hollywood Blvd, Los Angeles, CA, 90028 2. Beverly Hills Sign, Beverly Hills, CA 90210 Photo Friendly • 3 hours! • Up To 7 People! Photo Friendly • 3 hours! • Up To 7 People!",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -620,6 +593,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/ExVHF9QgR62r80ruHGN3"
     ],
+    "productImage": "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG",
     "wordCount": 149,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
@@ -696,13 +670,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG",
-          "handle": "mehLbyeBRDmhWg9xAAlG",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/ExVHF9QgR62r80ruHGN3",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -870,6 +838,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/1h3CHyuXQPCCwreMOxej"
     ],
+    "productImage": "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
     "wordCount": 125,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -956,13 +925,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
-          "handle": "4tVjDoPQt2rowJhpeefs",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/1h3CHyuXQPCCwreMOxej",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1132,6 +1095,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/63VVGBa4RRpzlTO7xFgE"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
     "wordCount": 158,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -1389,6 +1353,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/jcqlwBmITLuruspiO5W9"
     ],
+    "productImage": "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD",
     "wordCount": 149,
     "durationLabel": "5 hours",
     "durationIso": "PT5H",
@@ -1666,6 +1631,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -1688,13 +1654,12 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "",
-      "heroHandle": null,
-      "candidates": [],
-      "rejected": [],
+      "hero": null,
       "selected": null,
       "action": "none",
-      "reason": "no harvest images"
+      "reason": "no item-owned images",
+      "rejected": [],
+      "candidates": []
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/hollywooddreamtours-349518",
@@ -1759,7 +1724,7 @@
         "measures": [
           "2 Hours"
         ],
-        "description": "Duration 2 Hours",
+        "description": "2 Hours",
         "detailsText": "NO FREE: Customer Parking only All Day Parking prices change daily Public Parking 1637 N. Cahuenga Blvd. Los Angeles, CA 2 Hours • All Ages 2 Hours • All Ages",
         "sourceUsed": ""
       },
@@ -1800,6 +1765,7 @@
       "Hollywood Sign-the"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
     "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
@@ -1825,16 +1791,10 @@
       "hero": "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
       "heroHandle": "L7s2PXn7TyLI9DkUDV7g",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
-          "handle": "L7s2PXn7TyLI9DkUDV7g",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/hollywoodhikes-471721",
@@ -1906,7 +1866,7 @@
           "Warner Bros"
         ],
         "measures": [],
-        "description": "Come celebrate the 100th Year Anniversary of the Hollywood Sign-the most iconic attraction on the West Coast! About We'll take you to the front of and behind (TO THE TOP) the Hollywood sign for an unforgettable experience! With tons of opportunities for ELITE Instagram photos, insider Hollywood History, and a local guide who actually works in Show Business, this hike brags some of the best views in LA. Snag a bird's eye view of top film studios Disney, Warner Bros., Paramount, Dreamworks, the Hollywood Walk of fame, and more! Your Guide will tell you story after story that will make you forget you're actually walking up a hill. More info - Hollywood Sign Panoramic 360° views of all of LA - The Best Photos by our Professional Photographer Tour Guides - Enjoy incredible storytelling from working actors, comedians, and musicians!",
+        "description": "Come celebrate the 100th Year Anniversary of the Hollywood Sign-the most iconic attraction on the West Coast! We'll take you to the front of and behind (TO THE TOP) the Hollywood sign for an unforgettable experience! With tons of opportunities for ELITE Instagram photos, insider Hollywood History, and a local guide who actually works in Show Business, this hike brags some of the best views in LA. Snag a bird's eye view of top film studios Disney, Warner Bros., Paramount, Dreamworks, the Hollywood Walk of fame, and more! Your Guide will tell you story after story that will make you forget you're actually walking up a hill. More info - Hollywood Sign Panoramic 360° views of all of LA - The Best Photos by our Professional Photographer Tour Guides - Enjoy incredible storytelling from working actors, comedians, and musicians!",
         "detailsText": "For all ages! • 2.5 Hours • Up to 30 People For all ages! • 2.5 Hours • Up to 30 People",
         "sourceUsed": "booking_details_content"
       },
@@ -1946,6 +1906,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
     "wordCount": 112,
     "durationLabel": null,
     "durationIso": null,
@@ -1971,16 +1932,10 @@
       "hero": "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
       "heroHandle": "jL1Pe9qMQF67SxBKhFNR",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
-          "handle": "jL1Pe9qMQF67SxBKhFNR",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/hollywoodhikes-471726",
@@ -2053,7 +2008,7 @@
           "Hollywood Walk"
         ],
         "measures": [],
-        "description": "Celebrating the 100th Year Anniversary of the Hollywood Sign! About We'll take you to the front of the HOLLYWOOD SIGN! With tons of opportunities for ELITE Instagram photos, insider Hollywood History, and a local guide who actually works in Show Business, this hike brags some of the best views in LA. Snag a bird's eye view of top film studios Disney, Warner Bros., Paramount, Dreamworks, the Hollywood Walk of fame, and more! Your Guide will tell you story after story that will make you forget you're actually walking up a hill.",
+        "description": "Celebrating the 100th Year Anniversary of the Hollywood Sign! We'll take you to the front of the HOLLYWOOD SIGN! With tons of opportunities for ELITE Instagram photos, insider Hollywood History, and a local guide who actually works in Show Business, this hike brags some of the best views in LA. Snag a bird's eye view of top film studios Disney, Warner Bros., Paramount, Dreamworks, the Hollywood Walk of fame, and more! Your Guide will tell you story after story that will make you forget you're actually walking up a hill.",
         "detailsText": "For all ages! • 1 Hour • Up to 30 People For all ages! • 1 Hour • Up to 30 People",
         "sourceUsed": "booking_details_content"
       },
@@ -2099,6 +2054,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/sDKyBWJzTLWhsY3MLKW5"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck",
     "wordCount": 110,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2163,13 +2119,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck",
-          "handle": "Md0xFxXARTGbe5OsbTck",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/sDKyBWJzTLWhsY3MLKW5",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -2246,7 +2196,7 @@
         "measures": [
           "3 Hours"
         ],
-        "description": "Duration 3 Hours About Join us on our Hollywood Sightseeing Tour. We will travel through the city on a vintage Trolley Bus, experiencing the sights, sounds and charm of Los Angeles in a unique and nostalgic way. Our Trolley Bus is a restored piece of history, with its classic design, tufted seats and brass details, it will transport you back in time as we take you on a journey through the city's most iconic neighborhoods and landmarks. More Info With our Luxury Los Angeles Bus Tour, you will travel in style through the entertainment capital among the theaters and stars of Hollywood Boulevard. Wind through charming Hollywood Hills, one of the historic neighborhoods of celebrity life. Have an exquisite look at some of the elite highlights of luxurious Beverly Hills. Experience legendary Sunset Strip - the place of rock music history. With stops at LA cultural centers like The Original Farmers Market and the beautiful museums along Miracle Mile, you'll create memories of a lifetime. Hollywood Boulevard - “Feel the excitement of the most iconic cultural district in the city of Los Angeles.” - Hollywood Walk of Fame - Capitol Records - Hollywood Sign - Musso & Frank - Hollywood Wax Museum - El Capitan\\ - Dolby Theater - TCL Chinese Theatres - Hollywood Museum Hollywood Hills - “Move through the winding hills and beautiful homes in the heart of Hollywood.” Sunset Boulevard / West Hollywood - \"Journey along this lively thoroughfare of bustling culture and glamorous nightlife.” - Sunset Plaza - Sunset Tower Hotel - Sunset Strip - Comedy Store - Whisky a Go Go - The Viper Room - The Roxy Theatre Beverly Hills - “Experience the luxury style of celebrity living and the exquisite beauty that surrounds this famous city.” - 15 min stop - Beverly Hills Hotel - Beverly Hills sign - Rodeo Drive - City Hall/Civic Center Miracle Mile/Museum Row - “Enjoy the amazing architecture and history along vibrant Wilshire Boulevard.” - 15 min stop for Photo at Urban Lights - LA County Museum of Art - Petersen Auto Museum - Academy Museum of Motion Pictures - La Brea Tar Pits The Original Farmers Market - “Grab a treat and take in the exotic foods, sights and sounds of over 100 gourmet vendors at this beloved historic open market.” - Passenger can choose to be dropped off here What's Included - Air-conditioned vehicle - Driver/Guide",
+        "description": "3 Hours Join us on our Hollywood Sightseeing Tour. We will travel through the city on a vintage Trolley Bus, experiencing the sights, sounds and charm of Los Angeles in a unique and nostalgic way. Our Trolley Bus is a restored piece of history, with its classic design, tufted seats and brass details, it will transport you back in time as we take you on a journey through the city's most iconic neighborhoods and landmarks. More Info With our Luxury Los Angeles Bus Tour, you will travel in style through the entertainment capital among the theaters and stars of Hollywood Boulevard. Wind through charming Hollywood Hills, one of the historic neighborhoods of celebrity life. Have an exquisite look at some of the elite highlights of luxurious Beverly Hills. Experience legendary Sunset Strip - the place of rock music history. With stops at LA cultural centers like The Original Farmers Market and the beautiful museums along Miracle Mile, you'll create memories of a lifetime. Hollywood Boulevard - “Feel the excitement of the most iconic cultural district in the city of Los Angeles.” - Hollywood Walk of Fame - Capitol Records - Hollywood Sign - Musso & Frank - Hollywood Wax Museum - El Capitan\\ - Dolby Theater - TCL Chinese Theatres - Hollywood Museum Hollywood Hills - “Move through the winding hills and beautiful homes in the heart of Hollywood.” Sunset Boulevard / West Hollywood - \"Journey along this lively thoroughfare of bustling culture and glamorous nightlife.” - Sunset Plaza - Sunset Tower Hotel - Sunset Strip - Comedy Store - Whisky a Go Go - The Viper Room - The Roxy Theatre Beverly Hills - “Experience the luxury style of celebrity living and the exquisite beauty that surrounds this famous city.” - 15 min stop - Beverly Hills Hotel - Beverly Hills sign - Rodeo Drive - City Hall/Civic Center Miracle Mile/Museum Row - “Enjoy the amazing architecture and history along vibrant Wilshire Boulevard.” - 15 min stop for Photo at Urban Lights - LA County Museum of Art - Petersen Auto Museum - Academy Museum of Motion Pictures - La Brea Tar Pits The Original Farmers Market - “Grab a treat and take in the exotic foods, sights and sounds of over 100 gourmet vendors at this beloved historic open market.” - Passenger can choose to be dropped off here - Air-conditioned vehicle - Driver/Guide",
         "detailsText": "Sightseeing Trolley Tour of Hollywood and Beverly Hills (Seats up to 18) Sightseeing Trolley Tour of Hollywood and Beverly Hills (Seats up to 18)",
         "sourceUsed": "structured_description"
       },
@@ -2282,6 +2232,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -2304,7 +2255,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -2409,6 +2360,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -2431,7 +2383,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -2529,7 +2481,7 @@
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
       "Guests walk the corridor and look at outdoor murals along the way. The guide explains how that public-art route and its artists developed. Artists, neighborhood change, and the works on the walls are what the commentary covers. People stay on foot, and the art is viewed outside rather than inside a museum.",
-      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The tasting also stops near Venice Boardwalk and Abbot Kinney. Guests keep eating as they reach Venice Canals Select. Food is the thread: each stop is there for what guests taste, with the street as the setting."
+      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The tasting includes Venice Boardwalk and Abbot Kinney. Also poured or served are Venice Canals Select. Among the places guests actually encounter are Venice Boardwalk, Abbot Kinney, and Venice Canals Select."
     ],
     "schemaDescription": "A three-hour guided outing with Take Me Out LA in Venice.",
     "removedClaims": [
@@ -2544,7 +2496,8 @@
       "Groups stay at a maximum of 8 guests"
     ],
     "galleryImages": [],
-    "wordCount": 109,
+    "productImage": "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
+    "wordCount": 103,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "1331 Abbot Kinney Blvd Venice, CA",
@@ -2589,16 +2542,10 @@
       "hero": "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
       "heroHandle": "xxTGErtvSvidZOPPQrkP",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
-          "handle": "xxTGErtvSvidZOPPQrkP",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/los-angeles/takemeoutla-629071",
@@ -2708,6 +2655,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -2730,7 +2678,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/nOED5MVjRYhdCqre6IVt",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",

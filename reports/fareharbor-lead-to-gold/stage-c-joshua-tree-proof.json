@@ -22,6 +22,7 @@
       "Cholla Garden and Cholla Cactus Garden"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
     "wordCount": 108,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
@@ -57,16 +58,10 @@
       "hero": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
       "heroHandle": "aMGGC3clTQOSy3ObhErS",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
-          "handle": "aMGGC3clTQOSy3ObhErS",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459544",
@@ -143,7 +138,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View Duration 4.5 hours About Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide.",
+          "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View 4.5 hours Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide.",
           "More Info 15-20% gratuity is customary."
         ],
         "gleanedFacts": [],
@@ -153,14 +148,14 @@
           "Skull Rock",
           "Arch Rock",
           "Ohlsen Ranch",
+          "Key's View",
           "Cholla Cactus Garden",
-          "Cap Rock Nature Trail",
-          "More Info"
+          "Cap Rock Nature Trail"
         ],
         "measures": [
           "4.5 hours"
         ],
-        "description": "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View Duration 4.5 hours About Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide. Enjoy an educational shuttle around the park with plenty of amazing photo opportunities. Your shuttle driver and guide will take you around the park ensuring you don't miss some of the best and most picturesque spots. The sightseeing tour visits Joshua Tree Classic's including: Cholla Cactus Garden, Skull Rock, Arch Rock, Ohlsen Ranch (or Cap Rock Nature Trail), and Key's View. Tours depart at 8am from our office in Joshua Tree. You can expect to be back around 12:30pm. Your ticket includes the park entrance fee. Advance reservations recommended. More Info 15-20% gratuity is customary. For groups of 8 or more please call.",
+        "description": "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View 4.5 hours Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide. Enjoy an educational shuttle around the park with plenty of amazing photo opportunities. Your shuttle driver and guide will take you around the park ensuring you don't miss some of the best and most picturesque spots. The sightseeing tour visits Joshua Tree Classic's including: Cholla Cactus Garden, Skull Rock, Arch Rock, Ohlsen Ranch (or Cap Rock Nature Trail), and Key's View. Tours depart at 8am from our office in Joshua Tree. You can expect to be back around 12:30pm. Your ticket includes the park entrance fee. Advance reservations recommended. More Info 15-20% gratuity is customary. For groups of 8 or more please call.",
         "detailsText": "All Ages! • 4.5 Hours • Up to 7 people! All Ages! • 4.5 Hours • Up to 7 people!",
         "sourceUsed": "structured_description"
       },
@@ -196,6 +191,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -245,16 +241,10 @@
       "hero": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
       "heroHandle": "AuIFxsfS7ewtuucDaAB8",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
-          "handle": "AuIFxsfS7ewtuucDaAB8",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459584",
@@ -323,7 +313,7 @@
         "measures": [
           "3 hours"
         ],
-        "description": "Our private stargazing with an astronomer and telescope. Stargazing's are booked only as available and are limited due to their popularity when coupled with other trips and tours. Duration 2-3 hours About You will need your own vehicle to follow the astronomer into the park. Your group will meet the astronomer at the visitors center unless arranged differently with him. Start times vary for different times of the year. Your start time is subject to change if we need to start later. More Info 15-20% gratuity is customary.",
+        "description": "Our private stargazing with an astronomer and telescope. Stargazing's are booked only as available and are limited due to their popularity when coupled with other trips and tours. 2-3 hours You will need your own vehicle to follow the astronomer into the park. Your group will meet the astronomer at the visitors center unless arranged differently with him. Start times vary for different times of the year. Your start time is subject to change if we need to start later. More Info 15-20% gratuity is customary.",
         "detailsText": "All Ages! • 3 Hours • Up to 4 people All Ages! • 3 Hours • Up to 4 people",
         "sourceUsed": "structured_description"
       },
@@ -365,6 +355,7 @@
       "Joshua Tree National Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
     "wordCount": 143,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -400,16 +391,10 @@
       "hero": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
       "heroHandle": "4bQTUQjQxu0HnhIofAkA",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
-          "handle": "4bQTUQjQxu0HnhIofAkA",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459589",
@@ -497,7 +482,7 @@
           "6 hours",
           "6 miles"
         ],
-        "description": "Our most popular package, the private single-day hiking tours are the perfect way to immerse yourself in the beauty of Joshua Tree National Park. Duration 6 hours About You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. What's Included - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. Not included: - Meals - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
+        "description": "Our most popular package, the private single-day hiking tours are the perfect way to immerse yourself in the beauty of Joshua Tree National Park. 6 hours You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. Not included: - Meals - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
         "detailsText": "All Ages! • 6 Hours • Up to 7 people All Ages! • 6 Hours • Up to 7 people",
         "sourceUsed": "structured_description"
       },
@@ -538,6 +523,7 @@
       "6 hours guided outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
     "wordCount": 143,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -573,16 +559,10 @@
       "hero": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
       "heroHandle": "DNm8050SkSrT6n4nlCPu",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
-          "handle": "DNm8050SkSrT6n4nlCPu",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459590",
@@ -670,7 +650,7 @@
           "6 hours",
           "6 miles"
         ],
-        "description": "Hike into the sunset. Duration 6 hours About You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/Sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. What's Included - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. Not included: - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
+        "description": "Hike into the sunset. 6 hours You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/Sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. Not included: - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
         "detailsText": "All Ages! • 6 Hours • Up to 7 people All Ages! • 6 Hours • Up to 7 people",
         "sourceUsed": "structured_description"
       },
@@ -698,22 +678,21 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Duration About After meeting at the office, the guide will then take guests on a drive through the most parts of the park. On the way, guests receive detailed narration on park, its history, and interesting geology to Joshua Tree. Once at the trailhead, the guide will lead guests on mostly off-trail adventure through Joshua Tree wilderness.",
-      "The climbing experience includes professional instruction from the certified rock guide, and all necessary equipment. After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
-      "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
+      "The day combines a guided hike with time on the rock, after a drive to the trailhead. Most of the hiking leaves the maintained trail and crosses open ground. On the drive, the guide explains the park's geology and how the landscape formed. The climbing block includes a rappel on the formations.",
+      "A certified guide gives the climbing instruction before anyone leaves the ground. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Joshua Tree National Park. Guests come to Joshua Tree National Park, and they hear why it is on the trip."
     ],
-    "schemaDescription": "A 8-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "schemaDescription": "A guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
       "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
     ],
     "highlights": [
-      "8 hours guided outing",
       "Joshua Tree National Park"
     ],
     "galleryImages": [],
-    "wordCount": 153,
+    "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+    "wordCount": 102,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": null,
@@ -748,16 +727,10 @@
       "hero": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
       "heroHandle": "HRCEcRa9TJmx1IJAyXAr",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
-          "handle": "HRCEcRa9TJmx1IJAyXAr",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459591",
@@ -843,7 +816,7 @@
         "measures": [
           "8 hours"
         ],
-        "description": "Our private, single-day hiking and climbing tours with a certified guide are the perfect way to immerse yourself in all that Joshua Tree National Park has to offer. Duration 8 hours About After meeting at our office, Your guide will then take you on a drive through the most incredible parts of the park. Along the way, you will receive a detailed narration on the park, its history, and interesting geology unique to Joshua Tree. Once at your trailhead, your guide will lead you on a mostly off-trail adventure through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before meeting your rock guides to climb and rappel from our world-famous rock formations. Your climbing experience includes professional instruction from our certified rock guide, and all necessary equipment. Whether you are a first-time climber or multi-pitch expert, our guides will make sure you have an incredible experience. All throughout the day, your personal guides will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get to add in some epic rock scrambling to the top of some of our otherworldly rock formations, for views and experiences rarely had by others. At the conclusion of your hike and climb, time permitting, your guide will try to get you to some of the other popular sights in the park before returning you safely to our office where you can relax and talk about the memories that you have made, that will last a lifetime. NOTE: Due to the extended time period for this journey, pick-up and drop-off is not available. All hike and climb trips will meet at our office in Joshua Tree. More Info INCLUDES: Guided tour, hiking, climbing, all equipment, private instruction Park fees, Transportation from our office, and Water. Optional meals available for purchase. 15-20% gratuity is customary.",
+        "description": "Our private, single-day hiking and climbing tours with a certified guide are the perfect way to immerse yourself in all that Joshua Tree National Park has to offer. 8 hours After meeting at our office, Your guide will then take you on a drive through the most incredible parts of the park. Along the way, you will receive a detailed narration on the park, its history, and interesting geology unique to Joshua Tree. Once at your trailhead, your guide will lead you on a mostly off-trail adventure through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before meeting your rock guides to climb and rappel from our world-famous rock formations. Your climbing experience includes professional instruction from our certified rock guide, and all necessary equipment. Whether you are a first-time climber or multi-pitch expert, our guides will make sure you have an incredible experience. All throughout the day, your personal guides will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get to add in some epic rock scrambling to the top of some of our otherworldly rock formations, for views and experiences rarely had by others. At the conclusion of your hike and climb, time permitting, your guide will try to get you to some of the other popular sights in the park before returning you safely to our office where you can relax and talk about the memories that you have made, that will last a lifetime. NOTE: Due to the extended time period for this journey, pick-up and drop-off is not available. All hike and climb trips will meet at our office in Joshua Tree. More Info INCLUDES: Guided tour, hiking, climbing, all equipment, private instruction Park fees, Transportation from our office, and Water. Optional meals available for purchase. 15-20% gratuity is customary.",
         "detailsText": "All Ages! • 8 Hours • Up to 7 people! All Ages! • 8 Hours • Up to 7 people!",
         "sourceUsed": "structured_description"
       },
@@ -879,6 +852,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -904,16 +878,10 @@
       "hero": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
       "heroHandle": "Y12ZerTQHWO2gQ7Uy83D",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
-          "handle": "Y12ZerTQHWO2gQ7Uy83D",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-512102",
@@ -1014,6 +982,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/L6OL61hWRyCzJKSQUCnH"
     ],
+    "productImage": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -1048,13 +1017,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
-          "handle": "lA6YOUdiQGGbV7T1ZuIa",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/L6OL61hWRyCzJKSQUCnH",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1146,18 +1109,24 @@
     "operator": "Cascade Trails Mustang Sanctuary",
     "publicPath": "/destinations/california/joshua-tree/tours/equine-therapy-365796",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Cascade Trails Mustang Sanctuary lists this outing."
+      "Guests spend part of the visit in a hands-on session with the horses. The session is at the ranch, with the desert landscape around the grounds. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
+      "Guests stay beside the horses instead of being led around a town route. Attention also goes to Cascade Trails, and the guide explains why it is on the route. Guests are with the horses for this booking, not on a walk through town."
     ],
-    "schemaDescription": "The operator Cascade Trails Mustang Sanctuary lists this outing.",
+    "schemaDescription": "A 45-minute horse outing with Cascade Trails Mustang Sanctuary.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
     ],
-    "highlights": [],
+    "highlights": [
+      "45 minutes horse outing"
+    ],
     "galleryImages": [],
-    "wordCount": 9,
-    "durationLabel": null,
+    "productImage": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+    "wordCount": 102,
+    "durationLabel": "45 minutes",
     "durationIso": null,
     "meetingLocation": null,
     "visiblePriceLabel": null,
@@ -1185,16 +1154,10 @@
       "hero": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
       "heroHandle": "pZEW0QshTZ2ldQHCsQ7P",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
-          "handle": "pZEW0QshTZ2ldQHCsQ7P",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-365796",
@@ -1254,17 +1217,18 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration 45 minutes About Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need."
+          "45 minutes Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need."
         ],
         "gleanedFacts": [],
         "properNames": [
+          "Cascade Trails Mustang Sanctuary",
           "Cascade Trails"
         ],
         "measures": [
           "45 minutes"
         ],
-        "description": "Come experience the magic of the herd! Duration 45 minutes About Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need. Wild mustangs were welcomed immediately, and the herd continues to grow. We invite guests to come interactively experience the herd through equine therapy. Cascade Trails is a unique experience created by impassioned owners who are personally committed to saving the wild mustangs. We are dedicated to authenticity and gracious, personalized service. Our sanctuary is a perfect blend of the desert enchantment and the magic of the herd.",
-        "detailsText": "We look forward to seeing you! What to Bring Please bring water, closed toed shoes and wear long pants. All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses",
+        "description": "Come experience the magic of the herd! 45 minutes Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need. Wild mustangs were welcomed immediately, and the herd continues to grow. We invite guests to come interactively experience the herd through equine therapy. Cascade Trails is a unique experience created by impassioned owners who are personally committed to saving the wild mustangs. We are dedicated to authenticity and gracious, personalized service. Our sanctuary is a perfect blend of the desert enchantment and the magic of the herd.",
+        "detailsText": "We look forward to seeing you! Please bring water, closed toed shoes and wear long pants. All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -1291,11 +1255,11 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
-      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to.",
-      "Guests come to Joshua Tree, and they hear why it is on the trip."
+      "The session is at the ranch, with the desert landscape around the grounds. Guests walk with the horses from the ranch rather than touring town on their own. This ride is the sunset departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop.",
+      "The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route.",
+      "Guests are with the horses for this booking, not on a walk through town."
     ],
-    "schemaDescription": "A one-hour walking tour with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -1303,10 +1267,11 @@
       "Verified meeting and check-in details stay in the facts panel."
     ],
     "highlights": [
-      "one-hour walking tour in Joshua Tree"
+      "one-hour horse outing in Joshua Tree"
     ],
     "galleryImages": [],
-    "wordCount": 111,
+    "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
+    "wordCount": 112,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -1382,16 +1347,10 @@
       "hero": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
       "heroHandle": "pXFOly2EQPSCLq4kuMij",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
-          "handle": "pXFOly2EQPSCLq4kuMij",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-402194",
@@ -1518,6 +1477,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/wkhu85HQceVtRSblYcmA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -1586,13 +1546,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
-          "handle": "sdDXkES9SBGh2gbGErzl",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/wkhu85HQceVtRSblYcmA",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1665,7 +1619,7 @@
         "measures": [
           "2 people"
         ],
-        "description": "If you are staying with us, this is already included in your stay! About Come enjoy an hour of fun and relaxation with the herd. This is a great opportunity for family and friends that cannot camp with Cascade Trails but want to meet the animals. Don't forget carrots for the horses and grapes for the goats 😊 Tour Minimum Please note the first booking on each tour requires at least 2 people or $40 regardless of group size. Each person is $20 after that.",
+        "description": "If you are staying with us, this is already included in your stay! Come enjoy an hour of fun and relaxation with the herd. This is a great opportunity for family and friends that cannot camp with Cascade Trails but want to meet the animals. Don't forget carrots for the horses and grapes for the goats 😊 Tour Minimum Please note the first booking on each tour requires at least 2 people or $40 regardless of group size. Each person is $20 after that.",
         "detailsText": "Thanks for booking! Please bring treats for the animals. The horses love carrots and the goats love grapes. Bringing water for yourself is also highly recommended. Please wear closed toed shoes. See you soon! All ages! • Meet the animals All ages! • Meet the animals",
         "sourceUsed": "structured_description"
       },
@@ -1703,6 +1657,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/SbYyYEcTlAkEkxiRgoJG"
     ],
+    "productImage": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -1807,7 +1762,7 @@
         "gleanedFacts": [],
         "properNames": [],
         "measures": [],
-        "description": "If you are staying with us, please add your discount code! About This experience is very similar to our regular visitor pass; you will spend the first half getting to meet all the animals however, this pass also invites you into the pasture to meet the horses one on one. You will have the chance to groom and meet the horses on a more personal level. Bringing carrots for the horses and grapes for the goats is still highly recommended to make the experience more special. $45 per person Give us a call if you are a local or if your group is 5 or more for group discounts",
+        "description": "If you are staying with us, please add your discount code! This experience is very similar to our regular visitor pass; you will spend the first half getting to meet all the animals however, this pass also invites you into the pasture to meet the horses one on one. You will have the chance to groom and meet the horses on a more personal level. Bringing carrots for the horses and grapes for the goats is still highly recommended to make the experience more special. $45 per person Give us a call if you are a local or if your group is 5 or more for group discounts",
         "detailsText": "Thanks for booking! Few friendly reminders: - please wear closed toe shoes. Whether it's a van or a boot, as long as it's closed. - each guest must sign their own waiver! - carrots for the horses and grapes for the goats are HIGHLY recommended. See ya soon 😊 Enter the pasture and meet the horses 1:1 Enter the pasture and meet the horses 1:1",
         "sourceUsed": "structured_description"
       },
@@ -1849,6 +1804,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/HRIBawpwRRKC9oEmEoDA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
     "wordCount": 13,
     "durationLabel": "30 minutes",
     "durationIso": null,
@@ -1950,7 +1906,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration 30 minutes About The tiny ones can ride a gentle horse.",
+          "30 minutes The tiny ones can ride a gentle horse.",
           "There will be a grounds fee of $10 per person for every adult person over 5 after 2 adults ."
         ],
         "gleanedFacts": [],
@@ -1962,7 +1918,7 @@
           "30 minutes",
           "15 minutes"
         ],
-        "description": "Duration 30 minutes About The tiny ones can ride a gentle horse. Parent/Guardian/Family Member leads the horse around our grounds. You can have a staff member lead the horse for an additional fee, select Wrangler Support for each rider at check-out. Please note that the wrangler support is not providing child care, and that a family member must be present during the pony ride. We are so happy when family and friends want to visit the ranch and watch their little friends when they are led around. Everyone accompanying pony rider must complete an online waiver (link is in your confirmation email). There will be a grounds fee of $10 per person for every adult person over 5 after 2 adults . When you book the pony ride you can select the number of people over 5 and pay for them at time of booking. We can also add those people upon arrival and charge the card on file. Important - Please use adult name for contact information and put child's name in rider field. - Pony rides do not go on the trails, they are lead around the property. - We use our older and calm horses for pony rides. - Minors must have waiver signed by parent/guardian, adults accompanying minors must sign waiver. Link to waiver is in your confirmation email. Please, plan on arriving 15 minutes prior to your ride time to check-in.",
+        "description": "30 minutes The tiny ones can ride a gentle horse. Parent/Guardian/Family Member leads the horse around our grounds. You can have a staff member lead the horse for an additional fee, select Wrangler Support for each rider at check-out. Please note that the wrangler support is not providing child care, and that a family member must be present during the pony ride. We are so happy when family and friends want to visit the ranch and watch their little friends when they are led around. Everyone accompanying pony rider must complete an online waiver (link is in your confirmation email). There will be a grounds fee of $10 per person for every adult person over 5 after 2 adults . When you book the pony ride you can select the number of people over 5 and pay for them at time of booking. We can also add those people upon arrival and charge the card on file. Important - Please use adult name for contact information and put child's name in rider field. - Pony rides do not go on the trails, they are lead around the property. - We use our older and calm horses for pony rides. - Minors must have waiver signed by parent/guardian, adults accompanying minors must sign waiver. Link to waiver is in your confirmation email. Please, plan on arriving 15 minutes prior to your ride time to check-in.",
         "detailsText": "Thanks for booking the pony ride! Here is important information : - Plan on arriving 15 minutes prior to your ride time to check-in. - Wear comfortable closed toe walking shoes. - Have the child wear sturdy, closed-toe shoes and long pants. - Water should be brought for every experience. It can be purchased at check-out or at the Ranch. - Dress weather-appropriate. Wear gloves when the weather is cold. Hats are highly recommended to protect you from the sun. - You are welcome to bring carrots for the horses, or we have them for sale at the ranch. - Sunscreen is mandatory Ages 12 and under • 30 minutes • Kids get to ride a horse! Ages 12 and under • 30 minutes • Kids get to ride a horse!",
         "sourceUsed": "structured_description"
       },
@@ -2003,6 +1959,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -2032,16 +1989,10 @@
       "hero": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
       "heroHandle": "pzVf33h6RaC4Ddxw9JQY",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
-          "handle": "pzVf33h6RaC4Ddxw9JQY",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-475064",
@@ -2101,15 +2052,15 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Duration 1 hour About Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship."
+          "1 hour Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship."
         ],
         "gleanedFacts": [],
         "properNames": [],
         "measures": [
           "1 hour"
         ],
-        "description": "Interested in learning how to ride? We're happy to show you the basics of natural horsemanship and basic riding skill. Duration 1 hour About Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship. Each session includes both groundwork and riding, covering skills like approaching, catching, saddling, and effective communication with your horse. Lessons are tailored to the individual, ensuring a personalized experience based on your comfort level and prior horse or riding experience. No two lessons are exactly the same, allowing you to progress at your own pace.",
-        "detailsText": "What to bring - Please wear sturdy, closed toe shoes. Sneakers are acceptable. No sandals, flip flops or crocs. - Wear jeans or leggings, shorts are not comfortable for riding. - You are welcome to bring carrots for the horses after your lesson. Sunscreen is mandatory if riding during the day. Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers! Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers!",
+        "description": "Interested in learning how to ride? We're happy to show you the basics of natural horsemanship and basic riding skill. 1 hour Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship. Each session includes both groundwork and riding, covering skills like approaching, catching, saddling, and effective communication with your horse. Lessons are tailored to the individual, ensuring a personalized experience based on your comfort level and prior horse or riding experience. No two lessons are exactly the same, allowing you to progress at your own pace.",
+        "detailsText": "Please wear sturdy, closed toe shoes. Sneakers are acceptable. No sandals, flip flops or crocs. - Wear jeans or leggings, shorts are not comfortable for riding. - You are welcome to bring carrots for the horses after your lesson. Sunscreen is mandatory if riding during the day. Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers! Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers!",
         "sourceUsed": "structured_description"
       },
       "bookingPageValidity": {
@@ -2151,6 +2102,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/nKSSwF7QQC0NC1nqmq5N"
     ],
+    "productImage": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
     "wordCount": 18,
     "durationLabel": null,
     "durationIso": null,
@@ -2302,6 +2254,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
@@ -2341,16 +2294,10 @@
       "hero": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
       "heroHandle": "i2eqYwwzSEWuSuZqdGMI",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
-          "handle": "i2eqYwwzSEWuSuZqdGMI",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-513079",
@@ -2432,7 +2379,7 @@
         "measures": [
           "4 guests"
         ],
-        "description": "About Indulge in the perfect blend of comfort and adventure at El Dorado. Our glamping bell tent accommodates 4 guests, offering a queen bed and two twin pull-outs with premium linen. Embrace the outdoor lifestyle with amenities like an outdoor shower, hammocks, a picnic table, and a propane grill. Gather around the firepit for memorable evenings, all while enjoying the scenic view of horses in the pasture. Please note that our shared portable toilets are just a short walk from all sites, ensuring a convenient and nature-friendly experience. Immerse yourself in the beauty of the outdoors without sacrificing modern comforts. Book your stay now for a unique glamping getaway! $120 per night",
+        "description": "Indulge in the perfect blend of comfort and adventure at El Dorado. Our glamping bell tent accommodates 4 guests, offering a queen bed and two twin pull-outs with premium linen. Embrace the outdoor lifestyle with amenities like an outdoor shower, hammocks, a picnic table, and a propane grill. Gather around the firepit for memorable evenings, all while enjoying the scenic view of horses in the pasture. Please note that our shared portable toilets are just a short walk from all sites, ensuring a convenient and nature-friendly experience. Immerse yourself in the beauty of the outdoors without sacrificing modern comforts. Book your stay now for a unique glamping getaway! $120 per night",
         "detailsText": "Overnight stay • Up to 4 guests Overnight stay • Up to 4 guests",
         "sourceUsed": "structured_description"
       },
@@ -2473,6 +2420,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
     "wordCount": 131,
     "durationLabel": null,
     "durationIso": null,
@@ -2537,16 +2485,10 @@
       "hero": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
       "heroHandle": "rnpEn0QT6Dimqxm2yUgA",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
-          "handle": "rnpEn0QT6Dimqxm2yUgA",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-514091",
@@ -2680,6 +2622,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -2729,16 +2672,10 @@
       "hero": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
       "heroHandle": "XQmjkdyTjmvynf1vUTMg",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
-          "handle": "XQmjkdyTjmvynf1vUTMg",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-514094",
@@ -2828,7 +2765,7 @@
         "gleanedFacts": [],
         "properNames": [],
         "measures": [],
-        "description": "About Discover the allure of the great outdoors with our exclusive glamping experience in the Durango bell tent. Perfect for a romantic getaway, this cozy bell tent sleeps two on a comfortable queen-sized bed, complete with all necessary linen for a dreamy night under the stars. Relax in style with outdoor seating and a picnic table, creating the perfect setting for al fresco meals. Unwind by the firepit, creating memories under the night sky. The interior is adorned with solar lights, casting a warm glow in the evening hours. To ensure your comfort, Durango is equipped with a buddy heater to keep you warm during cooler nights. Propane is available for purchase or feel free to bring your own. Please note that our shared portable toilets are conveniently located a short walk from all sites, fostering a communal yet private experience. Escape to Durango for an intimate and immersive glamping adventure. Book now for an unforgettable escape into nature!",
+        "description": "Discover the allure of the great outdoors with our exclusive glamping experience in the Durango bell tent. Perfect for a romantic getaway, this cozy bell tent sleeps two on a comfortable queen-sized bed, complete with all necessary linen for a dreamy night under the stars. Relax in style with outdoor seating and a picnic table, creating the perfect setting for al fresco meals. Unwind by the firepit, creating memories under the night sky. The interior is adorned with solar lights, casting a warm glow in the evening hours. To ensure your comfort, Durango is equipped with a buddy heater to keep you warm during cooler nights. Propane is available for purchase or feel free to bring your own. Please note that our shared portable toilets are conveniently located a short walk from all sites, fostering a communal yet private experience. Escape to Durango for an intimate and immersive glamping adventure. Book now for an unforgettable escape into nature!",
         "detailsText": "Overnight Stay • Up to 2 people Overnight Stay • Up to 2 people",
         "sourceUsed": "structured_description"
       },
@@ -2869,6 +2806,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
     ],
+    "productImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
     "wordCount": 103,
     "durationLabel": null,
     "durationIso": null,
@@ -3069,6 +3007,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
     "wordCount": 103,
     "durationLabel": null,
     "durationIso": null,
@@ -3123,16 +3062,10 @@
       "hero": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
       "heroHandle": "ls30OCxpT0tC44Qxd4i8",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
-          "handle": "ls30OCxpT0tC44Qxd4i8",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-520036",
@@ -3255,11 +3188,11 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Northern California and Phineas Fittipaldi. Guests keep eating as they reach Cascade Trails Personalized and Curated Wine Tasting. Wiley Wines Guided are part of the same food route. Food is the thread: each stop is there for what guests taste, with the street as the setting.",
-      "Among the places guests actually encounter are Northern California, Phineas Fittipaldi, and Cascade Trails Personalized. Later the guide turns to Curated Wine Tasting and Wiley Wines Guided, explaining what happened there. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Northern California and Phineas Fittipaldi, and they hear why those places are on the trip."
+      "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
+      "Guests stay beside the horses instead of being led around a town route."
     ],
-    "schemaDescription": "A 1.5-hour food walk with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -3267,13 +3200,14 @@
       "Verified meeting and check-in details stay in the facts panel."
     ],
     "highlights": [
-      "1.5-hour food walk in Joshua Tree",
+      "1.5-hour horse outing in Joshua Tree",
       "Interactive Equine Experience"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg"
+      "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
-    "wordCount": 117,
+    "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+    "wordCount": 120,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -3329,20 +3263,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC",
-      "heroHandle": "s8zBlMtqQz6kYBTWK8DC",
+      "hero": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+      "heroHandle": "pQXu1NGT4OVShVE4nevg",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
-          "handle": "pQXu1NGT4OVShVE4nevg",
-          "pixelSha256": "cf6e1c4d1c163bca9471e0470c4ba8ba19b74dc1ac6b14af6d6a63f93a5b4d65",
-          "differenceHashDistanceFromHero": 126,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.39023,
+          "url": "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A",
+          "handle": "sclvfJXRBe3ArUUxVz5A",
+          "pixelSha256": "2203c579b324df3c8ab33612e0926a224490faa62f85c20ea27f3b17940e7614",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.36469,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+      "selected": "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -3469,11 +3403,10 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
-      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to.",
-      "Guests come to Joshua Tree, and they hear why it is on the trip."
+      "Guests walk with the horses from the ranch rather than touring town on their own. This ride is the morning departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
+      "Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests are with the horses for this booking, not on a walk through town. Guests come to Joshua Tree, and they hear why it is on the trip."
     ],
-    "schemaDescription": "A one-hour walking tour with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -3481,10 +3414,11 @@
       "Verified meeting and check-in details stay in the facts panel."
     ],
     "highlights": [
-      "one-hour walking tour in Joshua Tree"
+      "one-hour horse outing in Joshua Tree"
     ],
     "galleryImages": [],
-    "wordCount": 111,
+    "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+    "wordCount": 113,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -3543,16 +3477,10 @@
       "hero": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
       "heroHandle": "Ir4znAwvSAGoPUPSgXqE",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
-          "handle": "Ir4znAwvSAGoPUPSgXqE",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-598562",
@@ -3639,7 +3567,7 @@
         "measures": [
           "1 hour"
         ],
-        "description": "If you are staying with us, please add your discount code! About Enjoy a beautiful walk ride in Joshua Tree. This is a peaceful way to start your day! (Weight limit: 240 lbs) Riders must be 8 years of age or older. Some riding experience is preferred from children 12 and under.",
+        "description": "If you are staying with us, please add your discount code! Enjoy a beautiful walk ride in Joshua Tree. This is a peaceful way to start your day! (Weight limit: 240 lbs) Riders must be 8 years of age or older. Some riding experience is preferred from children 12 and under.",
         "detailsText": "",
         "sourceUsed": "structured_description"
       },
@@ -3665,19 +3593,27 @@
     "operator": "Cascade Trails Mustang Sanctuary",
     "publicPath": "/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Cascade Trails Mustang Sanctuary lists this outing."
+      "Guests spend part of the visit in a hands-on session with the horses. The session is at the ranch, with the desert landscape around the grounds. This ride is the sunset departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop.",
+      "The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route. The ride includes Joshua Tree and PM Location. Also part of the same visit are PM Sunset Sound Bath."
     ],
-    "schemaDescription": "The operator Cascade Trails Mustang Sanctuary lists this outing.",
+    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
-    "highlights": [],
+    "highlights": [
+      "one-hour horse outing in Joshua Tree",
+      "Groups are capped at 15"
+    ],
     "galleryImages": [],
-    "wordCount": 9,
-    "durationLabel": null,
-    "durationIso": null,
+    "productImage": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+    "wordCount": 100,
+    "durationLabel": "1 hour",
+    "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
     "visiblePriceLabel": null,
     "priceRows": [],
@@ -3724,16 +3660,10 @@
       "hero": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
       "heroHandle": "uK3SSJDlS4ikEEyzE6vh",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
-          "handle": "uK3SSJDlS4ikEEyzE6vh",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-646142",
@@ -3843,6 +3773,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 7,
     "durationLabel": null,
     "durationIso": null,
@@ -3865,7 +3796,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",

@@ -5,7 +5,11 @@ from __future__ import annotations
 
 import unittest
 
-from tripadvisor_ratings import google_review_pair, parse_tripadvisor_rating
+from tripadvisor_ratings import (
+    google_review_pair,
+    parse_tripadvisor_rating,
+    ratings_payload_item_id,
+)
 
 
 PATRIOT = {
@@ -94,6 +98,21 @@ class TripadvisorRatingParserTest(unittest.TestCase):
         self.assertEqual(parsed["ratingValue"], 4.7)
         self.assertEqual(parsed["reviewCount"], 1645)
         self.assertEqual(parsed["provider"], "TripAdvisor")
+
+    def test_item_pk_is_readable_without_changing_the_tripadvisor_parser(self):
+        payload = {
+            "ratings": {
+                "item": {"pk": 587300},
+                "google_reviews": {"rating": 5.0, "user_ratings_total": 373},
+            }
+        }
+        self.assertEqual(ratings_payload_item_id(payload), "587300")
+        self.assertIsNone(parse_tripadvisor_rating(payload))
+        self.assertEqual(
+            google_review_pair(payload),
+            {"ratingValue": 5, "reviewCount": 373},
+        )
+        self.assertIsNone(ratings_payload_item_id({"ratings": {"tripadvisor": {}}}))
 
 
 if __name__ == "__main__":

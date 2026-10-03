@@ -13,6 +13,8 @@ import {
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
 import { getToursByCityUnified } from "../../../../data/tours";
+import { getFareHarborProofFromTour } from "../../../../data/fareharborLeadToGoldProof";
+import { fareHarborProductImage } from "../../../../data/fareharborPresentation";
 import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
@@ -186,7 +188,10 @@ export default function CityToursIndexRoute({
       { name: "Tours", url: toursHref },
     ]);
     const itemListItems = filteredTours.map(entry => {
-      const image = resolveTourHeroImage(entry.tour);
+      const image = fareHarborProductImage(
+        getFareHarborProofFromTour(entry.tour),
+        resolveTourHeroImage(entry.tour)
+      );
       return {
         name: entry.tour.title,
         url: entry.href,

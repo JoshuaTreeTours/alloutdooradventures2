@@ -72,6 +72,19 @@ export const fareHarborShortDescriptionRepeatsExperience = (
   return Boolean(shortDescription) && shortDescription === experience;
 };
 
+export const fareHarborProductImage = (
+  proof: { productImage?: string | null } | null | undefined,
+  fallback?: string | null
+): string | null => {
+  if (!proof || !Object.prototype.hasOwnProperty.call(proof, "productImage")) {
+    const image = fallback?.trim() ?? "";
+    return image || null;
+  }
+  const image =
+    typeof proof.productImage === "string" ? proof.productImage.trim() : "";
+  return image || null;
+};
+
 export const fareHarborPriceLabel = (
   proof: Pick<FareHarborProofProduct, "visiblePriceLabel">
 ) => {

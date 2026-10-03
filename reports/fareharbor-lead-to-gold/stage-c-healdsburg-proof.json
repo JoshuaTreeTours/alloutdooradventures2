@@ -22,6 +22,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
@@ -188,7 +189,7 @@
         "accessibility": null,
         "languages": [],
         "factualSentences": [
-          "Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM About Imagine going to Provence without leaving the country...",
+          "Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM Imagine going to Provence without leaving the country...",
           "Meeting Location • Getaway Adventures/Wine Country Bikes, 359 Hudson St, Healdsburg, 95448 Includes • Use of Electric bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides."
         ],
         "gleanedFacts": [],
@@ -204,7 +205,7 @@
         "measures": [
           "12 miles"
         ],
-        "description": "Come savor the wines of the Dry Creek Valley! Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM About Imagine going to Provence without leaving the country... Sun kissed vines, olive trees, and the golden hills. We cycle along the newly paved quiet back roads, to family owned wineries, one mile at a time… Arguably the best bicycling day trip anywhere in the country. A fantastic, quiet road where every turn brings a picture postcard view. Come cycle with us Getaway Style. No one matches our routes, bikes and most importantly our guides. Discover the beauty and tranquility of these fabled wine regions. Our award winning guides will take you to all the best places, prepare a tasty picnic spread, and take you into the vineyards for our “grapes 101”. We travel 10 to 12 miles, visit 2 wineries, and have our picnic lunch at one of our favorites. Rated easy and mostly flat. Suitable for all abilities. Includes use of e-bike and helmet, all gear, van support, unlimited bottled spring water and bars. Professional guide(s), free wine pickup. Wine country picnic lunch also included. Meeting Location • Getaway Adventures/Wine Country Bikes, 359 Hudson St, Healdsburg, 95448 Includes • Use of Electric bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Quivira, Martorana, Mauritson, Bella, Comstock, Truett Hurst, Mill Creek, Kokomo, Dry Creek and many others",
+        "description": "Come savor the wines of the Dry Creek Valley! Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM Imagine going to Provence without leaving the country... Sun kissed vines, olive trees, and the golden hills. We cycle along the newly paved quiet back roads, to family owned wineries, one mile at a time… Arguably the best bicycling day trip anywhere in the country. A fantastic, quiet road where every turn brings a picture postcard view. Come cycle with us Getaway Style. No one matches our routes, bikes and most importantly our guides. Discover the beauty and tranquility of these fabled wine regions. Our award winning guides will take you to all the best places, prepare a tasty picnic spread, and take you into the vineyards for our “grapes 101”. We travel 10 to 12 miles, visit 2 wineries, and have our picnic lunch at one of our favorites. Rated easy and mostly flat. Suitable for all abilities. Includes use of e-bike and helmet, all gear, van support, unlimited bottled spring water and bars. Professional guide(s), free wine pickup. Wine country picnic lunch also included. Meeting Location • Getaway Adventures/Wine Country Bikes, 359 Hudson St, Healdsburg, 95448 Includes • Use of Electric bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Quivira, Martorana, Mauritson, Bella, Comstock, Truett Hurst, Mill Creek, Kokomo, Dry Creek and many others",
         "detailsText": "From $209 • 5.5 Hours • A local favorite! • All ages! From $209 • 5.5 Hours • A local favorite! • All ages!",
         "sourceUsed": "structured_description"
       },
@@ -230,24 +231,20 @@
     "operator": "Getaway Adventures",
     "publicPath": "/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "Attention also goes to Wine Country, and the guide explains why it is on the route. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
-      "Guests come to Wine Country, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "The operator Getaway Adventures lists this outing."
     ],
-    "schemaDescription": "Attention also goes to Wine Country, and the guide explains why it is on the route. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
+    "schemaDescription": "The operator Getaway Adventures lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8"
     ],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/eSoIA6B7SDCaJLtnH97D",
+    "wordCount": 7,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Healdsburg",
@@ -305,13 +302,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/eSoIA6B7SDCaJLtnH97D",
-          "handle": "eSoIA6B7SDCaJLtnH97D",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -377,7 +368,7 @@
         "gleanedFacts": [],
         "properNames": [],
         "measures": [],
-        "description": "Go at your own pace on this self-guided e-bike tour of some of the best cycling roads in Wine Country. About Cruise around with ease on our Specialized or Trek e-bikes as you take in the sights or visit some of our favorite wineries.",
+        "description": "Go at your own pace on this self-guided e-bike tour of some of the best cycling roads in Wine Country. Cruise around with ease on our Specialized or Trek e-bikes as you take in the sights or visit some of our favorite wineries.",
         "detailsText": "",
         "sourceUsed": "structured_description"
       },

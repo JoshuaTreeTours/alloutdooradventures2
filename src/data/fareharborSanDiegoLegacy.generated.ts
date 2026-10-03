@@ -4,166 +4,6 @@ import type { FareHarborProofProduct } from "./fareharborLeadToGoldProof.generat
 
 export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
   {
-    "itemId": "453882",
-    "company": "actionsportrentals-paradisepointresort",
-    "title": "22’ Capri Sailboat",
-    "publicPath": "/destinations/california/san-diego/tours/22-capri-sailboat-453882",
-    "engine2Path": null,
-    "exceptionStatus": "OK",
-    "paragraphs": [
-      "From the water, guests see San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks.",
-      "The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to San Diego, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group."
-    ],
-    "schemaDescription": "A 8-hour harbor outing with Action Sport Rentals - Paradise Point Resort on San Diego Harbor. The sail passes Capri.",
-    "highlights": [
-      "8-hour harbor outing in San Diego",
-      "Capri",
-      "Life vests"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/wpmmqQmAQ5CD8KCgHOTr"
-    ],
-    "wordCount": 100,
-    "durationLabel": "8 hour",
-    "durationIso": "PT8H",
-    "meetingLocation": "1404 Vacation Rd, San Diego, CA 92109 We are on the Dock out in front of Barefoot Bar & Grill.",
-    "visiblePriceLabel": "From $63.60",
-    "priceRows": [
-      {
-        "label": "One Hour Rental",
-        "note": "",
-        "amountLabel": "$63.60"
-      },
-      {
-        "label": "Two Hour Rental",
-        "note": "",
-        "amountLabel": "$106"
-      },
-      {
-        "label": "Three Hour Rental",
-        "note": "",
-        "amountLabel": "$159"
-      },
-      {
-        "label": "Four Hour Rental",
-        "note": "",
-        "amountLabel": "$185.50"
-      }
-    ],
-    "pricingNotes": [],
-    "offer": {
-      "type": "Offer",
-      "price": "63.60",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "ratingValue": 4.5,
-      "reviewCount": 94,
-      "provider": "Google"
-    },
-    "ratingProvenance": "Google rating 4.5 from 94 reviews on GET https://fareharbor.com/api/v1/companies/actionsportrentals-paradisepointresort/items/453882/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
-  },
-  {
-    "itemId": "453906",
-    "company": "actionsportrentals-paradisepointresort",
-    "title": "Single Kayaks",
-    "publicPath": "/destinations/california/san-diego/tours/single-kayaks-453906",
-    "engine2Path": null,
-    "exceptionStatus": "OK",
-    "paragraphs": [
-      "Attention also goes to Paddle Kayak, and the guide explains why it is on the route. Guests come to Paddle Kayak, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing.",
-      "Nothing is staged indoors, because the block itself is the room."
-    ],
-    "schemaDescription": "A 8-hour paddle outing with Action Sport Rentals - Paradise Point Resort in San Diego.",
-    "highlights": [
-      "8-hour paddle outing in San Diego",
-      "Life vests"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/rP3oFxKcRQS3dyLU7C6m"
-    ],
-    "wordCount": 103,
-    "durationLabel": "8 hour",
-    "durationIso": "PT8H",
-    "meetingLocation": "1404 W. Vacation Way San Diego, CA 92109",
-    "visiblePriceLabel": "From $31.80",
-    "priceRows": [
-      {
-        "label": "One Hour Rental",
-        "note": "",
-        "amountLabel": "$31.80"
-      },
-      {
-        "label": "Two Hour Rental",
-        "note": "",
-        "amountLabel": "$47.70"
-      }
-    ],
-    "pricingNotes": [],
-    "offer": {
-      "type": "Offer",
-      "price": "31.80",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "ratingValue": 4.5,
-      "reviewCount": 94,
-      "provider": "Google"
-    },
-    "ratingProvenance": "Google rating 4.5 from 94 reviews on GET https://fareharbor.com/api/v1/companies/actionsportrentals-paradisepointresort/items/453906/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
-  },
-  {
-    "itemId": "453921",
-    "company": "actionsportrentals-paradisepointresort",
-    "title": "Tandem Kayak",
-    "publicPath": "/destinations/california/san-diego/tours/tandem-kayak-453921",
-    "engine2Path": null,
-    "exceptionStatus": "OK",
-    "paragraphs": [
-      "Attention also goes to Paddle Kayak, and the guide explains why it is on the route. Guests come to Paddle Kayak, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing.",
-      "Nothing is staged indoors, because the block itself is the room."
-    ],
-    "schemaDescription": "A 8-hour paddle outing with Action Sport Rentals - Paradise Point Resort in San Diego.",
-    "highlights": [
-      "8-hour paddle outing in San Diego",
-      "Life vests"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/I9ZwzPqdQ1iOEkFus8np"
-    ],
-    "wordCount": 103,
-    "durationLabel": "8 hour",
-    "durationIso": "PT8H",
-    "meetingLocation": "1404 W. Vacation Way San Diego, CA 92109",
-    "visiblePriceLabel": "From $37.10",
-    "priceRows": [
-      {
-        "label": "One Hour Rental",
-        "note": "",
-        "amountLabel": "$37.10"
-      },
-      {
-        "label": "Two Hour Rental",
-        "note": "",
-        "amountLabel": "$53"
-      }
-    ],
-    "pricingNotes": [],
-    "offer": {
-      "type": "Offer",
-      "price": "37.10",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "ratingValue": 4.5,
-      "reviewCount": 94,
-      "provider": "Google"
-    },
-    "ratingProvenance": "Google rating 4.5 from 94 reviews on GET https://fareharbor.com/api/v1/companies/actionsportrentals-paradisepointresort/items/453921/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "567520",
     "company": "bigbluephotoexpeditions",
     "title": "Half Day Whale Watch",
@@ -181,8 +21,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Bottled water"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/dEmAX7RGS0aPHHtMRej4"
+      "https://cdn.filestackcontent.com/OPfa1KsKQUS5gCD6Rhdh"
     ],
+    "productImage": "https://cdn.filestackcontent.com/dEmAX7RGS0aPHHtMRej4",
     "wordCount": 102,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -234,6 +75,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/VnkfSgiZQpuvQF28Gwov"
     ],
+    "productImage": "https://cdn.filestackcontent.com/y22gj42kSamXk9grvgcu",
     "wordCount": 105,
     "durationLabel": "2hrs",
     "durationIso": null,
@@ -274,6 +116,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/RGLiDdS7yDJDxohogjeg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/aoKRyGGNQTOvAf0QFgJ3",
     "wordCount": 116,
     "durationLabel": "3hrs",
     "durationIso": null,
@@ -316,6 +159,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/KWzn3WyMT6O0tt4a5thi"
     ],
+    "productImage": "https://cdn.filestackcontent.com/94SGHRDvSISnTIHNBF3q",
     "wordCount": 109,
     "durationLabel": "6hrs",
     "durationIso": null,
@@ -354,8 +198,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Sand Bass White Sea Bass and PM Note Departure Time Change November"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/CxYU0FBLQZyQHuej2C6n"
+      "https://cdn.filestackcontent.com/g3ySwqPtRvSb98zQ0Ec1"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CxYU0FBLQZyQHuej2C6n",
     "wordCount": 106,
     "durationLabel": null,
     "durationIso": null,
@@ -399,8 +244,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Sand Bass White Sea Bass"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/I5sMkDzPSPyRnPenoDYQ"
+      "https://cdn.filestackcontent.com/SeC210uuQIGdeEOig22l"
     ],
+    "productImage": "https://cdn.filestackcontent.com/I5sMkDzPSPyRnPenoDYQ",
     "wordCount": 104,
     "durationLabel": null,
     "durationIso": null,
@@ -444,8 +290,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "California And Mexican Fishing License's Not"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/PoNjuTkrQAe5naOnUemy"
+      "https://cdn.filestackcontent.com/G0gJj0bSiaW2m34bQqpy"
     ],
+    "productImage": "https://cdn.filestackcontent.com/PoNjuTkrQAe5naOnUemy",
     "wordCount": 102,
     "durationLabel": null,
     "durationIso": null,
@@ -493,6 +340,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/UctxVtWmTtum3UhHVoM8"
     ],
+    "productImage": "https://cdn.filestackcontent.com/3pWVLveMSVfRgj3xatKg",
     "wordCount": 110,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -538,6 +386,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/GvnC7ioTT8SxoUPeSF1z"
     ],
+    "productImage": "https://cdn.filestackcontent.com/6m0MPfY4QYieQW1ZxzxP",
     "wordCount": 102,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
@@ -580,6 +429,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/S7AtAAftQtKcpWxkxbbx"
     ],
+    "productImage": "https://cdn.filestackcontent.com/H3mpeHo1Rw66k8unQVdO",
     "wordCount": 107,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -636,6 +486,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/3LXZMOmkTXaqAWS0WHQD"
     ],
+    "productImage": "https://cdn.filestackcontent.com/GGjkjPKTTDqtC1ptquQ8",
     "wordCount": 105,
     "durationLabel": "4 hrs",
     "durationIso": null,
@@ -692,6 +543,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/bCe0BOtuQOmrvCGLwPmF"
     ],
+    "productImage": "https://cdn.filestackcontent.com/rYaGZM7QvSBV4Lxp7NYo",
     "wordCount": 103,
     "durationLabel": "4hrs",
     "durationIso": null,
@@ -749,6 +601,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/YW42l03fQzqhN9HZ8esd"
     ],
+    "productImage": "https://cdn.filestackcontent.com/9LZPyGi3Qu2cwSyVue8J",
     "wordCount": 125,
     "durationLabel": "5hrs",
     "durationIso": null,
@@ -805,6 +658,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/uB9BtezSQyY2G8fhRbwU"
     ],
+    "productImage": "https://cdn.filestackcontent.com/4eUJKZ9HSeWaIBcN69ew",
     "wordCount": 102,
     "durationLabel": "8hrs",
     "durationIso": null,
@@ -862,6 +716,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/FqzqRyIDTNOfbOX7udnS"
     ],
+    "productImage": "https://cdn.filestackcontent.com/3oUJ9TqQImZaKf79EqTw",
     "wordCount": 123,
     "durationLabel": "10hrs",
     "durationIso": null,
@@ -918,6 +773,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/5Xh1144JTCCBXZejb2gA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/URwWqYY7TVypIup4IkGf",
     "wordCount": 103,
     "durationLabel": "4hrs",
     "durationIso": null,
@@ -965,6 +821,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/6gUNR2ZR5iEmRvbjWk0w"
     ],
+    "productImage": "https://cdn.filestackcontent.com/xRzPvfNVRcGGNpX3S7pY",
     "wordCount": 125,
     "durationLabel": "5hrs",
     "durationIso": null,
@@ -1006,6 +863,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/uLKNPNocTCaXTPYCCcLR"
     ],
+    "productImage": "https://cdn.filestackcontent.com/AyUwrAEsQAmrWU3pFqA9",
     "wordCount": 103,
     "durationLabel": "12hrs",
     "durationIso": null,
@@ -1052,6 +910,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/Wa3lwD3TGCi2VFS2L51X"
     ],
+    "productImage": "https://cdn.filestackcontent.com/cnQqSpM8Rwi8ODymshzY",
     "wordCount": 103,
     "durationLabel": "12hrs",
     "durationIso": null,
@@ -1114,6 +973,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/HJllLnhWSQCpAiyhkK3e"
     ],
+    "productImage": "https://cdn.filestackcontent.com/dmkfwCV2RzqCSPG9s3HD",
     "wordCount": 111,
     "durationLabel": "8hrs",
     "durationIso": null,
@@ -1170,6 +1030,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/ZLZ9GAkWSvaBnLISBhNQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/SizSiz1tSPGbT7O83MXu",
     "wordCount": 116,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
@@ -1230,6 +1091,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/KptoLZ7yRNKiO6S63lvp"
     ],
+    "productImage": "https://cdn.filestackcontent.com/KVDrCYk8QCemECQpImb9",
     "wordCount": 111,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1271,6 +1133,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/KvfzkcLwTMyyUGscfTLZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/fn6WTc1sTEm81E8S9DF8",
     "wordCount": 100,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1312,6 +1175,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/VaJAt05dRWuevImrik3A"
     ],
+    "productImage": "https://cdn.filestackcontent.com/wvjtDvw9Rime53dnnTim",
     "wordCount": 119,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
@@ -1363,6 +1227,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/L7p7Z6bKTvyZT9fNRFe4"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Lge78zWoTrSauLFewM6U",
     "wordCount": 108,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1418,6 +1283,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/0TxiUQyKQA1wVPCy97PZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/K0Psj26yRBOOb1Tk5ded",
     "wordCount": 103,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1468,6 +1334,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/iKfB00LBRliZU6zpvVgP"
     ],
+    "productImage": "https://cdn.filestackcontent.com/GBZ260hwQLi4r5LCZk9i",
     "wordCount": 102,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -1524,6 +1391,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/YiyNTBYFTRWqx1rQpklr"
     ],
+    "productImage": "https://cdn.filestackcontent.com/bnODfn2QQwOMMBrzS6NG",
     "wordCount": 116,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1578,6 +1446,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/utCiTtEMRc69NvNYgu5x"
     ],
+    "productImage": "https://cdn.filestackcontent.com/HNcouHPKQiO48PkhUNNK",
     "wordCount": 102,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -1634,6 +1503,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/ZeHu3BCUQ9WHHj01SUvi"
     ],
+    "productImage": "https://cdn.filestackcontent.com/zyRdWpRxTHqbrDLTSSLc",
     "wordCount": 101,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
@@ -1690,6 +1560,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/gvgK7bI0Tfu1c0coH4Dm"
     ],
+    "productImage": "https://cdn.filestackcontent.com/A17czXW9TiGxLRkZYgve",
     "wordCount": 106,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -1755,6 +1626,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/YYONJBlSTJyZzhclrqrd"
     ],
+    "productImage": "https://cdn.filestackcontent.com/ogtgWmvgSMWGGNvNkzrQ",
     "wordCount": 104,
     "durationLabel": "24 Hours",
     "durationIso": "PT24H",
@@ -1820,6 +1692,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/MISL2UzkQCyI8dS0wMyB"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Zb3kiZu2R4qtrODBnwXo",
     "wordCount": 118,
     "durationLabel": null,
     "durationIso": null,
@@ -1865,6 +1738,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/6gg55KDQ0WZAOTqs3Fuy"
     ],
+    "productImage": "https://cdn.filestackcontent.com/AzNpvy1bRxWrfFcESeyM",
     "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
@@ -1904,6 +1778,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/PEBmKKkLT3ioR6uCN2NR"
     ],
+    "productImage": "https://cdn.filestackcontent.com/vEcXKTAJSbe2o8Ebl3Yh",
     "wordCount": 109,
     "durationLabel": null,
     "durationIso": null,
@@ -1945,6 +1820,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/BxCZorf8RJ64P674gYPW"
     ],
+    "productImage": "https://cdn.filestackcontent.com/u0bKJFu6SkCcDv4dapz7",
     "wordCount": 132,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
@@ -1986,6 +1862,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/l0cI9lKOSHOxWAdiyUD0"
     ],
+    "productImage": "https://cdn.filestackcontent.com/yTU8TVcQRiu4kzYSaFz8",
     "wordCount": 142,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2027,6 +1904,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/iTJaNlWKRbeHO6ZL4ecR"
     ],
+    "productImage": "https://cdn.filestackcontent.com/pLnZThORRtqGbep1HrjB",
     "wordCount": 113,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
@@ -2070,6 +1948,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/z15wuBS7Rnq84qKDNoRW"
     ],
+    "productImage": "https://cdn.filestackcontent.com/rgnIddz1TeipdzgtSNFh",
     "wordCount": 101,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
@@ -2118,6 +1997,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/NXp9fQrQvem81HXS3XBg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sCZPZAWRRiQTbeVxMS4A",
     "wordCount": 101,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -2157,6 +2037,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Seating for up to 6"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Qeb8j7NhThm1MCto75pb",
     "wordCount": 105,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -2203,6 +2084,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/OZLPddBeTe6tgvKvv2oQ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/ovm2Yu3mRxmAII6WxeWL",
     "wordCount": 119,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -2242,6 +2124,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/m0SLMpIwRSihZulFQ3Ml"
     ],
+    "productImage": "https://cdn.filestackcontent.com/nKnRiBkT92H8S3wUGVZ8",
     "wordCount": 100,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2291,6 +2174,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/CepfrWgRRpWeVgVNkAk8"
     ],
+    "productImage": "https://cdn.filestackcontent.com/RSHDkrbcS2rhQneIoDKA",
     "wordCount": 104,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2339,6 +2223,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/7hXDfrrmR56DVs7OfHka"
     ],
+    "productImage": "https://cdn.filestackcontent.com/9kba7YEkRt6pulJ0s9Cr",
     "wordCount": 105,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2412,6 +2297,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/HAdhoYuJRiCyNWFKSVBp"
     ],
+    "productImage": "https://cdn.filestackcontent.com/TnfJlyJ9SaKH74FJUEhh",
     "wordCount": 102,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2485,6 +2371,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/wfGrUuzMT4KeT3ukVNo0"
     ],
+    "productImage": "https://cdn.filestackcontent.com/l4UDcNPR5W9E9sLBZXFW",
     "wordCount": 107,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2559,6 +2446,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/HNEw0RZQjqmbiDOOAN5g"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CtkMYbAuSfazT4VuhwYi",
     "wordCount": 109,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2603,6 +2491,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/V0JfcOKEQruX2EwqKYdY"
     ],
+    "productImage": "https://cdn.filestackcontent.com/cGVW1ub8RJWsCgMc5tgV",
     "wordCount": 112,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
@@ -2659,49 +2548,6 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "ratingProvenance": "Google rating 4.9 from 884 reviews on GET https://fareharbor.com/api/v1/companies/sailsandiego/items/561192/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
   },
   {
-    "itemId": "655952",
-    "company": "sailsandiego",
-    "title": "The Mimosa Club",
-    "publicPath": "/destinations/california/san-diego/tours/the-mimosa-club-655952",
-    "engine2Path": null,
-    "exceptionStatus": "OK",
-    "paragraphs": [
-      "From the water, guests see San Diego. The landmarks are seen from the harbor, with the boat doing the traveling. There is no walking route. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by rather than touring the sidewalks.",
-      "The course is on the water for the whole outing, and the shore is what guests are there to see. Guests come to San Diego, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group."
-    ],
-    "schemaDescription": "A two-hour guided outing with Sail San Diego in San Diego.",
-    "highlights": [
-      "two-hour guided outing in San Diego"
-    ],
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/kPdI7ehSLyffV5tOpA3u"
-    ],
-    "wordCount": 100,
-    "durationLabel": "2 Hours",
-    "durationIso": "PT2H",
-    "meetingLocation": "2720 Shelter Island Drive San Diego, CA 92106",
-    "visiblePriceLabel": "From $79.50",
-    "priceRows": [
-      {
-        "label": "Adult",
-        "note": "Ages 21+",
-        "amountLabel": "$79.50"
-      }
-    ],
-    "pricingNotes": [],
-    "offer": {
-      "type": "Offer",
-      "price": "79.50",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "ratingValue": 4.9,
-      "reviewCount": 884,
-      "provider": "Google"
-    },
-    "ratingProvenance": "Google rating 4.9 from 884 reviews on GET https://fareharbor.com/api/v1/companies/sailsandiego/items/655952/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used."
-  },
-  {
     "itemId": "106781",
     "company": "sandiegospeedboatadventures",
     "title": "GPS-Guided Scooter + Speedboat Adventure Combo Tour",
@@ -2721,6 +2567,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/JTAQnuJ3Su699DhIwRwq"
     ],
+    "productImage": "https://cdn.filestackcontent.com/Jq0Rb448TkaPjM1xVSQ4",
     "wordCount": 121,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
@@ -2768,6 +2615,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/MXB2PLYRZSZ07342gHA0"
     ],
+    "productImage": "https://cdn.filestackcontent.com/jkzoy56QMmF8Cib3xqIk",
     "wordCount": 143,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -2812,16 +2660,18 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near San Diego County and Golden State. Guests keep eating as they reach San Diego Beer. Food is the thread: each stop is there for what guests taste, with the street as the setting. Among the places guests actually encounter are San Diego County, Golden State, and San Diego Beer.",
-      "The stops exist for the food. Streets and storefronts are the setting, and tasting is the point. Guests come to San Diego County and Golden State, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "A driver takes guests to family-run vineyards in San Diego County. San Diego County is the setting, and the vineyard visits are the reason for the booking. The guide explains winemaking and how the region's vineyards got started. A meal at one of the wineries is part of the same outing.",
+      "The commentary covers how the grapes are grown and how the wine is made. Guests stay in the vehicle between vineyards rather than walking a neighborhood route. The drive passes San Diego County and Golden State. Farther along, the van goes by San Diego Beer.",
+      "The point of the outing is the succession of landmarks seen from the van, not a march between them."
     ],
-    "schemaDescription": "A 4.5-hour guided outing with San Diego Beer, Wine & Spirits Tours.",
+    "schemaDescription": "A 4.5-hour driving tour with San Diego Beer, Wine & Spirits Tours.",
     "highlights": [
-      "4.5 hours guided outing",
+      "4.5 hours driving tour",
       "Transportation (from convenient meeting locations)"
     ],
     "galleryImages": [],
-    "wordCount": 106,
+    "productImage": "https://cdn.filestackcontent.com/begfWTkLQM2aPhLK06B1",
+    "wordCount": 116,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "Choose 1. Downtown San Diego 2. Old Town 3. North County 4. Groups of 5+ and private tours may request pick up your hotel/home",
@@ -2866,6 +2716,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/jSUNM7KdTPaWYDURRvVM"
     ],
+    "productImage": "https://cdn.filestackcontent.com/V5k7SLlgR4uDusTRu5kP",
     "wordCount": 103,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
@@ -2916,8 +2767,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Sailboat Rental Fee"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/iZTsnKOJRSiZsC9h9C9F"
+      "https://cdn.filestackcontent.com/eM72b8a4RQaEnEmuvshg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/iZTsnKOJRSiZsC9h9C9F",
     "wordCount": 110,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
@@ -2972,8 +2824,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Sailboat Rental Fee"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/gycdmyrRRv6oWRdqIozF"
+      "https://cdn.filestackcontent.com/fbpeoccToG3c8C2RBprw"
     ],
+    "productImage": "https://cdn.filestackcontent.com/gycdmyrRRv6oWRdqIozF",
     "wordCount": 112,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
@@ -3029,8 +2882,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Sailboat Rental Fee"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/sTGrwnrxTXY0aTxVC6KQ"
+      "https://cdn.filestackcontent.com/rRfQaYfBQHWuDm4qT81N"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sTGrwnrxTXY0aTxVC6KQ",
     "wordCount": 105,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
@@ -3085,8 +2939,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Groups stay at a maximum of 15 guests"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/D1uahufARReIowh3grWX"
+      "https://cdn.filestackcontent.com/ptp23k5BQhuu9DwLRJ69"
     ],
+    "productImage": "https://cdn.filestackcontent.com/D1uahufARReIowh3grWX",
     "wordCount": 101,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -3130,6 +2985,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/9zblb6ABQxGVrx1h7cZ8"
     ],
+    "productImage": "https://cdn.filestackcontent.com/7z55ii6eSuy4mGFEVHzs",
     "wordCount": 105,
     "durationLabel": null,
     "durationIso": null,
@@ -3184,6 +3040,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/nGcZiXdqTVqcfaX9ahpG"
     ],
+    "productImage": "https://cdn.filestackcontent.com/PzVcdlJFQz6y36vuNWDP",
     "wordCount": 110,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
@@ -3234,6 +3091,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/k36n4XZASGCiaHbZYnkG"
     ],
+    "productImage": "https://cdn.filestackcontent.com/krKVqOYGQWWfj11vOZo8",
     "wordCount": 109,
     "durationLabel": "2.5 hours",
     "durationIso": "PT2H30M",
@@ -3278,6 +3136,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/vnFZkUQmRT6lkZUrEd7f"
     ],
+    "productImage": "https://cdn.filestackcontent.com/K5rOUudISYq28nAS23yV",
     "wordCount": 100,
     "durationLabel": "2-8 hours",
     "durationIso": null,
@@ -3342,6 +3201,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/DV1bZyjeSFrUjOIsJC8U"
     ],
+    "productImage": "https://cdn.filestackcontent.com/aaOvrrlMTluXiMdOJNwM",
     "wordCount": 100,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -3386,6 +3246,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/HBgxb3pnRTGByMV39Rir"
     ],
+    "productImage": "https://cdn.filestackcontent.com/5HaLOjT2SG6q6YrhRFkQ",
     "wordCount": 100,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -3430,6 +3291,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/tRAV00GYS7SsmFXvcBSx"
     ],
+    "productImage": "https://cdn.filestackcontent.com/j3OgPQ5yqC1GRoWpPCgA",
     "wordCount": 100,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -3474,6 +3336,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/9HIzSBbHSIyLvLXZ358G"
     ],
+    "productImage": "https://cdn.filestackcontent.com/oUtLjE61QJGn33cwmR9E",
     "wordCount": 100,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -3518,6 +3381,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/qMuhfr4jRgmJUp8VNkAs"
     ],
+    "productImage": "https://cdn.filestackcontent.com/BD9kO85sRlmabfxEQ6np",
     "wordCount": 100,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
@@ -3561,6 +3425,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/Fb2MUVVJQKuYoyCrohrp"
     ],
+    "productImage": "https://cdn.filestackcontent.com/9tF440VSN64oDAez3xJn",
     "wordCount": 100,
     "durationLabel": null,
     "durationIso": null,
@@ -3643,6 +3508,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "two-hour bicycle outing in San Diego"
     ],
     "galleryImages": [],
+    "productImage": "https://www.filepicker.io/api/file/TNQvnsGLTL2aAnPDeuRk",
     "wordCount": 106,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
@@ -3736,6 +3602,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/VuMAGFqMRVGhk6PuGx1t"
     ],
+    "productImage": "https://cdn.filestackcontent.com/m192tskPQ0KwAEsoQK52",
     "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
@@ -3779,6 +3646,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/AlaKuWD0Q3eV3wFdblow"
     ],
+    "productImage": "https://cdn.filestackcontent.com/zktelNgnT2nmkxZyDTkw",
     "wordCount": 110,
     "durationLabel": "2.5 Hours",
     "durationIso": "PT2H30M",
@@ -3822,6 +3690,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/CnolBL0bTxub6Uen2Nz9"
     ],
+    "productImage": "https://cdn.filestackcontent.com/8g20c4VrSTK1ezBeKwXq",
     "wordCount": 118,
     "durationLabel": null,
     "durationIso": null,
@@ -3865,6 +3734,7 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/9MpeyMwR0qZ4D3APzIad"
     ],
+    "productImage": "https://cdn.filestackcontent.com/5VN5yjVgT8CUngdzqQ0A",
     "wordCount": 109,
     "durationLabel": "3 - 3.5 Hours",
     "durationIso": null,
@@ -3927,8 +3797,9 @@ export const fareHarborSanDiegoLegacyProducts: FareHarborProofProduct[] = [
       "Food & Beverages"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/5b6dTfH7Tbi1IfqM5mTr"
+      "https://cdn.filestackcontent.com/YAKRrI4SLmnbyO4XNwXT"
     ],
+    "productImage": "https://cdn.filestackcontent.com/5b6dTfH7Tbi1IfqM5mTr",
     "wordCount": 102,
     "durationLabel": "3.5 - 4 hours",
     "durationIso": null,

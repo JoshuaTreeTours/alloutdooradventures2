@@ -23,6 +23,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/QAfxoxEdS5GzAkWnDKFr"
     ],
+    "productImage": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
     "wordCount": 131,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -69,6 +70,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/1p8VFaKrQJes66ImcxqI"
     ],
+    "productImage": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
     "wordCount": 147,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -115,6 +117,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/SF4LKtBJSd27B19BFWAe"
     ],
+    "productImage": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
     "wordCount": 121,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -156,6 +159,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/Ql0ffiTOQlOy0GNLK5kN"
     ],
+    "productImage": "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg",
     "wordCount": 111,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -197,6 +201,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/PD17XlwrRTOcffMzq1Os"
     ],
+    "productImage": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
     "wordCount": 131,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
@@ -244,6 +249,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/FngF3uI1SpaUjYpw2NpA"
     ],
+    "productImage": "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj",
     "wordCount": 108,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",

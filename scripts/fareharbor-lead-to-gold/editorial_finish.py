@@ -321,8 +321,9 @@ def _outing_hours(blob: str) -> str | None:
     return str(max(found))
 
 
-def _cue_sentences(kind: str, description: str) -> list[str]:
+def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
     blob = description or ""
+    titled = f"{title}\n{blob}"
     rows: list[str] = []
     if kind == "drive" and re.search(r"minivan|\bvan\b", blob, re.I):
         rows.append("Guests travel by minivan rather than covering the sights on foot.")
@@ -1065,6 +1066,102 @@ def _cue_sentences(kind: str, description: str) -> list[str]:
         rows.append(
             "Dancers, humor from the hosts, and direct involvement of the audience are what the booking details describe."
         )
+    if re.search(r"\b(horses?|equines?|mustangs?|trail rides?|walk rides?)\b", titled, re.I):
+        if re.search(r"\bwine\b", titled, re.I):
+            rows.append("The visit pairs time with the horses and a wine tasting.")
+            if re.search(r"\bwiley\b", titled, re.I):
+                rows.append("The wines poured are from Wiley Wines.")
+            if re.search(r"northern california", titled, re.I):
+                rows.append("Those wines come from Northern California vineyards.")
+            if re.search(r"\bphineas\b", titled, re.I):
+                rows.append("Phineas Fittipaldi or another host from the winery leads the tasting.")
+            if re.search(r"light bites|paired", titled, re.I):
+                rows.append("Light bites are set out with the tasting.")
+        if re.search(r"hands-on|interactive", titled, re.I):
+            rows.append("Guests spend part of the visit in a hands-on session with the horses.")
+        if re.search(r"behavior|care", titled, re.I):
+            rows.append("Staff explain how the horses are cared for and how they behave.")
+        if re.search(r"ranch|desert", titled, re.I):
+            rows.append("The session is at the ranch, with the desert landscape around the grounds.")
+        if re.search(r"trail ride|walk ride", titled, re.I):
+            rows.append("Guests walk with the horses from the ranch rather than touring town on their own.")
+        if re.search(r"\bsunset\b", titled, re.I):
+            rows.append("This ride is the sunset departure from the ranch.")
+        if re.search(r"\bmorning\b", titled, re.I):
+            rows.append("This ride is the morning departure from the ranch.")
+        rows.append("People stay with the horses for the booked session rather than on a sightseeing loop.")
+        rows.append("The booking is the time with the horses, from the start of the session until it ends.")
+        rows.append("Guests stay beside the horses instead of being led around a town route.")
+    if re.search(r"\b(bike|bicycle|cycling|e-bike|ebike)\b", titled, re.I) and re.search(
+        r"\b(wine|winery|wineries)\b", titled, re.I
+    ):
+        rows.append("Guests ride bikes between wineries rather than walking from kitchen to kitchen.")
+        if re.search(r"helmet", titled, re.I):
+            rows.append("A bike and a helmet are set out when the group checks in.")
+        if re.search(r"tasting", titled, re.I):
+            rows.append("Tastings at the wineries are arranged along the ride.")
+        if re.search(r"picnic", titled, re.I):
+            rows.append("Lunch can be a picnic at a winery or a meal at a restaurant on the route.")
+        if re.search(r"electric", titled, re.I):
+            rows.append("An electric-assist bike is offered as an upgrade for the ride.")
+        if re.search(r"\b2\s*-\s*3\b|\btwo to three\b", titled, re.I):
+            rows.append("This departure is the shorter ride, planned for about two to three hours.")
+        elif re.search(r"3\s*-\s*5\s*\+|more than three", titled, re.I):
+            rows.append("This departure is the longest ride, planned for more than three hours.")
+        elif re.search(r"3\s*-\s*5\b", titled, re.I):
+            rows.append("This departure is the mid-length ride, planned for about three to five hours.")
+        rows.append("The bikes do the traveling, and the winery stops are where guests get off to taste.")
+    if re.search(r"\bhik", titled, re.I) and re.search(r"\bclimb", titled, re.I):
+        rows.append("The day combines a guided hike with time on the rock, after a drive to the trailhead.")
+        if re.search(r"off-trail|off trail", titled, re.I):
+            rows.append("Most of the hiking leaves the maintained trail and crosses open ground.")
+        if re.search(r"geolog", titled, re.I):
+            rows.append("On the drive, the guide explains the park's geology and how the landscape formed.")
+        if re.search(r"rappel", titled, re.I):
+            rows.append("The climbing block includes a rappel on the formations.")
+        if re.search(r"certified|instruction", titled, re.I):
+            rows.append("A certified guide gives the climbing instruction before anyone leaves the ground.")
+        rows.append("Rock formations, canyons, and the long views are what the hike is there to reach.")
+    if re.search(r"\bkayak", titled, re.I):
+        if re.search(r"\bsingle\b", titled, re.I):
+            rows.append("This rental is a single kayak for one paddler on the bay.")
+        if re.search(r"\b(tandem|2 person|two person|two-person)\b", titled, re.I):
+            rows.append("This rental is a two-person kayak for paddling the bay together.")
+        if re.search(r"life\s*jacket", titled, re.I):
+            rows.append("Life jackets are included with the kayak.")
+        rows.append("Staff point out places on the bay, and guests paddle the route they choose.")
+    if re.search(r"\b(?:vineyards?|winer(?:y|ies))\b", titled, re.I) and re.search(
+        r"\b(?:driv\w*|chauffeur\w*)\b", titled, re.I
+    ):
+        if re.search(r"san diego", titled, re.I):
+            rows.append("A driver takes guests to family-run vineyards in San Diego County.")
+            rows.append("San Diego County is the setting, and the vineyard visits are the reason for the booking.")
+        else:
+            rows.append("A driver takes guests to family-run vineyards.")
+            rows.append("The vineyards are the stops, and the vehicle is how guests travel between them.")
+        rows.append("The guide explains winemaking and how the region's vineyards got started.")
+        if re.search(r"\b(meal|lunch)\b", titled, re.I):
+            rows.append("A meal at one of the wineries is part of the same outing.")
+        if re.search(r"viticulture|grapes", titled, re.I):
+            rows.append("The commentary covers how the grapes are grown and how the wine is made.")
+        rows.append("Guests stay in the vehicle between vineyards rather than walking a neighborhood route.")
+    if re.search(r"korbel|armstrong redwood|russian river", titled, re.I):
+        if re.search(r"fisherman|golden gate", titled, re.I):
+            rows.append("The day leaves Fisherman's Wharf, crosses the Golden Gate Bridge, and continues toward the Russian River.")
+        if re.search(r"korbel", titled, re.I):
+            rows.append("The first tasting is at Korbel Winery, with California Champagne and a look at the grounds.")
+        if re.search(r"deli|snacks", titled, re.I):
+            rows.append("Korbel has a deli where guests can pick up lunch or order it ahead.")
+        if re.search(r"armstrong", titled, re.I):
+            rows.append("The group then walks among the redwoods at Armstrong Redwoods State Natural Reserve.")
+            rows.append("The Colonel Armstrong tree in that reserve is more than 1,000 years old.")
+        if re.search(r"guerneville", titled, re.I):
+            rows.append("A shorter stop can be downtown Guerneville instead of a long walk in the reserve.")
+        if re.search(r"russian river vineyards", titled, re.I):
+            rows.append("The last tasting is at Russian River Vineyards, looking out over the vines.")
+        if re.search(r"sebastopol", titled, re.I):
+            rows.append("The drive back to San Francisco passes through Sebastopol and open countryside.")
+        rows.append("Tastings and the redwood reserve are the day, not a walk between neighborhood restaurants.")
     return rows
 
 
@@ -1093,11 +1190,30 @@ def _name_sentences(kind: str, names: list[str], description: str) -> list[str]:
             "Later the route reaches {pair}.",
         ]
     elif kind == "food":
+        walking = re.search(
+            r"food tour|food walk|walking tour|\bon foot\b|neighborhood",
+            description or "",
+            re.I,
+        )
+        frames = (
+            [
+                "The tasting also stops near {pair}.",
+                "Guests keep eating as they reach {pair}.",
+                "{pair} are part of the same food route.",
+                "Another pause is at {pair}.",
+            ]
+            if walking
+            else [
+                "The tasting includes {pair}.",
+                "Also poured or served are {pair}.",
+                "{pair} are part of the same tasting.",
+            ]
+        )
+    elif kind == "ride":
         frames = [
-            "The tasting also stops near {pair}.",
-            "Guests keep eating as they reach {pair}.",
-            "{pair} are part of the same food route.",
-            "Another pause is at {pair}.",
+            "The ride includes {pair}.",
+            "Also part of the same visit are {pair}.",
+            "The horses are the reason for stopping at {pair}.",
         ]
     elif kind == "paddle":
         frames = [
@@ -1161,7 +1277,9 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         )
     if kind == "sail":
         rows.append("The landmarks are seen from the harbor, with the boat doing the traveling.")
-    if kind == "food":
+    if kind == "food" and re.search(
+        r"food tour|food walk|walking tour|\bon foot\b|neighborhood", blob, re.I
+    ):
         rows.append("Food is the thread: each stop is there for what guests taste, with the street as the setting.")
     if kind == "bike":
         rows.append("Guests cover the sights by bike, stopping where the guide has something to say.")
@@ -1228,8 +1346,12 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("There is no walking route. The boat is how guests move, and the harbor is the viewpoint.")
         rows.append("People stay aboard, watching the shore go by rather than touring the sidewalks.")
         rows.append("The course is on the water for the whole outing, and the shore is what guests are there to see.")
-    elif kind == "food":
+    elif kind == "food" and re.search(
+        r"food tour|food walk|walking tour|\bon foot\b|neighborhood", blob, re.I
+    ):
         rows.append("The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.")
+    elif kind == "ride":
+        rows.append("Guests are with the horses for this booking, not on a walk through town.")
     elif kind == "bike":
         rows.append("Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.")
     elif kind == "bus":
@@ -1251,7 +1373,7 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
     elif indoor:
         rows.append("People stay in the studio for the session. The canvas in front of them is the work, not a sidewalk stop.")
         rows.append("Instruction and practice happen in the same room, and guests leave with the piece they made.")
-    else:
+    elif kind in {"walk", "outing"}:
         rows.append("Outdoors is where the account is given, with the site itself in front of the group.")
         rows.append("Talking and looking are paired at every stop.")
         rows.append("History stays attached to the places, which is why the route exists.")
@@ -1298,7 +1420,7 @@ def finish_experience(
         return None
     kind = ev.activity_kind(title, blob)
     names = _names(blob, title, operator)
-    cue_drafts = _cue_sentences(kind, blob)
+    cue_drafts = _cue_sentences(kind, blob, title)
     name_drafts = _name_sentences(kind, names, blob)
     used: list[str] = []
     kept: list[str] = []

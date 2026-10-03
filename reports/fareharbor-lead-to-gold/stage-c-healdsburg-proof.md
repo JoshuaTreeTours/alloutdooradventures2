@@ -17,8 +17,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/healdsburg`.
 - Runtime PASS: 1
 - Runtime FAIL: 0
 - Terminal removals: 0
-- PRICE_NOT_FOUND after editorial: 1
-- INSUFFICIENT_SOURCE_CONTENT: 0
+- PRICE_NOT_FOUND after editorial: 0
+- INSUFFICIENT_SOURCE_CONTENT: 1
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 1
 - Runtime pages with a FareHarbor rating: 0
@@ -37,4 +37,4 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/healdsburg`.
 
 ## Manual review
 
-- None.
+- `29272` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272` — none

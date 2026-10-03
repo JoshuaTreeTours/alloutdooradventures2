@@ -10,18 +10,18 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/san-diego`. 
 - Geography conflicts with San Diego: 5
 - Moved to another destination: 0
 - Excluded for uncertain/unmapped geography: 5
-- Published San Diego routes: 77
-- Withheld for no authoritative price: 103
+- Published San Diego routes: 73
+- Withheld for no authoritative price: 107
 - Authoritative price-preview fares among active pages: 101
 - Active PRICE_NOT_FOUND before editorial: 84
-- Runtime PASS: 77
+- Runtime PASS: 73
 - Runtime FAIL: 0
 - Terminal removals: 18
-- PRICE_NOT_FOUND after editorial: 53
-- INSUFFICIENT_SOURCE_CONTENT: 52
+- PRICE_NOT_FOUND after editorial: 52
+- INSUFFICIENT_SOURCE_CONTENT: 58
 - SOURCE_NOT_FOUND: 2
-- OK priced pages: 78
-- Runtime pages with a FareHarbor rating: 34
+- OK priced pages: 73
+- Runtime pages with a FareHarbor rating: 30
 - Runtime pages without a FareHarbor rating: 43
 
 ## Ratings
@@ -35,7 +35,7 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `673429` `Aquata - 2 Hour Charter` — 4.9 / 2633 Google
 - `673432` `Aquata - 3 Hour Charter` — 4.9 / 2633 Google
 - `673433` `Aquata - 4 Hour Charter` — 4.9 / 2633 Google
-- 26 more published pages carry a FareHarbor rating.
+- 22 more published pages carry a FareHarbor rating.
 
 ## Geography conflicts
 
@@ -81,14 +81,18 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `453703` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/21-duffy-wsundeck-453703` — none
 - `453715` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/yamaha-waverunner-453715` — none
 - `453863` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/18-capri-sailboat-453863` — none
+- `453882` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/22-capri-sailboat-453882` — none
 - `453896` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/stand-up-paddle-sup-board-453896` — none
+- `453906` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/single-kayaks-453906` — none
+- `453921` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/tandem-kayak-453921` — none
 - `453941` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/funcat-electric-catamaran-lounge-chair-453941` — none
 - `614180` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/25-catalina-sailboat-614180` — none
 - `633989` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/bare-boat-rental---speed-boat-tour-633989` — none
+- `615826` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/private-custom-yacht-charters-615826` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 28 words; rich FareHarbor source requires at least 100 words
 - `565843` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/snorkel-safari-565843` — none
-- `107835` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/padi-freediver-course-107835` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 62 words; rich FareHarbor source requires at least 100 words
-- `109487` `PRICE_NOT_FOUND` `/destinations/california/jolla/tours/padi-advanced-freediver-course-109487` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 61 words; rich FareHarbor source requires at least 100 words
-- `110584` `PRICE_NOT_FOUND` `/destinations/california/jolla/tours/padi-master-freediver-course-110584` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 64 words; rich FareHarbor source requires at least 100 words
+- `107835` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/padi-freediver-course-107835` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 62 words; rich FareHarbor source requires at least 100 words
+- `109487` `PRICE_NOT_FOUND` `/destinations/california/jolla/tours/padi-advanced-freediver-course-109487` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 61 words; rich FareHarbor source requires at least 100 words
+- `110584` `PRICE_NOT_FOUND` `/destinations/california/jolla/tours/padi-master-freediver-course-110584` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 64 words; rich FareHarbor source requires at least 100 words
 - `226915` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/basicintro-to-freedive-course-226915` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 59 words; rich FareHarbor source requires at least 100 words; full product title is repeated in the description
 - `192837` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/ferry-tickets-192837` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 30 words; rich FareHarbor source requires at least 100 words
 - `60605` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/patriot-jet-boat-thrill-ride-60605` — none
@@ -97,10 +101,10 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `581364` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/wizard-school-room-581364` — none
 - `664169` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/6-passenger-capacity-signature-dolphin-and-whale-watching-trip-25hrs-approx-664169` — none
 - `422717` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/beginner-spearfishing-course-422717` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 14 words; rich FareHarbor source requires at least 100 words
-- `483473` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/discover-freediving-tour-483473` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 30 words; rich FareHarbor source requires at least 100 words
+- `483473` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/discover-freediving-tour-483473` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 30 words; rich FareHarbor source requires at least 100 words
 - `556020` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/spearfishing-shore-tour-556020` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 11 words; rich FareHarbor source requires at least 100 words
-- `601167` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/dominica-sperm-whales-freedivingandyoga-retreat-601167` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 51 words; rich FareHarbor source requires at least 100 words; full product title is repeated in the description
-- `626043` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/freedive-yogaandbreathwork-workshop-626043` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 46 words; rich FareHarbor source requires at least 100 words
+- `601167` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/dominica-sperm-whales-freedivingandyoga-retreat-601167` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 51 words; rich FareHarbor source requires at least 100 words; full product title is repeated in the description
+- `626043` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/freedive-yogaandbreathwork-workshop-626043` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 46 words; rich FareHarbor source requires at least 100 words
 - `489736` `SOURCE_NOT_FOUND` `/destinations/california/san-diego/tours/la-playa-cove---private-duffy-cruise-489736` — none
 - `324726` `SOURCE_NOT_FOUND` `/destinations/california/san-diego/tours/private-yacht-charter-on-the-sirara-324726` — none
 - `631718` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/pasta-class-631718` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 9 words; rich FareHarbor source requires at least 100 words
@@ -110,7 +114,7 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `313747` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/san-diego-gaslamp-quarter-ghost-tour-313747` — none
 - `315509` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/san-diego-embarcadero-waterfront-ghost-tour-315509` — none
 - `497509` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/tarot-reading-497509` — none
-- `264188` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/blue-and-mako-shark-snorkeling-expedition-6hrs-264188` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 31 words; rich FareHarbor source requires at least 100 words
+- `264188` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/blue-and-mako-shark-snorkeling-expedition-6hrs-264188` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 31 words; rich FareHarbor source requires at least 100 words
 - `130626` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/island-yoga-130626` — none
 - `148858` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/rock-painting-at-tidal-beach-148858` — none
 - `155330` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/build-a-buddy-155330` — none
@@ -118,6 +122,7 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `236981` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/putt-putt-golf-236981` — none
 - `236983` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/basketball-reservation-236983` — none
 - `237011` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/tie-dye-fun-237011` — none
+- `237048` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/mission-bay-bike-tour-237048` — none
 - `240386` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/tennis-rentals-240386` — none
 - `240433` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/sea-shell-painting-at-tidal-beach-240433` — none
 - `286894` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/football-on-the-beach-286894` — none
@@ -128,6 +133,7 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `552110` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/sound-bath-and-meditation-552110` — schema description is not shorter than the editorial body; experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 28 words; rich FareHarbor source requires at least 100 words
 - `556647` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/basketball-pick-up-game-556647` — none
 - `115475` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/foam-surfboard-115475` — none
+- `655952` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/the-mimosa-club-655952` — none
 - `667283` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/cruise-san-diego-bay-667283` — none
 - `294524` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/live-beach-cleanup-294524` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 72 words; rich FareHarbor source requires at least 100 words; repetitive sentence openings: the group; repetitive construction: 3 sentences start with The group
 - `418943` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/duffy---mission-bay-rental-418943` — none
@@ -137,9 +143,11 @@ TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present
 - `486330` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/pretty-pink-duffy---seaforth-boat-rental-486330` — none
 - `507393` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/whale-watching-excursion-507393` — none
 - `624568` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/burial-at-sea-624568` — none
+- `633918` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/that-special-someone-633918` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 46 words; rich FareHarbor source requires at least 100 words
 - `304583` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/adopt-me-donation-paddle-with-rescue-pup-304583` — none
 - `588376` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/private-charter-for-14-30-people-588376` — none
 - `588758` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/private-charter-for-up-to-13-people-588758` — none
 - `602816` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/valentines-day-on-the-bay-602816` — none
 - `320731` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/san-diego/tours/yo-ho-yo-ho-its-tritons-halloween-party-for-me-320731` — none
 - `353912` `PRICE_NOT_FOUND` `/destinations/california/san-diego/tours/valentines-day-sunset-charter-353912` — dollar amount leaked into editorial copy
+- `509885` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/jolla/tours/san-diego-beach-yoga-hiking-tour-509885` — none

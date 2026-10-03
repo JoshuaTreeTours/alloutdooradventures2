@@ -24,6 +24,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/UtPWgylITg6U8tyqaOY6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
     "wordCount": 130,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -93,8 +94,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Full-Day electric bike rental"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh"
+      "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm"
     ],
+    "productImage": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
     "wordCount": 112,
     "durationLabel": "2 Days",
     "durationIso": null,
@@ -141,6 +143,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9"
     ],
+    "productImage": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
     "wordCount": 145,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
@@ -187,6 +190,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
     "wordCount": 135,
     "durationLabel": "1 or 2 days",
     "durationIso": null,
@@ -231,8 +235,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Customized start time"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX"
+      "https://cdn.filestackcontent.com/V1jNQUi7TW6gHznJVTfd"
     ],
+    "productImage": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
     "wordCount": 110,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -292,8 +297,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Ride across Golden Gate Bridge"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg"
+      "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
     "wordCount": 127,
     "durationLabel": "2 Days",
     "durationIso": null,
@@ -343,6 +349,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw"
     ],
+    "productImage": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
     "wordCount": 114,
     "durationLabel": "2.5-3 hours",
     "durationIso": null,
@@ -401,17 +408,18 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Fisherman's Wharf and Golden Gate Bridge. Guests keep eating as they reach Korbel Winery and California Champagne. Colonel Armstrong Redwoods Tree and Russian River Vineyards are part of the same food route. Food is the thread: each stop is there for what guests taste, with the street as the setting.",
-      "Among the places guests actually encounter are Fisherman's Wharf, Golden Gate Bridge, and Korbel Winery. Later the route reaches California Champagne and Colonel Armstrong Redwoods Tree. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point. Guests come to Fisherman's Wharf and Golden Gate Bridge, and they hear why those places are on the trip."
+      "The first tasting is at Korbel Winery, with California Champagne and a look at the grounds. Korbel has a deli where guests can pick up lunch or order it ahead. The group then walks among the redwoods at Armstrong Redwoods State Natural Reserve. The Colonel Armstrong tree in that reserve is more than 1,000 years old.",
+      "A shorter stop can be downtown Guerneville instead of a long walk in the reserve. The last tasting is at Russian River Vineyards, looking out over the vines. The drive back to San Francisco passes through Sebastopol and open countryside. Tastings and the redwood reserve are the day, not a walk between neighborhood restaurants."
     ],
-    "schemaDescription": "A food walk with San Francisco Tours and Activities. Guests sample food near Golden Gate Bridge, Fisherman's Wharf, and Armstrong Redwoods State Natural Reserve.",
+    "schemaDescription": "A winery outing with San Francisco Tours and Activities. The outing passes Golden Gate Bridge, Fisherman's Wharf, and Armstrong Redwoods State Natural Reserve.",
     "highlights": [
       "Golden Gate Bridge and Fisherman's Wharf"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/dizEb5EQQqisqvXPU2SP"
     ],
-    "wordCount": 117,
+    "productImage": "https://cdn.filestackcontent.com/9PbtAJDZQYy6wkEpeEiC",
+    "wordCount": 111,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "99 Jefferson street",
@@ -461,8 +469,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/utfHkyQORPOdTjB6iyGI"
     ],
+    "productImage": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
     "wordCount": 115,
-    "durationLabel": "3 Hours",
+    "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
     "visiblePriceLabel": "From $65",
@@ -514,6 +523,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Golden Gate Park and Alamo Square"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
     "wordCount": 106,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -556,6 +566,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Hippie Hill and Golden Gate Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
     "wordCount": 121,
     "durationLabel": null,
     "durationIso": null,
@@ -610,6 +621,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/mXxIADBcSjKoZMd8xSgB"
     ],
+    "productImage": "https://cdn.filestackcontent.com/vKmop1eQIyYFjjTDnI7F",
     "wordCount": 111,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
@@ -652,6 +664,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Hippie Hill and Golden Gate Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
     "wordCount": 130,
     "durationLabel": null,
     "durationIso": null,
@@ -695,6 +708,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "Golden Gate Bridge and Young Museum"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
     "wordCount": 117,
     "durationLabel": "2Hours",
     "durationIso": "PT2H",

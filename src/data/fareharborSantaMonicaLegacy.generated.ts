@@ -22,6 +22,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM"
     ],
+    "productImage": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
     "wordCount": 132,
     "durationLabel": null,
     "durationIso": null,
@@ -65,6 +66,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
     "wordCount": 106,
     "durationLabel": null,
     "durationIso": null,
@@ -120,6 +122,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf"
     ],
+    "productImage": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
     "wordCount": 111,
     "durationLabel": "2-4 Hour",
     "durationIso": null,

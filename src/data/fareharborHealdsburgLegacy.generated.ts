@@ -19,6 +19,7 @@ export const fareHarborHealdsburgLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
     "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,

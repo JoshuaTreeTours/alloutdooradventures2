@@ -6,7 +6,7 @@
   "priceAvailable": 101,
   "tripadvisorRatingAvailable": 30,
   "imageAvailable": 203,
-  "inSitemap": 74,
+  "inSitemap": 73,
   "inMerchantFeed": 0,
   "products": [
     {
@@ -177,7 +177,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": true,
+      "inSitemap": false,
       "inMerchantFeed": false
     },
     {
@@ -215,7 +215,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": true,
+      "inSitemap": false,
       "inMerchantFeed": false
     },
     {
@@ -234,7 +234,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": true,
+      "inSitemap": false,
       "inMerchantFeed": false
     },
     {
@@ -880,7 +880,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": false,
+      "inSitemap": true,
       "inMerchantFeed": false
     },
     {
@@ -994,7 +994,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": false,
+      "inSitemap": true,
       "inMerchantFeed": false
     },
     {
@@ -1298,7 +1298,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": false,
+      "inSitemap": true,
       "inMerchantFeed": false
     },
     {
@@ -2818,7 +2818,7 @@
       "priceAvailable": true,
       "tripadvisorRatingAvailable": false,
       "imageAvailable": true,
-      "inSitemap": true,
+      "inSitemap": false,
       "inMerchantFeed": false
     },
     {

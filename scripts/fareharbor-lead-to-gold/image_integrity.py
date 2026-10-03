@@ -16,6 +16,15 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 FILESTACK_RE = re.compile(r"https://cdn\.filestackcontent\.com/([A-Za-z0-9]+)")
+HARVEST_IMAGE_RE = re.compile(
+    r"https://(?:cdn\.filestackcontent\.com|www\.filepicker\.io/api/file|cdn\.filepicker\.io/api/file)/([A-Za-z0-9]+)"
+)
+
+
+def _is_harvest_image_url(url: str) -> bool:
+    return bool(HARVEST_IMAGE_RE.search(url or ""))
+
+
 FRAME_SIZE = 128
 FRAME_BYTES = FRAME_SIZE * FRAME_SIZE * 3
 DHASH_SIZE = 16
@@ -23,6 +32,55 @@ NEAR_DUPLICATE_HAMMING = 10
 NEAR_DUPLICATE_MAE = 0.05
 CACHE_DIR = Path("/tmp/fareharbor-image-hash-cache")
 FFMPEG_TIMEOUT_US = 20_000_000
+
+
+def image_url(image) -> str:
+    if isinstance(image, str):
+        return image.strip()
+    if not isinstance(image, dict):
+        return ""
+    for key in ("image_cdn_url", "image_url", "url", "image", "cropped_cdn_url"):
+        value = image.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return ""
+
+
+def bound_item_id(image) -> str | None:
+    """Item id stamped on a harvest image, or None when the image is unbound."""
+    if not isinstance(image, dict):
+        return None
+    item = image.get("item")
+    if isinstance(item, dict) and item.get("pk") is not None:
+        return str(item.get("pk"))
+    uri = str(item.get("uri") or "") if isinstance(item, dict) else ""
+    uri = uri or str(image.get("uri") or "")
+    match = re.search(r"/items/(\d+)(?:/|$)", uri)
+    return match.group(1) if match else None
+
+
+def item_owned_image_urls(payloads: list, item_id: str) -> list[str]:
+    """Filestack URLs that belong to this item, in first-seen order.
+
+    An image whose payload names a different item is dropped. Unbound URLs are
+    kept because the caller already loaded this item's harvest folder.
+    """
+    urls: list[str] = []
+    seen: set[str] = set()
+    wanted = str(item_id)
+    for payload in payloads:
+        if not isinstance(payload, dict):
+            continue
+        for image in payload.get("images") or []:
+            bound = bound_item_id(image)
+            if bound and bound != wanted:
+                continue
+            url = image_url(image)
+            if not url or url in seen or not _is_harvest_image_url(url):
+                continue
+            seen.add(url)
+            urls.append(url)
+    return urls
 
 
 def filestack_handle(url: str | None) -> str | None:

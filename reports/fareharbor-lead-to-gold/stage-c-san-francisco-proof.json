@@ -26,6 +26,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/UtPWgylITg6U8tyqaOY6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
     "wordCount": 130,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -87,17 +88,9 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/vEVpb0nQXmA7la4TnQhR",
-      "heroHandle": "vEVpb0nQXmA7la4TnQhR",
+      "hero": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
+      "heroHandle": "MlBgeZ9KTJjEGjNdRos6",
       "candidates": [
-        {
-          "url": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
-          "handle": "MlBgeZ9KTJjEGjNdRos6",
-          "pixelSha256": "74a9a5888c63b3cb6fe7805d3eb3d6cda88ecf7568e5b80774d05f40125235f3",
-          "differenceHashDistanceFromHero": 0,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.0,
-          "classification": "NEAR_DUPLICATE"
-        },
         {
           "url": "https://cdn.filestackcontent.com/UtPWgylITg6U8tyqaOY6",
           "handle": "UtPWgylITg6U8tyqaOY6",
@@ -107,19 +100,10 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
-          "handle": "MlBgeZ9KTJjEGjNdRos6",
-          "pixelSha256": "74a9a5888c63b3cb6fe7805d3eb3d6cda88ecf7568e5b80774d05f40125235f3",
-          "differenceHashDistanceFromHero": 0,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.0,
-          "classification": "NEAR_DUPLICATE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/UtPWgylITg6U8tyqaOY6",
-      "action": "substituted",
-      "reason": "distinct harvested image after removing a hero duplicate"
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/baycitybike-10199",
@@ -294,7 +278,7 @@
     "paragraphs": [
       "A few optional stops leave time to step out for photographs and a closer look. The stops are burying grounds, and the guide talks about who is buried there and why those yards still matter. Guests ride bikes rather than touring the sights on foot.",
       "Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront, with the bay alongside. The shuttle portion starts at Fisherman's Wharf. A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace.",
-      "The operator presents the ride as suitable for beginners. People stay with the bikes for the riding portion of the booking."
+      "The operator presents the ride as suitable for beginners. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
     ],
     "schemaDescription": "A three-hour guided outing with Bay City Bike in San Francisco. The outing passes Bike fitting and safety orientation, Fisherman's Wharf waterfront, and Pass through the Marina District.",
     "removedClaims": [
@@ -309,9 +293,10 @@
       "Professional guide"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/e6I1JKJmQW2lgOBrNFuT"
+      "https://cdn.filestackcontent.com/gucAj5MQIiULfYKQ88IQ"
     ],
-    "wordCount": 120,
+    "productImage": "https://cdn.filestackcontent.com/e6I1JKJmQW2lgOBrNFuT",
+    "wordCount": 142,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "2661 Taylor Street, San Francisco, CA 94133",
@@ -369,20 +354,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/CaJRm8kOQnGCdorqC5W9",
-      "heroHandle": "CaJRm8kOQnGCdorqC5W9",
+      "hero": "https://cdn.filestackcontent.com/e6I1JKJmQW2lgOBrNFuT",
+      "heroHandle": "e6I1JKJmQW2lgOBrNFuT",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/e6I1JKJmQW2lgOBrNFuT",
-          "handle": "e6I1JKJmQW2lgOBrNFuT",
-          "pixelSha256": "1314ad38264f7ff8e330a3c15343fb5dda06631a880c1f5ddc01348c61ea0101",
-          "differenceHashDistanceFromHero": 143,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26334,
+          "url": "https://cdn.filestackcontent.com/gucAj5MQIiULfYKQ88IQ",
+          "handle": "gucAj5MQIiULfYKQ88IQ",
+          "pixelSha256": "8f86fa7fb66ecf4a1c15b23e46c889f0c1a383e98659728946c6a15136d45448",
+          "differenceHashDistanceFromHero": 130,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.32143,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/e6I1JKJmQW2lgOBrNFuT",
+      "selected": "https://cdn.filestackcontent.com/gucAj5MQIiULfYKQ88IQ",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -525,8 +510,9 @@
       "Full-Day electric bike rental"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh"
+      "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm"
     ],
+    "productImage": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
     "wordCount": 112,
     "durationLabel": "2 Days",
     "durationIso": null,
@@ -595,20 +581,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/JZVRvsPUSbyzFiketr6c",
-      "heroHandle": "JZVRvsPUSbyzFiketr6c",
+      "hero": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
+      "heroHandle": "1QxtclU7TtiEqeV7KWoh",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
-          "handle": "1QxtclU7TtiEqeV7KWoh",
-          "pixelSha256": "27782dc06aa9dd7cdbbfff258d5ff6df29e7f737efef1fd3f3dff5ff69912d2e",
-          "differenceHashDistanceFromHero": 143,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24895,
+          "url": "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm",
+          "handle": "mB1wx7JISQOHd0zy20Tm",
+          "pixelSha256": "3fac0cf3075e5bdbe48a8a04d174ee4629085e0b4e63dc2301d0f4afb8c8a208",
+          "differenceHashDistanceFromHero": 113,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25684,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
+      "selected": "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -741,14 +727,14 @@
         ],
         "gleanedFacts": [],
         "properNames": [
+          "Alcatraz Tour",
           "Bike Tour",
           "Novice Activity",
           "San Francisco's",
           "Alcatraz Island",
           "Al Capone",
           "North Beach",
-          "Ferry Building",
-          "La Mission"
+          "Ferry Building"
         ],
         "measures": [
           "3 hours",
@@ -756,7 +742,7 @@
           "30 minutes",
           "4 hour"
         ],
-        "description": "Alcatraz tour on your booked date; Bike tour the next day at 11:00 AM! Duration Alcatraz Tour 2 to 3 hours Bike Tour 3 to 4 hours (Next day at 11 AM) This tour is for age 13 & up Beginner to Novice _______________________ Activity details Experience two of San Francisco's most iconic adventures with this 2-day Alcatraz and citywide e-bike tour package. On your selected booking date, head to Pier 33 to board the ferry to Alcatraz Island, where you'll explore the former federal penitentiary with the award-winning audio tour. Wander through historic cell blocks, learn about infamous inmates like Al Capone, and take in panoramic views of the Bay before returning to the city. The following day, meet your guide for a 15-mile electric bike tour through San Francisco's most vibrant neighborhoods. Ride an energy-saving e-bike that makes hills easy as you explore North Beach, cruise along the waterfront to the Ferry Building, and pass Oracle Park and the Design District. Stop for a break at a local food-truck park before continuing into La Mission to admire colorful murals and rich cultural history. Pedal through the iconic Castro District, home to Harvey Milk Plaza, and continue through the Wiggle into the legendary Haight-Ashbury area, birthplace of the Summer of Love. Finish the tour with a ride down Polk Street, an ever-evolving neighborhood layered with history, before returning to Fisherman's Wharf. Guests may keep their e-bike until closing time or return it after the tour. Alcatraz Info Alcatraz departure time will be sent approximately 4 days before your tour. The ferry depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf.",
+        "description": "Alcatraz tour on your booked date; Bike tour the next day at 11:00 AM! Alcatraz Tour 2 to 3 hours Bike Tour 3 to 4 hours (Next day at 11 AM) This tour is for age 13 & up Beginner to Novice _______________________ Activity details Experience two of San Francisco's most iconic adventures with this 2-day Alcatraz and citywide e-bike tour package. On your selected booking date, head to Pier 33 to board the ferry to Alcatraz Island, where you'll explore the former federal penitentiary with the award-winning audio tour. Wander through historic cell blocks, learn about infamous inmates like Al Capone, and take in panoramic views of the Bay before returning to the city. The following day, meet your guide for a 15-mile electric bike tour through San Francisco's most vibrant neighborhoods. Ride an energy-saving e-bike that makes hills easy as you explore North Beach, cruise along the waterfront to the Ferry Building, and pass Oracle Park and the Design District. Stop for a break at a local food-truck park before continuing into La Mission to admire colorful murals and rich cultural history. Pedal through the iconic Castro District, home to Harvey Milk Plaza, and continue through the Wiggle into the legendary Haight-Ashbury area, birthplace of the Summer of Love. Finish the tour with a ride down Polk Street, an ever-evolving neighborhood layered with history, before returning to Fisherman's Wharf. Guests may keep their e-bike until closing time or return it after the tour. Alcatraz Info Alcatraz departure time will be sent approximately 4 days before your tour. The ferry depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf.",
         "detailsText": "Bring a copy of this voucher to redeem your tours! Note, The day you book is the Alcatraz Tour • Alcatraz Tour starting time: This will be sent to you 4 days prior to the reservation date; Typically it is a morning departure time. • Bike Tour starting time: 11am. Bike Tour is the day after Alcatraz. This will be reiterated in confirmation sent to you 4 days prior. • We take a monetary authorization on all rentals, starting at $500 per Ebike. The authorized amount is held until we have the safe return of all rental equipment. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Guests must be 13 or older to ride an electric bike. Bike rental may require a credit card deposit or authorization at bike tour check-in. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Guests must be 13 or older to ride an electric bike. Bike rental may require a credit card deposit or authorization at bike tour check-in. 2 Days: Alcatraz Ticket + San Francisco Guided E-Bike Tour 2-Day Alcatraz Ticket + San Francisco E-Bike Tour",
         "sourceUsed": "structured_description"
       },
@@ -803,6 +789,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9"
     ],
+    "productImage": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
     "wordCount": 145,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
@@ -871,39 +858,22 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/bnly8JywRo24yKhvyYMd",
-      "heroHandle": "bnly8JywRo24yKhvyYMd",
+      "hero": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
+      "heroHandle": "LtFc7vu6TcO5gyJbz6xb",
       "candidates": [
-        {
-          "url": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
-          "handle": "LtFc7vu6TcO5gyJbz6xb",
-          "pixelSha256": "4d20eb240989b539c1fd09100037f7e5e50bf669d68176a09ed970da9e944526",
-          "differenceHashDistanceFromHero": 0,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.01104,
-          "classification": "NEAR_DUPLICATE"
-        },
         {
           "url": "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9",
           "handle": "Rtxf5NczTnKdLryuT0z9",
           "pixelSha256": "1cae2e53f0400fe021b0df175b34a5207846067ee55adecfbf556f4c416b4693",
           "differenceHashDistanceFromHero": 123,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.3021,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.30135,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
-          "handle": "LtFc7vu6TcO5gyJbz6xb",
-          "pixelSha256": "4d20eb240989b539c1fd09100037f7e5e50bf669d68176a09ed970da9e944526",
-          "differenceHashDistanceFromHero": 0,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.01104,
-          "classification": "NEAR_DUPLICATE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9",
-      "action": "substituted",
-      "reason": "distinct harvested image after removing a hero duplicate"
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/baycitybike-165139",
@@ -1062,6 +1032,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6"
     ],
+    "productImage": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
     "wordCount": 135,
     "durationLabel": "1 or 2 days",
     "durationIso": null,
@@ -1142,13 +1113,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
-          "handle": "5KlLVEpKQFCR2lAnnUNA",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1265,19 +1230,19 @@
         "factualSentences": [],
         "gleanedFacts": [],
         "properNames": [
+          "Alcatraz Tour",
           "Self-Guided Bike Ride",
           "PM This",
           "Novice Activity",
           "Alcatraz Island",
           "Cellhouse Audio Tour",
           "Al Capone",
-          "San Francisco's",
-          "Fort Mason"
+          "San Francisco's"
         ],
         "measures": [
           "3 hours"
         ],
-        "description": "Alcatraz tour on your booked date; Bike ride the next day anytime between 8AM to 6:30PM! Duration Alcatraz Tour: 2 to 3 hours Self-Guided Bike Ride: Anytime between 8 AM to 6:30 PM This is for age 13 & up Beginner to Novice _______________________ Activity details Start your day with an official visit to Alcatraz Island, departing from Pier 33 aboard Alcatraz Cruises. Enjoy a 2.5-hour self-guided experience that includes the renowned Cellhouse Audio Tour, featuring fascinating stories about notorious inmates such as Al Capone and “Birdman” Robert Stroud. Your Alcatraz ticket includes round-trip ferry transportation, access inside the Cellhouse, an orientation video, and a multilingual audio headset for a fully immersive visit. After returning from Alcatraz, take a short walk to our bike shop on 2661 Taylor Street to pick up your electric bike. Each e-bike comes equipped with a front handlebar bag for personal items or cameras, a rear gear rack, and a complimentary map. You'll receive a brief orientation and professional fitting before heading out on a self-guided ride along San Francisco's iconic waterfront. Cruise past scenic highlights including Aquatic Park, Fort Mason, the Marina, the Presidio, Crissy Field, and Fort Point. Many riders choose to continue across the Golden Gate Bridge to Vista Point or onward to Sausalito, where ferries are available to return to San Francisco. With a full day of e-bike use, you're free to explore at your own pace, stop for photos, enjoy breathtaking views, and experience the city in an active and unforgettable way. After your ride, you may return to San Francisco by biking back at your leisure. Alternatively, you can take a ferry back from Sausalito (ferry ticket not included). During high season, we also offer a Sausalito bike drop-off option for an additional fee.",
+        "description": "Alcatraz tour on your booked date; Bike ride the next day anytime between 8AM to 6:30PM! Alcatraz Tour: 2 to 3 hours Self-Guided Bike Ride: Anytime between 8 AM to 6:30 PM This is for age 13 & up Beginner to Novice _______________________ Activity details Start your day with an official visit to Alcatraz Island, departing from Pier 33 aboard Alcatraz Cruises. Enjoy a 2.5-hour self-guided experience that includes the renowned Cellhouse Audio Tour, featuring fascinating stories about notorious inmates such as Al Capone and “Birdman” Robert Stroud. Your Alcatraz ticket includes round-trip ferry transportation, access inside the Cellhouse, an orientation video, and a multilingual audio headset for a fully immersive visit. After returning from Alcatraz, take a short walk to our bike shop on 2661 Taylor Street to pick up your electric bike. Each e-bike comes equipped with a front handlebar bag for personal items or cameras, a rear gear rack, and a complimentary map. You'll receive a brief orientation and professional fitting before heading out on a self-guided ride along San Francisco's iconic waterfront. Cruise past scenic highlights including Aquatic Park, Fort Mason, the Marina, the Presidio, Crissy Field, and Fort Point. Many riders choose to continue across the Golden Gate Bridge to Vista Point or onward to Sausalito, where ferries are available to return to San Francisco. With a full day of e-bike use, you're free to explore at your own pace, stop for photos, enjoy breathtaking views, and experience the city in an active and unforgettable way. After your ride, you may return to San Francisco by biking back at your leisure. Alternatively, you can take a ferry back from Sausalito (ferry ticket not included). During high season, we also offer a Sausalito bike drop-off option for an additional fee.",
         "detailsText": "Bring a copy of this voucher to redeem your tours! Note, The day you book is the Alcatraz Tour • Alcatraz Tour starting time: This will be sent to you 4 days prior to the reservation date; Typically it is a morning departure time. • Bike rental will be booked for the same day of the Alcatraz tour. Call us if you want to do it on a different day. • We take a monetary authorization on all rentals, starting at $500 per Ebike. The authorized amount is held until we have the safe return of all rental equipment. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Pick up your bike anytime between 8AM to 6PM at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Bike rental may require a credit card deposit or authorization at bike tour check-in. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Pick up your bike anytime between 8AM to 6PM at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Bike rental may require a credit card deposit or authorization at bike tour check-in. Combine an official Alcatraz Island visit with a full-day self-guided electric bike rental to explore San Francisco's waterfront and iconic sights. Visit Alcatraz & ride an e-bike along San Francisco's waterfront",
         "sourceUsed": "structured_description"
       },
@@ -1322,8 +1287,9 @@
       "Customized start time"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX"
+      "https://cdn.filestackcontent.com/V1jNQUi7TW6gHznJVTfd"
     ],
+    "productImage": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
     "wordCount": 110,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -1407,20 +1373,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/vEVpb0nQXmA7la4TnQhR",
-      "heroHandle": "vEVpb0nQXmA7la4TnQhR",
+      "hero": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
+      "heroHandle": "OigHBImtTFqj90aW2xuX",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
-          "handle": "OigHBImtTFqj90aW2xuX",
-          "pixelSha256": "b7c7d29de4df17591e7af66fcbab6915890ad97019408fd707ec04842f80a275",
-          "differenceHashDistanceFromHero": 125,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.38996,
+          "url": "https://cdn.filestackcontent.com/V1jNQUi7TW6gHznJVTfd",
+          "handle": "V1jNQUi7TW6gHznJVTfd",
+          "pixelSha256": "fc89b52dab5e450c743589efc513c1e05854ab7b5b115ba07510a9d074cd029d",
+          "differenceHashDistanceFromHero": 134,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.34199,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
+      "selected": "https://cdn.filestackcontent.com/V1jNQUi7TW6gHznJVTfd",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -1595,8 +1561,9 @@
       "Ride across Golden Gate Bridge"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg"
+      "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
     "wordCount": 127,
     "durationLabel": "2 Days",
     "durationIso": null,
@@ -1662,20 +1629,20 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/6g5ddW0TIqlyYdqk721h",
-      "heroHandle": "6g5ddW0TIqlyYdqk721h",
+      "hero": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
+      "heroHandle": "buHBr3TpS0dFLFrU9XBg",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
-          "handle": "buHBr3TpS0dFLFrU9XBg",
-          "pixelSha256": "6bfec4170ba312d61a22bfbc9a2eab0aa47e4c9b0d71c16ae9e494a663c3f181",
-          "differenceHashDistanceFromHero": 121,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26006,
+          "url": "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg",
+          "handle": "QZUMQnSUW81MayWmY4Lg",
+          "pixelSha256": "ce34d9b0e553c9c009ad7272a91d14fa0ef091b200bcd131e67e90ea880dc9ee",
+          "differenceHashDistanceFromHero": 113,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22029,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
+      "selected": "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -1809,21 +1776,21 @@
         ],
         "gleanedFacts": [],
         "properNames": [
+          "Alcatraz Tour",
           "Bike Tour",
           "Novice Activity",
           "San Francisco's",
           "Golden Gate Bridge",
           "Vista Point",
           "San Francisco",
-          "Alcatraz Info Alcatraz",
-          "Riders MUST"
+          "Alcatraz Info Alcatraz"
         ],
         "measures": [
           "3 hours",
           "30 minutes",
           "3 hour"
         ],
-        "description": "Alcatraz tour on your booked date; Bike tour the next day at 11:00 AM! Duration Alcatraz Tour 2 to 3 hours Bike Tour 2.5 to 3 hours (Next day at 10 AM) Beginner to Novice _______________________ Activity details Experience 2 of San Francisco's most iconic adventures with a visit to Alcatraz followed by a guided bike tour across the Golden Gate Bridge on the day after. On your selected booking date, head to Pier 33 to board the ferry to Alcatraz Island. Explore the world-famous former prison at your own pace with the immersive audio tour, visit historic exhibits, and enjoy sweeping views of the city before returning to the mainland. The next day, meet your guide for a scenic bike tour along San Francisco's waterfront. Get fitted for your bike and helmet before pedaling toward the towering Golden Gate Bridge. Enjoy photo stops and commentary along the way, then ride across the bridge on a dedicated bike path with breathtaking views of the bay, Alcatraz, and the city skyline. After crossing into Marin, follow the path through Vista Point and down a winding road to the charming bayside town of Sausalito. Spend time exploring galleries, restaurants, and waterfront streets before returning to San Francisco by ferry (tickets sold separately). Please note: the date you select at booking is the date of your Alcatraz visit. Alcatraz departure time will be sent approximately 4 days before your tour. For the guided bike tour, please arrive 30 minutes early. Alcatraz Info Alcatraz departure time will be sent approximately 4 days before your tour. The ferry depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf.",
+        "description": "Alcatraz tour on your booked date; Bike tour the next day at 11:00 AM! Alcatraz Tour 2 to 3 hours Bike Tour 2.5 to 3 hours (Next day at 10 AM) Beginner to Novice _______________________ Activity details Experience 2 of San Francisco's most iconic adventures with a visit to Alcatraz followed by a guided bike tour across the Golden Gate Bridge on the day after. On your selected booking date, head to Pier 33 to board the ferry to Alcatraz Island. Explore the world-famous former prison at your own pace with the immersive audio tour, visit historic exhibits, and enjoy sweeping views of the city before returning to the mainland. The next day, meet your guide for a scenic bike tour along San Francisco's waterfront. Get fitted for your bike and helmet before pedaling toward the towering Golden Gate Bridge. Enjoy photo stops and commentary along the way, then ride across the bridge on a dedicated bike path with breathtaking views of the bay, Alcatraz, and the city skyline. After crossing into Marin, follow the path through Vista Point and down a winding road to the charming bayside town of Sausalito. Spend time exploring galleries, restaurants, and waterfront streets before returning to San Francisco by ferry (tickets sold separately). Please note: the date you select at booking is the date of your Alcatraz visit. Alcatraz departure time will be sent approximately 4 days before your tour. For the guided bike tour, please arrive 30 minutes early. Alcatraz Info Alcatraz departure time will be sent approximately 4 days before your tour. The ferry depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf.",
         "detailsText": "Bring a copy of this voucher to redeem your tours! Note, The day you book is the Alcatraz Tour • Alcatraz Tour starting time: This will be sent to you 4 days prior to the reservation date; Typically it is a morning departure time. • Bike Tour starting time: 10am. Bike Tour is the day after Alcatraz. This will be reiterated in confirmation sent to you 4 days prior. • We take a monetary authorization on all rentals, starting at $100 per regular bike and $500 per Ebike. The authorized amount is held until we have the safe return of all rental equipment. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Bike rental may require a credit card deposit or authorization at bike tour check-in. Alcatraz Info: Boats depart from Pier 33. Arrive a minimum of 30 minutes before your departure. All riders' names must have been submitted with booking. Riders MUST present ID at tour time. Bike Tour Info: Check-in 30 minutes before the tour and meet your guide at 2661 Taylor Street TOUR CENTER in Fisherman's Wharf. Bike rental may require a credit card deposit or authorization at bike tour check-in. 2 Day experience: Alcatraz visit + Golden Gate Bridge guided bike tour 2-Day Alcatraz Ticket & Golden Gate Bridge Bike Tour",
         "sourceUsed": "structured_description"
       },
@@ -1859,6 +1826,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -1881,7 +1849,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -1986,6 +1954,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -2008,7 +1977,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -2106,7 +2075,7 @@
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
       "Guests ride bikes rather than touring the sights on foot. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. The ride meets by Ghirardelli Square on Beach Street. A helmet is included, and the shop fits the bike before departure.",
-      "People stay with the bikes for the riding portion of the booking. Cyclists also come to Young Museum and Stow Lake. Beach Street and San Francisco CA are on the same loop. Attention also goes to Ocean Beach, and the guide explains why it is on the route."
+      "Much of the riding follows the shore, with the ocean alongside. People stay with the bikes for the riding portion of the booking. Cyclists also come to Young Museum and Stow Lake. Beach Street and San Francisco CA are on the same loop. Attention also goes to Ocean Beach, and the guide explains why it is on the route."
     ],
     "schemaDescription": "A three-hour bicycle outing with Bike & Roll San Francisco. The outing passes Young Museum, Golden Gate Park, and Beach Street.",
     "removedClaims": [
@@ -2121,7 +2090,8 @@
       "‍- Helmet"
     ],
     "galleryImages": [],
-    "wordCount": 103,
+    "productImage": "https://cdn.filestackcontent.com/JDfE0xOzR92fXjjaflD5",
+    "wordCount": 114,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "288 Beach Street, San Francisco CA, 94133",
@@ -2146,16 +2116,10 @@
       "hero": "https://cdn.filestackcontent.com/JDfE0xOzR92fXjjaflD5",
       "heroHandle": "JDfE0xOzR92fXjjaflD5",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/JDfE0xOzR92fXjjaflD5",
-          "handle": "JDfE0xOzR92fXjjaflD5",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/bikeandroll-638088",
@@ -2273,6 +2237,7 @@
       "‍- Helmet"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/EQc1aA9qTUuyD2ZPa0t5",
     "wordCount": 127,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -2298,16 +2263,10 @@
       "hero": "https://cdn.filestackcontent.com/EQc1aA9qTUuyD2ZPa0t5",
       "heroHandle": "EQc1aA9qTUuyD2ZPa0t5",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/EQc1aA9qTUuyD2ZPa0t5",
-          "handle": "EQc1aA9qTUuyD2ZPa0t5",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/bikeandroll-638096",
@@ -2422,6 +2381,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 9,
     "durationLabel": null,
     "durationIso": null,
@@ -2444,7 +2404,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -2558,6 +2518,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw"
     ],
+    "productImage": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
     "wordCount": 114,
     "durationLabel": "2.5-3 hours",
     "durationIso": null,
@@ -2631,13 +2592,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
-          "handle": "H7WvZjGQBqEjbeR52yGh",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -2787,10 +2742,10 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Fisherman's Wharf and Golden Gate Bridge. Guests keep eating as they reach Korbel Winery and California Champagne. Colonel Armstrong Redwoods Tree and Russian River Vineyards are part of the same food route. Food is the thread: each stop is there for what guests taste, with the street as the setting.",
-      "Among the places guests actually encounter are Fisherman's Wharf, Golden Gate Bridge, and Korbel Winery. Later the route reaches California Champagne and Colonel Armstrong Redwoods Tree. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point. Guests come to Fisherman's Wharf and Golden Gate Bridge, and they hear why those places are on the trip."
+      "The first tasting is at Korbel Winery, with California Champagne and a look at the grounds. Korbel has a deli where guests can pick up lunch or order it ahead. The group then walks among the redwoods at Armstrong Redwoods State Natural Reserve. The Colonel Armstrong tree in that reserve is more than 1,000 years old.",
+      "A shorter stop can be downtown Guerneville instead of a long walk in the reserve. The last tasting is at Russian River Vineyards, looking out over the vines. The drive back to San Francisco passes through Sebastopol and open countryside. Tastings and the redwood reserve are the day, not a walk between neighborhood restaurants."
     ],
-    "schemaDescription": "A food walk with San Francisco Tours and Activities. Guests sample food near Golden Gate Bridge, Fisherman's Wharf, and Armstrong Redwoods State Natural Reserve.",
+    "schemaDescription": "A winery outing with San Francisco Tours and Activities. The outing passes Golden Gate Bridge, Fisherman's Wharf, and Armstrong Redwoods State Natural Reserve.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -2803,7 +2758,8 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/dizEb5EQQqisqvXPU2SP"
     ],
-    "wordCount": 117,
+    "productImage": "https://cdn.filestackcontent.com/9PbtAJDZQYy6wkEpeEiC",
+    "wordCount": 111,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "99 Jefferson street",
@@ -2856,13 +2812,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/9PbtAJDZQYy6wkEpeEiC",
-          "handle": "9PbtAJDZQYy6wkEpeEiC",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/dizEb5EQQqisqvXPU2SP",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -2999,6 +2949,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -3021,7 +2972,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/87fVGnTIQJ6rzoTqFXQ5",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -3136,8 +3087,9 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/utfHkyQORPOdTjB6iyGI"
     ],
+    "productImage": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
     "wordCount": 115,
-    "durationLabel": "3 Hours",
+    "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
     "visiblePriceLabel": "From $65",
@@ -3224,39 +3176,22 @@
       ]
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/4ckCtTmFTlKzE2h8AmvL",
-      "heroHandle": "4ckCtTmFTlKzE2h8AmvL",
+      "hero": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
+      "heroHandle": "QJ0kzZTCR5Kaz0qgtGsb",
       "candidates": [
-        {
-          "url": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
-          "handle": "QJ0kzZTCR5Kaz0qgtGsb",
-          "pixelSha256": "0f839f8ab6985b438529970da9680f1b86beaf7e6d59100abdd58262586ca83b",
-          "differenceHashDistanceFromHero": 10,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00217,
-          "classification": "NEAR_DUPLICATE"
-        },
         {
           "url": "https://cdn.filestackcontent.com/utfHkyQORPOdTjB6iyGI",
           "handle": "utfHkyQORPOdTjB6iyGI",
           "pixelSha256": "0f3217567a96f709adb9662d7ff06425738d8f8b9db8badd4fc545d37e36b387",
-          "differenceHashDistanceFromHero": 117,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26692,
+          "differenceHashDistanceFromHero": 121,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26683,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
-          "handle": "QJ0kzZTCR5Kaz0qgtGsb",
-          "pixelSha256": "0f839f8ab6985b438529970da9680f1b86beaf7e6d59100abdd58262586ca83b",
-          "differenceHashDistanceFromHero": 10,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.00217,
-          "classification": "NEAR_DUPLICATE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/utfHkyQORPOdTjB6iyGI",
-      "action": "substituted",
-      "reason": "distinct harvested image after removing a hero duplicate"
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/unlimitedbiking-138644",
@@ -3322,7 +3257,7 @@
         "decimalPlaces": 2
       },
       "facts": {
-        "duration": "3 Hours",
+        "duration": "3 hours",
         "meetingAddress": "757 Beach Street San Francisco, CA 94109",
         "itemLocation": "757 Beach Street San Francisco, CA 94109",
         "headline": "All Ages! • 3 Hours",
@@ -3360,7 +3295,7 @@
           "3 Hours",
           "15 guests"
         ],
-        "description": "Duration 3 Hours About Explore San Francisco - the City by the Bay with its rolling hills and never ending water views - with Unlimited Biking on a beautiful bike ride along the city's stunning waterfront, across the Golden Gate Bridge, towards the quaint coastal community of Sausalito. Tours depart daily at 10am from Unlimited Biking's storefront on 887 Beach Street, at the foot of Ghirardelli Square, and last for 3 hours. To ensure a personalized guest experience, each tour will be held in a small-group format of no more than 15 guests. After departing from Ghirardelli Square at the western end of Fisherman's Wharf, guests will bike through the green hillside of Fort Mason, the Marina District, through Crissy Fields, up to and across the Golden Gate Bridge, and then down the Marin Headlands into Sausalito. There, guests can either stay to explore Sausalito on their own, or take the ferry back to San Francisco. Guests on this small-group bike tour will be fitted with state-of-the-art Cannondale bikes. For a nominal fee, guests can also upgrade to e-bikes. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group.",
+        "description": "3 Hours Explore San Francisco - the City by the Bay with its rolling hills and never ending water views - with Unlimited Biking on a beautiful bike ride along the city's stunning waterfront, across the Golden Gate Bridge, towards the quaint coastal community of Sausalito. Tours depart daily at 10am from Unlimited Biking's storefront on 887 Beach Street, at the foot of Ghirardelli Square, and last for 3 hours. To ensure a personalized guest experience, each tour will be held in a small-group format of no more than 15 guests. After departing from Ghirardelli Square at the western end of Fisherman's Wharf, guests will bike through the green hillside of Fort Mason, the Marina District, through Crissy Fields, up to and across the Golden Gate Bridge, and then down the Marin Headlands into Sausalito. There, guests can either stay to explore Sausalito on their own, or take the ferry back to San Francisco. Guests on this small-group bike tour will be fitted with state-of-the-art Cannondale bikes. For a nominal fee, guests can also upgrade to e-bikes. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group.",
         "detailsText": "We are excited to have you join our amazing tour guides on an adventure over San Francisco's most iconic bridge! This tour is approximately 3 hours long and covers many of SF's best sights, such as The Golden Gate Bridge, Sausalito and much more! Please try to arrive 10-15 minutes before your tour's starting time to check in with our team and meet your guide! Your outfit should be seasonally suitable; we also suggest that you dress in something comfy, not too loose, and closed-toe shoes. Don't forget a proper ID and your camera! Please keep in mind that this tour ends in Sausalito. From there, you can ride back or take the Blue and Gold Ferry back to Fisherman's Wharf! Know Before You Go: - All children must be one year or older to be on any bike/bike attachments for the child's own safety. - Any riders who are under 18 years of age must have an adult present to check in and sign the waiver form in behalf of them. We require a valid identity card upon check in. - For all our riders' safety, we are not able to accommodate any riders who are 300 pounds and over as this exceeds the weight limit the manufacturer has advised for the bike's build. We apologize for the inconvenience, but we do prioritize your safety during the ride. If anything from the list above concerns you or any members of your party, please feel free to reach out to our team by responding to this email. We will get back to you as soon as we can! All Ages! • 3 Hours All Ages! • 3 Hours",
         "sourceUsed": "structured_description"
       },
@@ -3404,6 +3339,7 @@
       "Golden Gate Park and Alamo Square"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
     "wordCount": 106,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -3485,16 +3421,10 @@
       "hero": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
       "heroHandle": "xGESOWORQrxa5Ik9AqpQ",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
-          "handle": "xGESOWORQrxa5Ik9AqpQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/unlimitedbiking-201053",
@@ -3586,7 +3516,7 @@
           "4 hours",
           "4 hour"
         ],
-        "description": "You'll get to know San Francisco's patchwork of neighborhoods on the Best of San Francisco Electric Bike Tour! Duration 4 hours About This 4 hour guided ebike ride is your introduction to the city's colorful history and cultures, with routes through its most vibrant neighborhoods, including the Mission, Castro, Haight-Ashbury, and Alamo Square. You'll see how SF has been shaped by waves of settlers, from Spanish missionaries to Silicon Valley techies. Join us as we pedal past dazzling murals, Victorian row houses, famous viewpoints, thriving commercial districts, and gems of Golden Gate Park. Ghirardelli Square: Our Start and End Location Alamo Square: Home to the Painted Ladies and one of the most iconic views in the city. Nopa: Residential neighborhood filled with Victorian architecture. Panhandle: The handle to Golden Gate Park's “pan,” this narrow park boasts redwood, cypress, and pine trees. Golden Gate Park: The city's ultimate treasure, it is where we go to run, ride, play, and think. Haight-Ashbury: The famous 1960's hippie hangout and former home to the Grateful Dead, Janis Joplin, and more. Lower Haight: Less famous than its Haight sibling up the hill, Lower Haight boasts hip shops, local bars, and the famous Wiggle bike route. Castro: Vibrant, colorful, and rooted in activism, the Castro is sure to put a smile on your face. Mission: Dynamic neighborhood with Latino roots and an abundance of historic murals. We don't stop for lunch on this tour, but we do include a snack stop. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group. Tour Times: 9:30 AM Daily Tips Dress appropriately for the weather and don't forget your camera!",
+        "description": "You'll get to know San Francisco's patchwork of neighborhoods on the Best of San Francisco Electric Bike Tour! 4 hours This 4 hour guided ebike ride is your introduction to the city's colorful history and cultures, with routes through its most vibrant neighborhoods, including the Mission, Castro, Haight-Ashbury, and Alamo Square. You'll see how SF has been shaped by waves of settlers, from Spanish missionaries to Silicon Valley techies. Join us as we pedal past dazzling murals, Victorian row houses, famous viewpoints, thriving commercial districts, and gems of Golden Gate Park. Ghirardelli Square: Our Start and End Location Alamo Square: Home to the Painted Ladies and one of the most iconic views in the city. Nopa: Residential neighborhood filled with Victorian architecture. Panhandle: The handle to Golden Gate Park's “pan,” this narrow park boasts redwood, cypress, and pine trees. Golden Gate Park: The city's ultimate treasure, it is where we go to run, ride, play, and think. Haight-Ashbury: The famous 1960's hippie hangout and former home to the Grateful Dead, Janis Joplin, and more. Lower Haight: Less famous than its Haight sibling up the hill, Lower Haight boasts hip shops, local bars, and the famous Wiggle bike route. Castro: Vibrant, colorful, and rooted in activism, the Castro is sure to put a smile on your face. Mission: Dynamic neighborhood with Latino roots and an abundance of historic murals. We don't stop for lunch on this tour, but we do include a snack stop. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group. Tour Times: 9:30 AM Daily Tips Dress appropriately for the weather and don't forget your camera!",
         "detailsText": "We are excited to have you join our amazing tour guides on an adventure through San Francisco! This tour is approximately 4 hours long and covers all the must-see sights! Please try to arrive 10-15 minutes before your tour's starting time to check in with our team and meet your guide! Your outfit should be seasonally suitable; we also suggest that you dress in something comfy, not too loose, and closed-toe shoes. Don't forget a proper ID and your camera! Know Before Your Go: - You must be at least 13 years old to ride an electric bike. We do not attach children's attachments to ebikes. - Any riders who are under 18 years of age must have an adult present to check in and sign the waiver form in behalf of them. We require a valid identity card upon check in. - For all our riders' safety, we are not able to accommodate any riders who are 300 pounds and over as this exceeds the weight limit the manufacturer has advised for the bike's build. We apologize for the inconvenience, but we do prioritize your safety during the ride. If anything from the list above concerns you or any members of your party, please feel free to reach out to our team by responding to this email. We will get back to you as soon as we can! 4 Hours • All Ages • See first hand the city's colorful history and cultures! 4 Hours • All Ages • See first hand the city's colorful history and cultures!",
         "sourceUsed": "structured_description"
       },
@@ -3629,6 +3559,7 @@
       "Hippie Hill and Golden Gate Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
     "wordCount": 121,
     "durationLabel": null,
     "durationIso": null,
@@ -3720,16 +3651,10 @@
       "hero": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
       "heroHandle": "X88GqyOZRZOXAyGEaeGQ",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
-          "handle": "X88GqyOZRZOXAyGEaeGQ",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/unlimitedbiking-201055",
@@ -3876,6 +3801,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/mXxIADBcSjKoZMd8xSgB"
     ],
+    "productImage": "https://cdn.filestackcontent.com/vKmop1eQIyYFjjTDnI7F",
     "wordCount": 111,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
@@ -4059,7 +3985,7 @@
         "measures": [
           "4 Hours"
         ],
-        "description": "Duration 4 Hours About This guided ride is your introduction to the city's colorful history and cultures, with routes through its most vibrant neighborhoods, including the Mission, Castro, Haight-Ashbury, and Alamo Square. You'll see how SF has been shaped by waves of settlers, from Spanish missionaries to Silicon Valley techies. Join us as we pedal past dazzling murals, Victorian row houses, famous viewpoints, thriving commercial districts, and gems of Golden Gate Park. You'll surely come away with new perspectives on the city after visiting: Ghirardelli Square: Our Start and End Location. Alamo Square: Home to the Painted Ladies and one of the most iconic views in the city. Nopa: Residential neighborhood filled with Victorian architecture. Panhandle: The handle to Golden Gate Park's “pan,” this narrow park boasts redwood, cypress, and pine trees. Golden Gate Park: The city's ultimate treasure, it is where we go to run, ride, play, and think. Haight-Ashbury: The famous 1960's hippie hangout and former home to the Grateful Dead, Janis Joplin, and more. Lower Haight: Less famous than its Haight sibling up the hill, Lower Haight boasts hip shops, local bars, and the famous Wiggle bike route. Castro: Vibrant, colorful, and rooted in activism, the Castro is sure to put a smile on your face. Mission: Dynamic neighborhood with Latino roots and an abundance of historic murals. We don't stop for lunch on this tour, but we do include a snack stop. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group. Tour Times: 9:30AM Daily Tips Dress appropriately for the weather and don't forget your camera!",
+        "description": "4 Hours This guided ride is your introduction to the city's colorful history and cultures, with routes through its most vibrant neighborhoods, including the Mission, Castro, Haight-Ashbury, and Alamo Square. You'll see how SF has been shaped by waves of settlers, from Spanish missionaries to Silicon Valley techies. Join us as we pedal past dazzling murals, Victorian row houses, famous viewpoints, thriving commercial districts, and gems of Golden Gate Park. You'll surely come away with new perspectives on the city after visiting: Ghirardelli Square: Our Start and End Location. Alamo Square: Home to the Painted Ladies and one of the most iconic views in the city. Nopa: Residential neighborhood filled with Victorian architecture. Panhandle: The handle to Golden Gate Park's “pan,” this narrow park boasts redwood, cypress, and pine trees. Golden Gate Park: The city's ultimate treasure, it is where we go to run, ride, play, and think. Haight-Ashbury: The famous 1960's hippie hangout and former home to the Grateful Dead, Janis Joplin, and more. Lower Haight: Less famous than its Haight sibling up the hill, Lower Haight boasts hip shops, local bars, and the famous Wiggle bike route. Castro: Vibrant, colorful, and rooted in activism, the Castro is sure to put a smile on your face. Mission: Dynamic neighborhood with Latino roots and an abundance of historic murals. We don't stop for lunch on this tour, but we do include a snack stop. All guests must be able to ride their own bicycles. Attachments such as double trailers and tagalong bikes are not permitted for the safety of the group. Tour Times: 9:30AM Daily Tips Dress appropriately for the weather and don't forget your camera!",
         "detailsText": "We are excited to have you join our amazing tour guides on an adventure through San Francisco! This tour is approximately 4 hours long and covers all the must-see sights! Please try to arrive 10-15 minutes before your tour's starting time to check in with our team and meet your guide! Your outfit should be seasonally suitable; we also suggest that you dress in something comfy, not too loose, and closed-toe shoes. Don't forget a proper ID and your camera! Know Before You Go: - All children must be one year or older to be on any bike/bike attachments. - Any riders who are under 18 years of age must have an adult present to check in and sign the waiver form in behalf of them. We require a valid identity card upon check in. - For all our riders' safety, we are not able to accommodate any riders who are 300 pounds and over as this exceeds the weight limit the manufacturer has advised for the bike's build. We apologize for the inconvenience, but we do prioritize your safety during the ride. If anything from the list above concerns you or any members of your party, please feel free to reach out to our team by responding to this email. We will get back to you as soon as we can! 4 Hours • All Ages! 4 Hours • All Ages!",
         "sourceUsed": "structured_description"
       },
@@ -4102,6 +4028,7 @@
       "Hippie Hill and Golden Gate Park"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
     "wordCount": 130,
     "durationLabel": null,
     "durationIso": null,
@@ -4183,16 +4110,10 @@
       "hero": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
       "heroHandle": "MctECLigTik6NbecyE3b",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
-          "handle": "MctECLigTik6NbecyE3b",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/unlimitedbiking-313936",
@@ -4328,6 +4249,7 @@
       "Golden Gate Bridge and Young Museum"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
     "wordCount": 117,
     "durationLabel": "2Hours",
     "durationIso": "PT2H",
@@ -4407,16 +4329,10 @@
       "hero": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
       "heroHandle": "gJnb19rgTxOvZbBGY7Oz",
       "candidates": [],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
-          "handle": "gJnb19rgTxOvZbBGY7Oz",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": null,
       "action": "none",
-      "reason": "no distinct harvested image"
+      "reason": "no harvest images"
     },
     "source": {
       "artifacts": "data/fareharbor-lead-to-gold/san-francisco/unlimitedbiking-315246",
@@ -4520,7 +4436,7 @@
           "2Hours",
           "4Hours"
         ],
-        "description": "San Francisco eBike Rentals Duration 2Hours , 4Hours, All Day About Explore San Francisco's famous Golden Gate Park, with tons of sights and landmarks along with its beautiful bike paths - or see both the Park and the Golden Gate Bridge on one amazing, mostly flat 9-mile electric bike ride! Unlimited Biking will arm you with all you need for your adventure - a helmet, a map, a bike bag/basket, and a bike lock, all free of charge - you just supply the need to explore! These pedal assist bikes will do a majority of the work for you so you can see more, with less work! Visit all of the highlights of the park including Stow Lake Boathouse, Academy of the Sciences, de Young Museum, Conservatory of Flowers, Botanical Garden, Rose Garden, Dutch Windmill and more! Golden Gate Park has a paved trail of around 4-miles from one end of the park to the other! After your ride, you can return back to our shop, or head towards the Golden Gate Bridge. Bikes can be returned at any of our locations. Operation Days April 1st - October 31st: Store Hours: 9am to 7pm November 1st - March 31st: Store Hours: 9am to 5pm Tips Dress appropriately for the weather and bring your camera!",
+        "description": "San Francisco eBike Rentals 2Hours , 4Hours, All Day Explore San Francisco's famous Golden Gate Park, with tons of sights and landmarks along with its beautiful bike paths - or see both the Park and the Golden Gate Bridge on one amazing, mostly flat 9-mile electric bike ride! Unlimited Biking will arm you with all you need for your adventure - a helmet, a map, a bike bag/basket, and a bike lock, all free of charge - you just supply the need to explore! These pedal assist bikes will do a majority of the work for you so you can see more, with less work! Visit all of the highlights of the park including Stow Lake Boathouse, Academy of the Sciences, de Young Museum, Conservatory of Flowers, Botanical Garden, Rose Garden, Dutch Windmill and more! Golden Gate Park has a paved trail of around 4-miles from one end of the park to the other! After your ride, you can return back to our shop, or head towards the Golden Gate Bridge. Bikes can be returned at any of our locations. Operation Days April 1st - October 31st: Store Hours: 9am to 7pm November 1st - March 31st: Store Hours: 9am to 5pm Tips Dress appropriately for the weather and bring your camera!",
         "detailsText": "2, 4 All Day • Ages 16+ • Explore the city on an eBike! 2, 4 All Day • Ages 16+ • Explore the city on an eBike!",
         "sourceUsed": "structured_description"
       },

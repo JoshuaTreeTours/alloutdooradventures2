@@ -8,6 +8,7 @@ import {
 } from "./fareharborLeadToGoldProof";
 import {
   fareHarborPriceLabel,
+  fareHarborProductImage,
   fareHarborRating,
   fareHarborRatingParityErrors,
   fareHarborShortDescription,
@@ -187,5 +188,26 @@ describe("FareHarbor presentation parity", () => {
       ],
     });
     expect(mismatch.join("\n")).toContain("disagrees");
+  });
+
+  it("uses an item image when the proof names one and keeps the catalog hero otherwise", () => {
+    expect(
+      fareHarborProductImage(
+        { productImage: "https://cdn.filestackcontent.com/item-owned" },
+        "https://cdn.filestackcontent.com/catalog"
+      )
+    ).toBe("https://cdn.filestackcontent.com/item-owned");
+    expect(
+      fareHarborProductImage(
+        { productImage: null },
+        "https://cdn.filestackcontent.com/catalog"
+      )
+    ).toBeNull();
+    expect(
+      fareHarborProductImage(
+        { aggregateRating: null },
+        "https://cdn.filestackcontent.com/catalog"
+      )
+    ).toBe("https://cdn.filestackcontent.com/catalog");
   });
 });

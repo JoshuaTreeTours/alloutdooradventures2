@@ -112,7 +112,13 @@ describe("FareHarbor California statewide rollout", () => {
   });
 
   it("publishes only priced California products on their resolved destinations", () => {
-    expect(getFareHarborSanDiegoLegacyProducts()).toHaveLength(77);
+    expect(getFareHarborSanDiegoLegacyProducts()).toHaveLength(73);
+    for (const itemId of ["453882", "453906", "453921", "655952"]) {
+      expect(
+        getFareHarborSanDiegoLegacyProducts().some(product => product.itemId === itemId),
+        itemId
+      ).toBe(false);
+    }
     expect(getFareHarborSanFranciscoLegacyProducts()).toHaveLength(14);
     expect(getFareHarborJoshuaTreeLegacyProducts()).toHaveLength(12);
     expect(getFareHarborRedondoBeachLegacyProducts()).toHaveLength(8);

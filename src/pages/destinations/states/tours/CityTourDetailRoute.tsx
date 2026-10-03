@@ -34,6 +34,7 @@ import {
 } from "../../../../data/fareharborLeadToGoldProof";
 import {
   fareHarborMobileStickyBooking,
+  fareHarborProductImage,
   fareHarborShortDescriptionRepeatsExperience,
 } from "../../../../data/fareharborPresentation";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
@@ -691,11 +692,13 @@ export default function CityTourDetailRoute({
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const heroImage =
+  const proof = getFareHarborProofFromTour(tour);
+  const catalogHero =
     resolveHeroImageForRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const heroImage = fareHarborProductImage(proof, catalogHero) ?? undefined;
   const baseStructuredImages = heroImage ? [heroImage] : [];
   const bookingUrl =
     tour && !isSuppressedFareHarborBookingPage(tour)
@@ -704,7 +707,6 @@ export default function CityTourDetailRoute({
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
-  const proof = getFareHarborProofFromTour(tour);
   const proofSchemaDescription = proof?.schemaDescription;
   const productDescription =
     proofSchemaDescription ??

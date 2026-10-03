@@ -20,6 +20,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
       "4 hours bicycle outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2",
     "wordCount": 114,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -88,6 +89,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
       "Oat Hill Mine Trail"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
     "wordCount": 114,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -132,16 +134,14 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery."
     ],
-    "schemaDescription": "A 2- to 3-hour food walk with Calistoga Bikeshop.",
-    "highlights": [
-      "2-3 hours food walk"
-    ],
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
+    "wordCount": 100,
     "durationLabel": "2-3 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -225,16 +225,14 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery."
     ],
-    "schemaDescription": "A 3- to 5-hour food walk with Calistoga Bikeshop.",
-    "highlights": [
-      "3-5 hours food walk"
-    ],
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+    "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
+    "wordCount": 101,
     "durationLabel": "3-5 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -318,14 +316,15 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
-      "Guests come to Bella Bakery and Palisades Eatery, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Bella Bakery and Palisades Eatery.",
+      "Guests cover the sights by bike, stopping where the guide has something to say."
     ],
-    "schemaDescription": "The tasting also stops near Bella Bakery and Palisades Eatery. Food is the thread: each stop is there for what guests taste, with the street as the setting. The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.",
+    "schemaDescription": "Guests ride bikes between wineries rather than walking from kitchen to kitchen. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
     "highlights": [],
     "galleryImages": [],
-    "wordCount": 114,
+    "productImage": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
+    "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -400,6 +399,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/WqgkaZtSoOgHUOcZQBgU"
     ],
+    "productImage": "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw",
     "wordCount": 118,
     "durationLabel": null,
     "durationIso": null,

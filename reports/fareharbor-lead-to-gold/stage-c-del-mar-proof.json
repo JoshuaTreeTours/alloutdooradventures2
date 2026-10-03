@@ -24,6 +24,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/75409NMSGOIfzwcvRgiC"
     ],
+    "productImage": "https://cdn.filestackcontent.com/SGnMaNG6Tm6sM6k2LURj",
     "wordCount": 16,
     "durationLabel": "60-90 minutes",
     "durationIso": null,
@@ -187,6 +188,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3"
     ],
+    "productImage": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
     "wordCount": 44,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
@@ -221,13 +223,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
-          "handle": "DqZj3FAvQnmXgt9TpCCE",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -344,9 +340,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Guests hear about Custom Girl Scout Trip and Miniature Horse. The guide's account includes Madagascar Hissing Cockroach and Guinea Pig. Stories along the way cover Pet Encounter Therapy. Among the places guests actually encounter are Custom Girl Scout Trip, Miniature Horse, and Madagascar Hissing Cockroach.",
-      "Later the route reaches Guinea Pig and Pet Encounter Therapy. Guests come to Custom Girl Scout Trip and Miniature Horse, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
+      "Staff explain how the horses are cared for and how they behave. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route.",
+      "Guests hear about Custom Girl Scout Trip and Miniature Horse. The guide's account includes Madagascar Hissing Cockroach and Guinea Pig. Stories along the way cover Pet Encounter Therapy. Among the places guests actually encounter are Custom Girl Scout Trip, Miniature Horse, and Madagascar Hissing Cockroach."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -362,7 +357,8 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B"
     ],
-    "wordCount": 111,
+    "productImage": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
+    "wordCount": 102,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -529,6 +525,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/RgNRKabMToq6mwRAwMoS"
     ],
+    "productImage": "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i",
     "wordCount": 37,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
@@ -563,13 +560,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i",
-          "handle": "NRimou5cQOqV2aIXQ10i",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/RgNRKabMToq6mwRAwMoS",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -703,6 +694,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
+    "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
     "wordCount": 109,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
@@ -910,6 +902,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/aVHRYXA3StO9Af8jaQ6o"
     ],
+    "productImage": "https://cdn.filestackcontent.com/4b9vaH9SQ1awioxUlbe7",
     "wordCount": 38,
     "durationLabel": "60-90 minutes",
     "durationIso": null,
@@ -1078,6 +1071,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
+    "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
     "wordCount": 109,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -1276,6 +1270,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
     "wordCount": 105,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
@@ -1474,6 +1469,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
     "wordCount": 114,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -1671,8 +1667,9 @@
       "Themed face painting"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8"
+      "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx"
     ],
+    "productImage": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
     "wordCount": 34,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
@@ -1695,20 +1692,20 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/9eSCWtx6Q8K3nSG6Zxe0",
-      "heroHandle": "9eSCWtx6Q8K3nSG6Zxe0",
+      "hero": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
+      "heroHandle": "UrZ8xSkCSbfw8hVpnGI8",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
-          "handle": "UrZ8xSkCSbfw8hVpnGI8",
-          "pixelSha256": "af5b450c06376f91134f258497f2b2f143312cf1a3ca4e5efdc792c988ea99b4",
-          "differenceHashDistanceFromHero": 131,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24835,
+          "url": "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx",
+          "handle": "cwpuL1q7RSeXWTg1zXOx",
+          "pixelSha256": "96e5e075667d08d5681a0298873c652e3d5fa6789647968613b5792d7cab9b3e",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25132,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
+      "selected": "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },
@@ -1838,8 +1835,9 @@
       "Onsite: mini horse, chicken, frog"
     ],
     "galleryImages": [
-      "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek"
+      "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
+    "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
     "wordCount": 108,
     "durationLabel": null,
     "durationIso": null,
@@ -1897,20 +1895,20 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/c6rJ6prCRVOZI8EAAKkp",
-      "heroHandle": "c6rJ6prCRVOZI8EAAKkp",
+      "hero": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
+      "heroHandle": "sEO38S0T9esk4TOgzFek",
       "candidates": [
         {
-          "url": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
-          "handle": "sEO38S0T9esk4TOgzFek",
-          "pixelSha256": "1a45b44867260d57eb731807b6c65ceaea93f1ce0d0d710147f4ff4f8f56ecd8",
-          "differenceHashDistanceFromHero": 121,
-          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24938,
+          "url": "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph",
+          "handle": "P1TOzw1XQoGD6l63r9ph",
+          "pixelSha256": "ed4c7acb1ca66c2fde5b30b249ee24c02198283d94a8bcd679e7742ccaaf9d99",
+          "differenceHashDistanceFromHero": 134,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26161,
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
       "rejected": [],
-      "selected": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
+      "selected": "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
     },

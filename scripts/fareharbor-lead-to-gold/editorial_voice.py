@@ -462,7 +462,13 @@ def activity_kind(title: str, description: str = "") -> str:
     """Guest activity implied by the title, then the description."""
     title_text = (title or "").lower()
     blob = f"{title_text} {(description or '').lower()}"
-    if re.search(r"\b(driv(?:e|ing)|minivan)\b", title_text):
+    if re.search(r"\b(horses?|equines?|mustangs?|trail rides?)\b", title_text):
+        return "ride"
+    if re.search(r"\b(wine|tasting)\b", title_text) and re.search(
+        r"\b(?:e-?bikes?|bikes?|bicycle|cycling)\b", blob
+    ) and not re.search(r"food tour|food walk|walking tour", blob):
+        return "bike"
+    if re.search(r"\b(driv(?:e|ing)|minivan|chauffeur\w*)\b", title_text):
         return "drive"
     if re.search(r"\b(kayak|paddle|canoe)\b", title_text):
         return "paddle"
@@ -519,10 +525,12 @@ def activity_contradiction_errors(
     kind = activity_kind(title, description)
     body = " ".join(paragraphs or [])
     errors = []
-    if kind in {"drive", "sail", "bike", "paddle", "food", "surf"} and re.search(r"\bthe walk\b", body, re.I):
+    if kind in {"drive", "sail", "bike", "paddle", "food", "surf", "ride"} and re.search(r"\bthe walk\b", body, re.I):
         errors.append(f"activity contradiction: walking language on a {kind} tour")
-    if kind in {"drive", "sail", "bike", "paddle", "food", "surf"} and re.search(r"\bwalking tour\b", body, re.I):
+    if kind in {"drive", "sail", "bike", "paddle", "food", "surf", "ride"} and re.search(r"\bwalking tour\b", body, re.I):
         errors.append(f"activity contradiction: called a walking tour but the activity is {kind}")
+    if kind == "ride" and re.search(r"\bfood walk\b", body, re.I):
+        errors.append("activity contradiction: food-walk language on a horse outing")
     if kind in {"drive", "walk", "bike", "food", "paddle"} and re.search(r"\bthe sail\b", body, re.I):
         errors.append(f"activity contradiction: sailing language on a {kind} tour")
     if kind == "sail" and re.search(r"\bthe ride\b", body, re.I):
@@ -621,6 +629,8 @@ def prose_quality_errors(
     description: str = "",
 ) -> list[str]:
     errors = []
+    errors.extend(section_label_leak_errors(paragraphs))
+    errors.extend(invented_food_walk_errors(paragraphs, title, description))
     errors.extend(activity_contradiction_errors(paragraphs, title, description))
     errors.extend(title_repetition_errors(paragraphs, title))
     errors.extend(repetitive_construction_errors(paragraphs))
@@ -728,14 +738,59 @@ def duration_adjective(duration: str | None) -> str | None:
     return None
 
 
+def section_label_leak_errors(paragraphs: list[str]) -> list[str]:
+    """Headings such as Duration and About must not survive as prose."""
+    errors = []
+    for paragraph in paragraphs or []:
+        if re.search(r"\bDuration\s+About\b", paragraph):
+            errors.append("section label leaked into prose: Duration About")
+        if re.match(r"^(?:Duration|Overview|Details|Highlights)\b", paragraph):
+            errors.append(f"section label leaked into prose: {paragraph[:48]}")
+        if re.match(
+            r"^About\s+(?!(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten)\b)",
+            paragraph,
+        ):
+            errors.append("section label leaked into prose: About")
+    return errors
+
+
+def invented_food_walk_errors(
+    paragraphs: list[str],
+    title: str = "",
+    description: str = "",
+) -> list[str]:
+    body = " ".join(paragraphs or [])
+    if not re.search(
+        r"streets and storefronts are the setting|the stops exist for the food|\bfood walk\b",
+        body,
+        re.I,
+    ):
+        return []
+    blob = f"{title}\n{description}"
+    if re.search(r"food tour|food walk|walking tour|\bon foot\b|neighborhood", blob, re.I):
+        return []
+    return ["invented food-walk framing is not in the item source"]
+
+
 def activity_phrase(title: str, description: str = "") -> str:
     text = (title or "").lower()
     desc = (description or "").lower()
+    blob = f"{text} {desc}"
+    if re.search(r"horse|equine|mustang|trail ride", text):
+        return "horse outing"
+    if re.search(r"\b(wine|tasting)\b", text) and re.search(
+        r"\b(?:e-?bikes?|bikes?|bicycle|cycling)\b", blob
+    ) and not re.search(r"food tour|food walk|walking tour", blob):
+        return "bicycle outing"
     if re.search(r"bike|bicycle|cycling|e-bike|scooter", text):
         return "bicycle outing"
+    if re.search(r"\b(wine|tasting)\b", text) and re.search(
+        r"\b(?:winery|vineyard|champagne)\b", blob
+    ) and not re.search(r"food tour|food walk|walking tour", blob):
+        return "winery outing"
     if re.search(r"kayak|paddle|canoe", text):
         return "paddle outing"
-    if re.search(r"\bdriv", text):
+    if re.search(r"\bdriv|chauffeur", text):
         return "driving tour"
     if re.search(r"sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack", text):
         return "harbor outing"
@@ -833,7 +888,8 @@ def is_junk_place_label(name: str) -> bool:
         r"special feature|water slide|tiki|fusion sound|happy place|"
         r"all fun|entrance fee|group size|semi-private|professional tour|"
         r"about me|paid separately|must be paid|best way|open air|what to bring|"
-        r"restroom|coffee break|bathroom|waiver|mother nature)\b",
+        r"restroom|coffee break|bathroom|waiver|mother nature)\b|"
+        r"(?:personalized|guided|tasting|experience)\s*$",
         key,
     ):
         return True
@@ -1238,6 +1294,18 @@ def place_sentences(places: list[str], activity: str) -> list[str]:
     elif activity == "paddle outing":
         opener = "The outing passes"
         closer_kind = "view"
+    elif activity == "winery outing":
+        opener = "The tasting includes"
+        closer_kind = "visit"
+    elif activity == "horse outing":
+        opener = "The visit includes"
+        closer_kind = "visit"
+    elif activity == "driving tour":
+        opener = "The drive passes"
+        closer_kind = "view"
+    elif activity == "guided outing":
+        opener = "The outing reaches"
+        closer_kind = "reach"
     elif activity == "food walk" or foodish:
         opener = "The walk samples" if foodish else "The walk visits"
         closer_kind = "visit"
@@ -1313,7 +1381,7 @@ def harvest_experience_drafts(
     description = facts.get("description") or ""
     if vessel and activity == "harbor outing":
         drafts.append(f"The outing is aboard {vessel}.")
-    if foods and (activity == "food walk" or foods):
+    if foods and activity == "food walk":
         if len(foods) <= 2:
             drafts.append(f"The walk samples {join_and(foods)}.")
         else:

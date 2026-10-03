@@ -17,8 +17,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/laguna-beach
 - Runtime PASS: 1
 - Runtime FAIL: 0
 - Terminal removals: 0
-- PRICE_NOT_FOUND after editorial: 2
-- INSUFFICIENT_SOURCE_CONTENT: 0
+- PRICE_NOT_FOUND after editorial: 0
+- INSUFFICIENT_SOURCE_CONTENT: 2
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 1
 - Runtime pages with a FareHarbor rating: 0
@@ -37,4 +37,5 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/laguna-beach
 
 ## Manual review
 
-- None.
+- `245311` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311` — none
+- `247443` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443` — none

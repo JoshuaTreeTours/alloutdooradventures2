@@ -34,6 +34,7 @@ export type FareHarborProofProduct = {
   schemaDescription: string;
   highlights: string[];
   galleryImages: string[];
+  productImage?: string | null;
   wordCount: number;
   durationLabel: string | null;
   durationIso: string | null;

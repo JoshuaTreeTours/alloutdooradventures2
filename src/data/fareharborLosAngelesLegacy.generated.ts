@@ -20,6 +20,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "2 hours guided outing"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
     "wordCount": 141,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -67,6 +68,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "three-hour guided outing in Los Angeles"
     ],
     "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
     "wordCount": 129,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -113,6 +115,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/ExVHF9QgR62r80ruHGN3"
     ],
+    "productImage": "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG",
     "wordCount": 149,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
@@ -155,6 +158,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/1h3CHyuXQPCCwreMOxej"
     ],
+    "productImage": "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
     "wordCount": 125,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
@@ -197,6 +201,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/63VVGBa4RRpzlTO7xFgE"
     ],
+    "productImage": "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
     "wordCount": 158,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
@@ -239,6 +244,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/jcqlwBmITLuruspiO5W9"
     ],
+    "productImage": "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD",
     "wordCount": 149,
     "durationLabel": "5 hours",
     "durationIso": "PT5H",

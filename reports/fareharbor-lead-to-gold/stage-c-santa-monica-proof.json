@@ -16,6 +16,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -38,7 +39,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/MxZVZt9GQk62utdMZq2I",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -143,6 +144,7 @@
     ],
     "highlights": [],
     "galleryImages": [],
+    "productImage": null,
     "wordCount": 8,
     "durationLabel": null,
     "durationIso": null,
@@ -165,7 +167,7 @@
       "signals": []
     },
     "imageAudit": {
-      "hero": "https://cdn.filestackcontent.com/aK878S5dT8G9k92N6s6y",
+      "hero": null,
       "selected": null,
       "action": "none",
       "reason": "terminal booking page",
@@ -279,6 +281,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM"
     ],
+    "productImage": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
     "wordCount": 132,
     "durationLabel": null,
     "durationIso": null,
@@ -369,13 +372,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
-          "handle": "yB81A1USTWy88t1OtaEb",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -511,6 +508,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ"
     ],
+    "productImage": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
     "wordCount": 106,
     "durationLabel": null,
     "durationIso": null,
@@ -611,13 +609,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
-          "handle": "HfGFL3BVQtOKjYPLZJfg",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -764,6 +756,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/FsO3FuKSIaZbpLrS6d4U"
     ],
+    "productImage": "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi",
     "wordCount": 111,
     "durationLabel": null,
     "durationIso": null,
@@ -832,13 +825,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi",
-          "handle": "RDHucASly96tdZqO8bgi",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/FsO3FuKSIaZbpLrS6d4U",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -958,6 +945,7 @@
     "galleryImages": [
       "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf"
     ],
+    "productImage": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
     "wordCount": 111,
     "durationLabel": "2-4 Hour",
     "durationIso": null,
@@ -1058,13 +1046,7 @@
           "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
         }
       ],
-      "rejected": [
-        {
-          "url": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
-          "handle": "e0A0PLgiRpabLDScjFDu",
-          "classification": "SAME_HANDLE"
-        }
-      ],
+      "rejected": [],
       "selected": "https://cdn.filestackcontent.com/WuL2b88BTsew7XiMGXsf",
       "action": "kept",
       "reason": "harvest image is already distinct from the hero"
@@ -1153,9 +1135,7 @@
         "cancellation": null,
         "accessibility": null,
         "languages": [],
-        "factualSentences": [
-          "Duration 2-4 Hour Options!"
-        ],
+        "factualSentences": [],
         "gleanedFacts": [],
         "properNames": [
           "Hour Options",
@@ -1171,7 +1151,7 @@
           "3 Hours",
           "4 Hours"
         ],
-        "description": "Duration 2-4 Hour Options! About Enjoy one of our regularly scheduled bike tours in a more intimate setting or work with us to customize your own tour. This is a perfect choice for families, VIPs, or anyone looking for a more personal experience on Santa Monica's top rated bike tour! Enjoy the best of Los Angeles with this two hour guided bike tour that begins in Santa Monica near the famous Santa Monica Pier! Take in the ocean breezes, visit the historic Venice Canals, ride through Marina del Rey, take pictures with the Art Walls, and explore Muscle Beach. The sunny California weather makes this tour a fun and beautiful experience for culture enthusiasts and history buffs. Choose between 2 Hours, 3 Hours, and 4 Hours four your private ride, as well as the time that you would like to go. Tips: Dress appropriately for the weather and don't forget your camera!",
+        "description": "2-4 Hour Options! Enjoy one of our regularly scheduled bike tours in a more intimate setting or work with us to customize your own tour. This is a perfect choice for families, VIPs, or anyone looking for a more personal experience on Santa Monica's top rated bike tour! Enjoy the best of Los Angeles with this two hour guided bike tour that begins in Santa Monica near the famous Santa Monica Pier! Take in the ocean breezes, visit the historic Venice Canals, ride through Marina del Rey, take pictures with the Art Walls, and explore Muscle Beach. The sunny California weather makes this tour a fun and beautiful experience for culture enthusiasts and history buffs. Choose between 2 Hours, 3 Hours, and 4 Hours four your private ride, as well as the time that you would like to go. Tips: Dress appropriately for the weather and don't forget your camera!",
         "detailsText": "PICK UP LOCATION : Please look closely at the location that you picked in the booking. 1431 Ocean Ave Santa Monica, CA 90401 Please plan to arrive 15 minutes early as the tour does leave on time. Let our team know if you are running late. Our Store Hours are: November-March: 9AM - 5PM April - October: 9AM - 7PM Your outfit should be seasonally suitable; we also suggest that you dress in something comfy, not too loose, and closed-toe shoes. Don't forget a valid ID, credit card, and your camera! All Ages • 2-4 Hour Options! All Ages • 2-4 Hour Options!",
         "sourceUsed": "structured_description"
       },

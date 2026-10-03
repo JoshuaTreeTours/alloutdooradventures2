@@ -17,8 +17,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/coronado`. V
 - Runtime PASS: 6
 - Runtime FAIL: 0
 - Terminal removals: 0
-- PRICE_NOT_FOUND after editorial: 5
-- INSUFFICIENT_SOURCE_CONTENT: 37
+- PRICE_NOT_FOUND after editorial: 6
+- INSUFFICIENT_SOURCE_CONTENT: 36
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 6
 - Runtime pages with a FareHarbor rating: 0
@@ -43,7 +43,7 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/coronado`. V
 - `527560` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/speed-boat-rental-527560` — none
 - `528464` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/pontoon-boat-rental-528464` — none
 - `418569` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/sylvan-18---coronado-rental-418569` — none
-- `418688` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/hurricane-20---coronado-rental-418688` — none
+- `418874` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/catalina-250---coronado-rental-418874` — none
 - `418883` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/tritoon-25---coronado-rental-418883` — none
 - `419398` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/catalina-320---coronado-bareboat-rental-419398` — none
 - `419404` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/catalina-320---coronado-captain-charter-419404` — none
@@ -62,7 +62,6 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/coronado`. V
 - `424591` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/tandem-kayak---coronado-424591` — none
 - `424599` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/single-kayak---coronado-rental-424599` — none
 - `425335` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/bay-skiff---coronado-425335` — none
-- `426233` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/seachaser-18---coronado-426233` — none
 - `466554` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/monterey-21---coronado-466554` — none
 - `528181` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/blue-bridge-kayak-tour-528181` — none
 - `529512` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/coronado/tours/above-board-stand-up-paddle-tours-sup-529512` — none
