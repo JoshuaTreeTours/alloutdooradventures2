@@ -1114,7 +1114,7 @@ export default function CityTourDetailRoute({
               </p>
             ))}
 
-            {hardenedTemplate?.secondaryImage ? (
+            {!proof && hardenedTemplate?.secondaryImage ? (
               <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
                 <Image
                   src={hardenedTemplate.secondaryImage}

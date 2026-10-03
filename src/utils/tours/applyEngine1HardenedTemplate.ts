@@ -19,17 +19,15 @@ const PARK_LANDMARKS: Record<string, string[]> = {
   ],
 };
 
-const FALLBACK_CITY_IMAGES: Record<string, string[]> = {
-  "joshua-tree": [
-    "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
-    "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C",
-    "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
-  ],
-  "palm-springs": [
-    "https://cdn.filestackcontent.com/znXEhdhTgWLJ6FJEnfUQ",
-    "https://cdn.filestackcontent.com/CrY70FqUSIelzMGF0HzQ",
-    "https://cdn.filestackcontent.com/cwr3WkdQ6KLI6NOvCoIw",
-  ],
+const ownTourImages = (tour: Tour) => {
+  const hero = tour.heroImage?.trim() ?? "";
+  const gallery = (tour.galleryImages ?? [])
+    .map(image => image.trim())
+    .filter(image => image && image !== hero);
+  return {
+    hero,
+    gallery: Array.from(new Set(gallery)),
+  };
 };
 
 type FAQ = { question: string; answer: string };
@@ -218,18 +216,11 @@ export const applyEngine1Template = (
       "Transportation to and from the meeting point unless explicitly listed",
   ]);
 
-  const fallbackImages =
-    FALLBACK_CITY_IMAGES[tourData.destination.citySlug] ?? [];
-  const secondaryImage =
-    (tourData.galleryImages ?? []).find(
-      image => image !== tourData.heroImage
-    ) ?? fallbackImages.find(image => image !== tourData.heroImage);
-
-  const schemaImages = unique([
-    tourData.heroImage,
-    ...(tourData.galleryImages ?? []),
-    ...fallbackImages,
-  ]).slice(0, 5);
+  // Destination lists used to reuse one item's photo (the Joshua Tree
+  // climb still) on every other tour in the city. Only this tour's images.
+  const owned = ownTourImages(tourData);
+  const secondaryImage = owned.gallery[0];
+  const schemaImages = unique([owned.hero, ...owned.gallery]).slice(0, 5);
 
   const itinerary = unique([
     "Meet the guide, review route plan, and confirm safety expectations",

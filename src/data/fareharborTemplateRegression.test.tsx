@@ -11,7 +11,7 @@ import FareHarborProductSummary from "../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../components/FareHarborProofSnapshot";
 import TourCard from "../components/TourCard";
 import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
-import { getTourBookingPath, tours } from "./tours";
+import { getTourBookingPath, getTourBySlugs, tours } from "./tours";
 import {
   applyFareHarborProofToHtml,
   applyFareHarborProofToPrerender,
@@ -26,6 +26,7 @@ import {
   fareHarborRatingParityErrors,
   formatFareHarborRating,
 } from "./fareharborPresentation";
+import { applyEngine1Template } from "../utils/tours/applyEngine1HardenedTemplate";
 
 vi.mock("../components/StructuredDataProvider", () => ({
   useStructuredData: () => undefined,
@@ -429,5 +430,75 @@ describe("FareHarbor Phase C template", () => {
       1
     );
     expect(barOnly).toContain("md:hidden");
+  }, 120000);
+
+  it("does not reuse another Joshua Tree item's photo as a destination fallback", () => {
+    const climb = "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr";
+    const products = getFareHarborProofProducts().filter(
+      product =>
+        product.exceptionStatus === "OK" &&
+        product.publicPath.includes("/california/joshua-tree/")
+    );
+    expect(products).toHaveLength(12);
+    const climbOwner = products.find(product => product.productImage === climb);
+    expect(climbOwner?.itemId).toBe("459591");
+
+    for (const product of products) {
+      const [, , stateSlug, citySlug, , tourSlug] = product.publicPath.split("/");
+      const tour = getTourBySlugs(stateSlug, citySlug, tourSlug);
+      if (!tour) {
+        expect(product.productImage, product.itemId).not.toBe(climb);
+        continue;
+      }
+      const allowed = new Set(
+        [product.productImage, ...product.galleryImages].filter(
+          (url): url is string => Boolean(url)
+        )
+      );
+      const foreign = new Set<string>();
+      for (const other of products) {
+        if (other.itemId === product.itemId) {
+          continue;
+        }
+        if (other.productImage) {
+          foreign.add(other.productImage);
+        }
+        for (const url of other.galleryImages) {
+          foreign.add(url);
+        }
+      }
+      const template = applyEngine1Template(tour!, {});
+      const borrowed = [
+        template?.secondaryImage,
+        ...(template?.schemaImages ?? []),
+      ].filter((url): url is string => Boolean(url) && foreign.has(url));
+      expect(borrowed, product.itemId).toEqual([]);
+
+      const page = renderRoute(
+        product.publicPath,
+        <CityTourDetailRoute params={{ stateSlug, citySlug, tourSlug }} />
+      );
+      const card = renderRoute(
+        product.publicPath,
+        <TourCard tour={tour!} href={product.publicPath} />
+      );
+      const ownPage = page.split("More tours in")[0] ?? page;
+      const shown = [
+        ...`${ownPage}\n${card}`.matchAll(
+          /https:\/\/cdn\.filestackcontent\.com\/[A-Za-z0-9]+/g
+        ),
+      ].map(match => match[0]);
+      for (const url of shown) {
+        expect(allowed.has(url), `${product.itemId} showed ${url}`).toBe(true);
+      }
+      expect(card, product.itemId).toContain(product.productImage);
+      if (product.itemId === "459591") {
+        expect(ownPage).toContain(climb);
+        expect(card).toContain(climb);
+      } else {
+        expect(ownPage, product.itemId).not.toContain(climb);
+        expect(card, product.itemId).not.toContain(climb);
+      }
+    }
   }, 120000);
 });
