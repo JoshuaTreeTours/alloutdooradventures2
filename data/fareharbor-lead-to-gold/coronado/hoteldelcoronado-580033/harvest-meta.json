@@ -1,0 +1,47 @@
+{
+  "company": "hoteldelcoronado",
+  "itemId": "580033",
+  "fetchedAt": "2026-10-02T22:42:26.881514+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hoteldelcoronado/580033/content/",
+      "status": 200,
+      "bytes": 7561,
+      "sha256": "61165f905d5706f63cc185d6b53bc55f2689a9f6170abd9630fec47df76b813f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hoteldelcoronado/580033/structured-description/",
+      "status": 200,
+      "bytes": 5841,
+      "sha256": "10e8233fb1e7274c99341b1af35000fd53e5e17f9baa8e4371e922bd819522c1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hoteldelcoronado/items/580033/",
+      "status": 200,
+      "bytes": 12579,
+      "sha256": "34e41f635a0b9a878eab885999f656d4dc4214457ea72714590c05c0257803bf"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hoteldelcoronado/price-preview/per-item/v2/?asn=fhdn&item_pks=580033&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 587,
+      "sha256": "e9e2829e14c6c3079869dbb10b63ad8fb12cd5d8956ad5124db55fdaf041bda1"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hoteldelcoronado/items/580033/ratings/",
+      "status": 200,
+      "bytes": 480,
+      "sha256": "09e6206b73e02fac069e6c6a435700e260e13726b3286927a7d365d78e4f7ca0"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "580033",
+    "provider": "hoteldelcoronado",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hoteldelcoronado/items/580033/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

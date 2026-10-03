@@ -1,0 +1,47 @@
+{
+  "company": "tikiboatmdr",
+  "itemId": "423092",
+  "fetchedAt": "2026-10-02T22:42:09.790332+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/tikiboatmdr/423092/content/",
+      "status": 200,
+      "bytes": 11370,
+      "sha256": "f64311c5282a0cd51c6d8b94e363506bc31799a56f31f8b275d365d6b073827f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/tikiboatmdr/423092/structured-description/",
+      "status": 200,
+      "bytes": 3579,
+      "sha256": "366ebb9bd591015bcf10ba901b9b824e0e977644581d55f10d3b34db99d4943b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/tikiboatmdr/items/423092/",
+      "status": 200,
+      "bytes": 28221,
+      "sha256": "33d525f1f44e9b80124d53b33e1690ff9c6be1366ed2af91e042add528c23ba7"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/tikiboatmdr/price-preview/per-item/v2/?asn=fhdn&item_pks=423092&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tikiboatmdr/items/423092/ratings/",
+      "status": 200,
+      "bytes": 539,
+      "sha256": "78946967d0a496a663f6b6d3e5cc660deae118a283f163153f4ae21aab926ae7"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "423092",
+    "provider": "tikiboatmdr",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikiboatmdr/items/423092/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

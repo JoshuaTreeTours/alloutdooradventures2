@@ -1,0 +1,51 @@
+{
+  "citySlug": "healdsburg",
+  "total": 2,
+  "active": 2,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 2,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "getawayadventures",
+      "operator": "Getaway Adventures",
+      "itemId": "29264",
+      "slug": "healdsburg-sip-n-cycle-29264",
+      "publicPath": "/destinations/california/healdsburg/tours/healdsburg-sip-n-cycle-29264",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4190,
+        "structuredStatus": 200,
+        "structuredBytes": 2504
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "getawayadventures",
+      "operator": "Getaway Adventures",
+      "itemId": "29272",
+      "slug": "self-guided-e-bike-tour-29272",
+      "publicPath": "/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2434,
+        "structuredStatus": 200,
+        "structuredBytes": 1130
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

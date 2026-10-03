@@ -1,0 +1,2088 @@
+[
+  {
+    "itemId": "439580",
+    "company": "animalcenter",
+    "title": "Interactive Animal Encounter",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/interactive-animal-encounter-439580",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Interactive Animal Encounter is a 60- to 90-minute guided outing with Helen Woodward Animal Center."
+    ],
+    "schemaDescription": "Interactive Animal Encounter is a 60- to 90-minute guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "60-90 minutes guided outing",
+      "Groups stay at a maximum of 20 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/75409NMSGOIfzwcvRgiC"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/SGnMaNG6Tm6sM6k2LURj",
+    "wordCount": 16,
+    "durationLabel": "60-90 minutes",
+    "durationIso": null,
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/439580/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/SGnMaNG6Tm6sM6k2LURj",
+      "heroHandle": "SGnMaNG6Tm6sM6k2LURj",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/75409NMSGOIfzwcvRgiC",
+          "handle": "75409NMSGOIfzwcvRgiC",
+          "pixelSha256": "f4bdb5cbda71f0cbe482e185872af64795d68bf17642bff63605836c08c9496b",
+          "differenceHashDistanceFromHero": 118,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25545,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/75409NMSGOIfzwcvRgiC",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-439580",
+      "fetchedAt": "2026-10-02T22:43:22.328087+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439580/content/",
+          "status": 200,
+          "bytes": 5292,
+          "sha256": "2a79aa494120cfbe636a23ff33f31e95ad7c64ccda2138dcfc6668da887e0c83"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439580/structured-description/",
+          "status": 200,
+          "bytes": 3777,
+          "sha256": "0662f67667a3f895436ce34a60496b491317cd0b470ac6c8772fea74d4fc2b2e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439580/",
+          "status": 200,
+          "bytes": 12843,
+          "sha256": "2f80a7ab9a7787b5694818bd3d73071cce6ce089e547bea0b831ccd849ae892b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=439580&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439580/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "767460f4cfbd751e92d5003ed962ac216b7a4f97d3fa921442c22e69b91f9f3c"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "60-90 minutes",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Design your animal meet and greet",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 20 people",
+        "included": [],
+        "excluded": [],
+        "itinerary": [
+          "The program will begin with a brief introduction and set up rules and expectations",
+          "Rotate activities and locations every 30 minutes depending on activity type"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations every 30 minutes depending on activity type. If your group doesn't have great walking accessibility, we will diminish the amount of room changing we do, but please let us know ahead of time in the booking comments so we can plan ahead accordingly."
+        ],
+        "highlights": [],
+        "restrictions": [
+          "For this program there is a group maximum of 20 people"
+        ],
+        "bring": [
+          "Water bottle",
+          "Close-toed shoes"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [
+          "This animal education opportunity is a perfect activity for any animal lover and works well with playgroups, youth groups, 4H groups, home school groups, families, and retirement homes.",
+          "A minimum of 6 participants is required to make this booking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Helen Woodward Animal Center"
+        ],
+        "measures": [],
+        "description": "Create new memories during customizable animal encounters at Helen Woodward Animal Center! This animal education opportunity is a perfect activity for any animal lover and works well with playgroups, youth groups, 4H groups, home school groups, families, and retirement homes. You will not only get hands-on animal interactions but will also gain a better understanding of our furred, feathered, and scaled friends. Program defaults as 60-minute but you can select the 'extra time program' per participant to extend it to a 90-minute program for even more fun! A minimum of 6 participants is required to make this booking. You may bring less participants on the day of the program, but we will not refund the difference if less than 6 participants attend, as that is the minimum cost we need to run the program.",
+        "detailsText": "We are looking forward to seeing you! Check In Procedure Meet at Education in the large covered pavilion. Plan to arrive 10 minutes before your program start time. Late arrival results in a shorter program with less time for animal interaction. Your instructor(s) will be waiting for you at the Education Department Other Notes Typical programs require you to select 3 animals to meet and participate in 1 activity. If you would like a different combination of these options, please contact us once your program is booked. Check-in with the Lobby and your assigned Instructor will guide you and your group back to the starting area. Your entire group does not need to be present to check-in. Check-in with the Lobby and your assigned Instructor will guide you and your group back to the starting area. Your entire group does not need to be present to check-in. Design your animal meet and greet Design your animal meet and greet",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "439580",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439580/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "schema description is not shorter than the editorial body",
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 16 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "439587",
+    "company": "animalcenter",
+    "title": "Girl Scouts Badges",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/girl-scouts-badges-439587",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Girl Scouts Badges is a 1.5-hour guided outing with Helen Woodward Animal Center. For Daisies, Brownies, Juniors, and Cadettes, Eco Learner Badge, and Pets Badge are included.",
+      "Groups stay at a maximum of 20 guests. The walk is stroller and wheelchair accessible."
+    ],
+    "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1.5 hours guided outing",
+      "For Daisies, Brownies, Juniors, and Cadettes"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
+    "wordCount": 44,
+    "durationLabel": "1.5 hours",
+    "durationIso": "PT1H30M",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/439587/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
+      "heroHandle": "DqZj3FAvQnmXgt9TpCCE",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3",
+          "handle": "ujuWK7NhRtW8dtEYGFl3",
+          "pixelSha256": "b7312c450f9b254b7b4eb11ec0ae0fc9bed091d111d0a48697e02b4ba0fab9d9",
+          "differenceHashDistanceFromHero": 132,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28913,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-439587",
+      "fetchedAt": "2026-10-02T22:43:22.329067+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439587/content/",
+          "status": 200,
+          "bytes": 4436,
+          "sha256": "01cb8ec78da961fe02de537066c2bd7e747d4e990b2e5e7066a7511974f23a09"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439587/structured-description/",
+          "status": 200,
+          "bytes": 3366,
+          "sha256": "d8cd1adb3092f346236cb14e657da36d809466087e09996232650e4762cd69b8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439587/",
+          "status": 200,
+          "bytes": 9455,
+          "sha256": "26e6f0363c38705db973d215502f337b070b36772454a0f95170a32f2234112f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=439587&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439587/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "3fcfdb270cde13806a6ba3f73de4aed0e0cf82a437454bf0d422b81445c4679f"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1.5 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Earn a badge with our animal ambassadors",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 20 people",
+        "included": [
+          "For Daisies, Brownies, Juniors, and Cadettes",
+          "Eco Learner Badge",
+          "Pets Badge",
+          "Animal Habitats Badge",
+          "Animal Helpers Badge!",
+          "_Coming soon is more in the Eco badge series!_"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "The program will begin with a brief introduction and set up rules and expectations",
+          "Rotate activities and locations about 30 minutes depending on activity type"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
+        ],
+        "highlights": [],
+        "restrictions": [
+          "We can only run 1 badge type at a time",
+          "A different badge requires a separate booking",
+          "If more than 1 badge type is selected we will default to the lowest level of badge selected"
+        ],
+        "bring": [
+          "Water bottle",
+          "Close-toed shoes"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Helen Woodward Animal Center"
+        ],
+        "measures": [],
+        "description": "Our Girl Scout activities include 90-minute tours that meet ALL badge requirements. You can choose to add the badge to your order so that each girl scout will go home with the appropriate badge for their vest or sash. You can even purchase a custom Helen Woodward Animal Center patch to commemorate the visit! A minimum of 5 children is required to make this booking, however you may bring less children on the day of the program. You will not be refunded the difference if less than 5 children attend.",
+        "detailsText": "We are looking forward to seeing you! Check in Procedure Meet at Education in the large covered pavilion. Plan to arrive 10 minutes before your program start time. Late arrival results in a shorter program with less time for animal interaction. Your instructor(s) will be waiting for you at the Education Department. Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. Earn a badge with our animal ambassadors Earn a badge with our animal ambassadors",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "439587",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439587/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 44 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "446272",
+    "company": "animalcenter",
+    "title": "Custom Scout Trip",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/custom-scout-trip-446272",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The Custom Girl Scout Trip is the opportunity for all ages to hear about and interact with variety of animals and build compassion through stopping at different departments at Center or fulfilling community service work. Each program is long and allows each troop to choose activities and animals covered in the tour for the ultimate customizable meet.",
+      "Minimum of 5 children is also required to make this booking, however guests may bring less children on day of the program. Guests not be refunded difference if less than 5 children attend. After that, customize the visit the way guests want it. Option A: 4 animal stops at and 1 Center activity.",
+      "After that, option B: 2 animal stops at and 2 Center activities. The program will begin with a brief introduction and set up rules and expectations. Lizard: Learn about their classification and interesting defense and protection methods."
+    ],
+    "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1.5 hours guided outing",
+      "Groups stay at a maximum of 20 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
+    "wordCount": 147,
+    "durationLabel": "1.5 hours",
+    "durationIso": "PT1H30M",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/446272/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
+      "heroHandle": "ORGmE8VqTkqejgzHtkTV",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B",
+          "handle": "RbCPmd24Tu2tNQmMlz7B",
+          "pixelSha256": "3a72075e85b5f94e19becfd62a159744db91bd7a5666fb477399f45cbb308193",
+          "differenceHashDistanceFromHero": 132,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22817,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-446272",
+      "fetchedAt": "2026-10-02T22:43:22.328793+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/446272/content/",
+          "status": 200,
+          "bytes": 6706,
+          "sha256": "f8e85520007eb3e408013198ba39a9a07b2344254367bf124e5018e3d524d2f2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/446272/structured-description/",
+          "status": 200,
+          "bytes": 5637,
+          "sha256": "2ce0d019c0ef86edc4f429fece2045012ef5d9267265521711b522a81ab9ed79"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/446272/",
+          "status": 200,
+          "bytes": 9555,
+          "sha256": "f3fabdbc7c3ffe14a2f157d5d27fb304352035fc63fda12b0567b3fc746ae46e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=446272&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/446272/ratings/",
+          "status": 200,
+          "bytes": 477,
+          "sha256": "5e8e1269a8077abc11e0044a413ab4566ef3f7efc42321ef73b770d848b0b43a"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1.5 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Meet animals and earn community service!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 20 people",
+        "included": [
+          "Turtle or Tortoise: Learn about the differences in their habitats",
+          "Snake: Learn about their unique adaptations and snake safety",
+          "Sheep or Goat: Learn about their peculiar digestive system and farm animal care",
+          "Bird (dove, parrot, or chicken): Learn about animal classifications and life cycles",
+          "Miniature Horse: Learn about the “jobs” they perform, both past and present",
+          "Madagascar Hissing Cockroach: Learn about misconceptions of these creepy crawlies",
+          "Lizard: Learn about their classification and interesting defense and protection methods",
+          "Rabbit or Guinea Pig: Learn about proper pet care and Pet Encounter Therapy"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "The program will begin with a brief introduction and set up rules and expectations",
+          "Rotate activities and locations about 30 minutes depending on activity type"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
+        ],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Water bottle",
+          "Close-toed shoes"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [
+          "Each program is 90 minutes long and allows each troop to choose the activities and animals included in the tour for the ultimate customizable experience!",
+          "Option A: 4 animal visits and 1 Center activity."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Helen Woodward Animal Center"
+        ],
+        "measures": [
+          "90 minutes"
+        ],
+        "description": "Our Custom Girl Scout Trip is the perfect opportunity for all ages to learn about and interact with a variety of animals and build compassion through visiting different departments at the Center or fulfilling community service work. You can even purchase a custom Helen Woodward Animal Center patch to commemorate the visit! Each program is 90 minutes long and allows each troop to choose the activities and animals included in the tour for the ultimate customizable experience! A minimum of 5 children is required to make this booking, however you may bring less children on the day of the program. You will not be refunded the difference if less than 5 children attend. Customize the visit the way you want it! Option A: 4 animal visits and 1 Center activity. Option B: 2 animal visits and 2 Center activities.",
+        "detailsText": "We are looking forward to seeing you! Check in Procedure Meet at Education in the large covered pavilion. Plan to arrive 10 minutes before your program start time. Late arrival results in a shorter program with less time for animal interaction. Your instructor(s) will be waiting for you at the Education Department. Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. Meet animals and earn community service! Meet animals and earn community service!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "446272",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/446272/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "461127",
+    "company": "animalcenter",
+    "title": "Outreaches",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/outreaches-461127",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Outreaches is a one-hour guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
+      "Groups stay at a maximum of 3 guests. The walk is stroller and wheelchair accessible."
+    ],
+    "schemaDescription": "Outreaches is a one-hour guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1 hour guided outing",
+      "_All grade lesson_"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RgNRKabMToq6mwRAwMoS"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i",
+    "wordCount": 37,
+    "durationLabel": "1 hour",
+    "durationIso": "PT1H",
+    "meetingLocation": "At your school",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/461127/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i",
+      "heroHandle": "NRimou5cQOqV2aIXQ10i",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/RgNRKabMToq6mwRAwMoS",
+          "handle": "RgNRKabMToq6mwRAwMoS",
+          "pixelSha256": "0d230226119cdea457d1dd66a4470c977d8f178633030b6319bf0588fe740a67",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.31655,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/RgNRKabMToq6mwRAwMoS",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-461127",
+      "fetchedAt": "2026-10-02T22:43:22.329506+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/461127/content/",
+          "status": 200,
+          "bytes": 10061,
+          "sha256": "217bac70e40829df1a763478b8233010adecc65a83ff1d20cb4bf215f9ca6ccc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/461127/structured-description/",
+          "status": 200,
+          "bytes": 7011,
+          "sha256": "09682a47fe785f8c9b1bd1edd9056498d6cba14ea8364620dc7f4726108799cb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/461127/",
+          "status": 200,
+          "bytes": 12817,
+          "sha256": "d552b6b4e0273ef98707235deb7af00e9ecff6941aa5c07f663eb26c2a05a3c3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=461127&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/461127/ratings/",
+          "status": 200,
+          "bytes": 470,
+          "sha256": "ac4355f2425f2c1b4ed0571295e5234291455fe0553dc349d0a5bae2719a0099"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1 hour",
+        "meetingAddress": "At your school",
+        "itemLocation": null,
+        "headline": "From $255 • Bring the critters to your classroom",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 3 classes for 60-minutes or 2 classes for 90-minutes in a day",
+        "included": [
+          "_All grade lesson_",
+          "Outreaches will meet a dog, rabbit, dove, and box turtle",
+          "_Preschool & Elementary School lessons_",
+          "Preschool and Kindergarten: “Plants and Paws” - Understand the needs of plants and animals and how they're connected to each other and their environment",
+          "Outreaches will meet a dog, rabbit, dove, and leopard gecko",
+          "1st Grade: “The Wonderful World of Animals” - Discover the different ways animals interact with the world and why these interactions vary depending on the species",
+          "Outreaches will meet a dove, guinea pig, bearded dragon, and Madagascar hissing cockroach",
+          "2nd Grade: “Home is Where the Heart Is” - Explore different habitats and discover the types of animals that live in each one"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "The program will begin with a brief introduction and set up rules and expectations",
+          "The STEM activity is 30 minutes and typically done at the end"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Animal presentations are 15 minutes per species. Typically we introduce the individual animal then talk about its species based on the focus of the grade-level theme, allowing for interaction and questions near the end of the presentation. The STEM activity is 30 minutes and typically done at the end."
+        ],
+        "highlights": [],
+        "restrictions": [
+          "We can only do 1 curriculum per day, so if you are planning for us to visit multiple grade levels in 1 day, you'll need to select the curriculum that will work best for all of them",
+          "Outreaches only available for schools"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "San Diego"
+        ],
+        "measures": [],
+        "description": "Interacting with animals is a fun and unique way for students to learn about the world around them. We offer a variety of programs that give kids in San Diego the chance to meet cute critters while learning lessons that complement their grade level's NGSS and incorporate STEM. Year-round field trips to the Center or outreaches to your classroom are offered for preschool, elementary, middle and high school classes. If you are a school, please call us at 858-756-4117 ext 318 or email us at education@animalcenter.org to reserve your spot, this way we can book you without upfront payment, and then we will invoice you at the time of program completion to get an accurate and final headcount.",
+        "detailsText": "We are looking forward to seeing you! Education Outreaches include animal encounters and interactive educational activities that meet grade-level STEM and NGSS. - If you chose the 60-minute version and did not select STEM as part of our time with you, we should leave paperwork copies for each teacher which explains the STEM activity we would have done and provides a template if applicable. If you did not receive this, please email us and we can send it electronically to you. - Some of our STEM activities include follow-up activities for the class to complete after we leave, if the teacher so desires. We will leave paperwork copies for each teacher which explains the follow up activity and provides any applicable templates. If you did not receive this and believe you should have, please email us and we can send it electronically to you if applicable. - - - CLASSROOM EXPECTATIONS - We will arrive ~15 minutes before the start time to check in, set up our equipment, and let the animals get used to their surroundings. It is very helpful if we can set up before the children are present. - Please inform us before the visit where we should park if there are special instructions. It is easier to unload our vehicle if we can park close to the building. We can move our vehicle after we unload if necessary. - An indoor area where the students can sit comfortably in a half circle so everyone can easily see is required. If an outdoors location is the only option, it limits our animals to only reptiles and invertebrates for animal safety purposes. - Remaining in the same location throughout the visit and having each class come to us is necessary. This reduces stress on the animals and helps us stay on time as we bring many supplies with us that are difficult to keep packing/unpacking between classes. - In order to best serve the students and maintain animal health and safety, we only present to one class at a time (20-30 students maximum). - Our staff are trained on positive classroom management strategies, but we appreciate continued support from the teacher to ensure the best experience for the children and the animals. We will check in at the office and head to the designated room to await your class' arrival. We will check in at the office and head to the designated room to await your class' arrival. From $255 • Bring the critters to your classroom From $255 • Bring the critters to your classroom",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "461127",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/461127/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 37 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "481283",
+    "company": "animalcenter",
+    "title": "HowlOWeen Harvest Family Festival",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/howloween-harvest-family-festival-481283",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
+      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program."
+    ],
+    "schemaDescription": "A four-hour guided outing with Helen Woodward Animal Center. The outing passes Howl-O-Ween Harvest Family Festival.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "4 hours guided outing",
+      "Howl-O-Ween Harvest Family Festival",
+      "Festive, themed music throughout the event"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
+    "wordCount": 74,
+    "durationLabel": "4 hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": "From $9.43",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18+",
+        "amountLabel": "$9.43"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 2 - 17. Children must be 5 years old to pet a reptiles.",
+        "amountLabel": "$18.81"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "9.43",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/481283/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
+      "heroHandle": "14TeaaaLR7St7gA8WAoW",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg",
+          "handle": "9H7WEa7xR9WevF7kDcEg",
+          "pixelSha256": "6a1eea863534362febd1dd18bbfcbda1ff67dc6b95ac4bbfe9aaa4e558fa61f5",
+          "differenceHashDistanceFromHero": 111,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.17528,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-481283",
+      "fetchedAt": "2026-10-02T22:43:24.414782+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/481283/content/",
+          "status": 200,
+          "bytes": 9788,
+          "sha256": "5e2330dc5f999f09f031bad4dfc5eba29aa69b4c529da61f34422e573fb96534"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/481283/structured-description/",
+          "status": 200,
+          "bytes": 4965,
+          "sha256": "36026a951b245928c9c11c4380a49c314b70c371b694d3cba4fccef4935076b8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/481283/",
+          "status": 200,
+          "bytes": 10497,
+          "sha256": "8a9afa48669f763b7bb671993f04b8a373f21ddc27120bf4a11e69462822f529"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=481283&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 695,
+          "sha256": "34aafe6d22173cb25f0ac4340133532e92b40c36de422eb43ba75838acd15c62"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/481283/ratings/",
+          "status": 200,
+          "bytes": 494,
+          "sha256": "68836f85b10221326fac4ce411deef4e96d9f522fb71390e439a5737bc513209"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18+",
+          "amount": 9.43
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18+",
+            "amount": 9.43
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 2 - 17. Children must be 5 years old to pet a reptiles.",
+            "amount": 18.81
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-10T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "It's sure to be a howl-ing good time!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Any",
+        "included": [
+          "Haunted activities in a few rooms for young learners",
+          "Trick-or-treat stations at most main activity areas",
+          "Interactive animal encounters with a variety of species",
+          "Whimsical face painting that brings out the spirit of the season",
+          "Miniature pumpkin patch where each child can take one home",
+          "Festive, themed music throughout the event"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [
+          "Event starts at 9am and ends at 1pm. We advise giving yourself at least 1-2 hours to enjoy all the activities available. You do the activities in whatever order suits you best!"
+        ],
+        "highlights": [
+          "Hands-on animal encounters with ambassadors in festive attire",
+          "Trick-or-treat and craft stations for children",
+          "Mildly haunted rooms suitable for young audiences",
+          "Face painting, games and seasonal music throughout the event"
+        ],
+        "restrictions": [
+          "Shoes : For safety reasons, closed-toed shoes only",
+          "Drawstrings : For safety reasons, drawstrings (hoodies, pants or shorts) should not be worn on the playground",
+          "Pets : No pets are allowed on the campgrounds",
+          "There are no exceptions to this safety policy"
+        ],
+        "bring": [
+          "Water and snacks encouraged",
+          "Close-toed shoes and comfortable clothes",
+          "Phone or camera to take pictures of the animals!"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Howl-O-Ween Harvest Family Festival"
+        ],
+        "measures": [],
+        "description": "Enjoy a family skele-fun celebration at the Howl-O-Ween Harvest Family Festival on the Humane Education Campus. Kids and adults can meet animal ambassadors in themed attire, visit trick-or-treat and craft stations, try face painting, explore a mini pumpkin patch, and test their courage in mildly haunted rooms. The event mixes hands-on animal encounters with music, games and seasonal activities to create a playful, spooky atmosphere for toddlers through elementary ages.",
+        "detailsText": "Thank you for registering for Howl-O-Ween Harvest Family Days at Helen Woodward Animal Center! Our animal friends are excited to celebrate the autumn season with your family, don't forget to bring your camera and please wear close toed shoes. Please enter the gate to the side of the lobby, there will be signs helping direct you to the registration booth. We will scan the QR codes of the tickets sent to you in your confirmation email. Tickets can be purchased ahead of time or at any point morning of and during the event, but all purchasing and registration is done online through the software. We will give you a red wrist band if you did not agree to the media policy. Please enter the gate to the side of the lobby, there will be signs helping direct you to the registration booth. We will scan the QR codes of the tickets sent to you in your confirmation email. Tickets can be purchased ahead of time or at any point morning of and during the event, but all purchasing and registration is done online through the software. We will give you a red wrist band if you did not agree to the media policy. Jump into the spirit of the season with hands-on animal encounters, crafts, games, and family-friendly fun! It's sure to be a howl-ing good time!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "481283",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/481283/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "483273",
+    "company": "animalcenter",
+    "title": "Onsite Field Trips",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/onsite-field-trips-483273",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Onsite Field Trips is a 60- to 90-minute guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
+      "Groups are capped at 150. The walk is stroller and wheelchair accessible."
+    ],
+    "schemaDescription": "Onsite Field Trips is a 60- to 90-minute guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "60-90 minutes guided outing",
+      "_All grade lesson_"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aVHRYXA3StO9Af8jaQ6o"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/4b9vaH9SQ1awioxUlbe7",
+    "wordCount": 38,
+    "durationLabel": "60-90 minutes",
+    "durationIso": null,
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/483273/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/4b9vaH9SQ1awioxUlbe7",
+      "heroHandle": "4b9vaH9SQ1awioxUlbe7",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/aVHRYXA3StO9Af8jaQ6o",
+          "handle": "aVHRYXA3StO9Af8jaQ6o",
+          "pixelSha256": "5cfad58affd71831cbe03597b9956c0458911470d2a622f72f85332c08c3eb30",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.15888,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/aVHRYXA3StO9Af8jaQ6o",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-483273",
+      "fetchedAt": "2026-10-02T22:43:24.476547+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/483273/content/",
+          "status": 200,
+          "bytes": 8656,
+          "sha256": "b3cfa9c460e6169a7dd75758f8f316095477fcf1b89b886ed940e0d2ba73e48b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/483273/structured-description/",
+          "status": 200,
+          "bytes": 6793,
+          "sha256": "dab4de87018a476ea598d92948206a39e23dbdde6292a4e331a46614692c52c4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/483273/",
+          "status": 200,
+          "bytes": 11758,
+          "sha256": "c1e2bbfd769291d8232ccf0d149d83a0e4170f46c13c830fd3d7138d16de3f9e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=483273&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/483273/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "4218da10fb9560d85c91d4ade060aa511b12f6f7955a28f473d5a0d63c4e82f8"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "60-90 minutes",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "PreK-Highschool • Where schools can be WILD!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum around 150 people",
+        "included": [
+          "_All grade lesson_",
+          "Field Trips will meet a dog, parrot, guinea pig, and goat",
+          "_Preschool & Elementary School lessons_",
+          "Preschool and Kindergarten: “Plants and Paws” - Understand the needs of plants and animals and how they're connected to each other and their environment",
+          "Field Trips will meet a dog, rabbit, chicken, and sheep",
+          "1st Grade: “The Wonderful World of Animals” - Discover the different ways animals interact with the world and why these interactions vary depending on the species",
+          "Field Trips will meet a dove, guinea pig, bearded dragon, and sheep",
+          "2nd Grade: “Home is Where the Heart Is” - Explore different habitats and discover the types of animals that live in each one"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "The program will begin with a brief introduction and set up rules and expectations",
+          "Rotate activities and locations about 30 minutes depending on activity type"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
+        ],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Water bottle and snack",
+          "Close-toed shoes"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "San Diego"
+        ],
+        "measures": [],
+        "description": "Interacting with animals is a fun and unique way for students to learn about the world around them. We offer a variety of programs that give kids in San Diego the chance to meet cute critters while learning lessons that complement their grade level's NGSS and incorporate STEM. Year-round field trips to the Center or outreaches to your classroom are offered for preschool, elementary, middle and high school classes. If you are a school, please call us at 858-756-4117 ext 318 or email us at education@animalcenter.org to reserve your spot, this way we can book you without upfront payment, and then we will invoice you at the time of program completion to get an accurate and final headcount.",
+        "detailsText": "We are looking forward to seeing you! CHECK-IN PROCEDURE Meet at Education in the large covered pavilion. Plan to arrive 10 minutes before your program start time. Late arrival results in a shorter program with less time for animal interaction. Your instructor(s) will be waiting for you at the Education Department PROGRAM EXPECTATIONS To prepare children for live animal presentations at Helen Woodward Animal Center, please read and share the following before you arrive: All participants, regardless of age, should wear closed-toed shoes. Please remain with the group at all times. Some areas of the Center are restricted to staff access only. Food is not allowed in any of the animal areas. Not all animals can be pet. We will invite you to pet when available. Animals are very sensitive to and easily startled by loud, high-pitched sounds and fast movement. Help children act respectfully around the animals by keeping \"voices low and feet slow.\" Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. Our Instructor will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario you can come into the covered pavilion and can sit at our picnic tables and play in the pavilion space while waiting. Once the program is closer to start time, the Instructor will ask for your name to cross reference with a check list and then will shortly begin the program. PreK-Highschool • Where schools can be WILD! PreK-Highschool • Where schools can be WILD!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "483273",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/483273/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 38 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "502768",
+    "company": "animalcenter",
+    "title": "Zookeeper Camp",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/zookeeper-camp-502768",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
+      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program."
+    ],
+    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "6 hours guided outing",
+      "Groups stay at a maximum of 10 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
+    "wordCount": 97,
+    "durationLabel": "6 hours",
+    "durationIso": "PT6H",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": "From $223.66",
+    "priceRows": [
+      {
+        "label": "Participant",
+        "note": "Ages 9 - 16",
+        "amountLabel": "$223.66"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "223.66",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/502768/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
+      "heroHandle": "ibmlLd4tT2201W0hqxks",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim",
+          "handle": "BJ66n6AiTMulvKW6zWim",
+          "pixelSha256": "0a74f633106f7400c3735c8d66ad94a2dd0b3560e4dd3774e525312fe65b90da",
+          "differenceHashDistanceFromHero": 107,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.23544,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-502768",
+      "fetchedAt": "2026-10-02T22:43:24.633698+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502768/content/",
+          "status": 200,
+          "bytes": 19594,
+          "sha256": "b27f93d7e98928580d501e1ebfb2fd0e867aca3dc1a771fee65e0bb858ec23b8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502768/structured-description/",
+          "status": 200,
+          "bytes": 12928,
+          "sha256": "13df37fc4a41019f4fcbdace67e14064980e168c804dd8aeb3a6393c6ffafdc5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502768/",
+          "status": 200,
+          "bytes": 18249,
+          "sha256": "0a31f4f1dd17aac91f35db498635eaa282d9ac47eac2b40020557826fbbd9046"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502768&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 547,
+          "sha256": "570cb1aeaf20a7e745df9da5c10c4f7705da47d097f3f0286c446ac195802281"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502768/ratings/",
+          "status": 200,
+          "bytes": 474,
+          "sha256": "4a54225bdc978f79a0d5cab5ab7d2cf1ffed36fb4b105ce595f78f9c5f4b3b2d"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Participant",
+          "note": "Ages 9 - 16",
+          "amount": 223.66
+        },
+        "customerTypes": [
+          {
+            "singular": "Participant",
+            "note": "Ages 9 - 16",
+            "amount": 223.66
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-11-08T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Discover animal careers and skills!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 9,
+        "maxAge": 16,
+        "groupSize": "Maximum 10 campers",
+        "included": [],
+        "excluded": [],
+        "itinerary": [
+          "8:45-9:00: check in period",
+          "9:30-10:00: first activity. The class will discuss the day, camp rules, and icebreakers as well",
+          "10:00-10:30: snack period",
+          "10:30-11:15: second activity",
+          "11:15-11:45: third activity",
+          "11:45-12:30: lunch period",
+          "12:30-12:45: fourth activity",
+          "12:45-1:15: fifth activity",
+          "1:15-2:00: sixth activity",
+          "2:00-2:30: seventh activity",
+          "2:30-3:00: eighth activity and day review",
+          "3:00-3:15: check out period, campers stay circled up with their class and play quiet games"
+        ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 15-45 min. They meet different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play and a lunch time which includes some free play. 8:45-9:00: check in period. 9:30-10:00: first activity. The class will discuss the day, camp rules, and icebreakers as well. 10:00-10:30: snack period. 10:30-11:15: second activity. 11:15-11:45: third activity. 11:45-12:30: lunch period. 12:30-12:45: fourth activity. 12:45-1:15: fifth activity. 1:15-2:00: sixth activity. 2:00-2:30: seventh activity. 2:30-3:00: eighth activity and day review. 3:00-3:15: check out period, campers stay circled up with their class and play quiet games."
+        ],
+        "highlights": [
+          "Handle a variety of animal species",
+          "Prepare and feed out animal diets",
+          "Assist with the grooming, exercising, and training of different animals species",
+          "Assist with the cleaning of animal habitats",
+          "Learn about animal career opportunities of various kinds",
+          "Discover animal husbandry and zookeeping techniques"
+        ],
+        "restrictions": [
+          "This camp is for kids only!",
+          "Must be 9 or older for safety and maturity reasons with the activities and level of knowledge we provide",
+          "All campers must be able to use the restroom confidently and on their own",
+          "Shoes : For safety reasons, closed-toed shoes only"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "This one-day camp involves unique hands-on activities from our professional animal care staff to give campers experiences with the different aspects of animal husbandry. This includes: diet preparation, animal exercise, enrichment strategies, training sessions, and more. Campers will be encouraged to follow their passion and explore their skills with animals of all kinds, such as large and small mammals, reptiles, and birds. Spots are extremely limited in order to provide the best and safest experience.",
+        "detailsText": "You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items and get their nametag. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items and get their nametag. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! Get hands-on with animals and explore a day in the life of a zookeeper! Discover animal careers and skills!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "502768",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502768/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "502778",
+    "company": "animalcenter",
+    "title": "Veterinarian Camp - Half Day",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/veterinarian-camp---half-day-502778",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
+      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. That same account stays with Equine Hospital."
+    ],
+    "schemaDescription": "A 3.5-hour guided outing with Helen Woodward Animal Center. The outing passes 40 min: second activity, 30 min: third activity, and 30 min: snack period.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "3.5 hours guided outing",
+      "40 min: second activity and 30 min: third activity",
+      "Groups stay at a maximum of 15 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
+    "wordCount": 84,
+    "durationLabel": "3.5 hours",
+    "durationIso": "PT3H30M",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": "From $96.46",
+    "priceRows": [
+      {
+        "label": "Participant",
+        "note": "Ages 9 - 16",
+        "amountLabel": "$96.46"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "96.46",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/502778/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
+      "heroHandle": "goB3rdXSFW4gMJNAvkTc",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ",
+          "handle": "3w21HAWTHWbmWrewGaAJ",
+          "pixelSha256": "be2bb913cf1c2dc0265602b8b767925bfd76d84d37e79dd1c0080f81c8a594a0",
+          "differenceHashDistanceFromHero": 110,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.17191,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-502778",
+      "fetchedAt": "2026-10-02T22:43:24.954658+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502778/content/",
+          "status": 200,
+          "bytes": 16967,
+          "sha256": "6ad68eb5ec398009a57cbf4028460974919d4e0c11cf2727b054c15033b40ee0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502778/structured-description/",
+          "status": 200,
+          "bytes": 10943,
+          "sha256": "c29000b0a77a5d714efe94f4f140d3d47e82275321c3a377a1c78b923ef2622d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502778/",
+          "status": 200,
+          "bytes": 15930,
+          "sha256": "448374325b79cadd31dfea4125fbc3a948144c7e34a9086ae01d2916239fc5e2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502778&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 545,
+          "sha256": "3b289f007944dce844146e8b1f56626e3cfa142b2fb2f45a25091c627cc805c3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502778/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "c137244b311d9c884d6530c5b7e6adc7b172f5462a92ddc329f1e55bb4ed72ab"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Participant",
+          "note": "Ages 9 - 16",
+          "amount": 96.46
+        },
+        "customerTypes": [
+          {
+            "singular": "Participant",
+            "note": "Ages 9 - 16",
+            "amount": 96.46
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T13:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "3.5 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Find out what it takes to be a vet!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 9,
+        "maxAge": 16,
+        "groupSize": "Maximum 15 campers",
+        "included": [
+          "Equine Care & Management 101: Learn about the different aspects of equine care and the roles of the veterinarians, technicians and assistants while visiting the Equine Hospital"
+        ],
+        "excluded": [],
+        "itinerary": [
+          "15 minutes before program start: check in period, campers decorate their portfolios which are provided to them",
+          "30 min: first activity. The class will discuss the day, camp rules, and icebreakers as well",
+          "40 min: second activity",
+          "30 min: third activity",
+          "30 min: snack period",
+          "40 min: fourth activity",
+          "30 min: fifth activity",
+          "15 min at program end: check out period, campers stay circled up with their class and play quiet games"
+        ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 30-45 min. They meet 3 different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play. 15 minutes before program start: check in period, campers decorate their portfolios which are provided to them. 30 min: first activity. The class will discuss the day, camp rules, and icebreakers as well. 40 min: second activity 30 min: third activity. 30 min: snack period. 40 min: fourth activity. 30 min: fifth activity. 15 min at program end: check out period, campers stay circled up with their class and play quiet games."
+        ],
+        "highlights": [
+          "Portfolio provided for each camper full of worksheets that will be used during the day, information sheets, and a place for them to store small loose items they might receive",
+          "Tour an Equine horse hospital!",
+          "Practice suture skills on a banana",
+          "Dissect a paper frog model",
+          "View cells with a microscope",
+          "Understand canine CPR with a realistic training dummy"
+        ],
+        "restrictions": [
+          "This camp is for kids only!",
+          "Must be 9 or older for safety and maturity reasons with the activities and level of knowledge we provide",
+          "All campers must be able to use the restroom confidently and on their own",
+          "Shoes : For safety reasons, closed-toed shoes only"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Veterinarian Camp"
+        ],
+        "measures": [],
+        "description": "Are you ready to step into the shoes of a real vet? Join us for You Can Be a Veterinarian Camp, an immersive half-day experience where kids will explore the exciting world of veterinary medicine firsthand! From handling exotic animals to practicing real-life techniques, campers will gain valuable skills, interact with professional equipment, and even speak with veterinary experts. This rare opportunity offers a fun, hands-on journey into the world of animal care, inspiring future vets to learn, dream big, and discover their passion",
+        "detailsText": "You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items, get their nametag, and get their portfolio. They can decorate their portfolio before camp starts. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items, get their nametag, and get their portfolio. They can decorate their portfolio before camp starts. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! An immersive half-day experience where kids will explore the exciting world of veterinary medicine firsthand! Find out what it takes to be a vet!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "502778",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502778/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "502784",
+    "company": "animalcenter",
+    "title": "Veterinarian Camp - Full Day",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/veterinarian-camp---full-day-502784",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program."
+    ],
+    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "6 hours guided outing",
+      "Groups stay at a maximum of 30 guests"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
+    "wordCount": 51,
+    "durationLabel": "6 hours",
+    "durationIso": "PT6H",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": "From $175.96",
+    "priceRows": [
+      {
+        "label": "Participant",
+        "note": "Ages 9 - 16",
+        "amountLabel": "$175.96"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "175.96",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/502784/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
+      "heroHandle": "CFihp53ZRhWtTGzA5RyZ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q",
+          "handle": "aOgx21zkRt0iVtD4X60q",
+          "pixelSha256": "e9ea6fa2e120c6832947e917e7ff9d15f79ea3503462fe5dc43b0d01e2f40cd7",
+          "differenceHashDistanceFromHero": 125,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.17981,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-502784",
+      "fetchedAt": "2026-10-02T22:43:26.567561+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502784/content/",
+          "status": 200,
+          "bytes": 19248,
+          "sha256": "7048800f1527647124e8378b12cdba9faab8dd15505a6b5641cb7dd70bf3b275"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502784/structured-description/",
+          "status": 200,
+          "bytes": 12808,
+          "sha256": "6b8b3ff996c93c0c1257e36feb7b16a9b788d2a5f4467e7e07face2effa2effb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502784/",
+          "status": 200,
+          "bytes": 18212,
+          "sha256": "53c380f7b4970139c0ac7988ab01902e1f12a9ec75dc074d27eea083b5ce6f86"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502784&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 547,
+          "sha256": "879b24fa895135c0fb163d4c1b3776d0809a3d166e36c66086359d36ed240226"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502784/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "a2b9d72c3dda62c470d2b001805ca6d006d743576ae7ab851fd21759e10a410f"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Participant",
+          "note": "Ages 9 - 16",
+          "amount": 175.96
+        },
+        "customerTypes": [
+          {
+            "singular": "Participant",
+            "note": "Ages 9 - 16",
+            "amount": 175.96
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-11-07T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Be a vet for a day!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 9,
+        "maxAge": 16,
+        "groupSize": "Maximum 30 campers",
+        "included": [],
+        "excluded": [],
+        "itinerary": [
+          "8:45-9:00: check in period, campers decorate their portfolios which are provided to them",
+          "9:00-9:30: first activity. The class will discuss the day, camp rules, and icebreakers as well",
+          "9:30-10:00: second activity (usually meeting the veterinarian)",
+          "10:00-10:30: third activity",
+          "10:30-11:00: snack period",
+          "11:00-11:45: fourth activity",
+          "11:45-12:30: fifth activity",
+          "12:30-1:15: lunch period",
+          "1:15-2:00: sixth activity",
+          "2:00-2:15: team game",
+          "2:15-3:00: seventh activity",
+          "3:00-3:15: check out period, campers stay circled up with their class and play quiet games"
+        ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 30-45 min. They meet 4 different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play, a lunch time which includes some free play, and a team-building game. 8:45-9:00: check in period, campers decorate their portfolios which are provided to them. 9:00-9:30: first activity. The class will discuss the day, camp rules, and icebreakers as well. 9:30-10:00: second activity (usually meeting the veterinarian) 10:00-10:30: third activity. 10:30-11:00: snack period. 11:00-11:45: fourth activity. 11:45-12:30: fifth activity. 12:30-1:15: lunch period. 1:15-2:00: sixth activity. 2:00-2:15: team game. 2:15-3:00: seventh activity. 3:00-3:15: check out period, campers stay circled up with their class and play quiet games."
+        ],
+        "highlights": [
+          "Portfolio provided for each camper full of worksheets that will be used during the day, information sheets, and a place for them to store small loose items they might receive",
+          "Meet a veterinarian who will share their knowledge and answer questions",
+          "Tour a companion animal hospital!",
+          "Practice suture skills on a banana",
+          "View cells with a microscope",
+          "Understand canine CPR with a realistic training dummy"
+        ],
+        "restrictions": [
+          "This camp is for kids only!",
+          "Must be 9 or older for safety and maturity reasons with the activities and level of knowledge we provide",
+          "All campers must be able to use the restroom confidently and on their own",
+          "Shoes : For safety reasons, closed-toed shoes only"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Veterinarian Camp"
+        ],
+        "measures": [],
+        "description": "Are you ready to step into the shoes of a real vet? Join us for You Can Be a Veterinarian Camp, an immersive one-day experience where kids will explore the exciting world of veterinary medicine firsthand! From handling exotic animals to practicing real-life techniques, campers will gain valuable skills, interact with professional equipment, and even speak with veterinary experts. This rare opportunity offers a fun, hands-on journey into the world of animal care, inspiring future vets to learn, dream big, and discover their passion",
+        "detailsText": "You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items, get their nametag, and get their portfolio. They can decorate their portfolio before camp starts. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! You can wait by our lobby and when check-in begins a side gate will be opened. Staff with clipboards will be there to check you in 10 minutes prior to start time. Once checked in, parents are free to leave and campers will be directed to their class table to place down their items, get their nametag, and get their portfolio. They can decorate their portfolio before camp starts. Once check-in has finished the class Instructor will assemble all the campers to go over expectations, the schedule of the day, and begin! An immersive one-day experience where kids will explore the exciting world of veterinary medicine firsthand! Be a vet for a day!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "502784",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502784/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "509720",
+    "company": "animalcenter",
+    "title": "Spring Buddies Family Festival",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/spring-buddies-family-festival-509720",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Spring Buddies Family Festival is a 6-hour guided outing with Helen Woodward Animal Center. Themed face painting and Festive, themed music throughout the event are included.",
+      "The walk is stroller and wheelchair accessible."
+    ],
+    "schemaDescription": "Spring Buddies Family Festival is a 6-hour guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "6 hours guided outing",
+      "Themed face painting"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
+    "wordCount": 34,
+    "durationLabel": "6 hours",
+    "durationIso": "PT6H",
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/509720/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UrZ8xSkCSbfw8hVpnGI8",
+      "heroHandle": "UrZ8xSkCSbfw8hVpnGI8",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx",
+          "handle": "cwpuL1q7RSeXWTg1zXOx",
+          "pixelSha256": "96e5e075667d08d5681a0298873c652e3d5fa6789647968613b5792d7cab9b3e",
+          "differenceHashDistanceFromHero": 120,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25132,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/cwpuL1q7RSeXWTg1zXOx",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-509720",
+      "fetchedAt": "2026-10-02T22:43:26.758254+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/509720/content/",
+          "status": 200,
+          "bytes": 5751,
+          "sha256": "548945eb4d6192fb3238fd7d450be8dbd4a9e8f170df8457d43ecfba9efd9d35"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/509720/structured-description/",
+          "status": 200,
+          "bytes": 4688,
+          "sha256": "342b320e9947251fe568e8513772092d0d916398177cbd232c54d3ab10973a53"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/509720/",
+          "status": 200,
+          "bytes": 12434,
+          "sha256": "8c3319f0a981de2f54fa0547b7b8d0a99d91f60eb6f0bcdb9659e9f07e9669fe"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=509720&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/509720/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "d803cd83c5d4b68098b4d0b23566f607b23e580e9acdf4e5c2538a9727314337"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "6 hours",
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Spring into fun with the whole family",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Any",
+        "included": [
+          "Interactive animal encounters with a variety of species",
+          "Fun games and activities for young learners",
+          "Themed face painting",
+          "Festive, themed music throughout the event"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [
+          "Event starts at 9am and ends at 3pm. We advise giving yourself at least 1-2 hours to enjoy all the activities available. You do the activities in whatever order suits you best!"
+        ],
+        "highlights": [],
+        "restrictions": [
+          "Shoes : For safety reasons, closed-toed shoes only",
+          "Drawstrings : For safety reasons, drawstrings (hoodies, pants or shorts) should not be worn on the playground",
+          "Pets : No pets are allowed on the campgrounds",
+          "There are no exceptions to this safety policy"
+        ],
+        "bring": [
+          "Water and snacks encouraged",
+          "Close-toed shoes and comfortable clothes",
+          "Phone or camera to take pictures of the animals!"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [
+          "Must book at least 1 Adult to proceed with booking children because children should not be dropped off or left unattended."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Animal Buddies Family Festival"
+        ],
+        "measures": [],
+        "description": "Animal Buddies Family Festival is a joyful, seasonal event designed for families to celebrate spring together through animals, creativity, and play. Guests will enjoy hands-on animal encounters with a variety of species, themed crafts to make and take home, engaging activities and access to our playground, whimsical face painting, and festive music throughout the event. Animal ambassadors will rotate in and out of the event space for some up close and personal encounters, so there's always something new to discover as the event proceeds! This experience provides an engaging environment where curiosity, learning, and fun can bloom. Must book at least 1 Adult to proceed with booking children because children should not be dropped off or left unattended. Most suitable for toddlers through Elementary ages.",
+        "detailsText": "Thank you for registering for Spring Buddies Family Festival at Helen Woodward Animal Center! Our animal friends are excited to celebrate the spring season with your family! Don't forget to bring your camera and please wear close toed shoes! Please enter the gate to the side of the lobby, there will be signs helping direct you to the registration booth. We will scan the QR codes of the tickets sent to you in your confirmation email. Tickets can be purchased ahead of time or at any point morning of and during the event, but all purchasing and registration is done online through the software. We will give you a red wrist band if you did not agree to the media policy. Please enter the gate to the side of the lobby, there will be signs helping direct you to the registration booth. We will scan the QR codes of the tickets sent to you in your confirmation email. Tickets can be purchased ahead of time or at any point morning of and during the event, but all purchasing and registration is done online through the software. We will give you a red wrist band if you did not agree to the media policy. Celebrate spring with hands-on animal encounters, crafts, games, and family-friendly fun! Spring into fun with the whole family",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "509720",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/509720/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 34 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "575652",
+    "company": "animalcenter",
+    "title": "Spring Adventure",
+    "operator": "Helen Woodward Animal Center",
+    "publicPath": "/destinations/california/del-mar/tours/spring-adventure-575652",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Children meet live animals and hear how life cycles work. Animals that may be brought out include a mini horse, a chicken, a frog, and a guinea pig. Staff stay with the group while the animals are part of the program. Guests spend part of the visit in a hands-on session with the horses.",
+      "The commentary takes up Next Generation Science Standards and Education Office. That same account stays with Girl Scouts and Between Earth."
+    ],
+    "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "Onsite: mini horse, chicken, frog"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
+    "wordCount": 76,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+    "visiblePriceLabel": "From $5.30",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 18+",
+        "amountLabel": "$5.30"
+      },
+      {
+        "label": "Child- 60 minute seasonal",
+        "note": "",
+        "amountLabel": "$15.63"
+      },
+      {
+        "label": "Extra Time Field Trip",
+        "note": "Adds 30 minutes, add per child",
+        "amountLabel": "$3.18"
+      },
+      {
+        "label": "60 Minute Seasonal Outreach (Per class)",
+        "note": "Outreaches only available to schools",
+        "amountLabel": "$312.70"
+      },
+      {
+        "label": "Extra Time Outreach",
+        "note": "Adds 30 minutes, add per class - only available for schools",
+        "amountLabel": "$63.60"
+      },
+      {
+        "label": "HWAC Patch",
+        "note": "",
+        "amountLabel": "$6.36"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "5.30",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/animalcenter/items/575652/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Del Mar",
+      "state": "California",
+      "citySlug": "del-mar",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
+      "heroHandle": "sEO38S0T9esk4TOgzFek",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph",
+          "handle": "P1TOzw1XQoGD6l63r9ph",
+          "pixelSha256": "ed4c7acb1ca66c2fde5b30b249ee24c02198283d94a8bcd679e7742ccaaf9d99",
+          "differenceHashDistanceFromHero": 134,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26161,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/del-mar/animalcenter-575652",
+      "fetchedAt": "2026-10-02T22:43:26.890695+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/575652/content/",
+          "status": 200,
+          "bytes": 8337,
+          "sha256": "57cb9e4abff66c167614c975c84a2f172f8f8303f3cbe3c44ec5703f140c693b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/575652/structured-description/",
+          "status": 200,
+          "bytes": 6609,
+          "sha256": "75480cc7798a6a3eee08207c0e5af7264f44ca9194b2832d6862dedf22bb2361"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/575652/",
+          "status": 200,
+          "bytes": 11128,
+          "sha256": "00b4c6129835d48aa4c4743e70b67d6d0646fd7bb1e16330d50592ec6049fe1d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=575652&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1359,
+          "sha256": "1cd30980540ebd2872e32b0c0138e92518e2a167c065e1f320775effea831dcd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/575652/ratings/",
+          "status": 200,
+          "bytes": 476,
+          "sha256": "29790dd9dfac297ffb5992a7991aba83ece4641a14825c11c1bcd6fdfad86008"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 18+",
+          "amount": 5.3
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 18+",
+            "amount": 5.3
+          },
+          {
+            "singular": "Child- 60 minute seasonal",
+            "note": "",
+            "amount": 15.63
+          },
+          {
+            "singular": "Extra Time Field Trip",
+            "note": "Adds 30 minutes, add per child",
+            "amount": 3.18
+          },
+          {
+            "singular": "60 Minute Seasonal Outreach (Per class)",
+            "note": "Outreaches only available to schools",
+            "amount": 312.7
+          },
+          {
+            "singular": "Extra Time Outreach",
+            "note": "Adds 30 minutes, add per class - only available for schools",
+            "amount": 63.6
+          },
+          {
+            "singular": "HWAC Patch",
+            "note": "",
+            "amount": 6.36
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2027-01-01T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
+        "itemLocation": null,
+        "headline": "Schools • Scouts • Playgroups • Hands-On Interactions",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "Maximum 180 people",
+        "included": [
+          "Interactions with 4 animals plus a STEM activity. Kids will interact with the following animals, which vary depending on location",
+          "Onsite: mini horse, chicken, frog, Madagascar hissing cockroach",
+          "Offsite: guinea pig, dove, frog, Madagascar hissing cockroach",
+          "Onsite: mini horse, chicken, frog",
+          "Offsite: guinea pig, dove, frog"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [
+          "Animal presentations are 15 minute blocks and the STEM activity is a 30 minute block. General flow involves meeting the animals first then doing the activity, but this order can vary based on Instructor discretion."
+        ],
+        "highlights": [],
+        "restrictions": [
+          "Outreaches : Only available for schools",
+          "Shoes : For safety reasons, closed-toed shoes only",
+          "Drawstrings : For safety reasons, drawstrings (hoodies, pants or shorts) should not be worn on the playground",
+          "Pets : No pets are allowed on the campgrounds"
+        ],
+        "bring": [
+          "Water and snacks encouraged",
+          "Close-toed shoes and comfortable clothes",
+          "Phone or camera to take pictures of the animals!"
+        ],
+        "cancellation": null,
+        "accessibility": "Stroller and wheelchair accessible",
+        "languages": [],
+        "factualSentences": [
+          "Schools: Spring Adventure incorporates STEM concepts and aligns with Next Generation Science Standards for grades K-6."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Spring Adventure",
+          "Next Generation Science Standards",
+          "Education Office",
+          "Girl Scouts",
+          "Between Earth"
+        ],
+        "measures": [],
+        "description": "Spring Adventure is an engaging, seasonally themed program that invites children to explore the science of spring through animals, observation, and hands-on learning. Participants will meet live animal ambassadors-including a mammal, bird, amphibian, and invertebrate-take part in an age-appropriate STEM activity focused on butterfly conservation, and learn about life cycles, baby animals, and the changes plants and animals experience as winter turns to spring. The program encourages curiosity, critical thinking, and compassion for animals while reinforcing foundational science concepts in a fun, accessible way. Schools: Spring Adventure incorporates STEM concepts and aligns with Next Generation Science Standards for grades K-6. The program can be hosted on-site at our campus or brought directly to your classroom to reduce transportation costs and simplify scheduling. Schools are encouraged to call or email our Education Office to book; this allows us to reserve your program without upfront payment and invoice after the program concludes. Girl Scouts: this program can be customized to meet some of the “Between Earth and Sky” journey requirements for Daisies.",
+        "detailsText": "We are looking forward to seeing you! CHECK-IN PROCEDURE Meet at Education lobby to check in, at which point you will be directed back to the main meeting space for your program at one of our indoor classrooms or playgrounds. Plan to arrive 10 minutes before your program start time. Late arrival results in a shorter program with less time for animal interaction. PROGRAM EXPECTATIONS To prepare children for live animal presentations at Helen Woodward Animal Center, please read and share the following before you arrive: All participants, regardless of age, should wear closed-toed shoes. Please remain with the group at all times. Some areas of the Center are restricted to staff access only. Food is only permitted in our Park or Pollinator event spaces. Not all animals can be pet. Your guide will invite you to pet when available. Animals are very sensitive to and easily startled by loud, high-pitched sounds and fast movement. Help children act respectfully around the animals by keeping \"voices low and feet slow.\" For this reason flash photography is also prohibited. Our Instructors will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario, send the group leader to our Education Lobby to check in and office staff will assist you. You will then be directed back to a classroom or a playground to use before the program begins. Our Instructors will be expecting your arrival, but may not immediately be out there to greet you if they are finishing room and animal preparation, especially if you arrive early. In that scenario, send the group leader to our Education Lobby to check in and office staff will assist you. You will then be directed back to a classroom or a playground to use before the program begins. Hop into fun with an unforgettable animal experience Schools • Scouts • Playgroups • Hands-On Interactions",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "575652",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575652/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

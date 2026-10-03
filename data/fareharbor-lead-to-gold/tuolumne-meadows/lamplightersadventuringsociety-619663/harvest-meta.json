@@ -1,0 +1,47 @@
+{
+  "company": "lamplightersadventuringsociety",
+  "itemId": "619663",
+  "fetchedAt": "2026-10-02T22:43:45.093960+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/content/",
+      "status": 200,
+      "bytes": 2213,
+      "sha256": "ceb159b725255d28de8a45545ed9918dc753a6f7d9823bc541fa2761eb449cf7"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619663/structured-description/",
+      "status": 200,
+      "bytes": 1278,
+      "sha256": "8fa7fe433af6cba4dfd021e163a15110dbfc06d1e0eda5176493f141db84fa54"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/",
+      "status": 200,
+      "bytes": 14883,
+      "sha256": "e1303c090f35c2bbf549fb37669eafe355fe5cdb0768df06fe19c4c780c07dea"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619663&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 530,
+      "sha256": "e75322e35d44a9af499f6883842840810ef18960644a514f0379ac150c504b17"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619663/ratings/",
+      "status": 200,
+      "bytes": 592,
+      "sha256": "3380143d62d1bf468de3a4c163d79894e80fb6c501d26e3f66c36b143d446cfc"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "619663",
+    "provider": "lamplightersadventuringsociety",
+    "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619663/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,47 @@
+{
+  "company": "alldayla",
+  "itemId": "518084",
+  "fetchedAt": "2026-10-02T19:39:53.365494+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/alldayla/518084/content/",
+      "status": 200,
+      "bytes": 2262,
+      "sha256": "9546340a97707ef275ae8e3c0914e97c4731c1ac95a3e26f9faae35e878f1c4d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/alldayla/518084/structured-description/",
+      "status": 200,
+      "bytes": 1591,
+      "sha256": "6dcff8747efeec036f2f64dbf97c3aa54dc51f233f06c873061061dcde459af4"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/alldayla/items/518084/",
+      "status": 200,
+      "bytes": 8747,
+      "sha256": "ebaa65d0ebce21c5f2a7452e44a85127482a56e3b80fab4e78b0cc50fbed2c48"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/alldayla/price-preview/per-item/v2/?asn=fhdn&item_pks=518084&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 556,
+      "sha256": "6752f445515c05a031b9904efec958c444f68489ea70b267c2cc28e5d2995a52"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/alldayla/items/518084/ratings/",
+      "status": 200,
+      "bytes": 516,
+      "sha256": "ec06fb1bb87e0486f6d7d16791c568256525b1660460ae45509c5812cbe88c35"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "518084",
+    "provider": "alldayla",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alldayla/items/518084/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

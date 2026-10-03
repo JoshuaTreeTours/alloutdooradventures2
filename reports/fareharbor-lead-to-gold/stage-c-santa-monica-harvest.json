@@ -1,0 +1,439 @@
+{
+  "fetchedAt": "2026-10-02T22:43:58.336967+00:00",
+  "citySlug": "santa-monica",
+  "totalBostonLegacy": 6,
+  "total": 6,
+  "active": 4,
+  "terminal": 2,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 3,
+  "priceNotFound": 1,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "49179",
+    "49189"
+  ],
+  "priceNotFoundIds": [
+    "394581"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "49179",
+      "company": "pedalornot",
+      "catalogId": "pedal-or-not-49179",
+      "slug": "small-group-tour-49179",
+      "title": "Small Group Tour",
+      "operator": "Pedal or Not",
+      "publicPath": "/destinations/california/santa-monica/tours/small-group-tour-49179",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49179/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/MxZVZt9GQk62utdMZq2I",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/MxZVZt9GQk62utdMZq2I"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:53.635602+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49179/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49179/structured-description/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "f11653abf319ee71fc7eccdfd30a1fe98ec7dde8b6c363e42468e01592a46ac1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49179/",
+          "status": 404,
+          "bytes": 588051,
+          "sha256": "4813a9a95f29fed5bad1c67dddcbb980a7744f44d8175b953871fb7d9805d008"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalornot/price-preview/per-item/v2/?asn=fhdn&item_pks=49179&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 134,
+          "sha256": "7085c58a4302fa098d6f9b1b89e6fe38c7ef57e24c8d6ca1d3ad62729d9d0480"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49179/ratings/",
+          "status": 404,
+          "bytes": 588067,
+          "sha256": "e5e4766383544e517d31af5bae604b1898114c02dc1fa6f022a46ad5f879e4df"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "49179",
+        "provider": "pedalornot",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49179/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "49189",
+      "company": "pedalornot",
+      "catalogId": "pedal-or-not-49189",
+      "slug": "the-best-private-tour-in-town-49189",
+      "title": "The Best Private Tour in Town",
+      "operator": "Pedal or Not",
+      "publicPath": "/destinations/california/santa-monica/tours/the-best-private-tour-in-town-49189",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49189/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/aK878S5dT8G9k92N6s6y",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/aK878S5dT8G9k92N6s6y"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:53.636237+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pedalornot/49189/structured-description/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "1a65c11ee5f2d46913b3e69642a0e89c81a2d0a89dca803535481cb1cb66607a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/",
+          "status": 404,
+          "bytes": 588051,
+          "sha256": "ad4a4cbcb7f72d2f64de9e59d52c8846bb5ec21b67c34f45fe2e069618d7c567"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pedalornot/price-preview/per-item/v2/?asn=fhdn&item_pks=49189&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 134,
+          "sha256": "7085c58a4302fa098d6f9b1b89e6fe38c7ef57e24c8d6ca1d3ad62729d9d0480"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pedalornot/items/49189/ratings/",
+          "status": 404,
+          "bytes": 588067,
+          "sha256": "bd27ffb6724f6f98c11a702578bc61536362e3b2ba79282251347722ca69daa5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "49189",
+        "provider": "pedalornot",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pedalornot/items/49189/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "394572",
+      "company": "unlimitedbiking",
+      "catalogId": "unlimited-biking-394572",
+      "slug": "santa-monica-and-venice-beach-ebike-tour-394572",
+      "title": "Santa Monica & Venice Beach eBike Tour",
+      "operator": "Unlimited Biking",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-ebike-tour-394572",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394572/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:53.637941+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394572/content/",
+          "status": 200,
+          "bytes": 4084,
+          "sha256": "a7e9b9df338074e1d91b6b5c034cb73f6d55a46952353e195690b1a20362afd2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394572/structured-description/",
+          "status": 200,
+          "bytes": 1812,
+          "sha256": "48329afbc24f858a6927fc814f783ed8750ee95bedc131b8faed027e15b14c88"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394572/",
+          "status": 200,
+          "bytes": 12473,
+          "sha256": "f46628583582bc2d0c4e399c884b4aee0454523b9ae52447ca99e8b722a93194"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394572&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "3244ef7f69ffc831a107cda657ea30b9ef43051857468529f7e8ec3a55c189ba"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394572/ratings/",
+          "status": 200,
+          "bytes": 632,
+          "sha256": "80c1d7833038c204c371c703b0f6c6104e8b11664394b37309778a8263acbee3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "394572",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394572/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 85.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "394573",
+      "company": "unlimitedbiking",
+      "catalogId": "unlimited-biking-394573",
+      "slug": "santa-monica-and-venice-beach-bike-tour-394573",
+      "title": "Santa Monica & Venice Beach Bike Tour",
+      "operator": "Unlimited Biking",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-bike-tour-394573",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394573/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:53.641024+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394573/content/",
+          "status": 200,
+          "bytes": 3890,
+          "sha256": "b9091f8a859fdd7777ec1ec06546fd6bc84f2949579f5512b97f126895688466"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394573/structured-description/",
+          "status": 200,
+          "bytes": 1764,
+          "sha256": "550b5d759fdd7ecc0986a3f809a37944080944a5b0d1e8f1a87b6986c171d3c2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394573/",
+          "status": 200,
+          "bytes": 12277,
+          "sha256": "023ca1c5036ee9ef8a1d982aa588190dc706e336bd4548a84a10a9021bd8f67a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394573&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 817,
+          "sha256": "041ef07fb71a75205f734e9c13cbfdd02a73894db022a556c4b314670a4ac717"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394573/ratings/",
+          "status": 200,
+          "bytes": 631,
+          "sha256": "a61a2fd4835a55c1250618cea578a36560afd10ee5f754fb3d0d8c08a04460a0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "394573",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394573/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 65.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "394581",
+      "company": "unlimitedbiking",
+      "catalogId": "unlimited-biking-394581",
+      "slug": "santa-monica-ebike-rentals-394581",
+      "title": "Santa Monica eBike Rentals",
+      "operator": "Unlimited Biking",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-ebike-rentals-394581",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/RDHucASly96tdZqO8bgi"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:55.701615+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394581/content/",
+          "status": 200,
+          "bytes": 4295,
+          "sha256": "7d0e840f68c76ae5eb63b012e2e8c4da29f818dcc7183558a93aa28543b3b0b5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/394581/structured-description/",
+          "status": 200,
+          "bytes": 1641,
+          "sha256": "fa9653a839ab5602660eee26dfe6ba4fc6ea3b7e0e23ab86ba1263026b26acad"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394581/",
+          "status": 200,
+          "bytes": 12670,
+          "sha256": "f2c217adc2a08f54da640bef04d34594b70e8801eba2252a03a71aad90213c6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=394581&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/394581/ratings/",
+          "status": 200,
+          "bytes": 615,
+          "sha256": "3f4a0c926dec1f1b64ad66675c29212d695515b46c0696ec97fdeb340e349d6c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "394581",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394581/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "395126",
+      "company": "unlimitedbiking",
+      "catalogId": "unlimited-biking-395126",
+      "slug": "santa-monica-private-bike-tour-395126",
+      "title": "Santa Monica Private Bike Tour",
+      "operator": "Unlimited Biking",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-private-bike-tour-395126",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Santa Monica",
+        "citySlug": "santa-monica",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/395126/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/e0A0PLgiRpabLDScjFDu"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:55.956231+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/395126/content/",
+          "status": 200,
+          "bytes": 3014,
+          "sha256": "24ff11ee7a50de47c44b0b2ea1c4eb26f2dccf848b3b4bcfbf03251307431ad6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/395126/structured-description/",
+          "status": 200,
+          "bytes": 1818,
+          "sha256": "aa1f9e82af0c57def6a549d42ee8d95457cd040cfd45e722b3449012cf3b1e61"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/395126/",
+          "status": 200,
+          "bytes": 12219,
+          "sha256": "4167588b93763059a9246da64ee4dec11af6a26e31d873248427d523dae2a106"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=395126&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 874,
+          "sha256": "06c7e88b55330df16e4c9af62dfd24fe8959ff02dfd77a2e2d0ded25e469037d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/395126/ratings/",
+          "status": 200,
+          "bytes": 619,
+          "sha256": "18023ef84c2a11a36b07e6efe7e20c08a064d70699ba2ab9e2de80fbb18b01b8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "395126",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/395126/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 300.0,
+        "currency": "USD",
+        "singular": "Two Hours Private Bike Tour"
+      }
+    }
+  ]
+}

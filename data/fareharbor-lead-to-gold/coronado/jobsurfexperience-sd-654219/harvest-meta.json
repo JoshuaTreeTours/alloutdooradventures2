@@ -1,0 +1,47 @@
+{
+  "company": "jobsurfexperience-sd",
+  "itemId": "654219",
+  "fetchedAt": "2026-10-02T22:42:29.153246+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/654219/content/",
+      "status": 200,
+      "bytes": 7140,
+      "sha256": "362a282fe06f3c47e65349251e80debbb51a6cffcfef7dba5bc4c31aea687501"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/jobsurfexperience-sd/654219/structured-description/",
+      "status": 200,
+      "bytes": 6088,
+      "sha256": "5e6592356c9662e8b16023f4cdaa05f5a5d70a66a863b23d1d77a4469cab4c18"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/654219/",
+      "status": 200,
+      "bytes": 11269,
+      "sha256": "fc8199142c9930888c17194e69ea0c7bf4facf5f177b97ec8484842f33a9b20e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/jobsurfexperience-sd/price-preview/per-item/v2/?asn=fhdn&item_pks=654219&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 526,
+      "sha256": "65f11c4e7c76f6cbe5afea7999145bc3f448dc636e59d68d12571ef20a883c5c"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/jobsurfexperience-sd/items/654219/ratings/",
+      "status": 200,
+      "bytes": 479,
+      "sha256": "aba3fb17350da8a21c84b488b0b3c667eaef47a8313c80382e1634d2c52db9f8"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "654219",
+    "provider": "jobsurfexperience-sd",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/654219/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

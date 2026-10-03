@@ -1,0 +1,47 @@
+{
+  "company": "hollywoodbustoursla",
+  "itemId": "333382",
+  "fetchedAt": "2026-10-02T19:39:55.846286+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hollywoodbustoursla/333382/content/",
+      "status": 200,
+      "bytes": 8513,
+      "sha256": "2b1d39c138cd79b1641ca53d5229967ea4a5a7b53f51b6b960c4b05bfafacc2b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hollywoodbustoursla/333382/structured-description/",
+      "status": 200,
+      "bytes": 4811,
+      "sha256": "5dc5e0c8c698af18819a0f53090f4e24936ab7882b861d47915a585a80f2131a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/",
+      "status": 200,
+      "bytes": 29977,
+      "sha256": "3d48deed95f54d29b35e7c40c2250eb795b2dd95f3e6875c4efdf350c94b605f"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hollywoodbustoursla/price-preview/per-item/v2/?asn=fhdn&item_pks=333382&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 898,
+      "sha256": "4b9cc06277c22037b2556b65fb84378f93a8d46878494155d0ca65de9abae049"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywoodbustoursla/items/333382/ratings/",
+      "status": 200,
+      "bytes": 571,
+      "sha256": "cdc78489b72478c743727f6876f9c26751c8444018705413010616df5a0b1d66"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "333382",
+    "provider": "hollywoodbustoursla",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

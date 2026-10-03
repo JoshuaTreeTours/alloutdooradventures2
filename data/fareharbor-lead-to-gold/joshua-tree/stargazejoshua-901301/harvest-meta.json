@@ -1,0 +1,48 @@
+{
+  "company": "stargazejoshua",
+  "itemId": "901301",
+  "fetchedAt": "2026-10-02T22:43:05.945131+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/stargazejoshua/901301/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/stargazejoshua/901301/structured-description/",
+      "status": 404,
+      "bytes": 588087,
+      "sha256": "10dfe39839fefada5e94cba86be920bec2e26067ffb842535cb5bbdf2979fcef"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/stargazejoshua/items/901301/",
+      "status": 404,
+      "bytes": 588061,
+      "sha256": "4bb7bac797411f1b0c2034ef09d74a98d9f3f51471b91b52754076f6ce0d1cde"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/stargazejoshua/price-preview/per-item/v2/?asn=fhdn&item_pks=901301&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 138,
+      "sha256": "2623c7d0267277082748c237ac26768d4e7e08804f17f169155bc24f3c3d1b25"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/stargazejoshua/items/901301/ratings/",
+      "status": 404,
+      "bytes": 588077,
+      "sha256": "727ace522d7de052fbf7eb04ec8f4481c89e212d7270aa957ea3429bf587852d"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "901301",
+    "provider": "stargazejoshua",
+    "bookingUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

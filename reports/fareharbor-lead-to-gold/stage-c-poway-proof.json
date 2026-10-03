@@ -1,0 +1,240 @@
+[
+  {
+    "itemId": "71811",
+    "company": "powaytrailcompany",
+    "title": "Trail Rides",
+    "operator": "San Diego Trail Company",
+    "publicPath": "/destinations/california/oro-poway/tours/trail-rides-71811",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests hear about Guided Trail Rides and Ride Pace. Stories along the way cover Weight Limits and Minuet Ride. Hour Ride and Weekend Rides come up in the commentary. Guests stay on foot the whole time, pausing while the guide talks at each site. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
+      "Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
+    ],
+    "schemaDescription": "A walking tour with San Diego Trail Company in Oro. Poway. The walk passes Trail Ride Pricing Weekday Rides and Rider Considerations At San Diego Trail.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel.",
+      "Oro. Poway, California from meeting_point does not belong to Poway, and no matching public destination exists"
+    ],
+    "highlights": [
+      "Trail Ride Pricing Weekday Rides and Rider Considerations At San Diego Trail"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/r8UFPqqgR52KcNeOXTwq"
+    ],
+    "wordCount": 110,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "14875 Mina De Oro. Poway, CA. 92064",
+    "visiblePriceLabel": "From $68.90",
+    "priceRows": [
+      {
+        "label": "Ranch Trail Ride",
+        "note": "30 minute/per person",
+        "amountLabel": "$68.90"
+      },
+      {
+        "label": "Rider- 1 Hour",
+        "note": "",
+        "amountLabel": "$132.50"
+      },
+      {
+        "label": "Rider - 1.5 Hour",
+        "note": "",
+        "amountLabel": "$177.55"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "68.90",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/powaytrailcompany/items/71811/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Oro. Poway",
+      "state": "California",
+      "citySlug": "oro-poway",
+      "stateSlug": "california",
+      "reason": "Oro. Poway, California from meeting_point does not belong to Poway, and no matching public destination exists",
+      "place": {
+        "city": "Oro. Poway",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "oro-poway",
+        "stateSlug": "california",
+        "raw": "Oro. Poway, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Oro. Poway",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oro-poway",
+          "stateSlug": "california",
+          "raw": "Oro. Poway, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Oro. Poway",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "oro-poway",
+          "stateSlug": "california",
+          "raw": "Oro. Poway, CA",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/p2Azwg8QYWt6Wc57rZVA",
+      "heroHandle": "p2Azwg8QYWt6Wc57rZVA",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/r8UFPqqgR52KcNeOXTwq",
+          "handle": "r8UFPqqgR52KcNeOXTwq",
+          "pixelSha256": "0322719e96a6cbe2bb8bc46ba4664988ba171f614418db90c32af61f30703126",
+          "differenceHashDistanceFromHero": 137,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.33797,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/r8UFPqqgR52KcNeOXTwq",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/poway/powaytrailcompany-71811",
+      "fetchedAt": "2026-10-02T22:44:27.460631+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/powaytrailcompany/71811/content/",
+          "status": 200,
+          "bytes": 13630,
+          "sha256": "a7878bd9428755eca69f98bf73f434a55752367801c2607f6ee8f10ebf38b906"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/powaytrailcompany/71811/structured-description/",
+          "status": 200,
+          "bytes": 5812,
+          "sha256": "a675a6bcdfc509f533317de211d817c76db9db58c8cc71e762a6fdf3810cf23a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/powaytrailcompany/items/71811/",
+          "status": 200,
+          "bytes": 26710,
+          "sha256": "632326eabbdfbe6b7344703cc6989e2df7291022fe2468096bd2866c24df18a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/powaytrailcompany/price-preview/per-item/v2/?asn=fhdn&item_pks=71811&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 814,
+          "sha256": "60c2b4ddb0b26fb888bd3e4319ec4c670cf3e42892925c8b50db45b3d25b9288"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/powaytrailcompany/items/71811/ratings/",
+          "status": 200,
+          "bytes": 421,
+          "sha256": "5fb07e98a5df572ab4a4db1daed33760a0899270a01f7e701ee5ef897688406d"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Ranch Trail Ride",
+          "note": "30 minute/per person",
+          "amount": 68.9
+        },
+        "customerTypes": [
+          {
+            "singular": "Ranch Trail Ride",
+            "note": "30 minute/per person",
+            "amount": 68.9
+          },
+          {
+            "singular": "Rider- 1 Hour",
+            "note": "",
+            "amount": 132.5
+          },
+          {
+            "singular": "Rider - 1.5 Hour",
+            "note": "",
+            "amount": 177.55
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "14875 Mina De Oro. Poway, CA. 92064",
+        "itemLocation": "14875 Mina De Oro. Poway, CA. 92064",
+        "headline": "1 Hour, 1.5 Hours, Luxury Picnic Add ON!!!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Weight Limits: Riders 5'8\" and taller: Maximum weight limit of 240 lbs.",
+          "Riders under 5'8\": Maximum weight limit of 180 lbs."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Guided Trail Rides",
+          "JP's BBQ",
+          "Ride Pace",
+          "Weight Limit",
+          "Weight Limits",
+          "Trail Ride Pricing Weekday Rides",
+          "Minuet Ride",
+          "Hour Ride"
+        ],
+        "measures": [
+          "1 Hour",
+          "1.5 Hour",
+          "2 Hour"
+        ],
+        "description": "Guided Trail Rides at San Diego Trail Company Explore scenic trails on horseback with our expert-guided rides! Our trail rides are perfect for riders of all experience levels, ages 7 and up. Plus, enjoy a delicious lunch catered by Tuga & JP's BBQ every Saturday after your ride! 🚨 Please note: Destination rides are not available. Ride Pace & Safety Our trail rides are walking-only to ensure the safety and comfort of both horse and rider. While our wranglers provide a fun and engaging experience, we do not offer trotting or loping during rides. Please also note that multiple groups may be on a single ride, which helps maintain a safe and enjoyable pace for everyone. Weather & Rain Policy We closely monitor local weather conditions and will notify you by 8 AM on the day of your ride or lesson if excessive heat, wind, or rain require us to cancel or reschedule. Your safety and comfort, along with the well-being of our horses, always come first. Because our footing can get slick or muddy after rain, there are times when we need to make a call based on ground conditions rather than the sky. If we need to adjust your ride or lesson for safety reasons, we'll reach out as soon as we can. If it has recently rained and you haven't heard from us yet, it's always helpful to check in. Weather here changes fast, and sometimes conditions can look fine until we're out in the arena or on the trail. If the footing is safe, we ride. If it isn't, we'll get you rescheduled. Safety & Rider Considerations At San Diego Trail Company, the safety of our guests, staff, and horses is our highest priority. Certain medical conditions, recent surgeries, disabilities, or other health concerns can make horseback riding unsafe. If you require additional assistance or a more hands-on riding experience, we must be informed in advance so we can determine whether we can safely accommodate your needs. If you have had a recent surgery, a chronic physical condition, or any impairment that may affect your comfort, balance, or ability to control a horse, please disclose this before your ride. While we will do our best to accommodate individual circumstances, we reserve the right to adjust or deny a ride if a condition has not been disclosed in advance for safety reasons. Horseback riding engages muscles in ways that may be unfamiliar, and we understand that aches and pains happen. However, we ask all riders to use discretion and prioritize their health and the safety of the entire group. If you have any concerns about your ability to ride, please let us know at the time of booking so we can make the best possible arrangements. Weight Limit & Rider Safety We take rider and horse safety seriously and will verify weight limits on-site at our discretion. While we strive to be flexible and tailor each ride to your needs, we ask for rider weights at the time of booking. We reserve the right to decline a rider if we cannot safely accommodate them due to horse availability, saddle fit, or concerns about accuracy on the day of the ride. Our horses and saddles come in a range of sizes, but we may not always have the right fit for every rider. If you are unsure whether we can accommodate you, please reach out before booking. Your safety and comfort are our top priorities! Weight Limits: Riders 5'8\" and taller: Maximum weight limit of 240 lbs. Riders under 5'8\": Maximum weight limit of 180 lbs. Trail Ride Pricing Weekday Rides (Monday - Thursday) 30 Minuet Ride $65 per person 1 Hour Ride: $110.00 per person 1.5 Hour Ride: $165.00 per person 2 Hour Ride: $220.00 per person Weekend Rides (Friday - Sunday) 30 Minuet ride $65 per person 1 Hour Ride: $125.00 per person 1.5 Hour Ride: $167.50 per person 2 Hour Ride: $225.00 per person Book your ride today and experience the beauty of the trails on horseback! About Us San Diego Trail Company offers an unforgettable horseback riding experience, whether you're a beginner or a seasoned rider. Explore the stunning landscapes of Poway as you ride on our carefully selected horses. We exclusively use Western saddles and do not accommodate English riding or provide English saddles. Our knowledgeable team will pair you with the perfect horse based on your skill level, size, and, most importantly, the horse's personality and temperament. Rides are limited to a maximum of four participants to ensure a personalized experience with our expert wranglers. For families or groups, we're happy to accommodate larger parties whenever possible. Simply contact us for more information on group bookings. Please note that we operate by reservation only. Same-day bookings may be available upon request, but we kindly ask that you call in advance to confirm availability.",
+        "detailsText": "San Diego Trail Company Trail Ride Information Ride Options 30 Minutes • 1 Hour • 1.5 Hours Whether you're a first-time rider or experienced in the saddle, we're excited to welcome you to the ranch for a scenic trail riding experience through beautiful Poway. Each guest is matched with a horse based on experience level, size, and personality to help create a safe and enjoyable ride. Arrival & Check-In Please arrive 30 minutes early to allow time for parking, waivers, helmet fitting, and horse preparation. When entering the property, follow the road down to the Arena / Lesson Area - this is the designated parking and check-in location for trail rides, lessons, and events. Ranch Driving Rules • Speed limit is 5 MPH • If you see horses on the road, please stop and wait until they safely pass Before Your Ride If you arrive early, feel free to: • Visit our City Slicker Market • Enjoy coffee or DIY lemonade • Meet our retired horses All proceeds from the market help support the care of our retired ranch horses 🐴 Important Ride Policies • Trail rides are walking rides only • Trotting, cantering, and loping are not permitted for safety reasons • Reservations are required for all rides • Groups are kept small for a personalized experience Weight Limits • Riders 5'8” and taller: 240 lbs max • Riders under 5'8”: 180 lbs max Health & Safety • Helmets are provided • Children must be accompanied by an adult • This activity is not recommended during pregnancy • Waivers must be completed prior to arrival Weather Policy Safety always comes first for both guests and horses. Rides may be adjusted or rescheduled due to excessive heat, wind, rain, or unsafe trail conditions. If weather impacts your reservation, we will contact you as soon as possible. Gratuity Gratuity for your wranglers is not included but always appreciated. Location Poway Equestrian Center 14875 Mina De Oro Rd Poway, CA 92064 We look forward to riding with you! 1 Hour, 1.5 Hours, Luxury Picnic Add ON!!! 1 Hour, 1.5 Hours, Luxury Picnic Add ON!!!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "71811",
+        "provider": "powaytrailcompany",
+        "bookingUrl": "https://fareharbor.com/embeds/book/powaytrailcompany/items/71811/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

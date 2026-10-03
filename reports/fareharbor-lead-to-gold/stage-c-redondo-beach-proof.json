@@ -1,0 +1,1575 @@
+[
+  {
+    "itemId": "478885",
+    "company": "beachebiking",
+    "title": "2 Hour Beach E-Bike Ride",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/2-hour-beach-e-bike-ride-478885",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride a rented bike for the day. Time on the bike is about 2 hours. Time on the water is about 2 hours. The ride passes Hermosa Beach and Manhattan Beach. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+    ],
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
+    "wordCount": 105,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $42.40",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$42.40"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$42.40"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "42.40",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478885/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
+      "heroHandle": "Pb0Jgt9QVebMYsrvvnPz",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ",
+          "handle": "txmlzM1cQbCXWf0NTCQQ",
+          "pixelSha256": "bc07a367adac09babfff0fe6a91be88eb34925e966116dcda060926cc2e5dba1",
+          "differenceHashDistanceFromHero": 79,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.14425,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478885",
+      "fetchedAt": "2026-10-02T22:43:30.765510+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478885/content/",
+          "status": 200,
+          "bytes": 3000,
+          "sha256": "fc3c8e569c8b2a2ada16d741d96065faf1059e3eab8fc3cdda315774ee586a51"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478885/structured-description/",
+          "status": 200,
+          "bytes": 2405,
+          "sha256": "6fd2ef9234155384fbf6a975df2c999d6325770408b06d8c84745c506743002f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478885/",
+          "status": 200,
+          "bytes": 12407,
+          "sha256": "168eb9724dd047cf44f3088eb122338faa371966d691b5d0d437630bf0d0ae6a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478885&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 877,
+          "sha256": "084f5c1f09940876533f9a21b0233937865e498e85d16b71edfb9e4917de632f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478885/ratings/",
+          "status": 200,
+          "bytes": 472,
+          "sha256": "e2ffa9baf26395f009a93b503b9f73666e1c32d9803f56d2a9d0e0e73f7b416e"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 42.4
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 42.4
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 42.4
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "2 Hour E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach.",
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Redondo Beach",
+          "Hermosa Beach",
+          "Why Rent",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "2 hour",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "The 2 hour ride is a great way to explore the south bay beach towns of Redondo Beach, Hermosa Beach and Manhattan Beach. Hop right on the bike path from our shop and hop off at various locations along the beach. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "2 Hour E-Bike Rental 2 Hour E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478885",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478885/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "478891",
+    "company": "beachebiking",
+    "title": "4 Hr Beach E-Bike Ride",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/4-hr-beach-e-bike-ride-478891",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The group allows guests to get toward Santa Monica and all places in between with few short stops. Guests tell guests all the sights to see. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
+      "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
+    ],
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
+    "wordCount": 106,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $79.50",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$79.50"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$79.50"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "79.50",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478891/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
+      "heroHandle": "HFTBR3qsSu6mzf5ei1zy",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh",
+          "handle": "g7s2MrgBTc6kAsqqTvuh",
+          "pixelSha256": "f3d03266f7a339516d804ed87935480549384ceecfd5da402a61abad8d61d1f9",
+          "differenceHashDistanceFromHero": 127,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25747,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478891",
+      "fetchedAt": "2026-10-02T22:43:30.769813+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478891/content/",
+          "status": 200,
+          "bytes": 3018,
+          "sha256": "e391553011bb781d90baca1c06c795383bcda179d2e1061a5f9e2772058651d1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478891/structured-description/",
+          "status": 200,
+          "bytes": 2426,
+          "sha256": "f4c66958127ddec32279ac410e783caa704311bbe05b46ec0407c5cc4631a61a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478891/",
+          "status": 200,
+          "bytes": 12654,
+          "sha256": "57e0585f5f79209ce477ad1ccf10fb298d01ad16e83539cf7d598f8c0c9282d1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478891&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 877,
+          "sha256": "8fdf8c95cc3e57d72bdb0e9331118433a572b2a067e86da59a819a3e1ea9b2d3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478891/ratings/",
+          "status": 200,
+          "bytes": 469,
+          "sha256": "7f83e7af372224b74d4978eecf663448a319267d59bfe651d03a14018fec1b9a"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 79.5
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 79.5
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 79.5
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "4 Hour E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking.",
+          "Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Santa Monica",
+          "Why Rent",
+          "Redondo Beach",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "4 hour",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "The 4 hour ride allows you to get to Santa Monica and all the places in between with a few short stops. Hop right on the bike path from our shop and hop off at various locations along the beach. We'll tell you all the sights to see. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "4 Hour E-Bike Rental 4 Hour E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478891",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478891/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "478894",
+    "company": "beachebiking",
+    "title": "6 Hr E-Bike Ride",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/6-hr-e-bike-ride-478894",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Make sure to lock up the ebike safely with the included bike lock for when guests hop off at various locations on the beach. Guests give guests all the tips on places to see. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking.",
+      "Top 5 reasons to ride e-bike from Redondo Beach Pier: 1. Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5.",
+      "Riders must adhere toward safety guidelines agreed to in rental agreement."
+    ],
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/R1wAT0UsTLi7bM69t0Z8",
+    "wordCount": 114,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $100.70",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$100.70"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$100.70"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "100.70",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478894/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/R1wAT0UsTLi7bM69t0Z8",
+      "heroHandle": "R1wAT0UsTLi7bM69t0Z8",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA",
+          "handle": "dQH6BU9zS6CxcOacDchA",
+          "pixelSha256": "d79f80b5670044b6da62201d1c802c6555335813930470a73eaf50b94b8570ec",
+          "differenceHashDistanceFromHero": 109,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.14134,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478894",
+      "fetchedAt": "2026-10-02T22:43:30.775772+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478894/content/",
+          "status": 200,
+          "bytes": 3051,
+          "sha256": "44df1a233d554d81a0eb083cb2bfbd60939025c2f546885ae080ef52ef8b9733"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478894/structured-description/",
+          "status": 200,
+          "bytes": 2519,
+          "sha256": "877f03b410d9cdaedb9b49259eb8e03c0d9ec8b75c231946e634a5da335c143f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478894/",
+          "status": 200,
+          "bytes": 12052,
+          "sha256": "b6375f2099794a85440fc5882894a97a937a79da3d8de52c65974b7c0f23097d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478894&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "50e7d36d0cbc9eb95d4bd53ffcd3b428ed43d30138f4957de5dd3b936dc046d1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478894/ratings/",
+          "status": 200,
+          "bytes": 463,
+          "sha256": "e85636a69de0c20015f802ad25596b4a6180e2fbf07f3930b54c64fa85b6a2bb"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 100.7
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 100.7
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 100.7
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "E-Bike to Santa Monica!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking.",
+          "Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Redondo Beach",
+          "Why Rent",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "6 hour",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "About this ride The 6 hour ride allows you to cruise the beach bike path in both directions with a few leisurely stops between Redondo Beach and Santa Monica. Make sure to lock up your ebike safely with your included bike lock for when you hop off at various locations along the beach. We'll give you all the tips on places to see. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "E-Bike to Santa Monica! E-Bike to Santa Monica!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478894",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478894/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "478898",
+    "company": "beachebiking",
+    "title": "1 Day E-Bike Rental (including overnight)",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/1-day-e-bike-rental-including-overnight-478898",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "1 Day E-Bike Rental option is excellent value to leisurely day at beach, golden hour at sunset and quiet beach hours in the early morning. Guests look at full length of 22 mile Marvin Braude Bike Trail or convenience of experiencing beach towns on an e-bike.",
+      "After that, make sure to have safe, covered location to lock up the e-bike rental safely with the included bike lock. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
+      "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
+    ],
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes Day E-Bike Rental, Marvin Braude Bike Trail, and E-Bike Orientation.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Day E-Bike Rental and Marvin Braude Bike Trail"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Q52GuMkDSeC5gxy28b1A",
+    "wordCount": 150,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $116.60",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$116.60"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$116.60"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "116.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478898/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Q52GuMkDSeC5gxy28b1A",
+      "heroHandle": "Q52GuMkDSeC5gxy28b1A",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ",
+          "handle": "8vPrcuOSEKakmrwBJxrQ",
+          "pixelSha256": "b0f135b98f5a89b125d17c9aef2dd086dfc3e4cff379bb794612e9822532e4ae",
+          "differenceHashDistanceFromHero": 101,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24356,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478898",
+      "fetchedAt": "2026-10-02T22:43:30.777094+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478898/content/",
+          "status": 200,
+          "bytes": 3491,
+          "sha256": "a3b7422e1d2924b25b6a0b12054dd420273ff116bb36ea25f884e08eae38a53e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478898/structured-description/",
+          "status": 200,
+          "bytes": 2708,
+          "sha256": "1ec91af216a1ae765c5631c88331291bcf74493602b641494c29373d3eac2b4d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478898/",
+          "status": 200,
+          "bytes": 15040,
+          "sha256": "ee171741034d9bdf1c79a963ebe1a6c559e666c0189688bf16c7cb6be62ff862"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478898&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "9baa8ca231c15d3602a117ff9f30a2805642e3679bc9cfe9d658fddd35e0bac4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478898/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "10be6b7cbb233a8cbf0dac8de86fe7beafa039b318d1515c3a441847910a010c"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 116.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 116.6
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 116.6
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-02T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "24-Hour E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking.",
+          "Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Day E-Bike Rental",
+          "Marvin Braude Bike Trail",
+          "Why Rent",
+          "Redondo Beach",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "22 mile",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "Delivery available upon request. The 1 Day E-Bike Rental option is an excellent value to enjoy a leisurely day at the beach, the golden hour at sunset and the quiet beach hours in the early morning. Explore the full length of the 22 mile Marvin Braude Bike Trail or simply enjoy the convenience of experiencing the beach towns on an e-bike. Make sure to have a safe, covered location to lock up your e-bike rental safely with your included bike lock. Why Rent an E-Bike from Beach E Biking? - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to ride an e-bike from the Redondo Beach Pier: 1. Ride from Redondo Beach to Santa Monica (and back!) with ease. 2. Hop on the beach bike path right from our shop. 3. Cruise from one place to the next without worrying about parking. 4. Take in the best sights at the beach without the sweaty grind of pedaling a traditional pedal-power bike. 5. Feel like a kid again with the joy of riding a bike with pedal assist power. E-Bike Rental Includes: - Single rider e-bike and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - Battery charger is included with the overnight and multi-day option. - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "24-Hour E-Bike Rental 24-Hour E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478898",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478898/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "478902",
+    "company": "beachebiking",
+    "title": "2 Day E-Bike Rental",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/2-day-e-bike-rental-478902",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 48 hours. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride a rented bike for the day. Time on the bike is about 48 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+    ],
+    "schemaDescription": "A 48-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "48 Hours bicycle outing",
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
+    "wordCount": 98,
+    "durationLabel": "48 Hours",
+    "durationIso": "PT48H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $212",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$212"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$212"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "212.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478902/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
+      "heroHandle": "gbBSlaCsQYOA1wI7Wgg9",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP",
+          "handle": "lEcvhRXQyessYAkNjjlP",
+          "pixelSha256": "dce184d2bdde6b0180d4b05d11a1a5c7127049971ee700eaef24bf106d1f9baa",
+          "differenceHashDistanceFromHero": 150,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.38582,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478902",
+      "fetchedAt": "2026-10-02T22:43:33.022562+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478902/content/",
+          "status": 200,
+          "bytes": 3340,
+          "sha256": "8a0056b465a266d90030f6767329872d52b9e86ceffca6ef46d748e5167535a1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478902/structured-description/",
+          "status": 200,
+          "bytes": 2695,
+          "sha256": "e3f0bf0372b6e5ce289d11530633d95672a92fc3d36531fd3ec46a201c689dcf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478902/",
+          "status": 200,
+          "bytes": 13283,
+          "sha256": "ff5a7d068daa1fdf1155bb06693d0ef53a44a8d2346fee8df94f516159f40471"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478902&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "afd04c52b347ed1f2ec719d59a3c60486f2fe637856a2d8513e0dee0d7400634"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478902/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "a46e7bda6fd54d27e303bb98a4bc75aee04760aa53c09d2b6924e4296c97629e"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 212.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 212.0
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 212.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-02T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "48 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "2-Day E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- 48 Hours - It's just so much fun!",
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Beach Life Festival",
+          "Fiesta Hermoa",
+          "Redondo Beach",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "48 Hours",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "Delivery available upon request. Helmet, Lock and Charger included with overnight rentals. Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. - 48 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "2-Day E-Bike Rental 2-Day E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478902",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478902/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "478908",
+    "company": "beachebiking",
+    "title": "3 Day E-Bike Rental",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/3-day-e-bike-rental-478908",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 72 hours. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride a rented bike for the day. Time on the bike is about 72 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+    ],
+    "schemaDescription": "A 72-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "72 Hours bicycle outing",
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/jh5FuMKhQEW99iZwTIkf",
+    "wordCount": 98,
+    "durationLabel": "72 Hours",
+    "durationIso": "PT72H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $265",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$265"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$265"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "265.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/478908/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/jh5FuMKhQEW99iZwTIkf",
+      "heroHandle": "jh5FuMKhQEW99iZwTIkf",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8",
+          "handle": "erN7yLkxQWGcuiuKw3T8",
+          "pixelSha256": "d398a2837730f8f9712a929861c3490904cfb3a34c3034a79b299d9b67cba883",
+          "differenceHashDistanceFromHero": 106,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.15152,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-478908",
+      "fetchedAt": "2026-10-02T22:43:33.107878+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478908/content/",
+          "status": 200,
+          "bytes": 3032,
+          "sha256": "a76ffb85411081a149c41a6516b7b28fa14b0473bb7cff9a9cec49282c881383"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478908/structured-description/",
+          "status": 200,
+          "bytes": 2672,
+          "sha256": "e58635f4df66f2b94635293d38575264e25bd8e5c1f1598b36c6eab122458634"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478908/",
+          "status": 200,
+          "bytes": 9718,
+          "sha256": "3bc9eff33908696f0194bf0b906e5272060b741ef35e94962be09e5a251fc753"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478908&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "9372b19afdb48e07056505c83698c3199ec8b750872829c3e22ff546975d0372"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478908/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "e9f3f41fccdd1b17d99083bf61e57826cf3d2fd8ec69eea29d744a86c7b8d311"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 265.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 265.0
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 265.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-02T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "72 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "3-Day E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- 72 Hours - It's just so much fun!",
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Beach Life Festival",
+          "Fiesta Hermoa",
+          "Redondo Beach",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "72 Hours",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 72 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "3-Day E-Bike Rental 3-Day E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "478908",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478908/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "479100",
+    "company": "beachebiking",
+    "title": "4 Day E-Bike Rental",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/4-day-e-bike-rental-479100",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 96 hours. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride a rented bike for the day. Time on the bike is about 96 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+    ],
+    "schemaDescription": "A 96-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "96 Hours bicycle outing",
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/fq6swO0JT5ePBXYSB9mZ",
+    "wordCount": 98,
+    "durationLabel": "96 Hours",
+    "durationIso": "PT96H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $307.40",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$307.40"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$307.40"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "307.40",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/479100/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/fq6swO0JT5ePBXYSB9mZ",
+      "heroHandle": "fq6swO0JT5ePBXYSB9mZ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN",
+          "handle": "9jlIbmABSpC5knofFUrN",
+          "pixelSha256": "fbc7bf75fc2694e948619506946a794665a07d4d754256a8f6a2da30241fb8ee",
+          "differenceHashDistanceFromHero": 97,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.15025,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-479100",
+      "fetchedAt": "2026-10-02T22:43:33.265215+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479100/content/",
+          "status": 200,
+          "bytes": 3082,
+          "sha256": "12a6772b86c7c291f1ed040d951cc78ac08b7d87113316cf796f2e7e619ebcd0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479100/structured-description/",
+          "status": 200,
+          "bytes": 2665,
+          "sha256": "0f542b314eb2e1ef473132d8ab5f43c8a18980e60148d7e243042960b5c227ab"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479100/",
+          "status": 200,
+          "bytes": 10395,
+          "sha256": "0a0c10393d15e6ec44b886d1ad10d7d8e9b3178f6eeb6c9cf59c474845801425"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=479100&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "27c6e90ef1d76d471c725e9720aeffa6950513219ea9698348ea9803a3208c66"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479100/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "0c558654aa627c2dbb16829f7c2830ef1a367cc881fbeafb54ba0a878234dd71"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 307.4
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 307.4
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 307.4
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-02T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "96 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "4-Day E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- 96 Hours - It's just so much fun!",
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Beach Life Festival",
+          "Fiesta Hermoa",
+          "Redondo Beach",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "96 Hours",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermoa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 96 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "4-Day E-Bike Rental 4-Day E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "479100",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/479100/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "479103",
+    "company": "beachebiking",
+    "title": "7 Day E-Bike Rental",
+    "operator": "Beach E Biking",
+    "publicPath": "/destinations/california/redondo-beach/tours/7-day-e-bike-rental-479103",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 168 hours. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride a rented bike for the day. Time on the bike is about 168 hours. The ride passes Beach Life Festival and Fiesta Hermosa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+    ],
+    "schemaDescription": "A 168-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "168 Hours bicycle outing",
+      "E-Bike Orientation and Redondo Beach Pier"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/PTfS7XYLRNOdOoUUaoHx",
+    "wordCount": 98,
+    "durationLabel": "168 Hours",
+    "durationIso": "PT168H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $434.60",
+    "priceRows": [
+      {
+        "label": "Model E Bike • 24\" Wheels",
+        "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+        "amountLabel": "$434.60"
+      },
+      {
+        "label": "Model E Bike • 26\" Wheels",
+        "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+        "amountLabel": "$434.60"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "434.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/beachebiking/items/479103/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Redondo Beach",
+      "state": "California",
+      "citySlug": "redondo-beach",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/PTfS7XYLRNOdOoUUaoHx",
+      "heroHandle": "PTfS7XYLRNOdOoUUaoHx",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ",
+          "handle": "ew3F18DnQiiuN8JDPJqQ",
+          "pixelSha256": "cfd7d608a73de4dd155aa6653ffa9540b3538d86c5e05e1d69a6cc7c9bc92b26",
+          "differenceHashDistanceFromHero": 91,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.13209,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/redondo-beach/beachebiking-479103",
+      "fetchedAt": "2026-10-02T22:43:33.321550+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479103/content/",
+          "status": 200,
+          "bytes": 3084,
+          "sha256": "0350062dd36e71cd1e91fa63630800c4aac83dd6af95c714c6e32c2a969d57c0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479103/structured-description/",
+          "status": 200,
+          "bytes": 2667,
+          "sha256": "dc47df63183db0c09ce26931a4ab74ede18d05559d6ad1f5ea31e023c399c8ac"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479103/",
+          "status": 200,
+          "bytes": 10638,
+          "sha256": "3a92a405a4bad14dd02c98b53c18494d0b6ecf6dd6efb505f88d1c74ad6ee8a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=479103&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "32fbeae2610e35b51509c3842fed04f42f16fc9e9b9e4a0b0c935013be0ae14e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479103/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "5e3245c80563426d4c1fa131c388196d16723312c25495052035b29e60838671"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Model E Bike • 24\" Wheels",
+          "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+          "amount": 434.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Model E Bike • 24\" Wheels",
+            "note": "For riders 4'10\" (148cm) to 5'4\" (163cm) - Cruiser with Step-through Frame",
+            "amount": 434.6
+          },
+          {
+            "singular": "Model E Bike • 26\" Wheels",
+            "note": "For riders 5'4\" (163cm) and taller. Cruiser with Step-through Frame",
+            "amount": 434.6
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-02T16:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "168 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "7-Day E-Bike Rental",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- 168 Hours - It's just so much fun!",
+          "There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Beach Life Festival",
+          "Fiesta Hermosa",
+          "Redondo Beach",
+          "Santa Monica",
+          "Amp Hour Battery",
+          "E-Bike Orientation"
+        ],
+        "measures": [
+          "168 Hours",
+          "24 hour",
+          "50 mile"
+        ],
+        "description": "Multi-day rentals are the best value option for a leisurely beach visit - especially during busy Beach Life Festival, Fiesta Hermosa or AVP volleyball weekends. WIth a multi-day ebike, you can get around town, park at any bike rack and get where you need to go with little hassle and all the fun. Request delivery for the ultimate VIP package. Charger, lock and helmet included with each ebike. Delivery available upon request. Helmet, Lock and Charger included. - 168 Hours - It's just so much fun! With an electric bike rental, you can experience a new and exciting way to explore all of the beaches from Redondo Beach to Santa Monica while being active and enjoying the outdoors. - Convenient parking and beach access. There are 1000s of parking spots at the Redondo Beach Pier with up to 24 hour metered parking. Top 5 reasons to rent an e-bike from the Redondo Beach Pier: - You can easily hop around from one place to the next without worrying about parking. - Take in the sun and outdoors without the sweaty grind of pedaling a traditional pedal-power bike. - Feel like a kid again with the thrill of riding an electric bike. - Exercise when you want or use the ample power (pedal assist or throttle) to just cruise. - Convenient beach access without struggling to find a parking spot. E-Bike Rental Includes: - Single rider e-bike with step-through frame and front basket - Lock and helmet - 12 Amp Hour Battery, up to 50 mile range - 5 level pedal assist - Comfortable cushioned seat - E-Bike Orientation: We provide a complete tutorial on the e-bike so you'll know how to use all of the features and feel comfortable riding. Riders must adhere to the safety guidelines agreed to in the rental agreement.",
+        "detailsText": "7-Day E-Bike Rental 7-Day E-Bike Rental",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "479103",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/479103/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

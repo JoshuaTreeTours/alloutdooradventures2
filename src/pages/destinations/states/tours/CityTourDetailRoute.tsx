@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import FareHarborMobileStickyBookingBar from "../../../../components/FareHarborMobileStickyBookingBar";
 import FareHarborProductSummary from "../../../../components/FareHarborProductSummary";
 import FareHarborProofSnapshot from "../../../../components/FareHarborProofSnapshot";
 import Image from "../../../../components/Image";
@@ -31,7 +32,11 @@ import {
   getFareHarborProofFromTour,
   resolveFareHarborProofCtaLabel,
 } from "../../../../data/fareharborLeadToGoldProof";
-import { fareHarborShortDescriptionRepeatsExperience } from "../../../../data/fareharborPresentation";
+import {
+  fareHarborMobileStickyBooking,
+  fareHarborProductImage,
+  fareHarborShortDescriptionRepeatsExperience,
+} from "../../../../data/fareharborPresentation";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
@@ -687,11 +692,13 @@ export default function CityTourDetailRoute({
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const heroImage =
+  const proof = getFareHarborProofFromTour(tour);
+  const catalogHero =
     resolveHeroImageForRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const heroImage = fareHarborProductImage(proof, catalogHero) ?? undefined;
   const baseStructuredImages = heroImage ? [heroImage] : [];
   const bookingUrl =
     tour && !isSuppressedFareHarborBookingPage(tour)
@@ -700,7 +707,6 @@ export default function CityTourDetailRoute({
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
-  const proof = getFareHarborProofFromTour(tour);
   const proofSchemaDescription = proof?.schemaDescription;
   const productDescription =
     proofSchemaDescription ??
@@ -998,6 +1004,7 @@ export default function CityTourDetailRoute({
         fareHarborHeroStartingPrice ?? tour.startingPrice,
         tour.currency
       );
+  const stickyBooking = fareHarborMobileStickyBooking(proof, bookingUrl);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -1107,7 +1114,7 @@ export default function CityTourDetailRoute({
               </p>
             ))}
 
-            {hardenedTemplate?.secondaryImage ? (
+            {!proof && hardenedTemplate?.secondaryImage ? (
               <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
                 <Image
                   src={hardenedTemplate.secondaryImage}
@@ -1268,6 +1275,12 @@ export default function CityTourDetailRoute({
           </div>
         </section>
       )}
+      {stickyBooking ? (
+        <FareHarborMobileStickyBookingBar
+          href={stickyBooking.href}
+          priceLabel={stickyBooking.priceLabel}
+        />
+      ) : null}
     </main>
   );
 }

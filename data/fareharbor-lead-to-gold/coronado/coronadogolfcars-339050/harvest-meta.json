@@ -1,0 +1,47 @@
+{
+  "company": "coronadogolfcars",
+  "itemId": "339050",
+  "fetchedAt": "2026-10-02T22:42:26.880586+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/coronadogolfcars/339050/content/",
+      "status": 200,
+      "bytes": 2794,
+      "sha256": "44ecadc9dd10f6b03e982c4715ba9d94926d0cb9538ce512c1be55974912b12f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/coronadogolfcars/339050/structured-description/",
+      "status": 200,
+      "bytes": 1626,
+      "sha256": "5ed2b59f9de6d39d3fd17529d0a158c9f6ddab19a8ef128ce13ea69d6a00b58b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/coronadogolfcars/items/339050/",
+      "status": 200,
+      "bytes": 8770,
+      "sha256": "9769cf188a3cfc65c294e34bbc438331a183efe04c7040ac169b52d0957bac86"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/coronadogolfcars/price-preview/per-item/v2/?asn=fhdn&item_pks=339050&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/coronadogolfcars/items/339050/ratings/",
+      "status": 200,
+      "bytes": 534,
+      "sha256": "f41747249165473abe8d6201574134313140537b32957435fe4148e7beb2338e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "339050",
+    "provider": "coronadogolfcars",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/339050/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

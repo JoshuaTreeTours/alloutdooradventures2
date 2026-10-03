@@ -1,0 +1,32 @@
+{
+  "citySlug": "lee-vining",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "lamplightersadventuringsociety",
+      "operator": "The Lamplighters Adventuring Society LLC",
+      "itemId": "619660",
+      "slug": "summit-clouds-rest-619660",
+      "publicPath": "/destinations/california/lee-vining/tours/summit-clouds-rest-619660",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2426,
+        "structuredStatus": 200,
+        "structuredBytes": 1269
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

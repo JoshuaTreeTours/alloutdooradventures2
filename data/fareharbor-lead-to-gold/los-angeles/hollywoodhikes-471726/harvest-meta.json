@@ -1,0 +1,47 @@
+{
+  "company": "hollywoodhikes",
+  "itemId": "471726",
+  "fetchedAt": "2026-10-02T19:39:57.872763+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471726/content/",
+      "status": 200,
+      "bytes": 1607,
+      "sha256": "b027126d3f7e27112034ce5f0f3d68fbcaeb98dd7be7d3f9a26903fb3ae1abed"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hollywoodhikes/471726/structured-description/",
+      "status": 204,
+      "bytes": 0,
+      "sha256": null
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471726/",
+      "status": 200,
+      "bytes": 9104,
+      "sha256": "79decaf3a2e9e41b720e4625ace67fa6807874a4ec47ccc55444e16c36c266dc"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hollywoodhikes/price-preview/per-item/v2/?asn=fhdn&item_pks=471726&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hollywoodhikes/items/471726/ratings/",
+      "status": 200,
+      "bytes": 476,
+      "sha256": "458824c43435a2cbb0db5d6287d6f43012c81065c9f3f7684914d46462a858d6"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "471726",
+    "provider": "hollywoodhikes",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hollywoodhikes/items/471726/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

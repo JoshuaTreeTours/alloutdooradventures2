@@ -1,0 +1,47 @@
+{
+  "company": "baycitybike",
+  "itemId": "15779",
+  "fetchedAt": "2026-10-02T22:43:08.592637+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/baycitybike/15779/content/",
+      "status": 200,
+      "bytes": 14981,
+      "sha256": "e1eb3d49d499a963db7b1da72b5e6fe0f45810567b2e674e1b82c5ac36427d93"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/baycitybike/15779/structured-description/",
+      "status": 200,
+      "bytes": 10107,
+      "sha256": "b9093ad928121cb1d8f6f974cd2f06ca9a97898e3f0a3c6cbb606e5ef998ff5d"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/15779/",
+      "status": 200,
+      "bytes": 15807,
+      "sha256": "66664f6ac459bc5c72367fb9825abe7a90a3f3b933263fff3177599c0f0f9fc4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=15779&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 552,
+      "sha256": "8f00779ee8be97f58b171fd24541cbfe8a1ad04427e79db3915ca05cd6efd3b2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/15779/ratings/",
+      "status": 200,
+      "bytes": 617,
+      "sha256": "984d6858035c74018c3a5a4adce597caed3f84586b867e168171c78fdeeb61ad"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "15779",
+    "provider": "baycitybike",
+    "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/15779/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

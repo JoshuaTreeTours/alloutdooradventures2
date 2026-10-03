@@ -1,0 +1,47 @@
+{
+  "company": "sanfranciscotoursandactivities",
+  "itemId": "85853",
+  "fetchedAt": "2026-10-02T22:43:15.123828+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/85853/content/",
+      "status": 200,
+      "bytes": 3015,
+      "sha256": "408fdd65ee783aefe116b1962703ceaf3c8845f074d63ff3d9890ba750114777"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/85853/structured-description/",
+      "status": 200,
+      "bytes": 2352,
+      "sha256": "fd516b33ed8879654e66e885a009eed5d585bd1e64144fe420929a46e002eee7"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/85853/",
+      "status": 200,
+      "bytes": 10986,
+      "sha256": "febbbae4778dcab22b98da421eb6d5fff2bf941a73ebd493f1f679ca37188f9d"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sanfranciscotoursandactivities/price-preview/per-item/v2/?asn=fhdn&item_pks=85853&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 630,
+      "sha256": "80a95aac3fee74eb980845c56e5de01fd6ef02103aa52b4dd0585e61f91d2461"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/85853/ratings/",
+      "status": 200,
+      "bytes": 680,
+      "sha256": "b5d72047b2095ce107803104eff057c35a81f9e185fd4feef39a7e5ddfc1482b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "85853",
+    "provider": "sanfranciscotoursandactivities",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/85853/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

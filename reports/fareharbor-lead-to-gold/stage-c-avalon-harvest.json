@@ -1,0 +1,89 @@
+{
+  "fetchedAt": "2026-10-02T22:44:24.372372+00:00",
+  "citySlug": "avalon",
+  "totalBostonLegacy": 1,
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 1,
+  "priceNotFound": 0,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "560457",
+      "company": "bikecatalina",
+      "catalogId": "bike-catalina-560457",
+      "slug": "daily-bike-rental-from-avalon-560457",
+      "title": "Daily Bike Rental from Avalon",
+      "operator": "Bike Catalina",
+      "publicPath": "/destinations/california/avalon/tours/daily-bike-rental-from-avalon-560457",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Avalon",
+        "citySlug": "avalon",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikecatalina/items/560457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:44:22.328619+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikecatalina/560457/content/",
+          "status": 200,
+          "bytes": 2376,
+          "sha256": "c93c9a3776c784f462f93c503728d975ec37d059facc01fc1f0918b200a9f777"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikecatalina/560457/structured-description/",
+          "status": 200,
+          "bytes": 1184,
+          "sha256": "fc75e1395596353283b643f62af80309bcd9dc18fe4fd558cde7164d9275b1d8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikecatalina/items/560457/",
+          "status": 200,
+          "bytes": 10611,
+          "sha256": "b6fc184a7122a144e9238ae97e86f708ce61d0cc59738f3e8b467ea34a075126"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikecatalina/price-preview/per-item/v2/?asn=fhdn&item_pks=560457&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 541,
+          "sha256": "951d1affa6f5cbf579b755f96b00749dceeda58b8f6f8101d984361ed02ed573"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikecatalina/items/560457/ratings/",
+          "status": 200,
+          "bytes": 418,
+          "sha256": "49250f843b14617483163ff2fa9d3410292a5ef3a8861e45954772388a2dd27f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "560457",
+        "provider": "bikecatalina",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikecatalina/items/560457/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 63.6,
+        "currency": "USD",
+        "singular": "Bike pick up Avalon"
+      }
+    }
+  ]
+}

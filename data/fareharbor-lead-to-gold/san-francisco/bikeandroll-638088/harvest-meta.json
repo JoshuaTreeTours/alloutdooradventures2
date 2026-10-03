@@ -1,0 +1,47 @@
+{
+  "company": "bikeandroll",
+  "itemId": "638088",
+  "fetchedAt": "2026-10-02T22:43:13.157196+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bikeandroll/638088/content/",
+      "status": 200,
+      "bytes": 2736,
+      "sha256": "619d5e01df0ab56d46ada7aa65b8f22dd074376e4cd3be93764130f595e2c65a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bikeandroll/638088/structured-description/",
+      "status": 200,
+      "bytes": 1938,
+      "sha256": "a4177d556657a54053bb77b7174d93a688dd9b29f26d4620ba37ee686cd8dd5a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638088/",
+      "status": 200,
+      "bytes": 7968,
+      "sha256": "23df733d71df41da0bf751931f81787a2d2c23e45e81fbea66df8ce5f341e243"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bikeandroll/price-preview/per-item/v2/?asn=fhdn&item_pks=638088&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638088/ratings/",
+      "status": 200,
+      "bytes": 430,
+      "sha256": "e2bf3d1efcd038b96bc23c1e08276b6b84a11859d163389bb2e2ad46ef9eb409"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "638088",
+    "provider": "bikeandroll",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638088/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

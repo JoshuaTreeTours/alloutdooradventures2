@@ -1,0 +1,47 @@
+{
+  "company": "bigbluephotoexpeditions",
+  "itemId": "567520",
+  "fetchedAt": "2026-10-02T22:40:43.924778+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bigbluephotoexpeditions/567520/content/",
+      "status": 200,
+      "bytes": 4093,
+      "sha256": "f084ee2de5a87c8e1a6bf8c0908846b0a9fe2f2b6d5744ab56c18cd1c8343834"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bigbluephotoexpeditions/567520/structured-description/",
+      "status": 200,
+      "bytes": 3538,
+      "sha256": "de39ca846110a8ba346a591c1c6eb996ff974459d508ae5adf1873ef3610b714"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bigbluephotoexpeditions/items/567520/",
+      "status": 200,
+      "bytes": 12156,
+      "sha256": "452e526e4be1aa8c1f42e0c6487dd8fadd86739a72eb00727bb3ed33cceff654"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bigbluephotoexpeditions/price-preview/per-item/v2/?asn=fhdn&item_pks=567520&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 654,
+      "sha256": "0b4f1c69572428f2bf76c4027bfcf5fa31f7d258ff5451b7319e8a8462d397de"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bigbluephotoexpeditions/items/567520/ratings/",
+      "status": 200,
+      "bytes": 550,
+      "sha256": "5d57a88468190b647b15e8e4c59d479d8a71bba20c6983ec21e4144e779bc4c5"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "567520",
+    "provider": "bigbluephotoexpeditions",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bigbluephotoexpeditions/items/567520/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

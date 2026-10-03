@@ -1,0 +1,47 @@
+{
+  "company": "baycitybike",
+  "itemId": "280403",
+  "fetchedAt": "2026-10-02T22:43:10.738357+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/baycitybike/280403/content/",
+      "status": 200,
+      "bytes": 12994,
+      "sha256": "83ed3e68aecdd870c9b44c6da522ef959ac604a6d0ed6905ea7748b3a775c6df"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/baycitybike/280403/structured-description/",
+      "status": 200,
+      "bytes": 8642,
+      "sha256": "9038d7d4d3fb213ca3f1b0d046adfdd291cf88b72471c53c38f03b1da893dcb8"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/280403/",
+      "status": 200,
+      "bytes": 14999,
+      "sha256": "cead2502b396efab1a3f62d52450682d8d8009ace3e117f8249202badb2d04e4"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=280403&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 592,
+      "sha256": "6446eed8411f312b4b439391b2f7dabc74e3a563ae1ff467015b06e6cecbf867"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/280403/ratings/",
+      "status": 200,
+      "bytes": 619,
+      "sha256": "4a55be0a50582f8adf37f3eff22a5bb6afab09826cd57f18eddd401de62ab642"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "280403",
+    "provider": "baycitybike",
+    "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/280403/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

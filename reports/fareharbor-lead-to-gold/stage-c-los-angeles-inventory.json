@@ -1,0 +1,298 @@
+{
+  "citySlug": "los-angeles",
+  "total": 15,
+  "active": 12,
+  "terminal": 3,
+  "priceAvailable": 7,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 14,
+  "inSitemap": 6,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "alldayla",
+      "operator": "Golden Ticket LA",
+      "itemId": "168579",
+      "slug": "la-essential-star-homes-tour-168579",
+      "publicPath": "/destinations/california/los-angeles/tours/la-essential-star-homes-tour-168579",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1957,
+        "structuredStatus": 200,
+        "structuredBytes": 1528
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "alldayla",
+      "operator": "Golden Ticket LA",
+      "itemId": "205984",
+      "slug": "1-hr---real-hollywood-sign-tour-205984",
+      "publicPath": "/destinations/california/los-angeles/tours/1-hr---real-hollywood-sign-tour-205984",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2397,
+        "structuredStatus": 200,
+        "structuredBytes": 1532
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "alldayla",
+      "operator": "Golden Ticket LA",
+      "itemId": "518084",
+      "slug": "private-los-angeles-tour-beverly-hills-518084",
+      "publicPath": "/destinations/california/los-angeles/tours/private-los-angeles-tour-beverly-hills-518084",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2262,
+        "structuredStatus": 200,
+        "structuredBytes": 1591
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "graveline",
+      "operator": "Grave Line Tours",
+      "itemId": "680527",
+      "slug": "manson-family-murders-funeral-limo-tour-of-la-680527",
+      "publicPath": "/destinations/california/los-angeles/tours/manson-family-murders-funeral-limo-tour-of-la-680527",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9358,
+        "structuredStatus": 200,
+        "structuredBytes": 5119
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "graveline",
+      "operator": "Grave Line Tours",
+      "itemId": "680528",
+      "slug": "death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+      "publicPath": "/destinations/california/los-angeles/tours/death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9342,
+        "structuredStatus": 200,
+        "structuredBytes": 5065
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "graveline",
+      "operator": "Grave Line Tours",
+      "itemId": "680529",
+      "slug": "hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+      "publicPath": "/destinations/california/los-angeles/tours/hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9845,
+        "structuredStatus": 200,
+        "structuredBytes": 5822
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hollywoodbustoursla",
+      "operator": "Hollywood Bus Tours, LLC",
+      "itemId": "333382",
+      "slug": "a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+      "publicPath": "/destinations/california/los-angeles/tours/a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8513,
+        "structuredStatus": 200,
+        "structuredBytes": 4811
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hollywooddreamtours",
+      "operator": "Hollywood LA Tours",
+      "itemId": "349518",
+      "slug": "sightseeing-hollywood-tours-349518",
+      "publicPath": "/destinations/california/los-angeles/tours/sightseeing-hollywood-tours-349518",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1336,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": false,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hollywoodhikes",
+      "operator": "Hollywood Hikes, LLC",
+      "itemId": "471721",
+      "slug": "the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
+      "publicPath": "/destinations/california/los-angeles/tours/the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1944,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hollywoodhikes",
+      "operator": "Hollywood Hikes, LLC",
+      "itemId": "471726",
+      "slug": "the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
+      "publicPath": "/destinations/california/los-angeles/tours/the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1607,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "parlorcartours",
+      "operator": "Parlor Car Tours",
+      "itemId": "495929",
+      "slug": "hollywood-sightseeing-trolley-tour-495929",
+      "publicPath": "/destinations/california/los-angeles/tours/hollywood-sightseeing-trolley-tour-495929",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4828,
+        "structuredStatus": 200,
+        "structuredBytes": 3422
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sunsetexotictour",
+      "operator": "Sunset Exotic Tour",
+      "itemId": "324799",
+      "slug": "beverly-hills-tour-1h15-minutes-324799",
+      "publicPath": "/destinations/california/los-angeles/tours/beverly-hills-tour-1h15-minutes-324799",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sunsetexotictour",
+      "operator": "Sunset Exotic Tour",
+      "itemId": "382848",
+      "slug": "the-beach-tour-4-hours-382848",
+      "publicPath": "/destinations/california/los-angeles/tours/the-beach-tour-4-hours-382848",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "takemeoutla",
+      "operator": "Take Me Out LA",
+      "itemId": "629071",
+      "slug": "venices-finest-a-daytime-experience-629071",
+      "publicPath": "/destinations/california/los-angeles/tours/venices-finest-a-daytime-experience-629071",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2323,
+        "structuredStatus": 200,
+        "structuredBytes": 1956
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "walkandridetours",
+      "operator": "Walk and Ride Hollywood",
+      "itemId": "547525",
+      "slug": "1-hour-walk-of-fame-guided-tour-547525",
+      "publicPath": "/destinations/california/los-angeles/tours/1-hour-walk-of-fame-guided-tour-547525",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588091
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

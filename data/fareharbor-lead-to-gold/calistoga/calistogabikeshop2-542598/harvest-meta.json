@@ -1,0 +1,47 @@
+{
+  "company": "calistogabikeshop2",
+  "itemId": "542598",
+  "fetchedAt": "2026-10-02T22:43:47.838565+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542598/content/",
+      "status": 200,
+      "bytes": 3422,
+      "sha256": "edc1280a1cc111590405f7e9f094a3650ecb541b3875d19aaa7e05199b06b2c2"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542598/structured-description/",
+      "status": 200,
+      "bytes": 2266,
+      "sha256": "f05bb987200e154b00ae5fd2301e94c0377b02b7dfecfb35622847dfc74d5f95"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542598/",
+      "status": 200,
+      "bytes": 9213,
+      "sha256": "a1c32c3016db4bf6eb86ca1df910fd279368684dd4bf782841a50b1ef8c012b9"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542598&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1058,
+      "sha256": "a54b27d1d8164200cccb039a88408ca2d69a52eca78f8fde6e2d4e8d7bb1949a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542598/ratings/",
+      "status": 200,
+      "bytes": 433,
+      "sha256": "a816d7f560d2aece4784959535c5e12e647a78d9d0a42c40dc802f5ed5000151"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "542598",
+    "provider": "calistogabikeshop2",
+    "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542598/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

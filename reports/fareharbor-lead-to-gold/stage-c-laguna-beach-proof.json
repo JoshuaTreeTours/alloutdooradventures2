@@ -1,0 +1,620 @@
+[
+  {
+    "itemId": "245311",
+    "company": "lavidalaguna",
+    "title": "Electric Bike Rentals - In Store Rentals",
+    "operator": "La Vida Laguna",
+    "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests ride a rented bike for the day. Guests ride electric bikes for this booking. Time on the bike is about 4 hours. The ride passes Full Day Rental and Coast Highway."
+    ],
+    "schemaDescription": "Guests ride a rented bike for the day.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "four-hour bicycle outing in Laguna Beach",
+      "Electric Bike Rentals Half Day Rental"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/B3s1MabSfa3YNaIpwO5F"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/5DblDrT3Rqm8oZLbXOeQ",
+    "wordCount": 32,
+    "durationLabel": "4 hours",
+    "durationIso": "PT4H",
+    "meetingLocation": "Laguna Beach, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/lavidalaguna/items/245311/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Laguna Beach",
+      "state": "California",
+      "citySlug": "laguna-beach",
+      "stateSlug": "california",
+      "reason": "Laguna Beach, California belongs to the Laguna Beach area via meeting_point",
+      "place": {
+        "city": "Laguna Beach",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "laguna-beach",
+        "stateSlug": "california",
+        "raw": "Laguna Beach, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 33.534299,
+          "lng": -117.776242
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/5DblDrT3Rqm8oZLbXOeQ",
+      "heroHandle": "5DblDrT3Rqm8oZLbXOeQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/B3s1MabSfa3YNaIpwO5F",
+          "handle": "B3s1MabSfa3YNaIpwO5F",
+          "pixelSha256": "45c541c7eb42723f4a84a9861cca2ca22fd5412ef8070cb21ebe9920f61695dd",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28666,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/B3s1MabSfa3YNaIpwO5F",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/laguna-beach/lavidalaguna-245311",
+      "fetchedAt": "2026-10-02T22:43:59.426556+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/245311/content/",
+          "status": 200,
+          "bytes": 3685,
+          "sha256": "cb0861eb576060d03d9852aa6d1680b754559d9d40fdc7ed0efa552f25fee760"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/245311/structured-description/",
+          "status": 200,
+          "bytes": 1419,
+          "sha256": "c6a5f541a9cf5fcfb20e656b1b21c79c13626c5760adccd96a0a0fda2f5a6df9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/245311/",
+          "status": 200,
+          "bytes": 13983,
+          "sha256": "837f5890302069b4466e17d0c636b38967b81f0b3ccf728abf68b9579a6369c5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=245311&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/245311/ratings/",
+          "status": 200,
+          "bytes": 485,
+          "sha256": "75094ec2388e763e18da159d1ff9d399036c16c1f598dd6326b304a3e50226b2"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "4 hours",
+        "meetingAddress": "Laguna Beach, CA",
+        "itemLocation": "Laguna Beach, CA",
+        "headline": "4 or 8 hour Rentals • Ages 16+",
+        "startCity": "Laguna Beach",
+        "startProvince": "CA",
+        "startLat": 33.534299,
+        "startLng": -117.776242,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Full Day Rental"
+        ],
+        "measures": [
+          "4 hours",
+          "8 hours"
+        ],
+        "description": "Electric Bike Rentals Half Day Rental: 4 hours Full Day Rental: 8 hours Come experience the thrill of pedal-assisted biking, and see Laguna as you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, and some of the most beautiful neighborhoods and architecture in the world. Directions, parking, and what to bring are contained in the reservation confirmation email.",
+        "detailsText": "4 or 8 hour Rentals • Ages 16+ 4 or 8 hour Rentals • Ages 16+",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "245311",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/245311/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 32 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "247443",
+    "company": "lavidalaguna",
+    "title": "Electric Bike Rentals - Delivery",
+    "operator": "La Vida Laguna",
+    "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "This is a 8-hour bicycle outing with La Vida Laguna in Laguna Beach. The group covers the neighborhood's architecture. The rental is a pedal-assist electric bike. The group passes Electric Bike Rentals Full Day."
+    ],
+    "schemaDescription": "This is a 8-hour bicycle outing with La Vida Laguna in Laguna Beach.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "8-hour bicycle outing in Laguna Beach",
+      "Electric Bike Rentals Full Day"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ALCMEXHQFWuT3Iufe3lK"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/Qe3TZU9SaSJIUdWuiGFQ",
+    "wordCount": 36,
+    "durationLabel": "8 hours",
+    "durationIso": "PT8H",
+    "meetingLocation": "Laguna Beach, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/lavidalaguna/items/247443/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Laguna Beach",
+      "state": "California",
+      "citySlug": "laguna-beach",
+      "stateSlug": "california",
+      "reason": "Laguna Beach, California belongs to the Laguna Beach area via meeting_point",
+      "place": {
+        "city": "Laguna Beach",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "laguna-beach",
+        "stateSlug": "california",
+        "raw": "Laguna Beach, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 33.534299,
+          "lng": -117.776242
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Qe3TZU9SaSJIUdWuiGFQ",
+      "heroHandle": "Qe3TZU9SaSJIUdWuiGFQ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ALCMEXHQFWuT3Iufe3lK",
+          "handle": "ALCMEXHQFWuT3Iufe3lK",
+          "pixelSha256": "0c150cf39af72dbcb2803cf15b2afcd3d0f1550b94765489b4df7381f6041eda",
+          "differenceHashDistanceFromHero": 137,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.3153,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ALCMEXHQFWuT3Iufe3lK",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/laguna-beach/lavidalaguna-247443",
+      "fetchedAt": "2026-10-02T22:43:59.427574+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/247443/content/",
+          "status": 200,
+          "bytes": 3627,
+          "sha256": "dffd3aa6586445cd3cb777a62e94eeb27d6f38a34681b39cc7dca5f76f541713"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/247443/structured-description/",
+          "status": 200,
+          "bytes": 1372,
+          "sha256": "7bd26e8971c40af67fbf4ade4b470385843ba88597d6e46871ac987133ba1ac1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/247443/",
+          "status": 200,
+          "bytes": 14015,
+          "sha256": "8a9bd013a41a78df6cc385332cd4f9028402de4124975d290c83789b2d406f29"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=247443&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/247443/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "5f9ffa6c5cf80afe591b53e6f77744ed08d43df81607a7b26d8ed655d5f6b64f"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "8 hours",
+        "meetingAddress": "Laguna Beach, CA",
+        "itemLocation": "Laguna Beach, CA",
+        "headline": "Full Day Rentals • Ages 16+",
+        "startCity": "Laguna Beach",
+        "startProvince": "CA",
+        "startLat": 33.534299,
+        "startLng": -117.776242,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Electric Bike Rentals Full Day"
+        ],
+        "measures": [
+          "8 hours"
+        ],
+        "description": "Electric Bike Rentals Full Day - 8 hours Come experience the thrill of pedal-assisted biking, and see Laguna like you've never seen it before. You'll experience how easy it is to traverse our town safely without ever getting on Coast Highway. You'll see historic homes, local art, points of interest, and some of the most beautiful neighborhoods and architecture in the world. More information will be provided in the confirmation email.",
+        "detailsText": "Full Day Rentals • Ages 16+ Full Day Rentals • Ages 16+",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "247443",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/247443/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 36 words; rich FareHarbor source requires at least 100 words",
+        "meaningless filler: the description says the group covers a title or label"
+      ]
+    }
+  },
+  {
+    "itemId": "4351",
+    "company": "lavidalaguna",
+    "title": "Electric Bike Ride - Back Roads Laguna Tour",
+    "operator": "La Vida Laguna",
+    "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-ride---back-roads-laguna-tour-4351",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Pedal through quaint Craftsman neighborhoods and gardens, access view corridors, stop at Heisler Park to notice the magnificent public art and experience the downtown commercial district with many artist residences. Guests climb easily high above city in Mystic Hills neighborhood with commanding view of the downtown district, Main Beach, and Laguna Hotel.",
+      "Then guests roll through the quaint downtown area, navigating picturesque neighborhoods past Pyne Castle, alongside elevated ocean views in the bucolic and North Laguna. Then guests head seaward to Crescent Bay Beach Park, with best panoramic view of coastline that extends from Dana Point all way up toward Palos Verdes in LA County."
+    ],
+    "schemaDescription": "A two-hour bicycle outing with La Vida Laguna in Laguna Beach. The outing passes Heisler Park and Crescent Bay Beach Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour bicycle outing in Laguna Beach",
+      "Heisler Park and Crescent Bay Beach Park",
+      "Helmet"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
+    "wordCount": 105,
+    "durationLabel": "2 hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "1121 Glenneyre St. Laguna Beach, CA 92651",
+    "visiblePriceLabel": "From $174.90",
+    "priceRows": [
+      {
+        "label": "Rider",
+        "note": "4'-10\" tall and ages 15+ to ride",
+        "amountLabel": "$174.90"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "174.90",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/lavidalaguna/items/4351/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Laguna Beach",
+      "state": "California",
+      "citySlug": "laguna-beach",
+      "stateSlug": "california",
+      "reason": "Laguna Beach, California belongs to the Laguna Beach area via meeting_point",
+      "place": {
+        "city": "Laguna Beach",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "laguna-beach",
+        "stateSlug": "california",
+        "raw": "Glenneyre St. Laguna Beach, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Glenneyre St. Laguna Beach, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Laguna Beach",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "laguna-beach",
+          "stateSlug": "california",
+          "raw": "Laguna Beach, CA",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
+      "heroHandle": "UrwqlOveRG21COCHeNuc",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ",
+          "handle": "HNUlEehBTz6UDJCa2sZZ",
+          "pixelSha256": "53b853ca222885cc892456f10535dcb9b82358f7c893d3a727791af0533b90ac",
+          "differenceHashDistanceFromHero": 127,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.21457,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/laguna-beach/lavidalaguna-4351",
+      "fetchedAt": "2026-10-02T22:43:59.427223+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/4351/content/",
+          "status": 200,
+          "bytes": 4540,
+          "sha256": "760be1fed95f79714f6c96323af9e8b03578d5e62bc7fa533563c89bd5657470"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/4351/structured-description/",
+          "status": 200,
+          "bytes": 2953,
+          "sha256": "25f39034274c0ffce5772e5dfa0c54aa01cfc053414c50867dc8b3fafc52d32b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/4351/",
+          "status": 200,
+          "bytes": 15727,
+          "sha256": "cef9f495140ad065b6bfd7b733b25ab7652ef86e5c78325fa8c285f06cc9ec78"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=4351&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 554,
+          "sha256": "905029318ce8aabbca5386da1ee1176a49b4dc7a2b9ef0bae6e887e6a3f0cd35"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/4351/ratings/",
+          "status": 200,
+          "bytes": 484,
+          "sha256": "9778448b7e9e7f18485d1ee7dbac4fd01475ed4f58ab87de711ce592c9a2a992"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Rider",
+          "note": "4'-10\" tall and ages 15+ to ride",
+          "amount": 174.9
+        },
+        "customerTypes": [
+          {
+            "singular": "Rider",
+            "note": "4'-10\" tall and ages 15+ to ride",
+            "amount": 174.9
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 hours",
+        "meetingAddress": "1121 Glenneyre St. Laguna Beach, CA 92651",
+        "itemLocation": "Laguna Beach, CA",
+        "headline": "2 hours • See all of Laguna Beach from local's perspective through back roads • Ages 15+",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 15,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "Electric pedal assist 7-speed fat-tire bikes",
+          "Helmet",
+          "Water",
+          "Tour in English"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Shorts",
+          "Tennis shoes",
+          "Sunblock",
+          "Sunglasses"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [
+          "English"
+        ],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Laguna Beach",
+          "Central Laguna",
+          "Bluebird Canyon",
+          "Mystic Hills",
+          "Main Beach",
+          "Pyne Castle",
+          "Dana Point",
+          "Palos Verdes"
+        ],
+        "measures": [],
+        "description": "Experience the sublime beauty of Laguna Beach on this easy and historic loop that bypasses the busy streets. Pedal through the quaint Craftsman neighborhoods and gardens, access amazing view corridors, stop at Heisler Park to see the magnificent public art and experience the charming downtown commercial district with many artist residences. We start our ride at our office in Central Laguna and head east, looping through Bluebird Canyon to experience the rolling inland hills. We will climb easily high above the city in the Mystic Hills neighborhood with a commanding view of our downtown district, Main Beach, and historic Laguna Hotel. Then we roll through our quaint downtown area, navigating picturesque neighborhoods past the historic Pyne Castle, with elevated ocean views in the bucolic and historic North Laguna. Then we head seaward to beautiful Crescent Bay Beach Park, with the best panoramic view of the coastline that extends from Dana Point all the way up to Palos Verdes in LA County! Following PCH, the tour takes us south through Heisler Park to view some of the town's amazing public art. Last, we'll cycle back through the downtown village and the Central Laguna neighborhood, home to early California Craftsman bungalows.",
+        "detailsText": "Directions, parking, and what to bring are contained in the reservation confirmation email. Directions, parking, and what to bring are contained in the reservation confirmation email. 2 hours • See all of Laguna Beach from local's perspective through back roads • Ages 15+ 2 hours • See all of Laguna Beach from local's perspective through back roads • Ages 15+",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "4351",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/4351/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "itemId": "29265",
+    "company": "getawayadventures",
+    "title": "Carneros Sip 'N Cycle",
+    "operator": "Getaway Adventures",
+    "publicPath": "/destinations/california/napa/tours/carneros-sip-n-cycle-29265",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "The ride passes Pinot Noir and Napa Valley. Cyclists also come to San Pablo Bay and Cuttings Wharf Rd. Napa CA Includes and Specialized Town are on the same loop. Later the route reaches Wine Country and Mckenzie Mueller. Guests cover the sights by bike, stopping where the guide has something to say.",
+      "Among the places guests actually encounter are Pinot Noir, Napa Valley, and San Pablo Bay. Later the guide turns to Cuttings Wharf Rd and Napa CA Includes, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear."
+    ],
+    "schemaDescription": "A guided outing with Getaway Adventures in Napa. The outing passes Cuttings Wharf Rd.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "Cuttings Wharf Rd"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aZNDaf0PQm6M8XH06GvR"
+    ],
+    "wordCount": 103,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/getawayadventures/items/29265/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Napa",
+      "state": "California",
+      "citySlug": "napa",
+      "stateSlug": "california",
+      "reason": "Napa, California belongs to the Napa area via company_start_location",
+      "place": {
+        "city": "Napa",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "napa",
+        "stateSlug": "california",
+        "raw": "Napa, CA",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 38.226516,
+        "lng": -122.307493
+      },
+      "signals": [
+        {
+          "city": "Napa",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "napa",
+          "stateSlug": "california",
+          "raw": "Napa, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 38.226516,
+          "lng": -122.307493
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/YTOjYnERDWtsjUp2ALSz",
+      "heroHandle": "YTOjYnERDWtsjUp2ALSz",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/aZNDaf0PQm6M8XH06GvR",
+          "handle": "aZNDaf0PQm6M8XH06GvR",
+          "pixelSha256": "3eb3a6d2bf3844d4479988c84b06085a64f40005a189ef18fab937a416981207",
+          "differenceHashDistanceFromHero": 131,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.27031,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/YTOjYnERDWtsjUp2ALSz",
+          "handle": "YTOjYnERDWtsjUp2ALSz",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/aZNDaf0PQm6M8XH06GvR",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/napa/getawayadventures-29265",
+      "fetchedAt": "2026-10-02T22:44:17.448182+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29265/content/",
+          "status": 200,
+          "bytes": 3390,
+          "sha256": "8f2e8dd06c8028bbf3fae3bd9638bf46f4e5ca2f59a23c0919c7061d7668b5df"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29265/structured-description/",
+          "status": 200,
+          "bytes": 1974,
+          "sha256": "2f36264ce63d03ead5b3d121854d9f73dddce787eceeb20b63efa41afe5600d6"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29265/",
+          "status": 200,
+          "bytes": 12654,
+          "sha256": "470a90be36c64524cb5e1edc5412bda0aa4c3e56fce61f279f0fe1fda8bf5d5c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/getawayadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=29265&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29265/ratings/",
+          "status": 200,
+          "bytes": 483,
+          "sha256": "3f759b69dc809e6f92e6fc668ab218c10f4dce259a0a5909cba2ad6ea2211ae7"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "From $250 • 5 Hours • Bike in the Burgundy of California • All ages!",
+        "startCity": "Napa",
+        "startProvince": "CA",
+        "startLat": 38.226516,
+        "startLng": -122.307493,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Rates • Adult $250 Ages 17 and up • Child/Teen $126.75 Ages <15 Time 10:00AM - 3:30PM About Wide open spaces, lots of fantastic Pinot Noir, Chardonnays and other great wines.",
+          "Only 10 minutes from Napa and usually cooler than the rest of the Napa Valley, the Carneros is becoming a guest favorite."
+        ],
+        "gleanedFacts": [
+          "bottled water"
+        ],
+        "properNames": [
+          "Pinot Noir",
+          "Napa Valley",
+          "San Pablo Bay",
+          "Specialized Town",
+          "Wine Country",
+          "Mckenzie Mueller"
+        ],
+        "measures": [
+          "10 minutes"
+        ],
+        "description": "Bike in the Burgundy of California! Rates • Adult $250 Ages 17 and up • Child/Teen $126.75 Ages <15 Time 10:00AM - 3:30PM About Wide open spaces, lots of fantastic Pinot Noir, Chardonnays and other great wines. Quiet roads Fun, smaller family owned wineries. Close to Napa but far from the all the crowds. Only 10 minutes from Napa and usually cooler than the rest of the Napa Valley, the Carneros is becoming a guest favorite. There are quiet roads to bike along, great wineries that are some of our guide's favorites. You can see for miles here and being so close to San Pablo Bay you can get whiff of the sea air. Rolling hills and never ending vineyards. Come bike with us in the Carneros! Meeting Location • 6 Cuttings Wharf Rd, Napa CA Includes • Use of a high quality Specialized Town bike, helmet, unlimited bottled water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Etude, Bouchaine, Ceja, Mckenzie Mueller, Calmere, Sainstbury among others",
+        "detailsText": "From $250 • 5 Hours • Bike in the Burgundy of California • All ages! From $250 • 5 Hours • Bike in the Burgundy of California • All ages!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "29265",
+        "provider": "getawayadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/getawayadventures/items/29265/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

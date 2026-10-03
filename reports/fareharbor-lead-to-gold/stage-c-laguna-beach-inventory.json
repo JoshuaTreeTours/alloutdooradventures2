@@ -1,0 +1,70 @@
+{
+  "citySlug": "laguna-beach",
+  "total": 3,
+  "active": 3,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 3,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "lavidalaguna",
+      "operator": "La Vida Laguna",
+      "itemId": "245311",
+      "slug": "electric-bike-rentals---in-store-rentals-245311",
+      "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3685,
+        "structuredStatus": 200,
+        "structuredBytes": 1419
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lavidalaguna",
+      "operator": "La Vida Laguna",
+      "itemId": "247443",
+      "slug": "electric-bike-rentals---delivery-247443",
+      "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3627,
+        "structuredStatus": 200,
+        "structuredBytes": 1372
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "lavidalaguna",
+      "operator": "La Vida Laguna",
+      "itemId": "4351",
+      "slug": "electric-bike-ride---back-roads-laguna-tour-4351",
+      "publicPath": "/destinations/california/laguna-beach/tours/electric-bike-ride---back-roads-laguna-tour-4351",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4540,
+        "structuredStatus": 200,
+        "structuredBytes": 2953
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

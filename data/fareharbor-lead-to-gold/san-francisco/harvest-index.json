@@ -1,0 +1,997 @@
+{
+  "fetchedAt": "2026-10-02T22:43:21.726981+00:00",
+  "total": 21,
+  "products": [
+    {
+      "company": "baycitybike",
+      "itemId": "10199",
+      "fetchedAt": "2026-10-02T22:43:08.591628+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/10199/content/",
+          "status": 200,
+          "bytes": 11922,
+          "sha256": "04b7ba07beac37dd36905e671ac9cf6d95b5588386487f32adc5ffc5db9eeee1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/10199/structured-description/",
+          "status": 200,
+          "bytes": 7263,
+          "sha256": "4aa42d1b440dd5e56b244777aee25fd8e55a0f39bb8e839bdeb0d906c437fad5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/10199/",
+          "status": 200,
+          "bytes": 17313,
+          "sha256": "240344bded167cdeb8ec8c776f1147422a2f713a897a6fde0551c173136c429d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=10199&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1276,
+          "sha256": "dbc7ee85c3413c17a861b506e103d084205e5a508db836e370ff43bfaafbbd18"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/10199/ratings/",
+          "status": 200,
+          "bytes": 613,
+          "sha256": "54c132321b33b5c77b518eb7154e0da0a18464a218b7fbd835752b1b804992af"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "10199",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10199/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "10201",
+      "fetchedAt": "2026-10-02T22:43:08.592184+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/10201/content/",
+          "status": 200,
+          "bytes": 7964,
+          "sha256": "8075d475c4423e19ce9056dce2a447021982e688ab4b8d0ab03d391fce3acf9c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/10201/structured-description/",
+          "status": 200,
+          "bytes": 5146,
+          "sha256": "bc1969cc17ffe61600021f9b6479d014fd043c90006255c7257bcf470b46d5fa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/10201/",
+          "status": 200,
+          "bytes": 14571,
+          "sha256": "dbaba3664e014e5d9bdb171a622b6226469a36cd1604673d18d28ea46e07ff7c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=10201&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/10201/ratings/",
+          "status": 200,
+          "bytes": 594,
+          "sha256": "fe70d16edc9d538db73066374c1f8bbede214b6401bb99e17440c7fac2db2769"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "10201",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "15779",
+      "fetchedAt": "2026-10-02T22:43:08.592637+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/15779/content/",
+          "status": 200,
+          "bytes": 14981,
+          "sha256": "e1eb3d49d499a963db7b1da72b5e6fe0f45810567b2e674e1b82c5ac36427d93"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/15779/structured-description/",
+          "status": 200,
+          "bytes": 10107,
+          "sha256": "b9093ad928121cb1d8f6f974cd2f06ca9a97898e3f0a3c6cbb606e5ef998ff5d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/15779/",
+          "status": 200,
+          "bytes": 15807,
+          "sha256": "66664f6ac459bc5c72367fb9825abe7a90a3f3b933263fff3177599c0f0f9fc4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=15779&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 552,
+          "sha256": "8f00779ee8be97f58b171fd24541cbfe8a1ad04427e79db3915ca05cd6efd3b2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/15779/ratings/",
+          "status": 200,
+          "bytes": 617,
+          "sha256": "984d6858035c74018c3a5a4adce597caed3f84586b867e168171c78fdeeb61ad"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "15779",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/15779/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "165139",
+      "fetchedAt": "2026-10-02T22:43:08.593658+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/165139/content/",
+          "status": 200,
+          "bytes": 17034,
+          "sha256": "5e42440461bc907f73cf2c6fd88d5d6d0038a919c713adbffde85a8b920bdcbb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/165139/structured-description/",
+          "status": 200,
+          "bytes": 9781,
+          "sha256": "137b2322a642e5581defdf082da850abed03ac789600a3ba01bfb7c253eba67f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/165139/",
+          "status": 200,
+          "bytes": 15718,
+          "sha256": "fccc629c46d726f1bce8a980511643281ef6c7706dfe3ebc982b7d5969ddf60b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=165139&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 525,
+          "sha256": "8e31ce68cc6460ff4e4dd670a5500ff99d5c800d255429266b8c10ead1c4c5d4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/165139/ratings/",
+          "status": 200,
+          "bytes": 619,
+          "sha256": "d3cb8633bf40bc2d7c0658e890050fe3f5977e550519469154a07118f4fb8f79"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "165139",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/165139/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "280403",
+      "fetchedAt": "2026-10-02T22:43:10.738357+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/280403/content/",
+          "status": 200,
+          "bytes": 12994,
+          "sha256": "83ed3e68aecdd870c9b44c6da522ef959ac604a6d0ed6905ea7748b3a775c6df"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/280403/structured-description/",
+          "status": 200,
+          "bytes": 8642,
+          "sha256": "9038d7d4d3fb213ca3f1b0d046adfdd291cf88b72471c53c38f03b1da893dcb8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/280403/",
+          "status": 200,
+          "bytes": 14999,
+          "sha256": "cead2502b396efab1a3f62d52450682d8d8009ace3e117f8249202badb2d04e4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=280403&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 592,
+          "sha256": "6446eed8411f312b4b439391b2f7dabc74e3a563ae1ff467015b06e6cecbf867"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/280403/ratings/",
+          "status": 200,
+          "bytes": 619,
+          "sha256": "4a55be0a50582f8adf37f3eff22a5bb6afab09826cd57f18eddd401de62ab642"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "280403",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/280403/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "333235",
+      "fetchedAt": "2026-10-02T22:43:10.984364+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/333235/content/",
+          "status": 200,
+          "bytes": 13127,
+          "sha256": "c2523fe07f5e24bf53793e8e0ee5af8d4d61aafd476e596d50e22e1a75ecbb9d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/333235/structured-description/",
+          "status": 200,
+          "bytes": 8000,
+          "sha256": "4cfb1ee98fc7884618a6d20d24c07b0896ea672f298b2d311592b5514a2beddc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/333235/",
+          "status": 200,
+          "bytes": 14477,
+          "sha256": "274066539856753bc3a907751d2d10b193427457b8aed4cde22122cee8f74274"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=333235&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 997,
+          "sha256": "58761514c7e0c3970e789d185582fbabb3f15be140d2e62fb76b955552f392e6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/333235/ratings/",
+          "status": 200,
+          "bytes": 613,
+          "sha256": "98019d3230978346734a93814e286cd8f5e60f14d89beca3be42a21807133826"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "333235",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333235/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitybike",
+      "itemId": "81664",
+      "fetchedAt": "2026-10-02T22:43:11.023949+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/81664/content/",
+          "status": 200,
+          "bytes": 12890,
+          "sha256": "ad651a906c4b799f3d0119a113400c5047279df15cae68674a1eb573d90103ae"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitybike/81664/structured-description/",
+          "status": 200,
+          "bytes": 8772,
+          "sha256": "0ec73940b13a584a7f690584417468c2fe83bbe9d9a19f8822967be42d332c8f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/81664/",
+          "status": 200,
+          "bytes": 17170,
+          "sha256": "3a80a6f65656122a05d2988e168837e65973d61483d9ed0aaeb2284fe085e74c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitybike/price-preview/per-item/v2/?asn=fhdn&item_pks=81664&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 699,
+          "sha256": "e0a8cefe82467dc1803c8885962e6f9e30f6e6e3961acceaeca9009431127da4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitybike/items/81664/ratings/",
+          "status": 200,
+          "bytes": 628,
+          "sha256": "d0f7097550d00baa0a8526a83199b3b62cef223c8a5950980341c24574e27892"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "81664",
+        "provider": "baycitybike",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/81664/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "baycitykayak",
+      "itemId": "901001",
+      "fetchedAt": "2026-10-02T22:43:11.243121+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baycitykayak/901001/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baycitykayak/901001/structured-description/",
+          "status": 404,
+          "bytes": 588083,
+          "sha256": "f05d59814e6331d67bca93bdf5267b6ea0d17839629327d2e6797fe712a68e18"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitykayak/items/901001/",
+          "status": 404,
+          "bytes": 588057,
+          "sha256": "968fda6be2a1288a8b90c14acf581e3831364301dc5cd21d3b5570620da4dde2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baycitykayak/price-preview/per-item/v2/?asn=fhdn&item_pks=901001&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 136,
+          "sha256": "257c1cab7bfd5bd7b33f35e09d2904c8aaaa760e017a643a1abef025554b7ad0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baycitykayak/items/901001/ratings/",
+          "status": 404,
+          "bytes": 588073,
+          "sha256": "9b186d03c0e8b57f843f2b20e309cfc602d0cc41dbaea1d38d4f9bcabfa97f02"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "901001",
+        "provider": "baycitykayak",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "baynightadventures",
+      "itemId": "901003",
+      "fetchedAt": "2026-10-02T22:43:13.060748+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/baynightadventures/901003/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/baynightadventures/901003/structured-description/",
+          "status": 404,
+          "bytes": 588095,
+          "sha256": "a6392ede6edcf367f2b2bc0f36dd36ee5f3aca15882bcc520318c6081c6dbd9f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/baynightadventures/items/901003/",
+          "status": 404,
+          "bytes": 588069,
+          "sha256": "7fdfde75b80a162fd2ec57e1c06edba728e7300846fabafe8560de08137086eb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/baynightadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=901003&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 142,
+          "sha256": "63c157ddbc268b31eb6b6dd0f6edc5e1569435217c8753770637500193bc2f4d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/baynightadventures/items/901003/ratings/",
+          "status": 404,
+          "bytes": 588085,
+          "sha256": "2784fa25842eada1a8bba4fd00cd8abe659255e4a6c8c97ec3ead2a99ab9178d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "901003",
+        "provider": "baynightadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/baynightadventures/items/901003/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "bikeandroll",
+      "itemId": "638088",
+      "fetchedAt": "2026-10-02T22:43:13.157196+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikeandroll/638088/content/",
+          "status": 200,
+          "bytes": 2736,
+          "sha256": "619d5e01df0ab56d46ada7aa65b8f22dd074376e4cd3be93764130f595e2c65a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikeandroll/638088/structured-description/",
+          "status": 200,
+          "bytes": 1938,
+          "sha256": "a4177d556657a54053bb77b7174d93a688dd9b29f26d4620ba37ee686cd8dd5a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638088/",
+          "status": 200,
+          "bytes": 7968,
+          "sha256": "23df733d71df41da0bf751931f81787a2d2c23e45e81fbea66df8ce5f341e243"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikeandroll/price-preview/per-item/v2/?asn=fhdn&item_pks=638088&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638088/ratings/",
+          "status": 200,
+          "bytes": 430,
+          "sha256": "e2bf3d1efcd038b96bc23c1e08276b6b84a11859d163389bb2e2ad46ef9eb409"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638088",
+        "provider": "bikeandroll",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638088/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "bikeandroll",
+      "itemId": "638096",
+      "fetchedAt": "2026-10-02T22:43:13.279228+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikeandroll/638096/content/",
+          "status": 200,
+          "bytes": 2928,
+          "sha256": "a578f56ede83398427512644967dc0cfcd0723bb57af6be45ad00d250e6b5e02"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikeandroll/638096/structured-description/",
+          "status": 200,
+          "bytes": 2127,
+          "sha256": "e177cea25c24da6f6bf0c10b906ddc7f251e0c81b459c1a811740427d8e50755"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638096/",
+          "status": 200,
+          "bytes": 7986,
+          "sha256": "782c0745c593847412952c0e3f119df009da7f4b1201e035cbb2e98cc4ddd9db"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikeandroll/price-preview/per-item/v2/?asn=fhdn&item_pks=638096&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikeandroll/items/638096/ratings/",
+          "status": 200,
+          "bytes": 437,
+          "sha256": "29858bf5c74edb1d0d8216fc6955cd37cda0b247e72f551942cc46917a810a12"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638096",
+        "provider": "bikeandroll",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638096/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "fogcitybiketours",
+      "itemId": "901002",
+      "fetchedAt": "2026-10-02T22:43:14.051633+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/fogcitybiketours/901002/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/fogcitybiketours/901002/structured-description/",
+          "status": 404,
+          "bytes": 588091,
+          "sha256": "1821aec9cacc15103ddad87a8cabfc9d6b89f824fd561942879c162a6c6cf17a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/fogcitybiketours/items/901002/",
+          "status": 404,
+          "bytes": 588065,
+          "sha256": "6ae7d02f1c6c22d9c30ef44aa10ec0cbbc02687acbc067ce943ee9a6e3f24c56"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/fogcitybiketours/price-preview/per-item/v2/?asn=fhdn&item_pks=901002&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 140,
+          "sha256": "ef538a31c8f7f8276d892551b33b73d80d9c306d09a604858f8dbaf77ecb77d3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/fogcitybiketours/items/901002/ratings/",
+          "status": 404,
+          "bytes": 588081,
+          "sha256": "7a6857bd303ecb758a7742c906f5a39115c5256909fb7675b34e6ed295d6c81b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "901002",
+        "provider": "fogcitybiketours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "sanfranciscotoursandactivities",
+      "itemId": "315553",
+      "fetchedAt": "2026-10-02T22:43:14.988955+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/315553/content/",
+          "status": 200,
+          "bytes": 4185,
+          "sha256": "1da186c6e5be822ce8f3cfdb98827eff34c49f013d307d3e46fc3f1e264b522c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/315553/structured-description/",
+          "status": 200,
+          "bytes": 3314,
+          "sha256": "6f885e139977637669f3a8f1bc51f5452fb5ad43d6818a60725ff5b3c01559fc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/315553/",
+          "status": 200,
+          "bytes": 18065,
+          "sha256": "38dcb496a6f142239230e32f0cc4bf24c38729df39fb73f8c1f023e0acbcfca2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sanfranciscotoursandactivities/price-preview/per-item/v2/?asn=fhdn&item_pks=315553&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1659,
+          "sha256": "9f7b36b8dd5cf0fb8610bfd66419ac1dad194936c7f2bec7bdf98f3d2163255e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/315553/ratings/",
+          "status": 200,
+          "bytes": 672,
+          "sha256": "6a8c13148ae349c8a5eb5c2f9e40ff630a46b5bfeb1165debce6b5f96792b815"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "315553",
+        "provider": "sanfranciscotoursandactivities",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/315553/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sanfranciscotoursandactivities",
+      "itemId": "85853",
+      "fetchedAt": "2026-10-02T22:43:15.123828+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/85853/content/",
+          "status": 200,
+          "bytes": 3015,
+          "sha256": "408fdd65ee783aefe116b1962703ceaf3c8845f074d63ff3d9890ba750114777"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sanfranciscotoursandactivities/85853/structured-description/",
+          "status": 200,
+          "bytes": 2352,
+          "sha256": "fd516b33ed8879654e66e885a009eed5d585bd1e64144fe420929a46e002eee7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/85853/",
+          "status": 200,
+          "bytes": 10986,
+          "sha256": "febbbae4778dcab22b98da421eb6d5fff2bf941a73ebd493f1f679ca37188f9d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sanfranciscotoursandactivities/price-preview/per-item/v2/?asn=fhdn&item_pks=85853&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 630,
+          "sha256": "80a95aac3fee74eb980845c56e5de01fd6ef02103aa52b4dd0585e61f91d2461"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sanfranciscotoursandactivities/items/85853/ratings/",
+          "status": 200,
+          "bytes": 680,
+          "sha256": "b5d72047b2095ce107803104eff057c35a81f9e185fd4feef39a7e5ddfc1482b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "85853",
+        "provider": "sanfranciscotoursandactivities",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/85853/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "spinoutfitness",
+      "itemId": "423384",
+      "fetchedAt": "2026-10-02T22:43:15.372639+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/spinoutfitness/423384/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/spinoutfitness/423384/structured-description/",
+          "status": 404,
+          "bytes": 588087,
+          "sha256": "492e7c41c5d8bde29c44ad81bbcaca564e95356c8be7469271322d665f318b9e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/spinoutfitness/items/423384/",
+          "status": 404,
+          "bytes": 588061,
+          "sha256": "7b69d9dfa084c200b670c60aeb35cdc3434a3c20e77574b9fd91b7d14c23a7eb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/spinoutfitness/price-preview/per-item/v2/?asn=fhdn&item_pks=423384&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 138,
+          "sha256": "7c38998545cebce69e02cf71baa095f218ae76ba646b6af59b8ea574998201dd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/spinoutfitness/items/423384/ratings/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "3797bd3559e9301b1c77c55955c7c126bc501e16c98f77347d8ef0593bd9b559"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "423384",
+        "provider": "spinoutfitness",
+        "bookingUrl": "https://fareharbor.com/embeds/book/spinoutfitness/items/423384/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "138644",
+      "fetchedAt": "2026-10-02T22:43:16.019858+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/138644/content/",
+          "status": 200,
+          "bytes": 4487,
+          "sha256": "5c48d1ebbde0df51c60a7ab92ad4ec466a3f26d60d0e43f960b82eed787fd0b9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/138644/structured-description/",
+          "status": 200,
+          "bytes": 2186,
+          "sha256": "913ff151dd66675c49d128805295464f1652b4e1961867658edd549c1497d0c4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/138644/",
+          "status": 200,
+          "bytes": 14410,
+          "sha256": "8ec03abd1b37b20639647a6939be18dd22c04504e87539733616085675da97fc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=138644&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 917,
+          "sha256": "0e426ddc87e67a404528f403b496a77330b07c88a5eeb6aeb378ed92ee4fe8ec"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/138644/ratings/",
+          "status": 200,
+          "bytes": 621,
+          "sha256": "5515c964e26c5858d5586828295bddcf36aee6a1e3f0526673eed00ed7bd8637"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "138644",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/138644/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "201053",
+      "fetchedAt": "2026-10-02T22:43:16.990427+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/201053/content/",
+          "status": 200,
+          "bytes": 4875,
+          "sha256": "45a91179dbe2823cc72caadc5620aae586622b5c3c0a20d7d1b39573bda1c106"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/201053/structured-description/",
+          "status": 200,
+          "bytes": 2824,
+          "sha256": "37f1f67c9052fa4f2675715d904ccc27be2b79844980b9527552e56c78d47e89"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/201053/",
+          "status": 200,
+          "bytes": 13429,
+          "sha256": "a34c7016c8e4e9f10b6bd555be5db9cac65180828de15dd6a5404140c7f583fd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=201053&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "d11b809b616e36870e956f41e7ef882222a1e21dc2535c4108e8501d05ad2880"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/201053/ratings/",
+          "status": 200,
+          "bytes": 628,
+          "sha256": "e6335d86415040bfcabd2d5982b98d429669d7adf15de082832c7c43bdb5175c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "201053",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201053/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "201055",
+      "fetchedAt": "2026-10-02T22:43:17.198864+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/201055/content/",
+          "status": 200,
+          "bytes": 4327,
+          "sha256": "3783ccd0d078567ff8c330b6753e2ff1194c46a21722f34b0afd8169e6b899ec"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/201055/structured-description/",
+          "status": 200,
+          "bytes": 2256,
+          "sha256": "10b102589c31f1652655a6bdaa98e235c7140153cf45a4ed2711ece7fb581548"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/201055/",
+          "status": 200,
+          "bytes": 12851,
+          "sha256": "5563007f59b90071c9d8d1f01d440c2fa544bbe066db45812a6766227d930275"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=201055&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 817,
+          "sha256": "834c4c22727b454584bd8704e3d6a03fc3d21c1c63815f1c65a3bafeddf232bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/201055/ratings/",
+          "status": 200,
+          "bytes": 629,
+          "sha256": "9b507433ed34ab6ddd0e6c722886ad7bf98e087f2698a91809bd90748a3de61a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "201055",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201055/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "202161",
+      "fetchedAt": "2026-10-02T22:43:17.212773+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/202161/content/",
+          "status": 200,
+          "bytes": 4833,
+          "sha256": "4216fda39a3ea7e98f9143581f819f01d6705a070e2ec53bd682994481b5c517"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/202161/structured-description/",
+          "status": 200,
+          "bytes": 2772,
+          "sha256": "e1a25c9a327f185d49136a2e8c4a89d3c02fc7d151505dac074055375741fa58"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/202161/",
+          "status": 200,
+          "bytes": 14760,
+          "sha256": "7935283db103ebfe57bccac051dc948a4ba84113d59263c2612280c63a8fe5d6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=202161&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 582,
+          "sha256": "ab36e17fdde50a2486d049b09beb25d0d05f38386b9fdc912000368ae7304da5"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/202161/ratings/",
+          "status": 200,
+          "bytes": 629,
+          "sha256": "9e6cc34d240a790b658e213bcc0cee323168b8358cbc4e2068440d8e8c89ab91"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "202161",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/202161/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "313936",
+      "fetchedAt": "2026-10-02T22:43:18.041961+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/313936/content/",
+          "status": 200,
+          "bytes": 4252,
+          "sha256": "f4b3fc0d7fbd0dfcbce06ca78f46b953f9cbb705e98903083b88d94d25bf66ef"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/313936/structured-description/",
+          "status": 200,
+          "bytes": 2122,
+          "sha256": "36a47cd492e91734dd1b41b7b82aa0c21532cc2d5ed883009e91976c69d460c9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/313936/",
+          "status": 200,
+          "bytes": 12852,
+          "sha256": "9ad55eefebdb06c1634ef7164b8ab38d009ef3bd8e2a3d3f273e332c2b5f7ab1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=313936&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "96bfa18930cf8d39d578fe1ed6f927ae0c40ea019fc36dfff2d0f4ec4392051e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/313936/ratings/",
+          "status": 200,
+          "bytes": 624,
+          "sha256": "78d2059c5f28167cfcc9516f82caee5b3875562dbe287a313d0128eb62477ecd"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "313936",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/313936/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "unlimitedbiking",
+      "itemId": "315246",
+      "fetchedAt": "2026-10-02T22:43:19.012015+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/315246/content/",
+          "status": 200,
+          "bytes": 4162,
+          "sha256": "f6362738ab69307ad66c19ded562c8a90dfca1a9ddf88e1949192039d9be4351"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/unlimitedbiking/315246/structured-description/",
+          "status": 200,
+          "bytes": 2147,
+          "sha256": "eee88b55b995545e7b68f7f4233294eb5c310599425f02da2866463d8872a36b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/315246/",
+          "status": 200,
+          "bytes": 12107,
+          "sha256": "47d836e723882f0e61e53cfcbbc5012854637d3e6f6839bf5614f006d37faacc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/unlimitedbiking/price-preview/per-item/v2/?asn=fhdn&item_pks=315246&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 921,
+          "sha256": "5c3716737f91f1d123f68044227fdc6e22d51a98f85a44c5de8f3b1e4ec3ec88"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/unlimitedbiking/items/315246/ratings/",
+          "status": 200,
+          "bytes": 618,
+          "sha256": "472becc9669d2446f73231f058b57f8fb524bdd418e4ed65d0243b35139cefe6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "315246",
+        "provider": "unlimitedbiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/315246/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

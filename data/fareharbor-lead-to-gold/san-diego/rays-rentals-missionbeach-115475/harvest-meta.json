@@ -1,0 +1,47 @@
+{
+  "company": "rays-rentals-missionbeach",
+  "itemId": "115475",
+  "fetchedAt": "2026-10-02T22:41:44.080136+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/rays-rentals-missionbeach/115475/content/",
+      "status": 200,
+      "bytes": 1564,
+      "sha256": "067a9f481abde042c0486ecfa3388cedd22c94d75a5a499dbd17800f8a307950"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/rays-rentals-missionbeach/115475/structured-description/",
+      "status": 200,
+      "bytes": 918,
+      "sha256": "abbd6aa9c66c33bcfb6a334a76c4963f1b56d71f289406f39d9764c7d3c6f2e8"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/rays-rentals-missionbeach/items/115475/",
+      "status": 200,
+      "bytes": 9572,
+      "sha256": "f353d12b4ad99eb97678d80be7acce57a0eec54e178da264085a47730a591530"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/rays-rentals-missionbeach/price-preview/per-item/v2/?asn=fhdn&item_pks=115475&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 974,
+      "sha256": "f2697de1986b51df157a723296eb985c67faa4b01a717220e7e68eb2781323c4"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/rays-rentals-missionbeach/items/115475/ratings/",
+      "status": 200,
+      "bytes": 556,
+      "sha256": "f101574652c3eff24a1c4a3b116b4608317a902f7ffc4bea891a7b250e05f0b0"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "115475",
+    "provider": "rays-rentals-missionbeach",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rays-rentals-missionbeach/items/115475/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

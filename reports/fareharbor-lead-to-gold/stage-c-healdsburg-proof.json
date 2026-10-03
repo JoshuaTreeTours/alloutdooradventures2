@@ -1,0 +1,398 @@
+[
+  {
+    "itemId": "29264",
+    "company": "getawayadventures",
+    "title": "Healdsburg Sip 'N Cycle",
+    "operator": "Getaway Adventures",
+    "publicPath": "/destinations/california/healdsburg/tours/healdsburg-sip-n-cycle-29264",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. An electric-assist bike is offered as an upgrade for the ride.",
+      "The bikes do the traveling, and the winery stops are where guests get off to taste. Guests ride electric bikes for this booking. The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek."
+    ],
+    "schemaDescription": "A guided outing with Getaway Adventures in Healdsburg.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
+    "wordCount": 92,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Dry Creek Wine Region: Healdsburg, CA",
+    "visiblePriceLabel": "From $221.54",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 16 and up",
+        "amountLabel": "$221.54"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "221.54",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/getawayadventures/items/29264/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Healdsburg",
+      "state": "California",
+      "citySlug": "healdsburg",
+      "stateSlug": "california",
+      "reason": "Healdsburg, California belongs to the Healdsburg area via meeting_point",
+      "place": {
+        "city": "Healdsburg",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "healdsburg",
+        "stateSlug": "california",
+        "raw": "Healdsburg, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Healdsburg",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "healdsburg",
+          "stateSlug": "california",
+          "raw": "Healdsburg, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Healdsburg",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "healdsburg",
+          "stateSlug": "california",
+          "raw": "Healdsburg, CA",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Healdsburg",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "healdsburg",
+          "stateSlug": "california",
+          "raw": "Healdsburg, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 38.611377,
+          "lng": -122.874363
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
+      "heroHandle": "CtHNMZJWQ7CYQmPbaoM5",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O",
+          "handle": "6QtlqGStTi683k9VDt9O",
+          "pixelSha256": "00eb3d072e8e915a16c06523d3fdf6abca8244f495f92bd56f02c0e6736f2173",
+          "differenceHashDistanceFromHero": 62,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.15662,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/healdsburg/getawayadventures-29264",
+      "fetchedAt": "2026-10-02T22:44:07.452327+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29264/content/",
+          "status": 200,
+          "bytes": 4190,
+          "sha256": "ad7224830db9bbac6a39c356b48d12d929fd28461ffb1feb1ad4ee00de981a1e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29264/structured-description/",
+          "status": 200,
+          "bytes": 2504,
+          "sha256": "abd81f21773bf6f6e1eb50dcc9a471fe22d4376e9851b0ba8949180f96cfba4e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29264/",
+          "status": 200,
+          "bytes": 14231,
+          "sha256": "2e5471fb4059455833840530c8b3d271c0c891536eef0057ee7192e7f0c6e1ea"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/getawayadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=29264&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 537,
+          "sha256": "1fff39fee840c7ee39995c01d0d340f51e1914a5e99e8907ca2841956a9cdef0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29264/ratings/",
+          "status": 200,
+          "bytes": 485,
+          "sha256": "e140fb44ad9cfcecc825b1cefe163513e5545a09670c9a15710899dca8ca0d82"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 16 and up",
+          "amount": 221.54
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 16 and up",
+            "amount": 221.54
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Dry Creek Wine Region: Healdsburg, CA",
+        "itemLocation": "Dry Creek Wine Region: Healdsburg, CA",
+        "headline": "From $209 • 5.5 Hours • A local favorite! • All ages!",
+        "startCity": "Healdsburg",
+        "startProvince": "CA",
+        "startLat": 38.611377,
+        "startLng": -122.874363,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM Imagine going to Provence without leaving the country...",
+          "Meeting Location • Getaway Adventures/Wine Country Bikes, 359 Hudson St, Healdsburg, 95448 Includes • Use of Electric bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Dry Creek Valley",
+          "Getaway Adventures",
+          "Wine Country Bikes",
+          "Wine Country",
+          "Truett Hurst",
+          "Mill Creek",
+          "Dry Creek"
+        ],
+        "measures": [
+          "12 miles"
+        ],
+        "description": "Come savor the wines of the Dry Creek Valley! Rates • Adult $209 Ages 16 and up • Child/Teen $160 Ages <15 Time 10:00AM - 3:30PM Imagine going to Provence without leaving the country... Sun kissed vines, olive trees, and the golden hills. We cycle along the newly paved quiet back roads, to family owned wineries, one mile at a time… Arguably the best bicycling day trip anywhere in the country. A fantastic, quiet road where every turn brings a picture postcard view. Come cycle with us Getaway Style. No one matches our routes, bikes and most importantly our guides. Discover the beauty and tranquility of these fabled wine regions. Our award winning guides will take you to all the best places, prepare a tasty picnic spread, and take you into the vineyards for our “grapes 101”. We travel 10 to 12 miles, visit 2 wineries, and have our picnic lunch at one of our favorites. Rated easy and mostly flat. Suitable for all abilities. Includes use of e-bike and helmet, all gear, van support, unlimited bottled spring water and bars. Professional guide(s), free wine pickup. Wine country picnic lunch also included. Meeting Location • Getaway Adventures/Wine Country Bikes, 359 Hudson St, Healdsburg, 95448 Includes • Use of Electric bike and helmet, unlimited water, Wine Country picnic lunch, and professional local guides. Wineries we may visit • Quivira, Martorana, Mauritson, Bella, Comstock, Truett Hurst, Mill Creek, Kokomo, Dry Creek and many others",
+        "detailsText": "From $209 • 5.5 Hours • A local favorite! • All ages! From $209 • 5.5 Hours • A local favorite! • All ages!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "29264",
+        "provider": "getawayadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/getawayadventures/items/29264/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "29272",
+    "company": "getawayadventures",
+    "title": "Self Guided E Bike Tour",
+    "operator": "Getaway Adventures",
+    "publicPath": "/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests ride bikes from one winery to the next. The bikes do the traveling, and the winery stops are where guests get off to taste. Guests ride electric bikes for this booking."
+    ],
+    "schemaDescription": "Guests ride bikes from one winery to the next.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/eSoIA6B7SDCaJLtnH97D",
+    "wordCount": 32,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Healdsburg",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/getawayadventures/items/29272/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Healdsburg",
+      "state": "California",
+      "citySlug": "healdsburg",
+      "stateSlug": "california",
+      "reason": "Healdsburg, California belongs to the Healdsburg area via company_start_location",
+      "place": {
+        "city": "Healdsburg",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "healdsburg",
+        "stateSlug": "california",
+        "raw": "Healdsburg, CA",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 38.611377,
+        "lng": -122.874363
+      },
+      "signals": [
+        {
+          "city": "Healdsburg",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "healdsburg",
+          "stateSlug": "california",
+          "raw": "Healdsburg, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 38.611377,
+          "lng": -122.874363
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/eSoIA6B7SDCaJLtnH97D",
+      "heroHandle": "eSoIA6B7SDCaJLtnH97D",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8",
+          "handle": "ZWANa5wjSam222fWSmd8",
+          "pixelSha256": "3eb3a6d2bf3844d4479988c84b06085a64f40005a189ef18fab937a416981207",
+          "differenceHashDistanceFromHero": 122,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.32624,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/healdsburg/getawayadventures-29272",
+      "fetchedAt": "2026-10-02T22:44:07.452909+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29272/content/",
+          "status": 200,
+          "bytes": 2434,
+          "sha256": "58d0e920b004fe336b84fc01fccf24c0b98c08a961de07ea68d38821dfee25e6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29272/structured-description/",
+          "status": 200,
+          "bytes": 1130,
+          "sha256": "cb2e4928baba5dd7c76347b3cb68266aebd4d41c94aaaa505833a7dbb5584661"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29272/",
+          "status": 200,
+          "bytes": 11715,
+          "sha256": "7aed799deb85973c9c0edd45f67a378d43fa20480fc6fa652131e46abbfdeca5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/getawayadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=29272&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29272/ratings/",
+          "status": 200,
+          "bytes": 485,
+          "sha256": "b31fc39c11eb77fee06d40e1dd2ef1cd9def2f4e6f16c1d7afbd074990ce3fc3"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Healdsburg",
+        "itemLocation": "Healdsburg",
+        "headline": null,
+        "startCity": "Healdsburg",
+        "startProvince": "CA",
+        "startLat": 38.611377,
+        "startLng": -122.874363,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Go at your own pace on this self-guided e-bike tour of some of the best cycling roads in Wine Country. Cruise around with ease on our Specialized or Trek e-bikes as you take in the sights or visit some of our favorite wineries.",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "29272",
+        "provider": "getawayadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/getawayadventures/items/29272/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 32 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  }
+]

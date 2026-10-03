@@ -1,0 +1,48 @@
+{
+  "company": "fogcitybiketours",
+  "itemId": "901002",
+  "fetchedAt": "2026-10-02T22:43:14.051633+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/fogcitybiketours/901002/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/fogcitybiketours/901002/structured-description/",
+      "status": 404,
+      "bytes": 588091,
+      "sha256": "1821aec9cacc15103ddad87a8cabfc9d6b89f824fd561942879c162a6c6cf17a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/fogcitybiketours/items/901002/",
+      "status": 404,
+      "bytes": 588065,
+      "sha256": "6ae7d02f1c6c22d9c30ef44aa10ec0cbbc02687acbc067ce943ee9a6e3f24c56"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/fogcitybiketours/price-preview/per-item/v2/?asn=fhdn&item_pks=901002&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 140,
+      "sha256": "ef538a31c8f7f8276d892551b33b73d80d9c306d09a604858f8dbaf77ecb77d3"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/fogcitybiketours/items/901002/ratings/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "7a6857bd303ecb758a7742c906f5a39115c5256909fb7675b34e6ed295d6c81b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "901002",
+    "provider": "fogcitybiketours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

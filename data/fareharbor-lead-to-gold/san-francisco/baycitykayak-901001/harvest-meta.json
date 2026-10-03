@@ -1,0 +1,48 @@
+{
+  "company": "baycitykayak",
+  "itemId": "901001",
+  "fetchedAt": "2026-10-02T22:43:11.243121+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/baycitykayak/901001/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/baycitykayak/901001/structured-description/",
+      "status": 404,
+      "bytes": 588083,
+      "sha256": "f05d59814e6331d67bca93bdf5267b6ea0d17839629327d2e6797fe712a68e18"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitykayak/items/901001/",
+      "status": 404,
+      "bytes": 588057,
+      "sha256": "968fda6be2a1288a8b90c14acf581e3831364301dc5cd21d3b5570620da4dde2"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/baycitykayak/price-preview/per-item/v2/?asn=fhdn&item_pks=901001&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 136,
+      "sha256": "257c1cab7bfd5bd7b33f35e09d2904c8aaaa760e017a643a1abef025554b7ad0"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/baycitykayak/items/901001/ratings/",
+      "status": 404,
+      "bytes": 588073,
+      "sha256": "9b186d03c0e8b57f843f2b20e309cfc602d0cc41dbaea1d38d4f9bcabfa97f02"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "901001",
+    "provider": "baycitykayak",
+    "bookingUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,147 @@
+{
+  "fetchedAt": "2026-10-02T22:44:03.848636+00:00",
+  "total": 3,
+  "products": [
+    {
+      "company": "lavidalaguna",
+      "itemId": "245311",
+      "fetchedAt": "2026-10-02T22:43:59.426556+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/245311/content/",
+          "status": 200,
+          "bytes": 3685,
+          "sha256": "cb0861eb576060d03d9852aa6d1680b754559d9d40fdc7ed0efa552f25fee760"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/245311/structured-description/",
+          "status": 200,
+          "bytes": 1419,
+          "sha256": "c6a5f541a9cf5fcfb20e656b1b21c79c13626c5760adccd96a0a0fda2f5a6df9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/245311/",
+          "status": 200,
+          "bytes": 13983,
+          "sha256": "837f5890302069b4466e17d0c636b38967b81f0b3ccf728abf68b9579a6369c5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=245311&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/245311/ratings/",
+          "status": 200,
+          "bytes": 485,
+          "sha256": "75094ec2388e763e18da159d1ff9d399036c16c1f598dd6326b304a3e50226b2"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "245311",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/245311/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "lavidalaguna",
+      "itemId": "247443",
+      "fetchedAt": "2026-10-02T22:43:59.427574+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/247443/content/",
+          "status": 200,
+          "bytes": 3627,
+          "sha256": "dffd3aa6586445cd3cb777a62e94eeb27d6f38a34681b39cc7dca5f76f541713"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/247443/structured-description/",
+          "status": 200,
+          "bytes": 1372,
+          "sha256": "7bd26e8971c40af67fbf4ade4b470385843ba88597d6e46871ac987133ba1ac1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/247443/",
+          "status": 200,
+          "bytes": 14015,
+          "sha256": "8a9bd013a41a78df6cc385332cd4f9028402de4124975d290c83789b2d406f29"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=247443&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/247443/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "5f9ffa6c5cf80afe591b53e6f77744ed08d43df81607a7b26d8ed655d5f6b64f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "247443",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/247443/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "lavidalaguna",
+      "itemId": "4351",
+      "fetchedAt": "2026-10-02T22:43:59.427223+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/4351/content/",
+          "status": 200,
+          "bytes": 4540,
+          "sha256": "760be1fed95f79714f6c96323af9e8b03578d5e62bc7fa533563c89bd5657470"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lavidalaguna/4351/structured-description/",
+          "status": 200,
+          "bytes": 2953,
+          "sha256": "25f39034274c0ffce5772e5dfa0c54aa01cfc053414c50867dc8b3fafc52d32b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/4351/",
+          "status": 200,
+          "bytes": 15727,
+          "sha256": "cef9f495140ad065b6bfd7b733b25ab7652ef86e5c78325fa8c285f06cc9ec78"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lavidalaguna/price-preview/per-item/v2/?asn=fhdn&item_pks=4351&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 554,
+          "sha256": "905029318ce8aabbca5386da1ee1176a49b4dc7a2b9ef0bae6e887e6a3f0cd35"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lavidalaguna/items/4351/ratings/",
+          "status": 200,
+          "bytes": 484,
+          "sha256": "9778448b7e9e7f18485d1ee7dbac4fd01475ed4f58ab87de711ce592c9a2a992"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "4351",
+        "provider": "lavidalaguna",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lavidalaguna/items/4351/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

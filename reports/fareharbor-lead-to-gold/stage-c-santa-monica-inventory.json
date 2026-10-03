@@ -1,0 +1,127 @@
+{
+  "citySlug": "santa-monica",
+  "total": 6,
+  "active": 4,
+  "terminal": 2,
+  "priceAvailable": 3,
+  "tripadvisorRatingAvailable": 4,
+  "imageAvailable": 6,
+  "inSitemap": 3,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "pedalornot",
+      "operator": "Pedal or Not",
+      "itemId": "49179",
+      "slug": "small-group-tour-49179",
+      "publicPath": "/destinations/california/santa-monica/tours/small-group-tour-49179",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588077
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pedalornot",
+      "operator": "Pedal or Not",
+      "itemId": "49189",
+      "slug": "the-best-private-tour-in-town-49189",
+      "publicPath": "/destinations/california/santa-monica/tours/the-best-private-tour-in-town-49189",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588077
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "394572",
+      "slug": "santa-monica-and-venice-beach-ebike-tour-394572",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-ebike-tour-394572",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4084,
+        "structuredStatus": 200,
+        "structuredBytes": 1812
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "394573",
+      "slug": "santa-monica-and-venice-beach-bike-tour-394573",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-and-venice-beach-bike-tour-394573",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3890,
+        "structuredStatus": 200,
+        "structuredBytes": 1764
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "394581",
+      "slug": "santa-monica-ebike-rentals-394581",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-ebike-rentals-394581",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4295,
+        "structuredStatus": 200,
+        "structuredBytes": 1641
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "unlimitedbiking",
+      "operator": "Unlimited Biking",
+      "itemId": "395126",
+      "slug": "santa-monica-private-bike-tour-395126",
+      "publicPath": "/destinations/california/santa-monica/tours/santa-monica-private-bike-tour-395126",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3014,
+        "structuredStatus": 200,
+        "structuredBytes": 1818
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

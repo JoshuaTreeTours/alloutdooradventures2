@@ -1,12 +1,43 @@
 import { type FareHarborProofProduct } from "./fareharborLeadToGoldProof.generated";
 import {
   fareHarborMigratedProducts,
+  getFareHarborAvalonLegacyProducts,
   getFareHarborBostonLegacyProducts,
+  getFareHarborCalistogaLegacyProducts,
   getFareHarborChicagoLegacyProducts,
+  getFareHarborCoronadoLegacyProducts,
+  getFareHarborDelMarLegacyProducts,
+  getFareHarborHealdsburgLegacyProducts,
+  getFareHarborJoshuaTreeLegacyProducts,
+  getFareHarborLagunaBeachLegacyProducts,
+  getFareHarborLosAngelesLegacyProducts,
+  getFareHarborMarinaDelReyLegacyProducts,
+  getFareHarborOakhurstLegacyProducts,
+  getFareHarborRedondoBeachLegacyProducts,
+  getFareHarborSanDiegoLegacyProducts,
+  getFareHarborSanFranciscoLegacyProducts,
+  getFareHarborSantaMonicaLegacyProducts,
 } from "./fareharborCityBatches";
 import { fareHarborAggregateRatingSchema } from "./fareharborPresentation";
 
-export { getFareHarborBostonLegacyProducts, getFareHarborChicagoLegacyProducts };
+export {
+  getFareHarborAvalonLegacyProducts,
+  getFareHarborBostonLegacyProducts,
+  getFareHarborCalistogaLegacyProducts,
+  getFareHarborChicagoLegacyProducts,
+  getFareHarborCoronadoLegacyProducts,
+  getFareHarborDelMarLegacyProducts,
+  getFareHarborHealdsburgLegacyProducts,
+  getFareHarborJoshuaTreeLegacyProducts,
+  getFareHarborLagunaBeachLegacyProducts,
+  getFareHarborLosAngelesLegacyProducts,
+  getFareHarborMarinaDelReyLegacyProducts,
+  getFareHarborOakhurstLegacyProducts,
+  getFareHarborRedondoBeachLegacyProducts,
+  getFareHarborSanDiegoLegacyProducts,
+  getFareHarborSanFranciscoLegacyProducts,
+  getFareHarborSantaMonicaLegacyProducts,
+};
 
 const byItemId = new Map(
   fareHarborMigratedProducts.map(product => [product.itemId, product])

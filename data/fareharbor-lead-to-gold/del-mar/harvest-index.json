@@ -1,0 +1,523 @@
+{
+  "fetchedAt": "2026-10-02T22:43:29.995271+00:00",
+  "total": 11,
+  "products": [
+    {
+      "company": "animalcenter",
+      "itemId": "439580",
+      "fetchedAt": "2026-10-02T22:43:22.328087+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439580/content/",
+          "status": 200,
+          "bytes": 5292,
+          "sha256": "2a79aa494120cfbe636a23ff33f31e95ad7c64ccda2138dcfc6668da887e0c83"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439580/structured-description/",
+          "status": 200,
+          "bytes": 3777,
+          "sha256": "0662f67667a3f895436ce34a60496b491317cd0b470ac6c8772fea74d4fc2b2e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439580/",
+          "status": 200,
+          "bytes": 12843,
+          "sha256": "2f80a7ab9a7787b5694818bd3d73071cce6ce089e547bea0b831ccd849ae892b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=439580&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439580/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "767460f4cfbd751e92d5003ed962ac216b7a4f97d3fa921442c22e69b91f9f3c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "439580",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439580/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "439587",
+      "fetchedAt": "2026-10-02T22:43:22.329067+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439587/content/",
+          "status": 200,
+          "bytes": 4436,
+          "sha256": "01cb8ec78da961fe02de537066c2bd7e747d4e990b2e5e7066a7511974f23a09"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/439587/structured-description/",
+          "status": 200,
+          "bytes": 3366,
+          "sha256": "d8cd1adb3092f346236cb14e657da36d809466087e09996232650e4762cd69b8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439587/",
+          "status": 200,
+          "bytes": 9455,
+          "sha256": "26e6f0363c38705db973d215502f337b070b36772454a0f95170a32f2234112f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=439587&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/439587/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "3fcfdb270cde13806a6ba3f73de4aed0e0cf82a437454bf0d422b81445c4679f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "439587",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439587/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "446272",
+      "fetchedAt": "2026-10-02T22:43:22.328793+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/446272/content/",
+          "status": 200,
+          "bytes": 6706,
+          "sha256": "f8e85520007eb3e408013198ba39a9a07b2344254367bf124e5018e3d524d2f2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/446272/structured-description/",
+          "status": 200,
+          "bytes": 5637,
+          "sha256": "2ce0d019c0ef86edc4f429fece2045012ef5d9267265521711b522a81ab9ed79"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/446272/",
+          "status": 200,
+          "bytes": 9555,
+          "sha256": "f3fabdbc7c3ffe14a2f157d5d27fb304352035fc63fda12b0567b3fc746ae46e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=446272&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/446272/ratings/",
+          "status": 200,
+          "bytes": 477,
+          "sha256": "5e8e1269a8077abc11e0044a413ab4566ef3f7efc42321ef73b770d848b0b43a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "446272",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/446272/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "461127",
+      "fetchedAt": "2026-10-02T22:43:22.329506+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/461127/content/",
+          "status": 200,
+          "bytes": 10061,
+          "sha256": "217bac70e40829df1a763478b8233010adecc65a83ff1d20cb4bf215f9ca6ccc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/461127/structured-description/",
+          "status": 200,
+          "bytes": 7011,
+          "sha256": "09682a47fe785f8c9b1bd1edd9056498d6cba14ea8364620dc7f4726108799cb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/461127/",
+          "status": 200,
+          "bytes": 12817,
+          "sha256": "d552b6b4e0273ef98707235deb7af00e9ecff6941aa5c07f663eb26c2a05a3c3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=461127&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/461127/ratings/",
+          "status": 200,
+          "bytes": 470,
+          "sha256": "ac4355f2425f2c1b4ed0571295e5234291455fe0553dc349d0a5bae2719a0099"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "461127",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/461127/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "481283",
+      "fetchedAt": "2026-10-02T22:43:24.414782+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/481283/content/",
+          "status": 200,
+          "bytes": 9788,
+          "sha256": "5e2330dc5f999f09f031bad4dfc5eba29aa69b4c529da61f34422e573fb96534"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/481283/structured-description/",
+          "status": 200,
+          "bytes": 4965,
+          "sha256": "36026a951b245928c9c11c4380a49c314b70c371b694d3cba4fccef4935076b8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/481283/",
+          "status": 200,
+          "bytes": 10497,
+          "sha256": "8a9afa48669f763b7bb671993f04b8a373f21ddc27120bf4a11e69462822f529"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=481283&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 695,
+          "sha256": "34aafe6d22173cb25f0ac4340133532e92b40c36de422eb43ba75838acd15c62"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/481283/ratings/",
+          "status": 200,
+          "bytes": 494,
+          "sha256": "68836f85b10221326fac4ce411deef4e96d9f522fb71390e439a5737bc513209"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "481283",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/481283/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "483273",
+      "fetchedAt": "2026-10-02T22:43:24.476547+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/483273/content/",
+          "status": 200,
+          "bytes": 8656,
+          "sha256": "b3cfa9c460e6169a7dd75758f8f316095477fcf1b89b886ed940e0d2ba73e48b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/483273/structured-description/",
+          "status": 200,
+          "bytes": 6793,
+          "sha256": "dab4de87018a476ea598d92948206a39e23dbdde6292a4e331a46614692c52c4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/483273/",
+          "status": 200,
+          "bytes": 11758,
+          "sha256": "c1e2bbfd769291d8232ccf0d149d83a0e4170f46c13c830fd3d7138d16de3f9e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=483273&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/483273/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "4218da10fb9560d85c91d4ade060aa511b12f6f7955a28f473d5a0d63c4e82f8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "483273",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/483273/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "502768",
+      "fetchedAt": "2026-10-02T22:43:24.633698+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502768/content/",
+          "status": 200,
+          "bytes": 19594,
+          "sha256": "b27f93d7e98928580d501e1ebfb2fd0e867aca3dc1a771fee65e0bb858ec23b8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502768/structured-description/",
+          "status": 200,
+          "bytes": 12928,
+          "sha256": "13df37fc4a41019f4fcbdace67e14064980e168c804dd8aeb3a6393c6ffafdc5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502768/",
+          "status": 200,
+          "bytes": 18249,
+          "sha256": "0a31f4f1dd17aac91f35db498635eaa282d9ac47eac2b40020557826fbbd9046"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502768&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 547,
+          "sha256": "570cb1aeaf20a7e745df9da5c10c4f7705da47d097f3f0286c446ac195802281"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502768/ratings/",
+          "status": 200,
+          "bytes": 474,
+          "sha256": "4a54225bdc978f79a0d5cab5ab7d2cf1ffed36fb4b105ce595f78f9c5f4b3b2d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "502768",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502768/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "502778",
+      "fetchedAt": "2026-10-02T22:43:24.954658+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502778/content/",
+          "status": 200,
+          "bytes": 16967,
+          "sha256": "6ad68eb5ec398009a57cbf4028460974919d4e0c11cf2727b054c15033b40ee0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502778/structured-description/",
+          "status": 200,
+          "bytes": 10943,
+          "sha256": "c29000b0a77a5d714efe94f4f140d3d47e82275321c3a377a1c78b923ef2622d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502778/",
+          "status": 200,
+          "bytes": 15930,
+          "sha256": "448374325b79cadd31dfea4125fbc3a948144c7e34a9086ae01d2916239fc5e2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502778&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 545,
+          "sha256": "3b289f007944dce844146e8b1f56626e3cfa142b2fb2f45a25091c627cc805c3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502778/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "c137244b311d9c884d6530c5b7e6adc7b172f5462a92ddc329f1e55bb4ed72ab"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "502778",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502778/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "502784",
+      "fetchedAt": "2026-10-02T22:43:26.567561+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502784/content/",
+          "status": 200,
+          "bytes": 19248,
+          "sha256": "7048800f1527647124e8378b12cdba9faab8dd15505a6b5641cb7dd70bf3b275"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/502784/structured-description/",
+          "status": 200,
+          "bytes": 12808,
+          "sha256": "6b8b3ff996c93c0c1257e36feb7b16a9b788d2a5f4467e7e07face2effa2effb"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502784/",
+          "status": 200,
+          "bytes": 18212,
+          "sha256": "53c380f7b4970139c0ac7988ab01902e1f12a9ec75dc074d27eea083b5ce6f86"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=502784&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 547,
+          "sha256": "879b24fa895135c0fb163d4c1b3776d0809a3d166e36c66086359d36ed240226"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/502784/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "a2b9d72c3dda62c470d2b001805ca6d006d743576ae7ab851fd21759e10a410f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "502784",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502784/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "509720",
+      "fetchedAt": "2026-10-02T22:43:26.758254+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/509720/content/",
+          "status": 200,
+          "bytes": 5751,
+          "sha256": "548945eb4d6192fb3238fd7d450be8dbd4a9e8f170df8457d43ecfba9efd9d35"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/509720/structured-description/",
+          "status": 200,
+          "bytes": 4688,
+          "sha256": "342b320e9947251fe568e8513772092d0d916398177cbd232c54d3ab10973a53"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/509720/",
+          "status": 200,
+          "bytes": 12434,
+          "sha256": "8c3319f0a981de2f54fa0547b7b8d0a99d91f60eb6f0bcdb9659e9f07e9669fe"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=509720&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 226,
+          "sha256": "f57603d1d351241bc570d5932932f8d2adca539c41bbe835b6883b09340f1122"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/509720/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "d803cd83c5d4b68098b4d0b23566f607b23e580e9acdf4e5c2538a9727314337"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "509720",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/509720/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "animalcenter",
+      "itemId": "575652",
+      "fetchedAt": "2026-10-02T22:43:26.890695+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/575652/content/",
+          "status": 200,
+          "bytes": 8337,
+          "sha256": "57cb9e4abff66c167614c975c84a2f172f8f8303f3cbe3c44ec5703f140c693b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/animalcenter/575652/structured-description/",
+          "status": 200,
+          "bytes": 6609,
+          "sha256": "75480cc7798a6a3eee08207c0e5af7264f44ca9194b2832d6862dedf22bb2361"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/575652/",
+          "status": 200,
+          "bytes": 11128,
+          "sha256": "00b4c6129835d48aa4c4743e70b67d6d0646fd7bb1e16330d50592ec6049fe1d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/animalcenter/price-preview/per-item/v2/?asn=fhdn&item_pks=575652&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1359,
+          "sha256": "1cd30980540ebd2872e32b0c0138e92518e2a167c065e1f320775effea831dcd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/animalcenter/items/575652/ratings/",
+          "status": 200,
+          "bytes": 476,
+          "sha256": "29790dd9dfac297ffb5992a7991aba83ece4641a14825c11c1bcd6fdfad86008"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "575652",
+        "provider": "animalcenter",
+        "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575652/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

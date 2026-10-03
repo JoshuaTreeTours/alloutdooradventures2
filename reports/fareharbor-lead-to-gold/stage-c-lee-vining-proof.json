@@ -1,0 +1,176 @@
+[
+  {
+    "itemId": "619660",
+    "company": "lamplightersadventuringsociety",
+    "title": "Summit Clouds Rest",
+    "operator": "The Lamplighters Adventuring Society LLC",
+    "publicPath": "/destinations/california/yosemite/tours/summit-clouds-rest-619660",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator The Lamplighters Adventuring Society LLC lists this outing."
+    ],
+    "schemaDescription": "The operator The Lamplighters Adventuring Society LLC lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0S0cpD9MSMO9QcCDpduN"
+    ],
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Sunrise Lakes Trailhead Yosemite, CA 93541",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 37,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 37 reviews on GET https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619660/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Yosemite",
+      "state": "California",
+      "citySlug": "yosemite",
+      "stateSlug": "california",
+      "reason": "Yosemite, California from company_start_location does not belong to Lee Vining, and no matching public destination exists",
+      "place": {
+        "city": "Yosemite",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "yosemite",
+        "stateSlug": "california",
+        "raw": "Yosemite, CA",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 37.82577,
+        "lng": -119.470024
+      },
+      "signals": [
+        {
+          "city": "Yosemite",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "yosemite",
+          "stateSlug": "california",
+          "raw": "Yosemite, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 37.82577,
+          "lng": -119.470024
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/yCybBTRZOLweFOLN3COw",
+      "heroHandle": "yCybBTRZOLweFOLN3COw",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/0S0cpD9MSMO9QcCDpduN",
+          "handle": "0S0cpD9MSMO9QcCDpduN",
+          "pixelSha256": "9128147482571f5fa80f0dc6a9aa99bcd59de7aee0505230d1446c4dd63fa3f8",
+          "differenceHashDistanceFromHero": 124,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.2109,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [
+        {
+          "url": "https://cdn.filestackcontent.com/yCybBTRZOLweFOLN3COw",
+          "handle": "yCybBTRZOLweFOLN3COw",
+          "classification": "SAME_HANDLE"
+        }
+      ],
+      "selected": "https://cdn.filestackcontent.com/0S0cpD9MSMO9QcCDpduN",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/lee-vining/lamplightersadventuringsociety-619660",
+      "fetchedAt": "2026-10-02T22:44:35.664402+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619660/content/",
+          "status": 200,
+          "bytes": 2426,
+          "sha256": "b4cd38128dab7feacb5af15f12785f1977720b1e323dde338d433346334fcdce"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/lamplightersadventuringsociety/619660/structured-description/",
+          "status": 200,
+          "bytes": 1269,
+          "sha256": "6538dbe34bc3fbaa94779ab893916ed60649a826add6ef89f20e2496b0fb93b8"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619660/",
+          "status": 200,
+          "bytes": 17780,
+          "sha256": "2e12628aaa56477d015fb3e59f5303dc0da5a7908331836548314b8ba9e4d40f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/lamplightersadventuringsociety/price-preview/per-item/v2/?asn=fhdn&item_pks=619660&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 530,
+          "sha256": "6b8027b51e3e07d30df65725ede4257ee42d91a0af27ad20d19bfa5c05b0fb7e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/lamplightersadventuringsociety/items/619660/ratings/",
+          "status": 200,
+          "bytes": 582,
+          "sha256": "e9ffc4ab353a4834b552f3960151ed48ecdccaadf999590cac944c79981ba706"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "12 Hours",
+        "meetingAddress": "Sunrise Lakes Trailhead Yosemite, CA 93541",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Yosemite",
+        "startProvince": "CA",
+        "startLat": 37.82577,
+        "startLng": -119.470024,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Conquer Clouds Rest"
+        ],
+        "measures": [],
+        "description": "Conquer Clouds Rest, Yosemite's most rewarding summit. On this private, guided day hike, you'll marvel at an endless panorama of peaks and jaw-dropping views. You'll earn bragging rights and photos of a summit most people would never dare to reach!",
+        "detailsText": "Packing List: • Sun Hat • Sunglasses • Water Bottle (3L per person) • Sunscreen • Bug spray • Raincoat & Warm Layer Optional: • Cash, to tip your guide! We will provide backpacks, trekking poles, water filter, snacks and lunch!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "619660",
+        "provider": "lamplightersadventuringsociety",
+        "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619660/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

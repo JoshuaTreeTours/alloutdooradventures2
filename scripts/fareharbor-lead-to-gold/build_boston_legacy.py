@@ -31,11 +31,25 @@ from build_stage_b_proof import (
     word_count,
 )
 from inventory_boston import inventory
-from tripadvisor_ratings import parse_tripadvisor_rating
+from tripadvisor_ratings import (
+    google_review_pair,
+    parse_tripadvisor_rating,
+    ratings_payload_item_id,
+)
 from editorial_voice import (
+    activity_contradiction_errors,
     compose_editorial,
+    contrast_padding_errors,
+    count_words,
     editorial_substance_errors,
+    invented_food_walk_errors,
     load_editorial_sample,
+    paragraphs_without_contrast,
+    is_structural_label,
+    section_label_leak_errors,
+    split_sentences,
+    template_artifact_errors,
+    usable_regenerated_copy,
 )
 from source_priority import (
     collect_authoritative_source,
@@ -45,6 +59,7 @@ from source_priority import (
 )
 from image_integrity import (
     hero_gallery_duplicate_errors,
+    item_owned_image_urls,
     prefetch,
     select_visible_gallery,
 )
@@ -78,6 +93,15 @@ CITY_PROFILES = {
         "stateSlug": "illinois",
         "exportName": "fareHarborChicagoLegacyProducts",
         "generatedName": "fareharborChicagoLegacy.generated.ts",
+        "editorialSample": None,
+        "publishUnpriced": False,
+    },
+    "los-angeles": {
+        "city": "Los Angeles",
+        "state": "California",
+        "stateSlug": "california",
+        "exportName": "fareHarborLosAngelesLegacyProducts",
+        "generatedName": "fareharborLosAngelesLegacy.generated.ts",
         "editorialSample": None,
         "publishUnpriced": False,
     },
@@ -133,15 +157,41 @@ FILESTACK_RE = re.compile(r"https://cdn\.filestackcontent\.com/([A-Za-z0-9]+)")
 EDITORIAL_BY_ID = load_editorial_sample(EDITORIAL_SAMPLE) if EDITORIAL_SAMPLE else {}
 
 
+def synthesized_city_profile(city_slug: str) -> dict:
+    """Build a data-only profile from the catalog destination. No city-specific prose."""
+    payload = inventory(city_slug)
+    products = payload.get("products") or []
+    if not products:
+        known = ", ".join(sorted(CITY_PROFILES))
+        raise SystemExit(
+            f"unsupported FareHarbor city {city_slug}; no catalog products. known profiles: {known}"
+        )
+    destination = products[0].get("destination") or {}
+    parts = "".join(part.capitalize() for part in city_slug.split("-") if part)
+    return {
+        "city": destination.get("city") or city_slug,
+        "state": destination.get("state") or "",
+        "stateSlug": destination.get("stateSlug") or "",
+        "exportName": f"fareHarbor{parts}LegacyProducts",
+        "generatedName": f"fareharbor{parts}Legacy.generated.ts",
+        "editorialSample": None,
+        "publishUnpriced": False,
+    }
+
+
+PREVIOUS_RUNTIME: dict[str, dict] = {}
+REGENERATE_ITEM_IDS: set[str] = set()
+
+
 def configure_city(city_slug: str) -> None:
     """Point the shared builder at one city. Boston remains the default."""
     global CITY_SLUG, CITY_NAME, STATE_NAME, STATE_SLUG, EXPORT_NAME
     global HARVEST_ROOT, HARVEST_REPORT, REPORT_JSON, REPORT_MD, GENERATED_TS
     global EDITORIAL_SAMPLE, EDITORIAL_BY_ID, PUBLISH_UNPRICED
-    profile = CITY_PROFILES.get(city_slug)
-    if not profile:
-        known = ", ".join(sorted(CITY_PROFILES))
-        raise SystemExit(f"unsupported FareHarbor city {city_slug}; known: {known}")
+    global PREVIOUS_RUNTIME, REGENERATE_ITEM_IDS
+    PREVIOUS_RUNTIME = {}
+    REGENERATE_ITEM_IDS = set()
+    profile = CITY_PROFILES.get(city_slug) or synthesized_city_profile(city_slug)
     CITY_SLUG = city_slug
     CITY_NAME = profile["city"]
     STATE_NAME = profile["state"]
@@ -272,22 +322,25 @@ def unique(items: list[str]) -> list[str]:
     return result
 
 
-def harvest_images(folder: Path, content: dict, structured: dict, item_raw: dict) -> list[str]:
-    urls = []
-    for payload in (content, structured):
-        for image in payload.get("images") or []:
-            if isinstance(image, str):
-                urls.append(image)
-            elif isinstance(image, dict):
-                urls.append(str(image.get("url") or image.get("image") or ""))
+def harvest_images(
+    folder: Path,
+    content: dict,
+    structured: dict,
+    item_raw: dict,
+    item_id: str,
+) -> list[str]:
+    del folder
+    payloads = []
+    if isinstance(content, dict):
+        payloads.append(content)
+    if isinstance(structured, dict):
+        payloads.append(structured)
     item = item_raw.get("item") if isinstance(item_raw, dict) else None
     if isinstance(item, dict):
-        for image in item.get("images") or []:
-            if isinstance(image, str):
-                urls.append(image)
-            elif isinstance(image, dict):
-                urls.append(str(image.get("url") or image.get("image") or ""))
-    return unique([url for url in urls if FILESTACK_RE.search(url)])
+        payloads.append(item)
+    elif isinstance(item_raw, dict):
+        payloads.append(item_raw)
+    return item_owned_image_urls(payloads, item_id)
 
 
 def proper_names(text: str) -> list[str]:
@@ -536,11 +589,18 @@ def extract_facts(
     authoritative: dict | None = None,
 ) -> dict:
     item = item or {}
+    raw_description = field(usable, "description") or ""
+    if not isinstance(raw_description, str):
+        raw_description = ""
     structured_duration = clean_text(field(usable, "duration")) or None
-    description = clean_text(field(usable, "description") or "")
+    description = clean_text(raw_description)
     if authoritative and authoritative.get("description"):
         description = authoritative["description"]
+    # Headings such as "## Duration" are removed from customer prose. Read the
+    # raw source only when that cleaned prose no longer contains a duration.
     duration = normalize_activity_duration(structured_duration, description)
+    if not duration and raw_description:
+        duration = normalize_activity_duration(None, raw_description)
     meeting = field(usable, "meeting_point")
     meeting_address = None
     if isinstance(meeting, dict):
@@ -553,6 +613,7 @@ def extract_facts(
     included = []
     excluded = []
     itinerary = []
+    route_notes = []
     highlights = []
     restrictions = []
     bring = []
@@ -563,6 +624,11 @@ def extract_facts(
         item_excluded = list_values(payload.get("what_is_not_included_items"))
         excluded.extend(item_excluded or list_values(payload.get("what_is_not_included")))
         itinerary.extend(itinerary_stops(payload.get("itinerary")))
+        raw_itinerary = payload.get("itinerary")
+        if isinstance(raw_itinerary, str):
+            route_text = clean_text(raw_itinerary)
+            if word_count([route_text]) >= 8:
+                route_notes.append(route_text)
         highlights.extend(list_values(payload.get("highlights")))
         restrictions.extend(restriction_lines(payload.get("restrictions")))
         bring.extend(list_values(payload.get("what_to_bring_items") or payload.get("what_to_bring")))
@@ -589,6 +655,7 @@ def extract_facts(
         "included": unique(included)[:8],
         "excluded": unique(excluded)[:6],
         "itinerary": unique((authoritative or {}).get("itinerary") or itinerary)[:18],
+        "routeNotes": unique(route_notes)[:4],
         "highlights": unique(highlights)[:6],
         "restrictions": unique(restrictions)[:4],
         "bring": unique(bring)[:5],
@@ -690,17 +757,209 @@ def tripadvisor_rating(folder: Path, meta: dict, company: str, item_id: str) -> 
     )
     if record.get("status") != 200 or not path.exists():
         return None, absent
-    parsed = parse_tripadvisor_rating(load_json(path))
-    if not parsed:
-        return None, absent
-    provenance = (
-        f"TripAdvisor rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
-        f"on GET {endpoint} fields ratings.tripadvisor.rating and "
-        "ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. "
-        "Google reviews were not substituted. Catalog quality_score and availability_count "
-        "were not used."
-    )
-    return parsed, provenance
+    payload = load_json(path)
+    bound_item = ratings_payload_item_id(payload)
+    if bound_item and bound_item != str(item_id):
+        return None, (
+            f"The FareHarbor ratings endpoint {endpoint} returned item pk {bound_item}, "
+            f"which does not match item {item_id}. AggregateRating is omitted."
+        )
+    parsed = parse_tripadvisor_rating(payload)
+    if parsed:
+        provenance = (
+            f"TripAdvisor rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
+            f"on GET {endpoint} fields ratings.tripadvisor.rating and "
+            "ratings.tripadvisor.num_reviews. rating_image_url was not used to infer the score. "
+            "Google reviews were not substituted. Catalog quality_score and availability_count "
+            "were not used."
+        )
+        return parsed, provenance
+    google = google_review_pair(payload)
+    if google:
+        parsed = {**google, "provider": "Google"}
+        provenance = (
+            f"Google rating {parsed['ratingValue']} from {parsed['reviewCount']} reviews "
+            f"on GET {endpoint} fields ratings.google_reviews.rating and "
+            "ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this "
+            "pair stays attributed to Google. rating_image_url was not used. Catalog "
+            "quality_score and availability_count were not used."
+        )
+        return parsed, provenance
+    return None, absent
+
+
+def choose_product_image(catalog_hero: str | None, owned: list[str]) -> str | None:
+    """Prefer the catalog hero only when that file belongs to this item."""
+    hero = (catalog_hero or "").strip()
+    if hero and hero in owned:
+        return hero
+    return owned[0] if owned else None
+
+
+def copy_is_grounded(
+    paragraphs: list[str],
+    highlights: list[str],
+    schema: str,
+    title: str,
+    description: str,
+) -> bool:
+    blobs = [*(paragraphs or []), *(highlights or [])]
+    if schema:
+        blobs.append(schema)
+    if section_label_leak_errors(blobs):
+        return False
+    if invented_food_walk_errors(blobs, title, description):
+        return False
+    if activity_contradiction_errors(paragraphs or [], title, description):
+        return False
+    if contrast_padding_errors([*(paragraphs or []), schema or ""], description):
+        return False
+    if template_artifact_errors(blobs):
+        return False
+    return word_count(paragraphs or []) >= 100
+
+
+def restore_grounded_editorial(catalog: dict, description: str):
+    """Keep prose that already passes the shared checks.
+
+    Products whose previous copy was shared with an unrelated item are
+    regenerated. Heading leaks and invented food-walk framing are regenerated.
+    """
+    if str(catalog.get("itemId")) in REGENERATE_ITEM_IDS:
+        return None
+    previous = PREVIOUS_RUNTIME.get(str(catalog.get("itemId")))
+    if not previous or previous.get("exceptionStatus") != "OK":
+        return None
+    paragraphs = list(previous.get("paragraphs") or [])
+    highlights = list(previous.get("highlights") or [])
+    schema = previous.get("schemaDescription") or ""
+    if not copy_is_grounded(
+        paragraphs,
+        highlights,
+        schema,
+        catalog.get("title") or "",
+        description,
+    ):
+        return None
+    return paragraphs, highlights, schema
+
+
+def load_previous_runtime() -> dict[str, dict]:
+    if not GENERATED_TS.exists():
+        return {}
+    text = GENERATED_TS.read_text()
+    marker = f"export const {EXPORT_NAME}: FareHarborProofProduct[] = "
+    start = text.find(marker)
+    if start < 0:
+        return {}
+    payload = text[start + len(marker) :].strip()
+    if payload.endswith(";"):
+        payload = payload[:-1].strip()
+    try:
+        rows = json.loads(payload)
+    except json.JSONDecodeError:
+        return {}
+    return {str(row["itemId"]): row for row in rows if row.get("itemId")}
+
+
+def description_for_overlap(company: str, item_id: str) -> str:
+    base = ROOT / "data" / "fareharbor-lead-to-gold"
+    folders = list(base.glob(f"*/{company}-{item_id}"))
+    preferred = HARVEST_ROOT / f"{company}-{item_id}"
+    if preferred.exists():
+        folders.insert(0, preferred)
+    parts = []
+    seen = set()
+    for folder in folders:
+        if folder in seen or not folder.is_dir():
+            continue
+        seen.add(folder)
+        for name in ("structured-description.json", "content.json"):
+            path = folder / name
+            if not path.exists():
+                continue
+            raw = load_json(path)
+            data = unwrap_content(raw)
+            if isinstance(data, dict) and "error" not in data:
+                parts.append(clean_text(data.get("description") or ""))
+    return "\n".join(part for part in parts if part)
+
+
+def identical_prose_without_shared_source(rows: dict[str, dict], catalog: dict) -> set[str]:
+    """Item ids whose full prose matches another item with no shared source."""
+    grouped: dict[str, list[str]] = {}
+    for item_id, row in rows.items():
+        if row.get("exceptionStatus") != "OK":
+            continue
+        key = " ".join(row.get("paragraphs") or []).strip()
+        if len(key) < 80:
+            continue
+        grouped.setdefault(key, []).append(item_id)
+    forced: set[str] = set()
+    for item_ids in grouped.values():
+        if len(item_ids) < 2:
+            continue
+        descriptions = {}
+        for item_id in item_ids:
+            entry = catalog.get(item_id) or {}
+            company = entry.get("company") or rows[item_id].get("company") or ""
+            descriptions[item_id] = description_for_overlap(company, item_id)
+        borrowed = False
+        for index, left in enumerate(item_ids):
+            for right in item_ids[index + 1 :]:
+                if not (shingles(descriptions[left]) & shingles(descriptions[right])):
+                    borrowed = True
+                    break
+            if borrowed:
+                break
+        if borrowed:
+            forced.update(item_ids)
+    return forced
+
+
+def withhold_unpublished_items(products: list[dict]) -> None:
+    """A cleanup rebuild must not add routes that were not already published."""
+    if not PREVIOUS_RUNTIME:
+        return
+    previous_ok = {
+        item_id
+        for item_id, row in PREVIOUS_RUNTIME.items()
+        if row.get("exceptionStatus") == "OK"
+    }
+    for product in products:
+        if product["exceptionStatus"] != "OK" or product["itemId"] in previous_ok:
+            continue
+        product["exceptionStatus"] = "INSUFFICIENT_SOURCE_CONTENT"
+        product["visiblePriceLabel"] = None
+        product["priceRows"] = []
+        product["offer"] = None
+        product["aggregateRating"] = None
+        product["ratingProvenance"] = (
+            "This item was not in the published set. A cleanup rebuild does not add a new route."
+        )
+
+
+def unpublish_borrowed_prose(products: list[dict], catalog: dict) -> None:
+    rows = {product["itemId"]: product for product in products}
+    borrowed = identical_prose_without_shared_source(rows, catalog)
+    for product in products:
+        if product["itemId"] not in borrowed or product["exceptionStatus"] != "OK":
+            continue
+        product["exceptionStatus"] = "INSUFFICIENT_SOURCE_CONTENT"
+        product["paragraphs"] = short_missing_copy(product["title"], product.get("operator"))
+        product["highlights"] = []
+        product["wordCount"] = word_count(product["paragraphs"])
+        product["schemaDescription"] = " ".join(product["paragraphs"]).strip()
+        product["visiblePriceLabel"] = None
+        product["priceRows"] = []
+        product["offer"] = None
+        product["aggregateRating"] = None
+        product["ratingProvenance"] = (
+            "AggregateRating is omitted because the composed prose matched another "
+            "item whose source does not overlap this item."
+        )
+        product["galleryImages"] = []
+        product["productImage"] = None
 
 
 def public_path_for(geography: dict, slug: str) -> str:
@@ -773,6 +1032,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         if part
     )
     overlap_text = prose_for_overlap(authoritative) or (facts.get("description") or "")
+    short_grounded = False
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
         highlights = []
@@ -792,13 +1052,84 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 removed = list(overlay["removedClaims"])
             if overlay.get("schemaDescription"):
                 generated_schema = overlay["schemaDescription"]
+        elif not overlay:
+            description = facts.get("description") or ""
+            previous = PREVIOUS_RUNTIME.get(str(catalog.get("itemId")))
+            restored = restore_grounded_editorial(catalog, description)
+            if restored:
+                paragraphs, highlights, generated_schema = restored
+            elif previous and previous.get("exceptionStatus") == "OK":
+                previous_highlights = list(previous.get("highlights") or [])
+                if previous_highlights and not template_artifact_errors(previous_highlights) and not any(
+                    is_structural_label(item) for item in previous_highlights
+                ):
+                    highlights = previous_highlights
+                elif not previous_highlights:
+                    highlights = []
+                source_is_thin = not source_can_support_full_editorial(
+                    authoritative, facts
+                )
+                previous_paragraphs = list(previous.get("paragraphs") or [])
+                if (
+                    contrast_padding_errors(previous_paragraphs, description)
+                    and not template_artifact_errors(previous_paragraphs)
+                    and not usable_regenerated_copy(
+                        paragraphs,
+                        catalog.get("title") or "",
+                        description,
+                        source_is_thin,
+                    )
+                ):
+                    stripped = paragraphs_without_contrast(
+                        previous.get("paragraphs") or [], description
+                    )
+                    if count_words(stripped) >= 20:
+                        paragraphs = stripped
+                        if count_words(stripped) < 100:
+                            short_grounded = True
+                        schema_candidate = previous.get("schemaDescription") or ""
+                        if contrast_padding_errors(
+                            [schema_candidate], description
+                        ) or count_words([schema_candidate]) >= count_words(stripped):
+                            chosen_schema = []
+                            for piece in split_sentences(" ".join(stripped)):
+                                chosen_schema.append(piece)
+                                if (
+                                    count_words(chosen_schema) >= 8
+                                    and count_words(chosen_schema) < count_words(stripped)
+                                ):
+                                    break
+                            generated_schema = (
+                                " ".join(chosen_schema) if chosen_schema else " ".join(stripped)
+                            )
+                        else:
+                            generated_schema = schema_candidate
     words = word_count(paragraphs)
-    price = extract_price(preview) if endpoint_ok(meta, "price-preview") else None
+    price = (
+        extract_price(preview, catalog["itemId"])
+        if endpoint_ok(meta, "price-preview")
+        else None
+    )
     source_supports_full = source_can_support_full_editorial(authoritative, facts)
+    # A thin or fact-light source keeps its grounded sentences. Padding them
+    # out to 100 words is what produced template stops and fake contrasts.
+    description_text = facts.get("description") or ""
+    grounded_short = (
+        words < 100
+        and words >= 20
+        and bool(paragraphs)
+        and not contrast_padding_errors(paragraphs, description_text)
+        and not template_artifact_errors(paragraphs)
+    )
+    publish_short = (
+        exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
+        and grounded_short
+    )
     if (
         exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
         and words < 100
         and not source_supports_full
+        and not publish_short
     ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
@@ -817,19 +1148,32 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
     if exception == "INSUFFICIENT_SOURCE_CONTENT" and generated_schema != " ".join(paragraphs).strip():
         generated_schema = " ".join(paragraphs).strip()
 
-    harvest_urls = harvest_images(folder, content, structured, item_raw)
-    harvest_urls = [url for url in harvest_urls if url in source_text]
+    owned_images = harvest_images(
+        folder, content, structured, item_raw, catalog["itemId"]
+    )
+    owned_images = [url for url in owned_images if url in source_text]
+    product_image = (
+        None
+        if exception == "BOOKING_PAGE_NOT_FOUND"
+        else choose_product_image(catalog.get("heroImage"), owned_images)
+    )
     gallery = []
     image_audit = {
-        "hero": catalog.get("heroImage"),
+        "hero": product_image,
         "selected": None,
         "action": "none",
-        "reason": "terminal booking page",
+        "reason": (
+            "terminal booking page"
+            if exception == "BOOKING_PAGE_NOT_FOUND"
+            else "no item-owned images"
+        ),
         "rejected": [],
         "candidates": [],
     }
-    if exception != "BOOKING_PAGE_NOT_FOUND":
-        gallery, image_audit = select_visible_gallery(catalog.get("heroImage"), harvest_urls)
+    if product_image:
+        gallery_source = [url for url in owned_images if url != product_image]
+        gallery, image_audit = select_visible_gallery(product_image, gallery_source)
+        image_audit["hero"] = product_image
 
     visible = None
     offer = None
@@ -873,6 +1217,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         "removedClaims": removed,
         "highlights": highlights if exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND", "INSUFFICIENT_SOURCE_CONTENT"} else [],
         "galleryImages": gallery,
+        "productImage": product_image,
         "wordCount": words,
         "durationLabel": None if omit_facts else facts.get("duration"),
         "durationIso": None if omit_facts else duration_iso(facts.get("duration")),
@@ -905,6 +1250,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         geography=geography,
         expected_city=dest.get("city") or CITY_NAME,
         prose_source=overlap_text,
+        allow_short=bool(publish_short and exception == "OK"),
     )
     extra = []
     expected_city_slug = dest.get("citySlug") or CITY_SLUG
@@ -926,10 +1272,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 "BOOKING_PAGE_NOT_FOUND",
                 "INSUFFICIENT_SOURCE_CONTENT",
             } else "",
+            allow_short=bool(publish_short and exception == "OK"),
         )
         extra.extend(voice_errors)
         extra.extend(
-            hero_gallery_duplicate_errors(catalog.get("heroImage"), gallery)
+            hero_gallery_duplicate_errors(product_image, gallery)
         )
     if extra:
         validation["errors"] = list(validation.get("errors") or []) + extra
@@ -985,6 +1332,7 @@ def emit_ts(products: list[dict]) -> str:
                 "schemaDescription": product["schemaDescription"],
                 "highlights": product["highlights"],
                 "galleryImages": product["galleryImages"],
+                "productImage": product.get("productImage"),
                 "wordCount": product["wordCount"],
                 "durationLabel": product["durationLabel"],
                 "durationIso": product["durationIso"],
@@ -1041,7 +1389,26 @@ def has_authoritative_price(product: dict) -> bool:
     return bool(product.get("offer") and product.get("visiblePriceLabel"))
 
 
+def placeholder_product_ids() -> set[str]:
+    path = ROOT / "src" / "utils" / "tours" / "invalidPlaceholderTours.ts"
+    if not path.exists():
+        return set()
+    text = path.read_text()
+    match = re.search(
+        r"const INVALID_PLACEHOLDER_TOUR_PRODUCT_IDS = new Set\(\[([\s\S]*?)\]\);",
+        text,
+    )
+    if not match:
+        return set()
+    return set(re.findall(r'"(\d+)"', match.group(1)))
+
+
+PLACEHOLDER_PRODUCT_IDS = placeholder_product_ids()
+
+
 def is_public_product(product: dict) -> bool:
+    if product["itemId"] in PLACEHOLDER_PRODUCT_IDS:
+        return False
     if product.get("geography", {}).get("disposition") == "exclude":
         return False
     if product["exceptionStatus"] == "BOOKING_PAGE_NOT_FOUND":
@@ -1086,6 +1453,25 @@ def update_unpublished_unpriced_ids(item_ids: list[str]) -> None:
         ]
     )
     UNPRICED_TS.write_text(body)
+
+
+def ensure_sitemap_paths(paths: list[str]) -> None:
+    sitemap_path = ROOT / "public" / "sitemap-tours.xml"
+    if not sitemap_path.exists():
+        return
+    text = sitemap_path.read_text()
+    missing = [path for path in paths if path and path not in text]
+    if not missing:
+        return
+    block = "".join(
+        "  <url><loc>https://www.alloutdooradventures.com"
+        f"{path}</loc><priority>0.8</priority></url>\n"
+        for path in missing
+    )
+    if "</urlset>" not in text:
+        raise SystemExit("sitemap-tours.xml is missing </urlset>")
+    sitemap_path.write_text(text.replace("</urlset>", f"{block}</urlset>", 1))
+    print(f"added {len(missing)} published sitemap urls")
 
 
 def remove_sitemap_paths(paths: list[str]) -> None:
@@ -1156,9 +1542,9 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
     lines = [
         f"# Stage C {CITY_NAME} legacy FareHarbor tranche",
         "",
-        f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in `tours.generated.ts`. Engine 6 Viator routes and other cities were not processed.",
+        f"Scope is `citySlug === {CITY_SLUG}` FareHarbor products in the legacy catalog (generated tours and manual tours). Engine 6 Viator routes and other cities were not processed.",
         "",
-        f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come only from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. The bubble image, Google reviews, and catalog quality_score / availability_count are not used. AggregateRating is omitted when that TripAdvisor pair is absent. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
+        f"Authority is the stored harvest under `data/fareharbor-lead-to-gold/{CITY_SLUG}`. Visible Price / Product Offer / TouristTrip Offer use price-preview only. Empty price-preview stays `PRICE_NOT_FOUND`. Marketing headlines are not Offer prices. TripAdvisor rating and review count come from `GET /api/v1/companies/{{company}}/items/{{itemId}}/ratings/` fields `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews`. When that pair is absent, `ratings.google_reviews.rating` and `ratings.google_reviews.user_ratings_total` are used and attributed to Google. The bubble image, catalog quality_score, and availability_count are not used. AggregateRating is omitted when neither pair is present. Geography is taken from meeting point, item location, and source copy, not from the {CITY_NAME} bucket.",
         "",
         f"- Total {CITY_NAME} legacy products: {harvest.get('total', harvest.get('totalBostonLegacy'))}",
         f"- Active booking pages: {harvest['active']}",
@@ -1177,10 +1563,10 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         f"- INSUFFICIENT_SOURCE_CONTENT: {counts['INSUFFICIENT_SOURCE_CONTENT']}",
         f"- SOURCE_NOT_FOUND: {counts['SOURCE_NOT_FOUND']}",
         f"- OK priced pages: {counts['OK']}",
-        f"- Runtime pages with a TripAdvisor rating: {sum(1 for item in published if item.get('aggregateRating'))}",
-        f"- Runtime pages without a TripAdvisor rating: {sum(1 for item in published if not item.get('aggregateRating'))}",
+        f"- Runtime pages with a FareHarbor rating: {sum(1 for item in published if item.get('aggregateRating'))}",
+        f"- Runtime pages without a FareHarbor rating: {sum(1 for item in published if not item.get('aggregateRating'))}",
         "",
-        "## TripAdvisor ratings",
+        "## Ratings",
         "",
     ]
     rated = [item for item in published if item.get("aggregateRating")]
@@ -1191,11 +1577,11 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
         )
     )
     if not rated:
-        lines.append("- None. The ratings endpoint did not return a TripAdvisor pair for any published page.")
+        lines.append("- None. The ratings endpoint did not return a TripAdvisor or Google pair for any published page.")
     else:
         lines.append(
-            "Source: `ratings.tripadvisor.rating` and `ratings.tripadvisor.num_reviews` "
-            "on the FareHarbor item ratings endpoint. Provider is TripAdvisor."
+            "TripAdvisor wins when `ratings.tripadvisor.rating` and `num_reviews` are present. "
+            "Otherwise Google reviews on the same endpoint are shown as Google."
         )
         for product in rated[:8]:
             rating = product["aggregateRating"]
@@ -1204,7 +1590,7 @@ def markdown_report(products: list[dict], harvest: dict, review: list[dict], mov
                 f"{rating['ratingValue']} / {rating['reviewCount']} {rating['provider']}"
             )
         if len(rated) > 8:
-            lines.append(f"- {len(rated) - 8} more published pages carry the same TripAdvisor pair.")
+            lines.append(f"- {len(rated) - 8} more published pages carry a FareHarbor rating.")
     lines.extend([
         "",
         "## Geography conflicts",
@@ -1320,12 +1706,40 @@ def write_discovery(harvest: dict) -> None:
     print(f"wrote {out}")
 
 
+CALIFORNIA_EDITORIAL_CITIES = {
+    "avalon",
+    "calistoga",
+    "coronado",
+    "del-mar",
+    "healdsburg",
+    "joshua-tree",
+    "laguna-beach",
+    "los-angeles",
+    "marina-del-rey",
+    "oakhurst",
+    "redondo-beach",
+    "san-diego",
+    "san-francisco",
+    "santa-monica",
+}
+
+
 def main() -> None:
     import sys
+
+    global PREVIOUS_RUNTIME, REGENERATE_ITEM_IDS
 
     if "--city" in sys.argv:
         configure_city(sys.argv[sys.argv.index("--city") + 1])
     catalog = {item["itemId"]: item for item in inventory(CITY_SLUG)["products"]}
+    PREVIOUS_RUNTIME = load_previous_runtime()
+    REGENERATE_ITEM_IDS = identical_prose_without_shared_source(PREVIOUS_RUNTIME, catalog)
+    if CITY_SLUG in CALIFORNIA_EDITORIAL_CITIES:
+        REGENERATE_ITEM_IDS.update(
+            item_id
+            for item_id, row in PREVIOUS_RUNTIME.items()
+            if row.get("exceptionStatus") == "OK"
+        )
     harvest = load_json(HARVEST_REPORT)
     booking = {
         item["itemId"]: item["bookingPageValidity"]
@@ -1350,20 +1764,22 @@ def main() -> None:
             content = {}
         if not isinstance(structured, dict) or "error" in structured:
             structured = {}
-        image_urls.extend(harvest_images(folder, content, structured, item_raw))
+        image_urls.extend(
+            harvest_images(folder, content, structured, item_raw, entry["itemId"])
+        )
     unique_images = list(dict.fromkeys(image_urls))
     print(f"prefetching {len(unique_images)} product images")
     prefetch(unique_images, workers=12)
     products = []
-    runtime = []
-    failures = []
     for item_id, entry in sorted(catalog.items(), key=lambda pair: (pair[1]["company"], pair[0])):
         product = build_product(entry, booking[item_id], destinations)
         products.append(product)
-        if (
-            not product["validation"]["ok"]
-            and is_public_product(product)
-        ):
+    unpublish_borrowed_prose(products, catalog)
+    withhold_unpublished_items(products)
+    runtime = []
+    failures = []
+    for product in products:
+        if not product["validation"]["ok"] and is_public_product(product):
             failures.append(product)
         if is_public_product(product):
             runtime.append(product)
@@ -1405,13 +1821,16 @@ def main() -> None:
     if not PUBLISH_UNPRICED:
         update_unpublished_unpriced_ids(unpublished_unpriced)
     published_paths = {product["publicPath"] for product in runtime}
-    remove_sitemap_paths(
-        [
-            product["publicPath"]
-            for product in products
-            if product.get("publicPath") and product["publicPath"] not in published_paths
-        ]
-    )
+    drop_paths = []
+    for product in products:
+        original = catalog[product["itemId"]]["publicPath"]
+        current = product.get("publicPath") or ""
+        if current not in published_paths:
+            drop_paths.extend([current, original])
+        elif original != current:
+            drop_paths.append(original)
+    remove_sitemap_paths(drop_paths)
+    ensure_sitemap_paths(sorted(published_paths))
     print(f"wrote {GENERATED_TS}")
     print(f"wrote {GEOGRAPHY_TS}")
     print(f"wrote {REPORT_MD}")

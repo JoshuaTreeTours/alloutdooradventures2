@@ -1,0 +1,53 @@
+{
+  "fetchedAt": "2026-10-02T22:44:30.060765+00:00",
+  "total": 1,
+  "products": [
+    {
+      "company": "powaytrailcompany",
+      "itemId": "71811",
+      "fetchedAt": "2026-10-02T22:44:27.460631+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/powaytrailcompany/71811/content/",
+          "status": 200,
+          "bytes": 13630,
+          "sha256": "a7878bd9428755eca69f98bf73f434a55752367801c2607f6ee8f10ebf38b906"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/powaytrailcompany/71811/structured-description/",
+          "status": 200,
+          "bytes": 5812,
+          "sha256": "a675a6bcdfc509f533317de211d817c76db9db58c8cc71e762a6fdf3810cf23a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/powaytrailcompany/items/71811/",
+          "status": 200,
+          "bytes": 26710,
+          "sha256": "632326eabbdfbe6b7344703cc6989e2df7291022fe2468096bd2866c24df18a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/powaytrailcompany/price-preview/per-item/v2/?asn=fhdn&item_pks=71811&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 814,
+          "sha256": "60c2b4ddb0b26fb888bd3e4319ec4c670cf3e42892925c8b50db45b3d25b9288"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/powaytrailcompany/items/71811/ratings/",
+          "status": 200,
+          "bytes": 421,
+          "sha256": "5fb07e98a5df572ab4a4db1daed33760a0899270a01f7e701ee5ef897688406d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "71811",
+        "provider": "powaytrailcompany",
+        "bookingUrl": "https://fareharbor.com/embeds/book/powaytrailcompany/items/71811/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

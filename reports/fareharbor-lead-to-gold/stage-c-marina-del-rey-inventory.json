@@ -1,0 +1,51 @@
+{
+  "citySlug": "marina-del-rey",
+  "total": 2,
+  "active": 2,
+  "terminal": 0,
+  "priceAvailable": 2,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 2,
+  "inSitemap": 2,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "marinadelreyboatrentals",
+      "operator": "Marina Del Rey Boat Rentals",
+      "itemId": "656842",
+      "slug": "17-boston-whaler-656842",
+      "publicPath": "/destinations/california/marina-del-rey/tours/17-boston-whaler-656842",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4067,
+        "structuredStatus": 200,
+        "structuredBytes": 3234
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "marinadelreyboatrentals",
+      "operator": "Marina Del Rey Boat Rentals",
+      "itemId": "656850",
+      "slug": "13-foot-boston-whaler-656850",
+      "publicPath": "/destinations/california/marina-del-rey/tours/13-foot-boston-whaler-656850",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3518,
+        "structuredStatus": 200,
+        "structuredBytes": 2679
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

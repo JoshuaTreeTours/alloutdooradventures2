@@ -1,0 +1,47 @@
+{
+  "company": "sdbeerwinetours",
+  "itemId": "143288",
+  "fetchedAt": "2026-10-02T22:41:55.363325+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sdbeerwinetours/143288/content/",
+      "status": 200,
+      "bytes": 7611,
+      "sha256": "c9fda9d4b6cb498378a29397ab374cada296757eb1cf450f7ca93aa287e1a955"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sdbeerwinetours/143288/structured-description/",
+      "status": 200,
+      "bytes": 2542,
+      "sha256": "642defb4b7cd7d0b8859033ab402a09da626ec1863336bcb5505e61d72425b5b"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sdbeerwinetours/items/143288/",
+      "status": 200,
+      "bytes": 14267,
+      "sha256": "8850fb9ec034d71123fedbdaf391ebfda3c892f08b833b36e34c637d46df6107"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sdbeerwinetours/price-preview/per-item/v2/?asn=fhdn&item_pks=143288&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 602,
+      "sha256": "0fdba9cc3bdb053b11188f21b75205d6e6b57ab00418aca471cc0b872af3885a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sdbeerwinetours/items/143288/ratings/",
+      "status": 200,
+      "bytes": 540,
+      "sha256": "a26df388786becba1fa7a65136c824c1fd71b8bb183270d7bfed384a79dac571"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "143288",
+    "provider": "sdbeerwinetours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/143288/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

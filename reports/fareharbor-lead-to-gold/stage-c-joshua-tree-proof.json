@@ -1,0 +1,3889 @@
+[
+  {
+    "itemId": "459544",
+    "company": "joshuatreeexcursions",
+    "title": "Sightseeing Tour",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/sightseeing-tour-459544",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions. The outing starts at Cholla Garden. The group then visits Cholla Cactus Garden and Cap Rock Nature Trail."
+    ],
+    "schemaDescription": "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
+    "wordCount": 31,
+    "durationLabel": "4.5 hours",
+    "durationIso": "PT4H30M",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $487.60",
+    "priceRows": [
+      {
+        "label": "Tour",
+        "note": "Price includes up to 4 people",
+        "amountLabel": "$487.60"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "487.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459544/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
+      "heroHandle": "aMGGC3clTQOSy3ObhErS",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459544",
+      "fetchedAt": "2026-10-02T22:42:55.659333+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459544/content/",
+          "status": 200,
+          "bytes": 5768,
+          "sha256": "95ff1a7690743250f23ad5955099c7b806037408207723f0a2daf3f8a4445cfd"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459544/structured-description/",
+          "status": 200,
+          "bytes": 1854,
+          "sha256": "94d951c92427e1a4c1f64dd7db826d63eb579413fd609e547743acb5274298f7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459544/",
+          "status": 200,
+          "bytes": 8444,
+          "sha256": "76330f3899f4c90aa8985ec8e6439ac27e3bd7072b790fb854097d57571b9b35"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459544&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 552,
+          "sha256": "f9141a37de8872a6af9b98eac2a3e54db578a098ff907d79b8054b1fc8420860"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459544/ratings/",
+          "status": 200,
+          "bytes": 436,
+          "sha256": "a6cfd79e39d5276ff3a755e0af7f07f58e4ef0870d40dcaea61bb9340c558df9"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Tour",
+          "note": "Price includes up to 4 people",
+          "amount": 487.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Tour",
+            "note": "Price includes up to 4 people",
+            "amount": 487.6
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-10T08:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "4.5 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages! • 4.5 Hours • Up to 7 people!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View 4.5 hours Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide.",
+          "More Info 15-20% gratuity is customary."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Joshua Tree Classic's",
+          "Cholla Garden",
+          "Skull Rock",
+          "Arch Rock",
+          "Ohlsen Ranch",
+          "Key's View",
+          "Cholla Cactus Garden",
+          "Cap Rock Nature Trail"
+        ],
+        "measures": [
+          "4.5 hours"
+        ],
+        "description": "See some of Joshua Tree Classic's: Cholla Garden, Skull Rock, Arch Rock, Ohlsen Ranch, and Key's View 4.5 hours Only have a few short hours to spend in the park? Book a sightseeing tour with us and see the highlights of the park with an informative nature guide. Enjoy an educational shuttle around the park with plenty of amazing photo opportunities. Your shuttle driver and guide will take you around the park ensuring you don't miss some of the best and most picturesque spots. The sightseeing tour visits Joshua Tree Classic's including: Cholla Cactus Garden, Skull Rock, Arch Rock, Ohlsen Ranch (or Cap Rock Nature Trail), and Key's View. Tours depart at 8am from our office in Joshua Tree. You can expect to be back around 12:30pm. Your ticket includes the park entrance fee. Advance reservations recommended. More Info 15-20% gratuity is customary. For groups of 8 or more please call.",
+        "detailsText": "All Ages! • 4.5 Hours • Up to 7 people! All Ages! • 4.5 Hours • Up to 7 people!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "459544",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459544/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "459584",
+    "company": "joshuatreeexcursions",
+    "title": "Private Stargazing with an Astronomer",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/twentynine-palms/tours/private-stargazing-with-an-astronomer-459584",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Joshua Tree Excursions lists this outing."
+    ],
+    "schemaDescription": "The operator Joshua Tree Excursions lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459584/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Twentynine Palms",
+      "state": "California",
+      "citySlug": "twentynine-palms",
+      "stateSlug": "california",
+      "reason": "Twentynine Palms, California from company_start_location does not belong to Joshua Tree, and no matching public destination exists",
+      "place": {
+        "city": "Twentynine Palms",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "twentynine-palms",
+        "stateSlug": "california",
+        "raw": "Twentynine Palms, CA",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 34.077539,
+        "lng": -116.036582
+      },
+      "signals": [
+        {
+          "city": "Twentynine Palms",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "twentynine-palms",
+          "stateSlug": "california",
+          "raw": "Twentynine Palms, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 34.077539,
+          "lng": -116.036582
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
+      "heroHandle": "AuIFxsfS7ewtuucDaAB8",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459584",
+      "fetchedAt": "2026-10-02T22:42:55.659960+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459584/content/",
+          "status": 200,
+          "bytes": 5401,
+          "sha256": "27d2508ee84798f668c8416ce3a2c5ed850c878300f24964383226e1f6631435"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459584/structured-description/",
+          "status": 200,
+          "bytes": 1469,
+          "sha256": "12eb1d1dbe22f1fa6d8f79656fd3f2c681d6de41664680634e3f077fcd3f727d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459584/",
+          "status": 200,
+          "bytes": 9430,
+          "sha256": "0db6d9124aff17bf447ecfbc63d4137d40cf74ee6a6193797dd377fae68c9bde"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459584&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 539,
+          "sha256": "3e43c2a9cc8699b6f67033237dec7ce183efb657a376239ac4f4f556864e6e13"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459584/ratings/",
+          "status": 200,
+          "bytes": 457,
+          "sha256": "15671ad3870f7db9bdac314cf5a8fd71c47e223f3d953051f33541c85a8858c1"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "2-3 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages! • 3 Hours • Up to 4 people",
+        "startCity": "Twentynine Palms",
+        "startProvince": "CA",
+        "startLat": 34.077539,
+        "startLng": -116.036582,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "More Info 15-20% gratuity is customary."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "More Info"
+        ],
+        "measures": [
+          "3 hours"
+        ],
+        "description": "Our private stargazing with an astronomer and telescope. Stargazing's are booked only as available and are limited due to their popularity when coupled with other trips and tours. 2-3 hours You will need your own vehicle to follow the astronomer into the park. Your group will meet the astronomer at the visitors center unless arranged differently with him. Start times vary for different times of the year. Your start time is subject to change if we need to start later. More Info 15-20% gratuity is customary.",
+        "detailsText": "All Ages! • 3 Hours • Up to 4 people All Ages! • 3 Hours • Up to 4 people",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "459584",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459584/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "459589",
+    "company": "joshuatreeexcursions",
+    "title": "Private Morning Hike",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/private-morning-hike-459589",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions. The outdoor route is about 1-6 miles. The outing reaches Joshua Tree National Park."
+    ],
+    "schemaDescription": "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
+    "wordCount": 28,
+    "durationLabel": "6 hours",
+    "durationIso": "PT6H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $1,802",
+    "priceRows": [
+      {
+        "label": "Tour",
+        "note": "Price includes up to 4 people",
+        "amountLabel": "$1,802"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1802.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459589/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
+      "heroHandle": "4bQTUQjQxu0HnhIofAkA",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459589",
+      "fetchedAt": "2026-10-02T22:42:55.660413+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459589/content/",
+          "status": 200,
+          "bytes": 6588,
+          "sha256": "4e3efe4a05981a5d156257c9994cd75127248f27d94ac8eec1edd68567c2bf84"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459589/structured-description/",
+          "status": 200,
+          "bytes": 2673,
+          "sha256": "e33a0ec1d2544d1575040e7b0d19e34345ceb09ffe7361dd8d4d8484361739ea"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459589/",
+          "status": 200,
+          "bytes": 9277,
+          "sha256": "f45d83ec0eccd691b6d55b4b29176b44dd06700ada6d781675a4787a71bc8a16"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459589&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 554,
+          "sha256": "95d570893fe97c53f3885e132cc957e4f3c93718c6ca82c6d8fa9b3e13e96251"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459589/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "9f3bd4095f914be96466d4dab213047beb57b4cdb8c318f9fe67ef37565d196e"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Tour",
+          "note": "Price includes up to 4 people",
+          "amount": 1802.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Tour",
+            "note": "Price includes up to 4 people",
+            "amount": 1802.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-10T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages! • 6 Hours • Up to 7 people",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- Meals - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Coachella Valley",
+          "Joshua Tree"
+        ],
+        "measures": [
+          "6 hours",
+          "6 miles"
+        ],
+        "description": "Our most popular package, the private single-day hiking tours are the perfect way to immerse yourself in the beauty of Joshua Tree National Park. 6 hours You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. - Meals - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
+        "detailsText": "All Ages! • 6 Hours • Up to 7 people All Ages! • 6 Hours • Up to 7 people",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "459589",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "459590",
+    "company": "joshuatreeexcursions",
+    "title": "Private Sunset Hike",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/private-sunset-hike-459590",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+      "The outdoor route is about 1-6 miles."
+    ],
+    "schemaDescription": "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
+    "wordCount": 21,
+    "durationLabel": "6 hours",
+    "durationIso": "PT6H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $1,802",
+    "priceRows": [
+      {
+        "label": "Tour",
+        "note": "Price includes up to 4 people",
+        "amountLabel": "$1,802"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "1802.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459590/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
+      "heroHandle": "DNm8050SkSrT6n4nlCPu",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459590",
+      "fetchedAt": "2026-10-02T22:42:55.660964+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459590/content/",
+          "status": 200,
+          "bytes": 6475,
+          "sha256": "386396eef86b6644f0d87dd5c68e815324f133ce32da0784f8136519f8141aed"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459590/structured-description/",
+          "status": 200,
+          "bytes": 2561,
+          "sha256": "6ec5e2f42d50308fa419d5d7752632b934d367a6002eaa039e4e722e0501a370"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459590/",
+          "status": 200,
+          "bytes": 9164,
+          "sha256": "c691be7edd78f0c220645d123a9069e8285cb4ba82187077ac80ecfab36908c4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459590&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 554,
+          "sha256": "f767c68f5eef8b2c3739d1c8739ab614e8a18baee0556206314e8ffbe80f172a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459590/ratings/",
+          "status": 200,
+          "bytes": 440,
+          "sha256": "da0c14663c6d6503b1601dd42b002303f4afc9942bfa9925de5ffc99ca160827"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Tour",
+          "note": "Price includes up to 4 people",
+          "amount": 1802.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Tour",
+            "note": "Price includes up to 4 people",
+            "amount": 1802.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-10T12:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "6 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages! • 6 Hours • Up to 7 people",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- Additional equipment - 15-20% customary gratuity For groups of 8 or more please call."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Coachella Valley",
+          "Joshua Tree"
+        ],
+        "measures": [
+          "6 hours",
+          "6 miles"
+        ],
+        "description": "Hike into the sunset. 6 hours You can choose to meet at our office, be picked up locally or request transportation from Coachella Valley cities. Your guide will then take you on a drive through the most incredible parts of the park, on-route to your hike/Sightseeing for the day. From your trailhead, your guide will lead you on a mostly off-trail adventure of 1-6 miles, through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before continuing your journey. All along the way, your expert guide will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get in some epic rock scrambling to the top of some of our famous rock formations for views and experiences rarely had by others. At the conclusion of your hike, time permitting, your guide will get you to some of the other popular sights in the park before returning you safely to our office or back to your lodging facility where you can relax and talk about the memories that you have made, that will last a lifetime. - Pick up and drop off from our office in Joshua Tree - All park fees - Water - Transportation in & around the park - An optional lunch on the trail (additional fees apply) - A loaner daypack. - Additional equipment - 15-20% customary gratuity For groups of 8 or more please call.",
+        "detailsText": "All Ages! • 6 Hours • Up to 7 people All Ages! • 6 Hours • Up to 7 people",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "459590",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459590/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "459591",
+    "company": "joshuatreeexcursions",
+    "title": "Hike & Climb",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/hike-and-climb-459591",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "On the way, guests receive detailed narration on park, its history, and interesting geology to Joshua Tree. Once at the trailhead, the guide will lead guests on mostly off-trail adventure through Joshua Tree wilderness. The climbing experience includes professional instruction from the certified rock guide, and all necessary equipment.",
+      "After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
+      "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
+    ],
+    "schemaDescription": "A 8-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+    "wordCount": 130,
+    "durationLabel": "8 hours",
+    "durationIso": "PT8H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $2,014",
+    "priceRows": [
+      {
+        "label": "Tour",
+        "note": "Price includes up to 2 cliimbers",
+        "amountLabel": "$2,014"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "2014.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459591/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+      "heroHandle": "HRCEcRa9TJmx1IJAyXAr",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-459591",
+      "fetchedAt": "2026-10-02T22:42:57.701485+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459591/content/",
+          "status": 200,
+          "bytes": 6943,
+          "sha256": "60aa902dc5da522466531232c2d4251215b47f6ae78d6f2443bbb12b258ca390"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459591/structured-description/",
+          "status": 200,
+          "bytes": 3035,
+          "sha256": "30a311ebf44ce69a5870ff38b0f90a225dea772aa3854cfc935ad71c44243f49"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459591/",
+          "status": 200,
+          "bytes": 9626,
+          "sha256": "d01868ab9a08000e1454aa305d79c3b665c292d8d2e3354007fe9553cc808ea6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459591&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 557,
+          "sha256": "25f6a90de594cc2face8694c784b274838201d4baa9ccc8866932e833b5a2d49"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459591/ratings/",
+          "status": 200,
+          "bytes": 437,
+          "sha256": "4b14293b2f0c9f6b4e8058a32fdbe3b02597865071c150d4a91fabb3649de295"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Tour",
+          "note": "Price includes up to 2 cliimbers",
+          "amount": 2014.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Tour",
+            "note": "Price includes up to 2 cliimbers",
+            "amount": 2014.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-10T08:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "8 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All Ages! • 8 Hours • Up to 7 people!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "15-20% gratuity is customary."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Joshua Tree"
+        ],
+        "measures": [
+          "8 hours"
+        ],
+        "description": "Our private, single-day hiking and climbing tours with a certified guide are the perfect way to immerse yourself in all that Joshua Tree National Park has to offer. 8 hours After meeting at our office, Your guide will then take you on a drive through the most incredible parts of the park. Along the way, you will receive a detailed narration on the park, its history, and interesting geology unique to Joshua Tree. Once at your trailhead, your guide will lead you on a mostly off-trail adventure through the Joshua Tree wilderness. Towering rock formations, canyons, sweeping vistas, and surreal landscapes from another planet await you around every bend. Enjoy an optional lunch on the trail before meeting your rock guides to climb and rappel from our world-famous rock formations. Your climbing experience includes professional instruction from our certified rock guide, and all necessary equipment. Whether you are a first-time climber or multi-pitch expert, our guides will make sure you have an incredible experience. All throughout the day, your personal guides will share the history and geology of the Park, along with a myriad of stories and talks about the plants, animals, and other unique characteristics of the Park. You may even get to add in some epic rock scrambling to the top of some of our otherworldly rock formations, for views and experiences rarely had by others. At the conclusion of your hike and climb, time permitting, your guide will try to get you to some of the other popular sights in the park before returning you safely to our office where you can relax and talk about the memories that you have made, that will last a lifetime. NOTE: Due to the extended time period for this journey, pick-up and drop-off is not available. All hike and climb trips will meet at our office in Joshua Tree. More Info INCLUDES: Guided tour, hiking, climbing, all equipment, private instruction Park fees, Transportation from our office, and Water. Optional meals available for purchase. 15-20% gratuity is customary.",
+        "detailsText": "All Ages! • 8 Hours • Up to 7 people! All Ages! • 8 Hours • Up to 7 people!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "459591",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "512102",
+    "company": "joshuatreeexcursions",
+    "title": "Custom groups",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/custom-groups-512102",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Joshua Tree Excursions lists this outing."
+    ],
+    "schemaDescription": "The operator Joshua Tree Excursions lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/512102/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
+      "heroHandle": "Y12ZerTQHWO2gQ7Uy83D",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-512102",
+      "fetchedAt": "2026-10-02T22:42:57.758562+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/512102/content/",
+          "status": 200,
+          "bytes": 4822,
+          "sha256": "da8b727420a5c93a67cd6bb800bbcbb4cb7657fad03ac5a6a99402ab4b2b946d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/512102/structured-description/",
+          "status": 200,
+          "bytes": 936,
+          "sha256": "12d9ba9d1e1800b5a5294178ab6ea849cab94305cf231e41f0299a625ab44df3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/512102/",
+          "status": 200,
+          "bytes": 7494,
+          "sha256": "a577007dcecd8e0ed16d5dc1336344ff79bf77eec031d1b5141eac8b92a82ea7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=512102&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/512102/ratings/",
+          "status": 200,
+          "bytes": 433,
+          "sha256": "60c1a4a088ab6b500a6ad6b120fc0137f00230cb2e5dcb181938c947119a700b"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "From $4,770 for 4 people",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Customizable tours for your family or corporate event.",
+        "detailsText": "From $4,770 for 4 people From $4,770 for 4 people",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "512102",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/512102/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "528426",
+    "company": "joshuatreeexcursions",
+    "title": "Photography Hike",
+    "operator": "Joshua Tree Excursions",
+    "publicPath": "/destinations/california/joshua-tree/tours/photography-hike-528426",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Joshua Tree Excursions lists this outing."
+    ],
+    "schemaDescription": "The operator Joshua Tree Excursions lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/L6OL61hWRyCzJKSQUCnH"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/528426/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
+      "heroHandle": "lA6YOUdiQGGbV7T1ZuIa",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/L6OL61hWRyCzJKSQUCnH",
+          "handle": "L6OL61hWRyCzJKSQUCnH",
+          "pixelSha256": "4ccc6218f3b5586632cdfef7ec54504f2465ed0ddcefaee0924a60b3f32c1910",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.28204,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/L6OL61hWRyCzJKSQUCnH",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/joshuatreeexcursions-528426",
+      "fetchedAt": "2026-10-02T22:42:57.815024+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/528426/content/",
+          "status": 200,
+          "bytes": 5283,
+          "sha256": "b56c2798b721d77bddbe76b93dba7561b355b58e57a07d5e5c89b296b4cf3aaa"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/528426/structured-description/",
+          "status": 200,
+          "bytes": 1247,
+          "sha256": "c4bac507ebe6de45d8948003bb04ce61dbaa0bf476c261bb68e20388df68b93f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/528426/",
+          "status": 200,
+          "bytes": 9910,
+          "sha256": "aceb833cdfe3ba36cfd02a41bcf7c50a967e3d2c4c90c6803f569d6357c5e09b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=528426&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 554,
+          "sha256": "ae968984d04a2b3f618e72b8e1ec0f3a8c77d316e9a0e9b22c3c652de6f88bfa"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/528426/ratings/",
+          "status": 200,
+          "bytes": 436,
+          "sha256": "0b16bce9c497df61a7ea3a3e56f46571f046d97bf9e284cf881fab09af0cc209"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Your guide will then take you on a drive through the park, stopping at picturesque locations. At our shooting locations you will have time to study the landscape and evaluate the best shooting opportunities. Your guide will offer assistance in composition, exposure and perspective. Our goal is to help you in learning a new approach to creating photographs.",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "528426",
+        "provider": "joshuatreeexcursions",
+        "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/528426/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "365796",
+    "company": "mustangsanctuary",
+    "title": "Equine Therapy",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/equine-therapy-365796",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests spend part of the visit in a hands-on session with the horses. The session is at the ranch, with the desert landscape around the grounds."
+    ],
+    "schemaDescription": "Guests spend part of the visit in a hands-on session with the horses.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "45 minutes horse outing"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+    "wordCount": 27,
+    "durationLabel": "45 minutes",
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/365796/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+      "heroHandle": "pZEW0QshTZ2ldQHCsQ7P",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-365796",
+      "fetchedAt": "2026-10-02T22:42:57.870285+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/365796/content/",
+          "status": 200,
+          "bytes": 1984,
+          "sha256": "c293596993e6b74136cf42c4164ca76ceeb32951ca6e06815f569e4ce9a60db8"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/365796/structured-description/",
+          "status": 200,
+          "bytes": 1550,
+          "sha256": "f2a81e40b8c8527fafaf1fa62bbc1a3f13749eb229289b18199bb0d39ee96d90"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/365796/",
+          "status": 200,
+          "bytes": 8822,
+          "sha256": "82c2367da544f7c79e58ebd581e1724a5f4c27026219f6e964dbcf7fab326b5e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=365796&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/365796/ratings/",
+          "status": 200,
+          "bytes": 528,
+          "sha256": "4628ee17f22840f249bfcf49950357a9b448d6035721d3eb2d70c6e0e11ba905"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "45 minutes",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "45 minutes Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Cascade Trails Mustang Sanctuary",
+          "Cascade Trails"
+        ],
+        "measures": [
+          "45 minutes"
+        ],
+        "description": "Come experience the magic of the herd! 45 minutes Cascade Trails Mustang Sanctuary has a huge heart for animals and wanted to create a safe environment for those in need. Wild mustangs were welcomed immediately, and the herd continues to grow. We invite guests to come interactively experience the herd through equine therapy. Cascade Trails is a unique experience created by impassioned owners who are personally committed to saving the wild mustangs. We are dedicated to authenticity and gracious, personalized service. Our sanctuary is a perfect blend of the desert enchantment and the magic of the herd.",
+        "detailsText": "We look forward to seeing you! Please bring water, closed toed shoes and wear long pants. All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses All ages • Up to 2 people • 45 minutes • Enjoy the desert while experiencing the magic of the horses",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "365796",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/365796/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 27 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "402194",
+    "company": "mustangsanctuary",
+    "title": "Sunset Trail Ride",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/sunset-trail-ride-402194",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The session is at the ranch, with the desert landscape around the grounds. Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the sunset departure."
+    ],
+    "schemaDescription": "The session is at the ranch, with the desert landscape around the grounds.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
+    "wordCount": 36,
+    "durationLabel": "1 hour",
+    "durationIso": "PT1H",
+    "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
+    "visiblePriceLabel": "From $169.60",
+    "priceRows": [
+      {
+        "label": "Person",
+        "note": "8 years and older",
+        "amountLabel": "$169.60"
+      },
+      {
+        "label": "Group Ride Discount - Minimum 5 Riders",
+        "note": "",
+        "amountLabel": "$636"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "169.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/402194/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": null,
+          "lng": null
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
+      "heroHandle": "pXFOly2EQPSCLq4kuMij",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-402194",
+      "fetchedAt": "2026-10-02T22:42:59.587792+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/402194/content/",
+          "status": 200,
+          "bytes": 2079,
+          "sha256": "349b50709e357920c5418ed8c99dd25750f7b2aefcac4f032687250e09adf50a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/402194/structured-description/",
+          "status": 200,
+          "bytes": 1283,
+          "sha256": "be4ac3a4bfb2e0bf492bc344ec89d76dc936516272746f91bc30710e1a1d5e4b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/402194/",
+          "status": 200,
+          "bytes": 10162,
+          "sha256": "a4527f745747cbc658728d1e3fb08cb63b426203bd61a199e1680f1977ee4002"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=402194&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 715,
+          "sha256": "60bfdb6ec071f883ff8e4531334d3847e35230220f28b0361392d2f0dbe28e9d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/402194/ratings/",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "1cbe7c642f82a7c4a02cd1cb684a87539886a7ceee61f30610bcdd2508580a67"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "8 years and older",
+          "amount": 169.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "8 years and older",
+            "amount": 169.6
+          },
+          {
+            "singular": "Group Ride Discount - Minimum 5 Riders",
+            "note": "",
+            "amount": 636.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-06T17:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1 hour",
+        "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+        "itemLocation": null,
+        "headline": "1 hour sunset trail ride at the ranch. 8 yrs+",
+        "startCity": "Joshua Tree",
+        "startProvince": "CA",
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "1 hour trail ride"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "1 hour"
+        ],
+        "description": "Enjoy a beautiful walk ride near our ranch here in Joshua Tree. This experience is one of a kind in the desert as we walk into the sunset at golden hour. This is a peaceful way to end your day! Max weight (240 lbs)",
+        "detailsText": "1 hour sunset trail ride at the ranch. 8 yrs+ 1 hour sunset trail ride at the ranch. 8 yrs+",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "402194",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/402194/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "404983",
+    "company": "mustangsanctuary",
+    "title": "1 Hour Visitor Pass",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/1-hour-visitor-pass-404983",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Cascade Trails Mustang Sanctuary lists this outing."
+    ],
+    "schemaDescription": "The operator Cascade Trails Mustang Sanctuary lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wkhu85HQceVtRSblYcmA"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Joshua Tree, CA",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/404983/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+      "heroHandle": "sdDXkES9SBGh2gbGErzl",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/wkhu85HQceVtRSblYcmA",
+          "handle": "wkhu85HQceVtRSblYcmA",
+          "pixelSha256": "a56107a58f118014898c601a2aea957952f98f5b0e0b13b1c4bb740dcf8bf468",
+          "differenceHashDistanceFromHero": 140,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.25413,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/wkhu85HQceVtRSblYcmA",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-404983",
+      "fetchedAt": "2026-10-02T22:42:59.722529+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/404983/content/",
+          "status": 200,
+          "bytes": 1800,
+          "sha256": "5fa2d16d208f07ef17f12c516dee3828588d827018606f92e1a34bcbd8b35286"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/404983/structured-description/",
+          "status": 200,
+          "bytes": 1389,
+          "sha256": "e28c438ca188eae84b00c49d8b22b1f3d0f490430e742c6ce329e3952f4c52b2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/404983/",
+          "status": 200,
+          "bytes": 10186,
+          "sha256": "11d35de36c9b10e597837872d9c8a30de075e260e87e3aa8ef40caa32c7f9f80"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=404983&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 541,
+          "sha256": "3f9533742a60d15bb4ec2b3ff63c83e5cdd4779781e3d0c3861f9a1674a4c453"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/404983/ratings/",
+          "status": 200,
+          "bytes": 534,
+          "sha256": "fb4b73112ddce0407339b8dbf8ac8aebf36f1eddc5c840f8b99f993468f1b5eb"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Joshua Tree, CA",
+        "itemLocation": "Joshua Tree, CA",
+        "headline": "All ages! • Meet the animals",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Don't forget carrots for the horses and grapes for the goats 😊 Tour Minimum Please note the first booking on each tour requires at least 2 people or $40 regardless of group size.",
+          "Each person is $20 after that."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Cascade Trails"
+        ],
+        "measures": [
+          "2 people"
+        ],
+        "description": "If you are staying with us, this is already included in your stay! Come enjoy an hour of fun and relaxation with the herd. This is a great opportunity for family and friends that cannot camp with Cascade Trails but want to meet the animals. Don't forget carrots for the horses and grapes for the goats 😊 Tour Minimum Please note the first booking on each tour requires at least 2 people or $40 regardless of group size. Each person is $20 after that.",
+        "detailsText": "Thanks for booking! Please bring treats for the animals. The horses love carrots and the goats love grapes. Bringing water for yourself is also highly recommended. Please wear closed toed shoes. See you soon! All ages! • Meet the animals All ages! • Meet the animals",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "404983",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/404983/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "444127",
+    "company": "mustangsanctuary",
+    "title": "Interactive Equine Visitor Pass",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Cascade Trails Mustang Sanctuary lists this outing."
+    ],
+    "schemaDescription": "The operator Cascade Trails Mustang Sanctuary lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SbYyYEcTlAkEkxiRgoJG"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/444127/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
+      "heroHandle": "SsNrNK15RiyMCfZshddo",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/SbYyYEcTlAkEkxiRgoJG",
+          "handle": "SbYyYEcTlAkEkxiRgoJG",
+          "pixelSha256": "0ca3d4266fe90f8530186e4f926bff7b12d1b2ef4cc66a47bd1c74d12fe53a38",
+          "differenceHashDistanceFromHero": 119,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.18535,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/SbYyYEcTlAkEkxiRgoJG",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-444127",
+      "fetchedAt": "2026-10-02T22:42:59.792267+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/444127/content/",
+          "status": 200,
+          "bytes": 2027,
+          "sha256": "507cca64c95aa0d1851ec74fced07e792d02a397784db108113c4b56fbb99052"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/444127/structured-description/",
+          "status": 200,
+          "bytes": 1472,
+          "sha256": "736ad28ceac59476a7a752c81349fcd2675f086fdf45e06c8d80cf21485caa03"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/444127/",
+          "status": 200,
+          "bytes": 9048,
+          "sha256": "d1751b81ec51411f228d42870cd599f8437cc983ccc6a11ad7d213010b574ac8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=444127&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 541,
+          "sha256": "18544307b10c9ba88099125ba9466cc1b31b0f3b4eecb935861ce4cd7b201926"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/444127/ratings/",
+          "status": 200,
+          "bytes": 545,
+          "sha256": "93863c396c82505020f5d7802be3170ddba164fb8229742965ec655f8088c865"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Enter the pasture and meet the horses 1:1",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "If you are staying with us, please add your discount code! This experience is very similar to our regular visitor pass; you will spend the first half getting to meet all the animals however, this pass also invites you into the pasture to meet the horses one on one. You will have the chance to groom and meet the horses on a more personal level. Bringing carrots for the horses and grapes for the goats is still highly recommended to make the experience more special. $45 per person Give us a call if you are a local or if your group is 5 or more for group discounts",
+        "detailsText": "Thanks for booking! Few friendly reminders: - please wear closed toe shoes. Whether it's a van or a boot, as long as it's closed. - each guest must sign their own waiver! - carrots for the horses and grapes for the goats are HIGHLY recommended. See ya soon 😊 Enter the pasture and meet the horses 1:1 Enter the pasture and meet the horses 1:1",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "444127",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/444127/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "475058",
+    "company": "mustangsanctuary",
+    "title": "Pony Ride",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/pony-ride-475058",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds."
+    ],
+    "schemaDescription": "Staff explain how the horses are cared for and how they behave.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "30 minutes guided outing"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HRIBawpwRRKC9oEmEoDA"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
+    "wordCount": 25,
+    "durationLabel": "30 minutes",
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475058/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
+      "heroHandle": "GnZRHlivRSvjZoo19R29",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/HRIBawpwRRKC9oEmEoDA",
+          "handle": "HRIBawpwRRKC9oEmEoDA",
+          "pixelSha256": "c4c60d7a267400eb5fbc3d4f4f03e3e0cea6d526542244ff2947c3efd5bb2ab6",
+          "differenceHashDistanceFromHero": 131,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.22622,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/HRIBawpwRRKC9oEmEoDA",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-475058",
+      "fetchedAt": "2026-10-02T22:43:00.419634+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/475058/content/",
+          "status": 200,
+          "bytes": 3314,
+          "sha256": "1c1c00d342bc62e7c2c3b59d4acb59b9e9a171f158702cec4c2f811bda273ebc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/475058/structured-description/",
+          "status": 200,
+          "bytes": 2242,
+          "sha256": "bd0bf90967b9aa8814809614cd4aaf42cc1dc524ef10a3f48ef2e61a794e86d0"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475058/",
+          "status": 200,
+          "bytes": 12451,
+          "sha256": "c28734a902b955996ebe23f03da5bb387df9290a783e3e461e82ff5c2b78b879"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=475058&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475058/ratings/",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "7edcbce7319eb94d99b6ef90e06ef24c376d3643d233911b0fd876b6d26f529d"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "30 minutes",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Ages 12 and under • 30 minutes • Kids get to ride a horse!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "30 minutes The tiny ones can ride a gentle horse.",
+          "There will be a grounds fee of $10 per person for every adult person over 5 after 2 adults ."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Family Member",
+          "Wrangler Support"
+        ],
+        "measures": [
+          "30 minutes",
+          "15 minutes"
+        ],
+        "description": "30 minutes The tiny ones can ride a gentle horse. Parent/Guardian/Family Member leads the horse around our grounds. You can have a staff member lead the horse for an additional fee, select Wrangler Support for each rider at check-out. Please note that the wrangler support is not providing child care, and that a family member must be present during the pony ride. We are so happy when family and friends want to visit the ranch and watch their little friends when they are led around. Everyone accompanying pony rider must complete an online waiver (link is in your confirmation email). There will be a grounds fee of $10 per person for every adult person over 5 after 2 adults . When you book the pony ride you can select the number of people over 5 and pay for them at time of booking. We can also add those people upon arrival and charge the card on file. Important - Please use adult name for contact information and put child's name in rider field. - Pony rides do not go on the trails, they are lead around the property. - We use our older and calm horses for pony rides. - Minors must have waiver signed by parent/guardian, adults accompanying minors must sign waiver. Link to waiver is in your confirmation email. Please, plan on arriving 15 minutes prior to your ride time to check-in.",
+        "detailsText": "Thanks for booking the pony ride! Here is important information : - Plan on arriving 15 minutes prior to your ride time to check-in. - Wear comfortable closed toe walking shoes. - Have the child wear sturdy, closed-toe shoes and long pants. - Water should be brought for every experience. It can be purchased at check-out or at the Ranch. - Dress weather-appropriate. Wear gloves when the weather is cold. Hats are highly recommended to protect you from the sun. - You are welcome to bring carrots for the horses, or we have them for sale at the ranch. - Sunscreen is mandatory Ages 12 and under • 30 minutes • Kids get to ride a horse! Ages 12 and under • 30 minutes • Kids get to ride a horse!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "475058",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475058/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 25 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "475064",
+    "company": "mustangsanctuary",
+    "title": "Natural Horsemanship & Basic Riding Lessons",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/natural-horsemanship-and-basic-riding-lessons-475064",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Cascade Trails Mustang Sanctuary lists this outing."
+    ],
+    "schemaDescription": "The operator Cascade Trails Mustang Sanctuary lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
+    "wordCount": 9,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475064/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
+      "heroHandle": "pzVf33h6RaC4Ddxw9JQY",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-475064",
+      "fetchedAt": "2026-10-02T22:43:01.688455+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/475064/content/",
+          "status": 200,
+          "bytes": 2589,
+          "sha256": "1f24667a419671e68b98bb2ff15f06f84f3b6a94e7988f8ae4089362c8f165e1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/475064/structured-description/",
+          "status": 200,
+          "bytes": 1559,
+          "sha256": "dc432a7ab95044ffe8829e8c98a2f9c6b52fa1cc08163299f81211ed509a6657"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475064/",
+          "status": 200,
+          "bytes": 9788,
+          "sha256": "b8a842ba045fe7b3115fa1a00b14ef83845a56678f57c32f561f7f963b339146"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=475064&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 690,
+          "sha256": "d4b2af5d8dcd79a84d8d106604c04a8840ea16edf11406320b626109131b5549"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/475064/ratings/",
+          "status": 200,
+          "bytes": 562,
+          "sha256": "b77a5fa581ed718e24b55d71f745484363f5e27ec95c06e299b86f1d938701a5"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1 hour",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "1 hour Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "1 hour"
+        ],
+        "description": "Interested in learning how to ride? We're happy to show you the basics of natural horsemanship and basic riding skill. 1 hour Designed for beginner to intermediate riders, these lessons focus on building confidence and connection with horses through natural horsemanship. Each session includes both groundwork and riding, covering skills like approaching, catching, saddling, and effective communication with your horse. Lessons are tailored to the individual, ensuring a personalized experience based on your comfort level and prior horse or riding experience. No two lessons are exactly the same, allowing you to progress at your own pace.",
+        "detailsText": "Please wear sturdy, closed toe shoes. Sneakers are acceptable. No sandals, flip flops or crocs. - Wear jeans or leggings, shorts are not comfortable for riding. - You are welcome to bring carrots for the horses after your lesson. Sunscreen is mandatory if riding during the day. Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers! Ages 12+ • 1 hour • 1 on 1 lesson with one of our experienced wranglers!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "475064",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475064/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "476256",
+    "company": "mustangsanctuary",
+    "title": "Photoshoot",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/photoshoot-476256",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Photoshoot is a photography walk with Cascade Trails Mustang Sanctuary."
+    ],
+    "schemaDescription": "Photoshoot is a photography walk with Cascade Trails Mustang Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nKSSwF7QQC0NC1nqmq5N"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
+    "wordCount": 10,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/476256/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
+      "heroHandle": "2mxrExMkRtq7dBBXoXN3",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/nKSSwF7QQC0NC1nqmq5N",
+          "handle": "nKSSwF7QQC0NC1nqmq5N",
+          "pixelSha256": "604af19000d813e39321142b8e8e4c5568662937f3e03c0fac340be7673bb42c",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.21784,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/nKSSwF7QQC0NC1nqmq5N",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-476256",
+      "fetchedAt": "2026-10-02T22:43:01.743592+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/476256/content/",
+          "status": 200,
+          "bytes": 2090,
+          "sha256": "03fa485b98c4f8e78287e19812f28efec84238a3d7f6052acde0129998a519fa"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/476256/structured-description/",
+          "status": 200,
+          "bytes": 1857,
+          "sha256": "c33ed6a2b22e6f9e73653688099197236e8612add874b6f8fb4c1252ff17d539"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/476256/",
+          "status": 200,
+          "bytes": 9323,
+          "sha256": "6d47b050393268be9d9154656255c6f52ebcf506a374092247e12313323eba4d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=476256&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/476256/ratings/",
+          "status": 200,
+          "bytes": 525,
+          "sha256": "716c2350ba67ea5053973e10846242ea8fdb3633303e600d66c2dbd37879136b"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Capture your love for horses and create timeless memories.",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "$250 for first hour $125 for every hour after that - Price covers booked guest, and 2 attendees.",
+          "Any extra guests will be charged $10 per person."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Let us be that picturesque background for those memories you're creating, where the natural beauty of the desert converges with the grace and power of magnificent horses. please note photographer is not included. Guest must bring their own. We have great recommendations if needed (: - Photo shoots are billed by the hour. $250 for first hour $125 for every hour after that - Price covers booked guest, and 2 attendees. Any extra guests will be charged $10 per person. - All attendees, including the photographer, must have a waiver signed. The link to the waiver is in your confirmation email. Includes: - 1 horse brought out for you - 1 staff member to assist you - Access to pasture and horses, along with other areas. Goats and other smaller companions. Additional Horse Add On Includes: - Choice of horse (we reserve the right to switch horses for safety reasons) - Choice of brown saddle or no saddle",
+        "detailsText": "Thanks for booking a shoot! Your time starts at time booked. We suggest you have anyone who is assisting you and the photographer submit our online waiver prior to arrival. Capture your love for horses and create timeless memories. Capture your love for horses and create timeless memories.",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "476256",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/476256/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "schema description is not shorter than the editorial body",
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 10 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "513079",
+    "company": "mustangsanctuary",
+    "title": "El Dorado",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/el-dorado-513079",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors. Outdoor seating includes a picnic table for meals on the site.",
+      "An outdoor shower and a sink are part of this site. Shared portable toilets are a short walk from the site. Guests spend the night on the site, and the firepit is the evening gathering place."
+    ],
+    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
+    "wordCount": 83,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $222.60",
+    "priceRows": [
+      {
+        "label": "Two Nights",
+        "note": "",
+        "amountLabel": "$222.60"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "222.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/513079/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
+      "heroHandle": "i2eqYwwzSEWuSuZqdGMI",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-513079",
+      "fetchedAt": "2026-10-02T22:43:01.798575+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/513079/content/",
+          "status": 200,
+          "bytes": 2141,
+          "sha256": "7a4f7352399c546687a321c46cf2a48f656644dabd2abcdfb5e54bd5d0ab037d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/513079/structured-description/",
+          "status": 200,
+          "bytes": 1587,
+          "sha256": "805435581b360c7b623dffb49b1bc97a30fc8f13c9c63611d1dfecf43efcc971"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/513079/",
+          "status": 200,
+          "bytes": 9272,
+          "sha256": "598b9048cf8a914c835e5ee102e0a719eea5111ce3f262ca19c089cdfd36659a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=513079&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "b00876dccf90c9406714dfe4af50c45cbbc296fd8bddbf53bbe086cc1494c29c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/513079/ratings/",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "6a8d5f89a84a81a06dca244e2239b788a8cbb766e846ceea1ad04f0fff9982f4"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Two Nights",
+          "note": "",
+          "amount": 222.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Two Nights",
+            "note": "",
+            "amount": 222.6
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2027-01-15T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Overnight stay • Up to 4 guests",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "4 guests"
+        ],
+        "description": "Indulge in the perfect blend of comfort and adventure at El Dorado. Our glamping bell tent accommodates 4 guests, offering a queen bed and two twin pull-outs with premium linen. Embrace the outdoor lifestyle with amenities like an outdoor shower, hammocks, a picnic table, and a propane grill. Gather around the firepit for memorable evenings, all while enjoying the scenic view of horses in the pasture. Please note that our shared portable toilets are just a short walk from all sites, ensuring a convenient and nature-friendly experience. Immerse yourself in the beauty of the outdoors without sacrificing modern comforts. Book your stay now for a unique glamping getaway! $120 per night",
+        "detailsText": "Overnight stay • Up to 4 guests Overnight stay • Up to 4 guests",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "513079",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/513079/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "514091",
+    "company": "mustangsanctuary",
+    "title": "La Luna",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/la-luna-514091",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Overnight guests stay in a geodesic dome. Sleeping is on a queen bed, and linens are provided. A couch and a folding mattress give more room to sleep. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors.",
+      "An outdoor shower and a sink are part of this site. A private portable toilet is assigned to this site. A heater is available when the night turns cold. The dome is not insulated, so summers run hot and winters run cold. Guests bring their own drinking water for the stay.",
+      "Guests spend the night on the site, and the firepit is the evening gathering place."
+    ],
+    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
+    "wordCount": 113,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
+    "visiblePriceLabel": "From $148.40",
+    "priceRows": [
+      {
+        "label": "One Night",
+        "note": "3 pm Check In • 11 am Check Out",
+        "amountLabel": "$148.40"
+      },
+      {
+        "label": "Two Nights",
+        "note": "",
+        "amountLabel": "$349.80"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "148.40",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514091/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
+      "heroHandle": "rnpEn0QT6Dimqxm2yUgA",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-514091",
+      "fetchedAt": "2026-10-02T22:43:02.403295+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/514091/content/",
+          "status": 200,
+          "bytes": 2650,
+          "sha256": "2b3ff00bbd2dd1d8f6d0b788583f4d8a4ae0329956fc5affc456491b5ec2692a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/514091/structured-description/",
+          "status": 200,
+          "bytes": 2082,
+          "sha256": "3ab896e7910678494b4481bd82e04349443c0af26db404d88902918a1d114688"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514091/",
+          "status": 200,
+          "bytes": 9716,
+          "sha256": "ecd48c97c1c234fef396b25f891d78f823e55c2af14e253c45b01d34cba4e60f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=514091&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 683,
+          "sha256": "8f93318aee11b621b29f472af090f9b1fe1b1b037e906dd1e1bd9bb62bba15af"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514091/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "1bce6e0c4531c95653c2807c2cd7331e2ed0291b60b0942933534451aab7105a"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One Night",
+          "note": "3 pm Check In • 11 am Check Out",
+          "amount": 148.4
+        },
+        "customerTypes": [
+          {
+            "singular": "One Night",
+            "note": "3 pm Check In • 11 am Check Out",
+            "amount": 148.4
+          },
+          {
+            "singular": "Two Nights",
+            "note": "",
+            "amount": 349.8
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+        "itemLocation": null,
+        "headline": "Overnight Stay • Up to 4 People",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "La Luna",
+          "Sleeping Arrangements",
+          "Shape Couch",
+          "Queen Folding Mattress",
+          "Outdoor Amenities",
+          "Seasonal Considerations"
+        ],
+        "measures": [
+          "4 guests"
+        ],
+        "description": "Discover the magic of La Luna, our enchanting geodesic dome, perfect for up to 4 guests. With thoughtful amenities and a unique blend of comfort and nature, your stay promises to be unforgettable. Sleeping Arrangements: • Queen bed • Large U Shape Couch • Queen Folding Mattress • All essential linens provided Outdoor Amenities: • Seating area • Firepit for cozy evenings under the stars • Propane grill for outdoor cooking • Outdoor shower and sink Private Facilities: • Private portable toilet Conveniences: • One generator for powering lights, water pump, and electronic devices • Buddy heater • Games Important Notes: • Seasonal Considerations: The dome is not insulated, meaning summers can be very hot inside and winters extremely cold. Please pack accordingly to ensure your comfort during your stay. • Essentials: Bring your own drinking water and any additional items you may need to stay comfortable. Book your celestial escape today and experience the perfect blend of comfort and adventure!",
+        "detailsText": "Overnight Stay • Up to 4 People Overnight Stay • Up to 4 People",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "514091",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514091/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "514094",
+    "company": "mustangsanctuary",
+    "title": "Durango",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/durango-514094",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. Outdoor seating includes a picnic table for meals on the site. Solar lights are inside for the evening hours.",
+      "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. Guests spend the night on the site, and the firepit is the evening gathering place."
+    ],
+    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
+    "wordCount": 80,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $95.40",
+    "priceRows": [
+      {
+        "label": "One Night",
+        "note": "3 pm Check In • 11 am Check Out",
+        "amountLabel": "$95.40"
+      },
+      {
+        "label": "Two Nights",
+        "note": "",
+        "amountLabel": "$190.80"
+      },
+      {
+        "label": "Three Nights",
+        "note": "",
+        "amountLabel": "$286.20"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "95.40",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514094/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
+      "heroHandle": "XQmjkdyTjmvynf1vUTMg",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-514094",
+      "fetchedAt": "2026-10-02T22:43:03.600281+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/514094/content/",
+          "status": 200,
+          "bytes": 2408,
+          "sha256": "b6b025df44c9683b9c95164a010e0da5ecdbd4e43ec768ffe4337da39b695d05"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/514094/structured-description/",
+          "status": 200,
+          "bytes": 1858,
+          "sha256": "3df15d6a25ddd0e4eab8e051cb47daf27271f19bb81d8054a61fcc8ff67f8474"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514094/",
+          "status": 200,
+          "bytes": 9526,
+          "sha256": "6fc2057bb69283e57f2a6618cfb5fc42ac71fc4baa9ff22d5495013142461be7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=514094&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 800,
+          "sha256": "9b6ad52fd033b8d0d95280d6247dcc51c8bc71a82e9f82561652a6e1fbba02f1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/514094/ratings/",
+          "status": 200,
+          "bytes": 521,
+          "sha256": "c432f5bf8fb160bacc5e8f7d4f8de74a9a5ac7f99d5079bacefed15058abd937"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One Night",
+          "note": "3 pm Check In • 11 am Check Out",
+          "amount": 95.4
+        },
+        "customerTypes": [
+          {
+            "singular": "One Night",
+            "note": "3 pm Check In • 11 am Check Out",
+            "amount": 95.4
+          },
+          {
+            "singular": "Two Nights",
+            "note": "",
+            "amount": 190.8
+          },
+          {
+            "singular": "Three Nights",
+            "note": "",
+            "amount": 286.2
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "Overnight Stay • Up to 2 people",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Discover the allure of the great outdoors with our exclusive glamping experience in the Durango bell tent. Perfect for a romantic getaway, this cozy bell tent sleeps two on a comfortable queen-sized bed, complete with all necessary linen for a dreamy night under the stars. Relax in style with outdoor seating and a picnic table, creating the perfect setting for al fresco meals. Unwind by the firepit, creating memories under the night sky. The interior is adorned with solar lights, casting a warm glow in the evening hours. To ensure your comfort, Durango is equipped with a buddy heater to keep you warm during cooler nights. Propane is available for purchase or feel free to bring your own. Please note that our shared portable toilets are conveniently located a short walk from all sites, fostering a communal yet private experience. Escape to Durango for an intimate and immersive glamping adventure. Book now for an unforgettable escape into nature!",
+        "detailsText": "Overnight Stay • Up to 2 people Overnight Stay • Up to 2 people",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "514094",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514094/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "515026",
+    "company": "mustangsanctuary",
+    "title": "Campsite #6",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/campsite-6-515026",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
+    ],
+    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+    "wordCount": 75,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $31.80",
+    "priceRows": [
+      {
+        "label": "One Night",
+        "note": "",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Two Nights",
+        "note": "",
+        "amountLabel": "$63.60"
+      },
+      {
+        "label": "Three Nights",
+        "note": "",
+        "amountLabel": "$95.40"
+      },
+      {
+        "label": "Four Nights",
+        "note": "",
+        "amountLabel": "$127.20"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "31.80",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/515026/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+      "heroHandle": "AHzRqO2bR5q6JRWhBz7N",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe",
+          "handle": "087AoVruQH651SNUwhLe",
+          "pixelSha256": "5a0fc03193c7fccc3daffe89a99006b46525bc755f08f504c407a9117a75a6f7",
+          "differenceHashDistanceFromHero": 52,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.05075,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-515026",
+      "fetchedAt": "2026-10-02T22:43:03.728511+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/515026/content/",
+          "status": 200,
+          "bytes": 2552,
+          "sha256": "c5cf776b2f08ead93cd3fb1f90e7dd5c4d913507921e65456e0f49629b421e65"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/515026/structured-description/",
+          "status": 200,
+          "bytes": 1688,
+          "sha256": "b9adb89e2334b59a07de1249cf31221b9e2390614763f4dbb303ffcabb800b70"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/515026/",
+          "status": 200,
+          "bytes": 10421,
+          "sha256": "651c7fac93cf974964dec7ee5b964d829578c791ed12eccf2a4c7dd102647902"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=515026&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 879,
+          "sha256": "923e8cb2763c4b063c44522de368b7bac9b1d0aef72a227994804aa779032a6e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/515026/ratings/",
+          "status": 200,
+          "bytes": 525,
+          "sha256": "a2eb40a110573f92304d41d7850f54f9a983a7bf81e439382c0170291c68e594"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One Night",
+          "note": "",
+          "amount": 31.8
+        },
+        "customerTypes": [
+          {
+            "singular": "One Night",
+            "note": "",
+            "amount": 31.8
+          },
+          {
+            "singular": "Two Nights",
+            "note": "",
+            "amount": 63.6
+          },
+          {
+            "singular": "Three Nights",
+            "note": "",
+            "amount": 95.4
+          },
+          {
+            "singular": "Four Nights",
+            "note": "",
+            "amount": 127.2
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Your perfect destination for a rustic and authentic camping experience awaits! Our dry campsite offers a blank canvas for your outdoor adventure. Bring your own camping essentials, set up your tent, camper, or trailer (30ft max) and immerse yourself in the simplicity of nature. Enjoy the crackling warmth of a campfire under the stars at your private fire pit, perfect for cozy evenings with friends and family. The shared portable toilets are centrally located, just a short walk from all sites, ensuring convenience while maintaining the natural charm of the surroundings. Escape the hustle and bustle of everyday life as you create your own camping haven. Embrace the freedom to tailor your camping experience to your liking. Book your stay now for an authentic and unforgettable outdoor getaway!",
+        "detailsText": "1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max 1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "515026",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/515026/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "520036",
+    "company": "mustangsanctuary",
+    "title": "Campsite #7",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/campsite-7-520036",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
+    ],
+    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+    "wordCount": 75,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $31.80",
+    "priceRows": [
+      {
+        "label": "One Night",
+        "note": "",
+        "amountLabel": "$31.80"
+      },
+      {
+        "label": "Two Nights",
+        "note": "",
+        "amountLabel": "$63.60"
+      },
+      {
+        "label": "Three Nights",
+        "note": "",
+        "amountLabel": "$95.40"
+      },
+      {
+        "label": "Four Nights",
+        "note": "",
+        "amountLabel": "$127.20"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "31.80",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/520036/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+      "heroHandle": "ls30OCxpT0tC44Qxd4i8",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-520036",
+      "fetchedAt": "2026-10-02T22:43:03.782026+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/520036/content/",
+          "status": 200,
+          "bytes": 2495,
+          "sha256": "f925538fffbb1b5ba3e10733588303fcd55612637b0e992852a8e3aa5b6a2c82"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/520036/structured-description/",
+          "status": 200,
+          "bytes": 1688,
+          "sha256": "8613dfc2f0d86bf31bbeddd6707f27161dd2663c0f0209689161aa50c02f9c5e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/520036/",
+          "status": 200,
+          "bytes": 9624,
+          "sha256": "86eae53954819f332c1af651fb63ebc81d4deff3b60ad4d35a0c31cf7d880532"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=520036&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 879,
+          "sha256": "b7ae9123b0e71253f30f1f5bbb6bb698074568c97ac2918a93fdf2ba7fa5f887"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/520036/ratings/",
+          "status": 200,
+          "bytes": 525,
+          "sha256": "d090ad02eec3bf15334ac2d3bf09427da4e63b418f388b546e34de1a2127be56"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One Night",
+          "note": "",
+          "amount": 31.8
+        },
+        "customerTypes": [
+          {
+            "singular": "One Night",
+            "note": "",
+            "amount": 31.8
+          },
+          {
+            "singular": "Two Nights",
+            "note": "",
+            "amount": 63.6
+          },
+          {
+            "singular": "Three Nights",
+            "note": "",
+            "amount": 95.4
+          },
+          {
+            "singular": "Four Nights",
+            "note": "",
+            "amount": 127.2
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T15:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "Your perfect destination for a rustic and authentic camping experience awaits! Our dry campsite offers a blank canvas for your outdoor adventure. Bring your own camping essentials, set up your tent, camper, or trailer (30ft max) and immerse yourself in the simplicity of nature. Enjoy the crackling warmth of a campfire under the stars at your private fire pit, perfect for cozy evenings with friends and family. The shared portable toilets are centrally located, just a short walk from all sites, ensuring convenience while maintaining the natural charm of the surroundings. Escape the hustle and bustle of everyday life as you create your own camping haven. Embrace the freedom to tailor your camping experience to your liking. Book your stay now for an authentic and unforgettable outdoor getaway!",
+        "detailsText": "1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max 1 - 4 nights • Bring your own Tent, RV, or Trailer • 30ft max",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "520036",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/520036/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "587300",
+    "company": "mustangsanctuary",
+    "title": "In the Company of Horses & Wine",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/in-the-company-of-horses-and-wine-587300",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines. Also part of the same visit are Northern California and Phineas Fittipaldi.",
+      "Guests spend the booked time with the horses."
+    ],
+    "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+    "wordCount": 103,
+    "durationLabel": "1.5 hours",
+    "durationIso": "PT1H30M",
+    "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
+    "visiblePriceLabel": "From $106",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 21+",
+        "amountLabel": "$106"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "106.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/587300/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
+      "heroHandle": "pQXu1NGT4OVShVE4nevg",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A",
+          "handle": "sclvfJXRBe3ArUUxVz5A",
+          "pixelSha256": "2203c579b324df3c8ab33612e0926a224490faa62f85c20ea27f3b17940e7614",
+          "differenceHashDistanceFromHero": 136,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.36469,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-587300",
+      "fetchedAt": "2026-10-02T22:43:04.471190+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/587300/content/",
+          "status": 200,
+          "bytes": 4313,
+          "sha256": "92dc978e32b62a6ac88685092e93bbdb1f83761559367ce2c1d111cf88866eed"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/587300/structured-description/",
+          "status": 200,
+          "bytes": 2763,
+          "sha256": "12938d5e2005bdbc3d24ce50129c604a914b7b58a94c32c9864732f1f70fc85a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/587300/",
+          "status": 200,
+          "bytes": 10214,
+          "sha256": "77dd26b60427c6d539fd47df0b1c4d2c71afd672cfe2b47a6ec5c567160f3362"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=587300&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "446c95352ebecc94844c4ad6e98c17f6241ec7087a91e52c9250df67a1e14914"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/587300/ratings/",
+          "status": 200,
+          "bytes": 550,
+          "sha256": "06040856bacb263292ce66f78916c872b8e2ca99e08f9ca5ab5367f92b1ebd6a"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 21+",
+          "amount": 106.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 21+",
+            "amount": 106.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-24T15:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1.5 hours",
+        "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+        "itemLocation": null,
+        "headline": "Interactive Horse Experience and Wine Tasting!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": 21,
+        "maxAge": null,
+        "groupSize": "10",
+        "included": [
+          "Interactive Equine Experience",
+          "Hands-on session with horses",
+          "Insights into horse behavior and care practices at Cascade Trails",
+          "Personalized guidance from knowledgeable staff for a safe and memorable interaction",
+          "Curated Wine Tasting by Wiley Wines",
+          "Guided tasting of 3-4 wines, led by Phineas Fittipaldi or a Wiley Wines representative",
+          "Discussion on the minimal-intervention winemaking approach and vineyard stories",
+          "Enjoyment of unique, single-varietal wines from organically farmed Northern California vineyards"
+        ],
+        "excluded": [
+          "Transportation",
+          "Carrots for the horses or grapes for the goats. Available for purchase at the ranch"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Cascade Trails",
+          "Wiley Wines",
+          "Northern California",
+          "Phineas Fittipaldi's"
+        ],
+        "measures": [],
+        "description": "Join us at Cascade Trails for a one-of-a-kind event blending hands-on equine interaction with a taste of California's finest wines! Start the experience by connecting with our horses during an interactive session that offers insight into their care, behavior, and unique stories. Once you've immersed yourself in the equine world, enjoy a thoughtfully curated tasting from Wiley Wines. Known for their minimal-intervention approach, Wiley Wines crafts single-varietal wines from organically farmed, Northern California vineyards. Each pour celebrates the rugged beauty of California's landscapes and the pure, unfiltered essence of each grape variety, inspired by founder Phineas Fittipaldi's passion for wine, nature, and desert charm. This is a perfect pairing for wine and animal lovers seeking an authentic and enriching experience.",
+        "detailsText": "Thank you for securing your spot for our upcoming event at Cascade Trails with Wiley Wines! We're excited to welcome you to a memorable afternoon filled with equine experiences and delicious wines. Here are the details of your reservation: Date: 12/7/24 Time: 2:30 PM - 4:30 PM Location: Cascade Trails Mustang Sanctuary What's Included: • Hands-on interactive experience with our horses. • Guided wine tasting with Phineas Fittipaldi of Wiley Wines. • Light bites paired with the tasting. • Refreshments upon arrival. What's Not Included: • Additional wine purchases (bottles available for sale). • Keepsake items or merchandise. • Trail rides or other equine activities beyond the scheduled session. • Transportation to and from the event. Additional Information: • Arrival: Please plan to arrive 10-15 minutes early for check-in. • Attire: Comfortable, closed-toe shoes and sun protection, as the event is outdoors. • Cancellation Policy: Tickets are non-refundable, but can be transferred to another guest if needed. If you have any questions or need assistance, please don't hesitate to reach out. We look forward to seeing you for a fantastic afternoon of horses and wine! Warm regards, Marissa Cascade Trails Mustang Sanctuary Interactive Horse Experience and Wine Tasting! Interactive Horse Experience and Wine Tasting!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "587300",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "598562",
+    "company": "mustangsanctuary",
+    "title": "Morning Trail Ride",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/morning-trail-ride-598562",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the morning departure."
+    ],
+    "schemaDescription": "Guests take a walk ride with the horses in Joshua Tree.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+    "wordCount": 23,
+    "durationLabel": "1 Hour",
+    "durationIso": "PT1H",
+    "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
+    "visiblePriceLabel": "From $169.60",
+    "priceRows": [
+      {
+        "label": "Person",
+        "note": "8 years and older",
+        "amountLabel": "$169.60"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "169.60",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/598562/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+      "heroHandle": "Ir4znAwvSAGoPUPSgXqE",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-598562",
+      "fetchedAt": "2026-10-02T22:43:05.718083+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/598562/content/",
+          "status": 200,
+          "bytes": 2112,
+          "sha256": "409a80b69c4ae6abc85d85803f864a515cf179e9176c4c14eb374b880073d08a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/598562/structured-description/",
+          "status": 200,
+          "bytes": 1376,
+          "sha256": "34da54afe2f779e2f53af141d1852bd01380cf777d63d08b9a625b6b3085b607"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/598562/",
+          "status": 200,
+          "bytes": 8731,
+          "sha256": "01744378c293b50d5b5177d8cd48552ddf3fe17bccf1fa897ba07c6d35f18a7a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=598562&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 543,
+          "sha256": "26d39d5091034ef715698deb9e93e02f8384d49ea6dec02702acaa91426a33f1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/598562/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "0f8049f163de963a81f9c7ff2f6e01b9c35e827fafd454cc88a366e9772bdd0e"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "8 years and older",
+          "amount": 169.6
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "8 years and older",
+            "amount": 169.6
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T09:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1 Hour",
+        "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "1 hour trail ride"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "(Weight limit: 240 lbs) Riders must be 8 years of age or older.",
+          "Some riding experience is preferred from children 12 and under."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "1 hour"
+        ],
+        "description": "If you are staying with us, please add your discount code! Enjoy a beautiful walk ride in Joshua Tree. This is a peaceful way to start your day! (Weight limit: 240 lbs) Riders must be 8 years of age or older. Some riding experience is preferred from children 12 and under.",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "598562",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/598562/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "646142",
+    "company": "mustangsanctuary",
+    "title": "Sunset Sound Bath with Wild Horses",
+    "operator": "Cascade Trails Mustang Sanctuary",
+    "publicPath": "/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "Guests spend part of the visit in a hands-on session with the horses. The session is at the ranch, with the desert landscape around the grounds. This ride is the sunset departure."
+    ],
+    "schemaDescription": "Guests spend part of the visit in a hands-on session with the horses.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "one-hour horse outing in Joshua Tree",
+      "Groups are capped at 15"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+    "wordCount": 33,
+    "durationLabel": "1 hour",
+    "durationIso": "PT1H",
+    "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 373,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 373 reviews on GET https://fareharbor.com/api/v1/companies/mustangsanctuary/items/646142/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "Joshua Tree, California belongs to the Joshua Tree area via meeting_point",
+      "place": {
+        "city": "Joshua Tree",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "joshua-tree",
+        "stateSlug": "california",
+        "raw": "Joshua Tree, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Joshua Tree",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "joshua-tree",
+          "stateSlug": "california",
+          "raw": "Joshua Tree, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+      "heroHandle": "uK3SSJDlS4ikEEyzE6vh",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/mustangsanctuary-646142",
+      "fetchedAt": "2026-10-02T22:43:05.772320+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/646142/content/",
+          "status": 200,
+          "bytes": 3041,
+          "sha256": "90cb6c47f92d603cb49d8a88032e10af32a41cd26db4440928606aa8a9bb473d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/mustangsanctuary/646142/structured-description/",
+          "status": 200,
+          "bytes": 1641,
+          "sha256": "b0757499c6ceb58df7a34b172dde50e460e78a4b2602d0e65f58a9572f38086b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/646142/",
+          "status": 200,
+          "bytes": 9144,
+          "sha256": "1bdebd4fc96859d3c351b79d9508b7c5fcdbab602b77b7675ffcfe31cbc7088e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/mustangsanctuary/price-preview/per-item/v2/?asn=fhdn&item_pks=646142&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 227,
+          "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/mustangsanctuary/items/646142/ratings/",
+          "status": 200,
+          "bytes": 548,
+          "sha256": "3cb75fe89718e0651c55ea03cc4cae10ec07a469559bebc89737c55a999d9f42"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "1 hour",
+        "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": "15",
+        "included": [
+          "Interactive horse experience, tea elixirs and sound bath"
+        ],
+        "excluded": [
+          "Yoga mat",
+          "Blanket",
+          "Water"
+        ],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Joshua Tree",
+          "PM Location",
+          "SUNSET EXPERIENCE",
+          "PM Sunset Sound Bath"
+        ],
+        "measures": [],
+        "description": "a hypnotic, one-of-a-kind sound experience in Joshua Tree led by @monsterluna, a classically trained vocal artist and mystical sound healer. Date: Thursday, July 24 Time: 7 PM Location: @cascadetrails Cost: $50 (a portion of the proceeds will be donated to @cascadetrails) SUNSET EXPERIENCE: 7PM - Intro to the Sanctuary and the wild horses 7:20PM - Sip on herbal tea + elixirs to ground your mind 7:30-8:15 PM Sunset Sound Bath under the open desert sky What to Bring: • Yoga mat • Blanket • Water bottle See you on the mat. 🤍",
+        "detailsText": "",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "646142",
+        "provider": "mustangsanctuary",
+        "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/646142/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 33 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  },
+  {
+    "itemId": "901301",
+    "company": "stargazejoshua",
+    "title": "Joshua Tree Stargazing Night Walk",
+    "operator": "Stargaze Joshua",
+    "publicPath": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301",
+    "engine2Path": null,
+    "exceptionStatus": "BOOKING_PAGE_NOT_FOUND",
+    "paragraphs": [
+      "The operator Stargaze Joshua lists this outing."
+    ],
+    "schemaDescription": "The operator Stargaze Joshua lists this outing.",
+    "removedClaims": [
+      "No public copy was written because the booking page is terminal or no FareHarbor content was stored."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": null,
+    "wordCount": 7,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": null,
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/stargazejoshua/items/901301/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Joshua Tree",
+      "state": "California",
+      "citySlug": "joshua-tree",
+      "stateSlug": "california",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": null,
+      "selected": null,
+      "action": "none",
+      "reason": "terminal booking page",
+      "rejected": [],
+      "candidates": []
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/joshua-tree/stargazejoshua-901301",
+      "fetchedAt": "2026-10-02T22:43:05.945131+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/stargazejoshua/901301/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/stargazejoshua/901301/structured-description/",
+          "status": 404,
+          "bytes": 588087,
+          "sha256": "10dfe39839fefada5e94cba86be920bec2e26067ffb842535cb5bbdf2979fcef"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/stargazejoshua/items/901301/",
+          "status": 404,
+          "bytes": 588061,
+          "sha256": "4bb7bac797411f1b0c2034ef09d74a98d9f3f51471b91b52754076f6ce0d1cde"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/stargazejoshua/price-preview/per-item/v2/?asn=fhdn&item_pks=901301&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 138,
+          "sha256": "2623c7d0267277082748c237ac26768d4e7e08804f17f169155bc24f3c3d1b25"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/stargazejoshua/items/901301/ratings/",
+          "status": 404,
+          "bytes": 588077,
+          "sha256": "727ace522d7de052fbf7eb04ec8f4481c89e212d7270aa957ea3429bf587852d"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "description": "",
+        "detailsText": "",
+        "sourceUsed": ""
+      },
+      "bookingPageValidity": {
+        "itemId": "901301",
+        "provider": "stargazejoshua",
+        "bookingUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

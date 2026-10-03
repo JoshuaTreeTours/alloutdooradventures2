@@ -1,0 +1,48 @@
+{
+  "company": "pacificpaddleco",
+  "itemId": "901101",
+  "fetchedAt": "2026-10-02T22:41:33.483002+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/pacificpaddleco/901101/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/pacificpaddleco/901101/structured-description/",
+      "status": 404,
+      "bytes": 588089,
+      "sha256": "fb724f12226adda206a486665bb4e7601de0d7000f40aa0511b1039e8862b0c1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/pacificpaddleco/items/901101/",
+      "status": 404,
+      "bytes": 588063,
+      "sha256": "77731dbfc8ea4901e83fe1a50ae2db2e0fc77b60742170c9726a6b33d61606d9"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/pacificpaddleco/price-preview/per-item/v2/?asn=fhdn&item_pks=901101&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 139,
+      "sha256": "ffbc3950f8ba0cbe3b67d919f1ebd89c3c47b929d2421af367ac181c1eef867e"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/pacificpaddleco/items/901101/ratings/",
+      "status": 404,
+      "bytes": 588079,
+      "sha256": "7593c55ad23f0c1c7e91b9209dcd69998bd113dcf662f32d6786a4344f427cf0"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "901101",
+    "provider": "pacificpaddleco",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificpaddleco/items/901101/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,47 @@
+{
+  "company": "gocartours-sandiego",
+  "itemId": "369140",
+  "fetchedAt": "2026-10-02T22:41:07.385665+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gocartours-sandiego/369140/content/",
+      "status": 200,
+      "bytes": 3458,
+      "sha256": "264cfa72ea11e7553a0200cfa08ff8039ceb4498331b911cff458410ca5df0c1"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gocartours-sandiego/369140/structured-description/",
+      "status": 200,
+      "bytes": 2009,
+      "sha256": "9291e9e31560b946ab3af72a650f763cb6f39f850ea9f116902cbc3a344873c0"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gocartours-sandiego/items/369140/",
+      "status": 200,
+      "bytes": 13260,
+      "sha256": "fac7c37b7f29304dbc1ac28e4a74cfbb7ea21249c277a8b676bb19713a4addad"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gocartours-sandiego/price-preview/per-item/v2/?asn=fhdn&item_pks=369140&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gocartours-sandiego/items/369140/ratings/",
+      "status": 200,
+      "bytes": 442,
+      "sha256": "336ed5b1123b63f23a54adcd377c3861cf461736214da5f81e12439d6c8b84c0"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "369140",
+    "provider": "gocartours-sandiego",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/369140/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,70 @@
+{
+  "citySlug": "santa-barbara",
+  "total": 3,
+  "active": 3,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 2,
+  "imageAvailable": 3,
+  "inSitemap": 3,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "maddogsenglishmen",
+      "operator": "Mad Dogs & Englishmen",
+      "itemId": "464867",
+      "slug": "montecito-coastline-dog-friendly-electric-bike-and-sidecar-guided-tour-464867",
+      "publicPath": "/destinations/california/santa-barbara/tours/montecito-coastline-dog-friendly-electric-bike-and-sidecar-guided-tour-464867",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4156,
+        "structuredStatus": 200,
+        "structuredBytes": 1547
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "rootedvinetours",
+      "operator": "Rooted Vine Tours",
+      "itemId": "5525",
+      "slug": "transportation-only-non-tour-driver-for-hire-service-5525",
+      "publicPath": "/destinations/california/santa-barbara/tours/transportation-only-non-tour-driver-for-hire-service-5525",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1332,
+        "structuredStatus": 200,
+        "structuredBytes": 880
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tastesantabarbarafoodtours",
+      "operator": "Taste Santa Barbara Food Tours",
+      "itemId": "284350",
+      "slug": "virtual-tour-of-downtown-santa-barbara-284350",
+      "publicPath": "/destinations/california/santa-barbara/tours/virtual-tour-of-downtown-santa-barbara-284350",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1966,
+        "structuredStatus": 200,
+        "structuredBytes": 1221
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "citySlug": "redondo-beach",
+  "total": 8,
+  "active": 8,
+  "terminal": 0,
+  "priceAvailable": 8,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 8,
+  "inSitemap": 8,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478885",
+      "slug": "2-hour-beach-e-bike-ride-478885",
+      "publicPath": "/destinations/california/redondo-beach/tours/2-hour-beach-e-bike-ride-478885",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3000,
+        "structuredStatus": 200,
+        "structuredBytes": 2405
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478891",
+      "slug": "4-hr-beach-e-bike-ride-478891",
+      "publicPath": "/destinations/california/redondo-beach/tours/4-hr-beach-e-bike-ride-478891",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3018,
+        "structuredStatus": 200,
+        "structuredBytes": 2426
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478894",
+      "slug": "6-hr-e-bike-ride-478894",
+      "publicPath": "/destinations/california/redondo-beach/tours/6-hr-e-bike-ride-478894",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3051,
+        "structuredStatus": 200,
+        "structuredBytes": 2519
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478898",
+      "slug": "1-day-e-bike-rental-including-overnight-478898",
+      "publicPath": "/destinations/california/redondo-beach/tours/1-day-e-bike-rental-including-overnight-478898",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3491,
+        "structuredStatus": 200,
+        "structuredBytes": 2708
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478902",
+      "slug": "2-day-e-bike-rental-478902",
+      "publicPath": "/destinations/california/redondo-beach/tours/2-day-e-bike-rental-478902",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3340,
+        "structuredStatus": 200,
+        "structuredBytes": 2695
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "478908",
+      "slug": "3-day-e-bike-rental-478908",
+      "publicPath": "/destinations/california/redondo-beach/tours/3-day-e-bike-rental-478908",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3032,
+        "structuredStatus": 200,
+        "structuredBytes": 2672
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "479100",
+      "slug": "4-day-e-bike-rental-479100",
+      "publicPath": "/destinations/california/redondo-beach/tours/4-day-e-bike-rental-479100",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3082,
+        "structuredStatus": 200,
+        "structuredBytes": 2665
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "beachebiking",
+      "operator": "Beach E Biking",
+      "itemId": "479103",
+      "slug": "7-day-e-bike-rental-479103",
+      "publicPath": "/destinations/california/redondo-beach/tours/7-day-e-bike-rental-479103",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3084,
+        "structuredStatus": 200,
+        "structuredBytes": 2667
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

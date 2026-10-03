@@ -1,0 +1,47 @@
+{
+  "company": "triton-charters",
+  "itemId": "673432",
+  "fetchedAt": "2026-10-02T22:42:17.351797+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/triton-charters/673432/content/",
+      "status": 200,
+      "bytes": 8389,
+      "sha256": "38fdfe0c65500f51e6bc9cc2b27dc750752149e181ddaae77e72ab428ce768db"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/triton-charters/673432/structured-description/",
+      "status": 200,
+      "bytes": 3739,
+      "sha256": "5e3d7d4831be5c3199b5de0a25a1c9c11afd86930b48f2e8c9715e752db8b504"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/triton-charters/items/673432/",
+      "status": 200,
+      "bytes": 22270,
+      "sha256": "9972de2de3a0e6b4f5a2a07635e3f07bc74dbcbddf7a71bef9c665389c556e38"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/triton-charters/price-preview/per-item/v2/?asn=fhdn&item_pks=673432&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 554,
+      "sha256": "74fbbf5ca4aa5d6be3b3b4b156c84709949b97b1ce7f2a039d2e2f5014c1944a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/triton-charters/items/673432/ratings/",
+      "status": 200,
+      "bytes": 519,
+      "sha256": "57c611099e05b77d3e97dcb8e6cea4bcb623f0d21e50f2f448c47a6eb55881f9"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "673432",
+    "provider": "triton-charters",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673432/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

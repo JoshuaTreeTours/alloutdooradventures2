@@ -1,0 +1,47 @@
+{
+  "company": "joshuatreeexcursions",
+  "itemId": "459589",
+  "fetchedAt": "2026-10-02T22:42:55.660413+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459589/content/",
+      "status": 200,
+      "bytes": 6588,
+      "sha256": "4e3efe4a05981a5d156257c9994cd75127248f27d94ac8eec1edd68567c2bf84"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/joshuatreeexcursions/459589/structured-description/",
+      "status": 200,
+      "bytes": 2673,
+      "sha256": "e33a0ec1d2544d1575040e7b0d19e34345ceb09ffe7361dd8d4d8484361739ea"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459589/",
+      "status": 200,
+      "bytes": 9277,
+      "sha256": "f45d83ec0eccd691b6d55b4b29176b44dd06700ada6d781675a4787a71bc8a16"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/joshuatreeexcursions/price-preview/per-item/v2/?asn=fhdn&item_pks=459589&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 554,
+      "sha256": "95d570893fe97c53f3885e132cc957e4f3c93718c6ca82c6d8fa9b3e13e96251"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/joshuatreeexcursions/items/459589/ratings/",
+      "status": 200,
+      "bytes": 440,
+      "sha256": "9f3bd4095f914be96466d4dab213047beb57b4cdb8c318f9fe67ef37565d196e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "459589",
+    "provider": "joshuatreeexcursions",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

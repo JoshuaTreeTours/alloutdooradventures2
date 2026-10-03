@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 GENERATED = ROOT / "src" / "data" / "tours.generated.ts"
+MANUAL = ROOT / "src" / "data" / "tours.manual.ts"
 ENGINE6_ROUTES = ROOT / "src" / "engine6" / "routes.ts"
 SUPPRESSED = ROOT / "src" / "utils" / "fareharbor" / "suppressedBookingPages.ts"
 def inventory_report_path(city_slug: str = "boston") -> Path:
@@ -36,12 +37,47 @@ def load_generated_tours() -> list[dict]:
     return json.loads(text[start : end + 1])
 
 
+def load_manual_tours() -> list[dict]:
+    """Manual catalog tours use the same public shape as generated tours."""
+    if not MANUAL.exists():
+        return []
+    import subprocess
+
+    result = subprocess.run(
+        [
+            "npx",
+            "tsx",
+            "-e",
+            "import { manualTours } from './src/data/tours.manual.ts';"
+            "process.stdout.write(JSON.stringify(manualTours));",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(result.stdout)
+    return payload if isinstance(payload, list) else []
+
+
 def engine6_routes() -> set[str]:
     return set(ROUTE_RE.findall(ENGINE6_ROUTES.read_text(encoding="utf-8")))
 
 
 def retired_ids() -> set[str]:
     return set(ITEM_ID_RE.findall(SUPPRESSED.read_text(encoding="utf-8")))
+
+
+def removed_catalog_ids() -> set[str]:
+    """IDs the public catalog already hard-removes. Do not start a second rollout."""
+    path = ROOT / "src" / "utils" / "tours" / "isTourRemoved.ts"
+    if not path.exists():
+        return set()
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"const REMOVED_TOUR_IDS = new Set\(\[([\s\S]*?)\]\);", text)
+    if not match:
+        return set()
+    return set(re.findall(r'"(\d+)"', match.group(1)))
 
 
 def public_path(tour: dict) -> str:
@@ -52,9 +88,10 @@ def public_path(tour: dict) -> str:
 
 
 def inventory(city_slug: str = "boston") -> dict:
-    tours = load_generated_tours()
+    tours = [*load_generated_tours(), *load_manual_tours()]
     e6 = engine6_routes()
     retired = retired_ids()
+    removed = removed_catalog_ids()
     products = []
     skipped = []
     seen = set()
@@ -71,6 +108,16 @@ def inventory(city_slug: str = "boston") -> dict:
             skipped.append({"id": tour.get("id"), "reason": "NOT_FAREHARBOR"})
             continue
         company, item_id = match.group(1), match.group(2)
+        if item_id in removed:
+            skipped.append(
+                {
+                    "id": tour.get("id"),
+                    "itemId": item_id,
+                    "reason": "REMOVED_CATALOG",
+                    "publicPath": public_path(tour),
+                }
+            )
+            continue
         path = public_path(tour)
         if path in e6:
             skipped.append(

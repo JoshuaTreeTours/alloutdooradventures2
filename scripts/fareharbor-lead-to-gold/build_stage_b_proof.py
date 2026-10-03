@@ -90,16 +90,48 @@ def endpoint_ok(meta: dict, name: str) -> bool:
     return meta.get("endpoints", {}).get(name, {}).get("status") == 200
 
 
+_SECTION_HEADING_RE = re.compile(
+    r"(?im)(?:^|\n)[ \t]*#{1,6}[ \t]*("
+    r"duration|about|overview|details|highlights?|information|description|"
+    r"itinerary|included|what(?:'s| is) included|what(?:'s| is) not included|"
+    r"not included|meeting(?:[ \t]+(?:point|place))?|location|pricing|price|"
+    r"schedule|important details|see you soon|what to bring|what to expect|"
+    r"additional information|cancellation(?:[ \t]+policy)?|restrictions|faqs?|"
+    r"special requirements|extras|disclaimers|accessibility|"
+    r"experience level|departure(?:[ \t]+location)?|expedition includes|"
+    r"important information|wildlife disclaimer|tips|what to wear|good to know|please note"
+    r")[ \t:]*(?=\n|$)"
+)
+_BARE_SECTION_LABEL_RE = re.compile(
+    r"(?im)(?:^|\n)[ \t]*(duration|about|overview|details|highlights|information)[ \t]*(?=\n)"
+)
+_GLUED_SECTION_LABEL_RE = re.compile(
+    r"\bDuration\s+(?:\d+(?:\.\d+)?(?:\s*-\s*\d+(?:\.\d+)?)?\s*hours?\s+)?About\s+(?!\d)",
+    re.I,
+)
+
+
 def clean_text(value) -> str:
     if value is None:
         return ""
     if isinstance(value, dict):
         value = value.get("address") or value.get("raw") or ""
     text = str(value)
-    text = re.sub(r"[#*`]+", " ", text)
     text = text.replace("\u2019", "'").replace("\u2013", "-").replace("\u2014", "-")
-    text = re.sub(r"\s+", " ", text).strip(" -")
-    return text
+    text = _SECTION_HEADING_RE.sub("\n", text)
+    text = _BARE_SECTION_LABEL_RE.sub("\n", text)
+    text = re.sub(r"[#*`]+", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    text = _GLUED_SECTION_LABEL_RE.sub("", text)
+    text = re.sub(
+        r"^(?:Duration|Distance|Terrain|Overview|Details|Highlights|Information)"
+        r"(?:\s*,\s*(?:Duration|Distance|Terrain|Overview|Details|Highlights|Information))*\s+",
+        "",
+        text,
+    )
+    text = re.sub(r"\s+About\s+(?=[A-Z])", ". ", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip(" -")
 
 
 LIST_MARKETING = re.compile(
@@ -250,10 +282,14 @@ def duration_iso(label: str | None) -> str | None:
     return None
 
 
-def extract_price(preview: dict) -> dict | None:
+def extract_price(preview: dict, item_id: str | None = None) -> dict | None:
     items = preview.get("items") if isinstance(preview, dict) else None
     if not items:
         return None
+    if item_id:
+        items = [entry for entry in items if str(entry.get("id")) == str(item_id)]
+        if not items:
+            return None
     details = preview.get("details") or {}
     currency = (details.get("currency") or "").upper()
     places = int(details.get("currency_decimal_places") or 2)
@@ -430,6 +466,7 @@ def validate(
     geography: dict | None = None,
     expected_city: str | None = None,
     prose_source: str | None = None,
+    allow_short: bool = False,
 ) -> dict:
     schema = product.get("schemaDescription") or ""
     public_bits = product["paragraphs"] + product["highlights"] + ([schema] if schema else [])
@@ -450,7 +487,7 @@ def validate(
     }:
         if schema.strip() != " ".join(product["paragraphs"]).strip():
             errors.append("missing-source schema description must match the short page copy")
-    elif schema_words >= product["wordCount"]:
+    elif schema_words >= product["wordCount"] and not allow_short:
         errors.append("schema description is not shorter than the editorial body")
     elif schema_words > 80:
         errors.append(f"schema description is {schema_words} words; keep it concise")
@@ -479,8 +516,8 @@ def validate(
                 errors.append(
                     "aggregate rating review count must be a positive integer"
                 )
-            if rating.get("provider") != "TripAdvisor":
-                errors.append("aggregate rating provider must be TripAdvisor")
+            if rating.get("provider") not in {"TripAdvisor", "Google"}:
+                errors.append("aggregate rating provider must be TripAdvisor or Google")
     if re.search(r"\$\s?\d", text):
         errors.append("dollar amount leaked into editorial copy")
     if SECOND_PERSON.search(text):
@@ -516,7 +553,7 @@ def validate(
             errors.append(f"{status} product still has a price")
         if status != "INSUFFICIENT_SOURCE_CONTENT" and product["durationLabel"] is not None:
             errors.append(f"{status} product still has a duration")
-    elif words < 100:
+    elif words < 100 and not allow_short:
         errors.append(
             "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that"
         )
@@ -926,7 +963,7 @@ def emit_ts(products: list[dict]) -> str:
         "export type FareHarborProofAggregateRating = {\n"
         "  ratingValue: number;\n"
         "  reviewCount: number;\n"
-        "  provider: \"TripAdvisor\";\n"
+        "  provider: \"TripAdvisor\" | \"Google\";\n"
         "};\n\n"
         "export type FareHarborProofProduct = {\n"
         "  itemId: string;\n"
@@ -944,6 +981,7 @@ def emit_ts(products: list[dict]) -> str:
         "  schemaDescription: string;\n"
         "  highlights: string[];\n"
         "  galleryImages: string[];\n"
+        "  productImage?: string | null;\n"
         "  wordCount: number;\n"
         "  durationLabel: string | null;\n"
         "  durationIso: string | null;\n"

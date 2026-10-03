@@ -1,0 +1,47 @@
+{
+  "company": "seaforthboatrental",
+  "itemId": "639205",
+  "fetchedAt": "2026-10-02T22:42:48.219029+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/639205/content/",
+      "status": 200,
+      "bytes": 1902,
+      "sha256": "3ff27e9988b0be3c23ffb8ae61fc9ebe7e8b7e7b123abdd44bf358fbb2723754"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/seaforthboatrental/639205/structured-description/",
+      "status": 200,
+      "bytes": 1252,
+      "sha256": "c204c04540c4db012bba2a975752847d33bbbd2ab0ecf00f7319a81aa179eac3"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/639205/",
+      "status": 200,
+      "bytes": 11273,
+      "sha256": "a768842d174a440dd40d57358768e79a5eb5e98ac01802b2dd721fb786695d21"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/seaforthboatrental/price-preview/per-item/v2/?asn=fhdn&item_pks=639205&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/seaforthboatrental/items/639205/ratings/",
+      "status": 200,
+      "bytes": 491,
+      "sha256": "171623b218c9497ddac7b26ca5847caa4ae5aa1c950d9898b4dead7c633900ae"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "639205",
+    "provider": "seaforthboatrental",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639205/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

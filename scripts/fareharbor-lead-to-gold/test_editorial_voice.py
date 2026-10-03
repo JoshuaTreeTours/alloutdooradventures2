@@ -11,14 +11,18 @@ from editorial_voice import (
     apply_editorial_overlay,
     boilerplate_language_errors,
     compose_editorial,
+    contrast_padding_errors,
+    drop_contrast_padding,
     editorial_is_thin,
     editorial_substance_errors,
     editorial_voice_errors,
     field_dump_errors,
     fragment_errors,
     implementation_language_errors,
+    is_structural_label,
     load_editorial_sample,
     prose_quality_errors,
+    template_artifact_errors,
 )
 
 
@@ -214,10 +218,12 @@ class EditorialVoiceTest(unittest.TestCase):
             {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
         )
         body = " ".join(paragraphs)
-        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertGreaterEqual(len(body.split()), 40)
         self.assertIn("canvas", body.lower())
         self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotIn("walking route", body.lower())
         self.assertNotRegex(body.lower(), r"the (group|walk|outing) covers")
+        self.assertEqual(contrast_padding_errors(paragraphs, workshop), [])
         self.assertEqual(prose_quality_errors(paragraphs, "Spray Paint Workshop", workshop), [])
 
         revue = (
@@ -245,12 +251,229 @@ class EditorialVoiceTest(unittest.TestCase):
             {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
         )
         body = " ".join(paragraphs)
-        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertGreaterEqual(len(body.split()), 40)
         self.assertIn("revue", body.lower())
         self.assertNotIn("Las Vegas Style, and they hear why", body)
         self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotIn("walking route", body.lower())
         self.assertNotRegex(schema, r"passes Paint")
+        self.assertEqual(contrast_padding_errors(paragraphs, revue), [])
         self.assertEqual(prose_quality_errors(paragraphs, "Male Revue Night", revue), [])
+
+    def test_thin_trail_ride_is_not_padded_with_town_contrasts(self):
+        description = (
+            "Enjoy a beautiful walk ride in Joshua Tree. This is a peaceful way to start your day! "
+            "Riders must be 8 years of age or older."
+        )
+        paragraphs, _highlights, _schema, _removed = compose_editorial(
+            {
+                "title": "Morning Trail Ride",
+                "operator": "Cascade Trails Mustang Sanctuary",
+            },
+            {
+                "description": description,
+                "duration": "1 Hour",
+                "included": ["1 hour trail ride"],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+            },
+            description,
+            {
+                "disposition": "keep",
+                "place": {"city": "Joshua Tree", "state": "California"},
+            },
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertNotIn("rather than touring town", lowered)
+        self.assertNotIn("sightseeing loop", lowered)
+        self.assertNotIn("town route", lowered)
+        self.assertNotIn("not on a walk through town", lowered)
+        self.assertNotIn("instead of being led", lowered)
+        self.assertRegex(lowered, r"horse")
+        self.assertRegex(body, r"\b[Mm]orning\b")
+        self.assertGreaterEqual(len(body.split()), 20)
+        self.assertLess(len(body.split()), 100)
+        self.assertEqual(contrast_padding_errors(paragraphs, description), [])
+        errors = editorial_substance_errors(
+            paragraphs,
+            [],
+            paragraphs[0],
+            exception="OK",
+            title="Morning Trail Ride",
+            description=description,
+            allow_short=True,
+        )
+        self.assertEqual(errors, [], msg=errors)
+
+    def test_same_negative_contrast_is_kept_once_and_only_from_source(self):
+        padded = [
+            "Guests walk with the horses from the ranch rather than touring town on their own.",
+            "People stay with the horses for the booked session rather than on a sightseeing loop.",
+            "Guests stay beside the horses instead of being led around a town route.",
+            "Guests are with the horses for this booking, not on a walk through town.",
+        ]
+        kept_padded = drop_contrast_padding(padded, "A walk ride in Joshua Tree.")
+        self.assertEqual(len(kept_padded), 1)
+        self.assertNotRegex(kept_padded[0].lower(), r"rather than|sightseeing|town route|walk through town")
+        source = "This is not a walking tour. Guests ride horses at the ranch."
+        kept = drop_contrast_padding(
+            [
+                "This booking is a ranch ride, not a walking tour.",
+                "Guests are with the horses rather than on a walking tour.",
+            ],
+            source,
+        )
+        denials = [item for item in kept if "walking tour" in item.lower()]
+        self.assertEqual(len(denials), 1)
+        banana = "Suture practice uses a banana rather than a live animal."
+        self.assertEqual(
+            drop_contrast_padding([banana], "Practice sutures on a banana."),
+            [banana],
+        )
+
+    def test_source_labels_are_not_places(self):
+        for label in (
+            "Level Suitable",
+            "Departure Location",
+            "Important Information",
+            "California Expedition Includes",
+            "Tips Dress",
+            "Bike Must",
+            "On August",
+            "Ticketed Charters",
+            "Catamaran Yacht Charter",
+            "Wildlife Disclaimer",
+        ):
+            self.assertTrue(is_structural_label(label), label)
+        self.assertFalse(is_structural_label("Mission Bay"))
+        self.assertFalse(is_structural_label("USS Midway"))
+        self.assertFalse(is_structural_label("Coronado Bridge"))
+        self.assertFalse(is_structural_label("San Diego Bay"))
+
+    def test_private_bike_tour_does_not_invent_label_stops(self):
+        description = (
+            "Enjoy an exclusive and private tour experience by Bike. "
+            "Must be at least 16 years old to participate. Riders under 18 must be accompanied by a guardian. "
+            "2.5 Hours. Min. weight 100lbs, max 260lbs. "
+            "Tips Dress appropriately for the weather and don't forget your camera!"
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {"title": "Private San Diego Electric Bike Tour", "operator": "Unlimited Biking"},
+            {
+                "description": description,
+                "duration": "2.5 Hours",
+                "included": [],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": "330 K Street San Diego, CA 92101",
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertIn("electric", lowered)
+        self.assertIn("private", lowered)
+        self.assertNotIn("tips dress", lowered)
+        self.assertNotIn("bike must", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
+        self.assertGreaterEqual(len(body.split()), 20)
+        self.assertLess(len(body.split()), 100)
+
+    def test_harbor_cruise_uses_the_bay_route_not_charter_labels(self):
+        description = (
+            "Triton Charters is a catamaran that docked in the San Diego Bay. "
+            "The boat is certified for a maximum of 100 passengers, and public departures carry up to 80 guests."
+        )
+        itinerary = (
+            "This cruise goes through San Diego Bay past the USS Midway and under the Coronado Bridge. "
+            "The captain and crew stay with the boat. Music plays, and drinks are available."
+        )
+        included = [
+            "Coast Guard certified captain and crew members",
+            "Full 13-seat bar",
+            "Dance floor with music",
+            "Bean bags on the bow",
+            "Live music on select charters",
+        ]
+        paragraphs, _highlights, schema, _removed = compose_editorial(
+            {"title": "2.5 Hour Harbor Cruise", "operator": "Triton Charters"},
+            {
+                "description": description,
+                "duration": "2.5 hours",
+                "included": included,
+                "highlights": [],
+                "itinerary": [itinerary],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description + " " + itinerary,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertIn("uss midway", lowered)
+        self.assertIn("coronado bridge", lowered)
+        self.assertIn("san diego bay", lowered)
+        self.assertNotIn("ticketed charters", lowered)
+        self.assertNotIn("on august", lowered)
+        self.assertNotIn("catamaran yacht charter", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + [schema]), [])
+
+    def test_pelagic_page_describes_mola_not_section_headings(self):
+        description = (
+            "The trip swims alongside mola mola, also called ocean sunfish, off San Diego. "
+            "Bait balls and other pelagic fish are part of the same water. "
+            "Gray whales may be present in winter and spring, blue whales in summer, "
+            "and humpback whales in the fall. Dolphins are here year-round. "
+            "Beginners and intermediates can join. Scuba is not required, but snorkeling familiarity helps. "
+            "Departure is Mission Bay. Snacks are included. Sightings are not guaranteed. "
+            "The boat is usually back around 3:00 pm. The expedition runs 6 hours."
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {"title": "Pelagic Wildlife Expedition (6 Hrs)", "operator": "Net Zero Expeditions"},
+            {
+                "description": description,
+                "duration": "6 hours",
+                "included": ["Refreshments and healthy snacks"],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs + highlights + [schema])
+        lowered = body.lower()
+        self.assertIn("mola", lowered)
+        self.assertIn("mission bay", lowered)
+        self.assertNotIn("level suitable", lowered)
+        self.assertNotIn("departure location", lowered)
+        self.assertNotIn("important information", lowered)
+        self.assertNotIn("expedition includes", lowered)
+        self.assertNotIn("wildlife disclaimer", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
 
 
 if __name__ == "__main__":

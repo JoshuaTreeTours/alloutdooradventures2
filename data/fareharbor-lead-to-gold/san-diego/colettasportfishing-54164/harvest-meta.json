@@ -1,0 +1,47 @@
+{
+  "company": "colettasportfishing",
+  "itemId": "54164",
+  "fetchedAt": "2026-10-02T22:40:47.402301+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/colettasportfishing/54164/content/",
+      "status": 200,
+      "bytes": 8398,
+      "sha256": "f4071f7a31bc92d2681a188df688cbad612f666e984d9b71cbf33b4c4810f17a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/colettasportfishing/54164/structured-description/",
+      "status": 200,
+      "bytes": 3847,
+      "sha256": "a4bb0826f846aac58e73cf7e963e2a3f5c17050d83cf1f829a90c5cb4949b888"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/colettasportfishing/items/54164/",
+      "status": 200,
+      "bytes": 19064,
+      "sha256": "37a556067327593bdd9ce8c0c595b5aacaab4c6730fb3b4d8af06af315d44489"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/colettasportfishing/price-preview/per-item/v2/?asn=fhdn&item_pks=54164&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 761,
+      "sha256": "9a81028999f55585df181bd0a8a4f828571b9dbc9a04456c7ce065a2266ed4cf"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/colettasportfishing/items/54164/ratings/",
+      "status": 200,
+      "bytes": 527,
+      "sha256": "54c5cc0b2b037b59f4e44ba838e5d0553ea75f8d5b899592674cfea42af17962"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "54164",
+    "provider": "colettasportfishing",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54164/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

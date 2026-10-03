@@ -3743,7 +3743,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Duration, Distance, Terrain 1 mile at moderate pace, stopping at various sites on tour About Visit one of Boston's hidden districts, area that also has maintained its residential charm amidst surrounding city. The group begins behind Park Plaza Hotel, at Statler Park, overlooking renaissance and classical revival buildings constructed on site of old Boston & Providence Railroad and also features First Corps of Cadets Armory and Pope Manufacturing Building.",
+      "The route covers 1 mile at a moderate pace, stopping at various sites. Guests visit one of Boston's hidden districts, an area that has kept its residential character beside the surrounding city. The group begins behind Park Plaza Hotel, at Statler Park, overlooking renaissance and classical revival buildings constructed on the site of the old Boston & Providence Railroad, including the First Corps of Cadets Armory and the Pope Manufacturing Building.",
       "Guests look at history and architecture of Bay Village, small harmonious neighborhood alongside Boston's growing skyline. The group covers about 1 miles at a moderate pace. The day moves through Bay Street District, Back Bay, and Beacon Hill."
     ],
     "schemaDescription": "A 1.5-hour walking tour with Boston By Foot in Boston. The walk passes Beacon Hill, Park Plaza Hotel, and Statler Park.",
@@ -3752,7 +3752,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and Park Plaza Hotel"
     ],
     "galleryImages": [],
-    "wordCount": 106,
+    "wordCount": 108,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -4279,7 +4279,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Duration, Distance, Terrain 1 mile at moderate pace, stopping at various sites on tour About Walk from Beacon Hill and toward the South End on the outing of murder, mayhem, and mysticism. Guests notice mass grave of soldiers and club that changed fire laws across country.",
+      "The route covers 1 mile at a moderate pace, stopping at various sites. Guests walk from Beacon Hill toward the South End on an outing of murder, mayhem, and mysticism. Guests notice a mass grave of soldiers and a club that changed fire laws across the country.",
       "The outing's a spooky pass city on a hill's less shining history. Guests learn about Bostonians behaving badly as guests take a shadowy pass Boston's neighborhoods and meet some of Frogpondians who broke rules - and the law. The group covers about 1 miles at a moderate pace.",
       "The day moves through Massachusetts State House and Park Street."
     ],
@@ -4289,7 +4289,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Beacon Hill and South End"
     ],
     "galleryImages": [],
-    "wordCount": 103,
+    "wordCount": 104,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -4337,7 +4337,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Duration, Distance, Terrain 1 mile at moderate pace, stopping at various sites on the tour About Look toward past for tour of Boston's Old West End. After that, once a multi-cultural neighborhood representing 23 nationalities, West End was transformed during Government-sponsored Urban Renewal Program opening in late 1950s and lasting through the 1960s.",
+      "The route covers 1 mile at a moderate pace, stopping at various sites. Guests look toward the past on a tour of Boston's Old West End. Once a multi-cultural neighborhood representing 23 nationalities, the West End was transformed during the Government-sponsored Urban Renewal Program, which opened in the late 1950s and lasted through the 1960s.",
       "Concurrently, City Hall Plaza project (through separate funding) also forced demise of Scollay Square - commercial, entertainment and cultural center of neighborhood. Lost were relics such as Old Howard, Boston Museum (think P.T. The group covers about 1 miles at a moderate pace. The day moves through The Boston Museum, Elizabeth Peabody House, and The West End Museum.",
       "Later the group reaches Bowdoin Square."
     ],
@@ -4347,7 +4347,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
       "Government-sponsored Urban Renewal Program and Boston's Old West End"
     ],
     "galleryImages": [],
-    "wordCount": 119,
+    "wordCount": 121,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": null,
@@ -6659,7 +6659,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Highlights Take wander around city with a local guide and hear about the stories behind the landmarks dotted around the city. Guests hear history of Boston Massacre and part it played in the American Revolution. Guests take in modern and time-honored architecture of downtown skyscrapers.",
+      "Guests wander around the city with a local guide and hear about the stories behind the landmarks dotted around the city. Guests hear the history of the Boston Massacre and the part it played in the American Revolution. Guests take in the modern and time-honored architecture of downtown skyscrapers.",
       "Inclusions: Local, English-speaking guide and special Boston treat. Exclusions: Additional dishes and drink, souvenirs, tips and gratuities for guide. _________________________ Summary There's so much more toward Boston's Freedom Trail than the locations highlighted in every brochure and guidebook. Guests join local guide to hear the tales and hear about people that made Boston one of most important cities in American history.",
       "Guests hear about how unknown artist influenced story of the Boston Massacre and find which of the Founding Fathers attended the first public school in the country."
     ],
@@ -6670,7 +6670,7 @@ export const fareHarborBostonLegacyProducts: FareHarborProofProduct[] = [
     "galleryImages": [
       "https://cdn.filestackcontent.com/ZpPxhbNbQteMTV4jl2cH"
     ],
-    "wordCount": 134,
+    "wordCount": 138,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,

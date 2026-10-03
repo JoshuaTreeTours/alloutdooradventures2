@@ -221,7 +221,9 @@ TRAVEL_TIME_RE = re.compile(
     re.I,
 )
 CITY_STATE_RE = re.compile(
-    r"\b([A-Z][A-Za-z.'-]{2,}(?:\s+[A-Z][A-Za-z.'-]{2,}){0,3}),\s*"
+    r"\b([A-Z][A-Za-z.'-]{2,}"
+    r"(?:\s+(?:del|de|la|los|las)\s+[A-Z][A-Za-z.'-]{2,})?"
+    r"(?:\s+[A-Z][A-Za-z.'-]{2,}){0,3}),\s*"
     r"(Vermont|Maine|Massachusetts|New Hampshire|Rhode Island|Connecticut|"
     r"New York|New Jersey|Pennsylvania|Maryland|Virginia|California|Oregon|"
     r"Colorado|Florida|Hawaii|Texas|Washington|Illinois|"

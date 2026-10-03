@@ -1,0 +1,100 @@
+{
+  "fetchedAt": "2026-10-02T22:44:16.889046+00:00",
+  "total": 2,
+  "products": [
+    {
+      "company": "marinadelreyboatrentals",
+      "itemId": "656842",
+      "fetchedAt": "2026-10-02T22:44:14.310275+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656842/content/",
+          "status": 200,
+          "bytes": 4067,
+          "sha256": "edb3afad04e6d72bb67ec56ed3b4e3570baf6756e4a4932746bc297f4772c1b3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656842/structured-description/",
+          "status": 200,
+          "bytes": 3234,
+          "sha256": "ce78b818d86e20a7f024cc7de5ea3a5b66c086cc58696d36af5fbf1a1a5594bc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656842/",
+          "status": 200,
+          "bytes": 7454,
+          "sha256": "d3f4a760ecf189d5d10cf553b32e5a249a1afb1047d8ae3f99b8a94b15b2eae0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marinadelreyboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=656842&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1238,
+          "sha256": "1e0fd5dd66304ef42f59f487bba4210bf15d1af4227a08800176bd054c6a0743"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656842/ratings/",
+          "status": 200,
+          "bytes": 452,
+          "sha256": "efd7c3fa3b1dc19f9a473f38b70064804a0dc886b80dca2630800dcb53c48fde"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "656842",
+        "provider": "marinadelreyboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marinadelreyboatrentals/items/656842/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "marinadelreyboatrentals",
+      "itemId": "656850",
+      "fetchedAt": "2026-10-02T22:44:14.311152+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656850/content/",
+          "status": 200,
+          "bytes": 3518,
+          "sha256": "40f14623670ad4660fca7e2e304622395cb36f71aeb8b5f13854e5b483a2fa28"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656850/structured-description/",
+          "status": 200,
+          "bytes": 2679,
+          "sha256": "4ba70bc3eeb5ad4898d9c4ae7347adc4be38e40761365e711be084d914286ad3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656850/",
+          "status": 200,
+          "bytes": 7470,
+          "sha256": "354d53fde5dea4e8a6e903d2064e7ff913d4667df58d6de77065bcf71de92e6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marinadelreyboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=656850&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1387,
+          "sha256": "1b8c372821c59a6f56eb64762bab2a2b8cb0bfdca058581c2884bc280255d090"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656850/ratings/",
+          "status": 200,
+          "bytes": 457,
+          "sha256": "9895f6fc04d02f896cf4260a1eddc6ec164eeb556873ff8fb5449e0315e5bff9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "656850",
+        "provider": "marinadelreyboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marinadelreyboatrentals/items/656850/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

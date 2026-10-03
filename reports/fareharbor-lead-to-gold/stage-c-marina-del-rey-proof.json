@@ -1,0 +1,503 @@
+[
+  {
+    "itemId": "656842",
+    "company": "marinadelreyboatrentals",
+    "title": "17' Boston Whaler",
+    "operator": "Marina Del Rey Boat Rentals",
+    "publicPath": "/destinations/california/marina-del-rey/tours/17-boston-whaler-656842",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. The rental is a center-console hull, with the helm in the middle of the boat. The hull is a Boston Whaler, built as an open powerboat. An outboard of about 90 horsepower is fitted on the stern.",
+      "The motor is a four-stroke, and it is meant to run quietly. The hull is shaped to get on plane and to throw less spray. A Bluetooth sound system is installed on the boat. The posted capacity is 5 people. Fuel for the rental period is included in the booking.",
+      "Top speed is about 36 miles per hour. People remain on the boat for the rental."
+    ],
+    "schemaDescription": "A 1- to 8-hour guided outing with Marina Del Rey Boat Rentals in Marina del Rey.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1- to 8-hour guided outing in Marina del Rey",
+      "Model: 170 Montauk (Center Console)"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
+    "wordCount": 117,
+    "durationLabel": "1-8 Hours",
+    "durationIso": null,
+    "meetingLocation": "13717 Fiji Way Marina del Rey, CA 90292",
+    "visiblePriceLabel": "From $281.96",
+    "priceRows": [
+      {
+        "label": "Two Hour Rental",
+        "note": "",
+        "amountLabel": "$281.96"
+      },
+      {
+        "label": "Two and a Half Hour Rental",
+        "note": "",
+        "amountLabel": "$333.90"
+      },
+      {
+        "label": "Three Hour Rental",
+        "note": "",
+        "amountLabel": "$378.42"
+      },
+      {
+        "label": "Three and a Half Hour Rental",
+        "note": "",
+        "amountLabel": "$415.52"
+      },
+      {
+        "label": "Four Hour Rental",
+        "note": "",
+        "amountLabel": "$445.20"
+      },
+      {
+        "label": "Eight Hour Rental",
+        "note": "",
+        "amountLabel": "$831.04"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "281.96",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656842/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Marina del Rey",
+      "state": "California",
+      "citySlug": "marina-del-rey",
+      "stateSlug": "california",
+      "reason": "Marina del Rey, California belongs to the Marina del Rey area via meeting_point",
+      "place": {
+        "city": "Marina del Rey",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "marina-del-rey",
+        "stateSlug": "california",
+        "raw": "Marina del Rey, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Marina del Rey",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "marina-del-rey",
+          "stateSlug": "california",
+          "raw": "Marina del Rey, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/KeS9GrNLQga52eXs5d1L",
+      "heroHandle": "KeS9GrNLQga52eXs5d1L",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/marina-del-rey/marinadelreyboatrentals-656842",
+      "fetchedAt": "2026-10-02T22:44:14.310275+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656842/content/",
+          "status": 200,
+          "bytes": 4067,
+          "sha256": "edb3afad04e6d72bb67ec56ed3b4e3570baf6756e4a4932746bc297f4772c1b3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656842/structured-description/",
+          "status": 200,
+          "bytes": 3234,
+          "sha256": "ce78b818d86e20a7f024cc7de5ea3a5b66c086cc58696d36af5fbf1a1a5594bc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656842/",
+          "status": 200,
+          "bytes": 7454,
+          "sha256": "d3f4a760ecf189d5d10cf553b32e5a249a1afb1047d8ae3f99b8a94b15b2eae0"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marinadelreyboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=656842&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1238,
+          "sha256": "1e0fd5dd66304ef42f59f487bba4210bf15d1af4227a08800176bd054c6a0743"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656842/ratings/",
+          "status": 200,
+          "bytes": 452,
+          "sha256": "efd7c3fa3b1dc19f9a473f38b70064804a0dc886b80dca2630800dcb53c48fde"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Two Hour Rental",
+          "note": "",
+          "amount": 281.96
+        },
+        "customerTypes": [
+          {
+            "singular": "Two Hour Rental",
+            "note": "",
+            "amount": 281.96
+          },
+          {
+            "singular": "Two and a Half Hour Rental",
+            "note": "",
+            "amount": 333.9
+          },
+          {
+            "singular": "Three Hour Rental",
+            "note": "",
+            "amount": 378.42
+          },
+          {
+            "singular": "Three and a Half Hour Rental",
+            "note": "",
+            "amount": 415.52
+          },
+          {
+            "singular": "Four Hour Rental",
+            "note": "",
+            "amount": 445.2
+          },
+          {
+            "singular": "Eight Hour Rental",
+            "note": "",
+            "amount": 831.04
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T09:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-8 Hours",
+        "meetingAddress": "13717 Fiji Way Marina del Rey, CA 90292",
+        "itemLocation": null,
+        "headline": "90hp • Max 5 people or 950lbs",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "Model: 170 Montauk (Center Console)",
+          "5 persons or 950 lbs maximum limit",
+          "Bluetooth sound system included",
+          "90 hp motor",
+          "Maximum speed of approximately 36 mph",
+          "Excellent for fishing",
+          "Fuel included in price"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The 170 Montauk embodies the timeless look of Boston Whaler's past, with simple lines, low-maintenance construction and pristine finish, while embracing new and modern craftsmanship like quiet-running, fuel-efficient standard 90-hp FourStroke outboard power.",
+          "Equally, well suited to summer picnic cruising or fishing near shore for halibut or rockfish, the 170 Montauk does it all superbly."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Boston Whaler's",
+          "Boston Whaler"
+        ],
+        "measures": [],
+        "description": "There's nothing like a classic. The 170 Montauk embodies the timeless look of Boston Whaler's past, with simple lines, low-maintenance construction and pristine finish, while embracing new and modern craftsmanship like quiet-running, fuel-efficient standard 90-hp FourStroke outboard power. Sport fishermen and pleasure cruisers alike will enjoy the 170 Montauk's modified-V hull, which ensures quick planing and a smooth, dry ride. It's no coincidence you see Boston Whaler hanging off the back of luxury motor yachts in many exotic ports. The 170 Montauk is “the” boat in their line-up that made whaler such an iconic brand in boating. Equally, well suited to summer picnic cruising or fishing near shore for halibut or rockfish, the 170 Montauk does it all superbly. No other 17' boat is as seaworthy or comfortable. Have your favorite summer playlist ready to use with the onboard Bluetooth sound system. If you would like to reserve more than one boat at a time, please give us a call.",
+        "detailsText": "90hp • Max 5 people or 950lbs 90hp • Max 5 people or 950lbs",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "656842",
+        "provider": "marinadelreyboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marinadelreyboatrentals/items/656842/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "656850",
+    "company": "marinadelreyboatrentals",
+    "title": "13 foot Boston Whaler",
+    "operator": "Marina Del Rey Boat Rentals",
+    "publicPath": "/destinations/california/marina-del-rey/tours/13-foot-boston-whaler-656850",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. An outboard of about 40 horsepower is fitted on the stern. Fishing is not allowed on this smaller boat. The posted capacity is 3 people.",
+      "Fuel for the rental period is included in the booking. This smaller boat is limited to the harbor and does not go outside it. A bimini top provides shade over the seats. The seats swivel, which is part of how the boat is set up for new drivers.",
+      "People remain on the boat for the rental."
+    ],
+    "schemaDescription": "A 1- to 8-hour walking tour with Marina Del Rey Boat Rentals in Marina del Rey.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1- to 8-hour walking tour in Marina del Rey",
+      "Model Name: 130 Super Sport"
+    ],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
+    "wordCount": 104,
+    "durationLabel": "1-8 Hours",
+    "durationIso": null,
+    "meetingLocation": "13717 Fiji Way Marina del Rey, CA 90292",
+    "visiblePriceLabel": "From $143.10",
+    "priceRows": [
+      {
+        "label": "One and a Half Hour Rental",
+        "note": "",
+        "amountLabel": "$143.10"
+      },
+      {
+        "label": "Two Hour Rental",
+        "note": "",
+        "amountLabel": "$181.26"
+      },
+      {
+        "label": "Two and a Half Hour Rental",
+        "note": "",
+        "amountLabel": "$215.18"
+      },
+      {
+        "label": "Three Hour Rental",
+        "note": "",
+        "amountLabel": "$243.80"
+      },
+      {
+        "label": "Three and a Half Hour Rental",
+        "note": "",
+        "amountLabel": "$267.12"
+      },
+      {
+        "label": "Four Hour Rental",
+        "note": "",
+        "amountLabel": "$286.20"
+      },
+      {
+        "label": "Eight Hour Rental",
+        "note": "",
+        "amountLabel": "$534.24"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "143.10",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656850/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Marina del Rey",
+      "state": "California",
+      "citySlug": "marina-del-rey",
+      "stateSlug": "california",
+      "reason": "Marina del Rey, California belongs to the Marina del Rey area via meeting_point",
+      "place": {
+        "city": "Marina del Rey",
+        "state": "California",
+        "stateAbbr": "ca",
+        "citySlug": "marina-del-rey",
+        "stateSlug": "california",
+        "raw": "Marina del Rey, CA",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Marina del Rey",
+          "state": "California",
+          "stateAbbr": "ca",
+          "citySlug": "marina-del-rey",
+          "stateSlug": "california",
+          "raw": "Marina del Rey, CA",
+          "source": "meeting_point",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/AbWLMKlHTvWLTPo4oywf",
+      "heroHandle": "AbWLMKlHTvWLTPo4oywf",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/marina-del-rey/marinadelreyboatrentals-656850",
+      "fetchedAt": "2026-10-02T22:44:14.311152+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656850/content/",
+          "status": 200,
+          "bytes": 3518,
+          "sha256": "40f14623670ad4660fca7e2e304622395cb36f71aeb8b5f13854e5b483a2fa28"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marinadelreyboatrentals/656850/structured-description/",
+          "status": 200,
+          "bytes": 2679,
+          "sha256": "4ba70bc3eeb5ad4898d9c4ae7347adc4be38e40761365e711be084d914286ad3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656850/",
+          "status": 200,
+          "bytes": 7470,
+          "sha256": "354d53fde5dea4e8a6e903d2064e7ff913d4667df58d6de77065bcf71de92e6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marinadelreyboatrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=656850&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1387,
+          "sha256": "1b8c372821c59a6f56eb64762bab2a2b8cb0bfdca058581c2884bc280255d090"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marinadelreyboatrentals/items/656850/ratings/",
+          "status": 200,
+          "bytes": 457,
+          "sha256": "9895f6fc04d02f896cf4260a1eddc6ec164eeb556873ff8fb5449e0315e5bff9"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "One and a Half Hour Rental",
+          "note": "",
+          "amount": 143.1
+        },
+        "customerTypes": [
+          {
+            "singular": "One and a Half Hour Rental",
+            "note": "",
+            "amount": 143.1
+          },
+          {
+            "singular": "Two Hour Rental",
+            "note": "",
+            "amount": 181.26
+          },
+          {
+            "singular": "Two and a Half Hour Rental",
+            "note": "",
+            "amount": 215.18
+          },
+          {
+            "singular": "Three Hour Rental",
+            "note": "",
+            "amount": 243.8
+          },
+          {
+            "singular": "Three and a Half Hour Rental",
+            "note": "",
+            "amount": 267.12
+          },
+          {
+            "singular": "Four Hour Rental",
+            "note": "",
+            "amount": 286.2
+          },
+          {
+            "singular": "Eight Hour Rental",
+            "note": "",
+            "amount": 534.24
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-03T09:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1-8 Hours",
+        "meetingAddress": "13717 Fiji Way Marina del Rey, CA 90292",
+        "itemLocation": null,
+        "headline": "40hp • Max 3 people or 500 lbs",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "Model Name: 130 Super Sport",
+          "3 persons or 500 lbs maximum limit",
+          "Due to its small size, this vessel is only allowed inside the harbor",
+          "40 hp motor",
+          "No fishing allowed in this vessel",
+          "Fuel included in price"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Boston Whaler"
+        ],
+        "measures": [],
+        "description": "Our smallest power boat in our fleet makes up for its size in big fun and ease of use, perfect for a couple and/or a couple and two small children. This boat is very easy for the novice to learn how to operate a powerboat for the first time. Comes with comfortable swiveling seats and a bimini top to protect you from sun. The 13ft. Boston Whaler is only allowed inside the harbor, if you want to explore outside the harbor please see our 17ft. Boston Whaler or 21ft. Grady White. If you would like to reserve more than one boat at a time, please give us a call.",
+        "detailsText": "40hp • Max 3 people or 500 lbs 40hp • Max 3 people or 500 lbs",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "656850",
+        "provider": "marinadelreyboatrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marinadelreyboatrentals/items/656850/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

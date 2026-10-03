@@ -1,0 +1,47 @@
+{
+  "company": "divecalifornia",
+  "itemId": "226915",
+  "fetchedAt": "2026-10-02T22:40:50.479665+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/divecalifornia/226915/content/",
+      "status": 200,
+      "bytes": 9845,
+      "sha256": "e7f64560c8be6f2f1e5e1078b445c534d658f9ecc6e4c163b32bb4ef468ce944"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/divecalifornia/226915/structured-description/",
+      "status": 200,
+      "bytes": 5059,
+      "sha256": "610aa0272c29d77b47d471dff9bd346cff98767393845637210144d3b492d820"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/divecalifornia/items/226915/",
+      "status": 200,
+      "bytes": 18309,
+      "sha256": "dcf89ed51ece241174407bae3fe95834992c0f42a94ad735b59150b34133a9ff"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/divecalifornia/price-preview/per-item/v2/?asn=fhdn&item_pks=226915&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/divecalifornia/items/226915/ratings/",
+      "status": 200,
+      "bytes": 484,
+      "sha256": "5521257b9a29dcd3b83fbc4ae2ccd134d4ef02f050ecdc1d7924a460c746e267"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "226915",
+    "provider": "divecalifornia",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

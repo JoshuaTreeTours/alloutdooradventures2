@@ -1,0 +1,444 @@
+{
+  "fetchedAt": "2026-10-02T22:43:53.089806+00:00",
+  "citySlug": "calistoga",
+  "totalBostonLegacy": 6,
+  "total": 6,
+  "active": 6,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 6,
+  "priceNotFound": 0,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "542597",
+      "company": "calistogabikeshop2",
+      "catalogId": "calistoga-bikeshop-542597",
+      "slug": "road-bike-tours-542597",
+      "title": "Road Bike Tours",
+      "operator": "Calistoga Bikeshop",
+      "publicPath": "/destinations/california/calistoga/tours/road-bike-tours-542597",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542597/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/uXsZMOpBSeysfdYNFUU2"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:47.837606+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542597/content/",
+          "status": 200,
+          "bytes": 2998,
+          "sha256": "6e1d1f5157cef7d380dcca311d410d86afde84381b6de41a831d60b1299dc33d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542597/structured-description/",
+          "status": 200,
+          "bytes": 1848,
+          "sha256": "d80d02dd3100924dff76116b2601f2d4ea5669f5a5414b8b6b87d79177f65e49"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542597/",
+          "status": 200,
+          "bytes": 8778,
+          "sha256": "b32b462999db6efa2a9f1bc7779e13c09915b8c66dcb7a47415b8ed029f1ddd1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542597&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1524,
+          "sha256": "8f0a7062f1ef44f512facf87248ed0b9c8d2e1e25ae16233d0086a7dcca5162c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542597/ratings/",
+          "status": 200,
+          "bytes": 426,
+          "sha256": "4286a31d95f4e73f1f6cf10d7fb9853eafb0806a8e063f5274558e609eb5b8d8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "542597",
+        "provider": "calistogabikeshop2",
+        "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542597/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 211.99,
+        "currency": "USD",
+        "singular": "Specialized Ruby 49cm"
+      }
+    },
+    {
+      "itemId": "542598",
+      "company": "calistogabikeshop2",
+      "catalogId": "calistoga-bikeshop-542598",
+      "slug": "e-mountain-bike-tours-542598",
+      "title": "E-Mountain Bike Tours",
+      "operator": "Calistoga Bikeshop",
+      "publicPath": "/destinations/california/calistoga/tours/e-mountain-bike-tours-542598",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542598/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:47.838565+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542598/content/",
+          "status": 200,
+          "bytes": 3422,
+          "sha256": "edc1280a1cc111590405f7e9f094a3650ecb541b3875d19aaa7e05199b06b2c2"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542598/structured-description/",
+          "status": 200,
+          "bytes": 2266,
+          "sha256": "f05bb987200e154b00ae5fd2301e94c0377b02b7dfecfb35622847dfc74d5f95"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542598/",
+          "status": 200,
+          "bytes": 9213,
+          "sha256": "a1c32c3016db4bf6eb86ca1df910fd279368684dd4bf782841a50b1ef8c012b9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542598&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1058,
+          "sha256": "a54b27d1d8164200cccb039a88408ca2d69a52eca78f8fde6e2d4e8d7bb1949a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542598/ratings/",
+          "status": 200,
+          "bytes": 433,
+          "sha256": "a816d7f560d2aece4784959535c5e12e647a78d9d0a42c40dc802f5ed5000151"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "542598",
+        "provider": "calistogabikeshop2",
+        "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542598/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 264.99,
+        "currency": "USD",
+        "singular": "Specialized Turbo Levo 2"
+      }
+    },
+    {
+      "itemId": "542601",
+      "company": "calistogabikeshop2",
+      "catalogId": "calistoga-bikeshop-542601",
+      "slug": "cool-wine-tour---1-tasting-542601",
+      "title": "Cool Wine Tour - 1 Tasting",
+      "operator": "Calistoga Bikeshop",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---1-tasting-542601",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542601/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:47.839193+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542601/content/",
+          "status": 200,
+          "bytes": 4285,
+          "sha256": "fac097f967e76bf6a088b4e817448a7d231beedde27963f990d148ea4ae63605"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542601/structured-description/",
+          "status": 200,
+          "bytes": 3126,
+          "sha256": "3c1e1522329e8fa2d46b2326c9268f073d123b91f07a363331169678f463f73d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542601/",
+          "status": 200,
+          "bytes": 10098,
+          "sha256": "2cc62f50c61aab6b759c8653065fb78b4418da198f68216118132a0081e24b2b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542601&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 2378,
+          "sha256": "4c47db985a2c78ccc87ea252c40907440fef40bd5e609723445e1e94665a0411"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542601/ratings/",
+          "status": 200,
+          "bytes": 438,
+          "sha256": "6568edf0191a4254af4ec11392a747d2828877b3942403902e21dd3bbece3f90"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "542601",
+        "provider": "calistogabikeshop2",
+        "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542601/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 100.69,
+        "currency": "USD",
+        "singular": "Comfort Bike - Step Through - Small"
+      }
+    },
+    {
+      "itemId": "542603",
+      "company": "calistogabikeshop2",
+      "catalogId": "calistoga-bikeshop-542603",
+      "slug": "cool-wine-tour---2-tastings-542603",
+      "title": "Cool Wine Tour - 2 Tastings",
+      "operator": "Calistoga Bikeshop",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---2-tastings-542603",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542603/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:47.839391+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542603/content/",
+          "status": 200,
+          "bytes": 4293,
+          "sha256": "02d21a1f070e53eff702fd90c75bd87df530766bfbcad81ff72044bb62b53609"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542603/structured-description/",
+          "status": 200,
+          "bytes": 3133,
+          "sha256": "6cfe03da5f2dc28f1e1812a8c2192008dca9ec402d9449cf651284e5ffdc844a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542603/",
+          "status": 200,
+          "bytes": 10108,
+          "sha256": "3ae6223df244c5d60266ff7154c7d7942bb5bc61e1350b936433e01fb0bb6a19"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542603&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 2378,
+          "sha256": "ec042b5fe19410ceefe6609d8ad8cef745bfe202d127c8502ef3525a86d84dcd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542603/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "d1aac19513a8c804f82eeb73895a65db18aa343ba29e32c8352dd10235c885af"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "542603",
+        "provider": "calistogabikeshop2",
+        "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542603/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 100.69,
+        "currency": "USD",
+        "singular": "Comfort Bike - Step Through - Small"
+      }
+    },
+    {
+      "itemId": "542604",
+      "company": "calistogabikeshop2",
+      "catalogId": "calistoga-bikeshop-542604",
+      "slug": "cool-wine-tour---3-tastings-542604",
+      "title": "Cool Wine Tour - 3 Tastings",
+      "operator": "Calistoga Bikeshop",
+      "publicPath": "/destinations/california/calistoga/tours/cool-wine-tour---3-tastings-542604",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542604/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:50.205846+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542604/content/",
+          "status": 200,
+          "bytes": 4296,
+          "sha256": "84ec4813244ab4bebacba5b5b43e6f54ba768f0d00479392a30bc55432c64d3c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/calistogabikeshop2/542604/structured-description/",
+          "status": 200,
+          "bytes": 3135,
+          "sha256": "786168a5289f2f4f789f37491b27753c039b89d52e9f57867f364d83f5cae546"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542604/",
+          "status": 200,
+          "bytes": 10104,
+          "sha256": "ad54def781ed38b52087c1cd5bda8d106181a8e0ce41175888a52ad3cfed9536"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/calistogabikeshop2/price-preview/per-item/v2/?asn=fhdn&item_pks=542604&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1792,
+          "sha256": "f6efa417f8ee8891b31d0507d10f856e6cd271831797316a98b03146b29ef1cd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/calistogabikeshop2/items/542604/ratings/",
+          "status": 200,
+          "bytes": 438,
+          "sha256": "7ed0e4a025fb2845c1fca6018022fbe9d1284d4018bb105569ffa9c304776cc2"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "542604",
+        "provider": "calistogabikeshop2",
+        "bookingUrl": "https://fareharbor.com/embeds/book/calistogabikeshop2/items/542604/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 100.69,
+        "currency": "USD",
+        "singular": "Comfort Bike - Step Through - Small"
+      }
+    },
+    {
+      "itemId": "29207",
+      "company": "getawayadventures",
+      "catalogId": "getaway-adventures-29207",
+      "slug": "calistoga-sip-n-cycle-29207",
+      "title": "Calistoga Sip N' Cycle",
+      "operator": "Getaway Adventures",
+      "publicPath": "/destinations/california/calistoga/tours/calistoga-sip-n-cycle-29207",
+      "destination": {
+        "state": "California",
+        "stateSlug": "california",
+        "city": "Calistoga",
+        "citySlug": "calistoga",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/getawayadventures/items/29207/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw"
+      ],
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-02T22:43:50.468114+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29207/content/",
+          "status": 200,
+          "bytes": 3532,
+          "sha256": "e196632737efcfb19fc594fe3cfd6d97b5e8961c19fb331cc76c4d0e0162c623"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/getawayadventures/29207/structured-description/",
+          "status": 200,
+          "bytes": 2216,
+          "sha256": "bff8246456570d0eb8812cdf554a527581d5dd8dc8550d04f16fce628b5960a7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29207/",
+          "status": 200,
+          "bytes": 13614,
+          "sha256": "6da2e3cdc52704a37187caf79e5c40465f55a33fc6f3f95f681d425b8c6a8095"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/getawayadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=29207&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 816,
+          "sha256": "26b389a54caffd640f6af623b1a8e61c290e970f585fb65e54796de533a7ab4d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/getawayadventures/items/29207/ratings/",
+          "status": 200,
+          "bytes": 484,
+          "sha256": "149d5d7259e0292966386ea9a5c77f9e2d92d875a753d0fe5391582fbdd58f0f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "29207",
+        "provider": "getawayadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/getawayadventures/items/29207/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 265.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    }
+  ]
+}

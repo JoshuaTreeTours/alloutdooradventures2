@@ -1,0 +1,382 @@
+{
+  "fetchedAt": "2026-10-02T22:43:37.122098+00:00",
+  "total": 8,
+  "products": [
+    {
+      "company": "beachebiking",
+      "itemId": "478885",
+      "fetchedAt": "2026-10-02T22:43:30.765510+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478885/content/",
+          "status": 200,
+          "bytes": 3000,
+          "sha256": "fc3c8e569c8b2a2ada16d741d96065faf1059e3eab8fc3cdda315774ee586a51"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478885/structured-description/",
+          "status": 200,
+          "bytes": 2405,
+          "sha256": "6fd2ef9234155384fbf6a975df2c999d6325770408b06d8c84745c506743002f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478885/",
+          "status": 200,
+          "bytes": 12407,
+          "sha256": "168eb9724dd047cf44f3088eb122338faa371966d691b5d0d437630bf0d0ae6a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478885&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 877,
+          "sha256": "084f5c1f09940876533f9a21b0233937865e498e85d16b71edfb9e4917de632f"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478885/ratings/",
+          "status": 200,
+          "bytes": 472,
+          "sha256": "e2ffa9baf26395f009a93b503b9f73666e1c32d9803f56d2a9d0e0e73f7b416e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478885",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478885/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "478891",
+      "fetchedAt": "2026-10-02T22:43:30.769813+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478891/content/",
+          "status": 200,
+          "bytes": 3018,
+          "sha256": "e391553011bb781d90baca1c06c795383bcda179d2e1061a5f9e2772058651d1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478891/structured-description/",
+          "status": 200,
+          "bytes": 2426,
+          "sha256": "f4c66958127ddec32279ac410e783caa704311bbe05b46ec0407c5cc4631a61a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478891/",
+          "status": 200,
+          "bytes": 12654,
+          "sha256": "57e0585f5f79209ce477ad1ccf10fb298d01ad16e83539cf7d598f8c0c9282d1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478891&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 877,
+          "sha256": "8fdf8c95cc3e57d72bdb0e9331118433a572b2a067e86da59a819a3e1ea9b2d3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478891/ratings/",
+          "status": 200,
+          "bytes": 469,
+          "sha256": "7f83e7af372224b74d4978eecf663448a319267d59bfe651d03a14018fec1b9a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478891",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478891/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "478894",
+      "fetchedAt": "2026-10-02T22:43:30.775772+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478894/content/",
+          "status": 200,
+          "bytes": 3051,
+          "sha256": "44df1a233d554d81a0eb083cb2bfbd60939025c2f546885ae080ef52ef8b9733"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478894/structured-description/",
+          "status": 200,
+          "bytes": 2519,
+          "sha256": "877f03b410d9cdaedb9b49259eb8e03c0d9ec8b75c231946e634a5da335c143f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478894/",
+          "status": 200,
+          "bytes": 12052,
+          "sha256": "b6375f2099794a85440fc5882894a97a937a79da3d8de52c65974b7c0f23097d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478894&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "50e7d36d0cbc9eb95d4bd53ffcd3b428ed43d30138f4957de5dd3b936dc046d1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478894/ratings/",
+          "status": 200,
+          "bytes": 463,
+          "sha256": "e85636a69de0c20015f802ad25596b4a6180e2fbf07f3930b54c64fa85b6a2bb"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478894",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478894/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "478898",
+      "fetchedAt": "2026-10-02T22:43:30.777094+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478898/content/",
+          "status": 200,
+          "bytes": 3491,
+          "sha256": "a3b7422e1d2924b25b6a0b12054dd420273ff116bb36ea25f884e08eae38a53e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478898/structured-description/",
+          "status": 200,
+          "bytes": 2708,
+          "sha256": "1ec91af216a1ae765c5631c88331291bcf74493602b641494c29373d3eac2b4d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478898/",
+          "status": 200,
+          "bytes": 15040,
+          "sha256": "ee171741034d9bdf1c79a963ebe1a6c559e666c0189688bf16c7cb6be62ff862"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478898&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "9baa8ca231c15d3602a117ff9f30a2805642e3679bc9cfe9d658fddd35e0bac4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478898/ratings/",
+          "status": 200,
+          "bytes": 488,
+          "sha256": "10be6b7cbb233a8cbf0dac8de86fe7beafa039b318d1515c3a441847910a010c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478898",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478898/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "478902",
+      "fetchedAt": "2026-10-02T22:43:33.022562+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478902/content/",
+          "status": 200,
+          "bytes": 3340,
+          "sha256": "8a0056b465a266d90030f6767329872d52b9e86ceffca6ef46d748e5167535a1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478902/structured-description/",
+          "status": 200,
+          "bytes": 2695,
+          "sha256": "e3f0bf0372b6e5ce289d11530633d95672a92fc3d36531fd3ec46a201c689dcf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478902/",
+          "status": 200,
+          "bytes": 13283,
+          "sha256": "ff5a7d068daa1fdf1155bb06693d0ef53a44a8d2346fee8df94f516159f40471"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478902&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "afd04c52b347ed1f2ec719d59a3c60486f2fe637856a2d8513e0dee0d7400634"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478902/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "a46e7bda6fd54d27e303bb98a4bc75aee04760aa53c09d2b6924e4296c97629e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478902",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478902/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "478908",
+      "fetchedAt": "2026-10-02T22:43:33.107878+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478908/content/",
+          "status": 200,
+          "bytes": 3032,
+          "sha256": "a76ffb85411081a149c41a6516b7b28fa14b0473bb7cff9a9cec49282c881383"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/478908/structured-description/",
+          "status": 200,
+          "bytes": 2672,
+          "sha256": "e58635f4df66f2b94635293d38575264e25bd8e5c1f1598b36c6eab122458634"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478908/",
+          "status": 200,
+          "bytes": 9718,
+          "sha256": "3bc9eff33908696f0194bf0b906e5272060b741ef35e94962be09e5a251fc753"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=478908&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "9372b19afdb48e07056505c83698c3199ec8b750872829c3e22ff546975d0372"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/478908/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "e9f3f41fccdd1b17d99083bf61e57826cf3d2fd8ec69eea29d744a86c7b8d311"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478908",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/478908/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "479100",
+      "fetchedAt": "2026-10-02T22:43:33.265215+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479100/content/",
+          "status": 200,
+          "bytes": 3082,
+          "sha256": "12a6772b86c7c291f1ed040d951cc78ac08b7d87113316cf796f2e7e619ebcd0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479100/structured-description/",
+          "status": 200,
+          "bytes": 2665,
+          "sha256": "0f542b314eb2e1ef473132d8ab5f43c8a18980e60148d7e243042960b5c227ab"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479100/",
+          "status": 200,
+          "bytes": 10395,
+          "sha256": "0a0c10393d15e6ec44b886d1ad10d7d8e9b3178f6eeb6c9cf59c474845801425"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=479100&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "27c6e90ef1d76d471c725e9720aeffa6950513219ea9698348ea9803a3208c66"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479100/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "0c558654aa627c2dbb16829f7c2830ef1a367cc881fbeafb54ba0a878234dd71"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "479100",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/479100/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "beachebiking",
+      "itemId": "479103",
+      "fetchedAt": "2026-10-02T22:43:33.321550+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479103/content/",
+          "status": 200,
+          "bytes": 3084,
+          "sha256": "0350062dd36e71cd1e91fa63630800c4aac83dd6af95c714c6e32c2a969d57c0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/beachebiking/479103/structured-description/",
+          "status": 200,
+          "bytes": 2667,
+          "sha256": "dc47df63183db0c09ce26931a4ab74ede18d05559d6ad1f5ea31e023c399c8ac"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479103/",
+          "status": 200,
+          "bytes": 10638,
+          "sha256": "3a92a405a4bad14dd02c98b53c18494d0b6ecf6dd6efb505f88d1c74ad6ee8a2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/beachebiking/price-preview/per-item/v2/?asn=fhdn&item_pks=479103&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 880,
+          "sha256": "32fbeae2610e35b51509c3842fed04f42f16fc9e9b9e4a0b0c935013be0ae14e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/beachebiking/items/479103/ratings/",
+          "status": 200,
+          "bytes": 466,
+          "sha256": "5e3245c80563426d4c1fa131c388196d16723312c25495052035b29e60838671"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "479103",
+        "provider": "beachebiking",
+        "bookingUrl": "https://fareharbor.com/embeds/book/beachebiking/items/479103/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

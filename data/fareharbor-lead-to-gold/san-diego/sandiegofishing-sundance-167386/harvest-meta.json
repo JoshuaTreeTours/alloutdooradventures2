@@ -1,0 +1,47 @@
+{
+  "company": "sandiegofishing-sundance",
+  "itemId": "167386",
+  "fetchedAt": "2026-10-02T22:41:54.144920+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/sandiegofishing-sundance/167386/content/",
+      "status": 200,
+      "bytes": 4961,
+      "sha256": "6e9807559983dc39a47b08cfeb453ec239732e4fdaeaee8548087224e6f52463"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/sandiegofishing-sundance/167386/structured-description/",
+      "status": 200,
+      "bytes": 3274,
+      "sha256": "99014a0bcba626b96bd24bffcc1a7e1da19a38afc932ac6b1151860d381a181a"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/sandiegofishing-sundance/items/167386/",
+      "status": 200,
+      "bytes": 13918,
+      "sha256": "d06e0f746077f24963912361acf901c6fef0c34586e7284aac4b5d32877b8a30"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/sandiegofishing-sundance/price-preview/per-item/v2/?asn=fhdn&item_pks=167386&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 226,
+      "sha256": "b92ce5d3c2673147df3232c103ea244ee014034d3787c08b5eef0b3b92b79ffc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/sandiegofishing-sundance/items/167386/ratings/",
+      "status": 200,
+      "bytes": 486,
+      "sha256": "5b1527da285ff7c521752b6678a6c46e4ddf47f33c4488f1698f47053fca3c2f"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "167386",
+    "provider": "sandiegofishing-sundance",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-sundance/items/167386/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

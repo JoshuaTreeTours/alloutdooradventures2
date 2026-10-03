@@ -1,0 +1,47 @@
+{
+  "company": "mattarellocooking",
+  "itemId": "631718",
+  "fetchedAt": "2026-10-02T22:41:19.066595+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/mattarellocooking/631718/content/",
+      "status": 200,
+      "bytes": 2736,
+      "sha256": "8ab45d5c4844a4b2ae3ce94e2637a735ee3c0ab12db1fec42d0d86ea145d3ec8"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/mattarellocooking/631718/structured-description/",
+      "status": 200,
+      "bytes": 2167,
+      "sha256": "a0be583487706f11ac2760fc612b374ba699c0474e6d117eed7f6a6396d6f86c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/mattarellocooking/items/631718/",
+      "status": 200,
+      "bytes": 10730,
+      "sha256": "a861013949a4252393a5430289eb38f607ea50933cae2c90fe49c38992057aa9"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/mattarellocooking/price-preview/per-item/v2/?asn=fhdn&item_pks=631718&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 227,
+      "sha256": "cf4c4dd801624a5ae67c22a639558369e34c91f19f8f995a8510854d3528a2bd"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/mattarellocooking/items/631718/ratings/",
+      "status": 200,
+      "bytes": 515,
+      "sha256": "434dbd223329efe6ffaadcbc2775717f4f09b9b2a194e0cb2fe1f779a222b0a2"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "631718",
+    "provider": "mattarellocooking",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/631718/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

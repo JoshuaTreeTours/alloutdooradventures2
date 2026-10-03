@@ -1,0 +1,47 @@
+{
+  "company": "graveline",
+  "itemId": "680529",
+  "fetchedAt": "2026-10-02T19:39:55.789681+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/graveline/680529/content/",
+      "status": 200,
+      "bytes": 9845,
+      "sha256": "30bbe871d1f30a90d3fd0893e11ea6a308238387fb68832e0eb66ed611b71db9"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/graveline/680529/structured-description/",
+      "status": 200,
+      "bytes": 5822,
+      "sha256": "7769a5b4bd9b52f9520afe967244a674ec686c6031d1fcf37cbd1d4cbcb47c10"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/graveline/items/680529/",
+      "status": 200,
+      "bytes": 16112,
+      "sha256": "ab287a906ca956e276a7365e65aa86c0f28b9a9602b0bdb82b3ba8d9d9ac0f9e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/graveline/price-preview/per-item/v2/?asn=fhdn&item_pks=680529&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 523,
+      "sha256": "fe7be62cd2f2939255a285558c078cf49cb2587b525d0f377f4dcc80d3d52cd6"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/graveline/items/680529/ratings/",
+      "status": 200,
+      "bytes": 440,
+      "sha256": "20f14ca52f1806b040fcbf2370a8406b1ac4a49119a539f30f0b67d3f6c3cc61"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "680529",
+    "provider": "graveline",
+    "bookingUrl": "https://fareharbor.com/embeds/book/graveline/items/680529/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

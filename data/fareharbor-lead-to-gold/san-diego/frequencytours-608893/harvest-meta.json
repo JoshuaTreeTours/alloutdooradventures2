@@ -1,0 +1,47 @@
+{
+  "company": "frequencytours",
+  "itemId": "608893",
+  "fetchedAt": "2026-10-02T22:41:00.722027+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/frequencytours/608893/content/",
+      "status": 200,
+      "bytes": 3022,
+      "sha256": "d99c4a404a3b903ceb76c463b1683a26759aff642514d625f1c9d8729374024f"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/frequencytours/608893/structured-description/",
+      "status": 200,
+      "bytes": 2421,
+      "sha256": "1a136fbce8d67d1f380e937448052c90d9ec1db5bffb34ab2919dade4ea454e4"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/frequencytours/items/608893/",
+      "status": 200,
+      "bytes": 11220,
+      "sha256": "f4b062d95c4965a44689992c38fa71e2101087b0131fd3e4be8ca84917859c96"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/frequencytours/price-preview/per-item/v2/?asn=fhdn&item_pks=608893&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 533,
+      "sha256": "bb9ecd69d9bec31a30378fc3aa9794ccac5ede182aed2d2042527ecc987e5406"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/frequencytours/items/608893/ratings/",
+      "status": 200,
+      "bytes": 445,
+      "sha256": "421bd45d10b8df327d3d109a70888a5c96667a20778340a62979e614f3dedf46"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "608893",
+    "provider": "frequencytours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/frequencytours/items/608893/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}
