@@ -11,9 +11,7 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests hear about Good Trip Adventures. Guests come to Good Trip Adventures, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
-      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
-      "Seeing the place and hearing the reason for it are the whole visit."
+      "The commentary takes up Good Trip Adventures and Pohono Trail. That same account stays with Tunnel View and Bridalveil Falls. Cook's Meadow and Mirror Lake are part of the same story. The route keeps Curry Village and Yosemite Falls in view."
     ],
     "schemaDescription": "A 6- to 8-hour guided outing with Good Trip Adventures - California in Oakhurst.",
     "highlights": [
@@ -24,7 +22,7 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
     ],
     "productImage": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
-    "wordCount": 107,
+    "wordCount": 41,
     "durationLabel": "6-8 hours",
     "durationIso": null,
     "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",

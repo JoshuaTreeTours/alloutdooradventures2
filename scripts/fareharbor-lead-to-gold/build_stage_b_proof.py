@@ -97,8 +97,10 @@ _SECTION_HEADING_RE = re.compile(
     r"not included|meeting(?:[ \t]+(?:point|place))?|location|pricing|price|"
     r"schedule|important details|see you soon|what to bring|what to expect|"
     r"additional information|cancellation(?:[ \t]+policy)?|restrictions|faqs?|"
-    r"special requirements|extras|disclaimers|accessibility"
-    r")[ \t]*(?=\n|$)"
+    r"special requirements|extras|disclaimers|accessibility|"
+    r"experience level|departure(?:[ \t]+location)?|expedition includes|"
+    r"important information|wildlife disclaimer|tips|what to wear|good to know|please note"
+    r")[ \t:]*(?=\n|$)"
 )
 _BARE_SECTION_LABEL_RE = re.compile(
     r"(?im)(?:^|\n)[ \t]*(duration|about|overview|details|highlights|information)[ \t]*(?=\n)"

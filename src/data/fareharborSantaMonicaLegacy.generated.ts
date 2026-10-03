@@ -13,7 +13,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The booking runs about 3 hours. The ride starts near the Santa Monica Pier.",
       "Riders continue on to the Venice Canals. The same route also passes through Marina del Rey. Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside.",
-      "Some guests ride pedal-assist bikes, and others ride ordinary bikes. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+      "Some guests ride pedal-assist bikes, and others ride ordinary bikes. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 3 hours."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
     "highlights": [
@@ -23,7 +23,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/KrOFAf0zSgWSZWZkGoaM"
     ],
     "productImage": "https://cdn.filestackcontent.com/yB81A1USTWy88t1OtaEb",
-    "wordCount": 131,
+    "wordCount": 146,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",
@@ -57,7 +57,8 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The booking runs about 3 hours. The ride starts near the Santa Monica Pier. Riders continue on to the Venice Canals. The same route also passes through Marina del Rey.",
-      "Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+      "Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking.",
+      "Guests ride electric bikes for this booking. Time on the bike is about 3 hours."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
     "highlights": [
@@ -67,7 +68,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/qnI3CEYBRiGSGGMnAZXZ"
     ],
     "productImage": "https://cdn.filestackcontent.com/HfGFL3BVQtOKjYPLZJfg",
-    "wordCount": 105,
+    "wordCount": 120,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1431 Ocean Ave Santa Monica, CA 90401",

@@ -45,8 +45,10 @@ from editorial_voice import (
     invented_food_walk_errors,
     load_editorial_sample,
     paragraphs_without_contrast,
+    is_structural_label,
     section_label_leak_errors,
     split_sentences,
+    template_artifact_errors,
     usable_regenerated_copy,
 )
 from source_priority import (
@@ -611,6 +613,7 @@ def extract_facts(
     included = []
     excluded = []
     itinerary = []
+    route_notes = []
     highlights = []
     restrictions = []
     bring = []
@@ -621,6 +624,11 @@ def extract_facts(
         item_excluded = list_values(payload.get("what_is_not_included_items"))
         excluded.extend(item_excluded or list_values(payload.get("what_is_not_included")))
         itinerary.extend(itinerary_stops(payload.get("itinerary")))
+        raw_itinerary = payload.get("itinerary")
+        if isinstance(raw_itinerary, str):
+            route_text = clean_text(raw_itinerary)
+            if word_count([route_text]) >= 8:
+                route_notes.append(route_text)
         highlights.extend(list_values(payload.get("highlights")))
         restrictions.extend(restriction_lines(payload.get("restrictions")))
         bring.extend(list_values(payload.get("what_to_bring_items") or payload.get("what_to_bring")))
@@ -647,6 +655,7 @@ def extract_facts(
         "included": unique(included)[:8],
         "excluded": unique(excluded)[:6],
         "itinerary": unique((authoritative or {}).get("itinerary") or itinerary)[:18],
+        "routeNotes": unique(route_notes)[:4],
         "highlights": unique(highlights)[:6],
         "restrictions": unique(restrictions)[:4],
         "bring": unique(bring)[:5],
@@ -804,6 +813,8 @@ def copy_is_grounded(
     if activity_contradiction_errors(paragraphs or [], title, description):
         return False
     if contrast_padding_errors([*(paragraphs or []), schema or ""], description):
+        return False
+    if template_artifact_errors(blobs):
         return False
     return word_count(paragraphs or []) >= 100
 
@@ -1048,12 +1059,21 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             if restored:
                 paragraphs, highlights, generated_schema = restored
             elif previous and previous.get("exceptionStatus") == "OK":
-                highlights = list(previous.get("highlights") or [])
+                previous_highlights = list(previous.get("highlights") or [])
+                if previous_highlights and not template_artifact_errors(previous_highlights) and not any(
+                    is_structural_label(item) for item in previous_highlights
+                ):
+                    highlights = previous_highlights
+                elif not previous_highlights:
+                    highlights = []
                 source_is_thin = not source_can_support_full_editorial(
                     authoritative, facts
                 )
-                if contrast_padding_errors(previous.get("paragraphs") or [], description) and (
-                    not usable_regenerated_copy(
+                previous_paragraphs = list(previous.get("paragraphs") or [])
+                if (
+                    contrast_padding_errors(previous_paragraphs, description)
+                    and not template_artifact_errors(previous_paragraphs)
+                    and not usable_regenerated_copy(
                         paragraphs,
                         catalog.get("title") or "",
                         description,
@@ -1091,15 +1111,19 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         else None
     )
     source_supports_full = source_can_support_full_editorial(authoritative, facts)
-    # A thin source keeps its grounded sentences. Padding them out to 100 words
-    # is what produced the repeated "not a town tour" contrasts.
-    publish_short = (
-        exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
-        and words < 100
-        and (not source_supports_full or short_grounded)
+    # A thin or fact-light source keeps its grounded sentences. Padding them
+    # out to 100 words is what produced template stops and fake contrasts.
+    description_text = facts.get("description") or ""
+    grounded_short = (
+        words < 100
         and words >= 20
         and bool(paragraphs)
-        and not contrast_padding_errors(paragraphs, facts.get("description") or "")
+        and not contrast_padding_errors(paragraphs, description_text)
+        and not template_artifact_errors(paragraphs)
+    )
+    publish_short = (
+        exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
+        and grounded_short
     )
     if (
         exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
@@ -1226,11 +1250,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         geography=geography,
         expected_city=dest.get("city") or CITY_NAME,
         prose_source=overlap_text,
-        allow_short=bool(
-            exception == "OK"
-            and words < 100
-            and (not source_supports_full or short_grounded)
-        ),
+        allow_short=bool(publish_short and exception == "OK"),
     )
     extra = []
     expected_city_slug = dest.get("citySlug") or CITY_SLUG
@@ -1252,11 +1272,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 "BOOKING_PAGE_NOT_FOUND",
                 "INSUFFICIENT_SOURCE_CONTENT",
             } else "",
-            allow_short=bool(
-                exception == "OK"
-                and word_count(product["paragraphs"]) < 100
-                and (not source_supports_full or short_grounded)
-            ),
+            allow_short=bool(publish_short and exception == "OK"),
         )
         extra.extend(voice_errors)
         extra.extend(
@@ -1690,6 +1706,24 @@ def write_discovery(harvest: dict) -> None:
     print(f"wrote {out}")
 
 
+CALIFORNIA_EDITORIAL_CITIES = {
+    "avalon",
+    "calistoga",
+    "coronado",
+    "del-mar",
+    "healdsburg",
+    "joshua-tree",
+    "laguna-beach",
+    "los-angeles",
+    "marina-del-rey",
+    "oakhurst",
+    "redondo-beach",
+    "san-diego",
+    "san-francisco",
+    "santa-monica",
+}
+
+
 def main() -> None:
     import sys
 
@@ -1700,6 +1734,12 @@ def main() -> None:
     catalog = {item["itemId"]: item for item in inventory(CITY_SLUG)["products"]}
     PREVIOUS_RUNTIME = load_previous_runtime()
     REGENERATE_ITEM_IDS = identical_prose_without_shared_source(PREVIOUS_RUNTIME, catalog)
+    if CITY_SLUG in CALIFORNIA_EDITORIAL_CITIES:
+        REGENERATE_ITEM_IDS.update(
+            item_id
+            for item_id, row in PREVIOUS_RUNTIME.items()
+            if row.get("exceptionStatus") == "OK"
+        )
     harvest = load_json(HARVEST_REPORT)
     booking = {
         item["itemId"]: item["bookingPageValidity"]

@@ -37,4 +37,4 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/healdsburg`.
 
 ## Manual review
 
-- `29272` `PRICE_NOT_FOUND` `/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich; experience copy is 25 words; rich FareHarbor source requires at least 100 words
+- `29272` `PRICE_NOT_FOUND` `/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 32 words; rich FareHarbor source requires at least 100 words

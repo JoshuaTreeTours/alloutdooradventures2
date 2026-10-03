@@ -11,14 +11,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The route also reaches Skull Rock and Arch Rock. Ohlsen Ranch and Cholla Cactus Garden are part of the same outing. Later the group comes to Cap Rock Nature Trail and Key's View. There is time to look at More Info. Attention also goes to Joshua Tree Classic and Cholla Garden, with the guide attaching a story to each stop.",
-      "Among the places guests actually encounter are Joshua Tree Classic, Cholla Garden, and Skull Rock. Later the guide turns to Arch Rock and Ohlsen Ranch, explaining what happened there. Guests come to Joshua Tree Classic and Cholla Garden, and they hear why those places are on the trip."
+      "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions. The outing starts at Cholla Garden. The group then visits Cholla Cactus Garden and Cap Rock Nature Trail."
     ],
-    "schemaDescription": "A 4.5-hour guided outing with Joshua Tree Excursions. The outing passes Cholla Garden, Cholla Cactus Garden, and Cap Rock Nature Trail.",
+    "schemaDescription": "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
-    "wordCount": 108,
+    "wordCount": 31,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": null,
@@ -47,14 +46,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The guide will then take guests on a drive through the most parts of the park, on-route to the hike/sightseeing for the day. Optional lunch on the trail before continuing the journey. All on the way, the expert guide will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
-      "Guests may even get in some rock scrambling toward the top of some of the rock formations for views and meets rarely had by others. After that, at the conclusion of the hike, time permitting, the guide will get guests to some of other popular sights in park before returning guests safely to the office or back to the lodging facility where guests relax and talk about the memories that guests have made, that will last a lifetime."
+      "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions. The outdoor route is about 1-6 miles. The outing reaches Joshua Tree National Park."
     ],
-    "schemaDescription": "A 6-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "schemaDescription": "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
-    "wordCount": 143,
+    "wordCount": 28,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -83,14 +81,14 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The guide will then take guests on a drive through the most parts of the park, on-route to the hike/Sightseeing for the day. Optional lunch on the trail before continuing the journey. All on the way, the expert guide will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
-      "Guests may even get in some rock scrambling toward the top of some of the rock formations for views and meets rarely had by others. After that, at the conclusion of the hike, time permitting, the guide will get guests to some of other popular sights in park before returning guests safely to the office or back to the lodging facility where guests relax and talk about the memories that guests have made, that will last a lifetime."
+      "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+      "The outdoor route is about 1-6 miles."
     ],
-    "schemaDescription": "A 6-hour guided outing with Joshua Tree Excursions.",
+    "schemaDescription": "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
-    "wordCount": 143,
+    "wordCount": 21,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": null,
@@ -119,14 +117,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The day combines a guided hike with time on the rock, after a drive to the trailhead. Most of the hiking leaves the maintained trail and crosses open ground. On the drive, the guide explains the park's geology and how the landscape formed. The climbing block includes a rappel on the formations.",
-      "A certified guide gives the climbing instruction before anyone leaves the ground. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Joshua Tree National Park. Guests come to Joshua Tree National Park, and they hear why it is on the trip."
+      "On the way, guests receive detailed narration on park, its history, and interesting geology to Joshua Tree. Once at the trailhead, the guide will lead guests on mostly off-trail adventure through Joshua Tree wilderness. The climbing experience includes professional instruction from the certified rock guide, and all necessary equipment.",
+      "After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
+      "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
     ],
-    "schemaDescription": "A guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "schemaDescription": "A 8-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
-    "wordCount": 102,
+    "wordCount": 130,
     "durationLabel": "8 hours",
     "durationIso": "PT8H",
     "meetingLocation": null,
@@ -286,14 +285,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. Outdoor seating includes a picnic table for meals on the site. Solar lights are inside for the evening hours.",
-      "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop."
+      "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
-    "wordCount": 104,
+    "wordCount": 80,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -337,8 +335,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
-      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
@@ -346,7 +343,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
     ],
     "productImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
-    "wordCount": 111,
+    "wordCount": 75,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -395,14 +392,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
-      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
-    "wordCount": 111,
+    "wordCount": 75,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -452,7 +448,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
       "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines. Also part of the same visit are Northern California and Phineas Fittipaldi.",
-      "Among the places guests actually encounter are Cascade Trails, Wiley Wines, and Northern California."
+      "Guests spend the booked time with the horses."
     ],
     "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [],
@@ -460,7 +456,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
     "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
-    "wordCount": 109,
+    "wordCount": 103,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",

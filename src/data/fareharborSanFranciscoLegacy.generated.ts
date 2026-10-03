@@ -11,9 +11,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. Riders cross the Golden Gate Bridge and watch the bay from the span.",
-      "Much of the riding is along the waterfront, with the bay alongside. The shuttle portion starts at Fisherman's Wharf. There is free time in Sausalito before the shuttle turns back. A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace.",
-      "A round-trip ferry is part of getting riders back. The booking runs about 3 hours. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+      "Guests experience one of San Francisco's adventures on guided bike tour from Fisherman's Wharf toward Sausalito. Finish in Sausalito alongside free time to browse shops and waterfront dining rooms. Sausalito - explore waterfront restaurants, cafés, and return options. Cross the Golden Gate Bridge with sweeping bay and city views.",
+      "Guided ride with local storytelling and multiple photo stops. Free time to explore the picturesque town of Sausalito. Tickets include Full-day bike use. The day moves through Bike fitting and safety orientation, Fisherman's Wharf waterfront, and Pass through the Marina District. Next come Tour ends in Sausalito ferry terminal, Taylor Street TOUR CENTER, and Old Fort Baker."
     ],
     "schemaDescription": "A three-hour bicycle outing with Bay City Bike. The outing passes Bike fitting and safety orientation, Fisherman's Wharf waterfront, and Pass through the Marina District.",
     "highlights": [
@@ -25,7 +24,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/UtPWgylITg6U8tyqaOY6"
     ],
     "productImage": "https://cdn.filestackcontent.com/MlBgeZ9KTJjEGjNdRos6",
-    "wordCount": 140,
+    "wordCount": 107,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": null,
@@ -83,9 +82,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The ride passes Alcatraz Island and Al Capone. Cyclists also come to North Beach and Oracle Park. Design District and La Mission are on the same loop. Later the route reaches Castro District and Harvey Milk Plaza.",
-      "Attention also goes to Polk Street and Fisherman's Wharf, with the guide attaching a story to each stop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Alcatraz Island, Al Capone, and North Beach.",
-      "Later the guide turns to Oracle Park and Design District, explaining what happened there."
+      "Alcatraz tour on the booked date; Bike tour next day at 11:00 AM. On the selected booking date, head toward Pier 33 to board ferry to Alcatraz Island, where guests explore the former federal penitentiary with the audio tour. Guests ride energy-saving e-bike that also makes hills easy as guests explore North Beach, cruise on waterfront toward Ferry Building, and pass Oracle Park and Design District.",
+      "Pedal through the Castro District, home toward Harvey Milk Plaza, and continue through Wiggle toward legendary Haight-Ashbury area, birthplace of Summer of Love. Finish tour with ride down Polk Street, ever-evolving neighborhood layered alongside history, before returning to Fisherman's Wharf. All riders' names must have been submitted alongside booking.",
+      "Ferry ride from Pier 33 with scenic bay views. Two-day experience: Alcatraz visit + full-city guided e-bike tour. Keep the bike after the tour until closing time."
     ],
     "schemaDescription": "A guided outing lasting 2 Days with Bay City Bike in San Francisco. The outing passes Ferry ride from Pier 33 with scenic bay views, Self-guided exploration of the island, and Historic prison visit and exhibits.",
     "highlights": [
@@ -97,7 +96,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/mB1wx7JISQOHd0zy20Tm"
     ],
     "productImage": "https://cdn.filestackcontent.com/1QxtclU7TtiEqeV7KWoh",
-    "wordCount": 112,
+    "wordCount": 149,
     "durationLabel": "2 Days",
     "durationIso": null,
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -132,7 +131,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "The day pairs a shuttle ride with time on a bike. The shuttle runs out to Muir Woods National Monument. Guests walk among the coastal redwoods while they are there. Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront, with the bay alongside.",
       "The shuttle portion starts at Fisherman's Wharf. There is free time in Sausalito before the shuttle turns back. Once the shuttle is done, the bike portion follows the Bay Trail. A helmet is included, and the shop fits the bike before departure. About 90 minutes are set aside inside the redwood grove.",
-      "The city bike portion is self-guided after the shuttle returns. The redwoods are why the shuttle goes out, and the bridge is the riding highlight. People stay with the bikes for the riding portion of the booking."
+      "The city bike portion is self-guided after the shuttle returns. The redwoods are why the shuttle goes out, and the bridge is the riding highlight. People stay with the bikes for the riding portion of the booking. Guests ride a rented bike for the day."
     ],
     "schemaDescription": "A 8-hour bicycle outing with Bay City Bike in San Francisco. The outing passes Ride along the waterfront to Golden Gate Bridge, Self-guided exploration in the city, and Golden Gate Bridge.",
     "highlights": [
@@ -144,7 +143,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Rtxf5NczTnKdLryuT0z9"
     ],
     "productImage": "https://cdn.filestackcontent.com/LtFc7vu6TcO5gyJbz6xb",
-    "wordCount": 145,
+    "wordCount": 153,
     "durationLabel": "8 Hours",
     "durationIso": "PT8H",
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -178,7 +177,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. Riders cross the Golden Gate Bridge and watch the bay from the span.",
-      "The same ride can take in both the park paths and the bridge. Much of the riding is along the waterfront, with the bay alongside. A helmet is included, and the shop fits the bike before departure. The operator presents the ride as suitable for beginners.",
+      "The same ride can take in both the park paths and the bridge. Much of the riding is along the waterfront, with the bay alongside. The shuttle portion starts at Fisherman's Wharf. A helmet is included, and the shop fits the bike before departure. The operator presents the ride as suitable for beginners.",
       "A round-trip ferry is part of getting riders back. The booking runs about 5 hours. The city bike portion is self-guided after the shuttle returns. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
     ],
     "schemaDescription": "A bicycle outing lasting 1 or 2 days with Bay City Bike in San Francisco. The outing passes Ferry ride from Pier 33 with scenic bay views, Self-guided exploration of the island, and Historic prison visit and exhibits.",
@@ -191,7 +190,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YaeKVk5sRvSZb9uj9Zr6"
     ],
     "productImage": "https://cdn.filestackcontent.com/5KlLVEpKQFCR2lAnnUNA",
-    "wordCount": 145,
+    "wordCount": 152,
     "durationLabel": "1 or 2 days",
     "durationIso": null,
     "meetingLocation": "2661 Taylor Street San Francisco, CA 94133",
@@ -224,9 +223,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes between the stops on this outing. Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront, with the bay alongside.",
-      "The shuttle portion starts at Fisherman's Wharf. A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. A round-trip ferry is part of getting riders back.",
-      "The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+      "A small private tour for the party and a dedicated guide as guests pedal from the Golden Gate Bridge toward sunny Sausalito. The experience is customized to the group with private guide who also provides personalized commentary and adapts route and information to the interests.",
+      "Sausalito - explore waterfront restaurants, cafés, and return options. Fixed scenic route with waterfront views and landmark stops. Tickets include Full-Day bike rental and Helmet, lock, and map. The day moves through Bike fitting and safety orientation, Fisherman's Wharf waterfront, and Pass through the Marina District.",
+      "Next come Tour ends in Sausalito ferry terminal."
     ],
     "schemaDescription": "A three-hour guided outing with Bay City Bike in San Francisco. The outing passes Bike fitting and safety orientation, Fisherman's Wharf waterfront, and Pass through the Marina District.",
     "highlights": [
@@ -238,7 +237,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/V1jNQUi7TW6gHznJVTfd"
     ],
     "productImage": "https://cdn.filestackcontent.com/OigHBImtTFqj90aW2xuX",
-    "wordCount": 120,
+    "wordCount": 100,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "2661 Taylor Street, San Francisco, CA 94133",
@@ -288,7 +287,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "A few optional stops leave time to step out for photographs and a closer look. Guests ride bikes between the stops on this outing. Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront, with the bay alongside.",
       "The shuttle portion starts at Fisherman's Wharf. A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. A round-trip ferry is part of getting riders back.",
-      "The booking runs about 3 hours. The city bike portion is self-guided after the shuttle returns. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking."
+      "The booking runs about 3 hours. The city bike portion is self-guided after the shuttle returns. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking. A guide rides with the group and can carry the gear.",
+      "Guests ride a rented bike for the day."
     ],
     "schemaDescription": "A guided outing lasting 2 Days with Bay City Bike in San Francisco. The outing passes Ferry ride from Pier 33 with scenic bay views, Self-guided exploration of the island, and Historic prison visit and exhibits.",
     "highlights": [
@@ -300,7 +300,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/QZUMQnSUW81MayWmY4Lg"
     ],
     "productImage": "https://cdn.filestackcontent.com/buHBr3TpS0dFLFrU9XBg",
-    "wordCount": 137,
+    "wordCount": 156,
     "durationLabel": "2 Days",
     "durationIso": null,
     "meetingLocation": null,
@@ -339,7 +339,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. Much of the riding is along the waterfront, with the bay alongside. A helmet is included, and the shop fits the bike before departure. A round-trip ferry is part of getting riders back. The city bike portion is self-guided after the shuttle returns.",
-      "People stay with the bikes for the riding portion of the booking. The ride passes Alcatraz Island and San Francisco Bay Cruise. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes, with pauses only where there is something to see or hear."
+      "People stay with the bikes for the riding portion of the booking. Guests ride a rented bike for the day. The ride passes Alcatraz Island and San Francisco Bay Cruise."
     ],
     "schemaDescription": "A 2.5- to 3-hour guided outing with San Francisco Tours and Activities.",
     "highlights": [
@@ -350,7 +350,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw"
     ],
     "productImage": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
-    "wordCount": 105,
+    "wordCount": 84,
     "durationLabel": "2.5-3 hours",
     "durationIso": null,
     "meetingLocation": "Pier 33, Fisherman's Wharf",
@@ -514,8 +514,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. The ride meets by Ghirardelli Square on Beach Street. The booking runs about 4 hours.",
-      "The redwoods are why the shuttle goes out, and the bridge is the riding highlight. People stay with the bikes for the riding portion of the booking. Cyclists also come to Ghirardelli Square and End Location Alamo Square. Painted Ladies and Grateful Dead are on the same loop.",
-      "Later the route reaches Janis Joplin and Lower Haight."
+      "The redwoods are why the shuttle goes out, and the bridge is the riding highlight. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 4 hours. Cyclists also come to Golden Gate Park and Ghirardelli Square.",
+      "Painted Ladies and Grateful Dead are on the same loop. Later the route reaches Janis Joplin and Lower Haight."
     ],
     "schemaDescription": "A four-hour bicycle outing with Unlimited Biking in San Francisco. The outing passes Golden Gate Park, Alamo Square, and Ghirardelli Square.",
     "highlights": [
@@ -524,7 +524,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
-    "wordCount": 105,
+    "wordCount": 119,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
@@ -559,7 +559,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park. A helmet is included, and the shop fits the bike before departure.",
       "A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking. The ride passes San Francisco and Hippie Hill.",
-      "Cyclists also come to Arboretum Botanical Gardens and Japanese Tea Gardens. Bison Paddock and Kids Bikes are on the same loop. Later the route reaches Daily Pricing and Tips Dress."
+      "Cyclists also come to Arboretum Botanical Gardens and Japanese Tea Gardens. Bison Paddock and Kids Bikes are on the same loop. Later the route reaches Daily Pricing."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in San Francisco. The outing passes Hippie Hill, Golden Gate Park, and San Francisco's Golden Gate Park.",
     "highlights": [
@@ -567,7 +567,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
-    "wordCount": 120,
+    "wordCount": 117,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1792 Haight St San Francisco, CA 94117",
@@ -611,7 +611,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The ride stays in Golden Gate Park, on the park's bike paths. The ride meets by Ghirardelli Square on Beach Street. The booking runs about 4 hours. The redwoods are why the shuttle goes out, and the bridge is the riding highlight.",
-      "People stay with the bikes for the riding portion of the booking. Cyclists also come to Golden Gate Park and Ghirardelli Square. End Location and Painted Ladies are on the same loop. Later the route reaches Grateful Dead and Janis Joplin. Attention also goes to Alamo Square and Silicon Valley, with the guide attaching a story to each stop."
+      "People stay with the bikes for the riding portion of the booking. Cyclists also come to Golden Gate Park and Ghirardelli Square. Painted Ladies and Grateful Dead are on the same loop. Later the route reaches Janis Joplin and Lower Haight."
     ],
     "schemaDescription": "A four-hour bicycle outing with Unlimited Biking in San Francisco. The outing passes Golden Gate Park, Alamo Square, and Ghirardelli Square.",
     "highlights": [
@@ -622,7 +622,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/mXxIADBcSjKoZMd8xSgB"
     ],
     "productImage": "https://cdn.filestackcontent.com/vKmop1eQIyYFjjTDnI7F",
-    "wordCount": 110,
+    "wordCount": 92,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
@@ -657,7 +657,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park.",
       "A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The operator presents the ride as suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes San Francisco and Hippie Hill. Cyclists also come to Arboretum Botanical Gardens and Japanese Tea Gardens. Bison Paddock and Daily Pricing are on the same loop. Later the route reaches Tips Dress."
+      "Guests ride electric bikes for this booking."
     ],
     "schemaDescription": "A bicycle outing with Unlimited Biking in San Francisco. The outing passes Hippie Hill, Golden Gate Park, and San Francisco's Golden Gate Park.",
     "highlights": [
@@ -665,7 +665,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
-    "wordCount": 129,
+    "wordCount": 101,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1792 Haight St San Francisco, CA 94117",
@@ -699,8 +699,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. Riders cross the Golden Gate Bridge and watch the bay from the span. The same ride can take in both the park paths and the bridge.",
-      "A helmet is included, and the shop fits the bike before departure. The booking runs about 4 hours. People stay with the bikes for the riding portion of the booking. The ride passes San Francisco and Golden Gate Bridge. Cyclists also come to Stow Lake Boathouse and Young Museum.",
-      "Botanical Garden and Rose Garden are on the same loop. Later the route reaches Dutch Windmill and Operation Days April."
+      "A helmet is included, and the shop fits the bike before departure. The booking runs about 4 hours. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 2 hours.",
+      "The ride passes San Francisco and Golden Gate Bridge. Cyclists also come to Stow Lake Boathouse and Young Museum. Botanical Garden and Rose Garden are on the same loop. Later the route reaches Dutch Windmill."
     ],
     "schemaDescription": "A two-hour bicycle outing with Unlimited Biking in San Francisco. The outing passes Golden Gate Bridge, Young Museum, and Botanical Garden.",
     "highlights": [
@@ -709,7 +709,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
-    "wordCount": 116,
+    "wordCount": 127,
     "durationLabel": "2Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1792 Haight Street San Francisco, CA 94117",

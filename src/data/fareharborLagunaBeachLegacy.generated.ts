@@ -11,8 +11,8 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The ride passes Laguna Beach and Heisler Park. Cyclists also come to Central Laguna and Bluebird Canyon. Mystic Hills and Main Beach are on the same loop. Later the route reaches Pyne Castle and North Laguna. Attention also goes to Crescent Bay Beach Park and Dana Point, with the guide attaching a story to each stop.",
-      "Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Laguna Beach, Heisler Park, and Central Laguna. Later the route reaches Bluebird Canyon and Mystic Hills. Guests are on bikes, with pauses only where there is something to see or hear."
+      "Pedal through quaint Craftsman neighborhoods and gardens, access view corridors, stop at Heisler Park to notice the magnificent public art and experience the downtown commercial district with many artist residences. Guests climb easily high above city in Mystic Hills neighborhood with commanding view of the downtown district, Main Beach, and Laguna Hotel.",
+      "Then guests roll through the quaint downtown area, navigating picturesque neighborhoods past Pyne Castle, alongside elevated ocean views in the bucolic and North Laguna. Then guests head seaward to Crescent Bay Beach Park, with best panoramic view of coastline that extends from Dana Point all way up toward Palos Verdes in LA County."
     ],
     "schemaDescription": "A two-hour bicycle outing with La Vida Laguna in Laguna Beach. The outing passes Heisler Park and Crescent Bay Beach Park.",
     "highlights": [
@@ -24,7 +24,7 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ"
     ],
     "productImage": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
-    "wordCount": 108,
+    "wordCount": 105,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "1121 Glenneyre St. Laguna Beach, CA 92651",

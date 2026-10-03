@@ -118,6 +118,9 @@
           "The program will begin with a brief introduction and set up rules and expectations",
           "Rotate activities and locations every 30 minutes depending on activity type"
         ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations every 30 minutes depending on activity type. If your group doesn't have great walking accessibility, we will diminish the amount of room changing we do, but please let us know ahead of time in the booking comments so we can plan ahead accordingly."
+        ],
         "highlights": [],
         "restrictions": [
           "For this program there is a group maximum of 20 people"
@@ -171,9 +174,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Attention also goes to Girl Scout, and the guide explains why it is on the route. Guests come to Girl Scout, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account there. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
-      "Seeing the place and hearing the reason for it are the whole visit."
+      "Girl Scouts Badges is a 1.5-hour guided outing with Helen Woodward Animal Center. For Daisies, Brownies, Juniors, and Cadettes, Eco Learner Badge, and Pets Badge are included.",
+      "Groups stay at a maximum of 20 guests. The walk is stroller and wheelchair accessible."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -190,7 +192,7 @@
       "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3"
     ],
     "productImage": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
-    "wordCount": 112,
+    "wordCount": 44,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -290,6 +292,9 @@
           "The program will begin with a brief introduction and set up rules and expectations",
           "Rotate activities and locations about 30 minutes depending on activity type"
         ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
+        ],
         "highlights": [],
         "restrictions": [
           "We can only run 1 badge type at a time",
@@ -324,8 +329,12 @@
       }
     },
     "validation": {
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 44 words; rich FareHarbor source requires at least 100 words"
+      ]
     }
   },
   {
@@ -337,8 +346,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Staff explain how the horses are cared for and how they behave. Guests hear about Custom Girl Scout Trip and Miniature Horse. The guide's account includes Madagascar Hissing Cockroach and Guinea Pig. Stories along the way cover Pet Encounter Therapy. Among the places guests actually encounter are Custom Girl Scout Trip, Miniature Horse, and Madagascar Hissing Cockroach.",
-      "Later the route reaches Guinea Pig and Pet Encounter Therapy. Guests come to Custom Girl Scout Trip and Miniature Horse, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "The Custom Girl Scout Trip is the opportunity for all ages to hear about and interact with variety of animals and build compassion through stopping at different departments at Center or fulfilling community service work. Each program is long and allows each troop to choose activities and animals covered in the tour for the ultimate customizable meet.",
+      "Minimum of 5 children is also required to make this booking, however guests may bring less children on day of the program. Guests not be refunded difference if less than 5 children attend. After that, customize the visit the way guests want it. Option A: 4 animal stops at and 1 Center activity.",
+      "After that, option B: 2 animal stops at and 2 Center activities. The program will begin with a brief introduction and set up rules and expectations. Lizard: Learn about their classification and interesting defense and protection methods."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -355,7 +365,7 @@
       "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B"
     ],
     "productImage": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
-    "wordCount": 103,
+    "wordCount": 147,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -456,6 +466,9 @@
         "itinerary": [
           "The program will begin with a brief introduction and set up rules and expectations",
           "Rotate activities and locations about 30 minutes depending on activity type"
+        ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
         ],
         "highlights": [],
         "restrictions": [],
@@ -625,6 +638,9 @@
           "The program will begin with a brief introduction and set up rules and expectations",
           "The STEM activity is 30 minutes and typically done at the end"
         ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Animal presentations are 15 minutes per species. Typically we introduce the individual animal then talk about its species based on the focus of the grade-level theme, allowing for interaction and questions near the end of the presentation. The STEM activity is 30 minutes and typically done at the end."
+        ],
         "highlights": [],
         "restrictions": [
           "We can only do 1 curriculum per day, so if you are planning for us to visit multiple grade levels in 1 day, you'll need to select the curriculum that will work best for all of them",
@@ -673,7 +689,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
-      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program. Attention also goes to Howl-O-Ween Harvest Family Festival and Humane Education Campus, with the guide attaching a story to each stop. Guests come to Howl-O-Ween Harvest Family Festival and Humane Education Campus, and they hear why those places are on the trip."
+      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program."
     ],
     "schemaDescription": "A four-hour guided outing with Helen Woodward Animal Center. The outing passes Howl-O-Ween Harvest Family Festival.",
     "removedClaims": [
@@ -691,7 +707,7 @@
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
     "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
-    "wordCount": 120,
+    "wordCount": 74,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -825,6 +841,9 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [
+          "Event starts at 9am and ends at 1pm. We advise giving yourself at least 1-2 hours to enjoy all the activities available. You do the activities in whatever order suits you best!"
+        ],
         "highlights": [
           "Hands-on animal encounters with ambassadors in festive attire",
           "Trick-or-treat and craft stations for children",
@@ -1001,6 +1020,9 @@
           "The program will begin with a brief introduction and set up rules and expectations",
           "Rotate activities and locations about 30 minutes depending on activity type"
         ],
+        "routeNotes": [
+          "The program will begin with a brief introduction and set up rules and expectations. Rotate animals and locations about every 15 minutes depending on species. Typically we introduce the individual animal then talk about its species based on the focus of the selected theme, allowing for interaction and questions near the end of the presentation. Rotate activities and locations about 30 minutes depending on activity type."
+        ],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -1049,8 +1071,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
-      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program.",
-      "Outdoors is where the account is given, with the site itself in front of the group."
+      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program."
     ],
     "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -1067,7 +1088,7 @@
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
     "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
-    "wordCount": 113,
+    "wordCount": 97,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1197,6 +1218,9 @@
           "2:30-3:00: eighth activity and day review",
           "3:00-3:15: check out period, campers stay circled up with their class and play quiet games"
         ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 15-45 min. They meet different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play and a lunch time which includes some free play. 8:45-9:00: check in period. 9:30-10:00: first activity. The class will discuss the day, camp rules, and icebreakers as well. 10:00-10:30: snack period. 10:30-11:15: second activity. 11:15-11:45: third activity. 11:45-12:30: lunch period. 12:30-12:45: fourth activity. 12:45-1:15: fifth activity. 1:15-2:00: sixth activity. 2:00-2:30: seventh activity. 2:30-3:00: eighth activity and day review. 3:00-3:15: check out period, campers stay circled up with their class and play quiet games."
+        ],
         "highlights": [
           "Handle a variety of animal species",
           "Prepare and feed out animal diets",
@@ -1248,8 +1272,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. The guide's account includes Equine Hospital. Outdoors is where the account is given, with the site itself in front of the group.",
-      "Talking and looking are paired at every stop."
+      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. That same account stays with Equine Hospital."
     ],
     "schemaDescription": "A 3.5-hour guided outing with Helen Woodward Animal Center. The outing passes 40 min: second activity, 30 min: third activity, and 30 min: snack period.",
     "removedClaims": [
@@ -1267,7 +1290,7 @@
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
     "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
-    "wordCount": 107,
+    "wordCount": 84,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1395,6 +1418,9 @@
           "30 min: fifth activity",
           "15 min at program end: check out period, campers stay circled up with their class and play quiet games"
         ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 30-45 min. They meet 3 different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play. 15 minutes before program start: check in period, campers decorate their portfolios which are provided to them. 30 min: first activity. The class will discuss the day, camp rules, and icebreakers as well. 40 min: second activity 30 min: third activity. 30 min: snack period. 40 min: fourth activity. 30 min: fifth activity. 15 min at program end: check out period, campers stay circled up with their class and play quiet games."
+        ],
         "highlights": [
           "Portfolio provided for each camper full of worksheets that will be used during the day, information sheets, and a place for them to store small loose items they might receive",
           "Tour an Equine horse hospital!",
@@ -1447,9 +1473,7 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account there.",
-      "Guests stay with that subject for the length of the outing."
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program."
     ],
     "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -1466,7 +1490,7 @@
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
     "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
-    "wordCount": 109,
+    "wordCount": 51,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1595,6 +1619,9 @@
           "2:00-2:15: team game",
           "2:15-3:00: seventh activity",
           "3:00-3:15: check out period, campers stay circled up with their class and play quiet games"
+        ],
+        "routeNotes": [
+          "Campers rotate locations and activities every 30-45 min. They meet 4 different animals during certain activities and those are dispersed throughout the day. Campers also have a snack time which includes some free play, a lunch time which includes some free play, and a team-building game. 8:45-9:00: check in period, campers decorate their portfolios which are provided to them. 9:00-9:30: first activity. The class will discuss the day, camp rules, and icebreakers as well. 9:30-10:00: second activity (usually meeting the veterinarian) 10:00-10:30: third activity. 10:30-11:00: snack period. 11:00-11:45: fourth activity. 11:45-12:30: fifth activity. 12:30-1:15: lunch period. 1:15-2:00: sixth activity. 2:00-2:15: team game. 2:15-3:00: seventh activity. 3:00-3:15: check out period, campers stay circled up with their class and play quiet games."
         ],
         "highlights": [
           "Portfolio provided for each camper full of worksheets that will be used during the day, information sheets, and a place for them to store small loose items they might receive",
@@ -1761,6 +1788,9 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [
+          "Event starts at 9am and ends at 3pm. We advise giving yourself at least 1-2 hours to enjoy all the activities available. You do the activities in whatever order suits you best!"
+        ],
         "highlights": [],
         "restrictions": [
           "Shoes : For safety reasons, closed-toed shoes only",
@@ -1817,7 +1847,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Children meet live animals and hear how life cycles work. Animals that may be brought out include a mini horse, a chicken, a frog, and a guinea pig. Staff stay with the group while the animals are part of the program. Guests spend part of the visit in a hands-on session with the horses.",
-      "Guests hear about Next Generation Science Standards and Education Office. The guide's account includes Girl Scouts and Between Earth. Among the places guests actually encounter are Next Generation Science Standards, Education Office, and Girl Scouts. Guests come to Next Generation Science Standards and Education Office, and they hear why those places are on the trip."
+      "The commentary takes up Next Generation Science Standards and Education Office. That same account stays with Girl Scouts and Between Earth."
     ],
     "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -1833,7 +1863,7 @@
       "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
     "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
-    "wordCount": 110,
+    "wordCount": 76,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -2006,6 +2036,9 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [
+          "Animal presentations are 15 minute blocks and the STEM activity is a 30 minute block. General flow involves meeting the animals first then doing the activity, but this order can vary based on Instructor discretion."
+        ],
         "highlights": [],
         "restrictions": [
           "Outreaches : Only available for schools",

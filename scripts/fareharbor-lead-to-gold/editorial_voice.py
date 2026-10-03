@@ -94,6 +94,7 @@ SENTENCE_VERB_RE = re.compile(
     r"\b("
     r"is|are|was|were|be|been|being|has|have|had|does|do|did|"
     r"sail|sails|pass|passes|see|sees|explore|explores|ride|rides|"
+    r"swim|swims|paddle|paddles|snorkel|snorkels|"
     r"walk|walks|sample|samples|visit|visits|cover|covers|cross|crosses|"
     r"start|starts|leave|leaves|run|runs|offer|offers|include|includes|"
     r"come|comes|move|moves|stay|stays|sit|sits|answer|answers|"
@@ -162,6 +163,7 @@ Voice:
 - Keep ticket prices, fares, and dollar amounts out of the body.
 - Logistics (duration, group size, age floor, rain policy, what is included) come after the experience, and only when the harvest states them.
 - If the harvest is thin, write less. Do not pad.
+- Do not treat scraped headings, fares, dates, or UI labels as places or stops.
 
 Hard limits:
 - Use only facts present in the harvest packet. Do not invent attractions, schedules, amenities, history, or claims.
@@ -376,6 +378,16 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
         return False
     if re.search(r"\b(surfboards?|wetsuit|paddling)\b", blob, re.I) and re.search(
         r"\b(ocean|waves?)\b", blob, re.I
+    ):
+        return False
+    if re.search(r"\b(bikes?|bicycle|e-bike|ebike)\b", blob, re.I) and re.search(
+        r"\b(winery|wineries|tasting|trail|coast|mountain|rental|helmet)\b",
+        blob,
+        re.I,
+    ):
+        return False
+    if re.search(r"\b(sail|sunset sail|sailboat)\b", blob, re.I) and re.search(
+        r"\b(sunset|harbor|bay|ocean)\b", blob, re.I
     ):
         return False
     if not EXPERIENCE_TOKEN_RE.search(blob) and not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
@@ -805,7 +817,7 @@ def itinerary_list_errors(paragraphs: list[str]) -> list[str]:
         r"story|stories|account|accounts|sample|taste|tastes|tasting|"
         r"photograph|photographs|step|steps|board|boards|watch|watches|tells|talks|"
         r"commentary|built|modeled|fireworks|revolution|minivan|schooner|yacht|boat|harbor|pace|"
-        r"air conditioning|heated|bus|coves|hills|drive|drives|driving|van|bike|bikes|surf)\b",
+        r"air conditioning|heated|bus|coves|hills|drive|drives|driving|van|bike|bikes|surf|visit|visits|start|starts)\b",
         re.I,
     )
     for item in sentences:
@@ -833,6 +845,7 @@ def prose_quality_errors(
     errors.extend(itinerary_list_errors(paragraphs))
     errors.extend(generic_padding_errors(" ".join(paragraphs or [])))
     errors.extend(contrast_padding_errors(paragraphs, description))
+    errors.extend(template_artifact_errors(paragraphs))
     return errors
 
 
@@ -1048,6 +1061,8 @@ def is_guest_place(name: str, source_text: str) -> bool:
     lowered = text.lower()
     if any(noise in lowered for noise in PLACE_NOISE):
         return False
+    if is_structural_label(text):
+        return False
     if re.search(r"\b(cruise|charter|tour|experience|package|hour|minute)\b", lowered):
         return False
     haystack = source_text or ""
@@ -1072,10 +1087,94 @@ def unique_places(items: list[str], source_text: str) -> list[str]:
     return result
 
 
+_STRUCTURAL_LABEL_RE = re.compile(
+    r"\b("
+    r"suitable|departure|locations?|information|important|"
+    r"includes?|tips|dress|must|ticketed|charters?|disclaimer|"
+    r"rates|overview|highlights|duration|restrictions|"
+    r"cancellation|polic(?:y|ies)|requirements?|"
+    r"january|february|march|april|june|july|august|september|"
+    r"october|november|december|"
+    r"monday|tuesday|wednesday|thursday|friday|saturday|sunday|"
+    r"level|aboard|welcome"
+    r")\b",
+    re.I,
+)
+_TEMPLATE_ARTIFACT_RES = (
+    (re.compile(r"\bguests hear about\b", re.I), "Guests hear about"),
+    (re.compile(r"\bthe guide's account includes\b", re.I), "The guide's account includes"),
+    (re.compile(r"\bstories along the way cover\b", re.I), "Stories along the way cover"),
+    (re.compile(r"\bguests come to\b", re.I), "Guests come to"),
+    (re.compile(r"\btalking and looking are paired\b", re.I), "Talking and looking are paired"),
+    (re.compile(r"\boutdoors is where the account is given\b", re.I), "Outdoors is where the account is given"),
+    (re.compile(r"\bhearing the account\b", re.I), "hearing the account"),
+    (re.compile(r"\bamong the places guests actually encounter\b", re.I), "Among the places guests actually encounter"),
+    (re.compile(r"\battention also goes to\b", re.I), "Attention also goes to"),
+    (re.compile(r"\bthey hear why\b", re.I), "they hear why"),
+    (re.compile(r"\bcome up in the commentary\b", re.I), "come up in the commentary"),
+    (re.compile(r"\blater the guide turns to\b", re.I), "Later the guide turns to"),
+    (re.compile(r"\bhistory stays attached to the places\b", re.I), "History stays attached to the places"),
+    (re.compile(r"\bwith the guide attaching a story\b", re.I), "with the guide attaching a story"),
+    (re.compile(r"\bnothing is staged indoors\b", re.I), "Nothing is staged indoors"),
+    (re.compile(r"\ba brochure is not a substitute\b", re.I), "A brochure is not a substitute"),
+    (re.compile(r"\bseeing the place and hearing the reason\b", re.I), "Seeing the place and hearing the reason"),
+    (re.compile(r"\bguests stay with that subject\b", re.I), "Guests stay with that subject"),
+    (
+        re.compile(
+            r"\b("
+            r"level suitable|departure location|important information|"
+            r"expedition includes|tips dress|bike must|ticketed charters|"
+            r"catamaran yacht charter|wildlife disclaimer|on august|"
+            r"standard rates"
+            r")\b",
+            re.I,
+        ),
+        "source heading used as a place",
+    ),
+)
+
+
+def is_structural_label(name: str) -> bool:
+    """Scraped headings and UI fragments are not places, stops, or sights."""
+    key = (name or "").strip()
+    if not key:
+        return True
+    if _STRUCTURAL_LABEL_RE.search(key):
+        return True
+    if re.match(
+        r"^on\s+(?:a\s+)?(?:\d|january|february|march|april|may|june|july|august|september|october|november|december)\b",
+        key,
+        re.I,
+    ):
+        return True
+    return False
+
+
+def template_artifact_errors(paragraphs: list[str]) -> list[str]:
+    """Generator frames and heading fragments that must not ship as travel copy."""
+    text = " ".join(paragraphs or [])
+    if not text.strip():
+        return []
+    errors = []
+    for pattern, label in _TEMPLATE_ARTIFACT_RES:
+        if pattern.search(text):
+            errors.append(f"template artifact: {label}")
+    for name in PROPER_RE.findall(text):
+        if is_structural_label(name):
+            errors.append(f"source label used as a place: {name}")
+    return errors
+
+
 def is_junk_place_label(name: str) -> bool:
     """Headings, fares, and calls to action are not places or artworks."""
     key = (name or "").lower().strip()
     if not key:
+        return True
+    if is_structural_label(name):
+        return True
+    if re.search(r"\bcoast guard\b", key):
+        return True
+    if re.fullmatch(r"(?:san diego\s+)?sunset", key):
         return True
     if re.search(
         r"\b(included|tickets?|admission|taxes|fees|explore|meeting location|"
@@ -1409,7 +1508,11 @@ def description_fact_drafts(description: str, extras: list[str] | None = None) -
         drafts.append("The walk covers Victorian houses and streets.")
     if re.search(r"writers and poets|literary", blob, re.I):
         drafts.append("The walk covers writers and publishing sites.")
-    if re.search(r"\bstories\b", blob, re.I) and not any("stories" in row for row in drafts):
+    if (
+        re.search(r"\bstories\b", blob, re.I)
+        and re.search(r"\bneighborhood\b", blob, re.I)
+        and not any("stories" in row for row in drafts)
+    ):
         drafts.append("The walk includes stories from the neighborhood.")
     if re.search(r"\barchitecture\b", blob, re.I) and not any("architecture" in row for row in drafts):
         drafts.append("The walk covers the neighborhood's architecture.")
@@ -1844,7 +1947,7 @@ def _name_sentence(text: str, title: str, operator: str, seen: set[str]) -> str 
         return None
     for name in names:
         seen.add(name.lower())
-    return f"Guests come to {join_and(names)}"
+    return f"The route passes {join_and(names)}"
 
 
 def _loosen_overlap(
@@ -1924,6 +2027,8 @@ _AWKWARD_PROSE_RE = re.compile(
     r"\bcomfort and convenience\b|\bthe group across\b|\bthe outing across\b|"
     r"\bdelve toward\b|\bdive toward\b|\brose toward\b|\bworld-\b|\balso guided\b|"
     r"\bthe meet blends\b|\bmost neighborhoods\b|\bmost streets\b|\bfriendly, guide\b|"
+    r"\byummy\b|\bsee below\b|\bnotice below\b|\bbuild in to\b|\bworry-free\b|"
+    r"\bepic\b|\bkiller\b|"
     r"\bas well as\b.+\bas well as\b",
     re.I,
 )
@@ -2518,6 +2623,22 @@ def _paraphrase_sentence(
     return cleaned
 
 
+def _drop_repeated_places(paragraphs: list[str]) -> list[str]:
+    """Drop later sentences that only rename places already used."""
+    sentences: list[str] = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    seen: set[str] = set()
+    kept: list[str] = []
+    for item in sentences:
+        names = {name.lower() for name in PROPER_RE.findall(item)}
+        if names and names <= seen:
+            continue
+        seen.update(names)
+        kept.append(item)
+    return _pack_paragraphs(kept) or paragraphs
+
+
 def _pack_paragraphs(sentences: list[str]) -> list[str]:
     paragraphs = []
     current: list[str] = []
@@ -2795,8 +2916,11 @@ def compose_editorial(
             setting = f"on {city} Harbor"
         else:
             setting = f"in {city}"
-    if len(title.split()) >= 6 and duration_adj:
-        lead = f"This is a {duration_adj} {activity}"
+    if len(title.split()) >= 5 or (len(title.split()) >= 6 and duration_adj):
+        lead = "This is a"
+        if duration_adj:
+            lead += f" {duration_adj}"
+        lead += f" {activity}"
         if operator:
             lead += f" with {operator}"
         if setting:
@@ -2953,16 +3077,51 @@ def compose_editorial(
         )
     )
     finished = finish_experience(facts, title, operator, meeting, overlap_text)
-    if finished:
-        paragraphs = finished
-    elif (
-        narrative
-        and not narrative_overlaps
-        and not prose_quality_errors(narrative, title, description)
+
+    def _usable_editorial(candidate: list[str] | None) -> bool:
+        if not candidate:
+            return False
+        if narrative_overlaps and candidate is narrative:
+            return False
+        if prose_quality_errors(candidate, title, description):
+            return False
+        if fragment_errors(candidate):
+            return False
+        return True
+
+    # The paraphraser is the shared Boston voice. Cue sentences are the
+    # fallback when that paraphraser drops a real place the cues kept.
+    def _kept_places(candidate: list[str] | None) -> set[str]:
+        if not candidate:
+            return set()
+        return {
+            name.lower()
+            for name in PROPER_RE.findall(" ".join(candidate))
+            if not is_structural_label(name) and not is_junk_place_label(name)
+        }
+
+    narrative_places = _kept_places(narrative)
+    finished_places = _kept_places(finished)
+    finish_keeps_a_place = bool(finished_places - narrative_places)
+    finish_is_as_full = bool(
+        finished
+        and narrative
+        and count_words(finished) + 15 >= count_words(narrative)
+    )
+    if (
+        _usable_editorial(finished)
+        and finish_keeps_a_place
+        and (not _usable_editorial(narrative) or finish_is_as_full)
     ):
+        paragraphs = finished
+    elif _usable_editorial(narrative):
         paragraphs = narrative
+    elif _usable_editorial(finished):
+        paragraphs = finished
     elif repetitive_opener_errors(paragraphs):
         paragraphs = _diversify_openers(paragraphs)
+    if repetitive_construction_errors(paragraphs):
+        paragraphs = _drop_repeated_places(paragraphs)
     if (
         geography.get("disposition") == "moved"
         and city
@@ -2977,20 +3136,29 @@ def compose_editorial(
         highlight_rows.append(f"{duration_adj} {activity} in {city}")
     elif duration:
         highlight_rows.append(f"{duration} {activity}")
-    if places[:2]:
-        highlight_rows.append(join_and(places[:2]))
-    if included:
+    real_places = [name for name in places if not is_structural_label(name) and not is_junk_place_label(name)]
+    if real_places[:2]:
+        highlight_rows.append(join_and(real_places[:2]))
+    if included and not is_structural_label(included[0]):
         highlight_rows.append(included[0])
     elif group:
         highlight_rows.append(group.rstrip("."))
-    highlight_rows = [row.rstrip(".") for row in highlight_rows if row][:3]
+    highlight_rows = [
+        row.rstrip(".")
+        for row in highlight_rows
+        if row and not template_artifact_errors([row]) and not is_structural_label(row)
+    ][:3]
 
     body_words = count_words(paragraphs)
     if body_words < 40:
         schema = " ".join(paragraphs).strip()
-        first = split_sentences(schema)
-        if first and count_words(first[:1]) < body_words:
-            schema = first[0]
+        chosen = []
+        for piece in split_sentences(schema):
+            chosen.append(piece)
+            if count_words(chosen) >= 8 and count_words(chosen) < body_words:
+                break
+        if chosen and count_words(chosen) < body_words:
+            schema = " ".join(chosen)
     else:
         schema = compose_schema(
             title, operator, activity, duration_adj, duration, city, places, body_words
@@ -3009,6 +3177,8 @@ def compose_editorial(
             schema = paragraphs[0]
             if count_words([schema]) >= body_words and len(paragraphs) > 1:
                 schema = " ".join(paragraphs[0].split()[: max(8, body_words // 2)]).rstrip(".,") + "."
+    if template_artifact_errors([schema]):
+        schema = paragraphs[0] if paragraphs else schema
 
     removed = [
         "Catalog quality_score and availability_count were not treated as ratings.",

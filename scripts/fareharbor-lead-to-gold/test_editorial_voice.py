@@ -19,8 +19,10 @@ from editorial_voice import (
     field_dump_errors,
     fragment_errors,
     implementation_language_errors,
+    is_structural_label,
     load_editorial_sample,
     prose_quality_errors,
+    template_artifact_errors,
 )
 
 
@@ -335,6 +337,143 @@ class EditorialVoiceTest(unittest.TestCase):
             drop_contrast_padding([banana], "Practice sutures on a banana."),
             [banana],
         )
+
+    def test_source_labels_are_not_places(self):
+        for label in (
+            "Level Suitable",
+            "Departure Location",
+            "Important Information",
+            "California Expedition Includes",
+            "Tips Dress",
+            "Bike Must",
+            "On August",
+            "Ticketed Charters",
+            "Catamaran Yacht Charter",
+            "Wildlife Disclaimer",
+        ):
+            self.assertTrue(is_structural_label(label), label)
+        self.assertFalse(is_structural_label("Mission Bay"))
+        self.assertFalse(is_structural_label("USS Midway"))
+        self.assertFalse(is_structural_label("Coronado Bridge"))
+        self.assertFalse(is_structural_label("San Diego Bay"))
+
+    def test_private_bike_tour_does_not_invent_label_stops(self):
+        description = (
+            "Enjoy an exclusive and private tour experience by Bike. "
+            "Must be at least 16 years old to participate. Riders under 18 must be accompanied by a guardian. "
+            "2.5 Hours. Min. weight 100lbs, max 260lbs. "
+            "Tips Dress appropriately for the weather and don't forget your camera!"
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {"title": "Private San Diego Electric Bike Tour", "operator": "Unlimited Biking"},
+            {
+                "description": description,
+                "duration": "2.5 Hours",
+                "included": [],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": "330 K Street San Diego, CA 92101",
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertIn("electric", lowered)
+        self.assertIn("private", lowered)
+        self.assertNotIn("tips dress", lowered)
+        self.assertNotIn("bike must", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
+        self.assertGreaterEqual(len(body.split()), 20)
+        self.assertLess(len(body.split()), 100)
+
+    def test_harbor_cruise_uses_the_bay_route_not_charter_labels(self):
+        description = (
+            "Triton Charters is a catamaran that docked in the San Diego Bay. "
+            "The boat is certified for a maximum of 100 passengers, and public departures carry up to 80 guests."
+        )
+        itinerary = (
+            "This cruise goes through San Diego Bay past the USS Midway and under the Coronado Bridge. "
+            "The captain and crew stay with the boat. Music plays, and drinks are available."
+        )
+        included = [
+            "Coast Guard certified captain and crew members",
+            "Full 13-seat bar",
+            "Dance floor with music",
+            "Bean bags on the bow",
+            "Live music on select charters",
+        ]
+        paragraphs, _highlights, schema, _removed = compose_editorial(
+            {"title": "2.5 Hour Harbor Cruise", "operator": "Triton Charters"},
+            {
+                "description": description,
+                "duration": "2.5 hours",
+                "included": included,
+                "highlights": [],
+                "itinerary": [itinerary],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description + " " + itinerary,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertIn("uss midway", lowered)
+        self.assertIn("coronado bridge", lowered)
+        self.assertIn("san diego bay", lowered)
+        self.assertNotIn("ticketed charters", lowered)
+        self.assertNotIn("on august", lowered)
+        self.assertNotIn("catamaran yacht charter", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + [schema]), [])
+
+    def test_pelagic_page_describes_mola_not_section_headings(self):
+        description = (
+            "The trip swims alongside mola mola, also called ocean sunfish, off San Diego. "
+            "Bait balls and other pelagic fish are part of the same water. "
+            "Gray whales may be present in winter and spring, blue whales in summer, "
+            "and humpback whales in the fall. Dolphins are here year-round. "
+            "Beginners and intermediates can join. Scuba is not required, but snorkeling familiarity helps. "
+            "Departure is Mission Bay. Snacks are included. Sightings are not guaranteed. "
+            "The boat is usually back around 3:00 pm. The expedition runs 6 hours."
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {"title": "Pelagic Wildlife Expedition (6 Hrs)", "operator": "Net Zero Expeditions"},
+            {
+                "description": description,
+                "duration": "6 hours",
+                "included": ["Refreshments and healthy snacks"],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "San Diego", "state": "California"}},
+        )
+        body = " ".join(paragraphs + highlights + [schema])
+        lowered = body.lower()
+        self.assertIn("mola", lowered)
+        self.assertIn("mission bay", lowered)
+        self.assertNotIn("level suitable", lowered)
+        self.assertNotIn("departure location", lowered)
+        self.assertNotIn("important information", lowered)
+        self.assertNotIn("expedition includes", lowered)
+        self.assertNotIn("wildlife disclaimer", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
 
 
 if __name__ == "__main__":

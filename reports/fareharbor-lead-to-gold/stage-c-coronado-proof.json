@@ -8,10 +8,10 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "DELIVERY - 4 Passenger (multi-day) is a guided outing with Coronado Golf Cars.",
+      "This is a guided outing with Coronado Golf Cars.",
       "The outdoor route is about 20-30 miles."
     ],
-    "schemaDescription": "DELIVERY - 4 Passenger (multi-day) is a guided outing with Coronado Golf Cars.",
+    "schemaDescription": "This is a guided outing with Coronado Golf Cars.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -21,7 +21,7 @@
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
-    "wordCount": 21,
+    "wordCount": 17,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Delivery in San Diego",
@@ -106,6 +106,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -143,8 +144,7 @@
       "errors": [
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
         "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 21 words; rich FareHarbor source requires at least 100 words",
-        "full product title is repeated in the description"
+        "experience copy is 17 words; rich FareHarbor source requires at least 100 words"
       ]
     }
   },
@@ -260,6 +260,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [
           "Reservation is only valid for the purchased time(s) and date(s)",
@@ -491,6 +492,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -721,6 +723,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -937,6 +940,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -1158,6 +1162,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [
           "Fun for Everyone: An exciting and accessible e-bike adventure suitable for a wide range of ages and fitness levels"
         ],
@@ -1396,6 +1401,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -1621,6 +1627,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -1778,6 +1785,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -1950,6 +1958,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -2141,6 +2150,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -2313,6 +2323,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -2467,6 +2478,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -2618,6 +2630,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -2767,6 +2780,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -2814,10 +2828,10 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Catalina 250 - Coronado Rental is a 2- to 4-hour guided outing with Seaforth Boat Rentals.",
+      "This is a 2- to 4-hour guided outing with Seaforth Boat Rentals.",
       "Max of 6 passengers including children, Sailing Quiz required at check-in, and Pets Allowed are included."
     ],
-    "schemaDescription": "Catalina 250 - Coronado Rental is a 2- to 4-hour guided outing with Seaforth Boat Rentals.",
+    "schemaDescription": "This is a 2- to 4-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -2830,7 +2844,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
-    "wordCount": 33,
+    "wordCount": 30,
     "durationLabel": "2-4 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -2918,6 +2932,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -2952,7 +2967,7 @@
       "errors": [
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
         "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 33 words; rich FareHarbor source requires at least 100 words"
+        "experience copy is 30 words; rich FareHarbor source requires at least 100 words"
       ]
     }
   },
@@ -3070,6 +3085,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3219,6 +3235,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3380,6 +3397,7 @@
           "After hours and overnight rentals add on a 10% turnover fee to the final cost"
         ],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3512,6 +3530,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3660,6 +3679,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3812,6 +3832,7 @@
           "After hours and overnight rentals add on a 10% turnover fee to the final cost"
         ],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -3942,6 +3963,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4094,6 +4116,7 @@
           "After hours and overnight rentals add on a 10% turnover fee to the final cost"
         ],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4246,6 +4269,7 @@
           "After hours and overnight rentals add on a 10% turnover fee to the final cost"
         ],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4376,6 +4400,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4526,6 +4551,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4687,6 +4713,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4819,6 +4846,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -4955,6 +4983,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -5094,6 +5123,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -5237,6 +5267,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -5279,9 +5310,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Tandem Kayak - Coronado is a 1- to 2-hour paddle outing with Seaforth Boat Rentals. The outing includes a stand-up paddle session. The rental is a tandem bike."
+      "This rental is a two-person kayak for paddling the bay together. Staff point out places on the bay, and guests paddle the route they choose."
     ],
-    "schemaDescription": "Tandem Kayak - Coronado is a 1- to 2-hour paddle outing with Seaforth Boat Rentals.",
+    "schemaDescription": "This rental is a two-person kayak for paddling the bay together.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -5293,7 +5324,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
-    "wordCount": 29,
+    "wordCount": 26,
     "durationLabel": "1-2 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -5376,6 +5407,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [
           "Limited to 3 kayak rentals per group/time slot",
@@ -5409,7 +5441,8 @@
       "ok": false,
       "errors": [
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "experience copy is 29 words; rich FareHarbor source requires at least 100 words"
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 26 words; rich FareHarbor source requires at least 100 words"
       ]
     }
   },
@@ -5422,9 +5455,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Single Kayak - Coronado Rental is a 1- to 2-hour paddle outing with Seaforth Boat Rentals. The outing includes a stand-up paddle session. Must be 18 to rent, Kids 18 must be accompanied, and Life jackets included are included."
+      "This rental is a single kayak for one paddler on the bay. Life jackets are included with the kayak. Staff point out places on the bay, and guests paddle the route they choose."
     ],
-    "schemaDescription": "A 1- to 2-hour paddle outing with Seaforth Boat Rentals.",
+    "schemaDescription": "This rental is a single kayak for one paddler on the bay.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -5432,12 +5465,11 @@
       "Verified meeting and check-in details stay in the facts panel."
     ],
     "highlights": [
-      "1-2 hours paddle outing",
-      "Must be 18 to rent"
+      "1-2 hours paddle outing"
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
-    "wordCount": 40,
+    "wordCount": 33,
     "durationLabel": "1-2 hours",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -5522,6 +5554,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [
           "Limited to 3 kayak rentals per group/time slot",
@@ -5553,7 +5586,8 @@
       "ok": false,
       "errors": [
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "experience copy is 40 words; rich FareHarbor source requires at least 100 words"
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 33 words; rich FareHarbor source requires at least 100 words"
       ]
     }
   },
@@ -5676,6 +5710,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -5716,7 +5751,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The rental is a center-console hull, with the helm in the middle of the boat. An outboard of about 90 horsepower is fitted on the stern. People remain on the boat for the rental."
+      "Guests take out a small powerboat and stay aboard for the rental. The rental is a center-console hull, with the helm in the middle of the boat. An outboard of about 90 horsepower is fitted on the stern. People remain on the boat for the rental.",
+      "The cruise stays on San Diego Bay for the whole outing."
     ],
     "schemaDescription": "A 8-hour guided outing with Seaforth Boat Rentals.",
     "removedClaims": [
@@ -5730,7 +5766,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
-    "wordCount": 47,
+    "wordCount": 58,
     "durationLabel": "8 hour",
     "durationIso": "PT8H",
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
@@ -5811,6 +5847,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -5848,8 +5885,7 @@
       "ok": false,
       "errors": [
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 47 words; rich FareHarbor source requires at least 100 words"
+        "experience copy is 58 words; rich FareHarbor source requires at least 100 words"
       ]
     }
   },
@@ -5997,6 +6033,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -6041,19 +6078,25 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/blue-bridge-kayak-tour-528181",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Seaforth Boat Rentals lists this outing."
+      "Staff point out places on the bay, and guests paddle the route they choose. The paddle passes Coronado Bridge and San Diego Bay."
     ],
-    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
+    "schemaDescription": "Staff point out places on the bay, and guests paddle the route they choose.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
-    "highlights": [],
+    "highlights": [
+      "90 minutes paddle outing",
+      "Coronado Bridge"
+    ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
-    "wordCount": 8,
-    "durationLabel": null,
+    "wordCount": 23,
+    "durationLabel": "90 minutes",
     "durationIso": null,
     "meetingLocation": "1715 Strand Way, Coronado CA 92118",
     "visiblePriceLabel": null,
@@ -6133,6 +6176,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -6161,8 +6205,12 @@
       }
     },
     "validation": {
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 23 words; rich FareHarbor source requires at least 100 words"
+      ]
     }
   },
   {
@@ -6270,6 +6318,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -6426,6 +6475,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -6581,6 +6631,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -6741,6 +6792,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -6871,6 +6923,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -7004,6 +7057,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -7049,26 +7103,19 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/lagoon-380-coronado---multi-day-charter-671123",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "Lagoon 380 Coronado - Multi Day Charter is a harbor outing lasting Multi Day with Seaforth Boat Rentals.",
-      "The sail passes Lagoon."
+      "The operator Seaforth Boat Rentals lists this outing."
     ],
-    "schemaDescription": "Lagoon 380 Coronado - Multi Day Charter is a harbor outing lasting Multi Day with Seaforth Boat Rentals.",
+    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "Multi Day harbor outing",
-      "Lagoon"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
-    "wordCount": 21,
-    "durationLabel": "Multi Day",
+    "wordCount": 8,
+    "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1715 Strand Way Coronado, CA 92118",
     "visiblePriceLabel": null,
@@ -7168,6 +7215,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -7198,13 +7246,8 @@
       }
     },
     "validation": {
-      "ok": false,
-      "errors": [
-        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 21 words; rich FareHarbor source requires at least 100 words",
-        "full product title is repeated in the description"
-      ]
+      "ok": true,
+      "errors": []
     }
   },
   {
@@ -7328,6 +7371,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -7366,28 +7410,21 @@
     "operator": "Seaforth Boat Rentals",
     "publicPath": "/destinations/california/coronado/tours/aquila-44-coronado---multi-day-charter-690094",
     "engine2Path": null,
-    "exceptionStatus": "PRICE_NOT_FOUND",
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "Aquila 44 Coronado - Multi Day Charter is a harbor outing lasting Multi Day with Seaforth Boat Rentals.",
-      "The sail passes Aquila."
+      "The operator Seaforth Boat Rentals lists this outing."
     ],
-    "schemaDescription": "Aquila 44 Coronado - Multi Day Charter is a harbor outing lasting Multi Day with Seaforth Boat Rentals.",
+    "schemaDescription": "The operator Seaforth Boat Rentals lists this outing.",
     "removedClaims": [
-      "Catalog quality_score and availability_count were not treated as ratings.",
-      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
-      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
-      "Verified meeting and check-in details stay in the facts panel."
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
     ],
-    "highlights": [
-      "Multi Day harbor outing",
-      "Aquila"
-    ],
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/dEd9vwwpSs2SqdGQtOLc"
     ],
     "productImage": "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz",
-    "wordCount": 21,
-    "durationLabel": "Multi Day",
+    "wordCount": 8,
+    "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1715 Strand Way Coronado, CA 92118",
     "visiblePriceLabel": null,
@@ -7496,6 +7533,7 @@
         "included": [],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [
@@ -7526,13 +7564,8 @@
       }
     },
     "validation": {
-      "ok": false,
-      "errors": [
-        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 21 words; rich FareHarbor source requires at least 100 words",
-        "full product title is repeated in the description"
-      ]
+      "ok": true,
+      "errors": []
     }
   },
   {
@@ -7669,6 +7702,7 @@
           "After hours and overnight rentals add on a 10% turnover fee to the final cost"
         ],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [

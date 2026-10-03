@@ -12,9 +12,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Hermosa Beach and Manhattan Beach. Cyclists also come to Santa Monica and Redondo Beach Pier. E-Bike Rental Includes and Amp Hour Battery are on the same loop. Later the route reaches E-Bike Orientation. Guests cover the sights by bike, stopping where the guide has something to say."
+      "Guests ride a rented bike for the day. Time on the bike is about 2 hours. Time on the water is about 2 hours. The ride passes Hermosa Beach and Manhattan Beach. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -22,7 +22,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
-    "wordCount": 103,
+    "wordCount": 105,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -56,10 +56,10 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Santa Monica and Redondo Beach Pier. Cyclists also come to E-Bike Rental Includes and Amp Hour Battery. E-Bike Orientation are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Santa Monica, Redondo Beach Pier, and E-Bike Rental Includes."
+      "The group allows guests to get toward Santa Monica and all places in between with few short stops. Guests tell guests all the sights to see. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
+      "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -67,7 +67,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/g7s2MrgBTc6kAsqqTvuh"
     ],
     "productImage": "https://cdn.filestackcontent.com/HFTBR3qsSu6mzf5ei1zy",
-    "wordCount": 111,
+    "wordCount": 106,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -101,10 +101,11 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Santa Monica and Redondo Beach Pier. Cyclists also come to E-Bike Rental Includes and Amp Hour Battery. E-Bike Orientation are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Santa Monica, Redondo Beach Pier, and E-Bike Rental Includes."
+      "Make sure to lock up the ebike safely with the included bike lock for when guests hop off at various locations on the beach. Guests give guests all the tips on places to see. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking.",
+      "Top 5 reasons to ride e-bike from Redondo Beach Pier: 1. Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5.",
+      "Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -112,7 +113,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/dQH6BU9zS6CxcOacDchA"
     ],
     "productImage": "https://cdn.filestackcontent.com/R1wAT0UsTLi7bM69t0Z8",
-    "wordCount": 111,
+    "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -146,9 +147,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Marvin Braude Bike Trail and Santa Monica. Cyclists also come to Redondo Beach Pier and E-Bike Rental Includes. Amp Hour Battery and E-Bike Orientation are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say.",
-      "Among the places guests actually encounter are Marvin Braude Bike Trail, Santa Monica, and Redondo Beach Pier."
+      "1 Day E-Bike Rental option is excellent value to leisurely day at beach, golden hour at sunset and quiet beach hours in the early morning. Guests look at full length of 22 mile Marvin Braude Bike Trail or convenience of experiencing beach towns on an e-bike.",
+      "After that, make sure to have safe, covered location to lock up the e-bike rental safely with the included bike lock. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
+      "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
     "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes Day E-Bike Rental, Marvin Braude Bike Trail, and E-Bike Orientation.",
     "highlights": [
@@ -158,7 +159,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/8vPrcuOSEKakmrwBJxrQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/Q52GuMkDSeC5gxy28b1A",
-    "wordCount": 116,
+    "wordCount": 150,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -193,9 +194,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 48 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. E-Bike Rental Includes and Amp Hour Battery are on the same loop. Later the route reaches E-Bike Orientation. Guests cover the sights by bike, stopping where the guide has something to say."
+      "Guests ride a rented bike for the day. Time on the bike is about 48 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A 48-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A 48-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "48 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -204,7 +205,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/lEcvhRXQyessYAkNjjlP"
     ],
     "productImage": "https://cdn.filestackcontent.com/gbBSlaCsQYOA1wI7Wgg9",
-    "wordCount": 104,
+    "wordCount": 98,
     "durationLabel": "48 Hours",
     "durationIso": "PT48H",
     "meetingLocation": null,
@@ -239,9 +240,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 72 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. E-Bike Rental Includes and Amp Hour Battery are on the same loop. Later the route reaches E-Bike Orientation. Guests cover the sights by bike, stopping where the guide has something to say."
+      "Guests ride a rented bike for the day. Time on the bike is about 72 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A 72-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A 72-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "72 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -250,7 +251,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/erN7yLkxQWGcuiuKw3T8"
     ],
     "productImage": "https://cdn.filestackcontent.com/jh5FuMKhQEW99iZwTIkf",
-    "wordCount": 104,
+    "wordCount": 98,
     "durationLabel": "72 Hours",
     "durationIso": "PT72H",
     "meetingLocation": null,
@@ -285,9 +286,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 96 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. E-Bike Rental Includes and Amp Hour Battery are on the same loop. Later the route reaches E-Bike Orientation. Guests cover the sights by bike, stopping where the guide has something to say."
+      "Guests ride a rented bike for the day. Time on the bike is about 96 hours. The ride passes Beach Life Festival and Fiesta Hermoa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A 96-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A 96-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "96 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -296,7 +297,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/9jlIbmABSpC5knofFUrN"
     ],
     "productImage": "https://cdn.filestackcontent.com/fq6swO0JT5ePBXYSB9mZ",
-    "wordCount": 104,
+    "wordCount": 98,
     "durationLabel": "96 Hours",
     "durationIso": "PT96H",
     "meetingLocation": null,
@@ -331,9 +332,9 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 168 hours. People stay with the bikes for the riding portion of the booking.",
-      "The ride passes Beach Life Festival and Fiesta Hermosa. Cyclists also come to Santa Monica and Redondo Beach Pier. E-Bike Rental Includes and Amp Hour Battery are on the same loop. Later the route reaches E-Bike Orientation. Guests cover the sights by bike, stopping where the guide has something to say."
+      "Guests ride a rented bike for the day. Time on the bike is about 168 hours. The ride passes Beach Life Festival and Fiesta Hermosa. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A 168-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation, Redondo Beach Pier, and E-Bike Rental Includes.",
+    "schemaDescription": "A 168-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
     "highlights": [
       "168 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -342,7 +343,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ew3F18DnQiiuN8JDPJqQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/PTfS7XYLRNOdOoUUaoHx",
-    "wordCount": 104,
+    "wordCount": 98,
     "durationLabel": "168 Hours",
     "durationIso": "PT168H",
     "meetingLocation": null,

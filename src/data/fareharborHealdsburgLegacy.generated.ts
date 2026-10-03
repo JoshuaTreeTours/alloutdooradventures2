@@ -12,8 +12,7 @@ export const fareHarborHealdsburgLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. An electric-assist bike is offered as an upgrade for the ride.",
-      "The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek. Guests cover the sights by bike, stopping where the guide has something to say.",
-      "Among the places guests actually encounter are Wine Country Bikes, Hudson St, and Truett Hurst."
+      "The bikes do the traveling, and the winery stops are where guests get off to taste. Guests ride electric bikes for this booking. The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek."
     ],
     "schemaDescription": "A guided outing with Getaway Adventures in Healdsburg.",
     "highlights": [],
@@ -21,7 +20,7 @@ export const fareHarborHealdsburgLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
     ],
     "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
-    "wordCount": 114,
+    "wordCount": 92,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Dry Creek Wine Region: Healdsburg, CA",

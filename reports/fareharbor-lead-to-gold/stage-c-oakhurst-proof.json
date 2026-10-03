@@ -8,9 +8,7 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests hear about Good Trip Adventures. Guests come to Good Trip Adventures, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop.",
-      "History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
-      "Seeing the place and hearing the reason for it are the whole visit."
+      "The commentary takes up Good Trip Adventures and Pohono Trail. That same account stays with Tunnel View and Bridalveil Falls. Cook's Meadow and Mirror Lake are part of the same story. The route keeps Curry Village and Yosemite Falls in view."
     ],
     "schemaDescription": "A 6- to 8-hour guided outing with Good Trip Adventures - California in Oakhurst.",
     "removedClaims": [
@@ -27,7 +25,7 @@
       "https://cdn.filestackcontent.com/0Jq85utXS4KLyq2axZR6"
     ],
     "productImage": "https://cdn.filestackcontent.com/aCrowEcXQj2Pqop8QrKq",
-    "wordCount": 107,
+    "wordCount": 41,
     "durationLabel": "6-8 hours",
     "durationIso": null,
     "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",
@@ -183,6 +181,9 @@
           "Lunch (please bring a lunch)"
         ],
         "itinerary": [],
+        "routeNotes": [
+          "We'll head into the park, stopping along the way to take in views of the iconic rock formations, spot wildlife, and learn about the park's natural and human history. Stops today include Wawona, the Pohono Trail by Tunnel View, Bridalveil Falls, Cook's Meadow, Mirror Lake, Curry Village, Yosemite Falls, and El Capitan."
+        ],
         "highlights": [],
         "restrictions": [
           "Participants should comfortably handle a moderate walk of 4-6 miles throughout the day, with moderate elevation changes, to make the most of their adventure"
@@ -227,19 +228,26 @@
     "engine2Path": null,
     "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
     "paragraphs": [
-      "The operator Good Trip Adventures - California lists this outing."
+      "The commentary takes up Good Trip Adventures and Yosemite National Park. That same account stays with Giant Sequoias and Taft Point. Sentinel Dome and Glacier Point are part of the same story."
     ],
-    "schemaDescription": "The operator Good Trip Adventures - California lists this outing.",
+    "schemaDescription": "The commentary takes up Good Trip Adventures and Yosemite National Park.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
-    "highlights": [],
+    "highlights": [
+      "6- to 8-hour guided outing in Oakhurst",
+      "Yosemite National Park",
+      "Private, medically trained naturalist guide"
+    ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/J1ZoV9V8S1qqmxM9wRtN"
     ],
     "productImage": "https://cdn.filestackcontent.com/Z2z1tGadR8GPdhL8eeOC",
-    "wordCount": 9,
-    "durationLabel": null,
+    "wordCount": 32,
+    "durationLabel": "6-8 hours",
     "durationIso": null,
     "meetingLocation": "49044 Civic Circle Oakhurst, CA 93644",
     "visiblePriceLabel": null,
@@ -247,7 +255,7 @@
     "pricingNotes": [],
     "offer": null,
     "aggregateRating": null,
-    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/goodtripadventures-california/items/519508/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "ratingProvenance": "This item was not in the published set. A cleanup rebuild does not add a new route.",
     "geography": {
       "disposition": "keep",
       "conflictsWithExpected": false,
@@ -344,7 +352,24 @@
           "sha256": "4588625d840c5d686847a4911ddbe5495e3e9d1e0eca394d04f32d1384e71dba"
         }
       },
-      "price": null,
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Person",
+          "note": "Minimum of 2 people required for first booking • Price per person",
+          "amount": 371.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Person",
+            "note": "Minimum of 2 people required for first booking • Price per person",
+            "amount": 371.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2027-05-01T07:00:00",
+        "decimalPlaces": 2
+      },
       "facts": {
         "duration": "6-8 hours",
         "meetingAddress": "49044 Civic Circle Oakhurst, CA 93644",
@@ -367,6 +392,9 @@
           "Lunch (please bring a lunch)"
         ],
         "itinerary": [],
+        "routeNotes": [
+          "This tour includes short hikes to Taft Point and the Fissures and Sentinel Dome - two hikes that will surely test your nerve as you step over the fissures - massive cracks in the granite under our feet, walk right up to the edge of the vertical cliff face, and scramble up a massive dome. Not feeling like testing your fear of heights? No sweat, you can hang back and take in the views far from the edge! Next, we'll pay a visit to Glacier Point to take in even more amazing vistas from a short walk and trip to the visitor center. We'll either end or begin the day with a short hike in Mariposa Grove to see some of the largest living organisms on the planet."
+        ],
         "highlights": [],
         "restrictions": [
           "Participants should comfortably handle a moderate walk of 4-6 miles throughout the day, with moderate elevation changes, to make the most of their adventure"
@@ -412,9 +440,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The ride passes Bass Lake and High-elevation Sierra Nevada. Cyclists also come to Rider Requirements and High Sierra. National Forest Service and US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say.",
-      "Among the places guests actually encounter are Bass Lake, High-elevation Sierra Nevada, and Rider Requirements. Later the guide turns to High Sierra and National Forest Service, explaining what happened there. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.",
-      "Guests come to Bass Lake and High-elevation Sierra Nevada, and they hear why those places are on the trip."
+      "Guests experience one of the most riding environments in California on this advanced eBike tour in the Sierra Nevada near Bass Lake. The adventure takes guests deep toward high-elevation forests and granite landscapes that also make this region. The electric mountain bike provides power to conquer also sustained climbs and maximize time on trail, allowing guests to explore more of this backcountry terrain.",
+      "If guests are looking for true High Sierra mountain biking adventure with granite riding and views, the outing delivers an meet unlike anywhere else in California. 3% mandatory National Forest Service fee that passes through directly to the US Forest Service."
     ],
     "schemaDescription": "A 4- to 6-hour guided outing with Pedal Forward Bikes in Oakhurst. The outing passes High-elevation Sierra Nevada.",
     "removedClaims": [
@@ -432,7 +459,7 @@
       "https://cdn.filestackcontent.com/naUfFASzToyAoKfEzLbl"
     ],
     "productImage": "https://cdn.filestackcontent.com/sHG72BilQaymXMuxDEhI",
-    "wordCount": 115,
+    "wordCount": 105,
     "durationLabel": "4 - 6 Hours",
     "durationIso": null,
     "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
@@ -544,6 +571,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -588,8 +616,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The day combines a guided hike with time on the rock, after a drive to the trailhead. Rock formations, canyons, and the long views are what the hike is there to reach.",
-      "The ride passes Bass Lake and Sierra National Forest. Cyclists also come to California's Sierra Nevada and National Forest Service. US Forest Service are on the same loop. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Bass Lake, Sierra National Forest, and California's Sierra Nevada."
+      "As guests ride beneath towering pines and cedars, the guide will share stories of region's rich logging history and role railroad played in shaping Bass Lake area. Wide, gradual grade makes for comfortable ride while providing views of surrounding forest and distant mountain ridges. The feature of tour is the climb to a granite dome overlooking Bass Lake and Sierra Nevada.",
+      "The outing's the place to stop, take photos, the scenery, and experience one of the viewpoints in the region. The guide can customize ride to match group's skill level and also desired level of adventure. 3% mandatory National Forest Service fee that passes through directly to the US Forest Service."
     ],
     "schemaDescription": "A 2- to 4-hour guided outing with Pedal Forward Bikes in Oakhurst.",
     "removedClaims": [
@@ -606,7 +634,7 @@
       "https://cdn.filestackcontent.com/Ysuvg301Qyu9pieq0BDj"
     ],
     "productImage": "https://cdn.filestackcontent.com/YNt4aOsPSHWrPhzF0qBc",
-    "wordCount": 105,
+    "wordCount": 111,
     "durationLabel": "2-4 Hours",
     "durationIso": null,
     "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
@@ -718,6 +746,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -891,6 +920,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -931,8 +961,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The day combines a guided hike with time on the rock, after a drive to the trailhead. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Bass Lake Dam and Sierra Nevada. The guide's account includes Central Camp Road and Bass Lake View.",
-      "Stories along the way cover Sierra National Forest and National Forest Service. US Forest Service come up in the commentary. Among the places guests actually encounter are Bass Lake Dam, Sierra Nevada, and Central Camp Road. Later the guide turns to Bass Lake View and Sierra National Forest, explaining what happened there."
+      "Guests find Bass Lake on fun and family-friendly eBike adventure also designed for riders of all meet levels. That guided tour begins near shores of Bass Lake and traces scenic forest road that parallels the lake. On the way, guests visit several landmarks that tell story of Bass Lake's rich past.",
+      "As guests ride, views of sparkling lake, towering pine forests, and surrounding Sierra Nevada landscape. Tour continues up Central Camp Road, a route that was once part of railroad system used during region's logging era. At the top, guests arrive at Bass Lake View, one of area's most scenic overlooks.",
+      "Alongside panoramic views of lake and surrounding mountains, it's the place to relax, picnic, take photos, and soak in beauty of the Sierra National Forest. 3% mandatory National Forest Service fee that passes through directly to the US Forest Service."
     ],
     "schemaDescription": "A 2.5- to 3-hour bicycle outing with Pedal Forward Bikes in Oakhurst.",
     "removedClaims": [
@@ -949,7 +980,7 @@
       "https://cdn.filestackcontent.com/MYMjh7d6S3urhDsNkcQO"
     ],
     "productImage": "https://cdn.filestackcontent.com/93hzCBN4SUGMJ0tMo8Un",
-    "wordCount": 104,
+    "wordCount": 142,
     "durationLabel": "2.5-3 Hours",
     "durationIso": null,
     "meetingLocation": "40761 California 41 Oakhurst, CA 93644",
@@ -1061,6 +1092,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -1231,6 +1263,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
@@ -1403,6 +1436,7 @@
         ],
         "excluded": [],
         "itinerary": [],
+        "routeNotes": [],
         "highlights": [],
         "restrictions": [],
         "bring": [],
