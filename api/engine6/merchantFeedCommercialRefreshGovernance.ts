@@ -311,43 +311,56 @@ export const refreshExistingMerchantFeedCommercialFields = async <
   };
 };
 
+const emptyMerchantFeedCommercialRefreshAudit =
+  (): MerchantFeedCommercialRefreshAudit => ({
+    productsChecked: 0,
+    fieldsRefreshed: [],
+    fieldsPreserved: [],
+    unavailableLiveValues: [],
+  });
+
+/**
+ * Scheduled refresh deployments can reach this report without a live audit
+ * object. Missing audits must print an empty report instead of throwing.
+ */
 export const formatMerchantFeedCommercialRefreshAuditReport = (
-  audit: MerchantFeedCommercialRefreshAudit
+  audit?: MerchantFeedCommercialRefreshAudit | null
 ) => {
+  const safeAudit = audit ?? emptyMerchantFeedCommercialRefreshAudit();
   const lines = [
     "Engine6 merchant feed commercial refresh audit:",
-    `- products checked: ${audit.productsChecked}`,
-    `- fields refreshed: ${audit.fieldsRefreshed.length}`,
-    `- fields preserved: ${audit.fieldsPreserved.length}`,
-    `- unavailable live values: ${audit.unavailableLiveValues.length}`,
+    `- products checked: ${safeAudit.productsChecked}`,
+    `- fields refreshed: ${safeAudit.fieldsRefreshed.length}`,
+    `- fields preserved: ${safeAudit.fieldsPreserved.length}`,
+    `- unavailable live values: ${safeAudit.unavailableLiveValues.length}`,
     "",
     MERCHANT_FEED_RATING_COUNT_SYNCHRONIZED_ALIAS_NOTE,
   ];
 
-  if (audit.fieldsRefreshed.length > 0) {
+  if (safeAudit.fieldsRefreshed.length > 0) {
     lines.push("", "Refreshed fields:");
-    for (const entry of audit.fieldsRefreshed.slice(0, 25)) {
+    for (const entry of safeAudit.fieldsRefreshed.slice(0, 25)) {
       lines.push(
         `  ${entry.productCode}.${entry.field}: ${entry.previousValue} -> ${entry.refreshedValue}`
       );
     }
-    if (audit.fieldsRefreshed.length > 25) {
+    if (safeAudit.fieldsRefreshed.length > 25) {
       lines.push(
-        `  ...and ${audit.fieldsRefreshed.length - 25} additional refreshed field(s).`
+        `  ...and ${safeAudit.fieldsRefreshed.length - 25} additional refreshed field(s).`
       );
     }
   }
 
-  if (audit.unavailableLiveValues.length > 0) {
+  if (safeAudit.unavailableLiveValues.length > 0) {
     lines.push("", "Unavailable live values (preserved existing CSV values):");
-    for (const entry of audit.unavailableLiveValues.slice(0, 25)) {
+    for (const entry of safeAudit.unavailableLiveValues.slice(0, 25)) {
       lines.push(
         `  ${entry.productCode}.${entry.field}: preserved=${entry.preservedValue} (${entry.reason})`
       );
     }
-    if (audit.unavailableLiveValues.length > 25) {
+    if (safeAudit.unavailableLiveValues.length > 25) {
       lines.push(
-        `  ...and ${audit.unavailableLiveValues.length - 25} additional unavailable live value(s).`
+        `  ...and ${safeAudit.unavailableLiveValues.length - 25} additional unavailable live value(s).`
       );
     }
   }

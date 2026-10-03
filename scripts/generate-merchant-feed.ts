@@ -13,6 +13,7 @@ import {
   loadMerchantFeedNotYetPublishedOnProductionProductCodes,
 } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import {
+  alignMerchantFeedRowToSchemaResolvedMetadata,
   applyMerchantFeedChangeScopePreservingNonCommercial,
   type MerchantFeedCsvRow,
 } from "../api/engine6/merchantFeedChangeScopeGovernance";
@@ -664,7 +665,11 @@ const main = async () => {
         // authoritative for rows it contains. Newly eligible rows that are not
         // yet in that snapshot must use the same schema-resolved commercial
         // values used to build Product JSON-LD, rather than a later live/cache
-        // value introduced by reconciliation.
+        // value introduced by reconciliation. This path does not build a live
+        // refresh audit; skipped must stay true so the audit formatter is not
+        // handed an undefined audit.
+        skipped: true as const,
+        audit: null,
         rows: (rowsForCommercialRefresh as MerchantFeedCsvRow[]).map(row => {
           const generatedRow = generatedRows.find(
             candidate => candidate.id.trim().toUpperCase() === row.id.trim().toUpperCase()
@@ -678,6 +683,8 @@ const main = async () => {
             review_count: generatedRow.review_count,
           };
         }),
+        report:
+          "[merchant-feed-build] weekly commercial refresh: preserving committed merchant CSV commercial fields; skipping second live commercial refresh.",
       }
     : await applyMerchantFeedCommercialRefresh({
         rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
@@ -694,29 +701,21 @@ const main = async () => {
   let outputRows = commercialRefresh.rows as MerchantRow[];
 
   // Product JSON-LD and the merchant feed are two representations of the same
-  // product. Always align feed title and commercial fields to the exact
-  // schema-resolved values used by Product JSON-LD before parity validation.
-  // Change-scope preservation keeps descriptions, links, and images stable,
-  // but a preserved title from an older catalog name fails title parity once
-  // the shared product title moves. Price labels are likewise taken from
-  // formatMerchantPrice so `189.5 USD` and `189.50 USD` cannot diverge.
+  // product. Align title, image, and commercial fields to the schema-resolved
+  // values before parity validation. Descriptions and links stay on the
+  // preserved baseline row. A preserved title or image_link from an older
+  // catalog value fails schema parity once the shared product metadata moves,
+  // including a legitimate upstream image URL change. Price labels are taken
+  // from formatMerchantPrice so `189.5 USD` and `189.50 USD` cannot diverge.
   const generatedByProductCode = new Map(
     generatedRows.map(row => [row.id.trim().toUpperCase(), row])
   );
-  outputRows = outputRows.map(row => {
-    const generatedRow = generatedByProductCode.get(
-      row.id.trim().toUpperCase()
-    );
-    if (!generatedRow) return row;
-    return {
-      ...row,
-      title: generatedRow.title,
-      price: generatedRow.price,
-      average_rating: generatedRow.average_rating,
-      rating_count: generatedRow.rating_count,
-      review_count: generatedRow.review_count,
-    };
-  });
+  outputRows = outputRows.map(row =>
+    alignMerchantFeedRowToSchemaResolvedMetadata(
+      row,
+      generatedByProductCode.get(row.id.trim().toUpperCase())
+    )
+  );
 
   const preImageGovernanceParityAudit = auditEngine6MerchantFeedSchemaParity(
     schemaResolvedTours,

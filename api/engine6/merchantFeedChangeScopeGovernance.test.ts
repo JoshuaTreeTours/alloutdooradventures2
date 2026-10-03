@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import {
+  alignMerchantFeedRowToSchemaResolvedMetadata,
   applyMerchantFeedChangeScopePreservingNonCommercial,
   enforceMerchantFeedChangeScope,
   mergeMerchantFeedBaselineNonCommercialWithProposedCommercial,
@@ -326,6 +327,58 @@ describe("merchant feed change-scope governance", () => {
     expect(merchantFeedCsvRowsByteIdentical(result.rows[0]!, proposed[0]!)).toBe(
       true
     );
+  });
+
+  it("refreshes an upstream image URL without replacing description or link", () => {
+    const baseline = sampleRow({
+      image_link: "https://example.com/old-image.jpg",
+      description: "Preserved merchant description.",
+      link: "https://www.alloutdooradventures.com/tours/kept",
+      price: "89.00 USD",
+      average_rating: "5.0",
+      rating_count: "54",
+      review_count: "54",
+    });
+    const generated = sampleRow({
+      title: "Schema title",
+      image_link: "https://example.com/new-image.jpg",
+      description: "Regenerated description that must not replace the feed.",
+      link: "https://www.alloutdooradventures.com/tours/regenerated",
+      price: "99.00 USD",
+      average_rating: "4.8",
+      rating_count: "60",
+      review_count: "60",
+    });
+
+    expect(
+      alignMerchantFeedRowToSchemaResolvedMetadata(baseline, generated)
+    ).toMatchObject({
+      title: "Schema title",
+      image_link: "https://example.com/new-image.jpg",
+      description: "Preserved merchant description.",
+      link: "https://www.alloutdooradventures.com/tours/kept",
+      price: "99.00 USD",
+      average_rating: "4.8",
+      rating_count: "60",
+      review_count: "60",
+    });
+  });
+
+  it("keeps the merchant image when the schema image is blank", () => {
+    const baseline = sampleRow({
+      image_link: "https://example.com/kept.jpg",
+    });
+    const generated = sampleRow({
+      image_link: "   ",
+      price: "99.00 USD",
+    });
+
+    expect(
+      alignMerchantFeedRowToSchemaResolvedMetadata(baseline, generated)
+    ).toMatchObject({
+      image_link: "https://example.com/kept.jpg",
+      price: "99.00 USD",
+    });
   });
 
   it("merges only commercial parity fields from proposed rows", () => {

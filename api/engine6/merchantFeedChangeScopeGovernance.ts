@@ -216,6 +216,35 @@ export const mergeMerchantFeedBaselineNonCommercialWithProposedCommercial = <
   return merged;
 };
 
+/**
+ * Align a preserved merchant row to the schema-resolved website row.
+ * Title, price, rating, review count, and image URL follow Product JSON-LD.
+ * Description, link, and the remaining non-commercial columns stay preserved.
+ * An empty schema image does not wipe a usable merchant image.
+ */
+export const alignMerchantFeedRowToSchemaResolvedMetadata = <
+  TRow extends MerchantFeedCsvRow,
+>(
+  row: TRow,
+  generatedRow: TRow | undefined
+): TRow => {
+  if (!generatedRow) {
+    return row;
+  }
+
+  const schemaImage = generatedRow.image_link?.trim() ?? "";
+
+  return {
+    ...row,
+    title: generatedRow.title,
+    ...(schemaImage ? { image_link: schemaImage } : {}),
+    price: generatedRow.price,
+    average_rating: generatedRow.average_rating,
+    rating_count: generatedRow.rating_count,
+    review_count: generatedRow.review_count,
+  };
+};
+
 export type MerchantFeedChangeScopePreservationResult = {
   rows: MerchantFeedCsvRow[];
   /** Existing products whose regenerated non-commercial columns were restored from baseline. */

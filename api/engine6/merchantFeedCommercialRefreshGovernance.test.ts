@@ -288,4 +288,16 @@ describe("merchant feed commercial refresh governance", () => {
     expect(report).toContain("Unavailable live values");
     expect(report).toContain(MERCHANT_FEED_RATING_COUNT_SYNCHRONIZED_ALIAS_NOTE);
   });
+
+  it("formats a missing audit without reading productsChecked", () => {
+    for (const audit of [undefined, null]) {
+      const report = formatMerchantFeedCommercialRefreshAuditReport(audit);
+      expect(report).toContain("products checked: 0");
+      expect(report).toContain("fields refreshed: 0");
+      expect(report).toContain("fields preserved: 0");
+      expect(report).toContain("unavailable live values: 0");
+      expect(report).toContain(MERCHANT_FEED_RATING_COUNT_SYNCHRONIZED_ALIAS_NOTE);
+      expect(report).not.toContain("Refreshed fields:");
+    }
+  });
 });
