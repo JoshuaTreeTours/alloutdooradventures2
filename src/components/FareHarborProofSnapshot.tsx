@@ -1,4 +1,8 @@
 import type { FareHarborProofProduct } from "../data/fareharborLeadToGoldProof.generated";
+import {
+  fareHarborPartialPayment,
+  fareHarborPriceLabel,
+} from "../data/fareharborPresentation";
 
 type FareHarborProofSnapshotProps = {
   proof: FareHarborProofProduct;
@@ -7,7 +11,9 @@ type FareHarborProofSnapshotProps = {
 export default function FareHarborProofSnapshot({
   proof,
 }: FareHarborProofSnapshotProps) {
-  const hasPrice = Boolean(proof.visiblePriceLabel);
+  const priceLabel = fareHarborPriceLabel(proof);
+  const partialPayment = fareHarborPartialPayment(proof);
+  const hasPrice = Boolean(priceLabel);
   const hasDuration = Boolean(proof.durationLabel);
   const hasMeetingPoint = Boolean(proof.meetingLocation);
   const hasFareDetail =
@@ -25,7 +31,14 @@ export default function FareHarborProofSnapshot({
       <div className="space-y-4 text-sm text-green-950">
         {hasPrice ? (
           <p>
-            <strong>Price:</strong> {proof.visiblePriceLabel}
+            <strong>Price:</strong> {priceLabel}
+          </p>
+        ) : null}
+        {partialPayment ? (
+          <p className="text-xs text-green-900/80">
+            Tour price {partialPayment.tourPriceLabel}. The{" "}
+            {partialPayment.depositLabel} amount charged online is a
+            partial-payment deposit, not the full tour price.
           </p>
         ) : null}
         {hasDuration ? (
@@ -55,7 +68,12 @@ export default function FareHarborProofSnapshot({
                         </span>
                       ) : null}
                     </span>
-                    <span className="font-semibold">{row.amountLabel}</span>
+                    <span className="font-semibold">
+                      {partialPayment &&
+                      row.amountLabel === partialPayment.depositLabel
+                        ? `${row.amountLabel} deposit`
+                        : row.amountLabel}
+                    </span>
                   </li>
                 ))}
               </ul>

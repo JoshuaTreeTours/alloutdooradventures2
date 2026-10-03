@@ -11,24 +11,24 @@ export const fareHarborMiamiLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The booking is an airboat trip in the Florida Everglades. An alligator show is part of the same visit. The boat crosses the River of Grass. Mangroves line the marsh the boat runs through. The airboat is made to move fast across the marsh. A show by Florida Native people is included with the boat ride.",
+      "The booking is an airboat trip in the Florida Everglades. An alligator show is part of the same visit. The boat crosses the River of Grass. Mangroves line the marsh the boat runs through. The airboat is made to move fast across the marsh. A cultural show is included with the boat ride.",
       "Thick vegetation covers the ground the boat passes. Guests come alone or with family. The show also takes up food and hunting methods, as the hosts present them. The booking runs about 1 hour. The airboat is the reason for the day, and the marsh is the setting."
     ],
-    "schemaDescription": "An one-hour airboat outing with South Beach Welcome Center.",
+    "schemaDescription": "A one-hour airboat outing with South Beach Welcome Center.",
     "highlights": [
-      "1 Hours airboat outing"
+      "one-hour airboat outing"
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/WKQAWo7UTryARUKtiHrn",
-    "wordCount": 104,
-    "durationLabel": "1 Hours",
+    "wordCount": 101,
+    "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": null,
     "visiblePriceLabel": "From $14.99",
     "priceRows": [
       {
         "label": "Person",
-        "note": "$45.00 • (Price online is a Partial Payment Reservation)",
+        "note": "Tour price $45.00. The $14.99 charged online is a partial-payment deposit, not the full tour price.",
         "amountLabel": "$14.99"
       }
     ],

@@ -984,8 +984,10 @@ def invented_food_walk_errors(
 
 
 def indefinite(next_word: str) -> str:
-    """A/an for the following word. Hour takes an; 5-hour stays a."""
+    """A/an for the following word. Hour takes an; one-hour and 5-hour stay a."""
     word = (next_word or "").strip()
+    if re.match(r"(?:one|1)(?:\b|-)", word, re.I):
+        return "a"
     if re.match(r"(?:[aeiou]|hour\b)", word, re.I):
         return "an"
     return "a"
@@ -1216,6 +1218,21 @@ def template_artifact_errors(paragraphs: list[str]) -> list[str]:
     return errors
 
 
+def is_scraped_heading_highlight(text: str) -> bool:
+    """Section headings and inclusion labels are not customer highlights."""
+    raw = (text or "").strip()
+    if not raw:
+        return True
+    if is_structural_label(raw) or is_junk_place_label(raw):
+        return True
+    parts = re.split(r"\s+and\s+", raw, flags=re.I)
+    if len(parts) > 1 and any(
+        is_structural_label(part) or is_junk_place_label(part) for part in parts
+    ):
+        return True
+    return False
+
+
 def is_junk_place_label(name: str) -> bool:
     """Headings, fares, and calls to action are not places or artworks."""
     key = (name or "").lower().strip()
@@ -1240,7 +1257,12 @@ def is_junk_place_label(name: str) -> bool:
         r"snorkel stop|marina meet|observation pods|on foot|kino|"
         r"scenic offshore|primary reef|dolphin search|scenic cruising|"
         r"patch reef fishing|wild atlantic|fisheries service|prime sunset|"
-        r"positioning|floating time|sample flow)\b|"
+        r"positioning|floating time|sample flow|"
+        r"technique variation|wildlife observation|scenic ride back|"
+        r"boarding\s*&\s*setup|safety brief|sunchill|float the vessel|"
+        r"bow-rider|return cruise|shallow water stop|gym free|"
+        r"anchoring at a remote|snorkeling patch|variation light|"
+        r"coolers? with ice)\b|"
         r"(?:personalized|guided|tasting|experience)\s*$",
         key,
     ):
@@ -1820,6 +1842,8 @@ def age_sentence(min_age, max_age) -> str | None:
             age = None
         if age == 21:
             bits.append("Guests must be 21 or older.")
+        elif age == 1:
+            bits.append("Guests must be at least 1 year old.")
         elif age is not None:
             bits.append(f"Guests must be at least {age} years old.")
     if max_age not in (None, "") and not bits:
@@ -3195,8 +3219,13 @@ def compose_editorial(
     highlight_rows = []
     if duration_adj and city:
         highlight_rows.append(f"{duration_adj} {activity} in {city}")
+    elif duration_adj:
+        highlight_rows.append(f"{duration_adj} {activity}")
     elif duration:
-        highlight_rows.append(f"{duration} {activity}")
+        from migration_integrity import singularize_duration_label
+
+        shown = singularize_duration_label(duration) or duration
+        highlight_rows.append(f"{shown} {activity}")
     real_places = [name for name in places if not is_structural_label(name) and not is_junk_place_label(name)]
     if real_places[:2]:
         highlight_rows.append(join_and(real_places[:2]))
@@ -3213,8 +3242,7 @@ def compose_editorial(
         for row in highlight_rows
         if row
         and not template_artifact_errors([row])
-        and not is_structural_label(row)
-        and not is_junk_place_label(row)
+        and not is_scraped_heading_highlight(row)
     ][:3]
 
     body_words = count_words(paragraphs)

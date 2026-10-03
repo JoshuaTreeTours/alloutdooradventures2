@@ -6,7 +6,9 @@ import {
   buildFareHarborProofSchemaGraph,
   getFareHarborProofByItemId,
 } from "./fareharborLeadToGoldProof";
+import FareHarborProofSnapshot from "../components/FareHarborProofSnapshot";
 import {
+  fareHarborPartialPayment,
   fareHarborPriceLabel,
   fareHarborProductImage,
   fareHarborRating,
@@ -43,6 +45,23 @@ describe("FareHarbor presentation parity", () => {
     expect(fareHarborShortDescription(driving!)).not.toContain(driving!.title);
     expect(fareHarborPriceLabel(driving!)).toBe("From $620.10");
     expect(fareHarborRating(driving!)).toEqual(driving!.aggregateRating);
+
+    const deposit = getFareHarborProofByItemId("132331");
+    expect(deposit?.visiblePriceLabel).toBe("From $14.99");
+    expect(deposit?.offer?.price).toBe("14.99");
+    expect(fareHarborPartialPayment(deposit)).toEqual({
+      tourPriceLabel: "$45.00",
+      depositLabel: "$14.99",
+    });
+    expect(fareHarborPriceLabel(deposit!)).toBe(
+      "From $14.99 online deposit (tour price $45.00)"
+    );
+    const facts = renderToStaticMarkup(<FareHarborProofSnapshot proof={deposit!} />);
+    expect(facts).toContain("From $14.99 online deposit (tour price $45.00)");
+    expect(facts).toContain("Tour price $45.00");
+    expect(facts).toContain("not the full tour price");
+    expect(facts).toContain("$14.99 deposit");
+    expect(facts).not.toContain("Price:</strong> From $14.99<");
   });
 
   it("omits zero or incomplete ratings instead of rendering placeholder stars", () => {

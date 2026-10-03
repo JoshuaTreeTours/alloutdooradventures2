@@ -145,9 +145,9 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a four-hour guided outing with Six Fins Charter in Stock Island. The outing includes a stand-up paddle session. Free Cooler with ice, Free Bottled water, and Adult noodles are included.",
+      "This is a four-hour guided outing with Six Fins Charter in Stock Island. The outing includes a stand-up paddle session.",
       "Groups are capped at 8.",
-      "Guests must be at least 1 years old. A full refund is available with at least 24 hours' notice."
+      "Guests must be at least 1 year old. A full refund is available with at least 24 hours' notice."
     ],
     "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -158,7 +158,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/1c1QPJFSniXIJFrelZa9"
     ],
     "productImage": "https://cdn.filestackcontent.com/lfTU36coSeCs6VvlYDkg",
-    "wordCount": 58,
+    "wordCount": 46,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -188,20 +188,18 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 3 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
-      "The booking is about 3 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Great White Heron and Lower Keys.",
-      "Wildlife Observation Slow and Shallow Water Stop come into view as the boat moves. The cruise also passes Return Cruise Relax."
+      "The booking is about 3 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Great White Heron and Lower Keys."
     ],
-    "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island. The outing passes Wildlife Observation, Relax on the scenic ride back to the marina, and Key West National Wildlife Refuges.",
+    "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
       "three-hour guided outing in Stock Island",
-      "Wildlife Observation and Relax on the scenic ride back to the marina",
       "Groups are capped at 8"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/0Di2BwgDTfSsWuwW6ruB"
     ],
     "productImage": "https://cdn.filestackcontent.com/zhsgTdGSLqqeEFI08wIQ",
-    "wordCount": 113,
+    "wordCount": 92,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -230,9 +228,9 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Private Dolphin Playground Safari is a three-hour guided outing with Six Fins Charter in Stock Island. Free coolers with ice and Free bottled water are included.",
+      "Private Dolphin Playground Safari is a three-hour guided outing with Six Fins Charter in Stock Island.",
       "Groups are capped at 8.",
-      "Guests must be at least 1 years old. A full refund is available with at least 24 hours' notice."
+      "Guests must be at least 1 year old. A full refund is available with at least 24 hours' notice."
     ],
     "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -242,7 +240,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/kIAz9SGbQsalnlGlNbd7"
     ],
     "productImage": "https://cdn.filestackcontent.com/6auNpiXIQrCxnQM9DV1R",
-    "wordCount": 51,
+    "wordCount": 41,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -271,19 +269,18 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Lower Keys and Key West. Variation Light and Technique Variation Depending come into view as the boat moves. The cruise also passes Return Cruise Relax. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
+      "From the water, guests see Lower Keys and Key West. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
       "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island. The outing passes Technique Variation, Seasonal mahi-mahi opportunities, and Drift fishing along reef edges.",
+    "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
-      "four-hour guided outing in Stock Island",
-      "Technique Variation and Seasonal mahi-mahi opportunities"
+      "four-hour guided outing in Stock Island"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/u5m14eZHT5ivjVeNnQnM"
     ],
     "productImage": "https://cdn.filestackcontent.com/trC4enRduUsMUKHLjJrA",
-    "wordCount": 83,
+    "wordCount": 63,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -323,20 +320,18 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 10 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
-      "The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Take Six Fins and Key West.",
-      "Western Hemisphere and Marina Offshore Cruise come into view as the boat moves. The cruise also passes Minutes Each Way and Extended Sunset Return. Looking back toward shore, the group can see Hour Charter Option and Marquesas Keys Crescent-shaped."
+      "The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Key West."
     ],
-    "schemaDescription": "A 10-hour snorkel outing with Six Fins Charter in Stock Island. The outing passes Anchoring at a remote sandbar, Snorkeling patch reefs and clear flats, and Dolphin and wildlife viewing.",
+    "schemaDescription": "A 10-hour snorkel outing with Six Fins Charter in Stock Island.",
     "highlights": [
       "10-hour snorkel outing in Stock Island",
-      "Anchoring at a remote sandbar and Snorkeling patch reefs and clear flats",
       "Groups are capped at 8"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ngEhdLRR5Ow4w367Z1D7"
     ],
     "productImage": "https://cdn.filestackcontent.com/gzyl1XbhRBivoYpb9Dzd",
-    "wordCount": 132,
+    "wordCount": 88,
     "durationLabel": "10 hour",
     "durationIso": "PT10H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -371,9 +366,9 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "This is a private sandbar charter on the water. The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. Bean bags on the bow are there for sitting out in the air.",
-      "Time on the water is about 10 hours. From the water, guests see Marina Scenic and Key West Harbor Sandbar. Anchorages Swim and Sunbathe Professional come into view as the boat moves. The cruise also passes Gym Free. The landmarks are seen from the harbor, with the boat doing the traveling."
+      "Time on the water is about 10 hours. From the water, guests see Key West Harbor. The landmarks are seen from the harbor, with the boat doing the traveling."
     ],
-    "schemaDescription": "A 6-hour snorkel outing with Six Fins Charter in Stock Island. The outing passes Sandbar anchorage in a low-traffic area, Coastal cruising along the Gulf or Atlantic side, and Relaxation time on deck.",
+    "schemaDescription": "A 6-hour snorkel outing with Six Fins Charter in Stock Island.",
     "highlights": [
       "6-hour harbor outing in Stock Island"
     ],
@@ -381,7 +376,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/tE52xOOZQQqrCfOhij4U"
     ],
     "productImage": "https://cdn.filestackcontent.com/C7jKlgoLRJ2nwI3Hrctb",
-    "wordCount": 108,
+    "wordCount": 86,
     "durationLabel": "6 Hour",
     "durationIso": "PT6H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",

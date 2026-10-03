@@ -570,6 +570,32 @@ def is_natural_place_name(name: str, source_text: str) -> bool:
     return True
 
 
+def singularize_duration_label(text: str | None) -> str | None:
+    """Use the singular unit for a count of one. Ranges stay plural."""
+    if not text:
+        return text
+
+    def repl(match: re.Match) -> str:
+        amount = match.group(1)
+        unit = match.group(2)
+        prefix = text[: match.start()]
+        if re.search(r"\d(?:\.\d+)?\s*-\s*$", prefix):
+            return match.group(0)
+        if amount.strip() not in {"1", "1.0"}:
+            return match.group(0)
+        singular = "hour" if unit.lower().startswith("hour") else "minute"
+        if unit[:1].isupper():
+            singular = singular.capitalize()
+        return f"1 {singular}"
+
+    return re.sub(
+        r"(\d+(?:\.\d+)?)\s*(hours?|minutes?)",
+        repl,
+        text,
+        flags=re.I,
+    )
+
+
 def normalize_activity_duration(raw: str | None, description: str | None = None) -> str | None:
     text = normalize_space(raw)
     if text and TRAVEL_TIME_RE.search(text):
@@ -589,11 +615,11 @@ def normalize_activity_duration(raw: str | None, description: str | None = None)
             re.I,
         )
         if match:
-            return match.group(0)
+            return singularize_duration_label(match.group(0))
         if len(re.findall(r"[A-Za-z0-9']+", text)) <= 4 and re.search(
             r"\d|\b(?:hour|minute|day)s?\b", text, re.I
         ):
-            return text
+            return singularize_duration_label(text)
     desc = strip_markdown(description or "")
     desc = TRAVEL_TIME_RE.sub(" ", desc)
     match = re.search(
@@ -602,7 +628,7 @@ def normalize_activity_duration(raw: str | None, description: str | None = None)
         re.I,
     )
     if match:
-        return match.group(1)
+        return singularize_duration_label(match.group(1))
     return None
 
 

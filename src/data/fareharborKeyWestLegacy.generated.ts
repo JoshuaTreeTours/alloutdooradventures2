@@ -110,20 +110,18 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Run Offshore Cruise and Fishing Time Lines. Comfort Breaks Relax and Dock Fish Cleaning Arrival come into view as the boat moves. The cruise also passes Setup Load and Fishing Plan Meet. The landmarks are seen from the harbor, with the boat doing the traveling.",
       "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "A 4- to 12-hour harbor outing with Cowboy Charters on Key West Harbor. The sail passes Boarding & Setup, Safety Brief & Fishing Plan, and Run Offshore.",
+    "schemaDescription": "A 4- to 12-hour harbor outing with Cowboy Charters on Key West Harbor.",
     "highlights": [
       "4- to 12-hour harbor outing in Key West",
-      "Boarding & Setup and Safety Brief & Fishing Plan",
       "Captain and mate on every trip"
     ],
     "galleryImages": [
       "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9"
     ],
     "productImage": "https://cdn.filestackcontent.com/UxWDijTVS9CElGrgZCj8",
-    "wordCount": 90,
+    "wordCount": 40,
     "durationLabel": "4-12 Hours",
     "durationIso": null,
     "meetingLocation": "1801 N Roosevelt Blvd, Key West, Florida 33040",
@@ -375,17 +373,15 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental. From the water, guests see Premium Bow-rider."
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental."
     ],
-    "schemaDescription": "A harbor outing with Salty Sandbars on Key West Harbor. The sail passes SunChill Island Float The Vessel and Premium Bow-rider.",
-    "highlights": [
-      "SunChill Island Float The Vessel and Premium Bow-rider"
-    ],
+    "schemaDescription": "A harbor outing with Salty Sandbars on Key West Harbor.",
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI"
     ],
     "productImage": "https://cdn.filestackcontent.com/BNWLrJ0QdCQUX1Dl43zA",
-    "wordCount": 48,
+    "wordCount": 40,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -420,10 +416,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental."
     ],
-    "schemaDescription": "A guided outing with Salty Sandbars in Key West. The outing passes SunChill Island Float The Vessel and Newer Bow-rider.",
-    "highlights": [
-      "SunChill Island Float The Vessel and Newer Bow-rider"
-    ],
+    "schemaDescription": "A guided outing with Salty Sandbars in Key West.",
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5"
     ],
@@ -462,18 +456,16 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental. This is a private sandbar charter on the water.",
-      "The booking is about 5 hours. From the water, guests see Newer Bow-rider. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by.",
+      "The booking is about 5 hours. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by.",
       "The course is on the water for the whole outing, and the shore is what guests are there to see."
     ],
-    "schemaDescription": "A guided outing with Salty Sandbars in Key West. The outing passes SunChill Island Float The Vessel and Newer Bow-rider.",
-    "highlights": [
-      "SunChill Island Float The Vessel and Newer Bow-rider"
-    ],
+    "schemaDescription": "A guided outing with Salty Sandbars in Key West.",
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT"
     ],
     "productImage": "https://cdn.filestackcontent.com/UfxH7cWARrKPdXE5OUQA",
-    "wordCount": 116,
+    "wordCount": 108,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",

@@ -46,7 +46,7 @@ from editorial_voice import (
     invented_food_walk_errors,
     load_editorial_sample,
     paragraphs_without_contrast,
-    is_junk_place_label,
+    is_scraped_heading_highlight,
     is_structural_label,
     section_label_leak_errors,
     split_sentences,
@@ -1067,8 +1067,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                     for item in previous_highlights
                     if item
                     and not template_artifact_errors([item])
-                    and not is_structural_label(item)
-                    and not is_junk_place_label(item)
+                    and not is_scraped_heading_highlight(item)
                 ]
                 if kept_highlights:
                     highlights = kept_highlights

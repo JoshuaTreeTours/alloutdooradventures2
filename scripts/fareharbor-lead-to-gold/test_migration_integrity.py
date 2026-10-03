@@ -237,6 +237,8 @@ class EditorialRulesTest(unittest.TestCase):
             )
         )
         self.assertEqual(normalize_activity_duration("3 hours", None), "3 hours")
+        self.assertEqual(normalize_activity_duration("1 Hours", None), "1 Hour")
+        self.assertEqual(normalize_activity_duration("4-12 Hours", None), "4-12 Hours")
         self.assertIsNone(normalize_activity_duration("Varies", None))
 
 

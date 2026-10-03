@@ -1154,7 +1154,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"high speeds", titled, re.I):
             rows.append("The airboat is made to move fast across the marsh.")
         if re.search(r"native", titled, re.I) and re.search(r"\bshow\b", titled, re.I):
-            rows.append("A show by Florida Native people is included with the boat ride.")
+            rows.append("A cultural show is included with the boat ride.")
         if re.search(r"exhibits", titled, re.I):
             rows.append("Guests then have time to walk the park exhibits.")
         if re.search(r"snack bar", titled, re.I) and re.search(r"souvenir", titled, re.I):

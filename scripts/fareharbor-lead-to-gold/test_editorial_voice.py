@@ -590,6 +590,26 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertGreaterEqual(len(" ".join(paragraphs).split()), 100)
         self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
 
+    def test_one_hour_article_and_scraped_heading_highlights(self):
+        from editorial_voice import indefinite, is_scraped_heading_highlight
+
+        self.assertEqual(indefinite("one-hour"), "a")
+        self.assertEqual(indefinite("hour"), "an")
+        self.assertEqual(indefinite("airboat"), "an")
+        self.assertTrue(is_scraped_heading_highlight("Prime Sunset Positioning"))
+        self.assertTrue(is_scraped_heading_highlight("Coolers with ice"))
+        self.assertTrue(
+            is_scraped_heading_highlight(
+                "Technique Variation and Seasonal mahi-mahi opportunities"
+            )
+        )
+        self.assertFalse(
+            is_scraped_heading_highlight("Christmas Tree Island and Mallory Square")
+        )
+        self.assertFalse(
+            is_scraped_heading_highlight("four-hour snorkel outing in Stock Island")
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

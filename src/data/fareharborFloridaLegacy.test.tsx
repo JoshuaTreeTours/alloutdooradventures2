@@ -75,11 +75,26 @@ describe("FareHarbor Florida winter cohort", () => {
       expect(body, product.itemId).not.toContain("this is a airboat");
       expect(body, product.itemId).not.toContain("optional exploration");
       expect(body, product.itemId).not.toContain("id meeting");
+      expect(body, product.itemId).not.toContain("florida native");
+      expect(body, product.itemId).not.toContain("1 hours");
+      expect(body, product.itemId).not.toContain("an one-hour");
+      expect(body, product.itemId).not.toContain("prime sunset positioning");
+      expect(body, product.itemId).not.toContain("coolers with ice");
+      expect(body, product.itemId).not.toContain("technique variation");
+      expect(body, product.itemId).not.toContain("sunchill island float");
+      expect(body, product.itemId).not.toContain("boarding & setup");
       if (product.aggregateRating) {
         expect(["TripAdvisor", "Google"], product.itemId).toContain(
           product.aggregateRating.provider
         );
       }
     }
+    const airboat = florida.find(product => product.itemId === "132331");
+    expect(airboat?.durationLabel).toBe("1 Hour");
+    expect(airboat?.offer?.price).toBe("14.99");
+    expect(airboat?.visiblePriceLabel).toBe("From $14.99");
+    expect(airboat?.priceRows[0]?.note).toContain("Tour price $45.00");
+    expect(airboat?.priceRows[0]?.note).toContain("partial-payment deposit");
+    expect(airboat?.priceRows[0]?.amountLabel).toBe("$14.99");
   });
 });
