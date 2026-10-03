@@ -8,7 +8,7 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride in an open-air vehicle rather than walking between sights. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
+      "Guests ride in an open-air vehicle and see the sights from the seat. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
       "Moviemaking landmarks are among the sights seen from the vehicle. Residential neighborhoods are part of the same ride. Architectural buildings are visible from the open-air vehicle. Historic sites are also on the drive and are seen without a stop. Guests are asked to bring a camera for the ride.",
       "People stay aboard the vehicle for the length of the outing. There is no walking portion, because the operator does not schedule stops. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
     ],
@@ -23,7 +23,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-    "wordCount": 141,
+    "wordCount": 143,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -372,7 +372,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "A private group sets the sights, the departure time, and the length of the outing. The pace stays with the guests instead of following a fixed public timetable. Stops include well-known sights and places left out of ordinary travel guides. The private booking is limited to 7 guests.",
-      "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. There is no set walking route, and the group sets the stops. Small groups book the same private outing, and the plan is built around that party.",
+      "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. The group sets the stops, and the plan is not taken from a fixed public timetable. Small groups book the same private outing, and the plan is built around that party.",
       "The operator leads the outing, and the plan changes with the group's size and interests. Guests visit both the better-known sights and the places the travel guides skip."
     ],
     "schemaDescription": "A three-hour guided outing with Golden Ticket LA in Los Angeles.",
@@ -387,7 +387,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
-    "wordCount": 129,
+    "wordCount": 133,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "6808 Hollywood Blvd, Los Angeles, CA, 90028",
@@ -1753,7 +1753,7 @@
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
       "Guests hear about Year Anniversary and West Coast. The guide's account includes Hollywood History and Show Business. Stories along the way cover Warner Bros and Hollywood Walk. Hollywood Sign Panoramic and Best Photos come up in the commentary. Guests stay on foot the whole time, pausing while the guide talks at each site.",
-      "The locations are chosen because a film or television scene was shot there. Among the places guests actually encounter are Year Anniversary, West Coast, and Hollywood History. Later the guide turns to Show Business and Warner Bros, explaining what happened there. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given."
+      "The locations are chosen because a film or television scene was shot there. Among the places guests actually encounter are Year Anniversary, West Coast, and Hollywood History. Later the guide turns to Show Business and Warner Bros, explaining what happened there. They stand at the sites while the explanation is given."
     ],
     "schemaDescription": "A walking tour with Hollywood Hikes, LLC. The walk passes Hollywood Sign-the.",
     "removedClaims": [
@@ -1766,7 +1766,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
-    "wordCount": 113,
+    "wordCount": 104,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -1894,11 +1894,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Guests hear about Year Anniversary and Hollywood History. The guide's account includes Show Business and Warner Bros. Stories along the way cover Hollywood Walk. Guests stay on foot the whole time, pausing while the guide talks at each site. The locations are chosen because a film or television scene was shot there.",
-      "Among the places guests actually encounter are Year Anniversary, Hollywood History, and Show Business. Later the guide turns to Warner Bros and Hollywood Walk, explaining what happened there. Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.",
-      "Guests keep walking while that account is given, moving at the guide's pace."
+      "Guests hear about Year Anniversary and Hollywood History. The guide's account includes Show Business and Warner Bros. Stories along the way cover Hollywood Walk."
     ],
-    "schemaDescription": "Guests hear about Year Anniversary and Hollywood History. The guide's account includes Show Business and Warner Bros. Stories along the way cover Hollywood Walk. Guests stay on foot the whole time, pausing while the guide talks at each site. The locations are chosen because a film or television scene was shot there.",
+    "schemaDescription": "Guests hear about Year Anniversary and Hollywood History.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -1907,7 +1905,7 @@
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
-    "wordCount": 112,
+    "wordCount": 24,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -2023,8 +2021,12 @@
       }
     },
     "validation": {
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 24 words; rich FareHarbor source requires at least 100 words"
+      ]
     }
   },
   {
@@ -2481,7 +2483,7 @@
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
       "Guests walk the corridor and look at outdoor murals along the way. The guide explains how that public-art route and its artists developed. Artists, neighborhood change, and the works on the walls are what the commentary covers. People stay on foot, and the art is viewed outside rather than inside a museum.",
-      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The tasting includes Venice Boardwalk and Abbot Kinney. Also poured or served are Venice Canals Select. Among the places guests actually encounter are Venice Boardwalk, Abbot Kinney, and Venice Canals Select."
+      "The neighborhood is the setting, and the guide attaches a story to the murals the group stops to see. The tasting includes Venice Boardwalk and Abbot Kinney. Also poured or served are Venice Canals Select."
     ],
     "schemaDescription": "A three-hour guided outing with Take Me Out LA in Venice.",
     "removedClaims": [
@@ -2497,7 +2499,7 @@
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
-    "wordCount": 103,
+    "wordCount": 88,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "1331 Abbot Kinney Blvd Venice, CA",
@@ -2634,8 +2636,11 @@
       }
     },
     "validation": {
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "experience copy is 88 words; rich FareHarbor source requires at least 100 words"
+      ]
     }
   },
   {

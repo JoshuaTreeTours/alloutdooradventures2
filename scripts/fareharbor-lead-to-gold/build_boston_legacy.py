@@ -39,10 +39,15 @@ from tripadvisor_ratings import (
 from editorial_voice import (
     activity_contradiction_errors,
     compose_editorial,
+    contrast_padding_errors,
+    count_words,
     editorial_substance_errors,
     invented_food_walk_errors,
     load_editorial_sample,
+    paragraphs_without_contrast,
     section_label_leak_errors,
+    split_sentences,
+    usable_regenerated_copy,
 )
 from source_priority import (
     collect_authoritative_source,
@@ -798,6 +803,8 @@ def copy_is_grounded(
         return False
     if activity_contradiction_errors(paragraphs or [], title, description):
         return False
+    if contrast_padding_errors([*(paragraphs or []), schema or ""], description):
+        return False
     return word_count(paragraphs or []) >= 100
 
 
@@ -1014,6 +1021,7 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         if part
     )
     overlap_text = prose_for_overlap(authoritative) or (facts.get("description") or "")
+    short_grounded = False
     if exception in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}:
         paragraphs = short_missing_copy(catalog["title"], catalog.get("operator"))
         highlights = []
@@ -1034,11 +1042,48 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
             if overlay.get("schemaDescription"):
                 generated_schema = overlay["schemaDescription"]
         elif not overlay:
-            restored = restore_grounded_editorial(
-                catalog, facts.get("description") or ""
-            )
+            description = facts.get("description") or ""
+            previous = PREVIOUS_RUNTIME.get(str(catalog.get("itemId")))
+            restored = restore_grounded_editorial(catalog, description)
             if restored:
                 paragraphs, highlights, generated_schema = restored
+            elif previous and previous.get("exceptionStatus") == "OK":
+                highlights = list(previous.get("highlights") or [])
+                source_is_thin = not source_can_support_full_editorial(
+                    authoritative, facts
+                )
+                if contrast_padding_errors(previous.get("paragraphs") or [], description) and (
+                    not usable_regenerated_copy(
+                        paragraphs,
+                        catalog.get("title") or "",
+                        description,
+                        source_is_thin,
+                    )
+                ):
+                    stripped = paragraphs_without_contrast(
+                        previous.get("paragraphs") or [], description
+                    )
+                    if count_words(stripped) >= 20:
+                        paragraphs = stripped
+                        if count_words(stripped) < 100:
+                            short_grounded = True
+                        schema_candidate = previous.get("schemaDescription") or ""
+                        if contrast_padding_errors(
+                            [schema_candidate], description
+                        ) or count_words([schema_candidate]) >= count_words(stripped):
+                            chosen_schema = []
+                            for piece in split_sentences(" ".join(stripped)):
+                                chosen_schema.append(piece)
+                                if (
+                                    count_words(chosen_schema) >= 8
+                                    and count_words(chosen_schema) < count_words(stripped)
+                                ):
+                                    break
+                            generated_schema = (
+                                " ".join(chosen_schema) if chosen_schema else " ".join(stripped)
+                            )
+                        else:
+                            generated_schema = schema_candidate
     words = word_count(paragraphs)
     price = (
         extract_price(preview, catalog["itemId"])
@@ -1046,10 +1091,21 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         else None
     )
     source_supports_full = source_can_support_full_editorial(authoritative, facts)
+    # A thin source keeps its grounded sentences. Padding them out to 100 words
+    # is what produced the repeated "not a town tour" contrasts.
+    publish_short = (
+        exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
+        and words < 100
+        and (not source_supports_full or short_grounded)
+        and words >= 20
+        and bool(paragraphs)
+        and not contrast_padding_errors(paragraphs, facts.get("description") or "")
+    )
     if (
         exception not in {"SOURCE_NOT_FOUND", "BOOKING_PAGE_NOT_FOUND"}
         and words < 100
         and not source_supports_full
+        and not publish_short
     ):
         exception = "INSUFFICIENT_SOURCE_CONTENT"
         price = None
@@ -1170,6 +1226,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
         geography=geography,
         expected_city=dest.get("city") or CITY_NAME,
         prose_source=overlap_text,
+        allow_short=bool(
+            exception == "OK"
+            and words < 100
+            and (not source_supports_full or short_grounded)
+        ),
     )
     extra = []
     expected_city_slug = dest.get("citySlug") or CITY_SLUG
@@ -1191,6 +1252,11 @@ def build_product(catalog: dict, booking: dict, catalog_destinations: dict) -> d
                 "BOOKING_PAGE_NOT_FOUND",
                 "INSUFFICIENT_SOURCE_CONTENT",
             } else "",
+            allow_short=bool(
+                exception == "OK"
+                and word_count(product["paragraphs"]) < 100
+                and (not source_supports_full or short_grounded)
+            ),
         )
         extra.extend(voice_errors)
         extra.extend(

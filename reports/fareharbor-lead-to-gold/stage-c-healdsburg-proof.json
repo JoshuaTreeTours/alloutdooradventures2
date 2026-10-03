@@ -8,8 +8,9 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek. Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Wine Country Bikes, Hudson St, and Truett Hurst.",
-      "Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Wine Country Bikes and Hudson St, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
+      "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. An electric-assist bike is offered as an upgrade for the ride.",
+      "The bikes do the traveling, and the winery stops are where guests get off to taste. The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek. Guests cover the sights by bike, stopping where the guide has something to say.",
+      "Among the places guests actually encounter are Wine Country Bikes, Hudson St, and Truett Hurst."
     ],
     "schemaDescription": "A guided outing with Getaway Adventures in Healdsburg.",
     "removedClaims": [
@@ -23,7 +24,7 @@
       "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
     ],
     "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
-    "wordCount": 101,
+    "wordCount": 114,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Dry Creek Wine Region: Healdsburg, CA",
@@ -231,20 +232,23 @@
     "operator": "Getaway Adventures",
     "publicPath": "/destinations/california/healdsburg/tours/self-guided-e-bike-tour-29272",
     "engine2Path": null,
-    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "The operator Getaway Adventures lists this outing."
+      "Guests ride bikes from one winery to the next. The bikes do the traveling, and the winery stops are where guests get off to taste."
     ],
-    "schemaDescription": "The operator Getaway Adventures lists this outing.",
+    "schemaDescription": "Guests ride bikes from one winery to the next.",
     "removedClaims": [
-      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
     ],
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/ZWANa5wjSam222fWSmd8"
     ],
     "productImage": "https://cdn.filestackcontent.com/eSoIA6B7SDCaJLtnH97D",
-    "wordCount": 7,
+    "wordCount": 25,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Healdsburg",
@@ -383,8 +387,12 @@
       }
     },
     "validation": {
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "errors": [
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 25 words; rich FareHarbor source requires at least 100 words"
+      ]
     }
   }
 ]

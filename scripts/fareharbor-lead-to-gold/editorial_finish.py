@@ -326,7 +326,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
     titled = f"{title}\n{blob}"
     rows: list[str] = []
     if kind == "drive" and re.search(r"minivan|\bvan\b", blob, re.I):
-        rows.append("Guests travel by minivan rather than covering the sights on foot.")
+        rows.append("Guests travel between the sights by minivan.")
     if kind == "drive" and re.search(r"heat", blob, re.I) and re.search(r"air-condition", blob, re.I):
         rows.append("The vehicle has heat and air conditioning.")
     if kind == "drive" and re.search(r"mainly driving|mostly driving|time in the (?:car|vehicle|van)", blob, re.I):
@@ -488,7 +488,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
     if re.search(r"open[- ]air", blob, re.I) and re.search(
         r"does not include any stops|\bno stops\b", blob, re.I
     ):
-        rows.append("Guests ride in an open-air vehicle rather than walking between sights.")
+        rows.append("Guests ride in an open-air vehicle and see the sights from the seat.")
         rows.append("The outing does not include stops, so the sights are seen from the vehicle.")
         if re.search(r"\btraffic\b", blob, re.I):
             hours = re.search(r"up to\s+(\d+)\s*hours?", blob, re.I)
@@ -575,7 +575,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"whale sightings|see whales|look for whales|extended time", blob, re.I):
             rows.append("The longer window on the water is there to look for whales.")
         rows.append("People stay aboard, and the animals are what the trip goes out to find.")
-        rows.append("Travel stays on the boat, so there is no walking route.")
+        rows.append("Travel stays on the boat for the whole trip.")
     if re.search(r"\b(whaler|outboard|center console|powerboat|power boat)\b", blob, re.I) and not re.search(
         r"\bwhales?\b", blob, re.I
     ):
@@ -613,7 +613,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         speed = re.search(r"(\d+)\s*mph", blob, re.I)
         if speed:
             rows.append(f"Top speed is about {speed.group(1)} miles per hour.")
-        rows.append("People remain on the boat for the rental, and there is no walking route.")
+        rows.append("People remain on the boat for the rental.")
     if re.search(r"\bgocar\b|\bgo\s*car\b", blob, re.I):
         rows.append("Guests drive a small GPS-guided car rather than riding a tour bus.")
         if re.search(r"speedboat", blob, re.I):
@@ -634,11 +634,11 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             unit = "hour" if hours.group(1) == "1" else "hours"
             rows.append(f"The driving portion runs about {hours.group(1)} {unit}.")
         rows.append("Guests steer the car themselves, with the GPS setting the turns.")
-        rows.append("The outing is a drive, not a walk between the sights.")
+        rows.append("The outing is a drive, and the sights are seen from the car.")
     if re.search(r"bonfire|s'mores|smores", blob, re.I) or (
         re.search(r"firepit|fire pit", blob, re.I) and re.search(r"attendant", blob, re.I)
     ):
-        rows.append("Guests gather at a firepit rather than walking a neighborhood route.")
+        rows.append("Guests gather at a firepit for the evening.")
         if re.search(r"s'mores|smores|marshmallow", blob, re.I):
             rows.append("The group toasts marshmallows and makes s'mores at the fire.")
         if re.search(r"attendant", blob, re.I):
@@ -653,10 +653,9 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"attendant", blob, re.I):
             rows.append("The visit stays at the fire, with the attendant handling the bonfire.")
         else:
-            rows.append("The visit stays at the fire rather than touring the streets.")
-        rows.append("People sit together for the length of the booking instead of touring the streets.")
+            rows.append("The visit stays at the fire.")
     if re.search(r"\bhike", blob, re.I) and re.search(r"mountain", blob, re.I):
-        rows.append("Guests hike a mountain trail rather than touring by vehicle.")
+        rows.append("Guests walk a mountain trail for this outing.")
         if re.search(r"cowles", blob, re.I):
             rows.append("The hike goes up Cowles Mountain.")
         if re.search(r"mission trails", blob, re.I):
@@ -668,7 +667,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"easy", blob, re.I):
             rows.append("The operator describes the hike as an easier walk, with time to stop and look.")
         rows.append("Guests stay on foot for the outing, and the mountain is the destination.")
-        rows.append("The views are from the trail itself, not from a vehicle window.")
+        rows.append("The views are from the trail itself.")
     if re.search(r"christmas|holiday lights", blob, re.I) and re.search(
         r"neighborhood", blob, re.I
     ):
@@ -694,13 +693,13 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("There is time to get out for photographs at the displays.")
         if re.search(r"family", blob, re.I):
             rows.append("Families ride together to see the lights.")
-        rows.append("The outing is a ride past the decorations, not a daytime sightseeing walk.")
+        rows.append("The outing is a ride past the decorations.")
         rows.append("Guests stay with the vehicle except where the route stops for the displays.")
     if re.search(r"\b(geodesic dome|bell tent|glamping|dry campsite|campsite)\b", blob, re.I):
         if re.search(r"geodesic dome|\bdome\b", blob, re.I):
-            rows.append("Overnight guests sleep in a geodesic dome instead of taking a guided walk.")
+            rows.append("Overnight guests stay in a geodesic dome.")
         elif re.search(r"bell tent", blob, re.I):
-            rows.append("Overnight guests sleep in a bell tent instead of taking a guided walk.")
+            rows.append("Overnight guests stay in a bell tent.")
         else:
             rows.append("Guests camp on a dry site and bring a tent, a camper, or a trailer.")
         people = re.search(r"(?:up to|sleeps)\s+(\d+)", blob, re.I)
@@ -740,18 +739,17 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("The site has no hookups, so guests bring what they need for the night.")
         if re.search(r"joshua tree", blob, re.I):
             rows.append("The overnight stay is in Joshua Tree.")
-        rows.append("This booking is an overnight stay, not a sightseeing route through town.")
         if re.search(r"firepit|fire pit", blob, re.I):
             rows.append("Guests spend the night on the site, and the firepit is the evening gathering place.")
         else:
-            rows.append("Guests spend the night on the site rather than touring the town.")
+            rows.append("Guests stay on the site for the night.")
     if re.search(r"\bbike\b|\bbiking\b|\bebike\b|\be-bike\b", blob, re.I) and re.search(
         r"muir woods|golden gate|sausalito|santa monica|venice|pier|canal", blob, re.I
     ):
         if re.search(r"shuttle", blob, re.I):
             rows.append("The day pairs a shuttle ride with time on a bike.")
         else:
-            rows.append("Guests ride bikes rather than touring the sights on foot.")
+            rows.append("Guests ride bikes between the stops on this outing.")
         if re.search(r"pedal[\s-]?assist|electric", blob, re.I):
             rows.append("The bikes are pedal-assist, so the motor helps on the hills.")
         if re.search(r"muir woods", blob, re.I):
@@ -873,7 +871,6 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             if species:
                 rows.append(f"Animals that may be brought out include {ev.join_and(species[:4])}.")
         rows.append("Staff stay with the group while the animals are part of the program.")
-        rows.append("This booking is an animal program, not a sightseeing loop through town.")
     if re.search(r"\bsurf", blob, re.I) and re.search(r"\b(lesson|surfboard|waves?)\b", blob, re.I):
         rows.append(
             "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board."
@@ -911,7 +908,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             cap = re.search(r"maximum group size of (\d+)", blob, re.I)
         if cap:
             rows.append(f"The lesson takes groups of up to {cap.group(1)} guests.")
-        rows.append("People are in the water on surfboards rather than walking a neighborhood route.")
+        rows.append("People are in the water on surfboards for the lesson.")
         rows.append("The instructor stays in the surf with the group for the length of the lesson.")
     if re.search(r"\bprivate\b", blob, re.I) and re.search(
         r"you decide what to see|hidden gems", blob, re.I
@@ -942,7 +939,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if hours:
             unit = "hour" if hours.group(1) == "1" else "hours"
             rows.append(f"The outing runs for about {hours.group(1)} {unit}.")
-        rows.append("There is no set walking route, and the group sets the stops.")
+        rows.append("The group sets the stops, and the plan is not taken from a fixed public timetable.")
         if re.search(r"small groups", blob, re.I):
             rows.append(
                 "Small groups book the same private outing, and the plan is built around that party."
@@ -1035,7 +1032,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             )
         else:
             rows.append("Artists lead the instruction for newcomers and for people who have painted before.")
-        rows.append("The session stays indoors, with hands-on teaching rather than a walk past outdoor walls.")
+        rows.append("The session stays indoors, with hands-on teaching.")
         rows.append("A canvas and staff instruction are what the studio sets out for the group.")
     if re.search(r"neon|blacklight|ultraviolet", blob, re.I) and re.search(
         r"canvas|workshop|paint", blob, re.I
@@ -1059,10 +1056,10 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
                 "Audience participation is part of the show, and the operator describes the staging as Las Vegas Style."
             )
         elif re.search(r"audience participation", blob, re.I):
-            rows.append("Audience participation is part of the show rather than a seated lecture.")
+            rows.append("Audience participation is part of the show.")
         if re.search(r"bachelorette|birthday", blob, re.I):
             rows.append("Groups book the night for a bachelorette party, a birthday, or a night out with friends.")
-        rows.append("The performance stays in a club setting rather than on a walking route through the city.")
+        rows.append("The performance stays in a club setting.")
         rows.append(
             "Dancers, humor from the hosts, and direct involvement of the audience are what the booking details describe."
         )
@@ -1084,18 +1081,20 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
         if re.search(r"ranch|desert", titled, re.I):
             rows.append("The session is at the ranch, with the desert landscape around the grounds.")
         if re.search(r"trail ride|walk ride", titled, re.I):
-            rows.append("Guests walk with the horses from the ranch rather than touring town on their own.")
+            if re.search(r"joshua tree", titled, re.I):
+                rows.append("Guests take a walk ride with the horses in Joshua Tree.")
+            else:
+                rows.append("Guests take a walk ride with the horses.")
+        if re.search(r"\b1\s*hours?\b|\bone hours?\b|\ban hour\b", titled, re.I):
+            rows.append("The outing lasts about an hour.")
         if re.search(r"\bsunset\b", titled, re.I):
-            rows.append("This ride is the sunset departure from the ranch.")
+            rows.append("This ride is the sunset departure.")
         if re.search(r"\bmorning\b", titled, re.I):
-            rows.append("This ride is the morning departure from the ranch.")
-        rows.append("People stay with the horses for the booked session rather than on a sightseeing loop.")
-        rows.append("The booking is the time with the horses, from the start of the session until it ends.")
-        rows.append("Guests stay beside the horses instead of being led around a town route.")
+            rows.append("This ride is the morning departure.")
     if re.search(r"\b(bike|bicycle|cycling|e-bike|ebike)\b", titled, re.I) and re.search(
         r"\b(wine|winery|wineries)\b", titled, re.I
     ):
-        rows.append("Guests ride bikes between wineries rather than walking from kitchen to kitchen.")
+        rows.append("Guests ride bikes from one winery to the next.")
         if re.search(r"helmet", titled, re.I):
             rows.append("A bike and a helmet are set out when the group checks in.")
         if re.search(r"tasting", titled, re.I):
@@ -1144,7 +1143,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("A meal at one of the wineries is part of the same outing.")
         if re.search(r"viticulture|grapes", titled, re.I):
             rows.append("The commentary covers how the grapes are grown and how the wine is made.")
-        rows.append("Guests stay in the vehicle between vineyards rather than walking a neighborhood route.")
+        rows.append("Guests stay in the vehicle between vineyards.")
     if re.search(r"korbel|armstrong redwood|russian river", titled, re.I):
         if re.search(r"fisherman|golden gate", titled, re.I):
             rows.append("The day leaves Fisherman's Wharf, crosses the Golden Gate Bridge, and continues toward the Russian River.")
@@ -1161,7 +1160,7 @@ def _cue_sentences(kind: str, description: str, title: str = "") -> list[str]:
             rows.append("The last tasting is at Russian River Vineyards, looking out over the vines.")
         if re.search(r"sebastopol", titled, re.I):
             rows.append("The drive back to San Francisco passes through Sebastopol and open countryside.")
-        rows.append("Tastings and the redwood reserve are the day, not a walk between neighborhood restaurants.")
+        rows.append("Tastings and the redwood reserve are the day.")
     return rows
 
 
@@ -1333,27 +1332,27 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
     if re.search(r"pilot schooner|1890", blob, re.I):
         rows.append("The hull is a pilot schooner in the style of boats from the 1890s, with room on deck to watch.")
     if kind == "walk":
-        rows.append("Guests do not travel by bus or by boat. They stand at the sites while the explanation is given.")
+        rows.append("They stand at the sites while the explanation is given.")
         rows.append("Guests keep walking while that account is given, moving at the guide's pace.")
         rows.append("The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given.")
         rows.append("Each pause is there so guests can look at the place the story belongs to.")
     elif kind == "drive":
         vehicle = "car" if re.search(r"\bgocar\b|\bgo\s*car\b", blob, re.I) else "van"
         rows.append(
-            f"There is no set walking route. The {vehicle} is how guests move, and most landmarks are seen through the windows."
+            f"The {vehicle} is how guests move, and most landmarks are seen through the windows."
         )
     elif kind == "sail":
-        rows.append("There is no walking route. The boat is how guests move, and the harbor is the viewpoint.")
-        rows.append("People stay aboard, watching the shore go by rather than touring the sidewalks.")
+        rows.append("The boat is how guests move, and the harbor is the viewpoint.")
+        rows.append("People stay aboard, watching the shore go by.")
         rows.append("The course is on the water for the whole outing, and the shore is what guests are there to see.")
     elif kind == "food" and re.search(
         r"food tour|food walk|walking tour|\bon foot\b|neighborhood", blob, re.I
     ):
         rows.append("The stops exist for the food. Streets and storefronts are the setting, and tasting is the point.")
     elif kind == "ride":
-        rows.append("Guests are with the horses for this booking, not on a walk through town.")
+        rows.append("Guests spend the booked time with the horses.")
     elif kind == "bike":
-        rows.append("Guests are on bikes rather than on foot, with pauses only where there is something to see or hear.")
+        rows.append("Guests are on bikes, with pauses only where there is something to see or hear.")
     elif kind == "bus":
         rows.append("The coach does the traveling. Guests watch the locations go by and hear which scene was filmed at each one.")
     if len(names) >= 2:
@@ -1377,7 +1376,7 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
         rows.append("Outdoors is where the account is given, with the site itself in front of the group.")
         rows.append("Talking and looking are paired at every stop.")
         rows.append("History stays attached to the places, which is why the route exists.")
-        rows.append("The hour is spent at those sites, hearing the account rather than reading it later.")
+        rows.append("The hour is spent at those sites, hearing the account there.")
         rows.append("Guests stay with that subject for the length of the outing.")
         rows.append("Nothing is staged indoors, because the block itself is the room.")
         rows.append("Seeing the place and hearing the reason for it are the whole visit.")
@@ -1415,7 +1414,14 @@ def finish_experience(
         )
         if part
     )
-    if ev.count_words([blob]) < 40:
+    from source_priority import source_can_support_full_editorial
+
+    source_is_thin = not source_can_support_full_editorial(
+        {"description": description}, facts
+    )
+    # Thin harvests used to be stretched with invented contrasts until they
+    # hit 100 words. Stop at the grounded sentences instead.
+    if ev.count_words([blob]) < 12:
         DEBUG_REASONS.append((title, "short-blob"))
         return None
     kind = ev.activity_kind(title, blob)
@@ -1438,39 +1444,47 @@ def finish_experience(
         seen.add(key)
         kept.append(cleaned)
 
-    for draft in cue_drafts:
+    for draft in ev.drop_contrast_padding(cue_drafts, blob):
         _take(draft)
         if ev.count_words(kept) >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
             break
     if ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
-        for draft in name_drafts:
+        for draft in ev.drop_contrast_padding(name_drafts, blob):
             _take(draft)
             if ev.count_words(kept) >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
                 break
-    if ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
-        for draft in _stretch(kind, names, blob, " ".join(kept)):
+    if not source_is_thin and ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
+        for draft in ev.drop_contrast_padding(
+            _stretch(kind, names, blob, " ".join(kept)), blob
+        ):
             _take(draft)
             if ev.count_words(kept) >= ev.MIN_FULL_EDITORIAL_WORDS:
                 break
     if ev.count_words(kept) < ev.MIN_FULL_EDITORIAL_WORDS:
-        DEBUG_REASONS.append((title, f"under-{ev.count_words(kept)}"))
-        return None
+        if not (source_is_thin and ev.count_words(kept) >= 20):
+            DEBUG_REASONS.append((title, f"under-{ev.count_words(kept)}"))
+            return None
+        chosen = list(kept)
+    else:
+        chosen = None
     # Trim into the preferred band without dropping below 100.
-    chosen = []
-    total = 0
-    for item in kept:
-        words = ev.count_words([item])
-        if total >= ev.MIN_FULL_EDITORIAL_WORDS and total + words > ev.PREFERRED_MAX_EDITORIAL_WORDS + 10:
-            break
-        chosen.append(item)
-        total += words
-        if total >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
-            break
-    if ev.count_words(chosen) < ev.MIN_FULL_EDITORIAL_WORDS:
-        DEBUG_REASONS.append((title, f"trim-{ev.count_words(chosen)}"))
-        return None
+    # Thin sources already kept every grounded sentence, even under 100.
+    if chosen is None:
+        chosen = []
+        total = 0
+        for item in kept:
+            words = ev.count_words([item])
+            if total >= ev.MIN_FULL_EDITORIAL_WORDS and total + words > ev.PREFERRED_MAX_EDITORIAL_WORDS + 10:
+                break
+            chosen.append(item)
+            total += words
+            if total >= ev.PREFERRED_MAX_EDITORIAL_WORDS:
+                break
+        if ev.count_words(chosen) < ev.MIN_FULL_EDITORIAL_WORDS:
+            DEBUG_REASONS.append((title, f"trim-{ev.count_words(chosen)}"))
+            return None
     paragraphs = ev._pack_paragraphs(chosen)
-    if ev.editorial_length_errors(paragraphs):
+    if not source_is_thin and ev.editorial_length_errors(paragraphs):
         DEBUG_REASONS.append((title, "length"))
         return None
     quality = ev.prose_quality_errors(paragraphs, title, blob)
@@ -1478,7 +1492,7 @@ def finish_experience(
         DEBUG_REASONS.append((title, "quality:" + quality[0][:80]))
         return None
     fragments = ev.fragment_errors(paragraphs)
-    if fragments or ev.editorial_is_thin(paragraphs):
+    if fragments or (not source_is_thin and ev.editorial_is_thin(paragraphs)):
         DEBUG_REASONS.append((title, "fragment" if fragments else "thin"))
         return None
     if ev.overlap_with_source(" ".join(paragraphs), overlap_text or blob, title, operator):

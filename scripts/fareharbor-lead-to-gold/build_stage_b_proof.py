@@ -464,6 +464,7 @@ def validate(
     geography: dict | None = None,
     expected_city: str | None = None,
     prose_source: str | None = None,
+    allow_short: bool = False,
 ) -> dict:
     schema = product.get("schemaDescription") or ""
     public_bits = product["paragraphs"] + product["highlights"] + ([schema] if schema else [])
@@ -484,7 +485,7 @@ def validate(
     }:
         if schema.strip() != " ".join(product["paragraphs"]).strip():
             errors.append("missing-source schema description must match the short page copy")
-    elif schema_words >= product["wordCount"]:
+    elif schema_words >= product["wordCount"] and not allow_short:
         errors.append("schema description is not shorter than the editorial body")
     elif schema_words > 80:
         errors.append(f"schema description is {schema_words} words; keep it concise")
@@ -550,7 +551,7 @@ def validate(
             errors.append(f"{status} product still has a price")
         if status != "INSUFFICIENT_SOURCE_CONTENT" and product["durationLabel"] is not None:
             errors.append(f"{status} product still has a duration")
-    elif words < 100:
+    elif words < 100 and not allow_short:
         errors.append(
             "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that"
         )

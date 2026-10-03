@@ -171,8 +171,9 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Girl Scouts Badges is a 1.5-hour guided outing with Helen Woodward Animal Center. For Daisies, Brownies, Juniors, and Cadettes, Eco Learner Badge, and Pets Badge are included.",
-      "Groups stay at a maximum of 20 guests. The walk is stroller and wheelchair accessible."
+      "Attention also goes to Girl Scout, and the guide explains why it is on the route. Guests come to Girl Scout, and they hear why it is on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account there. Guests stay with that subject for the length of the outing. Nothing is staged indoors, because the block itself is the room.",
+      "Seeing the place and hearing the reason for it are the whole visit."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -189,7 +190,7 @@
       "https://cdn.filestackcontent.com/ujuWK7NhRtW8dtEYGFl3"
     ],
     "productImage": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
-    "wordCount": 44,
+    "wordCount": 112,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -323,12 +324,8 @@
       }
     },
     "validation": {
-      "ok": false,
-      "errors": [
-        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
-        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
-        "experience copy is 44 words; rich FareHarbor source requires at least 100 words"
-      ]
+      "ok": true,
+      "errors": []
     }
   },
   {
@@ -340,8 +337,8 @@
     "engine2Path": null,
     "exceptionStatus": "PRICE_NOT_FOUND",
     "paragraphs": [
-      "Staff explain how the horses are cared for and how they behave. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route.",
-      "Guests hear about Custom Girl Scout Trip and Miniature Horse. The guide's account includes Madagascar Hissing Cockroach and Guinea Pig. Stories along the way cover Pet Encounter Therapy. Among the places guests actually encounter are Custom Girl Scout Trip, Miniature Horse, and Madagascar Hissing Cockroach."
+      "Staff explain how the horses are cared for and how they behave. Guests hear about Custom Girl Scout Trip and Miniature Horse. The guide's account includes Madagascar Hissing Cockroach and Guinea Pig. Stories along the way cover Pet Encounter Therapy. Among the places guests actually encounter are Custom Girl Scout Trip, Miniature Horse, and Madagascar Hissing Cockroach.",
+      "Later the route reaches Guinea Pig and Pet Encounter Therapy. Guests come to Custom Girl Scout Trip and Miniature Horse, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -358,7 +355,7 @@
       "https://cdn.filestackcontent.com/RbCPmd24Tu2tNQmMlz7B"
     ],
     "productImage": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
-    "wordCount": 102,
+    "wordCount": 103,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -511,7 +508,7 @@
       "Outreaches is a one-hour guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
       "Groups stay at a maximum of 3 guests. The walk is stroller and wheelchair accessible."
     ],
-    "schemaDescription": "Outreaches is a one-hour guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included. Groups stay at a maximum of 3 guests. The walk is stroller and wheelchair accessible.",
+    "schemaDescription": "Outreaches is a one-hour guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -660,7 +657,6 @@
     "validation": {
       "ok": false,
       "errors": [
-        "schema description is not shorter than the editorial body",
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
         "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
         "experience copy is 37 words; rich FareHarbor source requires at least 100 words"
@@ -677,7 +673,7 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
-      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program. This booking is an animal program, not a sightseeing loop through town. Attention also goes to Howl-O-Ween Harvest Family Festival and Humane Education Campus, with the guide attaching a story to each stop."
+      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program. Attention also goes to Howl-O-Ween Harvest Family Festival and Humane Education Campus, with the guide attaching a story to each stop. Guests come to Howl-O-Ween Harvest Family Festival and Humane Education Campus, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A four-hour guided outing with Helen Woodward Animal Center. The outing passes Howl-O-Ween Harvest Family Festival.",
     "removedClaims": [
@@ -695,7 +691,7 @@
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
     "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
-    "wordCount": 109,
+    "wordCount": 120,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -888,7 +884,7 @@
       "Onsite Field Trips is a 60- to 90-minute guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
       "Groups are capped at 150. The walk is stroller and wheelchair accessible."
     ],
-    "schemaDescription": "Onsite Field Trips is a 60- to 90-minute guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included. Groups are capped at 150. The walk is stroller and wheelchair accessible.",
+    "schemaDescription": "Onsite Field Trips is a 60- to 90-minute guided outing with Helen Woodward Animal Center. _All grade lesson_ and _Preschool & Elementary School lessons_ are included.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -1037,7 +1033,6 @@
     "validation": {
       "ok": false,
       "errors": [
-        "schema description is not shorter than the editorial body",
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
         "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
         "experience copy is 38 words; rich FareHarbor source requires at least 100 words"
@@ -1055,7 +1050,7 @@
     "paragraphs": [
       "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
       "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program.",
-      "This booking is an animal program, not a sightseeing loop through town."
+      "Outdoors is where the account is given, with the site itself in front of the group."
     ],
     "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -1072,7 +1067,7 @@
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
     "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
-    "wordCount": 109,
+    "wordCount": 113,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1253,7 +1248,8 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "This booking is an animal program, not a sightseeing loop through town. The guide's account includes Equine Hospital. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
+      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. The guide's account includes Equine Hospital. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop."
     ],
     "schemaDescription": "A 3.5-hour guided outing with Helen Woodward Animal Center. The outing passes 40 min: second activity, 30 min: third activity, and 30 min: snack period.",
     "removedClaims": [
@@ -1271,7 +1267,7 @@
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
     "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
-    "wordCount": 105,
+    "wordCount": 107,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1452,8 +1448,8 @@
     "exceptionStatus": "OK",
     "paragraphs": [
       "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "This booking is an animal program, not a sightseeing loop through town. Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists.",
-      "The hour is spent at those sites, hearing the account rather than reading it later."
+      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account there.",
+      "Guests stay with that subject for the length of the outing."
     ],
     "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
@@ -1470,7 +1466,7 @@
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
     "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
-    "wordCount": 114,
+    "wordCount": 109,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -1655,7 +1651,7 @@
       "Spring Buddies Family Festival is a 6-hour guided outing with Helen Woodward Animal Center. Themed face painting and Festive, themed music throughout the event are included.",
       "The walk is stroller and wheelchair accessible."
     ],
-    "schemaDescription": "Spring Buddies Family Festival is a 6-hour guided outing with Helen Woodward Animal Center. Themed face painting and Festive, themed music throughout the event are included. The walk is stroller and wheelchair accessible.",
+    "schemaDescription": "Spring Buddies Family Festival is a 6-hour guided outing with Helen Woodward Animal Center.",
     "removedClaims": [
       "Catalog quality_score and availability_count were not treated as ratings.",
       "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
@@ -1805,7 +1801,6 @@
     "validation": {
       "ok": false,
       "errors": [
-        "schema description is not shorter than the editorial body",
         "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
         "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
         "experience copy is 34 words; rich FareHarbor source requires at least 100 words"
@@ -1821,7 +1816,7 @@
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Children meet live animals and hear how life cycles work. Animals that may be brought out include a mini horse, a chicken, a frog, and a guinea pig. Staff stay with the group while the animals are part of the program. This booking is an animal program, not a sightseeing loop through town.",
+      "Children meet live animals and hear how life cycles work. Animals that may be brought out include a mini horse, a chicken, a frog, and a guinea pig. Staff stay with the group while the animals are part of the program. Guests spend part of the visit in a hands-on session with the horses.",
       "Guests hear about Next Generation Science Standards and Education Office. The guide's account includes Girl Scouts and Between Earth. Among the places guests actually encounter are Next Generation Science Standards, Education Office, and Girl Scouts. Guests come to Next Generation Science Standards and Education Office, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
@@ -1838,7 +1833,7 @@
       "https://cdn.filestackcontent.com/P1TOzw1XQoGD6l63r9ph"
     ],
     "productImage": "https://cdn.filestackcontent.com/sEO38S0T9esk4TOgzFek",
-    "wordCount": 108,
+    "wordCount": 110,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",

@@ -11,8 +11,8 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The ride passes Bike Rentals Helmet and Advanced Booking. Guests cover the sights by bike, stopping where the guide has something to say. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear. Guests come to Bike Rentals Helmet and Advanced Booking, and they hear why those places are on the trip.",
-      "Outdoors is where the account is given, with the site itself in front of the group. Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
+      "The ride passes Bike Rentals Helmet and Advanced Booking. Guests cover the sights by bike, stopping where the guide has something to say. Guests come to Bike Rentals Helmet and Advanced Booking, and they hear why those places are on the trip. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists. The hour is spent at those sites, hearing the account rather than reading it later."
     ],
     "schemaDescription": "A bicycle outing with Bike Catalina in Avalon.",
     "highlights": [],
@@ -20,7 +20,7 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71"
     ],
     "productImage": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
-    "wordCount": 112,
+    "wordCount": 93,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Appointment only",

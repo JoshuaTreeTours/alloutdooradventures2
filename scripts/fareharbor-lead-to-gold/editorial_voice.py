@@ -374,6 +374,10 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
         r"\b(bed|sleeps?|tent|campfire|grill|heater)\b", blob, re.I
     ):
         return False
+    if re.search(r"\b(surfboards?|wetsuit|paddling)\b", blob, re.I) and re.search(
+        r"\b(ocean|waves?)\b", blob, re.I
+    ):
+        return False
     if not EXPERIENCE_TOKEN_RE.search(blob) and not FOOD_RE.search(blob) and not VESSEL_RE.search(blob):
         return True
     if re.search(
@@ -384,10 +388,6 @@ def editorial_is_thin(paragraphs: list[str]) -> bool:
         r"harvard yard|harvard square)\b",
         blob,
         re.I,
-    ):
-        return False
-    if re.search(r"\b(surfboard|wetsuit|paddling)\b", blob, re.I) and re.search(
-        r"\b(ocean|waves?)\b", blob, re.I
     ):
         return False
     if not re.search(r"\b[A-Z][A-Za-z0-9'&.-]{2,}(?:\s+[A-Z][A-Za-z0-9'&.-]{2,})+\b", blob):
@@ -404,6 +404,7 @@ def editorial_substance_errors(
     exception: str | None = None,
     title: str = "",
     description: str = "",
+    allow_short: bool = False,
 ) -> list[str]:
     errors = editorial_voice_errors(paragraphs, highlights, schema)
     text = " ".join([*(paragraphs or []), *(highlights or []), schema or ""])
@@ -413,12 +414,14 @@ def editorial_substance_errors(
     if exception in WITHHELD_STATUSES:
         return errors
     errors.extend(field_dump_errors(paragraphs))
-    if editorial_is_thin(paragraphs):
+    if editorial_is_thin(paragraphs) and not allow_short:
         errors.append(
             "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich"
         )
-    errors.extend(editorial_length_errors(paragraphs, exception=exception))
+    errors.extend(editorial_length_errors(paragraphs, exception=exception, allow_short=allow_short))
     errors.extend(prose_quality_errors(paragraphs, title, description))
+    if schema:
+        errors.extend(contrast_padding_errors([schema], description))
     return errors
 
 
@@ -426,8 +429,9 @@ def editorial_length_errors(
     paragraphs: list[str],
     *,
     exception: str | None = None,
+    allow_short: bool = False,
 ) -> list[str]:
-    if exception in WITHHELD_STATUSES:
+    if exception in WITHHELD_STATUSES or allow_short:
         return []
     words = count_words(paragraphs)
     if words < MIN_FULL_EDITORIAL_WORDS:
@@ -456,6 +460,197 @@ def generic_padding_errors(text: str) -> list[str]:
         for phrase in GENERIC_PADDING_PHRASES
         if phrase in lowered
     ]
+
+
+_DENIAL_CLAUSE_RE = re.compile(
+    r"(?:\brather than\b.+|\binstead of\b.+|\bnot (?:a|on)\b.+)",
+    re.I,
+)
+_INVENTED_ALT_ACTIVITY_RE = re.compile(
+    r"\b(?:"
+    r"sightseeing loops?|sightseeing routes?|sightseeing walks?|"
+    r"walking tours?|guided walks?|"
+    r"town routes?|through town|touring town|"
+    r"neighborhood routes?|"
+    r"walk through town|walking between|walks? between|"
+    r"on foot|"
+    r"touring the (?:streets|sidewalks|town|sights)|"
+    r"covering the sights on foot|"
+    r"daytime sightseeing|"
+    r"march between|"
+    r"walking routes?|"
+    r"sidewalks?|"
+    r"sidewalk stops?|"
+    r"kitchen to kitchen|"
+    r"neighborhood restaurants"
+    r")\b",
+    re.I,
+)
+_SOURCE_DRAWS_ACTIVITY_CONTRAST_RE = re.compile(
+    r"\b(?:"
+    r"not a (?:walking tour|sightseeing(?: loop| tour)?|guided walk|town tour|neighborhood tour)"
+    r"|rather than (?:a )?(?:walking tour|sightseeing|town route|walking)"
+    r"|instead of (?:a )?(?:walking tour|sightseeing|guided walk)"
+    r"|isn'?t a (?:walking tour|sightseeing)"
+    r"|no walking tour"
+    r")\b",
+    re.I,
+)
+_GENERIC_CONTRAST_CARRIER_RE = re.compile(
+    r"^(?:"
+    r"people stay with the .+ for the booked session"
+    r"|guests stay (?:with|beside) the .+"
+    r"|guests are with the .+ for this booking"
+    r"|this booking is\b.+"
+    r"|the outing is an? \w+"
+    r"|there is no\b.*"
+    r"|the point of the outing is\b.+"
+    r"|guests do not travel\b.*"
+    r"|the booking is the time\b.*"
+    r")$",
+    re.I,
+)
+
+
+def _contrast_norm(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
+
+
+def _denial_clause(sentence: str) -> str:
+    match = _DENIAL_CLAUSE_RE.search(sentence or "")
+    return match.group(0).strip() if match else ""
+
+
+def _contrast_family(denial: str) -> str:
+    if _INVENTED_ALT_ACTIVITY_RE.search(denial or ""):
+        return "alternate-tour"
+    return _contrast_norm(denial)
+
+
+def invented_activity_denial(sentence: str, source: str = "") -> bool:
+    """True when copy denies a walking tour or sightseeing loop the source never drew."""
+    if _SOURCE_DRAWS_ACTIVITY_CONTRAST_RE.search(source or ""):
+        return False
+    if re.search(r"\bno(?: set)? walking route\b", sentence or "", re.I):
+        return True
+    denial = _denial_clause(sentence)
+    return bool(denial and _INVENTED_ALT_ACTIVITY_RE.search(denial))
+
+
+def _positive_remainder(text: str) -> str | None:
+    match = re.search(r"\s+(?:rather than|instead of)\b|,\s+not\b", text or "", re.I)
+    if not match:
+        return None
+    left = text[: match.start()].strip(" ,")
+    if (
+        not left
+        or _GENERIC_CONTRAST_CARRIER_RE.search(left)
+        or count_words([left]) < 6
+        or not SENTENCE_VERB_RE.search(left)
+    ):
+        return None
+    return sentence(left)
+
+
+def drop_contrast_padding(sentences: list[str], source: str = "") -> list[str]:
+    """Drop invented town-tour denials and keep one statement of any other contrast."""
+    pieces: list[str] = []
+    for raw in sentences or []:
+        split = split_sentences(raw)
+        if split:
+            pieces.extend(split)
+        elif raw and raw.strip():
+            pieces.append(raw.strip())
+    kept: list[str] = []
+    seen_families: list[str] = []
+    seen_norm: set[str] = set()
+
+    def _remember(text: str) -> None:
+        cleaned = text.strip()
+        if not cleaned:
+            return
+        if cleaned[-1] not in ".!":
+            cleaned = sentence(cleaned)
+        norm = _contrast_norm(cleaned)
+        if not norm or norm in seen_norm:
+            return
+        seen_norm.add(norm)
+        kept.append(cleaned)
+
+    for piece in pieces:
+        sentence_text = piece.strip()
+        if not sentence_text:
+            continue
+        if invented_activity_denial(sentence_text, source):
+            positive = _positive_remainder(sentence_text)
+            if not positive:
+                continue
+            sentence_text = positive
+        denial = _denial_clause(sentence_text)
+        family = _contrast_family(denial) if denial else ""
+        if family and family in seen_families:
+            positive = _positive_remainder(sentence_text)
+            if not positive:
+                continue
+            sentence_text = positive
+            denial = _denial_clause(sentence_text)
+            family = _contrast_family(denial) if denial else ""
+            if family and family in seen_families:
+                continue
+        if family:
+            seen_families.append(family)
+        _remember(sentence_text)
+    return kept
+
+
+def paragraphs_without_contrast(paragraphs: list[str], source: str = "") -> list[str]:
+    sentences: list[str] = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    return _pack_paragraphs(drop_contrast_padding(sentences, source))
+
+
+def usable_regenerated_copy(
+    paragraphs: list[str],
+    title: str,
+    description: str,
+    source_is_thin: bool,
+) -> bool:
+    """New composer output may replace padded copy only when it stays grounded."""
+    if not paragraphs:
+        return False
+    if contrast_padding_errors(paragraphs, description):
+        return False
+    if prose_quality_errors(paragraphs, title, description):
+        return False
+    if fragment_errors(paragraphs):
+        return False
+    words = count_words(paragraphs)
+    if words < 20:
+        return False
+    if not source_is_thin and (words < MIN_FULL_EDITORIAL_WORDS or editorial_is_thin(paragraphs)):
+        return False
+    return True
+
+
+def contrast_padding_errors(paragraphs: list[str], source: str = "") -> list[str]:
+    sentences: list[str] = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    if not sentences:
+        return []
+    cleaned = drop_contrast_padding(sentences, source)
+    cleaned_norm = {_contrast_norm(item) for item in cleaned}
+    errors = [
+        f"contrast padding: {sentence}"
+        for sentence in sentences
+        if _contrast_norm(sentence) not in cleaned_norm
+    ]
+    if not errors and [_contrast_norm(item) for item in sentences] != [
+        _contrast_norm(item) for item in cleaned
+    ]:
+        errors.append("contrast padding: repeated negative contrast")
+    return errors
 
 
 def activity_kind(title: str, description: str = "") -> str:
@@ -610,7 +805,7 @@ def itinerary_list_errors(paragraphs: list[str]) -> list[str]:
         r"story|stories|account|accounts|sample|taste|tastes|tasting|"
         r"photograph|photographs|step|steps|board|boards|watch|watches|tells|talks|"
         r"commentary|built|modeled|fireworks|revolution|minivan|schooner|yacht|boat|harbor|pace|"
-        r"air conditioning|heated|bus|coves|hills)\b",
+        r"air conditioning|heated|bus|coves|hills|drive|drives|driving|van|bike|bikes|surf)\b",
         re.I,
     )
     for item in sentences:
@@ -637,6 +832,7 @@ def prose_quality_errors(
     errors.extend(filler_errors(paragraphs, title))
     errors.extend(itinerary_list_errors(paragraphs))
     errors.extend(generic_padding_errors(" ".join(paragraphs or [])))
+    errors.extend(contrast_padding_errors(paragraphs, description))
     return errors
 
 
@@ -2792,6 +2988,9 @@ def compose_editorial(
     body_words = count_words(paragraphs)
     if body_words < 40:
         schema = " ".join(paragraphs).strip()
+        first = split_sentences(schema)
+        if first and count_words(first[:1]) < body_words:
+            schema = first[0]
     else:
         schema = compose_schema(
             title, operator, activity, duration_adj, duration, city, places, body_words

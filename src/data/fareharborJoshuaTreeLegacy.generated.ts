@@ -155,15 +155,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The session is at the ranch, with the desert landscape around the grounds. Guests walk with the horses from the ranch rather than touring town on their own. This ride is the sunset departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop.",
-      "The booking is the time with the horses, from the start of the session until it ends. Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route.",
-      "Guests are with the horses for this booking, not on a walk through town."
+      "The session is at the ranch, with the desert landscape around the grounds. Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the sunset departure."
     ],
-    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "The session is at the ranch, with the desert landscape around the grounds.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
-    "wordCount": 112,
+    "wordCount": 36,
     "durationLabel": "1 hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -201,14 +199,14 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Overnight guests sleep in a bell tent instead of taking a guided walk. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors. Outdoor seating includes a picnic table for meals on the site.",
-      "An outdoor shower and a sink are part of this site. Shared portable toilets are a short walk from the site. This booking is an overnight stay, not a sightseeing route through town. Guests spend the night on the site, and the firepit is the evening gathering place."
+      "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors. Outdoor seating includes a picnic table for meals on the site.",
+      "An outdoor shower and a sink are part of this site. Shared portable toilets are a short walk from the site. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
-    "wordCount": 101,
+    "wordCount": 83,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -241,15 +239,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Overnight guests sleep in a geodesic dome instead of taking a guided walk. Sleeping is on a queen bed, and linens are provided. A couch and a folding mattress give more room to sleep. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors.",
+      "Overnight guests stay in a geodesic dome. Sleeping is on a queen bed, and linens are provided. A couch and a folding mattress give more room to sleep. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors.",
       "An outdoor shower and a sink are part of this site. A private portable toilet is assigned to this site. A heater is available when the night turns cold. The dome is not insulated, so summers run hot and winters run cold. Guests bring their own drinking water for the stay.",
-      "This booking is an overnight stay, not a sightseeing route through town. Guests spend the night on the site, and the firepit is the evening gathering place."
+      "Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
-    "wordCount": 131,
+    "wordCount": 113,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -287,15 +285,15 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Overnight guests sleep in a bell tent instead of taking a guided walk. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. Outdoor seating includes a picnic table for meals on the site. Solar lights are inside for the evening hours.",
-      "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. This booking is an overnight stay, not a sightseeing route through town. Guests spend the night on the site, and the firepit is the evening gathering place.",
-      "Outdoors is where the account is given, with the site itself in front of the group."
+      "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. Outdoor seating includes a picnic table for meals on the site. Solar lights are inside for the evening hours.",
+      "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
-    "wordCount": 114,
+    "wordCount": 104,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -339,7 +337,8 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
-      "The site has no hookups, so guests bring what they need for the night. This booking is an overnight stay, not a sightseeing route through town. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group."
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
@@ -347,7 +346,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
     ],
     "productImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
-    "wordCount": 103,
+    "wordCount": 111,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -396,13 +395,14 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
-      "The site has no hookups, so guests bring what they need for the night. This booking is an overnight stay, not a sightseeing route through town. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group."
+      "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place. Outdoors is where the account is given, with the site itself in front of the group.",
+      "Talking and looking are paired at every stop. History stays attached to the places, which is why the route exists."
     ],
     "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
-    "wordCount": 103,
+    "wordCount": 111,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,
@@ -451,8 +451,8 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
-      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
-      "Guests stay beside the horses instead of being led around a town route."
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines. Also part of the same visit are Northern California and Phineas Fittipaldi.",
+      "Among the places guests actually encounter are Cascade Trails, Wiley Wines, and Northern California."
     ],
     "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
     "highlights": [],
@@ -460,7 +460,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
     "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
-    "wordCount": 120,
+    "wordCount": 109,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",
@@ -493,14 +493,13 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests walk with the horses from the ranch rather than touring town on their own. This ride is the morning departure from the ranch. People stay with the horses for the booked session rather than on a sightseeing loop. The booking is the time with the horses, from the start of the session until it ends.",
-      "Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests are with the horses for this booking, not on a walk through town. Guests come to Joshua Tree, and they hear why it is on the trip."
+      "Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the morning departure."
     ],
-    "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "Guests take a walk ride with the horses in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
-    "wordCount": 113,
+    "wordCount": 23,
     "durationLabel": "1 Hour",
     "durationIso": "PT1H",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",

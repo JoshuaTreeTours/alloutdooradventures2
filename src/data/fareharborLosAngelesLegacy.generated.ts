@@ -11,7 +11,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride in an open-air vehicle rather than walking between sights. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
+      "Guests ride in an open-air vehicle and see the sights from the seat. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
       "Moviemaking landmarks are among the sights seen from the vehicle. Residential neighborhoods are part of the same ride. Architectural buildings are visible from the open-air vehicle. Historic sites are also on the drive and are seen without a stop. Guests are asked to bring a camera for the ride.",
       "People stay aboard the vehicle for the length of the outing. There is no walking portion, because the operator does not schedule stops. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
     ],
@@ -21,7 +21,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-    "wordCount": 141,
+    "wordCount": 143,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,
@@ -60,7 +60,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "A private group sets the sights, the departure time, and the length of the outing. The pace stays with the guests instead of following a fixed public timetable. Stops include well-known sights and places left out of ordinary travel guides. The private booking is limited to 7 guests.",
-      "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. There is no set walking route, and the group sets the stops. Small groups book the same private outing, and the plan is built around that party.",
+      "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. The group sets the stops, and the plan is not taken from a fixed public timetable. Small groups book the same private outing, and the plan is built around that party.",
       "The operator leads the outing, and the plan changes with the group's size and interests. Guests visit both the better-known sights and the places the travel guides skip."
     ],
     "schemaDescription": "A three-hour guided outing with Golden Ticket LA in Los Angeles.",
@@ -69,7 +69,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
-    "wordCount": 129,
+    "wordCount": 133,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "6808 Hollywood Blvd, Los Angeles, CA, 90028",

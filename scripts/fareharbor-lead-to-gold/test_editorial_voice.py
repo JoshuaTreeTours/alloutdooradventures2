@@ -11,6 +11,8 @@ from editorial_voice import (
     apply_editorial_overlay,
     boilerplate_language_errors,
     compose_editorial,
+    contrast_padding_errors,
+    drop_contrast_padding,
     editorial_is_thin,
     editorial_substance_errors,
     editorial_voice_errors,
@@ -214,10 +216,12 @@ class EditorialVoiceTest(unittest.TestCase):
             {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
         )
         body = " ".join(paragraphs)
-        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertGreaterEqual(len(body.split()), 40)
         self.assertIn("canvas", body.lower())
         self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotIn("walking route", body.lower())
         self.assertNotRegex(body.lower(), r"the (group|walk|outing) covers")
+        self.assertEqual(contrast_padding_errors(paragraphs, workshop), [])
         self.assertEqual(prose_quality_errors(paragraphs, "Spray Paint Workshop", workshop), [])
 
         revue = (
@@ -245,12 +249,92 @@ class EditorialVoiceTest(unittest.TestCase):
             {"disposition": "keep", "place": {"city": "Chicago", "state": "Illinois"}},
         )
         body = " ".join(paragraphs)
-        self.assertGreaterEqual(len(body.split()), 100)
+        self.assertGreaterEqual(len(body.split()), 40)
         self.assertIn("revue", body.lower())
         self.assertNotIn("Las Vegas Style, and they hear why", body)
         self.assertNotIn("nothing is staged indoors", body.lower())
+        self.assertNotIn("walking route", body.lower())
         self.assertNotRegex(schema, r"passes Paint")
+        self.assertEqual(contrast_padding_errors(paragraphs, revue), [])
         self.assertEqual(prose_quality_errors(paragraphs, "Male Revue Night", revue), [])
+
+    def test_thin_trail_ride_is_not_padded_with_town_contrasts(self):
+        description = (
+            "Enjoy a beautiful walk ride in Joshua Tree. This is a peaceful way to start your day! "
+            "Riders must be 8 years of age or older."
+        )
+        paragraphs, _highlights, _schema, _removed = compose_editorial(
+            {
+                "title": "Morning Trail Ride",
+                "operator": "Cascade Trails Mustang Sanctuary",
+            },
+            {
+                "description": description,
+                "duration": "1 Hour",
+                "included": ["1 hour trail ride"],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": "6353 Cascade Rd Joshua Tree, CA 92252",
+            },
+            description,
+            {
+                "disposition": "keep",
+                "place": {"city": "Joshua Tree", "state": "California"},
+            },
+        )
+        body = " ".join(paragraphs)
+        lowered = body.lower()
+        self.assertNotIn("rather than touring town", lowered)
+        self.assertNotIn("sightseeing loop", lowered)
+        self.assertNotIn("town route", lowered)
+        self.assertNotIn("not on a walk through town", lowered)
+        self.assertNotIn("instead of being led", lowered)
+        self.assertRegex(lowered, r"horse")
+        self.assertRegex(body, r"\b[Mm]orning\b")
+        self.assertGreaterEqual(len(body.split()), 20)
+        self.assertLess(len(body.split()), 100)
+        self.assertEqual(contrast_padding_errors(paragraphs, description), [])
+        errors = editorial_substance_errors(
+            paragraphs,
+            [],
+            paragraphs[0],
+            exception="OK",
+            title="Morning Trail Ride",
+            description=description,
+            allow_short=True,
+        )
+        self.assertEqual(errors, [], msg=errors)
+
+    def test_same_negative_contrast_is_kept_once_and_only_from_source(self):
+        padded = [
+            "Guests walk with the horses from the ranch rather than touring town on their own.",
+            "People stay with the horses for the booked session rather than on a sightseeing loop.",
+            "Guests stay beside the horses instead of being led around a town route.",
+            "Guests are with the horses for this booking, not on a walk through town.",
+        ]
+        kept_padded = drop_contrast_padding(padded, "A walk ride in Joshua Tree.")
+        self.assertEqual(len(kept_padded), 1)
+        self.assertNotRegex(kept_padded[0].lower(), r"rather than|sightseeing|town route|walk through town")
+        source = "This is not a walking tour. Guests ride horses at the ranch."
+        kept = drop_contrast_padding(
+            [
+                "This booking is a ranch ride, not a walking tour.",
+                "Guests are with the horses rather than on a walking tour.",
+            ],
+            source,
+        )
+        denials = [item for item in kept if "walking tour" in item.lower()]
+        self.assertEqual(len(denials), 1)
+        banana = "Suture practice uses a banana rather than a live animal."
+        self.assertEqual(
+            drop_contrast_padding([banana], "Practice sutures on a banana."),
+            [banana],
+        )
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "The ride passes Laguna Beach and Heisler Park. Cyclists also come to Central Laguna and Bluebird Canyon. Mystic Hills and Main Beach are on the same loop. Later the route reaches Pyne Castle and North Laguna. Attention also goes to Crescent Bay Beach Park and Dana Point, with the guide attaching a story to each stop.",
-      "Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Laguna Beach, Heisler Park, and Central Laguna. Later the route reaches Bluebird Canyon and Mystic Hills. Guests are on bikes rather than on foot, with pauses only where there is something to see or hear."
+      "Guests cover the sights by bike, stopping where the guide has something to say. Among the places guests actually encounter are Laguna Beach, Heisler Park, and Central Laguna. Later the route reaches Bluebird Canyon and Mystic Hills. Guests are on bikes, with pauses only where there is something to see or hear."
     ],
     "schemaDescription": "A two-hour bicycle outing with La Vida Laguna in Laguna Beach. The outing passes Heisler Park and Crescent Bay Beach Park.",
     "highlights": [
@@ -24,7 +24,7 @@ export const fareHarborLagunaBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/HNUlEehBTz6UDJCa2sZZ"
     ],
     "productImage": "https://cdn.filestackcontent.com/UrwqlOveRG21COCHeNuc",
-    "wordCount": 112,
+    "wordCount": 108,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "1121 Glenneyre St. Laguna Beach, CA 92651",

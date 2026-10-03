@@ -17,8 +17,8 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/laguna-beach
 - Runtime PASS: 1
 - Runtime FAIL: 0
 - Terminal removals: 0
-- PRICE_NOT_FOUND after editorial: 0
-- INSUFFICIENT_SOURCE_CONTENT: 2
+- PRICE_NOT_FOUND after editorial: 2
+- INSUFFICIENT_SOURCE_CONTENT: 0
 - SOURCE_NOT_FOUND: 0
 - OK priced pages: 1
 - Runtime pages with a FareHarbor rating: 0
@@ -37,5 +37,5 @@ Authority is the stored harvest under `data/fareharbor-lead-to-gold/laguna-beach
 
 ## Manual review
 
-- `245311` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311` — none
-- `247443` `INSUFFICIENT_SOURCE_CONTENT` `/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443` — none
+- `245311` `PRICE_NOT_FOUND` `/destinations/california/laguna-beach/tours/electric-bike-rentals---in-store-rentals-245311` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 37 words; rich FareHarbor source requires at least 100 words; meaningless filler: the description says the group covers a title or label
+- `247443` `PRICE_NOT_FOUND` `/destinations/california/laguna-beach/tours/electric-bike-rentals---delivery-247443` — experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that; experience copy is 39 words; rich FareHarbor source requires at least 100 words; activity contradiction: walking language on a bike tour; meaningless filler: the description says the group covers a title or label

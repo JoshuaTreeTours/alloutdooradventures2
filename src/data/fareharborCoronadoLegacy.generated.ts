@@ -13,7 +13,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. Ocean safety is covered before anyone takes a board into the water. Choosing which wave to catch is part of the same instruction.",
       "A wetsuit and a surfboard are provided for the time in the water. A rash guard, fins, a leash, and reef shoes are also set out with the gear. A private booking keeps one instructor with one guest. The lesson is aimed at first-time and beginner surfers.",
-      "People are in the water on surfboards rather than walking a neighborhood route. The instructor stays in the surf with the group for the length of the lesson."
+      "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
     "highlights": [
@@ -24,7 +24,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/QAfxoxEdS5GzAkWnDKFr"
     ],
     "productImage": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
-    "wordCount": 131,
+    "wordCount": 128,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "“The Views” courtyard on the southern end of the Hotel Del Coronado at our surf trailer - 1500 Orange Ave, Coronado, CA, 92118",
@@ -60,7 +60,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. Ocean safety is covered before anyone takes a board into the water. Choosing which wave to catch is part of the same instruction.",
       "A wetsuit and a surfboard are provided for the time in the water. A rash guard, fins, a leash, and reef shoes are also set out with the gear. Instructors stay with the group at about 4 guests per instructor. The booking is private, so the instructor works with that party alone.",
-      "Family or friends share the lesson and take the same waves together. People are in the water on surfboards rather than walking a neighborhood route. The instructor stays in the surf with the group for the length of the lesson."
+      "Family or friends share the lesson and take the same waves together. People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
     "highlights": [
@@ -71,7 +71,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/1p8VFaKrQJes66ImcxqI"
     ],
     "productImage": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
-    "wordCount": 147,
+    "wordCount": 144,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "“The Views” courtyard on the southern end of the Hotel Del Coronado at our surf trailer - 1500 Orange Ave, Coronado, CA, 92118",
@@ -107,7 +107,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. A wetsuit and a surfboard are provided for the time in the water.",
       "A rash guard, fins, a leash, and reef shoes are also set out with the gear. Instructors stay with the group at about 4 guests per instructor. Family or friends share the lesson and take the same waves together. The lesson takes groups of up to 16 guests.",
-      "People are in the water on surfboards rather than walking a neighborhood route. The instructor stays in the surf with the group for the length of the lesson."
+      "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
     "highlights": [
@@ -118,7 +118,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/SF4LKtBJSd27B19BFWAe"
     ],
     "productImage": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
-    "wordCount": 121,
+    "wordCount": 118,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "1500 Orange Ave Coronado, CA 92118",
@@ -191,7 +191,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests start on the sand with a lesson in paddling, stance, and how to stand up on the board. After that land lesson, the group goes into the ocean to catch waves. A wetsuit and a surfboard are provided for the time in the water.",
       "A rash guard, fins, a leash, and reef shoes are also set out with the gear. The lesson itself is given in English. Instructors stay with the group at about 4 guests per instructor. The lesson is aimed at first-time and beginner surfers. The operator aims to have beginners standing on the board within about 30 minutes.",
-      "People are in the water on surfboards rather than walking a neighborhood route. The instructor stays in the surf with the group for the length of the lesson."
+      "People are in the water on surfboards for the lesson. The instructor stays in the surf with the group for the length of the lesson."
     ],
     "schemaDescription": "A 1.5-hour guided outing with Jamie O'Brien Surf Experience - San Diego in Coronado.",
     "highlights": [
@@ -202,7 +202,7 @@ export const fareHarborCoronadoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/PD17XlwrRTOcffMzq1Os"
     ],
     "productImage": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
-    "wordCount": 131,
+    "wordCount": 128,
     "durationLabel": "1.5 Hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "Del Beach Club 1500 Orange Avenue Coronado, CA 92118",
