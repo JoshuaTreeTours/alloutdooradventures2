@@ -15,10 +15,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Among the places guests actually encounter are Joshua Tree Classic, Cholla Garden, and Skull Rock. Later the guide turns to Arch Rock and Ohlsen Ranch, explaining what happened there. Guests come to Joshua Tree Classic and Cholla Garden, and they hear why those places are on the trip."
     ],
     "schemaDescription": "A 4.5-hour guided outing with Joshua Tree Excursions. The outing passes Cholla Garden, Cholla Cactus Garden, and Cap Rock Nature Trail.",
-    "highlights": [
-      "4.5 hours guided outing",
-      "Cholla Garden and Cholla Cactus Garden"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
     "wordCount": 108,
@@ -54,10 +51,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests may even get in some rock scrambling toward the top of some of the rock formations for views and meets rarely had by others. After that, at the conclusion of the hike, time permitting, the guide will get guests to some of other popular sights in park before returning guests safely to the office or back to the lodging facility where guests relax and talk about the memories that guests have made, that will last a lifetime."
     ],
     "schemaDescription": "A 6-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
-    "highlights": [
-      "6 hours guided outing",
-      "Joshua Tree National Park"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
     "wordCount": 143,
@@ -93,9 +87,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests may even get in some rock scrambling toward the top of some of the rock formations for views and meets rarely had by others. After that, at the conclusion of the hike, time permitting, the guide will get guests to some of other popular sights in park before returning guests safely to the office or back to the lodging facility where guests relax and talk about the memories that guests have made, that will last a lifetime."
     ],
     "schemaDescription": "A 6-hour guided outing with Joshua Tree Excursions.",
-    "highlights": [
-      "6 hours guided outing"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
     "wordCount": 143,
@@ -131,9 +123,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "A certified guide gives the climbing instruction before anyone leaves the ground. Rock formations, canyons, and the long views are what the hike is there to reach. Guests hear about Joshua Tree National Park. Guests come to Joshua Tree National Park, and they hear why it is on the trip."
     ],
     "schemaDescription": "A guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
-    "highlights": [
-      "Joshua Tree National Park"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
     "wordCount": 102,
@@ -170,9 +160,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests are with the horses for this booking, not on a walk through town."
     ],
     "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
-    "highlights": [
-      "one-hour horse outing in Joshua Tree"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
     "wordCount": 112,
@@ -467,10 +455,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests stay beside the horses instead of being led around a town route."
     ],
     "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
-    "highlights": [
-      "1.5-hour horse outing in Joshua Tree",
-      "Interactive Equine Experience"
-    ],
+    "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
@@ -512,9 +497,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests stay beside the horses instead of being led around a town route. Attention also goes to Joshua Tree, and the guide explains why it is on the route. Guests are with the horses for this booking, not on a walk through town. Guests come to Joshua Tree, and they hear why it is on the trip."
     ],
     "schemaDescription": "A one-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
-    "highlights": [
-      "one-hour horse outing in Joshua Tree"
-    ],
+    "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
     "wordCount": 113,

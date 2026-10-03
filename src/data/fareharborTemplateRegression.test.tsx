@@ -445,6 +445,7 @@ describe("FareHarbor Phase C template", () => {
 
     for (const product of products) {
       const [, , stateSlug, citySlug, , tourSlug] = product.publicPath.split("/");
+      expect(product.highlights, product.itemId).toEqual([]);
       const tour = getTourBySlugs(stateSlug, citySlug, tourSlug);
       if (!tour) {
         expect(product.productImage, product.itemId).not.toBe(climb);
@@ -499,6 +500,8 @@ describe("FareHarbor Phase C template", () => {
         expect(ownPage, product.itemId).not.toContain(climb);
         expect(card, product.itemId).not.toContain(climb);
       }
+      expect(ownPage, product.itemId).not.toContain(">Highlights<");
+      expect(ownPage, product.itemId).not.toContain("Route emphasis on");
     }
   }, 120000);
 });

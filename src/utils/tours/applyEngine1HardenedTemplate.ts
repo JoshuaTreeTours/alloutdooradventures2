@@ -187,13 +187,18 @@ export const applyEngine1Template = (
       : "the Palm Springs desert region";
   const landmarks = PARK_LANDMARKS[tourData.destination.citySlug] ?? [];
 
-  const highlights = unique([
-    `Guided ${experienceType.replace("guided ", "")} through ${parkLabel}`,
-    ...landmarks.slice(0, 4).map(landmark => `Route emphasis on ${landmark}`),
-    ...(parsed?.highlights ?? []),
-    "Interpretive stops covering desert geology, ecology, and land-use history",
-    "Pacing calibrated to weather, group mobility, and daylight conditions",
-  ]).slice(0, 7);
+  // Joshua Tree already states the outing in the experience copy. The shared
+  // landmark list was repeating that section on every tour.
+  const highlights =
+    tourData.destination.citySlug === "joshua-tree"
+      ? []
+      : unique([
+          `Guided ${experienceType.replace("guided ", "")} through ${parkLabel}`,
+          ...landmarks.slice(0, 4).map(landmark => `Route emphasis on ${landmark}`),
+          ...(parsed?.highlights ?? []),
+          "Interpretive stops covering desert geology, ecology, and land-use history",
+          "Pacing calibrated to weather, group mobility, and daylight conditions",
+        ]).slice(0, 7);
 
   const includes = unique([
     "Professional guide",
