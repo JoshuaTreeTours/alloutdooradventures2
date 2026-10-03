@@ -1,0 +1,47 @@
+{
+  "company": "fatherdaughtercharters",
+  "itemId": "520862",
+  "fetchedAt": "2026-10-03T18:09:30.514203+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/content/",
+      "status": 200,
+      "bytes": 3026,
+      "sha256": "52c9264e5731ee01d1704ba0d3930a21326c74fea63b2ba7e4aec7b72e1507c5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/fatherdaughtercharters/520862/structured-description/",
+      "status": 200,
+      "bytes": 1694,
+      "sha256": "a58bc87df07cb457e5d816e9bf9b5e49db59d8ed4644225afd343f71773ae8ef"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/",
+      "status": 200,
+      "bytes": 12193,
+      "sha256": "7ee27a382058e62b6f1b3ea6d14118bf965e92c4a7898f8a79eac1114bbc6c75"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/fatherdaughtercharters/price-preview/per-item/v2/?asn=fhdn&item_pks=520862&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 562,
+      "sha256": "eb570b1c8876db0a19e1be20ff7bb02c4e5a8378f0d4bc33b81402c7fc71d50f"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/fatherdaughtercharters/items/520862/ratings/",
+      "status": 200,
+      "bytes": 428,
+      "sha256": "d8e0333fa591549ef5b27fab449aea23e2f734ce4397174b40439f06da7815e7"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "520862",
+    "provider": "fatherdaughtercharters",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fatherdaughtercharters/items/520862/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

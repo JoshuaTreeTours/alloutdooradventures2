@@ -1,0 +1,47 @@
+{
+  "company": "soflnps",
+  "itemId": "648246",
+  "fetchedAt": "2026-10-03T18:09:20.330971+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/soflnps/648246/content/",
+      "status": 200,
+      "bytes": 6949,
+      "sha256": "71e853d46169286d5d3b935c44b11d476d48ebdad3eaff92e47b396d83b84070"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/soflnps/648246/structured-description/",
+      "status": 200,
+      "bytes": 4160,
+      "sha256": "a1b08270a45a18713043ea3766bd35ae6b11e840c5f42c315007f9a6e165a632"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648246/",
+      "status": 200,
+      "bytes": 10210,
+      "sha256": "fa16197ce49fcd1934babd8ff8b3e4c87013e7cc170d26e7226df8d263430f5a"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/soflnps/price-preview/per-item/v2/?asn=fhdn&item_pks=648246&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648246/ratings/",
+      "status": 200,
+      "bytes": 460,
+      "sha256": "23c1c35fbf451def00742dad42a9f5cc1cf7193f9eafa197fb7edc92d3ec7398"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "648246",
+    "provider": "soflnps",
+    "bookingUrl": "https://fareharbor.com/embeds/book/soflnps/items/648246/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

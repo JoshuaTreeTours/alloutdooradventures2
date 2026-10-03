@@ -18,6 +18,19 @@ import { fareHarborOakhurstLegacyProducts } from "./fareharborOakhurstLegacy.gen
 import { fareHarborLagunaBeachLegacyProducts } from "./fareharborLagunaBeachLegacy.generated";
 import { fareHarborHealdsburgLegacyProducts } from "./fareharborHealdsburgLegacy.generated";
 import { fareHarborAvalonLegacyProducts } from "./fareharborAvalonLegacy.generated";
+import { fareHarborEvergladesCityLegacyProducts } from "./fareharborEvergladesCityLegacy.generated";
+import { fareHarborFortLauderdaleLegacyProducts } from "./fareharborFortLauderdaleLegacy.generated";
+import { fareHarborGoodlandLegacyProducts } from "./fareharborGoodlandLegacy.generated";
+import { fareHarborHomesteadLegacyProducts } from "./fareharborHomesteadLegacy.generated";
+import { fareHarborKeyWestLegacyProducts } from "./fareharborKeyWestLegacy.generated";
+import { fareHarborMiamiBeachLegacyProducts } from "./fareharborMiamiBeachLegacy.generated";
+import { fareHarborMiamiLegacyProducts } from "./fareharborMiamiLegacy.generated";
+import { fareHarborNaplesLegacyProducts } from "./fareharborNaplesLegacy.generated";
+import { fareHarborOrlandoLegacyProducts } from "./fareharborOrlandoLegacy.generated";
+import { fareHarborSarasotaLegacyProducts } from "./fareharborSarasotaLegacy.generated";
+import { fareHarborStPetersburgLegacyProducts } from "./fareharborStPetersburgLegacy.generated";
+import { fareHarborStockIslandLegacyProducts } from "./fareharborStockIslandLegacy.generated";
+import { fareHarborTampaLegacyProducts } from "./fareharborTampaLegacy.generated";
 
 /**
  * Canonical FareHarbor city batches.
@@ -45,6 +58,19 @@ export const fareHarborCityBatches: readonly (readonly FareHarborProofProduct[])
     fareHarborLagunaBeachLegacyProducts,
     fareHarborHealdsburgLegacyProducts,
     fareHarborAvalonLegacyProducts,
+    fareHarborMiamiLegacyProducts,
+    fareHarborMiamiBeachLegacyProducts,
+    fareHarborFortLauderdaleLegacyProducts,
+    fareHarborKeyWestLegacyProducts,
+    fareHarborStockIslandLegacyProducts,
+    fareHarborOrlandoLegacyProducts,
+    fareHarborTampaLegacyProducts,
+    fareHarborStPetersburgLegacyProducts,
+    fareHarborNaplesLegacyProducts,
+    fareHarborSarasotaLegacyProducts,
+    fareHarborEvergladesCityLegacyProducts,
+    fareHarborHomesteadLegacyProducts,
+    fareHarborGoodlandLegacyProducts,
   ];
 
 export const fareHarborMigratedProducts: FareHarborProofProduct[] =
@@ -97,3 +123,42 @@ export const getFareHarborHealdsburgLegacyProducts = (): FareHarborProofProduct[
 
 export const getFareHarborAvalonLegacyProducts = (): FareHarborProofProduct[] =>
   fareHarborAvalonLegacyProducts;
+
+export const getFareHarborMiamiLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborMiamiLegacyProducts;
+
+export const getFareHarborMiamiBeachLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborMiamiBeachLegacyProducts;
+
+export const getFareHarborFortLauderdaleLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborFortLauderdaleLegacyProducts;
+
+export const getFareHarborKeyWestLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborKeyWestLegacyProducts;
+
+export const getFareHarborStockIslandLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborStockIslandLegacyProducts;
+
+export const getFareHarborOrlandoLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborOrlandoLegacyProducts;
+
+export const getFareHarborTampaLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborTampaLegacyProducts;
+
+export const getFareHarborStPetersburgLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborStPetersburgLegacyProducts;
+
+export const getFareHarborNaplesLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborNaplesLegacyProducts;
+
+export const getFareHarborSarasotaLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborSarasotaLegacyProducts;
+
+export const getFareHarborEvergladesCityLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborEvergladesCityLegacyProducts;
+
+export const getFareHarborHomesteadLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborHomesteadLegacyProducts;
+
+export const getFareHarborGoodlandLegacyProducts = (): FareHarborProofProduct[] =>
+  fareHarborGoodlandLegacyProducts;

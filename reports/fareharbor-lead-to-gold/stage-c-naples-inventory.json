@@ -1,0 +1,108 @@
+{
+  "citySlug": "naples",
+  "total": 5,
+  "active": 5,
+  "terminal": 0,
+  "priceAvailable": 4,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 5,
+  "inSitemap": 3,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "evergladesfloridaadventures",
+      "operator": "Everglades Florida Adventures",
+      "itemId": "156715",
+      "slug": "ten-thousand-islands-tour-departing-from-our-new-location-port-of-the-islands-156715",
+      "publicPath": "/destinations/florida/naples/tours/ten-thousand-islands-tour-departing-from-our-new-location-port-of-the-islands-156715",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3985,
+        "structuredStatus": 200,
+        "structuredBytes": 2271
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "operator": "Florida Adventures and Rentals",
+      "itemId": "44245",
+      "slug": "rookery-bay-kayak-tours-44245",
+      "publicPath": "/destinations/florida/naples/tours/rookery-bay-kayak-tours-44245",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13000,
+        "structuredStatus": 200,
+        "structuredBytes": 8062
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "marcoecotours",
+      "operator": "La vita é bella - Marco Eco Tours",
+      "itemId": "464256",
+      "slug": "deluxe-pedal-kayak-tour-marco-island-and-naples-florida-464256",
+      "publicPath": "/destinations/florida/naples/tours/deluxe-pedal-kayak-tour-marco-island-and-naples-florida-464256",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3646,
+        "structuredStatus": 200,
+        "structuredBytes": 1817
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "threebrothersboards",
+      "operator": "Three Brothers Boards Paddle Board Tours",
+      "itemId": "416773",
+      "slug": "dolphin-and-manatee-adventure-tour-of-naples-with-olde-florida-history-416773",
+      "publicPath": "/destinations/florida/naples/tours/dolphin-and-manatee-adventure-tour-of-naples-with-olde-florida-history-416773",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3547,
+        "structuredStatus": 200,
+        "structuredBytes": 1818
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "threebrothersboards",
+      "operator": "Three Brothers Boards Paddle Board Tours",
+      "itemId": "416775",
+      "slug": "dolphin-and-manatee-adventure-tour-of-marco-island-with-olde-florida-history-416775",
+      "publicPath": "/destinations/florida/naples/tours/dolphin-and-manatee-adventure-tour-of-marco-island-with-olde-florida-history-416775",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3510,
+        "structuredStatus": 200,
+        "structuredBytes": 1741
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

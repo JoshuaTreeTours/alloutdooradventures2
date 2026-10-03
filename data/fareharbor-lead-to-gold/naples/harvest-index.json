@@ -1,0 +1,241 @@
+{
+  "fetchedAt": "2026-10-03T18:09:29.962637+00:00",
+  "total": 5,
+  "products": [
+    {
+      "company": "evergladesfloridaadventures",
+      "itemId": "156715",
+      "fetchedAt": "2026-10-03T18:09:25.843530+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/156715/content/",
+          "status": 200,
+          "bytes": 3985,
+          "sha256": "12d801b9d09fa3bedcaeb25127d15488073885d94a26a03ff6e0dfb2d94ae995"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/156715/structured-description/",
+          "status": 200,
+          "bytes": 2271,
+          "sha256": "1394e7f8fdb1ba2d585def9145a00e9a62440c76a22890d69377f31973d81433"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/156715/",
+          "status": 200,
+          "bytes": 11257,
+          "sha256": "15f7a80470bb908118637efaf3cb05c8ede119078d9cfcc24473467c9a56748b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/evergladesfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=156715&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/156715/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "fa71a50e28c4d09eae02f2762268c82b45d2e0f3708c6fefeea5ab91a9f3d711"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "156715",
+        "provider": "evergladesfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/evergladesfloridaadventures/items/156715/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "floridaadventuresandrentals",
+      "itemId": "44245",
+      "fetchedAt": "2026-10-03T18:09:25.844454+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44245/content/",
+          "status": 200,
+          "bytes": 13000,
+          "sha256": "b364afe9a10f294ab0079d58cac110e5406e525eb261b72360e31ab58c129270"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44245/structured-description/",
+          "status": 200,
+          "bytes": 8062,
+          "sha256": "d54c64528864ce30b4926b30afa28e7409f4dc9d0a2be320f67aa62e249f7ae5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44245/",
+          "status": 200,
+          "bytes": 39940,
+          "sha256": "6148e3f6a401f986d0be21826ab66716078d739e92a81c49d681e8e65339bed1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=44245&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 645,
+          "sha256": "43fb57d222cdd89c8b7f73fd896f30ee4e11770c5e956ef9bd306c64cb5f01df"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44245/ratings/",
+          "status": 200,
+          "bytes": 568,
+          "sha256": "23df9f0bee9c2b321a68efac5d7c2b826366e5b6ecaf582cb8526ec7b3e76bfe"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "44245",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44245/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "marcoecotours",
+      "itemId": "464256",
+      "fetchedAt": "2026-10-03T18:09:25.844920+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marcoecotours/464256/content/",
+          "status": 200,
+          "bytes": 3646,
+          "sha256": "95a5a7f6dccb751791abe18e4f69981137a9bf6b20a4197f7bb1f1ea01ef0510"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marcoecotours/464256/structured-description/",
+          "status": 200,
+          "bytes": 1817,
+          "sha256": "e6b7d6ed8abadfdad498d950a0ee2b27ff84a3062f146a32f91682385761b691"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marcoecotours/items/464256/",
+          "status": 200,
+          "bytes": 16795,
+          "sha256": "09270b5b681583a8ce4011607118688b192cf7642b3f7d2f172cb85df39f00a4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marcoecotours/price-preview/per-item/v2/?asn=fhdn&item_pks=464256&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 651,
+          "sha256": "d8537519589843cc9fe448f4a1ea3f62ac75f5f5a04bc8128bd468404e5494d2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marcoecotours/items/464256/ratings/",
+          "status": 200,
+          "bytes": 570,
+          "sha256": "222cf1ee7cf2dd2bfec2006437b8cf12810b3bd90cc3a4338ee91a2652ab78a3"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "464256",
+        "provider": "marcoecotours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marcoecotours/items/464256/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "threebrothersboards",
+      "itemId": "416773",
+      "fetchedAt": "2026-10-03T18:09:25.845709+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416773/content/",
+          "status": 200,
+          "bytes": 3547,
+          "sha256": "941268a2a22fd7e421799af64e92fbff6ad03a37cc40f8b135801a93d3e0572d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416773/structured-description/",
+          "status": 200,
+          "bytes": 1818,
+          "sha256": "329c2118eae1c11b538f1490bf90a12e08d2a13f95671ae463f3939213f6b44b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416773/",
+          "status": 200,
+          "bytes": 11969,
+          "sha256": "59f9170e8f9aa9196cae214bf29a39176a12551876e757cea72034596266f872"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/threebrothersboards/price-preview/per-item/v2/?asn=fhdn&item_pks=416773&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 656,
+          "sha256": "1613f70940ccda030590bcce1adbc26a8e80aaf1b8f8f791d286494f2691197d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416773/ratings/",
+          "status": 200,
+          "bytes": 601,
+          "sha256": "74f472660cdde717b4efdd1bff157a76eddc9b706bf4687b0089500e0669b4ea"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "416773",
+        "provider": "threebrothersboards",
+        "bookingUrl": "https://fareharbor.com/embeds/book/threebrothersboards/items/416773/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "threebrothersboards",
+      "itemId": "416775",
+      "fetchedAt": "2026-10-03T18:09:27.839100+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/content/",
+          "status": 200,
+          "bytes": 3510,
+          "sha256": "1d85c3534b8597c31b127212be63d4c0cd483b9eec732de944dec2e616026aa5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/structured-description/",
+          "status": 200,
+          "bytes": 1741,
+          "sha256": "41c24be55ec5ed4fac88f1f5179d86ad8ccfdaa24d2a3d5057f7f13436ef6147"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/",
+          "status": 200,
+          "bytes": 11839,
+          "sha256": "20826fcafc060537dd45f0908f6b837a9ffc4fd2163c4f13abf59609eb4c9a2c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/threebrothersboards/price-preview/per-item/v2/?asn=fhdn&item_pks=416775&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 656,
+          "sha256": "03bec6e1919850dc57c779d438b57acfbf33608adedb2f4540b4c2933033a3bc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/ratings/",
+          "status": 200,
+          "bytes": 607,
+          "sha256": "a1d06a831f1e5e01693b517378d0e9be7d22aa777063d6a713ee9d124f12928b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "416775",
+        "provider": "threebrothersboards",
+        "bookingUrl": "https://fareharbor.com/embeds/book/threebrothersboards/items/416775/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

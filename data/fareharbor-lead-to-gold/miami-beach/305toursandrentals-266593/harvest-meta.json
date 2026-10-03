@@ -1,0 +1,47 @@
+{
+  "company": "305toursandrentals",
+  "itemId": "266593",
+  "fetchedAt": "2026-10-03T18:10:17.588946+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266593/content/",
+      "status": 200,
+      "bytes": 3559,
+      "sha256": "6467a19197bfc2116b7ccff1ddbe5607fcd79da220fb8669c5fdd92161c79da6"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/305toursandrentals/266593/structured-description/",
+      "status": 200,
+      "bytes": 2433,
+      "sha256": "17b7dd0eb03ba1a257112a714dc549ef8f15c541938bf5c54bb5158778ef8e04"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266593/",
+      "status": 200,
+      "bytes": 10794,
+      "sha256": "9fbeb05a1143a718f333a07bac7a8ae3281e601fbc17b16659f6eef41a63b988"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/305toursandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=266593&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 765,
+      "sha256": "848f220877fb6323547dac13592f28d740b7fde16e38e0d4ea48604a0bdc2024"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/305toursandrentals/items/266593/ratings/",
+      "status": 200,
+      "bytes": 657,
+      "sha256": "729c8337f1d38d84103a37f7a4823bc69516317b87faefc40da7dbf687e20423"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "266593",
+    "provider": "305toursandrentals",
+    "bookingUrl": "https://fareharbor.com/embeds/book/305toursandrentals/items/266593/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

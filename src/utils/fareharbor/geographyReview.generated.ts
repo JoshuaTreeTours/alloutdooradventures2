@@ -137,6 +137,14 @@ export const fareHarborGeographyReviewEntries: FareHarborGeographyReviewEntry[] 
     "city": "Jolla",
     "state": "California",
     "expectedPath": "/destinations/california/san-diego/tours/san-diego-beach-yoga-private-class-647361"
+  },
+  {
+    "itemId": "416775",
+    "title": "Dolphin and Manatee Adventure Tour of Marco Island with Olde Florida History",
+    "reason": "Naples Naples, Florida from meeting_point does not belong to Naples, and no matching public destination exists",
+    "city": "Naples Naples",
+    "state": "Florida",
+    "expectedPath": "/destinations/florida/naples/tours/dolphin-and-manatee-adventure-tour-of-marco-island-with-olde-florida-history-416775"
   }
 ];
 

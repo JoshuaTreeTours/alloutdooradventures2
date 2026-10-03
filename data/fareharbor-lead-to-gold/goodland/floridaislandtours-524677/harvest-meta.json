@@ -1,0 +1,47 @@
+{
+  "company": "floridaislandtours",
+  "itemId": "524677",
+  "fetchedAt": "2026-10-03T18:10:38.363526+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524677/content/",
+      "status": 200,
+      "bytes": 4049,
+      "sha256": "88f5f3bd37906cefb755fee4692f2f8d7c0273c12c324897ceb3a057a9734183"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524677/structured-description/",
+      "status": 200,
+      "bytes": 3534,
+      "sha256": "1136ff9a8a56386c2937682f36117cad2804ba5bf9a48989ebd799326ce26f91"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524677/",
+      "status": 200,
+      "bytes": 10052,
+      "sha256": "4ee736e7c1a31758d8ee86c946ddbbc8efd9265f329be272c8513e1ef427c573"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=524677&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 583,
+      "sha256": "b7538ca2bc420e6ffa22924bb8abd10a9583086c9f6443c7b34734f545823752"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524677/ratings/",
+      "status": 200,
+      "bytes": 501,
+      "sha256": "d667f461d7dda1ab7f4c39e65ae6e1e7f07eb55a3ab707656a8c2c3515d9374e"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "524677",
+    "provider": "floridaislandtours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/524677/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

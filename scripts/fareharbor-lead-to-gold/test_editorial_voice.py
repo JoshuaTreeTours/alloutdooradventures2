@@ -356,6 +356,8 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertFalse(is_structural_label("USS Midway"))
         self.assertFalse(is_structural_label("Coronado Bridge"))
         self.assertFalse(is_structural_label("San Diego Bay"))
+        self.assertFalse(is_structural_label("Six Fins Charter"))
+        self.assertFalse(is_structural_label("South Beach Welcome Center"))
 
     def test_private_bike_tour_does_not_invent_label_stops(self):
         description = (
@@ -473,6 +475,119 @@ class EditorialVoiceTest(unittest.TestCase):
         self.assertNotIn("important information", lowered)
         self.assertNotIn("expedition includes", lowered)
         self.assertNotIn("wildlife disclaimer", lowered)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
+
+    def test_history_in_a_paddle_title_does_not_become_a_walking_tour(self):
+        description = (
+            "Naples has been rated one of the most beautiful places in the US to paddle. "
+            "Guests will have a relaxing time as they paddle through the pristine waters. "
+            "Your tour guide will guide you to areas where we see dolphins, manatees, sea turtles, "
+            "bald eagles, pelicans, osprey, and conchs. "
+            "There are only a few places in the world to see the West Indian Manatee and Naples is one of them. "
+            "Duration 2 hours."
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {
+                "title": "Dolphin and Manatee Adventure Tour of Naples with Olde Florida History",
+                "operator": "Three Brothers Boards Paddle Board Tours",
+            },
+            {
+                "description": description,
+                "duration": "2 hours",
+                "included": [],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "Naples", "state": "Florida"}},
+        )
+        body = " ".join(paragraphs + highlights + [schema]).lower()
+        self.assertIn("paddle", body)
+        self.assertIn("manatee", body)
+        self.assertNotIn("walking tour", body)
+        self.assertNotIn("the walk", body)
+        self.assertGreaterEqual(len(" ".join(paragraphs).split()), 100)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
+
+    def test_private_sandbar_charter_uses_named_shallows_not_inclusion_labels(self):
+        description = (
+            "A four-hour private sandbar charter to whichever of the Lower Keys hidden shallows "
+            "is firing that day. Snipes Keys, Jewfish Basin, Mud Keys, Sand Key. "
+            "We anchor in waist-deep crystal water, deploy floats and a Lily Pad. "
+            "Your USCG-licensed captain picks the spot based on wind, tide, and what your group wants. "
+            "Quick facts: Fuel + safety gear included. Optional Exploration. Free Cooler with ice."
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {"title": "Private Secret Local Sandbars Escape", "operator": "Six Fins Charter"},
+            {
+                "description": description,
+                "duration": "4 hours",
+                "included": ["Free Cooler with ice", "Free Bottled water", "Adult noodles"],
+                "highlights": ["Optional Exploration"],
+                "itinerary": ["Optional Exploration"],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "Stock Island", "state": "Florida"}},
+        )
+        body = " ".join(paragraphs + highlights + [schema])
+        lowered = body.lower()
+        self.assertIn("sandbar", lowered)
+        self.assertIn("snipes", lowered)
+        self.assertIn("mud keys", lowered)
+        self.assertNotIn("optional exploration", lowered)
+        self.assertNotIn("adult noodles", lowered)
+        self.assertNotIn("free cooler", lowered)
+        self.assertGreaterEqual(len(" ".join(paragraphs).split()), 20)
+        self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
+
+    def test_everglades_airboat_is_not_a_harbor_cruise(self):
+        description = (
+            "Embark on a seamless adventure from Miami Beach or downtown Miami aboard a climate-controlled coach "
+            "to the Florida Everglades. Enjoy a guided, mostly covered airboat tour led by a local park ranger "
+            "who shares insights into the wetlands and points out native wildlife and birds. "
+            "Experience a brief wildlife presentation featuring rescued alligators, then relax with free time "
+            "to explore park exhibits, visit the snack bar, or shop for souvenirs before returning to Miami. "
+            "Wildlife sightings vary with seasonal conditions. Approximately 5 hours."
+        )
+        paragraphs, highlights, schema, _removed = compose_editorial(
+            {
+                "title": "Everglades Airboat and Wildlife Sanctuary with round-trip transportation",
+                "operator": "US2U",
+            },
+            {
+                "description": description,
+                "duration": "Approximately 5 hours",
+                "included": [],
+                "highlights": [],
+                "itinerary": [],
+                "languages": [],
+                "restrictions": [],
+                "cancellation": None,
+                "accessibility": None,
+                "bring": [],
+                "meetingAddress": None,
+            },
+            description,
+            {"disposition": "keep", "place": {"city": "Miami Beach", "state": "Florida"}},
+        )
+        body = " ".join(paragraphs + highlights + [schema]).lower()
+        self.assertIn("airboat", body)
+        self.assertIn("everglades", body)
+        self.assertIn("alligator", body)
+        self.assertNotIn("harbor", body)
+        self.assertGreaterEqual(len(" ".join(paragraphs).split()), 100)
         self.assertEqual(template_artifact_errors(paragraphs + highlights + [schema]), [])
 
 

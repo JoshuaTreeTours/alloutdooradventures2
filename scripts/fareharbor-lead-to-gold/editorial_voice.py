@@ -123,7 +123,7 @@ EXPERIENCE_TOKEN_RE = re.compile(
     r"\b("
     r"sail|pass(?:es)?|see|explore|ride|walk|walking|sample|visits?|aboard|"
     r"come into view|covers?|cross(?:es|ing)?|neighborhood|schooner|"
-    r"yacht|trail|harbor|tasting|chocolate|freedom trail|esplanade|paddle"
+    r"yacht|trail|harbor|tasting|chocolate|freedom trail|esplanade|paddle|airboat"
     r")\b",
     re.I,
 )
@@ -703,7 +703,9 @@ def activity_kind(title: str, description: str = "") -> str:
         return "food"
     if re.search(r"\bcoach bus\b", blob):
         return "bus"
-    if re.search(r"\b(schooner|yacht|sailing|sunset cruise|harbor cruise)\b", blob):
+    if re.search(r"\bairboats?\b", blob):
+        return "outing"
+    if re.search(r"\b(schooner|yacht|sailing|sunset cruise|harbor cruise|sandbars?)\b", blob):
         return "sail"
     if re.search(r"\b(walking tour|on foot)\b", blob):
         return "walk"
@@ -981,6 +983,14 @@ def invented_food_walk_errors(
     return ["invented food-walk framing is not in the item source"]
 
 
+def indefinite(next_word: str) -> str:
+    """A/an for the following word. Hour takes an; 5-hour stays a."""
+    word = (next_word or "").strip()
+    if re.match(r"(?:[aeiou]|hour\b)", word, re.I):
+        return "an"
+    return "a"
+
+
 def activity_phrase(title: str, description: str = "") -> str:
     text = (title or "").lower()
     desc = (description or "").lower()
@@ -997,11 +1007,15 @@ def activity_phrase(title: str, description: str = "") -> str:
         r"\b(?:winery|vineyard|champagne)\b", blob
     ) and not re.search(r"food tour|food walk|walking tour", blob):
         return "winery outing"
-    if re.search(r"kayak|paddle|canoe", text):
+    if re.search(r"\bairboats?\b", blob):
+        return "airboat outing"
+    if re.search(r"\bsnorkel", blob):
+        return "snorkel outing"
+    if re.search(r"kayak|paddle|canoe|paddleboard", text):
         return "paddle outing"
     if re.search(r"\bdriv|chauffeur", text):
         return "driving tour"
-    if re.search(r"sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack", text):
+    if re.search(r"(?<!air)(?:sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack)", text):
         return "harbor outing"
     if re.search(r"food|tasting|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
         r"lobster roll|clam chowder|dim sum|food tour|food walk|tastings", desc
@@ -1015,6 +1029,14 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "photography walk"
     if re.search(r"ghost|haunt", text):
         return "evening walking tour"
+    # Description wins over a title word such as "history" when the outing is
+    # on the water. "Olde Florida History" is not a walking tour if guests paddle.
+    if re.search(r"\b(kayaks?|paddle(?:board(?:ing)?)?|canoes?)\b", desc):
+        return "paddle outing"
+    if re.search(r"\bairboats?\b", desc):
+        return "airboat outing"
+    if re.search(r"\b(snorkel(?:ing)?|scuba|boat tours?)\b", desc):
+        return "harbor outing"
     if re.search(r"walk|trail|foot|history|heritage|architecture", text) or re.search(
         r"walking tour", desc
     ):
@@ -1140,6 +1162,35 @@ def is_structural_label(name: str) -> bool:
     if not key:
         return True
     if _STRUCTURAL_LABEL_RE.search(key):
+        words = re.findall(r"[A-Za-z']+", key)
+        hits = [word for word in words if _STRUCTURAL_LABEL_RE.search(word)]
+        # "Charter" inside a business name is not a scraped heading.
+        # "Catamaran Yacht Charter" and "Ticketed Charters" still are.
+        if hits and all(word.lower() in {"charter", "charters", "welcome"} for word in hits):
+            generic = {
+                "catamaran",
+                "yacht",
+                "yachts",
+                "boat",
+                "boats",
+                "tour",
+                "tours",
+                "sunset",
+                "private",
+                "fishing",
+                "snorkel",
+                "sail",
+                "sailing",
+                "harbor",
+                "day",
+                "half",
+                "full",
+                "premium",
+                "offshore",
+                "the",
+            }
+            if any(word.lower() not in generic for word in words if word not in hits):
+                return False
         return True
     if re.match(
         r"^on\s+(?:a\s+)?(?:\d|january|february|march|april|may|june|july|august|september|october|november|december)\b",
@@ -1183,7 +1234,13 @@ def is_junk_place_label(name: str) -> bool:
         r"special feature|water slide|tiki|fusion sound|happy place|"
         r"all fun|entrance fee|group size|semi-private|professional tour|"
         r"about me|paid separately|must be paid|best way|open air|what to bring|"
-        r"restroom|coffee break|bathroom|waiver|mother nature)\b|"
+        r"restroom|coffee break|bathroom|waiver|mother nature|"
+        r"optional|exploration|coolers?|noodles|bottled|lily pad|"
+        r"ecosystems?|id meeting|conditions permitting|surface interval|"
+        r"snorkel stop|marina meet|observation pods|on foot|kino|"
+        r"scenic offshore|primary reef|dolphin search|scenic cruising|"
+        r"patch reef fishing|wild atlantic|fisheries service|prime sunset|"
+        r"positioning|floating time|sample flow)\b|"
         r"(?:personalized|guided|tasting|experience)\s*$",
         key,
     ):
@@ -1783,11 +1840,11 @@ def compose_schema(
     bits = []
     lead_bits = []
     if duration_adj:
-        lead_bits.append(f"A {duration_adj} {activity}")
+        lead_bits.append(f"{indefinite(duration_adj).capitalize()} {duration_adj} {activity}")
     elif duration:
-        lead_bits.append(f"A {activity} lasting {duration}")
+        lead_bits.append(f"{indefinite(activity).capitalize()} {activity} lasting {duration}")
     else:
-        lead_bits.append(f"A {activity}")
+        lead_bits.append(f"{indefinite(activity).capitalize()} {activity}")
     if operator:
         lead_bits.append(f"with {operator}")
     if city:
@@ -2917,7 +2974,7 @@ def compose_editorial(
         else:
             setting = f"in {city}"
     if len(title.split()) >= 5 or (len(title.split()) >= 6 and duration_adj):
-        lead = "This is a"
+        lead = f"This is {indefinite(duration_adj or activity)}"
         if duration_adj:
             lead += f" {duration_adj}"
         lead += f" {activity}"
@@ -2926,19 +2983,19 @@ def compose_editorial(
         if setting:
             lead += f" {setting}"
     elif duration_adj:
-        lead = f"{title} is a {duration_adj} {activity}"
+        lead = f"{title} is {indefinite(duration_adj or activity)} {duration_adj} {activity}"
         if operator:
             lead += f" with {operator}"
         if setting:
             lead += f" {setting}"
     elif duration:
-        lead = f"{title} is a {activity} lasting {duration}"
+        lead = f"{title} is {indefinite(activity)} {activity} lasting {duration}"
         if operator:
             lead += f" with {operator}"
         if setting:
             lead += f" {setting}"
     else:
-        lead = f"{title} is a {activity}"
+        lead = f"{title} is {indefinite(activity)} {activity}"
         if operator:
             lead += f" with {operator}"
         if setting:
@@ -3034,7 +3091,11 @@ def compose_editorial(
                 kept.append(cleaned)
 
     if not kept:
-        fallback = f"{title} is a {activity} with {operator}." if operator else f"{title} is a {activity}."
+        fallback = (
+            f"{title} is {indefinite(activity)} {activity} with {operator}."
+            if operator
+            else f"{title} is {indefinite(activity)} {activity}."
+        )
         cleaned = safe_sentence(fallback, meeting, overlap_text, title, operator)
         kept = [cleaned] if cleaned else [sentence(fallback)]
 
@@ -3139,14 +3200,21 @@ def compose_editorial(
     real_places = [name for name in places if not is_structural_label(name) and not is_junk_place_label(name)]
     if real_places[:2]:
         highlight_rows.append(join_and(real_places[:2]))
-    if included and not is_structural_label(included[0]):
+    if (
+        included
+        and not is_structural_label(included[0])
+        and not is_junk_place_label(included[0])
+    ):
         highlight_rows.append(included[0])
     elif group:
         highlight_rows.append(group.rstrip("."))
     highlight_rows = [
         row.rstrip(".")
         for row in highlight_rows
-        if row and not template_artifact_errors([row]) and not is_structural_label(row)
+        if row
+        and not template_artifact_errors([row])
+        and not is_structural_label(row)
+        and not is_junk_place_label(row)
     ][:3]
 
     body_words = count_words(paragraphs)

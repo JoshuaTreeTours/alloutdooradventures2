@@ -1,0 +1,931 @@
+{
+  "fetchedAt": "2026-10-03T18:09:57.241859+00:00",
+  "citySlug": "orlando",
+  "totalBostonLegacy": 12,
+  "total": 12,
+  "active": 12,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 1,
+  "priceNotFound": 11,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [
+    "694070",
+    "254237",
+    "254239",
+    "254240",
+    "254242",
+    "254243",
+    "271301",
+    "285090",
+    "290231",
+    "329221",
+    "491805"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "694070",
+      "company": "adventuresinflorida",
+      "catalogId": "adventures-in-florida-694070",
+      "slug": "expeditions-694070",
+      "title": "Expeditions",
+      "operator": "Adventures in Florida",
+      "publicPath": "/destinations/florida/orlando/tours/expeditions-694070",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/adventuresinflorida/items/694070/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/uDZratxFStKtnnN4f3yP",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/uDZratxFStKtnnN4f3yP"
+      ],
+      "tags": [
+        "Canoe"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:50.305792+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/adventuresinflorida/694070/content/",
+          "status": 200,
+          "bytes": 6912,
+          "sha256": "c6bafd3145f01689a16aa4e713efabc8ede9276093becdcb6deeb994d89e6493"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/adventuresinflorida/694070/structured-description/",
+          "status": 200,
+          "bytes": 1069,
+          "sha256": "7c60429d46d910cac8577b19c71aca72f89583744b7fef646997a06fd1cbc0c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/adventuresinflorida/items/694070/",
+          "status": 200,
+          "bytes": 7400,
+          "sha256": "4fbc20d548bec2bada36b5e74a4b479797b433c3e50e7d92f065f42f9d67a92e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/adventuresinflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=694070&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/adventuresinflorida/items/694070/ratings/",
+          "status": 200,
+          "bytes": 428,
+          "sha256": "08d6db4dbc4ac05f90d6335f57627d1f2ebac8838736abe9fdb5571d7949bcc6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "694070",
+        "provider": "adventuresinflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/adventuresinflorida/items/694070/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "333279",
+      "company": "epicpaddleadventures",
+      "catalogId": "epic-paddle-adventures-333279",
+      "slug": "date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
+      "title": "Date Night Neon Glow Clear Kayak or Paddleboard & Champagne Orlando",
+      "operator": "Epic Paddle Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.372967,
+        "lng": 28.565505
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/LRpu9FH3Tu2ZCUdGCgaK",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/LRpu9FH3Tu2ZCUdGCgaK"
+      ],
+      "tags": [
+        "Bike Tour",
+        "E",
+        "Bike",
+        "Kayak",
+        "Sightseeing Tour",
+        "SUP"
+      ],
+      "categories": [
+        "cycling",
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:50.306454+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/content/",
+          "status": 200,
+          "bytes": 10732,
+          "sha256": "eca0511cf67204240edbf9698c8367d451c654491006505fd583439680f967e1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/epicpaddleadventures/333279/structured-description/",
+          "status": 200,
+          "bytes": 7181,
+          "sha256": "e2ca3b45f58e2110266d86e61f388b45e088a541878666a6f26f3bb535982a7a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/",
+          "status": 200,
+          "bytes": 19611,
+          "sha256": "56cdbfed42aed76ca1d2d169ff80ad09ae40b13530f7e5ca08d69175c23e04bc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/epicpaddleadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=333279&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 963,
+          "sha256": "f526b971ae34e633a0b866f1907c01ce2f7d7d190d7bf3fa6ea295b407ab83d0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/epicpaddleadventures/items/333279/ratings/",
+          "status": 200,
+          "bytes": 589,
+          "sha256": "2848e1964d2510de483773b2ea733afb0bcb08b902bc63f6629254a5f1c336b4"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "333279",
+        "provider": "epicpaddleadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/epicpaddleadventures/items/333279/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 80.0,
+        "currency": "USD",
+        "singular": "Adult Paddle Board"
+      }
+    },
+    {
+      "itemId": "254237",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-254237",
+      "slug": "the-real-florida-manatee-adventure-254237",
+      "title": "The Real Florida Manatee Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/the-real-florida-manatee-adventure-254237",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/VG9doa7cRaaeJiPIegvw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/VG9doa7cRaaeJiPIegvw"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:50.306946+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254237/content/",
+          "status": 200,
+          "bytes": 7628,
+          "sha256": "beabe97451f8c2d3042f5b6fd98ff1f0aa50ee88af6a3293cb6e2a4c33148678"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254237/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254237/",
+          "status": 200,
+          "bytes": 20531,
+          "sha256": "7b349c58a593aee16a250254fabbcd19be78bae3e117524478c03540d2229af8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254237&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254237/ratings/",
+          "status": 200,
+          "bytes": 513,
+          "sha256": "3752d7ac032e5cf154f7b92a891b3d9633c4b3cec3e3949fd18fc71d852e8f3f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "254237",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254237/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "254239",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-254239",
+      "slug": "kennedy-space-center-adventure-254239",
+      "title": "Kennedy Space Center Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-254239",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254239/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/oZJphVuBQ562Pq7SMi7s",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/oZJphVuBQ562Pq7SMi7s"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:50.307367+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254239/content/",
+          "status": 200,
+          "bytes": 5090,
+          "sha256": "4665027eb78f5715a7313a4d8242dcdd0efa186a719e2fff31fefa5024a1d15e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254239/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254239/",
+          "status": 200,
+          "bytes": 16468,
+          "sha256": "0444c565e0277e1090eaa0c164f8e33fbe2c8d7e2e58d00b43ee424b49106e1b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254239&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254239/ratings/",
+          "status": 200,
+          "bytes": 509,
+          "sha256": "5f5c6d7c1c4d4d2d77b335cb2c130a110325b152b6a61bdbd07c8e09ef6d89a0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "254239",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254239/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "254240",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-254240",
+      "slug": "kennedy-space-center-ultimate-adventure-254240",
+      "title": "Kennedy Space Center Ultimate Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-ultimate-adventure-254240",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254240/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/1kKai6OnSIuK5ZtClKQW",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/1kKai6OnSIuK5ZtClKQW"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:52.189153+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254240/content/",
+          "status": 200,
+          "bytes": 4997,
+          "sha256": "3d2d88d391d7979c2ae3a545d87ac6c463276abef2f0134bc0a8f095afef6dbb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254240/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254240/",
+          "status": 200,
+          "bytes": 17394,
+          "sha256": "5e5c4b9de7b8d6162cbe1fcdba6c1785acf0ec44ddefeb892f56d633e58b04e7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254240&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254240/ratings/",
+          "status": 200,
+          "bytes": 518,
+          "sha256": "bc6e3a25f96b90c5a89524c1eb06c7cfe625dc1c2ebfaac528f3e8aeaf939a58"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "254240",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254240/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "254242",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-254242",
+      "slug": "kennedy-space-center-adventure-and-chat-with-an-astronaut-254242",
+      "title": "Kennedy Space Center Adventure and CHAT with an Astronaut",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-and-chat-with-an-astronaut-254242",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254242/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/p6wwc6l5QBGawYgt2dtq",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/p6wwc6l5QBGawYgt2dtq"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:52.607612+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254242/content/",
+          "status": 200,
+          "bytes": 4984,
+          "sha256": "ecc750568f57b4f4e08f0199497495e83fc73511ef979a2b206a007212c29477"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254242/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254242/",
+          "status": 200,
+          "bytes": 17616,
+          "sha256": "d4959cab9e3e4d66ec63f912e79f777100469796c0d85e6e43422cae6cf03314"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254242&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254242/ratings/",
+          "status": 200,
+          "bytes": 536,
+          "sha256": "fa370b460e49300fdda748afbd6bba48d47ad44da30a3bd3c2d8ae509d6e600e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "254242",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254242/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "254243",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-254243",
+      "slug": "kennedy-space-center-with-airboat-adventure-254243",
+      "title": "Kennedy Space Center with Airboat Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-with-airboat-adventure-254243",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254243/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/79o71uigTC25Eevxv1lt",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/79o71uigTC25Eevxv1lt"
+      ],
+      "tags": [
+        "Airboat"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:52.662757+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/content/",
+          "status": 200,
+          "bytes": 4761,
+          "sha256": "fb5cffb8ed444936e7584ac3ef8eed5ea7f5fff99fe288fac2a33903f0e0b342"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/254243/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/",
+          "status": 200,
+          "bytes": 17159,
+          "sha256": "cdb87b393ae4a501338645768dcde0090eddd1b54b93654b0573742929bac73b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=254243&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/254243/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "c79e9b384a41596c92c4202e1e4c8170215cd1ab417c1cbad32126644e9001fe"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "254243",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/254243/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "271301",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-271301",
+      "slug": "private-kennedy-space-center-adventure-271301",
+      "title": "PRIVATE Kennedy Space Center Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/private-kennedy-space-center-adventure-271301",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/271301/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/yl9kDLPRRRim34W3jHrs",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/yl9kDLPRRRim34W3jHrs"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:53.264474+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/271301/content/",
+          "status": 200,
+          "bytes": 4508,
+          "sha256": "de8a0f4517a1010e29adcabd0f4c244a11b1a65d06b2be0ce3438ccdbc912336"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/271301/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/271301/",
+          "status": 200,
+          "bytes": 15902,
+          "sha256": "a4919b9b09f79e54a3d4ad3844f6a37344e7dedf88b52a70e2b0df37a7ef8c6f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=271301&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/271301/ratings/",
+          "status": 200,
+          "bytes": 518,
+          "sha256": "b2337e417787989052fd03f7d57fe223d7394af05bbadd84d973284b8a961795"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "271301",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/271301/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "285090",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-285090",
+      "slug": "private-real-florida-manatee-adventure-285090",
+      "title": "PRIVATE Real Florida Manatee Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/private-real-florida-manatee-adventure-285090",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/285090/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/X9PBHTvTTEK5tm4vQQQi",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/X9PBHTvTTEK5tm4vQQQi"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:54.112008+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/285090/content/",
+          "status": 200,
+          "bytes": 5316,
+          "sha256": "0c319fb04e164e76f40291473f99acb0ab8de9855a232a233751a77d7fe212a3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/285090/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/285090/",
+          "status": 200,
+          "bytes": 17360,
+          "sha256": "09a154cbf71fe72d4788d4beddb4a4cf160b0e5cee57286e6c14d9444d3245c1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=285090&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/285090/ratings/",
+          "status": 200,
+          "bytes": 517,
+          "sha256": "b86e37027247e6a546cf79698dd272185d452d05d0c6ea93c2a69ee3c9cd35c8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "285090",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/285090/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "290231",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-290231",
+      "slug": "shingle-creek-guided-kayak-adventure-290231",
+      "title": "Shingle Creek Guided Kayak Adventure",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/shingle-creek-guided-kayak-adventure-290231",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.378927,
+        "lng": 28.538383
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/290231/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/VyHBvvxkQ2CpgWUg5BB0",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/VyHBvvxkQ2CpgWUg5BB0"
+      ],
+      "tags": [
+        "Kayak"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:54.321710+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/290231/content/",
+          "status": 200,
+          "bytes": 4243,
+          "sha256": "4ca27a7ea01e63ba018fc7bacf54dade3570369b36c97720b4d7b4526d67f779"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/290231/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/290231/",
+          "status": 200,
+          "bytes": 14210,
+          "sha256": "b632ce528fb42c9feb38075cc6bf9ebc15c4790dbf1108082f0ad1fc0513c1c7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=290231&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/290231/ratings/",
+          "status": 200,
+          "bytes": 516,
+          "sha256": "485b19a319e6e099510ede1f49c6405707ab7c82c56c8d6626730e1694647b82"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "290231",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/290231/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "329221",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-329221",
+      "slug": "boggy-creek-airboat-ride-adventures-and-transport-329221",
+      "title": "Boggy Creek Airboat Ride Adventures & Transport",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/boggy-creek-airboat-ride-adventures-and-transport-329221",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.431331,
+        "lng": 28.498678
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/329221/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/W8IwAyfRCi5ulp1HiMuW",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/W8IwAyfRCi5ulp1HiMuW"
+      ],
+      "tags": [
+        "Airboat",
+        "Transportation",
+        "Wildlife"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:54.482320+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/329221/content/",
+          "status": 200,
+          "bytes": 4481,
+          "sha256": "664d21f800fafdff5de66d7e59476bccb8dcc3cf4d8ede842a5c624eb5c96d1d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/329221/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/329221/",
+          "status": 200,
+          "bytes": 14528,
+          "sha256": "9b15ac90a04592db58f458cb26ddd4003319470bc22f5fb11bc49bb3cd8c0530"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=329221&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/329221/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "29b644d0b7ba2865bb3c5e9499dc8705daa8fd4b87752713d648b5ab0d5b6a28"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "329221",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/329221/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "491805",
+      "company": "realfloridaadventures",
+      "catalogId": "real-florida-adventures-491805",
+      "slug": "kennedy-space-center-direct-express-491805",
+      "title": "Kennedy Space Center Direct Express",
+      "operator": "Real Florida Adventures",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-direct-express-491805",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Orlando",
+        "citySlug": "orlando",
+        "lat": -81.46875,
+        "lng": 28.443623
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/491805/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/XtEGucCaQElaGbmkx6re",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/XtEGucCaQElaGbmkx6re"
+      ],
+      "tags": [
+        "Bus Tour",
+        "Guided Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:54.989783+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/491805/content/",
+          "status": 200,
+          "bytes": 5096,
+          "sha256": "9569d6d060f68be37d4d301b01a1035e605593f9637dd2141b3e1792fcaf868e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/realfloridaadventures/491805/structured-description/",
+          "status": 204,
+          "bytes": 0,
+          "sha256": null
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/491805/",
+          "status": 200,
+          "bytes": 16452,
+          "sha256": "1531a905cdd192f5d0df19201981d5336596ad0d7751036b8b48ac4c85f7a080"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/realfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=491805&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/realfloridaadventures/items/491805/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "374eb1c58f4deaa820c3ab2c4eeccfbdf8cdf0e0c1839c3f2242d714649a0e26"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "491805",
+        "provider": "realfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/realfloridaadventures/items/491805/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

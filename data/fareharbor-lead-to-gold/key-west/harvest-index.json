@@ -1,0 +1,852 @@
+{
+  "fetchedAt": "2026-10-03T18:10:08.682871+00:00",
+  "total": 18,
+  "products": [
+    {
+      "company": "floridakeysventures",
+      "itemId": "176775",
+      "fetchedAt": "2026-10-03T18:09:57.778437+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/176775/content/",
+          "status": 200,
+          "bytes": 3459,
+          "sha256": "02a7ff4823728e6cfb6eb1ea4a78795dfe9eb13a5c9df7286d93315f75ba4a5f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/176775/structured-description/",
+          "status": 200,
+          "bytes": 2076,
+          "sha256": "5fdb899c8cbd0c145dca2f691f4753bf941923cee730453ae9ebe989c0afa9aa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/176775/",
+          "status": 200,
+          "bytes": 13886,
+          "sha256": "1b677f9cceaaa6a70d1b3b80695889aa452fa35c04f46aa630f3d291b6e16d9f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=176775&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 770,
+          "sha256": "6967c1f085dd568a95a22a45b1db59f9c4edd409d3c27162dc8621525e8ca3c1"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/176775/ratings/",
+          "status": 200,
+          "bytes": 470,
+          "sha256": "58123331d1aef6447626afdffa8ac27599dc779b1ef0e736ae28a9c5441c3d8f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "176775",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/176775/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "floridakeysventures",
+      "itemId": "196883",
+      "fetchedAt": "2026-10-03T18:09:57.779003+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/196883/content/",
+          "status": 200,
+          "bytes": 3773,
+          "sha256": "85d7a1f9c7d2593c5aa8f0264cf7663e394aaab269e1414e927cc5bc91080d2b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/196883/structured-description/",
+          "status": 200,
+          "bytes": 2395,
+          "sha256": "fab12bbb15e5a595541516f602ade8dcad11c14742df9700b0738d9d982708e3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/196883/",
+          "status": 200,
+          "bytes": 14508,
+          "sha256": "35a105ecf78495ab84de1669bc9f8c5545c69b9393ce51093d929d888972c6e3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=196883&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/196883/ratings/",
+          "status": 200,
+          "bytes": 478,
+          "sha256": "1bea5c68a1f3e2689a9371645ce4ed8319a6c3e4fe5adbdec10b981e4391959f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "196883",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/196883/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "floridakeysventures",
+      "itemId": "203230",
+      "fetchedAt": "2026-10-03T18:09:57.779629+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/203230/content/",
+          "status": 200,
+          "bytes": 2407,
+          "sha256": "6b8931ea81c937a7d32eb17be03a72d47c321ddf707ef223f70d0696831f82b9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridakeysventures/203230/structured-description/",
+          "status": 200,
+          "bytes": 2224,
+          "sha256": "876c0eb622edc5ec8d882d177080c4ea30c1d2e85d6f9b83ad13f6a075360a1f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/203230/",
+          "status": 200,
+          "bytes": 11608,
+          "sha256": "53b93bf958300f2e418cc22cc48ac1261791d59b7358f2ccb6668b5d14b24f6e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridakeysventures/price-preview/per-item/v2/?asn=fhdn&item_pks=203230&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 770,
+          "sha256": "c770ebb43c56e7e5e4536dad6263ae10f0b4bece9d1d45ec4bc1fbbf06379c4d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridakeysventures/items/203230/ratings/",
+          "status": 200,
+          "bytes": 474,
+          "sha256": "e5313bc24e70c281186b6aa452ff14a5de4079f7af721bd8d0ec8a5dcf7eccb1"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "203230",
+        "provider": "floridakeysventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridakeysventures/items/203230/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "keywestfishing-charters",
+      "itemId": "104492",
+      "fetchedAt": "2026-10-03T18:09:57.779995+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/content/",
+          "status": 200,
+          "bytes": 15349,
+          "sha256": "1db4e7a52d565c5449a4728e24258373f337eee6c916c1a4395de8c404b304e0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/keywestfishing-charters/104492/structured-description/",
+          "status": 200,
+          "bytes": 8971,
+          "sha256": "45d3a05c02462c99c9966eb7010dc3f8e5bf63bb7b373c0f30271977528f50d9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/",
+          "status": 200,
+          "bytes": 21438,
+          "sha256": "83922ce8896508c46917f3107b0896adfa9e766484658db5e667f98911298b5f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/keywestfishing-charters/price-preview/per-item/v2/?asn=fhdn&item_pks=104492&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1358,
+          "sha256": "934702d1aca69f49dd9bfc5054110a208353630f3bc6aeb1d7cb64ca4df9ae99"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/keywestfishing-charters/items/104492/ratings/",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "101dc09cd4bab83180ff2180b93bef86822a02aa4f5723ab7b9dfcd820fc9b72"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "104492",
+        "provider": "keywestfishing-charters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/keywestfishing-charters/items/104492/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "laromayachtsflorida",
+      "itemId": "638390",
+      "fetchedAt": "2026-10-03T18:09:59.861279+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638390/content/",
+          "status": 200,
+          "bytes": 2447,
+          "sha256": "9a78ab4a755bfd6fc4404936e0e8e7eb6998cc9d57b8c6a3b83286fbb2b013a7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638390/structured-description/",
+          "status": 200,
+          "bytes": 2106,
+          "sha256": "ff2a393bbae056862e4e2cf87b82f8d42b7ff38b0a10272d6f53b00e09f52ca5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638390/",
+          "status": 200,
+          "bytes": 7455,
+          "sha256": "279dfc7f061814827728591c2a74e2c650bd23f19059ad6c2046d202e8b467e1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638390&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "2663ccc72540245311e168a33cdb903fb598d0493bece37b217592c03bda8558"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638390/ratings/",
+          "status": 200,
+          "bytes": 434,
+          "sha256": "cc6def06456746295cb41b9d3c3489e0a2d7f8cdf5a9fa8a66485fb4de8b4696"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638390",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638390/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "laromayachtsflorida",
+      "itemId": "638423",
+      "fetchedAt": "2026-10-03T18:10:00.129425+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/content/",
+          "status": 200,
+          "bytes": 1925,
+          "sha256": "8e111377cdd59d68c713ca202a42976661351007547d5496668ea4da8dff684c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/structured-description/",
+          "status": 200,
+          "bytes": 1590,
+          "sha256": "a23bbe0584b2152956faf524be7ecd7b84c73884d60f6a16bbf89aa54c1cce16"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/",
+          "status": 200,
+          "bytes": 7449,
+          "sha256": "080ab9de10d6771a0d8cd2e4936396c404d6bdd11491967929da33c87c1d62c5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638423&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "b4e10b451ca7e4d7cf6a75af5ae6274728b88b97379836920969bfc810af1d6d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "ba5b550ccf8c827b87ebe09286c08b1b53e89e92965ab710ef31b7dede126580"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638423",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638423/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "laromayachtsflorida",
+      "itemId": "638429",
+      "fetchedAt": "2026-10-03T18:10:00.224646+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638429/content/",
+          "status": 200,
+          "bytes": 1735,
+          "sha256": "6eddc64cee62b6327987e2f82be3bf520283fb9be890fa7345e70ab1f56f4a4b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638429/structured-description/",
+          "status": 200,
+          "bytes": 1400,
+          "sha256": "499568deba1d971502f747f48322b7fcfe3eac4bd1d483727af08fbb6b076e78"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638429/",
+          "status": 200,
+          "bytes": 7450,
+          "sha256": "c28cbb3568eb883931bef5eeda3442d5358007b5c4d0827a6917efc543400817"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638429&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 573,
+          "sha256": "9b67e60d830d89f3d33a081c5727166f255daaee5924a3f06bffe19fb09542aa"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638429/ratings/",
+          "status": 200,
+          "bytes": 439,
+          "sha256": "deaeaeaaf434a929f6d2088e2062836c0dccb86afe713ecf27f7379061170f73"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "638429",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638429/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "laromayachtsflorida",
+      "itemId": "639170",
+      "fetchedAt": "2026-10-03T18:10:00.281681+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639170/content/",
+          "status": 200,
+          "bytes": 2398,
+          "sha256": "3e778ecda9e029b11807e9641dadb511fb3d38b8090b47b8e5e9df24eeb10609"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639170/structured-description/",
+          "status": 200,
+          "bytes": 2075,
+          "sha256": "0201f0ea3b63bd07d19902b8112025ed80103446718abc948ffa47c170516758"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639170/",
+          "status": 200,
+          "bytes": 7435,
+          "sha256": "11ae8d2511d3c35c0d17e7f799d7a01b888aa0d71ed650fb8a8af3430f78a5ad"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=639170&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "eeb0517d78f66f3df65b4435fdef7887a9fa7c0741cb352b2d9854ef8d751861"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639170/ratings/",
+          "status": 200,
+          "bytes": 438,
+          "sha256": "8161ea85d00d8543f2748698b48efc30daa37a5b97f7cc1c6da64ddd27baab73"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "639170",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/639170/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "laromayachtsflorida",
+      "itemId": "639172",
+      "fetchedAt": "2026-10-03T18:10:01.970385+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639172/content/",
+          "status": 200,
+          "bytes": 1903,
+          "sha256": "994e9e653d8fe18e3bc537dca6555d5a3c392776e581aa934764201161ce3d92"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/639172/structured-description/",
+          "status": 200,
+          "bytes": 1575,
+          "sha256": "e662e4631a7c8b3c14787891b98237478fe3f7843fc46f87da1880a215d4b024"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639172/",
+          "status": 200,
+          "bytes": 7450,
+          "sha256": "69e666608cc6c6b636deb241a96ae7a4fdff8ef5b46fbedf21bf75be973cf35c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=639172&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 563,
+          "sha256": "b2e0029c617a7c1b641f67a6897f57dc302be06ebb8e32d1c45b168a43b9c8da"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/639172/ratings/",
+          "status": 200,
+          "bytes": 443,
+          "sha256": "497f91d090424f88b83e8a51e0aeb572a7b10417f5381f724c8a98ef22f31172"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "639172",
+        "provider": "laromayachtsflorida",
+        "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/639172/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "namastealldaykeywest",
+      "itemId": "626355",
+      "fetchedAt": "2026-10-03T18:10:02.169309+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/content/",
+          "status": 200,
+          "bytes": 2503,
+          "sha256": "366a491daacda2ecf62dcd9915944a9f7812dcfd7ec3d177aa213eac41476ec6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/namastealldaykeywest/626355/structured-description/",
+          "status": 200,
+          "bytes": 1672,
+          "sha256": "ea977811b9b33fbf1244dea9e90ce07f5b0b9bc3bd2839420413899e8ca08738"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/",
+          "status": 200,
+          "bytes": 7539,
+          "sha256": "e2024e15d93bec6b1f2efce27fe4645545e49ff0fc7e15c1570d27f7dbc4d9c2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/namastealldaykeywest/price-preview/per-item/v2/?asn=fhdn&item_pks=626355&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 551,
+          "sha256": "a3ac70208b22794982046cb62c8843b2a2184cd245e860b131e696d80164d1ed"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/namastealldaykeywest/items/626355/ratings/",
+          "status": 200,
+          "bytes": 442,
+          "sha256": "2a3dda8cfc4651ee61e347123e76cfed687acfdd2c3a0b57032a7fbb7705c573"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "626355",
+        "provider": "namastealldaykeywest",
+        "bookingUrl": "https://fareharbor.com/embeds/book/namastealldaykeywest/items/626355/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "saltysandbars",
+      "itemId": "417200",
+      "fetchedAt": "2026-10-03T18:10:02.724052+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417200/content/",
+          "status": 200,
+          "bytes": 2310,
+          "sha256": "d82d0163a52ee205c4f96cf7e54047fca0a01d41d2a831c1993dc80e77646684"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417200/structured-description/",
+          "status": 200,
+          "bytes": 1669,
+          "sha256": "35a3e88ca9160bd3ea1a08836830165e0e8eab9348137291a60c2764feadfadc"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417200/",
+          "status": 200,
+          "bytes": 10387,
+          "sha256": "93829336c373ea66da92e511b5d5749df7b98af22406c614ed5c2a33b8ff83c7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=417200&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 579,
+          "sha256": "ed89379e3640c7d270f8e69c2301654e463fd54525a00f05fcffc7b904ff8d71"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417200/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "4c2a3834274461303868493ec23ffb01a9773807dc40890cdc842a5a3012bf40"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "417200",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/417200/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "saltysandbars",
+      "itemId": "417207",
+      "fetchedAt": "2026-10-03T18:10:03.027320+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417207/content/",
+          "status": 200,
+          "bytes": 2308,
+          "sha256": "47e4837d0181defbb8fb48eca53889195040c72dadeffdee9b1c5b5695412007"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/417207/structured-description/",
+          "status": 200,
+          "bytes": 1670,
+          "sha256": "e2915984bd721cb1887cfb000de46e5c2145c1d47924f5632cd02b94d5e2cd7f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417207/",
+          "status": 200,
+          "bytes": 10346,
+          "sha256": "04e5e9f766689fc1eff559e80c1efdce7fd2e3cec3f71919f3feab9979390653"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=417207&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "835a00c8cb3192090f849ea4dda48c205bd31a40d363aa77ccb1353cbc9f461b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/417207/ratings/",
+          "status": 200,
+          "bytes": 514,
+          "sha256": "7c9831b0586fb307e97cc34500a52fa99068270d07137c0ee9f5e6c747e71a94"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "417207",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/417207/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "saltysandbars",
+      "itemId": "515385",
+      "fetchedAt": "2026-10-03T18:10:03.911354+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/515385/content/",
+          "status": 200,
+          "bytes": 2349,
+          "sha256": "7b1576db1130a7a3d63d6d3f2353bd0ec388a3eb58052db723b6aa14a1b37cab"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/515385/structured-description/",
+          "status": 200,
+          "bytes": 1733,
+          "sha256": "698e306a57b21fd8551bf5ffe103fcd13f551998ada110c610d94e98279f2ae5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/515385/",
+          "status": 200,
+          "bytes": 9967,
+          "sha256": "83f5c761cb531885dc8595753a30fc44c6e9ef08c793568944184425d9677d5c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=515385&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "67aa6daa3811fe564db01917c0a0d81a9ac17aa401138ee3362e93fecac41f47"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/515385/ratings/",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "ae951b1442a92cffc9f7d27ff6524edd976edb96a301c13eef8615f9421416ce"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "515385",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/515385/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "saltysandbars",
+      "itemId": "637746",
+      "fetchedAt": "2026-10-03T18:10:04.242222+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/637746/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/saltysandbars/637746/structured-description/",
+          "status": 200,
+          "bytes": 1253,
+          "sha256": "b1f5a304053dff00a8e48d3708d00d6dc233cac60de5cfcb4dd9076e5e4d9c87"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/637746/",
+          "status": 200,
+          "bytes": 8555,
+          "sha256": "59157adffc38dda2796cb3daa911987d5c9421bdc541269bc23d526bf02f3800"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/saltysandbars/price-preview/per-item/v2/?asn=fhdn&item_pks=637746&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/saltysandbars/items/637746/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "c1eedc1e78ba83c791eabe2e4a90685dc671cfeee557ab5622f09f82a6700d80"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "637746",
+        "provider": "saltysandbars",
+        "bookingUrl": "https://fareharbor.com/embeds/book/saltysandbars/items/637746/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    },
+    {
+      "company": "schoonerjolly",
+      "itemId": "26077",
+      "fetchedAt": "2026-10-03T18:10:04.966645+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/content/",
+          "status": 200,
+          "bytes": 3183,
+          "sha256": "3349dcf96c3ba37f983bef595a454e6d3827fac730b5a761c5b9352a88e0bbbc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/schoonerjolly/26077/structured-description/",
+          "status": 200,
+          "bytes": 2212,
+          "sha256": "9881c0e8053288d049184a7ecda68eddefcb5829ffb70ceeacd2e2474cd9135c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/",
+          "status": 200,
+          "bytes": 9576,
+          "sha256": "17e034498f2cab60b7eac2d0f20c7e737c961c5fde55bdc236a1655c10c62abc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/schoonerjolly/price-preview/per-item/v2/?asn=fhdn&item_pks=26077&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 767,
+          "sha256": "e1288cb35ddc030120d69c878c245276c89c19f05af3c8cb2748f5f7a9bc6b80"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/schoonerjolly/items/26077/ratings/",
+          "status": 200,
+          "bytes": 517,
+          "sha256": "31f9fe2898067526f2070f58635c9d893c47642f7066bb474243d3e85b565d64"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "26077",
+        "provider": "schoonerjolly",
+        "bookingUrl": "https://fareharbor.com/embeds/book/schoonerjolly/items/26077/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "sixfinsjetskirental",
+      "itemId": "628106",
+      "fetchedAt": "2026-10-03T18:10:05.184693+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinsjetskirental/628106/content/",
+          "status": 200,
+          "bytes": 20395,
+          "sha256": "6e71c1a1331d86251917a534c1f8dfb4bab94566801d1b93bf8e0646d0f9ba3b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/sixfinsjetskirental/628106/structured-description/",
+          "status": 200,
+          "bytes": 11423,
+          "sha256": "b43e0efaf6c51cb081b391b8c44bf33cc43f5593fc7d74cca2dba70b9fade78e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinsjetskirental/items/628106/",
+          "status": 200,
+          "bytes": 32791,
+          "sha256": "5942b406906be0a96c2037e37756a0ff05f605543d2e5efe4aaf43b13341740a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/sixfinsjetskirental/price-preview/per-item/v2/?asn=fhdn&item_pks=628106&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "9732ec9bc9738563d7fed965af9be83e8423601130f15675b48bc4590a0601b6"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/sixfinsjetskirental/items/628106/ratings/",
+          "status": 200,
+          "bytes": 542,
+          "sha256": "43e7ed13061f887b841515731d2238a847fd7c4348cf4380e00ded03c2dca0b6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "628106",
+        "provider": "sixfinsjetskirental",
+        "bookingUrl": "https://fareharbor.com/embeds/book/sixfinsjetskirental/items/628106/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "southpointdiverskw",
+      "itemId": "22878",
+      "fetchedAt": "2026-10-03T18:10:06.162483+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/content/",
+          "status": 200,
+          "bytes": 5504,
+          "sha256": "5d06768e2098e4c4d30f3fbacba90d09268dfe8cf6d2b7f589655fdbcd69ef76"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/southpointdiverskw/22878/structured-description/",
+          "status": 200,
+          "bytes": 2369,
+          "sha256": "a6f6aa5403eaac415d48256c2be6c8e7f5f73ea996e1f2d5c39890f1e772489a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/",
+          "status": 200,
+          "bytes": 16966,
+          "sha256": "feaf89b3a7c71e36ce6eb4f05841987ba8ad7fd78c5dd04d25a4c6e275306b4f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/southpointdiverskw/price-preview/per-item/v2/?asn=fhdn&item_pks=22878&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1075,
+          "sha256": "2fd9f5bf686cc8e17a992ecda13c7a1c413c991cb8dde3bf5bb152e8e31fb90b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/southpointdiverskw/items/22878/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "46fd71e2ca37f0a1d00979d100b775eb679d5353a1aef792711b3cf40e0f2495"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "22878",
+        "provider": "southpointdiverskw",
+        "bookingUrl": "https://fareharbor.com/embeds/book/southpointdiverskw/items/22878/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    },
+    {
+      "company": "undergrounddonutour",
+      "itemId": "624612",
+      "fetchedAt": "2026-10-03T18:10:06.292529+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/content/",
+          "status": 200,
+          "bytes": 8504,
+          "sha256": "f7754e2b08b47b7a752476f49753ec794b2614cb62d4b10323c875717f1a554b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/structured-description/",
+          "status": 200,
+          "bytes": 3837,
+          "sha256": "278fd299ca55b49839b7c08e564843f6d1fc1da35e8f2cba9e21e24baa2095ba"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/",
+          "status": 200,
+          "bytes": 17056,
+          "sha256": "8fbe08e79e83183bf730bb1bc1cbaa64c4f2722148b69c3903cb3d9d7a041cd6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/undergrounddonutour/price-preview/per-item/v2/?asn=fhdn&item_pks=624612&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 649,
+          "sha256": "36158db11585ffd59457804694ef42d7ae1438406f93bbe5d2b88a30ca3bfdf5"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/ratings/",
+          "status": 200,
+          "bytes": 647,
+          "sha256": "41c7ae1666dcf151c8a7fb0953e764c1431831f91b59df2f9f8f1d07e5b2aa3f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "624612",
+        "provider": "undergrounddonutour",
+        "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/624612/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "company": "southfloridatrikketours",
+  "itemId": "297478",
+  "fetchedAt": "2026-10-03T18:10:19.775814+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/297478/content/",
+      "status": 200,
+      "bytes": 3583,
+      "sha256": "3b7eed799f7e3523e4aa49f39e7ad0546410f0ce09c35af282477c2fffd50510"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/southfloridatrikketours/297478/structured-description/",
+      "status": 200,
+      "bytes": 2096,
+      "sha256": "911955b494f1b069fd5ac8bc55101b53d81146d48da76f7ba6f77bc22f29d8f6"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/297478/",
+      "status": 200,
+      "bytes": 15659,
+      "sha256": "0411d27aa639632eeb1b312e0852fb7cc3b7318249a7d31d871f88edeecec2af"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/southfloridatrikketours/price-preview/per-item/v2/?asn=fhdn&item_pks=297478&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 653,
+      "sha256": "f04c49015c4af5543b130181a5c6a285c039ba64f875f990cee10166a86ee537"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/southfloridatrikketours/items/297478/ratings/",
+      "status": 200,
+      "bytes": 634,
+      "sha256": "b5032a30780db2beed48254228a114aebca9585c5df552051f7b462e61b5e4d3"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "297478",
+    "provider": "southfloridatrikketours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/southfloridatrikketours/items/297478/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

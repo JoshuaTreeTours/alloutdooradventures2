@@ -1,0 +1,241 @@
+{
+  "citySlug": "miami",
+  "total": 12,
+  "active": 12,
+  "terminal": 0,
+  "priceAvailable": 8,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 12,
+  "inSitemap": 4,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "miamibeachwelcomecenter",
+      "operator": "South Beach Welcome Center",
+      "itemId": "132331",
+      "slug": "everglades-airboat-and-florida-alligator-show-tour-132331",
+      "publicPath": "/destinations/florida/miami/tours/everglades-airboat-and-florida-alligator-show-tour-132331",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3031,
+        "structuredStatus": 200,
+        "structuredBytes": 2492
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfairboatadventures",
+      "operator": "South Florida Airboat Adventures",
+      "itemId": "660368",
+      "slug": "nightime-python-road-hunt-660368",
+      "publicPath": "/destinations/florida/miami/tours/nightime-python-road-hunt-660368",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2885,
+        "structuredStatus": 200,
+        "structuredBytes": 1710
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfairboatadventures",
+      "operator": "South Florida Airboat Adventures",
+      "itemId": "660403",
+      "slug": "private-everglades-airboat-tour-660403",
+      "publicPath": "/destinations/florida/miami/tours/private-everglades-airboat-tour-660403",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3450,
+        "structuredStatus": 200,
+        "structuredBytes": 2795
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfairboatadventures",
+      "operator": "South Florida Airboat Adventures",
+      "itemId": "660426",
+      "slug": "sunrise-private-airboat-tour-660426",
+      "publicPath": "/destinations/florida/miami/tours/sunrise-private-airboat-tour-660426",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 1849,
+        "structuredStatus": 200,
+        "structuredBytes": 1215
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfairboatadventures",
+      "operator": "South Florida Airboat Adventures",
+      "itemId": "660427",
+      "slug": "sunset-private-airboat-tour-660427",
+      "publicPath": "/destinations/florida/miami/tours/sunset-private-airboat-tour-660427",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2246,
+        "structuredStatus": 200,
+        "structuredBytes": 1414
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfairboatadventures",
+      "operator": "South Florida Airboat Adventures",
+      "itemId": "660430",
+      "slug": "nighttime-private-airboat-tour-660430",
+      "publicPath": "/destinations/florida/miami/tours/nighttime-private-airboat-tour-660430",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2130,
+        "structuredStatus": 200,
+        "structuredBytes": 1355
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "469503",
+      "slug": "bella-vita-cruiser-yacht-50-469503",
+      "publicPath": "/destinations/florida/miami/tours/bella-vita-cruiser-yacht-50-469503",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9958,
+        "structuredStatus": 200,
+        "structuredBytes": 5898
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "469657",
+      "slug": "searay-sundecker-27-469657",
+      "publicPath": "/destinations/florida/miami/tours/searay-sundecker-27-469657",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10504,
+        "structuredStatus": 200,
+        "structuredBytes": 5127
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "538569",
+      "slug": "salt-cured-50-yacht-538569",
+      "publicPath": "/destinations/florida/miami/tours/salt-cured-50-yacht-538569",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6998,
+        "structuredStatus": 200,
+        "structuredBytes": 3173
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "575607",
+      "slug": "searay-sundancer-55-575607",
+      "publicPath": "/destinations/florida/miami/tours/searay-sundancer-55-575607",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9626,
+        "structuredStatus": 200,
+        "structuredBytes": 5762
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "597414",
+      "slug": "ferreti-destiny-85-ft-597414",
+      "publicPath": "/destinations/florida/miami/tours/ferreti-destiny-85-ft-597414",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 8210,
+        "structuredStatus": 200,
+        "structuredBytes": 5184
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "skytoursmiami",
+      "operator": "Sky Tours Miami",
+      "itemId": "371933",
+      "slug": "miami-downtown-private-airplane-tour-371933",
+      "publicPath": "/destinations/florida/miami/tours/miami-downtown-private-airplane-tour-371933",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 11461,
+        "structuredStatus": 200,
+        "structuredBytes": 7572
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

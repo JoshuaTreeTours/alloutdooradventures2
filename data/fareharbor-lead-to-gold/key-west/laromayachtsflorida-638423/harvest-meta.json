@@ -1,0 +1,47 @@
+{
+  "company": "laromayachtsflorida",
+  "itemId": "638423",
+  "fetchedAt": "2026-10-03T18:10:00.129425+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/content/",
+      "status": 200,
+      "bytes": 1925,
+      "sha256": "8e111377cdd59d68c713ca202a42976661351007547d5496668ea4da8dff684c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/laromayachtsflorida/638423/structured-description/",
+      "status": 200,
+      "bytes": 1590,
+      "sha256": "a23bbe0584b2152956faf524be7ecd7b84c73884d60f6a16bbf89aa54c1cce16"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/",
+      "status": 200,
+      "bytes": 7449,
+      "sha256": "080ab9de10d6771a0d8cd2e4936396c404d6bdd11491967929da33c87c1d62c5"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/laromayachtsflorida/price-preview/per-item/v2/?asn=fhdn&item_pks=638423&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 573,
+      "sha256": "b4e10b451ca7e4d7cf6a75af5ae6274728b88b97379836920969bfc810af1d6d"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/laromayachtsflorida/items/638423/ratings/",
+      "status": 200,
+      "bytes": 439,
+      "sha256": "ba5b550ccf8c827b87ebe09286c08b1b53e89e92965ab710ef31b7dede126580"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "638423",
+    "provider": "laromayachtsflorida",
+    "bookingUrl": "https://fareharbor.com/embeds/book/laromayachtsflorida/items/638423/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

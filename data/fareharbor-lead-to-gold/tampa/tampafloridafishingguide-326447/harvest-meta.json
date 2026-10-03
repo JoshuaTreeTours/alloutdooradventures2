@@ -1,0 +1,48 @@
+{
+  "company": "tampafloridafishingguide",
+  "itemId": "326447",
+  "fetchedAt": "2026-10-03T18:09:23.068004+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/tampafloridafishingguide/326447/structured-description/",
+      "status": 404,
+      "bytes": 588107,
+      "sha256": "d953c1b74a1b8ad92a73b3f3bdde00278e97c0f3518e178eddf906118439ffae"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/",
+      "status": 404,
+      "bytes": 588081,
+      "sha256": "3b636b47ec5b8d7383f787ec65e78fce1c4300ffc4aa9e650e50ed89fc61ecd1"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/tampafloridafishingguide/price-preview/per-item/v2/?asn=fhdn&item_pks=326447&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 148,
+      "sha256": "f6dfa14efa1ddd26e00cfbdbc2230d05423587723daa31ae52d72540828fe841"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/tampafloridafishingguide/items/326447/ratings/",
+      "status": 404,
+      "bytes": 588097,
+      "sha256": "fae7204c81f8ef85ef3758b6f6b534a35d8eae0e960e66dd6864443d65960a03"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "326447",
+    "provider": "tampafloridafishingguide",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tampafloridafishingguide/items/326447/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

@@ -1,0 +1,47 @@
+{
+  "company": "undergrounddonutour",
+  "itemId": "624612",
+  "fetchedAt": "2026-10-03T18:10:06.292529+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/content/",
+      "status": 200,
+      "bytes": 8504,
+      "sha256": "f7754e2b08b47b7a752476f49753ec794b2614cb62d4b10323c875717f1a554b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/undergrounddonutour/624612/structured-description/",
+      "status": 200,
+      "bytes": 3837,
+      "sha256": "278fd299ca55b49839b7c08e564843f6d1fc1da35e8f2cba9e21e24baa2095ba"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/",
+      "status": 200,
+      "bytes": 17056,
+      "sha256": "8fbe08e79e83183bf730bb1bc1cbaa64c4f2722148b69c3903cb3d9d7a041cd6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/undergrounddonutour/price-preview/per-item/v2/?asn=fhdn&item_pks=624612&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 649,
+      "sha256": "36158db11585ffd59457804694ef42d7ae1438406f93bbe5d2b88a30ca3bfdf5"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/undergrounddonutour/items/624612/ratings/",
+      "status": 200,
+      "bytes": 647,
+      "sha256": "41c7ae1666dcf151c8a7fb0953e764c1431831f91b59df2f9f8f1d07e5b2aa3f"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "624612",
+    "provider": "undergrounddonutour",
+    "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/624612/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

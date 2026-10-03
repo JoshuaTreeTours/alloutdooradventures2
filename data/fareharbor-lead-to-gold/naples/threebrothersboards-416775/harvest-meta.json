@@ -1,0 +1,47 @@
+{
+  "company": "threebrothersboards",
+  "itemId": "416775",
+  "fetchedAt": "2026-10-03T18:09:27.839100+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/content/",
+      "status": 200,
+      "bytes": 3510,
+      "sha256": "1d85c3534b8597c31b127212be63d4c0cd483b9eec732de944dec2e616026aa5"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/structured-description/",
+      "status": 200,
+      "bytes": 1741,
+      "sha256": "41c24be55ec5ed4fac88f1f5179d86ad8ccfdaa24d2a3d5057f7f13436ef6147"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/",
+      "status": 200,
+      "bytes": 11839,
+      "sha256": "20826fcafc060537dd45f0908f6b837a9ffc4fd2163c4f13abf59609eb4c9a2c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/threebrothersboards/price-preview/per-item/v2/?asn=fhdn&item_pks=416775&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 656,
+      "sha256": "03bec6e1919850dc57c779d438b57acfbf33608adedb2f4540b4c2933033a3bc"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/ratings/",
+      "status": 200,
+      "bytes": 607,
+      "sha256": "a1d06a831f1e5e01693b517378d0e9be7d22aa777063d6a713ee9d124f12928b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "416775",
+    "provider": "threebrothersboards",
+    "bookingUrl": "https://fareharbor.com/embeds/book/threebrothersboards/items/416775/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

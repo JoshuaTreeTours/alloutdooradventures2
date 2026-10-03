@@ -1,0 +1,254 @@
+[
+  {
+    "itemId": "537061",
+    "company": "evergladesfloridaadventures",
+    "title": "Mangrove Wilderness Boat Tour",
+    "operator": "Everglades Florida Adventures",
+    "publicPath": "/destinations/florida/everglades-city/tours/mangrove-wilderness-boat-tour-537061",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Mangrove Wilderness Boat Tour is a harbor outing lasting 1.75hrs with Everglades Florida Adventures on Everglades City Harbor. Landscape is included. The sail passes Everglades National Park."
+    ],
+    "schemaDescription": "Mangrove Wilderness Boat Tour is a harbor outing lasting 1.75hrs with Everglades Florida Adventures on Everglades City Harbor.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "1.75hrs harbor outing",
+      "Everglades National Park",
+      "landscape"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DZYWtT4Sea5FlEA9UX1a"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/ysRhxspAT7mn7U6LFcbm",
+    "wordCount": 28,
+    "durationLabel": "1.75hrs",
+    "durationIso": null,
+    "meetingLocation": "905 Copeland Ave S Everglades City, FL 34139",
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 13-61",
+        "amountLabel": "$65"
+      },
+      {
+        "label": "Senior",
+        "note": "Ages 62+ | 10% Discount Applied",
+        "amountLabel": "$58.50"
+      },
+      {
+        "label": "Military",
+        "note": "Active & Retired | 10% Discount Applied",
+        "amountLabel": "$58.50"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 5-12",
+        "amountLabel": "$29"
+      },
+      {
+        "label": "Young Child",
+        "note": "",
+        "amountLabel": "Free"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/537061/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Everglades City",
+      "state": "Florida",
+      "citySlug": "everglades-city",
+      "stateSlug": "florida",
+      "reason": "Everglades City, Florida belongs to the Everglades City area via meeting_point",
+      "place": {
+        "city": "Everglades City",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "everglades-city",
+        "stateSlug": "florida",
+        "raw": "Everglades City, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Everglades City",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "everglades-city",
+          "stateSlug": "florida",
+          "raw": "Everglades City, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Everglades City",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "everglades-city",
+          "stateSlug": "florida",
+          "raw": "Everglades City, FL",
+          "source": "item_location",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/ysRhxspAT7mn7U6LFcbm",
+      "heroHandle": "ysRhxspAT7mn7U6LFcbm",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/DZYWtT4Sea5FlEA9UX1a",
+          "handle": "DZYWtT4Sea5FlEA9UX1a",
+          "pixelSha256": "d087e2c463bb4acc631b3995f9f125a55eaa503d9808cfedfdf3eb9339c98a7d",
+          "differenceHashDistanceFromHero": 114,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.26256,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/DZYWtT4Sea5FlEA9UX1a",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/everglades-city/evergladesfloridaadventures-537061",
+      "fetchedAt": "2026-10-03T18:09:17.535378+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/537061/content/",
+          "status": 200,
+          "bytes": 4474,
+          "sha256": "32ede37f4766c80988a7e6207e52854db7cd306a5e48903e5f5099c7b6eaf761"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/537061/structured-description/",
+          "status": 200,
+          "bytes": 1927,
+          "sha256": "2a4ba1f5b58eff42acf89601704fb924b16ce517de45af0fee04fa284f2132c2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/537061/",
+          "status": 200,
+          "bytes": 15767,
+          "sha256": "de051a86216e3f195d7c72a1c26f418bdbb68efae58e0667eb6bb631562f6b88"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/evergladesfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=537061&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1070,
+          "sha256": "9d80a4ee0f71ded85bd56af2ef527b8e6a6a5ab0539dfce4513bacf9cf5b6178"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/537061/ratings/",
+          "status": 200,
+          "bytes": 477,
+          "sha256": "c83ad7da398e2da1543cfc1b0d343a75c06af5a3143971e866e862307982aa20"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 13-61",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 13-61",
+            "amount": 65.0
+          },
+          {
+            "singular": "Senior",
+            "note": "Ages 62+ | 10% Discount Applied",
+            "amount": 58.5
+          },
+          {
+            "singular": "Military",
+            "note": "Active & Retired | 10% Discount Applied",
+            "amount": 58.5
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 5-12",
+            "amount": 29.0
+          }
+        ],
+        "zeroPriceTypes": [
+          "Young Child"
+        ],
+        "departureStartAt": "2026-10-29T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "1.75hrs",
+        "meetingAddress": "905 Copeland Ave S Everglades City, FL 34139",
+        "itemLocation": "Everglades National Park, 905 Copeland Ave, Everglades City, FL 34139",
+        "headline": "Starting at $65 | 1hr 45min | All Ages | 6 passenger vessels",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "landscape"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "National Park Pass",
+          "Guests should consider bringing sunglasses, a hat, sunscreen, and water",
+          "Snacks, Drinks, and Souvenirs are available in the gift shop before departure"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Mangrove Wilderness Tour"
+        ],
+        "measures": [
+          "1 hour",
+          "45 minutes"
+        ],
+        "description": "Embark on an unforgettable adventure through Everglades National Park on our Mangrove Wilderness Tour! Over 1 hour and 45 minutes, we'll navigate the backcountry mangroves of the 10,000 islands.",
+        "detailsText": "Starting at $65 | 1hr 45min | All Ages | 6 passenger vessels Starting at $65 | 1hr 45min | All Ages | 6 passenger vessels",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "537061",
+        "provider": "evergladesfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/evergladesfloridaadventures/items/537061/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

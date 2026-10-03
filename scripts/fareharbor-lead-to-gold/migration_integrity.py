@@ -271,6 +271,17 @@ def known_area_cities() -> set[str]:
 KNOWN_AREA_CITIES = known_area_cities()
 
 
+SAINT_CITY_TAILS = {"petersburg", "augustine", "pete", "cloud"}
+
+
+def _is_street_token(part: str, next_part: str | None) -> bool:
+    token = part.lower().rstrip(".")
+    # "St. Petersburg" is a city, not a street suffix.
+    if token == "st" and next_part and next_part.lower().rstrip(".,") in SAINT_CITY_TAILS:
+        return False
+    return token in STREET_WORDS
+
+
 def city_from_address_parts(parts: list[str]) -> str | None:
     if not parts:
         return None
@@ -279,7 +290,7 @@ def city_from_address_parts(parts: list[str]) -> str | None:
         (
             index
             for index, part in enumerate(cleaned)
-            if part.lower().rstrip(".") in STREET_WORDS
+            if _is_street_token(part, cleaned[index + 1] if index + 1 < len(cleaned) else None)
         ),
         default=-1,
     )
@@ -307,6 +318,11 @@ def normalize_city(value: str | None) -> str | None:
     parsed = city_from_address_parts(city.split())
     if not parsed or parsed.lower() in STREET_WORDS:
         return None
+    lowered = parsed.lower().replace(".", "")
+    if lowered == "st petersburg" or lowered.endswith(" st petersburg"):
+        return "St. Petersburg"
+    if lowered == "st augustine" or lowered.endswith(" st augustine"):
+        return "St. Augustine"
     return parsed
 
 

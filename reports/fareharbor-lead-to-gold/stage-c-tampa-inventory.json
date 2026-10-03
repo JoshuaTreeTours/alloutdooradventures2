@@ -1,0 +1,51 @@
+{
+  "citySlug": "tampa",
+  "total": 2,
+  "active": 1,
+  "terminal": 1,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 2,
+  "inSitemap": 0,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "tampabayboatingadventures",
+      "operator": "Tampa Bay Boating Adventures",
+      "itemId": "589679",
+      "slug": "private-snorkeling-charters-in-st-pete-florida-589679",
+      "publicPath": "/destinations/florida/tampa/tours/private-snorkeling-charters-in-st-pete-florida-589679",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 4030
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "tampafloridafishingguide",
+      "operator": "Bag'Em Fishing Charters",
+      "itemId": "326447",
+      "slug": "inshore-fishing-charter-326447",
+      "publicPath": "/destinations/florida/tampa/tours/inshore-fishing-charter-326447",
+      "status": "BOOKING_PAGE_NOT_FOUND",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 404,
+        "structuredBytes": 588107
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

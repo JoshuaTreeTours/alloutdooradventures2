@@ -1,0 +1,32 @@
+{
+  "citySlug": "fort-lauderdale",
+  "total": 1,
+  "active": 1,
+  "terminal": 0,
+  "priceAvailable": 0,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 1,
+  "inSitemap": 0,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "cyclepartyftl",
+      "operator": "Cycle Party FTL",
+      "itemId": "56394",
+      "slug": "las-olas-coffee-snacks-and-shops-tour-56394",
+      "publicPath": "/destinations/florida/fort-lauderdale/tours/las-olas-coffee-snacks-and-shops-tour-56394",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6383,
+        "structuredStatus": 200,
+        "structuredBytes": 2361
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

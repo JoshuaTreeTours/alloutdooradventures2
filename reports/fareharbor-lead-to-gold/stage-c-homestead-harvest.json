@@ -1,0 +1,169 @@
+{
+  "fetchedAt": "2026-10-03T18:09:22.519783+00:00",
+  "citySlug": "homestead",
+  "totalBostonLegacy": 2,
+  "total": 2,
+  "active": 2,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 0,
+  "priceNotFound": 2,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [
+    "648246",
+    "648259"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "648246",
+      "company": "soflnps",
+      "catalogId": "south-florida-national-park-service-648246",
+      "slug": "journey-through-nine-mile-pond-nps-ranger-guided-canoe-adventure-648246",
+      "title": "Journey Through Nine Mile Pond: NPS Ranger-Guided Canoe Adventure",
+      "operator": "South Florida National Park Service",
+      "publicPath": "/destinations/florida/homestead/tours/journey-through-nine-mile-pond-nps-ranger-guided-canoe-adventure-648246",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Homestead",
+        "citySlug": "homestead",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/soflnps/items/648246/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/XSSKY4YERRGnPCmKwrDO",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/XSSKY4YERRGnPCmKwrDO"
+      ],
+      "tags": [
+        "Canoe"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:20.330971+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/soflnps/648246/content/",
+          "status": 200,
+          "bytes": 6949,
+          "sha256": "71e853d46169286d5d3b935c44b11d476d48ebdad3eaff92e47b396d83b84070"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/soflnps/648246/structured-description/",
+          "status": 200,
+          "bytes": 4160,
+          "sha256": "a1b08270a45a18713043ea3766bd35ae6b11e840c5f42c315007f9a6e165a632"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648246/",
+          "status": 200,
+          "bytes": 10210,
+          "sha256": "fa16197ce49fcd1934babd8ff8b3e4c87013e7cc170d26e7226df8d263430f5a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/soflnps/price-preview/per-item/v2/?asn=fhdn&item_pks=648246&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648246/ratings/",
+          "status": 200,
+          "bytes": 460,
+          "sha256": "23c1c35fbf451def00742dad42a9f5cc1cf7193f9eafa197fb7edc92d3ec7398"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "648246",
+        "provider": "soflnps",
+        "bookingUrl": "https://fareharbor.com/embeds/book/soflnps/items/648246/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "648259",
+      "company": "soflnps",
+      "catalogId": "south-florida-national-park-service-648259",
+      "slug": "paddling-in-paradise-ranger-guided-kayaking-on-florida-bay-648259",
+      "title": "Paddling in Paradise: Ranger-Guided Kayaking on Florida Bay",
+      "operator": "South Florida National Park Service",
+      "publicPath": "/destinations/florida/homestead/tours/paddling-in-paradise-ranger-guided-kayaking-on-florida-bay-648259",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Homestead",
+        "citySlug": "homestead",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/soflnps/items/648259/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/jOIhxN1fQkWanbtbwVNf",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/jOIhxN1fQkWanbtbwVNf"
+      ],
+      "tags": [
+        "Kayak"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:09:20.331550+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/soflnps/648259/content/",
+          "status": 200,
+          "bytes": 6765,
+          "sha256": "0fa260872d2f49f4a4941bb91fe4f97d555211bc11dd6799c248f9e6a393bd8e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/soflnps/648259/structured-description/",
+          "status": 200,
+          "bytes": 4425,
+          "sha256": "6a8a9f8202b2f27658e38fa588fe6ffb6323d07c697d4cf0a38859f36923434a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648259/",
+          "status": 200,
+          "bytes": 10964,
+          "sha256": "11d0b7564d8297f12232c846ac242a92e2395ae49582c688d4dd79231d2531a6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/soflnps/price-preview/per-item/v2/?asn=fhdn&item_pks=648259&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/soflnps/items/648259/ratings/",
+          "status": 200,
+          "bytes": 454,
+          "sha256": "d8a14ccc44d77d8815c50512c94e4aa27f010173a09faf40cd6aa79854c9d749"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "648259",
+        "provider": "soflnps",
+        "bookingUrl": "https://fareharbor.com/embeds/book/soflnps/items/648259/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

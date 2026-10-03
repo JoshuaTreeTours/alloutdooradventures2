@@ -1,0 +1,191 @@
+[
+  {
+    "itemId": "56394",
+    "company": "cyclepartyftl",
+    "title": "Las Olas Coffee, Snacks & Shops Tour",
+    "operator": "Cycle Party FTL",
+    "publicPath": "/destinations/florida/fort-lauderdale/tours/las-olas-coffee-snacks-and-shops-tour-56394",
+    "engine2Path": null,
+    "exceptionStatus": "PRICE_NOT_FOUND",
+    "paragraphs": [
+      "This is a guided outing with Cycle Party FTL in Fort Lauderdale."
+    ],
+    "schemaDescription": "This is a guided outing with Cycle Party FTL in Fort Lauderdale.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/DtI7RD36TJabNaG2fJJ8",
+    "wordCount": 12,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "Fort Lauderdale, FL",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": {
+      "ratingValue": 4.9,
+      "reviewCount": 313,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.9 from 313 reviews on GET https://fareharbor.com/api/v1/companies/cyclepartyftl/items/56394/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Fort Lauderdale",
+      "state": "Florida",
+      "citySlug": "fort-lauderdale",
+      "stateSlug": "florida",
+      "reason": "Fort Lauderdale, Florida belongs to the Fort Lauderdale area via meeting_point",
+      "place": {
+        "city": "Fort Lauderdale",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "fort-lauderdale",
+        "stateSlug": "florida",
+        "raw": "Fort Lauderdale, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Fort Lauderdale",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "fort-lauderdale",
+          "stateSlug": "florida",
+          "raw": "Fort Lauderdale, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Fort Lauderdale",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "fort-lauderdale",
+          "stateSlug": "florida",
+          "raw": "Fort Lauderdale, FL",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Fort Lauderdale",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "fort-lauderdale",
+          "stateSlug": "florida",
+          "raw": "Fort Lauderdale, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 26.119598,
+          "lng": -80.14614
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/DtI7RD36TJabNaG2fJJ8",
+      "heroHandle": "DtI7RD36TJabNaG2fJJ8",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/fort-lauderdale/cyclepartyftl-56394",
+      "fetchedAt": "2026-10-03T18:09:14.519442+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/cyclepartyftl/56394/content/",
+          "status": 200,
+          "bytes": 6383,
+          "sha256": "ad3204ef41b58eb7f2413f16d9a481ea0317a3e7aade8c86fc489f41c2189362"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/cyclepartyftl/56394/structured-description/",
+          "status": 200,
+          "bytes": 2361,
+          "sha256": "ba6fde30995985ed329a0e6056963376b22b7a80031c3cc476e2b21b85aa9821"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/cyclepartyftl/items/56394/",
+          "status": 200,
+          "bytes": 14968,
+          "sha256": "bb1a506289ac7192262879c1f97d2a2bb0845710ae9d9a754f840207cc636950"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/cyclepartyftl/price-preview/per-item/v2/?asn=fhdn&item_pks=56394&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/cyclepartyftl/items/56394/ratings/",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "bf7c89c5527a45d4dd2141cb43a2c830bb32421717e6701d0e448988379c6c72"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": null,
+        "meetingAddress": "Fort Lauderdale, FL",
+        "itemLocation": "Fort Lauderdale, FL",
+        "headline": "Learn More. FTL! • Private Tours ONLY",
+        "startCity": "Fort Lauderdale",
+        "startProvince": "FL",
+        "startLat": 26.119598,
+        "startLng": -80.14614,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Las Olas Coffee",
+          "Shops Tour",
+          "Fort Lauderdale",
+          "Cycle Party's Coffee"
+        ],
+        "measures": [],
+        "description": "Las Olas Coffee, Snacks & Shops Tour: Pedal, Discover, Shop! Discover the Charm of Fort Lauderdale: Get ready to experience the charm of Fort Lauderdale like never before with Cycle Party's Coffee, Snacks & Shops Tour. This one-of-a-kind adventure takes you through the picturesque streets of the city, offering a delightful blend of exploration, laughter, and shopping escapades. As we pedal our way around, you'll have the opportunity to uncover hidden gems, quaint cafes, and unique boutiques that make Fort Lauderdale special. Each stop is a chance to explore, take in the vibrant atmosphere, and perhaps grab a coffee or snack at your leisure. Our state-of-the-art party bike provides a smooth and enjoyable ride, creating a social and engaging atmosphere perfect for spending quality time with loved ones. Share laughs, stories, and discover the city's best-kept secrets together. Whether you're a shopping enthusiast, a lover of charming cafes, or simply looking for a unique way to explore Fort Lauderdale, our Coffee, Snacks & Shops Tour has something for everyone. Engage your sense of adventure and get ready to explore the city's delightful nooks and crannies. Are you ready to turn your exploration up a notch? Join us on this pedal-powered adventure and create lasting memories as you explore, shop, and discover the best of Fort Lauderdale. Reserve your spot today and get ready for an unforgettable journey!",
+        "detailsText": "Liability Waiver Please sign your waiver to save time before your tour and share the link with anyone else joining you so that they too can fill out the waiver: [https://web.wherewolf.co.nz/rfmajh](https://web.wherewolf.co.nz/rfmajh) Minimum Required We require a minimum of 6 people in order for a tour to go out. This is to guarantee a great experience and the ability to pedal our party bikes. If the minimum isn't met then we will do our best to find an alternate time or provide a refund. Suggested Gratuity A 20% gratuity on the full non-discounted price is recommended. Our guides work extremely hard to show you a great time and most importantly keep you safe. Credit card gratuities accepted. Meet Time Please arrive 30 minutes prior to tour start time for check-in. Rules 1. The Pilot is in charge of the tour. What he or she says, is LAW. 2. YOU MAY NOT BRING YOUR OWN ALCOHOL (NO BYOB, NO COOLERS, NO FLASKS). 3. No glass containers on the group bike. 4. No back-seat driving. 5. No umbrellas on the group bike. 6. Helmets are offered, in accordance with Florida State Law your choice if you're over 16. 7. No leaving the Cycle Party group bike or jumping off while in motion. Planned and announced stops only. 8. Respect our streets and our town, no littering or excess noise please. 9. Your Pilot, a trained Cycle Party employee, is the only individual who can drive the bike. 10. Insurance regulations require everyone to be 18 or older (16 with approval of parents; 21 on pub crawls). ID's are checked at time of departure. 11. All Party Guests must sign a release of liability form prior to riding the bike. 12. There are no refunds due to poor weather. 13. Unless it is a severe weather situation, we will ride. If severe weather does occur, Cycle Party reserves the right to cancel the Cycle Party tour and offer you a rain check. We also offer a rain check if the Cycle Party has to be canceled due to weather within the first hour of the tour. Rain checks have to be used in the following 12 months. Examples of severe weather may include but are not limited to: High wind advisory: typically over 30mph or severe thunderstorms with heavy lightning. Cycle Party is not responsible for lost, stolen or damaged items while on the group bike. 14. All rules of the road apply to the Cycle Party while in motion; your Pilot will help everyone stick to them. 15. Please have a designated driver for the ride home after any consumption of alcohol. Don't drink and drive. 16. Damage Fees and/or Late Fees may be assessed. 17. There will be no Damage/Late Fee charged if the Cycle Party group bike returns to the starting point on time and undamaged from the Cycle Party. We reserve the right to charge your credit card following the tour if necessary. Since the Cycle Party is powered by its passengers, they control the speed at which the tour progresses. For scheduling purposes, however, it is necessary that the tour end within 15 minutes of the scheduled return time. The pilot will determine if late fees are applicable. Traffic, outside of passengers control will be taken into consideration. 15-20 minutes late: $55 20-25 minutes late: $70 25-30 minutes late $85 30-59 minutes late $200 more than 60 minutes late: $250 per hour Damage: Cost of Repair Abandonment: $400 18. All inappropriate behavior by passengers will result in early termination of your tour without any refund. These offenses include but are not limited to: Extreme Intoxication, Excessive Noise, Littering, Public Urination. Learn More. FTL! • Private Tours ONLY Learn More. FTL! • Private Tours ONLY",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "56394",
+        "provider": "cyclepartyftl",
+        "bookingUrl": "https://fareharbor.com/embeds/book/cyclepartyftl/items/56394/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": false,
+      "errors": [
+        "schema description is not shorter than the editorial body",
+        "malformed keyword fragment",
+        "experience copy is under 100 words; rich FareHarbor source requires at least 100 words, or mark INSUFFICIENT_SOURCE_CONTENT when the source cannot support that",
+        "editorial lacks minimum experience substance; use remaining FareHarbor details or keep this as a composer FAIL, not INSUFFICIENT_SOURCE_CONTENT, when source is rich",
+        "experience copy is 12 words; rich FareHarbor source requires at least 100 words"
+      ]
+    }
+  }
+]

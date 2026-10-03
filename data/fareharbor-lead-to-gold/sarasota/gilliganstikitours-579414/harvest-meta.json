@@ -1,0 +1,47 @@
+{
+  "company": "gilliganstikitours",
+  "itemId": "579414",
+  "fetchedAt": "2026-10-03T18:09:39.250919+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gilliganstikitours/579414/content/",
+      "status": 200,
+      "bytes": 1473,
+      "sha256": "6e618879a239f84d8e7ea29f90dc9e3a71173e9521827b2692e98392a6e7abc0"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gilliganstikitours/579414/structured-description/",
+      "status": 200,
+      "bytes": 1297,
+      "sha256": "c9c96eb72b0103751e7f7814697fa0e38c611c8a0a3dad615263fea9005193da"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gilliganstikitours/items/579414/",
+      "status": 200,
+      "bytes": 8270,
+      "sha256": "9388e6d5dfc51f0829fffd471fd733b22287eedd19ea47707a2b0881be806996"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gilliganstikitours/price-preview/per-item/v2/?asn=fhdn&item_pks=579414&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gilliganstikitours/items/579414/ratings/",
+      "status": 200,
+      "bytes": 455,
+      "sha256": "e60a409962153cc58a91e62257d29ad192ecbd4f7d8de826f46f3ab574acca1c"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "579414",
+    "provider": "gilliganstikitours",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gilliganstikitours/items/579414/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

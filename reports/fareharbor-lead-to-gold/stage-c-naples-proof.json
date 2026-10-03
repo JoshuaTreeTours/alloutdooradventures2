@@ -1,0 +1,1031 @@
+[
+  {
+    "itemId": "156715",
+    "company": "evergladesfloridaadventures",
+    "title": "Ten Thousand Islands Tour | Departing from our new location @ Port Of The Islands",
+    "operator": "Everglades Florida Adventures",
+    "publicPath": "/destinations/florida/naples/tours/ten-thousand-islands-tour-departing-from-our-new-location-port-of-the-islands-156715",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "The operator Everglades Florida Adventures lists this outing."
+    ],
+    "schemaDescription": "The operator Everglades Florida Adventures lists this outing.",
+    "removedClaims": [
+      "No public experience copy was written because structured description, booking details, itinerary, and inclusions cannot support 100 words of specific prose without invention."
+    ],
+    "highlights": [],
+    "galleryImages": [],
+    "productImage": "https://cdn.filestackcontent.com/4PcghIrFTmu6dFqsooNT",
+    "wordCount": 8,
+    "durationLabel": null,
+    "durationIso": null,
+    "meetingLocation": "525 Newport Dr Naples FL 34114",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "The FareHarbor ratings endpoint https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/156715/ratings/ did not include a TripAdvisor rating and review count in ratings.tripadvisor.rating and ratings.tripadvisor.num_reviews. rating_image_url was not used. Google reviews were not substituted. Catalog quality_score and availability_count were not used. AggregateRating is omitted.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Naples",
+      "state": "Florida",
+      "citySlug": "naples",
+      "stateSlug": "florida",
+      "reason": "no contradictory source geography; not inferred from the bucket alone",
+      "place": null,
+      "signals": []
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/4PcghIrFTmu6dFqsooNT",
+      "heroHandle": "4PcghIrFTmu6dFqsooNT",
+      "candidates": [],
+      "rejected": [],
+      "selected": null,
+      "action": "none",
+      "reason": "no harvest images"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/naples/evergladesfloridaadventures-156715",
+      "fetchedAt": "2026-10-03T18:09:25.843530+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/156715/content/",
+          "status": 200,
+          "bytes": 3985,
+          "sha256": "12d801b9d09fa3bedcaeb25127d15488073885d94a26a03ff6e0dfb2d94ae995"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/evergladesfloridaadventures/156715/structured-description/",
+          "status": 200,
+          "bytes": 2271,
+          "sha256": "1394e7f8fdb1ba2d585def9145a00e9a62440c76a22890d69377f31973d81433"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/156715/",
+          "status": 200,
+          "bytes": 11257,
+          "sha256": "15f7a80470bb908118637efaf3cb05c8ede119078d9cfcc24473467c9a56748b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/evergladesfloridaadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=156715&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/evergladesfloridaadventures/items/156715/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "fa71a50e28c4d09eae02f2762268c82b45d2e0f3708c6fefeea5ab91a9f3d711"
+        }
+      },
+      "price": null,
+      "facts": {
+        "duration": "3 hours",
+        "meetingAddress": "525 Newport Dr Naples FL 34114",
+        "itemLocation": "Boat Tour Departs from 525 Newport Drive, Naples FL 34113 (Port of The Islands Marina)",
+        "headline": "Starting at $59 | 3 Hours | All Ages",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [
+          "The trip will take place on a 45ft passenger catamaran with partial shade and bench seating"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [
+          "Guests should consider bringing sunglasses, a hat, sunscreen, and water. Coolers and food are welcome",
+          "Snacks, Drinks, Beer, and Wine available for purchase at the marina ship store before departure"
+        ],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "The best way to explore the 10,000 Islands!"
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [],
+        "description": "The best way to explore the 10,000 Islands!",
+        "detailsText": "![EC Logo](https://cdn.filestackcontent.com/Di5XfrGRR4CxBVUCBxK1) Arrival Information - Boat departs from 525 Newport Drive, Naples, FL 34114 - Parking is located to the right as you enter Port of the Islands on Newport drive across from the fire station - Please be at the seawall next to the marina ship store at least 20 min before departure time. Trips board 5 min before departing and everyone needs to present for the safety briefing. We do our best to ensure that trips leave at their scheduled departure, so it is very important to be on time! ![Description of image](https://cdn.filestackcontent.com/TXb4CIpTO21wgBQWVbJ0) Starting at $59 | 3 Hours | All Ages Starting at $59 | 3 Hours | All Ages",
+        "sourceUsed": "booking_details_content"
+      },
+      "bookingPageValidity": {
+        "itemId": "156715",
+        "provider": "evergladesfloridaadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/evergladesfloridaadventures/items/156715/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "44245",
+    "company": "floridaadventuresandrentals",
+    "title": "Rookery Bay Kayak Tours",
+    "operator": "Florida Adventures and Rentals",
+    "publicPath": "/destinations/florida/naples/tours/rookery-bay-kayak-tours-44245",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Rookery Bay Kayak Tours is a two-hour paddle outing with Florida Adventures and Rentals in Naples. The outing passes Rookery Bay Estuarine Research Reserve.",
+      "Groups are capped at 10.",
+      "Guests must be at least 4 years old. A full refund is available with at least 48 hours' notice."
+    ],
+    "schemaDescription": "A two-hour paddle outing with Florida Adventures and Rentals in Naples. The outing passes Rookery Bay Estuarine Research Reserve.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel."
+    ],
+    "highlights": [
+      "two-hour paddle outing in Naples",
+      "Rookery Bay Estuarine Research Reserve",
+      "Groups are capped at 10"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/P7hY6A7Q96dHVAKHbWR5"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/1gcLiu63TkigI9M3sf1F",
+    "wordCount": 49,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "Capri Paddlecraft Park, 1295 Capri Blvd, Naples, FL 34113",
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Kid",
+        "note": "Ages 10 & Under",
+        "amountLabel": "$45"
+      },
+      {
+        "label": "Adult",
+        "note": "Ages 11+",
+        "amountLabel": "$65"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 1525,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 1525 reviews on GET https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44245/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Naples",
+      "state": "Florida",
+      "citySlug": "naples",
+      "stateSlug": "florida",
+      "reason": "Naples, Florida belongs to the Naples area via meeting_point",
+      "place": {
+        "city": "Naples",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "naples",
+        "stateSlug": "florida",
+        "raw": "Naples, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Naples, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Capri Blvd. Naples, FL",
+          "source": "item_location",
+          "weight": "strong"
+        },
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Naples, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 25.983925,
+          "lng": -81.7036
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/1gcLiu63TkigI9M3sf1F",
+      "heroHandle": "1gcLiu63TkigI9M3sf1F",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/P7hY6A7Q96dHVAKHbWR5",
+          "handle": "P7hY6A7Q96dHVAKHbWR5",
+          "pixelSha256": "6cead91ef834237c61c70f7eca4b67e0336b455fe555f9c1e1b744c8006dd044",
+          "differenceHashDistanceFromHero": 128,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.27465,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/P7hY6A7Q96dHVAKHbWR5",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/naples/floridaadventuresandrentals-44245",
+      "fetchedAt": "2026-10-03T18:09:25.844454+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44245/content/",
+          "status": 200,
+          "bytes": 13000,
+          "sha256": "b364afe9a10f294ab0079d58cac110e5406e525eb261b72360e31ab58c129270"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44245/structured-description/",
+          "status": 200,
+          "bytes": 8062,
+          "sha256": "d54c64528864ce30b4926b30afa28e7409f4dc9d0a2be320f67aa62e249f7ae5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44245/",
+          "status": 200,
+          "bytes": 39940,
+          "sha256": "6148e3f6a401f986d0be21826ab66716078d739e92a81c49d681e8e65339bed1"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=44245&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 645,
+          "sha256": "43fb57d222cdd89c8b7f73fd896f30ee4e11770c5e956ef9bd306c64cb5f01df"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44245/ratings/",
+          "status": 200,
+          "bytes": 568,
+          "sha256": "23df9f0bee9c2b321a68efac5d7c2b826366e5b6ecaf582cb8526ec7b3e76bfe"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 11+",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Kid",
+            "note": "Ages 10 & Under",
+            "amount": 45.0
+          },
+          {
+            "singular": "Adult",
+            "note": "Ages 11+",
+            "amount": 65.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-11-24T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": "Capri Paddlecraft Park, 1295 Capri Blvd, Naples, FL 34113",
+        "itemLocation": "Isle of Capri Paddle Park - 1295 Capri Blvd. Naples, FL 34113",
+        "headline": "2 hours • Explore the most pristine mangrove forest in North America! • All ages",
+        "startCity": "Naples",
+        "startProvince": "FL",
+        "startLat": 25.983925,
+        "startLng": -81.7036,
+        "minAge": 4,
+        "maxAge": 99,
+        "groupSize": "10-12 Individuals",
+        "included": [
+          "A dry bag is provided to help keep personal items dry and in one place on the kayak",
+          "Life vests are provided for all ages and sizes"
+        ],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [
+          "When you arrive to the park, you'll meet your guide by the company truck and trailer. Look for the blue and green kayaks, or our company name and logo on the side of the truck. They will provide parking instruction and where to find the restroom. Waivers must be signed for all individuals in your party. Once all guests have arrived and waivers are signed, your guide will bring you to the launch to provide you with the basics to kayaking and hazards to watch out for to ensure a safe and fun adventure. The guide will launch you into the water and begin the tour. You will return to the same location at the launch 2 hours later. Please note that your feet and bottom half will get wet, so plan your attire accordingly."
+        ],
+        "highlights": [],
+        "restrictions": [
+          "Ages 12 and under must be in a tandem kayak with an adult",
+          "All kayaks are adult kayaks",
+          "No kid kayaks are available",
+          "Not recommended for individuals who have recently had shoulder or back injuries or surgeries"
+        ],
+        "bring": [
+          "Sun protection like sunscreen, hats or sun protective clothing",
+          "Water is required to be brought by all guests!",
+          "Bug spray because its Florida",
+          "Camera or GoPro (optional)",
+          "Towel to help dry off after the tour"
+        ],
+        "cancellation": "Customers receive a full refund for cancellations 48 hours before the booking. Cancellations, changes, or no-shows within 48 hours are charged in full. Operator cancellations get a full refund.",
+        "accessibility": "Yes, but there would need to be someone to assist individual into kayak. All personal items must be stored in vehicle, no storage space.",
+        "languages": [],
+        "factualSentences": [
+          "Embark on a 2 hour kayaking adventure through Rookery Bay Estuarine Research Reserve."
+        ],
+        "gleanedFacts": [],
+        "properNames": [],
+        "measures": [
+          "2 hour"
+        ],
+        "description": "Embark on a 2 hour kayaking adventure through Rookery Bay Estuarine Research Reserve. Your guide will help you learn basic kayak maneuvers to help you along the route. You will learn about the parks history, storm events, the ecosystem you'll be exploring, and the wildlife that inhabits the area. By the end of your adventure you will leave with amazing memories and have learned amazing facts from your passionate guide! We cannot wait to explore with you!",
+        "detailsText": "Guests must arrive 20-30 minutes ahead of scheduled tour time for parking and to sign waivers. This also ensures time to get everyone ready for the adventure. Guests must arrive 20-30 minutes ahead of scheduled tour time for parking and to sign waivers. This also ensures time to get everyone ready for the adventure. 2 hours • Explore the most pristine mangrove forest in North America! • All ages 2 hours • Explore the most pristine mangrove forest in North America! • All ages",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "44245",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44245/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "464256",
+    "company": "marcoecotours",
+    "title": "Deluxe Pedal Kayak Tour | Marco Island and Naples, Florida",
+    "operator": "La vita é bella - Marco Eco Tours",
+    "publicPath": "/destinations/florida/naples/tours/deluxe-pedal-kayak-tour-marco-island-and-naples-florida-464256",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "This is a two-hour paddle outing with La vita é bella - Marco Eco Tours. The group passes Marco Island. The group stays on the water in Naples."
+    ],
+    "schemaDescription": "This is a two-hour paddle outing with La vita é bella - Marco Eco Tours.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "two-hour paddle outing in Naples",
+      "Marco Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zxpP1xVrTmZdTJlTw4QF"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/WpeZkDZZRiC8Bg4kDZzJ",
+    "wordCount": 27,
+    "durationLabel": "2 Hours",
+    "durationIso": "PT2H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $74.99",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 16+",
+        "amountLabel": "$74.99"
+      },
+      {
+        "label": "Child",
+        "note": "Ages 5 - 15",
+        "amountLabel": "$74.99"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "74.99",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 5,
+      "reviewCount": 1142,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 5 from 1142 reviews on GET https://fareharbor.com/api/v1/companies/marcoecotours/items/464256/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Naples",
+      "state": "Florida",
+      "citySlug": "naples",
+      "stateSlug": "florida",
+      "reason": "Naples, Florida belongs to the Naples area via title",
+      "place": {
+        "city": "Naples",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "naples",
+        "stateSlug": "florida",
+        "raw": "Naples, Florida",
+        "source": "title",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Naples, Florida",
+          "source": "title",
+          "weight": "strong"
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/WpeZkDZZRiC8Bg4kDZzJ",
+      "heroHandle": "WpeZkDZZRiC8Bg4kDZzJ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/zxpP1xVrTmZdTJlTw4QF",
+          "handle": "zxpP1xVrTmZdTJlTw4QF",
+          "pixelSha256": "34686bde875a2690396be2b4fc30a22afe5553b63f53eb13ab3b38d0ac30e480",
+          "differenceHashDistanceFromHero": 133,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.3157,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/zxpP1xVrTmZdTJlTw4QF",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/naples/marcoecotours-464256",
+      "fetchedAt": "2026-10-03T18:09:25.844920+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/marcoecotours/464256/content/",
+          "status": 200,
+          "bytes": 3646,
+          "sha256": "95a5a7f6dccb751791abe18e4f69981137a9bf6b20a4197f7bb1f1ea01ef0510"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/marcoecotours/464256/structured-description/",
+          "status": 200,
+          "bytes": 1817,
+          "sha256": "e6b7d6ed8abadfdad498d950a0ee2b27ff84a3062f146a32f91682385761b691"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/marcoecotours/items/464256/",
+          "status": 200,
+          "bytes": 16795,
+          "sha256": "09270b5b681583a8ce4011607118688b192cf7642b3f7d2f172cb85df39f00a4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/marcoecotours/price-preview/per-item/v2/?asn=fhdn&item_pks=464256&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 651,
+          "sha256": "d8537519589843cc9fe448f4a1ea3f62ac75f5f5a04bc8128bd468404e5494d2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/marcoecotours/items/464256/ratings/",
+          "status": 200,
+          "bytes": 570,
+          "sha256": "222cf1ee7cf2dd2bfec2006437b8cf12810b3bd90cc3a4338ee91a2652ab78a3"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 16+",
+          "amount": 74.99
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 16+",
+            "amount": 74.99
+          },
+          {
+            "singular": "Child",
+            "note": "Ages 5 - 15",
+            "amount": 74.99
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T10:00:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 Hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": "5+ years old • 2 Hours • Explore Marco Island's natural beauty!",
+        "startCity": null,
+        "startProvince": null,
+        "startLat": null,
+        "startLng": null,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "- First-class pedal kayaks - Life vests - Safety gear for a worry-free adventure - Gratuities - Parking fee approximately $10 - Casual - Comfortable athletic clothing - Hat and light jacket - Water shoes - Long sleeves - Sunblock."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Marco Island's"
+        ],
+        "measures": [
+          "2 Hours"
+        ],
+        "description": "Explore Marco Island's natural beauty without getting tired! 2 Hours We will reach out to you for the exact start time and meeting time. Want to explore Marco Island's natural beauty without getting tired? Our pedal kayaking eco-tours are perfect for you! Glide through the mangroves and wildlife effortlessly, and take in the stunning views without any distractions. Our eco-tours are designed to be relaxing and enjoyable, providing a unique way to connect with nature. We will take you on a journey through the island's hidden gems, giving you fascinating insights into the local ecosystem. - First-class pedal kayaks - Life vests - Safety gear for a worry-free adventure - Gratuities - Parking fee approximately $10 - Casual - Comfortable athletic clothing - Hat and light jacket - Water shoes - Long sleeves - Sunblock",
+        "detailsText": "5+ years old • 2 Hours • Explore Marco Island's natural beauty! 5+ years old • 2 Hours • Explore Marco Island's natural beauty!",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "464256",
+        "provider": "marcoecotours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/marcoecotours/items/464256/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "416773",
+    "company": "threebrothersboards",
+    "title": "Dolphin and Manatee Adventure Tour of Naples with Olde Florida History",
+    "operator": "Three Brothers Boards Paddle Board Tours",
+    "publicPath": "/destinations/florida/naples/tours/dolphin-and-manatee-adventure-tour-of-naples-with-olde-florida-history-416773",
+    "engine2Path": null,
+    "exceptionStatus": "OK",
+    "paragraphs": [
+      "Guests paddle on the water for the whole outing. Time on the water is about 2 hours. A guide stays with the group and chooses the water from recent sightings. The watch includes dolphins, manatees, sea turtles, and conchs. Birds along the same water include bald eagles, pelicans, and osprey.",
+      "The West Indian manatee is the animal this water is known for. The water around the city is the setting, picked for the animals that live there. The group moves at an easy pace, with time to watch rather than cover a set distance. Sea life and birds are both part of what the guide is looking for.",
+      "Manatees, when they are present, are why many guests book this water. Which animals appear depends on the day, and a sighting is not promised."
+    ],
+    "schemaDescription": "A two-hour paddle outing with Three Brothers Boards Paddle Board Tours in Naples.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy."
+    ],
+    "highlights": [
+      "two-hour walking tour in Naples"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RH6VUmgQJ6BCLay3Eewz"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/hNSHADkGRdGafqN6pELJ",
+    "wordCount": 133,
+    "durationLabel": "2 hours",
+    "durationIso": "PT2H",
+    "meetingLocation": null,
+    "visiblePriceLabel": "From $65",
+    "priceRows": [
+      {
+        "label": "Adult",
+        "note": "Ages 9+",
+        "amountLabel": "$65"
+      },
+      {
+        "label": "Child",
+        "note": "Under 9 years old",
+        "amountLabel": "$55"
+      }
+    ],
+    "pricingNotes": [],
+    "offer": {
+      "type": "Offer",
+      "price": "65.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "ratingValue": 4.8,
+      "reviewCount": 343,
+      "provider": "Google"
+    },
+    "ratingProvenance": "Google rating 4.8 from 343 reviews on GET https://fareharbor.com/api/v1/companies/threebrothersboards/items/416773/ratings/ fields ratings.google_reviews.rating and ratings.google_reviews.user_ratings_total. TripAdvisor was absent, so this pair stays attributed to Google. rating_image_url was not used. Catalog quality_score and availability_count were not used.",
+    "geography": {
+      "disposition": "keep",
+      "conflictsWithExpected": false,
+      "city": "Naples",
+      "state": "Florida",
+      "citySlug": "naples",
+      "stateSlug": "florida",
+      "reason": "Naples, Florida belongs to the Naples area via company_start_location",
+      "place": {
+        "city": "Naples",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "naples",
+        "stateSlug": "florida",
+        "raw": "Naples, FL",
+        "source": "company_start_location",
+        "weight": "weak",
+        "lat": 25.966786,
+        "lng": -81.708624
+      },
+      "signals": [
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Naples, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 25.966786,
+          "lng": -81.708624
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/hNSHADkGRdGafqN6pELJ",
+      "heroHandle": "hNSHADkGRdGafqN6pELJ",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/RH6VUmgQJ6BCLay3Eewz",
+          "handle": "RH6VUmgQJ6BCLay3Eewz",
+          "pixelSha256": "bc8bb274900cd8db282406ea3945747f8bc072e081b6d6fb31ea38825487f0c6",
+          "differenceHashDistanceFromHero": 123,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.27139,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/RH6VUmgQJ6BCLay3Eewz",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/naples/threebrothersboards-416773",
+      "fetchedAt": "2026-10-03T18:09:25.845709+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416773/content/",
+          "status": 200,
+          "bytes": 3547,
+          "sha256": "941268a2a22fd7e421799af64e92fbff6ad03a37cc40f8b135801a93d3e0572d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416773/structured-description/",
+          "status": 200,
+          "bytes": 1818,
+          "sha256": "329c2118eae1c11b538f1490bf90a12e08d2a13f95671ae463f3939213f6b44b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416773/",
+          "status": 200,
+          "bytes": 11969,
+          "sha256": "59f9170e8f9aa9196cae214bf29a39176a12551876e757cea72034596266f872"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/threebrothersboards/price-preview/per-item/v2/?asn=fhdn&item_pks=416773&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 656,
+          "sha256": "1613f70940ccda030590bcce1adbc26a8e80aaf1b8f8f791d286494f2691197d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416773/ratings/",
+          "status": 200,
+          "bytes": 601,
+          "sha256": "74f472660cdde717b4efdd1bff157a76eddc9b706bf4687b0089500e0669b4ea"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 9+",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 9+",
+            "amount": 65.0
+          },
+          {
+            "singular": "Child",
+            "note": "Under 9 years old",
+            "amount": 55.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 hours",
+        "meetingAddress": null,
+        "itemLocation": null,
+        "headline": null,
+        "startCity": "Naples",
+        "startProvince": "FL",
+        "startLat": 25.966786,
+        "startLng": -81.708624,
+        "minAge": null,
+        "maxAge": null,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [
+          "Rate $65 per adult(ages 9 and up) $32.50 per adult (ages 4-8) _________________ 2 hours ___ Naples has been rated one of the most beautiful places in the US to paddle."
+        ],
+        "gleanedFacts": [],
+        "properNames": [
+          "Natural Florida",
+          "West Indian Manatee",
+          "Travel Channel"
+        ],
+        "measures": [
+          "2 hours"
+        ],
+        "description": "Rate $65 per adult(ages 9 and up) $32.50 per adult (ages 4-8) _________________ 2 hours ___ Naples has been rated one of the most beautiful places in the US to paddle. This is because of the beautiful blue waters and the vast array of sea life and wildlife that can be observed in Naples! Guests will have a relaxing time as they paddle through the pristine waters and experience the true beauty of \"Natural Florida\". While we are on our adventure your tour guide will guide you to all of the areas where we see the most dolphins, manatees, sea turtles, bald eagles, pelicans, osprey, conchs and much more. In fact, there are only a few places in the world to see the West Indian Manatee and Naples is one of them! We were recently featured on the Travel Channel as one of the country's best tour operators and our tours fill up fast so book your tour today for a once in a lifetime adventure.",
+        "detailsText": "We look forward to you joining us! - ALL GUESTS MUST fill out their own waiver before arriving to the tour site. https://waiver.smartwaiver.com/w/6439726fe3dbb/web/ - Please arrive 20 minutes before your departure time. - Look for a text message from your tour guide, the day before your tour date, containing any pertinent information about your tour. - Please wear clothes you are ok with getting wet in, even though you will probably stay dry - Please pre-apply your sun screen so that your hands are not slippery on your paddles - Water shoes are recommended to best protect your feet - Please drink enough water so that you are hydrated before you arrive. - We recommend waterproof cell phone bags. Click here to purchase a waterproof cell phone bag for $12.50 and your tour guide will have your waterproof cell phone bag waiting for you before you start your tour. https://threebrothersboards.com/product/waterproof-cellphone-holder/ - We also recommend Sunglass Croakies, especially if you have prescription or expensive glasses. Click here to purchase a Sunglass Croakie for $7.99 and your tour guide will have your Sunglass Croakie waiting for you before you start your tour. https://threebrothersboards.com/product/original-croakies-eyewear-retainers/",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "416773",
+        "provider": "threebrothersboards",
+        "bookingUrl": "https://fareharbor.com/embeds/book/threebrothersboards/items/416773/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "itemId": "416775",
+    "company": "threebrothersboards",
+    "title": "Dolphin and Manatee Adventure Tour of Marco Island with Olde Florida History",
+    "operator": "Three Brothers Boards Paddle Board Tours",
+    "publicPath": "/destinations/florida/naples-naples/tours/dolphin-and-manatee-adventure-tour-of-marco-island-with-olde-florida-history-416775",
+    "engine2Path": null,
+    "exceptionStatus": "INSUFFICIENT_SOURCE_CONTENT",
+    "paragraphs": [
+      "Guests paddle on the water for the whole outing. A guide stays with the group and chooses the water from recent sightings. The watch includes dolphins, manatees, sea turtles, and conchs. Birds along the same water include bald eagles, pelicans, and osprey. The West Indian manatee is the animal this water is known for.",
+      "The water around the city is the setting, picked for the animals that live there. The group moves at an easy pace, with time to watch rather than cover a set distance. Sea life and birds are both part of what the guide is looking for.",
+      "Manatees, when they are present, are why many guests book this water. Which animals appear depends on the day, and a sighting is not promised."
+    ],
+    "schemaDescription": "A two-hour paddle outing with Three Brothers Boards Paddle Board Tours in Naples Naples. The outing passes Marco Island.",
+    "removedClaims": [
+      "Catalog quality_score and availability_count were not treated as ratings.",
+      "Marketing headlines and structured-description pricing prose were not used as Offer prices.",
+      "Process commentary about omitted lists, ratings, schema, and facts-panel behavior was not used as page copy.",
+      "Verified meeting and check-in details stay in the facts panel.",
+      "Naples Naples, Florida from meeting_point does not belong to Naples, and no matching public destination exists"
+    ],
+    "highlights": [
+      "two-hour paddle outing in Naples Naples",
+      "Marco Island"
+    ],
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bpznvX5FQG8GKcvb3EEb"
+    ],
+    "productImage": "https://cdn.filestackcontent.com/kj7u2WyMTdaUQCIDlBv0",
+    "wordCount": 125,
+    "durationLabel": "2 hours",
+    "durationIso": "PT2H",
+    "meetingLocation": "1969 County Rd 951, Naples Naples, FL 34113",
+    "visiblePriceLabel": null,
+    "priceRows": [],
+    "pricingNotes": [],
+    "offer": null,
+    "aggregateRating": null,
+    "ratingProvenance": "This item was not in the published set. A cleanup rebuild does not add a new route.",
+    "geography": {
+      "disposition": "exclude",
+      "conflictsWithExpected": true,
+      "city": "Naples Naples",
+      "state": "Florida",
+      "citySlug": "naples-naples",
+      "stateSlug": "florida",
+      "reason": "Naples Naples, Florida from meeting_point does not belong to Naples, and no matching public destination exists",
+      "place": {
+        "city": "Naples Naples",
+        "state": "Florida",
+        "stateAbbr": "fl",
+        "citySlug": "naples-naples",
+        "stateSlug": "florida",
+        "raw": "Naples Naples, FL",
+        "source": "meeting_point",
+        "weight": "strong"
+      },
+      "signals": [
+        {
+          "city": "Naples Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples-naples",
+          "stateSlug": "florida",
+          "raw": "Naples Naples, FL",
+          "source": "meeting_point",
+          "weight": "strong"
+        },
+        {
+          "city": "Naples",
+          "state": "Florida",
+          "stateAbbr": "fl",
+          "citySlug": "naples",
+          "stateSlug": "florida",
+          "raw": "Naples, FL",
+          "source": "company_start_location",
+          "weight": "weak",
+          "lat": 25.966786,
+          "lng": -81.708624
+        }
+      ]
+    },
+    "imageAudit": {
+      "hero": "https://cdn.filestackcontent.com/kj7u2WyMTdaUQCIDlBv0",
+      "heroHandle": "kj7u2WyMTdaUQCIDlBv0",
+      "candidates": [
+        {
+          "url": "https://cdn.filestackcontent.com/bpznvX5FQG8GKcvb3EEb",
+          "handle": "bpznvX5FQG8GKcvb3EEb",
+          "pixelSha256": "aa09ec4fe2f8d3de9e1c8f6c48f5c9f0a33ce56ad3e1f0535b9c54a6e106bb66",
+          "differenceHashDistanceFromHero": 129,
+          "normalizedPixelMeanAbsoluteErrorFromHero": 0.24074,
+          "classification": "DISTINCT_HARVESTED_PRODUCT_IMAGE"
+        }
+      ],
+      "rejected": [],
+      "selected": "https://cdn.filestackcontent.com/bpznvX5FQG8GKcvb3EEb",
+      "action": "kept",
+      "reason": "harvest image is already distinct from the hero"
+    },
+    "source": {
+      "artifacts": "data/fareharbor-lead-to-gold/naples/threebrothersboards-416775",
+      "fetchedAt": "2026-10-03T18:09:27.839100+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/content/",
+          "status": 200,
+          "bytes": 3510,
+          "sha256": "1d85c3534b8597c31b127212be63d4c0cd483b9eec732de944dec2e616026aa5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/threebrothersboards/416775/structured-description/",
+          "status": 200,
+          "bytes": 1741,
+          "sha256": "41c24be55ec5ed4fac88f1f5179d86ad8ccfdaa24d2a3d5057f7f13436ef6147"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/",
+          "status": 200,
+          "bytes": 11839,
+          "sha256": "20826fcafc060537dd45f0908f6b837a9ffc4fd2163c4f13abf59609eb4c9a2c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/threebrothersboards/price-preview/per-item/v2/?asn=fhdn&item_pks=416775&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 656,
+          "sha256": "03bec6e1919850dc57c779d438b57acfbf33608adedb2f4540b4c2933033a3bc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/threebrothersboards/items/416775/ratings/",
+          "status": 200,
+          "bytes": 607,
+          "sha256": "a1d06a831f1e5e01693b517378d0e9be7d22aa777063d6a713ee9d124f12928b"
+        }
+      },
+      "price": {
+        "currency": "USD",
+        "basis": {
+          "singular": "Adult",
+          "note": "Ages 9+",
+          "amount": 65.0
+        },
+        "customerTypes": [
+          {
+            "singular": "Adult",
+            "note": "Ages 9+",
+            "amount": 65.0
+          },
+          {
+            "singular": "Child",
+            "note": "Under 9 years old",
+            "amount": 55.0
+          }
+        ],
+        "zeroPriceTypes": [],
+        "departureStartAt": "2026-10-04T08:30:00",
+        "decimalPlaces": 2
+      },
+      "facts": {
+        "duration": "2 hours",
+        "meetingAddress": "1969 County Rd 951, Naples Naples, FL 34113",
+        "itemLocation": null,
+        "headline": "Ages 4+ 2 hours",
+        "startCity": "Naples",
+        "startProvince": "FL",
+        "startLat": 25.966786,
+        "startLng": -81.708624,
+        "minAge": 4,
+        "maxAge": 99,
+        "groupSize": null,
+        "included": [],
+        "excluded": [],
+        "itinerary": [],
+        "routeNotes": [],
+        "highlights": [],
+        "restrictions": [
+          "weight capacity for paddle boards",
+          "weight capacity for tandem kayaks"
+        ],
+        "bring": [],
+        "cancellation": null,
+        "accessibility": null,
+        "languages": [],
+        "factualSentences": [],
+        "gleanedFacts": [],
+        "properNames": [
+          "Natural Florida",
+          "West Indian Manatee",
+          "Marco Island"
+        ],
+        "measures": [],
+        "description": "Once we set off, your tour guide will be sharing facts about the amazing wildlife and the interesting history of Florida and Marco Island. Guest will have a relaxing time as they paddle through the pristine waters and experience the true beauty of \"Natural Florida\". While we are on our adventure your tour guide will guide you to all of the areas where we see the most dolphins, manatees, sea turtles, bald eagles, pelicans, osprey, conchs and much more. In fact, there are only a few places in the world to see the West Indian Manatee and Marco Island is one of them! We are conveniently located just minutes from anywhere on Marco. With over 13 years of experience our tours fill up fast so book your tour today.",
+        "detailsText": "We look forward to you joining us! - ALL GUESTS MUST fill out their own waiver before arriving to the tour site. https://waiver.smartwaiver.com/w/6439726fe3dbb/web/ - Please arrive 20 minutes before your departure time. - Look for a text message from your tour guide, the day before your tour date, containing any pertinent information about your tour. - Please wear clothes you are ok with getting wet in, even though you will probably stay dry - Please pre-apply your sun screen so that your hands are not slippery on your paddles - Water shoes are recommended to best protect your feet - Please drink enough water so that you are hydrated before you arrive. - We recommend waterproof cell phone bags. Click here to purchase a waterproof cell phone bag for $12.50 and your tour guide will have your waterproof cell phone bag waiting for you before you start your tour. https://threebrothersboards.com/product/waterproof-cellphone-holder/ - We also recommend Sunglass Croakies, especially if you have prescription or expensive glasses. Click here to purchase a Sunglass Croakie for $7.99 and your tour guide will have your Sunglass Croakie waiting for you before you start your tour. https://threebrothersboards.com/product/original-croakies-eyewear-retainers/ Ages 4+ 2 hours Ages 4+ 2 hours",
+        "sourceUsed": "structured_description"
+      },
+      "bookingPageValidity": {
+        "itemId": "416775",
+        "provider": "threebrothersboards",
+        "bookingUrl": "https://fareharbor.com/embeds/book/threebrothersboards/items/416775/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      }
+    },
+    "validation": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

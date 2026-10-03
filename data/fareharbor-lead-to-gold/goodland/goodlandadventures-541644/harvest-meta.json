@@ -1,0 +1,48 @@
+{
+  "company": "goodlandadventures",
+  "itemId": "541644",
+  "fetchedAt": "2026-10-03T18:10:40.259288+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/goodlandadventures/541644/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/goodlandadventures/541644/structured-description/",
+      "status": 404,
+      "bytes": 588095,
+      "sha256": "c9ab5b5f733210312d1f7d888c45ec6c51a7d6e6f829341455cee3881426021f"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/goodlandadventures/items/541644/",
+      "status": 404,
+      "bytes": 588069,
+      "sha256": "26ef3f664ac802b0b6dc24330f801ffbd20f5c17a4a0645f91fb69b69691045a"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/goodlandadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=541644&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 400,
+      "bytes": 142,
+      "sha256": "f26e032eb88134637f8482ed7a7f3dc1fd43cce015628fbf1aa7db4e343b7c2d"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/goodlandadventures/items/541644/ratings/",
+      "status": 404,
+      "bytes": 588085,
+      "sha256": "cad633bc2e150bc0cec319f0f7f10032318f8e3dc475da81bf48a1d706b5ef8a"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "541644",
+    "provider": "goodlandadventures",
+    "bookingUrl": "https://fareharbor.com/embeds/book/goodlandadventures/items/541644/",
+    "httpStatus": 404,
+    "classification": "BOOKING_PAGE_NOT_FOUND",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+    "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+  },
+  "hasAuthoritativePrice": false
+}

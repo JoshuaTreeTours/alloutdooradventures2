@@ -1,0 +1,222 @@
+{
+  "citySlug": "miami-beach",
+  "total": 11,
+  "active": 11,
+  "terminal": 0,
+  "priceAvailable": 10,
+  "tripadvisorRatingAvailable": 6,
+  "imageAvailable": 11,
+  "inSitemap": 9,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "305toursandrentals",
+      "operator": "305 Tours & Rentals",
+      "itemId": "266593",
+      "slug": "miami-boat-tour-with-free-south-beach-bicycle-rental-266593",
+      "publicPath": "/destinations/florida/miami-beach/tours/miami-boat-tour-with-free-south-beach-bicycle-rental-266593",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3559,
+        "structuredStatus": 200,
+        "structuredBytes": 2433
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "305toursandrentals",
+      "operator": "305 Tours & Rentals",
+      "itemId": "266597",
+      "slug": "miami-city-and-boat-tour-combo-with-free-south-beach-bicycle-rental-266597",
+      "publicPath": "/destinations/florida/miami-beach/tours/miami-city-and-boat-tour-combo-with-free-south-beach-bicycle-rental-266597",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3884,
+        "structuredStatus": 200,
+        "structuredBytes": 2728
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bobbysbikehike",
+      "operator": "Bobby's Bike Hike",
+      "itemId": "575606",
+      "slug": "miami-beach-bikes-bites-and-views-food-tour-adults-only-575606",
+      "publicPath": "/destinations/florida/miami-beach/tours/miami-beach-bikes-bites-and-views-food-tour-adults-only-575606",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6798,
+        "structuredStatus": 200,
+        "structuredBytes": 1686
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "sfjetskirentals",
+      "operator": "Jetski Rentals of South Florida",
+      "itemId": "625274",
+      "slug": "aqua-escape-party-boat-625274",
+      "publicPath": "/destinations/florida/miami-beach/tours/aqua-escape-party-boat-625274",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4253,
+        "structuredStatus": 200,
+        "structuredBytes": 3513
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "southfloridatrikketours",
+      "operator": "South Florida Trikke Tours",
+      "itemId": "107989",
+      "slug": "everglades-airboat-adventure-free-2-hours-with-rentals-107989",
+      "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-adventure-free-2-hours-with-rentals-107989",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3990,
+        "structuredStatus": 200,
+        "structuredBytes": 2150
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "southfloridatrikketours",
+      "operator": "South Florida Trikke Tours",
+      "itemId": "117385",
+      "slug": "miami-city-and-boat-tour-combo-little-havana-included-plus-free-2-hours-with-rentals-117385",
+      "publicPath": "/destinations/florida/miami-beach/tours/miami-city-and-boat-tour-combo-little-havana-included-plus-free-2-hours-with-rentals-117385",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4351,
+        "structuredStatus": 200,
+        "structuredBytes": 2435
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "southfloridatrikketours",
+      "operator": "South Florida Trikke Tours",
+      "itemId": "293969",
+      "slug": "miami-millionaires-row-cruiser-tour-free-2-hours-with-rentals-293969",
+      "publicPath": "/destinations/florida/miami-beach/tours/miami-millionaires-row-cruiser-tour-free-2-hours-with-rentals-293969",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2908,
+        "structuredStatus": 200,
+        "structuredBytes": 1471
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "southfloridatrikketours",
+      "operator": "South Florida Trikke Tours",
+      "itemId": "297478",
+      "slug": "everglades-airboat-and-millionaires-row-cruiser-tour-combo-free-2-hours-with-rentals-297478",
+      "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-and-millionaires-row-cruiser-tour-combo-free-2-hours-with-rentals-297478",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3583,
+        "structuredStatus": 200,
+        "structuredBytes": 2096
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "us2u",
+      "operator": "US2U",
+      "itemId": "176702",
+      "slug": "key-west-tour-with-dolphin-spotting-boat-from-miami-176702",
+      "publicPath": "/destinations/florida/miami-beach/tours/key-west-tour-with-dolphin-spotting-boat-from-miami-176702",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3097,
+        "structuredStatus": 200,
+        "structuredBytes": 2947
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "us2u",
+      "operator": "US2U",
+      "itemId": "81627",
+      "slug": "everglades-airboat-and-wildlife-sanctuary-with-round-trip-transportation-81627",
+      "publicPath": "/destinations/florida/miami-beach/tours/everglades-airboat-and-wildlife-sanctuary-with-round-trip-transportation-81627",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4512,
+        "structuredStatus": 200,
+        "structuredBytes": 4250
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "us2u",
+      "operator": "US2U",
+      "itemId": "81669",
+      "slug": "key-west-tour-with-snorkel-boat-from-miami-81669",
+      "publicPath": "/destinations/florida/miami-beach/tours/key-west-tour-with-snorkel-boat-from-miami-81669",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3314,
+        "structuredStatus": 200,
+        "structuredBytes": 3163
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    }
+  ]
+}

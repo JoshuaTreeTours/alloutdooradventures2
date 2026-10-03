@@ -1,0 +1,241 @@
+{
+  "citySlug": "orlando",
+  "total": 12,
+  "active": 12,
+  "terminal": 0,
+  "priceAvailable": 1,
+  "tripadvisorRatingAvailable": 0,
+  "imageAvailable": 12,
+  "inSitemap": 1,
+  "inMerchantFeed": 0,
+  "products": [
+    {
+      "company": "adventuresinflorida",
+      "operator": "Adventures in Florida",
+      "itemId": "694070",
+      "slug": "expeditions-694070",
+      "publicPath": "/destinations/florida/orlando/tours/expeditions-694070",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6912,
+        "structuredStatus": 200,
+        "structuredBytes": 1069
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "epicpaddleadventures",
+      "operator": "Epic Paddle Adventures",
+      "itemId": "333279",
+      "slug": "date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
+      "publicPath": "/destinations/florida/orlando/tours/date-night-neon-glow-clear-kayak-or-paddleboard-and-champagne-orlando-333279",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10732,
+        "structuredStatus": 200,
+        "structuredBytes": 7181
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "254237",
+      "slug": "the-real-florida-manatee-adventure-254237",
+      "publicPath": "/destinations/florida/orlando/tours/the-real-florida-manatee-adventure-254237",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7628,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "254239",
+      "slug": "kennedy-space-center-adventure-254239",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-254239",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5090,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "254240",
+      "slug": "kennedy-space-center-ultimate-adventure-254240",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-ultimate-adventure-254240",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4997,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "254242",
+      "slug": "kennedy-space-center-adventure-and-chat-with-an-astronaut-254242",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-adventure-and-chat-with-an-astronaut-254242",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4984,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "254243",
+      "slug": "kennedy-space-center-with-airboat-adventure-254243",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-with-airboat-adventure-254243",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4761,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "271301",
+      "slug": "private-kennedy-space-center-adventure-271301",
+      "publicPath": "/destinations/florida/orlando/tours/private-kennedy-space-center-adventure-271301",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4508,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "285090",
+      "slug": "private-real-florida-manatee-adventure-285090",
+      "publicPath": "/destinations/florida/orlando/tours/private-real-florida-manatee-adventure-285090",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5316,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "290231",
+      "slug": "shingle-creek-guided-kayak-adventure-290231",
+      "publicPath": "/destinations/florida/orlando/tours/shingle-creek-guided-kayak-adventure-290231",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4243,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "329221",
+      "slug": "boggy-creek-airboat-ride-adventures-and-transport-329221",
+      "publicPath": "/destinations/florida/orlando/tours/boggy-creek-airboat-ride-adventures-and-transport-329221",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4481,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "realfloridaadventures",
+      "operator": "Real Florida Adventures",
+      "itemId": "491805",
+      "slug": "kennedy-space-center-direct-express-491805",
+      "publicPath": "/destinations/florida/orlando/tours/kennedy-space-center-direct-express-491805",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5096,
+        "structuredStatus": 204,
+        "structuredBytes": 0
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    }
+  ]
+}

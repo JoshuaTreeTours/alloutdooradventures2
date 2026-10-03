@@ -1,0 +1,2348 @@
+{
+  "fetchedAt": "2026-10-03T18:10:43.108793+00:00",
+  "citySlug": "goodland",
+  "totalBostonLegacy": 30,
+  "total": 30,
+  "active": 29,
+  "terminal": 1,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 24,
+  "priceNotFound": 5,
+  "alreadyRetired": 1,
+  "engine6Collisions": 0,
+  "terminalIds": [
+    "541644"
+  ],
+  "priceNotFoundIds": [
+    "490967",
+    "692761",
+    "524677",
+    "524679",
+    "547157"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "128312",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-128312",
+      "slug": "sunset-eco-tour-128312",
+      "title": "Sunset Eco-Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/sunset-eco-tour-128312",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/128312/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/VxIJbDn1TDWYDwXF6Bp1",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/VxIJbDn1TDWYDwXF6Bp1"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:24.697699+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/128312/content/",
+          "status": 200,
+          "bytes": 9474,
+          "sha256": "1b1b3029a03fcb438323fe24933ddfeed36df4957740fd178f35b4641d9ee62e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/128312/structured-description/",
+          "status": 200,
+          "bytes": 8286,
+          "sha256": "d3cd34d3e5f1adcbc7d15dbb4ddd66ad63f891e0e517030227c45e54c3c82b09"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/128312/",
+          "status": 200,
+          "bytes": 14745,
+          "sha256": "035804cfd413afe0ade4463c511c78a3bd06ee6a518971c3f5199400cc71bdf3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=128312&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 909,
+          "sha256": "c24df37841b0d62fa6e9a39ec5e92d2067ad1e2c8f5fddc66353456983689878"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/128312/ratings/",
+          "status": 200,
+          "bytes": 561,
+          "sha256": "48798c9ccc85a90a39d2a5ba79a699c997e9288ea7f63184ebfdaf0cabb75257"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "128312",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/128312/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 425.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "154092",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-154092",
+      "slug": "4-hour-shelling-tour-154092",
+      "title": "4 Hour Shelling Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/4-hour-shelling-tour-154092",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/154092/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9UOMjxEsRJOItMfD0TBs",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9UOMjxEsRJOItMfD0TBs"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:24.698424+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/154092/content/",
+          "status": 200,
+          "bytes": 6616,
+          "sha256": "37758b90bf5cb987bc74c0011f4caad82d35c241bccbafe116428b008b0a5a83"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/154092/structured-description/",
+          "status": 200,
+          "bytes": 4334,
+          "sha256": "745648a0443e229c7a7264175990e3b9401703e0ab66b8a82e46eaae435bc320"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/154092/",
+          "status": 200,
+          "bytes": 28573,
+          "sha256": "e4cd55d4622ce3fc74c35e8e5f89d644103903e11c0608f69d100781942ece96"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=154092&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 528,
+          "sha256": "254080f66ad2867baf4690d13420eed7779050b70fd4dc91d14a97db0ccd96dc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/154092/ratings/",
+          "status": 200,
+          "bytes": 566,
+          "sha256": "2a724f69ada91df17c91037c2925f7cdde04971db379c8eee87bf825a3614e0c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "154092",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/154092/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 140.0,
+        "currency": "USD",
+        "singular": "Person"
+      }
+    },
+    {
+      "itemId": "44195",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-44195",
+      "slug": "marco-island-wildlife-sightseeing-and-shelling-tour-44195",
+      "title": "Marco Island Wildlife Sightseeing and Shelling Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/marco-island-wildlife-sightseeing-and-shelling-tour-44195",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/a7VDgVWLT2Ss2ueq63rL",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/a7VDgVWLT2Ss2ueq63rL"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:24.698919+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44195/content/",
+          "status": 200,
+          "bytes": 10493,
+          "sha256": "28c8279e0452831df7ddce6094e3fa3525163d3da1de5bffe98deacd5091190c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44195/structured-description/",
+          "status": 200,
+          "bytes": 8277,
+          "sha256": "bef35ffdd71feb0898caa0c70dafe99aaba62fb5ffcc55ce36b5bdd296cee7e5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44195/",
+          "status": 200,
+          "bytes": 28428,
+          "sha256": "aa88efb088cd34e67b4089f40c04d5d085a5ef7ec422a37267f73991a4ecfe67"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=44195&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 761,
+          "sha256": "b164994a106917847f8473a6818fd9b57bbfe440551a2eb3f16e49168efff222"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44195/ratings/",
+          "status": 200,
+          "bytes": 595,
+          "sha256": "92862312d8ca5479a48896981e7daed15890de7e5590380799cf0782e14ff634"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "44195",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44195/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 89.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "44212",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-44212",
+      "slug": "dolphin-tours-44212",
+      "title": "Dolphin Tours",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/dolphin-tours-44212",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44212/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/vF5Rh2GuTPqsqrDFoWIV",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/vF5Rh2GuTPqsqrDFoWIV"
+      ],
+      "tags": [
+        "Dolphin"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:24.699567+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44212/content/",
+          "status": 200,
+          "bytes": 9853,
+          "sha256": "5bd89f951307d512e5347a130dd995627017735ebc89f86e381faae989ddfaa3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44212/structured-description/",
+          "status": 200,
+          "bytes": 8081,
+          "sha256": "dd0820f3655fa162745cf8ed090b1e804525515729e4607900410bdc88793816"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44212/",
+          "status": 200,
+          "bytes": 20282,
+          "sha256": "b9c92d83ce002966852673f0573c4e1ff04a7109cfbb3a0c6b06841e1504c35a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=44212&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 761,
+          "sha256": "3071f738ef087ac2d722d17f4f492f21fb93254dea78cf50bc3dd87d01137246"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44212/ratings/",
+          "status": 200,
+          "bytes": 557,
+          "sha256": "fbbbc6d1778739f5adb1968aa0c399aa39355531d2913020c3b8b52ff96ab936"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "44212",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44212/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 89.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "44214",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-44214",
+      "slug": "3-hour-eco-tour-44214",
+      "title": "3 Hour Eco Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-eco-tour-44214",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/lZ1iMDFeQi4GodXv1xVg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/lZ1iMDFeQi4GodXv1xVg"
+      ],
+      "tags": [
+        "Eco Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:26.971790+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44214/content/",
+          "status": 200,
+          "bytes": 10438,
+          "sha256": "1e44c783ee2b1286583aa95c5d7b1aa3181b43de464f06c80665d870c2b489bf"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/44214/structured-description/",
+          "status": 200,
+          "bytes": 8848,
+          "sha256": "1097415449dc7f03d8f11e7d85a2a18896c19416f3f329fb54799c5322f245fa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44214/",
+          "status": 200,
+          "bytes": 20127,
+          "sha256": "3f3a9c04d395c3a0bdc441413468a1a067738c7fc51a6b939e1b2ce23ffe8372"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=44214&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1222,
+          "sha256": "9d4e9056883bd94b1079f61687366bf3140135d5f7d3d0af40f1ae97c7d840f0"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/44214/ratings/",
+          "status": 200,
+          "bytes": 559,
+          "sha256": "d822bb6555e6110ca716b057d0139fd22e399ccec2b9b4d5e73e332922446e33"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "44214",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/44214/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "490967",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-490967",
+      "slug": "audubon-birding-tour-490967",
+      "title": "Audubon Birding Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/audubon-birding-tour-490967",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": -81.64649,
+        "lng": 25.921758
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/490967/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/je2kFcwDTr6jDD9nXcnv",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/je2kFcwDTr6jDD9nXcnv"
+      ],
+      "tags": [],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:27.071640+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/490967/content/",
+          "status": 200,
+          "bytes": 5202,
+          "sha256": "1c2188d6146bb1178ce341f2c29ff1a1a695a807fbeeba70ece78f9851e3f203"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/490967/structured-description/",
+          "status": 200,
+          "bytes": 2697,
+          "sha256": "c85e17c65760d7a57a8fbcb923d2bbc294a209826d9d1058dbccc23d740fff6a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/490967/",
+          "status": 200,
+          "bytes": 18794,
+          "sha256": "7a8c15d57ff60b87a31d148d3802e819513e77579fb4ac6e1fd5e46bb18fd703"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=490967&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/490967/ratings/",
+          "status": 200,
+          "bytes": 566,
+          "sha256": "f753620f70104b6d507d28b26cdb4e1501935cf55046c26de7d3701a9d2ccb29"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "490967",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/490967/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "49231",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-49231",
+      "slug": "private-wildlife-sightseeing-and-shelling-tour-49231",
+      "title": "Private Wildlife Sightseeing and Shelling Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/private-wildlife-sightseeing-and-shelling-tour-49231",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/49231/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/vc3AxPPTY2f3KKUaCoKd",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/vc3AxPPTY2f3KKUaCoKd"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:27.129983+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/49231/content/",
+          "status": 200,
+          "bytes": 10122,
+          "sha256": "6ceb977e434745927f75467e85816c03b896881a7246ee44e38755a3feb36d5c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/49231/structured-description/",
+          "status": 200,
+          "bytes": 8473,
+          "sha256": "95ebbe7f6ef603cf2df52d74bf8a69890bd76b308bb6a0d382972e011e9746c9"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/49231/",
+          "status": 200,
+          "bytes": 20870,
+          "sha256": "b6ed6ed7349e1339ac044049d64931bfac17de4c5a5877bc782e6f1acf942b11"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=49231&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 922,
+          "sha256": "875fa96a9b259fbfdd60d17dc4b20f121bfebeb26e516f0336d43e51c32e000a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/49231/ratings/",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "9eb6e9b6184fa58fcc487817ac28429ac8b30e427617b65ee9506512d84a15c5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "49231",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/49231/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 425.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "525862",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-525862",
+      "slug": "2-hour-private-tour-525862",
+      "title": "2 Hour Private Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/2-hour-private-tour-525862",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525862/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/COMQwkvRkaN3KKjzuhiK",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/COMQwkvRkaN3KKjzuhiK"
+      ],
+      "tags": [
+        "Boat Rental",
+        "Boat Tour",
+        "Private"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:27.709741+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525862/content/",
+          "status": 200,
+          "bytes": 9682,
+          "sha256": "27d5ac88d1726304c7e85c231b3969c5300eb85edc1dfc51ba318914a1847235"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525862/structured-description/",
+          "status": 200,
+          "bytes": 8143,
+          "sha256": "9a8a92f79ff0f316fdad30e0ba5e73b40fc5dd4766b54ca2f236b510c6785536"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525862/",
+          "status": 200,
+          "bytes": 20989,
+          "sha256": "c1c419da95488b93af7e986aa8012769ba87629b6cbf918cb2588ed7e224374f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=525862&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 881,
+          "sha256": "ea7e96c6fbaff1e8a449568bb5952ac399406bb8a6f774ee0f9958803c77371a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525862/ratings/",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "8e8728943c130252087b2457eb762d56e47498f4fe324b044295fb0227920a7e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "525862",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525862/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 425.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "525864",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-525864",
+      "slug": "3-hour-private-tour-525864",
+      "title": "3 Hour Private Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-private-tour-525864",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525864/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/ltOok1RiT8S4QaUMmV3Q",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/ltOok1RiT8S4QaUMmV3Q"
+      ],
+      "tags": [
+        "Boat Rental",
+        "Boat Tour",
+        "Private"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:28.995526+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525864/content/",
+          "status": 200,
+          "bytes": 9467,
+          "sha256": "315bdc32df299f84f75f1f22233ee512d1152f839dee786e3a3ba1c4b1de0537"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525864/structured-description/",
+          "status": 200,
+          "bytes": 8143,
+          "sha256": "87f1af0aba36fdba35dcb649d6cb3e35ed998e6a99952da601310ee9e920bf5b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525864/",
+          "status": 200,
+          "bytes": 17988,
+          "sha256": "1021d9a8467973797338ae08362ef869baef8294b02582a24bb48c65865cb53e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=525864&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 881,
+          "sha256": "a49c90d645e219cc19381e0f01acf3faadc85def4e7107480d29e2ab69fd66db"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525864/ratings/",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "88febae3e600eb1a70287cf0deef07afab5198e82231fd101512b825245db6bc"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "525864",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525864/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 525.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "525865",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-525865",
+      "slug": "4-hour-private-tour-525865",
+      "title": "4 Hour Private Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/4-hour-private-tour-525865",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525865/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3zgLmjjPSWqzoQQ0j7GM",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3zgLmjjPSWqzoQQ0j7GM"
+      ],
+      "tags": [
+        "Boat Rental",
+        "Boat Tour",
+        "Private"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:29.256375+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525865/content/",
+          "status": 200,
+          "bytes": 9785,
+          "sha256": "2962c3f91fbf05d8babf6a15679d43f6fd401249c764b3906fd846e5bc561ae3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/525865/structured-description/",
+          "status": 200,
+          "bytes": 8691,
+          "sha256": "657d0f26257e9b0cecc4f4d0b6995b5815cd0955e5542e9b3857829d688b829b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525865/",
+          "status": 200,
+          "bytes": 15082,
+          "sha256": "0681b0a19b95e1120045f9370e79bd9741c7f5f60c994c456b6b3f9083f3f17b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=525865&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 882,
+          "sha256": "4856a021514213aa47dae394ba6b9ddc3c2bbf9253ea8f3b0d0573f5265f246d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/525865/ratings/",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "40a112022b41a88579c1889769559d4003cc2f54f56ed1ae5dce8cc958f52639"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "525865",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/525865/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 750.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "692761",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-692761",
+      "slug": "3-hour-shelling-tour-692761",
+      "title": "3 Hour Shelling Tour",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/3-hour-shelling-tour-692761",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/692761/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "",
+      "galleryImages": [],
+      "tags": [],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:29.719167+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/692761/content/",
+          "status": 200,
+          "bytes": 10002,
+          "sha256": "adb121217e8550cf3f486115b9f90f0d02a6bd7a917e4164e5e5371597277fc3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/692761/structured-description/",
+          "status": 200,
+          "bytes": 9126,
+          "sha256": "c4a7d6a284bcfb6dcad64e343522b6cf14812f667061a962f14d6dc3a861c640"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/692761/",
+          "status": 200,
+          "bytes": 10745,
+          "sha256": "b2228c3b615f86da5a038365293030f5c4cee59347741ee97ea2c5780f72c1d4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=692761&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 228,
+          "sha256": "34f6decf74163a8852ce571a63a66543a56948bea26fe4428a7d4d3228c85657"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/692761/ratings/",
+          "status": 200,
+          "bytes": 566,
+          "sha256": "580e525dc1c0fb37d4a6f1b685199baa08bea9443bfd803ddd0aaf2e7cd193ef"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "692761",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/692761/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "76676",
+      "company": "floridaadventuresandrentals",
+      "catalogId": "florida-adventures-and-rentals-76676",
+      "slug": "private-dolphin-tours-76676",
+      "title": "Private Dolphin Tours",
+      "operator": "Florida Adventures and Rentals",
+      "publicPath": "/destinations/florida/goodland/tours/private-dolphin-tours-76676",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/76676/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/KDRotEB8RFSRppMNjQMa",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/KDRotEB8RFSRppMNjQMa"
+      ],
+      "tags": [
+        "Dolphin"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:29.930296+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/76676/content/",
+          "status": 200,
+          "bytes": 9944,
+          "sha256": "0a3499fc5999dc48f752973cff48e85f689f92f6b473e8664f6969b03d687fbf"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaadventuresandrentals/76676/structured-description/",
+          "status": 200,
+          "bytes": 8107,
+          "sha256": "a97e5c97e6b44efdf2e8c5b3541082ab305933abbb2b750dd0d6d9c401543fdd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/76676/",
+          "status": 200,
+          "bytes": 20699,
+          "sha256": "dc000ff1ced25e489e2430e7511bfbd4ee8360aeb9cfcbcd16739802f65727b7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaadventuresandrentals/price-preview/per-item/v2/?asn=fhdn&item_pks=76676&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 922,
+          "sha256": "6380e5190dbeb603677df5f43004424a6f538ca983faeb05ddcd2c0516343480"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaadventuresandrentals/items/76676/ratings/",
+          "status": 200,
+          "bytes": 565,
+          "sha256": "e4784a66a299b72eac48e73463c96dded83666cf05ee68d690095caff193b5c8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "76676",
+        "provider": "floridaadventuresandrentals",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaadventuresandrentals/items/76676/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 475.0,
+        "currency": "USD",
+        "singular": "Private Tour: Up to 6 People"
+      }
+    },
+    {
+      "itemId": "239475",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239475",
+      "slug": "island-paradise-dolphin-shelling-birding-eco-boat-tour-239475",
+      "title": "Island Paradise: Dolphin, Shelling, Birding Eco Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/island-paradise-dolphin-shelling-birding-eco-boat-tour-239475",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/BwbJMCURqanzYzL5swi7",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/BwbJMCURqanzYzL5swi7"
+      ],
+      "tags": [
+        "Eco Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:31.437044+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239475/content/",
+          "status": 200,
+          "bytes": 2768,
+          "sha256": "e72c32ac05ac931559f279e571b89ebfcd7bf2e0ea69a8fdf77f047a0191ad16"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239475/structured-description/",
+          "status": 200,
+          "bytes": 1493,
+          "sha256": "0031b367ef049e558ed8338737d8da355c736a53fdaf5cc87afbcb9c30c581de"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239475/",
+          "status": 200,
+          "bytes": 16572,
+          "sha256": "0cef0bebc5048a6fdb05cafea803f2e5a206ccc5210c22dad865324c3c0056d9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239475&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1028,
+          "sha256": "c9fcfc11e74faeeb82b004f86e124ad67025a1811c162e2ab1a960908d76d830"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239475/ratings/",
+          "status": 200,
+          "bytes": 527,
+          "sha256": "29ff21feda69f9763a1f2df9161dacd302a40d8cb1534c1bb8c43fd38c6876f4"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239475",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239475/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "239489",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239489",
+      "slug": "sand-bar-shelling-tour-239489",
+      "title": "Sand Bar Shelling Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/sand-bar-shelling-tour-239489",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239489/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/tP7p0yyQJKDdYuLy0UUy",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/tP7p0yyQJKDdYuLy0UUy"
+      ],
+      "tags": [
+        "Walking Tour"
+      ],
+      "categories": [
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Walking Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:31.624499+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239489/content/",
+          "status": 200,
+          "bytes": 3388,
+          "sha256": "805c9323dbcdbdf83e0b0bdb18c40ef6276eae089f9ec0fd476923bb9b186713"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239489/structured-description/",
+          "status": 200,
+          "bytes": 2308,
+          "sha256": "b7d2cef7b789b29f376fff9ac8830a4fa8514d345ce76f4d1543573941a73efa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239489/",
+          "status": 200,
+          "bytes": 14163,
+          "sha256": "6d858450659fd7f6a69713fb69b6eec54e5321245a9556bab70b41fb9ccec8ba"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239489&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 762,
+          "sha256": "9e91b7243023c2dbf750955a49de7f0b3a3809ea447a9c65c3970b4f057733ed"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239489/ratings/",
+          "status": 200,
+          "bytes": 492,
+          "sha256": "780dbc97acf793b1cecce40fcbd3ce56c580c2ac8fc966a6cbd6552c3ff82798"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239489",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239489/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 500.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "239507",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239507",
+      "slug": "barrier-island-shelling-tour-239507",
+      "title": "Barrier Island Shelling Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/barrier-island-shelling-tour-239507",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/YEADPrOxQCmtk7ou7tCd",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/YEADPrOxQCmtk7ou7tCd"
+      ],
+      "tags": [
+        "Walking Tour"
+      ],
+      "categories": [
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Walking Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:32.660032+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239507/content/",
+          "status": 200,
+          "bytes": 2411,
+          "sha256": "fb932531bba1fd10e4fee03e9cbe35e599fb2ad5d517605464c8c08e91f0979f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239507/structured-description/",
+          "status": 200,
+          "bytes": 1245,
+          "sha256": "b6682e885326d74da2eaccd4f87ed41da07cce4825d640402a607ec56df63681"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239507/",
+          "status": 200,
+          "bytes": 14906,
+          "sha256": "fa6d3ca1cca7d4b37759bf6a5a33f79df37f9957b07a7a0a6b27f435c37850e5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239507&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1028,
+          "sha256": "76fbc03130662aa15eb4f0fb92e79e965c95e7a655d7a27b1c84420f5b69868d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239507/ratings/",
+          "status": 200,
+          "bytes": 498,
+          "sha256": "abc7d41600511532cc5b4f41c71feaf8246f1a638c41baa11ff73d178c87f33a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239507",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239507/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "239568",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239568",
+      "slug": "sunset-boat-tour-239568",
+      "title": "Sunset Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/sunset-boat-tour-239568",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239568/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/8MZLCSp9SxW8F1nO4x8P",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/8MZLCSp9SxW8F1nO4x8P"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:33.367005+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239568/content/",
+          "status": 200,
+          "bytes": 3204,
+          "sha256": "d782c733990b2056a607200c4709aeefec4773cb82cd19f0f486ae1f43726960"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239568/structured-description/",
+          "status": 200,
+          "bytes": 1429,
+          "sha256": "7d8a03cf8bc69d8bc41de59bba8a56dd4cb08d5995644a02031cc487ea32e9d6"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239568/",
+          "status": 200,
+          "bytes": 23408,
+          "sha256": "fd4bcded2aa641f5c70bdc2df4ba598903e8d9baa17eedf00f025796985b3020"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239568&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1028,
+          "sha256": "5e499c19f0acb9c162b05a75445f59db093672a2be0d3483df480cf494c1e8b4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239568/ratings/",
+          "status": 200,
+          "bytes": 486,
+          "sha256": "886542861a2cc7fcb9b1ac421310c9324f685fc4cc7aaf603b4397b7baeea8f5"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239568",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239568/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "239574",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239574",
+      "slug": "best-of-marco-dolphin-boat-tour-239574",
+      "title": "Best of Marco Dolphin Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/best-of-marco-dolphin-boat-tour-239574",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239574/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/9FJ00y2rRPq0dupGBpLz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/9FJ00y2rRPq0dupGBpLz"
+      ],
+      "tags": [
+        "Dolphin"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:33.835769+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239574/content/",
+          "status": 200,
+          "bytes": 2828,
+          "sha256": "a47b41551b86fc639499029a681cea1b0d822dc86920a98193297f54170ef075"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239574/structured-description/",
+          "status": 200,
+          "bytes": 1432,
+          "sha256": "e7e5a6e3c23479759fb4661509baac6555f3ba9b8484680a486180272023510c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239574/",
+          "status": 200,
+          "bytes": 18524,
+          "sha256": "0c15c8ab7cc1d2708ca78cdbbccbd5e4578e9df414b3f292a3ca211f41a84374"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239574&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1025,
+          "sha256": "716e63695bf5ae05494ecc615f9f6b4e37843334a4254fc74b4def4043f5dee3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239574/ratings/",
+          "status": 200,
+          "bytes": 493,
+          "sha256": "78821490715fa1e4db71635d2f4b993f2fdc5cd7d4b33d8bea25a92432d463d8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239574",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239574/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 85.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "239612",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239612",
+      "slug": "family-fun-day-with-fishing-4hrs-239612",
+      "title": "Family Fun Day with Fishing (4hrs)",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/family-fun-day-with-fishing-4hrs-239612",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": -81.6486,
+        "lng": 25.925322
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239612/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/WDrKet5SA8fLShqqRncQ",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/WDrKet5SA8fLShqqRncQ"
+      ],
+      "tags": [
+        "Fishing"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Fishing",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:33.916862+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239612/content/",
+          "status": 200,
+          "bytes": 3792,
+          "sha256": "bc7f9e30e0ed94166d827cdb60cb49f784493b90ef7dce517cf610bddf6a0ae3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239612/structured-description/",
+          "status": 200,
+          "bytes": 2406,
+          "sha256": "b97372addc654baae97902e4626a4cde455e44c37c9f461f01afef831c26db8e"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239612/",
+          "status": 200,
+          "bytes": 15198,
+          "sha256": "7d0b3cd66fc554f6c50041a807412ceb411e25dd63c9009fd82dd8a9a53624f7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239612&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 595,
+          "sha256": "63105e4d9ff71768811a29d658b42b0594cc306f8e10237819e8fda8cdeec47c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239612/ratings/",
+          "status": 200,
+          "bytes": 504,
+          "sha256": "8d271361cebb32877f8ea204caefaee48fcede38e7f20f3f679ac57a50296e46"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239612",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239612/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 850.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "239623",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-239623",
+      "slug": "4hr-private-boat-tour-239623",
+      "title": "4hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/4hr-private-boat-tour-239623",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239623/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/c72mVovlSliVaYOAtuQ4",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/c72mVovlSliVaYOAtuQ4"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:34.881718+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239623/content/",
+          "status": 200,
+          "bytes": 3089,
+          "sha256": "3871af94b250091aed7a58e8bebed85a1ef87f8155e02cf8eacbe312fd784134"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/239623/structured-description/",
+          "status": 200,
+          "bytes": 1236,
+          "sha256": "c1ddde269a49eee169875fed9a9d1cd258563408478b78d201ffc47e264e906c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239623/",
+          "status": 200,
+          "bytes": 24586,
+          "sha256": "25a1f138357507a6feb12f09208ec85a59f6e188488ee2768b5de60a24fb7efe"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=239623&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "4f40d66a11a22b0d92c7ec13a3bc0b3365c77f4ca750405215672ef33b4681d4"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/239623/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "e4606cddb083b34e9b027ca40536453f0c36b88c33df3f4b6af17325b86f7b90"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "239623",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/239623/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 1000.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "332475",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-332475",
+      "slug": "6hr-private-boat-tour-332475",
+      "title": "6hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/6hr-private-boat-tour-332475",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/332475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/r7GRdxCTwGZkfs8H6SMg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/r7GRdxCTwGZkfs8H6SMg"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:36.029266+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/332475/content/",
+          "status": 200,
+          "bytes": 2705,
+          "sha256": "03964e0fe15f2833a5159a86e23e4050537f5923a6ae4e8a0a95347c6e5f2bde"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/332475/structured-description/",
+          "status": 200,
+          "bytes": 1236,
+          "sha256": "f1b46c6892f3beebf08156370d210d99cabc73cad7383d0408f08ba1832a3410"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/332475/",
+          "status": 200,
+          "bytes": 19705,
+          "sha256": "2b32f0fd20be9a03c002a81ab009d45ef1792fc96376a780696642952bdab7fb"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=332475&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "57abcb1634d01643e0ad8f9db1eafc929d9d175fb7eba6f0ba7300153c03b087"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/332475/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "2125f7c53c4daec5457833382795e36dd89bca75300d6ec66a3442b3f2a4d28d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "332475",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/332475/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 1500.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "339514",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-339514",
+      "slug": "3hr-private-boat-tour-339514",
+      "title": "3hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/3hr-private-boat-tour-339514",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/339514/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/UgnxNeWDQDOP7Q7XPuSw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/UgnxNeWDQDOP7Q7XPuSw"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:36.222647+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/339514/content/",
+          "status": 200,
+          "bytes": 2006,
+          "sha256": "0b0481544469cea2328155a2aebd2e1f60e9eb49fc7ddad488684893aaf9ea8a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/339514/structured-description/",
+          "status": 200,
+          "bytes": 1236,
+          "sha256": "05e0ea228df05b3fd929fb17897b67d0135553a4c762ac1742ff50990da8706b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/339514/",
+          "status": 200,
+          "bytes": 11285,
+          "sha256": "5c2e4538bf29fcd3d093e6f5e97eb5cb73bceccf2ca0f5cbcefcb3384f573ec4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=339514&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 764,
+          "sha256": "621a821d86951b172a956c9784aba19da0e79169e4e65a9b981d2d8bfa92ea8a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/339514/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "0778df341cb9317d90fbd8ee7fb4eff5eccc8e4a38072d941d549478b1e4aef7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "339514",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/339514/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 750.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "352216",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-352216",
+      "slug": "2hr-private-boat-tour-352216",
+      "title": "2hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/2hr-private-boat-tour-352216",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/352216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/mGQcc7TyO9QTcTw0nWOw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/mGQcc7TyO9QTcTw0nWOw"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:36.367739+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/352216/content/",
+          "status": 200,
+          "bytes": 3105,
+          "sha256": "1597ed5d3ada3b7083df12711235eb3e9d80bf477dfff71620efb835b04ceef5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/352216/structured-description/",
+          "status": 200,
+          "bytes": 2413,
+          "sha256": "523cbe2622777296a66f4561a7e8d234c312ea30416667494d635837f4ef80e2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/352216/",
+          "status": 200,
+          "bytes": 11330,
+          "sha256": "3c66654fc297b1d366f69f16c07bd51632cba9fb4b001db1bef16df178f80cc8"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=352216&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 762,
+          "sha256": "3168e4d6004588f964d0932e60f8e2db065e67c43b5f5b9ce9364dd5f11ec548"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/352216/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "5c529d21f2a49db8c9d859a0f14d61d56d71b83c213352e30f349e6c7054f394"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "352216",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/352216/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 500.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "417714",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-417714",
+      "slug": "best-of-marco-island-tour-417714",
+      "title": "Best of Marco Island Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/best-of-marco-island-tour-417714",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/417714/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/lYw27uHtQ86Ixj97LJHh",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/lYw27uHtQ86Ixj97LJHh"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:36.977049+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/417714/content/",
+          "status": 200,
+          "bytes": 3494,
+          "sha256": "a8c740110c0b62603f0ec2fa91cb9fdf7bf1d6c6eaed0a7670988db80426aefa"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/417714/structured-description/",
+          "status": 200,
+          "bytes": 2666,
+          "sha256": "f46b8ff7ca566a11a1fd7c411a6560307ddc5e462807b26f7580181ea2929aef"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/417714/",
+          "status": 200,
+          "bytes": 14445,
+          "sha256": "7713300cf502bde5a015fd3e2d1a3e16197c57792f2a42169633b95c90fd7b25"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=417714&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1025,
+          "sha256": "624ed0e069ad3e052f0833a5920056347b5ce6594e96a723777cf16e7e9b44a8"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/417714/ratings/",
+          "status": 200,
+          "bytes": 495,
+          "sha256": "15a37056fe51257da919271fac82c7f88fc641ce456afc5875522ff6c7c62e5e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "417714",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/417714/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 85.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "417843",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-417843",
+      "slug": "half-day-super-shelling-tour-417843",
+      "title": "Half-Day Super Shelling Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/half-day-super-shelling-tour-417843",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/417843/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Fk3ukq2MQ0Wt6EfBNRSn",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Fk3ukq2MQ0Wt6EfBNRSn"
+      ],
+      "tags": [
+        "Private"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:38.189914+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/417843/content/",
+          "status": 200,
+          "bytes": 3664,
+          "sha256": "81201a4dd60dd356a0e998643fab8e7b3c36e9a4f89c91510473244f234df180"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/417843/structured-description/",
+          "status": 200,
+          "bytes": 2612,
+          "sha256": "e26e74d4d2eff1b1d5ad9663a276d36afcf617842ef88280630e101d53b855e4"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/417843/",
+          "status": 200,
+          "bytes": 14266,
+          "sha256": "7e2576fe2076e781e452d567227196e291d61b01e8df11c7f3dec667868d2059"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=417843&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1031,
+          "sha256": "4ec609bb0a3dde04814af169c733b76401e059ff3165eed35255d65ce1ab9378"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/417843/ratings/",
+          "status": 200,
+          "bytes": 498,
+          "sha256": "44ff598639eababad339e24aa17857ab9637a2b8e3dd0f4ed22f01466a20566b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "417843",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/417843/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 149.0,
+        "currency": "USD",
+        "singular": "Child Ticket"
+      }
+    },
+    {
+      "itemId": "478602",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-478602",
+      "slug": "25hr-private-boat-tour-478602",
+      "title": "2.5hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/25hr-private-boat-tour-478602",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/478602/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/rxYyzzYSQti4b6khDJJa",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/rxYyzzYSQti4b6khDJJa"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:38.250540+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/478602/content/",
+          "status": 200,
+          "bytes": 2240,
+          "sha256": "4ba36a889e38c3b29243b7ee522d116a85207b104a420d4a967d89a85fc0473f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/478602/structured-description/",
+          "status": 200,
+          "bytes": 1236,
+          "sha256": "1eae859eacfb701021c64df3dca578eba982c756134e702688a72871140245e3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/478602/",
+          "status": 200,
+          "bytes": 14106,
+          "sha256": "47edb893c0a3b9e162eecfb1d3876554c4372d2c3d3ef73c79feaa162f6d53cd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=478602&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 764,
+          "sha256": "7168f89e9d1c57b3da4d004fdfd7b367dd407c9b646ddc46cb4ced0c024e8392"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/478602/ratings/",
+          "status": 200,
+          "bytes": 493,
+          "sha256": "f92f874573f2a9eb9afe193ff6a3e926fb32436cd0b6bed3913db531d808ddb2"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "478602",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/478602/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 625.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "524677",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-524677",
+      "slug": "2-hour-small-group-private-tour-524677",
+      "title": "2 Hour Small Group Private Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/2-hour-small-group-private-tour-524677",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/524677/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/dtZLsMWpT9vopVb096EA",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/dtZLsMWpT9vopVb096EA"
+      ],
+      "tags": [
+        "Boat Tour",
+        "History Tour",
+        "Private",
+        "Sightseeing Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:38.363526+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524677/content/",
+          "status": 200,
+          "bytes": 4049,
+          "sha256": "88f5f3bd37906cefb755fee4692f2f8d7c0273c12c324897ceb3a057a9734183"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524677/structured-description/",
+          "status": 200,
+          "bytes": 3534,
+          "sha256": "1136ff9a8a56386c2937682f36117cad2804ba5bf9a48989ebd799326ce26f91"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524677/",
+          "status": 200,
+          "bytes": 10052,
+          "sha256": "4ee736e7c1a31758d8ee86c946ddbbc8efd9265f329be272c8513e1ef427c573"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=524677&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "b7538ca2bc420e6ffa22924bb8abd10a9583086c9f6443c7b34734f545823752"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524677/ratings/",
+          "status": 200,
+          "bytes": 501,
+          "sha256": "d667f461d7dda1ab7f4c39e65ae6e1e7f07eb55a3ab707656a8c2c3515d9374e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "524677",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/524677/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "524679",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-524679",
+      "slug": "25hr-small-group-private-boat-tour-524679",
+      "title": "2.5hr Small Group Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/25hr-small-group-private-boat-tour-524679",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/524679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/OCAY95yjRvSnFmJHwzNy",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/OCAY95yjRvSnFmJHwzNy"
+      ],
+      "tags": [
+        "Boat Rental",
+        "Boat Tour",
+        "History Tour",
+        "Private",
+        "Sightseeing Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:39.055359+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524679/content/",
+          "status": 200,
+          "bytes": 2027,
+          "sha256": "b29cc5921d44e8ab8aabc4fc7cf738de8ac5aac3c81bd796d91e383d6da4fa61"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/524679/structured-description/",
+          "status": 200,
+          "bytes": 1236,
+          "sha256": "5764cf348e3c7a4c52ee046d8a2f84788e4940753341fc76ec0710f5231b17a1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524679/",
+          "status": 200,
+          "bytes": 11333,
+          "sha256": "1abd1f99456086a852d0cf059868fca98e25e0641dd272eb51d5ad8557e3253a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=524679&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 583,
+          "sha256": "acc2e7da22ef175c95c901540a27caf4b708678d6bda914b14229de68df374bc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/524679/ratings/",
+          "status": 200,
+          "bytes": 506,
+          "sha256": "5dfeae2f677f29ee1087e47cab67d5a49ed0d8d0ed5b6c45035a80127822f639"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "524679",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/524679/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "597140",
+      "company": "floridaislandtours",
+      "catalogId": "florida-island-tours-597140",
+      "slug": "8hr-private-boat-tour-597140",
+      "title": "8hr Private Boat Tour",
+      "operator": "Florida Island Tours",
+      "publicPath": "/destinations/florida/goodland/tours/8hr-private-boat-tour-597140",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/597140/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/8qp1QRgTkyL0cRK8WBLo",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/8qp1QRgTkyL0cRK8WBLo"
+      ],
+      "tags": [],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:40.204618+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/597140/content/",
+          "status": 200,
+          "bytes": 2552,
+          "sha256": "5ff3cdae29e2450d2e52558e87ad0c3630ee0614f87c9492fe602ad1c6064b8e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/floridaislandtours/597140/structured-description/",
+          "status": 200,
+          "bytes": 1674,
+          "sha256": "5a8444cfe8fb928616d812cc4b83ffff206086056a7e84b04cf1af70971df185"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/597140/",
+          "status": 200,
+          "bytes": 15516,
+          "sha256": "14d24141d954ae4b31770549d05de5ddfd8eaa3897aae45fac3086598ef2fb99"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/floridaislandtours/price-preview/per-item/v2/?asn=fhdn&item_pks=597140&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 766,
+          "sha256": "3cb3cf27252d6bd092d3a288861866fee11c455ed6f4f15eb7a54dc8606cca1b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/floridaislandtours/items/597140/ratings/",
+          "status": 200,
+          "bytes": 492,
+          "sha256": "47dcdf3493b01cc27f105231b87d18e92f55ac6d211b6d6d55804e07c0dfe423"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "597140",
+        "provider": "floridaislandtours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/floridaislandtours/items/597140/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 2000.0,
+        "currency": "USD",
+        "singular": "Private charter 6-pack"
+      }
+    },
+    {
+      "itemId": "541644",
+      "company": "goodlandadventures",
+      "catalogId": "goodland-adventures-541644",
+      "slug": "afternoon-cruise-541644",
+      "title": "Afternoon Cruise",
+      "operator": "Goodland Adventures",
+      "publicPath": "/destinations/florida/goodland/tours/afternoon-cruise-541644",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": -81.646312,
+        "lng": 25.927296
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/goodlandadventures/items/541644/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/brhPzCXPTAGmXXEouS0j",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/brhPzCXPTAGmXXEouS0j"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": true,
+      "fetchedAt": "2026-10-03T18:10:40.259288+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/goodlandadventures/541644/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/goodlandadventures/541644/structured-description/",
+          "status": 404,
+          "bytes": 588095,
+          "sha256": "c9ab5b5f733210312d1f7d888c45ec6c51a7d6e6f829341455cee3881426021f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/goodlandadventures/items/541644/",
+          "status": 404,
+          "bytes": 588069,
+          "sha256": "26ef3f664ac802b0b6dc24330f801ffbd20f5c17a4a0645f91fb69b69691045a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/goodlandadventures/price-preview/per-item/v2/?asn=fhdn&item_pks=541644&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 400,
+          "bytes": 142,
+          "sha256": "f26e032eb88134637f8482ed7a7f3dc1fd43cce015628fbf1aa7db4e343b7c2d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/goodlandadventures/items/541644/ratings/",
+          "status": 404,
+          "bytes": 588085,
+          "sha256": "cad633bc2e150bc0cec319f0f7f10032318f8e3dc475da81bf48a1d706b5ef8a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "541644",
+        "provider": "goodlandadventures",
+        "bookingUrl": "https://fareharbor.com/embeds/book/goodlandadventures/items/541644/",
+        "httpStatus": 404,
+        "classification": "BOOKING_PAGE_NOT_FOUND",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . Loading... Page not found If you need assistance, please contact support@fareharbor.com .",
+        "evidence": "Authoritative booking destination returned HTTP 404 with a terminal not-found or deleted-product state."
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "547157",
+      "company": "puntagordatiki",
+      "catalogId": "tropical-tiki-tours-547157",
+      "slug": "morning-eco-tour-25hr-private-547157",
+      "title": "Morning Eco-Tour • 2.5hr • Private",
+      "operator": "Tropical Tiki Tours",
+      "publicPath": "/destinations/florida/goodland/tours/morning-eco-tour-25hr-private-547157",
+      "destination": {
+        "state": "Florida",
+        "stateSlug": "florida",
+        "city": "Goodland",
+        "citySlug": "goodland",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/puntagordatiki/items/547157/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3Dc9tvR2CouOXRK6tuOg",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3Dc9tvR2CouOXRK6tuOg"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-03T18:10:41.002555+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/puntagordatiki/547157/content/",
+          "status": 200,
+          "bytes": 7816,
+          "sha256": "c3e9312457a740d855b59fe8d1c768ce975e9a8051228814f85e5f9d106c3b5e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/puntagordatiki/547157/structured-description/",
+          "status": 200,
+          "bytes": 7857,
+          "sha256": "aadf07b1899a491e49fa354683541ee09a27cd9ec38e83605e00242c133b21a2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/puntagordatiki/items/547157/",
+          "status": 200,
+          "bytes": 8304,
+          "sha256": "1594a55c4378c529a2aa3a8063f817e0222baa4e01816089ff15f34db90d3fd4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/puntagordatiki/price-preview/per-item/v2/?asn=fhdn&item_pks=547157&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/puntagordatiki/items/547157/ratings/",
+          "status": 200,
+          "bytes": 444,
+          "sha256": "2d04fc46b152911d2bf1ecd1096a06d437d9648c2238963b0cd832f29fc0f192"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "547157",
+        "provider": "puntagordatiki",
+        "bookingUrl": "https://fareharbor.com/embeds/book/puntagordatiki/items/547157/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    }
+  ]
+}

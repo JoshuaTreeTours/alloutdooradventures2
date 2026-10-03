@@ -1,0 +1,53 @@
+{
+  "fetchedAt": "2026-10-03T18:09:16.981749+00:00",
+  "total": 1,
+  "products": [
+    {
+      "company": "cyclepartyftl",
+      "itemId": "56394",
+      "fetchedAt": "2026-10-03T18:09:14.519442+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/cyclepartyftl/56394/content/",
+          "status": 200,
+          "bytes": 6383,
+          "sha256": "ad3204ef41b58eb7f2413f16d9a481ea0317a3e7aade8c86fc489f41c2189362"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/cyclepartyftl/56394/structured-description/",
+          "status": 200,
+          "bytes": 2361,
+          "sha256": "ba6fde30995985ed329a0e6056963376b22b7a80031c3cc476e2b21b85aa9821"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/cyclepartyftl/items/56394/",
+          "status": 200,
+          "bytes": 14968,
+          "sha256": "bb1a506289ac7192262879c1f97d2a2bb0845710ae9d9a754f840207cc636950"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/cyclepartyftl/price-preview/per-item/v2/?asn=fhdn&item_pks=56394&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/cyclepartyftl/items/56394/ratings/",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "bf7c89c5527a45d4dd2141cb43a2c830bb32421717e6701d0e448988379c6c72"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "56394",
+        "provider": "cyclepartyftl",
+        "bookingUrl": "https://fareharbor.com/embeds/book/cyclepartyftl/items/56394/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false
+    }
+  ]
+}
