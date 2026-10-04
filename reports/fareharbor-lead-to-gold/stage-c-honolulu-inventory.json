@@ -1,0 +1,811 @@
+{
+  "citySlug": "honolulu",
+  "total": 42,
+  "active": 42,
+  "terminal": 0,
+  "priceAvailable": 39,
+  "tripadvisorRatingAvailable": 13,
+  "imageAvailable": 42,
+  "inSitemap": 32,
+  "inMerchantFeed": 2,
+  "products": [
+    {
+      "company": "alohahawaiitours",
+      "operator": "Aloha Hawaii Tours",
+      "itemId": "141477",
+      "slug": "sights-and-bites-circle-island-tour-141477",
+      "publicPath": "/destinations/hawaii/honolulu/tours/sights-and-bites-circle-island-tour-141477",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3938,
+        "structuredStatus": 200,
+        "structuredBytes": 2924
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "alohahawaiitours",
+      "operator": "Aloha Hawaii Tours",
+      "itemId": "163820",
+      "slug": "pearl-harbor-city-tour-uss-arizona-memorial-163820",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-city-tour-uss-arizona-memorial-163820",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5119,
+        "structuredStatus": 200,
+        "structuredBytes": 2950
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "andyoucreations",
+      "operator": "And You Creations",
+      "itemId": "201636",
+      "slug": "ocean-and-you-201636",
+      "publicPath": "/destinations/hawaii/honolulu/tours/ocean-and-you-201636",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6767,
+        "structuredStatus": 200,
+        "structuredBytes": 2863
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "andyoucreations",
+      "operator": "And You Creations",
+      "itemId": "334772",
+      "slug": "whales-and-you-334772",
+      "publicPath": "/destinations/hawaii/honolulu/tours/whales-and-you-334772",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9458,
+        "structuredStatus": 200,
+        "structuredBytes": 5499
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "andyoucreations",
+      "operator": "And You Creations",
+      "itemId": "368817",
+      "slug": "turtles-and-you-368817",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtles-and-you-368817",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7813,
+        "structuredStatus": 200,
+        "structuredBytes": 4030
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikehawaii",
+      "operator": "Bike Hawaii",
+      "itemId": "547932",
+      "slug": "e-bike-tour-honolulu-rainforest-ride-547932",
+      "publicPath": "/destinations/hawaii/honolulu/tours/e-bike-tour-honolulu-rainforest-ride-547932",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3735,
+        "structuredStatus": 200,
+        "structuredBytes": 2811
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikehawaii",
+      "operator": "Bike Hawaii",
+      "itemId": "547939",
+      "slug": "hawaii-volcanic-rainforest-hike-547939",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaii-volcanic-rainforest-hike-547939",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2873,
+        "structuredStatus": 200,
+        "structuredBytes": 2064
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikehawaii",
+      "operator": "Bike Hawaii",
+      "itemId": "556053",
+      "slug": "downhill-bike-and-koolau-waterfall-hike-556053",
+      "publicPath": "/destinations/hawaii/honolulu/tours/downhill-bike-and-koolau-waterfall-hike-556053",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4289,
+        "structuredStatus": 200,
+        "structuredBytes": 3222
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikehawaii",
+      "operator": "Bike Hawaii",
+      "itemId": "556071",
+      "slug": "rainforest-to-reef-tour-full-day-556071",
+      "publicPath": "/destinations/hawaii/honolulu/tours/rainforest-to-reef-tour-full-day-556071",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4488,
+        "structuredStatus": 200,
+        "structuredBytes": 3237
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "bikehawaii",
+      "operator": "Bike Hawaii",
+      "itemId": "556977",
+      "slug": "downhill-bike-adventure-556977",
+      "publicPath": "/destinations/hawaii/honolulu/tours/downhill-bike-adventure-556977",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2739,
+        "structuredStatus": 200,
+        "structuredBytes": 1803
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "114800",
+      "slug": "private-bike-tour-experience-114800",
+      "publicPath": "/destinations/hawaii/honolulu/tours/private-bike-tour-experience-114800",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2647,
+        "structuredStatus": 200,
+        "structuredBytes": 1409
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "20498",
+      "slug": "diamond-head-bike-to-hike-20498",
+      "publicPath": "/destinations/hawaii/honolulu/tours/diamond-head-bike-to-hike-20498",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4518,
+        "structuredStatus": 200,
+        "structuredBytes": 2838
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "20506",
+      "slug": "hawaiian-foodie-bike-tour-20506",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaiian-foodie-bike-tour-20506",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3823,
+        "structuredStatus": 200,
+        "structuredBytes": 2606
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "395815",
+      "slug": "open-house-real-estate-bike-tour-395815",
+      "publicPath": "/destinations/hawaii/honolulu/tours/open-house-real-estate-bike-tour-395815",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3979,
+        "structuredStatus": 200,
+        "structuredBytes": 2691
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "558599",
+      "slug": "hawaii-foodie-budget-bike-tour-558599",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaii-foodie-budget-bike-tour-558599",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 2845,
+        "structuredStatus": 200,
+        "structuredBytes": 1901
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "biketourhawaii",
+      "operator": "Bike Tour Hawaii",
+      "itemId": "58782",
+      "slug": "manoa-falls-electric-bike-to-hike-58782",
+      "publicPath": "/destinations/hawaii/honolulu/tours/manoa-falls-electric-bike-to-hike-58782",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5562,
+        "structuredStatus": 200,
+        "structuredBytes": 3632
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "divealohascuba",
+      "operator": "Aloha Scuba Diving Co.",
+      "itemId": "663537",
+      "slug": "divemaster-663537",
+      "publicPath": "/destinations/hawaii/honolulu/tours/divemaster-663537",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 14065,
+        "structuredStatus": 200,
+        "structuredBytes": 8488
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "diveoahu",
+      "operator": "Dive Oahu",
+      "itemId": "3108",
+      "slug": "night-dives-3108",
+      "publicPath": "/destinations/hawaii/honolulu/tours/night-dives-3108",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5307,
+        "structuredStatus": 200,
+        "structuredBytes": 2464
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "diveoahu",
+      "operator": "Dive Oahu",
+      "itemId": "8984",
+      "slug": "shallow-reefs-tour-8984",
+      "publicPath": "/destinations/hawaii/honolulu/tours/shallow-reefs-tour-8984",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7090,
+        "structuredStatus": 200,
+        "structuredBytes": 2813
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "diveoahu",
+      "operator": "Dive Oahu",
+      "itemId": "9120",
+      "slug": "wreck-and-reef-tour-9120",
+      "publicPath": "/destinations/hawaii/honolulu/tours/wreck-and-reef-tour-9120",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6663,
+        "structuredStatus": 200,
+        "structuredBytes": 2780
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "enoatours",
+      "operator": "E Noa Corporation",
+      "itemId": "42966",
+      "slug": "pearl-harbor-city---from-waikiki-42966",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-city---from-waikiki-42966",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5330,
+        "structuredStatus": 200,
+        "structuredBytes": 2634
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "enoatours",
+      "operator": "E Noa Corporation",
+      "itemId": "9620",
+      "slug": "pearl-harbor-remembered-a---from-waikiki-9620",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-remembered-a---from-waikiki-9620",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6381,
+        "structuredStatus": 200,
+        "structuredBytes": 3457
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "gohawaii-watersports",
+      "operator": "Go Hawaii Watersports",
+      "itemId": "476798",
+      "slug": "parasailing-476798",
+      "publicPath": "/destinations/hawaii/honolulu/tours/parasailing-476798",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6229,
+        "structuredStatus": 200,
+        "structuredBytes": 4058
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiinautical",
+      "operator": "Hawaii Nautical - Oahu",
+      "itemId": "213714",
+      "slug": "waikiki-signature-sunset-sail-213714",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-signature-sunset-sail-213714",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 5209
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiinautical",
+      "operator": "Hawaii Nautical - Oahu",
+      "itemId": "214395",
+      "slug": "waikiki-turtle-snorkel-sail-214395",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-turtle-snorkel-sail-214395",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 403,
+        "contentBytes": 119,
+        "structuredStatus": 200,
+        "structuredBytes": 5877
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hawaiioceancharters",
+      "operator": "Hawaii Ocean Charters",
+      "itemId": "640554",
+      "slug": "private-boat-charter-in-waikiki-big-kahuna-640554",
+      "publicPath": "/destinations/hawaii/honolulu/tours/private-boat-charter-in-waikiki-big-kahuna-640554",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6030,
+        "structuredStatus": 200,
+        "structuredBytes": 4728
+      },
+      "priceAvailable": false,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "hhsurf",
+      "operator": "Hans Hedemann South Shore (Queen Kapiolani)",
+      "itemId": "991",
+      "slug": "surf-lessons-991",
+      "publicPath": "/destinations/hawaii/honolulu/tours/surf-lessons-991",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3419,
+        "structuredStatus": 200,
+        "structuredBytes": 2410
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": true
+    },
+    {
+      "company": "livingoceanscuba",
+      "operator": "Living Ocean Tours",
+      "itemId": "284519",
+      "slug": "turtle-canyons-snorkel-excursion-284519",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtle-canyons-snorkel-excursion-284519",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 13286,
+        "structuredStatus": 200,
+        "structuredBytes": 6786
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "livingoceanscuba",
+      "operator": "Living Ocean Tours",
+      "itemId": "323935",
+      "slug": "waikiki-sunset-cruise-byob-323935",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-sunset-cruise-byob-323935",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 5350,
+        "structuredStatus": 200,
+        "structuredBytes": 2544
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "livingoceanscuba",
+      "operator": "Living Ocean Tours",
+      "itemId": "494462",
+      "slug": "deluxe-snorkel-and-wildlife-cruise-494462",
+      "publicPath": "/destinations/hawaii/honolulu/tours/deluxe-snorkel-and-wildlife-cruise-494462",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6555,
+        "structuredStatus": 200,
+        "structuredBytes": 3226
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "ohanasurfproject",
+      "operator": "Ohana Surf Project",
+      "itemId": "7571",
+      "slug": "surf-lessons-7571",
+      "publicPath": "/destinations/hawaii/honolulu/tours/surf-lessons-7571",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 16719,
+        "structuredStatus": 200,
+        "structuredBytes": 12503
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pinksailswaikiki",
+      "operator": "Pink Sails Waikiki",
+      "itemId": "110203",
+      "slug": "turtle-snorkeling-adventure-guaranteed-sightings-110203",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtle-snorkeling-adventure-guaranteed-sightings-110203",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 4152,
+        "structuredStatus": 200,
+        "structuredBytes": 3301
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "pinksailswaikiki",
+      "operator": "Pink Sails Waikiki",
+      "itemId": "80660",
+      "slug": "sunset-splash-adventure-80660",
+      "publicPath": "/destinations/hawaii/honolulu/tours/sunset-splash-adventure-80660",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3888,
+        "structuredStatus": 200,
+        "structuredBytes": 2903
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "polyad-activities",
+      "operator": "Polynesian Adventure Activities",
+      "itemId": "280763",
+      "slug": "oahu-grand-circle-island-tour-waimea-valley-and-dole-plantation-7b-280763",
+      "publicPath": "/destinations/hawaii/honolulu/tours/oahu-grand-circle-island-tour-waimea-valley-and-dole-plantation-7b-280763",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9226,
+        "structuredStatus": 200,
+        "structuredBytes": 4550
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "68062",
+      "slug": "one-on-one-individual-surf-lesson-68062",
+      "publicPath": "/destinations/hawaii/honolulu/tours/one-on-one-individual-surf-lesson-68062",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7024,
+        "structuredStatus": 200,
+        "structuredBytes": 3820
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "68064",
+      "slug": "one-on-one-individual-stand-up-paddle-lesson-68064",
+      "publicPath": "/destinations/hawaii/honolulu/tours/one-on-one-individual-stand-up-paddle-lesson-68064",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6743,
+        "structuredStatus": 200,
+        "structuredBytes": 3635
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "68065",
+      "slug": "canoe-surfing-68065",
+      "publicPath": "/destinations/hawaii/honolulu/tours/canoe-surfing-68065",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 7672,
+        "structuredStatus": 200,
+        "structuredBytes": 4388
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "68066",
+      "slug": "beachboy-valet-68066",
+      "publicPath": "/destinations/hawaii/honolulu/tours/beachboy-valet-68066",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 3835,
+        "structuredStatus": 200,
+        "structuredBytes": 2390
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "68068",
+      "slug": "burial-at-sea-68068",
+      "publicPath": "/destinations/hawaii/honolulu/tours/burial-at-sea-68068",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6609,
+        "structuredStatus": 200,
+        "structuredBytes": 3260
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": false,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "waikikibeachservices",
+      "operator": "Waikiki Beach Services",
+      "itemId": "94733",
+      "slug": "canoe-charter-94733",
+      "publicPath": "/destinations/hawaii/honolulu/tours/canoe-charter-94733",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 6441,
+        "structuredStatus": 200,
+        "structuredBytes": 2622
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "wildlifehawaii",
+      "operator": "Wildlife Hawaii",
+      "itemId": "314433",
+      "slug": "round-trip-north-shore-haleiwa-shuttle-314433",
+      "publicPath": "/destinations/hawaii/honolulu/tours/round-trip-north-shore-haleiwa-shuttle-314433",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 9812,
+        "structuredStatus": 200,
+        "structuredBytes": 8082
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": false,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": false
+    },
+    {
+      "company": "xtreme",
+      "operator": "X-Treme Parasail & Diamond Head Parasail",
+      "itemId": "247",
+      "slug": "parasail-247",
+      "publicPath": "/destinations/hawaii/honolulu/tours/parasail-247",
+      "status": "VALID",
+      "sourceContent": {
+        "contentStatus": 200,
+        "contentBytes": 10683,
+        "structuredStatus": 200,
+        "structuredBytes": 3592
+      },
+      "priceAvailable": true,
+      "tripadvisorRatingAvailable": true,
+      "imageAvailable": true,
+      "inSitemap": true,
+      "inMerchantFeed": true
+    }
+  ]
+}

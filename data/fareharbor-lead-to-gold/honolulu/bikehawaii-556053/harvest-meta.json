@@ -1,0 +1,47 @@
+{
+  "company": "bikehawaii",
+  "itemId": "556053",
+  "fetchedAt": "2026-10-04T23:01:08.554415+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/bikehawaii/556053/content/",
+      "status": 200,
+      "bytes": 4289,
+      "sha256": "59634ed4540a6820652927d4f9f27dfe569f10fe0c1fe75c01f8a1605d813ec3"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/bikehawaii/556053/structured-description/",
+      "status": 200,
+      "bytes": 3222,
+      "sha256": "60356ddbfefffe65178bd7b70aea8ad2307d07db725579d7a9262b3ed9b19893"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556053/",
+      "status": 200,
+      "bytes": 13496,
+      "sha256": "0d8e8f0c201f5d21cf39eaf631cce85be9c85cf96d8464d856a4b89cdf9a1d85"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=556053&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 654,
+      "sha256": "b8cacd8f4e7086189dc0d60ad7182d91c8b4ba3d9ebfdc1dd217bff3f5d87a88"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556053/ratings/",
+      "status": 200,
+      "bytes": 615,
+      "sha256": "01610880d596231c14169e6d36a4e5529f45ca38cd564cd4af6a104206d59fd6"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "556053",
+    "provider": "bikehawaii",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556053/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

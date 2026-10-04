@@ -1,0 +1,47 @@
+{
+  "company": "hawaiinautical",
+  "itemId": "213714",
+  "fetchedAt": "2026-10-04T23:01:20.208422+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiinautical/213714/content/",
+      "status": 403,
+      "bytes": 119,
+      "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/hawaiinautical/213714/structured-description/",
+      "status": 200,
+      "bytes": 5209,
+      "sha256": "73b64a4f6ea232cb68226eab252d45113d3e3193bd0929d0a8de2196e9552b3d"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/213714/",
+      "status": 200,
+      "bytes": 17755,
+      "sha256": "fa784b240fa434ebace2b827476673b41f7137a05752f8d3ea08cad9b23cd4d3"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/hawaiinautical/price-preview/per-item/v2/?asn=fhdn&item_pks=213714&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 229,
+      "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/213714/ratings/",
+      "status": 200,
+      "bytes": 523,
+      "sha256": "e57a00e3db48e61cbd2435dc5b7d3286d53761f65ef7ee2d1675b0a2f631a775"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "213714",
+    "provider": "hawaiinautical",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical/items/213714/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": false
+}

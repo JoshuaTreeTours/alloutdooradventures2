@@ -1,0 +1,47 @@
+{
+  "company": "polyad-activities",
+  "itemId": "280763",
+  "fetchedAt": "2026-10-04T23:01:26.769636+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/polyad-activities/280763/content/",
+      "status": 200,
+      "bytes": 9226,
+      "sha256": "79e51e79af8aa4aa7a7ae941aef1c6d6214ab64dc38bf31716cd861475601367"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/polyad-activities/280763/structured-description/",
+      "status": 200,
+      "bytes": 4550,
+      "sha256": "7164d7ed68c4fa93033d477a1429ccff4886b1b5957a3b294650dce73260d909"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/polyad-activities/items/280763/",
+      "status": 200,
+      "bytes": 15871,
+      "sha256": "550604b68db1703d1dc9ff66cdc86dd6912f6cb171ef27458f3d485bfcd60494"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/polyad-activities/price-preview/per-item/v2/?asn=fhdn&item_pks=280763&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 911,
+      "sha256": "e596899831ccc5249cfa77d9e6357b640291588e2ddeaef0cf58902f04edeae5"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/polyad-activities/items/280763/ratings/",
+      "status": 200,
+      "bytes": 556,
+      "sha256": "b00843bd8a5cb5a0b2f87c3ae581a2549fc7481f4d3447522c1ec337aec07cd7"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "280763",
+    "provider": "polyad-activities",
+    "bookingUrl": "https://fareharbor.com/embeds/book/polyad-activities/items/280763/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

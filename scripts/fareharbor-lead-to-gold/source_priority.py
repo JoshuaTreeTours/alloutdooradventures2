@@ -43,6 +43,8 @@ ITINERARY_NOISE = {
     "free time",
     "breaks",
     "break",
+    "return",
+    "returns",
 }
 ITINERARY_DURATION_PREFIX = re.compile(
     r"^(?:\d+(?:\.\d+)?\s*(?:min|mins|minutes|hr|hrs|hours?)\s*-+\s*)",
@@ -84,11 +86,30 @@ def substantial_text(value: str | None, *, min_words: int = 12) -> str:
     return text
 
 
+def _place_from_itinerary_line(text: str) -> str:
+    """Keep the place name. Drop the caption after a colon and step labels."""
+    if ":" not in text:
+        return text
+    left, right = re.split(r"\s*:\s*", text, maxsplit=1)
+    left = left.strip(" .-")
+    right = right.strip(" .-")
+    if re.match(r"^(?:stop|step)\s*\d+$", left, re.I):
+        if re.match(
+            r"^(?:hear|party|watch|enjoy|sample|see|visit|learn|dance|make|take)\b",
+            right,
+            re.I,
+        ):
+            return ""
+        return right
+    return left
+
+
 def itinerary_stops(value) -> list[str]:
     stops = []
     seen = set()
     for item in list_values(value):
         text = ITINERARY_DURATION_PREFIX.sub("", clean_text(item)).strip(" .-")
+        text = _place_from_itinerary_line(text)
         if not text:
             continue
         key = text.lower()
@@ -104,6 +125,14 @@ def itinerary_stops(value) -> list[str]:
         if ITINERARY_LOGISTICS_RE.search(key):
             continue
         if re.search(r"\b(duration|terrain|about|highlights|information)\s*$", key):
+            continue
+        if key in {"views", "snorkeling", "snorkel"}:
+            continue
+        if re.search(
+            r"\b(flight options|introductory dive|certified dive|"
+            r"pre-course|week \d|knowledge sessions|briefing|training day)\b",
+            key,
+        ):
             continue
         seen.add(key)
         stops.append(text)

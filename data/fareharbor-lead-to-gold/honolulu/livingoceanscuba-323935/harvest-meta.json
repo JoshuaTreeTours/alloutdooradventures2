@@ -1,0 +1,47 @@
+{
+  "company": "livingoceanscuba",
+  "itemId": "323935",
+  "fetchedAt": "2026-10-04T23:01:22.972869+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/323935/content/",
+      "status": 200,
+      "bytes": 5350,
+      "sha256": "0ae62201e32e6cf707f783bdfb816f210a43ec75e1c59326e18215d704aef826"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/323935/structured-description/",
+      "status": 200,
+      "bytes": 2544,
+      "sha256": "5d61435eb41e2b6bfcc6af266fd91c8c46a611d6a901d95197c95f7bc526ce0c"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/323935/",
+      "status": 200,
+      "bytes": 15764,
+      "sha256": "a9df269eb17e94d95a9d7a305922173760b8ce0c11003e51401817ed1a53877c"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/livingoceanscuba/price-preview/per-item/v2/?asn=fhdn&item_pks=323935&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 990,
+      "sha256": "3e185fee4a4eebd84de5c8c0ffa7b962f770d2b4aa58b2ef70078394b473d75e"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/323935/ratings/",
+      "status": 200,
+      "bytes": 526,
+      "sha256": "905f34c40eab11ee85eeecb9bdc5c21b1ee144a9f45b13becbcaba650a88fb93"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "323935",
+    "provider": "livingoceanscuba",
+    "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/323935/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

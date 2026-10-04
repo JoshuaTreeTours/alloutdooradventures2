@@ -1,0 +1,47 @@
+{
+  "company": "biketourhawaii",
+  "itemId": "558599",
+  "fetchedAt": "2026-10-04T23:01:13.623761+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/biketourhawaii/558599/content/",
+      "status": 200,
+      "bytes": 2845,
+      "sha256": "b4a547d5112e58a527da039d64f8ef968e178dee2f0419a61f005969b96488c9"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/biketourhawaii/558599/structured-description/",
+      "status": 200,
+      "bytes": 1901,
+      "sha256": "f1d6cea1ab6a8af9c147a0abed4b472cc52ad215960bdd0e2d432a0242416645"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/558599/",
+      "status": 200,
+      "bytes": 13191,
+      "sha256": "78619951c345ab84e0e5f6719c5ba105219a9306ebf9c401f61c60bb5546c3e6"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=558599&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 775,
+      "sha256": "84cee6311622c8b2943dad163931603fba583bb25cc4e8d16f9e64fb9033f575"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/558599/ratings/",
+      "status": 200,
+      "bytes": 426,
+      "sha256": "e0226dc170462f0e9b3963cab4c31e293c2864a83be9be52fc6e43cd4e3ee64b"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "558599",
+    "provider": "biketourhawaii",
+    "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/558599/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

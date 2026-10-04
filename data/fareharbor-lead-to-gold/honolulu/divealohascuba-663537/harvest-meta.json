@@ -1,0 +1,47 @@
+{
+  "company": "divealohascuba",
+  "itemId": "663537",
+  "fetchedAt": "2026-10-04T23:01:15.419211+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/divealohascuba/663537/content/",
+      "status": 200,
+      "bytes": 14065,
+      "sha256": "cb5c922e4c6b4c67a74a4153d0ee6d2e74ebf6cd84b17158230322e56a779f8a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/divealohascuba/663537/structured-description/",
+      "status": 200,
+      "bytes": 8488,
+      "sha256": "31da7e9f3d63c4a8245d48d99f42cf8d98ac4eecd13ba7940c61d33f6696b5ea"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/divealohascuba/items/663537/",
+      "status": 200,
+      "bytes": 11100,
+      "sha256": "0daec5a4d19074169861122488c950db66c5e366152f48cf55e13db68e52aaa2"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/divealohascuba/price-preview/per-item/v2/?asn=fhdn&item_pks=663537&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 540,
+      "sha256": "0f67e1e333afde8f64b44bc38973433c795e317c13df0f6bf2183330af563d26"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/divealohascuba/items/663537/ratings/",
+      "status": 200,
+      "bytes": 509,
+      "sha256": "bb632ca8021e8dca16c3c1e0c3c865337653d1995f29a07e4a4073cc35439f42"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "663537",
+    "provider": "divealohascuba",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divealohascuba/items/663537/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

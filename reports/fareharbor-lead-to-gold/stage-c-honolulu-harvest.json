@@ -1,0 +1,3381 @@
+{
+  "fetchedAt": "2026-10-04T23:01:36.966490+00:00",
+  "citySlug": "honolulu",
+  "totalBostonLegacy": 42,
+  "total": 42,
+  "active": 42,
+  "terminal": 0,
+  "transientOrIndeterminate": 0,
+  "authoritativePrice": 39,
+  "priceNotFound": 3,
+  "alreadyRetired": 0,
+  "engine6Collisions": 0,
+  "terminalIds": [],
+  "priceNotFoundIds": [
+    "213714",
+    "214395",
+    "640554"
+  ],
+  "transientIds": [],
+  "products": [
+    {
+      "itemId": "141477",
+      "company": "alohahawaiitours",
+      "catalogId": "aloha-hawaii-tours-141477",
+      "slug": "sights-and-bites-circle-island-tour-141477",
+      "title": "Sights & Bites Circle Island Tour",
+      "operator": "Aloha Hawaii Tours",
+      "publicPath": "/destinations/hawaii/honolulu/tours/sights-and-bites-circle-island-tour-141477",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.829185,
+        "lng": 21.279346
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/141477/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/RDZLOzvKRVeXaOHkO86R",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/RDZLOzvKRVeXaOHkO86R"
+      ],
+      "tags": [
+        "Farm",
+        "Surf"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:05.627587+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/alohahawaiitours/141477/content/",
+          "status": 200,
+          "bytes": 3938,
+          "sha256": "87b438f064b8750c43e91f969de060b39a578e694057b4e264eaadd430e7b45d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/alohahawaiitours/141477/structured-description/",
+          "status": 200,
+          "bytes": 2924,
+          "sha256": "50fb41db0084bdf328f09c076e85b0a570250f22c5c0e8cbf346ebde8a7e2bf1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/alohahawaiitours/items/141477/",
+          "status": 200,
+          "bytes": 18403,
+          "sha256": "fc3e73f5f00009be402ce619494462cc4bbd8a8b7ca9fd4cf844b1b454042662"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/alohahawaiitours/price-preview/per-item/v2/?asn=fhdn&item_pks=141477&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 649,
+          "sha256": "4d664dfccc4ef7c32c4feed2a10d39e5e04d0dc42d8d2e3539ddf80655cdc993"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/alohahawaiitours/items/141477/ratings/",
+          "status": 200,
+          "bytes": 631,
+          "sha256": "9561744206e6e2f86b4607b88bf315b8359896978f1e4163fa265cdc3b1abe8f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "141477",
+        "provider": "alohahawaiitours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/141477/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 149.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "163820",
+      "company": "alohahawaiitours",
+      "catalogId": "aloha-hawaii-tours-163820",
+      "slug": "pearl-harbor-city-tour-uss-arizona-memorial-163820",
+      "title": "Pearl Harbor City Tour / USS Arizona Memorial",
+      "operator": "Aloha Hawaii Tours",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-city-tour-uss-arizona-memorial-163820",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.829185,
+        "lng": 21.279346
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/163820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/T6HmzNNxSAu6KxpCM1Qy",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/T6HmzNNxSAu6KxpCM1Qy"
+      ],
+      "tags": [
+        "Attraction",
+        "Boat Tour",
+        "City Tour",
+        "Ferry",
+        "History Tour",
+        "Museum",
+        "Transportation"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:05.628624+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/alohahawaiitours/163820/content/",
+          "status": 200,
+          "bytes": 5119,
+          "sha256": "dce7dc8860d8aff097c1b34544ffaaf4b976b27e36c9aadeac8611cdc4a879f6"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/alohahawaiitours/163820/structured-description/",
+          "status": 200,
+          "bytes": 2950,
+          "sha256": "59dd88b57ca8698453bab5f6c620d5fb142e6b91f82683f3beb64cbf1bcaec99"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/alohahawaiitours/items/163820/",
+          "status": 200,
+          "bytes": 17695,
+          "sha256": "bd453828963ec18496a416bd565b687186d0bd0a67cc31847e8f0cfa6b2cc78d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/alohahawaiitours/price-preview/per-item/v2/?asn=fhdn&item_pks=163820&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 691,
+          "sha256": "26c3a17311b7b626ad5ed5df48175e588d8e562caf8374894f3d06c4e0608acd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/alohahawaiitours/items/163820/ratings/",
+          "status": 200,
+          "bytes": 639,
+          "sha256": "fbbafd16ae7be34039f36be442dbde3b912a542429e8f9e094d0416ab23251a6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "163820",
+        "provider": "alohahawaiitours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/163820/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 69.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "201636",
+      "company": "andyoucreations",
+      "catalogId": "and-you-creations-201636",
+      "slug": "ocean-and-you-201636",
+      "title": "Ocean and You",
+      "operator": "And You Creations",
+      "publicPath": "/destinations/hawaii/honolulu/tours/ocean-and-you-201636",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.8581021,
+        "lng": 21.2919685
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/201636/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/jqDLeHsfSNKuL9m0yJRh",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/jqDLeHsfSNKuL9m0yJRh"
+      ],
+      "tags": [
+        "Boat Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:05.629949+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/201636/content/",
+          "status": 200,
+          "bytes": 6767,
+          "sha256": "bf332d6c04a4dd3ddfc0b424ddd8e13c3af2fac0c375c406e1d6b39e25a2ee7f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/201636/structured-description/",
+          "status": 200,
+          "bytes": 2863,
+          "sha256": "81ca74a8cf721133ca44e1d230c0f69e57f5024f107cc01ffaf044494aacf69f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/201636/",
+          "status": 200,
+          "bytes": 22741,
+          "sha256": "0d73e63e9dc13864ba198651e65caea76bb177a9ac9e327d6ebbda520d9fa18a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/andyoucreations/price-preview/per-item/v2/?asn=fhdn&item_pks=201636&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "3a61e732108cc26f464797c5edf2f4ee2c9f261489607135d93c43524a189e43"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/201636/ratings/",
+          "status": 200,
+          "bytes": 510,
+          "sha256": "f4e18480fee628f34536a59a7405545f3141d5b245a7f1845106c68df76ffcb0"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "201636",
+        "provider": "andyoucreations",
+        "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/201636/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "334772",
+      "company": "andyoucreations",
+      "catalogId": "and-you-creations-334772",
+      "slug": "whales-and-you-334772",
+      "title": "Whales and You",
+      "operator": "And You Creations",
+      "publicPath": "/destinations/hawaii/honolulu/tours/whales-and-you-334772",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.8581021,
+        "lng": 21.2919685
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/334772/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/jGba9HUMRXSeKyD8ULPT",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/jGba9HUMRXSeKyD8ULPT"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Whale Watch"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:05.629646+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/334772/content/",
+          "status": 200,
+          "bytes": 9458,
+          "sha256": "cf4b789cd90719952036fab76158ebdd9e2c5b291d3f8e5de5b12691237e3ad0"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/334772/structured-description/",
+          "status": 200,
+          "bytes": 5499,
+          "sha256": "ad27dafafa53b559310b47b3374dff1181b0d63c7a0da70163c3e35da3e3c111"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/334772/",
+          "status": 200,
+          "bytes": 20610,
+          "sha256": "b95670ca56df4aefe7195a57ab84ed279eb2360762dc7760b848f5e31b33ca45"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/andyoucreations/price-preview/per-item/v2/?asn=fhdn&item_pks=334772&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 757,
+          "sha256": "7f167a0cd4c2e72a82bf314d1b5904e64664721e06394c9251392b12dec5468d"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/334772/ratings/",
+          "status": 200,
+          "bytes": 511,
+          "sha256": "1cf7e5b407bbb65171257ab186461943b713154ab44d1f9309fc47dd3bd47c40"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "334772",
+        "provider": "andyoucreations",
+        "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/334772/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "368817",
+      "company": "andyoucreations",
+      "catalogId": "and-you-creations-368817",
+      "slug": "turtles-and-you-368817",
+      "title": "Turtles and You",
+      "operator": "And You Creations",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtles-and-you-368817",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.8581021,
+        "lng": 21.2919685
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/368817/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/6FcyxAhyRQqxAx6BjZwn",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/6FcyxAhyRQqxAx6BjZwn"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Dolphin"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:07.959598+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/368817/content/",
+          "status": 200,
+          "bytes": 7813,
+          "sha256": "29ee02302daa4cff1957f48b83c0c28c64c37a8af33dd36fe904ff10c0914a6a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/andyoucreations/368817/structured-description/",
+          "status": 200,
+          "bytes": 4030,
+          "sha256": "5f85180929a300ab88924f1ca7d288913750a250cdb2527e85b5b7956de850d2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/368817/",
+          "status": 200,
+          "bytes": 19489,
+          "sha256": "6ffb9c2030a1bb71ad071e775ea3f1fb26bc3610cbd0123053794455f775744d"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/andyoucreations/price-preview/per-item/v2/?asn=fhdn&item_pks=368817&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 646,
+          "sha256": "745ae346d87189498868825ce9c26808006953f5288f9a2f5779335c3ed419ff"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/andyoucreations/items/368817/ratings/",
+          "status": 200,
+          "bytes": 512,
+          "sha256": "11029ed0c5ce8dc038b07f6f569d28b1f466caef260925756f10bcf6a68359ec"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "368817",
+        "provider": "andyoucreations",
+        "bookingUrl": "https://fareharbor.com/embeds/book/andyoucreations/items/368817/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 125.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "547932",
+      "company": "bikehawaii",
+      "catalogId": "bike-hawaii-547932",
+      "slug": "e-bike-tour-honolulu-rainforest-ride-547932",
+      "title": "E-Bike Tour – Honolulu Rainforest Ride",
+      "operator": "Bike Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/e-bike-tour-honolulu-rainforest-ride-547932",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/547932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/5AaBMHHhStfHCNQGta4i",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/5AaBMHHhStfHCNQGta4i"
+      ],
+      "tags": [
+        "Bike Tour",
+        "E",
+        "Bike",
+        "Eco Tour",
+        "Guided Tour",
+        "History Tour",
+        "Sightseeing Tour",
+        "Wildlife"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:08.376307+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/547932/content/",
+          "status": 200,
+          "bytes": 3735,
+          "sha256": "35b8f3ea7161ad8cf98d747b2a7bd69a2a99d68cd84d6b587202ff1acd3e5099"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/547932/structured-description/",
+          "status": 200,
+          "bytes": 2811,
+          "sha256": "96b530b63bd9bb28fbe2a2ad9762e2fff93e4d41cd377d950eb47bec490c87a3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/547932/",
+          "status": 200,
+          "bytes": 13252,
+          "sha256": "57128c0fdb33ecdef7646c53d6d7a5ca6fdafc2f67305371884727fb2b1cae06"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=547932&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 532,
+          "sha256": "4e59a3e91add1fc4e2c34e7d025a1e325068dc6feaea91835e9c286b24d6c5c9"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/547932/ratings/",
+          "status": 200,
+          "bytes": 611,
+          "sha256": "3504e75e0f99669e30300e846d755f0a5e8a72354d56020336a7e9fba77a47fe"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "547932",
+        "provider": "bikehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/547932/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 140.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "547939",
+      "company": "bikehawaii",
+      "catalogId": "bike-hawaii-547939",
+      "slug": "hawaii-volcanic-rainforest-hike-547939",
+      "title": "Hawaii Volcanic Rainforest Hike",
+      "operator": "Bike Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaii-volcanic-rainforest-hike-547939",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/547939/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/LVnE4XMfTHKYIILh7VjM",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/LVnE4XMfTHKYIILh7VjM"
+      ],
+      "tags": [
+        "Eco Tour",
+        "Hiking",
+        "History Tour",
+        "Photography Tour",
+        "Sightseeing Tour",
+        "Walking Tour",
+        "Wildlife"
+      ],
+      "categories": [
+        "cycling",
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:08.517266+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/547939/content/",
+          "status": 200,
+          "bytes": 2873,
+          "sha256": "b4165061ad11011b38912ce05238f6986c88524da4c26f2913ff78e5defdf812"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/547939/structured-description/",
+          "status": 200,
+          "bytes": 2064,
+          "sha256": "ef359171988667e2790c27c4391cd44b152c9b7bbfcba99f173c6b931da6cf2b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/547939/",
+          "status": 200,
+          "bytes": 11923,
+          "sha256": "f34a9b6e0dffcb24872af11c43016c6dd90809adea61ed8c6012098ce79fc151"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=547939&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 840,
+          "sha256": "d1cb67415464c354eb9c8fd43fd088050c2515ac70148d38603667ac11942b10"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/547939/ratings/",
+          "status": 200,
+          "bytes": 598,
+          "sha256": "01afd555e01fa4039cced7f79de84e290bf5a4ffda313a39d3f0872bc33b2240"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "547939",
+        "provider": "bikehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/547939/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 90.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "556053",
+      "company": "bikehawaii",
+      "catalogId": "bike-hawaii-556053",
+      "slug": "downhill-bike-and-koolau-waterfall-hike-556053",
+      "title": "Downhill Bike & Ko’olau Waterfall Hike",
+      "operator": "Bike Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/downhill-bike-and-koolau-waterfall-hike-556053",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556053/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/OOXQLsdT26HqOyGfBtgP",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/OOXQLsdT26HqOyGfBtgP"
+      ],
+      "tags": [
+        "Bike Rental",
+        "Bike Tour",
+        "Eco Tour",
+        "Hiking",
+        "History Tour",
+        "Sightseeing Tour",
+        "Walking Tour",
+        "Wildlife"
+      ],
+      "categories": [
+        "cycling",
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:08.554415+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556053/content/",
+          "status": 200,
+          "bytes": 4289,
+          "sha256": "59634ed4540a6820652927d4f9f27dfe569f10fe0c1fe75c01f8a1605d813ec3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556053/structured-description/",
+          "status": 200,
+          "bytes": 3222,
+          "sha256": "60356ddbfefffe65178bd7b70aea8ad2307d07db725579d7a9262b3ed9b19893"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556053/",
+          "status": 200,
+          "bytes": 13496,
+          "sha256": "0d8e8f0c201f5d21cf39eaf631cce85be9c85cf96d8464d856a4b89cdf9a1d85"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=556053&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 654,
+          "sha256": "b8cacd8f4e7086189dc0d60ad7182d91c8b4ba3d9ebfdc1dd217bff3f5d87a88"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556053/ratings/",
+          "status": 200,
+          "bytes": 615,
+          "sha256": "01610880d596231c14169e6d36a4e5529f45ca38cd564cd4af6a104206d59fd6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "556053",
+        "provider": "bikehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556053/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 175.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "556071",
+      "company": "bikehawaii",
+      "catalogId": "bike-hawaii-556071",
+      "slug": "rainforest-to-reef-tour-full-day-556071",
+      "title": "Rainforest to Reef tour: Full-Day",
+      "operator": "Bike Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/rainforest-to-reef-tour-full-day-556071",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/LC6xX9fRHSYDWY665hda",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/LC6xX9fRHSYDWY665hda"
+      ],
+      "tags": [
+        "Bike Rental",
+        "Bike Tour",
+        "Boat Tour",
+        "Catamaran",
+        "Eco Tour",
+        "Guided Tour",
+        "Hiking",
+        "History Tour",
+        "Walking Tour",
+        "Water Activities",
+        "Wildlife"
+      ],
+      "categories": [
+        "cycling",
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:10.629304+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556071/content/",
+          "status": 200,
+          "bytes": 4488,
+          "sha256": "7860cca062aa121d032feae4437e8f1283d493ab5b958bf3ab028aa00b2b6bb1"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556071/structured-description/",
+          "status": 200,
+          "bytes": 3237,
+          "sha256": "332927947f4a449c0ac557461a4fc4d62a2aa10ad556c2cf3dc00ecfdace2a91"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556071/",
+          "status": 200,
+          "bytes": 14202,
+          "sha256": "bd659635bf71bd84f8be629c415b4debbeeefdc0f9f16a117d6204883f898ba6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=556071&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 654,
+          "sha256": "507806fe2e1433c16f930c82ebb85ba7f26eae95f6dd07db18c687c63838e498"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556071/ratings/",
+          "status": 200,
+          "bytes": 601,
+          "sha256": "b9864f026a3f799c8efb078a971c466b953ca90bc2e1f76e1f6c1368b68be4ee"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "556071",
+        "provider": "bikehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556071/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 260.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "556977",
+      "company": "bikehawaii",
+      "catalogId": "bike-hawaii-556977",
+      "slug": "downhill-bike-adventure-556977",
+      "title": "Downhill Bike Adventure",
+      "operator": "Bike Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/downhill-bike-adventure-556977",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556977/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/d5iM3tqRmW6kEjfs1s4Z",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/d5iM3tqRmW6kEjfs1s4Z"
+      ],
+      "tags": [
+        "Bike Rental",
+        "Bike Tour",
+        "Eco Tour",
+        "Guided Tour",
+        "History Tour",
+        "Sightseeing Tour",
+        "Wildlife"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:10.752577+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556977/content/",
+          "status": 200,
+          "bytes": 2739,
+          "sha256": "85b8e7d9d62a1965f0bf97ee6b6691ce6232c86ad2d9bb89a1d7ba18ef4b606c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/bikehawaii/556977/structured-description/",
+          "status": 200,
+          "bytes": 1803,
+          "sha256": "6ed5ae6b9247ef2048c7e2d230ffbd3ec0821635bae7b800d89bb7dcdfd9252b"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556977/",
+          "status": 200,
+          "bytes": 11223,
+          "sha256": "541b0bf8430afb95851378f99689be41db1f30f853b41d66e7c90e5c9b0831f9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/bikehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=556977&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 650,
+          "sha256": "f102261d2efea2da534842cf7ef30b0ae6e7a2bffcd573331818bf698c30eb75"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/bikehawaii/items/556977/ratings/",
+          "status": 200,
+          "bytes": 590,
+          "sha256": "6b34336875bc148ae7044f77ca7b38f6ccf273169d06b9d7c88bc1eb5a467130"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "556977",
+        "provider": "bikehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/bikehawaii/items/556977/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 95.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "114800",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-114800",
+      "slug": "private-bike-tour-experience-114800",
+      "title": "Private Bike Tour Experience",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/private-bike-tour-experience-114800",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/114800/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/VGnDcJlRQRunimhP9Hqp",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/VGnDcJlRQRunimhP9Hqp"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:10.809205+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/114800/content/",
+          "status": 200,
+          "bytes": 2647,
+          "sha256": "77242ef220a044d22062601c1aca11255397b113a30496a80e2c7565aaf8251c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/114800/structured-description/",
+          "status": 200,
+          "bytes": 1409,
+          "sha256": "85e3dcc248f695f9f96f8d6342a118469e1bcc6f883df9cf770b21bc468d46d0"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/114800/",
+          "status": 200,
+          "bytes": 16879,
+          "sha256": "b9c8fe5678cce115ddd0baa59de12374c4d6977f0a6f49536143f943677dc9bd"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=114800&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 775,
+          "sha256": "96ebac9b15d88829efc5bc671ae707b7c11b7e43a776fa11f4121f5fba4e128a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/114800/ratings/",
+          "status": 200,
+          "bytes": 423,
+          "sha256": "2c475dd5a1dfdce790006f800e53391a361bb00777ea1765764487d185affa2e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "114800",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/114800/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 199.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "20498",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-20498",
+      "slug": "diamond-head-bike-to-hike-20498",
+      "title": "Diamond Head Bike to Hike",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/diamond-head-bike-to-hike-20498",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/20498/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://www.filepicker.io/api/file/zgPMYNRsQ6PTdImCq7Q0",
+      "galleryImages": [
+        "https://www.filepicker.io/api/file/zgPMYNRsQ6PTdImCq7Q0"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling",
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:11.325641+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/20498/content/",
+          "status": 200,
+          "bytes": 4518,
+          "sha256": "ee732efbd584d918883caff03cfd1d3a905efb7735c437e6216b16c1e81ac059"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/20498/structured-description/",
+          "status": 200,
+          "bytes": 2838,
+          "sha256": "3e966acd60871b8dcecc2804a57e487e8f2d7256247755b3c77b914e92be82fa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/20498/",
+          "status": 200,
+          "bytes": 28411,
+          "sha256": "c410b8b5ce3b2365de0400a99b741887b11d9198424082b12bc58d9d6509057a"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=20498&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 774,
+          "sha256": "e8d5e8ac068a818505bb5b988542deaf711b6634e74a634d9de9a4bf06cf38ff"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/20498/ratings/",
+          "status": 200,
+          "bytes": 418,
+          "sha256": "f2255060f7d1ea2ad2ee24aa1dfeb6b6f24a287786d9ad94f4860ec6ed77485d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "20498",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/20498/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 169.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "20506",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-20506",
+      "slug": "hawaiian-foodie-bike-tour-20506",
+      "title": "Hawaiian Foodie Bike Tour",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaiian-foodie-bike-tour-20506",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/20506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://www.filepicker.io/api/file/VtICGX5cSDqyBvOS8q0N",
+      "galleryImages": [
+        "https://www.filepicker.io/api/file/VtICGX5cSDqyBvOS8q0N"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:12.755173+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/20506/content/",
+          "status": 200,
+          "bytes": 3823,
+          "sha256": "b4ca14bd7a57ea475e7b1720dfd22407cc1ffeb646f589011830ce8eec91c452"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/20506/structured-description/",
+          "status": 200,
+          "bytes": 2606,
+          "sha256": "c190c53e255f5e68b061647372764aca68bb0bee51db42b09b4a7870e0bd6258"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/20506/",
+          "status": 200,
+          "bytes": 23246,
+          "sha256": "3fe528bf8d48c0c14723319a6a477aa3a8c14107f412a651cbb72dc41e60160f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=20506&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1033,
+          "sha256": "5e71f463cbade5c2a8bb767ac552f85607b4a6ff8a7e694f865a81c6ac55befc"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/20506/ratings/",
+          "status": 200,
+          "bytes": 418,
+          "sha256": "d421cfa1a9c115d56541f6fc82abc3dc00440b86ed341dac675e3798cee3c74e"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "20506",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/20506/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 189.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "395815",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-395815",
+      "slug": "open-house-real-estate-bike-tour-395815",
+      "title": "Open House Real Estate Bike Tour",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/open-house-real-estate-bike-tour-395815",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/395815/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/q2gKJL8aSwyoHbhpR4fe",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/q2gKJL8aSwyoHbhpR4fe"
+      ],
+      "tags": [
+        "Bike Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:12.842341+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/395815/content/",
+          "status": 200,
+          "bytes": 3979,
+          "sha256": "5a6cba7841624c2ea74edcc62fc56c6c8cd6b47b56151344508c8d46ef739507"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/395815/structured-description/",
+          "status": 200,
+          "bytes": 2691,
+          "sha256": "da1078096a4bea4494afa34a9558ae3e80522f4e2ba9d7432907b8d835e16f29"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/395815/",
+          "status": 200,
+          "bytes": 13958,
+          "sha256": "647d6c499d23cf894ec8877e11b713560463321e7cd0ed5d4fb818cd22bdb97f"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=395815&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 775,
+          "sha256": "cb15852b3e77d52b356dcedf06437957e75c1432fc84879ffdc79936d8f798d7"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/395815/ratings/",
+          "status": 200,
+          "bytes": 436,
+          "sha256": "e36f13ff7099d45808a145b202015ea80a547cdbf20c9c7f40aef0cc18c38f4a"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "395815",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/395815/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 169.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "558599",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-558599",
+      "slug": "hawaii-foodie-budget-bike-tour-558599",
+      "title": "Hawaii Foodie Budget Bike Tour",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/hawaii-foodie-budget-bike-tour-558599",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/558599/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/DmounhDRIuE4XYuWglsz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/DmounhDRIuE4XYuWglsz"
+      ],
+      "tags": [
+        "Bike Tour",
+        "Food Tour",
+        "Guided Tour"
+      ],
+      "categories": [
+        "cycling"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:13.623761+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/558599/content/",
+          "status": 200,
+          "bytes": 2845,
+          "sha256": "b4a547d5112e58a527da039d64f8ef968e178dee2f0419a61f005969b96488c9"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/558599/structured-description/",
+          "status": 200,
+          "bytes": 1901,
+          "sha256": "f1d6cea1ab6a8af9c147a0abed4b472cc52ad215960bdd0e2d432a0242416645"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/558599/",
+          "status": 200,
+          "bytes": 13191,
+          "sha256": "78619951c345ab84e0e5f6719c5ba105219a9306ebf9c401f61c60bb5546c3e6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=558599&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 775,
+          "sha256": "84cee6311622c8b2943dad163931603fba583bb25cc4e8d16f9e64fb9033f575"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/558599/ratings/",
+          "status": 200,
+          "bytes": 426,
+          "sha256": "e0226dc170462f0e9b3963cab4c31e293c2864a83be9be52fc6e43cd4e3ee64b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "558599",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/558599/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 119.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "58782",
+      "company": "biketourhawaii",
+      "catalogId": "bike-tour-hawaii-58782",
+      "slug": "manoa-falls-electric-bike-to-hike-58782",
+      "title": "Manoa Falls Electric Bike to Hike",
+      "operator": "Bike Tour Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/manoa-falls-electric-bike-to-hike-58782",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/58782/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/XQDrl6hHS3e4iO2Kfi12",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/XQDrl6hHS3e4iO2Kfi12"
+      ],
+      "tags": [
+        "Bike Tour",
+        "Hiking"
+      ],
+      "categories": [
+        "cycling",
+        "hiking"
+      ],
+      "primaryDisplayCategory": "Cycling",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:15.103946+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/58782/content/",
+          "status": 200,
+          "bytes": 5562,
+          "sha256": "ecba218a795f85b31b3a426af0d9a9f66bba270d87ab544d97fe49f4ff693616"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/biketourhawaii/58782/structured-description/",
+          "status": 200,
+          "bytes": 3632,
+          "sha256": "494faa3c2be89f693988ef6fa26550e8e0d3c57bd4bd0a4638ae2784455d2d49"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/58782/",
+          "status": 200,
+          "bytes": 28617,
+          "sha256": "14aa3e7895038be02351fc207a86c01da5f08aeca5901dce6aba6c7b26ec5611"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/biketourhawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=58782&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 659,
+          "sha256": "83e49a562eec5f9c363f6ef251509ddd27a52236d98659680413c1367a08200e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/biketourhawaii/items/58782/ratings/",
+          "status": 200,
+          "bytes": 427,
+          "sha256": "47b161b1679e1dc1a898d7527ffbcbed214045a1abc19c57e9a8c2c11bc43bfe"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "58782",
+        "provider": "biketourhawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/biketourhawaii/items/58782/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 179.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "663537",
+      "company": "divealohascuba",
+      "catalogId": "aloha-scuba-diving-co-663537",
+      "slug": "divemaster-663537",
+      "title": "Divemaster",
+      "operator": "Aloha Scuba Diving Co.",
+      "publicPath": "/destinations/hawaii/honolulu/tours/divemaster-663537",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.839599,
+        "lng": 21.290005
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/divealohascuba/items/663537/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/yZhWAnlmTmqPbEsCAjz2",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/yZhWAnlmTmqPbEsCAjz2"
+      ],
+      "tags": [
+        "Scuba"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:15.419211+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/divealohascuba/663537/content/",
+          "status": 200,
+          "bytes": 14065,
+          "sha256": "cb5c922e4c6b4c67a74a4153d0ee6d2e74ebf6cd84b17158230322e56a779f8a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/divealohascuba/663537/structured-description/",
+          "status": 200,
+          "bytes": 8488,
+          "sha256": "31da7e9f3d63c4a8245d48d99f42cf8d98ac4eecd13ba7940c61d33f6696b5ea"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/divealohascuba/items/663537/",
+          "status": 200,
+          "bytes": 11100,
+          "sha256": "0daec5a4d19074169861122488c950db66c5e366152f48cf55e13db68e52aaa2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/divealohascuba/price-preview/per-item/v2/?asn=fhdn&item_pks=663537&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 540,
+          "sha256": "0f67e1e333afde8f64b44bc38973433c795e317c13df0f6bf2183330af563d26"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/divealohascuba/items/663537/ratings/",
+          "status": 200,
+          "bytes": 509,
+          "sha256": "bb632ca8021e8dca16c3c1e0c3c865337653d1995f29a07e4a4073cc35439f42"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "663537",
+        "provider": "divealohascuba",
+        "bookingUrl": "https://fareharbor.com/embeds/book/divealohascuba/items/663537/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 1999.0,
+        "currency": "USD",
+        "singular": "Divemaster"
+      }
+    },
+    {
+      "itemId": "3108",
+      "company": "diveoahu",
+      "catalogId": "dive-oahu-3108",
+      "slug": "night-dives-3108",
+      "title": "Night Dives",
+      "operator": "Dive Oahu",
+      "publicPath": "/destinations/hawaii/honolulu/tours/night-dives-3108",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855534,
+        "lng": 21.293701
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/3108/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/LnAYJniuRkq7i5aQsKKu",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/LnAYJniuRkq7i5aQsKKu"
+      ],
+      "tags": [
+        "Scuba"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:15.533794+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/3108/content/",
+          "status": 200,
+          "bytes": 5307,
+          "sha256": "a1ca9ad344a655c415f1338970a33f8543822203d4d6a1c132b6b3461f5c7cd7"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/3108/structured-description/",
+          "status": 200,
+          "bytes": 2464,
+          "sha256": "0af62ee7daf15e66a8491d96482eee5706f562290d6b93fedcaffae77a4ea9e3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/3108/",
+          "status": 200,
+          "bytes": 14624,
+          "sha256": "12770ca07262a318b298db1963a634468fbd15fd5b32558fb2de5fd43ee7c5c6"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/diveoahu/price-preview/per-item/v2/?asn=fhdn&item_pks=3108&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 662,
+          "sha256": "c7866995782be6c304793e2504ea64a0303d8dba6a00461d0f035f8c682ec71c"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/3108/ratings/",
+          "status": 200,
+          "bytes": 567,
+          "sha256": "a930a2ec04423e2c2ddf4913a6ec696a4c90453cc4f78f5e065538d3c690cd13"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "3108",
+        "provider": "diveoahu",
+        "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/3108/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Rider"
+      }
+    },
+    {
+      "itemId": "8984",
+      "company": "diveoahu",
+      "catalogId": "dive-oahu-8984",
+      "slug": "shallow-reefs-tour-8984",
+      "title": "Shallow Reefs Tour",
+      "operator": "Dive Oahu",
+      "publicPath": "/destinations/hawaii/honolulu/tours/shallow-reefs-tour-8984",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855534,
+        "lng": 21.293701
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/8984/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/vzudqlKpQOyuuV8myDDX",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/vzudqlKpQOyuuV8myDDX"
+      ],
+      "tags": [
+        "Guided Tour",
+        "Scuba",
+        "Snorkel",
+        "Wildlife"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:17.237929+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/8984/content/",
+          "status": 200,
+          "bytes": 7090,
+          "sha256": "13cee2c97245efd6189b44fcbd8a20dfa512856903dd0aa50987f87172672054"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/8984/structured-description/",
+          "status": 200,
+          "bytes": 2813,
+          "sha256": "5201077e2741820cabf1314a3ff7145901dcde83439ce18a9bda2d6a6070177d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/8984/",
+          "status": 200,
+          "bytes": 19392,
+          "sha256": "315391b5462dbc2ed47f3d4202b63e27de7d283a0b0ea6d6a382db5ccb2fd362"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/diveoahu/price-preview/per-item/v2/?asn=fhdn&item_pks=8984&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1324,
+          "sha256": "8f84684426dfe294adc176943832e0b06b785a4347b17075fd821658a63dc6a8"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/8984/ratings/",
+          "status": 200,
+          "bytes": 574,
+          "sha256": "54cce81dbc6176c6e18b7cd7f998b92ae5449e84a402afc3094966f6fddcc0d6"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "8984",
+        "provider": "diveoahu",
+        "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/8984/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 79.0,
+        "currency": "USD",
+        "singular": "Rider Youth"
+      }
+    },
+    {
+      "itemId": "9120",
+      "company": "diveoahu",
+      "catalogId": "dive-oahu-9120",
+      "slug": "wreck-and-reef-tour-9120",
+      "title": "Wreck & Reef Tour",
+      "operator": "Dive Oahu",
+      "publicPath": "/destinations/hawaii/honolulu/tours/wreck-and-reef-tour-9120",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855534,
+        "lng": 21.293701
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/9120/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/QGb2pjpCT6CeIKoFIGZO",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/QGb2pjpCT6CeIKoFIGZO"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Dolphin",
+        "Guided Tour",
+        "Scuba",
+        "Snorkel",
+        "Water Activities",
+        "Wildlife"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:17.807967+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/9120/content/",
+          "status": 200,
+          "bytes": 6663,
+          "sha256": "bc70a5d91f69e47cef582332a08b9c7d3a3b59f98f294c1a56b69bf4fa73d7db"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/diveoahu/9120/structured-description/",
+          "status": 200,
+          "bytes": 2780,
+          "sha256": "bb3bf07787c55e1414bcc82318c9c4a760c6288ae78f21bf0c25a23e2009bea3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/9120/",
+          "status": 200,
+          "bytes": 20671,
+          "sha256": "533b9f2c7df70febd2adc3160238318f735182e0513cca6d9c66a737bf1f3349"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/diveoahu/price-preview/per-item/v2/?asn=fhdn&item_pks=9120&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 662,
+          "sha256": "e4d89a305122b71d36b9ff1f680aa774fd934949e3c8b1714d6679af394b1753"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/diveoahu/items/9120/ratings/",
+          "status": 200,
+          "bytes": 578,
+          "sha256": "5254e0351331fac760e5a3b4d6be7b260b755a420ca85afcf33faa2f5093ebf9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "9120",
+        "provider": "diveoahu",
+        "bookingUrl": "https://fareharbor.com/embeds/book/diveoahu/items/9120/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 99.0,
+        "currency": "USD",
+        "singular": "Rider"
+      }
+    },
+    {
+      "itemId": "42966",
+      "company": "enoatours",
+      "catalogId": "e-noa-corporation-42966",
+      "slug": "pearl-harbor-city---from-waikiki-42966",
+      "title": "Pearl Harbor City - from Waikiki",
+      "operator": "E Noa Corporation",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-city---from-waikiki-42966",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.85814,
+        "lng": 21.309884
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/enoatours/items/42966/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/6OoaRumCQ7WwcW4l80gz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/6OoaRumCQ7WwcW4l80gz"
+      ],
+      "tags": [
+        "Bus Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:17.909766+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/enoatours/42966/content/",
+          "status": 200,
+          "bytes": 5330,
+          "sha256": "f58778a69cf925a2dd3c0c8b7fee8bbbb303ffebb70eb4777a0506cec53818cb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/enoatours/42966/structured-description/",
+          "status": 200,
+          "bytes": 2634,
+          "sha256": "fefa28e352189668ef43b443a65e515aec2c77895e274cab9aaa94355fb523b2"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/enoatours/items/42966/",
+          "status": 200,
+          "bytes": 13787,
+          "sha256": "4ece5c1194f2e68df0eb60d6d6019e88c26e8c6f828a919dbe2523fcb2a2223b"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/enoatours/price-preview/per-item/v2/?asn=fhdn&item_pks=42966&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 768,
+          "sha256": "7145a7841d6cb3a9ec14a499f647fea856dcf697bfcb827c84a75c80284eb929"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/enoatours/items/42966/ratings/",
+          "status": 200,
+          "bytes": 602,
+          "sha256": "1de781d595b1debd96579ccd5c2e68d2db303d02ade319b71fc2c3b97d9f19f2"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "42966",
+        "provider": "enoatours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/enoatours/items/42966/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 69.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "9620",
+      "company": "enoatours",
+      "catalogId": "e-noa-corporation-9620",
+      "slug": "pearl-harbor-remembered-a---from-waikiki-9620",
+      "title": "Pearl Harbor Remembered A - from Waikiki",
+      "operator": "E Noa Corporation",
+      "publicPath": "/destinations/hawaii/honolulu/tours/pearl-harbor-remembered-a---from-waikiki-9620",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.85814,
+        "lng": 21.309884
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/enoatours/items/9620/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://www.filepicker.io/api/file/jEWLxe6SQ7ymcoET64Gw",
+      "galleryImages": [
+        "https://www.filepicker.io/api/file/jEWLxe6SQ7ymcoET64Gw"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Sightseeing Tour"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:19.208690+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/enoatours/9620/content/",
+          "status": 200,
+          "bytes": 6381,
+          "sha256": "edc21bb022caa6ead9c8f162d89d2b1970147b2b4a009a31b0f433254f78f941"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/enoatours/9620/structured-description/",
+          "status": 200,
+          "bytes": 3457,
+          "sha256": "0c63bf6aedc1d9cf5e5aa60f39658b9676666e77f4449cf9bafdb69793eb06b3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/enoatours/items/9620/",
+          "status": 200,
+          "bytes": 17437,
+          "sha256": "1ef4f5a97da941dce7b026b474d7cb6c204892389153e8a46a5beacfac0a40de"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/enoatours/price-preview/per-item/v2/?asn=fhdn&item_pks=9620&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 771,
+          "sha256": "dd80dfaacd8eea67939e1b0fe37a2a93051a0b2922d79ec463fcf1aec189b79b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/enoatours/items/9620/ratings/",
+          "status": 200,
+          "bytes": 608,
+          "sha256": "b12fe6a57f17629254e0ed6b6a3c21a7019d59a608e985d94d808950aa443743"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "9620",
+        "provider": "enoatours",
+        "bookingUrl": "https://fareharbor.com/embeds/book/enoatours/items/9620/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 143.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "476798",
+      "company": "gohawaii-watersports",
+      "catalogId": "go-hawaii-watersports-476798",
+      "slug": "parasailing-476798",
+      "title": "Parasailing",
+      "operator": "Go Hawaii Watersports",
+      "publicPath": "/destinations/hawaii/honolulu/tours/parasailing-476798",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855468,
+        "lng": 21.293682
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/gohawaii-watersports/items/476798/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3gm6nhiTDCOuIWifrwGz",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3gm6nhiTDCOuIWifrwGz"
+      ],
+      "tags": [
+        "Eco Tour",
+        "Parasail",
+        "Sightseeing Tour",
+        "Water Activities"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:19.854989+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/gohawaii-watersports/476798/content/",
+          "status": 200,
+          "bytes": 6229,
+          "sha256": "777fb94b074d755dbfa217df89d420611fc101aa96a5e6e6501e027d2baf1a0a"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/gohawaii-watersports/476798/structured-description/",
+          "status": 200,
+          "bytes": 4058,
+          "sha256": "94bbe2b19abcf8b786344fefcd590eb6161bb3440e66463a7a77ef39b52d0045"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/gohawaii-watersports/items/476798/",
+          "status": 200,
+          "bytes": 16516,
+          "sha256": "c5dc40882e3bb34f7e7e8ab063df2ed415326eb22f05acdfd0fefb697e62a37e"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/gohawaii-watersports/price-preview/per-item/v2/?asn=fhdn&item_pks=476798&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1058,
+          "sha256": "2660801b9c400f4083dbef3ab8693f929d59354024dedb8cb9b3d77871056652"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/gohawaii-watersports/items/476798/ratings/",
+          "status": 200,
+          "bytes": 527,
+          "sha256": "5fbf6012a91f10b47ec93bcfe28d9a4099f8318e7f8ca6211aa5a240eafbced1"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "476798",
+        "provider": "gohawaii-watersports",
+        "bookingUrl": "https://fareharbor.com/embeds/book/gohawaii-watersports/items/476798/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 45.0,
+        "currency": "USD",
+        "singular": "Observer"
+      }
+    },
+    {
+      "itemId": "213714",
+      "company": "hawaiinautical",
+      "catalogId": "hawaii-nautical---oahu-213714",
+      "slug": "waikiki-signature-sunset-sail-213714",
+      "title": "Waikiki Signature Sunset Sail",
+      "operator": "Hawaii Nautical - Oahu",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-signature-sunset-sail-213714",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.8581021,
+        "lng": 21.2919685
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical/items/213714/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3C0VRhcAS6lBwf6I4F2g",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3C0VRhcAS6lBwf6I4F2g"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Catamaran",
+        "Sailing",
+        "Shuttle"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sailing",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:20.208422+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiinautical/213714/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiinautical/213714/structured-description/",
+          "status": 200,
+          "bytes": 5209,
+          "sha256": "73b64a4f6ea232cb68226eab252d45113d3e3193bd0929d0a8de2196e9552b3d"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/213714/",
+          "status": 200,
+          "bytes": 17755,
+          "sha256": "fa784b240fa434ebace2b827476673b41f7137a05752f8d3ea08cad9b23cd4d3"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hawaiinautical/price-preview/per-item/v2/?asn=fhdn&item_pks=213714&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/213714/ratings/",
+          "status": 200,
+          "bytes": 523,
+          "sha256": "e57a00e3db48e61cbd2435dc5b7d3286d53761f65ef7ee2d1675b0a2f631a775"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "213714",
+        "provider": "hawaiinautical",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical/items/213714/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "214395",
+      "company": "hawaiinautical",
+      "catalogId": "hawaii-nautical---oahu-214395",
+      "slug": "waikiki-turtle-snorkel-sail-214395",
+      "title": "Waikiki Turtle Snorkel Sail",
+      "operator": "Hawaii Nautical - Oahu",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-turtle-snorkel-sail-214395",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.8581021,
+        "lng": 21.2919685
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical/items/214395/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/BmPTSFEuToOr5EHQhDDy",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/BmPTSFEuToOr5EHQhDDy"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Sailing",
+        "Shuttle",
+        "Snorkel"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:21.182738+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiinautical/214395/content/",
+          "status": 403,
+          "bytes": 119,
+          "sha256": "8171b0b7a1ffad536052493b94364fd04576dfc40b0857dd6809920a0721331b"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiinautical/214395/structured-description/",
+          "status": 200,
+          "bytes": 5877,
+          "sha256": "197eb7817e57d72f48823dccfeaaf08cc3d4b17c2122ba31beb5581923922b5f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/214395/",
+          "status": 200,
+          "bytes": 18374,
+          "sha256": "a0e0a6bc4896e30293b1957d6fce73aa028d8a12359bac495de1c6dc66a8a9b2"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hawaiinautical/price-preview/per-item/v2/?asn=fhdn&item_pks=214395&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 229,
+          "sha256": "de4c7234077854fe2076d0e09b3d008aff24ee3120fdaa6ffba2c938903bb00a"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiinautical/items/214395/ratings/",
+          "status": 200,
+          "bytes": 521,
+          "sha256": "04817f981c44ba1c161105151ff8c52c8af788949ad9590667f878883dc7c4cf"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "214395",
+        "provider": "hawaiinautical",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hawaiinautical/items/214395/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "640554",
+      "company": "hawaiioceancharters",
+      "catalogId": "hawaii-ocean-charters-640554",
+      "slug": "private-boat-charter-in-waikiki-big-kahuna-640554",
+      "title": "Private Boat Charter in Waikiki \"Big Kahuna\"",
+      "operator": "Hawaii Ocean Charters",
+      "publicPath": "/destinations/hawaii/honolulu/tours/private-boat-charter-in-waikiki-big-kahuna-640554",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855566,
+        "lng": 21.291786
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hawaiioceancharters/items/640554/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/aG3xnD8yTfKQE9WIrE37",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/aG3xnD8yTfKQE9WIrE37"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Sightseeing Tour",
+        "Snorkel"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:21.627853+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiioceancharters/640554/content/",
+          "status": 200,
+          "bytes": 6030,
+          "sha256": "8e4fa2f3d2ea95a03d26983fe0961180f0ff605de0c0fe08f583996142f5e70d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hawaiioceancharters/640554/structured-description/",
+          "status": 200,
+          "bytes": 4728,
+          "sha256": "08b126b3633238bea1bb11560d377591e14c1d253ebf36f77fb9a94d1dd56160"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiioceancharters/items/640554/",
+          "status": 200,
+          "bytes": 17127,
+          "sha256": "a38e08e1375abb471f2940cbd02f64e95f13e8f860e9c3c7be7f36bab253c0dc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hawaiioceancharters/price-preview/per-item/v2/?asn=fhdn&item_pks=640554&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 978,
+          "sha256": "16a0cc49e314ad9f303e7cd7f46c6867e6ffd1ccb47aac49d60efb96ba9828e3"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hawaiioceancharters/items/640554/ratings/",
+          "status": 200,
+          "bytes": 558,
+          "sha256": "d5a4116b34dc915d9e88fdd3a0078b86cb0212b4af3ed38bf15249fc1f87061c"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "640554",
+        "provider": "hawaiioceancharters",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hawaiioceancharters/items/640554/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": false,
+      "priceBasis": null
+    },
+    {
+      "itemId": "991",
+      "company": "hhsurf",
+      "catalogId": "hans-hedemann-south-shore-queen-kapiolani-991",
+      "slug": "surf-lessons-991",
+      "title": "Surf Lessons",
+      "operator": "Hans Hedemann South Shore (Queen Kapiolani)",
+      "publicPath": "/destinations/hawaii/honolulu/tours/surf-lessons-991",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.821093,
+        "lng": 21.272028
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/hhsurf/items/991/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/3f1C2x1VQ5C00uCMc1ol",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/3f1C2x1VQ5C00uCMc1ol"
+      ],
+      "tags": [
+        "Surf",
+        "Water Activities"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:22.184546+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/hhsurf/991/content/",
+          "status": 200,
+          "bytes": 3419,
+          "sha256": "f8ad59ccd8c3ecf475cb821c5d2939a70a1049c33b0802d0e9510145a8b952cc"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/hhsurf/991/structured-description/",
+          "status": 200,
+          "bytes": 2410,
+          "sha256": "010bb773b6d1742574217a6f56ba546ee83c7c58296a2bbf7f20c094c0a1f7ea"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/hhsurf/items/991/",
+          "status": 200,
+          "bytes": 13852,
+          "sha256": "5d0bb0c4e973165e836b0377f90894388cd8be7252684474b7613da662d69ac9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/hhsurf/price-preview/per-item/v2/?asn=fhdn&item_pks=991&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1407,
+          "sha256": "a7b1091b32d7e5950714210506fab0a2177181747f370be6ebc6b3bffb702dfd"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/hhsurf/items/991/ratings/",
+          "status": 200,
+          "bytes": 499,
+          "sha256": "781da2da63058ac28d6f507a087b35de16d4cbc1f6a824d13d4f7ae992ad1595"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "991",
+        "provider": "hhsurf",
+        "bookingUrl": "https://fareharbor.com/embeds/book/hhsurf/items/991/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 100.0,
+        "currency": "USD",
+        "singular": "Group Lesson"
+      }
+    },
+    {
+      "itemId": "284519",
+      "company": "livingoceanscuba",
+      "catalogId": "living-ocean-tours-284519",
+      "slug": "turtle-canyons-snorkel-excursion-284519",
+      "title": "Turtle Canyons Snorkel Excursion",
+      "operator": "Living Ocean Tours",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtle-canyons-snorkel-excursion-284519",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855414,
+        "lng": 21.292381
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/284519/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/I0sGDrfjQKmfZKhduuxP",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/I0sGDrfjQKmfZKhduuxP"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Dolphin",
+        "Events",
+        "Fishing",
+        "Snorkel"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:22.643208+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/284519/content/",
+          "status": 200,
+          "bytes": 13286,
+          "sha256": "1868a1a06b94e7afcc8a28419a1bbc6b21d04b09fc7ccf96615091a59233f6ac"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/284519/structured-description/",
+          "status": 200,
+          "bytes": 6786,
+          "sha256": "2529fb35c6e875ebfe5ae6c66acc46d40e5cbb7e400d09c6d3db7360b051d53c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/284519/",
+          "status": 200,
+          "bytes": 18501,
+          "sha256": "548a734c9f475691ee1a92e041c7e4936c6fa866650a6c38a0d1104f83db3de9"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/livingoceanscuba/price-preview/per-item/v2/?asn=fhdn&item_pks=284519&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1203,
+          "sha256": "b6008d724b34a7870e253c18d1c02d96744e43e10b31d5cfa875a1dd88a3f217"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/284519/ratings/",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "02e99b7dca55fc541bc2b9aa95a952a3c0977a80e8b2735a0cb8e270cae9b3d9"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "284519",
+        "provider": "livingoceanscuba",
+        "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/284519/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 89.0,
+        "currency": "USD",
+        "singular": "Person Ages 3+: Non-Refundable • All Sales are Final"
+      }
+    },
+    {
+      "itemId": "323935",
+      "company": "livingoceanscuba",
+      "catalogId": "living-ocean-tours-323935",
+      "slug": "waikiki-sunset-cruise-byob-323935",
+      "title": "Waikiki Sunset Cruise BYOB",
+      "operator": "Living Ocean Tours",
+      "publicPath": "/destinations/hawaii/honolulu/tours/waikiki-sunset-cruise-byob-323935",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855414,
+        "lng": 21.292381
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/323935/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/AxyZS9ASP2dRkSjqPiQl",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/AxyZS9ASP2dRkSjqPiQl"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Events",
+        "Whale Watch"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Wildlife",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:22.972869+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/323935/content/",
+          "status": 200,
+          "bytes": 5350,
+          "sha256": "0ae62201e32e6cf707f783bdfb816f210a43ec75e1c59326e18215d704aef826"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/323935/structured-description/",
+          "status": 200,
+          "bytes": 2544,
+          "sha256": "5d61435eb41e2b6bfcc6af266fd91c8c46a611d6a901d95197c95f7bc526ce0c"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/323935/",
+          "status": 200,
+          "bytes": 15764,
+          "sha256": "a9df269eb17e94d95a9d7a305922173760b8ce0c11003e51401817ed1a53877c"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/livingoceanscuba/price-preview/per-item/v2/?asn=fhdn&item_pks=323935&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 990,
+          "sha256": "3e185fee4a4eebd84de5c8c0ffa7b962f770d2b4aa58b2ef70078394b473d75e"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/323935/ratings/",
+          "status": 200,
+          "bytes": 526,
+          "sha256": "905f34c40eab11ee85eeecb9bdc5c21b1ee144a9f45b13becbcaba650a88fb93"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "323935",
+        "provider": "livingoceanscuba",
+        "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/323935/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 59.0,
+        "currency": "USD",
+        "singular": "Person Ages 3+: Non-Refundable • All Sales are Final"
+      }
+    },
+    {
+      "itemId": "494462",
+      "company": "livingoceanscuba",
+      "catalogId": "living-ocean-tours-494462",
+      "slug": "deluxe-snorkel-and-wildlife-cruise-494462",
+      "title": "Deluxe Snorkel and Wildlife Cruise",
+      "operator": "Living Ocean Tours",
+      "publicPath": "/destinations/hawaii/honolulu/tours/deluxe-snorkel-and-wildlife-cruise-494462",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.855414,
+        "lng": 21.292381
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/494462/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Pbf5qvLTQXWn0DN5PWGT",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Pbf5qvLTQXWn0DN5PWGT"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Snorkel",
+        "Water Activities"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:24.060560+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/494462/content/",
+          "status": 200,
+          "bytes": 6555,
+          "sha256": "6e24da958f58dc618760c656933dbb41ed73767b6644ecaf107e5829737c09bb"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/livingoceanscuba/494462/structured-description/",
+          "status": 200,
+          "bytes": 3226,
+          "sha256": "bf37a51e47f2b9726ee702cd1b72f5c82849295a16444bbb3ed4469f8b5a97f5"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/494462/",
+          "status": 200,
+          "bytes": 19896,
+          "sha256": "00974e61fef4409871aaa710bad12311715ddc48c03ecd023a96fd4fe11a89a4"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/livingoceanscuba/price-preview/per-item/v2/?asn=fhdn&item_pks=494462&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 990,
+          "sha256": "3f5e758102a62188058408922d1e3b7feecf0456eb65d05c932346e90c9f3722"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/livingoceanscuba/items/494462/ratings/",
+          "status": 200,
+          "bytes": 533,
+          "sha256": "f0dfb09fc292326275284e90100ec9a9f75381170bd1a919cfd6f69178a1a1fb"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "494462",
+        "provider": "livingoceanscuba",
+        "bookingUrl": "https://fareharbor.com/embeds/book/livingoceanscuba/items/494462/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 89.0,
+        "currency": "USD",
+        "singular": "Person Ages 3+: Non-Refundable • All Sales are Final"
+      }
+    },
+    {
+      "itemId": "7571",
+      "company": "ohanasurfproject",
+      "catalogId": "ohana-surf-project-7571",
+      "slug": "surf-lessons-7571",
+      "title": "Surf Lessons!",
+      "operator": "Ohana Surf Project",
+      "publicPath": "/destinations/hawaii/honolulu/tours/surf-lessons-7571",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.821832,
+        "lng": 21.273892
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/ohanasurfproject/items/7571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/D7TuVSc0TQOFoBpqgWHR",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/D7TuVSc0TQOFoBpqgWHR"
+      ],
+      "tags": [
+        "Surf"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:24.485401+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/ohanasurfproject/7571/content/",
+          "status": 200,
+          "bytes": 16719,
+          "sha256": "de9e4ea4397ef972132a4a2a0fd88c7d35b73cd1cda7ed0335e0d8186a00f523"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/ohanasurfproject/7571/structured-description/",
+          "status": 200,
+          "bytes": 12503,
+          "sha256": "385952a00567fc1e9d99186d6c81fcc4f679da93bcb60a6d795ba14a83ff40c1"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/ohanasurfproject/items/7571/",
+          "status": 200,
+          "bytes": 21148,
+          "sha256": "3c57847183817599bdd9e7c4084724e6c0d9ef9ad4494c40a6d64379080433ca"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/ohanasurfproject/price-preview/per-item/v2/?asn=fhdn&item_pks=7571&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 2686,
+          "sha256": "878fb907f6c4d3c1ce8a109afab7bf13fbadd5b7939ef2bfb7c0ba963b0721cf"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/ohanasurfproject/items/7571/ratings/",
+          "status": 200,
+          "bytes": 470,
+          "sha256": "96fafa0340f897019c44a6a060ade146eb4e60c7fede2f2d21619986ded1ca15"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "7571",
+        "provider": "ohanasurfproject",
+        "bookingUrl": "https://fareharbor.com/embeds/book/ohanasurfproject/items/7571/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 120.0,
+        "currency": "USD",
+        "singular": "Open Group Lesson (2HR)"
+      }
+    },
+    {
+      "itemId": "110203",
+      "company": "pinksailswaikiki",
+      "catalogId": "pink-sails-waikiki-110203",
+      "slug": "turtle-snorkeling-adventure-guaranteed-sightings-110203",
+      "title": "Turtle Snorkeling Adventure + Guaranteed Sightings",
+      "operator": "Pink Sails Waikiki",
+      "publicPath": "/destinations/hawaii/honolulu/tours/turtle-snorkeling-adventure-guaranteed-sightings-110203",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/pinksailswaikiki/items/110203/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/8XOuPpykTUuTcZKWqe08",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/8XOuPpykTUuTcZKWqe08"
+      ],
+      "tags": [
+        "Snorkel"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:25.274471+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/110203/content/",
+          "status": 200,
+          "bytes": 4152,
+          "sha256": "3d80b0d60d62279c4b8c78d770afa7abbeed7d381acf12007a33aef8caa6fd9c"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/110203/structured-description/",
+          "status": 200,
+          "bytes": 3301,
+          "sha256": "b18fcaaf3d47045c199e1a2943415ad510b3736f76354d8c7bc8416830d7213f"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/110203/",
+          "status": 200,
+          "bytes": 14471,
+          "sha256": "4cef8d6117f8998322906fc8bc7e321b56da8e1cd94f1eccbb9ab67f69d1edb7"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pinksailswaikiki/price-preview/per-item/v2/?asn=fhdn&item_pks=110203&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 675,
+          "sha256": "6d0bb2b4dd189ffc65d039fde78c0212cdb688806a30ccec5e86577c700a9c14"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/110203/ratings/",
+          "status": 200,
+          "bytes": 551,
+          "sha256": "505c0cff1a454d06fafc7b51ad2faa99eeaf4b5876a84aa114cbd35be4db4deb"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "110203",
+        "provider": "pinksailswaikiki",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pinksailswaikiki/items/110203/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 79.0,
+        "currency": "USD",
+        "singular": "Guest"
+      }
+    },
+    {
+      "itemId": "80660",
+      "company": "pinksailswaikiki",
+      "catalogId": "pink-sails-waikiki-80660",
+      "slug": "sunset-splash-adventure-80660",
+      "title": "Sunset Splash Adventure",
+      "operator": "Pink Sails Waikiki",
+      "publicPath": "/destinations/hawaii/honolulu/tours/sunset-splash-adventure-80660",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/pinksailswaikiki/items/80660/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/WaPrmA5bQ6fmobBauFww",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/WaPrmA5bQ6fmobBauFww"
+      ],
+      "tags": [
+        "Boat Tour",
+        "Sailing"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:25.800156+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/80660/content/",
+          "status": 200,
+          "bytes": 3888,
+          "sha256": "75eb29855caf41302ebc222c4dd8603e97ac2e755ec0f9221eb0c28fa22e6ff5"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/80660/structured-description/",
+          "status": 200,
+          "bytes": 2903,
+          "sha256": "fab80deb196754ef0683a47a598caf44b9723231067545914d21a101cbec5333"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/80660/",
+          "status": 200,
+          "bytes": 16109,
+          "sha256": "947baff9c84abd4d55bba73f57dad480562ad41cb776b704fd287fb6b98e7019"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/pinksailswaikiki/price-preview/per-item/v2/?asn=fhdn&item_pks=80660&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 674,
+          "sha256": "457184ff1203546d8c7caeba562bf981974760b5ad6aed32c0c61c9ca492745b"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/80660/ratings/",
+          "status": 200,
+          "bytes": 522,
+          "sha256": "06b5aaf02be95b11a93dba7815961d7329ecdbc980f556fa98f58aed5026fc9b"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "80660",
+        "provider": "pinksailswaikiki",
+        "bookingUrl": "https://fareharbor.com/embeds/book/pinksailswaikiki/items/80660/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 56.0,
+        "currency": "USD",
+        "singular": "Guest"
+      }
+    },
+    {
+      "itemId": "280763",
+      "company": "polyad-activities",
+      "catalogId": "polynesian-adventure-activities-280763",
+      "slug": "oahu-grand-circle-island-tour-waimea-valley-and-dole-plantation-7b-280763",
+      "title": "Oahu Grand Circle Island Tour – Waimea Valley & Dole Plantation (7B)",
+      "operator": "Polynesian Adventure Activities",
+      "publicPath": "/destinations/hawaii/honolulu/tours/oahu-grand-circle-island-tour-waimea-valley-and-dole-plantation-7b-280763",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.85814,
+        "lng": 21.309884
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/polyad-activities/items/280763/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Uh021S5QiqfjT6eO6rXC",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Uh021S5QiqfjT6eO6rXC"
+      ],
+      "tags": [
+        "History Tour",
+        "Sightseeing Tour",
+        "Water Activities"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Sightseeing & City Tours",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:26.769636+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/polyad-activities/280763/content/",
+          "status": 200,
+          "bytes": 9226,
+          "sha256": "79e51e79af8aa4aa7a7ae941aef1c6d6214ab64dc38bf31716cd861475601367"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/polyad-activities/280763/structured-description/",
+          "status": 200,
+          "bytes": 4550,
+          "sha256": "7164d7ed68c4fa93033d477a1429ccff4886b1b5957a3b294650dce73260d909"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/polyad-activities/items/280763/",
+          "status": 200,
+          "bytes": 15871,
+          "sha256": "550604b68db1703d1dc9ff66cdc86dd6912f6cb171ef27458f3d485bfcd60494"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/polyad-activities/price-preview/per-item/v2/?asn=fhdn&item_pks=280763&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 911,
+          "sha256": "e596899831ccc5249cfa77d9e6357b640291588e2ddeaef0cf58902f04edeae5"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/polyad-activities/items/280763/ratings/",
+          "status": 200,
+          "bytes": 556,
+          "sha256": "b00843bd8a5cb5a0b2f87c3ae581a2549fc7481f4d3447522c1ec337aec07cd7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "280763",
+        "provider": "polyad-activities",
+        "bookingUrl": "https://fareharbor.com/embeds/book/polyad-activities/items/280763/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 139.0,
+        "currency": "USD",
+        "singular": "Adult"
+      }
+    },
+    {
+      "itemId": "68062",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-68062",
+      "slug": "one-on-one-individual-surf-lesson-68062",
+      "title": "One-on-One Individual Surf Lesson",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/one-on-one-individual-surf-lesson-68062",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.828755,
+        "lng": 21.277213
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68062/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/UsuBdZgHTpyGyuSihZ5U",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/UsuBdZgHTpyGyuSihZ5U"
+      ],
+      "tags": [
+        "SUP",
+        "Surf"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:26.827164+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68062/content/",
+          "status": 200,
+          "bytes": 7024,
+          "sha256": "641e4074c9b00b08e6cfa8f931a04b8d34f9b41186682b18ef6154b2c84089d3"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68062/structured-description/",
+          "status": 200,
+          "bytes": 3820,
+          "sha256": "ee381f9f386d173c9bc9be8508b088c4512cd8be2aa970f93a3d021d4e92e6a7"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68062/",
+          "status": 200,
+          "bytes": 16247,
+          "sha256": "1c6814cb30f2e10aa76e561ce59eb34f3c610cf3d35f2ad47c1c70726d24abaa"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=68062&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 582,
+          "sha256": "ca373912e137d59c7471052c555d4fad74c57b052b88323f09c5b422194d8fd7"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68062/ratings/",
+          "status": 200,
+          "bytes": 509,
+          "sha256": "e565e85691a7124b6f68e9f2f238e545bfddec8cfeba6d82c339e345a45e7be8"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "68062",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68062/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 150.0,
+        "currency": "USD",
+        "singular": "One-on-One Individual"
+      }
+    },
+    {
+      "itemId": "68064",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-68064",
+      "slug": "one-on-one-individual-stand-up-paddle-lesson-68064",
+      "title": "One-on-One Individual Stand-Up Paddle Lesson",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/one-on-one-individual-stand-up-paddle-lesson-68064",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.828755,
+        "lng": 21.277213
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68064/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/cNwsjyKhQMCXKofQwVOU",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/cNwsjyKhQMCXKofQwVOU"
+      ],
+      "tags": [
+        "Canoe",
+        "SUP",
+        "Surf"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:27.698538+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68064/content/",
+          "status": 200,
+          "bytes": 6743,
+          "sha256": "6886a8940e0d6f83d87713701a1991e3c7320cfadda673d5f53ddc5d6659418e"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68064/structured-description/",
+          "status": 200,
+          "bytes": 3635,
+          "sha256": "f3211be12d593506da89cdeb042b37000cdd1010b1b9965860d823291f7273b3"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68064/",
+          "status": 200,
+          "bytes": 15242,
+          "sha256": "0f46716b6b8bab2554d371ac8295f5bbca5a6a6ba9d009f241f03293e6fec3ad"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=68064&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 582,
+          "sha256": "aa3aa1ffe0730f22af585affae1b24ad0d0ccc52ef7449ddd195d9fdb5518884"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68064/ratings/",
+          "status": 200,
+          "bytes": 520,
+          "sha256": "c82a31cd1365a278a92fe87641d1a94b1096a487652f480be1260e76367ca37f"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "68064",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68064/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 150.0,
+        "currency": "USD",
+        "singular": "One-on-One Individual"
+      }
+    },
+    {
+      "itemId": "68065",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-68065",
+      "slug": "canoe-surfing-68065",
+      "title": "Canoe Surfing",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/canoe-surfing-68065",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.828755,
+        "lng": 21.277213
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68065/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL"
+      ],
+      "tags": [
+        "Canoe",
+        "Surf"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:28.153377+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68065/content/",
+          "status": 200,
+          "bytes": 7672,
+          "sha256": "6fa98df1c1ef636cd8929cba54877258fa7368cb9b53a1988150b2f537ec4eaa"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68065/structured-description/",
+          "status": 200,
+          "bytes": 4388,
+          "sha256": "41d6044a9ccb63ccc7468f893b6f1055b4b4cea3d8515abef790f279c26bb305"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68065/",
+          "status": 200,
+          "bytes": 16348,
+          "sha256": "71f172dc52718ced5b855f1538ce31751e8bd5b5f40efd3e61a5b6e3aa387808"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=68065&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 531,
+          "sha256": "3fe933f43a3a4ee6f5d137dbe7746b6d95cb70fbf389e31c41d9c56c51b6d191"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68065/ratings/",
+          "status": 200,
+          "bytes": 499,
+          "sha256": "a5fe04ed253811f27a4ffffbc4252c97a3e64dd10dbdddab957456aeb9751668"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "68065",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68065/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 48.0,
+        "currency": "USD",
+        "singular": "Rider"
+      }
+    },
+    {
+      "itemId": "68066",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-68066",
+      "slug": "beachboy-valet-68066",
+      "title": "Beachboy Valet",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/beachboy-valet-68066",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": null,
+        "lng": null
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/lHk7FEfRbiFUPpd8xX1Q",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/lHk7FEfRbiFUPpd8xX1Q"
+      ],
+      "tags": [
+        "Canoe",
+        "SUP",
+        "Surf",
+        "Water Activities"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:28.991711+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68066/content/",
+          "status": 200,
+          "bytes": 3835,
+          "sha256": "c8d8211928271eb23af084b26f947d089914438859ddd4c46b10f6a8bfc81923"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68066/structured-description/",
+          "status": 200,
+          "bytes": 2390,
+          "sha256": "ccd70bcf36e85506a7ec67e1e0bf58174909169df3294369e85a0466f412523a"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68066/",
+          "status": 200,
+          "bytes": 10425,
+          "sha256": "132b07f2d55459a38224190a644d596d1d94764f801ac0a4e435a4f427c97424"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=68066&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 592,
+          "sha256": "d3b4d0d85baa1d05cc7948352ad0495f31d44ea90501a9330ce7a70849c33a31"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68066/ratings/",
+          "status": 200,
+          "bytes": 490,
+          "sha256": "bee890c0e491532edac42be617da456c1fd2f391fe68eb7f707e74806c37c15d"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "68066",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68066/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 450.0,
+        "currency": "USD",
+        "singular": "Beachboy Valet (1 beachboy per person)"
+      }
+    },
+    {
+      "itemId": "68068",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-68068",
+      "slug": "burial-at-sea-68068",
+      "title": "Burial At Sea",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/burial-at-sea-68068",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.828755,
+        "lng": 21.277213
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68068/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/P8TCBgUbSWSL5g1PaPEu",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/P8TCBgUbSWSL5g1PaPEu"
+      ],
+      "tags": [
+        "Canoe",
+        "Surf"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:29.279697+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68068/content/",
+          "status": 200,
+          "bytes": 6609,
+          "sha256": "b5921e1b81a3bf1451ee571738069f14a782cfef502883d9b5a54ca430044117"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/68068/structured-description/",
+          "status": 200,
+          "bytes": 3260,
+          "sha256": "6e6ce9006cc1502e0edf1ba6ec7cca8f2a0df778b1f71e1094ed1865fd7507cd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68068/",
+          "status": 200,
+          "bytes": 14618,
+          "sha256": "7df3229896f98c06ed87703ba6c8b366f054576c0a546e10a9d0387a55e579dc"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=68068&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 576,
+          "sha256": "03661a96f15c639cb2d636f3ab1c68262a42175021e2d222e485000bcea4e526"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/68068/ratings/",
+          "status": 200,
+          "bytes": 506,
+          "sha256": "a8c0bac27c67c9e5778ac0cc517f83d729b0ffc03ba8c614812b611685ef79be"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "68068",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/68068/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 450.0,
+        "currency": "USD",
+        "singular": "Burial At Sea Service"
+      }
+    },
+    {
+      "itemId": "94733",
+      "company": "waikikibeachservices",
+      "catalogId": "waikiki-beach-services-94733",
+      "slug": "canoe-charter-94733",
+      "title": "Canoe Charter",
+      "operator": "Waikiki Beach Services",
+      "publicPath": "/destinations/hawaii/honolulu/tours/canoe-charter-94733",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.828755,
+        "lng": 21.277213
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/94733/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/ib5xQCTTS2i6apkYUDRw",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/ib5xQCTTS2i6apkYUDRw"
+      ],
+      "tags": [
+        "Canoe",
+        "Surf"
+      ],
+      "categories": [
+        "canoeing"
+      ],
+      "primaryDisplayCategory": "Paddle Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:29.812601+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/94733/content/",
+          "status": 200,
+          "bytes": 6441,
+          "sha256": "cde2a4a5b40f1df21bfe9e67ab373443040d74cb8ab42c79786a403d045ea11f"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/waikikibeachservices/94733/structured-description/",
+          "status": 200,
+          "bytes": 2622,
+          "sha256": "fd016894f24017d1cd0e8b039113d3c20621861002ff4a904053f2f30736cffd"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/94733/",
+          "status": 200,
+          "bytes": 17517,
+          "sha256": "6682e0a0ce63d54d7ecdfa68e44a2601b420e56b554dd28f2581a321876ee0b5"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/waikikibeachservices/price-preview/per-item/v2/?asn=fhdn&item_pks=94733&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 595,
+          "sha256": "368d6eb85893f4953c7915581d26b6523afee6104447f7e1bfc200f53fd71f11"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/waikikibeachservices/items/94733/ratings/",
+          "status": 200,
+          "bytes": 499,
+          "sha256": "935c45841c30cf66c38ce72601aad5f3f759c183598adc7610c154d626d39eb7"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "94733",
+        "provider": "waikikibeachservices",
+        "bookingUrl": "https://fareharbor.com/embeds/book/waikikibeachservices/items/94733/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 400.0,
+        "currency": "USD",
+        "singular": "One Hour Private Canoe Charter"
+      }
+    },
+    {
+      "itemId": "314433",
+      "company": "wildlifehawaii",
+      "catalogId": "wildlife-hawaii-314433",
+      "slug": "round-trip-north-shore-haleiwa-shuttle-314433",
+      "title": "Round Trip North Shore Haleiwa Shuttle",
+      "operator": "Wildlife Hawaii",
+      "publicPath": "/destinations/hawaii/honolulu/tours/round-trip-north-shore-haleiwa-shuttle-314433",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.85814,
+        "lng": 21.309884
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/wildlifehawaii/items/314433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://cdn.filestackcontent.com/AgzJHWfDToaWDD0dDSG9",
+      "galleryImages": [
+        "https://cdn.filestackcontent.com/AgzJHWfDToaWDD0dDSG9"
+      ],
+      "tags": [
+        "Shuttle"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": null,
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:30.235547+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/wildlifehawaii/314433/content/",
+          "status": 200,
+          "bytes": 9812,
+          "sha256": "6af989fdecf961b2b9c42c903f97d4cf1df8f67ca13ec7a7984478026527f19d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/wildlifehawaii/314433/structured-description/",
+          "status": 200,
+          "bytes": 8082,
+          "sha256": "d39e6ed6233b6f42ae72d4aa3f59afa9d2519545e378e45e0e43359689fe46fa"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/wildlifehawaii/items/314433/",
+          "status": 200,
+          "bytes": 14859,
+          "sha256": "a18045d7753e818393070832dda617ea70876c783daf6c49d3c92fbfa6752f52"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/wildlifehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=314433&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 552,
+          "sha256": "85fb3f484f94dfe751eca331be32400c786837227a6f621955618a365f3b2bc2"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/wildlifehawaii/items/314433/ratings/",
+          "status": 200,
+          "bytes": 491,
+          "sha256": "c1d45fb54c54b8e562e5549391a3fb7a072c2b9f7ef278305fe4e834b0a13631"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "314433",
+        "provider": "wildlifehawaii",
+        "bookingUrl": "https://fareharbor.com/embeds/book/wildlifehawaii/items/314433/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 70.0,
+        "currency": "USD",
+        "singular": "Passenger"
+      }
+    },
+    {
+      "itemId": "247",
+      "company": "xtreme",
+      "catalogId": "x-treme-parasail-and-diamond-head-parasail-247",
+      "slug": "parasail-247",
+      "title": "Parasail",
+      "operator": "X-Treme Parasail & Diamond Head Parasail",
+      "publicPath": "/destinations/hawaii/honolulu/tours/parasail-247",
+      "destination": {
+        "state": "Hawaii",
+        "stateSlug": "hawaii",
+        "city": "Honolulu",
+        "citySlug": "honolulu",
+        "lat": -157.85554,
+        "lng": 21.293726
+      },
+      "bookingUrl": "https://fareharbor.com/embeds/book/xtreme/items/247/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+      "heroImage": "https://www.filepicker.io/api/file/TICRSkWGSgKP0SNOUFTj",
+      "galleryImages": [
+        "https://www.filepicker.io/api/file/TICRSkWGSgKP0SNOUFTj"
+      ],
+      "tags": [
+        "Parasail"
+      ],
+      "categories": [
+        "day-adventures"
+      ],
+      "primaryDisplayCategory": "Water Sports",
+      "alreadyRetired": false,
+      "fetchedAt": "2026-10-04T23:01:31.089208+00:00",
+      "endpoints": {
+        "content": {
+          "url": "https://fareharbor.com/api/items/v1/xtreme/247/content/",
+          "status": 200,
+          "bytes": 10683,
+          "sha256": "d087c4f7b3bad600aa8ed0e2f05b97a28e3ecccf2b41eff3e14f88cb7789e76d"
+        },
+        "structured-description": {
+          "url": "https://fareharbor.com/api/items/v1/xtreme/247/structured-description/",
+          "status": 200,
+          "bytes": 3592,
+          "sha256": "fc2228d803f608b26b166e23892074a18a40fec4a44112a3ea394a62e0c450bf"
+        },
+        "item": {
+          "url": "https://fareharbor.com/api/v1/companies/xtreme/items/247/",
+          "status": 200,
+          "bytes": 21494,
+          "sha256": "6d4ba20474cef87b3e9f1fb21a67b67ccbd1b14be9eb22e540bbaad4024c6219"
+        },
+        "price-preview": {
+          "url": "https://fareharbor.com/api/embed/xtreme/price-preview/per-item/v2/?asn=fhdn&item_pks=247&include_breakdown=yes&allow_unlisted_items=yes",
+          "status": 200,
+          "bytes": 1263,
+          "sha256": "9a6f86281a0ac5791200701752a42c50fea7221060d3ee88994851b9a8396d87"
+        },
+        "ratings": {
+          "url": "https://fareharbor.com/api/v1/companies/xtreme/items/247/ratings/",
+          "status": 200,
+          "bytes": 593,
+          "sha256": "7413998ec1306b4d0c542d926d2070049c75588377b1570a6e6d5e914ddf9786"
+        }
+      },
+      "bookingPageValidity": {
+        "itemId": "247",
+        "provider": "xtreme",
+        "bookingUrl": "https://fareharbor.com/embeds/book/xtreme/items/247/",
+        "httpStatus": 200,
+        "classification": "VALID",
+        "networkError": false,
+        "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+      },
+      "hasAuthoritativePrice": true,
+      "priceBasis": {
+        "amount": 50.0,
+        "currency": "USD",
+        "singular": "Observer"
+      }
+    }
+  ]
+}

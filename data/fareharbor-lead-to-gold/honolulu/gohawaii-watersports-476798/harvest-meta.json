@@ -1,0 +1,47 @@
+{
+  "company": "gohawaii-watersports",
+  "itemId": "476798",
+  "fetchedAt": "2026-10-04T23:01:19.854989+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/gohawaii-watersports/476798/content/",
+      "status": 200,
+      "bytes": 6229,
+      "sha256": "777fb94b074d755dbfa217df89d420611fc101aa96a5e6e6501e027d2baf1a0a"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/gohawaii-watersports/476798/structured-description/",
+      "status": 200,
+      "bytes": 4058,
+      "sha256": "94bbe2b19abcf8b786344fefcd590eb6161bb3440e66463a7a77ef39b52d0045"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/gohawaii-watersports/items/476798/",
+      "status": 200,
+      "bytes": 16516,
+      "sha256": "c5dc40882e3bb34f7e7e8ab063df2ed415326eb22f05acdfd0fefb697e62a37e"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/gohawaii-watersports/price-preview/per-item/v2/?asn=fhdn&item_pks=476798&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 1058,
+      "sha256": "2660801b9c400f4083dbef3ab8693f929d59354024dedb8cb9b3d77871056652"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/gohawaii-watersports/items/476798/ratings/",
+      "status": 200,
+      "bytes": 527,
+      "sha256": "5fbf6012a91f10b47ec93bcfe28d9a4099f8318e7f8ca6211aa5a240eafbced1"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "476798",
+    "provider": "gohawaii-watersports",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gohawaii-watersports/items/476798/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

@@ -683,8 +683,12 @@ def activity_kind(title: str, description: str = "") -> str:
         return "bike"
     if re.search(r"\b(food|chocolate|tasting|dim sum|cannoli|brewery|beer|wine|dumpling)\b", title_text):
         return "food"
-    if re.search(r"\b(sail|cruise|yacht|schooner|charter)\b", title_text) or re.search(
-        r"\bharbor\b", title_text
+    if re.search(r"\b(sail|cruise|yacht|schooner|charter)\b", title_text) or (
+        re.search(r"\bharbor\b", title_text)
+        and not (
+            re.search(r"\bpearl harbor\b", title_text)
+            and not re.search(r"\b(sail|cruise|yacht|schooner|boat|ferry|snorkel)\b", title_text)
+        )
     ):
         return "sail"
     if re.search(r"\b(movie|film|\btv\b)\b", title_text):
@@ -988,6 +992,9 @@ def indefinite(next_word: str) -> str:
     word = (next_word or "").strip()
     if re.match(r"(?:one|1)(?:\b|-)", word, re.I):
         return "a"
+    # 8, 11, and 18 take "an" (eight, eleven, eighteen). 5-hour stays "a".
+    if re.match(r"(?:8|11|18)(?:\b|-)", word, re.I):
+        return "an"
     if re.match(r"(?:[aeiou]|hour\b)", word, re.I):
         return "an"
     return "a"
@@ -1017,7 +1024,14 @@ def activity_phrase(title: str, description: str = "") -> str:
         return "paddle outing"
     if re.search(r"\bdriv|chauffeur", text):
         return "driving tour"
-    if re.search(r"(?<!air)(?:sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack)", text):
+    if re.search(r"\bpearl harbor\b", text) and not re.search(
+        r"\b(sail|yacht|cruise|boat|ferry|schooner|charter|snorkel)\b", text
+    ):
+        pass
+    elif re.search(
+        r"(?<!air)(?:sail|yacht|cruise|harbor|boat|ferry|schooner|charter|adirondack)",
+        text,
+    ):
         return "harbor outing"
     if re.search(r"food|tasting|dumpling|dinner|brunch|lunch|cannoli|beer|wine|chocolate", text) or re.search(
         r"lobster roll|clam chowder|dim sum|food tour|food walk|tastings", desc
@@ -1621,7 +1635,7 @@ def description_fact_drafts(description: str, extras: list[str] | None = None) -
         drafts.append("The outing includes a stand-up paddle session.")
     if re.search(r"yoga", blob, re.I) and re.search(r"water|paddle|\bSUP\b", blob, re.I):
         drafts.append("The outing includes yoga on a paddleboard.")
-    if re.search(r"\btandem\b", blob, re.I):
+    if re.search(r"\btandem\b", blob, re.I) and re.search(r"\b(bike|bicycle)\b", blob, re.I):
         drafts.append("The rental is a tandem bike.")
     if re.search(r"pedal-assist|electric bicycle|e-bike", blob, re.I):
         drafts.append("The rental is a pedal-assist electric bike.")
@@ -2762,6 +2776,25 @@ def _experience_source_sentences(facts: dict) -> list[str]:
     return raw_sentences
 
 
+def _vary_group_openers(paragraphs: list[str]) -> list[str]:
+    """A third 'The group' opening is a validation failure, not a new fact."""
+    sentences = []
+    for paragraph in paragraphs or []:
+        sentences.extend(split_sentences(paragraph))
+    seen = 0
+    replacements = ("Guests", "The outing", "Visitors")
+    rewritten = []
+    for item in sentences:
+        if item.lower().startswith("the group"):
+            seen += 1
+            if seen >= 2:
+                replacement = replacements[(seen - 2) % len(replacements)]
+                item = re.sub(r"^The group\b", replacement, item, count=1, flags=re.I)
+                item = sentence(item)
+        rewritten.append(item)
+    return _pack_paragraphs(rewritten) or paragraphs
+
+
 def _diversify_openers(paragraphs: list[str]) -> list[str]:
     """Keep specific fallback copy without repeating The walk / The route / This is a."""
     sentences = []
@@ -3102,7 +3135,8 @@ def compose_editorial(
         if rain:
             logistics_drafts.append("The outing is held in ordinary rain as well as clear weather.")
         if access and re.search(r"stroller|wheelchair", access, re.I) and not SECOND_PERSON.search(access):
-            logistics_drafts.append("The walk is stroller and wheelchair accessible.")
+            noun = "walk" if "walk" in activity else "outing"
+            logistics_drafts.append(f"The {noun} is stroller and wheelchair accessible.")
         if any(re.search(r"identification", item, re.I) for item in bring):
             logistics_drafts.append("Adult beverages require valid identification.")
         if cancel_hours:
@@ -3207,6 +3241,8 @@ def compose_editorial(
         paragraphs = _diversify_openers(paragraphs)
     if repetitive_construction_errors(paragraphs):
         paragraphs = _drop_repeated_places(paragraphs)
+    if repetitive_construction_errors(paragraphs):
+        paragraphs = _vary_group_openers(paragraphs)
     if (
         geography.get("disposition") == "moved"
         and city
@@ -3241,6 +3277,14 @@ def compose_editorial(
         row.rstrip(".")
         for row in highlight_rows
         if row
+        and ":" not in row
+        and not re.match(r"^stop\s*\d+\b", row, re.I)
+        and not overlap_with_source(row, overlap_text or "", title, operator)
+        and not re.search(
+            r"\b(cold drinks|light snacks|sodas?|juices?)\b",
+            row,
+            re.I,
+        )
         and not template_artifact_errors([row])
         and not is_scraped_heading_highlight(row)
     ][:3]

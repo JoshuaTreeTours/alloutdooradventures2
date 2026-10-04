@@ -1,0 +1,47 @@
+{
+  "company": "ohanasurfproject",
+  "itemId": "7571",
+  "fetchedAt": "2026-10-04T23:01:24.485401+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/ohanasurfproject/7571/content/",
+      "status": 200,
+      "bytes": 16719,
+      "sha256": "de9e4ea4397ef972132a4a2a0fd88c7d35b73cd1cda7ed0335e0d8186a00f523"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/ohanasurfproject/7571/structured-description/",
+      "status": 200,
+      "bytes": 12503,
+      "sha256": "385952a00567fc1e9d99186d6c81fcc4f679da93bcb60a6d795ba14a83ff40c1"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/ohanasurfproject/items/7571/",
+      "status": 200,
+      "bytes": 21148,
+      "sha256": "3c57847183817599bdd9e7c4084724e6c0d9ef9ad4494c40a6d64379080433ca"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/ohanasurfproject/price-preview/per-item/v2/?asn=fhdn&item_pks=7571&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 2686,
+      "sha256": "878fb907f6c4d3c1ce8a109afab7bf13fbadd5b7939ef2bfb7c0ba963b0721cf"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/ohanasurfproject/items/7571/ratings/",
+      "status": 200,
+      "bytes": 470,
+      "sha256": "96fafa0340f897019c44a6a060ade146eb4e60c7fede2f2d21619986ded1ca15"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "7571",
+    "provider": "ohanasurfproject",
+    "bookingUrl": "https://fareharbor.com/embeds/book/ohanasurfproject/items/7571/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

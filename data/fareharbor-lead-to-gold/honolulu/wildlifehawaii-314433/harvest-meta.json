@@ -1,0 +1,47 @@
+{
+  "company": "wildlifehawaii",
+  "itemId": "314433",
+  "fetchedAt": "2026-10-04T23:01:30.235547+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/wildlifehawaii/314433/content/",
+      "status": 200,
+      "bytes": 9812,
+      "sha256": "6af989fdecf961b2b9c42c903f97d4cf1df8f67ca13ec7a7984478026527f19d"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/wildlifehawaii/314433/structured-description/",
+      "status": 200,
+      "bytes": 8082,
+      "sha256": "d39e6ed6233b6f42ae72d4aa3f59afa9d2519545e378e45e0e43359689fe46fa"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/wildlifehawaii/items/314433/",
+      "status": 200,
+      "bytes": 14859,
+      "sha256": "a18045d7753e818393070832dda617ea70876c783daf6c49d3c92fbfa6752f52"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/wildlifehawaii/price-preview/per-item/v2/?asn=fhdn&item_pks=314433&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 552,
+      "sha256": "85fb3f484f94dfe751eca331be32400c786837227a6f621955618a365f3b2bc2"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/wildlifehawaii/items/314433/ratings/",
+      "status": 200,
+      "bytes": 491,
+      "sha256": "c1d45fb54c54b8e562e5549391a3fb7a072c2b9f7ef278305fe4e834b0a13631"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "314433",
+    "provider": "wildlifehawaii",
+    "bookingUrl": "https://fareharbor.com/embeds/book/wildlifehawaii/items/314433/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

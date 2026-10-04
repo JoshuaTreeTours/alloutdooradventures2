@@ -1,0 +1,47 @@
+{
+  "company": "pinksailswaikiki",
+  "itemId": "110203",
+  "fetchedAt": "2026-10-04T23:01:25.274471+00:00",
+  "endpoints": {
+    "content": {
+      "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/110203/content/",
+      "status": 200,
+      "bytes": 4152,
+      "sha256": "3d80b0d60d62279c4b8c78d770afa7abbeed7d381acf12007a33aef8caa6fd9c"
+    },
+    "structured-description": {
+      "url": "https://fareharbor.com/api/items/v1/pinksailswaikiki/110203/structured-description/",
+      "status": 200,
+      "bytes": 3301,
+      "sha256": "b18fcaaf3d47045c199e1a2943415ad510b3736f76354d8c7bc8416830d7213f"
+    },
+    "item": {
+      "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/110203/",
+      "status": 200,
+      "bytes": 14471,
+      "sha256": "4cef8d6117f8998322906fc8bc7e321b56da8e1cd94f1eccbb9ab67f69d1edb7"
+    },
+    "price-preview": {
+      "url": "https://fareharbor.com/api/embed/pinksailswaikiki/price-preview/per-item/v2/?asn=fhdn&item_pks=110203&include_breakdown=yes&allow_unlisted_items=yes",
+      "status": 200,
+      "bytes": 675,
+      "sha256": "6d0bb2b4dd189ffc65d039fde78c0212cdb688806a30ccec5e86577c700a9c14"
+    },
+    "ratings": {
+      "url": "https://fareharbor.com/api/v1/companies/pinksailswaikiki/items/110203/ratings/",
+      "status": 200,
+      "bytes": 551,
+      "sha256": "505c0cff1a454d06fafc7b51ad2faa99eeaf4b5876a84aa114cbd35be4db4deb"
+    }
+  },
+  "bookingPageValidity": {
+    "itemId": "110203",
+    "provider": "pinksailswaikiki",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pinksailswaikiki/items/110203/",
+    "httpStatus": 200,
+    "classification": "VALID",
+    "networkError": false,
+    "visibleTextExcerpt": "FareHarbor FareHarbor FareHarbor did not load properly. Please try refreshing the page. If you continue to see this message, please contact us . Error code: no-assets . [[ company.name ]] [[ company.url|hostname ]] [[ company.phone ]] [[ company.email ]] Secured Your info will be transferred securely over a 2048-bit encrypted connection. Health & Safety Close policy View cart ([[ cart.lfmCount ]])"
+  },
+  "hasAuthoritativePrice": true
+}

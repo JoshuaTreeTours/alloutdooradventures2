@@ -51,6 +51,10 @@ _NAME_BLOCK_FIRST = {
     "max",
     "pickup",
     "pick",
+    "on",
+    "to",
+    "depart",
+    "stop",
 }
 
 _LOGISTICS = re.compile(
@@ -151,6 +155,29 @@ def _names(text: str, title: str, operator: str) -> list[str]:
             "december",
         }
         if name.split() and all(part.lower() in calendar or part.isdigit() for part in name.split()):
+            return
+        if ":" in name or re.match(r"^stop\s*\d+\b", key):
+            return
+        if key in {"views", "snorkeling", "snorkel", "scuba diving", "skin diver", "scuba"}:
+            return
+        if re.search(r"\b(flight options|introductory dive|certified dive)\b", key):
+            return
+        if re.search(
+            r"\b(stop|stops|free|complimentary|opportunity|snacks|drinks|sodas?|"
+            r"juices?|guaranteed|spectacular|depart|pickup|pick-up|tattoo|"
+            r"return|returns|spot|more|use|donuts?|mochi|poi|waterslide|"
+            r"trampoline|local|director|workshop|assessments?|crew-pak|"
+            r"dollar|professional|introductory|notes|built-in|pre-course|week|"
+            r"workshops?|skill-circuit|conducted|program)\b",
+            key,
+        ):
+            return
+        operator_words = [part for part in (operator or "").split() if part]
+        if len(operator_words) >= 2 and key.startswith(
+            " ".join(operator_words[:2]).lower()
+        ):
+            return
+        if re.search(r"\w'\s|\s'", name):
             return
         if re.search(r"\b(combo|waiver|adventure|package)\b", key) or key.endswith(" special"):
             return
@@ -1543,12 +1570,15 @@ def _name_sentences(kind: str, names: list[str], description: str) -> list[str]:
     index = 0
     cursor = 0
     while cursor < len(names) and index < len(frames):
+        frame = frames[index]
+        index += 1
         chunk = names[cursor : cursor + 2]
-        cursor += 2
         if not chunk:
             break
-        rows.append(frames[index].format(pair=_pair(chunk)))
-        index += 1
+        if len(chunk) == 1 and re.search(r"\{pair\} (?:come|are)\b", frame):
+            continue
+        cursor += 2
+        rows.append(frame.format(pair=_pair(chunk)))
     return rows
 
 
@@ -1625,9 +1655,12 @@ def _stretch(kind: str, names: list[str], description: str, already: str) -> lis
     elif kind == "bus":
         rows.append("The coach does the traveling. Guests watch the locations go by and hear which scene was filmed at each one.")
     indoor = re.search(
-        r"\b(workshop|studio|revue|blacklight|spray paint)\b", blob, re.I
+        r"\b(studio|revue|blacklight|spray paint)\b", blob, re.I
     ) or (
         re.search(r"\bcanvas\b", blob, re.I) and not re.search(r"blank canvas", blob, re.I)
+    ) or (
+        re.search(r"\bworkshop\b", blob, re.I)
+        and re.search(r"\b(paint|canvas|studio)\b", blob, re.I)
     )
     if indoor and re.search(r"revue|strip", blob, re.I):
         rows.append("People are seated for a show. The dancers and the hosts are the event, not a neighborhood route.")
