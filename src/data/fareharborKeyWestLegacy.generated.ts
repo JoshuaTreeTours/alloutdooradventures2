@@ -11,7 +11,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The commentary takes up Southernmost Point. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given.",
+      "The walk includes the Southernmost Point. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace. The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given.",
       "Each pause is there so guests can look at the place the story belongs to."
     ],
     "schemaDescription": "Walking tour in Key West with time at the Southernmost Point while a guide explains each outdoor stop.",
@@ -59,7 +59,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The commentary takes up Key West's Historic Districts and Old Town. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
+      "The walk covers Key West's historic districts and Old Town. Guests stay on foot the whole time, pausing while the guide talks at each site. They stand at the sites while the explanation is given. Guests keep walking while that account is given, moving at the guide's pace.",
       "The explanation happens outdoors, in front of the buildings, and the group moves on only after it is given. Each pause is there so guests can look at the place the story belongs to."
     ],
     "schemaDescription": "Walking tour of Key West historic districts and Old Town. The group stays on foot while a guide talks at each site.",
@@ -71,7 +71,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/Zjd7meM5Tz2cNHinQ1t9"
     ],
     "productImage": "https://cdn.filestackcontent.com/7EnDEvYSfK01EcfWuxd1",
-    "wordCount": 83,
+    "wordCount": 82,
     "durationLabel": "1.5",
     "durationIso": null,
     "meetingLocation": "516 Duval Street Key West, FL 33040",
@@ -333,8 +333,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. The stop is a Key West sandbar, away from a crowd of other boats. From the water, guests see Florida Keys. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This is a private sandbar charter on the water. The stop is a Key West sandbar, away from a crowd of other boats. From the water, guests see Florida Keys."
     ],
     "schemaDescription": "Private sandbar charter in Key West, held away from a crowd of other boats.",
     "highlights": [
@@ -345,7 +344,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/VjRAjbQwSqi0xdZMZdY1"
     ],
     "productImage": "https://cdn.filestackcontent.com/eWvlhjg8TiS4pCYrHPMa",
-    "wordCount": 83,
+    "wordCount": 30,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd, Key West, FL, USA",
@@ -458,9 +457,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental. This is a private sandbar charter on the water.",
-      "The booking is about 5 hours. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by.",
-      "The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. This is a private sandbar charter on the water.",
+      "The booking is about 5 hours."
     ],
     "schemaDescription": "Private sandbar charter of about five hours on a Boston Whaler in Key West, with a captain aboard.",
     "highlights": [],
@@ -468,7 +466,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/jLcExHEVRlKUVfGnvsfT"
     ],
     "productImage": "https://cdn.filestackcontent.com/UfxH7cWARrKPdXE5OUQA",
-    "wordCount": 108,
+    "wordCount": 47,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -501,8 +499,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests go out for a sunset sail. From the water, guests see Historic Seaport and Key West Bight. Mallory Square and Fort Zachary Taylor come into view as the boat moves. The cruise also passes Navy Mole and Truman Annex. Looking back toward shore, the group can see President Truman and Winter Whitehouse.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This two-hour sunset sail in Key West passes the Historic Seaport, Key West Bight, Mallory Square, and Fort Zachary Taylor. It also passes the Navy Mole, Truman Annex, and Truman's Winter White House."
     ],
     "schemaDescription": "Two-hour sunset sail in Key West, passing the Historic Seaport, Key West Bight, Mallory Square, and Fort Zachary Taylor.",
     "highlights": [
@@ -513,7 +510,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/jkb8Ow99SMKrclylzRcB"
     ],
     "productImage": "https://cdn.filestackcontent.com/rYOWrfRTpiNlWy9n0MOz",
-    "wordCount": 106,
+    "wordCount": 34,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Key West, FL",

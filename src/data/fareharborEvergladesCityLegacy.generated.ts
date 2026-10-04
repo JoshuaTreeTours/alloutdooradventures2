@@ -11,7 +11,7 @@ export const fareHarborEvergladesCityLegacyProducts: FareHarborProofProduct[] = 
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Mangrove Wilderness Boat Tour is a harbor outing lasting 1.75hrs with Everglades Florida Adventures on Everglades City Harbor. Landscape is included. The sail passes Everglades National Park."
+      "The boat runs about an hour and 45 minutes through mangrove wilderness in Everglades National Park."
     ],
     "schemaDescription": "Boat tour of about an hour and 45 minutes through mangrove wilderness in Everglades National Park.",
     "highlights": [
@@ -23,7 +23,7 @@ export const fareHarborEvergladesCityLegacyProducts: FareHarborProofProduct[] = 
       "https://cdn.filestackcontent.com/DZYWtT4Sea5FlEA9UX1a"
     ],
     "productImage": "https://cdn.filestackcontent.com/ysRhxspAT7mn7U6LFcbm",
-    "wordCount": 28,
+    "wordCount": 16,
     "durationLabel": "1.75hrs",
     "durationIso": null,
     "meetingLocation": "905 Copeland Ave S Everglades City, FL 34139",

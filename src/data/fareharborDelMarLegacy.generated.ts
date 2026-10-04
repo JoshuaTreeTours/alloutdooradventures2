@@ -12,7 +12,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
-      "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program."
+      "Music plays while the stations stay open."
     ],
     "schemaDescription": "Four-hour family festival with animal ambassadors, activity stations, and trick-or-treat stops.",
     "highlights": [
@@ -24,7 +24,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/9H7WEa7xR9WevF7kDcEg"
     ],
     "productImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
-    "wordCount": 74,
+    "wordCount": 61,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -59,7 +59,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
-      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program."
+      "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals."
     ],
     "schemaDescription": "Six-hour zookeeper camp built around animal-care tasks.",
     "highlights": [
@@ -70,7 +70,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BJ66n6AiTMulvKW6zWim"
     ],
     "productImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
-    "wordCount": 97,
+    "wordCount": 84,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -99,8 +99,8 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
-      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. That same account stays with Equine Hospital."
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital.",
+      "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave."
     ],
     "schemaDescription": "Half-day veterinarian camp of about 3.5 hours, with clinical practice and a microscope.",
     "highlights": [
@@ -112,7 +112,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/3w21HAWTHWbmWrewGaAJ"
     ],
     "productImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
-    "wordCount": 84,
+    "wordCount": 64,
     "durationLabel": "3.5 hours",
     "durationIso": "PT3H30M",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",
@@ -141,7 +141,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program."
+      "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital."
     ],
     "schemaDescription": "Six-hour veterinarian camp with clinical practice, a microscope, and canine CPR practice.",
     "highlights": [
@@ -152,7 +152,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/aOgx21zkRt0iVtD4X60q"
     ],
     "productImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
-    "wordCount": 51,
+    "wordCount": 38,
     "durationLabel": "6 hours",
     "durationIso": "PT6H",
     "meetingLocation": "6447 Helen Woodward Way Rancho Santa Fe, CA 92067",

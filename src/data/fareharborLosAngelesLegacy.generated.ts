@@ -13,7 +13,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests ride in an open-air vehicle and see the sights from the seat. The outing does not include stops, so the sights are seen from the vehicle. The length runs up to about 2 hours and changes with traffic. The vehicle passes through city neighborhoods on the same drive.",
       "Moviemaking landmarks are among the sights seen from the vehicle. Residential neighborhoods are part of the same ride. Architectural buildings are visible from the open-air vehicle. Historic sites are also on the drive and are seen without a stop. Guests are asked to bring a camera for the ride.",
-      "People stay aboard the vehicle for the length of the outing. There is no walking portion, because no stops are scheduled. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
+      "People stay aboard the vehicle for the length of the outing. The ride stays in Los Angeles."
     ],
     "schemaDescription": "Open-air star-homes drive of about two hours in Los Angeles, seen from the vehicle.",
     "highlights": [
@@ -21,7 +21,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/LIGvdjqQuGtmU4AubLWb",
-    "wordCount": 141,
+    "wordCount": 117,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": null,

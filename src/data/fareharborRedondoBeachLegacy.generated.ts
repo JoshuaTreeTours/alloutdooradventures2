@@ -11,8 +11,8 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
-      "Guests ride a rented bike for the day. Time on the bike is about 2 hours. Time on the water is about 2 hours. The ride passes Hermosa Beach and Manhattan Beach. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
+      "Guests ride pedal-assist bikes, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure.",
+      "The ride takes about two hours and passes Hermosa Beach, Manhattan Beach, Santa Monica, and the Redondo Beach Pier."
     ],
     "schemaDescription": "Two-hour electric-bike ride from the Redondo Beach pier along the shore.",
     "highlights": [
@@ -22,7 +22,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/txmlzM1cQbCXWf0NTCQQ"
     ],
     "productImage": "https://cdn.filestackcontent.com/Pb0Jgt9QVebMYsrvvnPz",
-    "wordCount": 105,
+    "wordCount": 43,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,

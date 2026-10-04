@@ -11,7 +11,7 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride a rented bike for the day. A helmet, water, and the bike permit come with the rental. Reserving ahead is how the shop holds a bike. The rental bikes are picked up in Avalon. The ride passes Bike Rentals Helmet and Advanced Booking."
+      "A helmet, water, and the bike permit come with the rental. Reserving ahead is how the shop holds a bike. The rental bikes are picked up in Avalon."
     ],
     "schemaDescription": "Daily bike rental picked up in Avalon, with a helmet and a bike permit.",
     "highlights": [],
@@ -19,7 +19,7 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71"
     ],
     "productImage": "https://cdn.filestackcontent.com/7UZlabVyQ6JGgc5Cxq8G",
-    "wordCount": 45,
+    "wordCount": 28,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Appointment only",

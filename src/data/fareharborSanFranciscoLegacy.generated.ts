@@ -336,7 +336,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. Much of the riding is along the waterfront, with the bay alongside. A helmet is included, and the shop fits the bike before departure. A round-trip ferry is part of getting riders back. The city bike portion is self-guided after the shuttle returns.",
-      "People stay with the bikes for the riding portion of the booking. Guests ride a rented bike for the day. The ride passes Alcatraz Island and San Francisco Bay Cruise."
+      "The ride passes Alcatraz Island."
     ],
     "schemaDescription": "Alcatraz tour with a round-trip ferry and a self-guided bike ride along the waterfront.",
     "highlights": [
@@ -347,7 +347,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/qAEet9tQQfOQFzNGumpw"
     ],
     "productImage": "https://cdn.filestackcontent.com/H7WvZjGQBqEjbeR52yGh",
-    "wordCount": 84,
+    "wordCount": 59,
     "durationLabel": "2.5-3 hours",
     "durationIso": null,
     "meetingLocation": "Pier 33, Fisherman's Wharf",
@@ -454,9 +454,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront, with the bay alongside. The ride meets by Ghirardelli Square on Beach Street. The shuttle portion starts at Fisherman's Wharf.",
-      "A round-trip ferry is part of getting riders back. The booking runs about 3 hours. People stay with the bikes for the riding portion of the booking. The ride passes Beach Street and Ghirardelli Square. Cyclists also come to Fisherman's Wharf and Fort Mason.",
-      "Marina District and Crissy Fields are on the same loop. Later the route reaches Marin Headlands and San Francisco."
+      "Riders cross the Golden Gate Bridge and watch the bay from the span. Much of the riding is along the waterfront. The ride meets by Ghirardelli Square on Beach Street, and the shuttle portion starts at Fisherman's Wharf.",
+      "A round-trip ferry brings riders back. The booking runs about three hours. The ride also passes Fort Mason, the Marina District, Crissy Field, and the Marin Headlands."
     ],
     "schemaDescription": "Three-hour bike tour across the Golden Gate Bridge.",
     "highlights": [
@@ -467,7 +466,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/utfHkyQORPOdTjB6iyGI"
     ],
     "productImage": "https://cdn.filestackcontent.com/QJ0kzZTCR5Kaz0qgtGsb",
-    "wordCount": 114,
+    "wordCount": 66,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
@@ -510,9 +509,8 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. The ride meets by Ghirardelli Square on Beach Street. The booking runs about 4 hours.",
-      "The redwoods are why the shuttle goes out, and the bridge is the riding highlight. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 4 hours. Cyclists also come to Golden Gate Park and Ghirardelli Square.",
-      "Painted Ladies and Grateful Dead are on the same loop. Later the route reaches Janis Joplin and Lower Haight."
+      "This four-hour electric-bike tour starts and ends at Ghirardelli Square. The bikes are pedal-assist, and a helmet is included.",
+      "The route goes through the Mission, the Castro, Haight-Ashbury, and Alamo Square, where the Painted Ladies stand, and it includes a stretch in Golden Gate Park."
     ],
     "schemaDescription": "Four-hour electric-bike tour of San Francisco, including Golden Gate Park and the Painted Ladies.",
     "highlights": [
@@ -521,7 +519,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/xGESOWORQrxa5Ik9AqpQ",
-    "wordCount": 119,
+    "wordCount": 49,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "757 Beach Street San Francisco, CA 94109",
@@ -554,9 +552,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park. A helmet is included, and the shop fits the bike before departure.",
-      "A guide rides with the group and sets the pace. The ride is suitable for beginners. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking. The ride passes San Francisco and Hippie Hill.",
-      "Cyclists also come to Arboretum Botanical Gardens and Japanese Tea Gardens. Bison Paddock and Kids Bikes are on the same loop. Later the route reaches Daily Pricing."
+      "Guests ride bikes on the paths inside Golden Gate Park. Hippie Hill is one stop. A helmet is included, and the shop fits the bike before departure.",
+      "A guide rides with the group and sets the pace. The ride is suitable for beginners and runs about two hours.",
+      "Riders also pass the Arboretum and Botanical Gardens, the Japanese Tea Garden, and the Bison Paddock."
     ],
     "schemaDescription": "Bike tour of about two hours inside Golden Gate Park, passing Hippie Hill.",
     "highlights": [
@@ -564,7 +562,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/X88GqyOZRZOXAyGEaeGQ",
-    "wordCount": 114,
+    "wordCount": 64,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1792 Haight St San Francisco, CA 94117",
@@ -653,8 +651,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. The ride stays in Golden Gate Park, on the park's bike paths. Hippie Hill is one of the places riders pass inside the park.",
-      "A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The ride is suitable for beginners in the park. The booking runs about 2 hours. People stay with the bikes for the riding portion of the booking.",
-      "Guests ride electric bikes for this booking."
+      "A helmet is included, and the shop fits the bike before departure. A guide rides with the group and sets the pace. The ride is suitable for beginners in the park. The booking runs about 2 hours."
     ],
     "schemaDescription": "Electric-bike tour of about two hours inside Golden Gate Park.",
     "highlights": [
@@ -662,7 +659,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/MctECLigTik6NbecyE3b",
-    "wordCount": 101,
+    "wordCount": 82,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "1792 Haight St San Francisco, CA 94117",
@@ -695,9 +692,9 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. Riders cross the Golden Gate Bridge and watch the bay from the span. The same ride can take in both the park paths and the bridge.",
-      "A helmet is included, and the shop fits the bike before departure. The booking runs about 4 hours. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 2 hours.",
-      "The ride passes San Francisco and Golden Gate Bridge. Cyclists also come to Stow Lake Boathouse and Young Museum. Botanical Garden and Rose Garden are on the same loop. Later the route reaches Dutch Windmill."
+      "Guests ride pedal-assist bikes, so the motor helps on the hills. Riders can cross the Golden Gate Bridge and watch the bay from the span, and the same rental can use the park paths.",
+      "A helmet is included, and the shop fits the bike before departure. Time on the bike is about two hours.",
+      "The park paths can include Stow Lake Boathouse, the de Young Museum, the Botanical Garden, the Rose Garden, and the Dutch Windmill."
     ],
     "schemaDescription": "Electric-bike rental of about two hours that can cross the Golden Gate Bridge and use the park paths.",
     "highlights": [
@@ -706,7 +703,7 @@ export const fareHarborSanFranciscoLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/gJnb19rgTxOvZbBGY7Oz",
-    "wordCount": 127,
+    "wordCount": 77,
     "durationLabel": "2Hours",
     "durationIso": "PT2H",
     "meetingLocation": "1792 Haight Street San Francisco, CA 94117",

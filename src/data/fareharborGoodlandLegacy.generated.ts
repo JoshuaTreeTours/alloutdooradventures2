@@ -11,7 +11,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Rookery Bay Reserve and Gulf Coast. Florida Adventures and Marco Island come into view as the boat moves."
+      "This two-hour sunset eco-tour goes through the Ten Thousand Islands and Rookery Bay Reserve. The boat watches for dolphins and coastal birds and can stop at a beach for shells before sunset on the Gulf Coast. The boat holds up to 17 guests."
     ],
     "schemaDescription": "Two-hour sunset eco-tour with views of Rookery Bay Reserve and the Gulf Coast.",
     "highlights": [
@@ -22,7 +22,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/83CS5ZiaTsCDlGa4CSzb"
     ],
     "productImage": "https://cdn.filestackcontent.com/VxIJbDn1TDWYDwXF6Bp1",
-    "wordCount": 23,
+    "wordCount": 45,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -458,7 +458,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Keywaydin Island and Marco Island. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "This four-hour private boat tour can visit Keywaydin Island or Marco Island. The stops are chosen before departure."
     ],
     "schemaDescription": "Four-hour private boat tour that can visit Keywaydin Island or Marco Island, with stops chosen before departure.",
     "highlights": [
@@ -469,7 +469,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/YJLDIdbbQx69gq67jNw5"
     ],
     "productImage": "https://cdn.filestackcontent.com/3zgLmjjPSWqzoQQ0j7GM",
-    "wordCount": 63,
+    "wordCount": 19,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "Goodland Boat Park, 750 Palm Point Dr., Goodland, FL 34140",
@@ -865,7 +865,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. From the water, guests see Marco Island and Kice Island. Dickman's Point and Caxambas Sandbars come into view as the boat moves. The cruise also passes Second Chance and Shell Island."
+      "This four-hour shelling trip stays on the water. The boat can pass Marco Island, Kice Island, Dickman's Point, and Shell Island, with time at the Caxambas sandbars."
     ],
     "schemaDescription": "Four-hour shelling trip passing Marco Island, Kice Island, Dickman's Point, and Shell Island, with time at the Caxambas sandbars.",
     "highlights": [
@@ -877,7 +877,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/cO930ey7QiGeJn87UPKk"
     ],
     "productImage": "https://cdn.filestackcontent.com/Fk3ukq2MQ0Wt6EfBNRSn",
-    "wordCount": 40,
+    "wordCount": 28,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",
@@ -921,7 +921,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Marco Island and Ten Thousand Islands. Islands Beach and Sunset Free come into view as the boat moves."
+      "This private boat tour runs about eight hours, with views of Marco Island and the Ten Thousand Islands."
     ],
     "schemaDescription": "Private boat tour of about eight hours with views of Marco Island and the Ten Thousand Islands.",
     "highlights": [
@@ -932,7 +932,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/UDgRqXXnQv6L1n5Cqstp"
     ],
     "productImage": "https://cdn.filestackcontent.com/8qp1QRgTkyL0cRK8WBLo",
-    "wordCount": 23,
+    "wordCount": 18,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "220 Goodland Dr Goodland FL 34140",

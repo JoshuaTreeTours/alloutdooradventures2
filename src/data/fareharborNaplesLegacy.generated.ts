@@ -11,7 +11,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Rookery Bay Kayak Tours is a two-hour paddle outing with Florida Adventures and Rentals in Naples. The outing passes Rookery Bay Estuarine Research Reserve.",
+      "This is a two-hour kayak tour in the Rookery Bay Estuarine Research Reserve.",
       "Groups are capped at 10.",
       "Guests must be at least 4 years old. A full refund is available with at least 48 hours' notice."
     ],
@@ -25,7 +25,7 @@ export const fareHarborNaplesLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/P7hY6A7Q96dHVAKHbWR5"
     ],
     "productImage": "https://cdn.filestackcontent.com/1gcLiu63TkigI9M3sf1F",
-    "wordCount": 49,
+    "wordCount": 38,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "Capri Paddlecraft Park, 1295 Capri Blvd, Naples, FL 34113",

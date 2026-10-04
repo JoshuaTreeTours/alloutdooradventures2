@@ -133,14 +133,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the shorter ride, planned for about two to three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
     "schemaDescription": "Bike ride of two to three hours between wineries, with one tasting.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/SwR4Y3RQQGBRO96VyY2t",
-    "wordCount": 107,
+    "wordCount": 100,
     "durationLabel": "2-3 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -225,14 +224,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the mid-length ride, planned for about three to five hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
     "schemaDescription": "Bike ride of three to five hours between wineries, with two tastings.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/zix0oCeRLWOZBaJNZcxl",
-    "wordCount": 108,
+    "wordCount": 101,
     "durationLabel": "3-5 hours",
     "durationIso": null,
     "meetingLocation": null,
@@ -317,14 +315,13 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Tastings at the wineries are arranged along the ride. Lunch can be a picnic at a winery or a meal at a restaurant on the route.",
-      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear.",
-      "Guests ride electric bikes for this booking."
+      "An electric-assist bike is offered as an upgrade for the ride. This departure is the longest ride, planned for more than three hours. The bikes do the traveling, and the winery stops are where guests get off to taste. A guide rides with the group and can carry the gear."
     ],
     "schemaDescription": "Bike ride of more than three hours between wineries, with three tastings.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/VrZxRqihRfOgP1AUC8cq",
-    "wordCount": 106,
+    "wordCount": 99,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": null,

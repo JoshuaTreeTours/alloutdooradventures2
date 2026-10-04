@@ -449,8 +449,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "exceptionStatus": "OK",
     "paragraphs": [
       "The visit pairs time with the horses and a wine tasting. The wines poured are from Wiley Wines. Those wines come from Northern California vineyards. Phineas Fittipaldi or another host from the winery leads the tasting. Guests spend part of the visit in a hands-on session with the horses.",
-      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines. Also part of the same visit are Northern California and Phineas Fittipaldi.",
-      "Guests spend the booked time with the horses."
+      "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines."
     ],
     "schemaDescription": "About 1.5 hours with the horses and a Wiley Wines tasting in Joshua Tree.",
     "highlights": [],
@@ -458,7 +457,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
     ],
     "productImage": "https://cdn.filestackcontent.com/pQXu1NGT4OVShVE4nevg",
-    "wordCount": 103,
+    "wordCount": 83,
     "durationLabel": "1.5 hours",
     "durationIso": "PT1H30M",
     "meetingLocation": "6353 Cascade Rd Joshua Tree, CA 92252",

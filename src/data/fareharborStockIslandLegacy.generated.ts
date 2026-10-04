@@ -63,8 +63,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. Music plays on board, and some departures add a live set. Bean bags on the bow are there for sitting out in the air. From the water, guests see Key West and Marina Scenic Harbor.",
-      "The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "A few optional stops leave time to step out for photographs and a closer look. Music plays on board, and some departures add a live set. Bean bags on the bow are there for sitting out in the air. From the water, guests see Key West and Marina Scenic Harbor."
     ],
     "schemaDescription": "Three-hour private sunset cruise with music on board and bean bags on the bow.",
     "highlights": [
@@ -74,7 +73,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/XqwQ1QzQQqeMi1AGxnjl"
     ],
     "productImage": "https://cdn.filestackcontent.com/dUz5aAyR9CR0PeWgW3Jj",
-    "wordCount": 103,
+    "wordCount": 50,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
