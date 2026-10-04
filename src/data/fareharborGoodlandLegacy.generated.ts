@@ -808,8 +808,8 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. From the water, guests see Marco Island Historical Society and Calusa Indians. Cape Romano and Goodland See come into view as the boat moves. The cruise also passes Marco Estates and Cape Marco. The landmarks are seen from the harbor, with the boat doing the traveling.",
-      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Florida Island Tours lists a two-hour cruise that leaves Goodland, crosses mangrove estuary inside the Ten Thousand Islands refuge, reaches Marco Island, and returns. The guide is described as a Florida-certified master naturalist who also belongs to the historical society on Marco Island. Talk on the boat covers the Calusa, Cape Romano, how the island was developed, waterfront culture, and wildlife. Dolphins, manatees, and birds are the animals the page says guests may see.",
+      "The route notes also take in Goodland's waterfront bars and restaurants, then houses along the Marco Estates. A cooler with ice is included, and so is parking. The group cap is six."
     ],
     "schemaDescription": "A two-hour guided outing with Florida Island Tours in Goodland. The outing passes Marco Island, Marco Island Historical Society, and Ten Thousand Islands National Wildlife Refuge.",
     "highlights": [
@@ -821,7 +821,7 @@ export const fareHarborGoodlandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/BTdUqlRTKXqzttPAN7Xw"
     ],
     "productImage": "https://cdn.filestackcontent.com/lYw27uHtQ86Ixj97LJHh",
-    "wordCount": 95,
+    "wordCount": 108,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "220 Goodland Dr. Goodland, FL 34140",

@@ -110,7 +110,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Cowgirl is a private offshore fishing charter on a 45-foot Hatteras out of Key West, for up to six guests. Lengths offered are 4, 6, 8, 10, or 12 hours. Grounds named are reefs, wrecks, and deeper water. Species named are mahi, wahoo, and tuna, plus sailfish, snapper, and shark. An air-conditioned cabin is there between bites.",
+      "A captain and a mate work every trip. Bait, rods, reels, lures, and other tackle are included, as are Florida fishing licenses, ice, and coolers. Fish can be cleaned and bagged at the dock when the law allows it. Guests bring food and drinks. Usual departure times are 7:00 a.m. and 1:00 p.m., with other hours on request, after a safety talk and a plan for the day."
     ],
     "schemaDescription": "A 4- to 12-hour harbor outing with Cowboy Charters on Key West Harbor.",
     "highlights": [
@@ -121,7 +122,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/KLbmMCxcR7iJvPIwv4d9"
     ],
     "productImage": "https://cdn.filestackcontent.com/UxWDijTVS9CElGrgZCj8",
-    "wordCount": 40,
+    "wordCount": 131,
     "durationLabel": "4-12 Hours",
     "durationIso": null,
     "meetingLocation": "1801 N Roosevelt Blvd, Key West, Florida 33040",
@@ -174,8 +175,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Teak decks and wood trim are part of the boat. Guests sail on a catamaran for this cruise. Bathrooms are on board for the length of the cruise. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "The Atlantia is a power catamaran of 64 feet, with a beam of 33 feet, chartered from Key West for four to eight hours. Six staterooms, six bathrooms, and crew quarters are on board. The page allows up to 12 guests overnight and up to 12 on a day charter.",
+      "The galley has an island and an industrial dishwasher. A hood sits over the full-size range. The oven is full size as well, and the sink is a double bay. The salon has a television that retracts, plus a lounge and dining area with two tables that convert. Decks are teak. Lounges sit at the bow and at the stern. Outside there are two refrigerators, sinks, and a machine for ice. Navigation gear is at the helm."
     ],
     "schemaDescription": "A 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
     "highlights": [
@@ -184,7 +185,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/UV7VbaC8RwKQanIogE8b",
-    "wordCount": 81,
+    "wordCount": 128,
     "durationLabel": "4 - 8 Hours",
     "durationIso": null,
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -213,8 +214,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "The \"Somewhere\" is a 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West. The outing reaches Lagoon.",
-      "Groups stay at a maximum of 12 guests."
+      "The Somewhere is a Lagoon 450 F flybridge catamaran chartered in Key West for four to eight hours, with a maximum of 12 guests. The operator describes it as manageable for a couple and large enough for a group. The cockpit is large. The flybridge keeps the lines and controls within reach. A forward cockpit is there for the breeze.",
+      "Below, there are four cabins, each with an ensuite head and a separate shower, and headroom listed at 6 feet 6 inches or more. The saloon has a C-shaped galley and windows the operator describes as a full circle of views. Sliding doors meet flush floors and decks."
     ],
     "schemaDescription": "The \"Somewhere\" is a 4- to 8-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
     "highlights": [
@@ -224,7 +225,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/decacu4jS1KjdaOl3XbS",
-    "wordCount": 30,
+    "wordCount": 109,
     "durationLabel": "4 - 8 Hours",
     "durationIso": null,
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -253,8 +254,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Teak decks and wood trim are part of the boat. Guests sail on a catamaran for this cruise. Bathrooms are on board for the length of the cruise. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Sunset Atlantia is a two-hour evening charter in Key West on the 64-foot power catamaran with a 33-foot beam. Six staterooms, six bathrooms, and crew quarters are aboard, and the group cap is 12.",
+      "The galley includes an island, an industrial dishwasher, a hood above a full-size range and oven, and a double sink. The salon has a retractable television and two convertible tables. Teak decks hold lounges at bow and stern. Two refrigerators sit outside, with sinks and an ice maker. The helm has navigation electronics. The page does not describe a separate sunset course beyond the shorter booking."
     ],
     "schemaDescription": "A two-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
     "highlights": [
@@ -263,7 +264,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/ffg3ALRnRL265ybaJwEu",
-    "wordCount": 81,
+    "wordCount": 104,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -292,8 +293,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Sunset \"Somewhere\" is a two-hour guided outing with Laroma Yachts Florida, LLC in Key West. The outing reaches Lagoon.",
-      "Groups stay at a maximum of 12 guests."
+      "Sunset Somewhere is a two-hour evening charter on a Lagoon 450 F flybridge catamaran in Key West. The group cap is 12. The page describes the boat as manageable for a couple and large enough for a group. The cockpit is large. On the flybridge, lines and controls are within reach. A second cockpit faces forward for the breeze.",
+      "Four cabins each have a head and a separate shower. Headroom is listed at 6 feet 6 inches or more. The saloon has a galley in a C shape and windows the operator describes as a full ring of views. Sliding doors open to decks that sit flush with the floors. The page does not add a separate sunset course beyond this shorter booking."
     ],
     "schemaDescription": "Sunset \"Somewhere\" is a two-hour guided outing with Laroma Yachts Florida, LLC in Key West.",
     "highlights": [
@@ -303,7 +304,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/i4ADNzRdS3iashVlHD1h",
-    "wordCount": 28,
+    "wordCount": 124,
     "durationLabel": "2 Hours",
     "durationIso": "PT2H",
     "meetingLocation": "7001 Shrimp Road Key West, FL 33040",
@@ -373,7 +374,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental."
+      "This charter is four hours on a Boston Whaler 230 Vantage, a bow-rider. A captain is aboard. The page says six people can sit comfortably. The bow has a lounge and a sun pad. A shaded bench is fitted, and a larger shaded area is on the boat as well. Audio is a Bluetooth connection. There is a freshwater shower and a sink at a prep station.",
+      "Fuel is included. So is a cooler holding ice, plus bottled water. Soda and chips are aboard too. The operator describes the use as a private boat ride to spots reached only by water. It is not a shared timetable."
     ],
     "schemaDescription": "A harbor outing with Salty Sandbars on Key West Harbor.",
     "highlights": [],
@@ -381,7 +383,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/tAXXbINpRYmNV8fSCzEI"
     ],
     "productImage": "https://cdn.filestackcontent.com/BNWLrJ0QdCQUX1Dl43zA",
-    "wordCount": 40,
+    "wordCount": 108,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -414,7 +416,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take out a small powerboat and stay aboard for the rental. The hull is a Boston Whaler, built as an open powerboat. A Bluetooth sound system is installed on the boat. People remain on the boat for the rental."
+      "This charter lasts six hours on a Boston Whaler 230 Vantage. The page calls the hull a newer bow-rider. A captain is aboard. Seating is described as comfortable for six people. The bow has a lounge and a sun pad. A shaded bench is fitted, and a larger shaded area is on the boat as well. Audio uses a Bluetooth connection. A freshwater shower and a sink at a prep station are on board.",
+      "Fuel is included. So is a cooler holding ice, plus bottled water. Soda and chips are aboard too. The operator describes the booking as time on this private boat. It is not a shared timetable, and the page does not add a second list of stops."
     ],
     "schemaDescription": "A guided outing with Salty Sandbars in Key West.",
     "highlights": [],
@@ -422,7 +425,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/SgVH47iFTRiTrmuNYhZ5"
     ],
     "productImage": "https://cdn.filestackcontent.com/YEuiJ9MCSLOuMzZtp2y3",
-    "wordCount": 40,
+    "wordCount": 121,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "811 Palm Ave Cswy 10 Key West, FL 33040",
@@ -593,9 +596,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a guided outing with Southpoint Divers in Key West. Tanks & weights, gloves, and water are included. The outdoor route is about 6 miles.",
-      "The outing reaches Florida Keys National Marine Sanctuary. Groups are capped at 20.",
-      "Guests must be at least 15 years old. A full refund is available with at least 48 hours' notice."
+      "Southpoint Divers runs a morning dive of two tanks on the USNS General Hoyt S. Vandenberg. The page says the ship was sunk in 2009 and calls it both Key West's largest artificial reef and the second-largest artificial reef anywhere. It lies about six miles south-southeast of Key West, inside the national marine sanctuary of the Florida Keys, on the bottom at 140 feet. Divers are limited to 100 feet, which is the deck.",
+      "The account says corals cover the steel and that fish use the deck and the corridors. Two tanks are the dive plan. Also included are weights, gloves, water, ice in a cooler, and a boat with a cover. The page frames the trip as that morning wreck dive."
     ],
     "schemaDescription": "A guided outing lasting 4.5 with Southpoint Divers in Key West. The outing passes Florida Keys National Marine Sanctuary.",
     "highlights": [
@@ -607,7 +609,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/D0iqBBR02Z9H4OO25wwq"
     ],
     "productImage": "https://cdn.filestackcontent.com/mEbdkwwRdiJILAx7Cnow",
-    "wordCount": 57,
+    "wordCount": 124,
     "durationLabel": "4.5",
     "durationIso": null,
     "meetingLocation": "606 Front Street Key West Florida 33040",
@@ -651,7 +653,8 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "A few optional stops leave time to step out for photographs and a closer look. The tasting also stops near Glazed Donuts and Old Town Key West. Food is the thread: each stop is there for what guests taste, with the street as the setting."
+      "The Underground Donut Tour is a Key West walk of two hours for groups of up to 20. It begins at Glazed Donuts with donuts just made, then moves into Old Town. Later tastes rotate. The page names Key lime pie, cookies, and ice cream as possibilities, and also local donuts. Conch fritters are on the list too, under the local nickname Key West donuts. The group decides which of those appear.",
+      "During the walk the guide adds island history and local stories. Tropical streets and brightly painted buildings are the setting the page describes. The tour does not end where it started. Strollers and wheelchairs are noted as workable. Tips and parking fees are extra."
     ],
     "schemaDescription": "A two-hour walking tour with Underground Donut Tour in Key West.",
     "highlights": [
@@ -662,7 +665,7 @@ export const fareHarborKeyWestLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ucavwJ29Qq62vEB34mOM"
     ],
     "productImage": "https://cdn.filestackcontent.com/HPV1P8fNS2qRfCdHLUZP",
-    "wordCount": 45,
+    "wordCount": 116,
     "durationLabel": "2 hours",
     "durationIso": "PT2H",
     "meetingLocation": "430 Duval Street Key West, FL 33040",

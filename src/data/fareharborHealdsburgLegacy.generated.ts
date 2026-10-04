@@ -11,8 +11,8 @@ export const fareHarborHealdsburgLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. An electric-assist bike is offered as an upgrade for the ride.",
-      "The bikes do the traveling, and the winery stops are where guests get off to taste. Guests ride electric bikes for this booking. The ride passes Wine Country Bikes and Hudson St. Cyclists also come to Truett Hurst and Mill Creek."
+      "Getaway Adventures runs this Healdsburg ride in Dry Creek Valley on paved back roads. Hours are 10:00 a.m. to 3:30 p.m. Adults 16 and older are $209. Ages 15 and under are $160. Distance is 10 to 12 miles, with two family wineries, a picnic, and a vineyard stop called Grapes 101.",
+      "The meeting point is Getaway Adventures, also called Wine Country Bikes, at 359 Hudson Street in Healdsburg. An electric bike, a helmet, other gear, van support, bottled water, and bars are included. Wineries the page says may be visited include Quivira and Martorana. Mauritson, Bella, and Comstock are on the same list. So are Truett Hurst and Mill Creek, and so are Kokomo and Dry Creek. One departure does not stop at every name."
     ],
     "schemaDescription": "A guided outing with Getaway Adventures in Healdsburg.",
     "highlights": [],
@@ -20,7 +20,7 @@ export const fareHarborHealdsburgLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/6QtlqGStTi683k9VDt9O"
     ],
     "productImage": "https://cdn.filestackcontent.com/CtHNMZJWQ7CYQmPbaoM5",
-    "wordCount": 92,
+    "wordCount": 130,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Dry Creek Wine Region: Healdsburg, CA",

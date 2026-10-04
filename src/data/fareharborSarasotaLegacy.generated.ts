@@ -11,8 +11,8 @@ export const fareHarborSarasotaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. The booking is about 8 hours. From the water, guests see Egmont Key and Passage Key. Venice Island and Stump Pass come into view as the boat moves. The cruise also passes Boca Grande. The landmarks are seen from the harbor, with the boat doing the traveling.",
-      "The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Gulf Water Tours lists a private cruise of four, six, or eight hours on the water around Sarasota. The captain picks stops with the group. Named options include Egmont Key and Passage Key. Venice Island is another. Stump Pass and Boca Grande are also on the list. The same page can be booked as time on a sandbar, as an evening cruise, as a look for dolphins, as snorkeling, or as a run along the coast.",
+      "The captain is included, and the boat is private. No single route is locked in advance. The stop list is chosen in that pre-trip conversation."
     ],
     "schemaDescription": "A 4- to 8-hour harbor outing with Gulf Water Tours. The sail passes Discuss preferences and destinations and Venice Island.",
     "highlights": [
@@ -24,7 +24,7 @@ export const fareHarborSarasotaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/S0lwYmUvRiSBW7c3Uk0L"
     ],
     "productImage": "https://cdn.filestackcontent.com/DcVDZmTSsmHYjjJhq3uE",
-    "wordCount": 96,
+    "wordCount": 102,
     "durationLabel": "4 - 8 hours",
     "durationIso": null,
     "meetingLocation": null,

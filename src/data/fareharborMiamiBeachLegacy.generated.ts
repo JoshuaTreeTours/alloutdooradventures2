@@ -11,8 +11,8 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 1.5 hours. The ride passes Hour Bike Rental and Biscayne Bay. Cyclists also come to Downtown Miami and Fisher Island.",
-      "Millionaire's Row and Versace Mansion are on the same loop. Later the route reaches Star Island and Lincoln Road."
+      "305 Tours pairs a narrated boat cruise of 90 minutes with a South Beach bike rental of three hours, usable the same day or later. Pickup is a South Beach hotel or the shop. On the water the boat crosses Biscayne Bay and passes the downtown skyline, then the port, Fisher Island, and the row of houses the page calls Millionaire's Row. Drinks and small snacks are sold on board.",
+      "The rental includes a bicycle, a helmet, a lock, and a bottle of water. The land route in the description goes by the Versace Mansion and Star Island, then Lincoln Road, Ocean Drive, the Art Deco District, and South Pointe Park. Those bike stops are separate from the 90 minutes afloat."
     ],
     "schemaDescription": "A three-hour bicycle outing with 305 Tours & Rentals. The outing passes Fisher Island, Star Island, and South Pointe Park.",
     "highlights": [
@@ -21,7 +21,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/kekAePQFQNam02qguFGM",
-    "wordCount": 68,
+    "wordCount": 121,
     "durationLabel": "3 Hour",
     "durationIso": "PT3H",
     "meetingLocation": null,
@@ -59,8 +59,8 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 5 hours. The ride passes Hour Bike Rental and Art Deco District. Cyclists also come to Ocean Drive and Downtown Miami.",
-      "Brickell Avenue and Coconut Grove are on the same loop. Later the route reaches Coral Gables and Little Havana."
+      "This 305 Tours booking is listed at five hours: a city tour of about four hours, a boat cruise, and a three-hour South Beach bike rental on the same day or another day. Pickup is a South Beach hotel or the shop. The air-conditioned bus covers the Art Deco District and Ocean Drive, then downtown, Brickell, Coconut Grove, and Coral Gables. Little Havana and Calle Ocho are on that same bus loop.",
+      "The boat is a narrated cruise of 90 minutes on Biscayne Bay, passing the downtown skyline, the port, Fisher Island, and Millionaire's Row. Drinks and light snacks are sold aboard. The bike rental includes a bicycle, a helmet, a lock, and bottled water. The bike notes name the Versace Mansion, Star Island, Lincoln Road, Ocean Drive, the Art Deco streets, and South Pointe Park."
     ],
     "schemaDescription": "A 5-hour bicycle outing with 305 Tours & Rentals. The outing passes Fisher Island, Star Island, and South Pointe Park.",
     "highlights": [
@@ -69,7 +69,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/wpgG3jOSWxAOOvHj5RQ4",
-    "wordCount": 68,
+    "wordCount": 138,
     "durationLabel": "5 Hours",
     "durationIso": "PT5H",
     "meetingLocation": null,
@@ -151,8 +151,8 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. The booking is an airboat trip in the Florida Everglades. After the ride there is a short wildlife talk that includes rescued alligators. Count on about 2 hours, including the ride to the park and back.",
-      "The airboat is the reason for the day. The coach is only the way there and back. The commentary takes up Art Deco District and Everglades National Park. That same account stays with Florida Everglades and South Beach's Art Deco."
+      "Miami Beach Bike Rental lists this as a 4.5-hour trip from the Art Deco district in South Beach to Everglades National Park and back. A coach takes the group out and returns it to the same drop-off. On the airboat the operator names alligators, turtles, birds, snakes, and other reptiles in a subtropical area it measures at 1.5 million acres.",
+      "The route then goes to an alligator farm. There the guide compares caimans, crocodiles, and other species, and explains historic methods used to capture alligators. The booking also includes two free hours on a rental. The airboat time and the farm stop are both inside the 4.5 hours."
     ],
     "schemaDescription": "A 4.5-hour airboat outing with South Florida Trikke Tours in Miami Beach. The outing passes Everglades National Park.",
     "highlights": [
@@ -163,7 +163,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/t10LSbZvTt6s2EsIDFhn"
     ],
     "productImage": "https://cdn.filestackcontent.com/DokRtLLrSNiXv03swq6F",
-    "wordCount": 90,
+    "wordCount": 113,
     "durationLabel": "4.5 hours",
     "durationIso": "PT4H30M",
     "meetingLocation": "233 14th Street Miami Beach, FL 33139",
@@ -201,8 +201,8 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Art Deco buildings in the financial district are what guests are taken to see. Guests ride a rented bike for the day. Time on the water is about 2 hours. The ride passes Art Deco District and Ocean Drive. Cyclists also come to Downtown Miami and Brickell Avenue.",
-      "South Beach and Calle Ocho are on the same loop. Later the route reaches Biscayne Bay and Fisher Island."
+      "Pickup for this combo is the South Beach shop. An air-conditioned bus then covers the Art Deco District and Ocean Drive. Downtown Miami and Brickell Avenue follow. Little Havana and Calle Ocho close the land loop. A narrated cruise of 90 minutes runs on Biscayne Bay, past the downtown skyline, the port, Fisher Island, and Millionaire's Row. Drinks and light snacks are for sale on the boat.",
+      "A bike is included. The described ride passes the Versace Mansion and Star Island, then Lincoln Road, Ocean Drive, the Art Deco District, and South Pointe Park. The title adds two free hours on a rental. The operator says the city-and-boat day can last from three hours to eight, depending on how the stops are used."
     ],
     "schemaDescription": "A harbor outing with South Florida Trikke Tours on Miami Beach Harbor. The sail passes Fisher Island, Star Island, and South Pointe Park.",
     "highlights": [
@@ -212,7 +212,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/71gYJqsRQ9iUpTexLCIz"
     ],
     "productImage": "https://cdn.filestackcontent.com/DYYUaSQ1usrWWUcOQMwA",
-    "wordCount": 67,
+    "wordCount": 126,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "233 14th Street Miami Beach, FL 33139",
@@ -299,7 +299,8 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Overseas Highway and Miami Ca. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint. People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "US2U sells this as a coach day from Miami down to Key West, listed at 14 hours. The bus leaves selected Miami points around 6:30 a.m. and uses the Overseas Highway. Arrival in Key West is around 11:30 a.m., traffic allowing. There, a boat goes out to look for dolphins, and drinks are served on that boat. Unguided free time in town follows.",
+      "The coach leaves Key West around 5:30 p.m. and is aimed at Miami around 9:00 p.m., again depending on traffic. The boat is the wildlife leg. The rest of the island time is on foot without a guide."
     ],
     "schemaDescription": "A 14-hour harbor outing with US2U on Miami Beach Harbor.",
     "highlights": [
@@ -310,7 +311,7 @@ export const fareHarborMiamiBeachLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ghxzLhlSmGjaZLqIZ3JV"
     ],
     "productImage": "https://cdn.filestackcontent.com/Urj6Sb5jR2qmdDnXq5cQ",
-    "wordCount": 63,
+    "wordCount": 109,
     "durationLabel": "14 hours",
     "durationIso": "PT14H",
     "meetingLocation": "700 Collins Avenue Miami Beach, FL 33139",

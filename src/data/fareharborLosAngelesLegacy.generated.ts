@@ -188,10 +188,8 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Chancellor Apartments - Outside view of Room 501 and discussion of Short's life there. Pig'n'Whistle - Sidewalk stop to place Short in Hollywood's café scene. Boardners - Outside visit and stories of its noir-era patrons. Hollywood Cherokee building - Stop outside the gynecologist's former office and related background.",
-      "The Frolic Room - Sidewalk stop examining its connection to Dahlia-era nightlife. Florentine Gardens - Stop discussing suspect connections and alleged encounters. Guardian Arms - Outside stop covering a short stay tied to suspect Margolis. Sowden (Hodel) House - Street-level viewing and discussion of allegations against Hodel.",
-      "Biltmore Hotel - Stop covering the last known sightings and conflicting accounts. Hotel Cecil - Outside stop linking the hotel to broader true crime legends. Herald Examiner Building - Discussion of media sensationalism and leaked details. Catalina St bungalow - Stop covering theories tying the bungalow to the murder.",
-      "Walter Bayley residence - Stop about another suspect's former home. Body discovery location - Site visit to the lot where Short's body was found."
+      "The Black Dahlia funeral-limo route is a list of outdoor stops. Chancellor Apartments is an outside look at Room 501 and at Elizabeth Short's time there. Pig'n'Whistle is a sidewalk stop on the Hollywood cafe scene. Boardners is an outside visit tied to noir-era patrons. The Hollywood Cherokee building is the former gynecologist's office.",
+      "The Frolic Room covers Dahlia-era nightlife. Florentine Gardens covers suspect connections. Guardian Arms covers a short stay linked to suspect Margolis. Sowden House, also called the Hodel house, is a street-level stop on allegations against Hodel. The Biltmore covers the last known sightings. Hotel Cecil is tied to other true-crime cases. The Herald Examiner Building covers press coverage. The Catalina Street bungalow and the Walter Bayley house are suspect addresses. The last stop is the lot where the body was found."
     ],
     "schemaDescription": "A three-hour guided outing with Grave Line Tours in Los Angeles.",
     "highlights": [
@@ -202,7 +200,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/63VVGBa4RRpzlTO7xFgE"
     ],
     "productImage": "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
-    "wordCount": 158,
+    "wordCount": 140,
     "durationLabel": "3 hours",
     "durationIso": "PT3H",
     "meetingLocation": "6801 Hollywood Boulevard Los Angeles, CA 90028",

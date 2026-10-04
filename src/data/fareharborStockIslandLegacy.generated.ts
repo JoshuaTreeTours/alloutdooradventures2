@@ -145,9 +145,8 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a four-hour guided outing with Six Fins Charter in Stock Island. The outing includes a stand-up paddle session.",
-      "Groups are capped at 8.",
-      "Guests must be at least 1 year old. A full refund is available with at least 24 hours' notice."
+      "Six Fins Charter lists this as a four-hour private sandbar trip from the Perry Hotel and Marina on Stock Island. The captain, who is Coast Guard licensed, chooses among Snipes Key, Jewfish Basin, the Mud Keys, Sand Key, or another flat, based on wind, tide, and the group. The boat anchors in waist-deep water and puts out floats and a lily pad.",
+      "Fuel and safety gear are included. A cooler, bottled water, and snacks are aboard. A lily pad, noodles, and a stand-up paddleboard can be requested at the dock. The group is capped at eight, and the boat is not shared. The listed price in the description is $1,195."
     ],
     "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -158,7 +157,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/1c1QPJFSniXIJFrelZa9"
     ],
     "productImage": "https://cdn.filestackcontent.com/lfTU36coSeCs6VvlYDkg",
-    "wordCount": 46,
+    "wordCount": 114,
     "durationLabel": "4 Hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -187,8 +186,8 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 3 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
-      "The booking is about 3 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Great White Heron and Lower Keys."
+      "This private eco charter lasts three hours and leaves the Perry Hotel and Marina with Six Fins. The water is the Great White Heron refuge and the Key West National Wildlife Refuge, described as protected area around the Lower Keys. A Coast Guard-licensed captain narrates. Subjects on the page are mangrove forest, seagrass flats, and bird rookeries, plus an occasional manatee and reef patches where green turtles feed.",
+      "Early morning or late afternoon is the suggested window. Fuel and safety gear are included. A cooler, bottled water, and snacks are aboard, and two bean-bag chairs can be requested. A shallow stop, in a cove or on a sandbar, is allowed when conditions permit. The printed price is $995. The group cap is eight."
     ],
     "schemaDescription": "A three-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -199,7 +198,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/0Di2BwgDTfSsWuwW6ruB"
     ],
     "productImage": "https://cdn.filestackcontent.com/zhsgTdGSLqqeEFI08wIQ",
-    "wordCount": 92,
+    "wordCount": 125,
     "durationLabel": "3 Hours",
     "durationIso": "PT3H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -269,8 +268,8 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "From the water, guests see Lower Keys and Key West. The landmarks are seen from the harbor, with the boat doing the traveling. The boat is how guests move, and the harbor is the viewpoint.",
-      "People stay aboard, watching the shore go by. The course is on the water for the whole outing, and the shore is what guests are there to see."
+      "Six Fins runs this private light-tackle trip to patch reefs in the Lower Keys. The boat is a 30-foot Jeanneau from the Perry Hotel and Marina. Fish named are snapper, grouper, and jacks, plus an occasional permit, all within a few miles of Key West. The captain is Coast Guard licensed and is the fishing guide. Rods and reels are included. So are terminal tackle and bait, either live or cut. A restaurant can be asked to cook the catch.",
+      "Prices on the page are $1,395 for four hours, $1,595 for six, and $1,795 for eight. This listing is the four-hour trip. Coolers, bottled water, snacks, and the fishing gear are included. Other methods on the page are trolling with light gear, aimed at mackerel and at bonito, plus mahi when that season is open, and drifting along the reef edge."
     ],
     "schemaDescription": "A four-hour guided outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -280,7 +279,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/u5m14eZHT5ivjVeNnQnM"
     ],
     "productImage": "https://cdn.filestackcontent.com/trC4enRduUsMUKHLjJrA",
-    "wordCount": 63,
+    "wordCount": 147,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -319,8 +318,8 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This private charter looks for wild dolphins in the backcountry channels. The charter runs about 10 hours. The boat is private for the group that booked it. Whether a pod is close that day is not promised. This is a private sandbar charter on the water.",
-      "The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. From the water, guests see Key West."
+      "Six Fins takes a private group to the Marquesas Keys on a 30-foot Jeanneau with a Coast Guard-licensed captain. Departure is the Perry Hotel and Marina on Stock Island. The operator describes the keys as uninhabited mangrove islands about 30 miles west of Key West, and it calls the ring the only natural atoll in this hemisphere. The ten-hour booking adds time at the Marquesas anchorage. The boat is not shared.",
+      "The day includes snorkeling in clear water, lunch on an empty sandbar, and time in the backcountry. Fuel and safety gear are included. At the dock, guests can ask for a lily pad, pool noodles, snorkel sets, fishing tackle, or a stand-up paddleboard. Dolphin and other wildlife viewing is on the itinerary, as is beach time on those islands. The run each way is listed at about 60 to 75 minutes."
     ],
     "schemaDescription": "A 10-hour snorkel outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -331,7 +330,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/ngEhdLRR5Ow4w367Z1D7"
     ],
     "productImage": "https://cdn.filestackcontent.com/gzyl1XbhRBivoYpb9Dzd",
-    "wordCount": 88,
+    "wordCount": 146,
     "durationLabel": "10 hour",
     "durationIso": "PT10H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",
@@ -365,8 +364,8 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "This is a private sandbar charter on the water. The booking is about 10 hours. The stop is a Key West sandbar, away from a crowd of other boats. A Coast Guard licensed captain runs the boat. Fuel and the safety gear are included. Bean bags on the bow are there for sitting out in the air.",
-      "Time on the water is about 10 hours. From the water, guests see Key West Harbor. The landmarks are seen from the harbor, with the boat doing the traveling."
+      "This private charter is clothing-optional. The boat is a 30-foot Jeanneau with a Coast Guard-licensed captain, leaving the Perry Hotel and Marina on Stock Island. Six hours is listed at $1,295. Eight hours is $1,445, and ten hours is $1,670. Nobody else shares the boat. The captain anchors at empty sandbars, or at reefs for snorkeling, or in quiet mangrove coves.",
+      "Fuel and safety gear are included. A cooler, bottled water, snacks, and snorkel gear are aboard. On request the dock can add a lily pad, noodles, a paddleboard, and two bean-bag chairs. The written order of the day is a pass through the harbor, a sandbar with little traffic, time in the water, snorkeling if conditions allow, and time on deck. The page is for adults."
     ],
     "schemaDescription": "A 6-hour snorkel outing with Six Fins Charter in Stock Island.",
     "highlights": [
@@ -376,7 +375,7 @@ export const fareHarborStockIslandLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/tE52xOOZQQqrCfOhij4U"
     ],
     "productImage": "https://cdn.filestackcontent.com/C7jKlgoLRJ2nwI3Hrctb",
-    "wordCount": 86,
+    "wordCount": 134,
     "durationLabel": "6 Hour",
     "durationIso": "PT6H",
     "meetingLocation": "7001 Shrimp Rd Dock A Slip 32 Stock Island, FL 33040",

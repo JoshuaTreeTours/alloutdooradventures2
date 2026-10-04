@@ -78,7 +78,8 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests take a walk ride with the horses. The ride follows Oat Hill Mine Trail, a short way from the shop. The ride passes Oat Hill Mine Trail and Santa Cruz."
+      "This four-hour electric mountain-bike tour leaves Calistoga Bike Shop for the mine trail just under a mile away, the Oat Hill line. The page describes views, sections of medium technical trail, and harder side features. The climb is more than four miles into the Palisades above town, with optional rolling trail after that and singletrack on the descent.",
+      "Bikes issued for the tour are full-suspension carbon models from Santa Cruz and from Specialized. Six riding parks sit within a 40-minute drive. The guide carries most tools needed for a trailside repair. More time, if wanted, is billed hourly. A calmer trail ride or a harder line can be chosen instead of the mine-trail climb."
     ],
     "schemaDescription": "Guests take a walk ride with the horses.",
     "highlights": [
@@ -87,7 +88,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     ],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/eYyXNK3GQI6Xjo9xRPzO",
-    "wordCount": 31,
+    "wordCount": 119,
     "durationLabel": "4 hours",
     "durationIso": "PT4H",
     "meetingLocation": null,
@@ -387,8 +388,8 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
     "engine2Path": null,
     "exceptionStatus": "OK",
     "paragraphs": [
-      "Guests ride bikes from one winery to the next. A bike and a helmet are set out when the group checks in. Lunch can be a picnic at a winery or a meal at a restaurant on the route. The bikes do the traveling, and the winery stops are where guests get off to taste.",
-      "The ride passes Napa Valley and Logvy Community Park. Cyclists also come to Wine Country and Chateau Montelena. Bennett Lane and Lava Vine are on the same loop. Later the route reaches Clos Pegase."
+      "Getaway Adventures runs this Calistoga ride through northern Napa on quiet back roads. The clock times are 10:30 a.m. to 3:00 p.m. Adults 16 and older are $250. Ages 15 and under are $200. Two wineries are on the route, and the distance is about 12 miles, mostly flat. A stop called Grapes 101 covers sipping, swirling, and tasting. Guides then lay out a picnic at one winery.",
+      "Meet at Logvy Community Park, 1745 Washington Street, Calistoga. A town bike, a helmet, water, the picnic, and a local guide are included. The operator's may-visit list includes Chateau Montelena and Bennett Lane, plus Envy. Other names on that list are Summers and Lava Vine. August Briggs, Tedeschi, and Twomey are listed too, as are T Vine and Clos Pegase."
     ],
     "schemaDescription": "A guided outing with Getaway Adventures in Calistoga. The outing passes Logvy Community Park.",
     "highlights": [
@@ -398,7 +399,7 @@ export const fareHarborCalistogaLegacyProducts: FareHarborProofProduct[] = [
       "https://cdn.filestackcontent.com/WqgkaZtSoOgHUOcZQBgU"
     ],
     "productImage": "https://cdn.filestackcontent.com/3ObyUVjhQfG97bQL4uRw",
-    "wordCount": 89,
+    "wordCount": 133,
     "durationLabel": null,
     "durationIso": null,
     "meetingLocation": "Logvy Community Park, Calistoga, CA",
