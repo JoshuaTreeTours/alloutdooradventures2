@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Small-Group-Circle-Island-Tour-with-Snorkeling/d59070-12446SNORKEL",
     "title": "Oahu Small-Group Circle Island Tour with Turtle Snorkeling",
     "description": {
-      "text": "Explore Oahu on this full-day minibus tour with a small group and a local guide. See the Dole Plantation, the Halona Blowhole, Diamond Head, and Makapu’u Beach during this day-long outing. Round-trip transportation from Waikiki hotels is included.Stop by Kualoa Point on Kane’ohe Bay for a look at Mokoliʻi Visit a macadamia nut farm and the Dole pineapple plantation Snorkel amongst Hawaiian green sea turtles Travel by minibus with a max Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A small-group minibus circles Oahu with snorkeling among Hawaiian green sea turtles on the North Shore. A local guide travels with a group of about 24 to 28 people or fewer. Stops include the Dole Plantation, a macadamia nut farm, the Halona Blowhole, Diamond Head, and Makapu'u Beach, plus Kualoa Point on Kaneohe Bay for a view of Mokoliʻi. Round-trip transportation from Waikiki hotels is included. The North Shore snorkel is with Hawaiian green sea turtles. Waikiki hotels are the pickup and return point for the minibus."
     },
     "location": {
       "city": "Honolulu",
@@ -31,40 +31,32 @@
       ]
     },
     "highlights": [
-      "Explore Oahu on this full-day minibus tour with a small group and a local guide",
-      "See the Dole Plantation, the Halona Blowhole, Diamond Head, and Makapu’u Beach during this day-long outing",
-      "Round-trip transportation from Waikiki hotels is included.Stop by Kualoa Point on Kane’ohe Bay for a look at Mokoliʻi Vi",
-      "Oahu Small-Group Circle Island Tour with Turtle Snorkeling departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "A small-group minibus circles Oahu with snorkeling among Hawaiian green sea turtles on the North Shore",
+      "A local guide travels with a group of about 24 to 28 people or fewer",
+      "Stops include the Dole Plantation, a macadamia nut farm, the Halona Blowhole, Diamond Head, and Makapu'u Beach, plus Kualoa Point on Kaneohe Bay for a view of Mokoliʻi"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Round-trip transportation from Waikiki hotels"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Return transportation to Waikiki hotels"
       }
     },
-    "itinerarySummary": "Explore Oahu on this full-day minibus tour with a small group and a local guide.",
+    "itinerarySummary": "A small-group minibus circles Oahu with snorkeling among Hawaiian green sea turtles on the North Shore.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Diamond Head",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "North Shore",
+        "title": "Halona Blowhole",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Haleiwa",
+        "title": "Makapu'u Beach",
         "description": "",
         "stopType": "stop"
       },
@@ -74,19 +66,19 @@
         "stopType": "stop"
       },
       {
-        "title": "Waimea Valley",
+        "title": "Macadamia nut farm",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Polynesian Cultural Center",
+        "title": "Kualoa Point",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Kualoa Ranch",
+        "title": "North Shore snorkeling",
         "description": "",
-        "stopType": "pass-by"
+        "stopType": "stop"
       }
     ],
     "inclusions": [
@@ -107,7 +99,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Round-trip transportation from Waikiki hotels"
       }
     ],
     "categories": [

@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Grand-Tour-Around-Island-with-Snorkeling-16-Locations/d59070-375182P1",
     "title": "Oahu: Grand Tour Around Island with Snorkeling",
     "description": {
-      "text": "With just one day, you can see 16 of Oahu’s greatest sights and still have time for snorkeling—if you hop on this tour. Across one whirlwind day, you’ll witness Diamond Head State Monument, the Halona Blowhole, the Dole Plantation, and so much more. You’ll capture fantastic photos, learn all about the island’s history, and go snorkeling, topping off the day surrounded by Oahu’s colorful marine life.Make the most of your time on the island, hitting all the best spots with a guide See Makapu'u Beach, Kahuku Farms, Waimea Bay, and beyond Snacks and snorkeling gear provided Hassle-free hotel picku Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "This Oahu day includes snorkeling plus Diamond Head State Monument, the Halona Blowhole, and the Dole Plantation. Other named stops are Makapu'u Beach, Kahuku Farms, and Waimea Bay. Snacks and snorkeling gear are provided, and pickup at the hotel is part of the day. Those named stops and the snorkeling share the same day, with the snacks and gear provided. Diamond Head State Monument, the Halona Blowhole, the Dole Plantation, Makapu'u Beach, Kahuku Farms, and Waimea Bay are the places named alongside the snorkeling on this Oahu day."
     },
     "location": {
       "city": "Honolulu",
@@ -31,28 +31,20 @@
       ]
     },
     "highlights": [
-      "With just one day, you can see 16 of Oahu’s greatest sights and still have time for snorkeling—if you hop on this tour",
-      "Across one whirlwind day, you’ll witness Diamond Head State Monument, the Halona Blowhole, the Dole Plantation, and so m",
-      "You’ll capture fantastic photos, learn all about the island’s history, and go snorkeling, topping off the day surrounded",
-      "Oahu: Grand Tour Around Island with Snorkeling departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "This Oahu day includes snorkeling plus Diamond Head State Monument, the Halona Blowhole, and the Dole Plantation",
+      "Other named stops are Makapu'u Beach, Kahuku Farms, and Waimea Bay",
+      "Snacks and snorkeling gear are provided, and pickup at the hotel is part of the day"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Pickup from your hotel"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "With just one day, you can see 16 of Oahu’s greatest sights and still have time for snorkeling—if you hop on this tour.",
+    "itinerarySummary": "This Oahu day includes snorkeling plus Diamond Head State Monument, the Halona Blowhole, and the Dole Plantation.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Diamond Head State Monument",
         "description": "",
@@ -81,7 +73,7 @@
       {
         "title": "Kahuku Farms",
         "description": "",
-        "stopType": "pass-by"
+        "stopType": "stop"
       }
     ],
     "inclusions": [
@@ -102,7 +94,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Pickup from your hotel"
       }
     ],
     "categories": [

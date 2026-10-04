@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Private-and-Small-group-tours-North-Shore-waterfalls-and-Turtles/d59070-189546P8",
     "title": "North Shore day,Waterfalls and Turtles Tour",
     "description": {
-      "text": "Aloha we started off the day with a history lesson as we drive across the island to the North Shore where our day starts at the old Sugar Mill for a guided tour of our magnificent coffees and chocolates of Hawaii followed by one of the most unique souvenir shops on the island afterwards, we will take a short 7 mile drive to the sacred Valley of Waimea, where we will track 3/4 of a mile in through the sacred valley and rainforest, visiting at a Hawaiian village And ending up at a 45 foot waterfall with 110 foot pool at the base to go swimming (lifeguard‘s present) afterwards, we will trek back Your guide covers Pearl Harbor memorials, circle-island routing, North Shore surf towns, helicopter flyovers, luau evenings, or reef snorkeling depending on the route. Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "This North Shore day from Honolulu stops at the old Sugar Mill and then walks to a waterfall in Waimea Valley. The drive over includes a history lesson. At the Sugar Mill there is coffee and chocolate, then a souvenir shop. About seven miles later, a three-quarter-mile walk through rainforest and a Hawaiian village reaches a 45-foot waterfall and a pool about 110 feet across, with lifeguards on duty. Swimming is part of the stop before the walk back. Lifeguards are present for the swim at the waterfall pool."
     },
     "location": {
       "city": "Honolulu",
@@ -31,47 +31,34 @@
       ]
     },
     "highlights": [
-      "North Shore day,Waterfalls and Turtles Tour from Honolulu",
-      "Pearl Harbor, North Shore, or Waikiki routing",
-      "Professional guide with Oahu expertise",
-      "Small-group or private format as listed",
-      "Honolulu cultural, coastal, or aerial experience"
+      "This North Shore day from Honolulu stops at the old Sugar Mill and then walks to a waterfall in Waimea Valley",
+      "The drive over includes a history lesson",
+      "At the Sugar Mill there is coffee and chocolate, then a souvenir shop"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "See booking details"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "Aloha we started off the day with a history lesson as we drive across the island to the North Shore where our day starts at the old Sugar Mill for a guided tour of our magnificent coffees and chocolates of Hawaii followed by one of the most unique souvenir shops on the island afterwards, we will take a short 7 mile drive to the sacred Valley of Waimea, where we will track 3/4 of a mile in through the sacred valley and rainforest, visiting at a Hawaiian village And ending up at a 45 foot waterfall with 110 foot pool at the base to go swimming (lifeguard‘s present) afterwards, we will trek back Your guide covers Pearl Harbor memorials, circle-island routing, North Shore surf towns, helicopter flyovers, luau evenings, or reef snorkeling depending on the route.",
+    "itinerarySummary": "This North Shore day from Honolulu stops at the old Sugar Mill and then walks to a waterfall in Waimea Valley.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Hanauma Bay",
+        "title": "Old Sugar Mill",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Waikiki",
+        "title": "Waimea Valley",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "North Shore",
+        "title": "45-foot waterfall",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -92,7 +79,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "See booking details"
       }
     ],
     "categories": [

@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Ka-Moana-Luau/d59070-64146P1",
     "title": "Oahu: Ka Moana Lūʻau at Aloha Tower – Oceanfront Luau Show",
     "description": {
-      "text": "Experience a traditional Hawaiian Luau in a scenic location. The evening begins with a variety of cultural activities ideal for all ages. Learn how to make a coconut headband, string flower lei, or dance hula, and then sit down for a buffet dinner with a large selection of Hawaiian specialties like Kalua pork and Huli Huli chicken. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "Ka Moana Luau is an oceanfront show at Aloha Tower, with cultural activities, a Hawaiian buffet, and fire dance. Activities include making a coconut headband, stringing a flower lei, and hula. The buffet includes kalua pork, huli huli chicken, and lomi lomi salmon. The performance includes Polynesian fire dance. The headband, lei, and hula come before that fire dance and buffet at Aloha Tower in Honolulu. Lomi lomi salmon joins kalua pork and huli huli chicken on the Aloha Tower buffet before the fire dance."
     },
     "location": {
       "city": "Honolulu",
@@ -31,47 +31,29 @@
       ]
     },
     "highlights": [
-      "Experience a traditional Hawaiian Luau in a scenic location",
-      "The evening begins with a variety of cultural activities ideal for all ages",
-      "Learn how to make a coconut headband, string flower lei, or dance hula, and then sit down for a buffet dinner with a lar",
-      "Oahu: Ka Moana Lūʻau at Aloha Tower – Oceanfront Luau Show departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "Ka Moana Luau is an oceanfront show at Aloha Tower, with cultural activities, a Hawaiian buffet, and fire dance",
+      "Activities include making a coconut headband, stringing a flower lei, and hula",
+      "The buffet includes kalua pork, huli huli chicken, and lomi lomi salmon"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Aloha Tower"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Aloha Tower"
       }
     },
-    "itinerarySummary": "Experience a traditional Hawaiian Luau in a scenic location.",
+    "itinerarySummary": "Ka Moana Luau is an oceanfront show at Aloha Tower, with cultural activities, a Hawaiian buffet, and fire dance.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
+        "title": "Aloha Tower",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Waikiki",
+        "title": "Polynesian fire dance",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "North Shore",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -92,7 +74,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Aloha Tower"
       }
     ],
     "categories": [

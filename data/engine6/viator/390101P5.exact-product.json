@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Deluxe-Arizona-Memorial-and-USS-Missouri-Battleship-Tour/d59070-390101P5",
     "title": "Deluxe Arizona Memorial and USS Missouri Battleship Tour",
     "description": {
-      "text": "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-group tour. After a pickup from your Waikiki hotel, travel to the harbor in a comfortable, air-conditioned vehicle. This full-day tour gives you time to reflect on what you see and learn at Pearl Harbor.Ideal for World War II and American history buffs Round-trip hotel transfers mean you don't risk getting lost Includes tickets for USS Arizona Memorial and USS Missouri Battleship Enjoy a short ride through the historical Honolulu downtown Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A small group leaves a Waikiki hotel for Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri. The transfer uses an air-conditioned vehicle, and tickets for the USS Arizona Memorial and the USS Missouri, also called the Mighty MO, are included. The day includes a short ride through downtown Honolulu. Time aboard the battleship follows pickup at the Waikiki hotel on this Oahu tour. Downtown Honolulu is a short ride on the same air-conditioned day as the Arizona Memorial and the Mighty MO."
     },
     "location": {
       "city": "Honolulu",
@@ -31,28 +31,20 @@
       ]
     },
     "highlights": [
-      "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-g",
-      "After a pickup from your Waikiki hotel, travel to the harbor in a comfortable, air-conditioned vehicle",
-      "This full-day tour gives you time to reflect on what you see and learn at Pearl Harbor.Ideal for World War II and Americ",
-      "Deluxe Arizona Memorial and USS Missouri Battleship Tour departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "A small group leaves a Waikiki hotel for Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri",
+      "The transfer uses an air-conditioned vehicle, and tickets for the USS Arizona Memorial and the USS Missouri, also called the Mighty MO, are included",
+      "The day includes a short ride through downtown Honolulu"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Pickup from your Waikiki hotel"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Return transfer to your Waikiki hotel"
       }
     },
-    "itinerarySummary": "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-group tour.",
+    "itinerarySummary": "A small group leaves a Waikiki hotel for Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Pearl Harbor",
         "description": "",
@@ -69,14 +61,9 @@
         "stopType": "stop"
       },
       {
-        "title": "Pearl Harbor Aviation Museum",
+        "title": "Downtown Honolulu",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Honolulu",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -97,7 +84,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Pickup from your Waikiki hotel"
       }
     ],
     "categories": [

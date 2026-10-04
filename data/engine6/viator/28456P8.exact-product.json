@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Private-60-Minute-Helicopter-Tour-with-Kualoa-Ranch-Landing/d59070-28456P8",
     "title": "Private 45 Minute Helicopter Tour with Romantic Landing",
     "description": {
-      "text": "If you're looking to add to the romance of your Hawaii trip then this romantic helicopter ride is right up your alley. Enjoy a scenic flight over Oahu and take in the lush valleys, Diamond Head crater, and the South Shore. Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A private helicopter flight over Oahu passes lush valleys, Diamond Head crater, and the South Shore. The flight lands at a private oasis away from crowds, where leis, chocolates, and champagne are waiting. The helicopter is reserved for the booking, and several departure times are offered from Honolulu. Leis, chocolates, and champagne are set out at that private Oahu landing after the pass over the crater, the valleys, and the South Shore. Several departure times are offered so the private Honolulu flight can be scheduled for the party."
     },
     "location": {
       "city": "Honolulu",
@@ -31,57 +31,34 @@
       ]
     },
     "highlights": [
-      "Private 45 Minute Helicopter Tour with Romantic Landing from Honolulu",
-      "Pearl Harbor, North Shore, or Waikiki routing",
-      "Professional guide with Oahu expertise",
-      "Small-group or private format as listed",
-      "Honolulu cultural, coastal, or aerial experience"
+      "A private helicopter flight over Oahu passes lush valleys, Diamond Head crater, and the South Shore",
+      "The flight lands at a private oasis away from crowds, where leis, chocolates, and champagne are waiting",
+      "The helicopter is reserved for the booking, and several departure times are offered from Honolulu"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "See booking details"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "If you're looking to add to the romance of your Hawaii trip then this romantic helicopter ride is right up your alley.",
+    "itinerarySummary": "A private helicopter flight over Oahu passes lush valleys, Diamond Head crater, and the South Shore.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Diamond Head",
+        "title": "Diamond Head crater",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Sacred Falls",
+        "title": "South Shore",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Pearl Harbor",
+        "title": "Private landing",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "North Shore",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Waikiki",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -102,7 +79,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "See booking details"
       }
     ],
     "categories": [

@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Chiefs-Luau-Admission-Including-Transfers/d59070-6981P1",
     "title": "Oahu: Chief's Luau Admission Including Transfers",
     "description": {
-      "text": "Immerse yourself in Hawaiian culture with a visit to a traditional luau. Your driver will pick you up at your hotel and take you to the luau, where you'll be greeted with a lei and a cocktail. During the course of the evening, you'll have your fill of Hawaiian food while watching a live Polynesian show. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "Chief's Luau includes pickup at the hotel, a lei and cocktail greeting, Hawaiian food, and a live Polynesian show. The meal is an all-you-can-eat buffet, and headband weaving is one of the activities during the evening. Round-trip transfers from the hotel are provided, and more than one package is offered. Headband weaving sits with the buffet and the Polynesian show after the hotel transfer on Oahu. Packages differ, but the hotel transfer, lei, cocktail, buffet, and live Polynesian show are the evening's core on Oahu."
     },
     "location": {
       "city": "Honolulu",
@@ -31,47 +31,29 @@
       ]
     },
     "highlights": [
-      "Immerse yourself in Hawaiian culture with a visit to a traditional luau",
-      "Your driver will pick you up at your hotel and take you to the luau, where you'll be greeted with a lei and a cocktail",
-      "During the course of the evening, you'll have your fill of Hawaiian food while watching a live Polynesian show",
-      "Oahu: Chief's Luau Admission Including Transfers departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "Chief's Luau includes pickup at the hotel, a lei and cocktail greeting, Hawaiian food, and a live Polynesian show",
+      "The meal is an all-you-can-eat buffet, and headband weaving is one of the activities during the evening",
+      "Round-trip transfers from the hotel are provided, and more than one package is offered"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Round-trip transfer from your hotel"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Return transfer to your hotel"
       }
     },
-    "itinerarySummary": "Immerse yourself in Hawaiian culture with a visit to a traditional luau.",
+    "itinerarySummary": "Chief's Luau includes pickup at the hotel, a lei and cocktail greeting, Hawaiian food, and a live Polynesian show.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
+        "title": "Hotel transfer",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Waikiki",
+        "title": "Chief's Luau",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "North Shore",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -92,7 +74,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Round-trip transfer from your hotel"
       }
     ],
     "categories": [

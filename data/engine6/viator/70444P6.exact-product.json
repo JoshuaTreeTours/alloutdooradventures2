@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Hawaii-Volcano-Eco-Adventure-Tour-from-Oahu/d59070-70444P6",
     "title": "Hawaii Volcanoes National Park Experience Departing from Oahu",
     "description": {
-      "text": "Get away from the Oahu buzz with this whirlwind volcano-chasing tour. After your short flight from Honolulu, arrive in Kona to meet your driver for a serious adventure: You’ll visit the historic town of Kona, set your eyes on the Mars-like Kilauea Iki Overlook, run your toes along black sand, and explore Hawaii Volcanoes National Park, an active volcanic landscape that’s creating the Big Island to this day.Inter-island flight to Kona International Airport and transport included See wild spots like Hawaii Volcanoes National Park Spend 8+ hours on the ground, for a full day chasing wild landscap Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "This volcano day leaves Honolulu on a flight to Kona International Airport, where a driver meets the group. More than eight hours on the ground include historic Kona, the Kilauea Iki Overlook, black sand, and Hawaii Volcanoes National Park. Ground transport is included with the inter-island flight. The park is an active volcanic landscape that is still forming the Big Island. Black sand and the Kilauea Iki Overlook share that ground day with historic Kona. The driver meets the group in Kona after the flight from Honolulu."
     },
     "location": {
       "city": "Honolulu",
@@ -31,47 +31,44 @@
       ]
     },
     "highlights": [
-      "Hawaii Volcanoes National Park Experience Departing from Oahu from Honolulu",
-      "Pearl Harbor, North Shore, or Waikiki routing",
-      "Professional guide with Oahu expertise",
-      "Small-group or private format as listed",
-      "Honolulu cultural, coastal, or aerial experience"
+      "This volcano day leaves Honolulu on a flight to Kona International Airport, where a driver meets the group",
+      "More than eight hours on the ground include historic Kona, the Kilauea Iki Overlook, black sand, and Hawaii Volcanoes National Park",
+      "Ground transport is included with the inter-island flight"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Flight from Honolulu to Kona International Airport, then meet the driver in Kona"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "Get away from the Oahu buzz with this whirlwind volcano-chasing tour.",
+    "itinerarySummary": "This volcano day leaves Honolulu on a flight to Kona International Airport, where a driver meets the group.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
+        "title": "Flight from Honolulu",
         "description": "",
-        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Kona",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilauea Iki Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Black sand",
+        "description": "",
         "stopType": "stop"
       },
       {
         "title": "Hawaii Volcanoes National Park",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Kilauea",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Black Sand Beach",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kona",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -92,7 +89,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Flight from Honolulu to Kona International Airport, then meet the driver in Kona"
       }
     ],
     "categories": [

@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Polynesian-Cultural-Center-and-Mini-Circle-Island-Including-Pearl-Harbour/d59070-179218P23",
     "title": "Pearl Harbor, Dole, and Polynesian Cultural Center from Waikiki",
     "description": {
-      "text": "See three of Oahu's most important cultural attractions in just one day with his small-group tour. You'll visit historic Pearl Harbor where you'll learn about WWII history in the US, continuing to the Dole Plantation to learn about the history of the state's pineapple industry. Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A small-group day from Waikiki visits Pearl Harbor, the Dole Plantation, and the Polynesian Cultural Center. Pearl Harbor covers World War II history in the United States, the Dole Plantation covers Hawaii's pineapple industry, and the Polynesian Cultural Center covers traditions in Hawaii and across the Pacific. Round-trip transportation from Waikiki hotels is included, and admission is included in the tour price. All three stops are on Oahu, and the day returns to the hotel. Waikiki hotel transfers are round trip."
     },
     "location": {
       "city": "Honolulu",
@@ -31,52 +31,34 @@
       ]
     },
     "highlights": [
-      "Pearl Harbor, Dole, and Polynesian Cultural Center from Waikiki from Honolulu",
-      "Pearl Harbor, North Shore, or Waikiki routing",
-      "Professional guide with Oahu expertise",
-      "Small-group or private format as listed",
-      "Honolulu cultural, coastal, or aerial experience"
+      "A small-group day from Waikiki visits Pearl Harbor, the Dole Plantation, and the Polynesian Cultural Center",
+      "Pearl Harbor covers World War II history in the United States, the Dole Plantation covers Hawaii's pineapple industry, and the Polynesian Cultural Center covers traditions in Hawaii and across the Pacific",
+      "Round-trip transportation from Waikiki hotels is included, and admission is included in the tour price"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Round-trip transportation from Waikiki hotels"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Return to your hotel"
       }
     },
-    "itinerarySummary": "See three of Oahu's most important cultural attractions in just one day with his small-group tour.",
+    "itinerarySummary": "A small-group day from Waikiki visits Pearl Harbor, the Dole Plantation, and the Polynesian Cultural Center.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Pearl Harbor",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "USS Arizona Memorial",
+        "title": "Dole Plantation",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Battleship Missouri Memorial",
+        "title": "Polynesian Cultural Center",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Pearl Harbor Aviation Museum",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Honolulu",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -97,7 +79,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Round-trip transportation from Waikiki hotels"
       }
     ],
     "categories": [

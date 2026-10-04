@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Pearl-Harbor-USS-Arizona-Memorial-and-Battleship-Missouri/d59070-452226P3",
     "title": "Pearl Harbor: USS Arizona Memorial and Battleship Missouri Tour",
     "description": {
-      "text": "Deepen your understanding of World War II and the attack on Pearl Harbor with this seamless and convenient tour. Enjoy stress-free travel with direct pickup and transportation to the Pearl Harbor National Museum. Then, skip the hassle of ticket lines as admission to key sites—including the Pearl Harbor National Memorial and Battleship Missouri Memorial—is included, giving you more time to immerse yourself in the exhibits.Avoid long lines at the Pearl Harbor National Memorial with included tickets Rare opportunity to step aboard a battleship Hassle-free pickup and drop-off from Waikiki hotels L Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "Pickup at a Waikiki hotel goes to Pearl Harbor for the USS Arizona Memorial and the Battleship Missouri. The ride goes to the Pearl Harbor National Museum, and included tickets cover the Pearl Harbor National Memorial and the Battleship Missouri Memorial, including time aboard the battleship. Drop-off returns to Waikiki hotels. This Honolulu visit covers the attack on Pearl Harbor and World War II, with those tickets included. Boarding the battleship is included with the Missouri ticket on this Honolulu booking."
     },
     "location": {
       "city": "Honolulu",
@@ -31,35 +31,27 @@
       ]
     },
     "highlights": [
-      "Deepen your understanding of World War II and the attack on Pearl Harbor with this seamless and convenient tour",
-      "Enjoy stress-free travel with direct pickup and transportation to the Pearl Harbor National Museum",
-      "Then, skip the hassle of ticket lines as admission to key sites—including the Pearl Harbor National Memorial and Battles",
-      "Pearl Harbor: USS Arizona Memorial and Battleship Missouri Tour departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "Pickup at a Waikiki hotel goes to Pearl Harbor for the USS Arizona Memorial and the Battleship Missouri",
+      "The ride goes to the Pearl Harbor National Museum, and included tickets cover the Pearl Harbor National Memorial and the Battleship Missouri Memorial, including time aboard the battleship",
+      "Drop-off returns to Waikiki hotels"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Pickup and drop-off from Waikiki hotels"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Drop-off at Waikiki hotels"
       }
     },
-    "itinerarySummary": "Deepen your understanding of World War II and the attack on Pearl Harbor with this seamless and convenient tour.",
+    "itinerarySummary": "Pickup at a Waikiki hotel goes to Pearl Harbor for the USS Arizona Memorial and the Battleship Missouri.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Pearl Harbor",
+        "title": "Pearl Harbor National Museum",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "USS Arizona Memorial",
+        "title": "Pearl Harbor National Memorial",
         "description": "",
         "stopType": "stop"
       },
@@ -67,16 +59,6 @@
         "title": "Battleship Missouri Memorial",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Pearl Harbor Aviation Museum",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Honolulu",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -97,7 +79,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Pickup and drop-off from Waikiki hotels"
       }
     ],
     "categories": [

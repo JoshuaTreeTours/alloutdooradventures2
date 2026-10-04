@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Germaines-Luau/d59070-33188P2",
     "title": "Oahu: Germaine's Luau",
     "description": {
-      "text": "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei. Head to the venue and be greeted with a traditional lei before you are seated for dinner. Enjoy a delicious Hawaiian-American meal with dishes that include a succulent roasted pig, sauteed island fish, Hawaiian chicken, and much more. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "Germaine's Luau is a dinner show in Kapolei, with a lei greeting, a Hawaiian-American meal, and live dance. The meal includes roasted pig, sauteed island fish, and Hawaiian chicken. Performances include Polynesian fire-knife, hula, and slap dancing. The Makai Luau Package lists a shell lei, a Hawaiian buffet, soft drinks, hot coffee, and one alcoholic drink ticket for each adult age 21 or older. This Oahu luau is held in Kapolei. Soft drinks, hot coffee, and the adult drink ticket are listed on the Makai package with the shell lei."
     },
     "location": {
       "city": "Honolulu",
@@ -31,47 +31,29 @@
       ]
     },
     "highlights": [
-      "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei",
-      "Head to the venue and be greeted with a traditional lei before you are seated for dinner",
-      "Enjoy a delicious Hawaiian-American meal with dishes that include a succulent roasted pig, sauteed island fish, Hawaiian",
-      "Oahu: Germaine's Luau departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "Germaine's Luau is a dinner show in Kapolei, with a lei greeting, a Hawaiian-American meal, and live dance",
+      "The meal includes roasted pig, sauteed island fish, and Hawaiian chicken",
+      "Performances include Polynesian fire-knife, hula, and slap dancing"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Kapolei"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Kapolei"
       }
     },
-    "itinerarySummary": "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei.",
+    "itinerarySummary": "Germaine's Luau is a dinner show in Kapolei, with a lei greeting, a Hawaiian-American meal, and live dance.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
+        "title": "Kapolei",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Waikiki",
+        "title": "Luau dinner show",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "North Shore",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -92,7 +74,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Kapolei"
       }
     ],
     "categories": [

@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Oahu-Grand-Circle-Island-Day-Tour-with-Dole-Plantation/d59070-23607",
     "title": "Oahu Deluxe Grand Circle Island Tour",
     "description": {
-      "text": "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day tour. Check out Diamond Head, Nu’uanu Pali lookout, the Halona Blowhole, Waimea Valley and Oahu’s beautiful North Shore. Soak up Hawaiian history and culture with a stop at the Dole Plantation and the serene, Japanese-style Byodo-In Temple. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A coach circles Oahu from Honolulu, with Diamond Head, the North Shore, the Dole Plantation, and Byodo-In Temple. The day also includes Nu'uanu Pali Lookout, the Halona Blowhole, and Waimea Valley. On the North Shore, Waimea Bay is noted for big-wave surfing since the 1960s. Byodo-In Temple admission and round-trip hotel transport are included. Ocean views, rugged mountains, and history come along on the full-day coach circuit. The temple stop includes admission, and the coach handles the hotel transport both ways."
     },
     "location": {
       "city": "Honolulu",
@@ -31,45 +31,32 @@
       ]
     },
     "highlights": [
-      "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day",
-      "Check out Diamond Head, Nu’uanu Pali lookout, the Halona Blowhole, Waimea Valley and Oahu’s beautiful North Shore",
-      "Soak up Hawaiian history and culture with a stop at the Dole Plantation and the serene, Japanese-style Byodo-In Temple",
-      "Oahu Deluxe Grand Circle Island Tour departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "A coach circles Oahu from Honolulu, with Diamond Head, the North Shore, the Dole Plantation, and Byodo-In Temple",
+      "The day also includes Nu'uanu Pali Lookout, the Halona Blowhole, and Waimea Valley",
+      "On the North Shore, Waimea Bay is noted for big-wave surfing since the 1960s"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Round-trip hotel transport"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Return hotel transport"
       }
     },
-    "itinerarySummary": "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day tour.",
+    "itinerarySummary": "A coach circles Oahu from Honolulu, with Diamond Head, the North Shore, the Dole Plantation, and Byodo-In Temple.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Diamond Head",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "North Shore",
+        "title": "Nu'uanu Pali Lookout",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Haleiwa",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Dole Plantation",
+        "title": "Halona Blowhole",
         "description": "",
         "stopType": "stop"
       },
@@ -79,14 +66,24 @@
         "stopType": "stop"
       },
       {
-        "title": "Polynesian Cultural Center",
+        "title": "North Shore",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Kualoa Ranch",
+        "title": "Waimea Bay",
         "description": "",
-        "stopType": "pass-by"
+        "stopType": "stop"
+      },
+      {
+        "title": "Dole Plantation",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Byodo-In Temple",
+        "description": "",
+        "stopType": "stop"
       }
     ],
     "inclusions": [
@@ -107,7 +104,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Round-trip hotel transport"
       }
     ],
     "categories": [

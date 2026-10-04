@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Breathtaking-8-hour-circle-island-tour-for-only-45/d59070-166842P1",
     "title": "Premium Oahu Circle Island Tour – Small Group, No Crowds",
     "description": {
-      "text": "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time. In a cozy vehicle with no more than 14 passengers, you'll see landmarks like Diamond Head, the Halona Blowhole, Nu'uanu Pali Lookout, and historic Haleiwa Town. You'll also visit the famed Dole Plantation where you'll get a whole delicious Dole pineapple. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A small-group coach of no more than 14 passengers circles Oahu after pickup at a Waikiki hotel. The day includes Diamond Head, the Halona Blowhole, Nu'uanu Pali Lookout, and Haleiwa Town. A stop at the Dole Plantation includes a whole Dole pineapple. The guide covers Oahu history during the ride. Pickup at the Waikiki hotel is part of that 14-passenger circle. Diamond Head, the Halona Blowhole, Nu'uanu Pali Lookout, Haleiwa Town, and the Dole pineapple stop are the named pieces of this small-group circle from Waikiki."
     },
     "location": {
       "city": "Honolulu",
@@ -31,40 +31,37 @@
       ]
     },
     "highlights": [
-      "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time",
-      "In a cozy vehicle with no more than 14 passengers, you'll see landmarks like Diamond Head, the Halona Blowhole, Nu'uanu ",
-      "You'll also visit the famed Dole Plantation where you'll get a whole delicious Dole pineapple",
-      "Premium Oahu Circle Island Tour – Small Group, No Crowds departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "A small-group coach of no more than 14 passengers circles Oahu after pickup at a Waikiki hotel",
+      "The day includes Diamond Head, the Halona Blowhole, Nu'uanu Pali Lookout, and Haleiwa Town",
+      "A stop at the Dole Plantation includes a whole Dole pineapple"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Pickup from your Waikiki hotel"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time.",
+    "itinerarySummary": "A small-group coach of no more than 14 passengers circles Oahu after pickup at a Waikiki hotel.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Diamond Head",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "North Shore",
+        "title": "Halona Blowhole",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Haleiwa",
+        "title": "Nu'uanu Pali Lookout",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleiwa Town",
         "description": "",
         "stopType": "stop"
       },
@@ -72,21 +69,6 @@
         "title": "Dole Plantation",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Waimea Valley",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -107,7 +89,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Pickup from your Waikiki hotel"
       }
     ],
     "categories": [

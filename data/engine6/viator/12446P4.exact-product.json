@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Private-Island-Tour/d59070-12446P4",
     "title": "Private Tour Oahu Circle Island - Fully Personalized Experience",
     "description": {
-      "text": "Swap the big, crowded tour buses for a private and personalized experience of Oahu. This private tour is exclusively for your party so there's no rushing or waiting around for others. Your tour is fully customizable so you can choose which places you want to visit and how long you want to spend therePrivate tour of Oahu: Avoid crowds and enjoy a personalized experience Flexibility to customize your tour to your own preferences Hassle-free pickup and drop-off from your accommodations See the sights and learn about Hawaiian history from your guide Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "A private circle-island tour of Oahu is reserved for one party, with stops and timing set by that party. There is no shared bus and no waiting on other groups. Pickup and drop-off are from the party's accommodations, and the guide covers Hawaiian history during the day. The places on this Honolulu booking are the ones the party chooses, and the party decides how long to remain at each one. The guide's comments on Hawaiian history accompany the party from the accommodation pickup to the drop-off back at those accommodations."
     },
     "location": {
       "city": "Honolulu",
@@ -31,62 +31,24 @@
       ]
     },
     "highlights": [
-      "Swap the big, crowded tour buses for a private and personalized experience of Oahu",
-      "This private tour is exclusively for your party so there's no rushing or waiting around for others",
-      "Your tour is fully customizable so you can choose which places you want to visit and how long you want to spend therePri",
-      "Private Tour Oahu Circle Island - Fully Personalized Experience departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "A private circle-island tour of Oahu is reserved for one party, with stops and timing set by that party",
+      "There is no shared bus and no waiting on other groups",
+      "Pickup and drop-off are from the party's accommodations, and the guide covers Hawaiian history during the day"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Pickup and drop-off from your accommodations"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Drop-off at your accommodations"
       }
     },
-    "itinerarySummary": "Swap the big, crowded tour buses for a private and personalized experience of Oahu.",
+    "itinerarySummary": "A private circle-island tour of Oahu is reserved for one party, with stops and timing set by that party.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Diamond Head",
+        "title": "Custom stops",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "North Shore",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Haleiwa",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Dole Plantation",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Waimea Valley",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -107,7 +69,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Pickup and drop-off from your accommodations"
       }
     ],
     "categories": [

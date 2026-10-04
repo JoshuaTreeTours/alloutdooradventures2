@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Circle-Island-Tour-small-group-setting-snorkeling-included/d59070-5563928P2",
     "title": "Scenic Full Day Circle Island Tour-Snorkeling/Breakfast/Byodo-in",
     "description": {
-      "text": "There are many Circle Island tours on offer in Oahu but this one delivers a small-group, crowd- and traffic-free experience. With an early-morning pickup from Waikiki hotels, you're on the road before the rest, which means no lines at the island's top attractions, including the Diamond Head Lookout and Halona Blowhole.Benefit from your local Hawaiian guide's insights into local culture Start your day off right with an included breakfast burrito Enjoy hassle-free hotel pickup and drop-off in Waikiki Includes admission to Byodo-In Temple and an unrushed experience Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "This small-group circle-island tour picks up early from Waikiki hotels and includes Byodo-In Temple. Named lookouts include Diamond Head Lookout and the Halona Blowhole. Breakfast is a burrito, temple admission is included, and a local guide comments on the culture. Drop-off returns to Waikiki. The burrito, the temple admission, and those two lookouts are part of the early small-group ride on Oahu. A local guide, the breakfast burrito, and Byodo-In admission accompany the early Waikiki pickup on this small-group Oahu ride."
     },
     "location": {
       "city": "Honolulu",
@@ -31,62 +31,34 @@
       ]
     },
     "highlights": [
-      "Scenic Full Day Circle Island Tour-Snorkeling/Breakfast/Byodo-in from Honolulu",
-      "Pearl Harbor, North Shore, or Waikiki routing",
-      "Professional guide with Oahu expertise",
-      "Small-group or private format as listed",
-      "Honolulu cultural, coastal, or aerial experience"
+      "This small-group circle-island tour picks up early from Waikiki hotels and includes Byodo-In Temple",
+      "Named lookouts include Diamond Head Lookout and the Halona Blowhole",
+      "Breakfast is a burrito, temple admission is included, and a local guide comments on the culture"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "Early pickup and drop-off from Waikiki hotels"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "Drop-off at Waikiki hotels"
       }
     },
-    "itinerarySummary": "There are many Circle Island tours on offer in Oahu but this one delivers a small-group, crowd- and traffic-free experience.",
+    "itinerarySummary": "This small-group circle-island tour picks up early from Waikiki hotels and includes Byodo-In Temple.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Diamond Head",
+        "title": "Diamond Head Lookout",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "North Shore",
+        "title": "Halona Blowhole",
         "description": "",
         "stopType": "stop"
       },
       {
-        "title": "Haleiwa",
+        "title": "Byodo-In Temple",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Dole Plantation",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Waimea Valley",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Polynesian Cultural Center",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kualoa Ranch",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -107,7 +79,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "Early pickup and drop-off from Waikiki hotels"
       }
     ],
     "categories": [

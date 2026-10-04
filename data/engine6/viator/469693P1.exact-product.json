@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Auana-by-Cirque-du-Soleil-at-the-Waikiki-Beachcomber-Hotel/d59070-469693P1",
     "title": "'Auana by Cirque du Soleil at the Waikiki Beachcomber Hotel",
     "description": {
-      "text": "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of powerful acrobats, hilarious comedians, talented musicians and singers, and profound hula dancers. The unparalleled ensemble brings together international and local talents to shine a fresh light on the spirit of Hawai‘i. Blending Cirque du Soleil’s world-renowned artistry with the rich traditions of the islands, this one-of-a-kind spectacle transports audiences on a breathtaking journey through Hawaiian culture. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "'Auana is a Cirque du Soleil show at the OUTRIGGER Waikiki Beachcomber Hotel in Honolulu. The Hawaii-inspired production uses acrobats, comedians, musicians, singers, and hula dancers. The company mixes international performers with local performers and draws on Hawaiian tradition. The show is presented only at the OUTRIGGER Waikiki Beachcomber Hotel. International and local performers share the acrobatics, comedy, music, singing, and hula in this Hawaii-inspired production at the Waikiki Beachcomber Hotel in Honolulu."
     },
     "location": {
       "city": "Honolulu",
@@ -31,42 +31,24 @@
       ]
     },
     "highlights": [
-      "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of",
-      "The unparalleled ensemble brings together international and local talents to shine a fresh light on the spirit of Hawai‘",
-      "Blending Cirque du Soleil’s world-renowned artistry with the rich traditions of the islands, this one-of-a-kind spectacl",
-      "'Auana by Cirque du Soleil at the Waikiki Beachcomber Hotel departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "'Auana is a Cirque du Soleil show at the OUTRIGGER Waikiki Beachcomber Hotel in Honolulu",
+      "The Hawaii-inspired production uses acrobats, comedians, musicians, singers, and hula dancers",
+      "The company mixes international performers with local performers and draws on Hawaiian tradition"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "OUTRIGGER Waikiki Beachcomber Hotel"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "OUTRIGGER Waikiki Beachcomber Hotel"
       }
     },
-    "itinerarySummary": "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of powerful acrobats, hilarious comedians, talented musicians and singers, and profound hula dancers.",
+    "itinerarySummary": "'Auana is a Cirque du Soleil show at the OUTRIGGER Waikiki Beachcomber Hotel in Honolulu.",
     "itineraryItems": [
       {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
-      {
-        "title": "Waikiki Beachcomber Hotel",
+        "title": "OUTRIGGER Waikiki Beachcomber Hotel",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "OUTRIGGER Waikiki Beach Resort",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Kalakaua Avenue",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -87,7 +69,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "OUTRIGGER Waikiki Beachcomber Hotel"
       }
     ],
     "categories": [

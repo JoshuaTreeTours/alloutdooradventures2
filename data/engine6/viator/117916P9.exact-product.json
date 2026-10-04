@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/Honolulu/Pearl-Harbor-Passport-and-Honolulu-City-Tour/d59070-117916P9",
     "title": "Pearl Harbor Complete Experience Passport",
     "description": {
-      "text": "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admissions. This tour combines access to key memorials, museums, and historic vessels in one streamlined experience, helping you gain a broader understanding of the events of December 7, 1941. Included admissions and transportation make exploring this historic landmark more convenient and efficient.Pearl Harbor's top memorials and museums explored with one convenient booking Included admission tickets save time and simplify your visit USS Arizona Memorial boat ride included at no Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+      "text": "This Pearl Harbor visit from Honolulu includes memorials, museums, historic vessels, and a USS Arizona boat ride. Admissions and transportation are included, so the December 7, 1941 sites on this booking are handled together. The boat ride to the USS Arizona Memorial is part of that included access. Transportation, the admissions, and the USS Arizona Memorial boat ride all sit on this one Honolulu booking. The USS Arizona Memorial boat ride, the admissions, and the transportation are bundled for this Pearl Harbor visit from Honolulu."
     },
     "location": {
       "city": "Honolulu",
@@ -31,28 +31,20 @@
       ]
     },
     "highlights": [
-      "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admis",
-      "This tour combines access to key memorials, museums, and historic vessels in one streamlined experience, helping you gai",
-      "Included admissions and transportation make exploring this historic landmark more convenient and efficient.Pearl Harbor'",
-      "Pearl Harbor Complete Experience Passport departing from Honolulu",
-      "Professional Oahu guide or captain"
+      "This Pearl Harbor visit from Honolulu includes memorials, museums, historic vessels, and a USS Arizona boat ride",
+      "Admissions and transportation are included, so the December 7, 1941 sites on this booking are handled together",
+      "The boat ride to the USS Arizona Memorial is part of that included access"
     ],
     "logistics": {
       "start": {
-        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "description": "See booking details"
       },
       "end": {
-        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+        "description": "See booking details"
       }
     },
-    "itinerarySummary": "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admissions.",
+    "itinerarySummary": "This Pearl Harbor visit from Honolulu includes memorials, museums, historic vessels, and a USS Arizona boat ride.",
     "itineraryItems": [
-      {
-        "title": "Honolulu",
-        "description": "",
-        "duration": "30 minutes",
-        "stopType": "stop"
-      },
       {
         "title": "Pearl Harbor",
         "description": "",
@@ -62,21 +54,6 @@
         "title": "USS Arizona Memorial",
         "description": "",
         "stopType": "stop"
-      },
-      {
-        "title": "Battleship Missouri Memorial",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Pearl Harbor Aviation Museum",
-        "description": "",
-        "stopType": "stop"
-      },
-      {
-        "title": "Honolulu",
-        "description": "",
-        "stopType": "pass-by"
       }
     ],
     "inclusions": [
@@ -97,7 +74,7 @@
       },
       {
         "question": "Where does the tour depart from in Honolulu?",
-        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+        "answer": "See booking details"
       }
     ],
     "categories": [

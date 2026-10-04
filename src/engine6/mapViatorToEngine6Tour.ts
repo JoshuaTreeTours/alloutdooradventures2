@@ -14,6 +14,7 @@ import {
   stripEngine6AdmissionArtifacts,
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
+import { getHonoluluTargetedNarrativeDescription } from "./honoluluApprovedNarrativeDescriptions";
 import { getMexicoCityTargetedNarrativeDescription } from "./mexicoCityApprovedNarrativeDescriptions";
 
 const shouldLogEngine6LocationDiagnostics = () =>
@@ -369,7 +370,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
 export const hasEngine6ReviewedOverviewOverride = (productCode: string) =>
   Boolean(
     ENGINE6_OVERVIEW_OVERRIDES[productCode.trim()] ||
-      getMexicoCityTargetedNarrativeDescription(productCode)
+      getMexicoCityTargetedNarrativeDescription(productCode) ||
+      getHonoluluTargetedNarrativeDescription(productCode)
   );
 
 const toSentence = (value: string) => {
@@ -495,6 +497,113 @@ const slugToLabel = (slug: string) =>
     .join(" ");
 
 const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
+  "28456P8": [
+    "The flight passes Diamond Head crater.",
+    "The South Shore is part of the same scenic flight.",
+    "The landing is a private oasis with leis, chocolates, and champagne.",
+  ],
+  "12446P4": [
+    "The party chooses the stops and how long to stay, with pickup and drop-off from the accommodations.",
+  ],
+  "70444P6": [
+    "The day starts with an inter-island flight from Honolulu to Kona International Airport.",
+    "A driver meets the group in the historic town of Kona.",
+    "The Kilauea Iki Overlook is one of the ground stops.",
+    "Black sand is part of the same ground day.",
+    "Hawaii Volcanoes National Park is the active volcanic landscape on this day from Honolulu.",
+  ],
+  "28456P1": [
+    "The helicopter passes Diamond Head.",
+    "Sacred Falls is one of the landmarks seen from the air.",
+    "The flight passes the Dole Plantation.",
+    "Pearl Harbor is seen from the air on this ride.",
+  ],
+  "117916P9": [
+    "Pearl Harbor's memorials, museums, and historic vessels are visited together.",
+    "A boat ride to the USS Arizona Memorial is included.",
+  ],
+  "179218P23": [
+    "Pearl Harbor is the World War II history stop.",
+    "The Dole Plantation covers the history of Hawaii's pineapple industry.",
+    "The Polynesian Cultural Center covers traditions in Hawaii and across the Pacific.",
+  ],
+  "368856P1": [
+    "The lesson is private, one-to-one instruction with a surfboard and waterproof gear.",
+  ],
+  "6981P1": [
+    "A driver picks the group up at the hotel and provides the return transfer.",
+    "The luau includes a lei, a cocktail, a Hawaiian buffet, and a live Polynesian show.",
+  ],
+  "189546P8": [
+    "The old Sugar Mill stop includes coffee, chocolate, and a souvenir shop.",
+    "A three-quarter-mile walk through Waimea Valley passes rainforest and a Hawaiian village.",
+    "The walk ends at a 45-foot waterfall and a pool with lifeguards on duty.",
+  ],
+  "12446SNORKEL": [
+    "Diamond Head is one of the minibus stops.",
+    "The Halona Blowhole is one of the minibus stops.",
+    "Makapu'u Beach is one of the minibus stops.",
+    "The Dole Plantation is one of the minibus stops.",
+    "A macadamia nut farm is one of the minibus stops.",
+    "Kualoa Point on Kaneohe Bay is a look toward Mokoliʻi.",
+    "Snorkeling with Hawaiian green sea turtles is on the North Shore.",
+  ],
+  "452226P3": [
+    "Waikiki hotel pickup goes to the Pearl Harbor National Museum.",
+    "Included tickets cover the Pearl Harbor National Memorial.",
+    "Included tickets cover the Battleship Missouri Memorial, with time aboard the battleship.",
+  ],
+  "23607": [
+    "The coach stops at Diamond Head.",
+    "Nu'uanu Pali Lookout is on the circle.",
+    "The Halona Blowhole is on the circle.",
+    "Waimea Valley is on the circle.",
+    "The North Shore is on the circle.",
+    "Waimea Bay is the North Shore beach noted for big-wave surfing since the 1960s.",
+    "The Dole Plantation is a history and culture stop.",
+    "Byodo-In Temple admission is included.",
+  ],
+  "390101P5": [
+    "The group travels from a Waikiki hotel to Pearl Harbor.",
+    "Tickets for the USS Arizona Memorial are included.",
+    "Tickets for the Battleship Missouri Memorial, the Mighty MO, are included.",
+    "A short ride passes through downtown Honolulu.",
+  ],
+  "64146P1": [
+    "Ka Moana Luau is held at Aloha Tower.",
+    "The evening includes cultural activities, a Hawaiian buffet, and Polynesian fire dance.",
+  ],
+  "33188P2": [
+    "Germaine's Luau is held in Kapolei.",
+    "The evening includes a lei, a Hawaiian-American meal, and live fire-knife, hula, and slap dancing.",
+  ],
+  "166842P1": [
+    "Diamond Head is on this small-group circle.",
+    "The Halona Blowhole is on this small-group circle.",
+    "Nu'uanu Pali Lookout is on this small-group circle.",
+    "Haleiwa Town is on this small-group circle.",
+    "The Dole Plantation stop includes a whole Dole pineapple.",
+  ],
+  "375182P1": [
+    "Diamond Head State Monument is a named stop on this snorkeling day.",
+    "The Halona Blowhole is a named stop on this snorkeling day.",
+    "The Dole Plantation is a named stop on this snorkeling day.",
+    "Makapu'u Beach is a named stop on this snorkeling day.",
+    "Waimea Bay is a named stop on this snorkeling day.",
+    "Kahuku Farms is a named stop on this snorkeling day.",
+  ],
+  "469693P1": [
+    "'Auana is performed at the OUTRIGGER Waikiki Beachcomber Hotel.",
+  ],
+  "3961P32": [
+    "The luau buffet and Hawaiian welcome are in Waikiki.",
+    "Rock-a-Hula is the onsite show of hula, fire-knife dancing, and rock and roll.",
+  ],
+  "5563928P2": [
+    "Diamond Head Lookout is an early stop on this small-group circle.",
+    "The Halona Blowhole is an early stop on this small-group circle.",
+    "Byodo-In Temple admission is included.",
+  ],
   "163975P1": [
     "Roll past Stearns Wharf for broad harbor views, fishing-pier history, and a classic first look at Santa Barbara’s shoreline.",
     "Continue along East Beach, where palms, volleyball courts, and mountain-meets-ocean scenery define the city’s laid-back coastal mood.",
@@ -1216,7 +1325,9 @@ export const mapViatorToEngine6Tour = (
       city,
       state,
       sourceOverview: sourceOverviewText,
-    }) ?? getMexicoCityTargetedNarrativeDescription(payload.rawProductCode);
+    }) ??
+    getMexicoCityTargetedNarrativeDescription(payload.rawProductCode) ??
+    getHonoluluTargetedNarrativeDescription(payload.rawProductCode);
   const governedOverview =
     isEngine6NewBuildProductCode(payload.rawProductCode) &&
     !hasEngine6ReviewedOverviewOverride(payload.rawProductCode)
