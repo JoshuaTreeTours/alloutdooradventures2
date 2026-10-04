@@ -14,7 +14,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "Families meet animal ambassadors and move between activity stations. Trick-or-treat stops are set around the activity areas. Face painting is offered along with the animal visits. A small pumpkin patch is on site, and each child may take one pumpkin. A few rooms are arranged as a mild haunt for young children.",
       "Music plays while the stations stay open. Staff stay with the group while the animals are part of the program."
     ],
-    "schemaDescription": "A four-hour guided outing with Helen Woodward Animal Center. The outing passes Howl-O-Ween Harvest Family Festival.",
+    "schemaDescription": "Four-hour family festival with animal ambassadors, activity stations, and trick-or-treat stops.",
     "highlights": [
       "4 hours guided outing",
       "Howl-O-Ween Harvest Family Festival",
@@ -61,7 +61,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "The camp day is built around animal-care tasks with the staff. Preparing animal diets is one of those tasks. The group also sets up enrichment for the animals. Grooming and exercise are part of the same camp day. Mammals, reptiles, and birds are among the animals campers work with.",
       "Cleaning animal habitats is one of the camp tasks. Training sessions with the animals are part of the day. The camp keeps the group small so each camper can work close to the animals. Staff stay with the group while the animals are part of the program."
     ],
-    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Six-hour zookeeper camp built around animal-care tasks.",
     "highlights": [
       "6 hours guided outing",
       "Groups stay at a maximum of 10 guests"
@@ -102,7 +102,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program.",
       "Guests spend part of the visit in a hands-on session with the horses. Staff explain how the horses are cared for and how they behave. That same account stays with Equine Hospital."
     ],
-    "schemaDescription": "A 3.5-hour guided outing with Helen Woodward Animal Center. The outing passes 40 min: second activity, 30 min: third activity, and 30 min: snack period.",
+    "schemaDescription": "Half-day veterinarian camp of about 3.5 hours, with clinical practice and a microscope.",
     "highlights": [
       "3.5 hours guided outing",
       "40 min: second activity and 30 min: third activity",
@@ -143,7 +143,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Campers meet a veterinarian and practice simple clinical skills. A microscope is set out so campers can look at cells. Canine CPR is practiced on a training dummy. The day includes a walk through a companion-animal hospital. Staff stay with the group while the animals are part of the program."
     ],
-    "schemaDescription": "A 6-hour guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Six-hour veterinarian camp with clinical practice, a microscope, and canine CPR practice.",
     "highlights": [
       "6 hours guided outing",
       "Groups stay at a maximum of 30 guests"
@@ -184,7 +184,7 @@ export const fareHarborDelMarLegacyProducts: FareHarborProofProduct[] = [
       "Spring Adventure is a seasonal program at the Helen Woodward Animal Center. Children meet live ambassadors from four groups: a mammal, a bird, an amphibian, and an invertebrate. One activity is a STEM session on butterfly conservation. The rest covers life cycles, young animals, and the shift from winter to spring for plants and animals.",
       "Schools are told the material lines up with the Next Generation science standards used in grades kindergarten through six. The program can run on the center's campus or travel to a classroom. Booking is by phone or email to the Education Office, with no payment up front and an invoice afterward. For Daisy Girl Scouts, the visit can be shaped toward parts of the Between Earth and Sky journey."
     ],
-    "schemaDescription": "A guided outing with Helen Woodward Animal Center.",
+    "schemaDescription": "Spring program at the Helen Woodward Animal Center where children meet a mammal, a bird, an amphibian, and an invertebrate.",
     "highlights": [
       "Onsite: mini horse, chicken, frog"
     ],

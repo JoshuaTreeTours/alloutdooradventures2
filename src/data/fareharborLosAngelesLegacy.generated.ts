@@ -15,7 +15,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "Moviemaking landmarks are among the sights seen from the vehicle. Residential neighborhoods are part of the same ride. Architectural buildings are visible from the open-air vehicle. Historic sites are also on the drive and are seen without a stop. Guests are asked to bring a camera for the ride.",
       "People stay aboard the vehicle for the length of the outing. There is no walking portion, because no stops are scheduled. The same open-air ride is how every sight on the outing is viewed. The ride stays in Los Angeles."
     ],
-    "schemaDescription": "A two-hour guided outing with Golden Ticket LA.",
+    "schemaDescription": "Open-air star-homes drive of about two hours in Los Angeles, seen from the vehicle.",
     "highlights": [
       "2 hours guided outing"
     ],
@@ -63,7 +63,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "Free pickup is available in Beverly Hills. Guests are asked to bring a camera for the outing. The outing runs for about 3 hours. The group sets the stops, and the plan is not taken from a fixed public timetable. Small groups book the same private outing, and the plan is built around that party.",
       "A guide leads the outing, and the plan changes with the group's size and interests. Guests visit both the better-known sights and the places the travel guides skip."
     ],
-    "schemaDescription": "A three-hour guided outing with Golden Ticket LA in Los Angeles.",
+    "schemaDescription": "Private Los Angeles tour of about three hours, with Beverly Hills pickup and stops chosen by the group.",
     "highlights": [
       "three-hour guided outing in Los Angeles"
     ],
@@ -106,7 +106,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "Cielo Drive - Visit the former site of the Tate-Polanski residence. Clothing found (Benedict Canyon) - See the ravine where discarded clothes from the Tate murders were located. Gun found (Longview Valley Dr) - See the yard where the gun used in the Tate killings was found.",
       "Sadie Atkins Strip Club (Candy Cat) - Visit the former site where Susan Atkins once performed. Manson's Favorite Hot Dog stand - Take a break and view an authentic Manson artifact up close. Family HQ/ Spahn Ranch - Explore the state park that once housed the Spahn Movie Ranch."
     ],
-    "schemaDescription": "A 3.5-hour guided outing with Grave Line Tours in Los Angeles. The outing passes Whiskey.",
+    "schemaDescription": "Funeral-limo tour of about 3.5 hours covering sites tied to the Manson Family murders.",
     "highlights": [
       "3.5-hour guided outing in Los Angeles",
       "Whiskey",
@@ -149,7 +149,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "Atmospheric lighting and visual background materials in the vehicle. The day moves through Sunset Grove double homicide and beheading, Former Ed Buck apartment, and Barney's Beanery. Next come Beverly Hills jewelry heist site, Spadena House (Witch's House), and Michael Jackson's Carolwood Drive home. Later the group reaches Menendez Mansion on North Elm Drive, Greystone Mansion murder-suicide site, and Viper Room (River Phoenix overdose site).",
       "The group also comes to Brittany Murphy's final Hollywood Hills home and Sunset Tower hauntings."
     ],
-    "schemaDescription": "A two-hour guided outing with Grave Line Tours in Los Angeles. The outing passes Sunset Grove double homicide and beheading, Former Ed Buck apartment, and Barney's Beanery.",
+    "schemaDescription": "Two-hour funeral-limo tour of Los Angeles crime and scandal sites.",
     "highlights": [
       "two-hour guided outing in Los Angeles",
       "Sunset Grove double homicide and beheading and Former Ed Buck apartment",
@@ -191,7 +191,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "The Black Dahlia funeral-limo route is a list of outdoor stops. Chancellor Apartments is an outside look at Room 501 and at Elizabeth Short's time there. Pig'n'Whistle is a sidewalk stop on the Hollywood cafe scene. Boardners is an outside visit tied to noir-era patrons. The Hollywood Cherokee building is the former gynecologist's office.",
       "The Frolic Room covers Dahlia-era nightlife. Florentine Gardens covers suspect connections. Guardian Arms covers a short stay linked to suspect Margolis. Sowden House, also called the Hodel house, is a street-level stop on allegations against Hodel. The Biltmore covers the last known sightings. Hotel Cecil is tied to other true-crime cases. The Herald Examiner Building covers press coverage. The Catalina Street bungalow and the Walter Bayley house are suspect addresses. The last stop is the lot where the body was found."
     ],
-    "schemaDescription": "A three-hour guided outing with Grave Line Tours in Los Angeles.",
+    "schemaDescription": "Three-hour funeral-limo tour of Black Dahlia sites, including an outside look at the Chancellor Apartments.",
     "highlights": [
       "three-hour guided outing in Los Angeles",
       "Groups are capped at 8"
@@ -233,7 +233,7 @@ export const fareHarborLosAngelesLegacyProducts: FareHarborProofProduct[] = [
       "The ticket also covers complimentary also self-guided Hollywood Walk of Fame walking outing, and the team will assist guests with setup during check-in so guests explore at the own pace. Guests travel in brand-new 2025 luxury, climate-controlled coaches. Entertaining local driver guide sharing stories and fun facts.",
       "Four curated stops allowing time to explore, eat, and take photos. Transportation aboard a 2025 climate-controlled luxury mini-coach. Entertaining driver guide providing local commentary and insights. Free multilingual audio guide app with pre-recorded commentary in 11 languages. Guests stop time at Beverly Hills and Rodeo Drive."
     ],
-    "schemaDescription": "A 5-hour guided outing with Hollywood Bus Tours, LLC in Los Angeles. The outing passes Farmers Market, Santa Monica Pier, and Grove.",
+    "schemaDescription": "Five-hour coach tour of Los Angeles highlights, with time in Beverly Hills and on Rodeo Drive.",
     "highlights": [
       "5-hour guided outing in Los Angeles",
       "Farmers Market and Santa Monica Pier",

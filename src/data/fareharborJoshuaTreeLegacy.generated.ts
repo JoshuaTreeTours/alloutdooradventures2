@@ -14,7 +14,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Joshua Tree Excursions runs this sightseeing circuit by shuttle. It lasts four and a half hours and leaves the Joshua Tree office at 8 a.m., with a return around 12:30 p.m. A driver who also guides stays with the group. This circuit is a drive between overlooks, with time to step out for photos, not the private hike.",
       "The sites come one by one. The Cholla Cactus Garden is one. Skull Rock is another. Arch Rock is included. The route then offers either Ohlsen Ranch or the Cap Rock Nature Trail, and it ends at Key's View."
     ],
-    "schemaDescription": "Sightseeing Tour is a 4.5-hour guided outing with Joshua Tree Excursions.",
+    "schemaDescription": "Sightseeing circuit of about 4.5 hours by shuttle through Joshua Tree National Park, with photo stops.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
@@ -50,7 +50,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "This private morning hike with Joshua Tree Excursions lasts six hours inside Joshua Tree National Park. Guests can meet at the Joshua Tree office, take a local pickup, or request transport from Coachella Valley cities. The guide drives through the park to the trailhead, then leads a mostly off-trail hike of one to six miles.",
       "Along the hike the guide covers park history, geology, plants, and animals. An optional lunch on the trail costs extra. Rock scrambling is optional. If time remains, the guide adds other park sights before the return to the office or the lodging. Included items are park fees, water, in-park transportation, and a loaner daypack. Meals and extra equipment are not included."
     ],
-    "schemaDescription": "Private Morning Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+    "schemaDescription": "Six-hour private morning hike in Joshua Tree National Park, mostly off trail.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
@@ -86,7 +86,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "This private sunset hike with Joshua Tree Excursions lasts six hours and is a hike into the sunset. Meeting choices are the Joshua Tree office, a local pickup, or transport from Coachella Valley cities. The guide drives through the park to a trailhead and then leads a mostly off-trail route of one to six miles.",
       "The guide's commentary covers history, geology, plants, and animals. Lunch on the trail is optional and costs extra. Rock scrambling is optional. Other park sights may be added at the end if time allows, before a return to the office or the lodging. Included are park fees, water, transportation in the park, and a loaner daypack."
     ],
-    "schemaDescription": "Private Sunset Hike is a 6-hour guided outing with Joshua Tree Excursions.",
+    "schemaDescription": "Six-hour private sunset hike in Joshua Tree National Park, mostly off trail.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
@@ -123,7 +123,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "After that, whether guests are first-time climber or multi-pitch expert, the guides will make sure guests have an experience. All throughout the day, the personal guides will share history and geology of the Park, stop with myriad of stories and talks about plants, animals, and other characteristics of the Park.",
       "Guests may even get to add in some rock scrambling toward the top of some of the otherworldly rock formations, for views and meets rarely had by others."
     ],
-    "schemaDescription": "A 8-hour guided outing with Joshua Tree Excursions. The outing passes Joshua Tree National Park.",
+    "schemaDescription": "Eight-hour hike and climb in Joshua Tree National Park, with instruction at the rocks.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
@@ -158,7 +158,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "The session is at the ranch, with the desert landscape around the grounds. Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the sunset departure."
     ],
-    "schemaDescription": "The session is at the ranch, with the desert landscape around the grounds.",
+    "schemaDescription": "One-hour sunset trail ride on horseback in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
@@ -203,7 +203,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. A propane grill is on hand for cooking outdoors. Outdoor seating includes a picnic table for meals on the site.",
       "An outdoor shower and a sink are part of this site. Shared portable toilets are a short walk from the site. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
-    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "schemaDescription": "Overnight stay in the El Dorado bell tent, with a queen bed, firepit, and outdoor shower.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
@@ -244,7 +244,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "An outdoor shower and a sink are part of this site. A private portable toilet is assigned to this site. A heater is available when the night turns cold. The dome is not insulated, so summers run hot and winters run cold. Guests bring their own drinking water for the stay.",
       "Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
-    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "Overnight stay in the La Luna geodesic dome, with a queen bed, firepit, and outdoor shower.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
@@ -289,7 +289,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Overnight guests stay in a bell tent. Sleeping is on a queen bed, and linens are provided. A firepit on the site is there for the evening. Outdoor seating includes a picnic table for meals on the site. Solar lights are inside for the evening hours.",
       "Shared portable toilets are a short walk from the site. A heater is available when the night turns cold. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
-    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "schemaDescription": "Overnight stay in the Durango bell tent, with a queen bed, firepit, and picnic table.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
@@ -339,7 +339,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
       "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
-    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "schemaDescription": "Campsite 6, a dry site for a tent, camper, or trailer, with a firepit and no hookups.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/087AoVruQH651SNUwhLe"
@@ -396,7 +396,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Guests camp on a dry site and bring a tent, a camper, or a trailer. A firepit on the site is there for the evening. Shared portable toilets are a short walk from the site. Trailers parked on the site are limited to about 30 feet.",
       "The site has no hookups, so guests bring what they need for the night. Guests spend the night on the site, and the firepit is the evening gathering place."
     ],
-    "schemaDescription": "A guided outing with Cascade Trails Mustang Sanctuary.",
+    "schemaDescription": "Campsite 7, a dry site for a tent, camper, or trailer, with a firepit and no hookups.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
@@ -452,7 +452,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
       "Staff explain how the horses are cared for and how they behave. The session is at the ranch, with the desert landscape around the grounds. The ride includes Cascade Trails and Wiley Wines. Also part of the same visit are Northern California and Phineas Fittipaldi.",
       "Guests spend the booked time with the horses."
     ],
-    "schemaDescription": "A 1.5-hour horse outing with Cascade Trails Mustang Sanctuary in Joshua Tree.",
+    "schemaDescription": "About 1.5 hours with the horses and a Wiley Wines tasting in Joshua Tree.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/sclvfJXRBe3ArUUxVz5A"
@@ -493,7 +493,7 @@ export const fareHarborJoshuaTreeLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests take a walk ride with the horses in Joshua Tree. The outing lasts about an hour. This ride is the morning departure."
     ],
-    "schemaDescription": "Guests take a walk ride with the horses in Joshua Tree.",
+    "schemaDescription": "One-hour morning horseback trail ride in Joshua Tree.",
     "highlights": [],
     "galleryImages": [],
     "productImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",

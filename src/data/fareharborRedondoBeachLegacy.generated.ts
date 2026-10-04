@@ -14,7 +14,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Guests ride bikes between the stops on this outing. The bikes are pedal-assist, so the motor helps on the hills. A helmet is included, and the shop fits the bike before departure. The booking runs about 24 hours. People stay with the bikes for the riding portion of the booking.",
       "Guests ride a rented bike for the day. Time on the bike is about 2 hours. Time on the water is about 2 hours. The ride passes Hermosa Beach and Manhattan Beach. Cyclists also come to Santa Monica and Redondo Beach Pier. Amp Hour Battery and E-Bike Orientation are on the same loop."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Two-hour electric-bike ride from the Redondo Beach pier along the shore.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -59,7 +59,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "The group allows guests to get toward Santa Monica and all places in between with few short stops. Guests tell guests all the sights to see. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
       "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Four-hour electric-bike ride from the Redondo Beach pier along the shore.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -105,7 +105,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Top 5 reasons to ride e-bike from Redondo Beach Pier: 1. Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5.",
       "Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Six-hour electric-bike ride from the Redondo Beach pier along the shore.",
     "highlights": [
       "E-Bike Orientation and Redondo Beach Pier"
     ],
@@ -151,7 +151,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "After that, make sure to have safe, covered location to lock up the e-bike rental safely with the included bike lock. There are 1000s of parking spots at Redondo Beach Pier with up to metered parking. Top 5 reasons to ride e-bike from Redondo Beach Pier: 1.",
       "Guests ride from Redondo Beach toward Santa Monica (and back.) with ease. 2. Cruise from one place toward the next without worrying about parking. 4. Guests take in best sights at beach without sweaty grind of pedaling traditional pedal-power bike. 5. Riders must adhere toward safety guidelines agreed to in rental agreement."
     ],
-    "schemaDescription": "A bicycle outing with Beach E Biking. The outing passes Day E-Bike Rental, Marvin Braude Bike Trail, and E-Bike Orientation.",
+    "schemaDescription": "One-day electric-bike rental, including overnight, from the Redondo Beach pier.",
     "highlights": [
       "Day E-Bike Rental and Marvin Braude Bike Trail"
     ],
@@ -196,7 +196,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Beach E Biking rents this electric bike for 48 hours. A helmet, a lock, and a charger come with it. The bike is a single-rider step-through frame with a front basket and a cushioned seat. Pedal assist has five levels, and a throttle is fitted. Battery size is given as 12 amp hours, with a stated range of up to 50 miles. An orientation covers the controls before the rental starts.",
       "Multi-day use is for getting around the beach towns, including weekends of the Beach Life Festival, Fiesta Hermoa, and AVP volleyball. Riders park at bike racks. The riding area runs from Redondo Beach up the shore toward Santa Monica, with access at the Redondo pier."
     ],
-    "schemaDescription": "A 48-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Two-day electric-bike rental from the Redondo Beach pier for riding between Redondo Beach and Santa Monica.",
     "highlights": [
       "48 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -242,7 +242,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Beach E Biking rents this electric bike for 72 hours. Included are a helmet, a lock, and a charger. The model is a single-rider step-through with a front basket and a cushioned seat, five pedal-assist levels, and a throttle. The battery is 12 amp hours and up to 50 miles. Staff give an orientation on the controls.",
       "Longer rentals suit beach-town trips and busy weekends: the Beach Life Festival, Fiesta Hermoa, and AVP volleyball. Riders can use ordinary bike racks. The shore runs from Redondo Beach toward Santa Monica, and the Redondo pier is the access point."
     ],
-    "schemaDescription": "A 72-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Three-day electric-bike rental from the Redondo Beach pier.",
     "highlights": [
       "72 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -288,7 +288,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Beach E Biking rents this electric bike for 96 hours. A helmet, lock, and charger are included. It is a single-rider step-through bike with a front basket, a cushioned seat, five levels of pedal assist, and a throttle. The listed battery is 12 amp hours, with a range figure of up to 50 miles. The shop starts the rental with a control orientation.",
       "Longer bookings cover beach errands and festival weekends, specifically the Beach Life Festival, Fiesta Hermoa, and AVP volleyball. Parking is at bike racks. Riders follow the beach from Redondo Beach toward Santa Monica, using the Redondo pier for access."
     ],
-    "schemaDescription": "A 96-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Four-day electric-bike rental from the Redondo Beach pier.",
     "highlights": [
       "96 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"
@@ -334,7 +334,7 @@ export const fareHarborRedondoBeachLegacyProducts: FareHarborProofProduct[] = [
       "Beach E Biking rents this electric bike for 168 hours, seven days. A helmet, a lock, and a charger are included. The bike is a single-rider step-through with a front basket, a cushioned seat, five pedal-assist levels, and a throttle. Battery capacity is 12 amp hours, up to 50 miles of range. An orientation explains the controls.",
       "Multi-day rentals suit beach towns and the Beach Life Festival, Fiesta Hermosa, and AVP volleyball weekends. Bike racks are how riders park. Riding follows the beaches between Redondo Beach and Santa Monica, with the Redondo Beach pier as the access point."
     ],
-    "schemaDescription": "A 168-hour bicycle outing with Beach E Biking. The outing passes E-Bike Orientation and Redondo Beach Pier.",
+    "schemaDescription": "Seven-day electric-bike rental from the Redondo Beach pier.",
     "highlights": [
       "168 Hours bicycle outing",
       "E-Bike Orientation and Redondo Beach Pier"

@@ -13,7 +13,7 @@ export const fareHarborOakhurstLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "The commentary takes up Good Trip Adventures and Pohono Trail. That same account stays with Tunnel View and Bridalveil Falls. Cook's Meadow and Mirror Lake are part of the same story. The route keeps Curry Village and Yosemite Falls in view."
     ],
-    "schemaDescription": "A 6- to 8-hour guided outing with Good Trip Adventures - California in Oakhurst.",
+    "schemaDescription": "Full-day small-group tour and hike in Yosemite Valley, about six to eight hours, from Oakhurst.",
     "highlights": [
       "6- to 8-hour guided outing in Oakhurst",
       "Medically trained, naturalist guide"

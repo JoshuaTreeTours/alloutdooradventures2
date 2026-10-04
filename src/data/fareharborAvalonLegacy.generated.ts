@@ -13,7 +13,7 @@ export const fareHarborAvalonLegacyProducts: FareHarborProofProduct[] = [
     "paragraphs": [
       "Guests ride a rented bike for the day. A helmet, water, and the bike permit come with the rental. Reserving ahead is how the shop holds a bike. The rental bikes are picked up in Avalon. The ride passes Bike Rentals Helmet and Advanced Booking."
     ],
-    "schemaDescription": "A bicycle outing with Bike Catalina in Avalon.",
+    "schemaDescription": "Daily bike rental picked up in Avalon, with a helmet and a bike permit.",
     "highlights": [],
     "galleryImages": [
       "https://cdn.filestackcontent.com/RT2uO7zRQqYlyh6IlD71"

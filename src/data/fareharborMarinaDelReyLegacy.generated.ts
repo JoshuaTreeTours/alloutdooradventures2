@@ -15,7 +15,7 @@ export const fareHarborMarinaDelReyLegacyProducts: FareHarborProofProduct[] = [
       "The motor is a four-stroke, and it is meant to run quietly. The hull is shaped to get on plane and to throw less spray. A Bluetooth sound system is installed on the boat. The posted capacity is 5 people. Fuel for the rental period is included in the booking.",
       "Top speed is about 36 miles per hour. People remain on the boat for the rental."
     ],
-    "schemaDescription": "A 1- to 8-hour guided outing with Marina Del Rey Boat Rentals in Marina del Rey.",
+    "schemaDescription": "Boston Whaler center-console rental of one to eight hours in Marina del Rey.",
     "highlights": [
       "1- to 8-hour guided outing in Marina del Rey",
       "Model: 170 Montauk (Center Console)"
@@ -80,7 +80,7 @@ export const fareHarborMarinaDelReyLegacyProducts: FareHarborProofProduct[] = [
       "Fuel for the rental period is included in the booking. This smaller boat is limited to the harbor and does not go outside it. A bimini top provides shade over the seats. The seats swivel, which is part of how the boat is set up for new drivers.",
       "People remain on the boat for the rental."
     ],
-    "schemaDescription": "A 1- to 8-hour walking tour with Marina Del Rey Boat Rentals in Marina del Rey.",
+    "schemaDescription": "13-foot Boston Whaler rental of one to eight hours in Marina del Rey, for up to three people.",
     "highlights": [
       "1- to 8-hour walking tour in Marina del Rey",
       "Model Name: 130 Super Sport"

@@ -15,7 +15,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
       "Riders continue on to the Venice Canals. The same route also passes through Marina del Rey. Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside.",
       "Some guests ride pedal-assist bikes, and others ride ordinary bikes. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking. Guests ride electric bikes for this booking. Time on the bike is about 3 hours."
     ],
-    "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "schemaDescription": "Electric-bike tour of about three hours through Santa Monica and Venice Beach.",
     "highlights": [
       "Santa Monica Pier"
     ],
@@ -60,7 +60,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
       "Muscle Beach is one of the places the group stops. The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. The guide stops so riders can take photographs along the way. People stay with the bikes for the riding portion of the booking.",
       "Guests ride electric bikes for this booking. Time on the bike is about 3 hours."
     ],
-    "schemaDescription": "A bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "schemaDescription": "Bike tour of about three hours through Santa Monica and Venice Beach.",
     "highlights": [
       "Santa Monica Pier"
     ],
@@ -115,7 +115,7 @@ export const fareHarborSantaMonicaLegacyProducts: FareHarborProofProduct[] = [
       "The Art Walls are a stop where riders take photographs. Much of the riding follows the shore, with the ocean alongside. People stay with the bikes for the riding portion of the booking. The ride passes Hour Options and Los Angeles. Cyclists also come to Santa Monica Pier and Venice Canals.",
       "Art Walls and Muscle Beach are on the same loop."
     ],
-    "schemaDescription": "A 2- to 4-hour bicycle outing with Unlimited Biking in Santa Monica. The outing passes Santa Monica Pier.",
+    "schemaDescription": "Private bike tour of two to four hours from Santa Monica Pier to the Venice Canals.",
     "highlights": [
       "2- to 4-hour bicycle outing in Santa Monica",
       "Santa Monica Pier"
